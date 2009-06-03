@@ -1,0 +1,15 @@
+Work around a gcc-4.1 bug on hppa and mips caused by delayed branch.
+See: http://bugs.debian.org/374396
+
+diff -Naur --exclude=debian perl-5.10.0.orig/cflags.SH perl-5.10.0/cflags.SH
+--- perl-5.10.0.orig/cflags.SH	2007-11-18 02:26:25.000000000 +1100
++++ perl-5.10.0/cflags.SH	2007-11-26 07:36:30.000000000 +1100
+@@ -307,6 +307,8 @@
+ 	case $archname in
+ 	    arm-*|armeb-*)
+ 		optimize=-Os;;
++	    hppa-*|mips*-*)
++		optimize="$optimize -fno-delayed-branch";;
+ 	esac;;
+     pp_sort) ;;
+     pp_sys) ;;

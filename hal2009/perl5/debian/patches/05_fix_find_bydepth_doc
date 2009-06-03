@@ -1,0 +1,14 @@
+Fix formatting of bydepth option (upstream CL33127).
+
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/File/Find.pm perl-5.10.0/lib/File/Find.pm
+--- perl-5.10.0.orig/lib/File/Find.pm	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/File/Find.pm	2008-02-06 00:27:36.000000000 +1100
+@@ -84,7 +84,7 @@
+ 
+ Reports the name of a directory only AFTER all its entries
+ have been reported.  Entry point C<finddepth()> is a shortcut for
+-specifying C<<{ bydepth => 1 }>> in the first argument of C<find()>.
++specifying C<{ bydepth =E<gt> 1 }> in the first argument of C<find()>.
+ 
+ =item C<preprocess>
+ 

@@ -1,0 +1,6 @@
+zip -r fh-102.zip lang_de/*.pro
+zip -r fh-102.zip lang_de/thesaurus/*.pro
+zip -r fh-102.zip lang_de/word_*
+zip -d fh-102.zip lang_de/facts.pro
+zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm
+

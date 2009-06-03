@@ -1,0 +1,25 @@
+Adjust the manual page extensions for the Debian Perl policy.
+Debian bug #479460.
+
+diff --git a/lib/Module/Build/Base.pm b/lib/Module/Build/Base.pm
+index 3090084..d19c436 100644
+--- a/lib/Module/Build/Base.pm
++++ b/lib/Module/Build/Base.pm
+@@ -2552,7 +2552,7 @@ sub manify_bin_pods {
+   foreach my $file (keys %$files) {
+     # Pod::Simple based parsers only support one document per instance.
+     # This is expected to change in a future version (Pod::Simple > 3.03).
+-    my $parser  = Pod::Man->new( section => 1 ); # binaries go in section 1
++    my $parser  = Pod::Man->new( section => '1p' ); # binaries go in section 1p
+     my $manpage = $self->man1page_name( $file ) . '.' .
+ 	          $self->config( 'man1ext' );
+     my $outfile = File::Spec->catfile($mandir, $manpage);
+@@ -2576,7 +2576,7 @@ sub manify_lib_pods {
+   while (my ($file, $relfile) = each %$files) {
+     # Pod::Simple based parsers only support one document per instance.
+     # This is expected to change in a future version (Pod::Simple > 3.03).
+-    my $parser  = Pod::Man->new( section => 3 ); # libraries go in section 3
++    my $parser  = Pod::Man->new( section => '3pm' ); # libraries go in section 3pm
+     my $manpage = $self->man3page_name( $relfile ) . '.' .
+ 	          $self->config( 'man3ext' );
+     my $outfile = File::Spec->catfile( $mandir, $manpage);

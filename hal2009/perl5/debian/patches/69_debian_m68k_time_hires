@@ -1,0 +1,14 @@
+m68k takes more that 60s to complete Time::HiRes test.
+
+diff -Naur --exclude=debian perl-5.10.0.orig/ext/Time/HiRes/t/HiRes.t perl-5.10.0/ext/Time/HiRes/t/HiRes.t
+--- perl-5.10.0.orig/ext/Time/HiRes/t/HiRes.t	2007-11-18 02:26:25.000000000 +1100
++++ perl-5.10.0/ext/Time/HiRes/t/HiRes.t	2007-11-26 07:27:31.000000000 +1100
+@@ -68,7 +68,7 @@
+ 
+ my $have_alarm = $Config{d_alarm};
+ my $have_fork  = $Config{d_fork};
+-my $waitfor = 180; # 30-45 seconds is normal (load affects this).
++my $waitfor = 300; # 30-45 seconds is normal (load affects this).
+ my $timer_pid;
+ my $TheEnd;
+ 

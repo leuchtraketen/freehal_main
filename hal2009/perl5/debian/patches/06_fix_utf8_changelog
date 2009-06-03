@@ -1,0 +1,635 @@
+Convert Changelog to UTF-8
+
+diff -Naur --exclude=debian perl-5.10.0.orig/Changes perl-5.10.0/Changes
+--- perl-5.10.0.orig/Changes	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/Changes	2008-02-20 23:03:29.000000000 +1100
+@@ -157,7 +157,7 @@
+ 	   ! lib/less.pm
+ ____________________________________________________________________________
+ [ 32620] By: rgs				   on 2007/12/16  15:14:15
+-	Log: Add a return value to less, noticed by SÃ©bastien Aperghis-Tramoni
++	Log: Add a return value to less, noticed by SÃƒÂ©bastien Aperghis-Tramoni
+      Branch: perl
+ 	   ! lib/less.pm
+ ____________________________________________________________________________
+@@ -470,7 +470,7 @@
+ 	   ! pod/perltodo.pod
+ ____________________________________________________________________________
+ [ 32580] By: rgs				   on 2007/12/05  15:47:33
+-	Log: This file is utf8 (I blame Ævar)
++	Log: This file is utf8 (I blame Ã†var)
+      Branch: perl
+ 	   ! pod/perl5100delta.pod
+ ____________________________________________________________________________
+@@ -789,7 +789,7 @@
+ ____________________________________________________________________________
+ [ 32495] By: rgs				   on 2007/11/26  11:33:42
+ 	Log: uconfig.h must be writable for microperl
+-	     (thanks to Sébastien Aperghis-Tramoni)
++	     (thanks to SÃ©bastien Aperghis-Tramoni)
+      Branch: perl
+ 	   ! Porting/makerel
+ ____________________________________________________________________________
+@@ -1319,7 +1319,7 @@
+ 	   ! lib/Module/Build/t/xs.t
+ ____________________________________________________________________________
+ [ 32350] By: nicholas				   on 2007/11/16  23:42:04
+-	Log: Decode the subject header encoding of Ævar's name.
++	Log: Decode the subject header encoding of Ã†var's name.
+      Branch: perl
+ 	   ! Changes
+ ____________________________________________________________________________
+@@ -1520,7 +1520,7 @@
+ ____________________________________________________________________________
+ [ 32286] By: rgs				   on 2007/11/12  16:57:08
+ 	Log: Subject: Fwd: CPAN Upload: S/SA/SAPER/Sys-Syslog-0.22.tar.gz
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Thu, 8 Nov 2007 02:05:45 +0100
+ 	     Message-Id: <BA3BE7CB-BBCC-47EF-A8EF-569BE97133E6@free.fr>
+      Branch: perl
+@@ -1861,7 +1861,7 @@
+ ____________________________________________________________________________
+ [ 32227] By: nicholas				   on 2007/11/06  10:47:30
+ 	Log: Subject: Fwd: CPAN Upload: S/SA/SAPER/constant-1.12.tar.gz
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Message-Id: <7B502F45-AB25-4EFF-8147-A02D8E2E9E21@free.fr>
+ 	     Date: Tue, 6 Nov 2007 02:49:51 +0100
+      Branch: perl
+@@ -1907,7 +1907,7 @@
+ ____________________________________________________________________________
+ [ 32222] By: rgs				   on 2007/11/05  10:19:31
+ 	Log: Subject: [PATCH] Another small patch for Sys::Syslog
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Mon, 5 Nov 2007 08:48:53 +0100
+ 	     Message-Id: <A5B536D9-E81C-48FC-9584-45E59ED7B6FB@free.fr>
+      Branch: perl
+@@ -1915,7 +1915,7 @@
+ ____________________________________________________________________________
+ [ 32221] By: rgs				   on 2007/11/04  20:02:18
+ 	Log: Subject: Re: (perl-current of 5.9.5) patch for ext/Sys/Syslog/Makefile.PL for
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Sun, 04 Nov 2007 03:52:36 +0100
+ 	     Message-id: <EECD3531-8352-4873-A1AD-E4B8731260CB@free.fr>
+      Branch: perl
+@@ -4486,7 +4486,7 @@
+ ____________________________________________________________________________
+ [ 31866] By: merijn				   on 2007/09/14  20:49:49
+ 	Log: Subject: Fwd: CPAN Upload: S/SA/SAPER/Sys-Syslog-0.21.tar.gz
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Fri, 14 Sep 2007 01:18:04 +0200
+ 	     Message-Id: <92AB5E7F-F8E1-4DEE-805C-B257A569CB62@free.fr>
+      Branch: perl
+@@ -5355,7 +5355,7 @@
+ ____________________________________________________________________________
+ [ 31750] By: stevep				   on 2007/08/23  15:15:07
+ 	Log: Subject: [PATCH] Upgrade Sys::Syslog to 0.19_01
+-	     From: Séstien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©stien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Thu, 23 Aug 2007 16:04:46 +0200
+ 	     Message-ID: <1187877886.46cd93fe13b12@imp.free.fr>
+      Branch: perl
+@@ -5801,7 +5801,7 @@
+ ____________________________________________________________________________
+ [ 31704] By: ams				   on 2007/08/12  14:20:44
+ 	Log: Subject: Re: [PATCH] Optimize split //
+-	     From: Ævar Arnfjörð Bjarmason <avarab@gmail.com>
++	     From: Ã†var ArnfjÃ¶rÃ° Bjarmason <avarab@gmail.com>
+ 	     Date: Sat, 11 Aug 2007 20:33:49 +0000
+ 	     Message-Id: <51dd1af80708111333kfd82e12u145b5ba38e23dcce@mail.gmail.com>
+      Branch: perl
+@@ -5884,7 +5884,7 @@
+ ____________________________________________________________________________
+ [ 31693] By: rgs				   on 2007/08/09  10:10:37
+ 	Log: Subject: [PATCH] Optimize split //
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Thu, 9 Aug 2007 07:49:16 +0000
+ 	     Message-ID: <51dd1af80708090049p2cf4810ep5a437ad53f64fa78@mail.gmail.com>
+      Branch: perl
+@@ -7391,7 +7391,7 @@
+ ____________________________________________________________________________
+ [ 31495] By: demerphq				   on 2007/06/28  22:09:07
+ 	Log: Subject: [PATCH] Move the RXf_WHITE logic for split " " into the regex engine
+-	     From: "Ævar Arnfjörð Bjarmason" 
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" 
+ 	     Date: Thu, 28 Jun 2007 20:06:50 +0000
+ 	     <avarab@gmail.com>
+ 	     Message-ID: <51dd1af80706281306i4dbba39em3eeb8da1d67ea27c@mail.gmail.com>
+@@ -8039,7 +8039,7 @@
+ ____________________________________________________________________________
+ [ 31411] By: rgs				   on 2007/06/18  07:53:05
+ 	Log: Subject: [PATCH] perlreapi.pod documentation for flags & cleanup
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Sun, 17 Jun 2007 18:09:25 +0000
+ 	     Message-ID: <51dd1af80706171109r37c294c4h78a51083c3b851ba@mail.gmail.com>
+      Branch: perl
+@@ -8047,7 +8047,7 @@
+ ____________________________________________________________________________
+ [ 31410] By: rgs				   on 2007/06/18  07:48:56
+ 	Log: Subject: [PATCH] POD Alignment for the magic table in perlapi.pod
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Sun, 17 Jun 2007 18:41:29 +0000
+ 	     Message-ID: <51dd1af80706171141w48cb717fr71ce7f214daebe36@mail.gmail.com>
+      Branch: perl
+@@ -8055,7 +8055,7 @@
+ ____________________________________________________________________________
+ [ 31409] By: rgs				   on 2007/06/18  07:39:35
+ 	Log: Subject: [PATCH] SvRX() and SvRXOK() macros
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Mon, 18 Jun 2007 03:33:34 +0000
+ 	     Message-ID: <51dd1af80706172033h1908aa0ge15698204e0b79ed@mail.gmail.com>
+      Branch: perl
+@@ -8570,7 +8570,7 @@
+ ____________________________________________________________________________
+ [ 31341] By: rgs				   on 2007/06/06  14:42:01
+ 	Log: Subject: Re: [PATCH] Callbacks for named captures (%+ and %-)
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Sun, 3 Jun 2007 20:24:59 +0000
+ 	     Message-ID: <51dd1af80706031324y5618d519p460da27a2e7fe712@mail.gmail.com>
+      Branch: perl
+@@ -9339,7 +9339,7 @@
+ ____________________________________________________________________________
+ [ 31244] By: rgs				   on 2007/05/20  12:58:53
+ 	Log: Subject: [PATCH] Minor perlreapi.pod cleanup
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Wed, 16 May 2007 16:38:44 +0000
+ 	     Message-ID: <51dd1af80705160938w13789b63m6d5f4710441ceac@mail.gmail.com>
+      Branch: perl
+@@ -9368,7 +9368,7 @@
+ ____________________________________________________________________________
+ [ 31241] By: rgs				   on 2007/05/20  12:48:01
+ 	Log: Subject: [PATCH] Don't use a regex match in lib/feature.pm
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Fri, 18 May 2007 20:16:53 +0000
+ 	     Message-ID: <51dd1af80705181316r15f65e45n55903de294565aa1@mail.gmail.com>
+      Branch: perl
+@@ -9764,7 +9764,7 @@
+ 	Log: Small fix to a previous patch on magic $<digit> variables.
+ 	     
+ 	     Subject: [PATCH]
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Thu, 10 May 2007 02:24:48 +0000
+ 	     Message-ID: <51dd1af80705091924q77c2ca23n30359779b96ab909@mail.gmail.com>
+      Branch: perl
+@@ -9790,7 +9790,7 @@
+ ____________________________________________________________________________
+ [ 31187] By: merijn				   on 2007/05/09  22:09:24
+ 	Log: Subject: [PATCH] Syntax error in Configure in blead
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Wed, 9 May 2007 20:30:04 +0000
+ 	     Message-ID: <51dd1af80705091330h1bb9b508g2154b03868b71d07@mail.gmail.com>
+      Branch: perl
+@@ -10085,7 +10085,7 @@
+ ____________________________________________________________________________
+ [ 31130] By: rgs				   on 2007/05/03  16:04:13
+ 	Log: Subject: [PATCH] FETCH/STORE/LENGTH callbacks for numbered capture variables
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Tue, 1 May 2007 23:58:44 +0000
+ 	     Message-ID: <51dd1af80705011658g1156e14cw4d2b21a8d772ed41@mail.gmail.com>
+      Branch: perl
+@@ -10173,7 +10173,7 @@
+ ____________________________________________________________________________
+ [ 31116] By: rgs				   on 2007/05/02  12:17:22
+ 	Log: Subject: [PATCH] When FETCHSIZE returns <0 perl segfaults
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Tue, 1 May 2007 21:06:47 +0000
+ 	     Message-ID: <51dd1af80705011406j7897772bm58e9c770183ef3ed@mail.gmail.com>
+      Branch: perl
+@@ -10261,7 +10261,7 @@
+ ____________________________________________________________________________
+ [ 31106] By: rgs				   on 2007/04/30  08:42:44
+ 	Log: Subject: Re: [PATCH] Cleanup of the regexp API
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Fri, 27 Apr 2007 02:22:25 +0000
+ 	     Message-ID: <51dd1af80704261922j3db0615wa86ccc4cb65b2713@mail.gmail.com>
+      Branch: perl
+@@ -11458,7 +11458,7 @@
+ 	   ! lib/Archive/Extract/t/src/y.zip.packed
+ ____________________________________________________________________________
+ [ 30922] By: rgs				   on 2007/04/12  14:27:23
+-	Log: Add the perlreapi man page, by Ã†var ArnfjÃ¶rÃ° Bjarmason
++	Log: Add the perlreapi man page, by ÃƒÂ†var ArnfjÃƒÂ¶rÃƒÂ° Bjarmason
+ 	     (largely from perlreguts)
+      Branch: perl
+ 	   + pod/perlreapi.pod
+@@ -11474,7 +11474,7 @@
+ 	   ! dump.c
+ ____________________________________________________________________________
+ [ 30920] By: rgs				   on 2007/04/12  13:57:49
+-	Log: Subject: Re: [PATCH] perlreguts.pod: use the unicode name for ß and show the codepoint
++	Log: Subject: Re: [PATCH] perlreguts.pod: use the unicode name for ÃŸ and show the codepoint
+ 	     From: avarab@gmail.com
+ 	     Date: Fri, 6 Apr 2007 21:41:57 +0000
+ 	     Message-ID: <51dd1af80704061441v4b972257ta4c95230bdbc47c5@mail.gmail.com>
+@@ -11751,7 +11751,7 @@
+ ____________________________________________________________________________
+ [ 30881] By: stevep				   on 2007/04/10  02:53:34
+ 	Log: Subject: Re: [PATCH] length() on magic capture variables
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Mon, 9 Apr 2007 22:02:42 +0000
+ 	     Message-ID: <51dd1af80704091502m19130c28y29e6e656516fabfd@mail.gmail.com>
+      Branch: perl
+@@ -11759,7 +11759,7 @@
+ ____________________________________________________________________________
+ [ 30880] By: stevep				   on 2007/04/10  02:49:07
+ 	Log: Subject: [PATCH] Test for the qr// construct
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Mon, 9 Apr 2007 20:36:58 +0000
+ 	     Message-ID: <51dd1af80704091336q335f0584o602b5e245bc210fe@mail.gmail.com>
+ 	     
+@@ -11809,7 +11809,7 @@
+ ____________________________________________________________________________
+ [ 30871] By: rgs				   on 2007/04/08  07:58:39
+ 	Log: Subject: [PATCH] RXf_WHITE never used due to small bug in regcomp.c
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Sat, 7 Apr 2007 00:17:05 +0000
+ 	     Message-ID: <51dd1af80704061717s44107fb9jf468ef28080d33a6@mail.gmail.com>
+      Branch: perl
+@@ -11950,7 +11950,7 @@
+ ____________________________________________________________________________
+ [ 30849] By: rgs				   on 2007/04/06  12:13:14
+ 	Log: Subject: Re: Proposed changes and to regular expression interfaces in core
+-	     From: "Ævar Arnfjörð Bjarmason" <avarab@gmail.com>
++	     From: "Ã†var ArnfjÃ¶rÃ° Bjarmason" <avarab@gmail.com>
+ 	     Date: Thu, 29 Mar 2007 22:52:49 +0000
+ 	     Message-ID: <51dd1af80703291552y1073bcb6r954b043eb68a4459@mail.gmail.com>
+      Branch: perl
+@@ -12969,7 +12969,7 @@
+ 	   ! pod/perlrun.pod
+ ____________________________________________________________________________
+ [ 30647] By: rgs				   on 2007/03/20  09:01:05
+-	Log: Subject: [PATCH] feel the the baÃŸ (encoding problems in the regex engine)
++	Log: Subject: [PATCH] feel the the baÃƒÂŸ (encoding problems in the regex engine)
+ 	     From: demerphq <demerphq@gmail.com>
+ 	     Date: Tue, 20 Mar 2007 01:40:34 +0100
+ 	     Message-ID: <9b18b3110703191740m6bf21942p6521f3016ed8092f@mail.gmail.com>
+@@ -13168,7 +13168,7 @@
+ ____________________________________________________________________________
+ [ 30594] By: nicholas				   on 2007/03/15  13:23:49
+ 	Log: Subject: Re: [Patch] Fix some of the tests of Storable on Perl 5.004
+-	     From: Sébastien Aperghis-Tramoni <saper@cpan.org>
++	     From: SÃ©bastien Aperghis-Tramoni <saper@cpan.org>
+ 	     Message-ID: <1173961567.45f93b5f0fc9f@imp.free.fr>
+ 	     Date: Thu, 15 Mar 2007 13:26:07 +0100
+      Branch: perl
+@@ -13266,7 +13266,7 @@
+ 	   ! gv.c
+ ____________________________________________________________________________
+ [ 30576] By: rgs				   on 2007/03/14  09:43:21
+-	Log: Patch by Sébastien Aperghis-Tramoni to avoid encoding
++	Log: Patch by SÃ©bastien Aperghis-Tramoni to avoid encoding
+ 	     everything that goes through Net::Cmd as UTF-8
+ 	     (regression as of Net::Cmd 2.27, see CPAN RT #24835)
+      Branch: perl
+@@ -14871,7 +14871,7 @@
+ 	   ! pod/perlpragma.pod
+ ____________________________________________________________________________
+ [ 30220] By: rgs				   on 2007/02/12  09:05:38
+-	Log: Document that m//k works, by Ævar Arnfjörð Bjarmason
++	Log: Document that m//k works, by Ã†var ArnfjÃ¶rÃ° Bjarmason
+      Branch: perl
+ 	   ! pod/perlop.pod
+ ____________________________________________________________________________
+@@ -20048,7 +20048,7 @@
+ [ 29258] By: rgs				   on 2006/11/13  11:17:10
+ 	Log: Parsing fix: it wasn't possible to call a function with a (_) prototype
+ 	     (that is, a function mimicing an unary op) without parentheses.
+-	     Bug reported by Ævar Arnfjörð Bjarmason.
++	     Bug reported by Ã†var ArnfjÃ¶rÃ° Bjarmason.
+      Branch: perl
+ 	   ! madly.act madly.tab madly.y perly.act perly.tab perly.y
+ 	   ! t/comp/uproto.t
+@@ -24099,7 +24099,7 @@
+ ____________________________________________________________________________
+ [ 28676] By: rgs				   on 2006/08/08  09:39:35
+ 	Log: Subject: [PATCH] Small precision about $SIG{__WARN__}
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Tue, 08 Aug 2006 11:17:58 +0200
+ 	     Message-ID: <1155028678.44d856c64fa0d@imp6-g19.free.fr>
+      Branch: perl
+@@ -25343,7 +25343,7 @@
+ ____________________________________________________________________________
+ [ 28503] By: stevep				   on 2006/07/07  18:38:01
+ 	Log: Subject: [PATCH] Test scripts for I18N::Langinfo and POSIX
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Fri, 07 Jul 2006 11:02:31 +0200
+ 	     Message-ID: <1152262951.44ae23272ffa0@imp3-g19.free.fr>
+ 	     
+@@ -25741,7 +25741,7 @@
+ ____________________________________________________________________________
+ [ 28450] By: rgs				   on 2006/06/29  15:53:43
+ 	Log: Subject: [PATCH] Small precision about \Q \E inside m//x
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Thu, 29 Jun 2006 17:46:57 +0200
+ 	     Message-ID: <1151596017.44a3f5f105205@imp1-g19.free.fr>
+      Branch: perl
+@@ -26236,7 +26236,7 @@
+ ____________________________________________________________________________
+ [ 28383] By: rgs				   on 2006/06/12  13:01:43
+ 	Log: Subject: Fw: CPAN Upload: S/SA/SAPER/Sys-Syslog-0.15.tar.gz
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Sun, 11 Jun 2006 02:30:54 +0200
+ 	     Message-ID: <1149985854.448b643e27a1f@imp5-g19.free.fr>
+      Branch: perl
+@@ -27419,7 +27419,7 @@
+ ____________________________________________________________________________
+ [ 28226] By: stevep				   on 2006/05/18  15:16:40
+ 	Log: Subject: [PATCH] Test script for DynaLoader
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Thu, 18 May 2006 16:46:00 +0200
+ 	     Message-ID: <1147963560.446c88a8891e1@imp1-g19.free.fr>
+      Branch: perl
+@@ -28213,7 +28213,7 @@
+ ____________________________________________________________________________
+ [ 28080] By: rgs				   on 2006/05/03  16:09:48
+ 	Log: Subject: -Dmad breaks a few tests
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Tue, 2 May 2006 01:37:03 +0200
+ 	     Message-Id: <64F8ECEA-D96B-11DA-AA80-000502F3279F@free.fr>
+ 	     
+@@ -35571,7 +35571,7 @@
+ 	   ! Porting/checkAUTHORS.pl
+ ____________________________________________________________________________
+ [ 26854] By: nicholas				   on 2006/01/14  12:25:15
+-	Log: Some reordering and one new address for Stéphane Payrard
++	Log: Some reordering and one new address for StÃ©phane Payrard
+      Branch: perl
+ 	   ! Porting/checkAUTHORS.pl
+ ____________________________________________________________________________
+@@ -35881,7 +35881,7 @@
+ ____________________________________________________________________________
+ [ 26782] By: stevep				   on 2006/01/11  12:25:24
+ 	Log: Subject: Fw: CPAN Upload: S/SA/SAPER/Sys-Syslog-0.13.tar.gz
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Wed, 11 Jan 2006 02:13:31 +0100
+ 	     Message-ID: <1136942011.43c45bbb82dce@imp1-g19.free.fr>
+      Branch: perl
+@@ -39424,7 +39424,7 @@
+ 	   ! lib/utf8_heavy.pl t/op/pat.t universal.c utf8.c
+ ____________________________________________________________________________
+ [ 26198] By: rgs				   on 2005/11/22  21:24:19
+-	Log: Notes in perlstyle about POD formatting, by Sébastien
++	Log: Notes in perlstyle about POD formatting, by SÃ©bastien
+ 	     Aperghis-Tramoni, with nits by chromatic and Randy W. Sims.
+      Branch: perl
+ 	   ! pod/perlstyle.pod
+@@ -40695,7 +40695,7 @@
+ [ 25990] By: nicholas				   on 2005/11/04  14:47:49
+ 	Log: Merge msgsnd, msgrcv with Perl_pp_shmwrite().
+ 	     "Perfection is achieved not when there's nothing more to add,
+-	     but when there's nothing left to remove" (Antoine de Saint-Exupéry)
++	     but when there's nothing left to remove" (Antoine de Saint-ExupÃ©ry)
+      Branch: perl
+ 	   ! mathoms.c opcode.h opcode.pl pp_sys.c
+ ____________________________________________________________________________
+@@ -41098,7 +41098,7 @@
+ ____________________________________________________________________________
+ [ 25927] By: nicholas				   on 2005/10/31  15:09:54
+ 	Log: Subject: [PATCH] Making ExtUtils::Constant compatible with Perl 5.004
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Message-ID: <1130712761.43654eb9cd9f7@imp4-g19.free.fr>
+ 	     Date: Sun, 30 Oct 2005 23:52:41 +0100
+ 	     
+@@ -41898,7 +41898,7 @@
+ ____________________________________________________________________________
+ [ 25802] By: rgs				   on 2005/10/19  07:52:20
+ 	Log: Subject: [PATCH] Adding documentation index to perlapi.pod and perlintern.pod
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Tue, 18 Oct 2005 22:22:57 +0200
+ 	     Message-ID: <1129666977.435559a10cb95@imp5-g19.free.fr>
+ 	     
+@@ -42827,7 +42827,7 @@
+ ____________________________________________________________________________
+ [ 25666] By: rgs				   on 2005/09/30  08:59:14
+ 	Log: Upgrade to XSLoader 0.05, plus a few doc nits,
+-	     by Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     by SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+      Branch: perl
+ 	   ! ext/DynaLoader/XSLoader_pm.PL ext/DynaLoader/t/XSLoader.t
+ ____________________________________________________________________________
+@@ -46955,7 +46955,7 @@
+ ____________________________________________________________________________
+ [ 24920] By: rgs				   on 2005/06/21  10:50:18
+ 	Log: Subject: [PATCH] ternary operator cond ? foo : bar being parsed as ?...?
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Fri, 17 Jun 2005 14:06:30 +0100
+ 	     Message-ID: <20050617130548.18776.qmail@lists.develooper.com>
+ 	     
+@@ -47399,7 +47399,7 @@
+ ____________________________________________________________________________
+ [ 24853] By: rgs				   on 2005/06/15  16:16:32
+ 	Log: Subject: sort optimization
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Mon, 06 Jun 2005 12:05:05 +0100
+ 	     Message-ID: <20050606110425.22941.qmail@lists.develooper.com>
+      Branch: perl
+@@ -47544,7 +47544,7 @@
+ ____________________________________________________________________________
+ [ 24832] By: rgs				   on 2005/06/14  08:52:46
+ 	Log: Subject: better assertion support
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Mon, 13 Jun 2005 16:48:01 +0100
+ 	     Message-ID: <20050613154719.29295.qmail@lists.develooper.com>
+      Branch: perl
+@@ -48056,7 +48056,7 @@
+ ____________________________________________________________________________
+ [ 24753] By: rgs				   on 2005/06/08  09:12:17
+ 	Log: Subject: Re: FindBin.pm: incomplete getcwd/cwd patch and SELinux (Strict policy)
+-	     From: José Pedro Oliveira <jpo@di.uminho.pt>
++	     From: JosÃ© Pedro Oliveira <jpo@di.uminho.pt>
+ 	     Date: Tue, 07 Jun 2005 21:07:42 +0100
+ 	     Message-ID: <42A5FE8E.3020608@di.uminho.pt>
+      Branch: perl
+@@ -48353,7 +48353,7 @@
+ ____________________________________________________________________________
+ [ 24708] By: rgs				   on 2005/06/05  11:14:41
+ 	Log: Subject: PATCH for [perl #36043] '@foo = sort { $a <=> $b } @bar' uses too much memory
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Jun 5, 2005 4:25 AM
+ 	     Message-ID: <20050605022436.21982.qmail@lists.develooper.com>
+      Branch: perl
+@@ -48385,7 +48385,7 @@
+ 	Log: Improve FindBin discovery of current directory, based on :
+ 	     
+ 	     Subject: FindBin.pm: incomplete getcwd/cwd patch? (#24375, #24379)
+-	     From: José Pedro Oliveira <jpo@di.uminho.pt>
++	     From: JosÃ© Pedro Oliveira <jpo@di.uminho.pt>
+ 	     Date: Thu, 12 May 2005 20:36:48 +0100
+ 	     Message-ID: <4283B050.6080805@di.uminho.pt>
+ 	     
+@@ -50463,7 +50463,7 @@
+ ____________________________________________________________________________
+ [ 24354] By: merijn				   on 2005/04/29  13:59:36
+ 	Log: Subject: [PATCH] Small patch to perlport.pod
+-	     From: Sébastien Aperghis-Tramoni <maddingue@free.fr>
++	     From: SÃ©bastien Aperghis-Tramoni <maddingue@free.fr>
+ 	     Date: Thu, 28 Apr 2005 02:24:04 +0200
+ 	     Message-Id: <D38E89F3-B77B-11D9-B91D-000502F3279F@free.fr>
+      Branch: perl
+@@ -54330,7 +54330,7 @@
+ 	   ! configure.com
+ ____________________________________________________________________________
+ [ 23714] By: nicholas				   on 2004/12/31  13:14:18
+-	Log: Bug in t/io/layers.t spotted by Ignasi Roca Carrió
++	Log: Bug in t/io/layers.t spotted by Ignasi Roca CarriÃ³
+      Branch: perl
+ 	   ! AUTHORS t/io/layers.t
+ ____________________________________________________________________________
+@@ -57938,7 +57938,7 @@
+ 	Log: Proposed patch + test case.
+ 
+ 	     Subject: [perl #30409] charnames.pm clobbers default variable
+-	     From: Marcel "Grünauer" (via RT) <perlbug-followup@perl.org>
++	     From: Marcel "GrÃ¼nauer" (via RT) <perlbug-followup@perl.org>
+ 	     Date: 22 Jun 2004 16:43:50 -0000
+ 	     Message-ID: <rt-3.0.9-30409-91174.12.8617678524438@perl.org>
+      Branch: perl
+@@ -71144,7 +71144,7 @@
+ ____________________________________________________________________________
+ [ 20202] By: jhi				   on 2003/07/24  13:12:08
+ 	Log: Subject: [patch] perldebug.pod clarification
+-	     From: Stéphane Payrard <stef@payrard.net>
++	     From: StÃ©phane Payrard <stef@payrard.net>
+ 	     Date: Mon, 21 Jul 2003 21:36:59 +0200
+ 	     Message-ID: <20030721193659.GC2722@stefp.dyndns.org>
+      Branch: perl
+@@ -72064,7 +72064,7 @@
+ [ 20003] By: rgs				   on 2003/07/05  07:45:16
+ 	Log: Allow to create more than one Shell object :
+ 	     Subject: [patch] Shell.pm fix
+-	     From: Stéphane Payrard <stef@payrard.net>
++	     From: StÃ©phane Payrard <stef@payrard.net>
+ 	     Date: Sat, 5 Jul 2003 01:16:50 +0200
+ 	     Message-ID: <20030704231650.GA19701@stefp.dyndns.org>
+      Branch: perl
+@@ -75613,7 +75613,7 @@
+ [ 19365] By: sky				   on 2003/04/28  16:30:03
+ 	Log: Subject: [PATCH] [perl #7592] Clarify what qw() does in scalar context
+ 	     From: Casey West <casey@geeknest.com>
+-	     Date: mŒn apr 28, 2003  16:00:05 Europe/Stockholm
++	     Date: mÂŒn apr 28, 2003  16:00:05 Europe/Stockholm
+ 	     Message-Id: <20030428140005.GC62281@geeknest.com>
+      Branch: perl
+ 	   ! pod/perlop.pod
+@@ -75621,7 +75621,7 @@
+ [ 19364] By: sky				   on 2003/04/28  16:20:43
+ 	Log: Subject: [PATCH] [patch #7514] Bug in perlop regex explination
+ 	     From: Casey West <casey@geeknest.com>
+-	     Date: mŒn apr 28, 2003  19:22:06 Europe/Stockholm
++	     Date: mÂŒn apr 28, 2003  19:22:06 Europe/Stockholm
+ 	     Message-Id: <20030428172206.GK62281@geeknest.com>
+      Branch: perl
+ 	   ! pod/perlop.pod
+@@ -76487,7 +76487,7 @@
+ 	   ! lib/Test/Harness/t/test-harness.t
+ ____________________________________________________________________________
+ [ 19194] By: rgs				   on 2003/04/12  21:21:04
+-	Log: Darwin/Rhapsody hints files updates by Wilfredo Sánchez
++	Log: Darwin/Rhapsody hints files updates by Wilfredo SÃ¡nchez
+      Branch: perl
+ 	   ! hints/darwin.sh hints/rhapsody.sh
+ ____________________________________________________________________________
+@@ -77622,7 +77622,7 @@
+ ____________________________________________________________________________
+ [ 19003] By: hv					   on 2003/03/17  01:23:02
+ 	Log: Subject: [perl #20724] Patch for dprofpp
+-	     From: Nicholas "Oxhøj" (via RT) <perlbug-followup@perl.org>
++	     From: Nicholas "OxhÃ¸j" (via RT) <perlbug-followup@perl.org>
+ 	     Date: 5 Feb 2003 08:41:17 -0000
+ 	     Message-Id: <rt-20724-50329.7.50247680562964@bugs6.perl.org>
+      Branch: perl
+@@ -78372,7 +78372,7 @@
+ ____________________________________________________________________________
+ [ 18843] By: rgs				   on 2003/03/06  21:59:02
+ 	Log: Make the -A switch work without an assertion name.
+-	     by Salvador Fandiño.
++	     by Salvador FandiÃ±o.
+      Branch: perl
+ 	   ! perl.c t/run/switch_A.t
+ ____________________________________________________________________________
+@@ -78455,7 +78455,7 @@
+ 	   ! ext/B/t/deparse.t
+ ____________________________________________________________________________
+ [ 18829] By: rgs				   on 2003/03/04  22:23:41
+-	Log: Patch by Salvador Fandiño to read the warning mask
++	Log: Patch by Salvador FandiÃ±o to read the warning mask
+ 	     returned by caller() and ${^WARNING_BITS} from
+ 	     $warnings::Bits{all} and not from the hardcoded core
+ 	     constant. (This mask could have been extended by
+@@ -78465,7 +78465,7 @@
+ ____________________________________________________________________________
+ [ 18828] By: rgs				   on 2003/03/04  20:49:59
+ 	Log: Subject: [PATCH] assertions
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Fri, 21 Feb 2003 17:26:16 +0000
+ 	     Message-ID: <3E566138.4090709@yahoo.com>
+ 	     and the complement : (with added comments)
+@@ -78480,7 +78480,7 @@
+ ____________________________________________________________________________
+ [ 18827] By: rgs				   on 2003/03/04  20:48:09
+ 	Log: Subject: [PATCH] assertions
+-	     From: Salvador Fandiño <sfandino@yahoo.com>
++	     From: Salvador FandiÃ±o <sfandino@yahoo.com>
+ 	     Date: Fri, 21 Feb 2003 17:26:16 +0000
+ 	     Message-ID: <3E566138.4090709@yahoo.com>
+ 	     and the complement : (with added comments)
+@@ -81903,7 +81903,7 @@
+ ____________________________________________________________________________
+ [ 18136] By: rgs				   on 2002/11/10  21:38:44
+ 	Log: Subject: t/run/runenv.t bug
+-	     From: Salvador "Fandiño" <sfandino@yahoo.com>
++	     From: Salvador "FandiÃ±o" <sfandino@yahoo.com>
+ 	     Date: Fri, 8 Nov 2002 08:07:13 -0800 (PST)
+ 	     Message-ID: <20021108160713.78109.qmail@web13409.mail.yahoo.com>
+      Branch: perl
+@@ -83167,7 +83167,7 @@
+ 	   ! t/lib/h2ph.pht utils/h2ph.PL
+ ____________________________________________________________________________
+ [ 17938] By: rgs				   on 2002/09/28  20:42:59
+-	Log: Email address change for Stéphane Payrard
++	Log: Email address change for StÃ©phane Payrard
+      Branch: perl
+ 	   ! AUTHORS
+ ____________________________________________________________________________
+@@ -83215,7 +83215,7 @@
+ ____________________________________________________________________________
+ [ 17931] By: hv					   on 2002/09/26  16:29:26
+ 	Log: Subject: [PATCH] [perl #10021] Fixing bareword usage under strict.pm
+-	     From: Kay_Röpke <kay@dolphin-services.de>
++	     From: Kay_RÃ¶pke <kay@dolphin-services.de>
+ 	     Date: Fri, 20 Sep 2002 16:09:08 +0200
+ 	     Message-Id: <8775B355-CCA2-11D6-AADE-000393414688@dolphin-services.de>
+      Branch: perl

@@ -1,0 +1,38 @@
+Tweak enc2xs to handle Debian @INC:  ignore missing directories,
+follow symlinks (/usr/share/perl/5.8 -> 5.8.4).
+
+diff -Naur --exclude=debian perl-5.10.0.orig/ext/Encode/bin/enc2xs perl-5.10.0/ext/Encode/bin/enc2xs
+--- perl-5.10.0.orig/ext/Encode/bin/enc2xs	2007-11-18 02:26:25.000000000 +1100
++++ perl-5.10.0/ext/Encode/bin/enc2xs	2007-11-26 03:08:02.000000000 +1100
+@@ -924,11 +924,11 @@
+ sub find_e2x{
+     eval { require File::Find; };
+     my (@inc, %e2x_dir);
+-    for my $inc (@INC){
++    for my $inc (grep -d, @INC){
+     push @inc, $inc unless $inc eq '.'; #skip current dir
+     }
+     File::Find::find(
+-         sub {
++         { wanted => sub {
+          my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+              $atime,$mtime,$ctime,$blksize,$blocks)
+              = lstat($_) or return;
+@@ -938,7 +938,7 @@
+              $e2x_dir{$File::Find::dir} ||= $mtime;
+          }
+          return;
+-         }, @inc);
++         }, follow => 1}, @inc);
+     warn join("\n", keys %e2x_dir), "\n";
+     for my $d (sort {$e2x_dir{$a} <=> $e2x_dir{$b}} keys %e2x_dir){
+     $_E2X = $d;
+@@ -1005,7 +1005,7 @@
+ 	    $LocalMod{$enc} ||= $mod;
+ 	}
+     };
+-    File::Find::find({wanted => $wanted}, @INC);
++    File::Find::find({wanted => $wanted, follow => 1}, grep -d, @INC);
+     $_ModLines = "";
+     for my $enc ( sort keys %LocalMod ) {
+         $_ModLines .=

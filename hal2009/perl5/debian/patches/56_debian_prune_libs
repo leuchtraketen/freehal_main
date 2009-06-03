@@ -1,0 +1,26 @@
+Prune the list of libs wanted to what we actually need.  We want to
+keep the dependencies on perl-base as small as possible, and some of
+the original list may be present on buildds (see Bug#128355).
+
+diff -Naur --exclude=debian perl-5.10.0.orig/Configure perl-5.10.0/Configure
+--- perl-5.10.0.orig/Configure	2007-11-18 02:26:25.000000000 +1100
++++ perl-5.10.0/Configure	2007-11-25 23:43:41.000000000 +1100
+@@ -1327,8 +1327,7 @@
+ : set usesocks on the Configure command line to enable socks.
+ : List of libraries we want.
+ : If anyone needs extra -lxxx, put those in a hint file.
+-libswanted="sfio socket bind inet nsl nm ndbm gdbm dbm db malloc dl dld ld sun"
+-libswanted="$libswanted m crypt sec util c cposix posix ucb bsd BSD"
++libswanted='gdbm gdbm_compat db dl m c crypt'
+ : We probably want to search /usr/shlib before most other libraries.
+ : This is only used by the lib/ExtUtils/MakeMaker.pm routine extliblist.
+ glibpth=`echo " $glibpth " | sed -e 's! /usr/shlib ! !'`
+@@ -21413,7 +21412,7 @@
+     ;;
+ *) case "$usedl" in
+     $define|true|[yY]*)
+-	    set X `echo " $libs " | sed -e 's@ -lndbm @ @' -e 's@ -lgdbm @ @' -e 's@ -ldbm @ @' -e 's@ -ldb @ @'` 
++	    set X `echo " $libs " | sed -e 's@ -lgdbm @ @' -e 's@ -lgdbm_compat @ @' -e 's@ -ldb @ @'` 
+ 	    shift
+ 	    perllibs="$*"
+ 	    ;;

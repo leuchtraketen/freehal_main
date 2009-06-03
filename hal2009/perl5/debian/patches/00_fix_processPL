@@ -1,0 +1,31 @@
+Revert part of upstream change 24524 to always use PERLRUNINST when
+building perl modules:  Some PDL demos expect blib to be implicitly
+searched.
+
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/MM_Unix.pm perl-5.10.0/lib/ExtUtils/MM_Unix.pm
+--- perl-5.10.0.orig/lib/ExtUtils/MM_Unix.pm	2007-11-18 02:26:24.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/MM_Unix.pm	2007-11-25 17:15:01.000000000 +1100
+@@ -3110,14 +3110,11 @@
+ 	    # pm_to_blib depends on then it can't depend on pm_to_blib
+ 	    # else we have a dependency loop.
+ 	    my $pm_dep;
+-	    my $perlrun;
+ 	    if( defined $self->{PM}{$target} ) {
+ 		$pm_dep  = '';
+-		$perlrun = 'PERLRUN';
+ 	    }
+ 	    else {
+ 		$pm_dep  = 'pm_to_blib';
+-		$perlrun = 'PERLRUNINST';
+ 	    }
+ 
+             $m .= <<MAKE_FRAG;
+@@ -3126,7 +3123,7 @@
+ 	\$(NOECHO) \$(NOOP)
+ 
+ $target :: $plfile $pm_dep
+-	\$($perlrun) $plfile $target
++	\$(PERLRUNINST) $plfile $target
+ MAKE_FRAG
+ 
+ 	}

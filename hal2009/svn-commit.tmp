@@ -1,0 +1,120 @@
++ added quality assurance tool
+-- Diese und die folgenden Zeilen werden ignoriert --
+
+M    hal2009-perl6-dummy.c
+M    hal2009-main.c
+M    hal2009-perl5.c
+M    hal2009-perl6.c
+M    scripts/update_zips
+D    lang_de/output.history
+D    lang_de/input.history
+M    lang_de/jeliza.pro
+M    hal2009-cgi.c
+M    MANIFEST
+M    hal2009-sql-sqlite.c
+M    hal2009-sql.c
+M    hal2009.c
+M    QA/FreeHALQA.pro
+M    QA/qa.h
+M    QA/qa.ui
+M    QA/qa.cpp
+M    QA/ui_qa.h
+M    QA/qa-c.c
+M    lang_en/facts.pro
+M    hal2009.h
+AM + gui-qt
+A  + gui-qt/ui_startup.h
+A  + gui-qt/src/boost
+A  + gui-qt/src/gui-qt/JElizaQt.cpp
+A  + gui-qt/src/gui-qt/JElizaQt.h
+A  + gui-qt/src/speech/speak_win.cpp
+A  + gui-qt/stuff
+A  + gui-qt/stuff/windows/libQtWebKit4.a
+A  + gui-qt/stuff/windows/libboost_wave-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtCore4.a
+A  + gui-qt/stuff/windows/libpthread-win.a
+A  + gui-qt/stuff/windows/boost.tgz
+A  + gui-qt/stuff/windows/libQtCored4.a
+A  + gui-qt/stuff/windows/libboost_thread-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtNetworkd4.a
+A  + gui-qt/stuff/windows/libQtSql4.a
+A  + gui-qt/stuff/windows/libqtmain.a
+A  + gui-qt/stuff/windows/liblibboost_date_time-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/liblibboost_unit_test_framework-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQt3Supportd4.a
+A  + gui-qt/stuff/windows/libQtSvgd4.a
+A  + gui-qt/stuff/windows/libqtmaind.a
+A  + gui-qt/stuff/windows/libQtDesignerComponents4.a
+A  + gui-qt/stuff/windows/liblibboost_graph-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/liblibboost_prg_exec_monitor-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtUiTools.a
+A  + gui-qt/stuff/windows/libboost_system-mgw-mt-1_37.a
+A  + gui-qt/stuff/windows/libQtCLucene4.a
+A  + gui-qt/stuff/windows/libboost_unit_test_framework-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtTestd4.a
+A  + gui-qt/stuff/windows/liblibboost_serialization-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtOpenGL4.a
+A  + gui-qt/stuff/windows/libQtScriptTools4.a
+A  + gui-qt/stuff/windows/libboost_thread-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtOpenGLd4.a
+A  + gui-qt/stuff/windows/libQtHelp4.a
+A  + gui-qt/stuff/windows/libQtWebKitd4.a
+A  + gui-qt/stuff/windows/liblibboost_program_options-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtHelpd4.a
+A  + gui-qt/stuff/windows/libQt3Support4.a
+A  + gui-qt/stuff/windows/libQtSvg4.a
+A  + gui-qt/stuff/windows/libboost_iostreams-mgw-mt-1_37.a
+A  + gui-qt/stuff/windows/libQtXml4.a
+A  + gui-qt/stuff/windows/libboost_thread-mgw-mt-1_37.a
+A  + gui-qt/stuff/windows/libQtXmld4.a
+A  + gui-qt/stuff/windows/libQtScript4.a
+A  + gui-qt/stuff/windows/libboost_program_options-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtScriptd4.a
+A  + gui-qt/stuff/windows/libQtAssistantClient4.a
+A  + gui-qt/stuff/windows/libboost_system-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtAssistantClientd4.a
+A  + gui-qt/stuff/windows/libboost_filesystem-mgw-mt-1_37.a
+A  + gui-qt/stuff/windows/libQtTest4.a
+A  + gui-qt/stuff/windows/libQtXmlPatterns4.a
+A  + gui-qt/stuff/windows/libboost_prg_exec_monitor-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtScriptToolsd4.a
+A  + gui-qt/stuff/windows/libboost_iostreams-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/liblibboost_system-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/liblibboost_test_exec_monitor-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libboost_system-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/liblibboost_signals-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libboost_filesystem-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/liblibboost_wave-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtDesignerComponentsd4.a
+A  + gui-qt/stuff/windows/libQtUiToolsd.a
+A  + gui-qt/stuff/windows/libboost_date_time-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/liblibboost_regex-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libQtCLucened4.a
+A  + gui-qt/stuff/windows/libQtGui4.a
+A  + gui-qt/stuff/windows/libboost_signals-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtXmlPatternsd4.a
+A  + gui-qt/stuff/windows/libboost_iostreams-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/libboost_graph-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtGuid4.a
+A  + gui-qt/stuff/windows/libboost_wserialization-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtNetwork4.a
+A  + gui-qt/stuff/windows/libQtDesigner4.a
+A  + gui-qt/stuff/windows/libboost_serialization-mgw-mt-1_37.dll
+A  + gui-qt/stuff/windows/libQtSqld4.a
+A  + gui-qt/stuff/windows/QtSvg4.dll
+A  + gui-qt/stuff/windows/libQtDesignerd4.a
+A  + gui-qt/stuff/windows/liblibboost_wserialization-mgw-mt-1_37.lib
+A  + gui-qt/stuff/windows/liblibboost_iostreams-mgw-mt-1_37.lib
+A  + gui-qt/scripts
+A  + gui-qt/ui_view.h
+A  + gui-qt/ui_jeliza.h
+A  + gui-qt/gui-qt.pro
+A  + gui-qt/ui_scan.h
+A  + gui-qt/ui_changelog.h
+A  + gui-qt/ui_help.h
+A  + gui-qt/ui_connect.h
+A  + gui-qt/ui_ee.h
+A  + gui-qt/ui_db_edit.h
+A  + gui-qt/Makefile
+A  + gui-qt/ui_options.h
+M    sum.hal

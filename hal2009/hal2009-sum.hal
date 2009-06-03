@@ -1,0 +1,132 @@
+define action sum with var lang, var path, var text do
+    #print "Summarizing text:"
+    #print new line
+    #print "    "
+    #print var text
+    #print new line
+    set new var size_before to length with var text
+
+    #do regex using var text: / (sehr|eher|aber|bitte|danke|trotzdem) /, " ", :global:i
+    #do regex using var text: / (und|and|oder|or) /, ", ", :global:i
+    #do regex using var text: / (ein.?.?.?) /, " ", :global:i
+
+    do regex using var text: /Szene./, "Szene ", :global:i
+    do regex using var text: /\n(Der|die|das) (.+?)\./, "\n$1.", :global:i
+    do regex using var text: /\n/, "NEWLINE", :global
+    do regex using var text: /[?]/, "?QUES", :global
+    do regex using var text: /\r/, "", :global
+    do regex using var text: /(NEWLINE<[A-Za-z]>* <[A-Za-z]>*)[.]/, "$0$1STOP", :global:i
+    do regex using var text: /(NEWLINE<[A-Za-z]>*)[.]/, "$0$1STOP", :global:i
+#    print var text
+
+    set new array sentences to split using /((<[.!:;)(]> )|\n|NEWLINE|QUES)/gm, var text
+    set var text to "- "
+    set new var middle_noun_count to 1
+    for each new var sentence in array sentences do
+        do regex using var sentence: /^\s*/, "", :global
+        set new array nouns to split using /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/, lcfirst(var sentence)
+        set var middle_noun_count to ( var middle_noun_count + items of array nouns ) / 2
+    done
+    set new var person to ''
+    for each new var sentence in array sentences do
+        if var sentence matches /STOP/ do
+            set new array parts to split with /STOP\s?/, var sentence
+            if not var person matches from array parts item [ 0 ] do
+                set var text to var text concat "\n\n" concat var person concat ":"
+            done
+            set var person to from array parts item [ 0 ]
+            set var sentence to from array parts item [ 1 ]
+        done
+##        if var person and not var sentence matches /Aufzug|Auftritt/ do
+##            set var sentence to var person concat ":\t" concat var sentence
+##        done
+
+        do regex using var sentence: /(^|\s)ich(\s|$)/, "$0var person$1", :global:i
+        do regex using var sentence: /(^|\s)mich(\s|$)/, "$0var person$1", :global:i
+
+        if var sentence matches / (ist|bin|sind|seid|bist|waren|war|warst) / do
+            set var text to var text concat "\n- " concat var sentence
+            go to next
+        done
+        if var sentence matches / (soll|muss|darf|kann|Szene|mein|geh)/ do
+            set var text to var text concat "\n- " concat var sentence
+            go to next
+        done
+        if var sentence matches / (in|im|an|am|bei|von) / do
+            set var text to var text concat "\n- " concat var sentence
+            go to next
+        done
+        if var sentence matches /(morgen|Morgen|Tag|tag|doch|Doch|viel)/ do
+            set var text to var text concat "\n- " concat var sentence
+            go to next
+        done
+        if var sentence matches /(Ein)|([?])/ do
+            set var text to var text concat "\n- " concat var sentence
+            go to next
+        done
+
+        set new array nouns to split using /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/, var sentence
+        set new array words to split using /\s/, var sentence
+        set new array clauses to split using /<[,]> /, var sentence
+        if is an empty array clauses do
+            go to next
+        done
+
+        if lc(var sentence) matches /aufzug/ do
+            set var text to var text concat "\n\n" concat "==" concat var sentence concat "==" concat "\n"
+        done
+        if lc(var sentence) matches /auftritt/ do
+            set var text to var text concat "\n\n" concat "===" concat var sentence concat "===" concat "\n"
+        done
+
+        if (( items of array words ) / ( items of array clauses )) <= 2 or (( items of array words ) / ( items of array clauses )) >= 15 do
+            go to next
+        done
+        if ( items of array words ) <= 2 do
+            go to next
+        done
+        if lc( " " concat var sentence concat " " ) matches /^ das/ do
+            go to next
+        done
+        if not lc( " " concat var sentence concat " " ) matches / (ist|bin|bist|habe|hast|hat|macht|tut|tun|machen|mache|kann|soll|sollen) / do
+            go to next
+        done
+        if ( items of array nouns ) <= var middle_noun_count + 0.5 do
+            go to next
+        done
+
+        set var sentence to ""
+        for each new var clause in array clauses do
+            if lc(var clause) matches /(\s|^)sollt/ do
+                go to next
+            done
+            if var sentence do
+                set var sentence to var sentence concat ", "
+            done
+            else do
+                set var clause to ucfirst with var clause
+            done
+            set var sentence to var sentence concat var clause
+        done
+        do regex using var sentence: /^\s/, "", :global
+        
+
+        if length(var sentence) > 10 do
+            set var text to var text concat "\n- " concat var sentence
+        done
+    done
+
+    set new var size_after to length with var text
+    print "Summarized text."
+    print new line
+    print "Reduced from "
+    print var size_before
+    print " characters to "
+    print var size_after
+    print " characters ("
+    print 100 / var size_before * var size_after
+    print "%)"
+    print new line
+    print var text
+    print new line
+done

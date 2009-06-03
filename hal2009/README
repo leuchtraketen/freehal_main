@@ -1,0 +1,41 @@
+This file is part of FreeHAL 2009.
+
+Copyright(c) 2006, 2007, 2008, 2009 Tobias Schulz and contributors.
+http://freehal.org
+ 
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 3
+of the License, or any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+
+FreeHAL 2009 is a reimplementation of FreeHAL, which was developed 
+from 2006 to 2008. It aims to /just work/, without requiring the user to
+know how FreeHAL works internally.
+
+To compile and install FreeHAL, you need:
+
+    * cmake
+    * perl 5
+    * and optionally parrot with rakudo perl (an implementation of perl 6)
+
+To compile the command line version of FreeHAL, invoke:
+
+    $ cmake .
+    $ make hal2009
+
+Then, execute FreeHAL 2009 by running:
+
+    $ ./hal2009 -i "A german sentence you want to say to FreeHAL"
+
+or:
+
+    $ ./hal2009 -s # This starts a shell where you can type in sentences
+
+English will be the next language which is going to be ported from the old
+FreeHAL to FreeHAL 2009.

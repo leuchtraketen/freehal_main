@@ -1,0 +1,16 @@
+Some modules which are included in core set INSTALLDIRS => 'perl'
+explicitly in Makefile.PL.  This makes sense for the normal @INC
+ordering, but not ours.  Provide a sensible default.
+
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/CPAN/FirstTime.pm perl-5.10.0/lib/CPAN/FirstTime.pm
+--- perl-5.10.0.orig/lib/CPAN/FirstTime.pm	2007-11-18 02:26:23.000000000 +1100
++++ perl-5.10.0/lib/CPAN/FirstTime.pm	2007-11-26 02:48:14.000000000 +1100
+@@ -940,7 +940,7 @@
+     }
+ 
+     if (!$matcher or 'makepl_arg make_arg' =~ /$matcher/) {
+-        my_dflt_prompt(makepl_arg => "", $matcher);
++        my_dflt_prompt(makepl_arg => "INSTALLDIRS=site", $matcher);
+         my_dflt_prompt(make_arg => "", $matcher);
+     }
+ 

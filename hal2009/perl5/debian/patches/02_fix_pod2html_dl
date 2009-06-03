@@ -1,0 +1,424 @@
+Fix issue with (nested) definition lists in lib/Pod/Html.pm
+- <dt> tags are not closed
+- generated code contains spurious </li> closing tags
+- when other (definition) lists are nested in a definition list, the
+  indentation of sublevels gets messed up because of incorrect
+  placement of <dt> tags
+
+http://rt.perl.org/rt3/Public/Bug/Display.html?id=45211
+
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/Pod/Html.pm perl-5.10.0/lib/Pod/Html.pm
+--- perl-5.10.0.orig/lib/Pod/Html.pm	2007-11-18 02:26:23.000000000 +1100
++++ perl-5.10.0/lib/Pod/Html.pm	2007-11-25 22:17:02.000000000 +1100
+@@ -246,8 +246,8 @@
+ my $Doindex;
+ 
+ my $Backlink;
+-my($Listlevel, @Listend);
+-my $After_Lpar;
++my($Listlevel, @Listtype);
++my $ListNewTerm;
+ use vars qw($Ignore);  # need to localize it later.
+ 
+ my(%Items_Named, @Items_Seen);
+@@ -286,7 +286,7 @@
+     $Htmldir = "";	    	# The directory to which the html pages
+ 				# will (eventually) be written.
+     $Htmlfile = "";		# write to stdout by default
+-    $Htmlfileurl = "" ;		# The url that other files would use to
++    $Htmlfileurl = "";		# The url that other files would use to
+ 				# refer to this file.  This is only used
+ 				# to make relative urls that point to
+ 				# other files.
+@@ -302,8 +302,9 @@
+     $Doindex = 1;   	    	# non-zero if we should generate an index
+     $Backlink = '';		# text for "back to top" links
+     $Listlevel = 0;		# current list depth
+-    @Listend = ();		# the text to use to end the list.
+-    $After_Lpar = 0;            # set to true after a par in an =item
++    @Listtype = ();		# list types for open lists
++    $ListNewTerm = 0;		# indicates new term in definition list; used
++    				# to correctly open/close <dd> tags
+     $Ignore = 1;		# whether or not to format text.  we don't
+ 				#   format text until we hit our first pod
+ 				#   directive.
+@@ -519,7 +520,6 @@
+ 
+     # now convert this file
+     my $after_item;             # set to true after an =item
+-    my $need_dd = 0;
+     warn "Converting input file $Podfile\n" if $Verbose;
+     foreach my $i (0..$#poddata){
+ 	$_ = $poddata[$i];
+@@ -527,7 +527,6 @@
+ 	if (/^(=.*)/s) {	# is it a pod directive?
+ 	    $Ignore = 0;
+ 	    $after_item = 0;
+-	    $need_dd = 0;
+ 	    $_ = $1;
+ 	    if (/^=begin\s+(\S+)\s*(.*)/si) {# =begin
+ 		process_begin($1, $2);
+@@ -543,12 +542,12 @@
+ 		if (/^=(head[1-6])\s+(.*\S)/s) {	# =head[1-6] heading
+ 		    process_head( $1, $2, $Doindex && $index );
+ 		} elsif (/^=item\s*(.*\S)?/sm) {	# =item text
+-		    $need_dd = process_item( $1 );
++		    process_item( $1 );
+ 		    $after_item = 1;
+ 		} elsif (/^=over\s*(.*)/) {		# =over N
+ 		    process_over();
+ 		} elsif (/^=back/) {		# =back
+-		    process_back($need_dd);
++		    process_back();
+ 		} elsif (/^=for\s+(\S+)\s*(.*)/si) {# =for
+ 		    process_for($1,$2);
+ 		} else {
+@@ -563,8 +562,14 @@
+ 	    next if $Ignore;
+ 	    next if @Begin_Stack && $Begin_Stack[-1] ne 'html';
+ 	    print HTML and next if @Begin_Stack && $Begin_Stack[-1] eq 'html';
+-	    print HTML "<dd>\n" if $need_dd;
+ 	    my $text = $_;
++
++	    # Open tag for definition list as we have something to put in it
++	    if( $ListNewTerm ){
++		print HTML "<dd>\n";
++		$ListNewTerm = 0;
++	    }
++
+ 	    if( $text =~ /\A\s+/ ){
+ 		process_pre( \$text );
+ 	        print HTML "<pre>\n$text</pre>\n";
+@@ -594,12 +599,8 @@
+ 		}
+ 		## end of experimental
+ 
+-		if( $after_item ){
+-		    $After_Lpar = 1;
+-		}
+ 		print HTML "<p>$text</p>\n";
+ 	    }
+-	    print HTML "</dd>\n" if $need_dd;
+ 	    $after_item = 0;
+ 	}
+     }
+@@ -1074,12 +1075,12 @@
+ 
+ 	# figure out what kind of item it is.
+ 	# Build string for referencing this item.
+-	if ( $txt =~ /\A=item\s+\*\s*(.*)\Z/s ) { # bullet
++	if ( $txt =~ /\A=item\s+\*\s*(.*)\Z/s ) { # bulleted list
+ 	    next unless $1;
+ 	    $item = $1;
+         } elsif( $txt =~ /\A=item\s+(?>\d+\.?)\s*(.*)\Z/s ) { # numbered list
+ 	    $item = $1;
+-	} elsif( $txt =~ /\A=item\s+(.*)\Z/s ) { # plain item
++	} elsif( $txt =~ /\A=item\s+(.*)\Z/s ) { # definition list
+ 	    $item = $1;
+ 	} else {
+ 	    next;
+@@ -1099,12 +1100,7 @@
+     $tag =~ /head([1-6])/;
+     my $level = $1;
+ 
+-    if( $Listlevel ){
+-	warn "$0: $Podfile: unterminated list at =head in paragraph $Paragraph.  ignoring.\n" unless $Quiet;
+-        while( $Listlevel ){
+-            process_back();
+-        }
+-    }
++    finish_list();
+ 
+     print HTML "<p>\n";
+     if( $level == 1 && ! $Top ){
+@@ -1143,19 +1139,32 @@
+         $name = anchorify($name);
+ 	print HTML qq{<a name="$name" class="item">}, process_text( \$otext ), '</a>';
+     }
+-    print HTML "</strong>\n";
++    print HTML "</strong>";
+     undef( $EmittedItem );
+ }
+ 
+-sub emit_li {
++sub new_listitem {
+     my( $tag ) = @_;
++    # Open tag for definition list as we have something to put in it
++    if( ($tag ne 'dl') && ($ListNewTerm) ){
++	print HTML "<dd>\n";
++	$ListNewTerm = 0;
++    }
++
+     if( $Items_Seen[$Listlevel]++ == 0 ){
+-	push( @Listend, "</$tag>" );
++	# start of new list
++	push( @Listtype, "$tag" );
+ 	print HTML "<$tag>\n";
++    } else {
++	# if this is not the first item, close the previous one
++	if ( $tag eq 'dl' ){
++	    print HTML "</dd>\n" unless $ListNewTerm;
++	} else {
++	    print HTML "</li>\n";
++	}
+     }
+-    my $emitted = $tag eq 'dl' ? 'dt' : 'li';
+-    print HTML "<$emitted>";
+-    return $emitted;
++    my $opentag = $tag eq 'dl' ? 'dt' : 'li';
++    print HTML "<$opentag>";
+ }
+ 
+ #
+@@ -1163,7 +1172,6 @@
+ #
+ sub process_item {
+     my( $otext ) = @_;
+-    my $need_dd = 0; # set to 1 if we need a <dd></dd> after an item
+ 
+     # lots of documents start a list without doing an =over.  this is
+     # bad!  but, the proper thing to do seems to be to just assume
+@@ -1173,43 +1181,41 @@
+ 	process_over();
+     }
+ 
+-    # formatting: insert a paragraph if preceding item has >1 paragraph
+-    if( $After_Lpar ){
+-	print HTML $need_dd ? "</dd>\n" : "</li>\n" if $After_Lpar;
+-	$After_Lpar = 0;
+-    }
+-
+     # remove formatting instructions from the text
+     my $text = depod( $otext );
+ 
+-    my $emitted; # the tag actually emitted, used for closing
+-
+     # all the list variants:
+     if( $text =~ /\A\*/ ){ # bullet
+-        $emitted = emit_li( 'ul' );
++        new_listitem( 'ul' );
+         if ($text =~ /\A\*\s+(\S.*)\Z/s ) { # with additional text
+             my $tag = $1;
+             $otext =~ s/\A\*\s+//;
+             emit_item_tag( $otext, $tag, 1 );
++            print HTML "\n";
+         }
+ 
+     } elsif( $text =~ /\A\d+/ ){ # numbered list
+-        $emitted = emit_li( 'ol' );
++        new_listitem( 'ol' );
+         if ($text =~ /\A(?>\d+\.?)\s*(\S.*)\Z/s ) { # with additional text
+             my $tag = $1;
+             $otext =~ s/\A\d+\.?\s*//;
+             emit_item_tag( $otext, $tag, 1 );
++            print HTML "\n";
+         }
+ 
+     } else {			# definition list
+-        $emitted = emit_li( 'dl' );
++        # new_listitem takes care of opening the <dt> tag
++        new_listitem( 'dl' );
+         if ($text =~ /\A(.+)\Z/s ){ # should have text
+             emit_item_tag( $otext, $text, 1 );
++	    # write the definition term and close <dt> tag
++	    print HTML "</dt>\n";
+         }
+-        $need_dd = 1;
++        # trigger opening a <dd> tag for the actual definition; will not
++        # happen if next paragraph is also a definition term (=item)
++        $ListNewTerm = 1;
+     }
+     print HTML "\n";
+-    return $need_dd;
+ }
+ 
+ #
+@@ -1219,30 +1225,31 @@
+     # start a new list
+     $Listlevel++;
+     push( @Items_Seen, 0 );
+-    $After_Lpar = 0;
+ }
+ 
+ #
+ # process_back - process a pod back tag and convert it to HTML format.
+ #
+ sub process_back {
+-    my $need_dd = shift;
+     if( $Listlevel == 0 ){
+ 	warn "$0: $Podfile: unexpected =back directive in paragraph $Paragraph.  ignoring.\n" unless $Quiet;
+ 	return;
+     }
+ 
+-    # close off the list.  note, I check to see if $Listend[$Listlevel] is
++    # close off the list.  note, I check to see if $Listtype[$Listlevel] is
+     # defined because an =item directive may have never appeared and thus
+-    # $Listend[$Listlevel] may have never been initialized.
++    # $Listtype[$Listlevel] may have never been initialized.
+     $Listlevel--;
+-    if( defined $Listend[$Listlevel] ){
+-	print HTML $need_dd ? "</dd>\n" : "</li>\n" if $After_Lpar;
+-	print HTML $Listend[$Listlevel];
+-        print HTML "\n";
+-        pop( @Listend );
++    if( defined $Listtype[$Listlevel] ){
++        if ( $Listtype[$Listlevel] eq 'dl' ){
++            print HTML "</dd>\n" unless $ListNewTerm;
++        } else {
++            print HTML "</li>\n";
++        }
++        print HTML "</$Listtype[$Listlevel]>\n";
++        pop( @Listtype );
++        $ListNewTerm = 0;
+     }
+-    $After_Lpar = 0;
+ 
+     # clean up item count
+     pop( @Items_Seen );
+@@ -2025,9 +2032,11 @@
+ # after the entire pod file has been read and converted.
+ #
+ sub finish_list {
+-    while ($Listlevel > 0) {
+-	print HTML "</dl>\n";
+-	$Listlevel--;
++    if( $Listlevel ){
++	warn "$0: $Podfile: unterminated list(s) at =head in paragraph $Paragraph.  ignoring.\n" unless $Quiet;
++	while( $Listlevel ){
++            process_back();
++        }
+     }
+ }
+ 
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/Pod/t/htmllink.t perl-5.10.0/lib/Pod/t/htmllink.t
+--- perl-5.10.0.orig/lib/Pod/t/htmllink.t	2007-11-18 02:26:23.000000000 +1100
++++ perl-5.10.0/lib/Pod/t/htmllink.t	2007-11-25 22:17:02.000000000 +1100
+@@ -108,24 +108,21 @@
+ <h2><a name="section_three">section three</a></h2>
+ <p>This is section three.</p>
+ <dl>
+-<dt><strong><a name="item1" class="item">item1</a></strong>
++<dt><strong><a name="item1" class="item">item1</a></strong></dt>
+ 
+ <dd>
+ <p>This is item one.</p>
+ </dd>
+-</li>
+-<dt><strong><a name="item_2" class="item">item 2</a></strong>
++<dt><strong><a name="item_2" class="item">item 2</a></strong></dt>
+ 
+ <dd>
+ <p>This is item two.</p>
+ </dd>
+-</li>
+-<dt><strong><a name="item_three" class="item">item three</a></strong>
++<dt><strong><a name="item_three" class="item">item three</a></strong></dt>
+ 
+ <dd>
+ <p>This is item three.</p>
+ </dd>
+-</li>
+ </dl>
+ 
+ </body>
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/Pod/t/htmlview.pod perl-5.10.0/lib/Pod/t/htmlview.pod
+--- perl-5.10.0.orig/lib/Pod/t/htmlview.pod	2007-11-18 02:26:23.000000000 +1100
++++ perl-5.10.0/lib/Pod/t/htmlview.pod	2007-11-25 22:17:02.000000000 +1100
+@@ -110,7 +110,7 @@
+ 
+ =head1 TESTING FOR AND BEGIN
+ 
+-=for html    <br>
++=for html    <br />
+ <p>
+ blah blah
+ </p>
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/Pod/t/htmlview.t perl-5.10.0/lib/Pod/t/htmlview.t
+--- perl-5.10.0.orig/lib/Pod/t/htmlview.t	2007-11-18 02:26:23.000000000 +1100
++++ perl-5.10.0/lib/Pod/t/htmlview.t	2007-11-25 22:17:02.000000000 +1100
+@@ -86,17 +86,15 @@
+ <h2><a name="new__"><code>new()</code></a></h2>
+ <p>Constructor method.  Accepts the following config options:</p>
+ <dl>
+-<dt><strong><a name="foo" class="item">foo</a></strong>
++<dt><strong><a name="foo" class="item">foo</a></strong></dt>
+ 
+ <dd>
+ <p>The foo item.</p>
+ </dd>
+-</li>
+-<dt><strong><a name="bar" class="item">bar</a></strong>
++<dt><strong><a name="bar" class="item">bar</a></strong></dt>
+ 
+ <dd>
+ <p>The bar item.</p>
+-</dd>
+ <p>This is a list within a list</p>
+ <ul>
+ <li>
+@@ -106,30 +104,36 @@
+ <p>The waz item.</p>
+ </li>
+ </ul>
+-<dt><strong><a name="baz" class="item">baz</a></strong>
++</dd>
++<dt><strong><a name="baz" class="item">baz</a></strong></dt>
+ 
+ <dd>
+ <p>The baz item.</p>
+ </dd>
+-</li>
+ </dl>
+ <p>Title on the same line as the =item + * bullets</p>
+ <ul>
+ <li><strong><a name="black_cat" class="item"><code>Black</code> Cat</a></strong>
+ 
++</li>
+ <li><strong><a name="sat_on_the" class="item">Sat <em>on</em>&nbsp;the</a></strong>
+ 
++</li>
+ <li><strong><a name="mat" class="item">Mat&lt;!&gt;</a></strong>
+ 
++</li>
+ </ul>
+ <p>Title on the same line as the =item + numerical bullets</p>
+ <ol>
+ <li><strong><a name="cat" class="item">Cat</a></strong>
+ 
++</li>
+ <li><strong><a name="sat" class="item">Sat</a></strong>
+ 
++</li>
+ <li><strong><a name="mat2" class="item">Mat</a></strong>
+ 
++</li>
+ </ol>
+ <p>No bullets, no title</p>
+ <dl>
+@@ -137,17 +141,14 @@
+ <dd>
+ <p>Cat</p>
+ </dd>
+-</li>
+ <dt>
+ <dd>
+ <p>Sat</p>
+ </dd>
+-</li>
+ <dt>
+ <dd>
+ <p>Mat</p>
+ </dd>
+-</li>
+ </dl>
+ <p>
+ </p>
+@@ -157,7 +158,7 @@
+ </p>
+ <hr />
+ <h1><a name="testing_for_and_begin">TESTING FOR AND BEGIN</a></h1>
+-<br>
++<br />
+ <p>
+ blah blah
+ </p><p>intermediate text</p>

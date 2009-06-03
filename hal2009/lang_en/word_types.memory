@@ -1,0 +1,934 @@
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+you:
+  type: n
+are:
+  type: vt
+fine:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+how:
+  type: questionword
+are:
+  type: vt
+you:
+  type: n
+Who:
+  type: questionword
+Who:
+  type: questionword
+How:
+  type: questionword
+must:
+  type: vt
+it:
+  type: n
+be:
+  type: vt
+be:
+  type: vt
+f:
+  type: n
+is:
+  type: vt
+marcenaria:
+  type: n
+salão:
+  type: n
+de:
+  type: n
+beleza:
+  type: n
+casa:
+  type: n
+grande:
+  type: n
+pesca:
+  type: n
+pé:
+  type: n
+goiaba:
+  type: n
+boi:
+  type: n
+pasto:
+  type: n
+loja:
+  type: n
+sofá:
+  type: n
+feira:
+  type: n
+livre:
+  type: n
+posto:
+  type: n
+policial:
+  type: n
+aniversário:
+  type: n
+criança:
+  type: n
+intestino:
+  type: n
+relicario:
+  type: n
+pacote:
+  type: n
+arroz:
+  type: n
+alambique:
+  type: n
+armario:
+  type: n
+cozinha:
+  type: n
+coordenador:
+  type: n
+coordenadoria:
+  type: n
+bando:
+  type: n
+maconheiro:
+  type: n
+centro:
+  type: n
+pesquisa:
+  type: n
+almofada:
+  type: n
+banca:
+  type: n
+jornais:
+  type: n
+lar:
+  type: n
+oficina:
+  type: n
+clips:
+  type: n
+porta:
+  type: n
+coruja:
+  type: n
+roupa:
+  type: n
+mesa:
+  type: n
+restaurante:
+  type: n
+automóvel:
+  type: n
+barraca:
+  type: n
+praia:
+  type: n
+pista:
+  type: n
+asfaltada:
+  type: n
+no:
+  type: n
+bolso:
+  type: n
+do:
+  type: vt
+paleto:
+  type: n
+antiguidades:
+  type: n
+biblioteca:
+  type: n
+biblioteca:
+  type: n
+ferro:
+  type: n
+velho:
+  type: n
+flor:
+  type: n
+garrafa:
+  type: n
+vinho:
+  type: n
+diretoria:
+  type: n
+radar:
+  type: n
+aeroporto:
+  type: n
+escoteiro:
+  type: n
+acampamento:
+  type: n
+metre:
+  type: n
+pizza:
+  type: n
+arvore:
+  type: n
+comida:
+  type: n
+caipirinha:
+  type: n
+jaboticaba:
+  type: n
+jaboticabas:
+  type: n
+perfume:
+  type: n
+perfumaria:
+  type: n
+garçom:
+  type: n
+bar:
+  type: adj
+cafe:
+  type: n
+toalha:
+  type: n
+banho:
+  type: n
+banheiro:
+  type: n
+fruta:
+  type: n
+academia:
+  type: n
+evento:
+  type: n
+impressora:
+  type: n
+laser:
+  type: n
+escritório:
+  type: n
+hóspede:
+  type: n
+hotel:
+  type: n
+jardim:
+  type: n
+farda:
+  type: n
+militar:
+  type: n
+chupeta:
+  type: n
+s:
+  type: n
+a:
+  type: n
+padaria:
+  type: n
+televisão:
+  type: n
+sala:
+  type: n
+assistir:
+  type: n
+bibelô:
+  type: n
+o:
+  type: n
+manta:
+  type: n
+con:
+  type: n
+artist:
+  type: n
+person:
+  type: n
+who:
+  type: questionword
+very:
+  type: n
+good:
+  type: n
+at:
+  type: n
+at:
+  type: n
+confidence:
+  type: n
+scams:
+  type: n
+Jesus:
+  type: n
+short:
+  type: n
+name:
+  type: n
+for:
+  type: prep
+of:
+  type: prep
+Nazareth:
+  type: n
+famous:
+  type: n
+religious:
+  type: n
+leader:
+  type: n
+lived:
+  type: n
+many:
+  type: n
+centuries:
+  type: n
+ago:
+  type: n
+process:
+  type: n
+or:
+  type: linking
+transaction:
+  type: n
+that:
+  type: art
+used:
+  type: n
+to:
+  type: prep
+cause:
+  type: n
+theft:
+  type: n
+situation:
+  type: n
+situation:
+  type: n
+steal:
+  type: n
+something:
+  type: n
+robber:
+  type: n
+thief:
+  type: n
+things:
+  type: n
+by:
+  type: prep
+force:
+  type: n
+threat:
+  type: n
+criminal:
+  type: n
+via:
+  type: n
+credit:
+  type: n
+card:
+  type: n
+economic:
+  type: n
+tool:
+  type: n
+knowing:
+  type: n
+spell:
+  type: n
+tremendous:
+  type: n
+advantage:
+  type: n
+bark:
+  type: n
+hard:
+  type: n
+covering:
+  type: n
+tree:
+  type: n
+blue:
+  type: n
+collar:
+  type: n
+useful:
+  type: n
+but:
+  type: n
+defince:
+  type: n
+concept:
+  type: n
+from:
+  type: n
+Cyc:
+  type: n
+livingroom:
+  type: n
+place:
+  type: n
+relax:
+  type: n
+Buddhism:
+  type: n
+religion:
+  type: n
+has:
+  type: vt
+theistic:
+  type: n
+and:
+  type: linking
+atheistic:
+  type: n
+form:
+  type: n
+Bugs:
+  type: n
+Bunny:
+  type: n
+cartoon:
+  type: n
+rabbit:
+  type: n
+Playing:
+  type: n
+darts:
+  type: n
+hobby:
+  type: n
+Water:
+  type: n
+reflective:
+  type: n
+surface:
+  type: n
+disc:
+  type: n
+efficient:
+  type: n
+way:
+  type: n
+store:
+  type: n
+data:
+  type: n
+mailbox:
+  type: n
+container:
+  type: n
+letters:
+  type: n
+bow:
+  type: n
+pretty:
+  type: n
+presents:
+  type: n
+hanger:
+  type: n
+device:
+  type: n
+keeping:
+  type: n
+clothes:
+  type: n
+off:
+  type: n
+the:
+  type: art
+floor:
+  type: n
+ear:
+  type: n
+orga:
+  type: n
+on:
+  type: prep
+animals:
+  type: n
+ca:
+  type: adj
+receive:
+  type: n
+sound:
+  type: n
+waves:
+  type: n
+watch:
+  type: n
+invention:
+  type: n
+keep:
+  type: n
+track:
+  type: n
+time:
+  type: n
+beam:
+  type: n
+light:
+  type: n
+burn:
+  type: n
+hockey:
+  type: n
+sport:
+  type: n
+basketball:
+  type: n
+sphere:
+  type: n
+not:
+  type: adj
+all:
+  type: n
+game:
+  type: n
+played:
+  type: n
+ice:
+  type: n
+sofa:
+  type: n
+furniture:
+  type: n
+goes:
+  type: n
+in:
+  type: prep
+living:
+  type: n
+room:
+  type: n
+hotdog:
+  type: n
+sausage:
+  type: n
+served:
+  type: n
+with:
+  type: n
+mustard:
+  type: n
+sliced:
+  type: n
+piece:
+  type: n
+bread:
+  type: n
+trophy:
+  type: n
+symbol:
+  type: n
+victory:
+  type: n
+great:
+  type: n
+accomplishment:
+  type: n
+boat:
+  type: n
+vessel:
+  type: n
+travels:
+  type: n
+through:
+  type: n
+water:
+  type: n
+virgin:
+  type: n
+never:
+  type: adj
+had:
+  type: n
+sexual:
+  type: n
+intercourse:
+  type: n
+screw:
+  type: n
+wonderful:
+  type: n
+simple:
+  type: adj
+eyesore:
+  type: n
+structure:
+  type: n
+displeasing:
+  type: n
+aesthetically:
+  type: n
+A:
+  type: n
+sore:
+  type: n
+eye:
+  type: n
+unpleasant:
+  type: n
+condition:
+  type: n
+naranja:
+  type: n
+gato:
+  type: n
+metaal:
+  type: n
+materiaal:
+  type: n
+glas:
+  type: n
+klei:
+  type: n
+een:
+  type: n
+tang:
+  type: n
+gereedschap:
+  type: n
+kerk:
+  type: n
+gebouw:
+  type: n
+spin:
+  type: n
+dier:
+  type: n
+zoogdier:
+  type: n
+carnivoren:
+  type: n
+huisdier:
+  type: n
+kat:
+  type: n
+vogel:
+  type: n
+bexiga:
+  type: n
+balão:
+  type: n
+catchup:
+  type: n
+molho:
+  type: n
+festa:
+  type: n
+despedida:
+  type: n
+branca:
+  type: n
+médico:
+  type: n
+shopping:
+  type: n
+center:
+  type: n
+canteiro:
+  type: n
+com:
+  type: n
+flores:
+  type: n
+avenida:
+  type: n
+charuto:
+  type: n
+tabacaria:
+  type: n
+quadro:
+  type: n
+parede:
+  type: n
+livro:
+  type: n
+estudante:
+  type: n
+lixo:
+  type: n
+lixão:
+  type: n
+trinco:
+  type: n
+jantar:
+  type: n
+arame:
+  type: n
+computador:
+  type: n
+la:
+  type: n
+house:
+  type: n
+cavalo:
+  type: n
+marinho:
+  type: n
+bicicleta:
+  type: n
+balneário:
+  type: n
+maquina:
+  type: n
+copiadora:
+  type: n
+secão:
+  type: n
+um:
+  type: prep
+supermercado:
+  type: n
+remédios:
+  type: n
+farmacia:
+  type: n
+camarao:
+  type: n
+torta:
+  type: n
+camarão:
+  type: n
+pneu:
+  type: n
+novo:
+  type: n
+show:
+  type: n
+escorredor:
+  type: n
+joias:
+  type: n
+vendedor:
+  type: n
+pastel:
+  type: n
+ou:
+  type: n
+numa:
+  type: n
+carro:
+  type: n
+estacionamento:
+  type: n
+pessoa:
+  type: n
+praça:
+  type: n
+pasta:
+  type: n
+bancos:
+  type: n
+areia:
+  type: n
+frutaria:
+  type: n
+bosta:
+  type: n
+esgoto:
+  type: n
+garagem:
+  type: n
+alface:
+  type: n
+quitanda:
+  type: n
+camping:
+  type: n
+salsicha:
+  type: n
+cachorro:
+  type: n
+quente:
+  type: n
+folha:
+  type: n
+fichário:
+  type: n
+sapato:
+  type: n
+copo:
+  type: n
+bandeja:
+  type: n
+floresta:
+  type: n
+prato:
+  type: n
+refeição:
+  type: n
+portão:
+  type: n
+cabeça:
+  type: n
+frango:
+  type: n
+açougue:
+  type: n
+bola:
+  type: n
+quadra:
+  type: n
+quadra:
+  type: n
+bebes:
+  type: n
+creche:
+  type: n
+coreto:
+  type: n
+faculdade:
+  type: n
+guardanapeiro:
+  type: n
+ensinamento:
+  type: n
+enciclopédia:
+  type: n
+pena:
+  type: n
+copa:
+  type: n
+pastelaria:
+  type: n
+caderno:
+  type: n
+papelaria:
+  type: n
+boiada:
+  type: n
+fazenda:
+  type: n
+advogado:
+  type: n
+fórum:
+  type: n
+chave:
+  type: n
+fenda:
+  type: n
+maleta:
+  type: n
+ferramenta:
+  type: n
+ferramenta:
+  type: n
+lâmpada:
+  type: n
+teto:
+  type: n
+trator:
+  type: n
+imobiliaria:
+  type: n
+peça:
+  type: n
+carne:
+  type: n
+peixe:
+  type: n
+aquário:
+  type: n
+manga:
+  type: n
+manga:
+  type: n
+rodovia:
+  type: n
+puta:
+  type: n
+muito:
+  type: n
+antiga:
+  type: n
+museu:
+  type: n
+caneta:
+  type: n
+escrivaninha:
+  type: n
+relogio:
+  type: n
+relojoaria:
+  type: n
+marcador:
+  type: n
+doces:
+  type: n
+doceria:
+  type: n
+lavanderia:
+  type: n
+registro:
+  type: n
+cartorio:
+  type: n
+jaboticabeira:
+  type: n
+ilha:
+  type: n
+fluvial:
+  type: n
+rio:
+  type: n

@@ -1,0 +1,8 @@
+mkdir freehal-$1
+for x in `cat MANIFEST`
+do
+	mkdir freehal-$1/$(dirname $x) 2>&1 > /dev/null
+	cp $x freehal-$1/$(dirname $x)
+done
+tar cplSzf freehal-$1.tar.gz freehal-$1
+rm -r freehal-$1

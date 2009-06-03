@@ -1,0 +1,326 @@
+Various debian-specific ExtUtils changes:
+
+ * Respect umask during installation, and set as appropriate for each of
+   perl, vendor and site (policy requires group writable site dirs).
+
+ * Don't install .packlist or perllocal.pod for perl or vendor.
+ * Fiddle with *PREFIX and variables written to the makefile so that
+   install directories may be changed when make is run by passing
+   PREFIX= to the "make install" command (used when packaging
+   modules).
+
+ * Set location of libperl.a to /usr/lib.
+ * Note that libperl-dev package is required for embedded linking.
+ * Change install target dependencies to facilitate parallel makes.
+
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/Embed.pm perl-5.10.0/lib/ExtUtils/Embed.pm
+--- perl-5.10.0.orig/lib/ExtUtils/Embed.pm	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/Embed.pm	2008-01-27 13:51:31.000000000 +1100
+@@ -305,6 +305,9 @@
+ Typically, an application B<Makefile> will invoke ExtUtils::Embed
+ functions while building your application.  
+ 
++Note that on Debian systems the B<libperl-dev> package is required for
++compiling applications which embed an interpreter.
++
+ =head1 @EXPORT
+ 
+ ExtUtils::Embed exports the following functions:
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/Install.pm perl-5.10.0/lib/ExtUtils/Install.pm
+--- perl-5.10.0.orig/lib/ExtUtils/Install.pm	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/Install.pm	2008-01-27 13:51:31.000000000 +1100
+@@ -453,7 +453,7 @@
+     return 0;
+ }
+ 
+-=item _mkpath($dir,$show,$mode,$verbose,$fake)
++=item _mkpath($dir,$show,$verbose,$fake)
+ 
+ Wrapper around File::Path::mkpath() to handle errors.
+ 
+@@ -470,13 +470,13 @@
+ =cut
+ 
+ sub _mkpath {
+-    my ($dir,$show,$mode,$verbose,$fake)=@_;
++    my ($dir,$show,$verbose,$fake)=@_;
+     if ( $verbose && $verbose > 1 && ! -d $dir) {
+         $show= 1;
+-        printf "mkpath(%s,%d,%#o)\n", $dir, $show, $mode;
++        printf "mkpath(%s,%d)\n", $dir, $show;
+     }
+     if (!$fake) {
+-        if ( ! eval { File::Path::mkpath($dir,$show,$mode); 1 } ) {
++        if ( ! eval { File::Path::mkpath($dir,$show); 1 } ) {
+             _choke("Can't create '$dir'","$@");
+         }
+ 
+@@ -644,7 +644,7 @@
+     }   
+     
+     foreach my $targetdir (sort keys %check_dirs) {
+-        _mkpath( $targetdir, 0, 0755, $verbose, $nonono );
++        _mkpath( $targetdir, 0, $verbose, $nonono );
+     }
+     foreach my $found (@found_files) {
+         my ($diff, $ffd, $origfile, $mode, $size, $atime, $mtime,
+@@ -657,7 +657,7 @@
+                 $targetfile= _unlink_or_rename( $targetfile, 'tryhard', 'install' )
+                     unless $nonono;
+             } elsif ( ! -d $targetdir ) {
+-                _mkpath( $targetdir, 0, 0755, $verbose, $nonono );
++                _mkpath( $targetdir, 0, $verbose, $nonono );
+             }
+             print "Installing $targetfile\n";
+             _copy( $sourcefile, $targetfile, $verbose, $nonono, );
+@@ -686,7 +686,7 @@
+ 
+     if ($pack{'write'}) {
+         $dir = install_rooted_dir(dirname($pack{'write'}));
+-        _mkpath( $dir, 0, 0755, $verbose, $nonono );
++        _mkpath( $dir, 0, $verbose, $nonono );
+         print "Writing $pack{'write'}\n";
+         $packlist->write(install_rooted_file($pack{'write'})) unless $nonono;
+     }
+@@ -984,7 +984,7 @@
+ sub pm_to_blib {
+     my($fromto,$autodir,$pm_filter) = @_;
+ 
+-    _mkpath($autodir,0,0755);
++    _mkpath($autodir,0);
+     while(my($from, $to) = each %$fromto) {
+         if( -f $to && -s $from == -s $to && -M $to < -M $from ) {
+             print "Skip $to (unchanged)\n";
+@@ -1007,7 +1007,7 @@
+             # we wont try hard here. its too likely to mess things up.
+             forceunlink($to);
+         } else {
+-            _mkpath(dirname($to),0,0755);
++            _mkpath(dirname($to),0);
+         }
+         if ($need_filtering) {
+             run_filter($pm_filter, $from, $to);
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/MM_Any.pm perl-5.10.0/lib/ExtUtils/MM_Any.pm
+--- perl-5.10.0.orig/lib/ExtUtils/MM_Any.pm	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/MM_Any.pm	2008-01-27 13:51:31.000000000 +1100
+@@ -685,8 +685,6 @@
+ sub manifypods_target {
+     my($self) = shift;
+ 
+-    my $man1pods      = '';
+-    my $man3pods      = '';
+     my $dependencies  = '';
+ 
+     # populate manXpods & dependencies:
+@@ -702,7 +700,7 @@
+     foreach my $section (qw(1 3)) {
+         my $pods = $self->{"MAN${section}PODS"};
+         push @man_cmds, $self->split_command(<<CMD, %$pods);
+-	\$(NOECHO) \$(POD2MAN) --section=$section --perm_rw=\$(PERM_RW)
++	\$(NOECHO) \$(POD2MAN) --section=\$(MAN${section}EXT) --perm_rw=\$(PERM_RW)
+ CMD
+     }
+ 
+@@ -1157,9 +1155,11 @@
+         $self->{SITEPREFIX}   ||= $sprefix;
+         $self->{VENDORPREFIX} ||= $vprefix;
+ 
+-        # Lots of MM extension authors like to use $(PREFIX) so we
+-        # put something sensible in there no matter what.
+-        $self->{PREFIX} = '$('.uc $self->{INSTALLDIRS}.'PREFIX)';
++	my $p = $self->{PREFIX} = $self->{PERLPREFIX};
++	for my $t (qw/PERL SITE VENDOR/)
++	{
++	    $self->{"${t}PREFIX"} =~ s!^\Q$p\E(?=/|$)!\$(PREFIX)!;
++	}
+     }
+ 
+     my $arch    = $Config{archname};
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/MM_Unix.pm perl-5.10.0/lib/ExtUtils/MM_Unix.pm
+--- perl-5.10.0.orig/lib/ExtUtils/MM_Unix.pm	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/MM_Unix.pm	2008-01-27 13:53:43.000000000 +1100
+@@ -2088,16 +2088,16 @@
+     my(@m);
+ 
+     push @m, q{
+-install :: all pure_install doc_install
++install :: pure_install doc_install
+ 	$(NOECHO) $(NOOP)
+ 
+-install_perl :: all pure_perl_install doc_perl_install
++install_perl :: pure_perl_install doc_perl_install
+ 	$(NOECHO) $(NOOP)
+ 
+-install_site :: all pure_site_install doc_site_install
++install_site :: pure_site_install doc_site_install
+ 	$(NOECHO) $(NOOP)
+ 
+-install_vendor :: all pure_vendor_install doc_vendor_install
++install_vendor :: pure_vendor_install doc_vendor_install
+ 	$(NOECHO) $(NOOP)
+ 
+ pure_install :: pure_$(INSTALLDIRS)_install
+@@ -2112,10 +2112,8 @@
+ doc__install : doc_site_install
+ 	$(NOECHO) $(ECHO) INSTALLDIRS not defined, defaulting to INSTALLDIRS=site
+ 
+-pure_perl_install ::
+-	$(NOECHO) $(MOD_INSTALL) \
+-		read }.$self->catfile('$(PERL_ARCHLIB)','auto','$(FULLEXT)','.packlist').q{ \
+-		write }.$self->catfile('$(DESTINSTALLARCHLIB)','auto','$(FULLEXT)','.packlist').q{ \
++pure_perl_install :: all
++	$(NOECHO) umask 022; $(MOD_INSTALL) \
+ 		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
+ 		$(INST_ARCHLIB) $(DESTINSTALLARCHLIB) \
+ 		$(INST_BIN) $(DESTINSTALLBIN) \
+@@ -2126,8 +2124,8 @@
+ 		}.$self->catdir('$(SITEARCHEXP)','auto','$(FULLEXT)').q{
+ 
+ 
+-pure_site_install ::
+-	$(NOECHO) $(MOD_INSTALL) \
++pure_site_install :: all
++	$(NOECHO) umask 02; $(MOD_INSTALL) \
+ 		read }.$self->catfile('$(SITEARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
+ 		write }.$self->catfile('$(DESTINSTALLSITEARCH)','auto','$(FULLEXT)','.packlist').q{ \
+ 		$(INST_LIB) $(DESTINSTALLSITELIB) \
+@@ -2139,10 +2137,8 @@
+ 	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
+ 		}.$self->catdir('$(PERL_ARCHLIB)','auto','$(FULLEXT)').q{
+ 
+-pure_vendor_install ::
+-	$(NOECHO) $(MOD_INSTALL) \
+-		read }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{ \
+-		write }.$self->catfile('$(DESTINSTALLVENDORARCH)','auto','$(FULLEXT)','.packlist').q{ \
++pure_vendor_install :: all
++	$(NOECHO) umask 022; $(MOD_INSTALL) \
+ 		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
+ 		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
+ 		$(INST_BIN) $(DESTINSTALLVENDORBIN) \
+@@ -2150,38 +2146,20 @@
+ 		$(INST_MAN1DIR) $(DESTINSTALLVENDORMAN1DIR) \
+ 		$(INST_MAN3DIR) $(DESTINSTALLVENDORMAN3DIR)
+ 
+-doc_perl_install ::
+-	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
+-	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
+-	-$(NOECHO) $(DOC_INSTALL) \
+-		"Module" "$(NAME)" \
+-		"installed into" "$(INSTALLPRIVLIB)" \
+-		LINKTYPE "$(LINKTYPE)" \
+-		VERSION "$(VERSION)" \
+-		EXE_FILES "$(EXE_FILES)" \
+-		>> }.$self->catfile('$(DESTINSTALLARCHLIB)','perllocal.pod').q{
++doc_perl_install :: all
+ 
+-doc_site_install ::
+-	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
+-	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
+-	-$(NOECHO) $(DOC_INSTALL) \
++doc_site_install :: all
++	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLSITEARCH)/perllocal.pod
++	-$(NOECHO) umask 02; $(MKPATH) $(DESTINSTALLSITEARCH)
++	-$(NOECHO) umask 02; $(DOC_INSTALL) \
+ 		"Module" "$(NAME)" \
+ 		"installed into" "$(INSTALLSITELIB)" \
+ 		LINKTYPE "$(LINKTYPE)" \
+ 		VERSION "$(VERSION)" \
+ 		EXE_FILES "$(EXE_FILES)" \
+-		>> }.$self->catfile('$(DESTINSTALLARCHLIB)','perllocal.pod').q{
++		>> }.$self->catfile('$(DESTINSTALLSITEARCH)','perllocal.pod').q{
+ 
+-doc_vendor_install ::
+-	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
+-	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
+-	-$(NOECHO) $(DOC_INSTALL) \
+-		"Module" "$(NAME)" \
+-		"installed into" "$(INSTALLVENDORLIB)" \
+-		LINKTYPE "$(LINKTYPE)" \
+-		VERSION "$(VERSION)" \
+-		EXE_FILES "$(EXE_FILES)" \
+-		>> }.$self->catfile('$(DESTINSTALLARCHLIB)','perllocal.pod').q{
++doc_vendor_install :: all
+ 
+ };
+ 
+@@ -2190,13 +2168,12 @@
+ 	$(NOECHO) $(NOOP)
+ 
+ uninstall_from_perldirs ::
+-	$(NOECHO) $(UNINSTALL) }.$self->catfile('$(PERL_ARCHLIB)','auto','$(FULLEXT)','.packlist').q{
+ 
+ uninstall_from_sitedirs ::
+ 	$(NOECHO) $(UNINSTALL) }.$self->catfile('$(SITEARCHEXP)','auto','$(FULLEXT)','.packlist').q{
+ 
+ uninstall_from_vendordirs ::
+-	$(NOECHO) $(UNINSTALL) }.$self->catfile('$(VENDORARCHEXP)','auto','$(FULLEXT)','.packlist').q{
++
+ };
+ 
+     join("",@m);
+@@ -2474,7 +2451,7 @@
+ 	($lperl = $libperl) =~ s/\$\(A\)/$self->{LIB_EXT}/;
+     }
+     unless ($libperl && -f $lperl) { # Ilya's code...
+-	my $dir = $self->{PERL_SRC} || "$self->{PERL_ARCHLIB}/CORE";
++	my $dir = $self->{PERL_SRC} || "/usr/lib";
+ 	$dir = "$self->{PERL_ARCHLIB}/.." if $self->{UNINSTALLED_PERL};
+ 	$libperl ||= "libperl$self->{LIB_EXT}";
+ 	$libperl   = "$dir/$libperl";
+@@ -3065,8 +3042,7 @@
+     print STDERR "  prefixify $var => $path\n" if $Verbose >= 2;
+     print STDERR "    from $sprefix to $rprefix\n" if $Verbose >= 2;
+ 
+-    if( $self->{ARGS}{PREFIX} && $self->file_name_is_absolute($path) && 
+-        $path !~ s{^\Q$sprefix\E\b}{$rprefix}s ) 
++    if( $path !~ s{^\Q$sprefix\E\b}{$rprefix}s && $self->{ARGS}{PREFIX} )
+     {
+ 
+         print STDERR "    cannot prefix, using default.\n" if $Verbose >= 2;
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/t/INST.t perl-5.10.0/lib/ExtUtils/t/INST.t
+--- perl-5.10.0.orig/lib/ExtUtils/t/INST.t	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/t/INST.t	2008-01-27 13:51:31.000000000 +1100
+@@ -65,9 +65,7 @@
+ is( $mm->{NAME}, 'Big::Dummy',  'NAME' );
+ is( $mm->{VERSION}, 0.01,            'VERSION' );
+ 
+-my $config_prefix = $Config{installprefixexp} || $Config{installprefix} ||
+-                    $Config{prefixexp}        || $Config{prefix};
+-is( $mm->{PERLPREFIX}, $config_prefix,   'PERLPREFIX' );
++is( $mm->{PERLPREFIX}, '$(PREFIX)',   'PERLPREFIX' );
+ 
+ is( !!$mm->{PERL_CORE}, !!$ENV{PERL_CORE}, 'PERL_CORE' );
+ 
+diff -Naur --exclude=debian perl-5.10.0.orig/lib/ExtUtils/t/INST_PREFIX.t perl-5.10.0/lib/ExtUtils/t/INST_PREFIX.t
+--- perl-5.10.0.orig/lib/ExtUtils/t/INST_PREFIX.t	2007-12-18 21:47:07.000000000 +1100
++++ perl-5.10.0/lib/ExtUtils/t/INST_PREFIX.t	2008-01-27 13:51:31.000000000 +1100
+@@ -16,7 +16,7 @@
+ }
+ 
+ use strict;
+-use Test::More tests => 52;
++use Test::More tests => 47;
+ use MakeMaker::Test::Utils;
+ use MakeMaker::Test::Setup::BFD;
+ use ExtUtils::MakeMaker;
+@@ -62,16 +62,16 @@
+                         Writing\ $Makefile\ for\ Big::Dummy\n
+ }x );
+ 
+-is( $mm->{PREFIX}, '$(SITEPREFIX)', 'PREFIX set based on INSTALLDIRS' );
++#is( $mm->{PREFIX}, '$(SITEPREFIX)', 'PREFIX set based on INSTALLDIRS' );
+ 
+ isa_ok( $mm, 'ExtUtils::MakeMaker' );
+ 
+ is( $mm->{NAME}, 'Big::Dummy',  'NAME' );
+ is( $mm->{VERSION}, 0.01,            'VERSION' );
+ 
+-foreach my $prefix (qw(PREFIX PERLPREFIX SITEPREFIX VENDORPREFIX)) {
+-    unlike( $mm->{$prefix}, qr/\$\(PREFIX\)/ );
+-}
++#foreach my $prefix (qw(PREFIX PERLPREFIX SITEPREFIX VENDORPREFIX)) {
++#    unlike( $mm->{$prefix}, qr/\$\(PREFIX\)/ );
++#}
+ 
+ 
+ my $PREFIX = File::Spec->catdir('foo', 'bar');
