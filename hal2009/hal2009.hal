@@ -1597,6 +1597,8 @@ define action logic with var input, var lang, hash parsed do
     while not exists: '_input__get_csv', end test do
         do wait 0.5 seconds
     done
+    print "File exists now: _input__get_csv"
+    print new line
     
     set new array results to an empty array
     set new var input_file_name to '_input__get_csv'
@@ -1656,7 +1658,10 @@ define action logic with var input, var lang, hash parsed do
         
         push into array results, array result
     done
-    
+
+    print "Found " concat items of array results concat " sentences"
+    print new line
+
     # TEXT
     # Exception: If we are in the "enum_all" context, all subjects together are the object
     # CODE
@@ -2072,17 +2077,25 @@ define action sort_out with array results, var mode, hash parsed do
     # CODE
     if not from array questionword_array first item do
         if is an empty array results_variable_answer do
+            print "-> results_proper (1): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
+            print new line
             return array results_proper
         done
         else do
+            print "-> results_variable_answer (2): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
+            print new line
             return array results_variable_answer
         done
     done
     else do
         if is an empty array results_proper do
+            print "-> results_variable_answer (1): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
+            print new line
             return array results_variable_answer
         done
         else do
+            print "-> results_proper (2): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
+            print new line
             return array results_proper
         done
     done

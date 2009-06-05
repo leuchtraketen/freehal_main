@@ -38,10 +38,24 @@
 #include <stdarg.h>
 #endif
 
+#ifdef __unix__
+    #include <sys/types.h>
+    #include <sys/stat.h>
+    #define MODUS ,0711)
+#elif __WIN32__ || _MS_DOS_
+    #include <sys/stat.h>
+    #include <dir.h>
+    #define MODUS )
+#else
+    #include <direct.h>  /* Visual C++ */
+    #define MODUS )
+#endif
+
+
 #include <pthread.h>
 
 #define halwrite(a, b, c, d) { if (a && d)      { fwrite(a, b, c, d); } }
-#define halclose(a)          { if ((int)a > 0)  { fclose(a);          } }
+#define halclose(a)          { if (a)           { fclose(a);          } }
 
 #ifndef USE_CXX
 void *malloc (size_t);
@@ -104,6 +118,9 @@ static char* sql_engine = 0;
 
 #define MAX_CLAUSES 10
 #define LINE_SIZE 4096
+#define FACT struct RECORD
+#define SHORTFACT struct RECORD_short
+#define factsize sizeof(FACT)+32
 struct RECORD;
 struct RECORD {
     char verb[LINE_SIZE];
@@ -115,6 +132,28 @@ struct RECORD {
     char questionword[LINE_SIZE];
     char context[LINE_SIZE];
     char pkey[LINE_SIZE];
+    int prio;
+    void* clauses[MAX_CLAUSES];
+    short type;
+    int hash_clauses;
+    double truth;
+    
+    short verb_flag_want;
+    short verb_flag_must;
+    short verb_flag_can;
+    short verb_flag_may;
+    short verb_flag_should;
+};
+struct RECORD_short {
+    char verb[50];
+    char subjects[50];
+    char objects[50];
+    char adverbs[50];
+    char from[50];
+    char extra[50];
+    char questionword[50];
+    char context[50];
+    char pkey[50];
     int prio;
     void* clauses[MAX_CLAUSES];
     short type;

@@ -23,14 +23,12 @@ cmake_minimum_required (VERSION 2.6)
 project (FreeHAL)
 
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include) 
-add_executable (hal2009-test hal2009-test.c hal2009-perl6.c hal2009-perl5.c null_config.c sqlite3.c) 
-target_link_libraries (hal2009-test parrot m crypt pthread perl dl)
 
-add_executable (hal2009 hal2009-main.c hal2009-perl6.c hal2009-perl5.c null_config.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
-target_link_libraries (hal2009 parrot m crypt pthread perl dl z) 
+add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
+target_link_libraries (hal2009 m crypt pthread perl dl z) 
 
-add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6.c hal2009-perl5.c null_config.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
-target_link_libraries (hal2009-server parrot m crypt pthread perl dl z boost_thread-mt boost_system-mt)
+add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
+target_link_libraries (hal2009-server m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
 add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/boinc_graphics2.a /usr/lib/boinc_zip.a /usr/lib/boinc_api.a /usr/lib/boinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c) 
 target_link_libraries (hal2009-boinc m crypt pthread dl boinc_api boinc_zip boinc_graphics2 boinc z /usr/lib/libperl.a) 

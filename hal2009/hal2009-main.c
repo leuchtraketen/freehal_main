@@ -226,8 +226,8 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
         struct DATASET set = hal2009_get_csv(text);
-        FILE* target = fopen("_input__get_csv", "w+b");
         const char* csv_data = hal2009_make_csv(&set);
+        FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
         halclose(target);
         fprintf(output(), "Release memory now.\n");
@@ -236,7 +236,6 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
-        ///pthread_exit(0);
     }
     else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
         exit(0);

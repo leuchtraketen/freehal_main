@@ -100,7 +100,7 @@ static int callback_clause(void* arg, int argc, char **argv, char **azColName) {
     }
 
     for(i=0; i<argc; ++i){
-        fprintf(output(), "Entity: %s\n", argv[i]);
+        printf("Entity: %s\n", argv[i]);
         if (argv[i] && strlen(argv[i])) {
             free(record[i]);
             record[i] = malloc(strlen(argv[i])+1);
@@ -150,7 +150,7 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
             synonyms[n+1] = 0;
 
         if (n+1 < 4000)
-            fprintf(output(), "%d: %s\n", n, synonyms[n]);
+            printf("%d: %s\n", n, synonyms[n]);
         else
             return 1;
         
@@ -194,8 +194,8 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
     
     short there_are_sub_clauses = (argv[1] && 0 == strcmp(argv[1], "-1"));
     
-    if (there_are_sub_clauses) fprintf(output(), "There are sub clauses. Ok.\n");
-    else                       fprintf(output(), "There aren't any sub clauses. Ok.\n");
+    if (there_are_sub_clauses) printf("There are sub clauses. Ok.\n");
+    else                       printf("There aren't any sub clauses. Ok.\n");
     
     /// Fetch subclauses.
     if (there_are_sub_clauses) {
@@ -205,7 +205,7 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
         strcat(sql, argv[0]);
         strcat(sql, ";");
         
-        fprintf(output(), "%s\n", sql);
+        printf("%s\n", sql);
         
         void* offset = record + argc - 1;
         
@@ -214,7 +214,7 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
             if (strstr(err, "are not unique")) {
                 break;
             }
-            fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             break;
         }
         sqlite3_free(err);
@@ -226,8 +226,8 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
     ++sqlite_current_data->size;
     time_t time_now;
     time(&time_now);
-    fprintf(output(), "Timeout is: %li\n", time_now);
-    fprintf(output(), "Time    is: %li\n", sqlite_current_data->timeout);
+    printf("Timeout is: %li\n", time_now);
+    printf("Time    is: %li\n", sqlite_current_data->timeout);
     if (sqlite_current_data->timeout < time_now) {
         if (sqlite_current_data->size >= 1) {
             return 1;
@@ -277,9 +277,9 @@ int sql_sqlite_set_filename(const char* filename) {
 
 int sql_sqlite_begin() {
     if (0 == sqlite_connection) {
-        fprintf(output(), "%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
+        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            fprintf(output(), "%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
@@ -292,9 +292,9 @@ int sql_sqlite_begin() {
 
 int sql_sqlite_end() {
     if (0 == sqlite_connection) {
-        fprintf(output(), "%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
+        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            fprintf(output(), "%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
@@ -309,9 +309,9 @@ int sql_sqlite_end() {
 
 int sql_sqlite_add_link (const char* link, int key_1, int key_2) {
     if (0 == sqlite_connection) {
-        fprintf(output(), "%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
+        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            fprintf(output(), "%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
@@ -338,7 +338,7 @@ int sql_sqlite_add_link (const char* link, int key_1, int key_2) {
     strcat(sql, ");");
     
     strcpy(sql, sql_sqlite_mask_sql(sql));
-    fprintf(output(), "%s", sql);
+    printf("%s", sql);
 
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
@@ -346,10 +346,10 @@ int sql_sqlite_add_link (const char* link, int key_1, int key_2) {
             /// Link is not unique - it already exists in the database
             break;
         }
-        fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
         if (strstr(err, "no such table")) {
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             }
         }
         else {
@@ -413,9 +413,9 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     if (0 == sqlite_connection) {
-        fprintf(output(), "%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
+        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            fprintf(output(), "%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
@@ -481,19 +481,19 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         else
             strcat(sql, "facts");
         strcat(sql, ";");
-        fprintf(output(), sql);
+        printf(sql);
     
         char key[99];
         char* err;
         if (sqlite3_exec(sqlite_connection, sql, select_primary_key, key, &err)) {
-            fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
         }
         sqlite3_free(err);
         
         if (key && key[0]) {
             num_of_records[relation_to?1:0] = atol(key);
         }
-        fprintf(output(), "%i", num_of_records[relation_to?1:0]);
+        printf("%i", num_of_records[relation_to?1:0]);
     }
     ++(num_of_records[relation_to?1:0]);
 
@@ -563,8 +563,8 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
     if (num_of_records_str) {
         FILE* target = fopen("_input_key", "w+b");
-        halwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
-        halclose(target);
+        fwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
+        fclose(target);
     }
 
             /*    char* err;
@@ -574,17 +574,17 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             {
                 if (num_of_records_str) {
                     FILE* target = fopen("_input_key", "w+b");
-                    halwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
-                    halclose(target);
+                    fwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
+                    fclose(target);
                 }
             }
 
             break;
         }
-        fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
         if (strstr(err, "no such table")) {
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             }
         }
         else {
@@ -622,7 +622,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                     /// do nothing
                 }
                 else {
-                    fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
                 }
             }
             sqlite3_free(err);
@@ -688,8 +688,8 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             free(words);
 
             FILE* target = fopen("_input_key", "w+b");
-            halwrite(key, 1, strlen(key), target);
-            halclose(target);
+            fwrite(key, 1, strlen(key), target);
+            fclose(target);
         }
 
         if (r->clauses && r->clauses[0] && !relation_to) {
@@ -705,12 +705,13 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     
     
-    char sqlite_filename_sql[9999];
+    char* sqlite_filename_sql = calloc(9999, 1);
     strcpy(sqlite_filename_sql, sqlite_filename);
     strcat(sqlite_filename_sql, ".sql");
     FILE* database_sql = fopen(sqlite_filename_sql, "a");
     fprintf(database_sql, "%s", sql);
-    halclose(database_sql);
+    fclose(database_sql);
+    free(sqlite_filename_sql);
     
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
@@ -718,11 +719,11 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             /// Fact is not unique - it already exists in the database
             break;
         }
-        fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
         if (strstr(err, "no such table")) {
             sqlite3_free(err);
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             }
             else {
                 sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err);
@@ -738,9 +739,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
 struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     if (0 == sqlite_connection) {
-        fprintf(output(), "%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
+        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            fprintf(output(), "%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
             sqlite_connection = 0;
             struct DATASET set;
             set.err = NO_CONNECTION;
@@ -785,7 +786,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 buf += j+1;
                 size = strlen(buf);
                 j = 0;
-                fprintf(output(), "New buf: %s\n", buf);
+                printf("New buf: %s\n", buf);
             }
         }
         strcat(sql, "SELECT objects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
@@ -801,7 +802,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         
         if (bbuf) free(bbuf);
         
-        fprintf(output(), "%s\n", sql);
+        printf("%s\n", sql);
         
         char* err;
         while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &subject_synonyms, &err)) {
@@ -811,11 +812,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (strstr(err, "callback requested query abort")) {
                 break;
             }
-            fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             if (strstr(err, "no such table")) {
                 sqlite3_free(err);
                 if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
                 }
             }
             else {
@@ -844,7 +845,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 buf += j+1;
                 size = strlen(buf);
                 j = 0;
-                fprintf(output(), "New buf: %s\n", buf);
+                printf("New buf: %s\n", buf);
             }
         }
         strcat(sql, "SELECT subjects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
@@ -860,7 +861,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         
         if (bbuf) free(bbuf);
         
-        fprintf(output(), "%s\n", sql);
+        printf("%s\n", sql);
         
         char* err;
         while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &object_synonyms, &err)) {
@@ -870,11 +871,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (strstr(err, "callback requested query abort")) {
                 break;
             }
-            fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             if (strstr(err, "no such table")) {
                 sqlite3_free(err);
                 if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
                 }
             }
             else {
@@ -1092,7 +1093,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
         strcat(sql, " ORDER BY 1");
 
-        fprintf(output(), "%s\n", sql);
+        printf("%s\n", sql);
         
         char* err;
         while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &important_records, &err)) {
@@ -1102,11 +1103,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (strstr(err, "callback requested query abort")) {
                 break;
             }
-            fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             if (strstr(err, "no such table")) {
                 sqlite3_free(err);
                 if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
                 }
             }
             else {
@@ -1316,10 +1317,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         need_and = 1;
     }
     if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
-        fprintf(output(), "Context is '%s'.\n", r->context);
+        printf("Context is '%s'.\n", r->context);
     }
     if (r->context && *r->context != 'd' && strlen(r->context) && strcmp(r->context, "default")) {
-        fprintf(output(), "Context is '%s' (verb = '%s').\n", r->context, (r->verb && *r->verb != '0' && *r->verb != ' ') ? r->verb : "" );
+        printf("Context is '%s' (verb = '%s').\n", r->context, (r->verb && *r->verb != '0' && *r->verb != ' ') ? r->verb : "" );
 
         char* buffers = calloc(5000, 1);
         *buffers = 0;
@@ -1777,7 +1778,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     /// End of statement
     strcat(sql, ";");
     
-    fprintf(output(), "%s\n", sql);
+    printf("%s\n", sql);
     
     struct DATASET sqlite_current_data;
     sqlite_current_data.size = 0;
@@ -1791,11 +1792,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (strstr(err, "are not unique")) {
             break;
         }
-        fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
         if (strstr(err, "no such table")) {
             sqlite3_free(err);
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                fprintf(output(), "Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             }
         }
         else {
