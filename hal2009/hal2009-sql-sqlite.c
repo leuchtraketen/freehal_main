@@ -80,6 +80,11 @@ static char* sqlite_sql_create_table = ""
 "verb_flag_want char(2),verb_flag_must char(2),verb_flag_can char(2),verb_flag_may char(2),verb_flag_should char(2),"
 "UNIQUE(`fact`));"
 "CREATE INDEX `idx_fact_rel_fact_flag` ON `rel_fact_flag` (`fact`);"
+
+"CREATE TABLE `rel_verb_verb` (`v1` varchar(50), `v2` varchar(50), `type` varchar(50), "
+"UNIQUE(`v1`, `v2`, `type`));"
+"CREATE INDEX `idx_v1_rel_verb_verb` ON `rel_verb_verb` (`v1`);"
+"CREATE INDEX `idx_v2_rel_verb_verb` ON `rel_verb_verb` (`v2`);"
 "";
 
 static int select_primary_key(void* key, int argc, char **argv, char **azColName) {
@@ -1174,14 +1179,49 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql, r->pkey);
         strcat(sql, " AND f1 <> f2))");
     }
+    
+    char** similar_verbs;
+    if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
+        char* sql_rel_verb_verb = malloc(512000);
+        *sql = 0;
+        strcat(sql, "SELECT v2 FROM rel_verb_verb WHERE v1 = \"");
+        strcat(sql, r->verb);
+        strcat(sql, "\";");
 
-    /// The 'd' here stands for the first character of "default"
+        similar_verbs = calloc(4000*sizeof(char*), 1);
+        printf("%s\n", sql_rel_verb_verb);
+        
+        char* err;
+        while (sqlite3_exec(sqlite_connection, sql_rel_verb_verb, callback_synonyms, &similar_verbs, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        sqlite3_free(err);
+        free(sql_rel_verb_verb);
+    }
+
     if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
         
         // If we do NOT have a WHERE phrase
         // temporarily disabled
         //if (0 != strcmp(r->context, "q_where")) {
-            
+        
+        {
+            strcat(sql, "( ");
             char* buffers_all_verbs = malloc(strlen(r->verb)+2);
             strcpy(buffers_all_verbs, r->verb);
             if (buffers_all_verbs) {
@@ -1242,6 +1282,71 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 }
             }
         //}
+            strcat(sql, ")");
+        }
+        /// similar verbs:
+        if (similar_verbs && similar_verbs[0]) {
+            strcat(sql, " OR ( ");
+            int w = 0;
+            while (similar_verbs[w]) {
+                char* buffer = similar_verbs[w];
+                char* buffers[10];
+                int l = 0;
+                while (buffer && l < 10) {
+                    buffers[l] = buffer;
+                    buffer = strtok(NULL, " ");
+                    ++l;
+                }
+                --l;
+                
+                short flag_is_divided_verb = 1;
+                if (l == 0) {
+                    flag_is_divided_verb = 0;
+                }
+                
+                while (l >= 0) {
+                    buffer = buffers[l];
+                    char* buffers = malloc(strlen(similar_verbs[w])+2);
+                    strcpy(buffers, buffer);
+                    if (buffers) {
+                        char* buffer = strtok(buffers, "|");
+                        if (buffer) {
+                            {
+                                strcat(sql, " ( nmain.verb = \"");
+                                strcat(sql, buffer);
+                                strcat(sql, "\"");
+                                if (flag_is_divided_verb) {
+                                    strcat(sql, " OR nmain.verb GLOB \"");
+                                    strcat(sql, buffer);
+                                    strcat(sql, " *\"");
+                                    strcat(sql, " OR nmain.verb GLOB \"* ");
+                                    strcat(sql, buffer);
+                                    strcat(sql, "\"");
+                                }
+                                while (buffer = strtok(NULL, "|")) {
+                                    strcat(sql, " OR nmain.verb = \"");
+                                    strcat(sql, buffer);
+                                    strcat(sql, "\"");
+                                    if (flag_is_divided_verb) {
+                                        strcat(sql, " OR nmain.verb GLOB \"* ");
+                                        strcat(sql, buffer);
+                                        strcat(sql, "\"");
+                                        strcat(sql, " OR nmain.verb GLOB \"");
+                                        strcat(sql, buffer);
+                                        strcat(sql, " *\"");
+                                    }
+                                }
+                                strcat(sql, " )");
+                            }
+                        }
+                    }
+                    free(buffers);
+                    --l;
+                }
+                ++w;
+            }
+            strcat(sql, " ) ");
+        }
     }
     if (subjects_buffer) {
         if (need_and) strcat(sql, " AND");

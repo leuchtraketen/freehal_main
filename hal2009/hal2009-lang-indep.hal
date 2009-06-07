@@ -96,6 +96,15 @@ define action compute_input with var input is rw, var lang do
 
     do regex using var input: / wehnig /, " wenig ", :global:i
 
+    if var input matches /learn: / do
+        do regex using var input: /learn: /, "_", :global:i
+        do regex using var input: /learn:/, "_", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /@/, " = ", :global:i
+        do regex using var input: /\s+/, "_", :global:i
+        set var input to var input concat "_"
+    done
+
     do regex using var input: / befindet sich /, " liegt ", :global:i
     do regex using var input: / befinden sich /, " liegen ", :global:i
     do regex using var input: / befinde mich /, " liege ", :global:i
