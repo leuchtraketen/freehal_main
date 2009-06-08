@@ -1183,10 +1183,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     char** similar_verbs;
     if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
         char* sql_rel_verb_verb = malloc(512000);
-        *sql = 0;
-        strcat(sql, "SELECT v2 FROM rel_verb_verb WHERE v1 = \"");
-        strcat(sql, r->verb);
-        strcat(sql, "\";");
+        *sql_rel_verb_verb = 0;
+        strcat(sql_rel_verb_verb, "SELECT v2 FROM rel_verb_verb WHERE v1 = \"");
+        strcat(sql_rel_verb_verb, r->verb);
+        strcat(sql_rel_verb_verb, "\";");
 
         similar_verbs = calloc(4000*sizeof(char*), 1);
         printf("%s\n", sql_rel_verb_verb);
@@ -1221,7 +1221,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         //if (0 != strcmp(r->context, "q_where")) {
         
         {
-            strcat(sql, "( ");
+            if (need_and) strcat(sql, " AND");
+            else          strcat(sql, "WHERE");
+            strcat(sql, "( 1 ");
             char* buffers_all_verbs = malloc(strlen(r->verb)+2);
             strcpy(buffers_all_verbs, r->verb);
             if (buffers_all_verbs) {

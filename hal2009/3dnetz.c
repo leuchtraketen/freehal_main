@@ -36,7 +36,7 @@ void *in1, *in2;
 void handle_avatar_add (void);
 void handle_chat (void);
 void handle_enter (int rc);
-char *name="Tobias";
+char *name="FreeHAL";
 char last_speaker[10000];
 
 #define OPTION_SIZE 512
@@ -283,11 +283,11 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
-        char message[100];
-
+        char* message = calloc(100000, 1);
         sprintf (message, "%s: %s", last_speaker, text);
         strcpy(last_speaker, "");
         aw_say (message);
+        free(message);
     }
     else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
         exit(0);
