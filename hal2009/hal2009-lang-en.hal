@@ -1866,6 +1866,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'nothing' => "n",
           'sen' => "adj",
           'vierzig' => "adj",
+          '=' => "vi",
           'ihr' => "art",
           'rauh' => "adj",
           'ob' => "questionword",

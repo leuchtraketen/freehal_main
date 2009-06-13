@@ -2760,6 +2760,7 @@ define action shell with var current_language, var path do
 
     for each new var sentences_as_line from var input_handle is rw do
         do regex using var sentences_as_line: /([?])/, "$0.", :global
+        set var sentences_as_line to divide_input with var sentences_as_line, var current_language
         set new array sentences to split with /[.!]/, var sentences_as_line
 
         for each new var line in array sentences do

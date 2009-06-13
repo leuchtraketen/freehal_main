@@ -19,6 +19,51 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+
+define action divide_input with var input is rw, var lang do
+    set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
+
+    if lc(var input) matches /learn:/ do
+        do regex using var input: /[,]/, "@", :global:i
+        do regex using var input: /learn:/, "", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /\s*@\s+/, "@", :global:i
+        do regex using var input: /\s+/, "_", :global:i
+        set new array words to split with /[@]/, var input
+        set var input to ""
+        for each new var word_1 in array words do
+            for each new var word_2 in array words do
+                if not var word_1 matches var word_2 do
+                    set var input to var input concat "_" concat var word_1 concat "_ = _" concat var word_2 concat "_ . "
+                done
+            done
+        done
+    done
+
+    if lc(var input) matches /properties: (.*?): / do
+        do regex using var input: /[,]/, "@", :global:i
+        do regex using var input: /properties:(.*?):/, "", :global:i
+        set new var word_1 to $0
+        do regex using var word_1: /^\s+/, "", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /\s*@\s+/, "@", :global:i
+        do regex using var input: /\s+/, " ", :global:i
+        set new array words to split with /[@]/, var input
+        set var input to ""
+        for each new var word_2 in array words do
+            if not var word_1 matches var word_2 do
+                set var input to var input concat var word_1 concat " " concat var verb_be_3rd_person_singular concat " " concat var word_2 concat " . "
+            done
+        done
+    done
+    
+    print "Input (separated sentences): "
+    print var input
+    print new line
+    
+    do return with var input
+done
+
 define action compute_input with var input is rw, var lang do
     set new var no_change_pronouns to 0
 
@@ -95,15 +140,6 @@ define action compute_input with var input is rw, var lang do
     do regex using var input: / hab /, " habe ", :global:i
 
     do regex using var input: / wehnig /, " wenig ", :global:i
-
-    if var input matches /learn: / do
-        do regex using var input: /learn: /, "_", :global:i
-        do regex using var input: /learn:/, "_", :global:i
-        do regex using var input: /^\s+/, "", :global:i
-        do regex using var input: /@/, " = ", :global:i
-        do regex using var input: /\s+/, "_", :global:i
-        set var input to var input concat "_"
-    done
 
     do regex using var input: / befindet sich /, " liegt ", :global:i
     do regex using var input: / befinden sich /, " liegen ", :global:i

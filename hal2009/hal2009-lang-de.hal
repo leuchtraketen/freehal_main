@@ -1510,6 +1510,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'einem'  => "art",
           'eine'  => "art",
           'ein'  => "art",
+          '=' => "vi",
           'zier' => "n",
           'auf' => "prep",
           'hin' => "prep",
@@ -2603,6 +2604,53 @@ define action guess_part_of_speech with var word do
     done
     
     do return using var guessed
+done
+
+define action get_verb with var verb, var person do
+
+    if var verb matches "be" do
+        if var person matches "1s" do
+            return "bin"
+        done
+        if var person matches "2s" do
+            return "bist"
+        done
+        if var person matches "3s" do
+            return "ist"
+        done
+        if var person matches "1p" do
+            return "sind"
+        done
+        if var person matches "2p" do
+            return "seid"
+        done
+        if var person matches "3p" do
+            return "sind"
+        done
+    done
+    
+    if var verb matches "have" do
+        if var person matches "1s" do
+            return "am"
+        done
+        if var person matches "2s" do
+            return "are"
+        done
+        if var person matches "3s" do
+            return "is"
+        done
+        if var person matches "1p" do
+            return "are"
+        done
+        if var person matches "2p" do
+            return "are"
+        done
+        if var person matches "3p" do
+            return "are"
+        done
+    done
+    
+    return ""
 done
 
 define action compute_output with var output do
