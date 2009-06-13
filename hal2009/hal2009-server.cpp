@@ -777,6 +777,8 @@ int set_nonblocking(int fd)
     int flags;
 
     /* If they have O_NONBLOCK, use the Posix way to do it */
+#if defined (__MINGW) || defined(__MINGW32__)
+#else
 #if defined(O_NONBLOCK)
     /* Fixme: O_NONBLOCK is defined but broken on SunOS 4.1.x and AIX 3.2.5. */
     if (-1 == (flags = fcntl(fd, F_GETFL, 0)))
@@ -786,6 +788,7 @@ int set_nonblocking(int fd)
     /* Otherwise, use the old way of doing it */
     flags = 1;
     return ioctl(fd, FIOBIO, &flags);
+#endif
 #endif
 } 
 

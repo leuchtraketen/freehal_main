@@ -68,6 +68,9 @@ void *realloc (void*, size_t);
 #include <windows.h>
 #define sleep(x) Sleep(1000*(x))
 #define usleep(x) Sleep(x)
+#define _set_stdout(x) { if (x) { _iob[STDOUT_FILENO] = *(x) ; } else { 1; } }
+#else
+#define _set_stdout(x) stdout = x
 #endif
 
 #ifndef HAL2009
@@ -246,11 +249,13 @@ FILE* output() {
 FILE* get_output() {
  	return stdout;
 }
+
 #ifdef stdout
 #undef stdout
+#define stdout	(&_iob[STDOUT_FILENO])
 #endif
 FILE* set_output(FILE* f) {
-    stdout = f;
+    _set_stdout(f);
  	return stdout;
 }
 void set_output_fd(int fd) {
@@ -260,7 +265,8 @@ void set_output_fd(int fd) {
         1;
 }
 FILE* unset_output() {
-    stdout = 0;
+   FILE* nullf = 0;
+    _set_stdout(nullf);
  	return stdout;
 }
 FILE* get_output_pipe() {
