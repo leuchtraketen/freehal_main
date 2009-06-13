@@ -20,7 +20,7 @@
 */
 
 #define FULL_NAME "FreeHAL"
-#define FULL_VERSION 135
+#define FULL_VERSION 136
 
 #ifndef __cplusplus
 #include <ctype.h>
@@ -246,6 +246,9 @@ FILE* output() {
 FILE* get_output() {
  	return stdout;
 }
+#ifdef stdout
+#undef stdout
+#endif
 FILE* set_output(FILE* f) {
     stdout = f;
  	return stdout;
