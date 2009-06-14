@@ -1082,6 +1082,12 @@ void hal2009_init(char* planguage, char* tlanguage, char* base_dir) {
 
     char* content = (char*)halmalloc(1024, "main");
     strcpy(content, ""
+    "compile source hal2009-lang-");
+    strcat(content, tlanguage);
+    strcat(content, ".hal\n"
+    "require source hal2009-lang-");
+    strcat(content, tlanguage);
+    strcat(content, ".hal\n"
     "compile source hal2009.hal\n"
     "require source hal2009.hal\n"
     "set STDOUT to handle for file name \"hal.log\", write\n"
