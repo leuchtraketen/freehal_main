@@ -1128,14 +1128,42 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     
     strcat(sql, "delete from cache_facts;");
     {
-        strcat(sql, "INSERT INTO cache_facts SELECT * from facts WHERE 0 ");
+//      strcat(sql, "INSERT INTO cache_facts SELECT * from facts WHERE 0 ");
+        strcat(sql, "INSERT INTO cache_facts SELECT * from facts WHERE pk IN (0");
         int w = 0;
         while (important_records[w] && w < 4000) {
-            strcat(sql, " OR pk = ");
+            /*if (important_records[w+1]) {
+                int z = w;
+                while (important_records[z] && (atoi(important_records[z]) - atoi(important_records[w]) < 2000) && z < 4000) {
+                    ++z;
+                }
+                if (!important_records[z]) --z;
+                
+                if (important_records[w] == important_records[z]) {
+                    strcat(sql, " OR pk = ");
+                    strcat(sql, important_records[w]);
+                }
+                else {
+                    strcat(sql, " OR (pk >= ");
+                    strcat(sql, important_records[w]);
+                    strcat(sql, " AND pk <= ");
+                    strcat(sql, important_records[z]);
+                    strcat(sql, ") ");
+                }
+                w = z;
+            }
+            else {
+                strcat(sql, " OR pk = ");
+                strcat(sql, important_records[w]);
+            }
+            */
+
+            strcat(sql, ", ");
             strcat(sql, important_records[w]);
+
             ++w;
         }
-        strcat(sql, ";");
+        strcat(sql, ");");
     }
 
     /////////////////////////// First, select the normal facts ///////////////////////////
