@@ -24,19 +24,19 @@
 static int database_used = 0;
 
 struct DATASET sql_get_records(struct RECORD* r) {
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+    if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_get_records(r);
     }
 }
 
 int sql_add_record(struct RECORD* r) {
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+    if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_add_record(r, NULL);
     }
 }
 
 int sql_add_link (char* link, int key_1, int key_2) {
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+    if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_add_link(link, key_1, key_2);
     }
 }
@@ -48,14 +48,14 @@ int sql_begin() {
     }
     fprintf(output(), "%s\n", "Start database access.");
     database_used = 1;
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+    if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_begin();
     }
 }
 
 int sql_end() {
     int ret;
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+    if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         ret = sql_sqlite_end();
     }
     fprintf(output(), "%s\n", "Stop database access.");
