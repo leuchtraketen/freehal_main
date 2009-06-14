@@ -1090,7 +1090,7 @@ void hal2009_init(char* planguage, char* tlanguage, char* base_dir) {
     strcat(content, ".hal\n"
     "compile source hal2009.hal\n"
     "require source hal2009.hal\n"
-    "set STDOUT to handle for file name \"hal.log\", write\n"
+//    "set STDOUT to handle for file name \"hal.log\", write\n"
     "set new var current_language to '");
     strcat(content, tlanguage);
     strcat(content, "'\n"
