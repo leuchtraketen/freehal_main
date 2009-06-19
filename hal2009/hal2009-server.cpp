@@ -568,39 +568,41 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         char* line = (char*)cxxhalmalloc(10000,  "hal2009_log_streamer");
         halclose(get_output_pipe());
         set_output_pipe(fopen("hal.log", "r"));
-        set_nonblocking(fileno(get_output_pipe()));
         if (get_output_pipe()) {
-            strcpy(code, "");
-            strcpy(line, "");
-            size_t nchars = 9999;
-            do {
-                if (strlen(line) > 1)
-                    strcat(code, line);
+            set_nonblocking(fileno(get_output_pipe()));
+            if (get_output_pipe()) {
+                strcpy(code, "");
                 strcpy(line, "");
-                if (current_line_number_from_log >= last_line_number_from_log) {
-                    last_line_number_from_log = current_line_number_from_log;
-                    fgets(line, nchars, get_output_pipe());
-                }
-                ++current_line_number_from_log;
-            } while (strlen(line));
+                size_t nchars = 9999;
+                do {
+                    if (strlen(line) > 1)
+                        strcat(code, line);
+                    strcpy(line, "");
+                    if (current_line_number_from_log >= last_line_number_from_log) {
+                        last_line_number_from_log = current_line_number_from_log;
+                        fgets(line, nchars, get_output_pipe());
+                    }
+                    ++current_line_number_from_log;
+                } while (strlen(line));
 
-            strcat(code, line);
-            if (strlen(code)) {
-                int lines = 1;
-                for (int c = 0; c < strlen(code); ++c) {
-                    if (code[c] == '\n')
-                        ++lines;
-                }
+                strcat(code, line);
+                if (strlen(code)) {
+                    int lines = 1;
+                    for (int c = 0; c < strlen(code); ++c) {
+                        if (code[c] == '\n')
+                            ++lines;
+                    }
 
-                hal2009_netcom_lock();
-                (*stream) << "MULTILINE:BEGIN" << endl;
-                (*stream) << lines << endl;
-                (*stream) << "LOG:" << code << "\n" << endl;
-                (*stream) << "MULTILINE:END" << endl;
-                hal2009_netcom_unlock();
+                    hal2009_netcom_lock();
+                    (*stream) << "MULTILINE:BEGIN" << endl;
+                    (*stream) << lines << endl;
+                    (*stream) << "LOG:" << code << "\n" << endl;
+                    (*stream) << "MULTILINE:END" << endl;
+                    hal2009_netcom_unlock();
+                }
             }
+            halclose(get_output_pipe());
         }
-        halclose(get_output_pipe());
     }
 
     cout << "End of statement process." << endl;
