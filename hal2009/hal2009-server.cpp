@@ -561,7 +561,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     unlink("_input_server");
     hal2009_clean();
 
-    {
+    if (0) {
         long int last_line_number_from_log = -1;
         long int current_line_number_from_log = 0;
         char* code = (char*)cxxhalmalloc(100001, "hal2009_log_streamer");
