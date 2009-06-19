@@ -556,7 +556,10 @@ define action compute_tags with var word, var lang, var path do
             if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
                 set from array tags first item to "n"
             done
-            if var lang matches "de" do
+            if lc(var word) matches var word and var lang matches "de" do
+                if var word matches /ist$/ do
+                    set from array tags first item to "n"
+                done
                 if var word matches /st$/ do
                     set from array tags first item to "vi"
                 done
