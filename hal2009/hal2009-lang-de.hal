@@ -2497,6 +2497,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'eueren' => "art",
           'done' => "adj",
           'mein' => "art",
+          'rechnen' => "vi",
           'kenn' => "vi",
           'kenne' => "vi",
           'kennst' => "vi",
@@ -2970,6 +2971,12 @@ define action toggle_entities with array entities do
         else if lc(var entity) matches /(^|\s)du($|\s)/ do
             do regex using var entity: /(^|\s)du($|\s)/, "${1}ich$2", :global:i
         done
+        else if lc(var entity) matches /(^|\s)mein/ do
+            do regex using var entity: /(^|\s)mein/, "${1}dein", :global:i
+        done
+        else if lc(var entity) matches /(^|\s)dein/ do
+            do regex using var entity: /(^|\s)dein/, "${1}mein", :global:i
+        done
         set from array entity_array first item to var entity
     done
     do return with array entities
@@ -2997,8 +3004,11 @@ define action stem_nouns with array phrases do
             # Delete articles...
             # CODE
 
+            if var noun matches /^ein.?.?$/ do
+                do regex using var noun: /^ein.?.?$/, "*", :global:i
+            done
             if var noun matches /ein.?.?$/ do
-                do regex using var noun: /ein.?.?$/, "*", :global:i
+                do regex using var noun: /ein.?.?$/, "ei*", :global:i
             done
             if var noun matches /ein$/ do
                 do regex using var noun: /ein$/, "*", :global:i
@@ -3014,7 +3024,7 @@ define action stem_nouns with array phrases do
             # TEXT
             # That's the stemming algorithm
             # CODE
-            if var noun matches /((ein)|(ien))$/ do
+            if var noun matches /((ein)|(ien)|(tes))$/ do
                 go to next
             done
             
@@ -3091,6 +3101,7 @@ define action check_for_math with var input do
     do regex using var math: /sich/, " ", :global:i
     do regex using var math: /der|die|das/, " ", :global:i
     do regex using var math: / plus /, "+", :global:i
+    do regex using var math: / und /, "+", :global:i
     do regex using var math: / half of (\d+)/, "( $1 \/ 2 )", :global:i
     do regex using var math: / minus /, "-", :global:i
     set new var slash to "/"

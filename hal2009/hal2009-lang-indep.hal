@@ -304,6 +304,9 @@ define action compute_input with var input is rw, var lang do
         do regex using var input: /<ws><[,]><ws>(<[a-zA-Z0-9_]>+\s+<[a-zA-Z0-9_]>+)\s+(und|oder|or|and)<ws>/, " $1 $0 $1 ", :global:i
     end for
 
+    do regex using var input: /heisse\sich/, "ist mein Name", :global:i
+    do regex using var input: /ich\sheisse/, "mein Name ist", :global:i
+
     do regex using var input: /wie heisst\sdu/, "wer bist du", :global:i
     do regex using var input: /wie heisse\s/, "wer bin ", :global:i
     
@@ -481,6 +484,12 @@ define action compute_input with var input is rw, var lang do
     do regex using var input: /was ist ueber (.*?)/, "was ist $0", :global:i
     do regex using var input: /was ist los mit (.*?)/, "was ist $0", :global:i
 
+    do regex using var input: /weisst du denn noch /, "weisst du ", :global:i
+    do regex using var input: /weisst du denn /, "weisst du ", :global:i
+    do regex using var input: /weisst du noch /, "weisst du ", :global:i
+    do regex using var input: /weisst du (w<[^\s]>*?)\s(<[^?!.,]>*)/, "$1 $0", :global:i
+    do regex using var input: /weisst du /, "", :global:i
+
     do regex using var input: /wie vie<[a-zA-Z]>+\s/, "wie ", :global:i
     do regex using var input: /^hm\, /, " ", :global:i
     do regex using var input: /^hm \, /, " ", :global:i
@@ -501,6 +510,7 @@ define action compute_input with var input is rw, var lang do
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
 
     do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
+    do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
     do regex using var input: /what is /, "ISUNKNOWN ", :global:i
 
     do regex using var input: /in dem jahr (<[\d]>+)/, "in dem \"jahre $0\"", :global:i

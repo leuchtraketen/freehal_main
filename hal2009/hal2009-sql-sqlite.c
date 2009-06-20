@@ -373,6 +373,21 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     
     *num_of_words = 1;
     words[0] = strdup("0");
+
+    if (strcmp(subj, "0")) {
+        words[*num_of_words] = strdup(subj);
+        ++(*num_of_words);
+    }
+    
+    if (strcmp( obj, "0")) {
+        words[*num_of_words] = strdup( obj);
+        ++(*num_of_words);
+    }
+    
+    if (strcmp(advs, "0")) {
+        words[*num_of_words] = strdup(advs);
+        ++(*num_of_words);
+    }
     
     buffer = strtok(subj, " ;.)(-,");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
@@ -480,12 +495,12 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     if (num_of_records[relation_to?1:0] == 0) {
         char sql[5120];
         *sql = 0;
-        strcat(sql, "SELECT COUNT(pk) FROM ");
+        strcat(sql, "SELECT pk from ");
         if (relation_to)
             strcat(sql, "clauses");
         else
             strcat(sql, "facts");
-        strcat(sql, ";");
+        strcat(sql, " order by 1 desc limit 1;");
         printf(sql);
     
         char key[99];
@@ -620,24 +635,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             strcat(sql, r->verb_flag_should?"1":"0");
             strcat(sql, ");\n");
 
-/*
-            char* err;
-            if (sqlite3_exec(sqlite_connection, sql, NULL, key, &err)) {
-                if (strstr(err, "is not unique")) {
-                    /// do nothing
-                }
-                else {
-                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
-                }
-            }
-            sqlite3_free(err);
-            free(sql);
             
-            /// Add word-fact relations
-            sql = malloc(5120+sizeof(r));
-            *sql = 0;
-*/
-
             int num_of_words = 0;
             char** words = calloc(501*sizeof(char*), 1);
             strcpy(r->extra, "");
@@ -647,7 +645,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                 if (words[num_of_words]) {
                     if (words[num_of_words][0] != '0') {
                         //strcpy(sql, "");
-                        strcat(sql, "INSERT INTO rel_word_fact (`word`, `fact`, `table`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
+                        strcat(sql, "INSERT OR IGNORE INTO rel_word_fact (`word`, `fact`, `table`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
                         strcat(sql, "\n\"");
                         strcat(sql, words[num_of_words]);
                         strcat(sql, "\", \n");
@@ -670,19 +668,6 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                         strcat(sql, r->verb_flag_should?"1":"0");
                         strcat(sql, ");");
 
-                        //printf("SQL: %s (%d)\n", sql, num_of_words);
-    /*
-                        char* err;
-                        if (sqlite3_exec(sqlite_connection, sql, select_primary_key, key, &err)) {
-                            if (strstr(err, "are not unique")) {
-                                /// do nothing
-                            }
-                            else {
-                                //printf("Error while executing SQL: %s\n%s\n", err, sql);
-                            }
-                        }
-                        sqlite3_free(err);
-    */
                         free(words[num_of_words]);
                         words[num_of_words] = 0;
                     }
@@ -717,7 +702,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     fprintf(database_sql, "%s", sql);
     fclose(database_sql);
     free(sqlite_filename_sql);
-    
+
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
         if (strstr(err, "unique")) {
@@ -791,19 +776,55 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 buf += j+1;
                 size = strlen(buf);
                 j = 0;
-                printf("New buf: %s\n", buf);
+                printf("New buf (matched by ' '): %s\n", buf);
             }
         }
         strcat(sql, "SELECT objects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
         if (buf) strcat(sql, buf);
-        strcat(sql, "\" GLOB subjects OR subjects ");
-        if (buf && strstr(buf, "*"))
-            strcat(sql, "GLOB");
-        else
+        strcat(sql, "\" GLOB subjects OR (1 ");
+        
+        if (buf && !strstr(buf, "*")) {
+            strcat(sql, "AND subjects ");
             strcat(sql, "=");
-        strcat(sql, " \"");
-        if (buf) strcat(sql, buf);
-        strcat(sql, "\") AND objects <> \"*\" AND subjects <> \"*\" AND adverbs = \"\"");
+            strcat(sql, " \"");
+            strcat(sql, buf);
+            strcat(sql, "\"");
+        }
+        else if (buf) {
+            int size = strlen(buf);
+            int j;
+            for (j = 0; j < size; ++j) {
+                if (buf[j] == '*') {
+                    buf[j] = '\0';
+
+                    printf("New buf (matched by '*'): %s*\n", buf);
+                    if (size) {
+                        strcat(sql, "AND subjects ");
+                        strcat(sql, "GLOB");
+                        strcat(sql, " \"");
+                        strcat(sql, buf);
+                        strcat(sql, "*\"");
+                    }
+                    buf[j] = '*';
+                    if (j-1 >= 0) buf[j-1] = '\0';
+
+                    if (j-1 >= 0) buf += j;
+                    else          buf += j+1;
+                    size = strlen(buf);
+                    j = 0;
+                }
+            }
+
+            if (size) {
+                strcat(sql, "AND subjects ");
+                strcat(sql, "GLOB");
+                strcat(sql, " \"");
+                strcat(sql, buf);
+                strcat(sql, "*\"");
+            }
+        }
+        
+        strcat(sql, ") ) AND objects <> \"*\" AND subjects <> \"*\" AND adverbs = \"\"");
         
         if (bbuf) free(bbuf);
         
@@ -1472,9 +1493,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war") || strstr(r->verb, "sind") || strstr(r->verb, "waren"))) {
                 strcpy(buffers, "ein*");
                 flag_should_contain = 0;
-                if (need_and) strcat(sql, " AND");
-                else          strcat(sql, "WHERE");
-                strcat(sql, " ( nmain.adverbs = \"\" )");
+                //if (need_and) strcat(sql, " AND");
+                //else          strcat(sql, "WHERE");
+                //strcat(sql, " ( nmain.adverbs = \"\" )");
                 need_and = 1;
             }
         }
@@ -1492,7 +1513,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 else          strcat(sql, "WHERE");
                 strcat(sql, " ( ");
                 if (0 == strcmp(r->context, "q_who") || 0 == strcmp(r->context, "q_what_weakly")) {
-                    strcat(sql, " nmain.adverbs = \"\" AND nmain.truth > 0.9 AND ");
+                    //strcat(sql, " nmain.adverbs = \"\" AND nmain.truth > 0.9 AND ");
                 }
                 if (flag_should_contain) {
                     strcat(sql, " (nmain.mix_1 GLOB \"");
