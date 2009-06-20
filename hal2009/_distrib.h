@@ -19,6 +19,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#define USE_CXX 1
+#define NOT_HEADER_ONLY 1
+#define DONT_DECLARE_STD 1
 #include "hal2009.h"
 
 
