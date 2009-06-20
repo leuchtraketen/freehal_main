@@ -127,7 +127,7 @@
 ** at all times.
 */
 #ifndef SQLITE_MAX_EXPR_DEPTH
-# define SQLITE_MAX_EXPR_DEPTH 1000
+# define SQLITE_MAX_EXPR_DEPTH 100000
 #endif
 
 /*
