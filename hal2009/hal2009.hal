@@ -379,7 +379,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     set var name_of_entry to var name_of_entry concat ")"
     set var name_of_entry to var name_of_entry concat var end_of_entry_line
     
-    do regex using var name_of_entry: /[\[\]\)\(]/, "", :global:i
+    do regex using var name_of_entry: /[\[\]]/, "", :global:i
     
     set new var type to 'q'
     set new var genus to 'q'
@@ -398,7 +398,10 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         else do
         
             if var line matches /^var name_of_entry/ do
-                print "Found do      " concat var name_of_entry concat "    \tin file " concat var file_name
+                print "Found do      " concat var name_of_entry concat "    \tin file " concat var file_name concat ":"
+                print var name_of_entry
+                print new line
+                print var line
                 print new line
                 # we've found the right entry!
                 for each new var line from var input_handle is rw do
@@ -629,6 +632,17 @@ define action compute_tags with var word, var lang, var path do
         set array tags to memory_get_by_name using "word_types.brain", var word, var lang, var path
     done
     
+    # TEXT
+    # Ask the user.
+    # CODE
+    if is an empty array tags do
+        if exists: var path concat "/no-tagger.txt", end test do
+            set array tags to an empty array
+            set from array tags first item to get_tag_part_of_speech using var word, var lang
+            do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+        done
+    done
+
     # TEXT
     # Look for similar words.
     # CODE
@@ -1431,7 +1445,7 @@ define action compute_context with hash parsed do
     do return with "default"
 done
 
-define action logic with var input, var lang, hash parsed do
+define action logic with var input, var lang, var path, hash parsed do
     set new array request_verb_array to an empty array
     if from hash parsed item { 'verbs' } do
         push into array request_verb_array, items of that array: from hash parsed item { 'verbs' } end-items-of
@@ -1550,6 +1564,37 @@ define action logic with var input, var lang, hash parsed do
     set new var request_objects_string to join using ' ', items of array request_objects
     set new var request_adverbs_string to join using ' ', items of array request_adverbs
     set new var request_extra_string to join using ' ', items of array request_extra
+
+    if var request_verb_string or var request_subjects_string or var request_objects_string or var request_adverbs_string do
+        set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
+        print into var flowchart_log data "begin box"
+        print into var flowchart_log data new line
+        print into var flowchart_log data "bckgrndcolr D0FFCF"
+        print into var flowchart_log data new line
+        print into var flowchart_log data "bordercolor D0FFCF"
+        print into var flowchart_log data new line
+        print into var flowchart_log data "linesoftext 7"
+        print into var flowchart_log data new line
+        print into var flowchart_log data "draw"
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Verbs:\t" concat var request_verb_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Subjects:\t" concat var request_subjects_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Objects:\t" concat var request_objects_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Adverbs:\t" concat var request_adverbs_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Other:\t" concat var request_extra_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Context:\t" concat var request_context_string
+        print into var flowchart_log data new line
+        print into var flowchart_log data "textcontent 000000 Modal verbs:\twant: " concat flag verb_flag_want concat "\tmust: " concat flag verb_flag_must concat "\tcan: " concat flag verb_flag_can concat "\tmay: " concat flag verb_flag_may concat "\tshould: " concat flag verb_flag_should
+        print into var flowchart_log data new line
+        print into var flowchart_log data "end box"
+        print into var flowchart_log data new line
+        do close with var flowchart_log
+    done
 
     set array request_subjects to stem_nouns with [ var request_subjects_string ]
     set array request_objects to stem_nouns with [ var request_objects_string ]
@@ -1844,7 +1889,7 @@ define action phrase with var lang, var mode, array results, hash parsed do
     do return using array phrases
 done
 
-define action post_phrase with var lang, var mode, hash parsed, array output do
+define action post_phrase with var lang, var path, var mode, hash parsed, array output do
     set new var primary_key to shift with items of array output
     
     set new var final_sentence to from array output first item
@@ -1858,7 +1903,7 @@ define action post_phrase with var lang, var mode, hash parsed, array output do
         # CODE
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order item { 'primary_key' } to var primary_key
-        set new array results_link_order to logic with '', var lang, hash hash_link_order
+        set new array results_link_order to logic with '', var lang, var path, hash hash_link_order
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
@@ -1874,7 +1919,7 @@ define action post_phrase with var lang, var mode, hash parsed, array output do
         # CODE
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order item { 'primary_key' } to 0 - var primary_key
-        set new array results_link_order to logic with '', var lang, hash hash_link_order
+        set new array results_link_order to logic with '', var lang, var path, hash hash_link_order
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
@@ -1986,10 +2031,10 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
     # Then use logic.
     # CODE
     if var mode matches "question" do
-        set array results to logic with var input, var lang, hash parsed
+        set array results to logic with var input, var lang, var path, hash parsed
     done
     if var mode matches "statement" do
-        set array results to logic with var input, var lang, hash parsed
+        set array results to logic with var input, var lang, var path, hash parsed
     done
     if var save_input matches "yes" do
         do save_facts with [ hash parsed ], '', var lang, var path
@@ -2419,7 +2464,7 @@ define action give_output with var input is rw, array facts_to_link, var current
         do return with [ var answer ]
     done
 
-    set (var input, new var no_change_pronouns) to compute_input with var input, var current_language
+    set (var input, new var no_change_pronouns) to compute_input with var input, var current_language, var path
     if not var input do
         do return with an empty array
     done
@@ -2446,6 +2491,41 @@ define action give_output with var input is rw, array facts_to_link, var current
             print new line
         done
     done
+    
+    # TEXT
+    # Flow chart log
+    # CODE
+    set new var num to items of array sentences
+    set var num to var num + 1
+    set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
+    print into var flowchart_log data "begin box"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "bckgrndcolr FFD0BB"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "bordercolor FFD0BB"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "linesoftext " concat var num
+    print into var flowchart_log data new line
+    print into var flowchart_log data "draw"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "textcontent 000000 Answers:"
+    print into var flowchart_log data new line
+    for each new array sentence in array sentences do
+        if from array sentence item [ 1 ] do
+            print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence item [ 0 ] concat ": " concat from array sentence item [ 1 ]
+            print into var flowchart_log data new line
+            print into var flowchart_log data "property    pk     " concat from array sentence item [ 0 ]
+            print into var flowchart_log data new line
+        done
+        else do
+            print into var flowchart_log data "textcontent 000000 \t - (invalid)"
+            print into var flowchart_log data new line
+        done
+    done
+    print into var flowchart_log data "end box"
+    print into var flowchart_log data new line
+    do close with var flowchart_log
+    
 
     if is an empty array sentences do
         print "Well, no logic answer available."
@@ -2482,7 +2562,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     # TEXT
     # Make the komma's readable.
     # CODE
-    set (var input, new var no_change_pronouns) to compute_input with var input, var lang
+    set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
     do regex using var input: /<[,]>\s/, " KOMMA ", :global:i
     do regex using var input: /(\D)<[.]>/, "${1} DOT ", :global:i
@@ -2704,7 +2784,7 @@ define action decide with array output, var input, flag all_output_phrases, var 
         set new var output_str to ''
         set new var i to items of array output
         for each new array _item in array output do
-            set new var item_str to post_phrase with var lang, var mode, hash parsed, array _item
+            set new var item_str to post_phrase with var lang, var path, var mode, hash parsed, array _item
             set var output_str to var output_str concat var i concat ".) " concat var item_str concat '<br>'
             set var i to var i - 1
         done
@@ -2737,7 +2817,7 @@ define action decide with array output, var input, flag all_output_phrases, var 
         # CODE
         set new var random_number to rand using items of array rel_output
         set new array final_output to from array rel_output item [ var random_number ]
-        set new var final_output_str to post_phrase with var lang, var mode, hash parsed, array final_output
+        set new var final_output_str to post_phrase with var lang, var path, var mode, hash parsed, array final_output
         do return var final_output_str
     done
 done

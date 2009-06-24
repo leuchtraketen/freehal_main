@@ -24,30 +24,42 @@
 
 /// C Part
 
+#ifdef HAL2009_DISTRIB_NO_SERVER
 extern "C" {
-typedef void (*fp)(void*);
+#   include <stdio.h>
+#   include <stdlib.h>
+#   include <string.h>
 
-#include "_distrib.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-void* invoke (const char* func, void* data) {
-    const char* str_to_ptr[N_FUNC] = STR_TO_PTR;
-    fp          ptr_to_str[N_FUNC] = PTR_TO_STR;
-
-    int i;
-    void* res = 0;
-    for (i = 0; i < N_FUNC; ++i) {
-        if (0 == strcmp( (const char*)(str_to_ptr[i]), func)) {
-            res = ( (void* (*)(void*))(ptr_to_str[i]) )(data);
-        }
+    void* invoke (const char* func, void* data) {
+        printf("Server not compiled in - Cannot execute function '%s' using data '%s'.\n", func, (const char*)data);
     }
+}
+#else // #ifdef HAL2009_DISTRIB_NO_SERVER
+extern "C" {
+    typedef void (*fp)(void*);
 
-    return res;
+#   include "_distrib.h"
+
+#   include <stdio.h>
+#   include <stdlib.h>
+#   include <string.h>
+
+    void* invoke (const char* func, void* data) {
+        const char* str_to_ptr[N_FUNC] = STR_TO_PTR;
+        fp          ptr_to_str[N_FUNC] = PTR_TO_STR;
+
+        int i;
+        void* res = 0;
+        for (i = 0; i < N_FUNC; ++i) {
+            if (0 == strcmp( (const char*)(str_to_ptr[i]), func)) {
+                res = ( (void* (*)(void*))(ptr_to_str[i]) )(data);
+            }
+        }
+
+        return res;
+    }
 }
-}
+#endif // #ifdef HAL2009_DISTRIB_NO_SERVER
 
 #ifdef __cplusplus
 
@@ -81,6 +93,8 @@ void hal2009_distrib_server_start() {
         {
             std::cerr << e.what() << std::endl;
         }
+        
+        usleep(2000);
     }
 }
 
@@ -122,11 +136,13 @@ void hal2009_distrib_server_run() {
         {
             std::cerr << "(1): " << e.what() << std::endl;
             if ( stream ) delete stream;
+            usleep(2000);
             continue;
         }
         try {
             if (!distrib_server_acceptor) {
                 hal2009_distrib_server_start();
+                usleep(2000);
             }
             if (!distrib_server_acceptor) {
                 delete stream;
@@ -138,6 +154,7 @@ void hal2009_distrib_server_run() {
         {
             std::cerr << "(2): " << e.what() << std::endl;
             if ( stream ) delete stream;
+            usleep(2000);
             continue;
         }
         try {
@@ -146,12 +163,14 @@ void hal2009_distrib_server_run() {
         catch (std::exception& e)
         {
             std::cerr << "(3): " << e.what() << std::endl;
+            usleep(2000);
         }
     }
 }
 
 const char** hal2009_distrib_search_servers() {
-    const char* servers[2] = { "127.0.0.1", 0 };
+    char** servers = (char**)calloc(sizeof(char*), 2);
+    servers[0] = strdup("127.0.0.1");
     return (const char**)servers;
 }
 
@@ -178,6 +197,7 @@ const char* hal2009_distrib_invoke_on(const char* host, unsigned short port, con
                 while (*stream && stream->rdbuf()->is_open()) {
                     getline(*stream, line);
                     result += line;
+                    line = "";
                 }
 
                 cout << "[ distrib :: Result = \"" << result << "\" ]." << endl;
@@ -200,24 +220,6 @@ const char* hal2009_distrib_invoke_on(const char* host, unsigned short port, con
 #ifndef HAL2009_DISTRIB_NO_MAIN
 
 int main (int argc, char** argv) {
-
-    if (!fork()) {
-        const char** servers = hal2009_distrib_search_servers();
-        int i = 0;
-        while (servers[i]) {
-            
-            char* param = calloc(50000, 1);
-            {
-                char* copy_of_input, copy_of_language;
-                sprintf(param, "%s:%s", copy_of_language, copy_of_input);
-            }
-            
-            hal2009_distrib_invoke_on(servers[i], distrib_port, "hal2009_answer__1", param);
-            
-            ++i;
-        }
-        return 0;
-    }
 
     hal2009_distrib_server_start();
     hal2009_distrib_server_run();

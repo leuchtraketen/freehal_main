@@ -127,7 +127,7 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
         ++n;
     }
     
-    if (!synonyms[n] && (n < 3 || strcmp(synonyms[n-1], argv[0]))) {
+    if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
         synonyms[n] = strdup(argv[0]);
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
@@ -159,6 +159,11 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
         else
             return 1;
         
+        if (n >= 1 && 0 == strcmp(synonyms[n-1], synonyms[n])) {
+            if (synonyms[n])
+                free(synonyms[n]);
+            synonyms[n] = 0;
+        }
     }
     
     return 0;
@@ -277,6 +282,9 @@ char* sql_sqlite_mask_sql(char* sql) {
 }
 
 int sql_sqlite_set_filename(const char* filename) {
+    if (sqlite_filename)
+        free(sqlite_filename);
+    sqlite_filename = 0;
     sqlite_filename = filename;
 }
 
@@ -429,6 +437,36 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     free(obj);
     free(advs);
     free(extra);
+}
+
+int sql_sqlite_del_record(struct RECORD* r) {
+    if (!r->pkey || !r->pkey[0])
+        return 1;
+    
+    char* sql = malloc(1024);
+    *sql = 0;
+    strcat(sql, "DELETE FROM facts WHERE pk = ");
+    strcat(sql, r->pkey);
+    strcat(sql, ";");
+    
+    char* err;
+    while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
+        printf("Error while executing SQL: %s\n%s\n", sql, err);
+        if (strstr(err, "no such table")) {
+            sqlite3_free(err);
+            if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                printf("Error while executing SQL: %s\n%s\n", sql, err);
+            }
+            else {
+                sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err);
+            }
+        }
+        else {
+            break;
+        }
+    }
+    sqlite3_free(err);
+    free(sql);
 }
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
@@ -913,6 +951,70 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         free(sql);
         sql = malloc(512000+sizeof(r));
         *sql = 0;
+    }
+    
+    int num_of_synonyms;
+    int _num_of_synonyms;
+    // Flow Chart Log
+    {
+        num_of_synonyms = 0;
+        while (subject_synonyms[num_of_synonyms] && num_of_synonyms < 4000) {
+            ++num_of_synonyms;
+        }
+
+        _num_of_synonyms = 0;
+        while (object_synonyms[_num_of_synonyms] && _num_of_synonyms < 4000) {
+            ++_num_of_synonyms;
+        }
+        
+        if (num_of_synonyms + _num_of_synonyms > 0) {
+            if (0 == num_of_synonyms)
+                num_of_synonyms = 1;
+            if (0 == _num_of_synonyms)
+                _num_of_synonyms = 1;
+
+            FILE* logfile = fopen("flowchart.log", "a");
+            fprintf(logfile, "begin box\n");
+            fprintf(logfile, "bckgrndcolr D0FFFF\n");
+            fprintf(logfile, "bordercolor D0FFFF\n");
+            fprintf(logfile, "linesoftext %d\n", num_of_synonyms+_num_of_synonyms+3);
+            fprintf(logfile, "draw\n");
+            fprintf(logfile, "textcontent 000000 Synonyms (Subject):\n");
+            int n = 0;
+            while (subject_synonyms[n] && n < 4000) {
+                char* subject_synonym_buf = subject_synonyms[n];
+                
+                fprintf(logfile, "textcontent 000000 \t - %s\n", subject_synonym_buf);
+                
+                ++n;
+            }
+            if (0 == n) {
+                fprintf(logfile, "textcontent 000000 \t none\n");
+            }
+            fclose(logfile);
+        }
+    }
+    
+    // Flow Chart Log
+    {
+        if (num_of_synonyms + _num_of_synonyms > 0) {
+            FILE* logfile = fopen("flowchart.log", "a");
+            fprintf(logfile, "textcontent 000000 \n");
+            fprintf(logfile, "textcontent 000000 Synonyms (Object):\n");
+            int n = 0;
+            while (object_synonyms[n] && n < 4000) {
+                char* object_synonym_buf = object_synonyms[n];
+                
+                fprintf(logfile, "textcontent 000000 \t - %s\n", object_synonym_buf);
+                
+                ++n;
+            }
+            if (0 == n) {
+                fprintf(logfile, "textcontent 000000 \t none\n");
+            }
+            fprintf(logfile, "end box\n");
+            fclose(logfile);
+        }
     }
     
     char** important_records = calloc(4000*sizeof(char*), 1);

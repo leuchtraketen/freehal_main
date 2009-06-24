@@ -64,8 +64,25 @@ define action divide_input with var input is rw, var lang do
     do return with var input
 done
 
-define action compute_input with var input is rw, var lang do
+define action compute_input with var input is rw, var lang, var path do
     set new var no_change_pronouns to 0
+    
+    set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
+    print into var flowchart_log data "begin box"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "bckgrndcolr FFFFD0"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "bordercolor FFFFD0"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "linesoftext 2"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "draw"
+    print into var flowchart_log data new line
+    print into var flowchart_log data "setinput    " concat var input
+    print into var flowchart_log data new line
+    print into var flowchart_log data "textcontent 000000 Input:\t" concat var input
+    print into var flowchart_log data new line
+    do close with var flowchart_log
 
     print "Computed input (no. 1) ... "
     print var input
@@ -542,6 +559,13 @@ define action compute_input with var input is rw, var lang do
 
     print "Computed input ... ... ", var input
     print new line
+
+    set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
+    print into var flowchart_log data "textcontent 000000 => \t" concat var input
+    print into var flowchart_log data new line
+    print into var flowchart_log data "end box"
+    print into var flowchart_log data new line
+    do close with var flowchart_log
 
     do return with ( var input, var no_change_pronouns )
 done

@@ -1025,8 +1025,7 @@ void* hal2009_answer_thread(void* parameters) {
     reset_stdout();
     
     char* tempfile = calloc(strlen(base_dir)+1000, 1);
-    strcpy(tempfile, base_dir);
-    strcat(tempfile, "/temp.hal");
+    snprintf(tempfile, strlen(base_dir)+1000-1, "%s/temp_%s_%i.hal", base_dir, tlanguage, strlen(base_dir));
     FILE* startfile = fopen(tempfile, "w");
     char* content = halmalloc(1024, "hal2009_answer_thread");
     strcpy(content, ""
@@ -1055,11 +1054,7 @@ void* hal2009_answer_thread(void* parameters) {
     halwrite(content, sizeof(char), strlen(content), startfile);
     halclose(startfile);
     halfree(content);
-    halfree(tempfile);
 
-    tempfile = calloc(strlen(base_dir)+1000, 1);
-    strcpy(tempfile, base_dir);
-    strcat(tempfile, "/temp.hal");
     if (0 == strcmp(planguage, "perl6")) {
         execute_perl6(tempfile);
     }

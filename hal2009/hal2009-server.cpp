@@ -678,6 +678,12 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             cout << "Got a HERE_IS_* statement at the wrong place in code" << endl;
         }
         
+        if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {
+            struct RECORD r;
+            strcpy(r.pkey, result->at(3).c_str());
+            sql_del_record(&r);
+        }
+        
         if ( result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             std::vector<std::string>* sentences = simple_split( string(result->at(1)), ".!" );
             for (int l = 0; l < sentences->size(); ++l) {
