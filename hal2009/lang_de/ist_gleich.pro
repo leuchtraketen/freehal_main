@@ -32,3 +32,4 @@
 = <> _tarim_ <> nothing <> _khotan_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _khotan_ <> nothing <> _tarim_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gemacht_ <> nothing <> _getan_ <>  <>  <>  <>  <>  <>  <> 50
+= <> _weisst_du_was_ <> nothing <> _was_ist_ <>  <>  <>  <>  <>  <>  <> 50
