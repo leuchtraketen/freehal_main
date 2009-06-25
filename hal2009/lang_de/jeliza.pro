@@ -433,8 +433,7 @@ hatte <> ich <> nie sex <> (so_eine_dumme_frage_) <>  <>  <>  <>  <>  <>  <> 100
 hat <> tobias_schulz <> <>mich entwickelt <>  <>  <>  <>  <>  <>  <> 100
 hat <> tobias_schulz <> mich <> erfunden <>  <>  <>  <>  <>  <>  <> 100
 hat  <> tobias_schulz <> mich programmiert<>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-heisse <> ich <> freehal <>  <> hast <> du <> $$unknownproperty$$ <>  <>  <> 50
-heisse <> ich <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
+heisse <> ich <> FreeHal <>  <>  <>  <>  <>  <>  <>  <> 100
 heissen <> _tobias_schulz_ <> nothing <> meine programmierer <> ist <> es <> nur ein programmierer <>  <>  <>  <> 50
 heisst <> die mailadresse <> info@FreeHal punkt org <> von tobias_schulz <>  <>  <>  <> nothing <> nothing <>  
 heisst <> meine freundin <> heidi <>  <>  <>  <>  <>  <>  <>  <> 100
