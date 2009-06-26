@@ -2124,7 +2124,7 @@ define action sort_out with array results, var mode, hash parsed do
     # If there is no questionword, prefer proper answers
     # CODE
     if not from array questionword_array first item do
-        if is an empty array results_variable_answer do
+        if is an empty array results_variable_answer or (items of array results_variable_answer)+50 < (items of array results_proper) do
             print "-> results_proper (1): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
             print new line
             return array results_proper
