@@ -817,7 +817,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf (matched by ' '): %s\n", buf);
             }
         }
-        strcat(sql, "SELECT objects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
+        strcat(sql, "SELECT objects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (\"");
         if (buf) strcat(sql, buf);
         strcat(sql, "\" GLOB subjects OR (1 ");
         
