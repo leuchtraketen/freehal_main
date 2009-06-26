@@ -199,6 +199,8 @@ extern "C" {
     int sql_sqlite_set_filename(const char* filename);
     void* halfilecalloc( long s, long si, char* f );
     void* halfilefree( void* s );
+    
+    int sql_del_record(struct RECORD* r);
 #ifdef __cplusplus
 }
 #endif
@@ -250,9 +252,11 @@ FILE* get_output() {
  	return stdout;
 }
 
+#if defined (__MINGW) || defined(__MINGW32__)
 #ifdef stdout
 #undef stdout
 #define stdout	(&_iob[STDOUT_FILENO])
+#endif
 #endif
 FILE* set_output(FILE* f) {
     _set_stdout(f);

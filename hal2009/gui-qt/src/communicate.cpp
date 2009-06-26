@@ -71,17 +71,17 @@ void session_stream_read(boost::shared_ptr<tcp::iostream> stream) {
             }
 
             while (line.size() > 0) {
-                cout << 1 << line.ref() << endl;
+                // cout << 1 << line.ref() << endl;
                 if (line.contains("MULTILINE:BEGIN")) {
                     int lines = 0;
                     (*stream) >> lines;
                     getline(*stream, line.ref());
-                    cout << 2 << line.ref() << endl;
+                    // cout << 2 << line.ref() << endl;
                     cline.set("\n");
                     time_t t = time(NULL);
                     while (!cline.contains("MULTILINE:END") && time(NULL) < t+2 && lines > 0) {
                         line += cline + "\n";
-                        cout << 3 << line.ref() << endl;
+                        // cout << 3 << line.ref() << endl;
                         getline(*stream, cline.ref());
                         --lines;
                     }
@@ -298,7 +298,7 @@ void freehal::comm_init_client(std::string host, bool verbose, bool wait = false
 
 void freehal::comm_send(freehal::string s) {
     if (ok_to_write) {
-        cout << "--" << s.ref() << endl;
+        // cout << "--" << s.ref() << endl;
         comm_write(s.ref());
     }
 }

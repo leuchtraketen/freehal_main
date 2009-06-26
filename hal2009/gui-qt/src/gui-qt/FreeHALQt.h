@@ -54,6 +54,7 @@
 #include <QtGui/QGraphicsView>
 
 #include <QtGui/QApplication>
+#include <QtGui/QPainter>
 #include <QtUiTools/QUiLoader>
 #include <QtGui/QMainWindow>
 #include <QtGui/QWidget>
@@ -142,6 +143,8 @@ public slots:
     void on_normalscreen_clicked();
     void on_fullscreen_triggered();
     void on_pushButton_clicked();
+    void on_compute_output_clicked();
+    void on_flowchart_fact_delete_clicked();
     void on_pushButton_learn_clicked();
     void on_lineEdit_returnPressed();
     void on_actionGespr_ch_triggered();
@@ -318,5 +321,26 @@ public:
 
 class DummyQObject : public QObject {
     Q_OBJECT
+};
+
+struct ClickPositionItem {
+    int beginY;
+    int endY;
+    char* prop;
+    char* value;
+};
+
+class FlowChart : public QWidget {
+    Q_OBJECT
+
+  public:
+    FlowChart(QWidget*);
+    void mousePressEvent(QMouseEvent *e);
+    void mouseReleaseEvent(QMouseEvent *e);
+
+    Ui::freehalWindow* user_interface_main_window;
+
+  protected:
+    void paintEvent(QPaintEvent *event);
 };
 

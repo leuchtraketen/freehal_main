@@ -173,6 +173,20 @@ void FreeHALWindow::on_pushButton_clicked() {
     freehal::comm_send("QUESTION:" + ques);
 }
 
+void FreeHALWindow::on_compute_output_clicked() {
+    QString qs = user_interface_main_window->flowchart_input->displayText();
+    freehal::string ques = ascii(qs);
+
+    freehal::comm_send("QUESTION:" + ques);
+}
+
+void FreeHALWindow::on_flowchart_fact_delete_clicked() {
+    QString qs(user_interface_main_window->flowchart_fact_pk->value());
+    freehal::string ques = ascii(qs);
+
+    freehal::comm_send("DELETE:FACT:PK:" + ques);
+}
+
 void FreeHALWindow::on_pushButton_learn_clicked() {
     QString qs = user_interface_main_window->lineEdit->displayText();
     freehal::string ques = ascii(qs);
@@ -363,6 +377,19 @@ int main(int argc, char* argv[]) {
     Ui::freehalWindow* user_interface_main_window = new Ui::freehalWindow();
     user_interface_main_window->setupUi(main_window);
     main_window->user_interface_main_window = user_interface_main_window;
+
+    FlowChart* fc = new FlowChart(NULL); // user_interface_main_window->scrollAreaWidgetContents);
+    fc->user_interface_main_window = main_window->user_interface_main_window;
+    //fc->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    //user_interface_main_window->scrollAreaWidgetContents->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    //user_interface_main_window->scrollAreaWidgetContents->setGeometry(fc->geometry());
+    /*
+QScrollArea* scrollArea = new QScrollArea;
+    scrollArea->setBackgroundRole(QPalette::White);
+    scrollArea->setWidget(fc);
+    user_interface_main_window->gridLayout_2->addWidget(scrollArea, 0, 0, 1, 1);
+    */
+    user_interface_main_window->gridLayout_4->addWidget(fc, 0, 0, 1, 1);
 
 
     Ui::ConnectDialog* user_interface_connection_dialog = new Ui::ConnectDialog();
@@ -840,6 +867,189 @@ void Helper::slotEverythingReady() {
     main_window->user_interface_main_window->textEdit->setEnabled(true);
     main_window->user_interface_main_window->pushButton->setEnabled(true);
     main_window->user_interface_main_window->textEdit->setHtml(QString());
+}
+
+FlowChart::FlowChart(QWidget* w)
+: QWidget(w) {
+}
+
+int lastX = 0, lastY = 0;
+int diffX = 0, diffY = 0;
+struct ClickPositionItem* clickPositions[1000];
+void FlowChart::mousePressEvent(QMouseEvent *e) {
+    cout << "Button pressed (" << e->x() << ", " << e->y() << ")." << endl;
+    if (e->button() == Qt::LeftButton) {
+        lastX = e->x();
+        lastY = e->y();
+    }
+}
+
+void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
+    cout << "Button released (" << e->x() << ", " << e->y() << ")." << endl;
+    if (e->button() == Qt::LeftButton) {
+        if (e->x() - lastX > 10 || e->y() - lastY > 10 || e->x() - lastX < -10 || e->y() - lastY < -10) {
+            diffX += e->x() - lastX;
+            diffY += e->y() - lastY;
+
+            cout << "Repainting (" << (e->x() - lastX > 10) << ", " << (e->y() - lastY > 10) << ", " << (e->x() - lastX < -10) << ", " << (e->y() - lastY < -10) << ")..." << endl;
+            this->repaint();
+        }
+
+        else {
+            this->user_interface_main_window->flowchart_fact_pk->setValue(0);
+            int y = e->y() - diffY;
+            for (int l = 0; l < 999 && clickPositions[l]; ++l) {
+                if (clickPositions[l]) {
+                    cout << "[from " << clickPositions[l]->beginY << " to " << clickPositions[l]->endY << "]" << endl;
+                    if (y >= clickPositions[l]->beginY && y <= clickPositions[l]->endY) {
+//                        if (clickPositions[l]->prop == QString("pk    ")) {
+
+                            this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
+
+                            break;
+//                        }
+                    }
+                }
+            }
+        }
+
+        lastX = 0;
+        lastY = 0;
+    }
+
+    if (e->button() != Qt::LeftButton) {
+        e->ignore();
+        return;
+    }
+}
+
+void FlowChart::paintEvent(QPaintEvent *event) {
+    QPainter painter(this);
+
+    for (int l = 0; l < 999 && clickPositions[l]; ++l) {
+        if (clickPositions[l]) {
+            free(clickPositions[l]->prop);
+            free(clickPositions[l]->value);
+            free(clickPositions[l]);
+        }
+    }
+
+    int pos = 0;
+
+    ifstream log("flowchart.log");
+    string line;
+    int margin_top = 10;
+    int margin_between = 10;
+    int padding = 10;
+    int text_height = 15;
+    int num_of_boxes = 0;
+    int box_width = 500;
+    while (log) {
+        getline(log, line);
+        while (line.size() && (line[line.size()-1] == '\r' || line[line.size()-1] == '\n')) {
+            line[line.size()-1] == '\0';
+        }
+
+        if (line == "begin box") {
+            if (num_of_boxes >= 1) {
+                painter.drawLine(diffX+10+box_width/2+5,  diffY+margin_top,   diffX+10+box_width/2+5, diffY+margin_top+margin_between*2);
+                painter.drawLine(diffX+10+box_width/2-5,  diffY+margin_top,   diffX+10+box_width/2-5, diffY+margin_top+margin_between*2);
+
+                painter.drawLine(diffX+10+box_width/2+10, diffY+margin_top+margin_between*1.5, diffX+10+box_width/2, diffY+margin_top+margin_between*2.5);
+                painter.drawLine(diffX+10+box_width/2-10, diffY+margin_top+margin_between*1.5, diffX+10+box_width/2, diffY+margin_top+margin_between*2.5);
+
+                margin_top += margin_between*3.5;
+            }
+
+            int num_text_lines = 0;
+            while (log) {
+                getline(log, line);
+                while (line.size() && (line[line.size()-1] == '\r' || line[line.size()-1] == '\n')) {
+                    line[line.size()-1] == '\0';
+                }
+
+                if (line == "end box") {
+                    break;
+                }
+
+                // Entries of a "box"
+
+                if (line.substr(0, 4) == "draw") {
+                    int height = (2*padding) + (text_height*num_text_lines);
+                    painter.drawRect(diffX+10, diffY+margin_top, box_width, height);
+                    margin_top += padding;
+                }
+                else if (line.substr(0, 12) == "setinput    ") {
+                    user_interface_main_window->flowchart_input->setText(QString::fromStdString(line.substr(12)));
+                }
+                else if (line.substr(0, 12) == "bckgrndcolr ") {
+                    painter.setBrush(QBrush(("#" + line.substr(12, 6)).c_str()));
+                }
+                else if (line.substr(0, 12) == "bordercolor ") {
+                    painter.setPen(QColor(("#" + line.substr(12, 6)).c_str()));
+                }
+                else if (line.substr(0, 12) == "linesoftext ") {
+                    sscanf(line.substr(12).c_str(), "%d", &num_text_lines);
+                }
+                else if (line.substr(0, 12) == "linkcontent ") {
+                    painter.setPen(QColor(("#" + line.substr(12, 6)).c_str()));
+                    QString prop;
+                    QString value;
+                    painter.drawText(diffX+10+padding, diffY+margin_top+padding, QString::fromStdString(line.substr(12+6+1)));
+                    getline(log, line);
+                    prop  = QString::fromStdString(line.substr(12, 6)); // property
+                    value = QString::fromStdString(line.substr(12+6+1)); // value
+
+                    clickPositions[pos] = (struct ClickPositionItem*)calloc(sizeof(struct ClickPositionItem), 1);
+                    clickPositions[pos]->prop  = strdup(prop .toStdString().c_str());
+                    clickPositions[pos]->value = strdup(value.toStdString().c_str());
+                    clickPositions[pos]->beginY = margin_top;
+                    clickPositions[pos]->endY = margin_top + text_height;
+                    ++pos;
+
+                    margin_top += text_height;
+                }
+                else if (line.substr(0, 12) == "textcontent ") {
+                    painter.setPen(QColor(("#" + line.substr(12, 6)).c_str()));
+                    painter.drawText(diffX+10+padding, diffY+margin_top+padding, QString::fromStdString(line.substr(12+6+1)));
+                    margin_top += text_height;
+                }
+            }
+            margin_top += padding;
+            margin_top += margin_between;
+            ++num_of_boxes;
+        }
+    }
+
+/*
+    painter.setBrush(QBrush("#c56c00"));
+    painter.drawRect(10, 15, 90, 60);
+
+    painter.setBrush(QBrush("#1ac500"));
+    painter.drawRect(130, 15, 90, 60);
+
+    painter.setBrush(QBrush("#539e47"));
+    painter.drawRect(250, 15, 90, 60);
+
+    painter.setBrush(QBrush("#004fc5"));
+    painter.drawRect(10, 105, 90, 60);
+
+    painter.setBrush(QBrush("#c50024"));
+    painter.drawRect(130, 105, 90, 60);
+
+    painter.setBrush(QBrush("#9e4757"));
+    painter.drawRect(250, 105, 90, 60);
+
+    painter.setBrush(QBrush("#5f3b00"));
+    painter.drawRect(10, 195, 90, 60);
+
+    painter.setBrush(QBrush("#4c4c4c"));
+    painter.drawRect(130, 195, 90, 60);
+
+    painter.setBrush(QBrush("#785f36"));
+    painter.drawRect(250, 195, 90, 60);
+*/
+
 }
 
 void freehal::comm_new(freehal::string s) {

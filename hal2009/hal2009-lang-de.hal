@@ -1738,6 +1738,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'wach' => "adj",
           'neues' => "adj",
           'unreife' => "adj",
+          'isunknown' => "vi",
+          'enumall' => "vi",
           'kaputt' => "adj",
           'duerr' => "adj",
           'uebernahm' => "vt",
@@ -3024,7 +3026,7 @@ define action stem_nouns with array phrases do
             # TEXT
             # That's the stemming algorithm
             # CODE
-            if var noun matches /((ein)|(ien)|(tes))$/ do
+            if var noun matches /((ein)|(ie.)|(tes))$/ do
                 go to next
             done
             
