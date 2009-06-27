@@ -131,7 +131,7 @@ a:hover {
 ob_implicit_flush(true);
 ob_end_flush();
 
-chdir("/var/www/web0/html/hal2009");
+#chdir("/var/www/web0/html/hal2009");
 $_IP = $_SERVER[HTTP_X_FORWARDED_FOR];
 if (!$_IP) $_IP = $_SERVER['X-Forwarded-For'];
 if (!$_IP) $_IP = $_SERVER[X_HTTP_FORWARD_FOR];
