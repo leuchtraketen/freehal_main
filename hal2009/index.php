@@ -133,12 +133,15 @@ if (!$_IP) $_IP = $_SERVER['X-Forwarded-For'];
 if (!$_IP) $_IP = $_SERVER[X_HTTP_FORWARD_FOR];
 if (!$_IP) { $_IP = $_SERVER[REMOTE_ADDR]; }
 if ($_POST[q]) {
-	`echo "$_IP: $_POST[q]" >> log/$_IP`;
+	echo `echo "$_IP: $_POST[q]" >> log/$_IP`;
 
-`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
+	$time = time();
+	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
+	$time = time() - $time;
 
-	`echo -n "output: " >> log/$_IP`;
-	`tail -n 1 lang_de/output.history >> log/$_IP`;
+	echo `echo -n "output: " >> log/$_IP `;
+	`echo -n $(tail -n 1 lang_de/output.history) >> log/$_IP`;
+	echo `echo " ($time sec)" >> log/$_IP `;
 	echo `sed -i 's/input:/$_IP:/igm' log/$_IP `;
 	echo `sed -i 's/output:/<span style="width: 150px !important; display: inline-block;">FreeHAL:<\/span>/igm' log/$_IP `;
 }
@@ -164,14 +167,7 @@ echo "</div>";
   <li><a href="http://download.freehal.org/">Download <img src="http://freehal.org/modules/languageicons/flags/en.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
   <li><a href="http://doc.freehal.org/de/Entwicklertagebuch">News <img src="http://freehal.org/modules/languageicons/flags/de.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
   <li><a href="http://boinc.freehal.org/">BOINC <img src="http://freehal.org/modules/languageicons/flags/en.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
-  <li><a href="http://demo.freehal.org/">Online Demo <img src="http://freehal.org/modules/languageicons/flags/de.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
 </ul>
-<b>Development</b>
-<ul>
-  <li><a href="http://doc.freehal.org/en/Repositories">Code Repositories <img src="http://freehal.org/modules/languageicons/flags/en.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
-  <li><a href="http://bugs.freehal.org">Bug Tracker <img src="http://freehal.org/modules/languageicons/flags/en.png" style="width: 18px; height: 9px; margin-left: 2px;" /></a></li>
-</ul>
-
 
 </ul>
 </div>
