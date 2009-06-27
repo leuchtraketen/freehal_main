@@ -148,7 +148,6 @@ while ($read = fread($handle, 4)) {
 	echo $read;
 }
 pclose($handle);
-	passthru("./hal2009-cgi \"$_POST[q]\"");
 ?> </pre>
 <script type="text/javascript">
 document.getElementById("sc").style.height = 500;
