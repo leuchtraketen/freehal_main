@@ -127,6 +127,10 @@ a:hover {
 
 
 <?
+
+ob_implicit_flush(true);
+ob_end_flush();
+
 chdir("/var/www/web0/html/hal2009");
 $_IP = $_SERVER[HTTP_X_FORWARDED_FOR];
 if (!$_IP) $_IP = $_SERVER['X-Forwarded-For'];
@@ -136,7 +140,22 @@ if ($_POST[q]) {
 	echo `echo "$_IP: $_POST[q]" >> log/$_IP`;
 
 	$time = time();
-	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
+#	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
+?> <pre style="height: 300px; overflow: auto; float: right;" id="sc"><?
+$q = escapeshellcmd($_POST[q]);
+$handle = popen('./hal2009-cgi "'.$q.'"', "r");
+while ($read = fread($handle, 4)) {
+	echo $read;
+}
+pclose($handle);
+	passthru("./hal2009-cgi \"$_POST[q]\"");
+?> </pre>
+<script type="text/javascript">
+document.getElementById("sc").style.height = 500;
+document.getElementById("sc").style.width = 200;
+document.getElementById("sc").style.float = "right";
+</script>
+<?
 	$time = time() - $time;
 
 	echo `echo -n "output: " >> log/$_IP `;
