@@ -102,19 +102,19 @@ void hal2009_handle_signal(void* arg) {
     char* text       = ((void**)arg)[1];
     char* start_type = ((void**)arg)[2];
     
-    if (0 == strcmp(type, "_printf__pos")) {
+    if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
         scanf("%s", text);
         FILE* target = fopen("_input__pos", "w+b");
         halwrite(text, 1, strlen(text), target);
         halclose(target);
     }
-    else if (0 == strcmp(type, "_printf__add_pro_file")) {
+    else if (0 == strcmp(type, "_output__add_pro_file")) {
         hal2009_add_pro_file(text);
         FILE* target = fopen("_input__add_pro_file", "w+b");
         halclose(target);
     }
-    else if (0 == strcmp(type, "_printf__get_csv")) {
+    else if (0 == strcmp(type, "_output__get_csv")) {
         struct DATASET set = hal2009_get_csv(text);
         FILE* target = fopen("_input__get_csv", "w+b");
         const char* csv_data = hal2009_make_csv(&set);
@@ -124,13 +124,13 @@ void hal2009_handle_signal(void* arg) {
         free(csv_data);
         fprintf(output(), "Memory is released.\n");
     }
-    else if (0 == strcmp(type, "_printf")) {
+    else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
         ///pthread_exit(0);
         exit(0);
     }
     else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
-        
+        exit(0);
     }
 }
 
