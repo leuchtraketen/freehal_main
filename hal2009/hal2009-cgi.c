@@ -19,6 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#define HAL2009_CGI_MODE 1
+
 #include "hal2009.h"
 
 #include <getopt.h>
