@@ -141,7 +141,7 @@ if ($_POST[q]) {
 
 	$time = time();
 #	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
-?> <pre style="height: 300px; overflow: auto; float: right;" id="sc"><?
+?> <pre style="height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
 $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('./hal2009-cgi "'.$q.'"', "r");
 while ($read = fread($handle, 4)) {
