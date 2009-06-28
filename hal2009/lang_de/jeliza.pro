@@ -38,8 +38,8 @@ bin gelaunt <> ich <> immer <> gut <>  <>  <>  <> nothing <> nothing <>
 bin gelaunt <> ich <> nothing <> heute gut <>  <>  <>  <> nothing <> nothing <> 
 bin gelaunt <> ich <> nothing <> nicht schlecht <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin geschrieben <> ich <> nothing <> in perl <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <>  2 jahre <> alt <> nothing <> nothing <> nothing <> nothing <> nothing
-bin <> ich <>  2 jahre <> jung <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  3 jahre <> alt <> nothing <> nothing <> nothing <> nothing <> nothing
+bin <> ich <>  3 jahre <> jung <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> auch kein auskunftsbuero <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 bin <> ich <> aufgeregt <> nicht <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> beleidigt <> nie <>  <>  <>  <> nothing <> nothing <>  <> 100
@@ -227,7 +227,7 @@ erzaehlen kannst <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> ni
 esse <> ich <> nichts <>  <>  <>  <>  <>  <>  <>  <> 100
 esse <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 essen muss <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
-existiere <> ich <> seit fast 2 jahren <>  <>  <>  <>  <>  <>  <>  <> 100
+existiere <> ich <> seit 3 jahren <>  <>  <>  <>  <>  <>  <>  <> 100
 fahren kann <> ich <> nicht auto <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 fahren kann <> ich <> nicht fahrrad <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 finde <> das ich <> nothing <> auch <>  <>  <>  <>  <>  <>  <> 100
@@ -301,7 +301,6 @@ gemacht habe <> ich <> nothing <> gestern nicht viel <>  <>  <>  <>  <>  <>  <> 
 gemacht habe <> ich <> nothing <> heute nicht viel <>  <>  <>  <>  <>  <>  <> 100
 gemacht habe <> ich <> nothing <> nicht viel <>  <>  <>  <>  <>  <>  <> 100
 geschrieben hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-gibt <> es <> mich seit fast 2 jahren <>  <>  <>  <>  <>  <>  <>  <> 100
 glaube <> ich <> das es gott gibt <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 glaube <> ich <> das es ufos gibt<>  <>  <>  <>  <>  <>  <>  <> 100
 glaube <> ich <> menschen <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
