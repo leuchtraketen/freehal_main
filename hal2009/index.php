@@ -137,7 +137,6 @@ if (!$_IP) $_IP = $_SERVER['X-Forwarded-For'];
 if (!$_IP) $_IP = $_SERVER[X_HTTP_FORWARD_FOR];
 if (!$_IP) { $_IP = $_SERVER[REMOTE_ADDR]; }
 if ($_POST[q]) {
-	echo `echo "$_IP: $_POST[q]" >> log/$_IP`;
 
 	$time = time();
 #	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
@@ -157,14 +156,18 @@ document.getElementById("sc").style.float = "right";
 <?
 	$time = time() - $time;
 
-	echo `echo -n "output: " >> log/$_IP `;
-	`echo -n $(tail -n 1 lang_de/output.history) >> log/$_IP`;
-	echo `echo " ($time sec)" >> log/$_IP `;
-	echo `sed -i 's/input:/$_IP:/igm' log/$_IP `;
-	echo `sed -i 's/output:/<span style="width: 150px !important; display: inline-block;">FreeHAL:<\/span>/igm' log/$_IP `;
+	$logf = fopen("log/$_IP", "a");
+	fwrite($logf, "$_IP: $_POST[q]\n");
+	fwrite($logf, "<span style=\"width: 150px !important; display: inline-block;\">FreeHAL:</span>");
+	$datei = file("lang_de/output.history");
+	$letzte_zeile = array_pop($datei);
+	fwrite($logf, trim($letzte_zeile));
+	fwrite($logf, " ($time sec)\n");
+	fclose($logf);
 }
 echo "<div class='pre'>";
-echo `tail -n 30 log/$_IP | perl -n -e 's/([0-9]+?\.[0-9]+?\.[0-9]+?\.[0-9]+?[:])/<u style="width: 150px; display: inline-block;">$1<\/u>/igm; s/($_IP [:])/<b>$1<\/b>/igmx; print; print qq{<br>};'`;
+#echo `tail -n 30 log/$_IP | perl -n -e 's/([0-9]+?\.[0-9]+?\.[0-9]+?\.[0-9]+?[:])/<u style="width: 150px; display: inline-block;">$1<\/u>/igm; s/($_IP [:])/<b>$1<\/b>/igmx; print; print qq{<br>};'`;
+echo file_get_contents("log/$_IP");
 echo "</div>";
 ?>
 
