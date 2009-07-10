@@ -35,7 +35,7 @@ int sql_add_record(struct RECORD* r) {
     }
 }
 
-int sql_del_record(struct RECORD* r) {
+char* sql_del_record(struct RECORD* r) {
     if (1) { // sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_del_record(r);
     }

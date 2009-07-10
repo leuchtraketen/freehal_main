@@ -2634,22 +2634,22 @@ define action get_verb with var verb, var person do
     
     if var verb matches "have" do
         if var person matches "1s" do
-            return "am"
+            return "habe"
         done
         if var person matches "2s" do
-            return "are"
+            return "hast"
         done
         if var person matches "3s" do
-            return "is"
+            return "hat"
         done
         if var person matches "1p" do
-            return "are"
+            return "haben"
         done
         if var person matches "2p" do
-            return "are"
+            return "habt"
         done
         if var person matches "3p" do
-            return "are"
+            return "haben"
         done
     done
     

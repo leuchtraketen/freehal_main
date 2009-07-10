@@ -439,14 +439,57 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     free(extra);
 }
 
-int sql_sqlite_del_record(struct RECORD* r) {
+char* sql_sqlite_del_record(struct RECORD* r) {
     if (!r->pkey || !r->pkey[0])
         return 1;
+    
+    char* source;
+    {
+        char* sql = malloc(1024);
+        *sql = 0;
+        strcat(sql, "SELECT `from` FROM facts WHERE pk = ");
+        strcat(sql, r->pkey);
+        strcat(sql, " LIMIT 1;");
+
+        // Fetch source of fact
+        char** sources = calloc(4*sizeof(char*), 1);
+        char* err;
+        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &sources, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        
+        if (sources[0]) {
+            source = strdup(sources[0]);
+        }
+        else {
+            source = 0;
+        }
+        
+        sqlite3_free(err);    
+        free(sql);
+        free(sources);
+    }
     
     char* sql = malloc(1024);
     *sql = 0;
     strcat(sql, "DELETE FROM facts WHERE pk = ");
     strcat(sql, r->pkey);
+    printf("pkey (in hal2009-sql-sqlite): %s\n", r->pkey);
     strcat(sql, ";");
     
     char* err;
@@ -467,6 +510,8 @@ int sql_sqlite_del_record(struct RECORD* r) {
     }
     sqlite3_free(err);
     free(sql);
+    
+    return source;
 }
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {

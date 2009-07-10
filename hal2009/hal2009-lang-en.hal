@@ -2496,6 +2496,53 @@ define action guess_part_of_speech with var word do
     do return using var guessed
 done
 
+define action get_verb with var verb, var person do
+
+    if var verb matches "be" do
+        if var person matches "1s" do
+            return "am"
+        done
+        if var person matches "2s" do
+            return "are"
+        done
+        if var person matches "3s" do
+            return "is"
+        done
+        if var person matches "1p" do
+            return "are"
+        done
+        if var person matches "2p" do
+            return "are"
+        done
+        if var person matches "3p" do
+            return "are"
+        done
+    done
+    
+    if var verb matches "have" do
+        if var person matches "1s" do
+            return "have"
+        done
+        if var person matches "2s" do
+            return "have"
+        done
+        if var person matches "3s" do
+            return "has"
+        done
+        if var person matches "1p" do
+            return "have"
+        done
+        if var person matches "2p" do
+            return "have"
+        done
+        if var person matches "3p" do
+            return "have"
+        done
+    done
+    
+    return ""
+done
+
 define action compute_output with var output do
     do regex using var output: /f=>/, "", :global:i
     do regex using var output: /!=>/, "", :global:i

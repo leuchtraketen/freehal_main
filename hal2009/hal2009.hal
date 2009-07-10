@@ -82,7 +82,7 @@ define action be_slow without arguments do
             print STDERR var diff
             print STDERR " cpu seconds were used."
             print STDERR new line
-            do wait 10 * var diff seconds
+            do wait 40 * var diff seconds
             set var be_slow__last_time to time without arguments
         done
     done

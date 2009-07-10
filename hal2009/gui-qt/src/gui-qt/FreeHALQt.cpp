@@ -56,6 +56,7 @@ Dialog5*                    dialog_startup;
 Dialog8*                    dialog_view;
 ConnectDialog*              dialog_connection;
 Helper*                     helper;
+FlowChart*                  fc;
 QMutex                      log_mutex;
 int                         NOTHING_TO_DO = 0;
 int                         ANSWER_TO_DO = 5;
@@ -181,10 +182,10 @@ void FreeHALWindow::on_compute_output_clicked() {
 }
 
 void FreeHALWindow::on_flowchart_fact_delete_clicked() {
-    QString qs(user_interface_main_window->flowchart_fact_pk->value());
-    freehal::string ques = ascii(qs);
+    QString qs;
+    qs.setNum(user_interface_main_window->flowchart_fact_pk->value());
 
-    freehal::comm_send("DELETE:FACT:PK:" + ques);
+    freehal::comm_send("DELETE:FACT:PK:" + qs.toStdString());
 }
 
 void FreeHALWindow::on_pushButton_learn_clicked() {
@@ -378,7 +379,7 @@ int main(int argc, char* argv[]) {
     user_interface_main_window->setupUi(main_window);
     main_window->user_interface_main_window = user_interface_main_window;
 
-    FlowChart* fc = new FlowChart(NULL); // user_interface_main_window->scrollAreaWidgetContents);
+    fc = new FlowChart(NULL); // user_interface_main_window->scrollAreaWidgetContents);
     fc->user_interface_main_window = main_window->user_interface_main_window;
     //fc->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     //user_interface_main_window->scrollAreaWidgetContents->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -390,6 +391,9 @@ QScrollArea* scrollArea = new QScrollArea;
     user_interface_main_window->gridLayout_2->addWidget(scrollArea, 0, 0, 1, 1);
     */
     user_interface_main_window->gridLayout_4->addWidget(fc, 0, 0, 1, 1);
+
+    helper->connect(fc, SIGNAL(ask_again()),
+             main_window, SLOT(on_compute_output_clicked()));
 
 
     Ui::ConnectDialog* user_interface_connection_dialog = new Ui::ConnectDialog();
@@ -875,46 +879,82 @@ FlowChart::FlowChart(QWidget* w)
 
 int lastX = 0, lastY = 0;
 int diffX = 0, diffY = 0;
-struct ClickPositionItem* clickPositions[1000];
+struct ClickPositionItem** clickPositions = (struct ClickPositionItem**)calloc(10000*sizeof(struct ClickPositionItem*), 1);
 void FlowChart::mousePressEvent(QMouseEvent *e) {
     cout << "Button pressed (" << e->x() << ", " << e->y() << ")." << endl;
     if (e->button() == Qt::LeftButton) {
-        lastX = e->x();
-        lastY = e->y();
+        if (e->x() <= this->size().width() - 20) {
+            lastX = e->x();
+            lastY = e->y();
+        }
+    }
+
+    if (e->button() == Qt::LeftButton) {
+        if (e->x() > this->size().width() - 20) {
+
+            if (e->y() > 50) {
+                diffY -= 20;
+            }
+            else {
+                diffY += 20;
+            }
+            this->repaint();
+
+            int z;
+            for (z = 0; z < 3; ++z) {
+                if (e->y() > 50) {
+                    diffY -= 30;
+                }
+                else {
+                    diffY += 30;
+                }
+                this->repaint();
+            }
+
+            if (e->y() >50) {
+                diffY -= 20;
+            }
+            else {
+                diffY += 20;
+            }
+            this->repaint();
+        }
     }
 }
 
 void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
     cout << "Button released (" << e->x() << ", " << e->y() << ")." << endl;
     if (e->button() == Qt::LeftButton) {
-        if (e->x() - lastX > 10 || e->y() - lastY > 10 || e->x() - lastX < -10 || e->y() - lastY < -10) {
-            diffX += e->x() - lastX;
-            diffY += e->y() - lastY;
+        if (e->x() <= this->size().width() - 20) {
+            if (e->x() - lastX > 10 || e->y() - lastY > 10 || e->x() - lastX < -10 || e->y() - lastY < -10) {
+                diffX += e->x() - lastX;
+                diffY += e->y() - lastY;
 
-            cout << "Repainting (" << (e->x() - lastX > 10) << ", " << (e->y() - lastY > 10) << ", " << (e->x() - lastX < -10) << ", " << (e->y() - lastY < -10) << ")..." << endl;
-            this->repaint();
-        }
+                cout << "Repainting (" << (e->x() - lastX > 10) << ", " << (e->y() - lastY > 10) << ", " << (e->x() - lastX < -10) << ", " << (e->y() - lastY < -10) << ")..." << endl;
+                this->repaint();
+            }
 
-        else {
-            this->user_interface_main_window->flowchart_fact_pk->setValue(0);
-            int y = e->y() - diffY;
-            for (int l = 0; l < 999 && clickPositions[l]; ++l) {
-                if (clickPositions[l]) {
-                    cout << "[from " << clickPositions[l]->beginY << " to " << clickPositions[l]->endY << "]" << endl;
-                    if (y >= clickPositions[l]->beginY && y <= clickPositions[l]->endY) {
-//                        if (clickPositions[l]->prop == QString("pk    ")) {
+            else {
+                this->user_interface_main_window->flowchart_fact_pk->setValue(0);
+                int y = e->y() - diffY;
+                for (int l = 0; l < 9999 && clickPositions[l]; ++l) {
+                    if (clickPositions[l]) {
+                        cout << "[from " << clickPositions[l]->beginY << " to " << clickPositions[l]->endY << "]" << endl;
+                        if (y >= clickPositions[l]->beginY && y <= clickPositions[l]->endY) {
+    //                        if (clickPositions[l]->prop == QString("pk    ")) {
 
-                            this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
+                                this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
 
-                            break;
-//                        }
+                                break;
+    //                        }
+                        }
                     }
                 }
             }
-        }
 
-        lastX = 0;
-        lastY = 0;
+            lastX = 0;
+            lastY = 0;
+        }
     }
 
     if (e->button() != Qt::LeftButton) {
@@ -926,11 +966,14 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
 void FlowChart::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
 
-    for (int l = 0; l < 999 && clickPositions[l]; ++l) {
+    for (int l = 0; l < 9999 && clickPositions[l]; ++l) {
         if (clickPositions[l]) {
-            free(clickPositions[l]->prop);
-            free(clickPositions[l]->value);
+            if (clickPositions[l]->prop)
+                free(clickPositions[l]->prop);
+            if (clickPositions[l]->value)
+                free(clickPositions[l]->value);
             free(clickPositions[l]);
+            clickPositions[l] = 0;
         }
     }
 
@@ -1000,12 +1043,14 @@ void FlowChart::paintEvent(QPaintEvent *event) {
                     prop  = QString::fromStdString(line.substr(12, 6)); // property
                     value = QString::fromStdString(line.substr(12+6+1)); // value
 
-                    clickPositions[pos] = (struct ClickPositionItem*)calloc(sizeof(struct ClickPositionItem), 1);
-                    clickPositions[pos]->prop  = strdup(prop .toStdString().c_str());
-                    clickPositions[pos]->value = strdup(value.toStdString().c_str());
-                    clickPositions[pos]->beginY = margin_top;
-                    clickPositions[pos]->endY = margin_top + text_height;
-                    ++pos;
+                    if (pos < 999) {
+                        clickPositions[pos] = (struct ClickPositionItem*)calloc(sizeof(struct ClickPositionItem), 1);
+                        clickPositions[pos]->prop  = strdup(prop .toStdString().c_str());
+                        clickPositions[pos]->value = strdup(value.toStdString().c_str());
+                        clickPositions[pos]->beginY = margin_top;
+                        clickPositions[pos]->endY = margin_top + text_height;
+                        ++pos;
+                    }
 
                     margin_top += text_height;
                 }
@@ -1077,6 +1122,11 @@ void freehal::comm_new(freehal::string s) {
             QString qs(s.ref().c_str()+8);
             qs = qs.replace(";", ":");
             freehal::display_sentence(freehal::string(qs.toStdString()));
+            fc->repaint();
+        }
+        if (s.contains("DELETED")) {
+            fc->repaint();
+            emit fc->ask_again();
         }
         if (s.contains("SPEAK")) {
             speak(parts[1].ref());

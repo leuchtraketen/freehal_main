@@ -333,12 +333,17 @@ struct ClickPositionItem {
 class FlowChart : public QWidget {
     Q_OBJECT
 
+    friend void freehal::comm_new(freehal::string);
+
   public:
     FlowChart(QWidget*);
     void mousePressEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
 
     Ui::freehalWindow* user_interface_main_window;
+
+  signals:
+    void ask_again();
 
   protected:
     void paintEvent(QPaintEvent *event);

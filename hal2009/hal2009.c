@@ -89,6 +89,80 @@ int hal2009_add_link (char* link, int key_1, int key_2) {
     sql_add_link(link, key_1, key_2);
 }
 
+int fact_delete_from_source (const char* source) {
+    char filename[999];
+    char line[999];
+    filename[0] = '\0';
+    line[0] = '\0';
+    
+    int i;
+    int len = strlen(source);
+    for (i = 0; i < 999 && i < len; ++i) {
+        if (source[i] == ':')
+            break;
+        filename[i] = source[i];
+    }
+    filename[i] = '\0';
+    
+    int l_i;
+    for (l_i = 0, ++i; i < 999 && i < len; ++i, ++l_i) {
+        line[l_i] = source[i];
+    }
+    line[l_i] = '\0';
+    
+    printf("File: %s\n", filename);
+    printf("Line: %s\n", line && line[0] ? line : "no line");
+    
+    int line_int = line && line[0] ? atoi(line) : 0;
+    
+    // Manipulate file
+    
+    FILE* file = fopen(filename, "r");
+    if (file) {
+        char* buffer;
+        int lines = 0;
+        while (file && (buffer = getline(file)) != NULL) {
+            ++lines;
+        }
+        fclose(file);
+        
+        file = fopen(filename, "r");
+        if (file) {
+            char** data = calloc(lines+2, sizeof(char*));
+            int line_number = 1;
+            while (file && (buffer = getline(file)) != NULL && line_number <= lines+1) {
+                ++line_number;
+                
+                if (line_number != line_int) {
+                    data[line_number] = strdup(buffer);
+                }
+                else {
+                    data[line_number] = 0;
+                }
+            }
+            fclose(file);
+            
+            file = fopen(filename, "w");
+            if (file) {
+                for (line_number = 0; line_number <= lines; ++line_number) {
+                    if (data[line_number]) {
+                        fprintf(file, "%s", data[line_number]);
+                        free(data[line_number]);
+                    }
+                }
+                fclose(file);
+            }
+        }
+    }
+    else {
+        printf("Unable to open file.\n");
+        
+        return 1;
+    }
+    
+    return 0;
+}
+
 int hal2009_add_pro_file (char* filename) {
     fprintf(output(), "Add .pro file %s.\n", filename);
     sql_begin();
@@ -101,7 +175,10 @@ int hal2009_add_pro_file (char* filename) {
     if ( input ) {
         char* line;
         int k = 0;
+        int line_number = 0;
         while ((line = getline(input)) != NULL) {
+            ++line_number;
+            
             /// Make lower case
             int i_size = strlen(line);
             int ij;
@@ -171,6 +248,8 @@ int hal2009_add_pro_file (char* filename) {
             buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
             if (buffer) hash_clauses += hash_clauses % strlen(buffer);
             buffer = filename;          strcpy(r.from,              (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            strcat(r.from, ":");
+            sprintf(r.from+strlen(r.from), "%d", line_number);
             strcpy(r.extra, "");
             
             r.verb_flag_want    = 0;
@@ -198,6 +277,8 @@ int hal2009_add_pro_file (char* filename) {
                 buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
                 buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
                 buffer = filename;          strcpy(sub_clause->from,          (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+                strcat(sub_clause->from, ":");
+                sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
                 strcpy(r.extra, "");
                 
                 r.verb_flag_want    = 0;
@@ -235,62 +316,6 @@ int hal2009_add_pro_file (char* filename) {
 
             int err;
             err = sql_add_record(&r);
-            /*
-            if (strstr(r.subjects, "_")) {
-                // Modify hash
-                r.hash_clauses = hash_clauses+2;
-                // create a backup variable for the next if(strstr()) statement
-                char* r_subjects_backup = strdup(r.subjects);
-                char*  r_objects_backup = strdup( r.objects);
-                
-                if (r.subjects[0] == '_') {
-                    char* subj_bak = strdup(r.subjects);
-                    strcpy(r.subjects, "* ");
-                    strcat(r.subjects, subj_bak+1);
-                    if (subj_bak) free(subj_bak);
-                }
-                
-                int j;
-                int length_subjects = strlen(r.subjects);
-                for (j = 0; j < LINE_SIZE-1; ++j) {
-                    if (r.subjects[j] == '_') {
-                        if (j >= length_subjects-1) {
-                            r.subjects[j] = '\0';
-                        }
-                        else {
-                            r.subjects[j] = '*';
-                        }
-                    }
-                }
-
-                if (r.objects[0] == '_') {
-                    char* obj_bak = strdup(r.objects);
-                    strcpy(r.objects, "* ");
-                    strcat(r.objects, obj_bak+1);
-                    if (obj_bak) free(obj_bak);
-                }
-                
-                int length_objects = strlen(r.objects);
-                for (j = 0; j < LINE_SIZE-1; ++j) {
-                    if (r.objects[j] == '_') {
-                        if (j >= length_objects-1) {
-                            r.objects[j] = '\0';
-                        }
-                        else {
-                            r.objects[j] = '*';
-                        }
-                    }
-                }
-
-                err = sql_add_record(&r);
-
-                // restore the backup variable for the next if(strstr()) statement
-                strcpy(r.subjects, r_subjects_backup);
-                free(r_subjects_backup);
-                strcpy( r.objects,  r_objects_backup);
-                free( r_objects_backup);
-            }
-            */
             if (strstr(r.subjects, "_")) {
                 // Modify hash
                 r.hash_clauses = hash_clauses-5;
@@ -1023,8 +1048,15 @@ void* hal2009_answer_thread(void* parameters) {
     }
 
     reset_stdout();
-    
+
     char* tempfile = calloc(strlen(base_dir)+1000, 1);
+    
+    snprintf(tempfile, strlen(base_dir)+1000-1, "%s/flowchart.log", base_dir);
+    FILE* flowchart_log = fopen(tempfile, "w");
+    if (flowchart_log)
+        fclose(flowchart_log);
+    *tempfile = 0;
+    
     snprintf(tempfile, strlen(base_dir)+1000-1, "%s/temp_%s_%i.hal", base_dir, tlanguage, strlen(base_dir));
     FILE* startfile = fopen(tempfile, "w");
     char* content = halmalloc(1024, "hal2009_answer_thread");

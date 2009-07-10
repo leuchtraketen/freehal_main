@@ -199,8 +199,10 @@ extern "C" {
     int sql_sqlite_set_filename(const char* filename);
     void* halfilecalloc( long s, long si, char* f );
     void* halfilefree( void* s );
-    
-    int sql_del_record(struct RECORD* r);
+    int sql_begin();
+    int sql_end();
+    char* sql_del_record(struct RECORD* r);
+    int fact_delete_from_source(const char* source);
 #ifdef __cplusplus
 }
 #endif

@@ -677,11 +677,23 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         if ( result_underscore->at(0) == string("HERE") && result->size() >= 2 ) {
             cout << "Got a HERE_IS_* statement at the wrong place in code" << endl;
         }
+
+        if ( result->at(0) == string("EXIT") ) {
+            exit(0);
+        }
         
         if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
-            sql_del_record(&r);
+            printf("pkey (in hal2009-server): %s\n", r.pkey);
+            sql_begin();
+            char* source = sql_del_record(&r);
+            if (source) {
+                fact_delete_from_source(source);
+                free(source);
+            }
+            sql_end();
+            (*stream) << "DELETED:SUCCESS" << endl;
         }
         
         if ( result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
