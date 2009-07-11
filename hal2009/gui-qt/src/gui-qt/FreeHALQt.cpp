@@ -922,6 +922,10 @@ void FlowChart::mousePressEvent(QMouseEvent *e) {
     }
 }
 
+void FreeHALWindow::on_refresh_chart_clicked() {
+    fc->repaint();
+}
+
 void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
     cout << "Button released (" << e->x() << ", " << e->y() << ")." << endl;
     if (e->button() == Qt::LeftButton) {
@@ -932,7 +936,7 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
 
                 cout << "Repainting (" << (e->x() - lastX > 10) << ", " << (e->y() - lastY > 10) << ", " << (e->x() - lastX < -10) << ", " << (e->y() - lastY < -10) << ")..." << endl;
                 this->repaint();
-            }
+        }
 
             else {
                 this->user_interface_main_window->flowchart_fact_pk->setValue(0);
@@ -1122,10 +1126,8 @@ void freehal::comm_new(freehal::string s) {
             QString qs(s.ref().c_str()+8);
             qs = qs.replace(";", ":");
             freehal::display_sentence(freehal::string(qs.toStdString()));
-            fc->repaint();
         }
         if (s.contains("DELETED")) {
-            fc->repaint();
             emit fc->ask_again();
         }
         if (s.contains("SPEAK")) {

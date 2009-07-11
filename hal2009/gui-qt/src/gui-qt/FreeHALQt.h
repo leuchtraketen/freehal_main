@@ -143,6 +143,7 @@ public slots:
     void on_normalscreen_clicked();
     void on_fullscreen_triggered();
     void on_pushButton_clicked();
+    void on_refresh_chart_clicked();
     void on_compute_output_clicked();
     void on_flowchart_fact_delete_clicked();
     void on_pushButton_learn_clicked();

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Fri Jul 10 16:23:45 2009
+** Created: Sat Jul 11 11:00:48 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -70,12 +70,13 @@ public:
     QWidget *scrollAreaWidgetContents;
     QGridLayout *gridLayout_5;
     QGridLayout *gridLayout_4;
-    QPushButton *flowchart_fact_delete;
-    QLabel *label;
+    QPushButton *refresh_chart;
     QLabel *label_2;
-    QPushButton *compute_output;
-    QSpinBox *flowchart_fact_pk;
     QLineEdit *flowchart_input;
+    QPushButton *compute_output;
+    QLabel *label;
+    QSpinBox *flowchart_fact_pk;
+    QPushButton *flowchart_fact_delete;
     QGroupBox *msg_box_2;
     QGridLayout *gridLayout1;
     QTextEdit *msg_2;
@@ -220,7 +221,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 291, 430));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 269, 447));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -233,40 +234,45 @@ public:
 
         gridLayout_5->addLayout(gridLayout_4, 0, 0, 1, 4);
 
-        flowchart_fact_delete = new QPushButton(scrollAreaWidgetContents);
-        flowchart_fact_delete->setObjectName(QString::fromUtf8("flowchart_fact_delete"));
+        refresh_chart = new QPushButton(scrollAreaWidgetContents);
+        refresh_chart->setObjectName(QString::fromUtf8("refresh_chart"));
 
-        gridLayout_5->addWidget(flowchart_fact_delete, 2, 3, 1, 1);
-
-        label = new QLabel(scrollAreaWidgetContents);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        gridLayout_5->addWidget(label, 2, 0, 1, 1);
+        gridLayout_5->addWidget(refresh_chart, 1, 2, 1, 2);
 
         label_2 = new QLabel(scrollAreaWidgetContents);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
-        gridLayout_5->addWidget(label_2, 1, 0, 1, 1);
+        gridLayout_5->addWidget(label_2, 2, 0, 1, 1);
+
+        flowchart_input = new QLineEdit(scrollAreaWidgetContents);
+        flowchart_input->setObjectName(QString::fromUtf8("flowchart_input"));
+
+        gridLayout_5->addWidget(flowchart_input, 2, 1, 1, 1);
 
         compute_output = new QPushButton(scrollAreaWidgetContents);
         compute_output->setObjectName(QString::fromUtf8("compute_output"));
 
-        gridLayout_5->addWidget(compute_output, 1, 3, 1, 1);
+        gridLayout_5->addWidget(compute_output, 2, 2, 1, 2);
+
+        label = new QLabel(scrollAreaWidgetContents);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout_5->addWidget(label, 3, 0, 1, 1);
 
         flowchart_fact_pk = new QSpinBox(scrollAreaWidgetContents);
         flowchart_fact_pk->setObjectName(QString::fromUtf8("flowchart_fact_pk"));
         flowchart_fact_pk->setMaximum(999999999);
 
-        gridLayout_5->addWidget(flowchart_fact_pk, 2, 1, 1, 1);
+        gridLayout_5->addWidget(flowchart_fact_pk, 3, 1, 1, 2);
 
-        flowchart_input = new QLineEdit(scrollAreaWidgetContents);
-        flowchart_input->setObjectName(QString::fromUtf8("flowchart_input"));
+        flowchart_fact_delete = new QPushButton(scrollAreaWidgetContents);
+        flowchart_fact_delete->setObjectName(QString::fromUtf8("flowchart_fact_delete"));
 
-        gridLayout_5->addWidget(flowchart_input, 1, 1, 1, 1);
+        gridLayout_5->addWidget(flowchart_fact_delete, 3, 3, 1, 1);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
-        gridLayout_6->addWidget(scrollArea, 0, 0, 1, 1);
+        gridLayout_6->addWidget(scrollArea, 1, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
 
@@ -504,10 +510,11 @@ public:
         normalscreen->setText(QApplication::translate("freehalWindow", " Exit ", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Talk), QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Log), QApplication::translate("freehalWindow", "Log", 0, QApplication::UnicodeUTF8));
-        flowchart_fact_delete->setText(QApplication::translate("freehalWindow", "Delete", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("freehalWindow", "Fact:", 0, QApplication::UnicodeUTF8));
+        refresh_chart->setText(QApplication::translate("freehalWindow", "Refresh", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("freehalWindow", "Input:", 0, QApplication::UnicodeUTF8));
         compute_output->setText(QApplication::translate("freehalWindow", "Compute output", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("freehalWindow", "Fact:", 0, QApplication::UnicodeUTF8));
+        flowchart_fact_delete->setText(QApplication::translate("freehalWindow", "Delete", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("freehalWindow", "Chart", 0, QApplication::UnicodeUTF8));
         msg_box_2->setTitle(QApplication::translate("freehalWindow", "FreeHAL needs some information", 0, QApplication::UnicodeUTF8));
         male->setText(QApplication::translate("freehalWindow", "male", 0, QApplication::UnicodeUTF8));
