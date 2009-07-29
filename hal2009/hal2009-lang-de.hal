@@ -1705,6 +1705,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'rank' => "adj",
           'fast' => "adj",
           'bett' => "n",
+          'einstein' => "n",
           'schneller' => "adj",
           'zweiter' => "adj",
           'sometimes' => "adj",
@@ -3358,6 +3359,16 @@ define action check_invoke with var statement do
     done
     
     return var appname
+done
+
+define action replace_he with var text, var replacement do
+    do regex using var text: /\s+?(er|ihn)\s+?/, " var replacement ", :global:i
+    do return with var text
+done
+
+define action replace_she with var text, var replacement do
+    do regex using var text: /\s+?(sie)\s+?/, " var replacement ", :global:i
+    do return with var text
 done
 
 define action verb_category with var verb do

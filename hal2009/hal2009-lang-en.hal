@@ -3003,6 +3003,16 @@ define action check_invoke with var statement do
     return var appname
 done
 
+define action replace_he with var text, var replacement do
+    do regex using var text: /\s+?(he)\s+?/, " var replacement ", :global:i
+    do return with var text
+done
+
+define action replace_she with var text, var replacement do
+    do regex using var text: /\s+?(she)\s+?/, " var replacement ", :global:i
+    do return with var text
+done
+
 define action verb_category with var verb do
     if var verb matches /(must)/ do
         do return with "must"

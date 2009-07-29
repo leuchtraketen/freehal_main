@@ -552,9 +552,26 @@ define action compute_input with var input is rw, var lang, var path do
 
     print "Computed input (no. 6) ... ", var input
     print new line
+    
+    set new var male_file to handle for file name var path concat '/lang_' concat var lang concat '/male.history', read
+    set new var last_male_substantive to ''
+    for each new var line from var male_file do
+        set var last_male_substantive to var line
+    done
+    do close with var male_file
 
-    if var lang matches "en" do
-        do regex using var input: /<[']>s\s/, " is ", :global:i
+    set new var female_file to handle for file name var path concat '/lang_' concat var lang concat '/female.history', read
+    set new var last_female_substantive to ''
+    for each new var line from var female_file do
+        set var last_female_substantive to var line
+    done
+    do close with var male_file
+    
+    if var last_male_substantive do
+        set var input to replace_he with var input, var last_male_substantive
+    done
+    if var last_female_substantive do
+        set var input to replace_he with var input, var last_female_substantive
     done
 
     print "Computed input ... ... ", var input

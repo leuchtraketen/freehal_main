@@ -82,7 +82,7 @@ define action be_slow without arguments do
             print STDERR var diff
             print STDERR " cpu seconds were used."
             print STDERR new line
-            do wait 40 * var diff seconds
+            do wait 20 * var diff seconds
             set var be_slow__last_time to time without arguments
         done
     done
@@ -97,7 +97,6 @@ define action check_score with var possible_score do
     if var possible_score matches /^(<[0-9]>+)\s?/ do
         set var output_num to $0
         print "Output number: " concat var output_num
-        print new line
         do regex using var possible_score: /^<[0-9]>+\s?/, "", :global
     done
 
@@ -208,7 +207,7 @@ define action get_score with array words, var sentence, var lang, var path do
 
     set var sentence to lc with var sentence
     do regex using var sentence: /<[?]>|<[!.,\-]>/, "", :global
-    set new var sum to 0
+    set new var sum to 1
     set new var num_words to items of array words
     for each new var word in array words do
         set new var input_file_name to var path concat '/lang_' concat var lang concat '/index_of_combination.cfg'
@@ -227,10 +226,10 @@ define action get_score with array words, var sentence, var lang, var path do
                         do regex using var score_here: /\s/, "", :global
 
                         if (0+var score_here) > -1 do
-                            set var sum to var sum + 2*var score_here + 1
+                            set var sum to var sum + 2*var score_here*(10000/var sum) + 1
                         done
                         else do
-                            set var num_words to var num_words - 1
+                            #set var num_words to var num_words - 1
                         done
                     done
                 done
@@ -243,7 +242,8 @@ define action get_score with array words, var sentence, var lang, var path do
         set var num_words to 1
     done
 
-    set var sum to (var sum + 1) / var num_words
+    set var sum to (var sum + 1) / var num_words 
+    
     do return with var sum
 done
 
@@ -1978,6 +1978,8 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
     print "Parsable sentence(s): "
     print var input
     print new line
+    
+    set new hash genus_of to an empty hash
 
     set new array clauses_input to split with " KOMMA ", var input
     set new hash parsed to an empty hash
@@ -1993,6 +1995,7 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
         # CODE
         for each new var word in array list_of_words is rw do
             set from hash tags item { var word } to compute_tags with var word, var lang, var path
+            set from hash genus_of item { lc(var word) } to from hash tags item { var word } first item
         end for
         
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
@@ -2024,7 +2027,84 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
             done
         done
     done
+    
+    # TEXT
+    # Save male and female substantives
+    # CODE
+    set new array copy_subjects to from hash parsed item { 'subjects' }
+    set new var genus_subject to 'q'
+    set new var subject to ''
+    set new var male_names to global array builtin_male_names
+    for each new array arr in array copy_subjects do
+        if var subject do
+            set var subject to var subject concat ' '
+        done
+        set var subject to var subject concat join " ", items of array arr
+        
+        if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
+            set var genus_subject to from hash genus_of item { lc(join " ", items of array arr) }
+        done
+        for each new var male_name in array male_names do
+            if var male_name matches lc(join " ", items of array arr) do
+                set var genus_subject to 'm'
+            done
+        done
+    done
 
+    set new array copy_objects to from hash parsed item { 'objects' }
+    set new var genus_object to 'q'
+    set new var object to ''
+    for each new array arr in array copy_objects do
+        if var object do
+            set var object to var object concat ' '
+        done
+        set var object to var object concat join " ", items of array arr
+        
+        if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
+            set var genus_object to from hash genus_of item { lc(join " ", items of array arr) }
+        done
+        for each new var male_name in array male_names do
+            if var male_name matches lc(join " ", items of array arr) do
+                set var genus_subject to 'm'
+            done
+        done
+    done
+    
+    print "genus of subject: ", var genus_subject, new line
+    print "genus of object:  ", var genus_object,  new line
+    
+    if var subject matches /^(er|sie|es|ihn|ihm|ihr)$/ do
+        set var subject to ''
+    done
+    if var object matches /^(er|sie|es|ihn|ihm|ihr)$/ do
+        set var object to ''
+    done
+    
+    set new var male_file to handle for file name var path concat '/lang_' concat var lang concat '/male.history', append
+    if var genus_subject matches "m" and var subject do
+        print into var male_file data var subject
+        print into var male_file data new line
+    done
+    if var genus_object matches "m" and var object do
+        print into var male_file data var object
+        print into var male_file data new line
+    done
+    do close with var male_file
+    
+    set new var female_file to handle for file name var path concat '/lang_' concat var lang concat '/female.history', append
+    if var genus_subject matches "f" and var subject do
+        print into var female_file data var subject
+        print into var female_file data new line
+    done
+    if var genus_object matches "f" and var object do
+        print into var female_file data var object
+        print into var female_file data new line
+    done
+    do close with var female_file
+
+    # TEXT
+    # Go on.
+    # CODE
     set new array results to an empty array
 
     # TEXT
