@@ -82001,39 +82001,36 @@ burlesken:
   genus  : f
   type: n,
 Feuerlinien:
+  genus  : f
   type: n,
-Hyochonder:
-  type: n,
-Ningaloo:
-  type: n,
-beilngries:
-  type: adj
-tallinn:
-  type: adj
 blasig:
   type: adv
 mustermann:
-  type: adj
+  genus  : m
+  type: n,
 gestalter:
-  type: adv
+  genus  : m
+  type: n,
 pack:
-  type: adj
+  genus  : s
+  type: n,
 zeitig:
   type: adv
 tadschikistan:
-  type: adj
-groessen:
-  type: vi
+  type: n,
 frechheit:
+  genus  : f
   type: n,
 Klage:
+  genus  : f
   type: n,
 Spion:
+  genus  : m
   type: n,
 war:
   type: vi
 Maximales:
-  type: n,
+  type: adj
 gedroehnt:
   type: vi
 Durchhaltevermoegen:
