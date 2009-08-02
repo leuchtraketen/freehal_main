@@ -86,7 +86,8 @@ wohnt <> a <> nothing <> in b <> q=> wohnt <> a <> nothing <> in b;schon lange <
 #Wenn erfand in der Datenbank steht, wird auf eine Frage mit erfunden geantwortet#
 erfunden hat <> a <> b <>  <> erfand <> a <> b <>  <> wenn <>  <> 50
 #Direkte Antwort auf die Frage "Was ist mit XY?" #
-ist-mit<> a <>nothing <> nothing <> q=> sein soll <> nothing <> nothing <> mit a <> was <>  <> 50
+ist <> nothing <> nothing <> mit a <> q=> sein soll <> nothing <>
+nothing <> mit a <> was <>  <> 50
 #Geburtstagswunsch#
 hat <> a <> heute geburtstag <>  <> f=> <> nothing <> nothing <> alle gute <>  <>  <> 50
 #Direkte Antwort auf die Eingabe "Ich bin blond" #
