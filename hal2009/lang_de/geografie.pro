@@ -427,7 +427,6 @@ hat <> der indus <> eine laenge <> von 3180 kilometer <>  <>  <> nothing <>  <> 
 hat <> der irrawaddy <> eine laenge <> von 2150 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der irrawaddy <> eine laenge <> von;2150;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der jangtsekiang <> eine laenge <> von 6300 km <>  <>  <>  <>  <>  <>  <> 50
-hat <> der jupiter <> 4 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupiter <> 61 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupiter <> die groesste anziehungskraft <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupiter <> mindestens 61 monde <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -3256,8 +3255,6 @@ ist <> julia <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
 ist <> julia <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> juneau <> die hauptstadt <> von alaska <>  <>  <>  <>  <>  <>  <> 50
 ist <> jupiter <> der groesste planet <> in euerem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
-ist <> jupiter <> der groesste planet eueres sonnensystems <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> jupiter <> der groesste planet eueres sonnensystems <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> kaarst <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kabul <> die hauptstadt <> von afghanistan <>  <>  <>  <>  <>  <>  <> 50
 ist <> kaernten <> ein bundesland <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
