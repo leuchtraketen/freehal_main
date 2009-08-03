@@ -2874,7 +2874,7 @@ define action compute_output with var output do
     do regex using var output: /nothing/, "nichts", :global:i
     do regex using var output: /NULL/, "", :global:i
     do regex using var output: /<[;]>/, " ", :global:i
-    do regex using var output: / = /, " bedeutet ", :global:i
+    #do regex using var output: / = /, " bedeutet ", :global:i
     do regex using var output: /_/, " ", :global:i
     do regex using var output: /\s+/, " ", :global:i
     do regex using var output: /\s+<[,]>/, ",", :global:i

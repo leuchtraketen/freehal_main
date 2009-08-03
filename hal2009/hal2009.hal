@@ -371,6 +371,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     
     set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
     set new var end_of_entry_line to ':'
+    do regex using var name_of_entry: /[\(\)]/, "", :global:i
     set var name_of_entry to var name_of_entry concat "("
     for each new var suffix in array standard_suffixes do
         set var name_of_entry to var name_of_entry concat "|"
