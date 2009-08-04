@@ -770,26 +770,30 @@ void hal2009_server_stop() {
 
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
     cout << "Get stream." << endl;
-    tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
-    
-    cout << "Print into stream." << endl;
-    (*stream) << "GET_" << s1 << ":" << s2 << endl;
-    
-    cout << "Wait for stream." << endl;
-    std::vector<std::string>* result;
-    string line;
-    while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
-        if ( line.size() != 0 ) {
-            cout << line << endl;
-            result = simple_split(line, ":" );
-            if ( result->at(0) == string("HERE_IS_") + s1 && result->size() >= 2 ) {
-                break;
+    if (hal2009_server_clients.size() && hal2009_server_clients[hal2009_server_clients.size()-1]) {
+        tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
+        
+        cout << "Print into stream." << endl;
+        (*stream) << "GET_" << s1 << ":" << s2 << endl;
+        
+        cout << "Wait for stream." << endl;
+        std::vector<std::string>* result;
+        string line;
+        while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
+            if ( line.size() != 0 ) {
+                cout << line << endl;
+                result = simple_split(line, ":" );
+                if ( result->at(0) == string("HERE_IS_") + s1 && result->size() >= 2 ) {
+                    break;
+                }
             }
         }
+        cout << "End of waiting for stream." << endl;
+        char* value = strdup(result->at(1).c_str());
+        return value;
     }
-    cout << "End of waiting for stream." << endl;
-    char* value = strdup(result->at(1).c_str());
-    return value;
+    cout << "There is no stream." << endl;
+    return strdup("q");
 }
 
 int set_nonblocking(int fd)
