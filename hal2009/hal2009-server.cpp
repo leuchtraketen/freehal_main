@@ -885,6 +885,7 @@ void hal2009_handle_signal(void* arg) {
         FILE* target = fopen("_input__pos", "w+b");
         halwrite(text, 1, strlen(text), target);
         halclose(target);
+        free(text);
     }
     else if (0 == strcmp(type, "_output__link")) {
         if (strlen(text) < 99) {

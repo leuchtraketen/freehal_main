@@ -1883,6 +1883,17 @@ define action phrase with var lang, var mode, array results, hash parsed do
             go to next
         done
         
+        if var final_sentence matches / [=] / and not var final_sentence matches /<[,]>/ do
+            # TEXT
+            # A Sentence must not have the verb "="
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
         set var final_sentence to compute_output with var final_sentence
         push into array phrases, [ var primary_key, var final_sentence ]
     done
