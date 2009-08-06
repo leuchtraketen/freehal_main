@@ -1659,6 +1659,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'brunkhorst' => "n",
           'buergerprotest' => "n",
           'protest' => "n",
+          'fuehlen' => 'vi',
           'faust' => "n",
           'frost' => "n",
           'fuerst' => "n",
