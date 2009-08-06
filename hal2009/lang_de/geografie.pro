@@ -8346,3 +8346,4 @@ wiegt <> die erde <> 5972 trillionen tonnen <>  <>  <>  <>  <>  <>  <>  <> 50
 wird <> 70 prozent <> nothing <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>  <>  <> 50
 wurde <> das erste planetarium <> nothing <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
 wurden <> die streichhoelzer <> nothing <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50
+ist <> wien <> die hauptstadt <> von oesterreich <> 50

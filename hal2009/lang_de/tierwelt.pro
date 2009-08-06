@@ -136,3 +136,8 @@ stammt <> der pekinese <> nothing <> aus china <>  <>  <>  <>  <>  <>  <> 50
 verlieren <> hirsche <> jedes jahr hirsche geweih <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> der tyrannosaurus <> ein dinosaurier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 wird <> ein maikaefer <> nothing <> aus einem engerling <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein welpe <> ein junger hund <>  <> 50
+ist <> ein schwein <> ein bratenlieferant <>  <> 50
+ist <> ein schwein <> en nutztier <>  <> 50
+ist <> ein schwein <> ein specklieferant <>  <> 50
+ist <> ein schwein <> ein nutztier <>  <> 50

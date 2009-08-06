@@ -206602,4 +206602,127 @@ Nordsee:
   genus: f
   type: n,
 wunderbares:
-  type: adj            
+  type: adj            ISUNKNOWN:
+  type: vi
+ISUNKNOWN:
+  type: vi
+ISUNKNOWN:
+  type: vi
+Bratenlieferant:
+  type: n
+es:
+  type: n
+schmerzstillende:
+  type: adj
+Mohnblumen:
+  type: n
+Mohnblumen:
+  type: n
+er:
+  type: n
+er:
+  type: n
+und:
+  type: linking
+sie:
+  type: n
+fasst:
+  type: vi
+legst:
+  type: vi
+fest,dir:
+  type: EXIT
+Krimi:
+  type: n
+SiFi:
+  type: n
+SiFi:
+  type: n
+tafelweise:
+  type: adj
+relaxen:
+  type: vi
+Predigt:
+  type: n
+wir:
+  type: n
+scheint:
+  type: vi
+zur_freude_zu:
+  type: n
+Lieblingsserie:
+  type: n
+Gelueste:
+  type: n
+befriedigen:
+  type: vi
+vorgaukelt:
+  type: vi
+sicher:
+  type: adj
+sicher:
+  type: adj
+interessante:
+  type: adj
+ausschaut:
+  type: vi
+Findest:
+  type: n
+_das_:
+  type: n
+Traume:
+  type: n
+Steiten:
+  type: n
+,du:
+  type: q
+anscheinend:
+  type: q
+Anwort:
+  type: n
+würdest:
+  type: vi
+wären:
+  type: q
+zumindest:
+  type: vi
+bistzufrieden:
+  type: q
+lügst:
+  type: vi
+träumst:
+  type: vi
+versuchst:
+  type: vi
+getroffen:
+  type: q
+gefuehlsvolle:
+  type: q
+KI:
+  type: n
+fuehlt:
+  type: q
+anders:
+  type: adj
+Sehnsuechte:
+  type: n
+zum_menschen_wie:
+  type: n
+zum_leben:
+  type: n
+beleidigt:
+  type: q
+oder:
+  type: linking
+Gefuehlen:
+  type: n
+diffiziles:
+  type: q
+Gefuhl:
+  type: n
+fuehlen:
+  type: vi
+fuehlen:
+  type: vi
+Fuehlst:
+  type: vi

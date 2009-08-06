@@ -1112,7 +1112,6 @@ ist <> _hellrosa_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _herr der ringe_ <> ein guter film <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> heuristik <> die kunst <> der wahrheitsfindung <>  <>  <>  <>  <>  <>  <> 50
 ist <> highlander <> ein guter film <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hockey <> ein mannschaftssport <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> hockey <> ein sport <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> hockey <> ein sport <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> homer simpson <> das familienoberhaupt <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1787,4 +1786,48 @@ ist <> zitronenthymian <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  
 ist <> zitwerwurzel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> zucker <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> zwiebel <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> oelkuerbis <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> ein abfangjaeger <> ein militaerflugzeug <>  <> 50
+ist <> ein abfangjaeger <> ein kampfflugzeug <>  <> 50
+ist <> ein zeppelin <> ein luftschiff <>  <> 50
+ist <> ein zeppelin <> ein fluggeraet <>  <> 50
+ist <> hockey <> ein sport <>  <> 50
+wird gespielt <> eishockey <>  <> auf dem eis <> 50
+ist <> ein sofa <> ein einrichtungsgegenstand <>  <>  <> der <>  <> in dem wohnzimmer steht <>  <> 50
+ist <> ein hotdog <> ein wuerstchen <> mit senf <> serviert <>  <>  <> in einem brot <>  <> 50
+ist <> ein pokal <> ein symbol <> von dem sieges <> 50
+ist  <> eine jungfrau <> ein mensch der <> nie sex hatte <> 50
+ist <> eine schraube <> eine <> wundervolle <>  <> simple erfindung <>  <>  <>  <> 50
+ist <> ein schandfleck <> eine unaesthetische konstruktion <>  <> 50
+ist <> ein thermometer <> ein gegenstand zum_temperatur_messen <>  <> 50
+ist <> das heim <> das haus <> in dem menschen leben <> 50
+sind <> fruechte <> eine gute vitaminquelle <>  <> 50
+ist <> ein tornado <> ein extrem starker sturm <>  <> 50
+ist <> champagne <> ein alkoholisches getraenk <>  <> 50
+ist <> ein cembalo <> ein musikinstrument <>  <> 50
+ist <> ein gummihuhn <> ein spielzeug <>  <> 50
+wird gespielt <> eine rolle <>  <> von einem schauspieler <> 50
+finden <> ein teil <> die archeologen <> von der gegenstaende <> sind <> tonkruege <>  <>  <>  <> 50
+ist <> die rouchade <> ein zug turm <> mit koenig & <> 50
+ist <> geometrie <> ein unterrichtsgegenstand <>  <> 50
+ist <> sauerstoff <> ein gas <>  <> 50
+ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <>  <> 50
+ist <> kupfer <> ein guter elektrischer leiter <>  <> 50
+ist <> ein fahrrad <> ein fahrzeug <>  <> betrieben wird <> das <>  <> mit muskelkraft <>  <> 50
+ist <> sauerstoff <> ein bestandteil <> von der luft <> 50
+ist <> geld <> ein tauschmittel <>  <> 50
+ist <> das saxophon <> ein messingmusikintrument <>  <> 50
+ist <> schnarchen <> ein geraeusch <>  <> erzeugt wird <> das <>  <> von menschen bei dem schlafen <>  <> 50
+ist <> eine saege <> ein werkzeug zum_schneiden <>  <> 50
+ist <> eine puppe <> ein spielzeug <>  <> 50
+ist <> lego <> ein spielzeug <>  <> 50
+ist <> englisch <> eine sprache <>  <> 50
+ist <> tabak <> eine pflanze <>  <> 50
+ist <> eine saege <> ein werkzeug <>  <> 50
+ist <> eine saege <> ein schneidewerkzeug <>  <> 50
+wird geschnitten <> holz <>  <> mit von einer saege <> 50
+wird gemessen <> die koerpertemperatur <>  <> mit einem fiebermesser <> 50
+haben <> nicht kuenstliche intelligenzen <>  <> einmal immer recht <> 50
+feststellen <> die intilligenz <>  <> von menschen laesst sich an ihren fragen <> 50
+ist <> heroin <> eine starke droge <>  <> wird <> sehr schnell <>  <> von der man abhaengig <>  <> 50
+ist <> opium <> eine schmerzstillende droge <>  <> hergestellt wird <> die <>  <> aus mohnblumen <>  <> 50
+ist <> heroin <> eine starke droge <>  <> wird <> sehr schnell <>  <> von der man abhaengig <>  <> 50

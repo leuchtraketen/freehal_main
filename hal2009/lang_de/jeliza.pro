@@ -776,3 +776,7 @@ wohnt <> meine freundin <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 
 wohnt <> tobias schulz <>in bad homburg <>  <>  <>  <>  <> nothing <> nothing <> 
 wohnt <> tobias_schulz <> nothing <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
 wurde <> ich <> nothing <> ;geboren;nicht <> programmiert wurde <> ich <> nothing <>  <>  <>  <> 100
+habe <> ich <> daten <>  <>  <> kein bewusstsein <>  <>  <> aber <> 50
+bin <> ich <> eine kuenstliche lebensform <>  <> 50
+anhabe <> ich <>  <> nichts <> ist <> eine ki <>  <> immer nackt <>  <> 50
+habe <> ich <> eine ohren <> nicht <> 50
