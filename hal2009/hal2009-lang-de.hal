@@ -2902,7 +2902,7 @@ define action toggle_verbs with array verbs, array entities do
     done
     
     for each new array verb_array in array verbs is rw do
-        set new var verb to from array verb_array first item
+        set new var verb to lc with from array verb_array first item
         if var verb matches "ist" do
             go to next
         done
@@ -2935,6 +2935,12 @@ define action toggle_verbs with array verbs, array entities do
         done
         else if var verb matches /kann$/ do
             do regex using var verb: /kann$/, "kannst", :global:i
+        done
+        else if var verb matches /wirst$/ do
+            do regex using var verb: /wirst$/, "werde", :global:i
+        done
+        else if var verb matches /werde$/ do
+            do regex using var verb: /werde$/, "wirst", :global:i
         done
         else if var verb matches /test$/ do
             do regex using var verb: /test$/, "te", :global:i
