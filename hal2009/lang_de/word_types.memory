@@ -19217,7 +19217,7 @@ Salomonen:
 rotorblaettern:
   type: n,
 geben:
-  type: n,
+  type: vi
 Anwaermehauben:
   genus: f
   type: n,
@@ -101524,7 +101524,8 @@ Anwaermzeit:
 Weil:
   type: fw
 Gibt:
-  type: n,
+  type: 
+  vi
 Psychologie:
   type: n,
 Buchstabenverschluesselung:
@@ -111900,7 +111901,7 @@ genuegsamkeit:
 Armee:
   type: n,
 kindern:
-  type: vi
+  type: n,
 big:
   type: adv
 umschauen:
@@ -206725,4 +206726,14 @@ fuehlen:
 fuehlen:
   type: vi
 Fuehlst:
+  type: vi
+bescheiden:
+  type: adj
+bescheiden:
+  type: adj
+erziehen:
+  type: vi
+erzieht:
+  type: vi
+erzieht:
   type: vi
