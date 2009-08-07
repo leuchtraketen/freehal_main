@@ -1306,7 +1306,9 @@ set multi-line new global array builtin_male_names to [
           "zeno",
 ];
 
-set multi-line new global array builtin_entity_ends_pattern to [
+set multi-line new global array builtin_entity_ends_pair to [
+          [ 'das', 'ein' ],
+          [ 'das', 'eine' ],
 ];
 
 set multi-line new global hash builtin_entity_ends to {
@@ -2044,6 +2046,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'kannst' => "vi",
           'kann' => "vi",
           'eng' => "adj",
+          'bereit' => "adj",
           'sproede' => "adj",
           'eine' => "art",
           'tomorrow' => "adj",
@@ -3032,7 +3035,7 @@ define action stem_nouns with array phrases do
             if var noun matches /ein$/ do
                 do regex using var noun: /ein$/, "*", :global:i
             done
-            if var noun matches /(der|die|das|den|dem|des)$/ do
+            if var noun matches /(der|die|das|den|dem|des)$/ and not items of array words is 1 do
                 do regex using var noun: /(der|die|das|den|dem|des)$/, "*", :global:i
             done
             
@@ -3267,6 +3270,76 @@ define action multiple_choices_verb with var verb do
     
     set new var verbs to join with "|", items of array choices
     do return with var verbs
+done
+
+define action find_mode with var input do
+    if var input matches /<[?]>/ do
+        print "Sentence contains a question mark"
+        print new line
+        
+        do return with "question"
+    done
+    else if lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
+        print "Sentence contains a question word and sub clauses"
+        print new line
+
+        do return with "question"
+    done
+    else if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+        print "Sentence contains a question word"
+        print new line
+
+        do return with "question"
+    done
+    do return with "statement"
+done
+
+define action but_feature_is_useful with var input do
+    if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+        do return with 0
+    done
+    
+    if lc(" " concat var input concat " ") matches /(\sdas\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+        if lc(" " concat var input concat " ") matches /(\sist\s)|(\ssind\s)/ do
+            do return with 1
+        done
+    done
+    
+    do return with 0
+done
+
+define action use_bug_feature with array results, hash parsed do
+    for each new array result in array results do
+        set new array clause to an empty array
+        
+        push into array clause, ''
+        push into array clause, 'aber'
+        set new var objects to ''
+        set new array objects_separated to from hash parsed item { 'objects' }
+        for each new array obj in array objects_separated do
+            set var objects to var objects concat " "
+            set var objects to var objects concat from array obj first item
+        done
+        do regex using var objects: /^\s/, "", :global
+        if var objects matches /^\sein/ do
+            push into array clause, 'k' concat var objects
+        done
+        else do
+            push into array clause, 'nicht ' concat var objects
+        done
+        push into array clause, ''
+        
+        set var objects to lc with var objects
+        set new var lastnoun to var objects
+        do regex using var lastnoun: /^.*?\s/, "", :global
+        if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var objects/ do
+            if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var lastnoun/ do
+                push into array result, array clause
+            done
+        done
+    done
+    
+    do return with array results
 done
 
 define action use_random with var input, var current_language, var path, var mode do

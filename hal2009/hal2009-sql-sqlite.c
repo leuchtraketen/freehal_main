@@ -1550,7 +1550,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (need_and) strcat(sql, " AND");
         else          strcat(sql, "WHERE");
         
-        if (strstr(subjects_buffer, "*")) {
+        if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
             strcat(sql, "\n ( nmain.subjects GLOB \"");
             strcat(sql, subjects_buffer);
             strcat(sql, "\" OR nmain.objects GLOB \"*");

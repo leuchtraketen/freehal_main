@@ -2924,6 +2924,40 @@ define action multiple_choices_verb with var verb do
     do return with var verbs
 done
 
+define action find_mode with var input do
+    if var input matches /<[?]>/ do
+        print "Sentence contains a question mark"
+        print new line
+        
+        do return with "question"
+    done
+    else if lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swhat\s)|(\swho\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhom\s)).*?(<[,]>|(komma))/ do
+        print "Sentence contains a question word and sub clauses"
+        print new line
+
+        do return with "question"
+    done
+    else if (" " concat var input concat " ") matches /(\swhat\s)|(\swho\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhom\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+        print "Sentence contains a question word"
+        print new line
+
+        do return with "question"
+    done
+    do return with "statement"
+done
+
+define action but_feature_is_useful with var input do
+    if (" " concat var input concat " ") matches /(\swhat\s)|(\swho\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhom\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+        do return with 0
+    done
+    
+    do return with 1
+done
+
+define action use_bug_feature with array results, hash parsed do
+    do return with array results
+done
+
 define action use_random with var input, var current_language, var path, var mode do
     set new array random to an empty array
 

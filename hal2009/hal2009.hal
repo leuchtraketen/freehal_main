@@ -728,10 +728,6 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     if flag found_subject do
         set var entity_key_name to "objects"
     done
-    print var ident
-    print "#    "
-    print 'var entity_key_name: ' concat var entity_key_name
-    print new line
 
     # TEXT
     # Here the current word and the following word are assigned to variables.
@@ -740,6 +736,12 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     set new array current_tag to from hash tags item { var current_word }
     set new var next_word to from array words item [ 1 ]
     set new array next_tag to from hash tags item { var next_word }
+
+    print var ident
+    print "#    "
+    print 'var entity_key_name: ' concat var entity_key_name concat ' ( ' concat var current_word concat ' -> ' concat var next_word concat ' )'
+    print new line
+
 
     # TEXT
     # It is known that the next word WILL be either a noun, an adjective or an article.
@@ -760,6 +762,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # CODE
     
     while from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } do
+
         do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
         shift from array words
         
@@ -771,9 +774,10 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             done
         done
         
-        set new array patterns to global array builtin_entity_ends_pattern
-        for each new var pattern in array patterns do
-            if lc(var current_word) matches /var pattern/ do
+        set new array pairs to global array builtin_entity_ends_pair
+        for each new array pair in array pairs do
+            
+            if lc(var current_word) matches from array pair item [ 0 ] and lc(var next_word) matches from array pair item [ 1 ] do
                 set flag found_subject to 1
                 set var entity_key_name to "subjects"
                 if flag found_subject do
@@ -796,11 +800,41 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
     done
 
+    set new array pairs to global array builtin_entity_ends_pair
+    for each new array pair in array pairs do
+        
+        if lc(var current_word) matches from array pair item [ 0 ] and lc(var next_word) matches from array pair item [ 1 ] do
+            set flag found_subject to 1
+            set var entity_key_name to "subjects"
+            if flag found_subject do
+                set var entity_key_name to "objects"
+            done
+        done
+    done
+    
     # TEXT
     # The subject ends when there is a noun which is followed by an adjective or an adverb or a verb or nothing.
     # CODE
     if from hash sym_noun item { from array current_tag item [ const TYPE ] } do
         if from hash sym_adj item { from array next_tag item [ const TYPE ] } || from hash sym_art item { from array next_tag item [ const TYPE ] } || from hash sym_verb item { from array next_tag item [ const TYPE ] } || from hash sym_prep item { from array next_tag item [ const TYPE ] } do
+            set flag found_subject to 1
+        done
+    done
+    
+    # TEXT
+    # The subject ends when the current word is an article and the next one is a verb
+    # CODE
+    if from hash sym_art item { from array current_tag item [ const TYPE ] } do
+        if from hash sym_verb item { from array next_tag item [ const TYPE ] } do
+            set flag found_subject to 1
+        done
+    done
+    
+    # TEXT
+    # The subject ends when the current word is an adjective/adverb and the next one is a verb
+    # CODE
+    if from hash sym_adj item { from array current_tag item [ const TYPE ] } do
+        if from hash sym_verb item { from array next_tag item [ const TYPE ] } do
             set flag found_subject to 1
         done
     done
@@ -2135,6 +2169,11 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
     # CODE
     if var mode matches "question" do
         set array results to logic with var input, var lang, var path, hash parsed
+        
+        set new flag bug_feature to but_feature_is_useful with var input
+        if flag bug_feature do
+            set array results to use_bug_feature with array results, hash parsed
+        done
     done
     if var mode matches "statement" do
         set array results to logic with var input, var lang, var path, hash parsed
@@ -2461,28 +2500,6 @@ define action invoke with var appname do
     done
     
     do return with var answer_success
-done
-
-define action find_mode with var input do
-    if var input matches /<[?]>/ do
-        print "Sentence contains a question mark"
-        print new line
-        
-        do return with "question"
-    done
-    else if lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
-        print "Sentence contains a question word and sub clauses"
-        print new line
-
-        do return with "question"
-    done
-    else if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
-        print "Sentence contains a question word"
-        print new line
-
-        do return with "question"
-    done
-    do return with "statement"
 done
 
 define action make_ascii with var text is rw do
