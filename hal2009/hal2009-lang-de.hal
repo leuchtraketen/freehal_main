@@ -3238,7 +3238,8 @@ define action multiple_choices_verb with var verb do
         done
     done
     
-    if var verb matches "bi" or var verb matches "is" or var verb matches /heis/ do
+    if var verb matches "bi" or var verb matches "is" or var verb matches "sind" or var verb matches /heis/ do
+        push into array choices, var verb
         push into array choices, "bin"
         push into array choices, "bist"
         push into array choices, "ist"
@@ -3250,6 +3251,7 @@ define action multiple_choices_verb with var verb do
         push into array choices, "heissen"
     done
     else if var verb matches "gib" or var verb matches "geb" do
+        push into array choices, var verb
         push into array choices, "gebe"
         push into array choices, "geben"
         push into array choices, "gibst"
@@ -3257,6 +3259,7 @@ define action multiple_choices_verb with var verb do
         push into array choices, "gebt"
     done
     else do
+        push into array choices, var verb
         for each new var ending in array endings do
             push into array choices, var verb concat var ending
         done

@@ -1121,15 +1121,15 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             free(words);
         }
         if (r->verb_flag_want)
-            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = pk AND verb_flag_want   = 1) ");
+            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = rel_word_fact.fact AND verb_flag_want   = 1) ");
         if (r->verb_flag_must)
-            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = pk AND verb_flag_must   = 1) ");
+            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = rel_word_fact.fact AND verb_flag_must   = 1) ");
         if (r->verb_flag_can)
-            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = pk AND verb_flag_can    = 1) ");
+            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = rel_word_fact.fact AND verb_flag_can    = 1) ");
         if (r->verb_flag_may)
-            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = pk AND verb_flag_may    = 1) ");
+            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = rel_word_fact.fact AND verb_flag_may    = 1) ");
         if (r->verb_flag_should)
-            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = pk AND verb_flag_should = 1) ");
+            strcat(sql, " AND EXISTS(SELECT 1 FROM rel_fact_flag AS rff WHERE rff.fact = rel_word_fact.fact AND verb_flag_should = 1) ");
 
         strcat(sql, " UNION ALL ");
         {
@@ -1553,7 +1553,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (strstr(subjects_buffer, "*")) {
             strcat(sql, "\n ( nmain.subjects GLOB \"");
             strcat(sql, subjects_buffer);
-            strcat(sql, "\" OR nmain.objects GLOB \"");
+            strcat(sql, "\" OR nmain.objects GLOB \"*");
             strcat(sql, subjects_buffer);
             strcat(sql, "\" ");
         }
@@ -1564,7 +1564,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, subjects_buffer);
             strcat(sql, "\" OR nmain.subjects GLOB \"");
             strcat(sql, subjects_buffer);
-            strcat(sql, " *\" OR nmain.objects GLOB \"");
+            strcat(sql, " *\" OR nmain.objects GLOB \"*");
             strcat(sql, subjects_buffer);
             strcat(sql, "\" OR nmain.subjects GLOB \"");
             strcat(sql, subjects_buffer);
@@ -1576,7 +1576,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (strstr(subject_synonyms[n], "*")) {
                 strcat(sql, "\n OR nmain.subjects GLOB \"");
                 strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR nmain.objects GLOB \"");
+                strcat(sql, "\" OR nmain.objects GLOB \"*");
                 strcat(sql, subject_synonyms[n]);
                 strcat(sql, "\" ");
             }
@@ -1587,7 +1587,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, subject_synonyms[n]);
                 strcat(sql, "\" OR nmain.subjects GLOB \"");
                 strcat(sql, subject_synonyms[n]);
-                strcat(sql, " *\" OR nmain.objects GLOB \"");
+                strcat(sql, " *\" OR nmain.objects GLOB \"*");
                 strcat(sql, subject_synonyms[n]);
                 strcat(sql, "\" OR nmain.subjects GLOB \"");
                 strcat(sql, subject_synonyms[n]);
@@ -1630,14 +1630,14 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         short flag_should_contain = 1;
         
         if (0 == strcmp(r->context, "q_what_weakly")) {
-            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war") || strstr(r->verb, "sind") || strstr(r->verb, "waren"))) {
+            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
                 //if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
                     strcpy(buffers, "* ein*");
                 //}
             }
         }
         if (0 == strcmp(r->context, "q_who")) {
-            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war") || strstr(r->verb, "sind") || strstr(r->verb, "waren"))) {
+            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
                 strcpy(buffers, "ein*");
                 flag_should_contain = 0;
                 //if (need_and) strcat(sql, " AND");
@@ -1863,7 +1863,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             short flag_should_contain = 1;
             
             if (0 == strcmp(r->context, "q_what_weakly")) {
-                if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war") || strstr(r->verb, "sind") || strstr(r->verb, "waren"))) {
+                if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war"))) {
                     if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
                         strcpy(buffers, "ein*");
                     }
