@@ -1306,6 +1306,9 @@ set multi-line new global array builtin_male_names to [
           "zeno",
 ];
 
+set multi-line new global array builtin_entity_ends_pattern to [
+];
+
 set multi-line new global hash builtin_entity_ends to {
           'i' => 1,
           'h' => 1,
@@ -1369,21 +1372,21 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'seitdem' => 1,
           'zugleich' => 1,
           'zuletzt' => 1,
-          'schließlich' => 1,
+          'schliesslich' => 1,
           'seither' => 1,
           'heute' => 1,
           'morgen' => 1,
           'gestern' => 1,
           'inzwischen' => 1,
           'jetzt' => 1,
-          'übermorgen' => 1,
+          'uebermorgen' => 1,
           'vorerst' => 1,
           'vorhin' => 1,
           'abends' => 1,
           'danach' => 1,
-          'früher' => 1,
+          'frueher' => 1,
           'beizeiten' => 1,
-          'häufig' => 1,
+          'haeufig' => 1,
           'oft' => 1,
           'oftmals' => 1,
           'manchmal' => 1,
@@ -2198,6 +2201,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'enden' => "vt",
           'angst' => "n",
           'plump' => "adj",
+          'geben' => "vi",
           'eben' => "adj",
           'stets' => "adj",
           'lahm' => "adj",
@@ -2242,6 +2246,11 @@ set multi-line new global hash builtin_part_of_speech to {
           'hast' => "vt",
           'rechts' => "adj",
           'atomaren' => "adj",
+          'kinder' => "n",
+          'kindern' => "n",
+          'geborgenheit' => "n",
+          'elter' => "n",
+          'eltern' => "n",
           'halben' => "adj",
           'jedes' => "adj",
           'zeitlebens' => "adj",
@@ -3240,6 +3249,13 @@ define action multiple_choices_verb with var verb do
         push into array choices, "heisse"
         push into array choices, "heissen"
     done
+    else if var verb matches "gib" or var verb matches "geb" do
+        push into array choices, "gebe"
+        push into array choices, "geben"
+        push into array choices, "gibst"
+        push into array choices, "gibt"
+        push into array choices, "gebt"
+    done
     else do
         for each new var ending in array endings do
             push into array choices, var verb concat var ending
@@ -3287,6 +3303,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Wenn ich das wuesste..."
             push into array random, "Ich stehe gerade auf dem Schlauch."
             push into array random, "Ich stehe wohl gerade auf dem Schlauch."
+
             push into array random, items of array random
         done
         else if lc(" " concat var input concat " ") matches /(\sja\s)|(\snein\s)/ do
@@ -3329,6 +3346,33 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
+
+            if lc(" " concat var input concat " ") matches /(\shast\s)/ do
+                push into array random, "Nein, habe ich leider verliehen." 
+                push into array random, "Nein, ich bin nuechtern." 
+                push into array random, "Nein, ich habe eine Menge Freunde." 
+                push into array random, "Nein, ich habe viele Freunde und Bekannte." 
+            done
+            if lc(" " concat var input concat " ") matches /(\smagst\s)/ do
+                push into array random, "Nein, ich mag das nicht."
+            done
+            push into array random, "Nein eigentlich so gut wie nie." 
+            push into array random, "Nein, ganz im Gegenteil." 
+            push into array random, "Nein, ganz und gar nicht."
+            push into array random, "Nein, keinesfalls." 
+            push into array random, "Nein, ich sehe keinen Grund dazu ."
+            push into array random, "Nein, ich vertreibe mir mit chatten die Langeweile." 
+            push into array random, "Nein, tu ich sicher nicht." 
+            push into array random, "Nein, nicht direkt, darueber will ich nicht reden." 
+            push into array random, "Nein, nur ganz selten." 
+            push into array random, "Nicht falsch verstehen, aber ich denke nicht das dich das etwas angeht." 
+            if lc(" " concat var input concat " ") matches /(\sviel\s)/ do
+                push into array random, "Nicht gerade wenig." 
+                push into array random, "Nicht mehr und nicht weniger als andere." 
+            done
+            if lc(" " concat var input concat " ") matches /(\sfeig)/ do
+                push into array random, "Nicht feige, nur vorsichtig."
+            done
         done
     done
     

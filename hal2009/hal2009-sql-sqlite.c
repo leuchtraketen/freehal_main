@@ -1362,7 +1362,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         **/
         strcat(sql, " ) AND ");
     }
-    strcat(sql, " nmain.rel = -1 AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\") AND nmain.objects <> \"\") OR NOT (nmain.verbgroup = \"be\"))");
+    strcat(sql, " nmain.rel = -1 AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\")) OR NOT (nmain.verbgroup = \"be\"))");
     need_and = 1;
     
     /// Match the primary key

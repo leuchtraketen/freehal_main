@@ -771,6 +771,17 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             done
         done
         
+        set new array patterns to global array builtin_entity_ends_pattern
+        for each new var pattern in array patterns do
+            if lc(var current_word) matches /var pattern/ do
+                set flag found_subject to 1
+                set var entity_key_name to "subjects"
+                if flag found_subject do
+                    set var entity_key_name to "objects"
+                done
+            done
+        done
+        
         set var current_word to var next_word
         set array current_tag to array next_tag
         set var next_word to from array words item [ 0 ]
