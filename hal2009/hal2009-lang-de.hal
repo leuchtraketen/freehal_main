@@ -3045,8 +3045,8 @@ define action stem_nouns with array phrases do
             if var noun matches /ein$/ do
                 do regex using var noun: /ein$/, "*", :global:i
             done
-            if var noun matches /(der|die|das|den|dem|des)$/ and not items of array words is 1 do
-                do regex using var noun: /(der|die|das|den|dem|des)$/, "*", :global:i
+            if var noun matches /^(der|die|das|den|dem|des)$/ and not items of array words is 1 do
+                do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
             done
             
             if length(var noun) <= 3 do
