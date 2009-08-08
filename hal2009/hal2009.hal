@@ -541,44 +541,42 @@ define action compute_tags with var word, var lang, var path do
     done
     
     if is an empty array tags do
-        if not exists: var path concat "/no-tagger.txt", end test do
-            if lc(var word) matches /^in_/ do
-                set from array tags first item to "adj"
-            done
-            if lc(var word) matches /^zu<[rm]>_/ do
-                set from array tags first item to "adj"
-            done
-            if lc(var word) matches /^jahr/ do
+        if lc(var word) matches /^in_/ do
+            set from array tags first item to "adj"
+        done
+        if lc(var word) matches /^zu<[rm]>_/ do
+            set from array tags first item to "adj"
+        done
+        if lc(var word) matches /^jahr/ do
+            set from array tags first item to "n"
+        done
+        if var word matches /<[0123456789]>/ do
+            set from array tags first item to "adj"
+        done
+        if var word matches /<[_]>/ do
+            set from array tags first item to "n"
+        done
+        if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
+            set from array tags first item to "n"
+        done
+        if lc(var word) matches var word and var lang matches "de" do
+            if var word matches /ist$/ do
                 set from array tags first item to "n"
             done
-            if var word matches /<[0123456789]>/ do
-                set from array tags first item to "adj"
+            if var word matches /st$/ do
+                set from array tags first item to "vi"
             done
-            if var word matches /<[_]>/ do
-                set from array tags first item to "n"
+            if var word matches /iert$/ do
+                set from array tags first item to "vi"
             done
-            if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
-                set from array tags first item to "n"
+            if var word matches /ieren$/ do
+                set from array tags first item to "vi"
             done
-            if lc(var word) matches var word and var lang matches "de" do
-                if var word matches /ist$/ do
-                    set from array tags first item to "n"
-                done
-                if var word matches /st$/ do
-                    set from array tags first item to "vi"
-                done
-                if var word matches /iert$/ do
-                    set from array tags first item to "vi"
-                done
-                if var word matches /ieren$/ do
-                    set from array tags first item to "vi"
-                done
-                if var word matches /iere$/ do
-                    set from array tags first item to "vi"
-                done
-                if var word matches /ierst$/ do
-                    set from array tags first item to "vi"
-                done
+            if var word matches /iere$/ do
+                set from array tags first item to "vi"
+            done
+            if var word matches /ierst$/ do
+                set from array tags first item to "vi"
             done
         done
     done

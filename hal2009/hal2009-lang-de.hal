@@ -2918,6 +2918,9 @@ define action toggle_verbs with array verbs, array entities do
         if var verb matches "ist" do
             go to next
         done
+        if var verb matches /^gew/ do
+            go to next
+        done
         if var verb matches /bin$/ do
             do regex using var verb: /bin$/, "bist", :global:i
         done

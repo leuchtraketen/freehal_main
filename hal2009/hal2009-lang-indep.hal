@@ -268,7 +268,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^sobald\s*?(.*),\s*?(.*)$/, "$0, wenn $1", :global:i
     do regex using var input: /^(.*),\s*?sobald\s*?(.*)$/, "$1, wenn $0", :global:i
 
-    do regex using var input: / so /, " ", :global:i
+#    do regex using var input: / so /, " ", :global:i
 
     do regex using var input: /kennst du /, "was ist ", :global:i
 
@@ -390,6 +390,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /wie frueh/, "wie uhr", :global:i
     do regex using var input: /<[=]>/, " = ", :global:i
     do regex using var input: /wofuer steht /, "was ist ", :global:i
+    do regex using var input: / schon mal /, " ", :global:i
+    do regex using var input: /^(......*?) hast du /, "du hast $0 ", :global:i
     do regex using var input: /hast du schon mal von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du schon von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du von (.*?) gehoert/, "was ist $0", :global:i
@@ -405,7 +407,11 @@ define action compute_input with var input is rw, var lang, var path do
     done
     
     set var input to ' ' concat var input concat ' '
+    do regex using var input: /\snoch\s(nie|nicht)(<[\s!.,?]>+)/, " noch-$0$1", :global:i
     do regex using var input: /\snoch(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\snoch[-](nie|nicht)(<[\s!.,?]>+)/, " noch $0$1", :global:i
+    do regex using var input: /(^|<[\s!.,?]>+)(so)\setwas(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
+    do regex using var input: /(^|<[\s!.,?]>+)(so)was(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
     do regex using var input: /\setwa(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sungefaehr(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdenn(<[\s!.,?]>+)/, "$0", :global:i
