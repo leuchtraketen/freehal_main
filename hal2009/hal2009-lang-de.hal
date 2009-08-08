@@ -3526,6 +3526,23 @@ define action verb_category with var verb do
     done
 done
 
+define action upper_case_correction with var phrase, hash tags, var lang, var path do
+    set new array words to split with /\s+?/, var phrase
+    
+    for each new var word in array words do
+        if not from hash tags item { var word } do
+            set from hash tags item { var word } to compute_tags with var word, var lang, var path
+        done
+        if from hash tags item { var word } first item matches /n/ do
+            set var word to ucfirst with var word
+        done
+    done
+    
+    set var phrase to join ' ', items of array words
+    
+    do return with var phrase
+done
+
 define action get_score_answer without arguments do
     return [ 0, "Bewertung erfolgreich." ]
 done

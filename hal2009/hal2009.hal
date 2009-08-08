@@ -2000,7 +2000,7 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
     do return with var final_sentence
 done
 
-define action use_mode with var input is copy, array facts_to_link, var lang, var path, var mode do
+define action use_mode with var input is copy, array facts_to_link, hash tags, var lang, var path, var mode do
     set new var is_question to "no"
     if var input matches /<[?]>/ do
         set var is_question to "yes"
@@ -2053,7 +2053,6 @@ define action use_mode with var input is copy, array facts_to_link, var lang, va
         # TEXT
         # Split the sentence.
         # CODE
-        set new hash tags to an empty hash
         set new array list_of_words to split with " ", var clause
         
         # TEXT
@@ -2576,7 +2575,7 @@ define action save_output with var input, var current_language, var path do
     do close with var output_handle
 done
 
-define action give_output with var input is rw, array facts_to_link, var current_language, var path do
+define action give_output with var input is rw, array facts_to_link, hash tags, var current_language, var path do
     # TEXT
     # We try to use the answer as a judgement
     # CODE
@@ -2610,7 +2609,7 @@ define action give_output with var input is rw, array facts_to_link, var current
     print "Input is computed... Going on."
     print new line
     set new var mode to find_mode using var input
-    set new array sentences to use_mode with var input, array facts_to_link, var current_language, var path, var mode
+    set new array sentences to use_mode with var input, array facts_to_link, hash tags, var current_language, var path, var mode
     print "Output is..."
     print new line
     for each new array sentence in array sentences do
@@ -2984,10 +2983,14 @@ define action shell with var current_language, var path do
             done
             
             do unlink with '_output'
-            set new array output to give_output with var line, array facts_to_link, var current_language, var path
+            set new hash tags to an empty hash
+            set new array output to give_output with var line, array facts_to_link, hash tags, var current_language, var path
             do unlink with '_output'
 
             set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
+            
+            set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
+    
             do unlink with '_output'
             do save_output with var final_output, var current_language, var path
             set new var output_file_name to '_output'
