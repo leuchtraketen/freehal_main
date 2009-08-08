@@ -96,7 +96,7 @@ define action check_score with var possible_score do
     set new var output_num to 0
     if var possible_score matches /^(<[0-9]>+)\s?/ do
         set var output_num to $0
-        print "Output number: " concat var output_num
+        print "( Output number: " concat var output_num concat " ) "
         do regex using var possible_score: /^<[0-9]>+\s?/, "", :global
     done
 
@@ -213,23 +213,34 @@ define action get_score with array words, var sentence, var lang, var path do
         set new var input_file_name to var path concat '/lang_' concat var lang concat '/index_of_combination.cfg'
         set new var input_handle to handle for file name var input_file_name, read
         for each new var line from var input_handle do
-            do regex using var word: /<[?]>|<[!.,\-]>/, "", :global
-            if not var line matches /[+]/ and var line matches /\[var word\]/ do
-                for each new var line_2 from var input_handle do
-                    if var line_2 matches "" or var line_2 matches /[\[\]]/ do
-                        go to last
-                    done
-                    #print "####" concat var line_2
-                    if lc(var line_2) matches /var sentence/ do
-                        set new array parts to split with ":", var line_2
-                        set new var score_here to from array parts item [ 1 ]
-                        do regex using var score_here: /\s/, "", :global
-
-                        if (0+var score_here) > -1 do
-                            set var sum to var sum + 2*var score_here*(10000/var sum) + 1
+        
+            set new flag redo to 1
+            while flag redo do
+                set flag redo to 0
+                
+                do regex using var word: /<[?]>|<[!.,\-]>/, "", :global
+                if not var line matches /[+]/ and var line matches /\[var word\]/ do
+                    for each new var line_2 from var input_handle do
+                        if var line_2 matches "" do
+                            go to last
                         done
-                        else do
-                            #set var num_words to var num_words - 1
+                        if var line_2 matches /[\[\]]/ do
+                            set var line to var line_2
+                            set flag redo to 1
+                            go to last
+                        done
+                        if lc(var line_2) matches /var sentence/ do
+                            set new array parts to split with ":", var line_2
+                            set new var score_here to from array parts item [ 1 ]
+                            do regex using var score_here: /\s/, "", :global
+
+                            # print "score_here:" concat var score_here concat new line
+                            if (0+var score_here) > -1 do
+                                set var sum to var sum + 20*var score_here*(10/var sum) + 1 
+                            done
+                            else do
+                                #set var num_words to var num_words - 1
+                            done
                         done
                     done
                 done
@@ -2913,8 +2924,8 @@ define action decide with array output, var input, flag all_output_phrases, var 
         set new array rel_output to an empty array
         for each new array _item in array output do
             print "Score of " concat from array _item item [ 1 ] concat " is "
-            set new var score to get_score with array words, from array _item first item, var lang, var path
-            print var score 
+            set new var score to get_score with array words, from array _item item [ 1 ], var lang, var path
+            print var score
             print new line
             set new var k to 0
             while var k < var score do
