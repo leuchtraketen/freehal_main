@@ -286,6 +286,10 @@ define action compute_input with var input is rw, var lang, var path do
 
     print "Computed input (no. 3) ... ", var input
     print new line
+    
+    if var input matches /((<[?]>)|(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s))/ do
+        do regex using var input: / (seinen|ihren|seiner|ihrer|seines|ihres|seine|ihre) /, " das ", :global:i
+    done
 
     do regex using var input: /Weisst du etwas ueber /, "was ist ", :global:i
     do regex using var input: /was weisst du ueber /, "was ist ", :global:i
