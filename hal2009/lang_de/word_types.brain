@@ -82597,50 +82597,58 @@ Akademischer:
 aneinander:
   type: pron
 taetigkeitsfeld:
-  type: adj
+  genus  : s
+  type: n,
 Viereck:
-  type: n,
-Einschbe:
-  type: n,
+  genus  : s
+  type: n,,
 Panikmacherinnen:
+  genus  : f
   type: n,
 herumwandern:
   type: vi
 Leggings:
+  genus  : f
   type: n,
 Begleiterin:
+  genus  : f
   type: n,
 Achtung:
+  genus  : f
   type: n,
 bestie:
-  type: adj
+  genus  : f
+  type: n,
 Grabsaeule:
+  genus  : f
   type: n,
 Festplattenspeicher:
+  genus  : m
   type: n,
 portraetieren:
   type: vi
-Pornografiepornographieunzuechtige:
-  type: n,
 Leitsatz:
+  genus  : m
   type: n,
 Allherrscher:
+  genus  : m
   type: n,
 abkapseln:
   type: vi
 Begehbar:
-  type: n,
+  type: adj
 Eintrittsantraege:
+  genus  : f
   type: n,
 Chemikalienlager:
-  type: n,
-Flurfrderzeuge:
+  genus  : s
   type: n,
 eingehen:
-  type: adv
+  type: vi
 Unguenstigster:
-  type: n,
+  type: adj
 Nachrichtengehalt:
+  genus  : m
   type: n,
 aufruecken:
   type: vi
@@ -82649,200 +82657,229 @@ novativ:
 rudern:
   type: vi
 Notiz:
+  genus  : f
   type: n,
 Fadheit:
+  genus  : f
   type: n,
 bedenken:
   type: vi
 Ablaufprotokoll:
+  genus  : s
   type: n,
 vorhersagbarkeit:
+  genus  : f
   type: n,
 Druckfehler:
+  genus  : m
   type: n,
 Klimatologe:
+  genus  : m
   type: n,
 kacken:
   type: vi
 Erschaffer:
+  genus  : m
   type: n,
-Bcherregal:
-  type: n,
-paavo:
-  type: adj
-dermatomykosen:
-  type: vi
 Tragisch:
-  type: n,
+  type: adj
 Amtsvorsteherinnen:
+  genus  : f
   type: n,
 Liebesakt:
+  genus  : m
   type: n,
 Bremsleuchte:
-  type: n,
-Deckungsbesttigung:
+  genus  : f
   type: n,
 Jemandem:
-  type: n,
-Auenhandelsbank:
-  type: n,
+  type: pron
 Innovativ:
-  type: n,
-lungenerkrankung:
   type: adj
+lungenerkrankung:
+  genus  : f
+  type: n,
 Bekanntmachungsblatt:
+  genus  : s
   type: n,
 Kraftfahrtbundesamt:
+  genus  : s
   type: n,
 Gregory:
   type: n,
 selbstmanipulation:
+  genus  : f
   type: n,
 disagio:
-  type: adj
+  genus  : s
+  type: n,
 Kriegsgewinnler:
+  genus  : f
   type: n,
 unausgegoren:
-  type: vi
+  type: adj
 Alarmstufe:
+  genus  : f
   type: n,
 beharrliche:
   type: adv
 Tomatenmark:
+  genus  : s
   type: n,
 verpflichten:
   type: vi
 Bridgetown:
   type: n,
 Mineral:
+  genus  : s
   type: n,
 Ultraschalluntersuchung:
-  type: n,
-Hmatom:
-  type: n,
-Festsle:
+  genus  : f
   type: n,
 Bullenstander:
+  genus  : m
   type: n,
 Fluechtigkeitsfehler:
+  genus  : m
   type: n,
 niederbrennen:
   type: vi
-Brckenkran:
-  type: n,
 Beamte:
+  genus  : m
   type: n,
 Zwischenspiel:
+  genus  : s
   type: n,
 weltklug:
   type: adj
 dilemma:
-  type: adj
+  genus  : s
+  type: n,
 blitzventil:
-  type: adj
-Fernsehkomdie:
+  genus  : s
   type: n,
 baldmoeglichen:
   type: adv
 trott:
-  type: vi
+  genus  : m
+  type: n,
 Adern:
+  genus  : f
   type: n,
 gabelung:
-  type: adj
+  genus  : f
+  type: n,
 ungeneigt:
-  type: vi
+  type: adj
 Etablierung:
+  genus  : f
   type: n,
 Jeanshose:
+  genus  : f
   type: n,
 Explosionsplattierung:
+  genus  : f
   type: n,
 Ahnungslosigkeit:
+  genus  : f
   type: n,
 Gewaltherrscher:
-  type: n,
-Dmmplatte:
-  type: n,
+  genus  : m  
 Enthauptung:
+  genus  : f
   type: n,
 Ermittlungsbeamten:
+  genus  : f
   type: n,
 anreden:
   type: vi
 Informierend:
-  type: n,
-paddelrud:
   type: adj
 Steckdosenverteiler:
+  genus  : m
   type: n,
 identisch:
   type: adj
 Baugerueste:
+  genus  : f
   type: n,
 rueckstand:
-  type: adj
+  genus  : m
+  type: n,
 Karton:
+  genus  : m
   type: n,
 Anfahrtsweg:
+  genus  : m
   type: n,
 Stumpfsinnig:
   type: n,
 Quasselstrippe:
+  genus  : f
   type: n,
 Wheatstonebruecke:
+  genus  : f
   type: n,
 Metrik:
+  genus  : f
   type: n,
-distinkt:
-  type: vi
 ungezwungen:
-  type: vi
-Abgesprochen:
-  type: n,
-Kolossal:
-  type: n,
-slowakei:
   type: adj
+Abgesprochen:
+  type: adj
+Kolossal:
+  type: adj
+slowakei:
+  genus  : f
+  type: n,
 Auswahlen:
+  genus  : f
   type: n,
 Einwalzenschlackebrecher:
+  genus  : f
   type: n,
 Laenger:
-  type: n,
+  type: adj
 Mischbecken:
+  genus  : s
   type: n,
 Dateiverwaltung:
+  genus  : f
   type: n,
 Fingern:
+  genus  : s
   type: n,
 autosuggestion:
+  genus  : f
   type: n,
 Entgiftung:
+  genus  : f
   type: n,
 zweireihig:
   type: adv
 Altkanzler:
+  genus  : m
   type: n,
 trimaran:
-  type: adj
-creglingen:
-  type: vi
-geschaeftsfuehrerin:
-  type: adj
-Modellpuppeschaufensterpuppe:
+  genus  : m
   type: n,
-Gebrde:
+creglingen:
+  type: n,
+geschaeftsfuehrerin:
+  genus  : f
   type: n,
 Pressluftschrauber:
+  genus  : m
   type: n,
 Franca:
   type: n,
 Abwaerts:
-  type: n,
+  type: adv
 Bundesbahnen:
+  genus  : f
   type: n,
 Kardamom:
+  genus  : m
   type: n,
 ungesetzlich:
   type: adv
@@ -82855,74 +82892,77 @@ gesundes:
 gehoerig:
   type: adv
 befasst:
-  type: vi
-velburg:
   type: adj
+velburg:
+  type: n,
 strotzen:
   type: vi
 aufpeppen:
-  type: adj
-Geschaffen:
   type: n,
+Geschaffen:
+  type: adj
 vierstimmig:
   type: adv
 Aufgabenheft:
+  genus  : s
   type: n,
 Helvetismus:
+  genus  : m
   type: n,
 Drill:
+  genus  : m
   type: n,
 Array:
+  genus  : s
   type: n,
 Dickes:
-  type: n,
-Apple:
-  type: n,
-ankergrund:
   type: adj
+ankergrund:
+  genus  : m
+  type: n,
 boehmen:
-  type: vi
+  type: n,
 vorliegenden:
   type: vi
 Kempen:
   type: n,
 rezession:
+  genus  : f
   type: n,
 erzielbar:
   type: adj
 bundeswehr:
-  type: adj
+  genus  : f
+  type: n,
 vorwaermen:
   type: vi
-Erfllungen:
-  type: n,
 Flugregel:
+  genus  : f
   type: n,
 unvollendetes:
   type: adv
 Buergerinitiative:
+  genus  : f
   type: n,
 Sirius:
+  genus  : m
   type: n,
 Sekretaerinnen:
+  genus  : f
   type: n,
 Exorzismus:
+  genus  : m
   type: n,
 Clinometer:
+  genus  : s
   type: n,
-zuegen:
-  type: vi
 anbetenswert:
-  type: vi
-Restructuring:
-  type: n,
-abreien:
   type: adj
-Traktat:
-  type: n,
 Osterinsel:
+  genus  : f
   type: n,
 Andeutungen:
+  genus  : f
   type: n,
 Tischfussballspiel:
   genus: s
@@ -82930,35 +82970,37 @@ Tischfussballspiel:
 lenzen:
   type: vi
 Uneinigkeit:
+  genus  : f
   type: n,
 heino:
-  type: adj
+  type: n,
 Iijima:
   type: n,
-Fubremse:
-  type: n,
 Schaerfen:
+  genus  : s
   type: n,
 Aussichten:
+  genus  : f
   type: n,
 Dividendenzuschlag:
+  genus  : m
   type: n,
 Bruderkrieg:
+  genus  : m
   type: n,
 Rigide:
   type: n,
-aviaeren:
-  type: vi
 Eigenverantwortung:
+  genus  : f
   type: n,
 Rhein:
+  genus  : m
   type: n,
 Vergraben:
-  type: n,
-Freistellungsauftrge:
+  genus  : s
   type: n,
 Menschenaehnlicher:
-  type: n,
+  type: adj
 Ausfhrungszeichnung:
   type: n,
 Brigadekommandeur:
