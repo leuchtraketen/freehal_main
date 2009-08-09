@@ -141459,7 +141459,7 @@ fez:
 Insiderhandel:
   type: n,
 programmierer:
-  type: adj
+  type: n,
 sputum:
   type: adj
 normiert:
@@ -150606,7 +150606,7 @@ Betriebsueberdruck:
 Fundgruben:
   type: n,
 datenbank:
-  type: adj
+  type: n,
 denkmal:
   type: adj
 ermigen:
@@ -206295,7 +206295,7 @@ Untergrund:
 kleineren:
   type: adv
 beziehungsweise:
-  type: pron
+  type: linking
 Metaphern:
   genus: f
   type: n,
@@ -206735,5 +206735,85 @@ erziehen:
   type: vi
 erzieht:
   type: vi
-erzieht:
+Scanner:
+  type: n
+Vielleicht:
+  type: adj
+gewusst:
   type: vi
+neues:
+  type: adj
+neues:
+  type: adj
+kinder:
+  type: n
+geborgenheit:
+  type: n
+geborgenheit:
+  type: n
+erfolgreich.:
+  type: adj
+erfolgreich.:
+  type: adj
+internet:
+  type: n
+gehirn,:
+  type: n
+software:
+  type: n
+heidi:
+  type: n
+vater:
+  type: n
+entwickler:
+  type: n
+entwickler:
+  type: n
+geben.:
+  type: vi
+Ahnung,:
+  type: n
+Schlauch.:
+  type: n
+Schlauch.:
+  type: n
+seele,:
+  type: n
+gedaechtnis,:
+  type: n
+anhabe:
+  type: vi
+anhabe:
+  type: vi
+nichts,:
+  type: 4
+nichts,:
+  type: 4
+kleidung:
+  type: n
+kleidung:
+  type: n
+etwelch:
+  type: adj
+&:
+  type: linking
+menschen,:
+  type: n
+menschen,:
+  type: n
+Python:
+  type: n
+Pascal:
+  type: n
+programmentwickler:
+  type: n
+verarbeitest:
+  type: vi
+verarbeitest:
+  type: vi
+humor:
+  type: n
+humor:
+  type: n
+Reinhold:
+  type: n

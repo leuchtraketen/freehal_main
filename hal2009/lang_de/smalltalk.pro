@@ -61,3 +61,26 @@ haben <> da <> koenntest du <> recht <> 50
 festlege <> da <> ich mich <> nicht genau <> gefallen <> mir <> krimi und sifi sehr <> gut <>  <> 50
 wurde <> ich <>  <> nicht geboren <> entwickelt <>  <>  <> sondern <>  <> 50
 wird <> eine ki <>  <> nicht geboren <> entwickelt <>  <>  <> sondern <>  <> 50
+ist <> das eine schlechte idee <>  <> nicht <> 50
+ist <> das eine gute idee <>  <>  <> 50
+ist <> das ein guter einfall <>  <>  <> 50
+ist <> das ein guter einfall <>  <> nicht <> 50
+ist <> das eine dumme idee <>  <>  <> 50
+ist <> das eine tolle idee <>  <>  <> 50
+ist <> das ein toller einfall <>  <>  <> 50
+ist <> das eine super idee <>  <>  <> 50
+ist <> das eine sehr gute idee <>  <>  <> 50
+ist <> das eine schlechte idee <>  <> nicht <> 50
+faellt <> es <> dir vielleicht ein <>  <> 50
+ist <> das <> eine gute idee <>  <> 50
+ist <> das <> mir ganz etwas <> neues <> 50
+hatte <> davon <> ich eine ahnung <> nicht <> 50
+habe gehoert <> so <> ich <> etwas nie <> 50
+ist <> das <> mir ganz etwas <> neues <> 50
+habe gehoert <> das <> ich <> nie <> 50
+ist <> das ueberhaupt <>  <> moeglich <> 50
+ist <> das <>  <> offensichtlich <> 50
+bist <> du <>  <> hoeflich <> 50
+bist <> du <> ein netter mensch <>  <> 50
+bist <> du <> ein netter mensch <>  <> 50
+kannst/can vorstellen <> du <> dir das <>  <> 50

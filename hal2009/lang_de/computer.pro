@@ -81,7 +81,6 @@ ist <> ein hyperlink <> ein verweis <> auf einer webseite <>  <>  <>  <>  <>  <>
 ist <> ein link <> eine verknuepfung zwischen internetseiten <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein modem <> ein datenumwandler <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein monitor <> ein bildschirm <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein pc <> ein computer <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ein _tablet_pc_ <> ein tragbarer computer <> ohne tastatur <>  <>  <>  <>  <>  <>  <> 50
 ist  <> ein thumbnail <> eine kleine ansicht <> von einer bilddatei <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein update <> eine aktualisierung <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -117,7 +116,6 @@ ist <> phishing <> der beruegerische erwerb <> von persoenlichen daten <>  <>  <
 ist <> php <> eine skriptsprache <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> _png_ <> ein bildformat <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> png <> ein grafikformat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _psd_ <> die dateiendung <> vom photoshop <>  <>  <>  <>  <>  <>  <> 50
 ist <> _public_domain_software_ <> kostenlose software <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> python <> eine programmiersprache <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> pyton <> nothing <> frei <>  <>  <>  <>  <>  <>  <> 50
@@ -177,5 +175,3 @@ verwendet <> blutooth <> dezimeterwellen <>  <>  <>  <>  <>  <>  <>  <> 50
 verwendet <> ein tft bildschirm <> fluessigkristalle <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> der erste microprozessor <> nothing <> der intel 4004 <>  <>  <>  <>  <>  <>  <> 50
 war <> eniac <> die erste programmgesteuerte rechenanlage <>  <>  <>  <>  <>  <>  <>  <> 50
-werden <> befehlsfolgen <> nothing <> in einem macro  gespeichert <>  <>  <>  <>  <>  <>  <> 50
-wird <> format <> musik <> mit dem mp3;platzsparend gespeichert <>  <>  <>  <>  <>  <>  <> 50

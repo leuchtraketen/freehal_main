@@ -67,7 +67,6 @@ anhat <> a <> nothing <>  <> anhaben kann <> a <> nothing <>  <> wenn <>  <> 50
 heisst <> a <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing <> immer mit eliza <>  <>  <> 100
 #Wenn ist in der Datenbank steht, wird auf bedeutet geantwortet #
 bedeutet <> a <> nothing <>  <> ist <> a <> nothing <>  <> wenn <>  <> 50
-# Eintrag zur Dialogerweiterung von Freehal#
 besitzt <> du <> a <>  <> f=> moechte <> ich <> auch a <>  <>  <>  ;; q=> schenkst <> du <> mir dann a <> nicht <> warum <>  <> 50
 #Direkte Anwort auf die Eingabe "ich gehe jetzt"#
 geht <> a <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  ;; f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> 50
@@ -76,7 +75,6 @@ ist <> $$wday$$ <> nothing <> heute <>  <>  <>  <>  <>  <>  <> 50
 ist <> $$wday$$ <> ein tag <>  <>  <>  <>  <>  <>  <>  <> 50
 # Bei der Eingabe "Ich heisse oder mein Name ist ..." Wird ein Zufallsnamen aus der Datenbank ausgegeben#
 ist <> dein name <> a <>  <> dachte f=> heisst <> ich du <> $$randomname$$ <>  <>  <>  <> 50
-heisst <> du <> a <>  <> dachte f=> heisst <> ich du <> $$randomname$$ <>  <>  <>  <> 50
 #Direkte Anwort auf die Eingabe " ? studiert ?#
 studiert <> a <> b <>  <> f=> ist <> b <> sicher sehr interessant <>  <>  <>  ;; q=> <> gefaellt <> mir an  <> b <> was <>  <> 50
 #Direkte Antwort auf die Eingabe "Ich bin dick"#
@@ -94,5 +92,3 @@ hat <> a <> heute geburtstag <>  <> f=> <> nothing <> nothing <> alle gute <>  <
 ist <> a <> nothing <> blond <> macht q=> <> blond wirklich <> bloed <>  <>  <>  <> 50
 #Direkte Antwort auf die Eingabe "Ich habe Hunger"#
 hat <> a <> hunger <>  <> essen f=> solltest <> a <> etwas <>  <>  <>  ;; f=> pluendern sollte <> a <> den kuehlschrank <>  <>  <>  <> 50
-#Direkte Antwort auf die Eingabe "Ich bin durstig"#
-ist <> a <> nothing <> durstig <> f=> solltest trinken <> a <> ein bier <>  <>  <>  <> 50

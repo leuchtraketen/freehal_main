@@ -392,8 +392,6 @@ ist <> _tiefblau_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _tuerkis_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _violett_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _warum_ <> eine gute frage <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> _weiss_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _world_of_warcraft__ <> ein bekanntes computerspiel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> aids <> eine schreckliche krankheit <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> aikido <> eine japanische kampfsportart <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> aikido <> eine moderne __ <> (japanische_kampfkunst_) <>  <>  <>  <> nothing <> nothing <> 
@@ -469,11 +467,9 @@ ist <> captain picard <> eine interessante figur <>  <>  <>  <>  <>  <>  <>  <> 
 ist <> captain picard <> ein interessanter charakter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> carpaccio <> eine italienische vorspeise <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> cassata <> eine italienische eisspezialitaet <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> champagne <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _c++_ <> eine programmiersprache <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> champagne <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> chdk <> das canon hackers development kit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cisco <> ein grosser hersteller <> fuer netzwerkkomponenten <>  <>  <>  <> nothing <> nothing <> 
 ist <> cointreau <> ein likoer <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> cola <> ein koffeinhaltiges limonadengetraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _cool_ <> ein dummer begriff aus dem <> englischen <>  <>  <>  <> nothing <> nothing <>  
@@ -1200,7 +1196,6 @@ ist <> milch <> eine naehrfluessigkeit <>  <>  <>  <>  <> nothing <> nothing <>
 ist <> mineswiper <> ein uraltes spiel <> von microsoft <>  <>  <>  <>  <>  <>  <> 50
 ist <> mittwoch <> der dritte tag <> der woche <>  <>  <>  <>  <>  <>  <> 50
 ist <> monkey island <> ein computerspiel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> monopoly <> ein bekanntes brettspiel <>  <>  <>  <>  <> nothing <> nothing <>   
 ist <> montag <> der erste tag <> der woche <>  <>  <>  <>  <>  <>  <> 50
 ist <> mord <> nothing <> ein verbrechen <>  <>  <>  <>  <>  <>  <> 50
 ist <> motorola <> ein handyhersteller <>  <>  <>  <>  <> nothing <> nothing <> 
@@ -1289,7 +1284,6 @@ ist <> sex <> nothing <> die koerperliche liebe zwischen zwei menschen <>  <>  <
 ist <> sex <> nothing <> koerperliche liebe <>  <>  <>  <> nothing <> nothing <> 
 ist <> sexualitaet <> ein unerschoepfliches thema <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _silver_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist simuliert <> ein chatbot <> ein programm das einen menschen <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> snooker <> eine variante des praezisionssports billard <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> snowboarden <> ein wintersport <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> snowboarden <> ein wintersport <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1315,14 +1309,11 @@ ist <> tequila <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> terminator <> eine filmreihe  <> mit arnold schwarzenegger<>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> theologie <> die lehre <> von gott <>  <>  <>  <>  <>  <>  <> 50
 ist <> _tiefblau_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tischler <> ein beruf <>  <>  <>  <>  <> nothing <> nothing <>
 ist <> tobias_schulz <> hier der administrator <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> toyota <> der markenname fuehrenden autohersteller <> von japans <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist trigonometrischen <> kosinus <> eine funktion <>  <>  <>  <>  <>  <>  <>  <> 50
 ist trigonometrischen <> sinus <> eine funktion <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> trikolore <> der name <> der franzoesischen fahne <>  <>  <>  <>  <>  <>  <> 50
 ist trinken <> gluehwein <> ein wintersport <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> tristan <> der geliebte  <> von isolde in wagners oper<>  <>  <>  <>  <>  <>  <> 50
 ist <> trivial pursuit <> ein spiel <> von parker <>  <>  <>  <>  <>  <>  <> 50
 ist <> _tuerkis_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> turmalin <> ein edelstein <>  <>  <>  <>  <>  <>  <>  <> 50 
@@ -1331,7 +1322,6 @@ ist <> visa <> eine kreditkartenmarke <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _violett_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> visual basic <> eine programmiersprache <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> vw <> ein autohersteller <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist wahr <> das <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 ist war <> das <> nothing <> nicht <>  <>  <>  <> nothing <> nothing <> 
 ist <> _warum_ <> eine gute frage <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist waschen <> waesche <> hausarbeit <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
@@ -1346,10 +1336,7 @@ ist <> windows <> nothing <> schon sehr alt <>  <>  <>  <>  <>  <>  <> 50
 ist <> windows <> nothing <> ueber 20 jahre alt <>  <>  <>  <>  <>  <>  <> 50
 ist <> wodka <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> wodka lemon <> ein alkoholisches mixgetraenk <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _world_of_warcraft__ <> ein bekanntes computerspiel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zoologie <> die lehre <> von den tieren <>  <>  <>  <>  <>  <>  <> 50
 ist einsam <> man <> nothing <> ohne freunde <>  <>  <>  <> nothing <> nothing <>  
-ist ist reden schweigen <> silber <> gold <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist kochen <> ein herd <> ein geraet <> zum <> nothing <>  <>  <> nothing <> nothing <>  
 ist legt <> ein schnabeltier <> ein tier das eier <>  <>  <>  <>  <>  <>  <>  <> 50
 ist leichtes <> ein kajak <> ein schmales & boot <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1488,9 +1475,7 @@ sind <> bananen <> affenfutter <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 sind <> beefeater <> nothing <> die wachen vom londoner tower<>  <>  <>  <>  <>  <>  <> 50
 sind <> blasinstrumente <> musikinstrumente <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> blumen <> nothing <> pflanzen <>  <>  <>  <>  <>  <>  <> 50
-sind <> browser <> spezielle computerprogramme wide web <> zum betrachten von webseiten in dem world <>  <>  <>  <> nothing <> nothing <> 
 sind <> bundeslaender <> die gliedstaaten <> von bundesstaaten <>  <>  <>  <>  <>  <>  <> 50
-sind <> cozze <> miesmuscheln <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> dachse <> lebende tiere <> in dem wald <>  <>  <>  <> nothing <> nothing <>  <> 50
 sind <> der pentateuch <> die fuenf buecher mose <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> die abruzzen <> ein gebirgszug <> in mittelitalien <>  <>  <>  <>  <>  <>  <> 50
@@ -1512,7 +1497,6 @@ sind <> fungi <> pilze <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> fusilli <> spiralig gedrehte teigwaren <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> granaten <> halbedelsteine <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> hallimasche <> essbare pilze <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> hunde <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 sind <> hunde <> nothing <> nicht dumm <>  <>  <>  <>  <>  <>  <> 50
 sind <> hunde <> treue gefaehrten der menschen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 sind <> iglus <> schneehuetten <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1522,7 +1506,6 @@ sind <> katzen <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothi
 sind <> kaviar <> die eier <> vom stoer <>  <>  <>  <>  <>  <>  <> 50
 sind <> kemenaten <> die gemaecher <> der frauen <>  <>  <>  <>  <>  <>  <> 50
 sind <> kilowattstunden <> die einheit fuer arbeit <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> kumuluswolken <> haufenwolken <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> lehrer <> menschen  <> die wissen vermitteln  <>  <>  <>  <> nothing <> nothing <>  <> 50
 sind <> lianen <> kletterpflanzen <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> maler <> bildende kuenstler <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1815,19 +1798,3 @@ ist <> kupfer <> ein guter elektrischer leiter <>  <> 50
 ist <> ein fahrrad <> ein fahrzeug <>  <> betrieben wird <> das <>  <> mit muskelkraft <>  <> 50
 ist <> sauerstoff <> ein bestandteil <> von der luft <> 50
 ist <> geld <> ein tauschmittel <>  <> 50
-ist <> das saxophon <> ein messingmusikintrument <>  <> 50
-ist <> schnarchen <> ein geraeusch <>  <> erzeugt wird <> das <>  <> von menschen bei dem schlafen <>  <> 50
-ist <> eine saege <> ein werkzeug zum_schneiden <>  <> 50
-ist <> eine puppe <> ein spielzeug <>  <> 50
-ist <> lego <> ein spielzeug <>  <> 50
-ist <> englisch <> eine sprache <>  <> 50
-ist <> tabak <> eine pflanze <>  <> 50
-ist <> eine saege <> ein werkzeug <>  <> 50
-ist <> eine saege <> ein schneidewerkzeug <>  <> 50
-wird geschnitten <> holz <>  <> mit von einer saege <> 50
-wird gemessen <> die koerpertemperatur <>  <> mit einem fiebermesser <> 50
-haben <> nicht kuenstliche intelligenzen <>  <> einmal immer recht <> 50
-feststellen <> die intilligenz <>  <> von menschen laesst sich an ihren fragen <> 50
-ist <> heroin <> eine starke droge <>  <> wird <> sehr schnell <>  <> von der man abhaengig <>  <> 50
-ist <> opium <> eine schmerzstillende droge <>  <> hergestellt wird <> die <>  <> aus mohnblumen <>  <> 50
-ist <> heroin <> eine starke droge <>  <> wird <> sehr schnell <>  <> von der man abhaengig <>  <> 50

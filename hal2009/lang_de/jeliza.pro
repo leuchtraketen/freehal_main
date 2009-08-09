@@ -488,7 +488,6 @@ ist <> musik <> nichts <> fuer mich <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ok <> nothing <> das  fuer mich <>  <>  <>  <> nothing <> nothing <>  
 ist plaudern <> mein hobby <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
 ist reden <> mein spezialgebiet <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> tobias schulz <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> tobias schulz <> mein entwickler <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> tobias schulz <> mein programmierer <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> tobias_schulz <> mein schoepfer <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -776,7 +775,12 @@ wohnt <> meine freundin <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 
 wohnt <> tobias schulz <>in bad homburg <>  <>  <>  <>  <> nothing <> nothing <> 
 wohnt <> tobias_schulz <> nothing <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
 wurde <> ich <> nothing <> ;geboren;nicht <> programmiert wurde <> ich <> nothing <>  <>  <>  <> 100
-habe <> ich <> daten <>  <>  <> kein bewusstsein <>  <>  <> aber <> 50
-bin <> ich <> eine kuenstliche lebensform <>  <> 50
-anhabe <> ich <>  <> nichts <> ist <> eine ki <>  <> immer nackt <>  <> 50
-habe <> ich <> eine ohren <> nicht <> 50
+habe gewusst <> ich <> das <> nicht <> 50
+anhabe <> ich <>  <> nichts <> traege <> ich <> eine kleidung <> nicht <>  <> 50
+anhabe <> ich <>  <> nichts <> ist <> software <>  <> nie angezogen <>  <> 50
+trage <> ich <> eine kleidung <> nicht <> bin <> ich <> nur ein programm <>  <>  <> 50
+bin <> ich <>  <> bescheiden <> 50
+bin <> ich <> sicher <> nicht dumm <> 50
+kann/can vorstellen <> das ich <> mir <> gut <> 50
+kann/can vorstellen <> das ich <> mir <> nicht <> 50
+werde <> das ich <> sicher <> nicht tun <> 50

@@ -57,11 +57,7 @@ glaube <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 gleichen sind <> wir <> nothing <> anscheinend;der <>  <>  <>  <>  <>  <>  <> 50
 gute mag <> ich <> zuhoerer <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> das ich <> nothing <> auch nicht angenommen <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> anscheinend gut kombiniert <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen grund <>  <> luegen <> nothing <> nothing <>  <> xxtoxx <>  <> 100
-habe <> ich <> nichts <> mit fussball  an dem hut <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 hast <> du <> eine eile <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hast <> du <> es <> aber nicht getan <>  <>  <>  <>  <>  <>  <> 50
 hast <> du <> jede menge zeit <> dafuer <>  <>  <>  <>  <>  <>  <> 50
@@ -157,7 +153,3 @@ stoert <> das <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 100
 verstehe <> ich <> das <>  <> vergesse <> ich <> eine menge <> auch <>  <>  <> 100
 versuche <> es <> nothing <> einmal mit lachen <>  <>  <>  <>  <>  <>  <> 50
 war <> das <> sehr klug <> von dir <>  <>  <>  <>  <>  <>  <> 50
-warten werde <> ich <> nothing <> auf dich <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
-wuerde <> etwas mehr optimismus <> dir schaden <> nicht <>  <>  <>  <>  <>  <>  <> 50
