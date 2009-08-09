@@ -128,7 +128,15 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
     }
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
-        synonyms[n] = strdup(argv[0]);
+        if (argc >= 2) {
+            synonyms[n] = malloc(4+strlen(argv[0])+strlen(argv[1])+strlen(argv[2]));
+            strcpy(synonyms[n],                                       argv[0]);
+            strcpy(synonyms[n]+1+strlen(argv[0]),                     argv[1]);
+            strcpy(synonyms[n]+1+strlen(argv[0])+1+strlen(argv[1]),   argv[2]);
+        }
+        else {
+            synonyms[n] = strdup(argv[0]);
+        }
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
                 strcpy(synonyms[n]+1, synonyms[n]+2);
@@ -862,7 +870,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf (matched by ' '): %s\n", buf);
             }
         }
-        strcat(sql, "SELECT objects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (\"");
+        strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (\"");
         if (buf) strcat(sql, buf);
         strcat(sql, "\" GLOB subjects OR (1 ");
         
@@ -957,7 +965,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
-        strcat(sql, "SELECT subjects  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
+        strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
         if (buf) strcat(sql, buf);
         strcat(sql, "\" GLOB objects OR objects ");
         if (buf && strstr(buf, "*"))
@@ -1029,7 +1037,14 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             while (subject_synonyms[n] && n < 4000) {
                 char* subject_synonym_buf = subject_synonyms[n];
                 
-                fprintf(logfile, "textcontent 000000 \t - %s\n", subject_synonym_buf);
+                fprintf(logfile, "textcontent 000000 \t - %s", subject_synonym_buf);
+                int u;
+                for (u = 0; u < 25-strlen(subject_synonym_buf); ++u) {
+                    fprintf(logfile, " ");
+                }
+                fprintf(logfile, " (");
+                fprintf(logfile, "%s)\n", subject_synonym_buf+1+strlen(subject_synonym_buf) + 1+strlen(subject_synonym_buf+1+strlen(subject_synonym_buf)));
+                fprintf(logfile, "property    pk     %s\n", subject_synonym_buf+1+strlen(subject_synonym_buf));
                 
                 ++n;
             }
@@ -1050,7 +1065,15 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             while (object_synonyms[n] && n < 4000) {
                 char* object_synonym_buf = object_synonyms[n];
                 
-                fprintf(logfile, "textcontent 000000 \t - %s\n", object_synonym_buf);
+                fprintf(logfile, "textcontent 000000 \t - %s", object_synonym_buf);
+                int u;
+                for (u = 0; u < 25-strlen(object_synonym_buf); ++u) {
+                    fprintf(logfile, " ");
+                }
+                fprintf(logfile, " (");
+                fprintf(logfile, "%s)\n", object_synonym_buf+1+strlen(object_synonym_buf) + 1+strlen(object_synonym_buf+1+strlen(object_synonym_buf)));
+                fprintf(logfile, "property    pk     %s\n", object_synonym_buf+1+strlen(object_synonym_buf));
+                
                 
                 ++n;
             }

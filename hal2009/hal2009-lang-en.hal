@@ -3037,6 +3037,14 @@ define action check_invoke with var statement do
     return var appname
 done
 
+define action check_sentence_for_weather with var input do
+    do return with ''
+done
+
+define action check_for_weather with var place, var lang, var path do
+    do return without arguments
+done
+
 define action replace_he with var text, var replacement do
     do regex using var text: /\s+?(he)\s+?/, " var replacement ", :global:i
     do return with var text

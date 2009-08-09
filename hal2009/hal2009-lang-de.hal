@@ -3498,6 +3498,112 @@ define action check_invoke with var statement do
     return var appname
 done
 
+define action check_sentence_for_weather with var input do
+    if lc(var input) matches /wetter in ([^\s]+(?:\sin\s[^\s]+)?)/ do
+        if $0 do
+            print "I have to check the weather for " concat $0
+            print new line
+            do return with $0
+        done
+        else do
+            print "I have to check the weather, but there is a bad syntax: " concat var input
+            print new line
+        done
+    done
+    else do
+        print "I don't have to check the weather"
+        print new line
+    done
+    
+    do return with ''
+done
+
+define action check_for_weather with var place, var lang, var path do
+    do chdir with var path
+    do regex using var place: /\s+/, "\\s", :global
+    do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather.txt http://www.wetter.com/suche/?search=" concat var place concat "&search_type_weather=1&search_type_site=1"
+    
+    set new var pro_file_name to "./lang_" concat var lang concat "/weather.pro"
+    set new var weather_pro_file to handle for file name var pro_file_name, write
+    do close with var weather_pro_file
+    
+    set new var search_results to handle for file name "weather.txt", read
+    for each new var line from var search_results do
+        if var line matches /["]search_result["]/ do
+            set new var url to var line
+            do regex using var url: /^.*?http/, "http", :global
+            do regex using var url: /html.*?$/, "html", :global
+            print var url
+            print new line
+            
+            set new var name to ''
+            set new var temperature to ''
+            set new var weather to ''
+            
+            do wait 2 seconds
+            do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather-city.txt " concat var url
+            set new var city to handle for file name "weather-city.txt", read
+            for each new var line from var city do
+                if var line matches /me_switch me_active/ do
+                    do regex using var line: /[<][^>]*?[>]/, "", :global
+                    do regex using var line: /[&].*/, "", :global
+                    do regex using var line: /[^a-zA-Z0-9, ]/, "", :global:i
+                    do regex using var line: /,/, " in ", :global
+                    if var line do
+                        set var name to var line
+                    done
+                done
+                if var line matches /fc_temper/ do
+                    set var line to the next line from var city
+                    if var line matches /temp_observe/ do
+                        do regex using var line: /[<][^>]*?[>]/, "", :global
+                        do regex using var line: /[&].*/, "", :global
+                        do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
+                        do regex using var line: /,/, " in ", :global
+                        if var line do
+                            set var temperature to var line
+                            
+                            print var line
+                            print new line
+                        done
+                    done
+                done
+                if var line matches /fc_temper/ do
+                    set var line to the next line from var city
+                    do regex using var line: /[<][^>]*?[>]/, "", :global
+                    do regex using var line: /[&].*/, "", :global
+                    do regex using var line: /[^a-zA-Z0-9, ]/, "", :global:i
+                    do regex using var line: /,/, " in ", :global
+                    if var line do
+                        set var weather to var line
+                    done
+                done
+            done
+            do close with var city
+            
+            set new var weather_pro_file to handle for file name var pro_file_name, append
+            print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> 50"
+            print into var weather_pro_file data new line
+            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad celsius <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data new line
+            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data new line
+            print into var weather_pro_file data "ist <> die temperatur <> " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data new line
+            print into var weather_pro_file data "ist <> das wetter <> " concat var weather concat " bei " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data new line
+            print into var weather_pro_file data new line
+            do close with var weather_pro_file
+
+        done
+    done
+    do close with var search_results
+    
+    do reread_pro_file with var pro_file_name
+    
+    do return without arguments
+done
+
 define action replace_he with var text, var replacement do
     do regex using var text: /\s+?(er|ihn)\s+?/, " var replacement ", :global:i
     do return with var text
@@ -3531,7 +3637,9 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     
     for each new var word in array words do
         if not from hash tags item { var word } do
-            set from hash tags item { var word } to compute_tags with var word, var lang, var path
+            set new var word_to_check to var word
+            do regex using var word_to_check: /<[^a-zA-Z0-9]>/, "", :global:i
+            set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
         if from hash tags item { var word } first item matches /n/ do
             set var word to ucfirst with var word

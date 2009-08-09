@@ -2033,6 +2033,10 @@ define action use_mode with var input is copy, array facts_to_link, hash tags, v
         set new var answer to invoke with var appname
         do return with [ var answer ]
     done
+    set new var place to check_sentence_for_weather with var input
+    if var place do
+        do check_for_weather with var place, var lang, var path
+    done
 
     # TEXT
     # No unlogical answers? Make the komma's readable.
