@@ -1037,7 +1037,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             while (subject_synonyms[n] && n < 4000) {
                 char* subject_synonym_buf = subject_synonyms[n];
                 
-                fprintf(logfile, "textcontent 000000 \t - %s", subject_synonym_buf);
+                fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf);
                 int u;
                 for (u = 0; u < 25-strlen(subject_synonym_buf); ++u) {
                     fprintf(logfile, " ");
@@ -1065,7 +1065,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             while (object_synonyms[n] && n < 4000) {
                 char* object_synonym_buf = object_synonyms[n];
                 
-                fprintf(logfile, "textcontent 000000 \t - %s", object_synonym_buf);
+                fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf);
                 int u;
                 for (u = 0; u < 25-strlen(object_synonym_buf); ++u) {
                     fprintf(logfile, " ");
@@ -1573,48 +1573,58 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (need_and) strcat(sql, " AND");
         else          strcat(sql, "WHERE");
         
-        if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
-            strcat(sql, "\n ( nmain.subjects GLOB \"");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" OR nmain.objects GLOB \"*");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" ");
+        if (strlen(subjects_buffer)) {
+            if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
+                strcat(sql, "\n ( nmain.subjects GLOB \"");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" OR nmain.objects GLOB \"*");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" ");
+            }
+            else {
+                strcat(sql, "\n ( nmain.subjects GLOB \"");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" OR nmain.subjects GLOB \"");
+                strcat(sql, subjects_buffer);
+                strcat(sql, " *\" OR nmain.objects GLOB \"*");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" OR nmain.subjects GLOB \"");
+                strcat(sql, subjects_buffer);
+                strcat(sql, "\" ");
+            }
         }
         else {
-            strcat(sql, "\n ( nmain.subjects GLOB \"");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" OR nmain.subjects GLOB \"");
-            strcat(sql, subjects_buffer);
-            strcat(sql, " *\" OR nmain.objects GLOB \"*");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" OR nmain.subjects GLOB \"");
-            strcat(sql, subjects_buffer);
-            strcat(sql, "\" ");
+                strcat(sql, "\n ( 0 ");
         }
         
         int n = 0;
         while (subject_synonyms[n] && n < 4000) {
-            if (strstr(subject_synonyms[n], "*")) {
-                strcat(sql, "\n OR nmain.subjects GLOB \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR nmain.objects GLOB \"*");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" ");
+            if (strlen(subject_synonyms[n])) {
+                if (strstr(subject_synonyms[n], "*")) {
+                    strcat(sql, "\n OR nmain.subjects GLOB \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR nmain.objects GLOB \"*");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" ");
+                }
+                else {
+                    strcat(sql, "\n OR nmain.subjects GLOB \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, " *\" OR nmain.objects GLOB \"*");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" ");
+                }
             }
             else {
-                strcat(sql, "\n OR nmain.subjects GLOB \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR nmain.subjects GLOB \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, " *\" OR nmain.objects GLOB \"*");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR nmain.subjects GLOB \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" ");
+                    strcat(sql, "\n ");
             }
             ++n;
         }
@@ -1624,18 +1634,30 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     if (objects_buffer && (0 == subjects_buffer || strcmp(objects_buffer, subjects_buffer))) {
         if (need_and) strcat(sql, " AND");
         else          strcat(sql, "WHERE");
-        strcat(sql, "\n ( nmain.objects = \"*\" OR nmain.objects GLOB \"");
+        strcat(sql, "\n ( ");
+        if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
+            strcat(sql, "nmain.objects = \"*\"");
+        }
+        strcat(sql, " nmain.objects GLOB \"");
         strcat(sql, objects_buffer);
         if (objects_buffer == subjects_buffer && objects_buffer == r->extra) {
             strcat(sql, "\" OR nmain.objects = \"\" OR nmain.objects = \" ");
         }
         strcat(sql, "\" ");
+        strcat(sql, " OR nmain.objects GLOB \"* ");
+        strcat(sql, objects_buffer);
+        strcat(sql, "\" ");
 
         int n = 0;
         while (subject_synonyms[n] && n < 4000) {
-            strcat(sql, "\n OR nmain.objects GLOB \"");
-            strcat(sql, subject_synonyms[n]);
-            strcat(sql, "\" ");
+            if (strlen(subject_synonyms[n])) {
+                strcat(sql, "\n OR nmain.objects GLOB \"");
+                strcat(sql, subject_synonyms[n]);
+                strcat(sql, "\" ");
+                strcat(sql, "OR nmain.objects GLOB \"* ");
+                strcat(sql, subject_synonyms[n]);
+                strcat(sql, "\" ");
+            }
             ++n;
         }
         strcat(sql, " ) ");

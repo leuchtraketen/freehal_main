@@ -2077,7 +2077,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'nun' => "adj",
           'flach' => "adj",
           'obschon' => "questionword",
-          'aber' => "questionword",
+          'aber' => "adj",
           'interessieren' => "vt",
           'sicher' => "adj",
           'zuweilen' => "adj",
@@ -3315,6 +3315,10 @@ define action but_feature_is_useful with var input do
         if lc(" " concat var input concat " ") matches /(\sist\s)|(\ssind\s)/ do
             do return with 1
         done
+    done
+    
+    if lc(" " concat var input concat " ") matches /(\shast\s)|(\shat\s)|(\shabe\s)/ do
+        do return with 1
     done
     
     do return with 0
