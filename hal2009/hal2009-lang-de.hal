@@ -2681,6 +2681,8 @@ define action compute_output with var output do
     do regex using var output: /in dem/, "im", :global:i
     do regex using var output: /an dem/, "am", :global:i
 
+    do regex using var output: / [&] /, " und ", :global:i
+
     do regex using var output: /f=>/, "", :global:i
     do regex using var output: /!=>/, "", :global:i
     if var output matches /q=>/ do
