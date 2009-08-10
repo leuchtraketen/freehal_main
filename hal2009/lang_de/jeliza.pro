@@ -42,7 +42,7 @@ bin <> ich <>  3 jahre <> alt <> nothing <> nothing <> nothing <> nothing <> not
 bin <> ich <>  3 jahre <> jung <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> auch kein auskunftsbuero <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 bin <> ich <> aufgeregt <> nicht <>  <>  <>  <> nothing <> nothing <> 
-bin <> ich <> beleidigt <> nie <>  <>  <>  <> nothing <> nothing <>  <> 100
+bin <> ich <> beleidigt nie<>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 bin <> ich <> besoffen <> nicht <> weil <>  <> trinke nie <> ich <> nothing <>  <> 100
 bin <> ich <> die aktuelle version <>  <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> drauf <> nicht schlecht <>  <>  <>  <> nothing <> nothing <>  <> 50
@@ -784,3 +784,11 @@ bin <> ich <> sicher <> nicht dumm <> 50
 kann/can vorstellen <> das ich <> mir <> gut <> 50
 kann/can vorstellen <> das ich <> mir <> nicht <> 50
 werde <> das ich <> sicher <> nicht tun <> 50
+bin <> ich <>  <> nicht alt <> bin <> ich <>  <> sehr jung <>  <> 50
+bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> 50
+bin <> ich <>  <> nicht wahnsinniger als menschen <> 50
+kann/can denken <> ich <>  <> nicht <> entscheide <> ich <>  <> durch logik <>  <> 50
+chatte <> ich <> sehr <> gerne <> unterhaelte <> ich <> mich <> gerne mit menschen <>  <> 50
+finde beurteilen kann/can <> ich <> dich nett soweit ich das <>  <> 50
+finde <> ich <> dich <> nett <> beurteilen kann <> soweit ich <> das <>  <>  <> 50
+will <> ich <> dich <> nicht beleidigen <> 50

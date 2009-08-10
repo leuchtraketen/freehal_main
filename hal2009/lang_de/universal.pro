@@ -1045,9 +1045,7 @@ ist <> felxibilitaet <> nothing <> gut <>  <>  <>  <>  <>  <>  <> 50
 ist <> fettes essen <> sehr <> ungesund <>  <>  <>  <> nothing <> nothing <> 
 ist <> firefox <> ein browser <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ford <> eine automarke <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> franz klammer <> der beliebteste oesterreicher <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> freehal <> mein richtiger name <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> freitag <> der fuenfte tag <> der woche <>  <>  <>  <>  <>  <>  <> 50
 ist <> freizeit <> nothing <> wichtig <>  <>  <>  <> nothing <> nothing <>  <> 50 
 ist <> freude <> nothing <> ein gefuehl <>  <>  <>  <>  <>  <>  <> 50
 ist <> frisbee <> ein spiel <> mit einer wurfscheibe <>  <>  <>  <>  <>  <>  <> 50
@@ -1796,5 +1794,3 @@ ist <> sauerstoff <> ein gas <>  <> 50
 ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <>  <> 50
 ist <> kupfer <> ein guter elektrischer leiter <>  <> 50
 ist <> ein fahrrad <> ein fahrzeug <>  <> betrieben wird <> das <>  <> mit muskelkraft <>  <> 50
-ist <> sauerstoff <> ein bestandteil <> von der luft <> 50
-ist <> geld <> ein tauschmittel <>  <> 50

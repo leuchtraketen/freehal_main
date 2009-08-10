@@ -283,7 +283,6 @@ kommt <> hochmut <> nothing <> vor;dem;fall <>  <>  <> nothing <>  <>  <>  <> 50
 grasen <> nothing <> nothing <> auf;der;die;narren <> ist <> hoffnung <> nothing <> die <> wiese <>  <> 50
 beissen <> hunde <> nothing <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 bellen <> hunde <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-beste ist <> hunger <> koch <>  <>  <>  <> nothing <>  <>  <>  <> 50
 bin <> ich <> mann <>  <> sagte <> der dieb <> nothing <> (da_er_an_dem_schandpfahl_stand) <>  <>  <> 100
 ist <> ich <> nothing <> tue;als;ein;guter;christ;nicht;mehr;komma;als;mir;befohlen <>  <>  <> nothing <>  <>  <>  <> 100
 ersaufen <> mehr leute <> nothing <> in;dem;becher;als;in;dem;bach <>  <>  <> nothing <>  <>  <>  <> 50
@@ -523,4 +522,3 @@ ist <> viel schatten <> nothing <> auch <> ist <> nothing  viel licht <> nothing
 folgen sollten <> worten <> taten <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> zehn versagen <> besser <> als;einmal;luegen;mal <>  <>  <> nothing <>  <>  <>  <> 50
 verderben <> nothing <> nothing <> zu;viele;koeche;den;brei <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zusammen <> man stark <>  <>  <>  <> nothing <>  <>  <>  <> 50

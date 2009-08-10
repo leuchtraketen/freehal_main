@@ -469,7 +469,8 @@ truebung:
 Cc:
   type: n,
 verarschen:
-  type: adv
+  type: 
+  vi
 Erbsen:
   genus: f
   type: n,
@@ -52648,9 +52649,8 @@ Anstroemmachzahl:
 Thermografie:
   genus  : f
   type: n,
-Verarsche:
-  genus  : f
-  type: n,
+Verarsche:  
+  type: vi
 personalcomputer:
   genus  : m
   type: n,
@@ -63004,6 +63004,8 @@ Ansteckstruchen:
   genus  : m
   type: n,
 Finde:
+  type: vi
+  finde:
   type: vi
 Computerisierung:
   genus  : f
@@ -180706,7 +180708,7 @@ Dringlichkeitsantrag:
 ausgeschmueckt:
   type: vi
 staerkste:
-  type: vi
+  type: adj
 Firewire:
   type: n,
 Asparaginsaeure:
@@ -203995,8 +203997,9 @@ tote:
   type: adj
 bellen:
   type: vi
-liebe:  
-  type: vi
+liebe: 
+  genus: f 
+  type: n,
 saess:
   type:vi
 Mittelweg:
@@ -206668,7 +206671,7 @@ interessante:
 ausschaut:
   type: vi
 Findest:
-  type: n
+  type: vi
 _das_:
   type: n
 Traume:
@@ -206816,4 +206819,47 @@ humor:
 humor:
   type: n
 Reinhold:
+  type: n
+3:
+  type: adj
+jahre:
+  type: n
+jahre:
+  type: n
+intelligent:
+  type: adj
+Ah:
+  type: n
+Ah:
+  type: n
+entscheidest:
+  type: vi
+unterhaeltst:
+  type: vi
+Verarscht:
+  type: n
+dieb:
+  type: n
+schandpfahl:
+  type: n
+fuehlst:
+  type: vi
+fuehle:
+  type: vi
+fuehle:
+  type: vi
+wohlfuehle:
+  type: vi
+wohlfuehle:
+  type: vi
+beleidigt:
+  type: adjFreeware:
+  type: n
+Freeware:
+  type: n
+2:
+  type: adj
+Lanolin:
+  type: n
+schafwolle:
   type: n

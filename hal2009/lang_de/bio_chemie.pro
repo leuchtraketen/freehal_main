@@ -936,3 +936,4 @@ wird <> quecksilber <> nothing <> bei zimmertemperatur fluessig <>  <>  <>  <>  
 wird <> raki <> nothing <> aus _anis_und_rosinen_ hergestellt <>  <>  <>  <>  <>  <>  <> 50
 wird zerlegt <> wasser <> nothing <> durch elektrolyse in seine bestandteile <>  <>  <>  <>  <>  <>  <> 50
 zerlegt <> ein prisma <> das licht <> in farben <>  <>  <>  <>  <>  <>  <> 50
+ist <> der tod <> das unausweichliche ende <> von einer biologischen existenz <> 50

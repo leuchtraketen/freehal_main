@@ -469,7 +469,7 @@ truebung:
 Cc:
   type: n,
 verarschen:
-  type: adv
+  type: vi
 Erbsen:
   genus: f
   type: n,
@@ -52648,9 +52648,8 @@ Anstroemmachzahl:
 Thermografie:
   genus  : f
   type: n,
-Verarsche:
-  genus  : f
-  type: n,
+Verarsche:  
+  type: vi
 personalcomputer:
   genus  : m
   type: n,
@@ -180968,7 +180967,7 @@ Dringlichkeitsantrag:
 ausgeschmueckt:
   type: vi
 staerkste:
-  type: vi
+  type: adj
 Firewire:
   type: n,
 Asparaginsaeure:
@@ -204257,8 +204256,9 @@ tote:
   type: adj
 bellen:
   type: vi
-liebe:  
-  type: vi
+liebe: 
+  genus  : f 
+  type: n,
 saess:
   type:vi
 Mittelweg:
