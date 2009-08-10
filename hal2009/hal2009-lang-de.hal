@@ -2078,6 +2078,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'flach' => "adj",
           'obschon' => "questionword",
           'aber' => "adj",
+          'beleidigt' => "adj",
           'interessieren' => "vt",
           'sicher' => "adj",
           'zuweilen' => "adj",
@@ -2310,6 +2311,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'schwul' => "adj",
           'sechzig' => "adj",
           'q=>' => "vt",
+          'findest' => "vi",
           'junges' => "adj",
           'soviel' => "adj",
           'beizeiten' => "adj",
@@ -2954,6 +2956,18 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /weiss$/ do
             do regex using var verb: /weiss$/, "weisst", :global:i
         done
+        else if var verb matches /haeltst$/ do
+            do regex using var verb: /haeltst$/, "halte", :global:i
+        done
+        else if var verb matches /halte$/ do
+            do regex using var verb: /halte$/, "haeltst", :global:i
+        done
+        else if var verb matches /willst$/ do
+            do regex using var verb: /willst$/, "will", :global:i
+        done
+        else if var verb matches /will$/ do
+            do regex using var verb: /will$/, "willst", :global:i
+        done
         else if var verb matches /kannst$/ do
             do regex using var verb: /kannst$/, "kann", :global:i
         done
@@ -3286,6 +3300,12 @@ done
 
 define action find_mode with var input do
     if var input matches /<[?]>/ do
+        print "Sentence contains a question mark"
+        print new line
+        
+        do return with "question"
+    done
+    else if lc(var input) matches /^(kannst\s)|(kann\s)/ do
         print "Sentence contains a question mark"
         print new line
         

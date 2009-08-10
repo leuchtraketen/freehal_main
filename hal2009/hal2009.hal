@@ -567,9 +567,6 @@ define action compute_tags with var word, var lang, var path do
         if var word matches /<[_]>/ do
             set from array tags first item to "n"
         done
-        if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
-            set from array tags first item to "n"
-        done
         if lc(var word) matches var word and var lang matches "de" do
             if var word matches /ist$/ do
                 set from array tags first item to "n"
@@ -589,6 +586,14 @@ define action compute_tags with var word, var lang, var path do
             if var word matches /ierst$/ do
                 set from array tags first item to "vi"
             done
+        done
+        else if ucfirst(var word) matches var word and var lang matches "de" do
+            if var word matches /est$/ do
+                set from array tags first item to "vi"
+            done
+        done
+        else if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
+            set from array tags first item to "n"
         done
     done
     
