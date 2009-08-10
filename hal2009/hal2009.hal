@@ -2086,6 +2086,8 @@ define action use_mode with var input is copy, array facts_to_link, hash tags, v
                 set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }, array entities
                 set from hash parsed item { 'subjects' } to toggle_entities using from hash parsed item { 'subjects' }
                 set from hash parsed item { 'objects' } to toggle_entities using from hash parsed item { 'objects' }
+                set from hash parsed item { 'adverbs' } to toggle_entities using from hash parsed item { 'adverbs' }
+                set from hash parsed item { 'extra' } to toggle_entities using from hash parsed item { 'extra' }
                 set from hash parsed item { 'clauses' } to an empty array
             done
             else do
@@ -2096,6 +2098,8 @@ define action use_mode with var input is copy, array facts_to_link, hash tags, v
                 set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }, array entities
                 set from hash parsed_clause item { 'subjects' } to toggle_entities using from hash parsed_clause item { 'subjects' }
                 set from hash parsed_clause item { 'objects' } to toggle_entities using from hash parsed_clause item { 'objects' }
+                set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }
+                set from hash parsed_clause item { 'extra' } to toggle_entities using from hash parsed_clause item { 'extra' }
                 set from hash parsed_clause item { 'clauses' } to an empty array
                 do push using items of that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
             done

@@ -2359,6 +2359,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'derb' => "adj",
           'your' => "art",
           'neuen' => "adj",
+          'meinung' => "n",
           'stet' => "adj",
           'fuenfzehnte' => "adj",
           'wen' => "questionword",
@@ -2956,6 +2957,12 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /weiss$/ do
             do regex using var verb: /weiss$/, "weisst", :global:i
         done
+        else if var verb matches /traegst$/ do
+            do regex using var verb: /traegst$/, "trage", :global:i
+        done
+        else if var verb matches /trage$/ do
+            do regex using var verb: /trage$/, "traegst", :global:i
+        done
         else if var verb matches /haeltst$/ do
             do regex using var verb: /haeltst$/, "halte", :global:i
         done
@@ -3019,12 +3026,24 @@ define action toggle_entities with array entities do
         else if lc(var entity) matches /(^|\s)du($|\s)/ do
             do regex using var entity: /(^|\s)du($|\s)/, "${1}ich$2", :global:i
         done
-        else if lc(var entity) matches /(^|\s)mein/ do
+        else if   (var entity) matches /(^|\s)mein/ do
             do regex using var entity: /(^|\s)mein/, "${1}dein", :global:i
         done
-        else if lc(var entity) matches /(^|\s)dein/ do
+        else if   (var entity) matches /(^|\s)dein/ do
             do regex using var entity: /(^|\s)dein/, "${1}mein", :global:i
         done
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print new line
+        print var entity
+        print new line
         set from array entity_array first item to var entity
     done
     do return with array entities
@@ -3039,7 +3058,7 @@ define action adjust_truth with array result, var truth, var number_of_clause do
             do regex using from array result item [ var number_of_clause ] item [ 1 ]: /^ein/, "kein", :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3 ] to from array result item [ var number_of_clause ] item [ 3 ] concat " nicht"
+            set from array result item [ var number_of_clause ] item [ 3 ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 ]
         done
     done
 done
