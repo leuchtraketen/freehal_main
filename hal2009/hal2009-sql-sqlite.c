@@ -2054,8 +2054,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, subject_synonyms[n]);
                 strcat(sql, "\" )");
                 strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
-                if (strstr(subject_synonyms[n], "*"))
+                if (strstr(subject_synonyms[n], "*")) {
                     strcat(sql, "GLOB \"");
+                }
                 else {
                     strcat(sql, "= \"");
                 }
