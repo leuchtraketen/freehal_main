@@ -9,7 +9,7 @@ while (<>) {
 		$line =~ s/["]/\\"/igm;
 		chomp $line;
 		if ( $line ) {
-			$line = "\t\t\tprint \"" . $line . "\\n\";\n";
+			$line = "\t\t\tprintf(\"%s\", \"" . $line . "\\n\");\n";
 
 			print $line;
 		}
