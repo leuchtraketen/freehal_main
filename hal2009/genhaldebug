@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+while (<>) {
+	my $line = $_;
+
+	print $line;
+	if ( $line =~ /^\s/ ) {
+
+		$line =~ s/["]/\\"/igm;
+		chomp $line;
+		if ( $line ) {
+			$line = "\t\t\tprint \"" . $line . "\\n\";\n";
+
+			print $line;
+		}
+	}
+}
