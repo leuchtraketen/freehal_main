@@ -129,15 +129,15 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
         printf("Critical point 1 start\n");
-        if (argc >= 2 && argv[1] && argv[2]) {
+        /*if (argc >= 2 && argv[1] && argv[2]) {
             synonyms[n] = malloc(4+strlen(argv[0])+strlen(argv[1])+strlen(argv[2]));
             strcpy(synonyms[n],                                       argv[0]);
             strcpy(synonyms[n]+1+strlen(argv[0]),                     argv[1]);
             strcpy(synonyms[n]+1+strlen(argv[0])+1+strlen(argv[1]),   argv[2]);
         }
-        else {
+        else {*/
             synonyms[n] = strdup(argv[0]);
-        }
+        //}
         printf("Critical point 1 end\n");
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
@@ -1045,8 +1045,8 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
-                fprintf(logfile, "%s)\n", subject_synonym_buf+1+strlen(subject_synonym_buf) + 1+strlen(subject_synonym_buf+1+strlen(subject_synonym_buf)));
-                fprintf(logfile, "property    pk     %s\n", subject_synonym_buf+1+strlen(subject_synonym_buf));
+                //fprintf(logfile, "%s)\n", subject_synonym_buf+1+strlen(subject_synonym_buf) + 1+strlen(subject_synonym_buf+1+strlen(subject_synonym_buf)));
+                //fprintf(logfile, "property    pk     %s\n", subject_synonym_buf+1+strlen(subject_synonym_buf));
                 
                 ++n;
             }
@@ -1073,8 +1073,8 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
-                fprintf(logfile, "%s)\n", object_synonym_buf+1+strlen(object_synonym_buf) + 1+strlen(object_synonym_buf+1+strlen(object_synonym_buf)));
-                fprintf(logfile, "property    pk     %s\n", object_synonym_buf+1+strlen(object_synonym_buf));
+                //fprintf(logfile, "%s)\n", object_synonym_buf+1+strlen(object_synonym_buf) + 1+strlen(object_synonym_buf+1+strlen(object_synonym_buf)));
+                //fprintf(logfile, "property    pk     %s\n", object_synonym_buf+1+strlen(object_synonym_buf));
                 
                 
                 ++n;

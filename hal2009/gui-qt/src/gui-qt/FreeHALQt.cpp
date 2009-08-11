@@ -881,6 +881,8 @@ int lastX = 0, lastY = 0;
 int diffX = 0, diffY = 0;
 struct ClickPositionItem** clickPositions = (struct ClickPositionItem**)calloc(10000*sizeof(struct ClickPositionItem*), 1);
 void FlowChart::mousePressEvent(QMouseEvent *e) {
+    try {
+
     cout << "Button pressed (" << e->x() << ", " << e->y() << ")." << endl;
     if (e->button() == Qt::LeftButton) {
         if (e->x() <= this->size().width() - 20) {
@@ -920,6 +922,10 @@ void FlowChart::mousePressEvent(QMouseEvent *e) {
             this->repaint();
         }
     }
+
+    } catch (std::bad_alloc b) {
+        cout << "Bad allocation in mousePressEvent." << endl;
+    }
 }
 
 void FreeHALWindow::on_refresh_chart_clicked() {
@@ -927,6 +933,7 @@ void FreeHALWindow::on_refresh_chart_clicked() {
 }
 
 void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
+    try {
     cout << "Button released (" << e->x() << ", " << e->y() << ")." << endl;
     if (e->button() == Qt::LeftButton) {
         if (e->x() <= this->size().width() - 20) {
@@ -965,9 +972,13 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
         e->ignore();
         return;
     }
+    } catch (std::bad_alloc b) {
+        cout << "Bad allocation in mouseReleaseEvent." << endl;
+    }
 }
 
 void FlowChart::paintEvent(QPaintEvent *event) {
+    try {
     QPainter painter(this);
 
     for (int l = 0; l < 9999 && clickPositions[l]; ++l) {
@@ -1098,10 +1109,14 @@ void FlowChart::paintEvent(QPaintEvent *event) {
     painter.setBrush(QBrush("#785f36"));
     painter.drawRect(250, 195, 90, 60);
 */
+    } catch (std::bad_alloc b) {
+        cout << "Bad allocation in paintEvent." << endl;
+    }
 
 }
 
 void freehal::comm_new(freehal::string s) {
+    try {
     if (s.contains("ĹOG")) {
         cout << s.ref() << endl;
     }
@@ -1196,5 +1211,9 @@ void freehal::comm_new(freehal::string s) {
             not_change_mode = false;
         }
     }
+    } catch (std::bad_alloc b) {
+        cout << "Bad allocation in comm_new." << endl;
+    }
+
 }
 
