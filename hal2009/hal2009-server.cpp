@@ -46,9 +46,7 @@ namespace boost {
 #endif
 #endif
 
-extern "C" {
-    int cstat (char* c, struct stat* s);
-}
+extern "C" int cstat (char* c, struct stat* s);
 extern "C" void extract();
 
 void hal2009_server_start();
