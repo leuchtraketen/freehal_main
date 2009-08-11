@@ -128,7 +128,8 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
     }
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
-        if (argc >= 2) {
+        printf("Critical point 1 start\n");
+        if (argc >= 2 && argv[1] && argv[2]) {
             synonyms[n] = malloc(4+strlen(argv[0])+strlen(argv[1])+strlen(argv[2]));
             strcpy(synonyms[n],                                       argv[0]);
             strcpy(synonyms[n]+1+strlen(argv[0]),                     argv[1]);
@@ -137,6 +138,7 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
         else {
             synonyms[n] = strdup(argv[0]);
         }
+        printf("Critical point 1 end\n");
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
                 strcpy(synonyms[n]+1, synonyms[n]+2);
