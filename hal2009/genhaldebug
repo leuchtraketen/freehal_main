@@ -8,7 +8,7 @@ while (<>) {
 
 		$line =~ s/["]/\\"/igm;
 		chomp $line;
-		if ( $line ) {
+		if ( $line && $line !~ /else|if|while/ ) {
 			$line = "\t\t\tprintf(\"%s\", \"" . $line . "\\n\");\n";
 
 			print $line;
