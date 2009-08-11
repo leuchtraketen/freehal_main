@@ -8,7 +8,9 @@ while (<>) {
 
 		$line =~ s/["]/\\"/igm;
 		chomp $line;
-		if ( $line && $line !~ /else|if|while/ ) {
+		my $line2 = $line;
+		$line2 =~ s/\s//igm;
+		if ( $line && $line !~ /else|if|while/ && length($line2) > 3 ) {
 			$line = "\t\t\tprintf(\"%s\", \"" . $line . "\\n\");\n";
 
 			print $line;
