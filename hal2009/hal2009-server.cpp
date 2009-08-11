@@ -770,30 +770,26 @@ void hal2009_server_stop() {
 
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
     cout << "Get stream." << endl;
-    if (hal2009_server_clients.size() && hal2009_server_clients[hal2009_server_clients.size()-1]) {
-        tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
-        
-        cout << "Print into stream." << endl;
-        (*stream) << "GET_" << s1 << ":" << s2 << endl;
-        
-        cout << "Wait for stream." << endl;
-        std::vector<std::string>* result;
-        string line;
-        while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
-            if ( line.size() != 0 ) {
-                cout << line << endl;
-                result = simple_split(line, ":" );
-                if ( result->at(0) == string("HERE_IS_") + s1 && result->size() >= 2 ) {
-                    break;
-                }
+    tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
+    
+    cout << "Print into stream." << endl;
+    (*stream) << "GET_" << s1 << ":" << s2 << endl;
+    
+    cout << "Wait for stream." << endl;
+    std::vector<std::string>* result;
+    string line;
+    while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
+        if ( line.size() != 0 ) {
+            cout << line << endl;
+            result = simple_split(line, ":" );
+            if ( result->at(0) == string("HERE_IS_") + s1 && result->size() >= 2 ) {
+                break;
             }
         }
-        cout << "End of waiting for stream." << endl;
-        char* value = strdup(result->at(1).c_str());
-        return value;
     }
-    cout << "There is no stream." << endl;
-    return strdup("q");
+    cout << "End of waiting for stream." << endl;
+    char* value = strdup(result->at(1).c_str());
+    return value;
 }
 
 int set_nonblocking(int fd)
@@ -885,7 +881,6 @@ void hal2009_handle_signal(void* arg) {
         FILE* target = fopen("_input__pos", "w+b");
         halwrite(text, 1, strlen(text), target);
         halclose(target);
-        free(text);
     }
     else if (0 == strcmp(type, "_output__link")) {
         if (strlen(text) < 99) {

@@ -1002,7 +1002,9 @@ void FlowChart::paintEvent(QPaintEvent *event) {
     int text_height = 15;
     int num_of_boxes = 0;
     int box_width = 500;
-    while (log) {
+    int timeout = 5000;
+    while (log && timeout >= 0) {
+        --timeout;
         getline(log, line);
         while (line.size() && (line[line.size()-1] == '\r' || line[line.size()-1] == '\n')) {
             line[line.size()-1] == '\0';
