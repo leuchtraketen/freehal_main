@@ -129,15 +129,7 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
         printf("Critical point 1 start\n");
-        /*if (argc >= 2 && argv[1] && argv[2]) {
-            synonyms[n] = malloc(4+strlen(argv[0])+strlen(argv[1])+strlen(argv[2]));
-            strcpy(synonyms[n],                                       argv[0]);
-            strcpy(synonyms[n]+1+strlen(argv[0]),                     argv[1]);
-            strcpy(synonyms[n]+1+strlen(argv[0])+1+strlen(argv[1]),   argv[2]);
-        }
-        else {*/
-            synonyms[n] = strdup(argv[0]);
-        //}
+        synonyms[n] = strdup(argv[0]);
         printf("Critical point 1 end\n");
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
@@ -167,6 +159,70 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
 
         if (n+1 < 4000) {
             printf("%d: %s\n", n, synonyms[n]);
+        }
+        else {
+            return 1;
+        }
+        
+        if (n >= 1 && 0 == strcmp(synonyms[n-1], synonyms[n])) {
+            if (synonyms[n])
+                free(synonyms[n]);
+            synonyms[n] = 0;
+        }
+    }
+    
+    return 0;
+}
+
+
+static int callback_synonyms_trio (void* arg, int argc, char **argv, char **azColName) {
+    if (!argv[0] && !argv[1] && !argv[2]) {
+        return 0;
+    }
+    
+    char** synonyms = *(char***)(arg);
+    int n = 0;
+    while (synonyms[n] && n < 4000) {
+        ++n;
+    }
+    
+    if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
+        printf("Critical point 2 start\n");
+        synonyms[n] = malloc(5*sizeof(char**));
+        char** arr = synonyms[n];
+        arr[0] = strdup(argv[0]);
+        arr[1] = strdup(argv[1]);
+        arr[2] = strdup(argv[2]);
+        
+        printf("Critical point 2 end\n");
+        if (synonyms[n]) {
+            if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
+                strcpy(synonyms[n]+1, synonyms[n]+2);
+                synonyms[n][0] = '*';
+            }
+            if (synonyms[n][0] == 'a' && synonyms[n][1] == 'n' && synonyms[n][2] == ' ') {
+                strcpy(synonyms[n]+1, synonyms[n]+3);
+                synonyms[n][0] = '*';
+            }
+            if (synonyms[n][0] == 'e' && synonyms[n][1] == 'i' && synonyms[n][2] == 'n' && synonyms[n][3] == ' ') {
+                strcpy(synonyms[n]+1, synonyms[n]+4);
+                synonyms[n][0] = '*';
+            }
+            if (synonyms[n][0] == 'e' && synonyms[n][1] == 'i' && synonyms[n][2] == 'n' && synonyms[n][4] == ' ') {
+                strcpy(synonyms[n]+1, synonyms[n]+5);
+                synonyms[n][0] = '*';
+            }
+            if (synonyms[n][0] == 'e' && synonyms[n][1] == 'i' && synonyms[n][2] == 'n' && synonyms[n][5] == ' ') {
+                strcpy(synonyms[n]+1, synonyms[n]+6);
+                synonyms[n][0] = '*';
+            }
+        }
+        if (n+1 < 4000) {
+            synonyms[n+1] = 0;
+        }
+
+        if (n+1 < 4000) {
+            printf("%d: %s zzz %s zzz %s\n", n, ((char**)synonyms[n])[0], ((char**)synonyms[n])[1], ((char**)synonyms[n])[2]);
         }
         else {
             return 1;
@@ -866,6 +922,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
     // Fetch subject synonyms (maximum: 4000)
     char** subject_synonyms = calloc(4000*sizeof(char*), 1);
+    char*** subject_synonyms_trio = calloc(4000*sizeof(char**), 1);
     if (subjects_buffer) {
         char* buf = 0;
         if (subjects_buffer) buf = strdup(subjects_buffer);
@@ -953,6 +1010,26 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         }
         sqlite3_free(err);
     
+        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms_trio, &subject_synonyms_trio, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        sqlite3_free(err);
+    
         free(sql);
         sql = malloc(512000+sizeof(r));
         *sql = 0;
@@ -961,6 +1038,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
     // Fetch object synonyms (maximum: 4000)
     char** object_synonyms = calloc(4000*sizeof(char*), 1);
+    char*** object_synonyms_trio = calloc(4000*sizeof(char**), 1);
     if (objects_buffer) {
         char* buf = 0;
         if (objects_buffer) buf = strdup(objects_buffer);
@@ -1014,6 +1092,26 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         }
         sqlite3_free(err);
     
+        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms_trio, &object_synonyms_trio, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        sqlite3_free(err);
+    
         free(sql);
         sql = malloc(512000+sizeof(r));
         *sql = 0;
@@ -1024,12 +1122,12 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     // Flow Chart Log
     {
         num_of_synonyms = 0;
-        while (subject_synonyms[num_of_synonyms] && num_of_synonyms < 4000) {
+        while (subject_synonyms_trio[num_of_synonyms] && num_of_synonyms < 4000) {
             ++num_of_synonyms;
         }
 
         _num_of_synonyms = 0;
-        while (object_synonyms[_num_of_synonyms] && _num_of_synonyms < 4000) {
+        while (object_synonyms_trio[_num_of_synonyms] && _num_of_synonyms < 4000) {
             ++_num_of_synonyms;
         }
         
@@ -1047,17 +1145,17 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             fprintf(logfile, "draw\n");
             fprintf(logfile, "textcontent 000000 Synonyms (Subject):\n");
             int n = 0;
-            while (subject_synonyms[n] && n < 4000) {
-                char* subject_synonym_buf = subject_synonyms[n];
+            while (subject_synonyms_trio[n] && n < 4000) {
+                char** subject_synonym_buf = subject_synonyms_trio[n];
                 
-                fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf);
+                fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf[0]);
                 int u;
-                for (u = 0; u < 25-strlen(subject_synonym_buf); ++u) {
+                for (u = 0; u < 25-strlen(subject_synonym_buf[0]); ++u) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
-                //fprintf(logfile, "%s)\n", subject_synonym_buf+1+strlen(subject_synonym_buf) + 1+strlen(subject_synonym_buf+1+strlen(subject_synonym_buf)));
-                //fprintf(logfile, "property    pk     %s\n", subject_synonym_buf+1+strlen(subject_synonym_buf));
+                fprintf(logfile, "%s)\n", subject_synonym_buf[2]);
+                fprintf(logfile, "property    pk     %s\n", subject_synonym_buf[1]);
                 
                 ++n;
             }
@@ -1075,17 +1173,17 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             fprintf(logfile, "textcontent 000000 \n");
             fprintf(logfile, "textcontent 000000 Synonyms (Object):\n");
             int n = 0;
-            while (object_synonyms[n] && n < 4000) {
-                char* object_synonym_buf = object_synonyms[n];
+            while (object_synonyms_trio[n] && n < 4000) {
+                char** object_synonym_buf = object_synonyms_trio[n];
                 
-                fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf);
+                fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf[0]);
                 int u;
-                for (u = 0; u < 25-strlen(object_synonym_buf); ++u) {
+                for (u = 0; u < 25-strlen(object_synonym_buf[0]); ++u) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
-                //fprintf(logfile, "%s)\n", object_synonym_buf+1+strlen(object_synonym_buf) + 1+strlen(object_synonym_buf+1+strlen(object_synonym_buf)));
-                //fprintf(logfile, "property    pk     %s\n", object_synonym_buf+1+strlen(object_synonym_buf));
+                fprintf(logfile, "%s)\n", object_synonym_buf[2]);
+                fprintf(logfile, "property    pk     %s\n", object_synonym_buf[1]);
                 
                 
                 ++n;
