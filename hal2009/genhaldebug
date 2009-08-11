@@ -6,6 +6,7 @@ while (<>) {
 	print $line;
 	if ( $line =~ /^\s/ ) {
 
+		$line =~ s/[\\]/\\\\/igm;
 		$line =~ s/["]/\\"/igm;
 		chomp $line;
 		my $line2 = $line;
