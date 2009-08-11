@@ -12,7 +12,7 @@ while (<>) {
 		my $line2 = $line;
 		$line2 =~ s/\s//igm;
 		if ( $line && $line !~ /else|if|while|for/ && length($line2) > 3 && $line =~ /[;]/ && $line =~ /[)(=}{]/ ) {
-			$line = "\t\t\t{ FILE* f = fopen(\"crash-code.txt\", \"a\"); printf(\"%s\", \"" . $line . "\\n\"); fclose(f); } ;\n";
+			$line = "\t\t\t{ FILE* f = fopen(\"crash-code.txt\", \"a\"); fprintf(f, \"%s\", \"" . $line . "\\n\"); fclose(f); } ;\n";
 
 			print $line;
 		}
