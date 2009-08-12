@@ -2268,6 +2268,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'einem' => "art",
           'dreist' => "adj",
           'spricht' => "vt",
+          'bruder' => "n",
+          'brueder' => "n",
           'gut' => "adj",
           'beschlossen' => "vt",
           'leichte' => "adj",

@@ -117,13 +117,13 @@ static int callback_clause(void* arg, int argc, char **argv, char **azColName) {
 }
 
 static int callback_synonyms (void* arg, int argc, char **argv, char **azColName) {
-    if (!argv[0]) {
+    if (!argv[0] || 0 == strcmp(argv[0], "*")) {
         return 0;
     }
     
     char** synonyms = *(char***)(arg);
     int n = 0;
-    while (synonyms[n] && n < 4000) {
+    while (synonyms[n] && n < 20000) {
         ++n;
     }
     
@@ -153,11 +153,11 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
                 synonyms[n][0] = '*';
             }
         }
-        if (n+1 < 4000) {
+        if (n+1 < 20000) {
             synonyms[n+1] = 0;
         }
 
-        if (n+1 < 4000) {
+        if (n+1 < 20000) {
             printf("%d: %s\n", n, synonyms[n]);
         }
         else {
@@ -176,13 +176,13 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
 
 
 static int callback_synonyms_trio (void* arg, int argc, char **argv, char **azColName) {
-    if (!argv[0] && !argv[1] && !argv[2]) {
+    if (!argv[0] || !argv[1] || !argv[2] || 0 == strcmp(argv[0], "*")) {
         return 0;
     }
     
     char** synonyms = *(char***)(arg);
     int n = 0;
-    while (synonyms[n] && n < 4000) {
+    while (synonyms[n] && n < 20000) {
         ++n;
     }
     
@@ -217,11 +217,11 @@ static int callback_synonyms_trio (void* arg, int argc, char **argv, char **azCo
                 synonyms[n][0] = '*';
             }
         }
-        if (n+1 < 4000) {
+        if (n+1 < 20000) {
             synonyms[n+1] = 0;
         }
 
-        if (n+1 < 4000) {
+        if (n+1 < 20000) {
             printf("%d: %s zzz %s zzz %s\n", n, ((char**)synonyms[n])[0], ((char**)synonyms[n])[1], ((char**)synonyms[n])[2]);
         }
         else {
@@ -920,9 +920,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     }
 
 
-    // Fetch subject synonyms (maximum: 4000)
-    char** subject_synonyms = calloc(4000*sizeof(char*), 1);
-    char*** subject_synonyms_trio = calloc(4000*sizeof(char**), 1);
+    // Fetch subject synonyms (maximum: 20000)
+    char** subject_synonyms = calloc(20000*sizeof(char*), 1);
+    char*** subject_synonyms_trio = calloc(20000*sizeof(char**), 1);
     if (subjects_buffer) {
         char* buf = 0;
         if (subjects_buffer) buf = strdup(subjects_buffer);
@@ -1039,10 +1039,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     }
     
 
-    // Fetch object synonyms (maximum: 4000)
-    char** object_synonyms = calloc(4000*sizeof(char*), 1);
-    char*** object_synonyms_trio = calloc(4000*sizeof(char**), 1);
-    if (objects_buffer) {
+    // Fetch object synonyms (maximum: 20000)
+    char** object_synonyms = calloc(20000*sizeof(char*), 1);
+    char*** object_synonyms_trio = calloc(20000*sizeof(char**), 1);
+    if (objects_buffer && strcmp(objects_buffer, "*")) {
         char* buf = 0;
         if (objects_buffer) buf = strdup(objects_buffer);
         char* bbuf = buf;
@@ -1057,65 +1057,67 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
-        strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
-        if (buf && strstr(buf, "*")) {
-            strcat(sql, "GLOB");
-        }
-        else {
-            strcat(sql, "=");
-        }
-        strcat(sql, " \"");
-        if (buf) strcat(sql, buf);
-        strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
-        
-        if (bbuf) free(bbuf);
-        
-        printf("%s\n", sql);
-        
-        char* err;
-        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &object_synonyms, &err)) {
-            if (strstr(err, "are not unique")) {
-                break;
-            }
-            if (strstr(err, "callback requested query abort")) {
-                break;
-            }
-            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
-            if (strstr(err, "no such table")) {
-                sqlite3_free(err);
-                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
-                }
+        if (strcmp(buf, "*")) {
+            strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
+            if (buf && strstr(buf, "*")) {
+                strcat(sql, "GLOB");
             }
             else {
-                break;
+                strcat(sql, "=");
             }
-        }
-        sqlite3_free(err);
-    
-        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms_trio, &object_synonyms_trio, &err)) {
-            if (strstr(err, "are not unique")) {
-                break;
-            }
-            if (strstr(err, "callback requested query abort")) {
-                break;
-            }
-            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
-            if (strstr(err, "no such table")) {
-                sqlite3_free(err);
-                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            strcat(sql, " \"");
+            if (buf) strcat(sql, buf);
+            strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
+            
+            if (bbuf) free(bbuf);
+            
+            printf("%s\n", sql);
+            
+            char* err;
+            while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &object_synonyms, &err)) {
+                if (strstr(err, "are not unique")) {
+                    break;
+                }
+                if (strstr(err, "callback requested query abort")) {
+                    break;
+                }
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                if (strstr(err, "no such table")) {
+                    sqlite3_free(err);
+                    if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    }
+                }
+                else {
+                    break;
                 }
             }
-            else {
-                break;
+            sqlite3_free(err);
+        
+            while (sqlite3_exec(sqlite_connection, sql, callback_synonyms_trio, &object_synonyms_trio, &err)) {
+                if (strstr(err, "are not unique")) {
+                    break;
+                }
+                if (strstr(err, "callback requested query abort")) {
+                    break;
+                }
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                if (strstr(err, "no such table")) {
+                    sqlite3_free(err);
+                    if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                    }
+                }
+                else {
+                    break;
+                }
             }
+            sqlite3_free(err);
+        
+            free(sql);
+            sql = malloc(512000+sizeof(r));
+            *sql = 0;
         }
-        sqlite3_free(err);
-    
-        free(sql);
-        sql = malloc(512000+sizeof(r));
-        *sql = 0;
     }
     
     int num_of_synonyms;
@@ -1123,12 +1125,12 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     // Flow Chart Log
     {
         num_of_synonyms = 0;
-        while (subject_synonyms_trio[num_of_synonyms] && num_of_synonyms < 4000) {
+        while (subject_synonyms_trio[num_of_synonyms] && num_of_synonyms < 20000) {
             ++num_of_synonyms;
         }
 
         _num_of_synonyms = 0;
-        while (object_synonyms_trio[_num_of_synonyms] && _num_of_synonyms < 4000) {
+        while (object_synonyms_trio[_num_of_synonyms] && _num_of_synonyms < 20000) {
             ++_num_of_synonyms;
         }
         
@@ -1146,7 +1148,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             fprintf(logfile, "draw\n");
             fprintf(logfile, "textcontent 000000 Synonyms (Subject):\n");
             int n = 0;
-            while (subject_synonyms_trio[n] && n < 4000) {
+            while (subject_synonyms_trio[n] && n < 20000) {
                 char** subject_synonym_buf = subject_synonyms_trio[n];
                 
                 fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf[0]);
@@ -1174,7 +1176,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             fprintf(logfile, "textcontent 000000 \n");
             fprintf(logfile, "textcontent 000000 Synonyms (Object):\n");
             int n = 0;
-            while (object_synonyms_trio[n] && n < 4000) {
+            while (object_synonyms_trio[n] && n < 20000) {
                 char** object_synonym_buf = object_synonyms_trio[n];
                 
                 fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf[0]);
@@ -1197,7 +1199,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         }
     }
     
-    char** important_records = calloc(4000*sizeof(char*), 1);
+    char** important_records = calloc(20000*sizeof(char*), 1);
     {
         {
             int num_of_words = 0;
@@ -1205,7 +1207,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             detect_words(&num_of_words, words, r);
             strcat(sql, "SELECT fact FROM rel_word_fact WHERE (");
             int n = 0;
-            while (subject_synonyms[n] && n < 4000) {
+            while (subject_synonyms[n] && n < 20000) {
                 char* subject_synonym_buf = subject_synonyms[n];
                 if (subject_synonym_buf[0] == '*')
                     subject_synonym_buf += 1;
@@ -1273,7 +1275,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             detect_words(&num_of_words, words, r);
             strcat(sql, "SELECT facts.rel FROM rel_word_fact JOIN facts ON facts.pk = rel_word_fact.fact WHERE facts.rel <> -1 AND (");
             int n = 0;
-            while (subject_synonyms[n] && n < 4000) {
+            while (subject_synonyms[n] && n < 20000) {
                 char* subject_synonym_buf = subject_synonyms[n];
                 if (subject_synonym_buf[0] == '*')
                     subject_synonym_buf += 1;
@@ -1339,7 +1341,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             detect_words(&num_of_words, words, r);
             strcat(sql, "SELECT facts.pk FROM rel_word_fact JOIN facts ON facts.rel = rel_word_fact.fact WHERE facts.rel <> -1 AND (");
             int n = 0;
-            while (subject_synonyms[n] && n < 4000) {
+            while (subject_synonyms[n] && n < 20000) {
                 char* subject_synonym_buf = subject_synonyms[n];
                 if (subject_synonym_buf[0] == '*')
                     subject_synonym_buf += 1;
@@ -1434,10 +1436,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 //      strcat(sql, "INSERT INTO cache_facts SELECT * from facts WHERE 0 ");
         strcat(sql, "INSERT INTO cache_facts SELECT * from facts WHERE pk IN (0");
         int w = 0;
-        while (important_records[w] && w < 4000) {
+        while (important_records[w] && w < 20000) {
             /*if (important_records[w+1]) {
                 int z = w;
-                while (important_records[z] && (atoi(important_records[z]) - atoi(important_records[w]) < 2000) && z < 4000) {
+                while (important_records[z] && (atoi(important_records[z]) - atoi(important_records[w]) < 2000) && z < 20000) {
                     ++z;
                 }
                 if (!important_records[z]) --z;
@@ -1476,7 +1478,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     if (important_records[0]) {
         strcat(sql, " ( ");
         int w = 0;
-        while (important_records[w] && w < 4000) {
+        while (important_records[w] && w < 20000) {
             ++w;
         }
         --w;
@@ -1488,7 +1490,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql, important_records[w]);
         /**
         int n = 0;
-        while (important_records[n] && n < 4000) {
+        while (important_records[n] && n < 20000) {
             strcat(sql, " OR nmain.pk = ");
             strcat(sql, important_records[n]);
             strcat(sql, " ");
@@ -1519,7 +1521,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql_rel_verb_verb, r->verb);
         strcat(sql_rel_verb_verb, "\";");
 
-        similar_verbs = calloc(4000*sizeof(char*), 1);
+        similar_verbs = calloc(20000*sizeof(char*), 1);
         printf("%s\n", sql_rel_verb_verb);
         
         char* err;
@@ -1712,7 +1714,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         }
         
         int n = 0;
-        while (subject_synonyms[n] && n < 4000) {
+        while (subject_synonyms[n] && n < 20000) {
             if (strlen(subject_synonyms[n])) {
                 if (strstr(subject_synonyms[n], "*")) {
                     strcat(sql, "\n OR nmain.subjects GLOB \"");
@@ -1761,7 +1763,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql, "\" ");
 
         int n = 0;
-        while (subject_synonyms[n] && n < 4000) {
+        while (subject_synonyms[n] && n < 20000) {
             if (strlen(subject_synonyms[n])) {
                 strcat(sql, "\n OR nmain.objects GLOB \"");
                 strcat(sql, subject_synonyms[n]);
@@ -1936,7 +1938,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (important_records[0]) {
             strcat(sql, " ( ");
             int w = 0;
-            while (important_records[w] && w < 4000) {
+            while (important_records[w] && w < 20000) {
                 ++w;
             }
             --w;
@@ -1949,7 +1951,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, " ");
             /**
             int n = 0;
-            while (important_records[n] && n < 4000) {
+            while (important_records[n] && n < 20000) {
                 strcat(sql, " OR nmain.pk = ");
                 strcat(sql, important_records[n]);
                 strcat(sql, " ");
@@ -1981,7 +1983,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 }
                 strcat(sql, "\")");
                 int n = 0;
-                while (subject_synonyms[n] && n < 4000) {
+                while (subject_synonyms[n] && n < 20000) {
                     strcat(sql, " OR fact.subjects GLOB \"");
                     strcat(sql, subject_synonyms[n]);
                     strcat(sql, "\" ");
@@ -2130,7 +2132,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, r->subjects);
             strcat(sql, "\")");
             int n = 0;
-            while (subject_synonyms[n] && n < 4000) {
+            while (subject_synonyms[n] && n < 20000) {
                 strcat(sql, " OR ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
                 strcat(sql, subject_synonyms[n]);
                 strcat(sql, "\" GLOB main.subjects OR \"");
@@ -2189,7 +2191,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, r->objects);
             strcat(sql, "\" GLOB main.subjects )");
             int n = 0;
-            while (object_synonyms[n] && n < 4000) {
+            while (object_synonyms[n] && n < 20000) {
                 strcat(sql, " OR ( \"");
                 strcat(sql, object_synonyms[n]);
                 strcat(sql, "\" GLOB main.objects OR \"");

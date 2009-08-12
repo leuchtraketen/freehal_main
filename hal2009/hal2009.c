@@ -239,15 +239,15 @@ int hal2009_add_pro_file (char* filename) {
             
             strcpy(r.questionword, "");
             
-            buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
             if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
             if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
             if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
             if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = filename;          strcpy(r.from,              (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+            buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
             strcat(r.from, ":");
             sprintf(r.from+strlen(r.from), "%d", line_number);
             strcpy(r.extra, "");
@@ -271,12 +271,12 @@ int hal2009_add_pro_file (char* filename) {
             while (buffer && i+1 < MAX_CLAUSES) {
                 r.clauses[i] = malloc(sizeof(struct RECORD));
                 struct RECORD* sub_clause = r.clauses[i];
-                                            strcpy(sub_clause->verb,          (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = filename;          strcpy(sub_clause->from,          (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+                                            strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                 strcat(sub_clause->from, ":");
                 sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
                 strcpy(r.extra, "");
@@ -423,19 +423,19 @@ struct DATASET hal2009_get_csv(char* csv_request) {
     struct RECORD r;
     char* buffer;
 
-    buffer = strtok(csv_request, "^"); strcpy(r.verb,               (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.subjects,           (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.objects,            (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.adverbs,            (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.extra,              (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.context,            (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
-    buffer = strtok(NULL,        "^"); strcpy(r.pkey,               (buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?buffer:"\0");
+    buffer = strtok(csv_request, "^"); strcpy(r.verb,               (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.subjects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.objects,            (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.adverbs,            (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.extra,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.context,            (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
+    buffer = strtok(NULL,        "^"); strcpy(r.pkey,               (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?buffer:"\0");
 
-    buffer = strtok(NULL,        "^"); r.verb_flag_want    =        ((buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?atoi(buffer):0);
-    buffer = strtok(NULL,        "^"); r.verb_flag_must    =        ((buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?atoi(buffer):0);
-    buffer = strtok(NULL,        "^"); r.verb_flag_can     =        ((buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?atoi(buffer):0);
-    buffer = strtok(NULL,        "^"); r.verb_flag_may     =        ((buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?atoi(buffer):0);
-    buffer = strtok(NULL,        "^"); r.verb_flag_should  =        ((buffer && (buffer[0] != ' ' || strlen(buffer) >= 1))?atoi(buffer):0);
+    buffer = strtok(NULL,        "^"); r.verb_flag_want    =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
+    buffer = strtok(NULL,        "^"); r.verb_flag_must    =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
+    buffer = strtok(NULL,        "^"); r.verb_flag_can     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
+    buffer = strtok(NULL,        "^"); r.verb_flag_may     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
+    buffer = strtok(NULL,        "^"); r.verb_flag_should  =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
 
 
     if (0 == strlen(r.verb)) {
