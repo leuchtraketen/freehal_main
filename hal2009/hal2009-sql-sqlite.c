@@ -938,9 +938,12 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf (matched by ' '): %s\n", buf);
             }
         }
-        strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (\"");
+        strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (subjects ");
+        if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
+        else                            strcat(sql, " = ");
+        strcat(sql, " \"");
         if (buf) strcat(sql, buf);
-        strcat(sql, "\" GLOB subjects OR (1 ");
+        strcat(sql, "\" OR (1 ");
         
         if (buf && !strstr(buf, "*")) {
             strcat(sql, "AND subjects ");
@@ -1054,9 +1057,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
-        strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (\"");
-        if (buf) strcat(sql, buf);
-        strcat(sql, "\" GLOB objects OR objects ");
+        strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
         if (buf && strstr(buf, "*")) {
             strcat(sql, "GLOB");
         }

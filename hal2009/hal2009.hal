@@ -549,6 +549,10 @@ define action compute_tags with var word, var lang, var path do
         if not from array tags first item do
             set array tags to an empty array
         done
+        else do
+            print "built in: " concat from array tags first item
+            print new line
+        done
     done
     
     if is an empty array tags do
