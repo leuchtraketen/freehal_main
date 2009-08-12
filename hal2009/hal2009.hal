@@ -1717,6 +1717,8 @@ define action logic with var input, var lang, var path, hash parsed do
     set new var input_handle to handle for file name var input_file_name, read
 
     for each new var line from var input_handle is rw do
+        print var line
+        print new line
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
         
@@ -1841,7 +1843,55 @@ define action phrase with var lang, var mode, array results, hash parsed do
                     # CODE
                     set var final_sentence to ""
                 done
-                if from global hash builtin_auxiliary_verbs item { var verb } is 1 do
+                
+                if var verb matches /([01])([01])([01])([01])([01])$/ do
+                    set new var person to get_person with hash parsed item { 'subjects' } first item first item
+                    
+                    set new var is_want to $0
+                    set new var is_must to $1
+                    set new var is_can to $2
+                    set new var is_may to $3
+                    set new var is_should to $4
+                    
+                    if var is_want do
+                        set new var new_verb to get_verb with "want", var person
+                        if var new_verb do
+                            push into array auxiliary_verbs, var new_verb
+                        done
+                    done
+                    
+                    if var is_must do
+                        set new var new_verb to get_verb with "must", var person
+                        if var new_verb do
+                            push into array auxiliary_verbs, var new_verb
+                        done
+                    done
+                    
+                    if var is_can do
+                        set new var new_verb to get_verb with "can", var person
+                        if var new_verb do
+                            push into array auxiliary_verbs, var new_verb
+                        done
+                    done
+                    
+                    if var is_may do
+                        set new var new_verb to get_verb with "may", var person
+                        if var new_verb do
+                            push into array auxiliary_verbs, var new_verb
+                        done
+                    done
+                    
+                    if var is_should do
+                        set new var new_verb to get_verb with "should", var person
+                        if var new_verb do
+                            push into array auxiliary_verbs, var new_verb
+                        done
+                    done
+                    
+                    do regex using var verb: /([01])([01])([01])([01])([01])$/, "", :global
+                done
+                
+                if from global hash builtin_auxiliary_verbs item { var verb } do
                     push into array auxiliary_verbs, var verb
                 done
                 else do

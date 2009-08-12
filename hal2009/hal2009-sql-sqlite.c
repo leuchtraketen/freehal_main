@@ -128,9 +128,7 @@ static int callback_synonyms (void* arg, int argc, char **argv, char **azColName
     }
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
-        printf("Critical point 1 start\n");
         synonyms[n] = strdup(argv[0]);
-        printf("Critical point 1 end\n");
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
                 strcpy(synonyms[n]+1, synonyms[n]+2);
@@ -187,14 +185,12 @@ static int callback_synonyms_trio (void* arg, int argc, char **argv, char **azCo
     }
     
     if (!synonyms[n] && (n < 1 || strcmp(synonyms[n-1], argv[0]))) {
-        printf("Critical point 2 start\n");
         synonyms[n] = malloc(5*sizeof(char**));
         char** arr = synonyms[n];
         arr[0] = strdup(argv[0]);
         arr[1] = strdup(argv[1]);
         arr[2] = strdup(argv[2]);
         
-        printf("Critical point 2 end\n");
         if (synonyms[n]) {
             if (synonyms[n][0] == 'a' && synonyms[n][1] == ' ') {
                 strcpy(synonyms[n]+1, synonyms[n]+2);
@@ -1472,8 +1468,8 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     }
 
     /////////////////////////// First, select the normal facts ///////////////////////////
-    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb`, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain ");
-//                    " LEFT JOIN rel_word_fact ON rel_word_fact.fact = nmain.pk");
+    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
+                    " LEFT JOIN rel_fact_flag AS rff ON rff.fact = nmain.pk");
     strcat(sql, " WHERE ");
     if (important_records[0]) {
         strcat(sql, " ( ");
@@ -1933,7 +1929,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
         strcat(sql, " \n\nUNION ALL "
                     "SELECT DISTINCT \n"
-                    "fact.pk, fact.rel, fact.verb, fact.subjects, fact.objects, fact.adverbs, fact.prio, NULL, fact.truth \n"
+                    "fact.pk, fact.rel, fact.verb || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, fact.subjects, fact.objects, fact.adverbs, fact.prio, NULL, fact.truth \n"
                     "FROM cache_facts AS main JOIN clauses AS clause ON ");
         if (important_records[0]) {
             strcat(sql, " ( ");
@@ -1967,6 +1963,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     "((clause.verbgroup = \"be\") AND (fact.verbgroup = \"be\") )) ");
 //                    "JOIN rel_word_fact ON (rel_word_fact.fact = main.pk OR rel_word_fact.fact = clause.pk)\n\n");
 
+        strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = fact.pk ");
         {
             if (need_and) strcat(sql, " AND");
             else          strcat(sql, "WHERE");

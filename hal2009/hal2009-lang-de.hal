@@ -2636,6 +2636,31 @@ define action guess_part_of_speech with var word do
     do return using var guessed
 done
 
+define action get_person with var _noun do
+    set new var noun to lc with var _noun
+    
+    if var noun matches "ich" do
+        do return with "1s"
+    done
+    if var noun matches "du" do
+        do return with "2s"
+    done
+    if var noun matches /^(er|sie|es)$/ do
+        do return with "3s"
+    done
+    if var noun matches "wir" do
+        do return with "1p"
+    done
+    if var noun matches "ihr" do
+        do return with "2p"
+    done
+    if var noun matches "sie" do
+        do return with "3p"
+    done
+    
+    do return with "3s"
+done
+
 define action get_verb with var verb, var person do
 
     if var verb matches "be" do
@@ -2677,6 +2702,111 @@ define action get_verb with var verb, var person do
         done
         if var person matches "3p" do
             return "haben"
+        done
+    done
+    
+    if var verb matches "want" do
+        if var person matches "1s" do
+            return "will"
+        done
+        if var person matches "2s" do
+            return "willst"
+        done
+        if var person matches "3s" do
+            return "will"
+        done
+        if var person matches "1p" do
+            return "wollen"
+        done
+        if var person matches "2p" do
+            return "wollt"
+        done
+        if var person matches "3p" do
+            return "wollen"
+        done
+    done
+    
+    if var verb matches "must" do
+        if var person matches "1s" do
+            return "muss"
+        done
+        if var person matches "2s" do
+            return "musst"
+        done
+        if var person matches "3s" do
+            return "muss"
+        done
+        if var person matches "1p" do
+            return "muessen"
+        done
+        if var person matches "2p" do
+            return "muesst"
+        done
+        if var person matches "3p" do
+            return "muessen"
+        done
+    done
+    
+    if var verb matches "can" do
+        if var person matches "1s" do
+            return "kann"
+        done
+        if var person matches "2s" do
+            return "kannst"
+        done
+        if var person matches "3s" do
+            return "kann"
+        done
+        if var person matches "1p" do
+            return "koennen"
+        done
+        if var person matches "2p" do
+            return "koennt"
+        done
+        if var person matches "3p" do
+            return "koennen"
+        done
+    done
+    
+    if var verb matches "may" do
+        if var person matches "1s" do
+            return "darf"
+        done
+        if var person matches "2s" do
+            return "darfst"
+        done
+        if var person matches "3s" do
+            return "darf"
+        done
+        if var person matches "1p" do
+            return "duerfen"
+        done
+        if var person matches "2p" do
+            return "duerft"
+        done
+        if var person matches "3p" do
+            return "duerfen"
+        done
+    done
+    
+    if var verb matches "should" do
+        if var person matches "1s" do
+            return "soll"
+        done
+        if var person matches "2s" do
+            return "sollst"
+        done
+        if var person matches "3s" do
+            return "soll"
+        done
+        if var person matches "1p" do
+            return "sollen"
+        done
+        if var person matches "2p" do
+            return "sollt"
+        done
+        if var person matches "3p" do
+            return "sollen"
         done
     done
     
