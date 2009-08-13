@@ -1810,7 +1810,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             }
         }
         if (0 == strcmp(r->context, "q_from_where")) {
-            strcpy(buffers, "aus *;von *;from *;aus *;* aus *;* von *;* from *;* aus *");
+            strcpy(buffers, "aus *;von *;from *;aus *;durch *;* aus *;* von *;* from *;* aus *;* durch *");
         }
         
         if (buffers) {
