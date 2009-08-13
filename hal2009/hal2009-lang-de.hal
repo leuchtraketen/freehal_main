@@ -3451,8 +3451,8 @@ define action find_mode with var input do
         
         do return with "question"
     done
-    else if lc(var input) matches /^(kannst\s)|(kann\s)/ do
-        print "Sentence contains a question mark"
+    else if lc(var input) matches /^((kannst\s)|(kann\s))/ do
+        print "Sentence contains a question with can..."
         print new line
         
         do return with "question"
