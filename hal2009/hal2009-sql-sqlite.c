@@ -1149,7 +1149,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 
                 fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf[0]);
                 int u;
-                for (u = 0; u < 25-strlen(subject_synonym_buf[0]); ++u) {
+                for (u = 0; u < 25-strlen(subject_synonym_buf[0]) && u < 26; ++u) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
@@ -1177,7 +1177,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 
                 fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf[0]);
                 int u;
-                for (u = 0; u < 25-strlen(object_synonym_buf[0]); ++u) {
+                for (u = 0; u < 25-strlen(object_synonym_buf[0]) && u < 26; ++u) {
                     fprintf(logfile, " ");
                 }
                 fprintf(logfile, " (");
