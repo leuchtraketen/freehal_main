@@ -1802,10 +1802,15 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             }
         }
         if (0 == strcmp(r->context, "q_where")) {
-            strcpy(buffers, "*in *;*im *;*am *;*an *;* auf;* aus;* von;*from *;*at *;*in *;*im *;*am *;*an *;*auf *;*from *;*at *;*aus *;*von *");
+            if (r->verb && *r->verb != '0' && *r->verb != ' ' && strstr(r->verb, "|ist|")) {
+                strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* aus *;in *;an *;from *;at *;auf *;aus *");
+            }
+            else {
+                strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;an *;from *;at *;auf *;von *;aus *");
+            }
         }
         if (0 == strcmp(r->context, "q_from_where")) {
-            strcpy(buffers, "* aus;* von;*from *;*aus *;*von *;* from *");
+            strcpy(buffers, "aus *;von *;from *;aus *;* aus *;* von *;* from *;* aus *");
         }
         
         if (buffers) {
