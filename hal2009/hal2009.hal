@@ -796,7 +796,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         print "next: " concat from array next_tag first item concat " - " concat var next_word
         print new line
         
-        if not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word do
+        if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
             do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
         done
         shift from array words
