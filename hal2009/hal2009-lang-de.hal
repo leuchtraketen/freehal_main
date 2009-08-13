@@ -1362,6 +1362,8 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'fast' => 1,
           'eben' => 1,
           'endlich' => 1,
+          'information' => 1,
+          'informationen' => 1,
           'anfangs' => 1,
           'bald' => 1,
           'damals' => 1,

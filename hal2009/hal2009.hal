@@ -299,6 +299,11 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         do return without arguments
     done
 
+    if var name_of_entry matches /br[0-9]+?$/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
 
     do be_slow without arguments
     print "Searching   " concat var name_of_entry concat "    \tin file " concat var file_name
@@ -562,6 +567,9 @@ define action compute_tags with var word, var lang, var path do
         if lc(var word) matches /^zu<[rm]>_/ do
             set from array tags first item to "adj"
         done
+        if lc(var word) matches /tion(|en)?$/ do
+            set from array tags first item to "n"
+        done
         if lc(var word) matches /^jahr/ do
             set from array tags first item to "n"
         done
@@ -710,6 +718,8 @@ define action compute_tags with var word, var lang, var path do
         set from array tags first item to get_tag_part_of_speech using var word, var lang
         do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
     done
+    
+    do regex using from array tags first item: /,/, "", :global
 
     # TEXT
     # Return the result.
@@ -779,9 +789,16 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # add them all to the hash
     # CODE
     
-    while from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } do
+    while (from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item ) do
 
-        do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+        print "now:  " concat from array current_tag first item concat " - " concat var current_word
+        print new line
+        print "next: " concat from array next_tag first item concat " - " concat var next_word
+        print new line
+        
+        if not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word do
+            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+        done
         shift from array words
         
         if from global hash builtin_entity_ends item { lc(var current_word) } do
@@ -809,6 +826,13 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         set var next_word to from array words item [ 0 ]
         set array next_tag to from hash tags item { var next_word }
     done
+
+    print "end of loop"
+    print new line
+    print "now:  " concat from array current_tag first item concat " - " concat var current_word
+    print new line
+    print "next: " concat from array next_tag first item concat " - " concat var next_word
+    print new line
 
     if from global hash builtin_entity_ends item { lc(var current_word) } do
         set flag found_subject to 1
@@ -1845,7 +1869,7 @@ define action phrase with var lang, var mode, array results, hash parsed do
                 done
                 
                 if var verb matches /([01])([01])([01])([01])([01])$/ do
-                    set new var person to get_person with hash parsed item { 'subjects' } first item first item
+                    set new var person to get_person with hash parsed item { 'subjects' } first item
                     
                     set new var is_want to $0
                     set new var is_must to $1
