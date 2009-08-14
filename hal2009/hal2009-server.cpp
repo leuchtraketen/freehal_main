@@ -523,7 +523,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     strncpy(input,               s.c_str(), 1024);
 
     bool only_learn = 0;
-    if (s[0] == 'l' && s[1] == 'e' && s[2] == 'a' && s[3] == 'r' && s[4] == 'n' && s[5] == ':') {
+    if (s[0] == 'o' && s[1] == 'n' && s[2] == 'l' && s[3] == 'y') {
         only_learn = 1;
         strcpy(input, input+6);
     }
