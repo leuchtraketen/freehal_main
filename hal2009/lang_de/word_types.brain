@@ -1,3 +1,54 @@
+wohne:
+  type: vt
+geistiger:
+  type: adj
+geistiger:
+  type: adj
+verspottest:
+  type: vi
+Verspottest:
+  type: vi
+verspotte:
+  type: vi
+Maschiene:
+  genus  : f
+  type: n
+maschine:
+  genus  : f
+  type: n
+kernladungszahl:
+  genus  : f
+  type: n
+protonen:
+  genus  : f
+  type: n
+vulkanisation:
+  genus  : f
+  type: n
+rohkautschuk:
+  genus  : m
+  type: n
+Uran:
+  genus  : s
+  type: n
+actinoiden:
+  genus  : f
+  type: n
+ordnungszahl:
+  genus  : f
+  type: n
+Debian:
+  type: n
+linux:
+  type: n
+distribution:
+  genus  : f
+  type: n
+kent:
+  type: n
+kinderwagen:
+  genus  : m
+  type: n
 es:
   type: pron
 schmerzstillende:
@@ -10770,8 +10821,6 @@ praktisch:
   type: adj
 kastenhalslauten:
   type: n
-geberei:
-  type: vi
 Lagerbestandswechsel:
   genus: m
   type: n
@@ -28145,9 +28194,6 @@ gespraechsthemen:
   type: n
 Erbrechen:
   genus: s
-  type: n
-ausloeser:
-  genus: m
   type: n
 besiegelt:
   type: vi
@@ -48204,9 +48250,6 @@ Herumtasten:
   type: n
 Unberuecksichtigt:
   type: adj
-Paradeissuppe:
-  genus  : f
-  type: n
 gier:
   genus  : f
   type: n
@@ -54157,9 +54200,6 @@ tellektuell:
   type: adj
 Fechtkunst:
   genus  : f
-  type: n
-Faserendflaechen:
-  genus: f
   type: n
 ansprechbar:
   type: adj
@@ -60193,9 +60233,6 @@ hochpreisig:
   type: adv
 sichtslos:
   type: adv
-Miniaturgolf:
-  genus  : s
-  type: n
 Abdrueckvorrichtung:
   genus  : f
   type: n
@@ -61510,8 +61547,6 @@ Dillkraut:
   type: n
 meuterisch:
   type: adj
-unabweisbar:
-  type: adj
 Gedaerm:
   genus  : s
   type: n
@@ -61623,8 +61658,6 @@ Unterseebooen:
 Voucher:
   genus  : m
   type: n
-umkippen:
-  type: vi
 unterstuetzung:
   genus  : f
   type: n
@@ -64271,8 +64304,6 @@ Energieverschwendung:
   type: n
 kumran:
   type: n
-umfassen:
-  type: vi
 Kinderarzt:
   genus  : m
   type: n
@@ -67494,9 +67525,6 @@ Cocktails:
 Bereichsmatrix:
   genus  : f
   type: n
-Montageanleitung:
-  genus  : f
-  type: n
 Ausschluss:
   genus  : m
   type: n
@@ -67620,9 +67648,6 @@ Ermigung:
   type: n
 per:
   type: prep
-Messestand:
-  genus  : m
-  type: n
 Gertefundament:
   genus  : s
   type: n
@@ -68073,9 +68098,6 @@ Anrichten:
   genus  : s
   type: n
 Filmstars:
-  genus  : f
-  type: n
-Strohpellets:
   genus  : f
   type: n
 Unentbehrlich:
@@ -68886,8 +68908,6 @@ arzneistofftraeger:
 Stammwort:
   genus  : s
   type: n
-unverantwortlich:
-  type: adv
 asymptomatisch:
   type: adj
 Schloss:
@@ -70315,8 +70335,6 @@ Kaeserinde:
 balancen:
   genus  : f
   type: n
-hoerbar:
-  type: adj
 Verschiedenes:
   type: adj
 Dreizehn:
@@ -74483,7 +74501,6 @@ tritt:
   type: vi
 gelaehmt:
   type: 
-adj
 Steckbruecke:
   genus  : f
   type: n
@@ -74726,8 +74743,6 @@ vielerlei:
   type: adj
 Inguinal:
   type: adj
-verstreuen:
-  type: vi
 jerusalem:
   type: n
 Staudensellerie:
@@ -76339,8 +76354,6 @@ Flohbisse:
 Geheul:
   genus  : s
   type: n
-phantasielos:
-  type: adj
 zurueckfliessen:
   type: vi
 Abfallzerkleinerungsmaschinen:
@@ -78078,9 +78091,6 @@ Heizkissen:
 scheidung:
   genus  : f
   type: n
-Programmpaket:
-  genus  : s
-  type: n
 Klumpatsch:
   type: n
 Hauptstrasse:
@@ -78964,9 +78974,6 @@ Morgenland:
   type: n
 Maskulin:
   type: adj
-Prolet:
-  genus  : m
-  type: n
 Aushubhuegel:
   genus  : m
   type: n
@@ -80000,9 +80007,6 @@ Fraktionssitzung:
   type: n
 Meeresgott:
   genus  : m
-  type: n
-Ortszulage:
-  genus  : f
   type: n
 Hebelarm:
   genus  : m
@@ -81817,8 +81821,6 @@ torsion:
   type: n
 gedoen:
   type: n
-zellenfoermig:
-  type: adv
 Audienz:
   genus  : f
   type: n
@@ -81917,8 +81919,6 @@ herunternehmen:
   type: vi
 Kameralistische:
   type: adj
-Malaysia:
-  type: n
 Schwingen:
   genus  : f
   type: n
@@ -85351,8 +85351,6 @@ unveraenderlichen:
   type: adv
 Mastozyt:
   type: n
-verpennen:
-  type: vi
 alkohol:
   type: adj
 reticulata:
@@ -87907,8 +87905,6 @@ Rohr:
   type: n
 Stute:
   type: n
-Platzpatrone:
-  type: n
 Ergaenzungen:
   type: n
 Foerderschulen:
@@ -88661,8 +88657,6 @@ Keimfreiheit:
   type: n
 miteinander:
   type: adj
-verstaendlich:
-  type: adv
 besudeln:
   type: vi
 Polyp:
@@ -88749,8 +88743,6 @@ Armenuntersttzung:
   type: n
 Roesten:
   type: n
-lebst:
-  type: vi
 Gestellte:
   type: n
 Subversiv:
@@ -90174,8 +90166,6 @@ Discounter:
   type: n
 rechtbasteln:
   type: vi
-Medienplanung:
-  type: n
 Stimmlos:
   type: n
 Rebellisch:
@@ -90971,8 +90961,6 @@ Enttaeuscht:
 Freudlosigkeit:
   type: n
 Weniger:
-  type: n
-Maischbottich:
   type: n
 film:
   type: n
@@ -96188,8 +96176,6 @@ Muskuloe:
   type: n
 ueberkirchlich:
   type: adv
-unerquicklich:
-  type: adv
 Brovorsteher:
   type: n
 Eichamt:
@@ -96336,8 +96322,6 @@ Juhuu:
   type: n
 Christopher:
   type: n
-unterentwickelt:
-  type: vi
 Druckplatten:
   type: n
 Summarum:
@@ -99474,8 +99458,6 @@ abschluss:
   type: vt
 Url:
   type: n
-Obstbrand:
-  type: n
 Starrfluegelflugzeug:
   type: n
 Obliterationverstopfung:
@@ -102266,8 +102248,6 @@ Weil:
   type: fw
 Gibt:
   type: vi
-Psychologie:
-  type: n
 Buchstabenverschluesselung:
   type: n
 massenhafte:
@@ -103187,8 +103167,6 @@ kongo:
 haushaelterisch:
   type: adj
 Schlau:
-  type: n
-Pelzwaren:
   type: n
 kassette:
   type: vi
@@ -105559,8 +105537,6 @@ Appenzell:
   type: n
 Entbindung:
   type: n
-gefahrlos:
-  type: adv
 verzagtheit:
   type: n
 pfandhaus:
@@ -111251,8 +111227,6 @@ besehen:
   type: adv
 Vorher:
   type: adv
-Ortsvorwahl:
-  type: n
 Braende:
   type: n
 bestechung:
@@ -114571,8 +114545,6 @@ Croupier:
   type: n
 passabel:
   type: adj
-Objektivitaet:
-  type: n
 Endkundengeschaeft:
   type: n
 Antennennachfhrsystem:
@@ -115395,8 +115367,6 @@ Papiere:
 wertsteigerung:
   type: adj
 Schleppend:
-  type: n
-Arbeitsproduktivitaet:
   type: n
 stagnieren:
   type: vi
@@ -118488,8 +118458,6 @@ Vergammelt:
 Beklommen:
   type: n
 Klimawandel:
-  type: n
-Piezoeffekt:
   type: n
 pflanzenblueten:
   type: vi
@@ -124054,8 +124022,6 @@ s:
   type: n
 Schluessigkeit:
   type: n
-Pausenhof:
-  type: n
 2was:
   type: n
 hinterher:
@@ -126068,8 +126034,6 @@ auferstehung:
   type: adj
 knattern:
   type: vi
-Post:
-  type: n
 Froesteln:
   type: n
 opium:
@@ -128799,8 +128763,6 @@ Fristversumnis:
   type: n
 rechtsstreien:
   type: adj
-einwandloss:
-  type: adv
 Friedhofsverwaltung:
   genus: f
   type: n
@@ -129477,8 +129439,6 @@ dummchen:
   type: adv
 Berufsverband:
   type: n
-ohnmaechtig:
-  type: adv
 brandenburg:
   type: adj
 Aufnahmekapazitt:
@@ -131917,8 +131877,6 @@ corner:
 Editierstation:
   type: n
 Urin:
-  type: n
-Parasit:
   type: n
 Schwachstelle:
   type: n
@@ -141666,8 +141624,6 @@ abfahrtsfahrplan:
   type: adj
 Tadel:
   type: n
-Kaiserstuhl:
-  type: n
 evidenz:
   type: adj
 Legitimitaet:
@@ -142310,8 +142266,6 @@ Buerschchen:
 Organspendeausweis:
   type: n
 Ausweisen:
-  type: n
-Markenartikel:
   type: n
 Scharfrichter:
   type: n
@@ -148173,8 +148127,6 @@ Entdeckt:
   type: n
 astrologie:
   type: adj
-Menschenfreundlichkeit:
-  type: n
 Schiffahrtsstrasse:
   type: n
 Xerophthalmien:
@@ -153573,8 +153525,6 @@ Brauhaeuser:
   type: n
 Friedhofsgrtnerin:
   type: n
-Obstanbau:
-  type: n
 Ausgleichsmassnahmen:
   type: n
 paritaetisch:
@@ -156861,8 +156811,6 @@ Tosca:
   type: n
 feuerwasser:
   type: adj
-Mesopotamien:
-  type: n
 Kardiologe:
   type: n
 berragen:
@@ -169942,8 +169890,6 @@ Bob:
   type: n
 rundfunkanstalt:
   type: vi
-Ermaechtigung:
-  type: n
 Fehlverhalten:
   type: n
 Kaertchen:
@@ -170910,8 +170856,6 @@ senz:
   type: adj
 Atombomben:
   type: n
-unueberlegt:
-  type: vi
 amtsenthebung:
   type: adj
 Metaplasieumwandlung:
@@ -179011,8 +178955,6 @@ Gotcha:
   type: n
 Opschwesteroperationsschwesteroperationstechnische:
   type: n
-Pechvogel:
-  type: n
 Schwachkopf:
   type: n
 unserein:
@@ -181126,8 +181068,6 @@ Renovaskulaer:
   type: n
 datieren:
   type: vi
-Parkkralle:
-  type: n
 Dienstlich:
   type: adv
 Antrittsrede:
@@ -189663,9 +189603,6 @@ Bohrkrone:
   type: n
 Arbeitsbeschreibungen:
   type: n
-Fahrtenbuecher:
-  genus: f
-  type: n
 anstecken:
   type: vi
 Elefantengras:
@@ -195141,8 +195078,6 @@ Behandlungsweise:
   type: n
 buchfuehrung:
   type: adj
-Praegestempel:
-  type: n
 nachbarschaft:
   type: adv
 Ulcus:
@@ -195667,8 +195602,6 @@ Unterhaltszahlung:
 Beschaemungen:
   type: n
 Ausliefern:
-  type: n
-Forschungsfoerderung:
   type: n
 Wachau:
   type: n
@@ -202265,8 +202198,6 @@ Nibelungen:
   type: n
 ternettagebuch:
   type: adj
-unbewiesen:
-  type: vi
 gepraege:
   type: adv
 aufenthaltstitel:
@@ -205223,9 +205154,6 @@ passend:
   type: adj
 juckt:
   type: vt
-ihm:
-  genus: m
-  type: prep
 schiefer:
   type: adj
 zahlt:
@@ -205363,9 +205291,6 @@ welket:
   type: vt
 schiefe:
   type: adj
-ihn:
-  genus: m
-  type: prep
 heilt:
   type: vt
 Da:
@@ -205907,9 +205832,6 @@ erbittertsten:
   type: adv
 vorweggenommene:
   type: adv
-ihn:
-  genus: m
-  type: prep
 Revolutionen:
   genus: f
   type: n

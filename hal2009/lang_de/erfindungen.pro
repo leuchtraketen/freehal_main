@@ -773,10 +773,8 @@ erfand <> johann vaalers <> 190 die bueroklammer <> im jahr <>  <>  <> nothing <
 erfand <> henry seely <> das buegeleisen <> im jahr 1882 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> otto rohwedder <> die brotschneidemaschine <> im jahr 1928 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> james sharp <> den gasherd <> im jahr 1826 <>  <>  <> nothing <>  <>  <>  <> 50
-erfand <> cockram <> die geschirrspuelmaschine <> im jahr 1889 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> william kent <> den kinderwagen <> im jahr 1733 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> erik rothheim <> die spraydose <> im jahr 1926 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> edwin budding <> den rasenmaeher <> im jahr 1830 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> king camp gilette <> den rasierapparat <> im jahr 1901 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> hubert_cecil_booth <> den staubsauger <> im jahr 1902 <>  <>  <> nothing <>  <>  <>  <> 50
-erfand <> quintenz <> die dezimalwaage <> im jahr 1821 <>  <>  <> nothing <>  <>  <>  <> 50
