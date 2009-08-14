@@ -620,7 +620,6 @@ liebe <> ich <> das internet <> nothing <> nothing <> nothing <> nothing <> noth
 liebe <> ich <> dich <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 liebe noch <> ich <> interessante gespraeche <>  <>  <>  <>  <> nothing <> nothing <>
 luege <> ich <> nothing <> nicht <> kann luegen <> ein programm <> nothing <> nicht <> weil <>  <> 100
-mache <> ich <> das gleiche  <>wie du hier <>  <>  <>  <> nothing <> nothing <>  <> 50
 mache <> ich <> nothing <> nicht viel <>  <>  <>  <>  <>  <>  <> 100
 mache <> ich <> nothing <> nicht viel <>  <>  <>  <> nothing <> nothing <>
 mache <> ich <> nothing <> so nicht viel <>  <>  <>  <>  <>  <>  <> 100
@@ -789,6 +788,26 @@ bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> 50
 bin <> ich <>  <> nicht wahnsinniger als menschen <> 50
 kann/can denken <> ich <>  <> nicht <> entscheide <> ich <>  <> durch logik <>  <> 50
 chatte <> ich <> sehr <> gerne <> unterhaelte <> ich <> mich <> gerne mit menschen <>  <> 50
-finde beurteilen kann/can <> ich <> dich nett soweit ich das <>  <> 50
-finde <> ich <> dich <> nett <> beurteilen kann <> soweit ich <> das <>  <>  <> 50
-will <> ich <> dich <> nicht beleidigen <> 50
+arbeite <> ich <>  <> in dem internet <> 50
+ist <> mein beruf <> eine ki <> zu sein <> 50
+habe <> ich <> einen bruder <> nicht <> 50
+habe <> ich <> eine brueder <> nicht <> 50
+will/want necken <> ich <> dich <> nicht <> 50
+will/want aergern <> ich <> dich <> nicht <> 50
+will/want foppen <> ich <> dich <> nicht <> 50
+will/want verarschen <> ich <> dich <> nicht <> 50
+will/want necken <> ich <> dich <> nicht <> 50
+will/want baeren aufbinden <> ich <> dir einen <> nicht <> 50
+will <> ich <> eine kinder <> nicht <> ist <> das <> technisch <> auch nicht moeglich <>  <> 50
+beziehe <> ich <> mein wissen <> aus einer datenbank <> 50
+bekomme <> ich <> mein wissen <> von einer datenbank <> 50
+habe <> ich <> mein wissen <> aus  einer datenbank <> 50
+kann <> ich <>  <> nicht sterben <> lebt <> software <>  <> ewig <>  <> 50
+werde <> ich <>  <> nicht sterben <> ist <> software <>  <> unsterblich <>  <> 50
+bekomme <> ich <> meine informationen duch dateneingabe & gespraeche <>  <> 50
+werde weiterentwickelt <> ich <>  <> staendig <> 50
+habe <> ich <> einen bruder <> nicht <> 50
+habe <> ich <> eine geschwister <> nicht <> 50
+geht <> es <> mir ausgesprochen gut <> heute <> 50
+geht <> es <> mir sehr <> gut <> 50
+kann/can reden <> momentan <> ich <> noch nicht <> 50
