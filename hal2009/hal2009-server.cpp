@@ -480,7 +480,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_input_server");
+        unlink("_output");
         hal2009_clean();
         return;
     }
@@ -492,7 +492,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_input_server");
+        unlink("_output");
         hal2009_clean();
         return;
     }
@@ -504,7 +504,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_input_server");
+        unlink("_output");
         hal2009_clean();
         return;
     }
@@ -533,7 +533,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     int timeout = 3;
     while (0 == strlen(answer_from_c) && timeout > 0) {
         cout << "Delete nonsense." << endl;
-        unlink("_input_server");
+        unlink("_output");
         hal2009_clean();
 
         (*answer) += "<b>" + string(username) + "</b>: " + string(input) + "<br />";
@@ -547,16 +547,16 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     //    pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
 
         void* temporary_memory = malloc(5120);
-        while (cstat("_input_server", (struct stat*)temporary_memory)) {
-            usleep(100);
+        while (cstat("_output", (struct stat*)temporary_memory)) {
+            usleep(1000);
         }
         free(temporary_memory);
-        ifstream output_stream("_input_server");
+        ifstream output_stream("_output");
         usleep(500);
         string output;
         getline(output_stream, output);
         if (output.size() == 0) {
-            ifstream output_stream("_input_server");
+            ifstream output_stream("_output");
             usleep(500);
             string output;//
             getline(output_stream, output);
@@ -577,7 +577,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     (*stream) << "DISPLAY:" << (*answer) << endl;
     hal2009_netcom_unlock();
 
-    unlink("_input_server");
+    unlink("_output");
     hal2009_clean();
 
     if (0) {
@@ -921,14 +921,14 @@ void hal2009_handle_signal(void* arg) {
         free((void*)csv_data);
         fprintf(output(), "Memory is released.\n");
     }
-    else if (0 == strcmp(type, "_output")) {
+    /*else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
-        ofstream out("_input_server");
+        ofstream out("_output");
         out << text << endl;
         cout << "Printing into _input_server: " << text << endl;
         out.close();
         unlink("_output");
         ///pthread_exit(0);
-    }
+    }*/
 }
 
