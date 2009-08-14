@@ -81,6 +81,11 @@ static char* sqlite_sql_create_table = ""
 "UNIQUE(`fact`));"
 "CREATE INDEX `idx_fact_rel_fact_flag` ON `rel_fact_flag` (`fact`);"
 
+"CREATE TABLE `rel_clause_flag` (`fact` INTEGER, "
+"verb_flag_want char(2),verb_flag_must char(2),verb_flag_can char(2),verb_flag_may char(2),verb_flag_should char(2),"
+"UNIQUE(`fact`));"
+"CREATE INDEX `idx_fact_rel_clause_flag` ON `rel_clause_flag` (`fact`);"
+
 "CREATE TABLE `rel_verb_verb` (`v1` varchar(50), `v2` varchar(50), `type` varchar(50), "
 "UNIQUE(`v1`, `v2`, `type`));"
 "CREATE INDEX `idx_v1_rel_verb_verb` ON `rel_verb_verb` (`v1`);"
@@ -276,13 +281,14 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
     if (there_are_sub_clauses) {
         char* sql = malloc(5120);
         *sql = 0;
-        strcat(sql, "SELECT `verb`, `subjects`, `objects`, `adverbs`, `questionword` FROM `clauses` WHERE `rel` = ");
+        strcat(sql, "SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword` FROM `clauses` ");
+        strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = pk WHERE `rel` = ");
         strcat(sql, argv[0]);
-        strcat(sql, " UNION ALL SELECT `verb`, `subjects`, `objects`, `adverbs`, `questionword` FROM `facts` WHERE `pk` = (SELECT f2 FROM `linking` WHERE f1 = ");
+        strcat(sql, " UNION ALL SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword` FROM `facts` ");
+        strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = pk ");
+        strcat(sql, " WHERE `pk` = (SELECT f2 FROM `linking` WHERE f1 = ");
         strcat(sql, argv[0]);
         strcat(sql, ");");
-        
-
         
         printf("%s\n", sql);
         
@@ -748,7 +754,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
     strcpy(sql, sql_sqlite_mask_sql(sql));
 
-    if (num_of_records_str) {
+    if (num_of_records_str && !relation_to) {
         FILE* target = fopen("_input_key", "w+b");
         fwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
         fclose(target);
@@ -788,7 +794,14 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 //            char* sql = malloc(5120+sizeof(r));
             //*sql = 0;
 
-            strcat(sql, "INSERT INTO rel_fact_flag (`fact`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
+            strcat(sql, "INSERT INTO rel_");
+            if (relation_to) {
+                strcat(sql, "clause");
+            }
+            else {
+                strcat(sql, "fact");
+            }
+            strcat(sql, "_flag (`fact`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
             strcat(sql, key);
             strcat(sql, ", ");
             strcat(sql, r->verb_flag_want?"1":"0");
@@ -846,9 +859,11 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 //            free(sql);
             free(words);
 
-            FILE* target = fopen("_input_key", "w+b");
-            fwrite(key, 1, strlen(key), target);
-            fclose(target);
+            if (!relation_to) {
+                FILE* target = fopen("_input_key", "w+b");
+                fwrite(key, 1, strlen(key), target);
+                fclose(target);
+            }
         }
 
         if (r->clauses && r->clauses[0] && !relation_to) {
@@ -874,11 +889,13 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
-        if (strstr(err, "unique")) {
+        if (strstr(err, "are not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
             /// Fact is not unique - it already exists in the database
             --(num_of_records[relation_to?1:0]);
-            FILE* target = fopen("_input_key", "w+b");
-            fclose(target);
+            if (!relation_to) {
+                FILE* target = fopen("_input_key", "w+b");
+                fclose(target);
+            }
             break;
         }
         printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);

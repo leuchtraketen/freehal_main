@@ -717,13 +717,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         
         if ( result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
 
-            std::vector<std::string>* sentences = simple_split( string(result->at(1)), ".!" );
-            for (int l = 0; l < sentences->size(); ++l) {
-                if ((*sentences)[l] == " " || (*sentences)[l] == "" || (*sentences)[l] == ".") {
-                    continue;
-                }
-                hal2009_server_statement(stream, (*sentences)[l], username, language);
-            }
+            hal2009_server_statement(stream, result->at(1), username, language);
         }
         
         delete result;

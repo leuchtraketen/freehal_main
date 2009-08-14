@@ -415,7 +415,7 @@ int hal2009_add_pro_file (char* filename) {
                     
                     line = calloc(strlen(wholeline)+1, 1);
                     
-//                    printf("last_pk: %d\n", last_pk);
+                    printf("last_pk: %d\n", last_pk);
                     if (last_pk) {
                         int current_pk;
                         
@@ -423,12 +423,12 @@ int hal2009_add_pro_file (char* filename) {
                         if (target) {
                             fscanf(target, "%d", &current_pk);
                             fclose(target);
-//                            printf("current_pk: %d\n", current_pk);
+                            printf("current_pk: %d\n", current_pk);
                             
                             hal2009_add_link("order", last_pk, current_pk);
                         }
                         else {
-//                            printf("could not open _input_key\n", last_pk);
+                            printf("could not open _input_key\n", last_pk);
                         }
                     }
                     
