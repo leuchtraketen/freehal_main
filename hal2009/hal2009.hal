@@ -2399,6 +2399,8 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
     print "Write some facts into " concat var pro_file_name concat "."
     print new line
 
+    set new array line_array to an empty array
+
     for each new hash parsed in array facts_parsed do
         set new var line to ''
         
@@ -2495,10 +2497,13 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
         done
         set var line to var line concat ' <> '
         set var line to var line concat '50'
-        set var line to var line concat new line
         
-        print into var pro_file data lc(var line)
+        push into array line_array, var line
     done
+    
+    set new var line to join with ' ~ ', items of line_array
+    
+    print into var pro_file data lc(var line)
     
     do close with var pro_file
     
