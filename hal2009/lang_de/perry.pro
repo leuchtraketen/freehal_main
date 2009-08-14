@@ -14,7 +14,6 @@ aeltesten zaehlt <> das finanzgenie homer gershwin adams <> weggefaehrten <> zu 
 aeusserlich unterscheiden <> die akonen <> sich <> kaum;von terranern <>  <>  <> nothing <>  <>  <>  <> 50
 aeusserlich unterscheiden <> plophoser <> nothing <> in keiner weise von menschen der erde <>  <>  <> nothing <>  <>  <>  <> 50
 aeusserst einstellen kann <> perry_rhodan <> sich <> auf neue situationen;rasch <>  <>  <> nothing <>  <>  <>  <> 50
-aeusserst uralte verfuegt <> das <> volk der haluter hoch entwickelte technik <> seit jeher ueber eine <>  <>  <> nothing <>  <>  <>  <> 50
 agieren <> roboter cairol <> der kosmokraten <> als beauftragte;mit dem namen <>  <>  <> nothing <>  <>  <>  <> 50
 agiert kuehl <> atlan <> nothing <> in der regel <>  <>  <> nothing <>  <>  <>  <> 50
 allen benutzten <> die lemurer <> kugelraumschiffe groessen <> in <>  <>  <> nothing <>  <>  <>  <> 50
@@ -253,7 +252,6 @@ sind <> roboter <> kuenstliche wesen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind sprichwoertlichen <> die ertruser <> appetit <> fuer ihren    bekannt <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> springer <> ein volk <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> transmitter <> ein verkehrsmittel <>  <>  <>  <> nothing <>  <>  <>  <> 50
-sind treuesten <> die positronisch-biologischen roboter <> langem die verbuendeten der terraner <> seit <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> typisch <> lang gestreckte walzenraumer <> fuer die maahks <>  <>  <> nothing <>  <>  <>  <> 50
 sind vorfahren <> lemurer <> die der menschen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind zweieinhalb <> die <> etwa meter <> cairol-roboter;gross <>  <>  <> nothing <>  <>  <>  <> 50
@@ -283,5 +281,3 @@ war <> urspruengliche heimatwelt der herreach <> trokan <>  <>  <>  <> nothing <
 wichtigsten <> jahren waren die schohaaken die <> helfer der superintelligenz archetim <> vor 20 millionen <>  <>  <> nothing <>  <>  <>  <> 50
 wirken <> der unither <> nothing <> die koerper;klobig <>  <>  <> nothing <>  <>  <>  <> 50
 wissen <> einmal sie <> nothing <> nicht;selbst <> aussahen urspruenglich <> die cynos <> nothing <>  <> wie <>  <> 50
-wurde <> gucky <> nothing <> auf tramp geboren <>  <>  <> nothing <>  <>  <>  <> 50
-zerfallen <> die blues <> nothing <> in viele kleinere <>  <>  <> nothing <>  <>  <>  <> 50

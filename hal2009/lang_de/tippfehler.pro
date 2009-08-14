@@ -1388,7 +1388,6 @@
 >>> <> _variaet__ <> _varietaet_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _variert__ <> nothing <> _variiert_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _variéte _ <> _varieté_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
->>> <> _varrieren__ <> nothing <> _variieren_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _vekehr__ <> _verkehr_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _venezuelanisch__ <> nothing <> _venezolanisch_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _venizianisch__ <> nothing <> _venezianisch_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -1561,4 +1560,3 @@
 >>> <> _zustaetzlich__ <> nothing <> _zusaetzlich_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _komms__ <> nothing <> _kommst_ <>  <> nothing <>  <>  <>  <> 50
 >>> <> _haste__ <> nothing <> _hast du_ <>  <> nothing <>  <>  <>  <> 50
->>> <> _heue__ <> nothing <> _heute_ <>  <> nothing <>  <>  <>  <> 50

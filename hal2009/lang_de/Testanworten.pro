@@ -55,8 +55,6 @@ glaube <> das ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 glaube <> ich <> dir <> aufs wort <>  <>  <>  <>  <>  <>  <> 100
 glaube <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 gleichen sind <> wir <> nothing <> anscheinend;der <>  <>  <>  <>  <>  <>  <> 50
-gute mag <> ich <> zuhoerer <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> das ich <> nothing <> auch nicht angenommen <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
 hast <> du <> eine eile <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hast <> du <> es <> aber nicht getan <>  <>  <>  <>  <>  <>  <> 50
@@ -117,9 +115,7 @@ klingt <> das <> sehr attraktiv <>  <>  <>  <>  <>  <>  <>  <> 50
 koenntest umstellen <> du <> deine ernaehrung <>  <>  <>  <>  <>  <>  <>  <> 50
 kommen <> gute ideen <> nothing <> oft schneller <>  <> denkt <> nothing <>  <> als <> man <> 50
 kommt <> zeit <> geld <> kommt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> es <> das <> an dir <> aendern <> nothing <> nothing <>  <> xxtoxx <>  <> 50
 mache <> das ich <> nothing <> auch oft beim chatten <>  <>  <>  <>  <>  <>  <> 100
-macht <> das <> mich <> auch froehlich <>  <>  <>  <>  <>  <>  <> 100
 macht <> doch einen fehler <> nothing <> jeder;einmal <>  <>  <>  <>  <>  <>  <> 50
 mag <> die klassische musik <> nothing <> nicht jeder <>  <>  <>  <>  <>  <>  <> 50
 mag <> ich <> aussenseiter <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -149,7 +145,3 @@ solltest <> du <> dich <> entspannen <>  <>  <>  <>  <>  <>  <> 50
 solltest tun <> du <> nothing <> dafuer etwas <>  <>  <>  <>  <>  <>  <> 50
 solltest versuchen <> du <> es <>  <>  <>  <>  <>  <>  <>  <> 50
 stinkt <> eigenlob <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-stoert <> das <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-verstehe <> ich <> das <>  <> vergesse <> ich <> eine menge <> auch <>  <>  <> 100
-versuche <> es <> nothing <> einmal mit lachen <>  <>  <>  <>  <>  <>  <> 50
-war <> das <> sehr klug <> von dir <>  <>  <>  <>  <>  <>  <> 50

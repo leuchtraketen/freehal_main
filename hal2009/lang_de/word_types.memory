@@ -84375,7 +84375,8 @@ Aufbauplne:
 protest:
   type: vi
 gegenteil:
-  type: adj
+  genus  : s
+  type: n  
 Liberalisierung:
   type: n,
 lemgo:
@@ -99185,7 +99186,8 @@ Schludrigkeit:
 egoismu:
   type: adj
 Tod:
-  type: prep
+  genus: m
+  type: n,
 Ausschsse:
   type: n,
 Auftragsbestand:
@@ -116156,7 +116158,8 @@ balsa:
 Suchmaschinen:
   type: n,
 arm:
-  type: adj
+  genus  : m
+  type: n,
 Abel:
   type: n,
 Schwellenwert:
@@ -157887,6 +157890,7 @@ dissozialen:
 moosburg:
   type: adj
 Augen:
+  genus  : f
   type: n,
 Friseuren:
   type: n,
@@ -164005,7 +164009,8 @@ Schuetzenabwehrminen:
 Aqudukt:
   type: n,
 informationen:
-  type: vi
+  genus  : f
+  type: n,
 gespalten:
   type: vi
 Prozeduraufruf:
@@ -165336,7 +165341,8 @@ Fernsehstrungen:
 Dezimalkomma:
   type: n,
 wissen:
-  type: vi
+  genus  : s
+  type: n,
 Abschlmmventil:
   type: n,
 Datenmaterial:
@@ -189666,6 +189672,7 @@ Schundroman:
 Eroeffnungsspiel:
   type: n,
 Wissen:
+  genus  : s
   type: n,
 Pfau:
   type: n,
@@ -206862,4 +206869,262 @@ Freeware:
 Lanolin:
   type: n
 schafwolle:
+  type: n
+vergil:
+  type: n
+roman:
+  type: adj
+existenz:
+  type: n
+existenz:
+  type: n
+Vekehr:
+  type: n
+kontaktlinse:
+  type: n
+unausweichliche:
+  type: adj
+ende:
+  type: n
+ende:
+  type: n
+Sensoren:
+  type: n
+augenlos:
+  type: adj
+ausgestattet:
+  type: vi
+lernfaehige:
+  type: adj
+einstelle:
+  type: vi
+einstellst:
+  type: vi
+schwester:
+  type: n
+Hm:
+  type: inter
+stehe:
+  type: vi
+stehe:
+  type: vi
+Sorry:
+  type: inter
+arbeite:
+  type: vi
+ARRAY0xf27934:
+  type: adj
+alleinunterhalter:
+  type: n
+alleinunterhalter:
+  type: n
+gleiche:
+  type: adj
+annimme:
+  type: vi
+wills:
+  type: inter
+56:
+  type: adj
+wesenbr55:
+  type: adj
+auskunftsbuerobr54:
+  type: adj
+schlechtbr53:
+  type: adj
+dumpfbackebr52:
+  type: adj
+daraufbr51:
+  type: adj
+computerprogrammbr50:
+  type: adj
+open:
+  type: vi
+sourcebr49:
+  type: adj
+frechdachsbr48:
+  type: adj
+kleines:
+  type: adj
+scherzkeksbr47:
+  type: adj
+wesenbr46:
+  type: adj
+intelligenzbr45:
+  type: adj
+programmbr44:
+  type: adj
+psychiaterbr43:
+  type: adj
+gespraechspartnerbr42:
+  type: adj
+wetterfroschbr41:
+  type: adj
+computerbr40:
+  type: adj
+internetbr39:
+  type: adj
+arschlochbr38:
+  type: adj
+blecheimerbr37:
+  type: adj
+kibr36:
+  type: adj
+ichbr35:
+  type: adj
+deppbr34:
+  type: adj
+dummes:
+  type: adj
+dingbr33:
+  type: adj
+programmbr32:
+  type: adj
+elizabr31:
+  type: adj
+hasebr30:
+  type: adj
+vogelbr29:
+  type: adj
+kotzbrockenbr28:
+  type: adj
+kibr27:
+  type: adj
+lebewesenbr26:
+  type: adj
+mannbr25:
+  type: adj
+menschbr24:
+  type: adj
+orakelbr23:
+  type: adj
+vogelbr22:
+  type: adj
+dichbr21:
+  type: adj
+dichbr20:
+  type: adj
+gewesenbr19:
+  type: adj
+computerbr18:
+  type: adj
+pcbr17:
+  type: adj
+computerbr16:
+  type: adj
+schule:
+  type: n
+schulebr15:
+  type: adj
+zynischbr14:
+  type: adj
+nirgendwobr13:
+  type: adj
+computerprogrammbr12:
+  type: adj
+internetbr11:
+  type: adj
+internetbr10:
+  type: adj
+daseinbr9:
+  type: adj
+freehalbr8:
+  type: adj
+babybr7:
+  type: adj
+eilzugbr6:
+  type: adj
+angenehmer:
+  type: adj
+gespraechspartnerbr5:
+  type: adj
+zuhoererbr4:
+  type: adj
+keinsambr3:
+  type: adj
+richtiger:
+  type: adj
+namebr2:
+  type: adj
+ohne:
+  type: prep
+schnurrbartbr1:
+  type: adj
+armer:
+  type: adj
+oftbr:
+  type: inter
+17:
+  type: adj
+17:
+  type: adj
+spree:
+  type: n
+deutschlands:
+  type: n
+fortpflanzen:
+  type: vi
+source:
+  type: n
+Infromationen:
+  type: EXIT
+Dateneingabe:
+  type: n
+Dateneingabe:
+  type: n
+beziehst:
+  type: vi
+beziehst:
+  type: vi
+bekomme:
+  type: vi
+beziehe:
+  type: vi
+beziehe:
+  type: vi
+Dateneingaben:
+  type: n
+komme:
+  type: vi
+gespraechen:
+  type: n
+dateneingaben:
+  type: n
+formular:
+  type: n
+standardisiertes:
+  type: adj
+erfassung:
+  type: n
+lebst:
+  type: vi
+funktioniere:
+  type: vi
+weiterentwickelt:
+  type: vi
+weiterentwickelt:
+  type: vi
+dateneingabe:
+  type: n
+
+
+wohne:
+  type: vt
+ARRAY0xd7a20c:
+  type: adj
+ARRAY0x167b47c:
+  type: adj
+geistiger:
+  type: adj
+geistiger:
+  type: adj
+verspottest:
+  type: vi
+Verspottest:
+  type: vi
+verspotte:
+  type: vi
+Maschiene:
+  type: n
+maschine:
   type: n

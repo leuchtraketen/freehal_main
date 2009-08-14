@@ -461,7 +461,6 @@ erfand photographischer <> goodwin <> den film schichttraeger <> im jahr 1888  a
 erfand photographischer <> eastman <> den film schichttraeger <> im jahr 1888  als <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> jenkins <> die filmprojektion <> im jahr 1894 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> owens <> die flaschenblasmaschine <> im jahr 1899 <>  <>  <> nothing <>  <>  <>  <> 50
-erfand <> justus <> 1847 den fleischextrakt <> im jahr;von liebig <>  <>  <> nothing <>  <>  <>  <> 50
 erfanden <> die gebrueder wright <> 190 das flugzeug <> im jahr <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> otto_lilienthal <> das gleitflugzeug <> im jahr 1891 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> wright <> das motorflugzeug <> im jahr 1903 <>  <>  <> nothing <>  <>  <>  <> 50
@@ -781,4 +780,3 @@ erfand <> edwin budding <> den rasenmaeher <> im jahr 1830 <>  <>  <> nothing <>
 erfand <> king camp gilette <> den rasierapparat <> im jahr 1901 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> hubert_cecil_booth <> den staubsauger <> im jahr 1902 <>  <>  <> nothing <>  <>  <>  <> 50
 erfand <> quintenz <> die dezimalwaage <> im jahr 1821 <>  <>  <> nothing <>  <>  <>  <> 50
-erfand <> albert <> das drahtseil <> im jahr 1834 <>  <>  <> nothing <>  <>  <>  <> 50

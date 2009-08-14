@@ -1334,7 +1334,6 @@ ist <> windows <> nothing <> schon sehr alt <>  <>  <>  <>  <>  <>  <> 50
 ist <> windows <> nothing <> ueber 20 jahre alt <>  <>  <>  <>  <>  <>  <> 50
 ist <> wodka <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> wodka lemon <> ein alkoholisches mixgetraenk <>  <>  <>  <>  <>  <>  <>  <> 50
-ist einsam <> man <> nothing <> ohne freunde <>  <>  <>  <> nothing <> nothing <>  
 ist kochen <> ein herd <> ein geraet <> zum <> nothing <>  <>  <> nothing <> nothing <>  
 ist legt <> ein schnabeltier <> ein tier das eier <>  <>  <>  <>  <>  <>  <>  <> 50
 ist leichtes <> ein kajak <> ein schmales & boot <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1793,4 +1792,3 @@ ist <> geometrie <> ein unterrichtsgegenstand <>  <> 50
 ist <> sauerstoff <> ein gas <>  <> 50
 ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <>  <> 50
 ist <> kupfer <> ein guter elektrischer leiter <>  <> 50
-ist <> ein fahrrad <> ein fahrzeug <>  <> betrieben wird <> das <>  <> mit muskelkraft <>  <> 50

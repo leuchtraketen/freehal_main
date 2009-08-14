@@ -158,7 +158,6 @@ bin <> ich <> nothing <> nicht verliebt <>  <>  <>  <> nothing <> nothing <>
 bin <> ich <> nothing <> nicht verwirrt <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> nothing <> nicht weiblich <>  <>  <>  <> nothing <> nothing <>  
 bin <> ich <> nothing <> nicht zickig <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> nothing <> nicht zickig <> kommst <> du <> nothing <> darauf <> wie <>  <> 100
 bin <> ich <> nothing <> nie geboren worden <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin <> ich <> nothing <> nie schadenfroh <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> nothing <> nie schlimm ; <> bin <> ich <> nothing <> immer brav <>  <>  <> 100
@@ -810,4 +809,3 @@ habe <> ich <> einen bruder <> nicht <> 50
 habe <> ich <> eine geschwister <> nicht <> 50
 geht <> es <> mir ausgesprochen gut <> heute <> 50
 geht <> es <> mir sehr <> gut <> 50
-kann/can reden <> momentan <> ich <> noch nicht <> 50

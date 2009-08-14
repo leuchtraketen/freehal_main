@@ -281,8 +281,6 @@ ist <> hinterher <> man schlauer <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> hinterher <> offiziere schlauer <>  <>  <>  <> nothing <>  <>  <>  <> 50
 kommt <> hochmut <> nothing <> vor;dem;fall <>  <>  <> nothing <>  <>  <>  <> 50
 grasen <> nothing <> nothing <> auf;der;die;narren <> ist <> hoffnung <> nothing <> die <> wiese <>  <> 50
-beissen <> hunde <> nothing <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
-bellen <> hunde <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 bin <> ich <> mann <>  <> sagte <> der dieb <> nothing <> (da_er_an_dem_schandpfahl_stand) <>  <>  <> 100
 ist <> ich <> nothing <> tue;als;ein;guter;christ;nicht;mehr;komma;als;mir;befohlen <>  <>  <> nothing <>  <>  <>  <> 100
 ersaufen <> mehr leute <> nothing <> in;dem;becher;als;in;dem;bach <>  <>  <> nothing <>  <>  <>  <> 50
@@ -302,7 +300,6 @@ frisst <> nothing <> nothing <> in;der;not;der;teufel;fliegen <>  <>  <> nothing
 isst <> der bauer <> brot <> in;der;not;auch <>  <>  <> nothing <>  <>  <>  <> 50
 isst <> der <> koenig brot <> in;der;not <>  <>  <> nothing <>  <>  <>  <> 50
 liegt <> die kraft <> nothing <> in;der;ruhe <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der mittelweg <> nothing <> in;gefahr;und;groesster;not;tod;der <>  <>  <> nothing <>  <>  <>  <> 50
 ertrunken gefallen ist <> nothing <> nothing <> und;das;kind;erst;in;den;brunnen <> ist <>  <> es <> dann;zu;spaet;komma <>  <>  <> 50
 ist ruiniert <> der <> nothing <> ruf;erst <> lebt ungeniert <> es <> sich recht <>  <>  <>  <> 50
 ist tanzen <> die <> katze maeuse <> auf;dem;tisch;aus;dem;haus;komma <>  <>  <> nothing <>  <>  <>  <> 50
@@ -414,7 +411,6 @@ geht <> schlechten leuten <> es <> gut;immer <>  <>  <> nothing <>  <>  <>  <> 5
 verdirbt <> schlechter umgang <> sitten <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> hier <> frage <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> selbsterkenntnis <> schritt <> auf;dem;weg;zur;besserung <>  <>  <> nothing <>  <>  <>  <> 50
-gehen <> selbst die groessten koenige <> nothing <> zu;fuss;aufs;klo <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> selbst <> mann <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> selbst <> nothing <> die;frau <>  <>  <> nothing <>  <>  <>  <> 50
 selbst <> nothing <> sich <>  <> besiegen ist schoenste <> der <> sieg <>  <> xxtoxx <>  <> 50
@@ -518,7 +514,3 @@ ist macht <> wissen <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sitzt <> frau venus <> nothing <> an;dem;ofen <> schuert <> nothing  bacchus das feuer <> nothing <>  <> wo <>  <> 50
 ist <> ein <> nothing <> weg;auch <> ist wille <> ein <> nothing <>  <> wo <>  <> 50
 ist <> da <> feuer <> auch <> ist <> nothing  rauch <> nothing <>  <> wo <>  <> 50
-ist <> viel schatten <> nothing <> auch <> ist <> nothing  viel licht <> nothing <>  <> wo <>  <> 50
-folgen sollten <> worten <> taten <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zehn versagen <> besser <> als;einmal;luegen;mal <>  <>  <> nothing <>  <>  <>  <> 50
-verderben <> nothing <> nothing <> zu;viele;koeche;den;brei <>  <>  <> nothing <>  <>  <>  <> 50

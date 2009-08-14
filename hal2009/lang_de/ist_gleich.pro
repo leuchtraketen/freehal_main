@@ -35,3 +35,7 @@
 = <> _weisst_du_was_ <> nothing <> _was_ist_ <>  <>  <>  <>  <>  <>  <> 50
 = <> _einfall_ <> nothing <> _idee_ <>  <>  <>  <>  <>  <>  <> 50
 = <> _idee_ <> nothing <> _einfall_ <>  <>  <>  <>  <>  <>  <> 50
+= <> _beruflich_ <> nothing <> _beruf_ <>  <>  <>  <>  <>  <>  <> 50
+= <> _beruf_ <> nothing <> _beruflich_ <>  <>  <>  <>  <>  <>  <> 50
+= <> _ewig_leben_ <> nothing <> _unsterblich_sein_ <>  <>  <>  <>  <>  <>  <> 50
+= <> _unsterblich_sein_ <> nothing <> _ewig_leben_ <>  <>  <>  <>  <>  <>  <> 50
