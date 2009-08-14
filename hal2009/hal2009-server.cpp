@@ -463,6 +463,27 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     }
     cout << "Initialize variables." << endl;
 
+    if (s == "/del fact" || s == "/del fakt" || s == "/DEL FAKT" || s == "/DEL FACT" || s == "/df" || s == "/DF" || s == "/d f" || s == "/D F") {
+        struct RECORD r;
+        strcpy(r.pkey, "a");
+        printf("pkey (in hal2009-server, 2): %s\n", r.pkey);
+        sql_begin();
+        char* source = sql_del_record(&r);
+        if (source) {
+            fact_delete_from_source(source);
+            free(source);
+        }
+        sql_end();
+
+        (*answer) += "<b>" + string(username) + "</b>: " + s + "<br />";
+        (*answer) += "<b>FreeHAL</b>: Deleted.<br />";
+        cout << "Got something to display from '" << username << "'." << endl;
+        cout << "    " << (*answer) << endl;
+        (*stream) << "DISPLAY:" << (*answer) << endl;
+        unlink("_input_server");
+        hal2009_clean();
+        return;
+    }
     if (s == "de" || s == "deutsch" || s == "Deutsch" || s == "german" || s == "German" || s == "Deutsch!" || s == "deutsch!") {
         strcpy(language,             "de");
 
@@ -683,7 +704,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
-            printf("pkey (in hal2009-server): %s\n", r.pkey);
+            printf("pkey (in hal2009-server, 1): %s\n", r.pkey);
             sql_begin();
             char* source = sql_del_record(&r);
             if (source) {
@@ -695,6 +716,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         }
         
         if ( result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
+
             std::vector<std::string>* sentences = simple_split( string(result->at(1)), ".!" );
             for (int l = 0; l < sentences->size(); ++l) {
                 if ((*sentences)[l] == " " || (*sentences)[l] == "" || (*sentences)[l] == ".") {
