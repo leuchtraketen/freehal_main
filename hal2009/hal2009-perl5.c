@@ -75,9 +75,6 @@ static inline void convert_to_perl5_structure (halstring* hals) {
         hals = replace(hals, "print ", "do print with ");
     }
     
-    if (strstr(hals->s, "~" )) {
-        hals = replace(hals, "~", "$");
-    }
     hals = replace(hals, "# TEXT", "#---------------------------------------");
     hals = replace(hals, "# CODE", "#---------------------------------------");
     hals = replace(hals, "variable ", "var ");

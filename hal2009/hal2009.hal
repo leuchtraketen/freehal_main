@@ -2083,7 +2083,7 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
     do return with var final_sentence
 done
 
-define action use_mode with var input is copy, array facts_to_link, hash tags, var lang, var path, var mode do
+define action use_mode with var input is copy, array facts_to_save, hash tags, var lang, var path, var mode do
     set new var is_question to "no"
     if var input matches /<[?]>/ do
         set var is_question to "yes"
@@ -2278,16 +2278,16 @@ define action use_mode with var input is copy, array facts_to_link, hash tags, v
         set array results to logic with var input, var lang, var path, hash parsed
     done
     if var save_input matches "yes" do
-        do save_facts with [ hash parsed ], '', var lang, var path
+        push into array facts_to_save, hash parsed
         
         # TEXT
         # Grab the primary key of the fact
         # CODE
-        set new var key_file to handle for file name "_input_key", read
-        set new var key to the next line from var key_file
-        do close with var key_file
+        ##set new var key_file to hndle for file name "_input_key", read
+        ##set new var key to the next line from var key_file
+        ##do close with var key_file
         
-        push into array facts_to_link, var key
+        ##push into array facts_to_link, var key
     done
     set array results to sort_out with array results, var mode, hash parsed
     set new array phrases to phrase with var lang, var mode, array results, hash parsed
@@ -2501,9 +2501,11 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
         push into array line_array, var line
     done
     
-    set new var line to join with ' ~ ', items of line_array
+    set new var divisor to ' ~ '
+    set new var line to join with var divisor, items of array line_array
     
     print into var pro_file data lc(var line)
+    print into var pro_file data new line
     
     do close with var pro_file
     
@@ -2671,7 +2673,7 @@ define action save_output with var input, var current_language, var path do
     do close with var output_handle
 done
 
-define action give_output with var input is rw, array facts_to_link, hash tags, var current_language, var path do
+define action give_output with var input is rw, array facts_to_save, hash tags, var current_language, var path do
     # TEXT
     # We try to use the answer as a judgement
     # CODE
@@ -2705,7 +2707,7 @@ define action give_output with var input is rw, array facts_to_link, hash tags, 
     print "Input is computed... Going on."
     print new line
     set new var mode to find_mode using var input
-    set new array sentences to use_mode with var input, array facts_to_link, hash tags, var current_language, var path, var mode
+    set new array sentences to use_mode with var input, array facts_to_save, hash tags, var current_language, var path, var mode
     print "Output is..."
     print new line
     for each new array sentence in array sentences do
@@ -2758,13 +2760,13 @@ define action give_output with var input is rw, array facts_to_link, hash tags, 
         push into array sentences, items of array random
     done
     
-    print "Primary keys are:"
-    print new line
-    for each new var key in array facts_to_link do
-        print "  - "
-        print var key
-        print new line
-    done
+    ##print "Primary keys are:"
+    ##print new line
+    ##for each new var key in array facts_to_link do
+    ##    print "  - "
+    ##    print var key
+    ##    print new line
+    ##done
     
     do return using array sentences
 done
@@ -3063,12 +3065,12 @@ define action shell with var current_language, var path do
     set new var input_file_name to '_input'
     set new var input_handle to handle for file name var input_file_name, read
 
-    set new array facts_to_link to an empty array
+    set new array facts_to_save to an empty array
 
     for each new var sentences_as_line from var input_handle is rw do
         do regex using var sentences_as_line: /([?])/, "$0.", :global
         set var sentences_as_line to divide_input with var sentences_as_line, var current_language
-        set new array sentences to split with /[.!]/, var sentences_as_line
+        set new array sentences to split with /[.!~]/, var sentences_as_line
 
         for each new var line in array sentences do
 
@@ -3080,7 +3082,7 @@ define action shell with var current_language, var path do
             
             do unlink with '_output'
             set new hash tags to an empty hash
-            set new array output to give_output with var line, array facts_to_link, hash tags, var current_language, var path
+            set new array output to give_output with var line, array facts_to_save, hash tags, var current_language, var path
             do unlink with '_output'
 
             set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
@@ -3102,14 +3104,17 @@ define action shell with var current_language, var path do
         done
     done
     
-    set new var f1 to shift with items of array facts_to_link
-    set new var f2 to shift with items of array facts_to_link
-    if var f1 and var f2 do
-        do link_facts with "order", var f1, var f2
+    do save_facts with array facts_to_save, '', var current_language, var path
+    do wait 2 seconds
     
-        set var f1 to var f2
-        set var f2 to shift with items of array facts_to_link
-    done
+    #set new var f1 to shift with items of array facts_to_link
+    #set new var f2 to shift with items of array facts_to_link
+    #if var f1 and var f2 do
+    #    do link_facts with "order", var f1, var f2
+    #
+    #    set var f1 to var f2
+    #    set var f2 to shift with items of array facts_to_link
+    #done
     
     set new var exit_file_name to '_exit'
     set new var exit_handle to handle for file name var exit_file_name, write

@@ -278,7 +278,11 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
         *sql = 0;
         strcat(sql, "SELECT `verb`, `subjects`, `objects`, `adverbs`, `questionword` FROM `clauses` WHERE `rel` = ");
         strcat(sql, argv[0]);
-        strcat(sql, ";");
+        strcat(sql, " UNION ALL SELECT `verb`, `subjects`, `objects`, `adverbs`, `questionword` FROM `facts` WHERE `pk` = (SELECT f2 FROM `linking` WHERE f1 = ");
+        strcat(sql, argv[0]);
+        strcat(sql, ");");
+        
+
         
         printf("%s\n", sql);
         
@@ -872,6 +876,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
         if (strstr(err, "unique")) {
             /// Fact is not unique - it already exists in the database
+            --(num_of_records[relation_to?1:0]);
+            FILE* target = fopen("_input_key", "w+b");
+            fclose(target);
             break;
         }
         printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);

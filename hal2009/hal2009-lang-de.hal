@@ -3167,6 +3167,12 @@ define action toggle_entities with array entities do
         else if   (var entity) matches /(^|\s)dein/ do
             do regex using var entity: /(^|\s)dein/, "${1}mein", :global:i
         done
+        else if lc(var entity) matches /(^)mein/ do
+            do regex using var entity: /(^)mein/, "${1}dein", :global:i
+        done
+        else if lc(var entity) matches /(^)dein/ do
+            do regex using var entity: /(^)dein/, "${1}mein", :global:i
+        done
         
         set from array entity_array first item to var entity
     done

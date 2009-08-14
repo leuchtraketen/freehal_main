@@ -173,224 +173,271 @@ int hal2009_add_pro_file (char* filename) {
     fprintf(output(), " _____________________________________________________________\n");
     fprintf(output(), "|                                                             |\n|");
     if ( input ) {
-        char* line;
+        char* wholeline;
         int k = 0;
         int line_number = 0;
-        while ((line = getline(input)) != NULL) {
+        while ((wholeline = getline(input)) != NULL) {
             ++line_number;
             
-            /// Make lower case
-            int i_size = strlen(line);
-            int ij;
-            for (ij = 0; ij < i_size; ++ij) {
-                line[ij] = (char)(tolower((int)(line[ij])));
-            }
-            
-            /// Compute the hash
-            int hash_clauses = 1;
-            int j;
-            ++k;
-            for (j = 0; j < strlen(line); ++j) {
-                hash_clauses += line[j] * (int)((double)(line[j])/3.0) * (j+1+(k%7));
-                hash_clauses += hash_clauses % strlen(line);
-                hash_clauses += hash_clauses % line[j];
-            }
-            hash_clauses /= strlen(line);
-            if (hash_clauses < 0)
-                hash_clauses = -hash_clauses;
-            
-            /// Add the fact
-            struct RECORD r;
-            r.truth = 1.0;
-            halstring sline;
-            sline.do_free = 1;
-            halstring* sline_ref = &sline;
-            sline.s = line;
-            sline_ref = replace(sline_ref, "nothing", " ");
-            sline_ref = replace(sline_ref, "nichts", "nothing");
-            line = sline_ref->s;
-            if (strstr(line, " kein")) {
-                sline_ref = replace(sline_ref, " kein", " ein");
-                r.truth = 0.0;
-            }
-            if (strstr(line, "nicht")) {
-                sline_ref = replace(sline_ref, "nicht", "");
-                r.truth = 0.0;
-            }
-            if (strstr(line, " not ")) {
-                sline_ref = replace(sline_ref, " not ", "");
-                r.truth = 0.0;
-            }
-            sline_ref = replace(sline_ref, "\"", "'");
-            sline_ref = replace(sline_ref, " <> ", "^");
-            sline_ref = replace(sline_ref, "<>", "^");
-            sline_ref = replace(sline_ref, " ^", "^");
-            sline_ref = replace(sline_ref, " ^", "^");
-            sline_ref = replace(sline_ref, " ^", "^");
-            sline_ref = replace(sline_ref, "^ ", "^");
-            sline_ref = replace(sline_ref, "^ ", "^");
-            sline_ref = replace(sline_ref, "^ ", "^");
-            sline_ref = replace(sline_ref, "^^", "^ ^");
-            sline_ref = replace(sline_ref, "^^", "^ ^");
-            sline_ref = replace(sline_ref, "^^", "^ ^");
-            line = sline_ref->s;
-            
-            char* buffer;
-            
-            strcpy(r.questionword, "");
-            
-            buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-            if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-            if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-            if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-            if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-            buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-            strcat(r.from, ":");
-            sprintf(r.from+strlen(r.from), "%d", line_number);
-            strcpy(r.extra, "");
-            
-            r.verb_flag_want    = 0;
-            r.verb_flag_must    = 0;
-            r.verb_flag_can     = 0;
-            r.verb_flag_may     = 0;
-            r.verb_flag_should  = 0;
-            
-            r.prio = 50;
-            
-            buffer = strtok(NULL, "^");
-            int i;
-            i = 0;
-            while (buffer && i+1 < MAX_CLAUSES) {
-                r.clauses[i] = 0;
-                ++i;
-            }
-            i = 0;
-            while (buffer && i+1 < MAX_CLAUSES) {
-                r.clauses[i] = malloc(sizeof(struct RECORD));
-                struct RECORD* sub_clause = r.clauses[i];
-                                            strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                strcat(sub_clause->from, ":");
-                sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
-                strcpy(r.extra, "");
-                
-                r.verb_flag_want    = 0;
-                r.verb_flag_must    = 0;
-                r.verb_flag_can     = 0;
-                r.verb_flag_may     = 0;
-                r.verb_flag_should  = 0;
+            int d;
+            int f;
+            int first_record_in_this_line = 1;
+            char* line = calloc(strlen(wholeline)+1, 1);
+            for (d = 0, f = 0; d <= strlen(wholeline); ++d, ++f) {
+                line[f] = wholeline[d];
+                if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
+                    f = -1;
+                    d += 2;
+                    line[f] = 0;
 
-
-                sub_clause->prio  = 50;
-                sub_clause->truth = 1.0;
-                
-                r.clauses[i] = sub_clause;
-                r.clauses[i+1] = NULL;
-                ++i;
-                buffer = strtok(NULL, "^");
-            }
-            r.clauses[i] = NULL;
-            
-            halfree(line);
-            
-            if (0 == strlen(r.verb)) {
-                continue;
-            }
-            if (0 == strlen(r.subjects)) {
-                strcpy(r.subjects, "");
-            }
-            if (0 == strlen(r.objects)) {
-                strcpy(r.objects, "");
-            }
-            if (0 == strlen(r.adverbs)) {
-                strcpy(r.adverbs, "");
-            }
-            r.hash_clauses = hash_clauses;
-
-            int err;
-            err = sql_add_record(&r);
-            if (strstr(r.subjects, "_")) {
-                // Modify hash
-                r.hash_clauses = hash_clauses-5;
-                
-                int size_subjects = strlen(r.subjects);
-                if (r.subjects[0] == '_') {
-                    char* subj_bak = strdup(r.subjects);
-                    strcpy(r.subjects, subj_bak+1);
-                    if (subj_bak) free(subj_bak);
-                }
-                
-                int j;
-                for (j = 0; j < LINE_SIZE-1; ++j) {
-                    if (r.subjects[j] == '_') {
-                        if (j > size_subjects-3) {
-                            r.subjects[j] = '\0';
-                        }
-                        else {
-                            r.subjects[j] = ' ';
+                    int last_pk;
+                    if (!first_record_in_this_line) {
+                        FILE* target = fopen("_input_key", "r");
+                        if (target) {
+                            fscanf(target, "%d", &last_pk);
+                            fclose(target);
                         }
                     }
-                }
                 
-                int size_objects = strlen(r.objects);
-                if (r.objects[0] == '_') {
-                    char* obj_bak = strdup(r.objects);
-                    strcpy(r.objects, obj_bak+1);
-                    if (obj_bak) free(obj_bak);
-                }
-                
-                for (j = 0; j < LINE_SIZE-1; ++j) {
-                    if (r.objects[j] == '_') {
-                        if (j > size_objects-3) {
-                            r.objects[j] = '\0';
+                    /// Make lower case
+                    int i_size = strlen(line);
+                    int ij;
+                    for (ij = 0; ij < i_size; ++ij) {
+                        line[ij] = (char)(tolower((int)(line[ij])));
+                    }
+                    
+                    /// Compute the hash
+                    int hash_clauses = 1;
+                    int j;
+                    ++k;
+                    for (j = 0; j < strlen(line); ++j) {
+                        hash_clauses += line[j] * (int)((double)(line[j])/3.0) * (j+1+(k%7));
+                        hash_clauses += hash_clauses % strlen(line);
+                        hash_clauses += hash_clauses % line[j];
+                    }
+                    hash_clauses /= strlen(line);
+                    if (hash_clauses < 0)
+                        hash_clauses = -hash_clauses;
+                    
+                    /// Add the fact
+                    struct RECORD r;
+                    r.truth = 1.0;
+                    halstring sline;
+                    sline.do_free = 1;
+                    halstring* sline_ref = &sline;
+                    sline.s = line;
+                    sline_ref = replace(sline_ref, "nothing", " ");
+                    sline_ref = replace(sline_ref, "nichts", "nothing");
+                    line = sline_ref->s;
+                    if (strstr(line, " kein")) {
+                        sline_ref = replace(sline_ref, " kein", " ein");
+                        r.truth = 0.0;
+                    }
+                    if (strstr(line, "nicht")) {
+                        sline_ref = replace(sline_ref, "nicht", "");
+                        r.truth = 0.0;
+                    }
+                    if (strstr(line, " not ")) {
+                        sline_ref = replace(sline_ref, " not ", "");
+                        r.truth = 0.0;
+                    }
+                    sline_ref = replace(sline_ref, "\"", "'");
+                    sline_ref = replace(sline_ref, " <> ", "^");
+                    sline_ref = replace(sline_ref, "<>", "^");
+                    sline_ref = replace(sline_ref, " ^", "^");
+                    sline_ref = replace(sline_ref, " ^", "^");
+                    sline_ref = replace(sline_ref, " ^", "^");
+                    sline_ref = replace(sline_ref, "^ ", "^");
+                    sline_ref = replace(sline_ref, "^ ", "^");
+                    sline_ref = replace(sline_ref, "^ ", "^");
+                    sline_ref = replace(sline_ref, "^^", "^ ^");
+                    sline_ref = replace(sline_ref, "^^", "^ ^");
+                    sline_ref = replace(sline_ref, "^^", "^ ^");
+                    line = sline_ref->s;
+                    
+                    char* buffer;
+                    
+                    strcpy(r.questionword, "");
+                    
+                    buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
+                    buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
+                    buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
+                    buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
+                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    strcat(r.from, ":");
+                    sprintf(r.from+strlen(r.from), "%d", line_number);
+                    strcpy(r.extra, "");
+                    
+                    r.verb_flag_want    = 0;
+                    r.verb_flag_must    = 0;
+                    r.verb_flag_can     = 0;
+                    r.verb_flag_may     = 0;
+                    r.verb_flag_should  = 0;
+                    
+                    r.prio = 50;
+                    
+                    buffer = strtok(NULL, "^");
+                    int i;
+                    i = 0;
+                    while (buffer && i+1 < MAX_CLAUSES) {
+                        r.clauses[i] = 0;
+                        ++i;
+                    }
+                    i = 0;
+                    while (buffer && i+1 < MAX_CLAUSES) {
+                        r.clauses[i] = malloc(sizeof(struct RECORD));
+                        struct RECORD* sub_clause = r.clauses[i];
+                                                    strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        strcat(sub_clause->from, ":");
+                        sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
+                        strcpy(r.extra, "");
+                        
+                        r.verb_flag_want    = 0;
+                        r.verb_flag_must    = 0;
+                        r.verb_flag_can     = 0;
+                        r.verb_flag_may     = 0;
+                        r.verb_flag_should  = 0;
+
+
+                        sub_clause->prio  = 50;
+                        sub_clause->truth = 1.0;
+                        
+                        r.clauses[i] = sub_clause;
+                        r.clauses[i+1] = NULL;
+                        ++i;
+                        buffer = strtok(NULL, "^");
+                    }
+                    r.clauses[i] = NULL;
+                    
+                    halfree(line);
+                    
+                    if (0 == strlen(r.verb)) {
+                        continue;
+                    }
+                    if (0 == strlen(r.subjects)) {
+                        strcpy(r.subjects, "");
+                    }
+                    if (0 == strlen(r.objects)) {
+                        strcpy(r.objects, "");
+                    }
+                    if (0 == strlen(r.adverbs)) {
+                        strcpy(r.adverbs, "");
+                    }
+                    r.hash_clauses = hash_clauses;
+
+                    int err;
+                    err = sql_add_record(&r);
+                    if (strstr(r.subjects, "_")) {
+                        // Modify hash
+                        r.hash_clauses = hash_clauses-5;
+                        
+                        int size_subjects = strlen(r.subjects);
+                        if (r.subjects[0] == '_') {
+                            char* subj_bak = strdup(r.subjects);
+                            strcpy(r.subjects, subj_bak+1);
+                            if (subj_bak) free(subj_bak);
                         }
-                        else {
-                            r.objects[j] = ' ';
+                        
+                        int j;
+                        for (j = 0; j < LINE_SIZE-1; ++j) {
+                            if (r.subjects[j] == '_') {
+                                if (j > size_subjects-3) {
+                                    r.subjects[j] = '\0';
+                                }
+                                else {
+                                    r.subjects[j] = ' ';
+                                }
+                            }
+                        }
+                        
+                        int size_objects = strlen(r.objects);
+                        if (r.objects[0] == '_') {
+                            char* obj_bak = strdup(r.objects);
+                            strcpy(r.objects, obj_bak+1);
+                            if (obj_bak) free(obj_bak);
+                        }
+                        
+                        for (j = 0; j < LINE_SIZE-1; ++j) {
+                            if (r.objects[j] == '_') {
+                                if (j > size_objects-3) {
+                                    r.objects[j] = '\0';
+                                }
+                                else {
+                                    r.objects[j] = ' ';
+                                }
+                            }
+                        }
+
+                        err = sql_add_record(&r);
+                    }
+                    
+                    int k = 0;
+                    while (i+1 < MAX_CLAUSES && r.clauses[k]) {
+                        halfree(r.clauses[k]);
+                        ++k;
+                    }
+                    
+                    if (err) {
+                        if (err == NO_CONNECTION) {
+                            fprintf(output(), "\n");
+                            fflush(stdout);
+                            sql_end();
+                            return err;
                         }
                     }
-                }
 
-                err = sql_add_record(&r);
-            }
-            
-            int k = 0;
-            while (i+1 < MAX_CLAUSES && r.clauses[k]) {
-                halfree(r.clauses[k]);
-                ++k;
-            }
-            
-            if (err) {
-                if (err == NO_CONNECTION) {
-                    fprintf(output(), "\n");
-                    fflush(stdout);
-                    sql_end();
-                    return err;
+                    ++position_in_insertions;
+                    if (position_in_insertions % 25 == 0) {
+                        fprintf(output(), ".");
+                        fflush(stdout);
+                    }
+                    if (position_in_insertions % 1500 == 0) {
+                        time_t now = 0;
+                        time(&now);
+                        if (now - start <= 2) {
+                            fprintf(output(), " | ---\n|");
+                        }
+                        else {
+                            long int facts_per_second = position_in_insertions / (now - start);
+                            fprintf(output(), " | %i facts per second (%li facts, %i seconds)\n|", facts_per_second, position_in_insertions, now - start);
+                        }
+                        fflush(stdout);
+                    }
+                    
+                    line = calloc(strlen(wholeline)+1, 1);
+                    
+//                    printf("last_pk: %d\n", last_pk);
+                    if (last_pk) {
+                        int current_pk;
+                        
+                        FILE* target = fopen("_input_key", "r");
+                        if (target) {
+                            fscanf(target, "%d", &current_pk);
+                            fclose(target);
+//                            printf("current_pk: %d\n", current_pk);
+                            
+                            hal2009_add_link("order", last_pk, current_pk);
+                        }
+                        else {
+//                            printf("could not open _input_key\n", last_pk);
+                        }
+                    }
+                    
+                    first_record_in_this_line = 0;
                 }
             }
 
-            ++position_in_insertions;
-            if (position_in_insertions % 25 == 0) {
-                fprintf(output(), ".");
-                fflush(stdout);
-            }
-            if (position_in_insertions % 1500 == 0) {
-                time_t now = 0;
-                time(&now);
-                if (now - start <= 2) {
-                    fprintf(output(), " | ---\n|");
-                }
-                else {
-                    long int facts_per_second = position_in_insertions / (now - start);
-                    fprintf(output(), " | %i facts per second (%li facts, %i seconds)\n|", facts_per_second, position_in_insertions, now - start);
-                }
-                fflush(stdout);
+            if (line) {
+                free(line);
             }
         }
     }
