@@ -227,7 +227,7 @@ int hal2009_add_pro_file (char* filename) {
                     halstring* sline_ref = &sline;
                     sline.s = line;
                     
-                    sline_ref = replace(sline_ref, "<>  <>  <>  <>  <>  <>  <> 50", "<> 50");
+                    sline_ref = replace(sline_ref, "<>  <>  <>  <>  <>  <>  <>  <> 50", "<> 50");
                     printf("%s", sline_ref->s);
 
                     sline_ref = replace(sline_ref, "nothing", " ");
