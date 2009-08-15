@@ -1734,6 +1734,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'nackt' => "adj",
           'leck' => "adj",
           'wenn' => "questionword",
+          'Arm' => "n",
           'arm' => "adj",
           'nachts' => "adj",
           'lang' => "adj",
@@ -2193,6 +2194,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'suchst' => "vt",
           'prall' => "adj",
           'unreifen' => "adj",
+          'gebaeren' => "vi",
+          'baeren' => "n",
+          'baer' => "n",
           'why' => "questionword",
           'siebte' => "adj",
           'mit' => "prep",
@@ -2588,6 +2592,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'gern' => "adj",
           'gehoert' => "vt",
           'f' => "n",
+          'reizen' => "vi",
           'unseren' => "art",
           'schenkte' => "vt",
           'sie' => "n",
@@ -2840,7 +2845,7 @@ define action compute_output with var output do
     set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
     
     for each new var prefix in array verb_prefixes do
-        if not from hash builtin_verb_prefixes_no_split item { var prefix } do
+        if from hash builtin_verb_prefixes_no_split item { var prefix } do
             go to next
         done
         if from hash builtin_auxiliary_verbs item { var prefix } do
@@ -2982,6 +2987,8 @@ define action compute_output with var output do
 
     do regex using var output: / von den /, " der ", :global:i
     do regex using var output: / von dem /, " des ", :global:i
+    
+    do regex using var output: / nicht noch /, " noch nicht ", :global:i
 
     do regex using var output: / in jahre_/, " im Jahre ", :global:i
     do regex using var output: / in_jahre_/, " im Jahre ", :global:i
@@ -3103,6 +3110,12 @@ define action toggle_verbs with array verbs, array entities do
         done
         else if var verb matches /trage$/ do
             do regex using var verb: /trage$/, "traegst", :global:i
+        done
+        else if var verb matches /nimmst$/ do
+            do regex using var verb: /nimmst$/, "nehme", :global:i
+        done
+        else if var verb matches /nehme$/ do
+            do regex using var verb: /nehme$/, "nimmst", :global:i
         done
         else if var verb matches /haeltst$/ do
             do regex using var verb: /haeltst$/, "halte", :global:i
