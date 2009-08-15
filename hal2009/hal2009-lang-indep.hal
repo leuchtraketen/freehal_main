@@ -156,6 +156,10 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /welchen\stag\shaben\swir<[?]>/, "wie ist Tag heute?", :global:i
     do regex using var input: / hab /, " habe ", :global:i
 
+    do regex using var input: /(^|\s)du hast (.*?) aus /, "$0du bekommst $1 aus ", :global:i
+    do regex using var input: /(^|\s)woher hast du /, "$0woher bekommst du ", :global:i
+    do regex using var input: /(^|\s)woher hast du /, "$0woher bekommst du ", :global:i
+    
     do regex using var input: / wehnig /, " wenig ", :global:i
     do regex using var input: /^wovon /, "was ", :global:i
     do regex using var input: / wovon /, " was ", :global:i
@@ -536,6 +540,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: /\seines\s/, " von einem ", :global:i
     do regex using var input: /\seiner\s/, " von einer ", :global:i
+    do regex using var input: /\s(aus|von|in|an)\svon\seine([rs])\s/, " $0 eine$1 ", :global:i
 
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sder\s([A-Z])/, "$0$1 von der $2", :global
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sdes\s([A-Z])/, "$0$1 von dem $2", :global

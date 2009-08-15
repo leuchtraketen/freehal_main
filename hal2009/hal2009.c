@@ -182,7 +182,7 @@ int hal2009_add_pro_file (char* filename) {
             int d;
             int f;
             int first_record_in_this_line = 1;
-            char* line = calloc(strlen(wholeline)+1, 1);
+            char* line = calloc(line_size + 100, 1);
             for (d = 0, f = 0; d <= strlen(wholeline); ++d, ++f) {
                 line[f] = wholeline[d];
                 if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
@@ -230,7 +230,7 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     line = sline_ref->s;
                     if (strstr(line, " kein")) {
-                        sline_ref = replace(sline_ref, " kein", " ein");
+                        sline_ref = replace(sline_ref, " kein", " nicht ein");
                         r.truth = 0.0;
                     }
                     if (strstr(line, "nicht")) {
@@ -253,13 +253,14 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
-                    line = sline_ref->s;
+                    char* line_dup = strdup(sline_ref->s);
+                    if (sline_ref->do_free) halfreef(sline_ref->s, "hal2009_add_pro_file");
                     
                     char* buffer;
                     
                     strcpy(r.questionword, "");
                     
-                    buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = strtok(line_dup, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
@@ -317,8 +318,6 @@ int hal2009_add_pro_file (char* filename) {
                         buffer = strtok(NULL, "^");
                     }
                     r.clauses[i] = NULL;
-                    
-                    halfree(line);
                     
                     if (0 == strlen(r.verb)) {
                         continue;
@@ -413,10 +412,10 @@ int hal2009_add_pro_file (char* filename) {
                         fflush(stdout);
                     }
                     
-                    line = calloc(strlen(wholeline)+1, 1);
+                    line = calloc(line_size + 100, 1);
                     
-                    printf("last_pk: %d\n", last_pk);
                     if (last_pk) {
+                        printf("last_pk: %d\n", last_pk);
                         int current_pk;
                         
                         FILE* target = fopen("_input_key", "r");
@@ -660,6 +659,67 @@ halstring* replace(halstring *src, const char *from, const char *to) {
                 memmove(dst, to, tolen);
                 src->s += fromlen;
                 dst += tolen;
+            }
+            else /* No match found. */
+            {
+                strcpy(dst, src->s);
+                break;
+            }
+        }
+    }
+    
+    /*
+    if ( src->do_free ) {
+        halfree(full_string_pointer);
+    }
+
+    src->s = value;
+    */
+    
+    strcpy(full_string_pointer, value);
+    src->s = full_string_pointer;
+    halfreef(value, "replace");
+    halfreef(string_to_free, "replace");
+    
+    return src;
+}
+
+/* a replace function */
+halstring* replace_once(halstring *src, const char *from, const char *to) {
+    char* full_string_pointer = src->s;
+    src->s = halmalloc(line_size + 100, "replace");
+    strcpy(src->s, full_string_pointer);
+    char* string_to_free = src->s;
+    
+    size_t size = strlen(src->s) + 1;
+    size_t fromlen = strlen(from);
+    size_t tolen = strlen(to);
+
+    char *value = halmalloc(size, "replace");
+
+    char *dst = value;
+
+    if ( value != NULL ) {
+        for ( ;; ) {
+            const char *match = strstr(src->s, from);
+            if ( match != NULL ) {
+                size_t count = match - src->s;
+                char *temp;
+                size += tolen - fromlen;
+                temp = realloc(value, size);
+                if ( temp == NULL ) {
+                    halfree(value);
+                    return NULL;
+                }
+                dst = temp + (dst - value);
+                value = temp;
+                memmove(dst, src->s, count);
+                src->s += count;
+                dst += count;
+                memmove(dst, to, tolen);
+                src->s += fromlen;
+                dst += tolen;
+                break;
             }
             else /* No match found. */
             {

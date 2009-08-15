@@ -2504,8 +2504,10 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
     set new var divisor to ' ~ '
     set new var line to join with var divisor, items of array line_array
     
-    print into var pro_file data lc(var line)
-    print into var pro_file data new line
+    if var line do
+        print into var pro_file data lc(var line)
+        print into var pro_file data new line
+    done
     
     do close with var pro_file
     

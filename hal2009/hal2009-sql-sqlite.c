@@ -1808,9 +1808,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
                 strcat(sql, "\n ( nmain.subjects GLOB \"");
                 strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.objects GLOB \"*");
+                strcat(sql, "\" OR nmain.objects GLOB \"* ");
                 strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.subjects GLOB \"*");
+                strcat(sql, "\" OR nmain.subjects GLOB \"* ");
                 strcat(sql, subjects_buffer);
                 strcat(sql, "\" ");
             }
@@ -1838,7 +1838,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 if (strstr(subject_synonyms[n], "*")) {
                     strcat(sql, "\n OR nmain.subjects GLOB \"");
                     strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.objects GLOB \"*");
+                    strcat(sql, "\" OR nmain.objects GLOB \"* ");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
                     strcat(sql, subject_synonyms[n]);
                     strcat(sql, "\" ");
                 }
@@ -1882,13 +1884,13 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql, "\" ");
 
         int n = 0;
-        while (subject_synonyms[n] && n < 20000) {
-            if (strlen(subject_synonyms[n])) {
+        while (object_synonyms[n] && n < 20000) {
+            if (strlen(object_synonyms[n])) {
                 strcat(sql, "\n OR nmain.objects GLOB \"");
-                strcat(sql, subject_synonyms[n]);
+                strcat(sql, object_synonyms[n]);
                 strcat(sql, "\" ");
                 strcat(sql, "OR nmain.objects GLOB \"* ");
-                strcat(sql, subject_synonyms[n]);
+                strcat(sql, object_synonyms[n]);
                 strcat(sql, "\" ");
             }
             ++n;

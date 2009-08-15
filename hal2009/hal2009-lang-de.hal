@@ -2531,6 +2531,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'eueren' => "art",
           'done' => "adj",
           'mein' => "art",
+          'wissen' => "n",
           'rechnen' => "vi",
           'kenn' => "vi",
           'kenne' => "vi",
@@ -3034,6 +3035,8 @@ define action compute_output with var output do
     do regex using var output: /\$\$year\$\$/, "var year", :global:i
     do regex using var output: /\$\$date\$\$/, "var mday.var mon.var year", :global:i
 
+    do regex using var output: /array\(.*?\)/, "", :global:i
+    
     do regex using var output: /nothing/, "nichts", :global:i
     do regex using var output: /NULL/, "", :global:i
     do regex using var output: /<[;]>/, " ", :global:i
