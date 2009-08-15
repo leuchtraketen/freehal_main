@@ -233,13 +233,22 @@ int hal2009_add_pro_file (char* filename) {
                         sline_ref = replace(sline_ref, " kein", " nicht ein");
                         r.truth = 0.0;
                     }
+                    double subclause_truth = 1.0;
                     if (strstr(line, "nicht")) {
-                        sline_ref = replace(sline_ref, "nicht", "");
+                        sline_ref = replace_once(sline_ref, "nicht", "");
                         r.truth = 0.0;
+                        if (strstr(line, "nicht")) {
+                            sline_ref = replace(sline_ref, "nicht", "");
+                            subclause_truth = 0.0;
+                        }
                     }
                     if (strstr(line, " not ")) {
-                        sline_ref = replace(sline_ref, " not ", "");
+                        sline_ref = replace_once(sline_ref, " not ", "");
                         r.truth = 0.0;
+                        if (strstr(line, " not ")) {
+                            sline_ref = replace(sline_ref, " not ", "");
+                            subclause_truth = 0.0;
+                        }
                     }
                     sline_ref = replace(sline_ref, "\"", "'");
                     sline_ref = replace(sline_ref, " <> ", "^");
@@ -310,7 +319,7 @@ int hal2009_add_pro_file (char* filename) {
 
 
                         sub_clause->prio  = 50;
-                        sub_clause->truth = 1.0;
+                        sub_clause->truth = subclause_truth;
                         
                         r.clauses[i] = sub_clause;
                         r.clauses[i+1] = NULL;
