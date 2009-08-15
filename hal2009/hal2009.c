@@ -214,9 +214,9 @@ int hal2009_add_pro_file (char* filename) {
             for (d = 0, f = 0; d <= strlen(wholeline); ++d, ++f) {
                 line[f] = wholeline[d];
                 if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
+                    line[f] = 0;
                     f = -1;
                     d += 2;
-                    line[f] = 0;
 
                     int last_pk;
                     if (!first_record_in_this_line) {
