@@ -182,14 +182,15 @@ int hal2009_add_pro_file (char* filename) {
             int d;
             int f;
             int first_record_in_this_line = 1;
-            char* line = calloc(line_size + 100, 1);
+            char* line = calloc(line_size + 100+1, 1);
+            
             for (d = 0, f = 0; d <= strlen(wholeline); ++d, ++f) {
                 line[f] = wholeline[d];
                 if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
                     f = -1;
                     d += 2;
                     line[f] = 0;
-                
+
                     int last_pk;
                     if (!first_record_in_this_line) {
                         FILE* target = fopen("_input_key", "r");
@@ -226,33 +227,22 @@ int hal2009_add_pro_file (char* filename) {
                     sline.do_free = 1;
                     halstring* sline_ref = &sline;
                     sline.s = line;
-                    
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     line = sline_ref->s;
                     if (strstr(line, " kein")) {
-                        sline_ref = replace(sline_ref, " kein", " nicht ein");
+                        sline_ref = replace(sline_ref, " kein", " ein");
                         r.truth = 0.0;
                     }
-                    double subclause_truth = 1.0;
                     if (strstr(line, "nicht")) {
-                        /*sline_ref = replace_once(sline_ref, "nicht", "");
+                        sline_ref = replace(sline_ref, "nicht", "");
                         r.truth = 0.0;
-                        if (strstr(line, "nicht")) {*/
-                            sline_ref = replace(sline_ref, "nicht", "");
-                            /*subclause_truth = 0.0;
-                        }*/
                     }
                     if (strstr(line, " not ")) {
-                        /*sline_ref = replace_once(sline_ref, " not ", "");
+                        sline_ref = replace(sline_ref, " not ", "");
                         r.truth = 0.0;
-                        if (strstr(line, " not ")) {*/
-                            sline_ref = replace(sline_ref, " not ", "");
-                            /*subclause_truth = 0.0;
-                        }*/
                     }
                     sline_ref = replace(sline_ref, "\"", "'");
-                    sline_ref = replace(sline_ref, " <> 50", "");
                     sline_ref = replace(sline_ref, " <> ", "^");
                     sline_ref = replace(sline_ref, "<>", "^");
                     sline_ref = replace(sline_ref, " ^", "^");
@@ -264,24 +254,21 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
-                    printf("%s", sline_ref->s);
-
-                    char* line_dup = strdup(sline_ref->s);
-                    if (sline_ref->do_free) halfreef(sline_ref->s, "hal2009_add_pro_file");
+                    line = sline_ref->s;
                     
                     char* buffer;
                     
                     strcpy(r.questionword, "");
                     
-                    buffer = strtok(line_dup, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
+                    buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
+                    buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
+                    buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
+                    buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
+                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     strcat(r.from, ":");
                     sprintf(r.from+strlen(r.from), "%d", line_number);
                     strcpy(r.extra, "");
@@ -302,9 +289,8 @@ int hal2009_add_pro_file (char* filename) {
                         ++i;
                     }
                     i = 0;
-                    r.num_clauses = 0;
                     while (buffer && i+1 < MAX_CLAUSES) {
-                        r.clauses[i] = calloc(sizeof(struct RECORD), 1);
+                        r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
@@ -316,32 +302,24 @@ int hal2009_add_pro_file (char* filename) {
                         sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
                         strcpy(r.extra, "");
                         
-                        sub_clause->verb_flag_want    = 0;
-                        sub_clause->verb_flag_must    = 0;
-                        sub_clause->verb_flag_can     = 0;
-                        sub_clause->verb_flag_may     = 0;
-                        sub_clause->verb_flag_should  = 0;
+                        r.verb_flag_want    = 0;
+                        r.verb_flag_must    = 0;
+                        r.verb_flag_can     = 0;
+                        r.verb_flag_may     = 0;
+                        r.verb_flag_should  = 0;
 
 
                         sub_clause->prio  = 50;
-                        sub_clause->truth = subclause_truth;
-
+                        sub_clause->truth = 1.0;
+                        
                         r.clauses[i] = sub_clause;
-
-                        if (!strlen(sub_clause->verb) && !strlen(sub_clause->subjects)) {
-                            free(r.clauses[i]);
-                            r.clauses[i] = NULL;
-                            r.clauses[i+1] = NULL;
-                            break;
-                        }
-                        
-                        ++(r.num_clauses);
-                        
                         r.clauses[i+1] = NULL;
                         ++i;
                         buffer = strtok(NULL, "^");
                     }
                     r.clauses[i] = NULL;
+                    
+                    halfree(line);
                     
                     if (0 == strlen(r.verb)) {
                         continue;
@@ -359,9 +337,7 @@ int hal2009_add_pro_file (char* filename) {
 
                     int err;
                     err = sql_add_record(&r);
-                    printf("(..38)\n");
                     if (strstr(r.subjects, "_")) {
-                    printf("(..39)\n");
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
                         
@@ -402,9 +378,7 @@ int hal2009_add_pro_file (char* filename) {
                             }
                         }
 
-                    printf("(..40)\n");
                         err = sql_add_record(&r);
-                    printf("(..41)\n");
                     }
                     
                     int k = 0;
@@ -440,7 +414,7 @@ int hal2009_add_pro_file (char* filename) {
                         fflush(stdout);
                     }
                     
-                    line = calloc(line_size + 100, 1);
+                    line = calloc(line_size + 100+1, 1);
                     
                     if (last_pk) {
                         printf("last_pk: %d\n", last_pk);
@@ -687,69 +661,6 @@ halstring* replace(halstring *src, const char *from, const char *to) {
                 memmove(dst, to, tolen);
                 src->s += fromlen;
                 dst += tolen;
-            }
-            else /* No match found. */
-            {
-                strcpy(dst, src->s);
-                break;
-            }
-        }
-    }
-    
-    /*
-    if ( src->do_free ) {
-        halfree(full_string_pointer);
-    }
-
-    src->s = value;
-    */
-    
-    strcpy(full_string_pointer, value);
-    src->s = full_string_pointer;
-    halfreef(value, "replace");
-    halfreef(string_to_free, "replace");
-    
-    return src;
-}
-
-/* a replace function */
-halstring* replace_once(halstring *src, const char *from, const char *to) {
-    char* full_string_pointer = src->s;
-    src->s = halmalloc(line_size + 100, "replace");
-    strcpy(src->s, full_string_pointer);
-    char* string_to_free = src->s;
-    
-    size_t size = strlen(src->s) + 1;
-    size_t fromlen = strlen(from);
-    size_t tolen = strlen(to);
-
-    char *value = halmalloc(size, "replace");
-
-    char *dst = value;
-
-    if ( value != NULL ) {
-        int only_one = 0;
-        for ( ;; ) {
-            const char *match = strstr(src->s, from);
-            if ( match != NULL && !only_one ) {
-                size_t count = match - src->s;
-                char *temp;
-                size += tolen - fromlen;
-                temp = realloc(value, size);
-                if ( temp == NULL ) {
-                    halfree(value);
-                    return NULL;
-                }
-                dst = temp + (dst - value);
-                value = temp;
-                memmove(dst, src->s, count);
-                src->s += count;
-                dst += count;
-                memmove(dst, to, tolen);
-                src->s += fromlen;
-                dst += tolen;
-                
-                only_one = 1;
             }
             else /* No match found. */
             {
