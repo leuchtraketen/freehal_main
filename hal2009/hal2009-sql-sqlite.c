@@ -695,6 +695,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     ++(num_of_records[relation_to?1:0]);
 
+    printf("sql_sqlite_add_record start\n");
     // 5120+sizeof(struct RECORD)
     char* sql = malloc(102400);
     *sql = 0;
