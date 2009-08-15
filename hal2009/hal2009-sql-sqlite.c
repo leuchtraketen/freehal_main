@@ -601,6 +601,7 @@ char* sql_sqlite_del_record(struct RECORD* r) {
 }
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
+    printf("sql_sqlite_add_record\n");
     if (0 == sqlite_connection) {
         printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
@@ -917,6 +918,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     sqlite3_free(err);
     free(sql);
+    printf("sql_sqlite_add_record end\n");
 }
 
 struct DATASET sql_sqlite_get_records(struct RECORD* r) {
