@@ -905,15 +905,23 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     
                 printf("(..25)\n");
     char* sqlite_filename_sql = calloc(9999, 1);
+                printf("(..26)\n");
     strcpy(sqlite_filename_sql, sqlite_filename);
+                printf("(..27)\n");
     strcat(sqlite_filename_sql, ".sql");
+                printf("(..28)\n");
     FILE* database_sql = fopen(sqlite_filename_sql, "a");
+                printf("(..29)\n");
     fprintf(database_sql, "%s", sql);
+                printf("(..30)\n");
     fclose(database_sql);
+                printf("(..31)\n");
     free(sqlite_filename_sql);
+                printf("(..32)\n");
 
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
+                printf("(..33)\n");
         if (strstr(err, "are not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
             /// Fact is not unique - it already exists in the database
             --(num_of_records[relation_to?1:0]);
@@ -936,9 +944,13 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         else {
             break;
         }
+                printf("(..34)\n");
     }
+                printf("(..35)\n");
     sqlite3_free(err);
+                printf("(..36)\n");
     free(sql);
+                printf("(..37)\n");
     printf("sql_sqlite_add_record end\n");
 }
 

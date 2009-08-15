@@ -315,11 +315,11 @@ int hal2009_add_pro_file (char* filename) {
                         sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
                         strcpy(r.extra, "");
                         
-                        r.verb_flag_want    = 0;
-                        r.verb_flag_must    = 0;
-                        r.verb_flag_can     = 0;
-                        r.verb_flag_may     = 0;
-                        r.verb_flag_should  = 0;
+                        sub_clause->verb_flag_want    = 0;
+                        sub_clause->verb_flag_must    = 0;
+                        sub_clause->verb_flag_can     = 0;
+                        sub_clause->verb_flag_may     = 0;
+                        sub_clause->verb_flag_should  = 0;
 
 
                         sub_clause->prio  = 50;
@@ -327,7 +327,7 @@ int hal2009_add_pro_file (char* filename) {
 
                         r.clauses[i] = sub_clause;
 
-                        if (!*sub_clause->verb && !*sub_clause->subjects) {
+                        if (!strlen(sub_clause->verb) && !strlen(sub_clause->subjects)) {
                             free(r.clauses[i]);
                             r.clauses[i] = NULL;
                             r.clauses[i+1] = NULL;
@@ -356,7 +356,9 @@ int hal2009_add_pro_file (char* filename) {
 
                     int err;
                     err = sql_add_record(&r);
+                    printf("(..38)\n");
                     if (strstr(r.subjects, "_")) {
+                    printf("(..39)\n");
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
                         
@@ -397,7 +399,9 @@ int hal2009_add_pro_file (char* filename) {
                             }
                         }
 
+                    printf("(..40)\n");
                         err = sql_add_record(&r);
+                    printf("(..41)\n");
                     }
                     
                     int k = 0;
