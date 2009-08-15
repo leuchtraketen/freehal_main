@@ -711,9 +711,10 @@ halstring* replace_once(halstring *src, const char *from, const char *to) {
     char *dst = value;
 
     if ( value != NULL ) {
+        int only_one = 0;
         for ( ;; ) {
             const char *match = strstr(src->s, from);
-            if ( match != NULL ) {
+            if ( match != NULL && !only_one ) {
                 size_t count = match - src->s;
                 char *temp;
                 size += tolen - fromlen;
@@ -730,7 +731,8 @@ halstring* replace_once(halstring *src, const char *from, const char *to) {
                 memmove(dst, to, tolen);
                 src->s += fromlen;
                 dst += tolen;
-                break;
+                
+                only_one = 1;
             }
             else /* No match found. */
             {
