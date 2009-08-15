@@ -601,7 +601,7 @@ char* sql_sqlite_del_record(struct RECORD* r) {
 }
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
-    printf("sql_sqlite_add_record: %s %s %s\n", r->verb, r->subjects, r->objects);
+    //printf("sql_sqlite_add_record: %s %s %s\n", r->verb, r->subjects, r->objects);
     if (0 == sqlite_connection) {
         printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
@@ -674,9 +674,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         halfree(override_verb);
     }
     
-    printf ("(.7)\n");
+    //printf ("(.7)\n");
     if (num_of_records[relation_to?1:0] == 0) {
-        printf ("(.8)\n");
+        //printf ("(.8)\n");
         char sql[5120];
         *sql = 0;
         strcat(sql, "SELECT pk from ");
@@ -689,7 +689,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         strcat(sql, " order by 1 desc limit 1;");
         printf(sql);
     
-        printf ("(.9)\n");
+        //printf ("(.9)\n");
         char key[99];
         char* err;
         if (sqlite3_exec(sqlite_connection, sql, select_primary_key, key, &err)) {
@@ -697,7 +697,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         }
         sqlite3_free(err);
         
-        printf ("(.10)\n");
+        //printf ("(.10)\n");
         if (key && key[0]) {
             num_of_records[relation_to?1:0] = atol(key);
         }
@@ -705,7 +705,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     ++(num_of_records[relation_to?1:0]);
 
-    printf("sql_sqlite_add_record start\n");
+    //printf("sql_sqlite_add_record start\n");
     // 5120+sizeof(struct RECORD)
     char* sql = malloc(102400);
     *sql = 0;
@@ -955,7 +955,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                 //printf("(..36)\n");
     free(sql);
                 //printf("(..37)\n");
-    printf("sql_sqlite_add_record end\n");
+    //printf("sql_sqlite_add_record end\n");
     
     return 0;
 }
