@@ -189,6 +189,8 @@ int hal2009_add_pro_file (char* filename) {
                     f = -1;
                     d += 2;
                     line[f] = 0;
+                
+                    printf("%s", line);
 
                     int last_pk;
                     if (!first_record_in_this_line) {
