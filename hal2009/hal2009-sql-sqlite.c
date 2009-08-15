@@ -601,7 +601,7 @@ char* sql_sqlite_del_record(struct RECORD* r) {
 }
 
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
-    printf("sql_sqlite_add_record: %d %d %d\n", r->verb, r->subjects, r->objects);
+    printf("sql_sqlite_add_record: %s %s %s\n", r->verb, r->subjects, r->objects);
     if (0 == sqlite_connection) {
         printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
         if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
@@ -626,7 +626,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     if ( *r->verb && (*r->verb >= 'z' || *r->verb <= 'a') ) {
         return INVALID;
     }
-    if ( (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
+    if ( r->subjects && *r->subjects && (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
         return INVALID;
     }
     
