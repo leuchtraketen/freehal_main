@@ -137,6 +137,7 @@ struct RECORD {
     char pkey[LINE_SIZE];
     int prio;
     void* clauses[MAX_CLAUSES];
+    int num_clauses;
     short type;
     int hash_clauses;
     double truth;
