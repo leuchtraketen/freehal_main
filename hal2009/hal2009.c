@@ -227,8 +227,6 @@ int hal2009_add_pro_file (char* filename) {
                     halstring* sline_ref = &sline;
                     sline.s = line;
                     
-                    printf("%s", sline_ref->s);
-
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     line = sline_ref->s;
@@ -265,6 +263,8 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
+                    printf("%s", sline_ref->s);
+
                     char* line_dup = strdup(sline_ref->s);
                     if (sline_ref->do_free) halfreef(sline_ref->s, "hal2009_add_pro_file");
                     
