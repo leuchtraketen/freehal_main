@@ -303,7 +303,7 @@ int hal2009_add_pro_file (char* filename) {
                     }
                     i = 0;
                     while (buffer && i+1 < MAX_CLAUSES) {
-                        r.clauses[i] = malloc(sizeof(struct RECORD));
+                        r.clauses[i] = calloc(sizeof(struct RECORD), 1);
                         struct RECORD* sub_clause = r.clauses[i];
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
@@ -330,6 +330,7 @@ int hal2009_add_pro_file (char* filename) {
                         if (!*sub_clause->verb && !*sub_clause->subjects) {
                             free(r.clauses[i]);
                             r.clauses[i] = NULL;
+                            r.clauses[i+1] = NULL;
                             break;
                         }
                         
