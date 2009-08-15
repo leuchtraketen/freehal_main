@@ -890,6 +890,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                 printf("(..19)\n");
                 if (sql_sqlite_add_record(r->clauses[n], key)) {
                     printf("break\n");
+                    r->clauses[n] = 0;
                     break;
                 }
                 printf("(..20)\n");
