@@ -1791,4 +1791,5 @@ ist <> die rouchade <> ein zug turm <> mit koenig & <> 50
 ist <> geometrie <> ein unterrichtsgegenstand <>  <> 50
 ist <> sauerstoff <> ein gas <>  <> 50
 ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <>  <> 50
-ist <> kupfer <> ein guter elektrischer leiter <>  <> 50
+ist <> kupfer <> ein guter elektrischer leiter <>  <> 50ist <> eine maschine <> ein technisches hilfsmittel <>  <> 50
+ist <> eine maschine <> ein technisches arbeitsmittel <>  <> 50
