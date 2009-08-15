@@ -273,15 +273,15 @@ int hal2009_add_pro_file (char* filename) {
                     
                     strcpy(r.questionword, "");
                     
-                    buffer = strtok(line_dup, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = strtok(line_dup, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
-                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"");
                     strcat(r.from, ":");
                     sprintf(r.from+strlen(r.from), "%d", line_number);
                     strcpy(r.extra, "");

@@ -619,7 +619,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         printf ("(2)\n");
         return INVALID;
     }
-    if ( !r->verb || !*r->verb ) {
+    if ( !(r->verb) || !(*r->verb) ) {
         printf ("(3)\n");
         return INVALID;
     }
@@ -887,16 +887,23 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         if (r->clauses && r->clauses[0] && !relation_to) {
             int n;
             for (n = 0; n+1 < MAX_CLAUSES && r->clauses && r->clauses[n] && r->clauses[n]; ++n) {
+                printf("(..19)\n");
                 sql_sqlite_add_record(r->clauses[n], key);
+                printf("(..20)\n");
                 free(r->clauses[n]);
+                printf("(..21)\n");
                 r->clauses[n] = 0;
+                printf("(..22)\n");
             }
+                printf("(..23)\n");
             if (r->clauses[n]) free(r->clauses[n]);
+                printf("(..24)\n");
             r->clauses[n] = 0;
         }
     }
     
     
+                printf("(..25)\n");
     char* sqlite_filename_sql = calloc(9999, 1);
     strcpy(sqlite_filename_sql, sqlite_filename);
     strcat(sqlite_filename_sql, ".sql");
