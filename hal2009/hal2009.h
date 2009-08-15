@@ -196,8 +196,7 @@ extern "C" {
     const char* hal2009_make_csv(struct DATASET* set);
     void* hal2009_answer_thread(void* parameters);
     int hal2009_execute_file(char* file, char* planguage);
-    int sql_sqlite_set_filename(cons# Code Repositories
-# Bug Tracker t char* filename);
+    int sql_sqlite_set_filename(const char* filename);
     void* halfilecalloc( long s, long si, char* f );
     void* halfilefree( void* s );
     int sql_begin();
