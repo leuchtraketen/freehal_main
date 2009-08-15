@@ -619,6 +619,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     if ( *r->verb == ' ' && !relation_to ) {
         return INVALID;
     }
+    if ( *r->verb >= 'z' || *r->verb <= 'a' ) {
+        return INVALID;
+    }
     if ( (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
         return INVALID;
     }
@@ -934,11 +937,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
 
     // Fetch subject before the other parameters because of the SQL join statement
-    char* extras_buffer = 0;
+    char* extras_buffer = r->extra;
     char* subjects_buffer = 0;
     if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
         subjects_buffer = r->subjects;
-        extras_buffer    = r->extra;
+        extras_buffer   = r->extra;
     }
     else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how")) {
         subjects_buffer = r->extra;
@@ -1185,6 +1188,16 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, " \"_");
             if (buf) strcat(sql, buf);
             strcat(sql, "_\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
+            strcat(sql, " UNION ALL ");
+            strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
+            strcat(sql, "GLOB");
+            strcat(sql, " \"* ");
+            if (buf) strcat(sql, buf);
+            strcat(sql, "\" OR objects ");
+            strcat(sql, "GLOB");
+            strcat(sql, " \"");
+            if (buf) strcat(sql, buf);
+            strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
             
             if (bbuf) free(bbuf);
             
