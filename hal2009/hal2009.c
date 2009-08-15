@@ -239,20 +239,20 @@ int hal2009_add_pro_file (char* filename) {
                     }
                     double subclause_truth = 1.0;
                     if (strstr(line, "nicht")) {
-                        sline_ref = replace_once(sline_ref, "nicht", "");
+                        /*sline_ref = replace_once(sline_ref, "nicht", "");
                         r.truth = 0.0;
-                        if (strstr(line, "nicht")) {
+                        if (strstr(line, "nicht")) {*/
                             sline_ref = replace(sline_ref, "nicht", "");
-                            subclause_truth = 0.0;
-                        }
+                            /*subclause_truth = 0.0;
+                        }*/
                     }
                     if (strstr(line, " not ")) {
-                        sline_ref = replace_once(sline_ref, " not ", "");
+                        /*sline_ref = replace_once(sline_ref, " not ", "");
                         r.truth = 0.0;
-                        if (strstr(line, " not ")) {
+                        if (strstr(line, " not ")) {*/
                             sline_ref = replace(sline_ref, " not ", "");
-                            subclause_truth = 0.0;
-                        }
+                            /*subclause_truth = 0.0;
+                        }*/
                     }
                     sline_ref = replace(sline_ref, "\"", "'");
                     sline_ref = replace(sline_ref, " <> ", "^");
