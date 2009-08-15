@@ -627,10 +627,10 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         printf ("(4)\n");
         return INVALID;
     }
-    if ( *r->verb && (*r->verb >= 'z' || *r->verb <= 'a') ) {
+    /*if ( *r->verb && (*r->verb >= 'z' || *r->verb <= 'a') ) {
         printf ("(5)\n");
         return INVALID;
-    }
+    }*/
     if ( r->subjects && *r->subjects && (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
         printf ("(6)\n");
         return INVALID;
