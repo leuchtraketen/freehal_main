@@ -324,14 +324,15 @@ int hal2009_add_pro_file (char* filename) {
 
                         sub_clause->prio  = 50;
                         sub_clause->truth = subclause_truth;
-                        
-                        if (!*sub_clause->verb && !*sub_clause->subjects && !*sub_clause->objects) {
+
+                        r.clauses[i] = sub_clause;
+
+                        if (!*sub_clause->verb && !*sub_clause->subjects) {
                             free(r.clauses[i]);
                             r.clauses[i] = NULL;
                             break;
                         }
                         
-                        r.clauses[i] = sub_clause;
                         r.clauses[i+1] = NULL;
                         ++i;
                         buffer = strtok(NULL, "^");
