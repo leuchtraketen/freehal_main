@@ -249,7 +249,7 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
         sqlite_current_data->data = calloc(99999, 1);
     }
     
-    sqlite_current_data->column_count = argc - 1 + 4*(MAX_CLAUSES - 1);
+    sqlite_current_data->column_count = argc - 1 + 5*(MAX_CLAUSES - 1);
     
     int i;
     char** record = calloc(sizeof(char**)*(argc+2)*MAX_CLAUSES+1, 1);
@@ -281,10 +281,10 @@ static int callback(void* arg, int argc, char **argv, char **azColName) {
     if (there_are_sub_clauses) {
         char* sql = malloc(5120);
         *sql = 0;
-        strcat(sql, "SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword` FROM `clauses` ");
+        strcat(sql, "SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword`, `truth` FROM `clauses` ");
         strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = pk WHERE `rel` = ");
         strcat(sql, argv[0]);
-        strcat(sql, " UNION ALL SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword` FROM `facts` ");
+        strcat(sql, " UNION ALL SELECT `verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `subjects`, `objects`, `adverbs`, `questionword`, `truth` FROM `facts` ");
         strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = pk ");
         strcat(sql, " WHERE `pk` = (SELECT f2 FROM `linking` WHERE f1 = ");
         strcat(sql, argv[0]);
@@ -887,45 +887,45 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         if (r->clauses && r->clauses[0] && !relation_to) {
             int n;
             for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n] && ((struct RECORD*)(r->clauses[n]))->verb && ((struct RECORD*)(r->clauses[n]))->subjects && (*(((struct RECORD*)(r->clauses[n]))->verb) || *(((struct RECORD*)(r->clauses[n]))->subjects)); ++n) {
-                printf("(..19)\n");
+                //printf("(..19)\n");
                 if (sql_sqlite_add_record(r->clauses[n], key)) {
                     printf("break\n");
                     r->clauses[n] = 0;
                     break;
                 }
-                printf("(..20)\n");
+                //printf("(..20)\n");
                 free(r->clauses[n]);
-                printf("(..21)\n");
+                //printf("(..21)\n");
                 r->clauses[n] = 0;
-                printf("(..22)\n");
+                //printf("(..22)\n");
             }
-                printf("(..23)\n");
+                //printf("(..23)\n");
             if (r->clauses[n]) free(r->clauses[n]);
-                printf("(..24)\n");
+                //printf("(..24)\n");
             r->clauses[n] = 0;
         }
     }
     
     
-                printf("(..25)\n");
+                //printf("(..25)\n");
     char* sqlite_filename_sql = calloc(9999, 1);
-                printf("(..26)\n");
+                //printf("(..26)\n");
     strcpy(sqlite_filename_sql, sqlite_filename);
-                printf("(..27)\n");
+                //printf("(..27)\n");
     strcat(sqlite_filename_sql, ".sql");
-                printf("(..28)\n");
+                //printf("(..28)\n");
     FILE* database_sql = fopen(sqlite_filename_sql, "a");
-                printf("(..29)\n");
+                //printf("(..29)\n");
     fprintf(database_sql, "%s", sql);
-                printf("(..30)\n");
+                //printf("(..30)\n");
     fclose(database_sql);
-                printf("(..31)\n");
+                //printf("(..31)\n");
     free(sqlite_filename_sql);
-                printf("(..32)\n");
+                //printf("(..32)\n");
 
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
-                printf("(..33)\n");
+                //printf("(..33)\n");
         if (strstr(err, "are not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
             /// Fact is not unique - it already exists in the database
             --(num_of_records[relation_to?1:0]);
@@ -948,13 +948,13 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         else {
             break;
         }
-                printf("(..34)\n");
+                //printf("(..34)\n");
     }
-                printf("(..35)\n");
+                //printf("(..35)\n");
     sqlite3_free(err);
-                printf("(..36)\n");
+                //printf("(..36)\n");
     free(sql);
-                printf("(..37)\n");
+                //printf("(..37)\n");
     printf("sql_sqlite_add_record end\n");
     
     return 0;

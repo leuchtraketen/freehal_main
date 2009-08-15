@@ -163,6 +163,33 @@ int fact_delete_from_source (const char* source) {
     return 0;
 }
 
+int remove_negation (char* line, double* truth_ref) {
+    halstring sline;
+    sline.do_free = 0;
+    halstring* sline_ref = &sline;
+    char l[4196];
+    sline.s = l;
+    strncpy(l, line, 4196);
+    
+    if (strstr(line, "kein")) {
+        sline_ref = replace(sline_ref, "kein", "ein");
+        (*truth_ref) = 0.0;
+    }
+    if (strstr(line, "nicht")) {
+        sline_ref = replace(sline_ref, "nicht", "");
+        (*truth_ref) = 0.0;
+    }
+    if (strstr(line, " not ")) {
+        sline_ref = replace(sline_ref, " not ", "");
+        (*truth_ref) = 0.0;
+    }
+    
+    strncpy(line, sline_ref->s, 4196);
+    if (line[0] == ' ') {
+        strcpy(line, line+1);
+    }
+}
+
 int hal2009_add_pro_file (char* filename) {
     fprintf(output(), "Add .pro file %s.\n", filename);
     sql_begin();
@@ -230,18 +257,7 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     line = sline_ref->s;
-                    if (strstr(line, " kein")) {
-                        sline_ref = replace(sline_ref, " kein", " ein");
-                        r.truth = 0.0;
-                    }
-                    if (strstr(line, "nicht")) {
-                        sline_ref = replace(sline_ref, "nicht", "");
-                        r.truth = 0.0;
-                    }
-                    if (strstr(line, " not ")) {
-                        sline_ref = replace(sline_ref, " not ", "");
-                        r.truth = 0.0;
-                    }
+
                     sline_ref = replace(sline_ref, "\"", "'");
                     sline_ref = replace(sline_ref, " <> ", "^");
                     sline_ref = replace(sline_ref, "<>", "^");
@@ -261,12 +277,16 @@ int hal2009_add_pro_file (char* filename) {
                     strcpy(r.questionword, "");
                     
                     buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    remove_negation(r.verb, &(r.truth));
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    remove_negation(r.subjects, &(r.truth));
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    remove_negation(r.objects, &(r.truth));
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    remove_negation(r.adverbs, &(r.truth));
                     if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     strcat(r.from, ":");
@@ -292,10 +312,16 @@ int hal2009_add_pro_file (char* filename) {
                     while (buffer && i+1 < MAX_CLAUSES) {
                         r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
+                        sub_clause->truth = 1.0;
+
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        remove_negation(sub_clause->verb, &(sub_clause->truth));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        remove_negation(sub_clause->subjects, &(sub_clause->truth));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        remove_negation(sub_clause->objects, &(sub_clause->truth));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        remove_negation(sub_clause->adverbs, &(sub_clause->truth));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         strcat(sub_clause->from, ":");
@@ -310,7 +336,6 @@ int hal2009_add_pro_file (char* filename) {
 
 
                         sub_clause->prio  = 50;
-                        sub_clause->truth = 1.0;
                         
                         r.clauses[i] = sub_clause;
                         r.clauses[i+1] = NULL;

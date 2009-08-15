@@ -3198,16 +3198,16 @@ define action toggle_entities with array entities do
     do return with array entities
 done
 
-define action adjust_truth with array result, var truth, var number_of_clause do
+define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
     if var truth < 0.5 do
-        if from array result item [ var number_of_clause ] item [ 2 ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 ]: /^ein/, "kein", :global:i
+        if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein/, "kein", :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 ]: /^ein/, "kein", :global:i
+        else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /^ein/ do
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein/, "kein", :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3 ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 ]
+            set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
         done
     done
 done

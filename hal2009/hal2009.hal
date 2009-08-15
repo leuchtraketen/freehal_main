@@ -1777,7 +1777,7 @@ define action logic with var input, var lang, var path, hash parsed do
         # Truth goes from 1.0 to 0.0.
         # CODE
         
-        do adjust_truth with array result, from array rawresult item [ var i ], var number_of_clause
+        do adjust_truth with array result, from array rawresult item [ var i ], var number_of_clause, 0
         set var i to var i + 1
         
         # TEXT
@@ -1789,12 +1789,14 @@ define action logic with var input, var lang, var path, hash parsed do
         set var number_of_clause to var number_of_clause + 1
         set var i to 0
         while var i < 10 do
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 0 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 1 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 2 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 3 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 4 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 5) + var offs + 5 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 0 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 1 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 2 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 3 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 4 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 5 ]
+            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 6 ]
+            do adjust_truth with array result, from array rawresult item [ var offs - 1 ], var number_of_clause, var i
             set var i to var i + 1
             push into array result, an empty array
             set var number_of_clause to var number_of_clause + 1
