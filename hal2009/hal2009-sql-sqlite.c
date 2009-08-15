@@ -612,21 +612,27 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     
     if (!r) {
+        printf ("(1)\n");
         return INVALID;
     }
     if ((0 == r->subjects || 0 == *(r->subjects) || 0 == strcmp(r->subjects, "nothing")) || (0 == r->objects)) {
+        printf ("(2)\n");
         return INVALID;
     }
     if ( !r->verb || !*r->verb ) {
+        printf ("(3)\n");
         return INVALID;
     }
     if ( *r->verb && *r->verb == ' ' && !relation_to ) {
+        printf ("(4)\n");
         return INVALID;
     }
     if ( *r->verb && (*r->verb >= 'z' || *r->verb <= 'a') ) {
+        printf ("(5)\n");
         return INVALID;
     }
     if ( r->subjects && *r->subjects && (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
+        printf ("(6)\n");
         return INVALID;
     }
     
@@ -668,7 +674,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         halfree(override_verb);
     }
     
+    printf ("(.7)\n");
     if (num_of_records[relation_to?1:0] == 0) {
+        printf ("(.8)\n");
         char sql[5120];
         *sql = 0;
         strcat(sql, "SELECT pk from ");
@@ -681,6 +689,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         strcat(sql, " order by 1 desc limit 1;");
         printf(sql);
     
+        printf ("(.9)\n");
         char key[99];
         char* err;
         if (sqlite3_exec(sqlite_connection, sql, select_primary_key, key, &err)) {
@@ -688,6 +697,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         }
         sqlite3_free(err);
         
+        printf ("(.10)\n");
         if (key && key[0]) {
             num_of_records[relation_to?1:0] = atol(key);
         }
