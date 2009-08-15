@@ -190,8 +190,6 @@ int hal2009_add_pro_file (char* filename) {
                     d += 2;
                     line[f] = 0;
                 
-                    printf("%s", line);
-
                     int last_pk;
                     if (!first_record_in_this_line) {
                         FILE* target = fopen("_input_key", "r");
@@ -228,6 +226,10 @@ int hal2009_add_pro_file (char* filename) {
                     sline.do_free = 1;
                     halstring* sline_ref = &sline;
                     sline.s = line;
+                    
+                    sline_ref = replace(sline_ref, "<>  <>  <>  <>  <>  <>  <> 50", "<> 50");
+                    printf("%s", sline_ref->s);
+
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     line = sline_ref->s;
