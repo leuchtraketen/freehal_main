@@ -309,6 +309,7 @@ int hal2009_add_pro_file (char* filename) {
                         ++i;
                     }
                     i = 0;
+                    sub_clause->num_clauses = 0;
                     while (buffer && i+1 < MAX_CLAUSES) {
                         r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
@@ -339,6 +340,7 @@ int hal2009_add_pro_file (char* filename) {
                         
                         r.clauses[i] = sub_clause;
                         r.clauses[i+1] = NULL;
+                        ++(sub_clause->num_clauses);
                         ++i;
                         buffer = strtok(NULL, "^");
                     }
