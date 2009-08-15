@@ -3025,7 +3025,7 @@ define action decide with array output, var input, flag all_output_phrases, var 
             print var score
             print new line
             set new var k to 0
-            while var k < var score do
+            while var k < var score + 1 do
                 push into array rel_output, array _item
                 set var k to var k + 1
             done

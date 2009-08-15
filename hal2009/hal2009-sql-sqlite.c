@@ -1810,6 +1810,8 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, subjects_buffer);
                 strcat(sql, "\" OR nmain.objects GLOB \"*");
                 strcat(sql, subjects_buffer);
+                strcat(sql, "\" OR nmain.subjects GLOB \"*");
+                strcat(sql, subjects_buffer);
                 strcat(sql, "\" ");
             }
             else {
