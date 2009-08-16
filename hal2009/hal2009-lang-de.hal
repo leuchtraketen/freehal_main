@@ -2855,6 +2855,9 @@ define action compute_output with var output do
         if from hash builtin_auxiliary_verbs item { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs item { var prefix } do
             go to next
         done
+        if var output matches /kann|soll|muss|muess|darf/ do
+            go to next
+        done
         
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/, " $1 $2 $0 ", :global
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)$/, " $1 $2 $0", :global
@@ -3225,14 +3228,16 @@ define action stem_nouns with array phrases do
             # Delete articles...
             # CODE
 
-            if var noun matches /^ein.?.?$/ do
-                do regex using var noun: /^ein.?.?$/, "*", :global:i
-            done
-            if var noun matches /ein.?.?$/ do
-                do regex using var noun: /ein.?.?$/, "ei*", :global:i
-            done
-            if var noun matches /ein$/ do
-                do regex using var noun: /ein$/, "*", :global:i
+            if not var noun matches /....../ do
+                if var noun matches /^ein.?.?$/ do
+                    do regex using var noun: /^ein.?.?$/, "*", :global:i
+                done
+                if var noun matches /ein.?.?$/ do
+                    do regex using var noun: /ein.?.?$/, "ei*", :global:i
+                done
+                if var noun matches /ein$/ do
+                    do regex using var noun: /ein$/, "*", :global:i
+                done
             done
             if var noun matches /^(der|die|das|den|dem|des)$/ and not items of array words is 1 do
                 #do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
@@ -3248,6 +3253,10 @@ define action stem_nouns with array phrases do
             # That's the stemming algorithm
             # CODE
             if var noun matches /((ein)|(ie.)|(tes))$/ do
+                go to next
+            done
+            
+            if var noun matches /ei.$/ do
                 go to next
             done
             
@@ -3296,6 +3305,7 @@ define action stem_nouns with array phrases do
         do regex using var phrase: /<[*]>\s/, "*", :global
         do regex using var phrase: /\s<[*]>/, "*", :global
         do regex using var phrase: /^\s+/, "", :global
+        do regex using var phrase: /\s+$/, "", :global
     done
     
     return array phrases
