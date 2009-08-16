@@ -188,6 +188,8 @@ int remove_negation (char* line, double* truth_ref) {
     if (line[0] == ' ') {
         strcpy(line, line+1);
     }
+    
+    if (sline_ref->do_free) halfree(sline_ref->s);
 }
 
 int hal2009_add_pro_file (char* filename) {
@@ -226,7 +228,7 @@ int hal2009_add_pro_file (char* filename) {
                             fclose(target);
                         }
                     }
-                
+                    
                     /// Make lower case
                     int i_size = strlen(line);
                     int ij;
@@ -256,8 +258,6 @@ int hal2009_add_pro_file (char* filename) {
                     sline.s = line;
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
-                    line = sline_ref->s;
-
                     sline_ref = replace(sline_ref, "\"", "'");
                     sline_ref = replace(sline_ref, " <> ", "^");
                     sline_ref = replace(sline_ref, "<>", "^");
@@ -364,6 +364,9 @@ int hal2009_add_pro_file (char* filename) {
 
                     int err;
                     err = sql_add_record(&r);
+                    if (err) {
+                        printf("Error: %s\n", wholeline);
+                    }
                     if (strstr(r.subjects, "_")) {
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
@@ -409,7 +412,7 @@ int hal2009_add_pro_file (char* filename) {
                     }
                     
                     int k = 0;
-                    while (i+1 < MAX_CLAUSES && r.clauses[k]) {
+                    while (k+1 < MAX_CLAUSES && r.clauses[k]) {
                         halfree(r.clauses[k]);
                         ++k;
                     }
@@ -440,7 +443,8 @@ int hal2009_add_pro_file (char* filename) {
                         }
                         fflush(stdout);
                     }
-                    
+
+                    halfree(line);
                     line = calloc(line_size + 100+1, 1);
                     
                     if (last_pk) {
@@ -462,11 +466,17 @@ int hal2009_add_pro_file (char* filename) {
                     
                     first_record_in_this_line = 0;
                 }
+                
+            }
+            
+            if (first_record_in_this_line) {
+                printf ("Error in line: %s\n%s\n", wholeline, "No database entry made.");
             }
 
             if (line) {
                 free(line);
             }
+            free(wholeline);
         }
     }
     

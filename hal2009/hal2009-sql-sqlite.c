@@ -796,6 +796,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     sqlite3_free(err);
 */
+    
     {
         char* key = num_of_records_str;
 
@@ -879,25 +880,18 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         if (r->clauses && r->clauses[0] && !relation_to) {
             int n;
             for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n] && ((struct RECORD*)(r->clauses[n]))->verb && ((struct RECORD*)(r->clauses[n]))->subjects && (*(((struct RECORD*)(r->clauses[n]))->verb) || *(((struct RECORD*)(r->clauses[n]))->subjects)); ++n) {
-                //printf("(..19)\n");
-                if (sql_sqlite_add_record(r->clauses[n], key)) {
+                if (0 && sql_sqlite_add_record(r->clauses[n], key)) {
                     printf("break\n");
                     r->clauses[n] = 0;
                     break;
                 }
-                //printf("(..20)\n");
-                free(r->clauses[n]);
-                //printf("(..21)\n");
-                r->clauses[n] = 0;
-                //printf("(..22)\n");
+                //free(r->clauses[n]);
+                //r->clauses[n] = 0;
             }
-                //printf("(..23)\n");
-            if (r->clauses[n]) free(r->clauses[n]);
-                //printf("(..24)\n");
-            r->clauses[n] = 0;
+            //if (r->clauses[n]) free(r->clauses[n]);
+            //r->clauses[n] = 0;
         }
     }
-    
     
                 //printf("(..25)\n");
     char* sqlite_filename_sql = calloc(9999, 1);
