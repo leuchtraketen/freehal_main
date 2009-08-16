@@ -612,15 +612,19 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     }
     
     if (!r) {
+        printf ("!(1)");
         return INVALID;
     }
-    if ((0 == r->subjects || 0 == *(r->subjects) || 0 == strcmp(r->subjects, "nothing")) || (0 == r->objects)) {
+    /*if ((0 == r->subjects || 0 == *(r->subjects) || 0 == strcmp(r->subjects, "nothing")) || (0 == r->objects)) {
+        printf ("!(2)");
         return INVALID;
-    }
+    }*/
     if ( *r->verb == ' ' && !relation_to ) {
+        printf ("!(3)");
         return INVALID;
     }
     if ( (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
+        printf ("!(4)");
         return INVALID;
     }
     

@@ -1470,6 +1470,10 @@ set multi-line new global hash builtin_verb_prefixes_no_split to {
           'aus' => 1,
 };
 
+set multi-line new global hash builtin_verb_prefixes_with_auxiliary_verbs to {
+          'an' => 1, # anhaben
+};
+
 set multi-line new global hash builtin_auxiliary_verbs to {
           'bin' => 1,
           'bist' => 1,
@@ -2848,11 +2852,12 @@ define action compute_output with var output do
         if from hash builtin_verb_prefixes_no_split item { var prefix } do
             go to next
         done
-        if from hash builtin_auxiliary_verbs item { var prefix } do
+        if from hash builtin_auxiliary_verbs item { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs item { var prefix } do
             go to next
         done
         
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/, " $1 $2 $0 ", :global
+        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)$/, " $1 $2 $0", :global
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)$/, " $1 $0", :global
     done
     
