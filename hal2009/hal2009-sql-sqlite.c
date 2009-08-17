@@ -623,10 +623,10 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         printf ("!(3)");
         return INVALID;
     }
-    if ( (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
+    /*if ( (*r->subjects >= '0' && *r->subjects <= '9') && relation_to ) {
         printf ("!(4)");
         return INVALID;
-    }
+    }*/
     
     if (r->verb) {
         char* override_verb = halmalloc(strlen(r->verb)*2+1, "sql_sqlite_add_record");

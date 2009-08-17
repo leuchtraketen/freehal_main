@@ -2998,6 +2998,7 @@ define action init_pro_files with var current_language, var path do
                 set new var output_handle to handle for file name "_output__add_pro_file", write
                 print into var output_handle data var file
                 do close with var output_handle
+                do wait 3 seconds
 
                 # TEXT
                 # Wait...
