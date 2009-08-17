@@ -546,9 +546,12 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         usleep(200);
     //    pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
 
-        void* temporary_memory = malloc(5120);
-        while (cstat("_output", (struct stat*)temporary_memory)) {
+        FILE* f;
+        while (!(f = fopen("_output", "r"))) {
             usleep(1000);
+        }
+        if (f) {
+            fclose(f);
         }
         free(temporary_memory);
         ifstream output_stream("_output");
@@ -921,14 +924,18 @@ void hal2009_handle_signal(void* arg) {
         free((void*)csv_data);
         fprintf(output(), "Memory is released.\n");
     }
-    /*else if (0 == strcmp(type, "_output")) {
-        fprintf(output(), "\nFreeHAL: %s\n", text);
+    else if (0 == strcmp(type, "_output")) {
+        /*fprintf(output(), "\nFreeHAL: %s\n", text);
         ofstream out("_output");
         out << text << endl;
         cout << "Printing into _input_server: " << text << endl;
         out.close();
         unlink("_output");
-        ///pthread_exit(0);
-    }*/
+        ///pthread_exit(0);*/
+        
+        ofstream out("_output");
+        out << text << endl;
+        out.close();
+    }
 }
 
