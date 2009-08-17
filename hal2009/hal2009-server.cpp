@@ -553,7 +553,6 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         if (f) {
             fclose(f);
         }
-        free(temporary_memory);
         ifstream output_stream("_output");
         usleep(500);
         string output;
