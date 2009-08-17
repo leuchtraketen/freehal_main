@@ -207524,4 +207524,9 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            
+  type: adj            Ah:
+  type: inter
+ISUNKNOWN:
+  type: vi
+ISUNKNOWN:
+  type: vi
