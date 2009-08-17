@@ -412,7 +412,7 @@ int hal2009_add_pro_file (char* filename) {
                     }
                     
                     int k = 0;
-                    while (k+1 < MAX_CLAUSES && r.clauses[k]) {
+                    while (k+1 < MAX_CLAUSES && k < i && r.clauses[k]) {
                         halfree(r.clauses[k]);
                         ++k;
                     }
