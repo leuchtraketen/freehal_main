@@ -1527,6 +1527,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'hin' => "prep",
           'hinzu' => "prep",
           'dazu' => "prep",
+          'fehler' => "n",
           'rauf' => "prep",
           'herauf' => "prep",
           'hinab' => "prep",
