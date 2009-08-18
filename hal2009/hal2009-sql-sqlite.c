@@ -20,11 +20,14 @@
 */
 
 #include "sqlite3.h"
+///#include "sqlite3async.h"
 
 static sqlite3* sqlite_connection = 0;
 static const char* sqlite_filename = 0;
 static char*** sqlite_results;
 static long int num_of_records[2];
+static int sqlite3async_started = 0;
+
 
 static char* sqlite_sql_create_table = ""
 "CREATE TABLE `facts` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -387,6 +390,11 @@ int sql_sqlite_end() {
             return NO_CONNECTION;
         }
     }
+    
+    /**if (sqlite3async_started) {
+        sqlite3async_shutdown();
+        sqlite3async_started = 0;
+    }**/
 
     char* err;
     sqlite3_exec(sqlite_connection, "COMMIT;", NULL, NULL, &err);
@@ -600,6 +608,10 @@ char* sql_sqlite_del_record(struct RECORD* r) {
     return source;
 }
 
+/**int sql_sqlite_io_thread (void* v) {
+    sqlite3async_run();
+}**/
+
 int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     //printf("sql_sqlite_add_record: %s %s %s\n", r->verb, r->subjects, r->objects);
     if (0 == sqlite_connection) {
@@ -609,6 +621,15 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
+        
+        /**
+        sqlite3async_initialize(0, 0);
+        sqlite3async_control(SQLITEASYNC_HALT, SQLITEASYNC_HALT_NEVER);
+
+        sqlite3async_started = 1;
+        pthread_t io_thread;
+        pthread_create (&io_thread, NULL, sql_sqlite_io_thread, NULL);
+        **/
     }
     
     if (!r) {
@@ -919,6 +940,15 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                 FILE* target = fopen("_input_key", "w+b");
                 fclose(target);
             }
+//        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            --num_facts_added_during_this_run;
+            ++num_facts_not_added_during_this_run_because_exist;
+
+            break;
+        }
+        else if (strstr(err, "PRIMARY KEY must be unique")) {
+            ++(num_of_records[relation_to?1:0]);
+            sql_sqlite_add_record(r, relation_to);
             break;
         }
         printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
@@ -932,6 +962,8 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             }
         }
         else {
+            --num_facts_added_during_this_run;
+            ++num_facts_not_added_during_this_run_because_other_error;
             break;
         }
                 //printf("(..34)\n");

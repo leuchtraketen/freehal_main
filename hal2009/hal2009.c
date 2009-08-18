@@ -193,15 +193,14 @@ int remove_negation (char* line, double* truth_ref) {
 }
 
 int hal2009_add_pro_file (char* filename) {
-    static int num_facts_added_during_this_run = 0;
     fprintf(output(), "Add .pro file %s.\n", filename);
     sql_begin();
     position_in_insertions = 0;
     time_t start = 0;
     time(&start);
     FILE* input = fopen(filename, "rb");
-    fprintf(output(), "_______________________________\n");
-    fprintf(output(), "|                              |\n|");
+    fprintf(output(), " _______________________________\n");
+    fprintf(output(), "|                               |\n|");
     if ( input ) {
         char* wholeline;
         int k = 0;
@@ -240,13 +239,11 @@ int hal2009_add_pro_file (char* filename) {
                     /// Compute the hash
                     int hash_clauses = 1;
                     int j;
-                    ++k;
                     for (j = 0; j < strlen(line); ++j) {
-                        hash_clauses += line[j] * (int)((double)(line[j])/3.0) * (j+1+(k%7));
-                        hash_clauses += hash_clauses % strlen(line);
-                        hash_clauses += hash_clauses % line[j];
+                        hash_clauses += line[j];
+                        hash_clauses += j % 5;
                     }
-                    hash_clauses /= strlen(line);
+                    //hash_clauses /= strlen(line)+1;
                     if (hash_clauses < 0)
                         hash_clauses = -hash_clauses;
                     
@@ -279,16 +276,12 @@ int hal2009_add_pro_file (char* filename) {
                     
                     buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.verb, &(r.truth));
-                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.subjects, &(r.truth));
-                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.objects, &(r.truth));
-                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.adverbs, &(r.truth));
-                    if (buffer) hash_clauses += hash_clauses % strlen(buffer);
                     buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     strcat(r.from, ":");
                     sprintf(r.from+strlen(r.from), "%d", line_number);
@@ -430,11 +423,11 @@ int hal2009_add_pro_file (char* filename) {
                     }
 
                     ++position_in_insertions;
-                    if (position_in_insertions % 50 == 0) {
+                    if (position_in_insertions % 25 == 0) {
                         fprintf(output(), ".");
                         fflush(stdout);
                     }
-                    if (position_in_insertions % 1500 == 0) {
+                    if (position_in_insertions % 750 == 0) {
                         time_t now = 0;
                         time(&now);
                         if (now - start <= 2) {
@@ -442,7 +435,7 @@ int hal2009_add_pro_file (char* filename) {
                         }
                         else {
                             long int facts_per_second = position_in_insertions / (now - start);
-                            fprintf(output(), " | %i facts/sec (%li f., %i sec)\n|", facts_per_second, position_in_insertions, now - start);
+                            fprintf(output(), " | %i facts/sec (%li facts, %i sec)\n|", facts_per_second, position_in_insertions, now - start);
                         }
                         fflush(stdout);
                     }
@@ -483,9 +476,10 @@ int hal2009_add_pro_file (char* filename) {
         }
     }
     
-    while (position_in_insertions % 1500 != 0) {
-        ++position_in_insertions;
-        if (position_in_insertions % 50 == 0) {
+    int position_in_insertions_simulated = position_in_insertions;
+    while (position_in_insertions_simulated % 750 != 0) {
+        ++position_in_insertions_simulated;
+        if (position_in_insertions_simulated % 25 == 0) {
             fprintf(output(), " ");
             fflush(stdout);
         }
@@ -494,13 +488,20 @@ int hal2009_add_pro_file (char* filename) {
     time_t now = 0;
     time(&now);
     long int facts_per_second = position_in_insertions / ((now - start)>0?(now - start):1);
-    fprintf(output(), "_______________________________| %i facts/sec (%li f., %i sec)\n", facts_per_second, position_in_insertions, now - start);
+    fprintf(output(), "_______________________________| %i facts/sec (%li facts, %i sec)\n", facts_per_second, position_in_insertions, now - start);
     fflush(stdout);
     fprintf(output(), "\n");
     fflush(stdout);
     sql_end();
     
-    fprintf(output(), "Added %d facts.", num_facts_added_during_this_run);
+    fprintf(output(), "\nAdded %d facts.", num_facts_added_during_this_run);
+    fprintf(output(), "\nNot added %d facts because they already exist in the database.", num_facts_not_added_during_this_run_because_exist);
+    fprintf(output(), "\nNot added %d facts because of an other error.", num_facts_not_added_during_this_run_because_other_error);
+    fprintf(output(), "\n(%d facts)", num_facts_added_during_this_run
+        + num_facts_not_added_during_this_run_because_exist
+        + num_facts_not_added_during_this_run_because_other_error);
+    fprintf(output(), "\n\n");
+    
 
     return 0;
 }

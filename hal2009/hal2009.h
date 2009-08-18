@@ -178,6 +178,10 @@ struct DATASET {
     int err;
 };
 
+static int num_facts_added_during_this_run = 0;
+static int num_facts_not_added_during_this_run_because_exist = 0;
+static int num_facts_not_added_during_this_run_because_other_error = 0;
+
 /************* API functions **************/
 #ifdef __cplusplus
 extern "C" {
