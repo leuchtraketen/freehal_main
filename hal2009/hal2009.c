@@ -193,14 +193,15 @@ int remove_negation (char* line, double* truth_ref) {
 }
 
 int hal2009_add_pro_file (char* filename) {
+    static int num_facts_added_during_this_run = 0;
     fprintf(output(), "Add .pro file %s.\n", filename);
     sql_begin();
     position_in_insertions = 0;
     time_t start = 0;
     time(&start);
     FILE* input = fopen(filename, "rb");
-    fprintf(output(), " _____________________________________________________________\n");
-    fprintf(output(), "|                                                             |\n|");
+    fprintf(output(), "_______________________________\n");
+    fprintf(output(), "|                              |\n|");
     if ( input ) {
         char* wholeline;
         int k = 0;
@@ -367,6 +368,7 @@ int hal2009_add_pro_file (char* filename) {
                     if (err) {
                         printf("Error: %s\n", wholeline);
                     }
+                    ++num_facts_added_during_this_run;
                     if (strstr(r.subjects, "_")) {
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
@@ -408,6 +410,7 @@ int hal2009_add_pro_file (char* filename) {
                             }
                         }
 
+                        ++num_facts_added_during_this_run;
                         err = sql_add_record(&r);
                     }
                     
@@ -427,7 +430,7 @@ int hal2009_add_pro_file (char* filename) {
                     }
 
                     ++position_in_insertions;
-                    if (position_in_insertions % 25 == 0) {
+                    if (position_in_insertions % 50 == 0) {
                         fprintf(output(), ".");
                         fflush(stdout);
                     }
@@ -439,7 +442,7 @@ int hal2009_add_pro_file (char* filename) {
                         }
                         else {
                             long int facts_per_second = position_in_insertions / (now - start);
-                            fprintf(output(), " | %i facts per second (%li facts, %i seconds)\n|", facts_per_second, position_in_insertions, now - start);
+                            fprintf(output(), " | %i facts/sec (%li f., %i sec)\n|", facts_per_second, position_in_insertions, now - start);
                         }
                         fflush(stdout);
                     }
@@ -482,7 +485,7 @@ int hal2009_add_pro_file (char* filename) {
     
     while (position_in_insertions % 1500 != 0) {
         ++position_in_insertions;
-        if (position_in_insertions % 25 == 0) {
+        if (position_in_insertions % 50 == 0) {
             fprintf(output(), " ");
             fflush(stdout);
         }
@@ -491,11 +494,13 @@ int hal2009_add_pro_file (char* filename) {
     time_t now = 0;
     time(&now);
     long int facts_per_second = position_in_insertions / ((now - start)>0?(now - start):1);
-    fprintf(output(), "_____________________________________________________________| %i facts per second (%li facts, %i seconds)\n", facts_per_second, position_in_insertions, now - start);
+    fprintf(output(), "_______________________________| %i facts/sec (%li f., %i sec)\n", facts_per_second, position_in_insertions, now - start);
     fflush(stdout);
     fprintf(output(), "\n");
     fflush(stdout);
     sql_end();
+    
+    fprintf(output(), "Added %d facts.", num_facts_added_during_this_run);
 
     return 0;
 }

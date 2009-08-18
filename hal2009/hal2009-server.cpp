@@ -563,6 +563,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
             string output;//
             getline(output_stream, output);
         }
+        unlink("_output");
         answer_from_c = output.c_str();
         
         --timeout;
