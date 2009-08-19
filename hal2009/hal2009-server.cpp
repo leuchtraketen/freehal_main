@@ -534,13 +534,17 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     while (0 == strlen(answer_from_c) && timeout > 0) {
         
         static string last_input = string();
-        static string last_input_time = 0;
+        static long last_input_time = 0;
         
-        if (input && (time(NULL) - last_input_time) <= 5 && last_input != string(input) ) {
+        time_t now;
+        time(&now);
+        cout << "input: now:  " << input      << endl;
+        cout << "input: last: " << last_input << endl;
+        if (input && (now - last_input_time) <= 600 && last_input == string(input) ) {
             return;
         }
         last_input = string(input);
-        last_input_time = time(NULL);
+        last_input_time = now;
         
         cout << "Delete nonsense." << endl;
         unlink("_output");
@@ -946,6 +950,8 @@ void hal2009_handle_signal(void* arg) {
         ofstream out("_output");
         out << text << endl;
         out.close();
+        
+        usleep(3000);
     }
 }
 
