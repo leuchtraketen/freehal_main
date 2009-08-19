@@ -480,7 +480,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_output");
+        unlink("_output2");
         hal2009_clean();
         return;
     }
@@ -492,7 +492,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_output");
+        unlink("_output2");
         hal2009_clean();
         return;
     }
@@ -504,7 +504,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*answer) << endl;
         (*stream) << "DISPLAY:" << (*answer) << endl;
-        unlink("_output");
+        unlink("_output3");
         hal2009_clean();
         return;
     }
@@ -540,14 +540,15 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         time(&now);
         cout << "input: now:  " << input      << endl;
         cout << "input: last: " << last_input << endl;
-        if (input && (now - last_input_time) <= 600 && last_input == string(input) ) {
+        if (input && (now - last_input_time) <= 30 && last_input == string(input) ) {
+            unlink("_output3");
             return;
         }
         last_input = string(input);
         last_input_time = now;
         
         cout << "Delete nonsense." << endl;
-        unlink("_output");
+        unlink("_output3");
         hal2009_clean();
 
         (*answer) += "<b>" + string(username) + "</b>: " + string(input) + "<br />";
@@ -561,23 +562,23 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     //    pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
 
         FILE* f;
-        while (!(f = fopen("_output", "r"))) {
+        while (!(f = fopen("_output3", "r"))) {
             usleep(1000);
         }
         if (f) {
             fclose(f);
         }
-        ifstream output_stream("_output");
+        ifstream output_stream("_output3");
         usleep(500);
         string output;
         getline(output_stream, output);
         if (output.size() == 0) {
-            ifstream output_stream("_output");
+            ifstream output_stream("_output3");
             usleep(500);
             string output;//
             getline(output_stream, output);
         }
-        unlink("_output");
+        unlink("_output3");
         answer_from_c = output.c_str();
         
         --timeout;
@@ -594,7 +595,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     (*stream) << "DISPLAY:" << (*answer) << endl;
     hal2009_netcom_unlock();
 
-    unlink("_output");
+    unlink("_output3");
     hal2009_clean();
 
     if (0) {
@@ -947,11 +948,9 @@ void hal2009_handle_signal(void* arg) {
         unlink("_output");
         ///pthread_exit(0);*/
         
-        ofstream out("_output");
+        ofstream out("_output2");
         out << text << endl;
         out.close();
-        
-        usleep(3000);
     }
 }
 
