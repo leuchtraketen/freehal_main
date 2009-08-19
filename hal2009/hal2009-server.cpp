@@ -540,7 +540,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         time(&now);
         cout << "input: now:  " << input      << endl;
         cout << "input: last: " << last_input << endl;
-        if (input && (now - last_input_time) <= 30 && last_input == string(input) ) {
+        if (input && (now - last_input_time) <= 3 && last_input == string(input) ) {
             unlink("_output2");
             return;
         }
