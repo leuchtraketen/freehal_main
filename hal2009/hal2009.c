@@ -241,7 +241,7 @@ int hal2009_add_pro_file (char* filename) {
                     int j;
                     for (j = 0; j < strlen(line); ++j) {
                         hash_clauses += line[j];
-                        hash_clauses += j % 5;
+                        hash_clauses += j % 6;
                     }
                     //hash_clauses /= strlen(line)+1;
                     if (hash_clauses < 0)
