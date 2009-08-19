@@ -532,6 +532,16 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     const char* answer_from_c = "";
     int timeout = 3;
     while (0 == strlen(answer_from_c) && timeout > 0) {
+        
+        static string last_input = string();
+        static string last_input_time = 0;
+        
+        if (input && (time(NULL) - last_input_time) <= 5 && last_input != string(input) ) {
+            return;
+        }
+        last_input = string(input);
+        last_input_time = time(NULL);
+        
         cout << "Delete nonsense." << endl;
         unlink("_output");
         hal2009_clean();
