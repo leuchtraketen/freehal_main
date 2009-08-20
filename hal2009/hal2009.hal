@@ -1796,7 +1796,7 @@ define action logic with var input, var lang, var path, hash parsed do
             do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 4 ]
             do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 5 ]
             do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 6 ]
-            do adjust_truth with array result, from array rawresult item [ var offs - 1 ], var number_of_clause, var i
+            do adjust_truth with array result, from array rawresult item [ var offs - 1 + 6 ], var number_of_clause, var i
             set var i to var i + 1
             push into array result, an empty array
             set var number_of_clause to var number_of_clause + 1

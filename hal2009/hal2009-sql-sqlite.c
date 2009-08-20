@@ -900,7 +900,8 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
         if (r->clauses && r->clauses[0] && !relation_to) {
             int n;
-            for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n] && ((struct RECORD*)(r->clauses[n]))->verb && ((struct RECORD*)(r->clauses[n]))->subjects && (*(((struct RECORD*)(r->clauses[n]))->verb) || *(((struct RECORD*)(r->clauses[n]))->subjects)); ++n) {
+            for (n = 0; n <= r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
+                printf("#");
                 if (sql_sqlite_add_record(r->clauses[n], key)) {
                     printf("break\n");
                     r->clauses[n] = 0;
@@ -933,7 +934,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
                 //printf("(..33)\n");
-        if (strstr(err, "are not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
+        if (strstr(err, " not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
             /// Fact is not unique - it already exists in the database
             --(num_of_records[relation_to?1:0]);
             if (!relation_to) {
@@ -2006,6 +2007,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;an *;from *;at *;auf *;von *;aus *");
             }
         }
+        if (0 == strcmp(r->context, "q_how")) {
+            flag_should_contain = 0;
+            strcpy(buffers, "* in *;* im *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;im *;an *;from *;at *;auf *;von *;aus *");
+        }
         if (0 == strcmp(r->context, "q_from_where")) {
             strcpy(buffers, "aus *;von *;from *;aus *;durch *;* aus *;* von *;* from *;* aus *;* durch *");
         }
@@ -2037,7 +2042,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                         strcat(sql, "\")");
                     }
                     else {
-                        strcat(sql, " OR ( (NOT(nmain.mix_1 GLOB \"");
+                        strcat(sql, " AND ( (NOT(nmain.mix_1 GLOB \"");
                         strcat(sql, buffer);
                         strcat(sql, "\")))");
                     }
