@@ -2861,6 +2861,10 @@ define action compute_output with var output do
             go to next
         done
         
+        if lc(var output) matches /(andro)/ do
+            go to next
+        done
+        
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/, " $1 $2 $0 ", :global
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)$/, " $1 $2 $0", :global
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)$/, " $1 $0", :global
