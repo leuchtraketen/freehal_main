@@ -958,6 +958,7 @@ void hal2009_handle_signal(void* arg) {
         ofstream out("_output2");
         out << text << endl;
         out.close();
+        unlink("_output");
     }
 }
 
