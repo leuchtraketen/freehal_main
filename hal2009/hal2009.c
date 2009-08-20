@@ -149,6 +149,9 @@ int fact_delete_from_source (const char* source) {
                         fprintf(file, "%s", data[line_number]);
                         free(data[line_number]);
                     }
+                    else {
+                        fprintf(file, "\r\n");
+                    }
                 }
                 fclose(file);
             }
