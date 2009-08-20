@@ -531,16 +531,16 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
 
     const char* answer_from_c = "";
     int timeout = 3;
+    static string last_input = string();
+    static long last_input_time = 0;
     while (0 == strlen(answer_from_c) && timeout > 0) {
         
-        static string last_input = string();
-        static long last_input_time = 0;
         
         time_t now;
         time(&now);
         cout << "input: now:  " << input      << endl;
         cout << "input: last: " << last_input << endl;
-        if (input && (now - last_input_time) <= 3 && last_input == string(input) ) {
+        if (input && (now - last_input_time) <= 3600 && last_input == string(input) ) {
             unlink("_output2");
             return;
         }
@@ -586,6 +586,9 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     }
     if (0 == strlen(answer_from_c)) {
         answer_from_c = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
+    }
+    else {
+        last_input_time = 0;
     }
     (*answer) += "<b>FreeHAL</b>: " + string(answer_from_c) + "<br />";
 
