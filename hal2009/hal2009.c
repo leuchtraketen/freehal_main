@@ -308,6 +308,16 @@ int hal2009_add_pro_file (char* filename) {
                     i = 0;
                     r.num_clauses = 0;
                     while (buffer && i+1 < MAX_CLAUSES) {
+                        if ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))) {
+                            if (strlen(buffer) <= 6 && strlen(buffer) >= 2) {
+                                if (buffer[0] == '0' || buffer[0] == '1' || buffer[0] == '2' || buffer[0] == '3' || buffer[0] == '4' || buffer[0] == '5' || buffer[0] == '6' || buffer[0] == '7' || buffer[0] == '8' || buffer[0] == '9') {
+                                    if (buffer[1] == '0' || buffer[1] == '1' || buffer[1] == '2' || buffer[1] == '3' || buffer[1] == '4' || buffer[1] == '5' || buffer[1] == '6' || buffer[1] == '7' || buffer[1] == '8' || buffer[1] == '9') {
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        
                         r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
                         sub_clause->truth = 1.0;

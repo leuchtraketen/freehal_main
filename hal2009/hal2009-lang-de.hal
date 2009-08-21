@@ -1512,6 +1512,11 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'muss' => 1,
           'muessen' => 1,
           'muesst' => 1,
+          
+          'lasse' => 1,
+          'laesst' => 1,
+          'laesst' => 1,
+          'lassen' => 1,
 };
 
 set multi-line new global hash builtin_part_of_speech to {
