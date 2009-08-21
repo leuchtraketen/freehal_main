@@ -2430,6 +2430,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'studiert' => "vi",
           'keinem' => "adj",
           'hohl' => "adj",
+          'Liebe' => "n",
+          'liebe' => "vi",
           'zweiten' => "adj",
           'fix' => "adj",
           'immer' => "adj",

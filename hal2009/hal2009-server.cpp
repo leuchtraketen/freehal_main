@@ -558,8 +558,9 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
 
         cout << "Start threads (language: " << language_copy << ")." << endl;
         pthread_t answer_thread = hal2009_answer(strdup(input), strdup(programming_language), strdup(language_copy), strdup(base_dir), NOT_JOIN, MULTI);
-        usleep(200);
-    //    pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
+        usleep(1000);
+        //pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
+        pthread_join(answer_thread, NULL);
 
         FILE* f;
         while (!(f = fopen("_output2", "r"))) {
