@@ -691,7 +691,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     hal2009_netcom_lock();
     (*stream) << "READY:EVERYTHING_INITIALIZED" << endl;
     (*stream) << "JELIZA_FULL_VERSION:" << FULL_VERSION << endl;
-    (*stream) << "NAME:" << FULL_NAME << endl;
+    (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << endl;
     (*stream) << "Perl:." << endl;
     hal2009_netcom_unlock();
     

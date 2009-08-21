@@ -20,7 +20,7 @@
 */
 
 #define FULL_NAME "FreeHAL"
-#define FULL_VERSION 138
+#define FULL_VERSION 00000
 
 #ifndef __cplusplus
 #include <ctype.h>
