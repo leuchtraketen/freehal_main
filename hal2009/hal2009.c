@@ -357,6 +357,7 @@ int hal2009_add_pro_file (char* filename) {
                     if (0 == strlen(r.adverbs)) {
                         strcpy(r.adverbs, "");
                     }
+                    hash_clauses += r.num_clauses * 13;
                     r.hash_clauses = hash_clauses;
 
                     int err;
