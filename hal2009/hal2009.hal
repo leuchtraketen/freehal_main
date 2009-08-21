@@ -3092,6 +3092,12 @@ define action shell with var current_language, var path do
         set new array sentences to split with /[.!~]/, var sentences_as_line
 
         for each new var line in array sentences do
+        
+            do regex using var line: /^\s+/, "", :global
+            do regex using var line: /\s+$/, "", :global
+            if not var line do
+                go to next
+            done
 
             set new flag all_output_phrases to 0
             if lc(var line) matches /^\/all / do

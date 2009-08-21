@@ -528,7 +528,6 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         strcpy(input, input+6);
     }
 
-
     const char* answer_from_c = "";
     int timeout = 3;
     static string last_input = string();
@@ -746,6 +745,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 }
                 input += result->at(i);
             }
+            replace_all(input, "::", ":");
             hal2009_server_statement(stream, input, username, language);
         }
         
