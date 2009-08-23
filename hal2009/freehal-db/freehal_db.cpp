@@ -341,7 +341,7 @@ void Fact::delete_fact() {
     printf("success.\n");
 
     int v_value = window->getUi()->tableView->verticalScrollBar()->value();
-    if (window->getLastProcess() == MATCHING) {
+    if (window->getLastProcess() == MATCHING_FACTS) {
         window->on_matchingfacts_clicked();
     }
     window->getUi()->tableView->verticalScrollBar()->setValue(v_value);

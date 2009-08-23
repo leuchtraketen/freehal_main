@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'freehal_db.h'
 **
-** Created: Sun Aug 23 12:14:36 2009
+** Created: Sun Aug 23 17:52:03 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -119,7 +119,7 @@ static const uint qt_meta_data_FreeHAL_DB[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   12, // methods
+       3,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -127,13 +127,14 @@ static const uint qt_meta_data_FreeHAL_DB[] = {
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x0a,
       39,   11,   11,   11, 0x0a,
+      57,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_FreeHAL_DB[] = {
     "FreeHAL_DB\0\0on_matchingfacts_clicked()\0"
-    "menuClick(QPoint)\0"
+    "menuClick(QPoint)\0on_allfacts_clicked()\0"
 };
 
 const QMetaObject FreeHAL_DB::staticMetaObject = {
@@ -163,9 +164,10 @@ int FreeHAL_DB::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: on_matchingfacts_clicked(); break;
         case 1: menuClick((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 2: on_allfacts_clicked(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
