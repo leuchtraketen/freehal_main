@@ -132,20 +132,26 @@ int fact_delete_from_source (const char* source) {
             char** data = calloc(lines+2, sizeof(char*));
             int line_number = 1;
             while (file && (buffer = getline(file)) != NULL && line_number <= lines+1) {
-                ++line_number;
                 
-                if (line_number != line_int) {
+                if (!buffer) {
+                    data[line_number] = -1;
+                }
+                else if (line_number != line_int) {
                     data[line_number] = strdup(buffer);
                 }
                 else {
                     data[line_number] = 0;
                 }
+                ++line_number;
             }
             fclose(file);
             
             file = fopen(filename, "w");
             if (file) {
-                for (line_number = 0; line_number <= lines; ++line_number) {
+                for (line_number = 1; line_number <= lines; ++line_number) {
+                    if (data[line_number] == -1) {
+                        // do nothing
+                    }
                     if (data[line_number]) {
                         fprintf(file, "%s", data[line_number]);
                         free(data[line_number]);
