@@ -542,7 +542,11 @@ struct DATASET hal2009_get_csv(char* csv_request) {
     buffer = strtok(NULL,        "^"); r.verb_flag_can     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
     buffer = strtok(NULL,        "^"); r.verb_flag_may     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
     buffer = strtok(NULL,        "^"); r.verb_flag_should  =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
-
+    
+    buffer = strtok(NULL,        "^");
+    if (buffer && 0 == strcmp(buffer, "everything")) {
+        r.everything_q = EVERYTHING;
+    }
 
     if (0 == strlen(r.verb)) {
         strcpy(r.verb, "0");
