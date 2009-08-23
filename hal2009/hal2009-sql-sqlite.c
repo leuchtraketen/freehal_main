@@ -1665,7 +1665,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
                     " LEFT JOIN rel_fact_flag AS rff ON rff.fact = nmain.pk");
     
-    if (everything_q != EVERYTHING) {
+    if (r->everything_q != EVERYTHING) {
     
         strcat(sql, " WHERE ");
         if (important_records[0]) {
