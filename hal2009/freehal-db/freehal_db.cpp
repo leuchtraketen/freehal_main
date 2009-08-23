@@ -200,7 +200,7 @@ void FactModel::computeIndex(int row, int column)
     }
 
     if (column == 1 && ref.size() >= 6) {
-        ref.resize(ref.size()-6);
+        ref.resize(ref.size()-5);
         while (ref.size() <= 8) {
             ref += " ";
         }
@@ -352,10 +352,11 @@ Ui::FreeHAL_DBClass* FreeHAL_DB::getUi() {
 }
 
 enum LAST_PROCESS FreeHAL_DB::getLastProcess() {
-    return last_process;
+    return lastprocess;
 }
+
 void FreeHAL_DB::setLastProcess(enum LAST_PROCESS p) {
-    last_process = p;
+    lastprocess = p;
 }
 
 void FreeHAL_DB::setupMenu()
@@ -458,14 +459,19 @@ QString FreeHAL_DB::make_csv()
             verbs[i] = verb;
         }
     }
-    QString verb = verbs.join(" ");
+    QString verb = verbs.join(" ").toLower();
 
-    QString subject = stem(ui->subject->text().split(" ")).join(" ");
-    QString object = stem(ui->object->text().split(" ")).join(" ");
-    QString adverbs = ui->adverbs->text();
-    QString questionword = ui->questionword->text();
-    QString extra = ui->extra->text();
+    QString subject = stem(ui->subject->text().split(" ")).join(" ").toLower();
+    QString object = stem(ui->object->text().split(" ")).join(" ").toLower();
+    QString adverbs = ui->adverbs->text().toLower();
+    QString questionword = ui->questionword->text().toLower();
+    QString extra = ui->extra->text().toLower();
     QString context = "default";
+
+    if (subject.size() == 0 && object.size()) {
+        subject = object;
+        object.clear();
+    }
 
     if (questionword.contains("wie") || questionword.contains("how")) {
         context = "q_how";
@@ -542,4 +548,34 @@ void FreeHAL_DB::on_allfacts_clicked()
     struct DATASET set = cxxhal2009_get_csv(csv_request);
     free(csv_request);
     factmodel->setData(set);
+}
+
+void FreeHAL_DB::on_subject_returnPressed()
+{
+    on_allfacts_clicked();
+}
+
+void FreeHAL_DB::on_verb_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHAL_DB::on_object_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHAL_DB::on_adverbs_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHAL_DB::on_questionword_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHAL_DB::on_extra_returnPressed()
+{
+    on_matchingfacts_clicked();
 }

@@ -1,0 +1,6 @@
+QMAKE_PRL_BUILD_DIR = C:\Qt\4.5.1\src\3rdparty\webkit\WebCore
+QMAKE_PRO_INPUT = WebCore.pro
+QMAKE_PRL_TARGET = QtWebKit
+QMAKE_PRL_DEFINES = QT_SHARED QT_THREAD_SUPPORT
+QMAKE_PRL_CONFIG = include_source_dir lex yacc uic resources incremental_off windows release ReleaseBuild Release build_pass qt release link_prl copy_dir_files debug_and_release debug_and_release_target precompile_header shared stl exceptions rtti dist-config large-config medium-config minimal-config small-config full-config build_all incremental create_prl link_prl depend_includepath QTDIR_build release ReleaseBuild Release build_pass building-libs depend_includepath qt_install_headers qt depend_includepath qmake_cache target_qt debug_and_release zlib no_debug_info release ReleaseBuild Release build_pass no_autoqmake moc thread dll shared
+QMAKE_PRL_VERSION = 4

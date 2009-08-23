@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'freehal_db.h'
 **
-** Created: Sun Aug 23 17:52:03 2009
+** Created: Sun Aug 23 18:45:09 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -119,7 +119,7 @@ static const uint qt_meta_data_FreeHAL_DB[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   12, // methods
+       9,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -128,13 +128,25 @@ static const uint qt_meta_data_FreeHAL_DB[] = {
       12,   11,   11,   11, 0x0a,
       39,   11,   11,   11, 0x0a,
       57,   11,   11,   11, 0x08,
+      82,   11,   11,   11, 0x08,
+     114,   11,   11,   11, 0x08,
+     141,   11,   11,   11, 0x08,
+     167,   11,   11,   11, 0x08,
+     191,   11,   11,   11, 0x08,
+     218,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_FreeHAL_DB[] = {
     "FreeHAL_DB\0\0on_matchingfacts_clicked()\0"
-    "menuClick(QPoint)\0on_allfacts_clicked()\0"
+    "menuClick(QPoint)\0on_extra_returnPressed()\0"
+    "on_questionword_returnPressed()\0"
+    "on_adverbs_returnPressed()\0"
+    "on_object_returnPressed()\0"
+    "on_verb_returnPressed()\0"
+    "on_subject_returnPressed()\0"
+    "on_allfacts_clicked()\0"
 };
 
 const QMetaObject FreeHAL_DB::staticMetaObject = {
@@ -164,10 +176,16 @@ int FreeHAL_DB::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: on_matchingfacts_clicked(); break;
         case 1: menuClick((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 2: on_allfacts_clicked(); break;
+        case 2: on_extra_returnPressed(); break;
+        case 3: on_questionword_returnPressed(); break;
+        case 4: on_adverbs_returnPressed(); break;
+        case 5: on_object_returnPressed(); break;
+        case 6: on_verb_returnPressed(); break;
+        case 7: on_subject_returnPressed(); break;
+        case 8: on_allfacts_clicked(); break;
         default: ;
         }
-        _id -= 3;
+        _id -= 9;
     }
     return _id;
 }

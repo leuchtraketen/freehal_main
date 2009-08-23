@@ -48,7 +48,7 @@ export II=" -I../../JEliza/boost_1_37_0/ -I../perl5 -I../perl5/win32 -I../perl -
 echo Compiling FreeHAL-DB
 i586-mingw32msvc-g++ $II -L../${DIR}/stuff/windows/ -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-DB.exe \
 	*.o \
-	 -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ 
+	 -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ -lperl510
 echo Ok
 
 

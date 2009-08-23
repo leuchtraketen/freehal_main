@@ -100,13 +100,19 @@ public:
 private:
     FreeHAL_DB(QWidget *parent = 0);
     Ui::FreeHAL_DBClass *ui;
-    enum LAST_PROCESS last_process;
+    enum LAST_PROCESS lastprocess;
 
 public slots:
     void on_matchingfacts_clicked();
     void menuClick(QPoint);
 
 private slots:
+    void on_extra_returnPressed();
+    void on_questionword_returnPressed();
+    void on_adverbs_returnPressed();
+    void on_object_returnPressed();
+    void on_verb_returnPressed();
+    void on_subject_returnPressed();
     void on_allfacts_clicked();
 };
 
