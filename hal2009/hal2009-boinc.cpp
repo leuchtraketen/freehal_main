@@ -22,6 +22,20 @@ int hal2009_add_pro_file (char* filename);
 struct DATASET hal2009_get_csv(char* csv_request);
 const char* hal2009_make_csv(struct DATASET* set);
 
+unsigned time_seed() {
+    time_t now = time (0);
+    unsigned char *p = (unsigned char *)&now;
+    unsigned seed = 0;
+    size_t i;
+ 
+    for ( i = 0; i < sizeof now; i++ )
+        seed = seed * ( UCHAR_MAX + 2U ) + p[i];
+    return seed;
+}
+double uniform_deviate ( int seed ) {
+    return seed * ( 1.0 / ( RAND_MAX + 1.0 ) );
+}
+
 void* cpu_thread (void* p) {
     BOINC_OPTIONS options;
     boinc_options_defaults(options);   // set defaults
@@ -58,10 +72,21 @@ void* cpu_thread (void* p) {
 
         usleep(1000);
     }
+    
+    srand (time_seed());
+    int N = 30;
+    int M = 600;
+    usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
 }
 
 int main (int argc, char** argv) {
     boinc_init();
+    
+    srand (time_seed());
+    int N = 30;
+    int M = 300;
+    usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+    
     extract();
     
     pthread_t thread_cpu;

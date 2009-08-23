@@ -304,9 +304,19 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
+    if var name_of_entry matches /__$/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /_/ do
+        print "Do not save \"_\" words: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
 
     do be_slow without arguments
-    print "Searching   " concat var name_of_entry concat "    \tin file " concat var file_name
+    print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name
     print new line
     
     if not from array tags item [ 0 ] do

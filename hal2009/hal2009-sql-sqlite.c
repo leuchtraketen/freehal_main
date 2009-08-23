@@ -1664,179 +1664,119 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     /////////////////////////// First, select the normal facts ///////////////////////////
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
                     " LEFT JOIN rel_fact_flag AS rff ON rff.fact = nmain.pk");
-    strcat(sql, " WHERE ");
-    if (important_records[0]) {
-        strcat(sql, " ( ");
-        int w = 0;
-        while (important_records[w] && w < 20000) {
-            ++w;
-        }
-        --w;
-        if (w < 0)
-            w = 0;
-        strcat(sql, " nmain.pk >= ");
-        strcat(sql, important_records[0]);
-        strcat(sql, " AND nmain.pk <= ");
-        strcat(sql, important_records[w]);
-        /**
-        int n = 0;
-        while (important_records[n] && n < 20000) {
-            strcat(sql, " OR nmain.pk = ");
-            strcat(sql, important_records[n]);
-            strcat(sql, " ");
-            ++n;
-        }
-        **/
-        strcat(sql, " ) AND ");
-    }
-    strcat(sql, " nmain.rel = -1 AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\")) OR NOT (nmain.verbgroup = \"be\"))");
-    need_and = 1;
     
-    /// Match the primary key
-    if (r->pkey && *r->pkey != '0' && *r->pkey != ' ' && strlen(r->pkey)) {
-        if (need_and) strcat(sql, " AND");
-        else          strcat(sql, "WHERE");
-        strcat(sql, " (nmain.pk IN (SELECT f2 FROM linking WHERE f1 = ");
-        strcat(sql, r->pkey);
-        strcat(sql, " AND f1 <> f2) OR nmain.pk IN (SELECT f1 FROM linking WHERE f2 = 0 - ");
-        strcat(sql, r->pkey);
-        strcat(sql, " AND f1 <> f2))");
-    }
+    if (everything_q != EVERYTHING) {
     
-    char** similar_verbs;
-    if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
-        char* sql_rel_verb_verb = malloc(512000);
-        *sql_rel_verb_verb = 0;
-        strcat(sql_rel_verb_verb, "SELECT v2 FROM rel_verb_verb WHERE v1 = \"");
-        strcat(sql_rel_verb_verb, r->verb);
-        strcat(sql_rel_verb_verb, "\";");
-
-        similar_verbs = calloc(20000*sizeof(char*), 1);
-        printf("%s\n", sql_rel_verb_verb);
-        
-        char* err;
-        while (sqlite3_exec(sqlite_connection, sql_rel_verb_verb, callback_synonyms, &similar_verbs, &err)) {
-            if (strstr(err, "are not unique")) {
-                break;
+        strcat(sql, " WHERE ");
+        if (important_records[0]) {
+            strcat(sql, " ( ");
+            int w = 0;
+            while (important_records[w] && w < 20000) {
+                ++w;
             }
-            if (strstr(err, "callback requested query abort")) {
-                break;
+            --w;
+            if (w < 0)
+                w = 0;
+            strcat(sql, " nmain.pk >= ");
+            strcat(sql, important_records[0]);
+            strcat(sql, " AND nmain.pk <= ");
+            strcat(sql, important_records[w]);
+            /**
+            int n = 0;
+            while (important_records[n] && n < 20000) {
+                strcat(sql, " OR nmain.pk = ");
+                strcat(sql, important_records[n]);
+                strcat(sql, " ");
+                ++n;
             }
-            printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
-            if (strstr(err, "no such table")) {
-                sqlite3_free(err);
-                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
-                    printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
-                }
-            }
-            else {
-                break;
-            }
+            **/
+            strcat(sql, " ) AND ");
         }
-        sqlite3_free(err);
-        free(sql_rel_verb_verb);
-    }
-
-    if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
+        strcat(sql, " nmain.rel = -1 AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\")) OR NOT (nmain.verbgroup = \"be\"))");
+        need_and = 1;
         
-        // If we do NOT have a WHERE phrase
-        // temporarily disabled
-        //if (0 != strcmp(r->context, "q_where")) {
-        
-        {
+        /// Match the primary key
+        if (r->pkey && *r->pkey != '0' && *r->pkey != ' ' && strlen(r->pkey)) {
             if (need_and) strcat(sql, " AND");
             else          strcat(sql, "WHERE");
-            strcat(sql, "( 1 ");
-            char* buffers_all_verbs = malloc(strlen(r->verb)+2);
-            strcpy(buffers_all_verbs, r->verb);
-            if (buffers_all_verbs) {
-                char* buffer = strtok(buffers_all_verbs, " ");
-                char* buffers[10];
-                int l = 0;
-                while (buffer && l < 10) {
-                    buffers[l] = buffer;
-                    buffer = strtok(NULL, " ");
-                    ++l;
+            strcat(sql, " (nmain.pk IN (SELECT f2 FROM linking WHERE f1 = ");
+            strcat(sql, r->pkey);
+            strcat(sql, " AND f1 <> f2) OR nmain.pk IN (SELECT f1 FROM linking WHERE f2 = 0 - ");
+            strcat(sql, r->pkey);
+            strcat(sql, " AND f1 <> f2))");
+        }
+        
+        char** similar_verbs;
+        if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
+            char* sql_rel_verb_verb = malloc(512000);
+            *sql_rel_verb_verb = 0;
+            strcat(sql_rel_verb_verb, "SELECT v2 FROM rel_verb_verb WHERE v1 = \"");
+            strcat(sql_rel_verb_verb, r->verb);
+            strcat(sql_rel_verb_verb, "\";");
+
+            similar_verbs = calloc(20000*sizeof(char*), 1);
+            printf("%s\n", sql_rel_verb_verb);
+            
+            char* err;
+            while (sqlite3_exec(sqlite_connection, sql_rel_verb_verb, callback_synonyms, &similar_verbs, &err)) {
+                if (strstr(err, "are not unique")) {
+                    break;
                 }
-                --l;
-                
-                short flag_is_divided_verb = 1;
-                if (l == 0) {
-                    flag_is_divided_verb = 0;
+                if (strstr(err, "callback requested query abort")) {
+                    break;
                 }
-                
-                while (l >= 0) {
-                    buffer = buffers[l];
-                    char* buffers = malloc(strlen(r->verb)+2);
-                    strcpy(buffers, buffer);
-                    if (buffers) {
-                        char* buffer = strtok(buffers, "|");
-                        if (buffer) {
-                            if (need_and) strcat(sql, " AND");
-                            else          strcat(sql, "WHERE");
-                            strcat(sql, " ( nmain.verb = \"");
-                            strcat(sql, buffer);
-                            strcat(sql, "\"");
-                            if (flag_is_divided_verb) {
-                                strcat(sql, " OR nmain.verb GLOB \"");
-                                strcat(sql, buffer);
-                                strcat(sql, " *\"");
-                                strcat(sql, " OR nmain.verb GLOB \"* ");
-                                strcat(sql, buffer);
-                                strcat(sql, "\"");
-                            }
-                            while (buffer = strtok(NULL, "|")) {
-                                strcat(sql, " OR nmain.verb = \"");
-                                strcat(sql, buffer);
-                                strcat(sql, "\"");
-                                if (flag_is_divided_verb) {
-                                    strcat(sql, " OR nmain.verb GLOB \"* ");
-                                    strcat(sql, buffer);
-                                    strcat(sql, "\"");
-                                    strcat(sql, " OR nmain.verb GLOB \"");
-                                    strcat(sql, buffer);
-                                    strcat(sql, " *\"");
-                                }
-                            }
-                            strcat(sql, " )");
-                            need_and = 1;
-                        }
+                printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
+                if (strstr(err, "no such table")) {
+                    sqlite3_free(err);
+                    if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                        printf("Error while executing SQL: %s\n\n%s\n\n", sql_rel_verb_verb, err);
                     }
-                    free(buffers);
-                    --l;
+                }
+                else {
+                    break;
                 }
             }
-        //}
-            strcat(sql, ")");
+            sqlite3_free(err);
+            free(sql_rel_verb_verb);
         }
-        /// similar verbs:
-        if (similar_verbs && similar_verbs[0]) {
-            strcat(sql, " OR ( ");
-            int w = 0;
-            while (similar_verbs[w]) {
-                char* buffer = similar_verbs[w];
-                char* buffers[10];
-                int l = 0;
-                while (buffer && l < 10) {
-                    buffers[l] = buffer;
-                    buffer = strtok(NULL, " ");
-                    ++l;
-                }
-                --l;
-                
-                short flag_is_divided_verb = 1;
-                if (l == 0) {
-                    flag_is_divided_verb = 0;
-                }
-                
-                while (l >= 0) {
-                    buffer = buffers[l];
-                    char* buffers = malloc(strlen(similar_verbs[w])+2);
-                    strcpy(buffers, buffer);
-                    if (buffers) {
-                        char* buffer = strtok(buffers, "|");
-                        if (buffer) {
-                            {
+
+        if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
+            
+            // If we do NOT have a WHERE phrase
+            // temporarily disabled
+            //if (0 != strcmp(r->context, "q_where")) {
+            
+            {
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+                strcat(sql, "( 1 ");
+                char* buffers_all_verbs = malloc(strlen(r->verb)+2);
+                strcpy(buffers_all_verbs, r->verb);
+                if (buffers_all_verbs) {
+                    char* buffer = strtok(buffers_all_verbs, " ");
+                    char* buffers[10];
+                    int l = 0;
+                    while (buffer && l < 10) {
+                        buffers[l] = buffer;
+                        buffer = strtok(NULL, " ");
+                        ++l;
+                    }
+                    --l;
+                    
+                    short flag_is_divided_verb = 1;
+                    if (l == 0) {
+                        flag_is_divided_verb = 0;
+                    }
+                    
+                    while (l >= 0) {
+                        buffer = buffers[l];
+                        char* buffers = malloc(strlen(r->verb)+2);
+                        strcpy(buffers, buffer);
+                        if (buffers) {
+                            char* buffer = strtok(buffers, "|");
+                            if (buffer) {
+                                if (need_and) strcat(sql, " AND");
+                                else          strcat(sql, "WHERE");
                                 strcat(sql, " ( nmain.verb = \"");
                                 strcat(sql, buffer);
                                 strcat(sql, "\"");
@@ -1862,409 +1802,220 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                                     }
                                 }
                                 strcat(sql, " )");
+                                need_and = 1;
                             }
                         }
+                        free(buffers);
+                        --l;
                     }
-                    free(buffers);
+                }
+            //}
+                strcat(sql, ")");
+            }
+            /// similar verbs:
+            if (similar_verbs && similar_verbs[0]) {
+                strcat(sql, " OR ( ");
+                int w = 0;
+                while (similar_verbs[w]) {
+                    char* buffer = similar_verbs[w];
+                    char* buffers[10];
+                    int l = 0;
+                    while (buffer && l < 10) {
+                        buffers[l] = buffer;
+                        buffer = strtok(NULL, " ");
+                        ++l;
+                    }
                     --l;
-                }
-                ++w;
-            }
-            strcat(sql, " ) ");
-        }
-    }
-    if (subjects_buffer) {
-        if (need_and) strcat(sql, " AND");
-        else          strcat(sql, "WHERE");
-        
-        if (strlen(subjects_buffer)) {
-            if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
-                strcat(sql, "\n ( nmain.subjects GLOB \"");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.objects GLOB \"* ");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" ");
-            }
-            else {
-                strcat(sql, "\n ( nmain.subjects GLOB \"");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.subjects GLOB \"");
-                strcat(sql, subjects_buffer);
-                strcat(sql, " *\" OR nmain.objects GLOB \"*");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" OR nmain.subjects GLOB \"");
-                strcat(sql, subjects_buffer);
-                strcat(sql, "\" ");
-            }
-        }
-        else {
-                strcat(sql, "\n ( 0 ");
-        }
-        
-        int n = 0;
-        while (subject_synonyms[n] && n < 20000) {
-            if (strlen(subject_synonyms[n])) {
-                if (strstr(subject_synonyms[n], "*")) {
-                    strcat(sql, "\n OR nmain.subjects GLOB \"");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.objects GLOB \"* ");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" ");
-                }
-                else {
-                    strcat(sql, "\n OR nmain.subjects GLOB \"");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.subjects GLOB \"");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, " *\" OR nmain.objects GLOB \"*");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR nmain.subjects GLOB \"");
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" ");
-                }
-            }
-            else {
-                    strcat(sql, "\n ");
-            }
-            ++n;
-        }
-        strcat(sql, ")");
-        need_and = 1;
-    }
-    if (objects_buffer && (0 == subjects_buffer || strcmp(objects_buffer, subjects_buffer))) {
-        if (need_and) strcat(sql, " AND");
-        else          strcat(sql, "WHERE");
-        strcat(sql, "\n ( ");
-        if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
-            strcat(sql, "nmain.objects = \"*\"");
-        }
-        strcat(sql, " nmain.objects GLOB \"");
-        strcat(sql, objects_buffer);
-        if (objects_buffer == subjects_buffer && objects_buffer == r->extra) {
-            strcat(sql, "\" OR nmain.objects = \"\" OR nmain.objects = \" ");
-        }
-        strcat(sql, "\" ");
-        strcat(sql, " OR nmain.objects GLOB \"* ");
-        strcat(sql, objects_buffer);
-        strcat(sql, "\" ");
-
-        int n = 0;
-        while (object_synonyms[n] && n < 20000) {
-            if (strlen(object_synonyms[n])) {
-                strcat(sql, "\n OR nmain.objects GLOB \"");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" ");
-                strcat(sql, "OR nmain.objects GLOB \"* ");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" ");
-            }
-            ++n;
-        }
-        strcat(sql, " ) ");
-
-        need_and = 1;
-    }
-    if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
-        printf("Context is '%s'.\n", r->context);
-    }
-    if (r->context && *r->context != 'd' && strlen(r->context) && strcmp(r->context, "default")) {
-        printf("Context is '%s' (verb = '%s').\n", r->context, (r->verb && *r->verb != '0' && *r->verb != ' ') ? r->verb : "" );
-
-        char* buffers = calloc(5000, 1);
-        *buffers = 0;
-        short flag_should_contain = 1;
-        
-        if (0 == strcmp(r->context, "q_what_weakly")) {
-            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
-                //if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
-                    strcpy(buffers, "* ein*");
-                //}
-            }
-        }
-        if (0 == strcmp(r->context, "q_who")) {
-            if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
-                strcpy(buffers, "ein*");
-                flag_should_contain = 0;
-                //if (need_and) strcat(sql, " AND");
-                //else          strcat(sql, "WHERE");
-                //strcat(sql, " ( nmain.adverbs = \"\" )");
-                need_and = 1;
-            }
-        }
-        if (0 == strcmp(r->context, "q_where")) {
-            if (r->verb && *r->verb != '0' && *r->verb != ' ' && strstr(r->verb, "|ist|")) {
-                strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* aus *;in *;an *;from *;at *;auf *;aus *");
-            }
-            else {
-                strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;an *;from *;at *;auf *;von *;aus *");
-            }
-        }
-        if (0 == strcmp(r->context, "q_how")) {
-            flag_should_contain = 0;
-            strcpy(buffers, "* in *;* im *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;im *;an *;from *;at *;auf *;von *;aus *");
-        }
-        if (0 == strcmp(r->context, "q_from_where")) {
-            strcpy(buffers, "aus *;von *;from *;aus *;durch *;* aus *;* von *;* from *;* aus *;* durch *");
-        }
-        
-        if (buffers) {
-            char* buffer = strtok(buffers, ";");
-            if (buffer) {
-                if (need_and) strcat(sql, " AND");
-                else          strcat(sql, "WHERE");
-                strcat(sql, " ( ");
-                if (0 == strcmp(r->context, "q_who") || 0 == strcmp(r->context, "q_what_weakly")) {
-                    //strcat(sql, " nmain.adverbs = \"\" AND nmain.truth > 0.9 AND ");
-                }
-                if (flag_should_contain) {
-                    strcat(sql, " (nmain.mix_1 GLOB \"");
-                    strcat(sql, buffer);
-                    strcat(sql, "\")");
-                }
-                else {
-                    strcat(sql, " ((NOT(nmain.mix_1 GLOB \"");
-                    strcat(sql, buffer);
-                    strcat(sql, "\")))");
-                }
-                
-                while (buffer = strtok(NULL, ";")) {
-                    if (flag_should_contain) {
-                        strcat(sql, " OR ( nmain.mix_1 GLOB \"");
-                        strcat(sql, buffer);
-                        strcat(sql, "\")");
+                    
+                    short flag_is_divided_verb = 1;
+                    if (l == 0) {
+                        flag_is_divided_verb = 0;
                     }
-                    else {
-                        strcat(sql, " AND ( (NOT(nmain.mix_1 GLOB \"");
-                        strcat(sql, buffer);
-                        strcat(sql, "\")))");
+                    
+                    while (l >= 0) {
+                        buffer = buffers[l];
+                        char* buffers = malloc(strlen(similar_verbs[w])+2);
+                        strcpy(buffers, buffer);
+                        if (buffers) {
+                            char* buffer = strtok(buffers, "|");
+                            if (buffer) {
+                                {
+                                    strcat(sql, " ( nmain.verb = \"");
+                                    strcat(sql, buffer);
+                                    strcat(sql, "\"");
+                                    if (flag_is_divided_verb) {
+                                        strcat(sql, " OR nmain.verb GLOB \"");
+                                        strcat(sql, buffer);
+                                        strcat(sql, " *\"");
+                                        strcat(sql, " OR nmain.verb GLOB \"* ");
+                                        strcat(sql, buffer);
+                                        strcat(sql, "\"");
+                                    }
+                                    while (buffer = strtok(NULL, "|")) {
+                                        strcat(sql, " OR nmain.verb = \"");
+                                        strcat(sql, buffer);
+                                        strcat(sql, "\"");
+                                        if (flag_is_divided_verb) {
+                                            strcat(sql, " OR nmain.verb GLOB \"* ");
+                                            strcat(sql, buffer);
+                                            strcat(sql, "\"");
+                                            strcat(sql, " OR nmain.verb GLOB \"");
+                                            strcat(sql, buffer);
+                                            strcat(sql, " *\"");
+                                        }
+                                    }
+                                    strcat(sql, " )");
+                                }
+                            }
+                        }
+                        free(buffers);
+                        --l;
                     }
+                    ++w;
                 }
                 strcat(sql, " ) ");
-
-                need_and = 1;
             }
         }
-        halfree(buffers);
-    }
-    if (r->adverbs && *r->adverbs != '0' && strlen(r->adverbs)) {
-        char* buffer;
-        buffer = strtok(r->adverbs, " ;,)(-.");
-        if (buffer) {
+        if (subjects_buffer) {
             if (need_and) strcat(sql, " AND");
             else          strcat(sql, "WHERE");
-            strcat(sql, " ( nmain.mix_1 GLOB \"*");
-            strcat(sql, buffer);
-            strcat(sql, "*\")");
             
-            while (buffer = strtok(NULL, " ;,)(-.")) {
-                strcat(sql, " AND");
-                strcat(sql, " ( nmain.mix_1 GLOB \"*");
-                strcat(sql, buffer);
-                strcat(sql, "*\")");
-            }
-
-            need_and = 1;
-        }
-    }
-    if (r->extra && *r->extra != '0' && strlen(r->extra) && r->extra != objects_buffer) {
-        char* buffer = r->extra;
-        if (need_and) strcat(sql, " AND");
-        else          strcat(sql, "WHERE");
-        strcat(sql, " ( nmain.mix_1 GLOB \"* ");
-        strcat(sql, buffer);
-        strcat(sql, "*\" OR nmain.mix_1 GLOB \"*");
-        strcat(sql, buffer);
-        strcat(sql, " *\" OR nmain.mix_1 GLOB \"* ");
-        strcat(sql, buffer);
-        strcat(sql, " *\"");
-
-        int n = 0;
-        while (extra_synonyms[n] && n < 20000) {
-            char* extra_synonym_buf = extra_synonyms[n];
-            
-            if (extra_synonym_buf && extra_synonym_buf[0]) {
-                ++extra_synonym_buf;
-                if (strlen(extra_synonym_buf) >= 2) {
-                    extra_synonym_buf[strlen(extra_synonym_buf)-1] = 0;
-                    
-                    strcat(sql, " OR nmain.mix_1 GLOB \"* ");
-                    strcat(sql, extra_synonym_buf);
-                    strcat(sql, "*\" OR nmain.mix_1 GLOB \"*");
-                    strcat(sql, extra_synonym_buf);
-                    strcat(sql, " *\" OR nmain.mix_1 GLOB \"* ");
-                    strcat(sql, extra_synonym_buf);
-                    strcat(sql, " *\"");
+            if (strlen(subjects_buffer)) {
+                if (strstr(subjects_buffer, "*") || 0 == strcmp(subjects_buffer, "das")) {
+                    strcat(sql, "\n ( nmain.subjects GLOB \"");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" OR nmain.objects GLOB \"* ");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" ");
+                }
+                else {
+                    strcat(sql, "\n ( nmain.subjects GLOB \"");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, " *\" OR nmain.objects GLOB \"*");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" OR nmain.subjects GLOB \"");
+                    strcat(sql, subjects_buffer);
+                    strcat(sql, "\" ");
                 }
             }
-                
-            ++n;
-        }
-
-        if (0 == strcmp(r->context, "q_what_prep")) {
-            strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"");
-            strcat(sql, buffer);
-            strcat(sql, "*\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
-            strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"");
-            strcat(sql, buffer);
-            strcat(sql, "*\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
-            strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"");
-            strcat(sql, buffer);
-            strcat(sql, "*\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
-            strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"");
-            strcat(sql, buffer);
-            strcat(sql, "*\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
-        
-            strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"*");
-            strcat(sql, buffer);
-            strcat(sql, "\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
-            strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"*");
-            strcat(sql, buffer);
-            strcat(sql, "\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
-            strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"*");
-            strcat(sql, buffer);
-            strcat(sql, "\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
-            strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
-            strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"*");
-            strcat(sql, buffer);
-            strcat(sql, "\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
-        }
-        strcat(sql, ")");
-        need_and = 1;
-    }
-    
-    strcat(sql, " AND nmain.questionword NOT IN (\"wenn\", \"if\", \"falls\", \"when\")"
-                " AND NOT EXISTS(SELECT nclause.pk FROM facts AS nclause WHERE nclause.rel = nmain.pk AND ( nclause.questionword IN (\"wenn\", \"if\", \"falls\", \"when\") OR nclause.verb GLOB \"*=>*\" ))");
-    
-    /////////////////////////// Then, select facts by if statements ///////////////////////////
-    
-    // There must be no primary key
-    if ( !( r->pkey && *r->pkey != '0' && *r->pkey != ' ' && strlen(r->pkey) ) ) {
-
-        need_and = 0;
-
-        strcat(sql, " \n\nUNION ALL "
-                    "SELECT DISTINCT \n"
-                    "fact.pk, fact.rel, fact.verb || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, fact.subjects, fact.objects, fact.adverbs, fact.prio, NULL, fact.truth \n"
-                    "FROM cache_facts AS main JOIN clauses AS clause ON ");
-        if (important_records[0]) {
-            strcat(sql, " ( ");
-            int w = 0;
-            while (important_records[w] && w < 20000) {
-                ++w;
+            else {
+                    strcat(sql, "\n ( 0 ");
             }
-            --w;
-            if (w < 0)
-                w = 0;
-            strcat(sql, " main.pk >= ");
-            strcat(sql, important_records[0]);
-            strcat(sql, " AND main.pk <= ");
-            strcat(sql, important_records[w]);
-            strcat(sql, " ");
-            /**
+            
             int n = 0;
-            while (important_records[n] && n < 20000) {
-                strcat(sql, " OR nmain.pk = ");
-                strcat(sql, important_records[n]);
-                strcat(sql, " ");
+            while (subject_synonyms[n] && n < 20000) {
+                if (strlen(subject_synonyms[n])) {
+                    if (strstr(subject_synonyms[n], "*")) {
+                        strcat(sql, "\n OR nmain.subjects GLOB \"");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" OR nmain.objects GLOB \"* ");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" ");
+                    }
+                    else {
+                        strcat(sql, "\n OR nmain.subjects GLOB \"");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" OR nmain.subjects GLOB \"* ");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" OR nmain.subjects GLOB \"");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, " *\" OR nmain.objects GLOB \"*");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" OR nmain.subjects GLOB \"");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" ");
+                    }
+                }
+                else {
+                        strcat(sql, "\n ");
+                }
                 ++n;
             }
-            **/
-            strcat(sql, " ) AND ");
+            strcat(sql, ")");
+            need_and = 1;
         }
-        strcat(sql, " main.pk = clause.rel ");
-        strcat(sql, "JOIN cache_facts AS fact ON main.truth = 1 AND \n"
-                    "((clause.verbgroup <> \"have\" AND clause.verbgroup <> \"be\" AND fact.verb GLOB clause.verb) OR "
-                    "((clause.verbgroup = \"have\") AND (fact.verbgroup = \"have\") ) OR  "
-                    "((clause.verbgroup = \"be\") AND (fact.verbgroup = \"be\") )) ");
-//                    "JOIN rel_word_fact ON (rel_word_fact.fact = main.pk OR rel_word_fact.fact = clause.pk)\n\n");
-
-        strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = fact.pk ");
-        {
+        if (objects_buffer && (0 == subjects_buffer || strcmp(objects_buffer, subjects_buffer))) {
             if (need_and) strcat(sql, " AND");
             else          strcat(sql, "WHERE");
-            strcat(sql, " fact.questionword = \"\" AND fact.subjects <> \"*\" AND fact.objects <> \"*\"");
-            need_and = 1;
-            
-            {
-                if (need_and) strcat(sql, " AND");
-                else          strcat(sql, "WHERE");
+            strcat(sql, "\n ( ");
+            if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
+                strcat(sql, "nmain.objects = \"*\"");
+            }
+            strcat(sql, " nmain.objects GLOB \"");
+            strcat(sql, objects_buffer);
+            if (objects_buffer == subjects_buffer && objects_buffer == r->extra) {
+                strcat(sql, "\" OR nmain.objects = \"\" OR nmain.objects = \" ");
+            }
+            strcat(sql, "\" ");
+            strcat(sql, " OR nmain.objects GLOB \"* ");
+            strcat(sql, objects_buffer);
+            strcat(sql, "\" ");
 
-                strcat(sql, "\n (((main.subjects = \"*\" OR clause.subjects = \"*\") AND (clause.subjects <> \"*\" OR main.subjects <> \"*\")) OR (main.subjects = \"\") OR (clause.subjects = \"\") OR (clause.subjects <> \"*\" AND fact.subjects GLOB clause.subjects) OR (clause.subjects = \"*\" AND fact.subjects GLOB \"");
-                if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
-                    strcat(sql, r->subjects);
-                }
-                strcat(sql, "\")");
-                int n = 0;
-                while (subject_synonyms[n] && n < 20000) {
-                    strcat(sql, " OR fact.subjects GLOB \"");
-                    strcat(sql, subject_synonyms[n]);
+            int n = 0;
+            while (object_synonyms[n] && n < 20000) {
+                if (strlen(object_synonyms[n])) {
+                    strcat(sql, "\n OR nmain.objects GLOB \"");
+                    strcat(sql, object_synonyms[n]);
                     strcat(sql, "\" ");
-                    ++n;
+                    strcat(sql, "OR nmain.objects GLOB \"* ");
+                    strcat(sql, object_synonyms[n]);
+                    strcat(sql, "\" ");
                 }
-                strcat(sql, " ) AND (clause.objects = \"\" OR fact.objects GLOB clause.objects) AND (clause.adverbs = \"\" OR clause.adverbs = \"\" OR fact.adverbs GLOB clause.adverbs)"
-                "\n AND (((fact.objects <> \"\" OR fact.adverbs <> \"\") AND fact.objects <> \"\") OR NOT (fact.verbgroup = \"be\"))\n");
+                ++n;
             }
-        }
+            strcat(sql, " ) ");
 
-        if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
-            char* buffers = malloc(strlen(r->verb)+2);
-            strcpy(buffers, r->verb);
-            if (buffers) {
-                char* buffer = strtok(buffers, "|");
-                if (buffer) {
-                    if (need_and) strcat(sql, " AND");
-                    else          strcat(sql, "WHERE");
-                    strcat(sql, " ( main.verb = \"");
-                    strcat(sql, buffer);
-                    strcat(sql, "\"");
-                    while (buffer = strtok(NULL, "|")) {
-                        strcat(sql, " OR main.verb = \"");
-                        strcat(sql, buffer);
-                        strcat(sql, "\"");
-                    }
-                    strcat(sql, " )");
-                    need_and = 1;
-                }
-            }
-            free(buffers);
+            need_and = 1;
+        }
+        if (r->context && *r->context != 'd' && strlen(r->context) && !strcmp(r->context, "default")) {
+            printf("Context is '%s'.\n", r->context);
         }
         if (r->context && *r->context != 'd' && strlen(r->context) && strcmp(r->context, "default")) {
+            printf("Context is '%s' (verb = '%s').\n", r->context, (r->verb && *r->verb != '0' && *r->verb != ' ') ? r->verb : "" );
+
             char* buffers = calloc(5000, 1);
             *buffers = 0;
             short flag_should_contain = 1;
             
             if (0 == strcmp(r->context, "q_what_weakly")) {
-                if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war"))) {
-                    if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
-                        strcpy(buffers, "ein*");
-                    }
+                if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
+                    //if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
+                        strcpy(buffers, "* ein*");
+                    //}
                 }
             }
             if (0 == strcmp(r->context, "q_who")) {
-                strcpy(buffers, "ein*");
-                flag_should_contain = 0;
-                if (need_and) strcat(sql, " AND");
-                else          strcat(sql, "WHERE");
-                strcat(sql, " ( main.adverbs = \"\" )");
-                need_and = 1;
+                if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
+                    strcpy(buffers, "ein*");
+                    flag_should_contain = 0;
+                    //if (need_and) strcat(sql, " AND");
+                    //else          strcat(sql, "WHERE");
+                    //strcat(sql, " ( nmain.adverbs = \"\" )");
+                    need_and = 1;
+                }
             }
             if (0 == strcmp(r->context, "q_where")) {
-                strcpy(buffers, "*in ;*im ;*am ;*an ;* aus;* von;*from ;*at ;in *;im *;am *;an *;from *;at *;aus *;von *");
+                if (r->verb && *r->verb != '0' && *r->verb != ' ' && strstr(r->verb, "|ist|")) {
+                    strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* aus *;in *;an *;from *;at *;auf *;aus *");
+                }
+                else {
+                    strcpy(buffers, "* in *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;an *;from *;at *;auf *;von *;aus *");
+                }
+            }
+            if (0 == strcmp(r->context, "q_how")) {
+                flag_should_contain = 0;
+                strcpy(buffers, "* in *;* im *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;im *;an *;from *;at *;auf *;von *;aus *");
+            }
+            if (0 == strcmp(r->context, "q_from_where")) {
+                strcpy(buffers, "aus *;von *;from *;aus *;durch *;* aus *;* von *;* from *;* aus *;* durch *");
             }
             
             if (buffers) {
@@ -2273,28 +2024,28 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     if (need_and) strcat(sql, " AND");
                     else          strcat(sql, "WHERE");
                     strcat(sql, " ( ");
-                    if (0 == strcmp(r->context, "q_who")) {
-                        strcat(sql, "( main.adverbs = \"\" ) AND main.truth > 0.9 AND ");
+                    if (0 == strcmp(r->context, "q_who") || 0 == strcmp(r->context, "q_what_weakly")) {
+                        //strcat(sql, " nmain.adverbs = \"\" AND nmain.truth > 0.9 AND ");
                     }
                     if (flag_should_contain) {
-                        strcat(sql, " ( main.mix_1 GLOB \"");
+                        strcat(sql, " (nmain.mix_1 GLOB \"");
                         strcat(sql, buffer);
                         strcat(sql, "\")");
                     }
                     else {
-                        strcat(sql, " ( (NOT(main.mix_1 GLOB \"");
+                        strcat(sql, " ((NOT(nmain.mix_1 GLOB \"");
                         strcat(sql, buffer);
                         strcat(sql, "\")))");
                     }
                     
                     while (buffer = strtok(NULL, ";")) {
                         if (flag_should_contain) {
-                            strcat(sql, " OR ( main.mix_1 GLOB \"");
+                            strcat(sql, " OR ( nmain.mix_1 GLOB \"");
                             strcat(sql, buffer);
                             strcat(sql, "\")");
                         }
                         else {
-                            strcat(sql, " OR ( (NOT(main.mix_1 GLOB \"");
+                            strcat(sql, " AND ( (NOT(nmain.mix_1 GLOB \"");
                             strcat(sql, buffer);
                             strcat(sql, "\")))");
                         }
@@ -2306,152 +2057,394 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             }
             halfree(buffers);
         }
-        if (r->extra && *r->extra != '0' && strlen(r->extra)) {
-            char* buffer = r->extra;
-            if (need_and) strcat(sql, " AND");
-            else          strcat(sql, "WHERE");
-
-            strcat(sql, " EXISTS(SELECT 1 FROM rel_word_fact WHERE word = \"");
-            strcat(sql, buffer);
-            strcat(sql, "\" AND fact IN (main.pk, clause.pk) ) ");
-            
-            need_and = 1;
-        }
-        if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
-            if (need_and) strcat(sql, " AND");
-            else          strcat(sql, "WHERE");
-            strcat(sql, " ( ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
-            strcat(sql, r->subjects);
-            strcat(sql, "\" GLOB main.subjects OR \"");
-            strcat(sql, r->subjects);
-            strcat(sql, "\" GLOB main.objects OR main.subjects ");
-            if (strstr(r->subjects, "*")) {
-                strcat(sql, "GLOB \"");
-            }
-            else {
-                strcat(sql, "= \"");
-            }
-            strcat(sql, r->subjects);
-            strcat(sql, "\" OR main.objects ");
-            if (strstr(r->subjects, "*")) {
-                strcat(sql, "GLOB \"");
-            }
-            else {
-                strcat(sql, "= \"");
-            }
-            strcat(sql, r->subjects);
-            strcat(sql, "\" )");
-            strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
-            if (strstr(r->subjects, "*")) {
-                strcat(sql, "GLOB \"");
-            }
-            else {
-                strcat(sql, "= \"");
-            }
-            strcat(sql, r->subjects);
-            strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
-            if (strstr(r->subjects, "*")) {
-                strcat(sql, "GLOB \"");
-            }
-            else {
-                strcat(sql, "= \"");
-            }
-            strcat(sql, r->subjects);
-            strcat(sql, "\")");
-            int n = 0;
-            while (subject_synonyms[n] && n < 20000) {
-                strcat(sql, " OR ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" GLOB main.subjects OR \"");
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" GLOB main.objects OR main.subjects ");
-                if (strstr(subject_synonyms[n], "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR main.objects ");
-                if (strstr(subject_synonyms[n], "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" )");
-                strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
-                if (strstr(subject_synonyms[n], "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
-                if (strstr(subject_synonyms[n], "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, subject_synonyms[n]);
-                strcat(sql, "\")");
-                free(subject_synonyms[n]);
-                ++n;
-            }
-            strcat(sql, ")");
-            need_and = 1;
-        }
-        if (r->objects && *r->objects != '0' && strlen(r->objects)) {
-            if (need_and) strcat(sql, " AND");
-            else          strcat(sql, "WHERE");
-            strcat(sql, " ( ( \"");
-            strcat(sql, r->objects);
-            strcat(sql, "\" GLOB main.objects OR \"");
-            strcat(sql, r->objects);
-            strcat(sql, "\" GLOB main.subjects )");
-            strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
-            strcat(sql, r->objects);
-            strcat(sql, "\" GLOB main.objects OR \"");
-            strcat(sql, r->objects);
-            strcat(sql, "\" GLOB main.subjects )");
-            int n = 0;
-            while (object_synonyms[n] && n < 20000) {
-                strcat(sql, " OR ( \"");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" GLOB main.objects OR \"");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" GLOB main.objects )");
-                strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" GLOB main.objects OR \"");
-                strcat(sql, object_synonyms[n]);
-                strcat(sql, "\" GLOB main.objects )");
-                free(object_synonyms[n]);
-                ++n;
-            }
-            strcat(sql, " ) ");
-            need_and = 1;
-        }
         if (r->adverbs && *r->adverbs != '0' && strlen(r->adverbs)) {
             char* buffer;
             buffer = strtok(r->adverbs, " ;,)(-.");
             if (buffer) {
                 if (need_and) strcat(sql, " AND");
                 else          strcat(sql, "WHERE");
-                strcat(sql, "(  (main.subjects IN (\"*\", \"\")) OR (main.objects IN (\"*\", \"\") AND clause.subjects IN (\"*\", \"\")) OR (");
-                strcat(sql, " ( main.mix_1 GLOB \"*");
-                strcat(sql, buffer);
-                strcat(sql, "*\")");
-                strcat(sql, " AND ( main.subjects <> \"*\"");
-                strcat(sql, " OR main.mix_1 GLOB \"*");
+                strcat(sql, " ( nmain.mix_1 GLOB \"*");
                 strcat(sql, buffer);
                 strcat(sql, "*\")");
                 
                 while (buffer = strtok(NULL, " ;,)(-.")) {
                     strcat(sql, " AND");
+                    strcat(sql, " ( nmain.mix_1 GLOB \"*");
+                    strcat(sql, buffer);
+                    strcat(sql, "*\")");
+                }
+
+                need_and = 1;
+            }
+        }
+        if (r->extra && *r->extra != '0' && strlen(r->extra) && r->extra != objects_buffer) {
+            char* buffer = r->extra;
+            if (need_and) strcat(sql, " AND");
+            else          strcat(sql, "WHERE");
+            strcat(sql, " ( nmain.mix_1 GLOB \"* ");
+            strcat(sql, buffer);
+            strcat(sql, "*\" OR nmain.mix_1 GLOB \"*");
+            strcat(sql, buffer);
+            strcat(sql, " *\" OR nmain.mix_1 GLOB \"* ");
+            strcat(sql, buffer);
+            strcat(sql, " *\"");
+
+            int n = 0;
+            while (extra_synonyms[n] && n < 20000) {
+                char* extra_synonym_buf = extra_synonyms[n];
+                
+                if (extra_synonym_buf && extra_synonym_buf[0]) {
+                    ++extra_synonym_buf;
+                    if (strlen(extra_synonym_buf) >= 2) {
+                        extra_synonym_buf[strlen(extra_synonym_buf)-1] = 0;
+                        
+                        strcat(sql, " OR nmain.mix_1 GLOB \"* ");
+                        strcat(sql, extra_synonym_buf);
+                        strcat(sql, "*\" OR nmain.mix_1 GLOB \"*");
+                        strcat(sql, extra_synonym_buf);
+                        strcat(sql, " *\" OR nmain.mix_1 GLOB \"* ");
+                        strcat(sql, extra_synonym_buf);
+                        strcat(sql, " *\"");
+                    }
+                }
+                    
+                ++n;
+            }
+
+            if (0 == strcmp(r->context, "q_what_prep")) {
+                strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"");
+                strcat(sql, buffer);
+                strcat(sql, "*\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
+                strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"");
+                strcat(sql, buffer);
+                strcat(sql, "*\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
+                strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"");
+                strcat(sql, buffer);
+                strcat(sql, "*\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
+                strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"");
+                strcat(sql, buffer);
+                strcat(sql, "*\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
+            
+                strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"*");
+                strcat(sql, buffer);
+                strcat(sql, "\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
+                strcat(sql, " OR EXISTS(SELECT i.subjects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.subjects <> \"\" AND i.objects GLOB \"*");
+                strcat(sql, buffer);
+                strcat(sql, "\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.subjects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
+                strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"*");
+                strcat(sql, buffer);
+                strcat(sql, "\" AND nmain.adverbs GLOB \"* \"||replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\"))");
+                strcat(sql, " OR EXISTS(SELECT i.objects FROM facts AS i WHERE (i.verbgroup = \"be\") AND ");
+                strcat(sql, "i.objects <> \"\" AND i.subjects GLOB \"*");
+                strcat(sql, buffer);
+                strcat(sql, "\" AND nmain.adverbs GLOB replace(replace(replace(replace(replace(replace(replace(replace(i.objects, \"ein \", \"\"), \"eine \", \"\"), \"a \", \"\"), \"an \", \"\"), \"der \", \"\"), \"die \", \"\"), \"das \", \"\"), \"the \", \"\")||\" *\")");
+            }
+            strcat(sql, ")");
+            need_and = 1;
+        }
+        
+        strcat(sql, " AND nmain.questionword NOT IN (\"wenn\", \"if\", \"falls\", \"when\")"
+                    " AND NOT EXISTS(SELECT nclause.pk FROM facts AS nclause WHERE nclause.rel = nmain.pk AND ( nclause.questionword IN (\"wenn\", \"if\", \"falls\", \"when\") OR nclause.verb GLOB \"*=>*\" ))");
+        
+        /////////////////////////// Then, select facts by if statements ///////////////////////////
+        
+        // There must be no primary key
+        if ( !( r->pkey && *r->pkey != '0' && *r->pkey != ' ' && strlen(r->pkey) ) ) {
+
+            need_and = 0;
+
+            strcat(sql, " \n\nUNION ALL "
+                        "SELECT DISTINCT \n"
+                        "fact.pk, fact.rel, fact.verb || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, fact.subjects, fact.objects, fact.adverbs, fact.prio, NULL, fact.truth \n"
+                        "FROM cache_facts AS main JOIN clauses AS clause ON ");
+            if (important_records[0]) {
+                strcat(sql, " ( ");
+                int w = 0;
+                while (important_records[w] && w < 20000) {
+                    ++w;
+                }
+                --w;
+                if (w < 0)
+                    w = 0;
+                strcat(sql, " main.pk >= ");
+                strcat(sql, important_records[0]);
+                strcat(sql, " AND main.pk <= ");
+                strcat(sql, important_records[w]);
+                strcat(sql, " ");
+                /**
+                int n = 0;
+                while (important_records[n] && n < 20000) {
+                    strcat(sql, " OR nmain.pk = ");
+                    strcat(sql, important_records[n]);
+                    strcat(sql, " ");
+                    ++n;
+                }
+                **/
+                strcat(sql, " ) AND ");
+            }
+            strcat(sql, " main.pk = clause.rel ");
+            strcat(sql, "JOIN cache_facts AS fact ON main.truth = 1 AND \n"
+                        "((clause.verbgroup <> \"have\" AND clause.verbgroup <> \"be\" AND fact.verb GLOB clause.verb) OR "
+                        "((clause.verbgroup = \"have\") AND (fact.verbgroup = \"have\") ) OR  "
+                        "((clause.verbgroup = \"be\") AND (fact.verbgroup = \"be\") )) ");
+    //                    "JOIN rel_word_fact ON (rel_word_fact.fact = main.pk OR rel_word_fact.fact = clause.pk)\n\n");
+
+            strcat(sql, " LEFT JOIN rel_fact_flag AS rff ON rff.fact = fact.pk ");
+            {
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+                strcat(sql, " fact.questionword = \"\" AND fact.subjects <> \"*\" AND fact.objects <> \"*\"");
+                need_and = 1;
+                
+                {
+                    if (need_and) strcat(sql, " AND");
+                    else          strcat(sql, "WHERE");
+
+                    strcat(sql, "\n (((main.subjects = \"*\" OR clause.subjects = \"*\") AND (clause.subjects <> \"*\" OR main.subjects <> \"*\")) OR (main.subjects = \"\") OR (clause.subjects = \"\") OR (clause.subjects <> \"*\" AND fact.subjects GLOB clause.subjects) OR (clause.subjects = \"*\" AND fact.subjects GLOB \"");
+                    if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
+                        strcat(sql, r->subjects);
+                    }
+                    strcat(sql, "\")");
+                    int n = 0;
+                    while (subject_synonyms[n] && n < 20000) {
+                        strcat(sql, " OR fact.subjects GLOB \"");
+                        strcat(sql, subject_synonyms[n]);
+                        strcat(sql, "\" ");
+                        ++n;
+                    }
+                    strcat(sql, " ) AND (clause.objects = \"\" OR fact.objects GLOB clause.objects) AND (clause.adverbs = \"\" OR clause.adverbs = \"\" OR fact.adverbs GLOB clause.adverbs)"
+                    "\n AND (((fact.objects <> \"\" OR fact.adverbs <> \"\") AND fact.objects <> \"\") OR NOT (fact.verbgroup = \"be\"))\n");
+                }
+            }
+
+            if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
+                char* buffers = malloc(strlen(r->verb)+2);
+                strcpy(buffers, r->verb);
+                if (buffers) {
+                    char* buffer = strtok(buffers, "|");
+                    if (buffer) {
+                        if (need_and) strcat(sql, " AND");
+                        else          strcat(sql, "WHERE");
+                        strcat(sql, " ( main.verb = \"");
+                        strcat(sql, buffer);
+                        strcat(sql, "\"");
+                        while (buffer = strtok(NULL, "|")) {
+                            strcat(sql, " OR main.verb = \"");
+                            strcat(sql, buffer);
+                            strcat(sql, "\"");
+                        }
+                        strcat(sql, " )");
+                        need_and = 1;
+                    }
+                }
+                free(buffers);
+            }
+            if (r->context && *r->context != 'd' && strlen(r->context) && strcmp(r->context, "default")) {
+                char* buffers = calloc(5000, 1);
+                *buffers = 0;
+                short flag_should_contain = 1;
+                
+                if (0 == strcmp(r->context, "q_what_weakly")) {
+                    if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war"))) {
+                        if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
+                            strcpy(buffers, "ein*");
+                        }
+                    }
+                }
+                if (0 == strcmp(r->context, "q_who")) {
+                    strcpy(buffers, "ein*");
+                    flag_should_contain = 0;
+                    if (need_and) strcat(sql, " AND");
+                    else          strcat(sql, "WHERE");
+                    strcat(sql, " ( main.adverbs = \"\" )");
+                    need_and = 1;
+                }
+                if (0 == strcmp(r->context, "q_where")) {
+                    strcpy(buffers, "*in ;*im ;*am ;*an ;* aus;* von;*from ;*at ;in *;im *;am *;an *;from *;at *;aus *;von *");
+                }
+                
+                if (buffers) {
+                    char* buffer = strtok(buffers, ";");
+                    if (buffer) {
+                        if (need_and) strcat(sql, " AND");
+                        else          strcat(sql, "WHERE");
+                        strcat(sql, " ( ");
+                        if (0 == strcmp(r->context, "q_who")) {
+                            strcat(sql, "( main.adverbs = \"\" ) AND main.truth > 0.9 AND ");
+                        }
+                        if (flag_should_contain) {
+                            strcat(sql, " ( main.mix_1 GLOB \"");
+                            strcat(sql, buffer);
+                            strcat(sql, "\")");
+                        }
+                        else {
+                            strcat(sql, " ( (NOT(main.mix_1 GLOB \"");
+                            strcat(sql, buffer);
+                            strcat(sql, "\")))");
+                        }
+                        
+                        while (buffer = strtok(NULL, ";")) {
+                            if (flag_should_contain) {
+                                strcat(sql, " OR ( main.mix_1 GLOB \"");
+                                strcat(sql, buffer);
+                                strcat(sql, "\")");
+                            }
+                            else {
+                                strcat(sql, " OR ( (NOT(main.mix_1 GLOB \"");
+                                strcat(sql, buffer);
+                                strcat(sql, "\")))");
+                            }
+                        }
+                        strcat(sql, " ) ");
+
+                        need_and = 1;
+                    }
+                }
+                halfree(buffers);
+            }
+            if (r->extra && *r->extra != '0' && strlen(r->extra)) {
+                char* buffer = r->extra;
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+
+                strcat(sql, " EXISTS(SELECT 1 FROM rel_word_fact WHERE word = \"");
+                strcat(sql, buffer);
+                strcat(sql, "\" AND fact IN (main.pk, clause.pk) ) ");
+                
+                need_and = 1;
+            }
+            if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+                strcat(sql, " ( ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
+                strcat(sql, r->subjects);
+                strcat(sql, "\" GLOB main.subjects OR \"");
+                strcat(sql, r->subjects);
+                strcat(sql, "\" GLOB main.objects OR main.subjects ");
+                if (strstr(r->subjects, "*")) {
+                    strcat(sql, "GLOB \"");
+                }
+                else {
+                    strcat(sql, "= \"");
+                }
+                strcat(sql, r->subjects);
+                strcat(sql, "\" OR main.objects ");
+                if (strstr(r->subjects, "*")) {
+                    strcat(sql, "GLOB \"");
+                }
+                else {
+                    strcat(sql, "= \"");
+                }
+                strcat(sql, r->subjects);
+                strcat(sql, "\" )");
+                strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
+                if (strstr(r->subjects, "*")) {
+                    strcat(sql, "GLOB \"");
+                }
+                else {
+                    strcat(sql, "= \"");
+                }
+                strcat(sql, r->subjects);
+                strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
+                if (strstr(r->subjects, "*")) {
+                    strcat(sql, "GLOB \"");
+                }
+                else {
+                    strcat(sql, "= \"");
+                }
+                strcat(sql, r->subjects);
+                strcat(sql, "\")");
+                int n = 0;
+                while (subject_synonyms[n] && n < 20000) {
+                    strcat(sql, " OR ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" GLOB main.subjects OR \"");
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" GLOB main.objects OR main.subjects ");
+                    if (strstr(subject_synonyms[n], "*")) {
+                        strcat(sql, "GLOB \"");
+                    }
+                    else {
+                        strcat(sql, "= \"");
+                    }
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR main.objects ");
+                    if (strstr(subject_synonyms[n], "*")) {
+                        strcat(sql, "GLOB \"");
+                    }
+                    else {
+                        strcat(sql, "= \"");
+                    }
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" )");
+                    strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
+                    if (strstr(subject_synonyms[n], "*")) {
+                        strcat(sql, "GLOB \"");
+                    }
+                    else {
+                        strcat(sql, "= \"");
+                    }
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
+                    if (strstr(subject_synonyms[n], "*")) {
+                        strcat(sql, "GLOB \"");
+                    }
+                    else {
+                        strcat(sql, "= \"");
+                    }
+                    strcat(sql, subject_synonyms[n]);
+                    strcat(sql, "\")");
+                    free(subject_synonyms[n]);
+                    ++n;
+                }
+                strcat(sql, ")");
+                need_and = 1;
+            }
+            if (r->objects && *r->objects != '0' && strlen(r->objects)) {
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+                strcat(sql, " ( ( \"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.objects OR \"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.subjects )");
+                strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.objects OR \"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.subjects )");
+                int n = 0;
+                while (object_synonyms[n] && n < 20000) {
+                    strcat(sql, " OR ( \"");
+                    strcat(sql, object_synonyms[n]);
+                    strcat(sql, "\" GLOB main.objects OR \"");
+                    strcat(sql, object_synonyms[n]);
+                    strcat(sql, "\" GLOB main.objects )");
+                    strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
+                    strcat(sql, object_synonyms[n]);
+                    strcat(sql, "\" GLOB main.objects OR \"");
+                    strcat(sql, object_synonyms[n]);
+                    strcat(sql, "\" GLOB main.objects )");
+                    free(object_synonyms[n]);
+                    ++n;
+                }
+                strcat(sql, " ) ");
+                need_and = 1;
+            }
+            if (r->adverbs && *r->adverbs != '0' && strlen(r->adverbs)) {
+                char* buffer;
+                buffer = strtok(r->adverbs, " ;,)(-.");
+                if (buffer) {
+                    if (need_and) strcat(sql, " AND");
+                    else          strcat(sql, "WHERE");
+                    strcat(sql, "(  (main.subjects IN (\"*\", \"\")) OR (main.objects IN (\"*\", \"\") AND clause.subjects IN (\"*\", \"\")) OR (");
                     strcat(sql, " ( main.mix_1 GLOB \"*");
                     strcat(sql, buffer);
                     strcat(sql, "*\")");
@@ -2459,25 +2452,36 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     strcat(sql, " OR main.mix_1 GLOB \"*");
                     strcat(sql, buffer);
                     strcat(sql, "*\")");
-                    }
+                    
+                    while (buffer = strtok(NULL, " ;,)(-.")) {
+                        strcat(sql, " AND");
+                        strcat(sql, " ( main.mix_1 GLOB \"*");
+                        strcat(sql, buffer);
+                        strcat(sql, "*\")");
+                        strcat(sql, " AND ( main.subjects <> \"*\"");
+                        strcat(sql, " OR main.mix_1 GLOB \"*");
+                        strcat(sql, buffer);
+                        strcat(sql, "*\")");
+                        }
 
-                strcat(sql, "))");
+                    strcat(sql, "))");
+                    need_and = 1;
+                }
+            }
+            /// There are no adverbs given in HAL request
+            else if (!(r->extra && *r->extra != '0' && strlen(r->extra))) {
+                if (need_and) strcat(sql, " AND");
+                else          strcat(sql, "WHERE");
+                strcat(sql, " ( main.adverbs = \"\" OR main.adverbs = \"*\" )");
+                
                 need_and = 1;
             }
         }
-        /// There are no adverbs given in HAL request
-        else if (!(r->extra && *r->extra != '0' && strlen(r->extra))) {
-            if (need_and) strcat(sql, " AND");
-            else          strcat(sql, "WHERE");
-            strcat(sql, " ( main.adverbs = \"\" OR main.adverbs = \"*\" )");
-            
-            need_and = 1;
+        
+        /// The User asks for nothing, he accepts every fact
+        if (0 == need_and) {
+            strcat(sql, " WHERE `pk` >= (abs(random()) * (SELECT max(`pk`) FROM `facts`)) LIMIT 10");
         }
-    }
-    
-    /// The User asks for nothing, he accepts every fact
-    if (0 == need_and) {
-        strcat(sql, " WHERE `pk` >= (abs(random()) * (SELECT max(`pk`) FROM `facts`)) LIMIT 10");
     }
         
     /// End of statement

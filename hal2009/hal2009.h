@@ -51,6 +51,7 @@
     #define MODUS )
 #endif
 
+#define EVERYTHING 3
 
 #include <pthread.h>
 
@@ -117,7 +118,7 @@ FILE* unset_output_pipe();
 #define SINGLE 1
 #define MULTI 2
 
-static char* sql_engine = 0;
+static char* sql_engine;
 
 #define MAX_CLAUSES 10
 #define LINE_SIZE 4096
@@ -147,6 +148,8 @@ struct RECORD {
     short verb_flag_can;
     short verb_flag_may;
     short verb_flag_should;
+    
+    short everything_q;
 };
 struct RECORD_short {
     char verb[50];
