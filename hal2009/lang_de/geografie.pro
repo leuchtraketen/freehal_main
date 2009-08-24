@@ -1,3 +1,5 @@
+
+
 
 aufgeht <> die sonne <> nothing <> in dem osten <>  <>  <>  <>  <>  <>  <> 50
 aufgenommen wurde <> die ddr <> 1973 <> in die uno <>  <>  <>  <>  <>  <>  <> 50
@@ -2255,7 +2257,7 @@ ist <> deutschland <> ein teil <> von europa <>  <>  <>  <> nothing <> nothing <
 ist <> deutschland <> nothing <> in europa <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> deutschlandsberg <> eine stadt <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
 ist <> dhaka <> die hauptstadt <> von bangladesch <>  <>  <>  <>  <>  <>  <> 50
-ist <> die Wolga <> der laengste fluss <> von europa <>  <>  <>  <>  <>  <>  <> 50
+
 ist <> die _ewige_stadt_ <> die hauptstadt <> von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _isla_margarita_ <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _patagonische_wueste_ <> die groesste wueste <> von amerika <>  <>  <>  <>  <>  <>  <> 50
@@ -8346,4 +8348,3 @@ wiegt <> die erde <> 5972 trillionen tonnen <>  <>  <>  <>  <>  <>  <>  <> 50
 wird <> 70 prozent <> nothing <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>  <>  <> 50
 wurde <> das erste planetarium <> nothing <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
 wurden <> die streichhoelzer <> nothing <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50
-ist <> wien <> die hauptstadt <> von oesterreich <> 50

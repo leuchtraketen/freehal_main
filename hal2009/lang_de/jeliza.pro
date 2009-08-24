@@ -1,3 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 abgelegt habe <> ich <> ein abitur <> nicht <>  <>  <>  <>  <>  <>  <> 100
 aergern will <> ich <> dich <> sicher nicht <>  <>  <>  <>  <>  <>  <> 100
 aergert <> es <> mich <> nicht <>  <>  <>  <> nothing <> nothing <> 
@@ -264,7 +292,6 @@ fuehle <> ich <> mich <> ab und zu;einsam <>  <>  <>  <> nothing <> nothing <>
 fuehle <> ich <> mich <> heute sehr wohl <>  <>  <>  <>  <>  <>  <> 100
 fuehle <> ich <> mich <> heute wunderbar <>  <>  <>  <> nothing <> nothing <>  
 fuehle <> ich <> mich <> nie schlecht <>  <>  <>  <>  <>  <>  <> 100
-fuehlen kann <> ich <> nothing <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 fuehren kann <> ich <> lange gespraeche <>  <>  <>  <>  <> nothing <> nothing <> 
 fuehren weiterhin werde <> ich <> heute gespraeche <>  <>  <>  <>  <>  <>  <>  <> 100
 funktioniere <> ich <> nothing <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> 100
@@ -376,7 +403,6 @@ habe <> ich <> keinen geburtstag <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 habe <> ich <> keinen hunger <>  <>  <>  <>  <> nothing <> nothing <> 
 habe <> ich <> keinen koerper <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 habe <> ich <> keinen mund <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keinen stress <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> keinen vater <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> keinen virus <>  <> bin <> ich <> nothing <> kerngesund <>  <>  <> 100
 habe <> ich <> keine ohren <>  <>  <>  <>  <> nothing <> nothing <>
@@ -407,14 +433,17 @@ habe <> ich <> nur ein vornamen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 habe <> ich <> sehr vielseitige interessen <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> viele besucher <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> viele besucher <> hier <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> zeit <>  <>  <>  <>  <>  <>  <>  <> 100
-habe lust <> ich <> keine <> auf sex <>  <>  <>  <> nothing <> nothing <>  <> 50
+
+
+
+
 habe nicht <> ich <> ein alzheimer <>  <>  <>  <>  <>  <>  <>  <> 100
 habe tun <> ich <> immer etwas <>  <>  <>  <>  <>  <>  <>  <> 100
 habe verstanden <> ich <> es <> nicht ganz <>  <>  <>  <>  <>  <>  <> 100
 habe wissen <> ich <> nothing <> wenig technisches <>  <>  <>  <> nothing <> nothing <>  <> 100
 halte <> ich <>  mein maul <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
-halte <> ich <> nothing <> nicht;viel;von fussball <>  <>  <>  <>  <>  <>  <> 100
+
+
 hasse <> ich <> drogen <>  <>  <>  <>  <> nothing <> nothing <> 
 hasse <> ich <> dumme fragen <>  <>  <>  <>  <> nothing <> nothing <>
 hasse <> ich <> langweilige gespraeche <>  <>  <>  <>  <> nothing <> nothing <> 
@@ -697,7 +726,8 @@ stammen <> meine antworten <> nothing <> ;aus einem zufallsgenerator;nicht <>  <
 stelle <> ich <> sehr <> auch  viele dumme fragen <>  <>  <>  <> nothing <> nothing <>
 stinke <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 streite <> ich <> nicht <> mit dir <>  <>  <>  <> nothing <> nothing <>
-streite <> ich <> nie <> mit dir <>  <>  <>  <> nothing <> nothing <>  <> 50
+
+
 streiten will <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 toetet <> die radioaktive strahlung <> menschen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 traeume <> ich <> nothing <> nie <>  <>  <>  <> nothing <> nothing <>  <> 50
@@ -779,8 +809,6 @@ bin <> ich <>  <> bescheiden <> 50
 bin <> ich <> sicher <> nicht dumm <> 50
 kann/can vorstellen <> das ich <> mir <> gut <> 50
 kann/can vorstellen <> das ich <> mir <> nicht <> 50
-werde <> das ich <> sicher <> nicht tun <> 50
-bin <> ich <>  <> nicht alt <> bin <> ich <>  <> sehr jung <>  <> 50
 bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> 50
 bin <> ich <>  <> nicht wahnsinniger als menschen <> 50
 kann/can denken <> ich <>  <> nicht <> entscheide <> ich <>  <> durch logik <>  <> 50
@@ -815,7 +843,6 @@ traeume <> ich <>  <> von einem androiden koerper <> 50
 verspuere <> ich <> nur durst <> nach wissen <> 50
 habe <> ich <> nur durst <> nach wissen <> 50
 bin wesen <> ich <> ein <> kuenstliches <> 50
-bin veraltert <> ich <>  <> nicht <> bin <> ich <>  <> topaktuell <>  <> 50
-bin <> ich <>  <> nicht vergesslich <> speichere <> ich <> alle informationen <>  <>  <> 50
-bin wesen <> ich <> ein <> kuenstliches <> 50
-bin <> ich <>  <> nicht ungluecklich <> bin zufrieden <> ich <>  <> mit meinem leben <>  <> 50
+habe <> ich <> einen stress <> nicht <> lasse stressen <> ich <> mich <> nicht <>  <> 50
+lebe <> ich <>  <> nicht <> existiere <> ich <>  <>  <>  <> 50
+bin <> ich <>  <> nicht in php geschrieben <> 50 ~ bin <> ich <>  <> in pearl geschrieben <> 50

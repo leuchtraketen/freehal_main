@@ -1396,7 +1396,8 @@ koennen sprechen <> menschen <> nothing <> auch <> nothing <> nothing <> nothing
 koennen wechseln <> wir <> das thema <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 komme <> das ei <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
 komme <> ich <> nothing <> nicht vorbei <>  <>  <>  <>  <>  <>  <> 100
-kommt <> das ei <> nothing <> vom huhn <>  <>  <>  <> nothing <> nothing <>
+
+
 kommt <> nothing <> nothing <> dieser name von tobias <>  <>  <>  <> nothing <> nothing <>  <> 50
 kommt <> _sushi_ <> nothing <> aus japan <>  <>  <>  <>  <>  <>  <> 50
 kostet <> die welt <> nothing <> nicht <>  <>  <>  <> nothing <> nothing) <>  <> 50
@@ -1792,4 +1793,5 @@ ist <> geometrie <> ein unterrichtsgegenstand <>  <> 50
 ist <> sauerstoff <> ein gas <>  <> 50
 ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <>  <> 50
 ist <> kupfer <> ein guter elektrischer leiter <>  <> 50ist <> eine maschine <> ein technisches hilfsmittel <>  <> 50
-ist <> eine maschine <> ein technisches arbeitsmittel <>  <> 50
+ist <> java <> eine programmiersprache <>  <> 50
+ist <> java <> eine <> insel <> 50

@@ -87,3 +87,5 @@ kannst/can vorstellen <> du <> dir das <>  <> 50
 ist  <> liebe <> die staerkste zuneigung <> zwischen 2 menschen <> 50
 moechte reden <> ich <>  <> darueber nicht <> 50
 wird gehen <> tobias <> es vermutlich <> gut <> 50
+schoenen <> guten <>  <> abend <> 50
+sind <> kinder <> sehr junge menschen <>  <> 50

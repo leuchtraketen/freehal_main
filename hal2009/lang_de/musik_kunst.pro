@@ -312,3 +312,5 @@ wurde <> franz kafka <> nothing <> in prag geboren <>  <>  <>  <>  <>  <>  <> 50
 wurde <> george_lazenby <> nothing <> in australien geboren <>  <>  <>  <>  <>  <>  <> 50
 wurde <> hermann_hesse <> nothing <> in calw geboren <>  <>  <>  <>  <>  <>  <> 50
 wurde <> romy schneider <> 44 jahre <> alt <>  <>  <>  <>  <>  <>  <> 50
+hat <> karl may <> winnetou <> geschrieben <> 50
+war <> karl may <> ein schriftsteller <>  <> 50

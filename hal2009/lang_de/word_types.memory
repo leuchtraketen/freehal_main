@@ -21308,7 +21308,7 @@ Schwemme:
 freizuegig:
   type: adv
 deutschland:
-  type: adj
+  type: n
 Hochzeitsturm:
   genus: m
   type: n
@@ -97711,7 +97711,8 @@ Anwenderinnen:
 Hardware:
   type: n
 schriftsteller:
-  type: adj
+  genus  : m
+  type: n
 Zwielaute:
   type: n
 Naturereignis:
@@ -207530,3 +207531,125 @@ ISUNKNOWN:
   type: vi
 ISUNKNOWN:
   type: vi
+unfehlbar:
+  type: adj
+unfehlbar:
+  type: adj
+Ah:
+  type: inter
+Ah:
+  type: inter
+atomhuelle:
+  type: n
+seife:
+  type: n
+fettsaeuren:
+  type: n
+Ws:
+  type: EXIT
+Isis:
+  type: n
+niedlich:
+  type: adj
+niedlich:
+  type: adj
+gummihuhn:
+  type: n
+puppe:
+  type: n
+specklieferant:
+  type: n
+welpe:
+  type: n
+unterhalten:
+  type: vi
+entsprechenden:
+  type: adj
+traeume:
+  type: vi
+androiden:
+  type: n
+lerne:
+  type: vi
+intelligentes:
+  type: adj
+_:_lange_:
+  type: n
+=:
+  type: vt
+_kurz_:
+  type: n
+_ewig_:
+  type: n
+_immer__:
+  type: n
+_immer__:
+  type: n
+droiden:
+  type: EXIT
+fluggeraet:
+  type: n
+fluggeraet:
+  type: n
+3:
+  type: adj
+paarhufer:
+  type: n
+stress:
+  type: n
+stressen:
+  type: vi
+stressen:
+  type: vi
+wurfscheibe:
+  type: n
+PHP:
+  type: n
+PHP:
+  type: n
+adenauer:
+  type: n
+adenauer:
+  type: n
+may:
+  type: n
+may:
+  type: n
+Java:
+  type: n
+Java:
+  type: n
+/GEN:
+  type: EXIT
+Bps:
+  type: EXIT
+"$$wday$$":::
+  type: inter
+$$wday$$:
+  type: inter
+/rf:
+  type: inter
+/DF:
+  type: inter
+/df:
+  type: inter
+dummer:
+  type: adj
+netter:
+  type: adj
+"Account:
+  type: n
+Manager":
+  type: n
+Manager":
+  type: n
+Managerin":
+  type: n
+Account:
+  type: n
+Account:
+  type: n
+account:
+  type: n
+manager:
+  type: n
