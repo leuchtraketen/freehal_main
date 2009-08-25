@@ -1336,6 +1336,14 @@ set multi-line new global hash builtin_entity_ends to {
 };
 
 set multi-line new global hash builtin_time_place_adverbs to {
+          '_wie_' => 1,
+          '_wer_' => 1,
+          '_was_' => 1,
+          '_wo_' => 1,
+          '_wann_' => 1,
+          '_warum_' => 1,
+          '_wieso_' => 1,
+          '_weshalb_' => 1,
           'nicht' => 1,
           '_q_' => 1,
           'kenne' => 1,
@@ -2544,6 +2552,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'viele' => "adj",
           'blass' => "adj",
           'jeden' => "adj",
+          'no-question' => "qq",
+          '_no-question_' => "qq",
           'mond' => "n",
           'the' => "art",
           'haettest' => "vt",
@@ -2846,6 +2856,8 @@ done
 define action compute_output with var output do
     do regex using var output: /in dem/, "im", :global:i
     do regex using var output: /an dem/, "am", :global:i
+    
+    do regex using var output: /^(.*?) _(wie|wer|was|wo|wann|warum|wieso|weshalb)_(.*?)$/, "$1 $0 $2", :global:i
 
     do regex using var output: / [&] /, " und ", :global:i
 
@@ -3516,19 +3528,19 @@ define action find_mode with var input do
         
         do return with "question"
     done
-    else if lc(var input) matches /^((kannst\s)|(kann\s))/ do
+    else if (not var input matches /_no-question_/) and lc(var input) matches /^((kannst\s)|(kann\s))/ do
         print "Sentence contains a question with can..."
         print new line
         
         do return with "question"
     done
-    else if lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
+    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
         print "Sentence contains a question word and sub clauses"
         print new line
 
         do return with "question"
     done
-    else if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+    else if (not var input matches /_no-question_/) and (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         print "Sentence contains a question word"
         print new line
 

@@ -248,6 +248,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /erzaele etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
     do regex using var input: /Erzaehlst du .*/, "was ist?", :global:i
 
+    do regex using var input: /(ich weiss nicht)\s+?(?:(wie|wer|was|wo|wann|warum|wieso|weshalb) (.*?))($|[.,])/, "_$1_ _no-question_ $2 , weiss ich nicht$3", :global:i
+    do regex using var input: /(du weisst nicht)\s+?(?:(wie|wer|was|wo|wann|warum|wieso|weshalb) (.*?))($|[.,])/, "_$1_ _no-question_ $2 , weisst du nicht$3", :global:i
+    do regex using var input: /(weiss ich)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
+    do regex using var input: /(weisst du)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
+    
     do regex using var input: /(was machst du).+?$/, "$0 ?", :global:i
     do regex using var input: /(das weiss ich,)$/, "$0 ?", :global:i
     do regex using var input: /(das weiss ich)$/, "$0 ?", :global:i
@@ -418,6 +423,8 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /^weisst du<ws><[,]>*<ws>/, "", :global:i
         do regex using var input: /^weisst du/, "", :global:i
     done
+    do regex using var input: /^weisst du<ws><[,]>*<ws>/, "", :global:i
+    do regex using var input: /^weisst du/, "", :global:i
     
     set var input to ' ' concat var input concat ' '
     do regex using var input: /\snoch\s(nie|nicht)(<[\s!.,?]>+)/, " noch-$0$1", :global:i
@@ -524,11 +531,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /was ist ueber (.*?)/, "was ist $0", :global:i
     do regex using var input: /was ist los mit (.*?)/, "was ist $0", :global:i
 
-    do regex using var input: /weisst du denn noch /, "weisst du ", :global:i
-    do regex using var input: /weisst du denn /, "weisst du ", :global:i
-    do regex using var input: /weisst du noch /, "weisst du ", :global:i
-    do regex using var input: /weisst du (w<[^\s]>*?)\s(<[^?!.,]>*)/, "$1 $0", :global:i
-    do regex using var input: /weisst du /, "", :global:i
+    do regex using var input: /^weisst du denn noch /, "weisst du ", :global:i
+    do regex using var input: /^weisst du denn /, "weisst du ", :global:i
+    do regex using var input: /^weisst du noch /, "weisst du ", :global:i
+    do regex using var input: /^weisst du (w<[^\s]>*?)\s(<[^?!.,]>*)/, "$1 $0", :global:i
+    do regex using var input: /^weisst du /, "", :global:i
 
     do regex using var input: /wie vie<[a-zA-Z]>+\s/, "wie ", :global:i
     do regex using var input: /^hm\, /, " ", :global:i

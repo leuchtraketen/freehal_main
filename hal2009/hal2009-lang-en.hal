@@ -1475,6 +1475,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'her' => "prep",
           'in' => "prep",
           'ueber' => "prep",
+          'no-question' => "qq",
+          '_no-question_' => "qq",
           'unter' => "prep",
           'neben' => "prep",
           'herunter' => "prep",
