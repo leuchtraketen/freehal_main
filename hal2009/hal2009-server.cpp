@@ -36,6 +36,11 @@ unsigned short server_port = 5173;
 unsigned short netcom_port = 5172;
 vector<tcp::iostream*> hal2009_server_clients;
 
+char* copy_for_init_planguage = 0;
+char* copy_for_init_signal_handler_tlanguage = 0;
+char* copy_for_init_base_dir = 0;
+int init_thread_ended = 0;
+
 #ifndef NO_PERL
 #ifdef WINDOWS
 #include <windows.h>
@@ -52,6 +57,7 @@ extern "C" void extract();
 void hal2009_server_start();
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2);
 int set_nonblocking(int);
+void* hal2009_init_thread (void*);
 
 boost::asio::io_service io_service;
 tcp::acceptor* hal2009_server_acceptor;
@@ -705,6 +711,10 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
 
     char* language             = (char*)cxxhalmalloc(16, "hal2009_server_client_connection");
     strcpy(language,             signal_handler_tlanguage);
+    
+    while (init_thread_ended <= 0) {
+        usleep(1000);
+    }
 
     string line;
     while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
@@ -736,7 +746,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             (*stream) << "DELETED:SUCCESS" << endl;
         }
         
-        if ( result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
+        if ( init_thread_ended > 0 && result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             
             string input;
             for (int i = 1; i < result->size(); ++i) {
@@ -791,6 +801,15 @@ void hal2009_server_run() {
         try {
             hal2009_server_clients.push_back(stream);
             
+            
+            if (init_thread_ended == 0) {
+                init_thread_ended = -1;
+                
+                pthread_t thread_init;
+                pthread_create (&thread_init, NULL, hal2009_init_thread, (void*)NULL);
+
+            }
+
             if (log_streamer)
                 delete log_streamer;
             log_streamer = new boost::thread(boost::bind(&hal2009_log_streamer, stream));
@@ -813,6 +832,9 @@ void hal2009_server_stop() {
 
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
     cout << "Get stream." << endl;
+    while (0 == hal2009_server_clients.size()) {
+        usleep(1000);
+    }
     tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
     
     cout << "Print into stream." << endl;
@@ -854,6 +876,11 @@ int set_nonblocking(int fd)
 #endif
 #endif
 } 
+
+void* hal2009_init_thread (void*) {
+    hal2009_init(strdup(copy_for_init_planguage), strdup(copy_for_init_signal_handler_tlanguage), strdup(copy_for_init_base_dir));
+    init_thread_ended = 1;
+}
 
 int main(int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
@@ -902,7 +929,9 @@ int main(int argc, char** argv) {
     fprintf(output(), "Opened new stdout: stdout = %li\n", (long int)(get_output()));
 
     pthread_t signal_thread = hal2009_start_signal_handler(strdup(planguage), strdup(signal_handler_tlanguage), MULTI);
-    hal2009_init(strdup(planguage), strdup(signal_handler_tlanguage), strdup(base_dir));
+    copy_for_init_planguage = strdup(planguage);
+    copy_for_init_base_dir = strdup(base_dir);
+    copy_for_init_signal_handler_tlanguage = strdup(signal_handler_tlanguage);
     pthread_t thread_netcom;
 
     hal2009_server_start();
