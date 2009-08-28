@@ -787,8 +787,10 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
     if (num_of_records_str && !relation_to) {
         FILE* target = fopen("_input_key", "w+b");
-        fwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
-        fclose(target);
+        if (target) {
+            fwrite(num_of_records_str, 1, strlen(num_of_records_str), target);
+            fclose(target);
+        }
     }
 
             /*    char* err;
@@ -893,8 +895,10 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
             if (!relation_to) {
                 FILE* target = fopen("_input_key", "w+b");
-                fwrite(key, 1, strlen(key), target);
-                fclose(target);
+                if (target) {
+                    fwrite(key, 1, strlen(key), target);
+                    fclose(target);
+                }
             }
         }
 
@@ -939,7 +943,9 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             --(num_of_records[relation_to?1:0]);
             if (!relation_to) {
                 FILE* target = fopen("_input_key", "w+b");
-                fclose(target);
+                if (target) {
+                    fclose(target);
+                }
             }
 //        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
             --num_facts_added_during_this_run;
@@ -1331,31 +1337,33 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 _num_of_synonyms = 1;
 
             FILE* logfile = fopen("flowchart.log", "a");
-            fprintf(logfile, "begin box\n");
-            fprintf(logfile, "bckgrndcolr D0FFFF\n");
-            fprintf(logfile, "bordercolor D0FFFF\n");
-            fprintf(logfile, "linesoftext %d\n", num_of_synonyms+_num_of_synonyms+3);
-            fprintf(logfile, "draw\n");
-            fprintf(logfile, "textcontent 000000 Synonyms (Subject):\n");
-            int n = 0;
-            while (subject_synonyms_trio[n] && n < 20000) {
-                char** subject_synonym_buf = subject_synonyms_trio[n];
-                
-                fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf[0]);
-                int u;
-                for (u = 0; u < 25-strlen(subject_synonym_buf[0]) && u < 26; ++u) {
-                    fprintf(logfile, " ");
+            if (logfile) {
+                fprintf(logfile, "begin box\n");
+                fprintf(logfile, "bckgrndcolr D0FFFF\n");
+                fprintf(logfile, "bordercolor D0FFFF\n");
+                fprintf(logfile, "linesoftext %d\n", num_of_synonyms+_num_of_synonyms+3);
+                fprintf(logfile, "draw\n");
+                fprintf(logfile, "textcontent 000000 Synonyms (Subject):\n");
+                int n = 0;
+                while (subject_synonyms_trio[n] && n < 20000) {
+                    char** subject_synonym_buf = subject_synonyms_trio[n];
+                    
+                    fprintf(logfile, "linkcontent 000000 \t - %s", subject_synonym_buf[0]);
+                    int u;
+                    for (u = 0; u < 25-strlen(subject_synonym_buf[0]) && u < 26; ++u) {
+                        fprintf(logfile, " ");
+                    }
+                    fprintf(logfile, " (");
+                    fprintf(logfile, "%s)\n", subject_synonym_buf[2]);
+                    fprintf(logfile, "property    pk     %s\n", subject_synonym_buf[1]);
+                    
+                    ++n;
                 }
-                fprintf(logfile, " (");
-                fprintf(logfile, "%s)\n", subject_synonym_buf[2]);
-                fprintf(logfile, "property    pk     %s\n", subject_synonym_buf[1]);
-                
-                ++n;
+                if (0 == n) {
+                    fprintf(logfile, "textcontent 000000 \t none\n");
+                }
+                fclose(logfile);
             }
-            if (0 == n) {
-                fprintf(logfile, "textcontent 000000 \t none\n");
-            }
-            fclose(logfile);
         }
     }
     
@@ -1363,29 +1371,31 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     {
         if (num_of_synonyms + _num_of_synonyms > 0) {
             FILE* logfile = fopen("flowchart.log", "a");
-            fprintf(logfile, "textcontent 000000 \n");
-            fprintf(logfile, "textcontent 000000 Synonyms (Object):\n");
-            int n = 0;
-            while (object_synonyms_trio[n] && n < 20000) {
-                char** object_synonym_buf = object_synonyms_trio[n];
-                
-                fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf[0]);
-                int u;
-                for (u = 0; u < 25-strlen(object_synonym_buf[0]) && u < 26; ++u) {
-                    fprintf(logfile, " ");
+            if (logfile) {
+                fprintf(logfile, "textcontent 000000 \n");
+                fprintf(logfile, "textcontent 000000 Synonyms (Object):\n");
+                int n = 0;
+                while (object_synonyms_trio[n] && n < 20000) {
+                    char** object_synonym_buf = object_synonyms_trio[n];
+                    
+                    fprintf(logfile, "linkcontent 000000 \t - %s", object_synonym_buf[0]);
+                    int u;
+                    for (u = 0; u < 25-strlen(object_synonym_buf[0]) && u < 26; ++u) {
+                        fprintf(logfile, " ");
+                    }
+                    fprintf(logfile, " (");
+                    fprintf(logfile, "%s)\n", object_synonym_buf[2]);
+                    fprintf(logfile, "property    pk     %s\n", object_synonym_buf[1]);
+                    
+                    
+                    ++n;
                 }
-                fprintf(logfile, " (");
-                fprintf(logfile, "%s)\n", object_synonym_buf[2]);
-                fprintf(logfile, "property    pk     %s\n", object_synonym_buf[1]);
-                
-                
-                ++n;
+                if (0 == n) {
+                    fprintf(logfile, "textcontent 000000 \t none\n");
+                }
+                fprintf(logfile, "end box\n");
+                fclose(logfile);
             }
-            if (0 == n) {
-                fprintf(logfile, "textcontent 000000 \t none\n");
-            }
-            fprintf(logfile, "end box\n");
-            fclose(logfile);
         }
     }
     
