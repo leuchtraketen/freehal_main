@@ -188,7 +188,7 @@ ist <> merten <> ein name <>  <> 50
 ist <> meta <> ein name <>  <> 50
 ist <> methodius <> ein name <>  <> 50
 ist <> metta <> ein name <>  <> 50
-mette ist <> ein name <>  <>  <> 50
+ist <> mette <> ein name <>  <> 50
 ist <> mian <> ein name <>  <> 50
 ist <> micah <> ein name <>  <> 50
 ist <> micha <> ein name <>  <> 50

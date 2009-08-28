@@ -85999,566 +85999,646 @@ rotationskompressor:
 Hal9000:
   type: n
 Leichenobduktion:
+  genus  : f
   type: n
 Wirtschaftstaetigkeit:
+  genus  : f
   type: n
 schwelen:
   type: vi
 Festnehmen:
+  genus  : s
   type: n
 pluendern:
   type: vi
 Aka:
   type: n
 druckluftantrieb:
-  type: adj
+  genus  : m
+  type: n
 Hierfuer:
-  type: n
-Dreistrkenglser:
-  type: n
+  type: adv
 Festlichkeiten:
+  genus  : f
   type: n
 hornberg:
-  type: adj
+  type: n
 Encoder:
+  genus  : m
   type: n
 Zutreffend:
-  type: n
-zitat:
   type: adj
+zitat:
+  genus  : s
+  type: n
 Badewannen:
+  genus  : f
   type: n
 drahtscheren:
-  type: vi
+  genus  : f
+  type: n
 leierkastenspieler:
+  genus  : m
   type: adj
 Vierter:
-  type: n
+  type: adj
 Novum:
+  genus  : s
   type: n
 Alternativloesung:
   genus: f
   type: n
 nachwehen:
-  type: adv
+  genus  : f
+  type: n
 Moma:
   type: n
 Uebergeschnappt:
-  type: n
+  type: adj
 Steuerruder:
+  genus  : s
   type: n
 Stopp:
+  genus  : m
   type: n
 Abfallkasten:
+  genus  : m
   type: n
 Leibesertuechtigung:
+  genus  : f
   type: n
 Kompatibilitaet:
+  genus  : f
   type: n
 zuschlag:
-  type: adj
+  genus  : m
+  type: n
 Triezen:
   type: n
 zwinkern:
   type: vi
 Wapitihirsch:
+  genus  : m
   type: n
 Englands:
   type: n
-2waldige:
-  type: adv
 Suedlich:
   type: adv
 Glasfasern:
+  genus  : f
   type: n
 organischen:
   type: adv
 Heizfaden:
+  genus  : m
   type: n
 lithographie:
-  type: adj
+  genus  : f
+  type: n
 Dampfwagen:
+  genus  : m
   type: n
 foerderlich:
   type: adv
 Ausfallbuergschaft:
+  genus  : f
   type: n
 Attachment:
+  genus  : s
   type: n
-Beschftigungen:
-  type: n
-bildseitenverhaeltni:
-  type: adj
-hetepbakef:
-  type: adj
 gehende:
   type: adv
 Schafskoepfe:
-  type: n
-Einzellschzeichen:
-  type: n
-Errterung:
+  genus  : f
   type: n
 Staatsministern:
+  genus  : f
   type: n
 Zusammenarbeiten:
+  genus  : s
   type: n
 umnebelung:
-  type: adj
+  genus  : f
+  type: n
 Rollkragenpulli:
+  genus  : m
   type: n
 Belueftungsgitter:
   genus: s
   type: n
-Fachanwlte:
-  type: n
 Seuchen:
+  genus  : f
   type: n
 Hymne:
+  genus  : f
   type: n
 Fussballschuh:
+  genus  : m
   type: n
 vorlesungsfreie:
   type: adj
 waltershausen:
-  type: vi
-Gandersheim:
   type: n
-Bauerngter:
+Gandersheim:
   type: n
 Ingles:
   type: n
 Atlantischer:
-  type: n
+  type: adj
 Leihvelo:
+  genus  : s
   type: n
 Bewalden:
+  genus  : s
   type: n
-einesweg:
-  type: adj
 Blendung:
+  genus  : f
   type: n
 bebildern:
   type: vi
 Neue:
+  genus  : s
   type: n
 Menge:
+  genus  : f
   type: n
 Seifhennersdorf:
   type: n
 Foamglas:
+  genus  : s
   type: n
 umwerfer:
-  type: adj
-Tentativ:
+  genus  : m
   type: n
+Tentativ:
+  type: adj
 Hilfsursprung:
+  genus  : m
   type: n
 tragetasche:
-  type: adv
+  genus  : f
+  type: n
 gefecht:
-  type: adv
+  genus  : s
+  type: n
 Koks:
+  genus  : m
   type: n
 Haarspalterei:
+  genus  : f
   type: n
 Beziehen:
+  genus  : s
   type: n
 Ibm:
   type: n
-obhuen:
-  type: adj
 Vergeudung:
+  genus  : f
   type: n
 Chirurgie:
+  genus  : f
   type: n
 Fahrradfahrer:
+  genus  : m
   type: n
 nichtvisko:
   type: adj
 nachgehen:
-  type: adv
+  type: vi
 changieren:
   type: vi
 Gruppenadresse:
+  genus  : f
   type: n
 Einflusszone:
+  genus  : f
   type: n
 ordnung:
-  type: adj
-fehlerlo:
-  type: adj
+  genus  : f
+  type: n
 Magersucht:
+  genus  : f
   type: n
 Fahrzeugelektronik:
+  genus  : f
   type: n
 scheisserei:
-  type: adj
-boden:
-  type: vi
-Komischer:
+  genus  : f
   type: n
+boden:
+  genus  : m
+  type: n
+Komischer:
+  type: adj
 vergeblich:
   type: adv
 Beeintraechtigung:
+  genus  : f
   type: n
 benummern:
   type: vi
 karlsruhe:
-  type: adv
-orgon:
-  type: adj
+  type: n
 Fliessbild:
+  genus  : s
   type: n
 Arbeitslosenzahlen:
+  genus  : f
   type: n
 Ausfall:
+  genus  : m
   type: n
 Gesellschaftswissenschaftler:
+  genus  : m
   type: n
 sonderpreis:
+  genus  : m
   type: n
 Blondinen:
-  type: n
-Entwrdigung:
+  genus  : f
   type: n
 Administrationsprogramm:
+  genus  : s
   type: n
 kursleiter:
-  type: adj
-Where:
-  type: fw
+  genus  : m
+  type: n
 Querbalkenverbindungstraeger:
+  genus  : m
   type: n
 Anzeigenredakteur:
+  genus  : m
   type: n
 Suedeuropa:
   type: n
 Chauffeure:
+  genus  : f
   type: n
 Gigant:
+  genus  : m
   type: n
 Auslandspresse:
+  genus  : f
   type: n
 Lebensnotwendig:
-  type: n
+  type: adj
 Kausalzusammenhang:
-  type: n
-Dieweil:
+  genus  : m
   type: n
 Schamlos:
-  type: n
-Amtsrzte:
-  type: n
+  type: adj
 verheiraten:
   type: vi
 Totenbett:
+  genus  : s
   type: n
 Kolloquium:
+  genus  : s
   type: n
 befestigung:
-  type: adj
-Class:
+  genus  : m
   type: n
-unisono:
-  type: adj
 handlungsvorschrift:
+  genus  : f
   type: vi
-unpopula:
-  type: adj
-Aalspie:
-  type: n
 verwandter:
-  type: vi
+  type: adj
 kennwort:
-  type: vi
-Hernach:
+  genus  : s
   type: n
+Hernach:
+  type: adv
 Toten:
-  type: prep
+  genus  : f
+  type: n
 Schritte:
+  genus  : f
   type: n
 Morpheus:
+  genus  : m
   type: n
 Sicherheit:
+  genus  : f
   type: n
-New:
-  type: prep
-bildwirkerei:
-  type: adj
 Ausdrucksstark:
-  type: n
+  type: adj
 Fluchtdorn:
+  genus  : m
   type: n
 sumpfig:
   type: adv
-Elastizitt:
-  type: n
-Andrckvorrichtung:
-  type: n
 Herausstehen:
+  genus  : s
   type: n
 nachtisch:
-  type: adj
+  genus  : m
+  type: n
 soporoes:
-  type: adj
-Impermeabel:
   type: n
 Betriebsstundenzaehler:
+  genus  : m
   type: n
 betrieblich:
   type: adv
 Darm:
+  genus  : m
   type: n
 Approbation:
+  genus  : f
   type: n
 Fluktuation:
+  genus  : f
   type: n
 Spinnst:
-  type: n
+  type: vi
 Eckdaten:
+  genus  : f
   type: n
 Komponente:
+  genus  : f
   type: n
 Biosynthese:
-  type: n
-Abfallschchte:
+  genus  : f
   type: n
 Zustimmend:
-  type: n
-Einsparungsmanahmen:
-  type: n
+  type: adj
 Konkurrent:
+  genus  : m
   type: n
 Revolten:
+  genus  : f
   type: n
 Storchschnabel:
+  genus  : m
   type: n
 Defensivreaktionen:
+  genus  : f
   type: n
 Eintiefung:
+  genus  : f
   type: n
 Nirgendwo:
-  type: n
-carnivor:
-  type: adj
-Ernhrungsfachmnner:
-  type: n
-berziehen:
   type: adv
 Vorbeugungsmassnahme:
+  genus  : f
   type: n
 spezialist:
-  type: vi
-Geheuer:
+  genus  : m
   type: n
-mai:
+Geheuer:
   type: adj
+mai:
+  genus  : m
+  type: n
 gelenkten:
-  type: vi
+  type: adj
 doppelklicken:
   type: vi
 rohrfernleitung:
-  type: adj
+  genus  : f
+  type: n
 Zuzuegler:
+  genus  : m
   type: n
 Wandbekleidung:
-  type: n
-Bltenkopf:
+  genus  : f
   type: n
 strukturieren:
   type: vi
 Blockbuster:
+  genus  : m
   type: n
 loben:
   type: vi
 Platin:
+  genus  : s
   type: n
 Trennlinie:
+  genus  : f
   type: n
 Bildtelefon:
+  genus  : s
   type: n
 Verdichtung:
+  genus  : f
   type: n
 Einkommensverwendung:
+  genus  : f
   type: n
 Geisteswissenschaft:
+  genus  : f
   type: n
 hathor:
-  type: adj
+  type: n
 Postausgang:
+  genus  : m
   type: n
 Langen:
+  genus  : s
   type: n
 Verzeihbar:
-  type: n
+  type: adj
 Brennerluftvorlage:
+  genus  : f
   type: n
 Strecke:
+  genus  : f
   type: n
 Verdehnung:
+  genus  : f
   type: n
 echelon:
-  type: adj
+  type: n
 weinrauteisen:
-  type: vi
+  type: n
 Petersdom:
+  genus  : m
   type: n
 Stueck:
+  genus  : s
   type: n
 Totenbahren:
+  genus  : f
   type: n
 Peinlich:
   type: adv
 Ausfallmuster:
+  genus  : s
   type: n
 europa:
-  type: adj
+  genus  : s
+  type: n
 Rezitation:
+  genus  : f
   type: n
 bildungsniveau:
-  type: adj
+  genus  : s
+  type: n
 eingliedernd:
   type: adj
 Einzelperson:
-  type: n
-Spezialitt:
-  type: n
-Pamphletschmaehschriftspottschriftstreitschrift:
+  genus  : f
   type: n
 Einigung:
+  genus  : f
   type: n
 Fachgebiete:
+  genus  : f
   type: n
 Cembalo:
+  genus  : s
   type: n
 Grad:
+  genus  : m
   type: n
 eurasien:
-  type: adj
-Anstoessig:
   type: n
+Anstoessig:
+  type: adj
 Bedienungsfelden:
+  genus  : f
   type: n
 Infiltrieren:
+  genus  : s
   type: n
 Zyklisch:
-  type: n
+  type: adj
 Alva:
   type: n
 Werbetrommel:
+  genus  : f
   type: n
 Baudezernate:
+  genus  : f
   type: n
 Kessel:
-  type: n
-Bettlektre:
+  genus  : m
   type: n
 verwunden:
   type: vi
 direkten:
-  type: vi
+  type: adj
 Bediengeraet:
+  genus  : s
   type: n
 prueden:
-  type: vi
+  type: adj
 andamanischen:
   type: adv
 schoenmachen:
-  type: adv
+  type: vi
 Wilddieb:
+  genus  : m
   type: n
 bipolar:
   type: adj
 Erzaehler:
+  genus  : m
   type: n
 Erledigungen:
+  genus  : f
   type: n
 Jeans:
+  genus  : f
   type: n
 paraden:
-  type: vi
+  genus  : f
+  type: n
 Betonen:
+  genus  : s
   type: n
 Marsmond:
+  genus  : m
   type: n
 opfernd:
   type: adj
 arbeitsmittel:
-  type: adj
-pfefferminzquark:
-  type: adj
-Aequidistant:
+  genus  : s
   type: n
+pfefferminzquark:
+  genus  : m
+  type: n
+Aequidistant:
+  type: adj
 Flugzeugen:
   type: n
 Grieben:
   type: n
-Ahorngewchse:
-  type: n
 verzichtete:
   type: vi
 kehrung:
-  type: adj
-durchgeknallt:
-  type: vi
-Abraeumer:
+  genus  : f
   type: n
-Aker:
+durchgeknallt:
+  type: adj
+Abraeumer:
+  genus  : m
   type: n
 navigieren:
   type: vi
 darstellung:
-  type: adj
+  genus  : f
+  type: n
 spruch:
-  type: adj
-Arbeitskrftepotential:
+  genus  : m
   type: n
 abklaerung:
-  type: adj
+  genus  : f
+  type: n
 Quirlig:
-  type: n
-Bedrfnisanstalten:
-  type: n
+  type: adj
 Aufpeppen:
+  genus  : s
   type: n
 begehung:
-  type: adj
-Muessiggangnichtstun:
+  genus  : f
   type: n
 Naechtlich:
   type: adv
 Einpresskoepfe:
+  genus  : f
   type: n
 Wagemut:
+  genus  : m
   type: n
 Druckluftspeicher:
+  genus  : m
   type: n
 Dickhaeuter:
+  genus  : f
   type: n
 Flugzeugabwehrkanone:
+  genus  : f
   type: n
 Vollenden:
+  genus  : s
   type: n
 nuance:
-  type: adj
-sellering:
-  type: adj
+  genus  : f
+  type: n
 Bohrbereiche:
+  genus  : f
   type: n
 Entlarvung:
+  genus  : f
   type: n
 Alphabetisierungsrate:
+  genus  : f
   type: n
 volksherrschaft:
-  type: adv
+  genus  : f
+  type: n
 Inhaftierung:
+  genus  : f
   type: n
 widerborstigkeit:
+  genus  : f
   type: n
 Handlungshilfe:
+  genus  : f
   type: n
 Zuspruch:
+  genus  : m
   type: n
 Instanbul:
   type: n
@@ -86569,177 +86649,221 @@ Perikard:
 spitzbuebisch:
   type: adj
 Komprimierung:
-  type: n
-Kardamone:
+  genus  : f
   type: n
 verteiltheit:
+  genus  : f
   type: n
 bezogen:
   type: vi
 Detailist:
+  genus  : m
   type: n
 Amateurinnen:
+  genus  : f
   type: n
 Homberg:
   type: n
 Brandlehm:
   type: n
 Darf:
-  type: n
-Bltenstiele:
-  type: n
+  type: vi
 Servieren:
+  genus  : s
   type: n
 Bundesgerichtshof:
+  genus  : m
   type: n
 Fertigungsprozesssimulation:
+  genus  : f
   type: n
 Gruss:
+  genus  : m
   type: n
 Reduktion:
+  genus  : f
   type: n
 Entwicklungsfaehig:
-  type: n
-freimut:
   type: adj
+freimut:
+  genus  : m
+  type: n
 Kirgisistan:
   type: n
 Chang:
   type: n
 Speckturm:
+  genus  : m
   type: n
 Flurfoerderer:
+  genus  : m
   type: n
 Ungezwirntes:
-  type: n
+  type: adj
 Wahrnehmen:
+  genus  : s
   type: n
 freyburg:
-  type: adj
+  type: n
 Knacki:
+  genus  : m
   type: n
 Filmspulen:
+  genus  : f
   type: n
 Frotteurismus:
+  genus  : m
   type: n
 Anarchistinnen:
+  genus  : f
   type: n
 Ausnahmeregelung:
+  genus  : f
   type: n
 Vermieten:
+  genus  : s
   type: n
 Erkundigung:
+  genus  : f
   type: n
 Donnerbalken:
+  genus  : m
   type: n
 Privatmensch:
+  genus  : m
   type: n
 linum:
-  type: adj
-Qubit:
+  genus  : s
   type: n
 Milchmaedchen:
+  genus  : s
   type: n
 Verzagtheit:
+  genus  : f
   type: n
 Gewalttat:
+  genus  : f
   type: n
 Computeranwendung:
+  genus  : f
   type: n
-2verankern:
-  type: vi
 Inhomogenitaet:
+  genus  : f
   type: n
 Bandantrieb:
+  genus  : m
   type: n
 zirka:
   type: adj
 musikalischen:
   type: adv
 personalausweis:
+  genus  : m
   type: n
 Additionsbefehl:
+  genus  : m
   type: n
 abgelegen:
   type: vi
 Ebene:
+  genus  : f
   type: n
 aufenthalt:
-  type: vi
+  genus  : m
+  type: n
 Abreisedatum:
+  genus  : s
   type: n
 blutwaesche:
-  type: adv
+  genus  : f
+  type: n
 Buegelfalten:
   genus: f
   type: n
 leasen:
   type: vi
 Kolchose:
+  genus  : f
   type: n
 letztendlich:
   type: adv
 nacherleben:
   type: vi
 Fabrikat:
+  genus  : s
   type: n
 Tempel:
+  genus  : m
   type: n
 Beerdigungsinstitut:
+  genus  : s
   type: n
 Bedeutungsgleiches:
-  type: n
-android:
   type: adj
+android:
+  genus  : m
+  type: n
 Unverstaendlich:
   type: adv
 Acrylkautschuk:
+  genus  : m
   type: n
 arbeitsort:
-  type: vi
+  genus  : m
+  type: n
 zank:
+  genus  : m
   type: adj
 abstreifgummi:
-  type: adj
-Leichtglaeubig:
+  genus  : m
   type: n
+Leichtglaeubig:
+  type: adj
 verinnerlicht:
   type: adv
 bekleidungsproduktion:
+  genus  : f
   type: n
 Ideenreichtum:
+  genus  : m
   type: n
 teterow:
-  type: adj
+  type: n
 intervertebral:
   type: adj
 Auflagezungen:
+  genus  : f
   type: n
 Gruebeln:
+  genus  : s
   type: n
 peking:
-  type: adj
+  type: n
 Stutzen:
+  genus  : s
   type: n
 Evakuierter:
   type: n
 Bilderkennungssystem:
-  type: n
-chancenlo:
-  type: adj
-Deichrckverlegung:
+  genus  : s
   type: n
 Sattdampf:
+  genus  : m
   type: n
 abhaengigkeitserkrankung:
-  type: adj
+  genus  : f
+  type: n
 portwein:
-  type: adj
+  genus  : m
+  type: n
 Alleinvertretungsansprueche:
+  genus  : m
   type: n
 tagesblatt:
-  type: vi
+  genus  : s
+  type: n
 Boulevardpresse:
+  genus  : f
   type: n
 nach:
   type: prep
@@ -86752,18 +86876,24 @@ zustanden:
 knurren:
   type: vi
 Palais:
+  genus  : s
   type: n
 Amplitudenmodulation:
+  genus  : f
   type: n
 Lax:
-  type: n
+  type: adj
 schuss:
+  genus  : m
   type: n
 Procrastination:
+  genus  : f
   type: n
 vollendung:
-  type: adj
+  genus  : f
+  type: n
 Agrarerzeugnis:
+  genus  : s
   type: n
 kolorieren:
   type: vi
@@ -86772,1026 +86902,1228 @@ Eccard:
 elision:
   type: n
 Roroschiff:
+  genus  : s
   type: n
 Rueckresorption:
+  genus  : f
   type: n
 Systementwurf:
+  genus  : s
   type: n
 Myopathie:
+  genus  : f
   type: n
 selbstgefaelligkeit:
-  type: n
-Aktivittsstrahl:
+  genus  : f
   type: n
 Rauswerfen:
+  genus  : s
   type: n
 Skonto:
+  genus  : m
   type: n
 Schuft:
+  genus  : m
   type: n
 unueblich:
   type: adv
 Klimaforscher:
   type: n
 bedenkentraeger:
-  type: adj
+  genus  : m
+  type: n
 lieben:
   type: vi
 Nationalgefuehl:
+  genus  : s
   type: n
 Wirkmaechtigkeit:
+  genus  : f
   type: n
 Ulken:
+  genus  : s
   type: n
 dozieren:
   type: vi
 sinnverwandt:
-  type: vi
+  type: adj
 Prahler:
+  genus  : m
   type: n
 Biererzeuger:
+  genus  : m
   type: n
 Fremdassembler:
+  genus  : m
   type: n
 beunruhigend:
   type: adj
 Einige:
   type: art
 Bergrutsche:
+  genus  : f
   type: n
 elektromagnetische:
   type: adv
 Beleuchten:
+  genus  : s
   type: n
 Ankerschiene:
+  genus  : f
   type: n
 forum:
-  type: adj
+  genus  : s
+  type: n
 Bierbauch:
+  genus  : m
   type: n
 nutten:
-  type: vi
+  genus  : f
+  type: n
 Hauptgegenstand:
+  genus  : m
   type: n
 Malware:
+  genus  : f
   type: n
 Mountains:
   type: n
 Felsendom:
+  genus  : m
   type: n
 Methodologie:
+  genus  : f
   type: n
 gefallen:
   type: vi
 Vorhaltung:
+  genus  : f
   type: n
 kasuistisch:
   type: adj
 selbstdokumentieren:
-  type: vi
+  genus  : s
+  type: n
 Bruchzahl:
+  genus  : f
   type: n
 Virilitaet:
+  genus  : f
   type: n
 soliditaet:
-  type: adj
+  genus  : f
+  type: n
 medienereignis:
+  genus  : s
   type: n
 reabsorption:
+  genus  : f
   type: n
 Fesch:
-  type: n
-thunfisch:
   type: adj
+thunfisch:
+  genus  : m
+  type: n
 sticken:
   type: vi
 berkelium:
-  type: adj
+  genus  : s
+  type: n
 modrig:
   type: adv
-Dunkelmnner:
-  type: n
 Generator:
+  genus  : m
   type: n
 Sowas:
-  type: n
+  type: pron
 Kontaminieren:
+  genus  : s
   type: n
 anketten:
   type: vi
-Flsterpropaganda:
-  type: n
 Elternverantwortung:
+  genus  : f
   type: n
 Suspendierung:
+  genus  : f
   type: n
 provisorisch:
   type: adj
 Betonrippendecke:
+  genus  : f
   type: n
 Betriebskrankenkasse:
+  genus  : f
   type: n
 Unzuechtige:
+  genus  : m
   type: n
 Saebel:
+  genus  : m
   type: n
 gaulard:
-  type: adj
+  type: n
 lieferbedingungen:
-  type: vi
+  genus  : f
+  type: n
 Chorleiter:
+  genus  : m
   type: n
 Rf:
   type: n
-Beschftigungsindex:
-  type: n
 Gemaecher:
+  genus  : f
   type: n
 Grazerin:
+  genus  : f
   type: n
 Attache:
+  genus  : m
   type: n
 Gst:
   type: n
 Draftmodus:
+  genus  : m
   type: n
 entwerfen:
   type: vi
 Fastenzeit:
+  genus  : f
   type: n
 Augenzeugenberichte:
-  type: n
-Gewhnung:
+  genus  : f
   type: n
 Backenzahn:
+  genus  : m
   type: n
 muskelhaut:
-  type: adj
+  genus  : f
+  type: n
 Farbband:
+  genus  : s
   type: n
 Pastis:
+  genus  : m
   type: n
 schlampig:
   type: adv
 Blauer:
-  type: n
+  type: adj
 Besitzer:
-  type: n
-Gespr:
+  genus  : m
   type: n
 Arbeitslosenunterstuetzung:
   genus: f
   type: n
 kot:
-  type: adj
+  genus  : m
+  type: n
 anschleppen:
-  type: adj
+  type: n
 Schnellbahn:
+  genus  : f
   type: n
 Foyers:
+  genus  : f
   type: n
 Nachstellen:
+  genus  : s
   type: n
 Hinterbeinen:
   type: n
 Hillesheim:
   type: n
 Haustueren:
+  genus  : f
   type: n
 betruegen:
   type: vi
 kanal:
-  type: adj
+  genus  : m
+  type: n
 Scheherazade:
+  genus  : f
   type: n
 Pferdegeschirr:
+  genus  : s
   type: n
 bereitwillig:
   type: adv
-Gedchtnishilfe:
-  type: n
 Designen:
+  genus  : m
   type: n
 Luegen:
+  genus  : f
   type: n
 Abblasemengen:
+  genus  : f
   type: n
 Sehr:
-  type: n
+  type: adv
 geparkten:
   type: adv
 Halbmetall:
+  genus  : s
   type: n
 Bewegungsunfaehig:
-  type: n
+  type: adj
 synthetisieren:
   type: vi
 lebendschachspiel:
-  type: adj
+  genus  : s
+  type: n
 Glandes:
   type: n
 Betriebsorganisation:
+  genus  : f
   type: n
 Kongenial:
-  type: n
+  type: adj
 anzuenden:
   type: vi
 bitfrequenz:
-  type: adj
-heavy:
-  type: adj
-Buerzel:
+  genus  : f
   type: n
-Farmpchter:
+Buerzel:
+  genus  : m
   type: n
 unausstehlich:
   type: adv
 Vereidigen:
+  genus  : s
   type: n
 Radstadt:
   type: n
 Traurigkeit:
+  genus  : f
   type: n
 Haaren:
   type: n
 Geistesabwesenheit:
+  genus  : f
   type: n
 Saum:
+  genus  : m
   type: n
 Sprachrohr:
-  type: n
-Feuerverzinkungsstraen:
+  genus  : s
   type: n
 Zufahrt:
+  genus  : f
   type: n
 federball:
-  type: adj
-Rezidiv:
+  genus  : m
   type: n
+Rezidiv:
+  type: adj
 Ruecksichtslosigkeit:
+  genus  : f
   type: n
 Christoph:
   type: n
 Saegeblock:
+  genus  : m
   type: n
 Tonus:
+  genus  : m
   type: n
 unverhuellt:
   type: vi
 Neige:
+  genus  : f
   type: n
-muenzen:
+muenzen:  
   type: vi
 Vollmond:
+  genus  : m
   type: n
 Vorderer:
-  type: n
+  type: adj
 landsverbindung:
-  type: adj
+  genus  : f
+  type: n
 bewerbung:
-  type: adj
+  genus  : f
+  type: n
 wissenschaften:
-  type: vi
+  genus  : f
+  type: n
 bestandsvertrag:
-  type: adj
+  genus  : m
+  type: n
 Kuhfaenger:
+  genus  : m
   type: n
 aufdruck:
-  type: adj
+  genus  : m
+  type: n
 Annehmlichkeit:
+  genus  : f
   type: n
 nippelspanner:
-  type: adj
+  genus  : m
+  type: n
 Fastnachtszeit:
+  genus  : f
   type: n
 Raeumung:
+  genus  : f
   type: n
 cocacola:
-  type: adj
-Putschrevolutionsturzumschwungumsturzumwaelzungwende:
+  genus  : s
   type: n
 rotmilan:
-  type: adj
+  genus  : m
+  type: n
 Brennebene:
+  genus  : f
   type: n
 Einzelstuecke:
-  type: n
-Beauvoir:
+  genus  : f
   type: n
 Kekse:
+  genus  : f
   type: n
 Ausgangsleistung:
+  genus  : f
   type: n
 leitspruch:
-  type: adj
-Mutationmutationsprodukt:
+  genus  : m
   type: n
 adaptivitaet:
-  type: adj
+  genus  : f
+  type: n
 Zusammenschliessen:
+  genus  : s
   type: n
 coden:
   type: vi
 Hoeher:
-  type: n
-erik:
   type: adj
+erik:
+  type: n
 hinter:
   type: adj
 geographischen:
   type: adv
 mannmonat:
-  type: adj
+  genus  : s
+  type: n
 Kompressor:
+  genus  : m
   type: n
 triumphieren:
   type: vi
 wahlstedt:
-  type: vi
-Exklusives:
   type: n
+Exklusives:
+  type: adj
 trotten:
   type: vi
 antidemokratische:
   type: adv
 Wollen:
+  genus  : s
   type: n
 Bettueberzuege:
+  genus  : f
   type: n
 dirndlkleid:
-  type: adj
+  genus  : s
+  type: n
 thf:
-  type: adj
+  type: n
 Ziffernblatt:
+  genus  : s
   type: n
 vorne:
-  type: prep
+  type: adv
 Normalverteilung:
+  genus  : f
   type: n
 Ministerrunde:
+  genus  : f
   type: n
 Rechenleistung:
+  genus  : f
   type: n
 hinabgehen:
-  type: adv
+  type: n
 neuansteckung:
-  type: adj
+  genus  : f
+  type: n
 Bundessteuerbehoerde:
+  genus  : f
   type: n
 Legt:
-  type: n
+  type: vi
 haendisch:
   type: adj
 Kongress:
+  genus  : m
   type: n
 hintereinander:
   type: adv
 Baugrunduntersuchung:
+  genus  : f
   type: n
 geschlechtsteilen:
-  type: vi
+  type: n
 Regelspur:
+  genus  : f
   type: n
 hindeuten:
   type: vi
 cadmium:
-  type: adj
+  genus  : s
+  type: n
 Polen:
+  genus  : s
   type: n
 meldorf:
-  type: adj
+  type: n
 pandabaeren:
-  type: vi
+  genus  : f
+  type: n
 Schwemmen:
+  genus  : s
   type: n
 Finanzteil:
+  genus  : s
   type: n
 hohe:
   type: adv
 Bretten:
+  genus  : s
   type: n
 Aluminiumfolie:
+  genus  : f
   type: n
 bezieher:
-  type: adj
+  genus  : m
+  type: n
 wesensart:
-  type: vi
+  genus  : f
+  type: n
 Praezisieren:
+  genus  : s
   type: n
 nerchau:
-  type: adj
+  type: n
 Nadelbaum:
   type: n
-Freiheitskmpfe:
-  type: n
 Forschungszentrum:
+  genus  : s
   type: n
 Dateigroesse:
+  genus  : f
   type: n
 Ergebener:
-  type: n
-linuxdistributor:
   type: adj
+linuxdistributor:
+  genus  : m
+  type: n
 Umspannung:
+  genus  : f
   type: n
 erwachen:
-  type: adv
+  type: vi
 Andrehen:
-  type: n
-Manoevermunitionmarkiermunitionsalutmunition:
+  genus  : s
   type: n
 Komatoes:
-  type: n
-langaermligen:
-  type: adv
+  type: adj
 Krebserkrankung:
+  genus  : f
   type: n
 Lakonisch:
-  type: n
+  type: adj
 Archivband:
+  genus  : m
   type: n
 Gesangssolist:
+  genus  : m
   type: n
 Abhoerplatz:
+  genus  : m
   type: n
 Dialysezentrum:
+  genus  : s
   type: n
 rechtswidrige:
   type: adv
 Adaptieren:
+  genus  : s
   type: n
 Bewertungsueberschuss:
+  genus  : m
   type: n
 debrezin:
-  type: adj
+  type: n
 Exzentrizitaet:
+  genus  : f
   type: n
 alchemie:
-  type: adj
-Kreisssaal:
+  genus  : f
   type: n
-istanziert:
-  type: vi
+Kreisssaal:
+  genus  : m
+  type: n
 gegenseitiges:
   type: adv
-queue:
-  type: adj
 Einschreiben:
+  genus  : s
   type: n
 Tastenanschlag:
+  genus  : m
   type: n
 atomspaltung:
-  type: adj
-erlutern:
-  type: vi
+  genus  : f
+  type: n
 forteilen:
   type: vi
 anfangs:
   type: adv
 Fertigungsplanung:
+  genus  : f
   type: n
 grundsaetzliche:
   type: adv
 Herruehren:
+  genus  : s
   type: n
 Meeresspiegel:
+  genus  : m
   type: n
 Vogellaerm:
+  genus  : m
   type: n
 Arbeitsteilung:
+  genus  : f
   type: n
-langenselbold:
-  type: adj
 herumrennen:
   type: vi
 entlueften:
   type: vi
 Deckenleuchte:
+  genus  : f
   type: n
 Diteinstufung:
+  genus  : f
   type: n
 Aethanol:
+  genus  : s
   type: n
 dotierung:
-  type: adj
-Computergestuetzte:
+  genus  : f
   type: n
+Computergestuetzte:
+  type: adj
 zulaessigkeit:
+  genus  : f
   type: n
 Verdauung:
+  genus  : f
   type: n
 Kalaschnikow:
   type: n
 Insektenpuppen:
+  genus  : f
   type: n
 Ethan:
+  genus  : s
   type: n
 Druckindustrie:
+  genus  : f
   type: n
 Strampeln:
+  genus  : s
   type: n
 Auswahlkriterien:
+  genus  : f
   type: n
 Demobilisierung:
+  genus  : f
   type: n
 Auskurieren:
+  genus  : s
   type: n
 kraenken:
   type: vi
-Gehuseform:
-  type: n
 Moralprediger:
+  genus  : m
   type: n
 Mitleidenschaft:
+  genus  : f
   type: n
 praha:
-  type: adj
+  type: n
 abfliessen:
   type: vi
 probeweisen:
-  type: vi
+  type: adj
 Esp:
   type: n
-Uschiff:
-  type: n
 Amtsdeutsch:
+  genus  : s
   type: n
 Bildhauerei:
+  genus  : f
   type: n
 giraffen:
-  type: vi
+  genus  : f
+  type: n
 straffaellig:
   type: adv
 abgespeckt:
-  type: vi
-Einbahnstraen:
-  type: n
+  type: adj
 Engelsgeduld:
+  genus  : f
   type: n
 Schocken:
+  genus  : f
   type: n
-schrfen:
-  type: vi
 Barbaren:
+  genus  : f
   type: n
 Breitausruestung:
+  genus  : f
   type: n
 genf:
-  type: adj
+  type: n
 vervierfachen:
   type: adv
 Baronin:
+  genus  : f
   type: n
 Finanzkraeftig:
-  type: n
+  type: adj
 Strassenbelag:
+  genus  : m
   type: n
 Abendschule:
+  genus  : f
   type: n
 Artikel:
+  genus  : m
   type: n
 Haifisch:
+  genus  : m
   type: n
 Blaskoepfe:
+  genus  : f
   type: n
 Aermel:
+  genus  : m
   type: n
 Abgestumpftheit:
+  genus  : f
   type: n
 unwirtschaftlich:
   type: adv
 Halbedelsteine:
+  genus  : f
   type: n
 wirtschaftsraum:
-  type: adj
-Zeitraum:
+  genus  : m
   type: n
-bulloen:
-  type: adj
+Zeitraum:
+  genus  : m
+  type: n
 Sehen:
+  genus  : s
   type: n
 Zerfall:
+  genus  : m
   type: n
 Shampoo:
-  type: n
-ingestion:
+  genus  : s
   type: n
 Gruenes:
-  type: n
+  type: adj
 Verbissen:
-  type: n
+  type: adj
 Potentiometer:
+  genus  : s
   type: n
 standen:
   type: vi
-Ablngzange:
-  type: n
 Futteral:
+  genus  : s
   type: n
 Federstahl:
+  genus  : m
   type: n
 Stiel:
+  genus  : m
   type: n
-dusi:
-  type: adj
 Staatsform:
+  genus  : f
   type: n
 Ausgangsstellung:
+  genus  : f
   type: n
 uneindeutig:
   type: adv
 Formlos:
-  type: n
+  type: adj
 Radiotherapie:
+  genus  : f
   type: n
 Verbandwatte:
+  genus  : f
   type: n
 Kakaopulver:
+  genus  : s
   type: n
 Fluessigkeitsheber:
+  genus  : m
   type: n
 gebaermutterhals:
-  type: n
-Bsewichte:
+  genus  : m
   type: n
 fortdauer:
-  type: adj
+  genus  : f
+  type: n
 bersprudeln:
   type: vi
 Haerte:
+  genus  : f
   type: n
 Diktierapparat:
+  genus  : m
   type: n
 Ausgewaschen:
-  type: n
+  type: adj
 interoperabel:
   type: adj
 Taucher:
+  genus  : m
   type: n
 gluehbirnen:
-  type: vi
+  genus  : f
+  type: n
 aufkaufen:
   type: vi
 geraetschaft:
-  type: adv
-caching:
-  type: adj
+  genus  : f
+  type: n
 bahnsteig:
-  type: adv
+  genus  : m
+  type: n
 glasschrank:
-  type: adj
-Flexibilitt:
+  genus  : m
   type: n
 sepp:
-  type: adj
+  type: n
 Charakteristikum:
+  genus  : s
   type: n
 laugenhaft:
   type: adv
 photomechanisch:
   type: adj
 Nazigruss:
+  genus  : m
   type: n
 Feuerdrachen:
+  genus  : m
   type: n
 Schwarzmaler:
-  type: n
-Buchhlle:
+  genus  : m
   type: n
 Mappen:
+  genus  : f
   type: n
 Diskriminierung:
-  type: n
-Tromml:
+  genus  : f
   type: n
 Gallert:
+  genus  : s
   type: n
 antipyretikum:
-  type: adj
-melitta:
-  type: adj
-Unbeliebt:
+  genus  : s
   type: n
+melitta:
+  type: n
+Unbeliebt:
+  type: adj
 akademischer:
   type: adj
 Sekretaer:
+  genus  : m
   type: n
 Abtritt:
+  genus  : m
   type: n
 Verkaufsgebiet:
+  genus  : s
   type: n
 Aktienzertifikat:
+  genus  : s
   type: n
 Erdrutsche:
+  genus  : f
   type: n
 Bremsgestaenge:
+  genus  : s
   type: n
 festlegen:
   type: vi
 Jessen:
   type: n
 Faserdurchmesserverteilung:
+  genus  : f
   type: n
 Einmuetig:
-  type: n
+  type: adj
 wirkt:
   type: n
 Gefaehrlich:
   type: adv
 Thrombus:
+  genus  : m
   type: n
 Chassistraeger:
+  genus  : m
   type: n
 Pruefdatei:
+  genus  : f
   type: n
 leitlinien:
-  type: adj
+  genus  : f
+  type: n
 aushandeln:
   type: vi
-Einkaufsschtige:
-  type: n
 spizieren:
   type: vi
 sinusitis:
+  genus  : f
   type: n
 Frivol:
-  type: n
-ohchr:
   type: adj
-Eingangstr:
-  type: n
 Ignorant:
+  genus  : m
   type: n
 Aussenbeleuchtung:
+  genus  : f
   type: n
-milliona:
-  type: adj
 Ablesbar:
-  type: n
-pyeliti:
   type: adj
 Ehrfuerchtig:
-  type: n
+  type: adj
 Geigenkasten:
+  genus  : m
   type: n
 rohheit:
+  genus  : f
   type: n
 Castro:
   type: n
 Einsatzgruppen:
+  genus  : f
   type: n
 Betreibt:
-  type: n
+  type: vi
 Versorgen:
-  type: n
-Maschinenkoderechnerkodezielkode:
+  genus  : s
   type: n
 leierkasten:
-  type: vi
+  genus  : m
+  type: n
 Besetztsignal:
+  genus  : s
   type: n
 einzigartigkeit:
+  genus  : f
   type: n
 Schlingpflanze:
+  genus  : f
   type: n
 Buchsenkontakte:
+  genus  : f
   type: n
 Anfahrtsbeschreibungen:
+  genus  : f
   type: n
 Augenglaeser:
+  genus  : f
   type: n
 Widerruf:
+  genus  : m
   type: n
 Leitungswasser:
-  type: n
-Forderungsausflle:
+  genus  : s
   type: n
 Elastisch:
-  type: n
+  type: adj
 Bagatellen:
+  genus  : f
   type: n
 marion:
-  type: adj
+  type: n
 Herrscher:
+  genus  : m
   type: n
 Fischhaendler:
+  genus  : m
   type: n
 witzigen:
   type: adv
 Doppelseite:
+  genus  : f
   type: n
 Astrophysikerin:
+  genus  : f
   type: n
-brown:
-  type: adj
 stammt:
   type: vi
 Kraftbertragungen:
+  genus  : f
   type: n
 koenigsbrunn:
-  type: adj
-Stahlerzeugung:
   type: n
-Gefrigkeit:
+Stahlerzeugung:
+  genus  : f
   type: n
 Beiwort:
+  genus  : f
   type: n
 Aktienmarkt:
+  genus  : m
   type: n
 bildungsclip:
-  type: adj
+  genus  : m
+  type: n
 Ubunto:
   type: n
 Emaille:
+  genus  : s
   type: n
 rutengeher:
-  type: adj
-Auenmauer:
+  genus  : m
   type: n
 Besserwisserin:
+  genus  : f
   type: n
 Kriminalitaet:
+  genus  : f
   type: n
 ueberquer:
-  type: adj
+  type: vi
 astronomische:
   type: adv
 siebzehnte:
   type: adv
 Elektrokardiograph:
+  genus  : m
   type: n
 Iserlohn:
   type: n
 Bussi:
+  genus  : s
   type: n
 Lucia:
   type: n
 Bestellbestaetigung:
+  genus  : f
   type: n
 fixpreis:
+  genus  : m
   type: n
 perron:
-  type: adj
+  type: n
 entschluesseler:
-  type: adj
+  genus  : m
+  type: n
 jux:
-  type: adj
+  genus  : m
+  type: n
 Abwurfzone:
+  genus  : f
   type: n
 Selbitz:
   type: n
 Selbstmoerder:
+  genus  : m
   type: n
 ausserhalb:
-  type: vi
+  type: adv
 fluchwort:
-  type: vi
+  genus  : s
+  type: n
 sozialen:
-  type: vi
+  type: adj
 Botulinumtoxin:
+  genus  : s
   type: n
 Pionier:
+  genus  : m
   type: n
 Fernsprechgebuehren:
+  genus  : f
   type: n
 tabula:
-  type: adj
+  type: n
 buenos:
   type: n
 Belueftungsringe:
+  genus  : f
   type: n
 Faeustel:
+  genus  : m
   type: n
 Geraeuschpegel:
+  genus  : m
   type: n
 Arbeitskosten:
+  genus  : f
   type: n
 schutzmann:
-  type: adj
+  genus  : m
+  type: n
 stellkammer:
-  type: adj
+  genus  : f
+  type: n
 flair:
-  type: adj
+  genus  : s
+  type: n
 ausgedacht:
   type: adv
 Verstaendlichkeit:
+  genus  : f
   type: n
 Sturzflut:
+  genus  : f  genus  : f
   type: n
 Bahnreservierung:
+  genus  : f
   type: n
 ljubljana:
-  type: adj
+  type: n
 Anschlussbaugruppen:
+  genus  : f
   type: n
 paradigma:
-  type: adj
-neuntoeen:
-  type: adj
+  genus  : s
+  type: n
 Johanngeorgenstadt:
   type: n
 Schnellpresse:
-  type: n
-Ermigungen:
+  genus  : f
   type: n
 Taetig:
-  type: n
+  type: adj
 Drehorgel:
+  genus  : f
   type: n
 luftgewehr:
-  type: adj
+  genus  : s
+  type: n
 Sprachstoerung:
+  genus  : f
   type: n
 Ausser:
-  type: n
+  type: prep
 Mittelohr:
+  genus  : s
   type: n
 Bombenalarm:
+  genus  : m
   type: n
 Thripse:
   type: n
 ueberholt:
-  type: vi
+  type: afj
 lichtecht:
   type: adv
 Unterbrochen:
-  type: n
+  type: adj
 brueskieren:
   type: vi
 Standardisieren:
+  genus  : s
   type: n
-verbrmen:
-  type: vi
 johanngeorgenstadt:
-  type: vi
-Finanzmrkte:
   type: n
 uebersiedlung:
-  type: adj
+  genus  : f
+  type: n
 bandbeschichtung:
-  type: adj
-Monatsanfangmonatsbeginn:
+  genus  : f
   type: n
 schwimmen:
-  type: adv
-eckarte:
   type: vi
-Entwsserungssysteme:
-  type: n
 politikerin:
-  type: adj
-demgemaess:
+  genus  : f
   type: n
+demgemaess:
+  type: adv
 Abprallen:
+  genus  : s
   type: n
 implementation:
+  genus  : f
   type: n
 Erlen:
   type: n
 Werbeetat:
+  genus  : s
   type: n
-stockautobu:
-  type: adj
 Galgenhumor:
-  type: n
-Bogenschieen:
+  genus  : m
   type: n
 Maori:
+  genus  : m
   type: n
 witz:
-  type: adj
+  genus  : m
+  type: n
 Drehpendel:
+  genus  : s
   type: n
 Bezaubernd:
-  type: n
-fussballbund:
   type: adj
+fussballbund:
+  genus  : f
+  type: n
 Zwittertum:
+  genus  : s
   type: n
 Trockenreiben:
+  genus  : s
   type: n
 aussetzung:
-  type: adj
+  genus  : f
+  type: n
 einkuenfte:
   genus: f
   type: n
 Gefangenhalten:
+  genus  : s
   type: n
 Substrat:
+  genus  : s
   type: n
 Widerborstigkeit:
+  genus  : f
   type: n
 Nahrung:
+  genus  : f
   type: n
 konfrontieren:
   type: vi
 Gebilde:
+  genus  : s
   type: n
 Bodenwasserspannung:
+  genus  : f
   type: n
 Fundamentalisten:
+  genus  : f
   type: n
 Hervorhebung:
+  genus  : f
   type: n
 Berg:
   genus: m
@@ -87799,424 +88131,503 @@ Berg:
 gehoerigen:
   type: adv
 gruensfeld:
-  type: adj
-Druckluftkanaele:
   type: n
-Fden:
+Druckluftkanaele:
+  genus  : f
   type: n
 schillernd:
   type: adj
 unnatuerlich:
   type: adv
 Feinmesslehre:
+  genus  : f
   type: n
 aalglatt:
-  type: vi
-Augpfel:
-  type: n
+  type: adj
 Gefuehlsmaessig:
-  type: n
+  type: adj
 Zugedroehnt:
-  type: n
+  type: adj
 Brottopf:
+  genus  : m
   type: n
 lenden:
-  type: vi
+  genus  : f
+  type: n
 echtigung:
-  type: adj
+  genus  : f
+  type: n
 appetit:
-  type: adj
+  genus  : m
+  type: n
 Seraphim:
   type: n
 Bremskraftverteiler:
+  genus  : m
   type: n
 schaufeln:
   type: vi
 Bremsbolzen:
+  genus  : f
   type: n
 Amharisch:
-  type: n
+  type: adj
 mutigen:
   type: adv
 Allerheiligste:
-  type: n
-Antikrperbildner:
+  genus  : s
   type: n
 Doppelfernroehre:
+  genus  : f
   type: n
 Schwenkbruecke:
+  genus  : f
   type: n
 Physiker:
+  genus  : m
   type: n
 Systemplanung:
+  genus  : f
   type: n
 billig:
   type: adv
 baeren:
-  type: vi
+  genus  : f
+  type: n
 Schoepfer:
+  genus  : m
   type: n
 Truthaehne:
+  genus  : f
   type: n
 Patch:
+  genus  : m
   type: n
 lustlosigkeit:
+  genus  : f
   type: n
 Unausloeschlich:
   type: adv
 wo:
   type: fw
 asthenie:
-  type: adj
+  genus  : f
+  type: n
 Elan:
+  genus  : m
   type: n
 Aussetzer:
+  genus  : f
   type: n
 entproteinisieren:
-  type: vi
-ostfildern:
   type: vi
 druckerzeugnis:
   type: n
 abstehen:
-  type: adv
+  type: vi
 Druckkopfpatronen:
-  type: n
-Verdauungsstrungen:
+  genus  : f
   type: n
 Leichdorn:
-  type: n
-Abgasschalldmpfer:
+  genus  : m
   type: n
 Austattungen:
+  genus  : f
   type: n
 Filtrierungen:
+  genus  : f
   type: n
 Abaenderungsantraege:
+  genus  : f
   type: n
 gehenkt:
-  type: vi
+  type: adj
 Bedienungsknoepfe:
+  genus  : f
   type: n
 begruendete:
   type: adv
 Vortrittsregel:
+  genus  : f
   type: n
 Hagia:
   type: n
 Anschlusssicherungen:
+  genus  : f
   type: n
 Augentrost:
+  genus  : m
   type: n
 Namenlos:
   type: adj
 Angela:
   type: n
 Instandhaltungstrupp:
+  genus  : m
   type: n
 Stuetze:
+  genus  : f
   type: n
-Mediatorschiedsmannschlichtervermittler:
+Unterhaltszahlung:
+  genus  : f
   type: n
-haltszahlung:
-  type: adj
 Steinobst:
+  genus  : s
   type: n
 Volk:
+  genus  : s
   type: n
-unterhaltszahlung:
-  type: adj
 Masslos:
-  type: n
+  type: adj
 Dankgefuehl:
+  genus  : s
   type: n
 Manchmal:
   type: adv
 Antiemetikum:
+  genus  : s
   type: n
 anblasen:
   type: vi
 Stilllegen:
+  genus  : s
   type: n
 Analogspeicher:
+  genus  : m
   type: n
 Peripher:
-  type: n
-lassan:
   type: adj
+lassan:
+  type: n
 intramuskulaer:
   type: adj
-ermchtigen:
-  type: adv
 Raetoromanisch:
-  type: n
-sieg:
   type: adj
+sieg:
+  genus  : m
+  type: n
 missverstanden:
   type: vi
 Berufsboxerinnen:
+  genus  : f
   type: n
 freddy:
-  type: adj
-Zentralene:
   type: n
 absperrventil:
-  type: adj
+  genus  : s
+  type: n
 Tischrede:
+  genus  : f
   type: n
 musizieren:
   type: vi
 Normiert:
-  type: n
+  type: adj
 augenglaeser:
-  type: adj
+  genus  : f
+  type: n
 fuhrartikel:
-  type: adj
+  genus  : m
+  type: n
 Elbflorenz:
   type: n
 Entsteht:
-  type: n
+  type: vi
 Angel:
+  genus  : f
   type: n
 Amtstraeger:
+  genus  : m
   type: n
 Uranusplanet:
+  genus  : m
   type: n
 Sodawa:
   type: n
 Eher:
   type: adv
-Begrndung:
-  type: n
 Union:
+  genus  : f
   type: n
 ordner:
-  type: adj
+  genus  : m
+  type: n
 Schraplau:
   type: n
-frhnen:
-  type: vi
-Fitnessrume:
-  type: n
-Brotkrbe:
-  type: n
 Bitmuster:
+  genus  : s
   type: n
 geschachtelten:
-  type: vi
+  type: adj
 Tanzabend:
+  genus  : m
   type: n
 bmi:
-  type: adj
+  type: n
 Schnellwaage:
+  genus  : f
   type: n
 Bilch:
-  type: n
-Bedrfnisse:
+  genus  : f
   type: n
 aufschlecken:
   type: vi
 intercity:
   type: adj
 Zusammenziehung:
+  genus  : f
   type: n
 Flexionen:
+  genus  : f
   type: n
 dementi:
-  type: adj
+  genus  : s
+  type: n
 Ruecksichtnahme:
+  genus  : f
   type: n
 Faellungsmittel:
+  genus  : s
   type: n
 Betonungszeichen:
+  genus  : s
   type: n
 Brennerarbeitsbereich:
+  genus  : m
   type: n
 Sowjetunion:
+  genus  : f
   type: n
 stottern:
   type: vi
 Mohrenkopf:
+  genus  : m
   type: n
 unbestimmt:
-  type: vi
+  type: adj
 Mannhaftigkeit:
+  genus  : f
   type: n
 unveraeusserlich:
   type: adv
 Umschulen:
+  genus  : s
   type: n
 Trieb:
+  genus  : m
   type: n
 Destillate:
+  genus  : f
   type: n
 Bocken:
-  type: n
-Defizienz:
   type: n
 Roedermark:
   type: n
 Balkon:
+  genus  : m
   type: n
 Asylantenwohnheim:
+  genus  : s
   type: n
 helios:
   type: n
-Bandsge:
-  type: n
 uebertragungsprotokoll:
-  type: adj
-Hydrologischen:
+  genus  : s
   type: n
+Hydrologischen:
+  type: adj
 Herrinnen:
+  genus  : f
   type: n
 Blutzucker:
+  genus  : m
   type: n
 Vormittag:
+  genus  : m
   type: n
 Personalausweise:
+  genus  : f
   type: n
 Aussetzbetrieb:
+  genus  : m
   type: n
 Fuer:
   type: prep
 beraumen:
   type: vi
 Gurken:
+  genus  : f
   type: n
 Mikroprozessor:
+  genus  : m
   type: n
 Eiterabsonderung:
+  genus  : f
   type: n
 Waschung:
+  genus  : f
   type: n
 Renommiert:
-  type: n
+  type: adj
 Bauchschuss:
+  genus  : m
   type: n
 abseifen:
   type: vi
 Boesartiges:
-  type: n
+  type: adj
 mischen:
-  type: adv
+  type: vi
 Horrorjahr:
+  genus  : s
   type: n
 zielbewusst:
-  type: vi
+  type: adj
 kriecherisch:
   type: adj
 Sinnlich:
   type: adv
-cheerleader:
-  type: adj
 Kavallerie:
+  genus  : f
   type: n
 nachplappert:
   type: vi
-gangsformen:
-  type: vi
 Erbfeinde:
+  genus  : f
   type: n
 Unreifes:
   type: adv
 Pop:
+  genus  : m
   type: n
 foerderung:
-  type: adj
+  genus  : f
+  type: n
 Halluzination:
+  genus  : f
   type: n
 Xerostomien:
+  genus  : f
   type: n
 Fleisch:
+  genus  : s
   type: n
 Endlufe:
+  genus  : f
   type: n
 rueckerhalten:
   type: vi
 Neuartig:
-  type: n
+  type: adj
 Allerdings:
-  type: n
+  type: adv
 wiederbeseelten:
-  type: vi
+  type: adj
 ambitioe:
   type: adj
 Fuegeverfahren:
+  genus  : s
   type: n
 stationieren:
   type: vi
 ausbildungsfoerderung:
-  type: adj
+  genus  : f
+  type: n
 Blockierungen:
+  genus  : f
   type: n
 Rohr:
+  genus  : s
   type: n
 Stute:
+  genus  : f
   type: n
 Ergaenzungen:
+  genus  : f
   type: n
 Foerderschulen:
+  genus  : f
   type: n
 Kontrollierbarkeit:
+  genus  : f
   type: n
 Knicklinie:
+  genus  : f
   type: n
 wanddekor:
-  type: adj
+  genus  : s
+  type: n
 Besteckkasten:
+  genus  : m
   type: n
 Ammonium:
+  genus  : s
   type: n
-Sennerin:
+Sennerin:  genus  : f
   type: n
 Collegestudent:
+  genus  : m
   type: n
 Fischkutter:
+  genus  : m
   type: n
-grillwuren:
-  type: vi
 defizitverringerung:
-  type: adj
+  genus  : f
+  type: n
 Huefingen:
   type: n
 Menden:
   type: n
 tragungsfehl:
+  genus  : m
   type: adj
 Schmiermittel:
+  genus  : s
   type: n
 asyl:
-  type: adj
+  genus  : s
+  type: n
 Zugleich:
   type: adv
 Leistungserhoehung:
+  genus  : f
   type: n
 Daemmerschoppen:
+  genus  : m
   type: n
 liefertermin:
-  type: adj
+  genus  : m
+  type: n
 Kabarett:
+  genus  : s
   type: n
 Ausstellungsgegenstaende:
+  genus  : f
   type: n
 straubing:
-  type: adj
+  type: n
 mokassin:
-  type: adj
+  genus  : f
+  type: n
 Malariasumpffieber:
+  genus  : s
   type: n
 Vereinheitlichen:
-  type: adv
+  genus  : s
+  type: n
 bedeutungsmaessig:
   type: adv
 schnecken:
-  type: vi
+  genus  : f
+  type: n
 Fixpunkt:
+  genus  : m
   type: n
 tierkreiszeichen:
-  type: adv
+  genus  : s
+  type: n
 Syndikusanwalt:
+  genus  : m
   type: n
 bundesweit:
   type: adj
@@ -88227,72 +88638,78 @@ kommutieren:
 typographisch:
   type: adj
 Friede:
+  genus  : m
   type: n
 Programmsystem:
+  genus  : s
   type: n
 Karikatur:
-  type: n
-Substantia:
+  genus  : f
   type: n
 buendigkeit:
+  genus  : f
   type: n
 Hereditaer:
-  type: n
-Dreissigstel:
-  type: n
-Folksngerinnen:
-  type: n
-liefer:
   type: adj
+liefer:
+  type: vi
 Nachfahre:
+  genus  : m
   type: n
 Schmallenberg:
   type: n
 gewerbe:
-  type: adv
+  genus  : s
+  type: n
 formativ:
   type: adj
 Zurschaustellung:
+  genus  : f
   type: n
 Fensterbrett:
+  genus  : s
   type: n
 Heroismus:
+  genus  : m
   type: n
 bildungskurs:
+  genus  : m
   type: n
 deplorabel:
   type: adj
-zurckerstatten:
-  type: vi
 tiefschuerfen:
   type: vi
 Stedelijk:
   type: n
 affigkeit:
+  genus  : f
   type: n
 vierzehnte:
   type: adv
 sturz:
-  type: adj
+  genus  : m
+  type: n
 ausfindig:
   type: adv
 Biegewellen:
+  genus  : f
   type: n
 Anschlussdeckung:
+  genus  : f
   type: n
 Stechend:
-  type: n
-Skikurs:
-  type: n
-pompo:
   type: adj
+Skikurs:
+  genus  : m
+  type: n
 Gliederung:
+  genus  : f
   type: n
 Neudefinierung:
+  genus  : f
   type: n
-bomaetschen:
-  type: adv
 Verschwiegenheit:
+  genus  : f
   type: n
 Unevoc:
   type: n
@@ -88301,379 +88718,455 @@ ruhig:
 transportfaehig:
   type: adv
 personal:
+  genus  : s
   type: adj
 Darmgeraeusch:
+  genus  : s
   type: n
 Gasheizungen:
+  genus  : f
   type: n
 Fehlsichtigkeit:
+  genus  : f
   type: n
 Fruktose:
+  genus  : f
   type: n
 teutonia:
-  type: adj
-Leider:
   type: n
+Leider:
+  type: adv
 einruecken:
   type: vi
 saeuberlich:
   type: adv
 soda:
-  type: adj
-Spezifische:
+  genus  : s
   type: n
+Spezifische:
+  type: adj
 Meerbusch:
   type: n
 Ausschachten:
+  genus  : s
   type: n
 Ruecktritt:
+  genus  : m
   type: n
 puh:
-  type: adj
-kursnotierung:
-  type: adj
-Anfangsbedingungen:
   type: n
-Bakkalaureat:
+kursnotierung:
+  genus  : f
+  type: n
+Anfangsbedingungen:
+  genus  : f
   type: n
 Klagend:
-  type: n
-Numerical:
-  type: n
+  type: adj
 Schar:
+  genus  : f
   type: n
 Delitzsch:
   type: n
-tucuxi:
-  type: adj
 geschlafen:
   type: vi
-Vervollstndigung:
-  type: n
 auftrag:
-  type: adj
-Republik:
+  genus  : m
   type: n
-Eichstriche:
+Republik:
+=
   type: n
 lakritz:
-  type: adj
+  genus  : f
+  type: n
 Epistolographie:
+  genus  : f
   type: n
 Dichtmasse:
+  genus  : f
   type: n
 Eisenerzgruben:
+  genus  : f
   type: n
 enorm:
   type: adj
 Friedenssicherung:
+  genus  : f
   type: n
 hausdurchsuchung:
-  type: adj
+  genus  : f
+  type: n
 Talsohle:
+  genus  : f
   type: n
 vorgericht:
-  type: adv
+  genus  : s
+  type: n
 energetisch:
   type: adj
 Diesmal:
-  type: n
+  type: adv
 Unabdingbar:
-  type: n
-campu:
   type: adj
 Lebensraum:
-  type: n
-Fhrungskraft:
+  genus  : m
   type: n
 Auftragsrueckstand:
+  genus  : m
   type: n
 Dax:
+  genus  : m
   type: n
 grossartig:
   type: adv
 Landshut:
   type: n
 Warenzeichen:
+  genus  : s
   type: n
 Drehlager:
-  type: n
-Charakterstrke:
+  genus  : s
   type: n
 nuetzlich:
   type: adv
 Praesent:
-  type: n
-hersehen:
-  type: adv
-cwwert:
-  type: vi
-kemenaten:
-  type: vi
-bewohnen:
-  type: adv
-ora:
   type: adj
-glasnost:
+hersehen:
   type: vi
-Explorieren:
+cwwert:
+  genus  : m
   type: n
-Beobachtungsflchen:
+kemenaten:
+  genus  : f
+  type: n
+bewohnen:
+  type: vi
+glasnost:
+  type: n
+Explorieren:
+  genus  : s
   type: n
 kolorektal:
   type: adj
 Kurzum:
-  type: n
+  type: adv
 Deckungsluecke:
+  genus  : f
   type: n
 Harare:
   type: n
 mehrmals:
   type: adv
 Blattform:
+  genus  : f
   type: n
 Minuskel:
+  genus  : f
   type: n
-hemmni:
-  type: adj
-tivalenz:
-  type: adj
 Suendenbock:
+  genus  : m
   type: n
 rauslegen:
   type: vi
 patriarchat:
-  type: adj
+  genus  : s
+  type: n
 Hatzfeld:
   type: n
 Weich:
-  type: n
+  type: adj
 Dreckskerl:
+  genus  : m
   type: n
 geschoben:
   type: vi
 torso:
-  type: adj
+  genus  : m
+  type: n
 Messbuch:
+  genus  : s
   type: n
 Separatist:
+  genus  : m
   type: n
 Gegenstation:
+  genus  : f
   type: n
 Rebsorte:
+  genus  : f
   type: n
 Bremsankerplatte:
+  genus  : f
   type: n
 Brandschutzmaske:
+  genus  : f
   type: n
 Forschungsanstalten:
+  genus  : f
   type: n
 Seitenformat:
+  genus  : s
   type: n
 Kenntnis:
+  genus  : f
   type: n
 Buecherschrank:
+  genus  : m
   type: n
 Baelger:
-  type: n
-2verstopfen:
-  type: vi
-Fruchtkrper:
+  genus  : f
   type: n
 Beatmungsdruckluft:
+  genus  : f
   type: n
 Osmium:
+  genus  : s
   type: n
 quaentchen:
-  type: adv
+  genus  : s
+  type: n
 Wulstnarbe:
+  genus  : f
   type: n
 deckenbalken:
-  type: vi
-Anderswo:
+  genus  : f
   type: n
+Anderswo:
+  type: adv
 Fliessfaehigkeit:
+  genus  : f
   type: n
 Bruttogehalt:
+  genus  : s
   type: n
 Fitnesscenter:
+  genus  : s
   type: n
 Ermittlungsarbeit:
+  genus  : f
   type: n
 groenland:
-  type: adj
-kauz:
-  type: adj
-Entschuldbar:
   type: n
-texel:
+kauz:
+  genus  : m
+  type: n
+Entschuldbar:
   type: adj
 azur:
-  type: adj
+  genus  : m
+  type: n
 meinungsverschiedenheiten:
-  type: vi
+  genus  : f
+  type: n
 Auflaufbremse:
+  genus  : f
   type: n
 Personifikation:
+  genus  : f
   type: n
 Verzierungen:
+  genus  : f
   type: n
 Emulsionskolloid:
+  genus  : s
   type: n
 Zerstoerungswut:
+  genus  : f
   type: n
 kanzleramt:
-  type: vi
+  genus  : s
+  type: n
 Entwicklungsabweichung:
+  genus  : f
   type: n
 Salzlake:
+  genus  : f
   type: n
 Spinnen:
+  genus  : s
   type: n
 Achtzigstel:
+  genus  : s
   type: n
 Konvention:
+  genus  : f
   type: n
 Computer:
+  genus  : m
   type: n
-perth:
-  type: adj
 abbuersten:
   type: vi
 Unprofessionalitaet:
+  genus  : f
   type: n
 Geburtsort:
+  genus  : m
   type: n
 Lebhaftigkeit:
+  genus  : f
   type: n
 trost:
-  type: vi
-Starke:
+  genus  : m
   type: n
-gaffer:
+Starke:
   type: adj
+gaffer:
+  genus  : m
+  type: n
 Pissbecken:
+  genus  : s
   type: n
 Applikatenachse:
+  genus  : f
   type: n
 Belmopan:
+  genus  : s
   type: n
 missinterpretation:
+  genus  : f
   type: n
 attribut:
-  type: adj
+  genus  : s
+  type: n
 Captain:
   genus: m
   type: n
 abdruck:
-  type: adj
+  genus  : m
+  type: n
 Loehnung:
+  genus  : f
   type: n
 Ausritt:
+  genus  : m
   type: n
 Cadmium:
+  genus  : s
   type: n
 Buchhaltungsbeleg:
+  genus  : m
   type: n
 Tischbein:
+  genus  : s
   type: n
 bohnenkrauen:
-  type: adj
-wet:
-  type: adj
+  genus  : f
+  type: n
 Entkohlung:
+  genus  : f
   type: n
 Plaque:
+  genus  : f
   type: n
 eingelegten:
-  type: vi
+  type: adj
 tetanus:
+  genus  : m
   type: n
 wettkampfteilnehmer:
-  type: adj
+  genus  : m
+  type: n
 Rammen:
+  genus  : s
   type: n
 Haupen:
   type: n
 Blinklicht:
+  genus  : s
   type: n
 Ablagetische:
+  genus  : f
   type: n
 Abwasseranschluss:
+  genus  : m
   type: n
 Diebe:
-  type: art
+  genus  : f
+  type: n
 stilrichtung:
-  type: adj
+  genus  : f
+  type: n
 Verbrennung:
+  genus  : f
   type: n
 Anschwaerzungen:
+  genus  : f
   type: n
 Besitzuebertragung:
+  genus  : f
   type: n
-nnothingt:
-  type: vi
 Amseln:
+  genus  : f
   type: n
 Kaperer:
+  genus  : m
   type: n
 Elementarwellen:
+  genus  : f
   type: n
 Steinebernburg:
   type: n
 Stammverzeichnis:
-  type: n
-2unberechenbar:
+  genus  : s
   type: n
 Krankenwagen:
+  genus  : m
   type: n
 Barbie:
+  genus  : f
   type: n
 Dinkelsbuehl:
   type: n
 Fernmeldebataillon:
+  genus  : s
   type: n
 Rothenburg:
   type: n
 therapie:
-  type: adj
+  genus  : f
+  type: n
 unerfahrenheit:
+  genus  : f
   type: n
 kriegsdienst:
-  type: vi
+  genus  : m
+  type: n
 Saeuregehalt:
+  genus  : m
   type: n
 Turnusmaessig:
-  type: n
+  type: adj
 Reno:
   type: n
 Ausmuenzung:
+  genus  : f
   type: n
 Ausschneidefigur:
+  genus  : f
   type: n
 Gewebstod:
+  genus  : m
   type: n
-go:
-  type: adj
 Flusslinien:
+  genus  : f
   type: n
 untertreibung:
-  type: adj
+  genus  :  f
+  type: n
 Gelegenheiten:
+  genus  : f
   type: n
 fehring:
-  type: adj
-Pital:
   type: n
 abwerben:
   type: vi
-Abfllen:
-  type: n
 Gummi:
+  genus  : m
   type: n
 Rehna:
   type: n
 Fussballspiele:
+  genus  : f
   type: n
 wesen:
   genus  : s
@@ -88681,114 +89174,134 @@ wesen:
 wollten:
   type: vi
 sandersleben:
-  type: vi
-Acousticophobie:
   type: n
 platten:
   type: vi
 Flachbeil:
+  genus  : s
   type: n
 Sportstaette:
+  genus  : f
   type: n
 verschlechtern:
   type: vi
 maedel:
-  type: adj
+  genus  : s
+  type: n
 Hiddensee:
   type: n
 Frust:
+  genus  : m
   type: n
 konstruktiv:
   type: adj
 Hoehle:
+  genus  : f
   type: n
 herausbrechen:
-  type: adv
-abstandslo:
-  type: adj
+  type: vi
 Spritze:
+  genus  : f
   type: n
 Aktivierungsenergie:
+  genus  : f
   type: n
 taktil:
   type: adj
 pyrogen:
-  type: vi
+  type: adj
 Oelfoerdergipfel:
+  genus  : m
   type: n
 glashaus:
+  genus  : s
   type: n
 Abluftstutzen:
+  genus  : m
   type: n
 Heimelig:
-  type: n
+  type: adj
 gewettet:
   type: vi
-Samenergsse:
-  type: n
 Fahrzeugpapiere:
+  genus  : f
   type: n
 Raumfaehre:
+  genus  : f
   type: n
 Abpolsterung:
+  genus  : f
   type: n
 Vertrocknen:
+  genus  : s
   type: n
 Ausgangsdaten:
+  genus  : f
   type: n
 aushebeln:
   type: vi
 Rubidium:
+  genus  : s
   type: n
 Geschasst:
-  type: n
-Marssegeltoppsegel:
-  type: n
+  type: adj
 Bethaus:
+  genus  : s
   type: n
 Aufgeladen:
+  genus  : s
   type: n
 Artisten:
+  genus  : f
   type: n
 Kindbett:
-  type: n
-Baurichtma:
+  genus  : s
   type: n
 litauen:
-  type: adj
-Allemal:
   type: n
+Allemal:
+  type: adv
 kapuzinerkressen:
-  type: vi
+  genus  : f
+  type: n
 fabrizieren:
   type: vi
 Ausbildungsschwerpunkt:
+  genus  : m
   type: n
 Mineralschlamm:
-  type: n
-Finanzierungsplne:
+  genus  : m
   type: n
 Samstagnacht:
+  genus  : f
   type: n
 verschwenden:
   type: vi
 silberloewe:
-  type: adj
+  genus  : m
+  type: n
 Hochlandbewohner:
+  genus  : m
   type: n
 Aktentasche:
+  genus  : f
   type: n
 Echelon:
+  genus  : m
   type: n
 Feinfuehligkeit:
+  genus  : f
   type: n
 stellungsraum:
-  type: adj
+  genus  : m
+  type: n
 Drucktasten:
+  genus  : f
   type: n
 Unverschaemt:
-  type: n
+  type: adj
 Drallheit:
+  genus  : f
   type: n
 bekannteste:
   type: adv
@@ -88797,171 +89310,211 @@ grosstuerisch:
 langaermeliges:
   type: adv
 Dirndlschuerzen:
+  genus  : f
   type: n
 Festhalten:
+  genus  : s
   type: n
 Aussendienstorganisation:
+  genus  : f
   type: n
 Kopfhoerer:
+  genus  : m
   type: n
 Ergebung:
+  genus  : f
   type: n
 Flammenofen:
+  genus  : m
   type: n
 zuckerschlecken:
   type: vi
 Erfolgskonto:
+  genus  : s
   type: n
 Wasserstoffperoxid:
+  genus  : s
   type: n
 beschwaden:
   type: vi
 ambiguen:
   type: adj
 oenologie:
-  type: adj
+  genus  : f
+  type: n
 Zagrosgebirge:
+  genus  : s
   type: n
 Jagdvogel:
+  genus  : m
   type: n
 Schadensersatz:
+  genus  : m
   type: n
 handlungsschema:
-  type: adj
+  genus  : s
+  type: n
 Betriebslehre:
+  genus  : f
   type: n
 Ascheabzug:
+  genus  : m
   type: n
 hinterruecks:
-  type: n
+  type: adj
 Schwarzwald:
+  genus  : m
   type: n
 Borste:
+  genus  : f
   type: n
 medvedev:
-  type: adj
+  type: n
 entkuppeln:
   type: vi
 Karbonfaser:
+  genus  : f
   type: n
 Vergeltungsakt:
+  genus  : m
   type: n
 Inolvenz:
+  genus  : f
   type: n
 H2o:
   type: n
 Pflanzung:
+  genus  : f
   type: n
 betriebsbereit:
-  type: vi
+  type: adj
 Druckumlaufschmierung:
+  genus  : f
   type: n
 Gravid:
   type: n
 Auslaenderfeindlichkeit:
+  genus  : f
   type: n
 jordan:
-  type: adj
+  genus  : m
+  type: n
 zirruswolken:
-  type: vi
+  genus  : f
+  type: n
 determinieren:
   type: vi
 wiedergaenger:
-  type: adj
+  genus  : m
+  type: n
 latifundium:
-  type: adj
+  genus  : s
+  type: n
 Oesterreichs:
   type: n
 herumschreien:
-  type: adj
-harnwegen:
   type: vi
+harnwegen:
+  type: n
 Letztverbraucher:
+  genus  : m
   type: n
 luftfeder:
   genus: f
   type: adj
 Schallmauer:
+  genus  : f
   type: n
 fahrkartenkontrollen:
-  type: vi
+  genus  : f
+  type: n
 klimaschutz:
-  type: adj
-Ingrata:
+  genus  : m
   type: n
 Gegenwert:
+  genus  : m
   type: n
 Tharandt:
   type: n
 Trave:
   type: n
 Dezidiert:
-  type: n
+  type: adj
 harzstreifen:
-  type: vi
-Arbeitsunflle:
+  genus  : m
   type: n
 iserlohn:
-  type: adj
+  type: n
 Keimfreiheit:
+  genus  : f
   type: n
 miteinander:
   type: adj
 besudeln:
   type: vi
 Polyp:
+  genus  : m
   type: n
 Menschenfresser:
+  genus  : m
   type: n
 Chemorezeptor:
+  genus  : m
   type: n
 Eisscholle:
+  genus  : f
   type: n
 Blumenmaedchen:
+  genus  : s
   type: n
 Fensterscheiben:
+  genus  : f
   type: n
 Blumenausstellungen:
-  type: n
-Abnahmebehrde:
-  type: n
-Junk:
+  genus  : f
   type: n
 Eukalyptuspflanzen:
+  genus  : f
   type: n
 Brom:
+  genus  : s
   type: n
 ferlach:
-  type: adj
+  type: n
 runzeligkeit:
+  genus  : f
   type: n
 Mitterteich:
   type: n
 stimmt:
   type: vi
 Schminke:
+  genus  : f
   type: n
 Groessten:
-  type: n
+  type: adj
 verengen:
   type: vi
 Vinaigrette:
+  genus  : f
   type: n
 Berieseln:
+  genus  : s
   type: n
 vorladen:
   type: vi
 zuungunsten:
-  type: vi
+  type: prep
 Fixierstueck:
+  genus  : s
   type: n
 Luett:
   type: n
 Bandschleife:
-  type: n
-Arbeitskrftewanderung:
+  genus  : f
   type: n
 Wasserpumpe:
+  genus  : f
   type: n
 unbezahlbar:
   type: adj
@@ -88970,240 +89523,288 @@ Wienern:
 ernaehrt:
   type: vi
 Kanzerogen:
-  type: n
-radiumtherapie:
   type: adj
+radiumtherapie:
+  genus  : f
+  type: n
 Andernfalls:
   type: adv
 Abwaschmaschine:
+  genus  : f
   type: n
 Forschungsgemeinschaft:
+  genus  : f
   type: n
-dist:
-  type: vi
 Eilzug:
+  genus  : m
   type: n
 leuchtkoerper:
-  type: adj
+  genus  : m
+  type: n
 Mondsee:
+  genus  : m
   type: n
 abdomen:
+  genus  : s
   type: vi
-Armenuntersttzung:
-  type: n
 Roesten:
+  genus  : s
   type: n
 Gestellte:
-  type: n
+  type: adj
 Subversiv:
-  type: n
+  type: adj
 Gartengeraete:
+  genus  : f
   type: n
 Absatzstudie:
-  type: n
-Fliepressverfahren:
+  genus  : f
   type: n
 Gespannt:
-  type: n
+  type: adj
 Pico:
   type: n
 Erstaunlich:
   type: adv
 drall:
   type: adj
-Betriebsartenwhler:
-  type: n
 Legislative:
+  genus  : f
   type: n
 Kurier:
+  genus  : m
   type: n
 Eintrittstuer:
+  genus  : f
   type: n
 loewenstein:
-  type: adj
+  type: n
 durchnaessen:
   type: vi
 polyurie:
-  type: adj
+  genus  : f
+  type: n
 gallneukirchen:
-  type: adv
+  type: n
 Borkum:
+  genus  : s
   type: n
 abgeschlossen:
-  type: vi
+  type: adj
 fortscheuchen:
-  type: adv
+  type: vi
 Niedergeschlagenheit:
+  genus  : f
   type: n
 Scheherezade:
+  genus  : f
   type: n
 wasserstoff:
-  type: adj
+  genus  : m
+  type: n
 Kakao:
+  genus  : m
   type: n
 Einsteckschloesser:
+  genus  : f
   type: n
 Verteilbar:
-  type: n
+  type: adj
 Parkinsonismussymptomatik:
+  genus  : f
   type: n
 Bergrutsch:
+  genus  : m
   type: n
 vierzehn:
   type: adv
-tizipieren:
-  type: vi
 Konsistenz:
+  genus  : f
   type: n
 Anstrichfarben:
+  genus  : f
   type: n
 tragungsprotokoll:
-  type: adj
+  genus  : s
+  type: n
 hemmschuh:
-  type: adj
+  genus  : m
+  type: n
 imaginaer:
   type: adj
 Schnarrtrommel:
+  genus  : f
   type: n
 Gaensekueken:
+  genus  : s
   type: n
 Ernennungsurkunde:
+  genus  : f
   type: n
 Grossschirma:
   type: n
 abteilung:
-  type: adj
+  genus  : f
+  type: n
 treibenden:
-  type: vi
+  type: adj
 unkreativ:
   type: adj
 Eignungsnachweis:
+  genus  : m
   type: n
 adlers:
   type: n
-Langweil:
-  type: n
 Strassenueberfuehrung:
+  genus  : f
   type: n
 loerrach:
-  type: adj
-Lazarett:
   type: n
-Antrge:
+Lazarett:
+  genus  : s
   type: n
 Brennpunkt:
+  genus  : m
   type: n
 Verkneifen:
+  genus  : s
   type: n
-Frderschule:
-  type: n
-hobart:
-  type: vi
 kaltennordheim:
-  type: adj
+  type: n
 Schlafzimmer:
+  genus  : s
   type: n
 strukteur:
+  genus  : m
   type: adj
 Atompilz:
+  genus  : m
   type: n
 infragen:
   type: vi
 Arbeitsfoerderungsgesetz:
-  type: n
-Bndelung:
+  genus  : s
   type: n
 Fernsehstoerungen:
+  genus  : f
   type: n
 fahrbahn:
-  type: adj
-Psychopathisch:
+  genus  : f
   type: n
-depot:
+Psychopathisch:
   type: adj
+depot:
+  genus  : s
+  type: n
 Festwerden:
+  genus  : s
   type: n
 Daun:
   type: n
 Absolutist:
+  genus  : m
   type: n
 Inlineskaten:
+  genus  : s
   type: n
 aufwecken:
   type: vi
 hinreichend:
   type: adj
 Oelfoerdermaximum:
+  genus  : s
   type: n
 Fuenfjahrplan:
+  genus  : m
   type: n
 Erfolgsquoten:
+  genus  : f
   type: n
 Anissamen:
-  type: n
-Ecknhte:
   type: n
 Lotrecht:
   type: n
 Tacho:
+  genus  : m
   type: n
 Delbrueck:
   type: n
 geldnot:
-  type: vi
+  genus  : f
+  type: n
 Durchflussmesser:
+  genus  : m
   type: n
 Autobuechereien:
+  genus  : f
   type: n
 Hunde:
+  genus  : f
   type: n
 kontextsensitiv:
   type: adj
 Abwerten:
+  genus  : s
   type: n
 Laufmaschensicher:
-  type: n
+  type: adj
 robben:
-  type: vi
+  genus  : f
+  type: n
 empfehlen:
   type: vi
 Einstellpult:
+  genus  : s
   type: n
 Dinosaurier:
+  genus  : m
   type: n
 interferenz:
-  type: adj
+  genus  : f
+  type: n
 stimmigkeit:
+  genus  : f
   type: n
 Erschrecken:
+  genus  : s
   type: n
 schwaz:
-  type: adj
+  type: n
 Dienstenthebung:
+  genus  : f
   type: n
 Gefuehlsmenschen:
+  genus  : f
   type: n
 Selbststaendig:
-  type: n
+  type: adj
 Miesmachen:
+  genus  : s
   type: n
 Europafahne:
+  genus  : f
   type: n
 Addition:
+  genus  : f
   type: n
 Bauchtaenzerin:
+  genus  : f
   type: n
 Treidelkurve:
+  genus  : f
   type: n
 definierst:
   type: vi
 Badeanzug:
+  genus  : m
   type: n
 berauben:
   type: vi
 limo:
-  type: adj
+  genus  : f
+  type: n
 Schutzherrschaft:
+  genus  : f
   type: n
 notwendigen:
   type: adv
@@ -89214,11 +89815,9 @@ anreissen:
 tumultuarisch:
   type: adj
 Seelischer:
-  type: n
-Aussteifungsstbe:
-  type: n
-toledo:
   type: adj
+toledo:
+  type: n
 Kartoffel:
   type: n
 leiblichen:
@@ -89226,29 +89825,36 @@ leiblichen:
 Fuenfzehnte:
   type: adv
 Uno:
+  genus  : f
   type: n
 Laptop:
+  genus  : m
   type: n
 Erbin:
+  genus  : f
   type: n
 eingeschraenkt:
-  type: vi
-latitueden:
-  type: vi
-br:
   type: adj
+latitueden:
+  genus  : f
+  type: n
 Sedativum:
+  genus  : s
   type: n
 Kleinkrieg:
+  genus  : m
   type: n
 geistlichen:
   type: adv
 Gleisabstand:
+  genus  : m
   type: n
 Busserl:
+  genus  : s
   type: n
 hinterlegung:
-  type: adj
+  genus  : f
+  type: n
 festem:
   type: adj
 termittieren:
@@ -89256,178 +89862,207 @@ termittieren:
 weitreichen:
   type: adv
 Verkrampfung:
+  genus  : f
   type: n
 nuklearforscher:
-  type: adj
+  genus  : m
+  type: n
 Fraunhofer:
   type: n
 Stromspeicher:
+  genus  : m
   type: n
 Abschnittsweise:
-  type: n
+  type: adj
 Spielgeraet:
+  genus  : s
   type: n
 Protest:
-  type: n
-Ankerwiderstnde:
+  genus  : m
   type: n
 Papstkrone:
-  type: n
-Lser:
+  genus  : f
   type: n
 arbeitslos:
   type: adv
 Privatdetektiv:
+  genus  : m
   type: n
 Brueckenbelag:
+  genus  : m
   type: n
 Abziehstein:
+  genus  : m
   type: n
 praktikum:
-  type: adj
-Eigentumsverhltnisse:
+  genus  : s
   type: n
 Runzel:
+  genus  : f
   type: n
 strahlt:
   type: vi
 Herrentier:
+  genus  : m
   type: n
 Aufhoerst:
-  type: n
+  type: vi
 Auslegerkonsolen:
+  genus  : f
   type: n
 Bevorzugte:
-  type: n
+  type: adj
 Preetz:
   type: n
 daempfen:
   type: vi
 fuehrer:
-  type: adj
+  genus  : m
+  type: n
 herumspringen:
   type: vi
 verfluchen:
-  type: adv
+  type: vi
 ertrag:
-  type: adj
+  genus  : m
+  type: n
 Entlegenheit:
+  genus  : f
   type: n
 Dysgeusie:
-  type: n
-Frontalzusammenste:
+  genus  : f
   type: n
 Begrenzungslinien:
+  genus  : f
   type: n
 Akzeptabilitaet:
+  genus  : f
   type: n
 behelfsmaessig:
   type: adv
 diktion:
+  genus  : f
   type: n
 Naturkatastrophe:
+  genus  : f
   type: n
 dividendenertrag:
-  type: adj
+  genus  : m
+  type: n
 selbstbestimmung:
-  type: adj
+  genus  : f
+  type: n
 Packen:
+  genus  : s
   type: n
 farbsehschwaeche:
-  type: adv
-tetanu:
-  type: adj
+  genus  : f
+  type: n
 steindruck:
-  type: adj
+  genus  : m
+  type: n
 truebselig:
   type: adv
-Fuegeflaeche:
-  type: n
 Bronchialmuskulatur:
+  genus  : f
   type: n
 Pupillenverengung:
+  genus  : f
   type: n
 wtf:
-  type: adj
+  type: n
 Sushi:
+  genus  : s
   type: n
 Bildhaft:
-  type: n
+  type: adj
 Nephropathie:
+  genus  : f
   type: n
 geschaeumte:
-  type: vi
+  type: adj
 Neckarbischofsheim:
   type: n
-tenno:
-  type: adj
-Htte:
-  type: n
 halten:
-  type: adv
+  type: vi
 lucifer:
-  type: adj
-Sexuelle:
+  genus  : m
   type: n
+Sexuelle:
+  type: adj
 Einfuehren:
+  genus  : s
   type: n
 peppen:
-  type: adj
+  type: vi
 Abenteuerspiele:
+  genus  : f
   type: n
 Stichsaege:
+  genus  : f
   type: n
 Energieumformung:
+  genus  : f
   type: n
 Gegenklagen:
+  genus  : f
   type: n
 Freizeitanlagen:
+  genus  : f
   type: n
 Fetischisten:
+  genus  : f
   type: n
 Berichtsjahr:
+  genus  : s
   type: n
 frequenzunabhaengig:
   type: adv
 Drin:
-  type: n
+  type: adv
 bezahlung:
-  type: adj
-Vermitteln:
+  genus  : f
   type: n
-titumoroe:
-  type: adj
+Vermitteln:
+  genus  : s
+  type: n
 Nicaragua:
   type: n
 Fm:
   type: n
 Sitzenbleiben:
+  genus  : s
   type: n
 Vademecum:
+  genus  : s
   type: n
 vulkanische:
   type: adv
 Verharren:
+  genus  : s
   type: n
 alkoholismus:
+  genus  : m
   type: n
 sackpfeifen:
-  type: vi
+  genus  : f
+  type: n
 Inspektion:
+  genus  : f
   type: n
 Fehlerwerte:
+  genus  : f
   type: n
 Konya:
   type: n
 zart:
-  type: vi
-Praezedenzvorrangvortrittvorzug:
-  type: n
+  type: adj
 Douro:
   type: n
 temporaer:
   type: adj
 Glanzton:
+  genus  : m
   type: n
 Flaechenbelastung:
   genus: f
@@ -89435,32 +90070,38 @@ Flaechenbelastung:
 anthroprozentrisch:
   type: adj
 feind:
-  type: adj
+  genus  : m
+  type: n
 Tel:
   type: n
 lebendgebaerenden:
   type: adv
 dunkelfeld:
-  type: adj
+  genus  : s
+  type: n
 uebereinkommen:
   type: vi
-Buhne:
-  type: n
 rudi:
-  type: adj
+  type: n
 Bildtreue:
+  genus  : f
   type: n
 Akzeleration:
+  genus  : f
   type: n
 Sippe:
+  genus  : f
   type: n
 Zeitwort:
+  genus  : s
   type: n
 Waschanstalt:
+  genus  : f
   type: n
 fuegen:
   type: vi
 Tabernakel:
+  genus  : s
   type: n
 Dampfwalze:
   type: n
@@ -89497,885 +90138,1018 @@ Abstoungskraft:
 vielsprachig:
   type: adv
 Finanzbeamtin:
+  genus  : f
   type: n
 brachte:
-  type: adv
+  type: vi
 Gefaessnaht:
+  genus  : f
   type: n
 Massenware:
+  genus  : f
   type: n
 Burma:
   type: n
 geisa:
-  type: adj
-Widerwaertig:
+  genus  : f
   type: n
-hartha:
+Widerwaertig:
   type: adj
+hartha:
+  type: n
 vertebral:
   type: adj
 schwafeln:
   type: vi
 Anfang:
+  genus  : m
   type: n
 ibsen:
-  type: vi
+  type: n
 verproviantieren:
   type: vi
 Elbmuendung:
+  genus  : f
   type: n
 urtikaria:
-  type: adj
+  type: n
 pornographisch:
   type: adj
 fahrscheinautomat:
-  type: adj
-Verfuegungsgewalt:
+  genus  : m
   type: n
-drren:
-  type: vi
+Verfuegungsgewalt:
+  genus  : f
+  type: n
 Pogrom:
+  genus  : s
   type: n
 kubuntu:
-  type: adj
+  type: n
 Dimension:
+  genus  : f
   type: n
 rechtsbehelf:
-  type: adj
+  genus  : m
+  type: n
 niveaugleiche:
   type: adv
 Bevollmaechtigte:
+  genus  : f
   type: n
 Mollymauk:
   type: n
 Cyanobakterium:
+  genus  : s
   type: n
 Photographien:
+  genus  : s
   type: n
 sinnlosigkeit:
+  genus  : f
   type: n
 unruhe:
-  type: adv
-Zahlungsverkehr:
+  genus  : f
   type: n
-Bordpsse:
+Zahlungsverkehr:
+  genus  : m
   type: n
 lebenshaltungsindex:
-  type: adj
-Schrglauf:
+  genus  : m
   type: n
 Chefaerzte:
+  genus  : f
   type: n
 Schiffsseite:
+  genus  : f
   type: n
 gruender:
-  type: adj
+  genus  : m
+  type: n
 eingeweiht:
-  type: vi
-grafikformat:
   type: adj
+grafikformat:
+  genus  : s
+  type: n
 Pyridoxal:
   type: n
 desorbieren:
   type: vi
 Schuldsystem:
+  genus  : s
   type: n
 Mandellikoer:
+  genus  : m
   type: n
 brie:
-  type: adj
+  genus  : m
+  type: n
 Dieselmotor:
+  genus  : m
   type: n
 Punta:
   type: n
 geschriebenstein:
-  type: adj
+  type: n
 Champagne:
+  genus  : m
   type: n
 Betriebsendschalter:
+  genus  : m
   type: n
 Drehfeld:
+  genus  : s
   type: n
 Ackerschnecke:
+  genus  : f
   type: n
 Moelln:
   type: n
 Beispielhaft:
-  type: n
+  type: adj
 Buchname:
+  genus  : m
   type: n
 Fallkonferenz:
+  genus  : f
   type: n
 Eidesformel:
+  genus  : f
   type: n
 Durchfallquote:
+  genus  : f
   type: n
 Mannschaftteam:
+  genus  : s
   type: n
 Geschichtsforscher:
+  genus  : m
   type: n
 datensicherheit:
-  type: n
-Produktangebotproduktpalette:
+  genus  : f
   type: n
 Korrigieren:
+  genus  : s
   type: n
 Center:
+  genus  : s
   type: n
 abtasten:
   type: vi
 bildungsinstitution:
+  genus  : f
   type: n
 auspacken:
   type: vi
 Holzkloetze:
+  genus  : f
   type: n
 Tongerte:
+  genus  : f
   type: n
 karibik:
-  type: adj
+  genus  : f
+  type: n
 therapeutikum:
-  type: adj
+  genus  : s
+  type: n
 Gunstbezeugung:
-  type: n
-Ausfhrungsplan:
-  type: n
-Diagnoseprfung:
+  genus  : f
   type: n
 nobelium:
-  type: adj
+  genus  : s
+  type: n
 pfaffenhofen:
-  type: vi
+  type: n
 starrkoepfigkeit:
   genus: f
   type: n
 Fachaufsicht:
+  genus  : f
   type: n
 Bilderzeuger:
+  genus  : m
   type: n
 adipoes:
   type: adj
 Kommerzialisierung:
+  genus  : f
   type: n
 Kusine:
+  genus  : f
   type: n
 massgeblichen:
   type: adv
 nieselregen:
-  type: vi
-Aufbewahrungszeitrume:
+  genus  : m
   type: n
 Dattelpflaume:
+  genus  : f
   type: n
 praxiserprobt:
-  type: vi
+  type: adj
 Fertigungskosten:
+  genus  : f
   type: n
 organik:
-  type: adj
+  genus  : f
+  type: n
 Tiefkuehlkost:
+  genus  : f
   type: n
 Einsitzend:
-  type: n
+  type: adj
 Infrastruktur:
+  genus  : f
   type: n
 Eisbewegung:
+  genus  : f
   type: n
 trag:
-  type: adj
+  type: vi
 Anhaeufen:
+  genus  : s
   type: n
 Pferd:
+  genus  : s
   type: n
 Ajaccio:
   type: n
 ausmergeln:
   type: vi
 Weltkrieg:
+  genus  : m
   type: n
 haeufen:
   type: vi
 Fettgewebe:
-  type: n
-Ing:
+  genus  : s
   type: n
 Hadern:
+  genus  : s
   type: n
 anstrich:
-  type: adj
+  genus  : m
+  type: n
 Zerium:
+  genus  : s
   type: n
 Erhebung:
+  genus  : f
   type: n
 Schindmaehren:
+  genus  : f
   type: n
 Thompson:
   type: n
 Waehrungsbank:
+  genus  : f
   type: n
 Schwindlig:
-  type: n
+  type: adj
 Gabeln:
+  genus  : s
   type: n
 hepatotoxisch:
   type: adj
-Auenlufthaube:
-  type: n
 geladenes:
   type: adv
 Tagesgestirn:
+  genus  : s
   type: n
 pedantisch:
   type: adj
 Perspektiven:
+  genus  : f
   type: n
 Negativ:
-  type: n
+  type: adj
 Schweiss:
+  genus  : m
   type: n
 telegen:
-  type: vi
+  type: adj
 Gewuehl:
+  genus  : s
   type: n
 Schwermut:
+  genus  : m
   type: n
 abschieben:
   type: vi
 Holunder:
+  genus  : m
   type: n
 Gewimmer:
+  genus  : s
   type: n
 Internetradio:
+  genus  : s
   type: n
 hausfriedensbruch:
-  type: adj
+  genus  : m
+  type: n
 zoegerlich:
   type: adv
 Abgekapselt:
-  type: n
-besprechungsprotokoll:
   type: adj
+besprechungsprotokoll:
+  genus  : s
+  type: b
 unanschaulich:
   type: adv
-Betrge:
-  type: n
 erzwingen:
   type: vi
 Injizieren:
+  genus  : s
   type: n
 herpen:
-  type: adj
+  type: n
 Waldhueter:
+  genus  : m
   type: n
 Basisadresse:
+  genus  : f
   type: n
 auswerten:
   type: vi
 Drehmomentkompensatoren:
+  genus  : f
   type: n
 panisch:
   type: adj
-spter:
-  type: adj
 Generisch:
-  type: n
+  type: adj
 Niedrigwasser:
+  genus  : s
   type: n
 Datenbankmodelle:
+  genus  : f
   type: n
 Zerlumpt:
-  type: n
-parodien:
   type: adj
+parodien:
+  genus  : f
+  type: n
 Farbumschlagstift:
+  genus  : m
   type: n
 Arbeitsspeicher:
+  genus  : m
   type: n
 Seaborgium:
+  genus  : s
   type: n
 bruenstig:
   type: adv
 Beschichtungskabine:
+  genus  : f
   type: n
 Updaten:
+  genus  : s
   type: n
 Fluessigkeitseigenschaften:
+  genus  : f
   type: n
 Richtschnur:
+  genus  : f
   type: n
 stranden:
   type: vi
 muskeln:
-  type: vi
+  genus  : f
+  type: n
 aktenkoffer:
-  type: adj
+  genus  : m
+  type: n
 Unersetzlich:
   type: adv
-Ottokraftstoffvergaserkraftstoff:
-  type: n
 Gegengeschenk:
+  genus  : s
   type: n
 Flockig:
-  type: n
+  type: adj
 schlagewerk:
-  type: adj
+  genus  : s
+  type: n
 nichtuebereinstimmung:
-  type: adj
+  genus  : f
+  type: n
 Dornwarzen:
+  genus  : f
   type: n
 Ueberarbeitung:
+  genus  : f
   type: n
 konvex:
   type: adj
 abkriegen:
   type: vi
-2unbestraft:
-  type: vi
 epilepsie:
-  type: adj
+  genus  : f
+  type: n
 gemeinschaft:
-  type: adv
+  genus  : f
+  type: n
 Arbeitsplatzsicherung:
+  genus  : f
   type: n
 Einwendungen:
+  genus  : f
   type: n
 Abstandhalterhuelse:
+  genus  : f
   type: n
 herumkommandieren:
   type: vi
 Kreuzungsweiche:
+  genus  : f
   type: n
 Biomimetik:
+  genus  : f
   type: n
-glanzlo:
-  type: adj
 apenninenhalbinsel:
-  type: adj
-verstoen:
-  type: adj
+  genus  : f
+  type: n
 Behandeln:
+  genus  : s
   type: n
 Ethylalkohol:
+  genus  : m
   type: n
 Affenhaus:
+  genus  : s
   type: n
 Beschimpfung:
+  genus  : f
   type: n
 Endeffekt:
+  genus  : m
   type: n
 Abblaseleitung:
+  genus  : f
   type: n
 Fotolabor:
-  type: n
-radladers:
+  genus  : s
   type: n
 beguenstigen:
-  type: adv
-Flauto:
-  type: n
+  type: vi
 Domstift:
+  genus  : m
   type: n
 Gesetzesbruch:
+  genus  : m
   type: n
 klugscheissen:
   type: vi
 Adressbuecher:
+  genus  : f
   type: n
 Adernbelegungen:
-  type: n
-Gaensebluemchene:
+  genus  : f
   type: n
 ankuscheln:
   type: vi
 Glimmen:
+  genus  : s
   type: n
-abol:
-  type: adj
 Schliessmuskel:
+  genus  : m
   type: n
 ueberfuehrung:
+  genus  : f
   type: adj
 Buerettenstativ:
+  genus  : s
   type: n
 Bordsteinschwalbe:
+  genus  : f
   type: n
-teletexen:
-  type: adj
-sontra:
-  type: adj
 mitkommen:
   type: vi
 Gross:
   type: adv
-Flachnhte:
-  type: n
-Gieen:
-  type: n
 nachziehen:
-  type: adv
+  type: vi
 Katalonien:
+  genus  : s
   type: n
 niedergang:
-  type: adj
+  genus  : m
+  type: n
 sertourlich:
   type: adv
 Abstichrinne:
+  genus  : f
   type: n
 Abwaegungsergebnis:
-  type: n
-Photophob:
+  genus  : s
   type: n
 Hernia:
   type: n
 Zurueckkommen:
+  genus  : s
   type: n
 fatalen:
-  type: vi
+  type: adj
 Enthusiasmus:
+  genus  : m
   type: n
 zufluestern:
   type: vi
 Zwergschimpanse:
+  genus  : m
   type: n
-Vitalitaen:
-  type: n
-absenz:
-  type: adj
 Anfahrkreislauf:
+  genus  : m
   type: n
 Entscheidung:
+  genus  : f
   type: n
 Todesanzeige:
+  genus  : f
   type: n
 Anheizzeit:
+  genus  : f
   type: n
 Koerperschwaeche:
+  genus  : f
   type: n
 Kodizill:
+  genus  : s
   type: n
 Verflachen:
+  genus  : s
   type: n
 weissagen:
   type: vi
 Abgasentgiftung:
+  genus  : f
   type: n
 Buddhismus:
-  type: n
-malignen:
-  type: vi
-Overhead:
-  type: n
-Baumsrge:
+  genus  : m
   type: n
 unwirklich:
   type: adv
 Saft:
+  genus  : m
   type: n
 Bankeinzug:
+  genus  : m
   type: n
 Buegeln:
+  genus  : s
   type: n
 tagegeld:
-  type: adj
+  genus  : s
+  type: n
 seidenartig:
   type: adv
 Ausmisten:
+  genus  : s
   type: n
 Metabolit:
+  genus  : m
   type: n
 Unkultiviert:
-  type: n
+  type: adj
 Einstellwert:
-  type: n
-Beckenbrche:
+  genus  : m
   type: n
 fach:
   type: adj
 Vortragender:
   type: n
 ermattet:
-  type: vi
-Brsenspekulanten:
-  type: n
+  type: adj
 Dezimalbrueche:
+  genus  : f
   type: n
 Boxberg:
   type: n
 unreal:
   type: adj
-Abstrmffnung:
-  type: n
 Zuerichsee:
+  genus  : m
   type: n
 Abgedroschener:
-  type: n
+  type: adj
 Muss:
+  genus  : s
   type: n
 nachricht:
-  type: adv
+  genus  : f
+  type: n
 Hintertreffen:
+  genus  : s
   type: n
 voelkermord:
-  type: adj
-Friedensverhandlungen:
+  genus  : m
   type: n
-Apfelblte:
+Friedensverhandlungen:
+  genus  : f
   type: n
 Extrusivgestein:
+  genus  : s
   type: n
 Alleinvertrieb:
+  genus  : m
   type: n
 loetbrenner:
-  type: adj
-francium:
-  type: adj
+  genus  : m
+  type: n
 penetriert:
-  type: vi
+  type: adj
 Fehlermeldungsunterprogramm:
+  genus  : s
   type: n
 Mittelsteinzeit:
+  genus  : f
   type: n
-beschmen:
-  type: vi
 Grundbesitzer:
+  genus  : m
   type: n
 Abschaltgrenzwerte:
+  genus  : f
   type: n
 Kohlenrevier:
+  genus  : s
   type: n
 Freimasstoleranz:
-  type: n
-Auenkanzeln:
+  genus  : f
   type: n
 Verheilen:
+  genus  : s
   type: n
 Samenkorn:
+  genus  : s
   type: n
 mami:
-  type: adj
-kergrund:
-  type: adj
-Miesepetrig:
+  genus  : f
   type: n
 Bewehrung:
+  genus  : f
   type: n
 Tollkuehnheit:
+  genus  : f
   type: n
 Hachenburg:
   type: n
 bimsen:
   type: vi
-Bltenform:
-  type: n
 Pyrexie:
+  genus  : f
   type: n
 Saurier:
+  genus  : m
   type: n
 Ampullen:
+  genus  : f
   type: n
 Kippa:
   type: n
-as:
-  type: n
-Gehirnentzndung:
-  type: n
-Count:
-  type: n
 Verschlag:
+  genus  : m
   type: n
 Eckbleche:
+  genus  : f
   type: n
 gleissen:
   type: vi
 Bravourleistung:
+  genus  : f
   type: n
 wonach:
-  type: adj
+  type: adv
 Absauggitter:
+  genus  : s
   type: n
 d:
   type: n
 stromunfall:
-  type: adj
-Gaskammer:
+  genus  : m
   type: n
-Friedensvertrge:
+Gaskammer:
+  genus  : f
   type: n
 konsekutiv:
   type: adj
 Datenbertragungsrate:
+  genus  : f
   type: n
 Abwehrkraefte:
+  genus  : f
   type: n
 stoned:
-  type: n
+  type: adj
 auffahren:
   type: vi
 Auktionsmaerkte:
   genus: f
   type: n
 Schnelligkeit:
+  genus  : f
   type: n
 belohnung:
-  type: adj
+  genus  : f
+  type: n
 Bremswirkung:
+  genus  : f
   type: n
 Damme:
   type: n
-Cramersche:
-  type: n
 verdunsten:
   type: vi
-costn:
-  type: adj
 diskette:
-  type: vi
+  genus  : f
+  type: n
 Diagenese:
+  genus  : f
   type: n
 Ansaugluft:
+  genus  : f
   type: n
 Ausgegluehtes:
-  type: n
-Durchziehtlle:
-  type: n
+  type: adj
 Enkoder:
+  genus  : m
   type: n
 Manama:
   type: n
 Franzosen:
+  genus  : f
   type: n
 Aggregate:
+  genus  : f
   type: n
 Eigenartig:
-  type: n
-kind:
   type: adj
+kind:
+  genus  : s
+  type: n
 Firmenanwaeltin:
+  genus  : f
   type: n
 zusammenprallen:
   type: vi
 wogegen:
-  type: vi
+  type: adv
 tageszeitung:
-  type: adj
+  genus  : f
+  type: n
 beim:
-  type: adj
+  type: prep
 urbanisieren:
   type: vi
 Foederalisten:
+  genus  : f
   type: n
 rueckbekommen:
   type: vi
 Blankdraht:
+  genus  : m
   type: n
 Tauchkolben:
+  genus  : m
   type: n
 heraussuchen:
-  type: adv
+  type: vi
 wischlappen:
-  type: adj
+  genus  : m
+  type: n
 Fehlzuordnung:
+  genus  : f
   type: n
 Wirr:
-  type: n
-Bohrungsdrckmaschinen:
-  type: n
+  type: adj
 Rechnerkode:
+  genus  : f
   type: n
 Persilschein:
+  genus  : m
   type: n
 Sonnensystems:
   type: n
 Schichtaufnahme:
+  genus  : f
   type: n
 Scraffito:
   type: n
 Abraumhalde:
+  genus  : f
   type: n
 Abreiblock:
+  genus  : m
   type: n
 restlich:
   type: adv
 Abhoergesetz:
   type: n
 Einscheibenkupplung:
+  genus  : f
   type: n
 taeuschungsalarm:
-  type: adj
-Bcherfreundinnen:
+  genus  : m
   type: n
 Dankenswert:
-  type: n
-Gewae:
-  type: n
+  type: adj
 Druckluftleitung:
+  genus  : f
   type: n
 Luke:
   type: n
 kulinarisch:
   type: adj
 Adrastea:
+  genus  : m
   type: n
 Worum:
   type: fw
 Krankenversicherung:
+  genus  : f
   type: n
 gestalten:
   type: vi
-Antiquittenhandlungen:
-  type: n
 bremst:
   type: vi
 Faschingsdienstag:
+  genus  : m
   type: n
 Neuerlich:
   type: adv
 jubilieren:
   type: vi
 Erkenntnisse:
+  genus  : f
   type: n
 Reflex:
+  genus  : m
   type: n
 Filtrationen:
+  genus  : f
   type: n
 Flachwichser:
+  genus  : m
   type: n
 nuckeln:
   type: vi
 Wirtschaftlichkeit:
+  genus  : f
   type: n
 doppelaussagen:
-  type: vi
+  genus  : f
+  type: n
 jersey:
-  type: adj
+  type: n
 einrenken:
   type: vi
 Umstuerzen:
+  genus  : f
   type: n
 Stoppelzieher:
+  genus  : m
   type: n
 Gefaellig:
-  type: n
+  type: adj
 boesen:
-  type: vi
-Blechbchse:
-  type: n
+  type: adj
 Zahltag:
+  genus  : m
   type: n
 Fluegeltueren:
+  genus  : f
   type: n
 Anspruchslos:
-  type: n
+  type: adj
 meschuggen:
-  type: vi
+  type: adj
 femidom:
-  type: adj
+  genus  : m
+  type: n
 auswechselspieler:
-  type: adj
+  genus  : m
+  type: n
 reisebereit:
   type: adj
 ansteigen:
-  type: adv
+  type: vi
 delhi:
-  type: adj
+  type: n
 Baudepartement:
+  genus  : s
   type: n
 Abtasteinheit:
-  type: n
-Brokratismus:
+  genus  : f
   type: n
 Duftwolke:
+  genus  : f
   type: n
 Detektive:
+  genus  : f
   type: n
 Anwartschaftszeiten:
+  genus  : f
   type: n
 rueckgriff:
-  type: adj
-Tief:
+  genus  : m
   type: n
-ohnedien:
-  type: adj
+Tief:
+  genus  : s
+  type: n
 Ruhemoebel:
+  genus  : s
   type: n
 zuversichtlich:
   type: adv
 Ausflugsschiff:
-  type: n
-aufrcken:
-  type: vi
-Sarnen:
+  genus  : s
   type: n
 erfunden:
   type: vi
 Nonnengans:
+  genus  : f
   type: n
 Aol:
   type: n
 Hinduismus:
+  genus  : m
   type: n
 geschickt:
   type: vi
 luebtheen:
-  type: adj
-entzuendungshemmen:
-  type: vi
+  type: n
 Feststoffdichte:
+  genus  : f
   type: n
 Bestrahlung:
+  genus  : f
   type: n
 Giesskanne:
+  genus  : f
   type: n
 Ausbilden:
+  genus  : s
   type: n
 Wrackgut:
+  genus  : s
   type: n
 Schnittwunde:
+  genus  : f
   type: n
 Handfessel:
+  genus  : f
   type: n
 bindungsfreudig:
   type: adv
 gott:
-  type: vi
+  type: n
 satzstoff:
-  type: adj
+  genus  : m
+  type: n
 erregung:
-  type: adj
+  genus  : f
+  type: n
 Realdefinition:
+  genus  : f
   type: n
 Tasse:
+  genus  : f
   type: n
 Rundordner:
   type: n
 Fusilli:
+  genus  : f
   type: n
 Fahrerseite:
+  genus  : f
   type: n
 Unvertraeglich:
   type: adv
-Bankberweisungen:
-  type: n
 gewandten:
-  type: vi
+  type: adj
 Umstand:
+  genus  : m
   type: n
 aki:
-  type: adj
+  type: n
 Schiedsrichter:
+  genus  : m
   type: n
 Bastelei:
+  genus  : f
   type: n
 abgeltung:
-  type: adj
+  genus  : f
+  type: n
 geklungen:
   type: vi
 munternd:
   type: adj
 Beendigung:
+  genus  : f
   type: n
 tempelhof:
-  type: adj
+  type: n
 akademischen:
   type: adv
 altmodisch:
@@ -90383,138 +91157,163 @@ altmodisch:
 abzappeln:
   type: vi
 Sperrklinke:
+  genus  : f
   type: n
 seitliche:
   type: adv
 briefpartner:
-  type: adj
+  genus  : m
+  type: n
 gewaltig:
   type: adv
 Bauindustrie:
+  genus  : f
   type: n
 Allgemeinflaeche:
+  genus  : f
   type: n
-geloebni:
-  type: adj
 teilmaessig:
   type: adv
 Domo:
   type: n
 Militaerkrankenhaus:
+  genus  : s
   type: n
 Druckluftflaschen:
+  genus  : f
   type: n
 Wochenmitte:
+  genus  : f
   type: n
 Dueben:
-  type: n
-Krankenhau:
   type: n
 hungern:
   type: vi
 Discounter:
+  genus  : m
   type: n
 rechtbasteln:
   type: vi
 Stimmlos:
-  type: n
+  type: adj
 Rebellisch:
-  type: n
+  type: adj
 Dahlie:
   type: n
 Auflageleisten:
+  genus  : f
   type: n
 Fundsachen:
+  genus  : f
   type: n
 Eriquillo:
   type: n
 Funksignal:
+  genus  : s
   type: n
 Gammatrinker:
+  genus  : m
   type: n
 Auszahlung:
+  genus  : f
   type: n
 Strick:
+  genus  : m
   type: n
 gleichziehen:
-  type: adv
+  type: vi
 Anspechzeit:
+  genus  : f
   type: n
 Geisterhaft:
-  type: n
+  type: adj
 Daumendrucktechnik:
+  genus  : f
   type: n
 Fischnetz:
+  genus  : s
   type: n
 verifizierbar:
   type: adj
-faelschlicherweisen:
-  type: vi
 aktivitaet:
-  type: adj
+  genus  : f
+  type: n
 Kuebel:
+  genus  : m
   type: n
 auskratzen:
   type: vi
 vorsprechen:
-  type: adv
+  type: vi
 Geschlechtsverkehr:
+  genus  : m
   type: n
 empoerung:
-  type: adj
+  genus  : f
+  type: n
 Schwert:
+  genus  : s
   type: n
 Bestatten:
+  genus  : s
   type: n
 nuetzlichkeit:
+  genus  : f
   type: n
 Kram:
+  genus  : m
   type: n
 unzuverlaessig:
   type: adv
 einschleichen:
-  type: adv
+  type: vi
 kiffen:
   type: vi
-Entpersnlichung:
-  type: n
 offenherzig:
   type: adv
 Anschweissverschraubung:
+  genus  : f
   type: n
 Spass:
+  genus  : m
   type: n
 Abwart:
+  genus  : m
   type: n
 Anspruchsklasse:
+  genus  : f
   type: n
 leitstrahl:
-  type: adj
+  genus  : m
+  type: n
 Armleuchter:
+  genus  : m
   type: n
 Gallenblasenoperationen:
+  genus  : f
   type: n
-eskanzlerin:
-  type: adj
-fleisen:
-  type: vi
+bundeskanzlerin:
+  type: n
 Jemanden:
-  type: n
+  type: pron
 Arnsberg:
-  type: n
-Poolschwimmbeckenswimmingpoolswimmingpool:
   type: n
 b9:
   type: n
 Filmmaterial:
+  genus  : s
   type: n
 Modellbahn:
+  genus  : f
   type: n
 Programmiersprachen:
+  genus  : f
   type: n
 Betriebsvereinbarungen:
+  genus  : f
   type: n
 Teilnehmer:
+  genus  : f
   type: n
 Mayo:
   type: n
@@ -90523,13 +91322,17 @@ Domnen:
 wagen:
   type: vi
 Allergiestoff:
+  genus  : m
   type: n
 Sekunde:
+  genus  : f
   type: n
 Niederprasseln:
+  genus  : s
   type: n
 anwendungsfall:
-  type: adj
+  genus  : m
+  type: n
 Frauenkirchen:
   type: n
 eitel:
@@ -90537,101 +91340,128 @@ eitel:
 verlaestern:
   type: vi
 Effektiv:
-  type: n
+  type: adj
 Gefriermaschine:
+  genus  : f
   type: n
 Ausdenken:
+  genus  : s
   type: n
 Einbildung:
+  genus  : f
   type: n
 Leibwaechter:
+  genus  : m
   type: n
 Francis:
   type: n
 Aussichtsvoll:
-  type: n
-spaichingen:
-  type: vi
-muskel:
   type: adj
+spaichingen:
+  type: n
+muskel:
+  genus  : m
+  type: n
 blutung:
+  genus  : f
   type: adj
 Anodenspannung:
+  genus  : f
   type: n
 Bandspule:
+  genus  : f
   type: n
 Dublette:
+  genus  : f
   type: n
 henker:
-  type: adj
+  genus  : m
+  type: n
 alleinsein:
   type: adj
 Litzendraht:
+  genus  : m
   type: n
 Steckkraft:
+  genus  : f
   type: n
 Gefechtsverbaende:
   genus: f
   type: n
 alias:
-  type: n
+  type: adv
 Luxus:
+  genus  : m
   type: n
 Gottfried:
   type: n
 ausahnen:
   type: vi
 Stufung:
+  genus  : f
   type: n
 domini:
-  type: adj
+  type: n
 schaffung:
-  type: adj
+  genus  : f
+  type: n
 Gesellschaftswissenschaft:
+  genus  : f
   type: n
 Freiheitsberaubung:
+  genus  : f
   type: n
 Stadtgrenzen:
+  genus  : f
   type: n
 Abfahrsystem:
+  genus  : s
   type: n
 Einlagekapital:
+  genus  : s
   type: n
 Gardisten:
+  genus  : f
   type: n
 Tatsaechlich:
   type: adv
 Forstrevier:
+  genus  : s
   type: n
 Versteckt:
-  type: n
+  type: adj
 Hoteldiener:
+  genus  : m
   type: n
 epo:
-  type: adj
-teddyba:
-  type: adj
+  type: n
 Bueromensch:
+  genus  : m
   type: n
 Guyana:
-  type: n
-Anbauscheibenpflge:
   type: n
 Tremor:
   type: n
 Boxenaufsicht:
+  genus  : f
   type: n
 verwendbarkeit:
+  genus  : f
   type: n
 Einschaltung:
+  genus  : f
   type: n
 wasch:
-  type: adj
+  genus  : m
+  type: n
 Drachenflieger:
+  genus  : m
   type: n
 kernkraftwerk:
-  type: adj
+  genus  : s
+  type: n
 Anbaumoebel:
+  genus  : f
   type: n
 quer:
   type: adj
@@ -90639,178 +91469,218 @@ buecken:
   type: vi
 auskaempfen:
   type: vi
-metrorrhagie:
-  type: adj
 Verbotenes:
-  type: n
+  type: adj
 Funktionsweise:
+  genus  : f
   type: n
 edmund:
-  type: adj
+  type: n
 Foerderpatenschaft:
+  genus  : f
   type: n
 anmut:
-  type: adj
+  genus  : f
+  type: n
 Einhalsung:
+  genus  : f
   type: n
 Einbuergerung:
+  genus  : f
   type: n
 Dialysezentren:
+  genus  : f
   type: n
 Bastard:
+  genus  : m
   type: n
 schwachpunkt:
-  type: vi
+  genus  : m
+  type: n
 Conchieren:
+  genus  : s
   type: n
 funktion:
+  genus  : f
   type: n
 dysphorie:
-  type: adj
+  genus  : f
+  type: n
 relegieren:
   type: vi
-Anschwrzung:
-  type: n
 geldschein:
-  type: adj
+  genus  : m
+  type: n
 rangun:
-  type: adj
+  type: n
 innehaben:
   type: vi
 Insel:
-  type: prep
+  genus  : f
+  type: n
 verkleinert:
-  type: vi
+  type: adj
 Schuldverschreibung:
+  genus  : f
   type: n
 datteln:
-  type: vi
+  genus  : f
+  type: n
 Abfallaufkommen:
+  genus  : s
   type: n
 Bohrlochwand:
+  genus  : f
   type: n
 allergen:
-  type: vi
+  type: adj
 grob:
   type: adj
 einmal:
   type: adv
 Pantoffelheld:
+  genus  : m
   type: n
 Charcotsyndrom:
+  genus  : s
   type: n
 Bowlingkugeln:
+  genus  : f
   type: n
 abgang:
-  type: adj
+  genus  : m
+  type: n
 verhaeltnisgleich:
   type: adj
 wehmut:
-  type: adj
+  genus  : f
+  type: n
 Austauschbarkeit:
+  genus  : f
   type: n
 mamma:
-  type: adj
-Zweitletzter:
+  genus  : f
   type: n
+Zweitletzter:
+  type: adj
 Oenologie:
+  genus  : f
   type: n
 abcc:
-  type: adj
+  type: n
 rotwurst:
-  type: vi
-Messbuchmissalmissale:
+  genus  : f
   type: n
 Stromanschluss:
+  genus  : m
   type: n
 Paulo:
   type: n
 zurueckkaufen:
   type: vi
 Gottesleugner:
+  genus  : m
   type: n
 Erschuetterungen:
+  genus  : f
   type: n
 verdrehen:
-  type: adv
+  type: vi
 Freiheitsrechte:
+  genus  : f
   type: n
 ortus:
   type: n
-slowmotion:
-  type: n
 Anhaenge:
+  genus  : f
   type: n
 aktenmappe:
-  type: adj
+  genus  : f
+  type: n
 Skulpteur:
-  type: n
-beschis:
-  type: n
-Pejorativ:
+  genus  : f
   type: n
 wohnungseinrichtung:
-  type: adj
+  genus  : f
+  type: n
 Platten:
+  genus  : f
   type: n
 dachfiren:
-  type: vi
-Antidrhnblech:
+  genus  : f
   type: n
 artikelstamm:
+  genus  : m
   type: adj
 Blasensprung:
+  genus  : m
   type: n
 Vorwurf:
+  genus  : m
   type: n
 romantik:
-  type: adj
+  genus  : f
+  type: n
 Flaeche:
+  genus  : f
   type: n
 abstecher:
-  type: adj
+  genus  : m
+  type: n
 materialwirtschaft:
-  type: adv
+  genus  : f
+  type: n
 Feststellen:
+  genus  : s
   type: n
 Verfehlung:
+  genus  : f
   type: n
 Datenbankanbindungen:
+  genus  : f
   type: n
-pessimismu:
-  type: adj
 referendariat:
-  type: adj
+  genus  : m
+  type: n
 ber:
-  type: adj
+  type: n
 Firmengruendung:
+  genus  : f
   type: n
 osteologie:
-  type: adj
+  genus  : f
+  type: n
 Weinkenner:
+  genus  : m
   type: n
 Dialogdatenverarbeitung:
+  genus  : f
   type: n
 Nachziehen:
+  genus  : s
   type: n
 Garantieverletzung:
+  genus  : f
   type: n
 Auskippen:
+  genus  : s
   type: n
 Fehlkonstruktion:
+  genus  : f
   type: n
 Heissgelaufen:
-  type: n
-Haushaelterisch:
-  type: n
-stettin:
   type: adj
-Invertiert:
+Haushaelterisch:
+  type: adj
+stettin:
   type: n
+Invertiert:
+  type: adj
 Auflageteller:
   type: n
 urformen:
-  type: vi
+  genus  : f
+  type: n
 leidenschaft:
   type: adv
 Abendroete:
@@ -207525,131 +208395,6937 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            Ah:
-  type: inter
+  type: adj            ISUNKNOWN:
+  type: vi
+Ah:
+  type: n
+Ah:
+  type: n
 ISUNKNOWN:
   type: vi
 ISUNKNOWN:
   type: vi
-unfehlbar:
-  type: adj
-unfehlbar:
-  type: adj
-Ah:
-  type: inter
-Ah:
-  type: inter
-atomhuelle:
+Aaron:
   type: n
-seife:
+Abbigail:
   type: n
-fettsaeuren:
+Abby:
   type: n
-Ws:
+Abelina:
+  type: n
+Abigail:
+  type: n
+Abraham:
+  type: n
+Achatius:
+  type: n
+Achaz:
+  type: n
+Achill:
+  type: n
+Achilles:
+  type: n
+Achim:
+  type: n
+Achmed:
+  type: n
+Achmet:
+  type: n
+Ada:
+  type: n
+Adalbero:
+  type: n
+Adalbert:
+  type: n
+Adalbrand:
+  type: n
+Adalbrecht:
+  type: n
+Adalfuns:
+  type: n
+Adalgis:
+  type: n
+Adalhard:
+  type: n
+Adalhart:
+  type: n
+Adalheidis:
+  type: n
+Adalhelm:
+  type: n
+Adalher:
+  type: n
+Adalmar:
+  type: n
+Adalram:
+  type: n
+Adalwin:
+  type: n
+Adamine:
+  type: n
+Adela:
+  type: n
+Adelar:
+  type: n
+Adelbert:
+  type: n
+Adelbrand:
+  type: n
+Adele:
+  type: n
+Adelgard:
+  type: n
+Adelgis:
+  type: n
+Adelgund:
+  type: n
+Adelgunde:
+  type: n
+Adelhard:
+  type: n
+Adelhart:
+  type: n
+Adelheid:
+  type: n
+Adelhelm:
+  type: n
+Adelhelma:
+  type: n
+Adelind:
+  type: n
+Adelinde:
+  type: n
+Adelisa:
+  type: n
+Adelmar:
+  type: n
+Adelmut:
+  type: n
+Adelrune:
+  type: n
+Adeltraud:
+  type: n
+Adeltrud:
+  type: n
+Adhelm:
+  type: n
+Adina:
+  type: n
+Adine:
+  type: n
+Adlai:
+  type: n
+Adolar:
+  type: n
+Adolfa:
+  type: n
+Adolfine:
+  type: n
+Adolph:
+  type: n
+Adolpha:
+  type: n
+Aegidius:
+  type: n
+Afra:
+  type: n
+Agatha:
+  type: n
+Agathe:
+  type: n
+Agenor:
+  type: n
+Agimund:
+  type: n
+Aglaia:
+  type: n
+Aglaja:
+  type: n
+Agnes:
+  type: n
+Agnesa:
+  type: n
+Agneta:
+  type: n
+Agnete:
+  type: n
+Agnetha:
+  type: n
+Ahas:
+  type: n
+Ahasver:
+  type: n
+Ahmad:
+  type: n
+Aida:
+  type: n
+Aiko:
+  type: n
+Aileen:
+  type: n
+Aischa:
+  type: n
+Aistulf:
+  type: n
+Aladin:
+  type: n
+Alan:
+  type: n
+Alawis:
+  type: n
+Alba:
+  type: n
+Alban:
+  type: n
+Alberic:
+  type: n
+Albero:
+  type: n
+Albin:
+  type: n
+Albina:
+  type: n
+Albine:
+  type: n
+Albrun:
+  type: n
+Alda:
+  type: n
+Aldebrand:
+  type: n
+Aldhelm:
+  type: n
+Aldina:
+  type: n
+Aldine:
+  type: n
+Aldo:
+  type: n
+Aldona:
+  type: n
+Aleandro:
+  type: n
+Alena:
+  type: n
+Alesja:
+  type: n
+Alex:
+  type: n
+Alexa:
+  type: n
+Alexandra:
+  type: n
+Alexandrina:
+  type: n
+Alexandrine:
+  type: n
+Alexia:
+  type: n
+Alexis:
+  type: n
+Alexius:
+  type: n
+Alfheri:
+  type: n
+Alfons:
+  type: n
+Alfreda:
+  type: n
+Alida:
+  type: n
+Alide:
+  type: n
+Aliena:
+  type: n
+Aliene:
+  type: n
+Alinda:
+  type: n
+Alinde:
+  type: n
+Alisa:
+  type: n
+Alke:
+  type: n
+Allmut:
+  type: n
+Almar:
+  type: n
+Almedina:
+  type: n
+Almut:
+  type: n
+Almute:
+  type: n
+Almuth:
+  type: n
+Alois:
+  type: n
+Aloisia:
+  type: n
+Aloisius:
+  type: n
+Aloys:
+  type: n
+Aloysius:
+  type: n
+Alphons:
+  type: n
+Alram:
+  type: n
+Alrun:
+  type: n
+Altmann:
+  type: n
+Alwar:
+  type: n
+Alwin:
+  type: n
+Alwina:
+  type: n
+Alwine:
+  type: n
+Amadeus:
+  type: n
+Amalberga:
+  type: n
+Amalia:
+  type: n
+Amalie:
+  type: n
+Amalrich:
+  type: n
+Amalthea:
+  type: n
+Amanda:
+  type: n
+Amantius:
+  type: n
+Amata:
+  type: n
+Amatus:
+  type: n
+Ambros:
+  type: n
+Ambrosia:
+  type: n
+Ambrosina:
+  type: n
+Ambrosius:
+  type: n
+Ameleya:
+  type: n
+Amelia:
+  type: n
+Amelie:
+  type: n
+Amidala:
+  type: n
+Amos:
+  type: n
+Amrei:
+  type: n
+Anacletus:
+  type: n
+Anah:
+  type: n
+Anakin:
+  type: n
+Anaklet:
+  type: n
+Anakletus:
+  type: n
+Analena:
+  type: n
+Anastasia:
+  type: n
+Anastasius:
+  type: n
+Anath:
+  type: n
+Anatol:
+  type: n
+Ande:
+  type: n
+Andi:
+  type: n
+Andra:
+  type: n
+Andres:
+  type: n
+Andrin:
+  type: n
+Andromeda:
+  type: n
+Angelike:
+  type: n
+Angeliki:
+  type: n
+Angelus:
+  type: n
+Anicetus:
+  type: n
+Anika:
+  type: n
+Anike:
+  type: n
+Anja:
+  type: n
+Anka:
+  type: n
+Anke:
+  type: n
+Marilena:
+  type: n
+Anna-Lena:
+  type: n
+Anna-Maria:
+  type: n
+Anna-Marie:
+  type: n
+Annabell:
+  type: n
+Annabella:
+  type: n
+Annalena:
+  type: n
+Annalene:
+  type: n
+Annalies:
+  type: n
+Annaliese:
+  type: n
+Annalisa:
+  type: n
+Annalise:
+  type: n
+Annamaria:
+  type: n
+Annamarie:
+  type: n
+Annatina:
+  type: n
+Anndea:
+  type: n
+Anne:
+  type: n
+Annedore:
+  type: n
+Annegret:
+  type: n
+Anneka:
+  type: n
+Anneke:
+  type: n
+Anneleen:
+  type: n
+Annelena:
+  type: n
+Annelene:
+  type: n
+Anneli:
+  type: n
+Annelie:
+  type: n
+Annelies:
+  type: n
+Anneliese:
+  type: n
+Annelise:
+  type: n
+Annely:
+  type: n
+Annemaria:
+  type: n
+Annemarie:
+  type: n
+Annemieke:
+  type: n
+Anni:
+  type: n
+Annica:
+  type: n
+Annik:
+  type: n
+Annika:
+  type: n
+Annike:
+  type: n
+Annina:
+  type: n
+Annine:
+  type: n
+Annunziata:
+  type: n
+Anouschka:
+  type: n
+Anselm:
+  type: n
+Anselma:
+  type: n
+Ansgar:
+  type: n
+Answald:
+  type: n
+Anthea:
+  type: n
+Antje:
+  type: n
+Antonia:
+  type: n
+Antonie:
+  type: n
+Antonina:
+  type: n
+Apollinaris:
+  type: n
+Apollonia:
+  type: n
+Apollonius:
+  type: n
+Aquilina:
+  type: n
+Aquinnah:
+  type: n
+Arabella:
+  type: n
+Arabelle:
+  type: n
+Aragorn:
+  type: n
+Aram:
+  type: n
+Archontula:
+  type: n
+Arend:
+  type: n
+Arendt:
+  type: n
+Argentina:
+  type: n
+Ariadna:
+  type: n
+Ariadne:
+  type: n
+Ariana:
+  type: n
+Arkadius:
+  type: n
+Arlett:
+  type: n
+Arletta:
+  type: n
+Arlette:
+  type: n
+Armella:
+  type: n
+Armelle:
+  type: n
+Armgard:
+  type: n
+Armgart:
+  type: n
+Arnd:
+  type: n
+Arndt:
+  type: n
+Arnest:
+  type: vi
+Arnfried:
+  type: n
+Arnhild:
+  type: n
+Arnolda:
+  type: n
+Arnolde:
+  type: n
+Arnoldina:
+  type: n
+Arnoldine:
+  type: n
+Arnolt:
+  type: n
+Arntrud:
+  type: n
+Arnulf:
+  type: n
+Arnust:
+  type: n
+Aron:
+  type: n
+Artemia:
+  type: n
+Artemis:
+  type: n
+Arved:
+  type: n
+Arvid:
+  type: n
+Arwed:
+  type: n
+Arwen:
+  type: n
+Arwid:
+  type: n
+Arwin:
+  type: n
+Ascan:
+  type: n
+Ascanius:
+  type: n
+Aschwin:
+  type: n
+Asgard:
+  type: n
+Askan:
+  type: n
+Askanja:
+  type: n
+Asko:
+  type: n
+Askwin:
+  type: n
+Asmeret:
+  type: n
+Asmus:
+  type: n
+Aspasia:
+  type: n
+Asser:
+  type: n
+Aswin:
+  type: n
+Atara:
+  type: n
+Athena:
+  type: n
+Atze:
+  type: n
+Audomar:
+  type: n
+Augis:
+  type: n
+Auguste:
+  type: n
+Augustina:
+  type: n
+Augustinus:
+  type: n
+Aurelia:
+  type: n
+Aurelie:
+  type: n
+Auriana:
+  type: n
+Ava:
+  type: n
+Avel:
+  type: n
+Ayleen:
+  type: n
+Azalea:
+  type: n
+Babette:
+  type: n
+Bailey:
+  type: n
+Balbina:
+  type: n
+Balduin:
+  type: n
+Baldur:
+  type: n
+Baldwin:
+  type: n
+Balian:
+  type: n
+Balthasar:
+  type: n
+Balthild:
+  type: n
+Balthilde:
+  type: n
+Balu:
+  type: n
+Baptist:
+  type: n
+Barbra:
+  type: n
+Barnabas:
+  type: n
+Bartel:
+  type: n
+Barthold:
+  type: n
+Bartholomaeus:
+  type: n
+Basil:
+  type: n
+Basileo:
+  type: n
+Bassel:
+  type: n
+Bastian:
+  type: n
+Bastienne:
+  type: n
+Bathilde:
+  type: n
+Bathseba:
+  type: n
+Batseba:
+  type: n
+Bea:
+  type: n
+Beat:
+  type: n
+Beata:
+  type: n
+Beate:
+  type: n
+Beath:
+  type: n
+Beatrix:
+  type: n
+Beda:
+  type: n
+Belana:
+  type: n
+Belanna:
+  type: n
+Belinde:
+  type: n
+Belisar:
+  type: n
+Bella:
+  type: n
+Bendix:
+  type: n
+Benedicta:
+  type: n
+Benedikta:
+  type: n
+Benen:
+  type: n
+Beniese:
+  type: n
+Benigna:
+  type: n
+Benjy:
+  type: n
+Benno:
+  type: n
+Berahthraban:
+  type: n
+Berengar:
+  type: n
+Berenice:
+  type: n
+Berenike:
+  type: n
+Berit:
+  type: n
+Bernd:
+  type: n
+Berndt:
+  type: n
+Bernfried:
+  type: n
+Berngar:
+  type: n
+Bernger:
+  type: n
+Bernhard:
+  type: n
+Bernharda:
+  type: n
+Bernharde:
+  type: n
+Bernhardina:
+  type: n
+Bernhardine:
+  type: n
+Bernward:
+  type: n
+Bert:
+  type: n
+Berta:
+  type: n
+Berte:
+  type: n
+Berthild:
+  type: n
+Berthilde:
+  type: n
+Berthold:
+  type: n
+Berti:
+  type: n
+Bertina:
+  type: n
+Bertine:
+  type: n
+Bertold:
+  type: n
+Bertolt:
+  type: n
+Bertrad:
+  type: n
+Bertrada:
+  type: n
+Bertrade:
+  type: n
+Bertradis:
+  type: n
+Bertram:
+  type: n
+Bertrand:
+  type: n
+Beryl:
+  type: n
+Beryll:
+  type: n
+Bethli:
+  type: n
+Betina:
+  type: n
+Betlindis:
+  type: n
+Bettina:
+  type: n
+Beverley:
+  type: n
+Beverly:
+  type: n
+Bianca:
+  type: n
+Bianka:
+  type: n
+Bibi:
+  type: n
+Bibiana:
+  type: n
+Bibiane:
+  type: n
+Binia:
+  type: n
+Birger:
+  type: n
+Birgid:
+  type: n
+Birgit:
+  type: n
+Birgitt:
+  type: n
+Birte:
+  type: n
+Birthe:
+  type: n
+Bithja:
+  type: n
+Bitja:
+  type: n
+Blanda:
+  type: n
+Blandina:
+  type: n
+Blandine:
+  type: n
+Blanka:
+  type: n
+Blictrudis:
+  type: n
+Bliktrud:
+  type: n
+Blonda:
+  type: n
+Bodo:
+  type: n
+Bodobert:
+  type: n
+Bonaventura:
+  type: n
+Bonifatius:
+  type: n
+Bonifaz:
+  type: n
+Borchard:
+  type: n
+Borghild:
+  type: n
+Bosse:
+  type: n
+Botho:
+  type: n
+Braida:
+  type: n
+Brigitta:
+  type: n
+Bringfried:
+  type: n
+Bringfriede:
+  type: n
+Briska:
+  type: n
+Brita:
+  type: n
+Britta:
+  type: n
+Bruna:
+  type: n
+Brunhild:
+  type: n
+Brunhilde:
+  type: n
+Brutus:
+  type: n
+Bryan:
+  type: n
+Bruenhild:
+  type: n
+Bruenhilde:
+  type: n
+Burghard:
+  type: n
+Burghild:
+  type: n
+Burghilde:
+  type: n
+Burglinde:
+  type: n
+Burgunde:
+  type: n
+Burkard:
+  type: n
+Burkart:
+  type: n
+Burkhard:
+  type: n
+Burkhart:
+  type: n
+Baerbel:
+  type: n
+Cajetan:
+  type: n
+Callista:
+  type: n
+Calvin:
+  type: n
+Candida:
+  type: n
+Candy:
+  type: n
+Cara:
+  type: n
+Caren:
+  type: n
+Carin:
+  type: n
+Carina:
+  type: n
+Carine:
+  type: n
+Carinna:
+  type: n
+Carissima:
+  type: n
+Carla:
+  type: n
+Carlyn:
+  type: n
+Carmelina:
+  type: n
+Carola:
+  type: n
+Carolin:
+  type: n
+Carolyn:
+  type: n
+Carsta:
+  type: n
+Carsten:
+  type: n
+Cascaya:
+  type: n
+Casimir:
+  type: n
+Caspar:
+  type: n
+Cassandra:
+  type: n
+Cassian:
+  type: n
+Catarina:
+  type: n
+Catharina:
+  type: n
+Catherina:
+  type: n
+Cathrin:
+  type: n
+Cathrina:
+  type: n
+Cathrine:
+  type: n
+Catrin:
+  type: n
+Catrina:
+  type: n
+Cay:
+  type: n
+Cecilia:
+  type: n
+Cecilie:
+  type: n
+Celin:
+  type: n
+Celina:
+  type: n
+Celine:
+  type: n
+Cesar:
+  type: n
+Chaja:
+  type: n
+Charis:
+  type: n
+Charitas:
+  type: n
+Charlott:
+  type: n
+Charlotte:
+  type: n
+Cheryl:
+  type: n
+Chiron:
+  type: n
+Chlodomer:
+  type: n
+Chlodwig:
+  type: n
+Chloe:
+  type: n
+Chloris:
+  type: n
+Chlothar:
+  type: n
+Chloee:
+  type: n
+Chris:
+  type: n
+Christel:
+  type: n
+Christfried:
+  type: n
+Christhild:
+  type: n
+Christian:
+  type: n
+Christiana:
+  type: n
+Christiane:
+  type: n
+Christina:
+  type: n
+Christl:
+  type: n
+Christof:
+  type: n
+Christoff:
+  type: n
+Ciarabelle:
+  type: n
+Cinja:
+  type: n
+Claas:
+  type: n
+Clamor:
+  type: n
+Clara:
+  type: n
+Clarina:
+  type: n
+Clarinda:
+  type: n
+Clarinde:
+  type: n
+Clarissa:
+  type: n
+Claudia:
+  type: n
+Claudius:
+  type: n
+Clea:
+  type: n
+Clelia:
+  type: n
+Clemens:
+  type: n
+Clementina:
+  type: n
+Cleo:
+  type: n
+Clivia:
+  type: n
+Clodomer:
+  type: n
+Clodomir:
+  type: n
+Cloe:
+  type: n
+Coelestina:
+  type: n
+Coloman:
+  type: n
+Concetta:
+  type: n
+Conni:
+  type: n
+Connie:
+  type: n
+Conny:
+  type: n
+Conradin:
+  type: n
+Constanze:
+  type: n
+Consuela:
+  type: n
+Cora:
+  type: n
+Corbinian:
+  type: n
+Cordelia:
+  type: n
+Cordula:
+  type: n
+Corentin:
+  type: n
+Corentine:
+  type: n
+Corina:
+  type: n
+Corinna:
+  type: n
+Cornel:
+  type: n
+Cornelia:
+  type: n
+Cornell:
+  type: n
+Corona:
+  type: n
+Cosima:
+  type: n
+Cosma:
+  type: n
+Cosmo:
+  type: n
+Courtney:
+  type: n
+Crescentia:
+  type: n
+Crispin:
+  type: n
+Curd:
+  type: n
+Cynthia:
+  type: n
+Cyprian:
+  type: n
+Cyprianus:
+  type: n
+Cyriac:
+  type: n
+Cyriacus:
+  type: n
+Cyril:
+  type: n
+Cyrill:
+  type: n
+Cyrillus:
+  type: n
+Caecilia:
+  type: n
+Caecilie:
+  type: n
+Caesarius:
+  type: n
+Caelestin:
+  type: n
+Caelestine:
+  type: n
+Dafne:
+  type: n
+Dagita:
+  type: n
+Dagmar:
+  type: n
+Dagny:
+  type: n
+Dagobert:
+  type: n
+Dahlia:
+  type: n
+Daisy:
+  type: n
+Dajana:
+  type: n
+Dalia:
+  type: n
+Daliah:
+  type: n
+Damaris:
+  type: n
+Damasus:
+  type: n
+Damian:
+  type: n
+Dana:
+  type: n
+Daneris:
+  type: n
+Dangel:
+  type: n
+Dania:
+  type: n
+Danica:
+  type: n
+Daniella:
+  type: n
+Danika:
+  type: n
+Danja:
+  type: n
+Dankmar:
+  type: n
+Dankrad:
+  type: n
+Danuta:
+  type: n
+Dany:
+  type: n
+Daphne:
+  type: n
+Daria:
+  type: n
+Darius:
+  type: n
+Davida:
+  type: n
+Dayana:
+  type: n
+Dean:
+  type: n
+Debora:
+  type: n
+Deborah:
+  type: n
+Degenhard:
+  type: n
+Deike:
+  type: n
+Delfred:
+  type: n
+Delia:
+  type: n
+Deliane:
+  type: n
+Delila:
+  type: n
+Delilah:
+  type: n
+Delphina:
+  type: n
+Demian:
+  type: n
+Demokrit:
+  type: n
+Deodat:
+  type: n
+Desiree:
+  type: n
+Destina:
+  type: n
+Detlev:
+  type: n
+Diana:
+  type: n
+Diane:
+  type: n
+Dianne:
+  type: n
+Didi:
+  type: n
+Diebald:
+  type: n
+Diemo:
+  type: n
+Diemut:
+  type: n
+Dierk:
+  type: n
+Dierks:
+  type: n
+Dietbald:
+  type: n
+Dieter:
+  type: n
+Dietgard:
+  type: n
+Dietger:
+  type: n
+Diethard:
+  type: n
+Diether:
+  type: n
+Diethild:
+  type: n
+Dietleib:
+  type: n
+Dietlind:
+  type: n
+Dietlinde:
+  type: n
+Dietmut:
+  type: n
+Dietreich:
+  type: n
+Dina:
+  type: n
+Dinah:
+  type: n
+Diomedes:
+  type: n
+Dionys:
+  type: n
+Ditmar:
+  type: n
+Dittmar:
+  type: n
+Django:
+  type: n
+Dodo:
+  type: n
+Doerk:
+  type: n
+Dolf:
+  type: n
+Dolores:
+  type: n
+Domenik:
+  type: n
+Domenika:
+  type: n
+Dominik:
+  type: n
+Dominikus:
+  type: n
+Donat:
+  type: n
+Dora:
+  type: n
+Dore:
+  type: n
+Dorena:
+  type: n
+Dorette:
+  type: n
+Dorian:
+  type: n
+Dorina:
+  type: n
+Doris:
+  type: n
+Dorit:
+  type: n
+Dorle:
+  type: n
+Dorli:
+  type: n
+Dorothea:
+  type: n
+Dorothee:
+  type: n
+Dorotheus:
+  type: n
+Dustin:
+  type: n
+Dylan:
+  type: n
+Doerte:
+  type: n
+Ebba:
+  type: n
+Ebbo:
+  type: n
+Eberhard:
+  type: n
+Eberharda:
+  type: n
+Eberhart:
+  type: n
+Eckard:
+  type: n
+Eckbert:
+  type: n
+Eckehard:
+  type: n
+Eckhard:
+  type: n
+Eda:
+  type: n
+Edda:
+  type: n
+Edelbert:
+  type: n
+Edelgard:
+  type: n
+Edeltraud:
+  type: n
+Edeltraut:
+  type: n
+Edeltrud:
+  type: n
+Edgar:
+  type: n
+Edina:
+  type: n
+Edis:
+  type: n
+Edith:
+  type: n
+Editha:
+  type: n
+Edwina:
+  type: n
+Edwine:
+  type: n
+Edzard:
+  type: n
+Efraim:
+  type: n
+Egbert:
+  type: n
+Egid:
+  type: n
+Egidia:
+  type: n
+Egidius:
+  type: n
+Egino:
+  type: n
+Egmond:
+  type: n
+Egmont:
+  type: n
+Egmund:
+  type: n
+Egolf:
+  type: n
+Egon:
+  type: n
+Ehrenfried:
+  type: n
+Ehrentraud:
+  type: n
+Ehrentrud:
+  type: n
+Ehrhard:
+  type: n
+Eik:
+  type: n
+Eike:
+  type: n
+Eiko:
+  type: n
+Eilert:
+  type: n
+Einar:
+  type: n
+Ekaterina:
+  type: n
+Ekkehard:
+  type: n
+Elanor:
+  type: n
+Elenya:
+  type: n
+Eleonora:
+  type: n
+Elfi:
+  type: n
+Elfie:
+  type: n
+Elfrida:
+  type: n
+Elfriede:
+  type: n
+Elfrun:
+  type: n
+Eliah:
+  type: n
+Eliana:
+  type: n
+Eliane:
+  type: n
+Elieser:
+  type: n
+Eliezer:
+  type: n
+Eligius:
+  type: n
+Elija:
+  type: n
+Elisa:
+  type: n
+Elisabeth:
+  type: n
+Elisabetha:
+  type: n
+Elischa:
+  type: n
+Elise:
+  type: n
+Elke:
+  type: n
+Ella:
+  type: n
+Ellmar:
+  type: n
+Elmar:
+  type: n
+Elousia:
+  type: n
+Elsa:
+  type: n
+Elsbeth:
+  type: n
+Else:
+  type: n
+Elsi:
+  type: n
+Elva:
+  type: n
+Elvina:
+  type: n
+Elvira:
+  type: n
+Elwine:
+  type: n
+Emanuel:
+  type: n
+Emerentia:
+  type: n
+Emerentiana:
+  type: n
+Emerenz:
+  type: n
+Emerich:
+  type: n
+Emil:
+  type: n
+Emilia:
+  type: n
+Emilie:
+  type: n
+Emma:
+  type: n
+Emmylina:
+  type: n
+Endrik:
+  type: n
+Engelbert:
+  type: n
+Engeline:
+  type: n
+Enie:
+  type: n
+Enna:
+  type: n
+Enno:
+  type: n
+Enoch:
+  type: n
+Enosch:
+  type: n
+Enrico:
+  type: n
+Enriko:
+  type: n
+Ephraim:
+  type: n
+Ephraem:
+  type: n
+Eragon:
+  type: n
+Erasmus:
+  type: n
+Erdmut:
+  type: n
+Erdmute:
+  type: n
+Erdmuthe:
+  type: n
+Erentraud:
+  type: n
+Erentrud:
+  type: n
+Erentrudis:
+  type: n
+Erfried:
+  type: n
+Erhard:
+  type: n
+Erhart:
+  type: n
+Erica:
+  type: n
+Erilea:
+  type: n
+Erkenbald:
+  type: n
+Erko:
+  type: n
+Erlefried:
+  type: n
+Erma:
+  type: n
+Ermentraud:
+  type: n
+Ermin:
+  type: n
+Erna:
+  type: n
+Ernfried:
+  type: n
+Erwin:
+  type: n
+Esdert:
+  type: n
+Esmeralda:
+  type: n
+Esra:
+  type: n
+Estella:
+  type: n
+Esther:
+  type: n
+Etta:
+  type: n
+Eucharius:
+  type: n
+Eugenia:
+  type: n
+Eugenie:
+  type: n
+Euphemia:
+  type: n
+Ezra:
+  type: n
+Euphrasia:
+  type: n
+Euphrosine:
+  type: n
+Euricius:
+  type: n
+Eusebia:
+  type: n
+Eustach:
+  type: n
+Eustachius:
+  type: n
+Eva:
+  type: n
+Eva-Maria:
+  type: n
+Evamaria:
+  type: n
+Evamarie:
+  type: n
+Evelin:
+  type: n
+Eveline:
+  type: n
+Everhard:
+  type: n
+Evert:
+  type: n
+Evi:
+  type: n
+Ewald:
+  type: n
+Ezechiel:
+  type: n
+Fabia:
+  type: n
+Fabian:
+  type: n
+Fabiana:
+  type: n
+Fabiane:
+  type: n
+Fabius:
+  type: n
+Fabrizia:
+  type: n
+Fabrizius:
+  type: n
+Fadri:
+  type: n
+Fadrina:
+  type: n
+Falko:
+  type: n
+Famke:
+  type: n
+Farald:
+  type: n
+Faralt:
+  type: n
+Farold:
+  type: n
+Farolt:
+  type: n
+Faustinus:
+  type: n
+Faustus:
+  type: n
+Faviola:
+  type: n
+Felician:
+  type: n
+Felicianus:
+  type: n
+Felina:
+  type: n
+Feline:
+  type: n
+Felizia:
+  type: n
+Felizian:
+  type: n
+Felizitas:
+  type: n
+Femke:
+  type: n
+Femmy:
+  type: n
+Fenja:
+  type: n
+Fenna:
+  type: n
+Fenne:
+  type: n
+Ferdi:
+  type: n
+Ferdinand:
+  type: n
+Ferdinanda:
+  type: n
+Ferdinande:
+  type: n
+Fernandine:
+  type: n
+Festina:
+  type: n
+Fidelis:
+  type: n
+Fidelius:
+  type: n
+Fido:
+  type: n
+Fiete:
+  type: n
+Filarete:
+  type: n
+Filibert:
+  type: n
+Filiberta:
+  type: n
+Filine:
+  type: n
+Filipp:
+  type: n
+Fina:
+  type: n
+Finetta:
+  type: n
+Finja:
+  type: n
+Fiona:
+  type: n
+Flemming:
+  type: n
+Florens:
+  type: n
+Florentin:
+  type: n
+Florentina:
+  type: n
+Florentine:
+  type: n
+Florenzia:
+  type: n
+Florestan:
+  type: n
+Florian:
+  type: n
+Floriana:
+  type: n
+Floriane:
+  type: n
+Florin:
+  type: n
+Florus:
+  type: n
+Folke:
+  type: n
+Folko:
+  type: n
+Fortunat:
+  type: n
+Fortunatus:
+  type: n
+Franciscus:
+  type: n
+Franka:
+  type: n
+Franko:
+  type: n
+Franzi:
+  type: n
+Franziska:
+  type: n
+Franziskus:
+  type: n
+Frauke:
+  type: n
+Freda:
+  type: n
+Frede:
+  type: n
+Fredegar:
+  type: n
+Frederice:
+  type: n
+Frederik:
+  type: n
+Frederika:
+  type: n
+Frederike:
+  type: n
+Fredi:
+  type: n
+Fredy:
+  type: n
+Freja:
+  type: n
+Freya:
+  type: n
+Frida:
+  type: n
+Fridenand:
+  type: n
+Fridolin:
+  type: n
+Fridrun:
+  type: n
+Fridurich:
+  type: n
+Frieda:
+  type: n
+Friedalotta:
+  type: n
+Friedbert:
+  type: n
+Friede:
+  type: n
+Friedebrecht:
+  type: n
+Friedegund:
+  type: n
+Friedel:
+  type: n
+Gabi:
   type: EXIT
+Friedemann:
+  type: n
+Frieder:
+  type: n
+Friederich:
+  type: n
+Friederika:
+  type: n
+Friederike:
+  type: n
+Friedger:
+  type: n
+Friedhelm:
+  type: n
+Friedhilde:
+  type: n
+Friedhold:
+  type: n
+Friedwart:
+  type: n
+Frieso:
+  type: n
+Friso:
+  type: n
+Frithjof:
+  type: n
+Frodo:
+  type: n
+Frowin:
+  type: n
+Fränzi:
+  type: n
+Fulvio:
+  type: n
+Gabriel:
+  type: n
+Gabriele:
+  type: n
+Gaby:
+  type: n
+Gad:
+  type: n
+Galina:
+  type: n
+Gallus:
+  type: n
+Gandalf:
+  type: n
+Gangolf:
+  type: n
+Garry:
+  type: n
+Gary:
+  type: n
+Gaudens:
+  type: n
+Gaudenz:
+  type: n
+Gebbert:
+  type: n
+Gebhard:
+  type: n
+Gela:
+  type: n
+Geli:
+  type: n
+Gemma:
+  type: n
+Genia:
+  type: n
+Genovefa:
+  type: n
+Genoveva:
+  type: n
+Geoffrey:
+  type: n
+Georgina:
+  type: n
+Georgine:
+  type: n
+Gerald:
+  type: n
+Geralde:
+  type: n
+Geraldina:
+  type: n
+Geraldine:
+  type: n
+Gerburg:
+  type: n
+Gerd:
+  type: n
+Gerda:
+  type: n
+Gereon:
+  type: n
+Gerfried:
+  type: n
+Gerharda:
+  type: n
+Gerharde:
+  type: n
+Gerhild:
+  type: n
+Gerhilde:
+  type: n
+Gerlach:
+  type: n
+Gerlind:
+  type: n
+Gerlinde:
+  type: n
+Germain:
+  type: n
+Germaine:
+  type: n
+Germana:
+  type: n
+Germar:
+  type: n
+Gernot:
+  type: n
+Gero:
+  type: n
+Gerold:
+  type: n
+Gerolf:
+  type: n
+Gerry:
+  type: n
+Gerti:
+  type: n
+Gertraud:
+  type: n
+Gertraut:
+  type: n
+Gertrud:
+  type: n
+Gertrude:
+  type: n
+Gervin:
+  type: n
+Gerwald:
+  type: n
+Gerwig:
+  type: n
+Gerwin:
+  type: n
+Gerwine:
+  type: n
+Gerwulf:
+  type: n
+Gesa:
+  type: n
+Gesche:
+  type: n
+Gese:
+  type: n
+Gesina:
+  type: n
+Gesine:
+  type: n
+Gestina:
+  type: n
+Getraud:
+  type: n
+Geza:
+  type: n
+Gideon:
+  type: n
+Giesbert:
+  type: n
+Gieselbert:
+  type: n
+Gilbert:
+  type: n
+Gilberta:
+  type: n
+Gilda:
+  type: n
+Gildo:
+  type: n
+Gina:
+  type: n
+Gion:
+  type: n
+Gisa:
+  type: n
+Gisbert:
+  type: n
+Gisberta:
+  type: n
+Gisela:
+  type: n
+Giselbert:
+  type: n
+Giselher:
+  type: n
+Giselmund:
+  type: n
+Gislinde:
+  type: n
+Gitta:
+  type: n
+Gitte:
+  type: n
+Glenda:
+  type: n
+Goda:
+  type: n
+Godehard:
+  type: n
+Godela:
+  type: n
+Godelinde:
+  type: n
+Gordian:
+  type: n
+Goswin:
+  type: n
+Gotelinde:
+  type: n
+Gotfrit:
+  type: n
+Gotlinde:
+  type: n
+Gotlindis:
+  type: n
+Gotthard:
+  type: n
+Gotthold:
+  type: n
+Gottlieb:
+  type: n
+Gottschalk:
+  type: n
+Gratian:
+  type: n
+Grazia:
+  type: n
+Grazian:
+  type: n
+Grazyna:
+  type: n
+Gresa:
+  type: n
+Greta:
+  type: n
+Gretchen:
+  type: n
+Grete:
+  type: n
+Gretel:
+  type: n
+Grethe:
+  type: n
+Grimoald:
+  type: n
+Grimwald:
+  type: n
+Griselda:
+  type: n
+Griseldis:
+  type: n
+Grit:
+  type: n
+Gritli:
+  type: n
+Gritt:
+  type: n
+Gritta:
+  type: n
+Grusche:
+  type: n
+Guda:
+  type: n
+Gudrun:
+  type: n
+Gudula:
+  type: n
+Guido:
+  type: n
+Gumbert:
+  type: n
+Gumpert:
+  type: n
+Gunda:
+  type: n
+Gundbert:
+  type: n
+Gunde:
+  type: n
+Gundel:
+  type: n
+Gundela:
+  type: n
+Gundelinde:
+  type: n
+Gundelindis:
+  type: n
+Gundolf:
+  type: n
+Gundula:
+  type: n
+Gunhild:
+  type: n
+Guntbert:
+  type: n
+Gunter:
+  type: n
+Gunther:
+  type: n
+Gunthild:
+  type: n
+Gunthilde:
+  type: n
+Guntram:
+  type: n
+Gustaf:
+  type: n
+Gusti:
+  type: n
+Gustl:
+  type: n
+Gutta:
+  type: n
+Gwendolin:
+  type: n
+Gwendoline:
+  type: n
+Gyde:
+  type: n
+Günter:
+  type: n
+Günther:
+  type: n
+Hadassa:
+  type: n
+Hadebrand:
+  type: n
+Hademar:
+  type: n
+Hadrian:
+  type: n
+Hadubrand:
+  type: n
+Hadufuns:
+  type: n
+Haduwig:
+  type: n
+Hagar:
+  type: n
+Haiko:
+  type: n
+Haimo:
+  type: n
+Hajo:
+  type: n
+Hamlet:
+  type: n
+Hanfried:
+  type: n
+Hanja:
+  type: n
+Hanjo:
+  type: n
+Hanna:
+  type: n
+Hanne:
+  type: n
+Hannelore:
+  type: n
+Hannes:
+  type: n
+Hannfried:
+  type: n
+Hanni:
+  type: n
+Hanno:
+  type: n
+Hanny:
+  type: n
+Hans-Joachim:
+  type: n
+Hans-Rudolf:
+  type: n
+Hansine:
+  type: n
+Hansjoachim:
+  type: n
+Hansjürgen:
+  type: n
+Hansjörg:
+  type: n
+Hanspeter:
+  type: n
+Hardi:
+  type: n
+Harduwin:
+  type: n
+Hardy:
+  type: n
+Hariberacht:
+  type: n
+Harmens:
+  type: n
+Harold:
+  type: n
+Hartbert:
+  type: n
+Hartmann:
+  type: n
+Hartmut:
+  type: n
+Hartwig:
+  type: n
+Hartwin:
+  type: n
+Harwig:
+  type: n
+Hasso:
+  type: n
+Hatto:
+  type: n
+Hauke:
+  type: n
+Hedda:
+  type: n
+Hede:
+  type: n
+Hedi:
+  type: n
+Hedwig:
+  type: n
+Hedy:
+  type: n
+Heide:
+  type: n
+Heidelinde:
+  type: n
+Heidelore:
+  type: n
+Heidemaria:
+  type: n
+Heidemarie:
+  type: n
+Heiderose:
+  type: n
+Heidrun:
+  type: n
+Heidy:
+  type: n
+Heike:
+  type: n
+Heiko:
+  type: n
+Heilburg:
+  type: n
+Heilgard:
+  type: n
+Heilke:
+  type: n
+Heilmar:
+  type: n
+Heilten:
+  type: n
+Heilwig:
+  type: n
+Heimerad:
+  type: n
+Heimerich:
+  type: n
+Heimo:
+  type: n
+Heimrad:
+  type: n
+Heiner:
+  type: n
+Heinrika:
+  type: n
+Heinrike:
+  type: n
+Heinz:
+  type: n
+Hektor:
+  type: n
+Helemburgis:
+  type: n
+Helferich:
+  type: n
+Helfrich:
+  type: n
+Helfried:
+  type: n
+Helga:
+  type: n
+Helgard:
+  type: n
+Helge:
+  type: n
+Helgrid:
+  type: n
+Helgrit:
+  type: n
+Helimar:
+  type: n
+Helin:
+  type: n
+Helke:
+  type: n
+Hella:
+  type: n
+Hellmuth:
+  type: n
+Helma:
+  type: n
+Helmer:
+  type: n
+Helmgard:
+  type: n
+Helmolt:
+  type: n
+Helmtraud:
+  type: n
+Helmtrud:
+  type: n
+Helmuth:
+  type: n
+Heloise:
+  type: n
+Hemma:
+  type: n
+Hendrick:
+  type: n
+Hendrina:
+  type: n
+Henke:
+  type: n
+Henner:
+  type: n
+Hennes:
+  type: n
+Henni:
+  type: n
+Henny:
+  type: n
+Henoch:
+  type: n
+Henrich:
+  type: n
+Henrick:
+  type: n
+Henrietta:
+  type: n
+Henriette:
+  type: n
+Henrik:
+  type: n
+Henrika:
+  type: n
+Henrike:
+  type: n
+Herakles:
+  type: n
+Heribert:
+  type: n
+Herlinde:
+  type: n
+Herma:
+  type: n
+Hermina:
+  type: n
+Hermine:
+  type: n
+Hermione:
+  type: n
+Hertha:
+  type: n
+Hertwig:
+  type: n
+Herwald:
+  type: n
+Herwig:
+  type: n
+Herwin:
+  type: n
+Hesekiel:
+  type: n
+Hetty:
+  type: n
+Heye:
+  type: n
+Hieronyma:
+  type: n
+Hieronymus:
+  type: n
+Hilar:
+  type: n
+Hilaria:
+  type: n
+Hilarius:
+  type: n
+Hilda:
+  type: n
+Hildburg:
+  type: n
+Hilde:
+  type: n
+Hildebrand:
+  type: n
+Hildeburg:
+  type: n
+Hildegard:
+  type: n
+Hildeger:
+  type: n
+Hildegunde:
+  type: n
+Hildemar:
+  type: n
+Hildrun:
+  type: n
+Hilger:
+  type: n
+Hilka:
+  type: n
+Hilke:
+  type: n
+Hillert:
+  type: n
+Hilma:
+  type: n
+Hilmar:
+  type: n
+Hiltraud:
+  type: n
+Hiltrud:
+  type: n
+Hinnerk:
+  type: n
+Hinrich:
+  type: n
+Hinrik:
+  type: n
+Hiob:
+  type: n
+Hippokrates:
+  type: n
+Hippolyt:
+  type: n
+Holda:
+  type: n
+Holde:
+  type: n
+Honorius:
+  type: n
+Horaz:
+  type: n
+Horsa:
+  type: n
+Hortensia:
+  type: n
+Hosea:
+  type: n
+Hrodeberht:
+  type: n
+Hrodgar:
+  type: n
+Hrodger:
+  type: n
+Hrodland:
+  type: n
+Hroswitha:
+  type: n
+Hruodolf:
+  type: n
+Hruodswinda:
+  type: n
+Huberta:
+  type: n
+Hubertina:
+  type: n
+Hubertine:
+  type: n
+Hugbert:
+  type: n
+Hugobald:
+  type: n
+Hugubert:
+  type: n
+Hulda:
+  type: n
+Huldrich:
+  type: n
+Huldrych:
+  type: n
+Humbert:
+  type: n
+Hunbert:
+  type: n
+Ibo:
+  type: n
+Ida:
+  type: n
+Iduna:
+  type: n
+Ignatia:
+  type: n
+Ignatz:
+  type: n
+Ignazia:
+  type: n
+Igor:
+  type: n
+Ijob:
+  type: n
+Ilga:
+  type: n
+Iliana:
+  type: n
+Iljana:
+  type: n
+Illona:
+  type: n
+Ilona:
+  type: n
+Ilonka:
+  type: n
+Ilsabein:
+  type: n
+Ilse:
+  type: n
+Ilva:
+  type: n
+Imka:
+  type: n
+Imke:
+  type: n
+Imko:
+  type: n
+Immanuel:
+  type: n
+Imme:
+  type: n
+Immo:
+  type: n
+Ina:
+  type: n
+Ines:
+  type: n
+Inessa:
+  type: n
+Inga:
+  type: n
+Ingbert:
+  type: n
+Inge:
+  type: n
+Ingeborg:
+  type: n
+Ingeburg:
+  type: n
+Ingela:
+  type: n
+Ingelore:
+  type: n
+Ingfried:
+  type: n
+Ingmar:
+  type: n
+Ingobert:
+  type: n
+Ingolf:
+  type: n
+Ingomar:
+  type: n
+Ingonda:
+  type: n
+Ingrid:
+  type: n
+Ingvelde:
+  type: n
+Ingwelde:
+  type: n
+Inna:
+  type: n
+Innocentia:
+  type: n
+Innozentia:
+  type: n
+Ino:
+  type: n
+Inola:
+  type: n
+Insa:
+  type: n
+Inse:
+  type: n
+Inska:
+  type: n
+Inske:
+  type: n
+Iphigenie:
+  type: n
+Irenäus:
+  type: n
+Irma:
+  type: n
+Irmchen:
+  type: n
+Irmela:
+  type: n
+Irmelin:
+  type: n
+Irmelind:
+  type: n
+Irmengard:
+  type: n
+Irmentraud:
+  type: n
+Irmgard:
+  type: n
+Irmhild:
+  type: n
+Irmhilde:
+  type: n
+Irmingard:
+  type: n
+Irmlind:
+  type: n
+Irmlinde:
+  type: n
+Irmtraud:
+  type: n
+Irmtrud:
+  type: n
+Isa:
+  type: n
+Isabell:
+  type: n
+Isabella:
+  type: n
+Isachar:
+  type: n
+Isadora:
+  type: n
+Isadore:
+  type: n
+Isebrand:
+  type: n
+Isenbert:
+  type: n
+Ishilde:
+  type: n
+Isidor:
+  type: n
+Isidora:
+  type: n
+Isidore:
+  type: n
 Isis:
   type: n
-niedlich:
-  type: adj
-niedlich:
-  type: adj
-gummihuhn:
+Ismene:
   type: n
-puppe:
+Issy:
   type: n
-specklieferant:
+Itria:
   type: n
-welpe:
+Ivette:
   type: n
-unterhalten:
-  type: vi
-entsprechenden:
-  type: adj
-traeume:
-  type: vi
-androiden:
+Ivo:
   type: n
-lerne:
-  type: vi
-intelligentes:
-  type: adj
-_:_lange_:
+Jael:
   type: n
-=:
-  type: vt
-_kurz_:
+Jahwe:
   type: n
-_ewig_:
+Jakob:
   type: n
-_immer__:
+Jakoba:
   type: n
-_immer__:
+Jakobea:
   type: n
-droiden:
-  type: EXIT
-fluggeraet:
+Jakobine:
   type: n
-fluggeraet:
+Jakobus:
   type: n
-3:
-  type: adj
-paarhufer:
+Jana:
   type: n
-stress:
+Janette:
   type: n
-stressen:
-  type: vi
-stressen:
-  type: vi
-wurfscheibe:
+Janin:
   type: n
-PHP:
+Janina:
   type: n
-PHP:
+Janine:
   type: n
-adenauer:
+Janini:
   type: n
-adenauer:
+Jann:
   type: n
-may:
+Janna:
   type: n
-may:
+Janne:
   type: n
-Java:
+Jannes:
   type: n
-Java:
+Jannika:
   type: n
-/GEN:
-  type: EXIT
-Bps:
-  type: EXIT
-"$$wday$$":::
-  type: inter
-$$wday$$:
-  type: inter
-/rf:
-  type: inter
-/DF:
-  type: inter
-/df:
-  type: inter
-dummer:
-  type: adj
-netter:
-  type: adj
+Jannike:
+  type: n
+Jannine:
+  type: n
+Jannis:
+  type: n
+Janosch:
+  type: n
+Jantje:
+  type: n
+Jarik:
+  type: n
+Jarina:
+  type: n
+Jarine:
+  type: n
+Jarmila:
+  type: n
+Jasmin:
+  type: n
+Jasmina:
+  type: n
+Jasper:
+  type: n
+Jehoschafat:
+  type: n
+Jehova:
+  type: n
+Jelissa:
+  type: n
+Jelke:
+  type: n
+Jella:
+  type: n
+Jelte:
+  type: n
+Jendrik:
+  type: n
+Jenifer:
+  type: n
+Jenka:
+  type: n
+Jenna:
+  type: n
+Jennifer:
+  type: n
+Jenny:
+  type: n
+Jennyfer:
+  type: n
+Jens:
+  type: n
+Jephthah:
+  type: n
+Jeremia:
+  type: n
+Jeremias:
+  type: n
+Jerrit:
+  type: n
+Jerry:
+  type: n
+Jesaja:
+  type: n
+Jeske:
+  type: n
+Jesko:
+  type: n
+Jessica:
+  type: n
+Jessie:
+  type: n
+Jessika:
+  type: n
+Jessy:
+  type: n
+Jette:
+  type: n
+Jetty:
+  type: n
+Joachim:
+  type: n
+Joah:
+  type: n
+Joahas:
+  type: n
+Joas:
+  type: n
+Jobst:
+  type: n
+Jocelyn:
+  type: n
+Jochebed:
+  type: n
+Jochen:
+  type: n
+Jodok:
+  type: n
+Jodokus:
+  type: n
+Joel:
+  type: n
+Joelina:
+  type: n
+Joelle:
+  type: n
+Johan:
+  type: n
+Jolantha:
+  type: n
+Jolanthe:
+  type: n
+Joleen:
+  type: n
+Jolina:
+  type: n
+Joline:
+  type: n
+Jonas:
+  type: n
+Jorinde:
+  type: n
+Joris:
+  type: n
+Josafat:
+  type: n
+Josaphat:
+  type: n
+Josceline:
+  type: n
+Joscha:
+  type: n
+Joschka:
+  type: n
+Joschua:
+  type: n
+Josefine:
+  type: n
+Joseline:
+  type: n
+Josepha:
+  type: n
+Josi:
+  type: n
+Josia:
+  type: n
+Josias:
+  type: n
+Jost:
+  type: n
+Jostein:
+  type: n
+Josua:
+  type: n
+Joy:
+  type: n
+Judith:
+  type: n
+Juditha:
+  type: n
+Jula:
+  type: n
+Julaine:
+  type: n
+Julian:
+  type: n
+Juliane:
+  type: n
+Julica:
+  type: n
+Julika:
+  type: n
+Julwin:
+  type: n
+Juna:
+  type: n
+Junis:
+  type: n
+Juno:
+  type: n
+Jupp:
+  type: n
+Just:
+  type: n
+Justian:
+  type: n
+Justina:
+  type: n
+Justine:
+  type: n
+Justus:
+  type: n
+Juta:
+  type: n
+Jutta:
+  type: n
+Jutte:
+  type: n
+Juven:
+  type: n
+Jürg:
+  type: n
+Jürgen:
+  type: n
+Jördis:
+  type: n
+Jörg:
+  type: n
+Jörgen:
+  type: n
+Jörn:
+  type: n
+Jörna:
+  type: n
+Kaija:
+  type: n
+Kain:
+  type: n
+Kaj:
+  type: n
+Kaja:
+  type: n
+Kajetan:
+  type: n
+Kajetana:
+  type: n
+Kaleb:
+  type: n
+Kalixtus:
+  type: n
+Kalliope:
+  type: n
+Kallistus:
+  type: n
+Kamilla:
+  type: n
+Kamillo:
+  type: n
+Kamillus:
+  type: n
+Kandida:
+  type: n
+Kandidus:
+  type: n
+Kara:
+  type: n
+Kareen:
+  type: n
+Karen:
+  type: n
+Karin:
+  type: n
+Karina:
+  type: n
+Karine:
+  type: n
+"Karl-Heinz":
+  type: n
+Karla:
+  type: n
+Karlheinz:
+  type: n
+Karlotta:
+  type: n
+Karmi:
+  type: n
+Karola:
+  type: n
+Karolina:
+  type: n
+Karoline:
+  type: n
+Karsta:
+  type: n
+Karsten:
+  type: n
+Kasimir:
+  type: n
+Kaspar:
+  type: n
+Kassandra:
+  type: n
+Kassiopeia:
+  type: n
+Kassius:
+  type: n
+Katarina:
+  type: n
+Katerina:
+  type: n
+Katherina:
+  type: n
+Kathrin:
+  type: n
+Kathrina:
+  type: n
+Kathrine:
+  type: n
+Kathryn:
+  type: n
+Katina:
+  type: n
+Katja:
+  type: n
+Katjana:
+  type: n
+Katrin:
+  type: n
+Katrina:
+  type: n
+Kay:
+  type: n
+Keanaja:
+  type: n
+Kerrin:
+  type: n
+Kersten:
+  type: n
+Kezia:
+  type: n
+Kilian:
+  type: n
+Killian:
+  type: n
+Kiria:
+  type: n
+Kirsa:
+  type: n
+Kirsten:
+  type: n
+Kirstin:
+  type: n
+Klaas:
+  type: n
+Klara:
+  type: n
+Klarina:
+  type: n
+Klarinda:
+  type: n
+Klarinde:
+  type: n
+Klarine:
+  type: n
+Klarissa:
+  type: n
+Klaudia:
+  type: n
+Klaudius:
+  type: n
+Klemens:
+  type: n
+Klementine:
+  type: n
+Klemenz:
+  type: n
+Kleopha:
+  type: n
+Kleophea:
+  type: n
+Kletus:
+  type: n
+Klothilde:
+  type: n
+Klotilde:
+  type: n
+Knud:
+  type: n
+Knut:
+  type: n
+Koloman:
+  type: n
+Kolumba:
+  type: n
+Kolumban:
+  type: n
+Konrada:
+  type: n
+Konradin:
+  type: n
+Konradine:
+  type: n
+Konstantin:
+  type: n
+Konstantina:
+  type: n
+Konstantine:
+  type: n
+Konstanze:
+  type: n
+Kora:
+  type: n
+Korbinian:
+  type: n
+Kordelia:
+  type: n
+Kordt:
+  type: n
+Kordula:
+  type: n
+Korinne:
+  type: n
+Kornelia:
+  type: n
+Kornelius:
+  type: n
+Korona:
+  type: n
+Kreszentia:
+  type: n
+Kreszenz:
+  type: n
+Kriemhild:
+  type: n
+Kriemhilde:
+  type: n
+Krimhild:
+  type: n
+Krimhilde:
+  type: n
+Krispin:
+  type: n
+Krista:
+  type: n
+Kunibald:
+  type: n
+Kunibert:
+  type: n
+Kunigunda:
+  type: n
+Kunigunde:
+  type: n
+Kuniza:
+  type: n
+Kuno:
+  type: n
+Kunz:
+  type: n
+Kurt:
+  type: n
+Kylian:
+  type: n
+Kyra:
+  type: n
+Kyrene:
+  type: n
+Kyrill:
+  type: n
+Kyrillus:
+  type: n
+Käte:
+  type: n
+Käthe:
+  type: n
+Ladina:
+  type: n
+Ladislaus:
+  type: n
+Laila:
+  type: n
+Lale:
+  type: n
+Lambert:
+  type: n
+Lamberta:
+  type: n
+Lampert:
+  type: n
+Lando:
+  type: n
+Landolf:
+  type: n
+Landulf:
+  type: n
+Lanfrank:
+  type: n
+Lantbert:
+  type: n
+Lanzo:
+  type: n
+Larina:
+  type: n
+Larisa:
+  type: n
+Laura:
+  type: n
+Laurenz:
+  type: n
+Lauretta:
+  type: n
+Laurin:
+  type: n
+Lauritz:
+  type: n
+Lavinia:
+  type: n
+Lazarus:
+  type: n
+Lea:
+  type: n
+Lean:
+  type: n
+Leander:
+  type: n
+Leefke:
+  type: n
+Legolas:
+  type: n
+Leila:
+  type: n
+Leilah:
+  type: n
+Lenard:
+  type: n
+Lene:
+  type: n
+Leni:
+  type: n
+Lennard:
+  type: n
+Lennart:
+  type: n
+Lennert:
+  type: n
+Leny:
+  type: n
+Leocadia:
+  type: n
+Leodebald:
+  type: n
+Leokadia:
+  type: n
+Leona:
+  type: n
+Leonhard:
+  type: n
+Leoni:
+  type: n
+Leonid:
+  type: n
+Leonie:
+  type: n
+Leonora:
+  type: n
+Leonore:
+  type: n
+Leontina:
+  type: n
+Leontine:
+  type: n
+Leopold:
+  type: n
+Leopoldine:
+  type: n
+Leslie:
+  type: n
+Levana:
+  type: n
+Levin:
+  type: n
+Levke:
+  type: n
+Lex:
+  type: n
+Lia:
+  type: n
+Liafwin:
+  type: n
+Liana:
+  type: n
+Liane:
+  type: n
+Lias:
+  type: n
+Lidia:
+  type: n
+Lidwina:
+  type: n
+Liebgard:
+  type: n
+Liebhard:
+  type: n
+Liebtrud:
+  type: n
+Liebwin:
+  type: n
+Lienhard:
+  type: n
+Liesa:
+  type: n
+Liesbeth:
+  type: n
+Lieschen:
+  type: n
+Liese:
+  type: n
+Liesel:
+  type: n
+Lieselotte:
+  type: n
+Lili:
+  type: n
+Liliana:
+  type: n
+Liliane:
+  type: n
+Lilith:
+  type: n
+Lilke:
+  type: n
+Lilo:
+  type: n
+Lina:
+  type: n
+Linard:
+  type: n
+Linda:
+  type: n
+Linde:
+  type: n
+Lindis:
+  type: n
+Line:
+  type: n
+Linn:
+  type: n
+Linnart:
+  type: n
+Linnea:
+  type: n
+Linya:
+  type: n
+Lio:
+  type: n
+Lioba:
+  type: n
+"Lisa-Maria":
+  type: n
+"Lisa-Marie":
+  type: n
+Lisamaria:
+  type: n
+Lisamarie:
+  type: n
+Lisbeth:
+  type: n
+Lise:
+  type: n
+Liselotte:
+  type: n
+Litwina:
+  type: n
+Liudger:
+  type: n
+Liv:
+  type: n
+Livia:
+  type: n
+Livius:
+  type: n
+Loan:
+  type: n
+Lois:
+  type: n
+Loki:
+  type: n
+Lolle:
+  type: n
+Lona:
+  type: n
+Londar:
+  type: n
+Lone:
+  type: n
+Lore:
+  type: n
+Loredana:
+  type: n
+Lorelei:
+  type: n
+Lorik:
+  type: n
+Lorina:
+  type: n
+Lorna:
+  type: n
+Lothar:
+  type: n
+Lotte:
+  type: n
+Lotti:
+  type: n
+Louise:
+  type: n
+Lovis:
+  type: n
+Luana:
+  type: n
+Lucienne:
+  type: n
+Lucilla:
+  type: n
+Lucius:
+  type: n
+Ludewig:
+  type: n
+Ludger:
+  type: n
+Ludgera:
+  type: n
+Ludmilla:
+  type: n
+Ludolf:
+  type: n
+Ludovica:
+  type: n
+Ludovika:
+  type: n
+Ludowika:
+  type: n
+Ludwig:
+  type: n
+Ludwina:
+  type: n
+Luise:
+  type: n
+Luitgard:
+  type: n
+Luitger:
+  type: n
+Luitolf:
+  type: n
+Luitpold:
+  type: n
+Luitwin:
+  type: n
+Lusia:
+  type: n
+Lutgard:
+  type: n
+Lutz:
+  type: n
+Luzia:
+  type: n
+Luzian:
+  type: n
+Luzius:
+  type: n
+Lydia:
+  type: n
+Lyn:
+  type: n
+Lynn:
+  type: n
+Lynne:
+  type: n
+Lyria:
+  type: n
+Lysander:
+  type: n
+Lysann:
+  type: n
+Lyssia:
+  type: n
+Lätitia:
+  type: n
+Maarten:
+  type: n
+Madelaine:
+  type: n
+Madita:
+  type: n
+Madleen:
+  type: n
+Madlen:
+  type: n
+Madlena:
+  type: n
+Madlene:
+  type: n
+Magali:
+  type: n
+Magalie:
+  type: n
+Magda:
+  type: n
+Magdalena:
+  type: n
+Magdalene:
+  type: n
+Magret:
+  type: n
+Maibrit:
+  type: n
+Maik:
+  type: n
+Maika:
+  type: n
+Maike:
+  type: n
+Maiken:
+  type: n
+Mailine:
+  type: n
+Maïssane:
+  type: n
+Maja:
+  type: n
+Maleachi:
+  type: n
+Maleen:
+  type: n
+Malina:
+  type: n
+Malou:
+  type: n
+Malte:
+  type: n
+Malve:
+  type: n
+Malwine:
+  type: n
+Manegold:
+  type: n
+Manfred:
+  type: n
+Manfried:
+  type: n
+Mangold:
+  type: n
+Manjola:
+  type: n
+Manuel:
+  type: n
+Manuela:
+  type: n
+Marah:
+  type: n
+Maraike:
+  type: n
+Maray:
+  type: n
+Marc:
+  type: n
+Marcel:
+  type: n
+Marcell:
+  type: n
+Marcellina:
+  type: n
+Marcellinus:
+  type: n
+Marei:
+  type: n
+Mareika:
+  type: n
+Mareike:
+  type: n
+Mareile:
+  type: n
+Maresi:
+  type: n
+Marga:
+  type: n
+Margareta:
+  type: n
+Margarete:
+  type: n
+Margaretha:
+  type: n
+Margarethe:
+  type: n
+Margot:
+  type: n
+Margret:
+  type: n
+Margreth:
+  type: n
+Margrit:
+  type: n
+Margrith:
+  type: n
+Margund:
+  type: n
+Marian:
+  type: n
+Mariana:
+  type: n
+Marianna:
+  type: n
+Marianne:
+  type: n
+Marieke:
+  type: n
+Mariele:
+  type: n
+Marielena:
+  type: n
+Marielene:
+  type: n
+Marielies:
+  type: n
+Marieliese:
+  type: n
+Marieluise:
+  type: n
+Marietheres:
+  type: n
+Marilene:
+  type: n
+Marilies:
+  type: n
+Marinus:
+  type: n
+Mario:
+  type: n
+Mariona:
+  type: n
+Marisa:
+  type: n
+Marissa:
+  type: n
+Marius:
+  type: n
+Marivi:
+  type: n
+Marko:
+  type: n
+Markolf:
+  type: n
+Markward:
+  type: n
+Markwart:
+  type: n
+Marla:
+  type: n
+Marlen:
+  type: n
+Marlena:
+  type: n
+Marlene:
+  type: n
+Marlies:
+  type: n
+Marliese:
+  type: n
+Marlis:
+  type: n
+Marlise:
+  type: n
+Marlit:
+  type: n
+Marlitt:
+  type: n
+Marlo:
+  type: n
+Maron:
+  type: n
+Martha:
+  type: n
+Martial:
+  type: n
+Martina:
+  type: n
+Martje:
+  type: n
+Marvin:
+  type: n
+Mary-Lou:
+  type: n
+Marylou:
+  type: n
+Marzel:
+  type: n
+Marzell:
+  type: n
+Marzella:
+  type: n
+Marzellina:
+  type: n
+Marzellinus:
+  type: n
+Marzellus:
+  type: n
+Mascha:
+  type: n
+Mathilda:
+  type: n
+Mathilde:
+  type: n
+Mathis:
+  type: n
+Mathäus:
+  type: n
+Matias:
+  type: n
+Matilde:
+  type: n
+Mattes:
+  type: n
+Mattheus:
+  type: n
+Matthäus:
+  type: n
+Mattias:
+  type: n
+Mattäus:
+  type: n
+Maura:
+  type: n
+Mauritz:
+  type: n
+Maurus:
+  type: n
+Maxi:
+  type: n
+Maxim:
+  type: n
+Maximilian:
+  type: n
+Maximiliane:
+  type: n
+Maximillian:
+  type: n
+Maxine:
+  type: n
+Maybrit:
+  type: n
+Maybritt:
+  type: n
+Mechthild:
+  type: n
+Medard:
+  type: n
+Medina:
+  type: n
+Meik:
+  type: n
+Meike:
+  type: n
+Meiko:
+  type: n
+Meinard:
+  type: n
+Meinhard:
+  type: n
+Meinolf:
+  type: n
+Meinrad:
+  type: n
+Meinulf:
+  type: n
+Melani:
+  type: n
+Melanie:
+  type: n
+Melchior:
+  type: n
+Melibea:
+  type: n
+Melina:
+  type: n
+Melinda:
+  type: n
+Meline:
+  type: n
+Melis:
+  type: n
+Melisa:
+  type: n
+Melisande:
+  type: n
+Melisenda:
+  type: n
+Melissa:
+  type: n
+Melusine:
+  type: n
+Melvin:
+  type: n
+Menka:
+  type: n
+Menko:
+  type: n
+Meret:
+  type: n
+Merita:
+  type: n
+Meriton:
+  type: n
+Merle:
+  type: n
+Merlin:
+  type: n
+Merlina:
+  type: n
+Merlind:
+  type: n
+Merlinde:
+  type: n
+Merten:
+  type: n
+Meta:
+  type: n
+Methodius:
+  type: n
+Metta:
+  type: n
+Mian:
+  type: n
+Micah:
+  type: n
+Micha:
+  type: n
+Michaela:
+  type: n
+Michal:
+  type: n
+Michelle:
+  type: n
+Mieke:
+  type: n
+Mile:
+  type: n
+Milena:
+  type: n
+Milenko:
+  type: n
+Milka:
+  type: n
+Milli:
+  type: n
+Miltraud:
+  type: n
+Miltrud:
+  type: n
+Mimi:
+  type: n
+Mimmi:
+  type: n
+Mina:
+  type: n
+Minea:
+  type: n
+Minette:
+  type: n
+Minja:
+  type: n
+Minos:
+  type: n
+Mirabell:
+  type: n
+Mirabella:
+  type: n
+Miranda:
+  type: n
+Miriam:
+  type: n
+Mirijam:
+  type: n
+Mirjam:
+  type: n
+Misael:
+  type: n
+Mischa:
+  type: n
+Mischael:
+  type: n
+Mithr:
+  type: n
+Namea:
+  type: n
+Moana:
+  type: n
+Moiken:
+  type: n
+Mombert:
+  type: n
+Momme:
+  type: n
+Mommo:
+  type: n
+Momo:
+  type: n
+Mona:
+  type: n
+Moni:
+  type: n
+Monika:
+  type: n
+Morena:
+  type: n
+Moritz:
+  type: n
+Moriz:
+  type: n
+Morpheus:
+  type: n
+Motje:
+  type: n
+Mounir:
+  type: n
+Mowgli:
+  type: n
+Mumme:
+  type: n
+Munir:
+  type: n
+Muriel:
+  type: n
+Mylene:
+  type: n
+Myrta:
+  type: n
+Myrte:
+  type: n
+Myrtha:
+  type: n
+Naarah:
+  type: n
+Nabor:
+  type: n
+Nada:
+  type: n
+Nadeschda:
+  type: n
+Nadia:
+  type: n
+Nadja:
+  type: n
+Nadjeschda:
+  type: n
+Naema:
+  type: n
+Nahor:
+  type: n
+Nahum:
+  type: n
+Nanni:
+  type: n
+Naomi:
+  type: n
+Naphtali:
+  type: n
+Narziß:
+  type: n
+Nastasja:
+  type: n
+Nastassja:
+  type: n
+Nasuada:
+  type: n
+Natalie:
+  type: n
+Natalina:
+  type: n
+Natanja:
+  type: n
+Natascha:
+  type: n
+Nathalie:
+  type: n
+Nathan:
+  type: n
+Nathanael:
+  type: n
+Naum:
+  type: n
+Nausikaa:
+  type: n
+Nayra:
+  type: n
+Neele:
+  type: n
+Neidhard:
+  type: n
+Neidhart:
+  type: n
+Neithard:
+  type: n
+Nela:
+  type: n
+Nele:
+  type: n
+Nelia:
+  type: n
+Nella:
+  type: n
+Nelli:
+  type: n
+Nemo:
+  type: n
+Nena:
+  type: n
+Nepomuk:
+  type: n
+Nereus:
+  type: n
+Nero:
+  type: n
+Nestor:
+  type: n
+Nichole:
+  type: n
+Nicklas:
+  type: n
+Nico:
+  type: n
+Nicol:
+  type: n
+Nicola:
+  type: n
+Nicolaus:
+  type: n
+Nicole:
+  type: n
+Nienke:
+  type: n
+Nika:
+  type: n
+Nikanor:
+  type: n
+Niki:
+  type: n
+Niklas:
+  type: n
+Niklaus:
+  type: n
+Niko:
+  type: n
+Nikodemus:
+  type: n
+Nikola:
+  type: n
+Nikolas:
+  type: n
+Nimrod:
+  type: n
+Nina:
+  type: n
+Ninifee:
+  type: n
+Ninja:
+  type: n
+Nithard:
+  type: n
+Nives:
+  type: n
+Noah:
+  type: n
+Noel:
+  type: n
+Noemi:
+  type: n
+Nora:
+  type: n
+Norbert:
+  type: n
+Nordbert:
+  type: n
+Nordman:
+  type: n
+Norea:
+  type: n
+Noreen:
+  type: n
+Norfried:
+  type: n
+Norgard:
+  type: n
+Norma:
+  type: n
+Norman:
+  type: n
+Normann:
+  type: n
+Nortrud:
+  type: n
+Norwin:
+  type: n
+Notburg:
+  type: n
+Notburga:
+  type: n
+Notger:
+  type: n
+Notker:
+  type: n
+Novalee:
+  type: n
+Octavia:
+  type: n
+Octavian:
+  type: n
+Octavius:
+  type: n
+Oda:
+  type: n
+Odan:
+  type: n
+Odila:
+  type: n
+Odilia:
+  type: n
+Odilie:
+  type: n
+Odina:
+  type: n
+Odine:
+  type: n
+Odo:
+  type: n
+Odoaker:
+  type: n
+Odovacar:
+  type: n
+Odowakar:
+  type: n
+Odowaker:
+  type: n
+Oke:
+  type: n
+Oktavia:
+  type: n
+Oktavian:
+  type: n
+Oktavus:
+  type: n
+Olaf:
+  type: n
+Olivera:
+  type: n
+Olivia:
+  type: n
+Ommo:
+  type: n
+Oranna:
+  type: n
+Orell:
+  type: n
+Orion:
+  type: n
+Ornella:
+  type: n
+Orsina:
+  type: n
+Ortraud:
+  type: n
+Ortrud:
+  type: n
+Ortrun:
+  type: n
+Ortwin:
+  type: n
+Osbert:
+  type: n
+Oswin:
+  type: n
+Otfried:
+  type: n
+Otger:
+  type: n
+Otgunde:
+  type: n
+Othmar:
+  type: n
+Otila:
+  type: n
+Otmar:
+  type: n
+Ottfried:
+  type: n
+Ottilia:
+  type: n
+Ottilie:
+  type: n
+Ottmar:
+  type: n
+Ottokar:
+  type: n
+Palmatius:
+  type: n
+Pam:
+  type: n
+Pamela:
+  type: n
+Pamina:
+  type: n
+Pankraz:
+  type: n
+Parsifal:
+  type: n
+Parzival:
+  type: n
+Paschalis:
+  type: n
+Patrick:
+  type: n
+Patrizia:
+  type: n
+Patrizius:
+  type: n
+Patroklus:
+  type: n
+Paula:
+  type: n
+Paulina:
+  type: n
+Pauline:
+  type: n
+Paulinus:
+  type: n
+Pebbles:
+  type: n
+Pelagia:
+  type: n
+Pelagius:
+  type: n
+Per:
+  type: prep
+Perdita:
+  type: n
+Perpetua:
+  type: n
+Perpetuus:
+  type: n
+Petra:
+  type: n
+Petronella:
+  type: n
+Petronia:
+  type: n
+Petronilla:
+  type: n
+Petunia:
+  type: n
+Phaedra:
+  type: n
+Phibie:
+  type: n
+Philemon:
+  type: n
+Philibert:
+  type: n
+Philine:
+  type: n
+Philipp:
+  type: n
+Philippa:
+  type: n
+Philippine:
+  type: n
+Philomena:
+  type: n
+Philomene:
+  type: n
+Phoebe:
+  type: n
+Phyllis:
+  type: n
+Phöbe:
+  type: n
+Phöbus:
+  type: n
+Pia:
+  type: n
+Piet:
+  type: n
+Pina:
+  type: n
+Pippin:
+  type: n
+Pirmin:
+  type: n
+Piroschka:
+  type: n
+Pit:
+  type: n
+Pitt:
+  type: n
+Pius:
+  type: n
+Placidus:
+  type: n
+Plektrudis:
+  type: n
+Poldi:
+  type: n
+Pollux:
+  type: n
+Polykarp:
+  type: n
+Pontian:
+  type: n
+Pontianus:
+  type: n
+Potifar:
+  type: n
+Potiphar:
+  type: n
+Praxedis:
+  type: n
+Prisca:
+  type: n
+Priscilla:
+  type: n
+Priska:
+  type: n
+Priszilla:
+  type: n
+Pyrrhus:
+  type: n
+Quintin:
+  type: n
+Quirin:
+  type: n
+Raban:
+  type: n
+Rabanus:
+  type: n
+Rabea:
+  type: n
+Rachel:
+  type: n
+Radegund:
+  type: n
+Radegunde:
+  type: n
+Radegundis:
+  type: n
+Radolf:
+  type: n
+Radulf:
+  type: n
+Rafael:
+  type: n
+Rafaela:
+  type: n
+Raffael:
+  type: n
+Raginald:
+  type: n
+Raginbert:
+  type: n
+Raginhard:
+  type: n
+Raginhari:
+  type: n
+Raginhilt:
+  type: n
+Raginmar:
+  type: n
+Raginmund:
+  type: n
+Rahel:
+  type: n
+Raica:
+  type: n
+Raimar:
+  type: n
+Raimer:
+  type: n
+Raimund:
+  type: n
+Raimunde:
+  type: n
+Rainald:
+  type: n
+Rainer:
+  type: n
+Rainhard:
+  type: n
+Ralf:
+  type: n
+Ramona:
+  type: n
+Rando:
+  type: n
+Randolf:
+  type: n
+Randulf:
+  type: n
+Raphael:
+  type: n
+Raphaela:
+  type: n
+Rasmus:
+  type: n
+Rea:
+  type: n
+Rebekka:
+  type: n
+Regelindis:
+  type: n
+Regina:
+  type: n
+Reginbert:
+  type: n
+Regula:
+  type: n
+Reik:
+  type: n
+Reiko:
+  type: n
+Reimar:
+  type: n
+Reimer:
+  type: n
+Reimo:
+  type: n
+Reimund:
+  type: n
+Reina:
+  type: n
+Reinbert:
+  type: n
+Reiner:
+  type: n
+Reingard:
+  type: n
+Reinhard:
+  type: n
+Reinhart:
+  type: n
+Reinhild:
+  type: n
+Reinhilde:
+  type: n
+Reinmar:
+  type: n
+Reinold:
+  type: n
+Rema:
+  type: n
+Rembert:
+  type: n
+Remedius:
+  type: n
+Remigia:
+  type: n
+Remmer:
+  type: n
+Remo:
+  type: n
+Rena:
+  type: n
+Renata:
+  type: n
+Renate:
+  type: n
+Rene:
+  type: n
+Reni:
+  type: n
+Renia:
+  type: n
+Renita:
+  type: n
+Renke:
+  type: n
+Resi:
+  type: n
+Reta:
+  type: n
+Reto:
+  type: n
+Riana:
+  type: n
+Ribanna:
+  type: n
+Rica:
+  type: n
+Richart:
+  type: n
+Richbert:
+  type: n
+Richmut:
+  type: n
+Richmute:
+  type: n
+Rickert:
+  type: n
+Rieka:
+  type: n
+Rieke:
+  type: n
+Rika:
+  type: n
+Rike:
+  type: n
+Riko:
+  type: n
+Rilana:
+  type: n
+Rimbert:
+  type: n
+Rina:
+  type: n
+Rita:
+  type: n
+Roberta:
+  type: n
+Roberte:
+  type: n
+Rochus:
+  type: n
+Rodena:
+  type: n
+Roderich:
+  type: n
+Roger:
+  type: n
+Roho:
+  type: n
+Roksana:
+  type: n
+Rolanda:
+  type: n
+Rolande:
+  type: n
+Rolf:
+  type: n
+Roman:
+  type: n
+Romana:
+  type: n
+Romarich:
+  type: n
+Romea:
+  type: n
+Romed:
+  type: n
+Romedius:
+  type: n
+Romegius:
+  type: n
+Romi:
+  type: n
+Romilda:
+  type: n
+Romuald:
+  type: n
+Romy:
+  type: n
+Ronja:
+  type: n
+Rosa:
+  type: n
+Rosalinde:
+  type: n
+Rosamunde:
+  type: n
+Rosanna:
+  type: n
+Rosel:
+  type: n
+Rosemarie:
+  type: n
+Rosi:
+  type: n
+Rosika:
+  type: n
+Rosina:
+  type: n
+Rosine:
+  type: n
+Rosmarie:
+  type: n
+Rosvita:
+  type: n
+Roswita:
+  type: n
+Roswitha:
+  type: n
+Rotraud:
+  type: n
+Rotraut:
+  type: n
+Rouven:
+  type: n
+Rowena:
+  type: n
+Roxana:
+  type: n
+Ruben:
+  type: n
+Rudger:
+  type: n
+Rudi:
+  type: n
+Ruedi:
+  type: n
+Rufina:
+  type: n
+Rufus:
+  type: n
+Rumold:
+  type: n
+Runa:
+  type: n
+Runhild:
+  type: n
+Ruodi:
+  type: n
+Rupert:
+  type: n
+Rupper:
+  type: n
+Namet:
+  type: n
+Ruprecht:
+  type: n
+Ruven:
+  type: n
+Ruwen:
+  type: n
+Sabeth:
+  type: n
+Sabine:
+  type: n
+Sabrina:
+  type: n
+Sachso:
+  type: n
+Sahra:
+  type: n
+Salome:
+  type: n
+Salomo:
+  type: n
+Salvator:
+  type: n
+Salvia:
+  type: n
+Salvina:
+  type: n
+Samanta:
+  type: n
+Samantha:
+  type: n
+Samson:
+  type: n
+Sander:
+  type: n
+Sandra:
+  type: n
+Sandrina:
+  type: n
+Sanja:
+  type: n
+Sanna:
+  type: n
+Sanne:
+  type: n
+Saphira:
+  type: n
+Sara:
+  type: n
+Sarah:
+  type: n
+Sarina:
+  type: n
+Sarine:
+  type: n
+Saskia:
+  type: n
+Sassa:
+  type: n
+Sasso:
+  type: n
+Saturnia:
+  type: n
+Saul:
+  type: n
+Schemarja:
+  type: n
+Schemarjah:
+  type: n
+Schimea:
+  type: n
+Scholastika:
+  type: n
+Schorsch:
+  type: n
+Schwanhild:
+  type: n
+Schwanhilde:
+  type: n
+Sebastian:
+  type: n
+Sebastina:
+  type: n
+Sebulon:
+  type: n
+Seleina:
+  type: n
+Selena:
+  type: n
+Selene:
+  type: n
+Selina:
+  type: n
+Selma:
+  type: n
+Sem:
+  type: n
+Senta:
+  type: n
+Sephora:
+  type: n
+Sepp:
+  type: n
+Seppi:
+  type: n
+Serafine:
+  type: n
+Seraja:
+  type: n
+Seraphin:
+  type: n
+Seraphina:
+  type: n
+Seraphinus:
+  type: n
+Sereina:
+  type: n
+Serena:
+  type: n
+Serenus:
+  type: n
+Serge:
+  type: n
+Servaz:
+  type: n
+Severin:
+  type: n
+Severina:
+  type: n
+Sheherazade:
+  type: n
+Sibylla:
+  type: n
+Sibylle:
+  type: n
+Sidonia:
+  type: n
+Sidonie:
+  type: n
+Sidonius:
+  type: n
+Siegbald:
+  type: n
+Siegbert:
+  type: n
+Siegbrecht:
+  type: n
+Sieghard:
+  type: n
+Sieghart:
+  type: n
+Siegher:
+  type: n
+Sieghilde:
+  type: n
+Sieglind:
+  type: n
+Sieglinde:
+  type: n
+Siegmar:
+  type: n
+Siegmund:
+  type: n
+Siegward:
+  type: n
+Sighild:
+  type: n
+Sighilde:
+  type: n
+Sigi:
+  type: n
+Sigisbert:
+  type: n
+Sigismund:
+  type: n
+Siglind:
+  type: n
+Siglinde:
+  type: n
+Sigried:
+  type: n
+Sigrun:
+  type: n
+Sigumari:
+  type: n
+Siguna:
+  type: n
+Sigune:
+  type: n
+Silja:
+  type: n
+Silka:
+  type: n
+Silke:
+  type: n
+Silko:
+  type: n
+Silvan:
+  type: n
+Silvana:
+  type: n
+Silvester:
+  type: n
+Silvia:
+  type: n
+Silvian:
+  type: n
+Silviana:
+  type: n
+Silvius:
+  type: n
+Simea:
+  type: n
+Simeon:
+  type: n
+Simke:
+  type: n
+Sina:
+  type: n
+Sinja:
+  type: n
+Sinje:
+  type: n
+Sira:
+  type: n
+Siria:
+  type: n
+Sirius:
+  type: n
+Sissi:
+  type: n
+Sixtus:
+  type: n
+Skrollan:
+  type: n
+Sofia:
+  type: n
+Sofie:
+  type: n
+Sokrates:
+  type: n
+Solveig:
+  type: n
+Solveigh:
+  type: n
+Sonea:
+  type: n
+Sonja:
+  type: n
+Sonnhild:
+  type: n
+Sontje:
+  type: n
+Sophie:
+  type: n
+Sophus:
+  type: n
+Sorina:
+  type: n
+Spartakus:
+  type: n
+Spiridon:
+  type: n
+Stanislas:
+  type: n
+Stanislaus:
+  type: n
+Stanislav:
+  type: n
+Stanislaw:
+  type: n
+Stefan:
+  type: n
+Stefania:
+  type: n
+Stefanie:
+  type: n
+Steffen:
+  type: n
+Steffi:
+  type: n
+Stella:
+  type: n
+Stephan:
+  type: n
+Stina:
+  type: n
+Stine:
+  type: n
+Stintje:
+  type: n
+Sulamith:
+  type: n
+Suleika:
+  type: n
+Suna:
+  type: n
+Sunna:
+  type: n
+Sunnhild:
+  type: n
+Susanna:
+  type: n
+Susy:
+  type: n
+Sven:
+  type: n
+Sveva:
+  type: n
+Swala:
+  type: n
+Swanhild:
+  type: n
+Swanhilde:
+  type: n
+Swen:
+  type: n
+Swenja:
+  type: n
+Sybilla:
+  type: n
+Sybille:
+  type: n
+Sylke:
+  type: n
+Sylvan:
+  type: n
+Sylvia:
+  type: n
+Syria:
+  type: n
+Sönke:
+  type: n
+Tabea:
+  type: n
+Tabita:
+  type: n
+Tabitha:
+  type: n
+Taja:
+  type: n
+Tale:
+  type: n
+Talea:
+  type: n
+Talina:
+  type: n
+Taline:
+  type: n
+Talita:
+  type: n
+Talitha:
+  type: n
+Talora:
+  type: n
+Tamara:
+  type: n
+Tamino:
+  type: n
+Tamme:
+  type: n
+Tammo:
+  type: n
+Tanita:
+  type: n
+Tanja:
+  type: n
+Tankred:
+  type: n
+Taria:
+  type: n
+Tassilo:
+  type: n
+Tasso:
+  type: n
+Tatjana:
+  type: n
+Tega:
+  type: n
+Teo:
+  type: n
+Terence:
+  type: n
+Terenz:
+  type: n
+Teresia:
+  type: n
+Terrence:
+  type: n
+Thaddäus:
+  type: n
+Thade:
+  type: n
+Thadäa:
+  type: n
+Thalea:
+  type: n
+Thankmar:
+  type: n
+Thassilo:
+  type: n
+Thea:
+  type: n
+Thekla:
+  type: n
+Thelma:
+  type: n
+Theo:
+  type: n
+Theobald:
+  type: n
+Theodebald:
+  type: n
+Theodericus:
+  type: n
+Theodora:
+  type: n
+Theodore:
+  type: n
+Theophil:
+  type: n
+Theophilus:
+  type: n
+Theres:
+  type: n
+Theresa:
+  type: n
+Therese:
+  type: n
+Thiathild:
+  type: n
+Thiemo:
+  type: n
+Thies:
+  type: n
+Thiess:
+  type: n
+Thietmar:
+  type: n
+Thilde:
+  type: n
+Thilo:
+  type: n
+Thimo:
+  type: n
+Thirza:
+  type: n
+Thommy:
+  type: n
+Thoralf:
+  type: n
+Thorben:
+  type: n
+Thordis:
+  type: n
+Thore:
+  type: n
+Thorge:
+  type: n
+Thorin:
+  type: n
+Thorsten:
+  type: n
+Thorwald:
+  type: n
+Thure:
+  type: n
+Thury:
+  type: n
+Thusnelda:
+  type: n
+Thusnelde:
+  type: n
+Thyra:
+  type: n
+Thöger:
+  type: n
+Tiana:
+  type: n
+Tiberius:
+  type: n
+Tiesto:
+  type: n
+Tiffany:
+  type: n
+Tiga:
+  type: n
+Til:
+  type: n
+Till:
+  type: n
+Tillman:
+  type: n
+Tillmann:
+  type: n
+Tillo:
+  type: n
+Tilman:
+  type: n
+Tilo:
+  type: n
+Timaeus:
+  type: n
+Timeon:
+  type: n
+Timme:
+  type: n
+Timmo:
+  type: n
+Timo:
+  type: n
+Timon:
+  type: n
+Timotheus:
+  type: n
+Tina:
+  type: n
+Tine:
+  type: n
+Tinette:
+  type: n
+Tinka:
+  type: n
+Tirian:
+  type: n
+Tirza:
+  type: n
+Titus:
+  type: n
+Tizia:
+  type: n
+Tizian:
+  type: n
+Tiziana:
+  type: n
+Tobi:
+  type: n
+Tokessa:
+  type: n
+Tom:
+  type: n
+Tomke:
+  type: n
+Tomma:
+  type: n
+Toralf:
+  type: n
+Torben:
+  type: n
+Tordis:
+  type: n
+Tore:
+  type: n
+Torge:
+  type: n
+Torsten:
+  type: n
+Torwald:
+  type: n
+Trajan:
+  type: n
+Traugott:
+  type: n
+Trientje:
+  type: n
+Trixi:
+  type: n
+Trudi:
+  type: n
+Trudy:
+  type: n
+Tusnelda:
+  type: n
+Tussinhilda:
+  type: n
+Ueli:
+  type: n
+Ula:
+  type: n
+Ulf:
+  type: n
+Uli:
+  type: n
+Ulla:
+  type: n
+Ulli:
+  type: n
+Ulrik:
+  type: n
+Ulrike:
+  type: n
+Undine:
+  type: n
+Uodalrich:
+  type: n
+Uota:
+  type: n
+Uriel:
+  type: n
+Urim:
+  type: n
+Urs:
+  type: n
+Ursel:
+  type: n
+Ursula:
+  type: n
+Uschi:
+  type: n
+Uta:
+  type: n
+Ute:
+  type: n
+Utta:
+  type: n
+Uwe:
+  type: n
+Valena:
+  type: n
+Valentin:
+  type: n
+Valentina:
+  type: n
+Valeria:
+  type: n
+Valerian:
+  type: n
+Valerie:
+  type: n
+Valerius:
+  type: n
+Valeska:
+  type: n
+Vanessa:
+  type: n
+Veltin:
+  type: n
+Verena:
+  type: n
+Verina:
+  type: n
+Veronika:
+  type: n
+Viktor:
+  type: n
+Viktoria:
+  type: n
+Viktorian:
+  type: n
+Vin:
+  type: n
+Vincenz:
+  type: n
+Vinzent:
+  type: n
+Vinzenta:
+  type: n
+Vinzentia:
+  type: n
+Vinzenz:
+  type: n
+Vital:
+  type: n
+Vitalis:
+  type: n
+Vivian:
+  type: n
+Viviane:
+  type: n
+Volbrecht:
+  type: n
+Volkard:
+  type: n
+Volkbert:
+  type: n
+Volker:
+  type: n
+Volkert:
+  type: n
+Volkhard:
+  type: n
+Volkmar:
+  type: n
+Vreneli:
+  type: n
+Vreni:
+  type: n
+Walahfried:
+  type: n
+Walburga:
+  type: n
+Walburgis:
+  type: n
+Waldburg:
+  type: n
+Waldemar:
+  type: n
+Waldfried:
+  type: n
+Walfried:
+  type: n
+Walli:
+  type: n
+Walo:
+  type: n
+Walpurga:
+  type: n
+Walpurgis:
+  type: n
+Walther:
+  type: n
+Walti:
+  type: n
+Waltram:
+  type: n
+Waltraud:
+  type: n
+Waltraut:
+  type: n
+Waltrudis:
+  type: n
+Waltrun:
+  type: n
+Wanda:
+  type: n
+Warin:
+  type: n
+Warinheri:
+  type: n
+Wasim:
+  type: n
+Wassim:
+  type: n
+Wastl:
+  type: n
+Wedigo:
+  type: n
+Weikhard:
+  type: n
+Wendelgard:
+  type: n
+Wendelin:
+  type: n
+Wendelina:
+  type: n
+Wendi:
+  type: n
+Wendy:
+  type: n
+Wenke:
+  type: n
+Wenzeslaus:
+  type: n
+Wera:
+  type: n
+Werinher:
+  type: n
+Werner:
+  type: n
+Werngard:
+  type: n
+Wiard:
+  type: n
+Wibe:
+  type: n
+Wibeke:
+  type: n
+Wibke:
+  type: n
+Wickie:
+  type: n
+Wido:
+  type: n
+Widukind:
+  type: n
+Wiebe:
+  type: n
+Wiebke:
+  type: n
+Wiegand:
+  type: n
+Wieland:
+  type: n
+Wienand:
+  type: n
+Wigand:
+  type: n
+Wigbert:
+  type: n
+Wigberta:
+  type: n
+Wigbrecht:
+  type: n
+Wigburg:
+  type: n
+Wighard:
+  type: n
+Wiglaf:
+  type: n
+Wigmar:
+  type: n
+Wignand:
+  type: n
+Wikhard:
+  type: n
+Wilbert:
+  type: n
+Wilbrecht:
+  type: n
+Wilburg:
+  type: n
+Wilfried:
+  type: n
+Wilfrieda:
+  type: n
+Wilfriede:
+  type: n
+Wilhard:
+  type: n
+Wilhelma:
+  type: n
+Wilhelmina:
+  type: n
+Wilhelmine:
+  type: n
+Wilibald:
+  type: n
+Wilibrord:
+  type: n
+Wilke:
+  type: n
+Wilko:
+  type: n
+Willa:
+  type: n
+Willfried:
+  type: n
+Willgard:
+  type: n
+Willhart:
+  type: n
+Willibald:
+  type: n
+Willibert:
+  type: n
+Willibrord:
+  type: n
+Wilma:
+  type: n
+Wilmar:
+  type: n
+Wilpert:
+  type: n
+Wiltraud:
+  type: n
+Wiltrud:
+  type: n
+Wiltrude:
+  type: n
+Wim:
+  type: n
+Winand:
+  type: n
+Winfried:
+  type: n
+Winifred:
+  type: n
+Winka:
+  type: n
+Winnie:
+  type: n
+Winnifred:
+  type: n
+Wiolant:
+  type: n
+Wipert:
+  type: n
+Wiprecht:
+  type: n
+Witold:
+  type: n
+Wittekind:
+  type: n
+Wladimir:
+  type: n
+Wladislaw:
+  type: n
+Wodan:
+  type: n
+Woldemar:
+  type: n
+Wolf:
+  type: n
+Wolfgang:
+  type: n
+Wolfhard:
+  type: n
+Wolfhart:
+  type: n
+Wolke:
+  type: n
+Wotan:
+  type: n
+Wulf:
+  type: n
+Wulfram:
+  type: n
+Wunibald:
+  type: n
+Xander:
+  type: n
+Xanthe:
+  type: n
+Xanthia:
+  type: n
+Xanthos:
+  type: n
+Xaver:
+  type: n
+Xaveria:
+  type: n
+Xena:
+  type: n
+Xenia:
+  type: n
+Yan:
+  type: n
+Yann:
+  type: n
+Yara:
+  type: n
+Yola:
+  type: n
+Yven:
+  type: n
+Yvette:
+  type: n
+Yvonne:
+  type: n
+Zacharias:
+  type: n
+Zafrina:
+  type: n
+Zarah:
+  type: n
+Zebedäus:
+  type: n
+Zefania:
+  type: n
+Zelda:
+  type: n
+Zenas:
+  type: n
+Zeno:
+  type: n
+Zenzi:
+  type: n
+Zephanja:
+  type: n
+Zeruja:
+  type: n
+Zilla:
+  type: n
+Zippora:
+  type: n
+Zipporah:
+  type: n
+Zita:
+  type: n
+Ziu:
+  type: n
+Zoe:
+  type: n
+Zyprian:
+  type: n
+Zyprianus:
+  type: n
+Zyriak:
+  type: n
+Zyriakus:
+  type: n
+Zölestin:
+  type: n
+Zölestine:
+  type: n
+Zölestinus:
+  type: n
 "Account:
-  type: n
-Manager":
   type: n
 Manager":
   type: n
 Managerin":
   type: n
-Account:
+"EDV-Fachkraft":
   type: n
-Account:
+"EDV-Sachbearbeiter":
   type: n
-account:
+"EDV-Sachbearbeiterin":
   type: n
-manager:
+"Kfz-Mechaniker":
+  type: n
+"Kfz-Mechanikerin":
+  type: n
+"Service-Manager":
+  type: n
+"Service-Managerin":
+  type: n
+"Technische:
+  type: adj
+Zeichnerin":
+  type: n
+"Technischer:
+  type: adj
+Zeichner":
+  type: n
+Abfallberater:
+  type: n
+Abfallberaterin:
+  type: n
+Abwassermeister:
+  type: n
+Abwassermeisterin:
+  type: n
+Ägyptologe:
+  type: n
+Ägyptologein:
+  type: n
+Akrobatin:
+  type: n
+Änderungsschneider:
+  type: n
+Änderungsschneiderin:
+  type: n
+Anlagenmechaniker:
+  type: n
+Anlagenmechanikerin:
+  type: n
+Apothekerin:
+  type: n
+Apparatebauer:
+  type: n
+Apparatebauerin:
+  type: n
+Archäologe:
+  type: n
+Archäologin:
+  type: n
+Architektin:
+  type: n
+Ärztin:
+  type: n
+Assistenzarzt:
+  type: n
+Assistenzarztärztin:
+  type: n
+Astrologe:
+  type: n
+Astrologin:
+  type: n
+Auditor:
+  type: n
+Auditorin:
+  type: n
+Aufzugmonteur:
+  type: n
+Aufzugmonteurin:
+  type: n
+Ausbaufacharbeiter:
+  type: n
+Ausbaufacharbeiterin:
+  type: n
+Ausbaufachwerker:
+  type: n
+Ausbaufachwerkerin:
+  type: n
+Außenhandelskaufmann:
+  type: n
+Außenhandelskauffrau:
+  type: n
+Autolackierer:
+  type: n
+Autolackiererin:
+  type: n
+Autoverkäufer:
+  type: n
+Autoverkäuferin:
+  type: n
+Autowäscher:
+  type: n
+Autowäscherin:
+  type: n
+Bäcker:
+  type: n
+Bäckerin:
+  type: n
+Backofenbauer:
+  type: n
+Backofenbauerin:
+  type: n
+Bandagist:
+  type: n
+Bandagistin:
+  type: n
+Bankettleiter:
+  type: n
+Bankettleiterassistent:
+  type: n
+Bankettleiterassistentin:
+  type: n
+Bankettleiterin:
+  type: n
+Barkellner:
+  type: n
+Barkellnerin:
+  type: n
+Barmeister:
+  type: n
+Barmeisterin:
+  type: n
+Baudenkmalpflegerin:
+  type: n
+Baugeräteführer:
+  type: n
+Bautenbeschichter:
+  type: n
+BautenObjektbeschichterin:
+  type: n
+Bauzeichner:
+  type: n
+Bauzeichnerin:
+  type: n
+Beamtin:
+  type: n
+Beerdiger:
+  type: n
+Berechnungsingenieur:
+  type: n
+Berechnungsingenieurin:
+  type: n
+Berufskraftfahrer:
+  type: n
+Berufskraftfahrerin:
+  type: n
+Bestattungsfachkraft:
+  type: n
+Betonbauer:
+  type: n
+Betonbauerin:
+  type: n
+Betriebsleiterin:
+  type: n
+Betriebswirtin:
+  type: n
+Bodenleger:
+  type: n
+Bodenlegerin:
+  type: n
+Bogenmacher:
+  type: n
+Bogenmacherin:
+  type: n
+Bootsbauer:
+  type: n
+Bootsbauerin:
+  type: n
+Böttcher:
+  type: n
+Böttcherin:
+  type: n
+Brautechniker:
+  type: n
+Buchbinder:
+  type: n
+Buchbinderin:
+  type: n
+Buchhändler:
+  type: n
+Buchhändlerin:
+  type: n
+Büchsenmacher:
+  type: n
+Büchsenmacherin:
+  type: n
+Büfettkraft:
+  type: n
+Bügler:
+  type: n
+Büglerin:
+  type: n
+Bühnenmaler:
+  type: n
+Bühnenmalerin:
+  type: n
+Bühnentänzer:
+  type: n
+Bühnentänzerin:
+  type: n
+Bürokauffrau:
+  type: n
+Bürokaufmann:
+  type: n
+Büromaschinenmechaniker:
+  type: n
+Büromaschinenmechanikerin:
+  type: n
+Chefärztin:
+  type: n
+Chefportier:
+  type: n
+Chemielaborant:
+  type: n
+Chemielaborantin:
+  type: n
+Chemikantin:
+  type: n
+Chiefsteward:
+  type: n
+Chiefstewardess:
+  type: n
+Chirurgiemechaniker:
+  type: n
+Chirurgiemechanikerin:
+  type: n
+Choreograf:
+  type: n
+Choreografin:
+  type: n
+Computergrafiker:
+  type: n
+Computergrafikerin:
+  type: n
+Damenmaßschneider:
+  type: n
+Damenmaßschneiderin:
+  type: n
+Dekorationsnäher:
+  type: n
+Dekorationsnäherin:
+  type: n
+Demograf:
+  type: n
+":
+  type: EXIT
+Demografin:
+  type: n
+Dentistin:
+  type: adj
+Designerin:
+  type: n
+Diplomkrankenpfleger:
+  type: n
+Diplomkrankenschwester:
+  type: n
+Dolmetscherin:
+  type: n
+Drechslerin:
+  type: n
+Dressman:
+  type: n
+Edelsteingraveur:
+  type: n
+Edelsteingraveurin:
+  type: n
+Edelsteinschleifer:
+  type: n
+Edelsteinschleiferin:
+  type: n
+Eisenbahnerin:
+  type: n
+Elektromonteurin:
+  type: n
+Elektronikerin:
+  type: n
+Elektrotechniker:
+  type: n
+Elektrotechnikerin:
+  type: n
+Empfangsassistent:
+  type: n
+Empfangsassistentin:
+  type: n
+Empfangschefin:
+  type: n
+Empfangsmitarbeiter:
+  type: n
+Empfangsmitarbeiterin:
+  type: n
+Energieberater:
+  type: n
+Energieberaterin:
+  type: n
+Ernährungsberater:
+  type: n
+Ernährungsberaterin:
+  type: n
+Erzieherin:
+  type: n
+Estrichleger:
+  type: n
+Estrichlegerin:
+  type: n
+Etagenaufsicht:
+  type: n
+Etagenkellner:
+  type: n
+Etagenkellnerin:
+  type: n
+Etagenoberkellner:
+  type: n
+Etagenoberkellnerin:
+  type: n
+Fachassistent:
+  type: n
+Fachassistentin:
+  type: n
+Fachinformatike:
+  type: n
+Berufr:
+  type: n
+Fachinformatikerin:
+  type: n
+Fachkrankenschwester:
+  type: n
+Fachkrankenspfleger:
+  type: n
+Fachunteroffizier:
+  type: n
+Fachverkäufer:
+  type: n
+Fachverkäuferin:
+  type: n
+Fahrradmonteur:
+  type: n
+Fahrradmonteurin:
+  type: n
+Fahrzeugbauer:
+  type: n
+Fahrzeugbauerin:
+  type: n
+Fahrzeugbaumechaniker:
+  type: n
+Fahrzeugbaumechanikerin:
+  type: n
+Fahrzeuglackierer:
+  type: n
+Fahrzeuglackiererin:
+  type: n
+Fahrzeugpfleger:
+  type: n
+Fahrzeugpflegerin:
+  type: n
+Falkner:
+  type: n
+Falknerin:
+  type: n
+Färber:
+  type: n
+Färberin:
+  type: n
+Fassadenreiniger:
+  type: n
+Fassadenreinigerin:
+  type: n
+Feinoptiker:
+  type: n
+Feinoptikerin:
+  type: n
+Feinoptikermeister:
+  type: n
+Feinoptikermeisterin:
+  type: n
+Feinwerkmechaniker:
+  type: n
+Feinwerkmechanikerin:
+  type: n
+Fernsehmoderator:
+  type: n
+Fernsehmoderatorin:
+  type: n
+Festwirt:
+  type: n
+Festwirtin:
+  type: n
+Feuerungsbauer:
+  type: n
+Feuerungsbauerin:
+  type: n
+Fischerin:
+  type: n
+Fitnesstrainer:
+  type: n
+Fitnesstrainerin:
+  type: n
+Flechtwerkgestalter:
+  type: n
+Flechtwerkgestalterin:
+  type: n
+Fleischerin:
+  type: n
+Fleischhauerin:
+  type: n
+Flexograf:
+  type: n
+Flexografin:
+  type: n
+Fliesenlegerin:
+  type: n
+Floristin:
+  type: n
+Fluggerätmechaniker:
+  type: n
+Fluggerätmechanikerin:
+  type: n
+Flugzeugreiniger:
+  type: n
+Flugzeugreinigerin:
+  type: n
+Forstarbeiter:
+  type: n
+Forstarbeiterin:
+  type: n
+Förster:
+  type: n
+Försterin:
+  type: n
+Fotomedienlaborant:
+  type: n
+Fotomedienlaborantin:
+  type: n
+Fotomodell:
+  type: n
+Fremdenführer:
+  type: n
+Fremdenführerin:
+  type: n
+Galvaniseur:
+  type: n
+Galvaniseurin:
+  type: n
+Galvaniseurmeister:
+  type: n
+Galvaniseurmeisterin:
+  type: n
+Gärtner:
+  type: n
+Gärtnerin:
+  type: n
+Gästebetreuer:
+  type: n
+Gästebetreuerin:
+  type: n
+Gebäudereiniger:
+  type: n
+Gebäudereinigerin:
+  type: n
+Gebäudereinigermeister:
+  type: n
+Gebäudereinigermeisterin:
+  type: n
+Geigenbauerin:
+  type: n
+Genetiker:
+  type: n
+Genetikerin:
+  type: n
+Geologe:
+  type: n
+Geologin:
+  type: n
+Gerichtsvollzieher:
+  type: n
+Gerichtsvollzieherin:
+  type: n
+Germanist:
+  type: n
+Germanistin:
+  type: n
+Gerüstbauer:
+  type: n
+Gerüstbauerin:
+  type: n
+Glasapparatebauer:
+  type: n
+Glasapparatebauerin:
+  type: n
+Glasbläser:
+  type: n
+Glasbläserin:
+  type: n
+Glaser:
+  type: n
+Glaserin:
+  type: n
+Glasmacher:
+  type: n
+Glasmacherin:
+  type: n
+Glasmaler:
+  type: n
+Glasmalerin:
+  type: n
+Glasschmelzer:
+  type: n
+Glasschmelzerin:
+  type: n
+Glasveredler:
+  type: n
+Glasveredlerin:
+  type: n
+Glockengießer:
+  type: n
+Glockengießerin:
+  type: n
+Goldschmied:
+  type: n
+Goldschmiedin:
+  type: n
+Grafiker:
+  type: n
+Grafikerin:
+  type: n
+Graveur:
+  type: n
+Graveurin:
+  type: n
+Großhandelskaufmann:
+  type: n
+Großhandelskauffrau:
+  type: n
+Gummiarbeiter:
+  type: n
+Gummiarbeiterin:
+  type: n
+Gürtler:
+  type: n
+Gürtlerin:
+  type: n
+Hallenchef:
+  type: n
+Hallenchefin:
+  type: n
+Handelsvertreterin:
+  type: n
+Händler:
+  type: n
+Händlerin:
+  type: n
+Handschuhmacher:
+  type: n
+Handschuhmacherin:
+  type: n
+Handzuginstrumentenmacher:
+  type: n
+Handzuginstrumentenmacherin:
+  type: n
+Hausdame:
+  type: n
+Hausmeisterin:
+  type: n
+Haustechniker:
+  type: n
+Haustechnikerin:
+  type: n
+Hauswirtschaftsverwalter:
+  type: n
+Hauswirtschaftsverwalterin:
+  type: n
+Heilpädagoge:
+  type: n
+Heilpädagogin:
+  type: n
+Herrenmaßschneider:
+  type: n
+Herrenmaßschneiderin:
+  type: n
+Historikerin:
+  type: n
+Hochbaufacharbeiter:
+  type: n
+Hochbaufacharbeiterin:
+  type: n
+Hochbaufachwerker:
+  type: n
+Hochbaufachwerkerin:
+  type: n
+Holzbildhauer:
+  type: n
+Holzbildhauerin:
+  type: n
+Holzblasinstrumentenmacher:
+  type: n
+Holzblasinstrumentenmacherin:
+  type: n
+Holzmechaniker:
+  type: n
+Holzmechanikerin:
+  type: n
+Holzspielzeugmacher:
+  type: n
+Holzspielzeugmacherin:
+  type: n
+Hörfunkmoderator:
+  type: n
+Hörfunkmoderatorin:
+  type: n
+Hörgeräteakustiker:
+  type: n
+Hörgeräteakustikerin:
+  type: n
+Hotelangestellte:
+  type: n
+Hotelangestellter:
+  type: n
+Hotelfachfrau:
+  type: n
+Hotelfachmann:
+  type: n
+Hotelmeister:
+  type: n
+Hotelmeisterin:
+  type: n
+Housekeeper:
+  type: n
+Imkerin:
+  type: n
+Informatikerin:
+  type: n
+Informationselektroniker:
+  type: n
+Informationselektronikerin:
+  type: n
+Ingenieurin:
+  type: n
+Innenausbautechniker:
+  type: n
+Innenausbautechnikerin:
+  type: n
+Installateurin:
+  type: n
+Isolierer:
+  type: n
+Isoliererin:
+  type: n
+Jäger:
+  type: n
+Jägerin:
+  type: n
+Journalist:
+  type: n
+Journalistin:
+  type: n
+Juristin:
+  type: n
+Justizbeamter:
+  type: n
+Justizbeamtin:
+  type: n
+Kachelofenbauer:
+  type: n
+Kachelofenbauerin:
+  type: n
+Kälteanlagenbauer:
+  type: n
+Kälteanlagenbauerin:
+  type: n
+Kanalbauer:
+  type: n
+Kanalbauerin:
+  type: n
+Kantinenangestellte:
+  type: n
+Kantinenangestellter:
+  type: n
+Kapitän:
+  type: n
+Karosseriebauer:
+  type: n
+Karosseriebauerin:
+  type: n
+Karosseriemechaniker:
+  type: n
+Karosseriemechanikerin:
+  type: n
+Kartonagenmacher:
+  type: n
+Kartonagenmacherin:
+  type: n
+Kauffrau:
+  type: n
+Kellermeister:
+  type: n
+Kellermeisterin:
+  type: n
+Keramiker:
+  type: n
+Keramikerin:
+  type: n
+Kerammodelleinrichter:
+  type: n
+Kerammodelleinrichterin:
+  type: n
+Kerammodelleur:
+  type: n
+Kerammodelleurin:
+  type: n
+Kindergärtner:
+  type: n
+Kindergärtnerin:
+  type: n
+Klavierbauer:
+  type: n
+Klavierbauerin:
+  type: n
+Klempnerin:
+  type: n
+Komponis:
+  type: n
+Beruft:
+  type: n
+Komponistin:
+  type: n
+Konditor:
+  type: n
+Konditorin:
+  type: n
+Konstrukteurin:
+  type: n
+Konstruktionsmechaniker:
+  type: n
+Konstruktionsmechanikerin:
+  type: n
+Kosmetikerin:
+  type: n
+Kraftfahrzeugmechatroniker:
+  type: n
+Kraftfahrzeugmechatronikerin:
+  type: n
+Krankenpfleger:
+  type: n
+Kriminalbeamtin:
+  type: n
+Küchenchef:
+  type: n
+Küchenchefin:
+  type: n
+Kundendienstberater:
+  type: n
+Kundendienstberaterin:
+  type: n
+Kunstglasmacher:
+  type: n
+Kunstglasmacherin:
+  type: n
+Kunsthändler:
+  type: n
+Kunsthändlerin:
+  type: n
+Kunstschmied:
+  type: n
+Kunstschmiedin:
+  type: n
+Kupferschmied:
+  type: n
+Kupferschmiedin:
+  type: n
+Kürschner:
+  type: n
+Kürschnerin:
+  type: n
+Küster:
+  type: n
+Küsterin:
+  type: n
+Lackierer:
+  type: n
+Lackiererin:
+  type: n
+Landmaschinenmechaniker:
+  type: n
+Landmaschinenmechanikerin:
+  type: n
+Landwirtin:
+  type: n
+Lebensmitteltechniker:
+  type: n
+Lebensmitteltechnikerin:
+  type: n
+Lehrerin:
+  type: n
+Linguist:
+  type: n
+Linguistin:
+  type: n
+Logotherapeut:
+  type: n
+Logotherapeutin:
+  type: n
+Lotsin:
+  type: n
+Luftheizungsbauer:
+  type: n
+Luftheizungsbauerin:
+  type: n
+Maklerin:
+  type: n
+Malerin:
+  type: n
+Managerin:
+  type: n
+Marionettenspieler:
+  type: n
+Marionettenspielerin:
+  type: n
+Maschinenglasmacher:
+  type: n
+Maschinenglasmacherin:
+  type: n
+Maschinist:
+  type: n
+Maschinistin:
+  type: n
+Maskenbildner:
+  type: n
+Maskenbildnerin:
+  type: n
+Masseur:
+  type: n
+Maßschneider:
+  type: n
+Maßschneiderin:
+  type: n
+Maurer:
+  type: n
+Maurerin:
+  type: n
+Mechaniker:
+  type: n
+Mechanikerin:
+  type: n
+Mechatroniker:
+  type: n
+Mechatronikerin:
+  type: n
+Mediengestalter:
+  type: n
+Mediengestalterin:
+  type: n
+Metallbauer:
+  type: n
+Metallbauerin:
+  type: n
+Metallbildner:
+  type: n
+Metallbildnerin:
+  type: n
+Metallblasinstrumentenmacher:
+  type: n
+Metallblasinstrumentenmacherin:
+  type: n
+Metallgießer:
+  type: n
+Metallgießerin:
+  type: n
+Metzger:
+  type: n
+Metzgerin:
+  type: n
+Mikrobiologe:
+  type: n
+Mikrobiologin:
+  type: n
+Modellbauer:
+  type: n
+Modellbauerin:
+  type: n
+Modist:
+  type: n
+Modistin:
+  type: n
+Molekularbiologe:
+  type: n
+Molekularbiologin:
+  type: n
+Motorradmechaniker:
+  type: n
+Motorradmechanikerin:
+  type: n
+Müller:
+  type: n
+Müllerin:
+  type: n
+Musiker:
+  type: n
+Musikerin:
+  type: n
+Nachtportier:
+  type: n
+Nähmaschinenmechaniker:
+  type: n
+Nähmaschinenmechanikerin:
+  type: n
+Nautiker:
+  type: n
+Nautikerin:
+  type: n
+Niederlassungsleiter:
+  type: n
+Niederlassungsleiterin:
+  type: n
+Night:
+  type: n
+Notarzt:
+  type: n
+Notärztin:
+  type: n
+Oberflächenbeschichter:
+  type: n
+Oberflächenbeschichterin:
+  type: n
+Oberkellner:
+  type: n
+Oberkellnerin:
+  type: n
+Objektbeschichter:
+  type: n
+Objektbeschichterin:
+  type: n
+Ofenbauer:
+  type: n
+Ofenbauerin:
+  type: n
+Ökonom:
+  type: n
+Ökonomin:
+  type: n
+Ökotrophologe:
+  type: n
+Ökotrophologein:
+  type: n
+Optiker:
+  type: n
+Optikerin:
+  type: n
+Orgelbauer:
+  type: n
+Orgelbauerin:
+  type: n
+Orthopädiemechaniker:
+  type: n
+Orthopädiemechanikerin:
+  type: n
+Orthopädieschuhmacher:
+  type: n
+Orthopädieschuhmacherin:
+  type: n
+Papiermacher:
+  type: n
+Papiermacherin:
+  type: n
+Parkettleger:
+  type: n
+Parkettlegerin:
+  type: n
+Perückenmacher:
+  type: n
+Perückenmacherin:
+  type: n
+Pharmareferent:
+  type: n
+Pharmareferentin:
+  type: n
+Pilotin:
+  type: n
+Polierin:
+  type: n
+Polizis:
+  type: n
+Polizistin:
+  type: n
+Porzellanmaler:
+  type: n
+Porzellanmalerin:
+  type: n
+Postbeamtin:
+  type: n
+Postlerin:
+  type: n
+Präparator:
+  type: n
+Präparatorin:
+  type: n
+Programmierer:
+  type: n
+Programmiererin:
+  type: n
+Pyrotechniker:
+  type: n
+Pyrotechnikerin:
+  type: n
+Qualitätsprüfer:
+  type: n
+Qualitätsprüferin:
+  type: n
+Rauchfangkehrer:
+  type: n
+Rauchfangkehrerin:
+  type: n
+Raumausstatter:
+  type: n
+Raumausstatterin:
+  type: n
+Rechtsanwältin:
+  type: n
+Reifenmacher:
+  type: n
+Reifenmacherin:
+  type: n
+Reifenmonteur:
+  type: n
+Reifenmonteurin:
+  type: n
+Reiseleiter:
+  type: n
+Reiseleiterin:
+  type: n
+Reservierungssachbearbeiter:
+  type: n
+Reservierungssachbearbeiterin:
+  type: n
+Restaurantfachfrau:
+  type: n
+Restaurantfachmann:
+  type: n
+Restaurantmeister:
+  type: n
+Restaurantmeisterin:
+  type: n
+Rettungsschwimmer:
+  type: n
+Rettungsschwimmerin:
+  type: n
+Richterin:
+  type: n
+Roomboy:
+  type: n
+Sänger:
+  type: n
+Sängerin:
+  type: n
+Sanitäter:
+  type: n
+Sanitäterin:
+  type: n
+Sattler:
+  type: n
+Sattlerin:
+  type: n
+Schädlingsbekämpfer:
+  type: n
+Schädlingsbekämpferin:
+  type: n
+Schallschutzisolierer:
+  type: n
+Schallschutzisoliererin:
+  type: n
+Schankanlagenreiniger:
+  type: n
+Schankanlagenreinigerin:
+  type: n
+Schichtführer:
+  type: n
+Schichtführerin:
+  type: n
+Schienenfahrzeugreiniger:
+  type: n
+Schienenfahrzeugreinigerin:
+  type: n
+Schiffbauer:
+  type: n
+Schiffbauerin:
+  type: n
+Schiffsreiniger:
+  type: n
+Schiffsreinigerin:
+  type: n
+Schiffssteward:
+  type: n
+Schiffsstewardess:
+  type: n
+Schlachterin:
+  type: n
+Schlafwagenschaffner:
+  type: n
+Schlafwagenschaffnerin:
+  type: n
+Schleiferin:
+  type: n
+Schlosser:
+  type: n
+Schlosserin:
+  type: n
+Schmiedin:
+  type: n
+Schneider:
+  type: n
+Schneiderin:
+  type: n
+Schneidwerkzeugmechaniker:
+  type: n
+Schneidwerkzeugmechanikerin:
+  type: n
+Schornsteinbauer:
+  type: n
+Schornsteinbauerin:
+  type: n
+Schornsteinfeger:
+  type: n
+Schornsteinfegerin:
+  type: n
+Schriftsetzermeister:
+  type: n
+Schriftsetzermeisterin:
+  type: n
+Schuhmacher:
+  type: n
+Schuhmacherin:
+  type: n
+Schusterin:
+  type: n
+Schweinezüchter:
+  type: n
+Schweinezüchterin:
+  type: n
+Schweißer:
+  type: n
+Schweißerin:
+  type: n
+Segelmacher:
+  type: n
+Segelmacherin:
+  type: n
+Seiler:
+  type: n
+Seilerin:
+  type: n
+Sekretär:
+  type: n
+Sekretärin:
+  type: n
+Servicetechniker:
+  type: n
+Servicetechnikerin:
+  type: n
+Servierer:
+  type: n
+Serviererin:
+  type: n
+Siebdrucker:
+  type: n
+Siebdruckerin:
+  type: n
+Silberschmied:
+  type: n
+Silberschmiedin:
+  type: n
+Skilehrer:
+  type: n
+Skilehrerin:
+  type: n
+Soldatin:
+  type: n
+Sozialhelfer:
+  type: n
+Sozialhelferin:
+  type: n
+Sozialwirt:
+  type: n
+Sozialwirtin:
+  type: n
+Soziologin:
+  type: n
+Spielzeugmacher:
+  type: n
+Spielzeugmacherin:
+  type: n
+Sportlehrer:
+  type: n
+Sportlehrerin:
+  type: n
+Sporttherapeut:
+  type: n
+Sporttherapeutin:
+  type: n
+Sprechwissenschaftlerin:
+  type: n
+Sprengmeister:
+  type: n
+Sprengmeisterin:
+  type: n
+Staatsanwalt:
+  type: n
+Staatsanwältin:
+  type: n
+Stahlbauer:
+  type: n
+Stahlbauerin:
+  type: n
+Stahlbetonbauer:
+  type: n
+Stahlbetonbauerin:
+  type: n
+Steinbildhauerin:
+  type: n
+Steinmetz:
+  type: n
+Steinmetzin:
+  type: n
+Stempelmacher:
+  type: n
+Stempelmacherin:
+  type: n
+Stickerin:
+  type: n
+Strahlenschutzfachkraft:
+  type: n
+Straßenbauer:
+  type: n
+Straßenbauerin:
+  type: n
+Straßenreiniger:
+  type: n
+Straßenreinigerin:
+  type: n
+Stricker:
+  type: n
+Strickerin:
+  type: n
+Stukkateur:
+  type: n
+Stukkateurin:
+  type: n
+Systemelektroniker:
+  type: n
+Systemelektronikerin:
+  type: n
+Systeminformatiker:
+  type: n
+Systeminformatikerin:
+  type: n
+Tänzer:
+  type: n
+Tänzerin:
+  type: n
+Taucher:
+  type: n
+Taucherin:
+  type: n
+Taxifahrerin:
+  type: n
+Techniker:
+  type: n
+Technikerin:
   type: n

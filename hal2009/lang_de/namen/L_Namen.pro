@@ -38,12 +38,12 @@ ist <> lennard <> ein name <>  <> 50
 ist <> lennart <> ein name <>  <> 50
 ist <> lennert <> ein name <>  <> 50
 ist <> leny <> ein name <>  <> 50
-lenz ist <> ein name <>  <>  <> 50
+ist <> lenz <> ein name <>  <> 50
 ist <> leo <> ein name <>  <> 50
 ist <> leocadia <> ein name <>  <> 50
 ist <> leodebald <> ein name <>  <> 50
 ist <> leokadia <> ein name <>  <> 50
-leon ist <> ein name <>  <>  <> 50
+ist <> leon <> ein name <>  <> 50
 ist <> leona <> ein name <>  <> 50
 ist <> leonhard <> ein name <>  <> 50
 ist <> leoni <> ein name <>  <> 50

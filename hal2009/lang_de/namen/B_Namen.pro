@@ -126,7 +126,7 @@ ist <> bosse <> ein name <>  <> 50
 ist <> botho <> ein name <>  <> 50
 ist <> braida <> ein name <>  <> 50
 ist <> brigitta <> ein name <>  <> 50
-brigitte ist <> ein name <>  <>  <> 50
+ist <> brigitte <> ein name <>  <> 50
 ist <> bringfried <> ein name <>  <> 50
 ist <> bringfriede <> ein name <>  <> 50
 ist <> briska <> ein name <>  <> 50

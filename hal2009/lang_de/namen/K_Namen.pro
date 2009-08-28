@@ -52,7 +52,7 @@ ist <> katrin <> ein name <>  <> 50
 ist <> katrina <> ein name <>  <> 50
 ist <> kay <> ein name <>  <> 50
 ist <> keanaja <> ein name <>  <> 50
-ken ist <> ein name <>  <>  <> 50
+ist <> ken <> ein name <>  <> 50
 ist <> kerrin <> ein name <>  <> 50
 ist <> kersten <> ein name <>  <> 50
 ist <> kevin <> ein name <>  <> 50

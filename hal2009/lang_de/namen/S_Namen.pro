@@ -5,7 +5,7 @@ ist <> sachso <> ein name <>  <> 50
 ist <> sahra <> ein name <>  <> 50
 ist <> salome <> ein name <>  <> 50
 ist <> salomo <> ein name <>  <> 50
-salomon ist <> ein name <>  <>  <> 50
+ist <> salomon <> ein name <>  <> 50
 ist <> salvator <> ein name <>  <> 50
 ist <> salvia <> ein name <>  <> 50
 ist <> salvina <> ein name <>  <> 50

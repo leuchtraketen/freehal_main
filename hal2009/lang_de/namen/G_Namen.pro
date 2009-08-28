@@ -36,7 +36,7 @@ ist <> gerfried <> ein name <>  <> 50
 ist <> gerhard <> ein name <>  <> 50
 ist <> gerharda <> ein name <>  <> 50
 ist <> gerharde <> ein name <>  <> 50
-gerhart ist <> ein name <>  <>  <> 50
+ist <> gerhart <> ein name <>  <> 50
 ist <> gerhild <> ein name <>  <> 50
 ist <> gerhilde <> ein name <>  <> 50
 ist <> gerlach <> ein name <>  <> 50
@@ -52,7 +52,7 @@ ist <> gero <> ein name <>  <> 50
 ist <> gerold <> ein name <>  <> 50
 ist <> gerolf <> ein name <>  <> 50
 ist <> gerry <> ein name <>  <> 50
-gert ist <> ein name <>  <>  <> 50
+ist <> gert <> ein name <>  <> 50
 ist <> gerti <> ein name <>  <> 50
 ist <> gertraud <> ein name <>  <> 50
 ist <> gertraut <> ein name <>  <> 50

@@ -139,7 +139,7 @@ ist <> ester <> ein name <>  <> 50
 ist <> esther <> ein name <>  <> 50
 ist <> etta <> ein name <>  <> 50
 ist <> eucharius <> ein name <>  <> 50
-eugen ist <> ein name <>  <>  <> 50
+ist <> eugen <> ein name  <>  <> 50
 ist <> eugenia <> ein name <>  <> 50
 ist <> eugenie <> ein name <>  <> 50
 ist <> euphemia <> ein name <>  <> 50

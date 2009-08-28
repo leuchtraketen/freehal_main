@@ -124,7 +124,7 @@ ist <> henrik <> ein name <>  <> 50
 ist <> henrika <> ein name <>  <> 50
 ist <> henrike <> ein name <>  <> 50
 ist <> herakles <> ein name <>  <> 50
-herbert ist <> ein name <>  <>  <> 50
+ist <> herbert <> ein name <>  <> 50
 ist <> heribert <> ein name <>  <> 50
 ist <> herlinde <> ein name <>  <> 50
 ist <> herma <> ein name <>  <> 50
@@ -178,7 +178,7 @@ ist <> homer <> ein name <>  <> 50
 ist <> honorius <> ein name <>  <> 50
 ist <> horaz <> ein name <>  <> 50
 ist <> horsa <> ein name <>  <> 50
-horst ist <> ein name <>  <>  <> 50
+ist <> horst <> ein name <>  <> 50
 ist <> hortensia <> ein name <>  <> 50
 ist <> hosea <> ein name <>  <> 50
 ist <> hrodeberht <> ein name <>  <> 50

@@ -20,7 +20,7 @@ ist <> taria <> ein name <>  <> 50
 ist <> tassilo <> ein name <>  <> 50
 ist <> tasso <> ein name <>  <> 50
 ist <> tatjana <> ein name <>  <> 50
-ist namen <> tega <> ein <>  <> 50
+ist <> tega <> ein name <>  <> 50
 ist <> teo <> ein name <>  <> 50
 ist <> terence <> ein name <>  <> 50
 ist <> terenz <> ein name <>  <> 50
