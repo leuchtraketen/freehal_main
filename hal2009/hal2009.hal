@@ -278,6 +278,7 @@ define action get_tag_part_of_speech with var word, var lang do
                 print "Got input."
                 print new line
                 do close with var input_handle
+                do wait 1 seconds
                 do unlink with '_input__pos'
                 do return using var response
             done
@@ -763,7 +764,8 @@ define action compute_tags with var word, var lang, var path do
     # CODE
     if is an empty array tags do
         set array tags to an empty array
-        set from array tags first item to get_tag_part_of_speech using var word, var lang
+        # set from array tags first item to get_tag_part_of_speech using var word, var lang
+        set from array tags first item to 'n'
         do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
     done
     
