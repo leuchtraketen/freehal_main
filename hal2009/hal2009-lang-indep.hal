@@ -582,7 +582,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     set new var e to 50
     while var e >= 0 do
-        do regex using var input: /var {mark}(<[^\s]>+?)\s(.*?)var {mark}/, "var {mark}$0_$1var {mark}", :global:i
+        do regex using var input: /var {mark}(<[^\svar mark]>+?)\s([^var mark]*?)var {mark}/, "var {mark}$0_$1var {mark}", :global:i
         set var e to var e - 1
     done
     do regex using var input: /var {mark}/, "_", :global:i
