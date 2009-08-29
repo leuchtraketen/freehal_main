@@ -560,9 +560,18 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
     do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
     do regex using var input: /what is /, "ISUNKNOWN ", :global:i
+    
+    set new var mark to "\""
 
-    do regex using var input: /in dem jahr (<[\d]>+)/, "in dem \"jahre $0\"", :global:i
-    do regex using var input: /in dem jahre (<[\d]>+)/, "in dem \"jahre $0\"", :global:i
+    do regex using var input: /in dem jahr (<[\d]>+)/, "in dem var {mark}jahre $0var {mark}", :global:i
+    do regex using var input: /in dem jahre (<[\d]>+)/, "in dem var {mark}jahre $0var {mark}", :global:i
+
+    set new var e to 50
+    while var e >= 0 do
+        do regex using var input: /var {mark}(<[^\s]>+?)\s(.*?)var {mark}/, "var {mark}$0_$1var {mark}", :global:i
+        set var e to var e - 1
+    done
+    do regex using var input: /var {mark}/, "_", :global:i
 
     do regex using var input: /^\s+/, "", :global:i
     do regex using var input: /\s+$/, "", :global:i
