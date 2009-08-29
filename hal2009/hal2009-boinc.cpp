@@ -43,7 +43,7 @@ void* cpu_thread (void* p) {
     options.send_status_msgs      = 1;
 
     
-    long max_seconds = 60 * 30;
+    long max_seconds = 60 * 90;
     long checkpoint_sec = 60;
     long checkpoint_cpu = 0;
 
