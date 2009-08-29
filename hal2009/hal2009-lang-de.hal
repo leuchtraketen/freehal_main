@@ -3289,7 +3289,7 @@ define action stem_nouns with array phrases do
             # TEXT
             # That's the stemming algorithm
             # CODE
-            if var noun matches /((ein)|(ie.)|(tes))$/ do
+            if var noun matches /((ein)|(ie.)|(tes)|(be))$/ do
                 go to next
             done
             
