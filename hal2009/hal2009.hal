@@ -2988,6 +2988,8 @@ define action init_pro_files with var current_language, var path do
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
+    push into array sub_directories, '/namen'   
+    push into array sub_directories, '/berufe'
     
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
