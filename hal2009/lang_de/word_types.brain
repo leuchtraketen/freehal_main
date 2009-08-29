@@ -1,3 +1,2245 @@
+_Account_Manager_:
+  genus  : m
+  type: n
+_Account_Managerin_:
+  genus  : f
+  type: n
+_Edv-Fachkraft_:
+  genus  : f
+  type: n
+_Edv-Sachbearbeiter_:
+  genus  : m
+  type: n
+_Edv-Sachbearbeiterin_:
+  genus  : f
+  type: n
+_Kfz-Mechaniker_:
+  genus  : m
+  type: n
+_Kfz-Mechanikerin_:
+  genus  : f
+  type: n
+_Service_Manager_:
+  genus  : m
+  type: n
+_Service_Managerin_:
+  genus  : f
+  type: n
+_Technische_Zeichnerin":
+  genus  : f
+  type: n
+_Technischer_Zeichner_:
+  genus  : m
+  type: n
+Abfallberater:
+  genus  : m
+  type: n
+Abfallberaterin:
+  genus  : f
+  type: n
+Abwassermeister:
+  genus  : m
+  type: n
+Abwassermeisterin:
+  genus  : f
+  type: n
+Aegyptologe:
+  genus  : m
+  type: n
+Aegyptologin:
+  genus  : f
+  type: n
+Akrobatin:
+  genus  : f
+  type: n
+Aenderungsschneider:
+  genus  : m
+  type: n
+Aenderungsschneiderin:
+  genus  : f
+  type: n
+Anlagenmechaniker:
+  genus  : m
+  type: n
+Anlagenmechanikerin:
+  genus  : f
+  type: n
+Apothekerin:
+  genus  : f
+  type: n
+Apparatebauer:
+  genus  : m
+  type: n
+Apparatebauerin:
+  genus  : f
+  type: n
+Archaeologe:
+  genus  : m
+  type: n
+Archaeologin:
+  genus  : f
+  type: n
+Architektin:
+  genus  : f
+  type: n
+Aerztin:
+  genus  : f
+  type: n
+Assistenzarzt:
+  genus  : m
+  type: n
+Assistenzarztaerztin:
+  genus  : f
+  type: n
+Astrologe:
+  genus  : m
+  type: n
+Astrologin:
+  genus  : f
+  type: n
+Auditor:
+  genus  : m
+  type: n
+Auditorin:
+  genus  : f
+  type: n
+Aufzugmonteur:
+  genus  : m
+  type: n
+Aufzugmonteurin:
+  genus  : f
+  type: n
+Ausbaufacharbeiter:
+  genus  : m
+  type: n
+Ausbaufacharbeiterin:
+  genus  : f
+  type: n
+Ausbaufachwerker:
+  genus  : m
+  type: n
+Ausbaufachwerkerin:
+  genus  : f
+  type: n
+Aussenhandelskaufmann:
+  genus  : m
+  type: n
+Aussenhandelskauffrau:
+  genus  : f
+  type: n
+Autolackierer:
+  genus  : m
+  type: n
+Autolackiererin:
+  genus  : f
+  type: n
+Autoverkaeufer:
+  genus  : m
+  type: n
+Autoverkaeuferin:
+  genus  : f
+  type: n
+Autowaescher:
+  genus  : m
+  type: n
+Autowaescherin:
+  genus  : f
+  type: n
+Baecker:
+  genus  : m
+  type: n
+Baeckerin:
+  genus  : f
+  type: n
+Backofenbauer:
+  genus  : m
+  type: n
+Backofenbauerin:
+  genus  : f
+  type: n
+Bandagist:
+  genus  : m
+  type: n
+Bandagistin:
+  genus  : f
+  type: n
+Bankettleiter:
+  genus  : m
+  type: n
+Bankettleiterassistent:
+  genus  : m
+  type: n
+Bankettleiterassistentin:
+  genus  : f
+  type: n
+Bankettleiterin:
+  genus  : f
+  type: n
+Barkellner:
+  genus  : m
+  type: n
+Barkellnerin:
+  genus  : f
+  type: n
+Barmeister:
+  genus  : m
+  type: n
+Barmeisterin:
+  genus  : f
+  type: n
+Baudenkmalpflegerin:
+  genus  : f
+  type: n
+Baugeraetefuehrer:
+  genus  : m
+  type: n
+Bautenbeschichter:
+  genus  : m
+  type: n
+Bautenobjektbeschichterin:
+  genus  : f
+  type: n
+Bauzeichner:
+  genus  : m
+  type: n
+Bauzeichnerin:
+  genus  : f
+  type: n
+Beamtin:
+  genus  : f
+  type: n
+Beerdiger:
+  genus  : m
+  type: n
+Berechnungsingenieur:
+  genus  : m
+  type: n
+Berechnungsingenieurin:
+  genus  : f
+  type: n
+Berufskraftfahrer:
+  genus  : m
+  type: n
+Berufskraftfahrerin:
+  genus  : f
+  type: n
+Bestattungsfachkraft:
+  genus  : f
+  type: n
+Betonbauer:
+  genus  : m
+  type: n
+Betonbauerin:
+  genus  : f
+  type: n
+Betriebsleiterin:
+  genus  : f
+  type: n
+Betriebswirtin:
+  genus  : f
+  type: n
+Bodenleger:
+  genus  : m
+  type: n
+Bodenlegerin:
+  genus  : f
+  type: n
+Bogenmacher:
+  genus  : m
+  type: n
+Bogenmacherin:
+  genus  : f
+  type: n
+Bootsbauer:
+  genus  : m
+  type: n
+Bootsbauerin:
+  genus  : f
+  type: n
+Boettcher:
+  genus  : m
+  type: n
+Boettcherin:
+  genus  : f
+  type: n
+Brautechniker:
+  genus  : m
+  type: n
+Buchbinder:
+  genus  : m
+  type: n
+Buchbinderin:
+  genus  : f
+  type: n
+Buchhaendler:
+  genus  : m
+  type: n
+Buchhaendlerin:
+  genus  : f
+  type: n
+Buechsenmacher:
+  genus  : m
+  type: n
+Buechsenmacherin:
+  genus  : f
+  type: n
+Buefettkraft:
+  genus  : f
+  type: n
+Buegler:
+  genus  : m
+  type: n
+Bueglerin:
+  genus  : f
+  type: n
+Buehnenmaler:
+  genus  : m
+  type: n
+Buehnenmalerin:
+  genus  : f
+  type: n
+Buehnentaenzer:
+  genus  : m
+  type: n
+Buehnentaenzerin:
+  genus  : f
+  type: n
+Buerokauffrau:
+  genus  : f
+  type: n
+Buerokaufmann:
+  genus  : m
+  type: n
+Bueromaschinenmechaniker:
+  genus  : m
+  type: n
+Bueromaschinenmechanikerin:
+  genus  : f
+  type: n
+Chefaerztin:
+  genus  : f
+  type: n
+Chefportier:
+  genus  : m
+  type: n
+Chemielaborant:
+  genus  : m
+  type: n
+Chemielaborantin:
+  genus  : f
+  type: n
+Chemikantin:
+  genus  : f
+  type: n
+Chiefsteward:
+  genus  : m
+  type: n
+Chiefstewardess:
+  genus  : f
+  type: n
+Chirurgiemechaniker:
+  genus  : m
+  type: n
+Chirurgiemechanikerin:
+  genus  : f
+  type: n
+Choreograf:
+  genus  : m
+  type: n
+Choreografin:
+  genus  : f
+  type: n
+Computergrafiker:
+  genus  : m
+  type: n
+Computergrafikerin:
+  genus  : f
+  type: n
+Damenmassschneider:
+  genus  : m
+  type: n
+Damenmassschneiderin:
+  genus  : f
+  type: n
+Dekorationsnaeher:
+  genus  : m  
+  type: n
+Dekorationsnaeherin:
+  genus  : f
+  type: n
+Demograf:
+  genus  : m
+  type: n
+Demografin:
+  genus  : f
+  type: n
+Dentistin:
+  genus  : f
+  type: n
+Designerin:
+  genus  : f
+  type: n
+Diplomkrankenpfleger:
+  genus  : m
+  type: n
+Diplomkrankenschwester:
+  genus  : f
+  type: n
+Dolmetscherin:
+  genus  : f
+  type: n
+Drechslerin:
+  genus  : f
+  type: n
+Dressman:
+  genus  : m
+  type: n
+Edelsteingraveur:
+  genus  : m
+  type: n
+Edelsteingraveurin:
+  genus  : f
+  type: n
+Edelsteinschleifer:
+  genus  : m
+  type: n
+Edelsteinschleiferin:
+  genus  : f
+  type: n
+Eisenbahnerin:
+  genus  : f
+  type: n
+Elektromonteurin:
+  genus  : f
+  type: n
+Elektronikerin:
+  genus  : f
+  type: n
+Elektrotechniker:
+  genus  : m
+  type: n
+Elektrotechnikerin:
+  genus  : f
+  type: n
+Empfangsassistent:
+  genus  : m
+  type: n
+Empfangsassistentin:
+  genus  : f
+  type: n
+Empfangschefin:
+  genus  : f
+  type: n
+Empfangsmitarbeiter:
+  genus  : m
+  type: n
+Empfangsmitarbeiterin:
+  genus  : f
+  type: n
+Energieberater:
+  genus  : m
+  type: n
+Energieberaterin:
+  genus  : f
+  type: n
+Ernaehrungsberater:
+  genus  : m
+  type: n
+Ernaehrungsberaterin:
+  genus  : f
+  type: n
+Erzieherin:
+  genus  : f
+  type: n
+Estrichleger:
+  genus  : m
+  type: n
+Estrichlegerin:
+  genus  : f
+  type: n
+Etagenaufsicht:
+  genus  : f
+  type: n
+Etagenkellner:
+  genus  : m
+  type: n
+Etagenkellnerin:
+  genus  : f
+  type: n
+Etagenoberkellner:
+  genus  : m
+  type: n
+Etagenoberkellnerin:
+  genus  : f
+  type: n
+Fachassistent:
+  genus  : m
+  type: n
+Fachassistentin:
+  genus  : f
+  type: n
+Fachinformatiker:
+  genus  : m
+  type: n
+Fachinformatikerin:
+  genus  : f
+  type: n
+Fachkrankenschwester:
+  genus  : f
+  type: n
+Fachkrankenspfleger:
+  genus  : m
+  type: n
+Fachunteroffizier:
+  genus  : m
+  type: n
+Fachverkaeufer:
+  genus  : m
+  type: n
+Fachverkaeuferin:
+  genus  : f
+  type: n
+Fahrradmonteur:
+  genus  : m
+  type: n
+Fahrradmonteurin:
+  genus  : f
+  type: n
+Fahrzeugbauer:
+  genus  : m
+  type: n
+Fahrzeugbauerin:
+  genus  : f
+  type: n
+Fahrzeugbaumechaniker:
+  genus  : m
+  type: n
+Fahrzeugbaumechanikerin:
+  genus  : f
+  type: n
+Fahrzeuglackierer:
+  genus  : m
+  type: n
+Fahrzeuglackiererin:
+  genus  : f
+  type: n
+Fahrzeugpfleger:
+  genus  : m
+  type: n
+Fahrzeugpflegerin:
+  genus  : f
+  type: n
+Falkner:
+  genus  : f
+  type: n
+Falknerin:
+  genus  : f
+  type: n
+Faerber:
+  genus  : m
+  type: n
+Faerberin:
+  genus  : f
+  type: n
+Fassadenreiniger:
+  genus  : m
+  type: n
+Fassadenreinigerin:
+  genus  : f
+  type: n
+Feinoptiker:
+  genus  : m
+  type: n
+Feinoptikerin:
+  genus  : f
+  type: n
+Feinoptikermeister:
+  genus  : m
+  type: n
+Feinoptikermeisterin:
+  genus  : f
+  type: n
+Feinwerkmechaniker:
+  genus  : m
+  type: n
+Feinwerkmechanikerin:
+  genus  : f
+  type: n
+Fernsehmoderator:
+  genus  : m
+  type: n
+Fernsehmoderatorin:
+  genus  : f
+  type: n
+Festwirt:
+  genus  : m
+  type: n
+Festwirtin:
+  genus  : f
+  type: n
+Feuerungsbauer:
+  genus  : m
+  type: n
+Feuerungsbauerin:
+  genus  : f
+  type: n
+Fischerin:
+  genus  : m
+  type: n
+Fitnesstrainer:
+  genus  : m
+  type: n
+Fitnesstrainerin:
+  genus  : f
+  type: n
+Flechtwerkgestalter:
+  genus  : m
+  type: n
+Flechtwerkgestalterin:
+  genus  : f
+  type: n
+Fleischerin:
+  genus  : m
+  type: n
+Fleischhauerin:
+  genus  : f
+  type: n
+Flexograf:
+  genus  : m
+  type: n
+Flexografin:
+  genus  : f
+  type: n
+Fliesenlegerin:
+  genus  : f
+  type: n
+Floristin:
+  genus  : f
+  type: n
+Fluggeraetmechaniker:
+  genus  : f
+  type: n
+Fluggeraetmechanikerin:
+  genus  : m
+  type: n
+Flugzeugreiniger:
+  genus  : f
+  type: n
+Flugzeugreinigerin:
+  genus  : f
+  type: n
+Forstarbeiter:
+  genus  : m
+  type: n
+Forstarbeiterin:
+  genus  : f
+  type: n
+Foerster:
+  genus  : m
+  type: n
+Foersterin:
+  genus  : f
+  type: n
+Fotomedienlaborant:
+  genus  : m
+  type: n
+Fotomedienlaborantin:
+  genus  : f
+  type: n
+Fotomodell:
+  genus  : s
+  type: n
+Fremdenfuehrer:
+  genus  : m
+  type: n
+Fremdenfuehrerin:
+  genus  : f
+  type: n
+Galvaniseur:
+  genus  : m
+  type: n
+Galvaniseurin:
+  genus  : f
+  type: n
+Galvaniseurmeister:
+  genus  : m
+  type: n
+Galvaniseurmeisterin:
+  genus  : f
+  type: n
+Gaertner:
+  genus  : m
+  type: n
+Gaertnerin:
+  genus  : f
+  type: n
+Gaestebetreuer:
+  genus  : m
+  type: n
+Gaestebetreuerin:
+  genus  : f
+  type: n
+Gebaeudereiniger:
+  genus  : m
+  type: n
+Gebaeudereinigerin:
+  genus  : f
+  type: n
+Gebaeudereinigermeister:
+  genus  : m
+  type: n
+Gebaeudereinigermeisterin:
+  genus  : f
+  type: n
+Geigenbauerin:
+  genus  : f
+  type: n
+Genetiker:
+  genus  : m
+  type: n
+Genetikerin:
+  genus  : f
+  type: n
+Geologe:
+  genus  : m
+  type: n
+Geologin:
+  genus  : f
+  type: n
+Gerichtsvollzieher:
+  genus  : m
+  type: n
+Gerichtsvollzieherin:
+  genus  : f
+  type: n
+Germanist:
+  genus  : m
+  type: n
+Germanistin:
+  genus  : f
+  type: n
+Geruestbauer:
+  genus  : m
+  type: n
+Geruestbauerin:
+  genus  : f
+  type: n
+Glasapparatebauer:
+  genus  : m
+  type: n
+Glasapparatebauerin:
+  genus  : f
+  type: n
+Glasblaeser:
+  genus  : m
+  type: n
+Glasblaeserin:
+  genus  : f
+  type: n
+Glaser:
+  genus  : m
+  type: n
+Glaserin:
+  genus  : f
+  type: n
+Glasmacher:
+  genus  : m
+  type: n
+Glasmacherin:
+  genus  : f
+  type: n
+Glasmaler:
+  genus  : m
+  type: n
+Glasmalerin:
+  genus  : f
+  type: n
+Glasschmelzer:
+  genus  : m
+  type: n
+Glasschmelzerin:
+  genus  : f
+  type: n
+Glasveredler:
+  genus  : m
+  type: n
+Glasveredlerin:
+  genus  : f
+  type: n
+Glockengiesser:
+  genus  : m
+  type: n
+Glockengiesserin:
+  genus  : f
+  type: n
+Goldschmied:
+  genus  : m
+  type: n
+Goldschmiedin:
+  genus  : f
+  type: n
+Grafiker:
+  genus  : m
+  type: n
+Grafikerin:
+  genus  : f
+  type: n
+Graveur:
+  genus  : m
+  type: n
+Graveurin:
+  genus  : f
+  type: n
+Grosshandelskaufmann:
+  genus  : m
+  type: n
+Grosshandelskauffrau:
+  genus  : m
+  type: n
+Gummiarbeiter:
+  genus  : m
+  type: n
+Gummiarbeiterin:
+  genus  : f
+  type: n
+Guertler:
+  genus  : m
+  type: n
+Guertlerin:
+  genus  : f
+  type: n
+Hallenchef:
+  genus  : m
+  type: n
+Hallenchefin:
+  genus  : f
+  type: n
+Handelsvertreterin:
+  genus  : m
+  type: n
+Haendler:
+  genus  : m
+  type: n
+Haendlerin:
+  genus  : f
+  type: n
+Handschuhmacher:
+  genus  : m
+  type: n
+Handschuhmacherin:
+  genus  : f
+  type: n
+Handzuginstrumentenmacher:
+  genus  : m
+  type: n
+Handzuginstrumentenmacherin:
+  genus  : f
+  type: n
+Hausdame:
+  genus  : m
+  type: n
+Hausmeisterin:
+  genus  : f
+  type: n
+Haustechniker:
+  genus  : m
+  type: n
+Haustechnikerin:
+  genus  : f
+  type: n
+Hauswirtschaftsverwalter:
+  genus  : m
+  type: n
+Hauswirtschaftsverwalterin:
+  genus  : f
+  type: n
+Heilpaedagoge:
+  genus  : m
+  type: n
+Heilpaedagogin:
+  genus  : f
+  type: n
+Herrenmassschneider:
+  genus  : m
+  type: n
+Herrenmassschneiderin:
+  genus  : f
+  type: n
+Historikerin:
+  genus  : f
+  type: n
+Hochbaufacharbeiter:
+  genus  : m
+  type: n
+Hochbaufacharbeiterin:
+  genus  : f
+  type: n
+Hochbaufachwerker:
+  genus  : m
+  type: n
+Hochbaufachwerkerin:
+  genus  : f
+  type: n
+Holzbildhauer:
+  genus  : m
+  type: n
+Holzbildhauerin:
+  genus  : f
+  type: n
+Holzblasinstrumentenmacher:
+  genus  : m
+  type: n
+Holzblasinstrumentenmacherin:
+  genus  : f
+  type: n
+Holzmechaniker:
+  genus  : m
+  type: n
+Holzmechanikerin:
+  genus  : f
+  type: n
+Holzspielzeugmacher:
+  genus  : m
+  type: n
+Holzspielzeugmacherin:
+  genus  : f
+  type: n
+Hoerfunkmoderator:
+  genus  : m
+  type: n
+Hoerfunkmoderatorin:
+  genus  : f
+  type: n
+Hoergeraeteakustiker:
+  genus  : m
+  type: n
+Hoergeraeteakustikerin:
+  genus  : f
+  type: n
+Hotelangestellte:
+  type: n
+Hotelangestellter:
+  type: n
+Hotelfachfrau:
+  genus  : f
+  type: n
+Hotelfachmann:
+  genus  : m
+  type: n
+Hotelmeister:
+  genus  : m
+  type: n
+Hotelmeisterin:
+  genus  : f
+  type: n
+Housekeeper:
+  genus  : m
+  type: n
+Imkerin:
+  genus  : f
+  type: n
+Informatikerin:
+  genus  : f
+  type: n
+Informationselektroniker:
+  genus  : m
+  genus  : m
+  type: n
+Informationselektronikerin:
+  genus  : f
+  type: n
+Ingenieurin:
+  genus  : f
+  type: n
+Innenausbautechniker:
+  genus  : m
+  type: n
+Innenausbautechnikerin:
+  genus  : f
+  type: n
+Installateurin:
+  genus  : f
+  type: n
+Isolierer:
+  genus  : m
+  type: n
+Isoliererin:
+  genus  : f
+  type: n
+Jaeger:
+  genus  : m
+  type: n
+Jaegerin:
+  genus  : f
+  type: n
+Journalist:
+  genus  : m
+  type: n
+Journalistin:
+  genus  : f
+  type: n
+Juristin:
+  genus  : f
+  type: n
+Justizbeamter:
+  genus  : m
+  type: n
+Justizbeamtin:
+  genus  : f
+  type: n
+Kachelofenbauer:
+  genus  : m
+  type: n
+Kachelofenbauerin:
+  genus  : f
+  type: n
+Kaelteanlagenbauer:
+  genus  : m
+  type: n
+Kaelteanlagenbauerin:
+  genus  : f
+  type: n
+Kanalbauer:
+  genus  : m
+  type: n
+Kanalbauerin:
+  genus  : f
+  type: n
+Kantinenangestellte:
+  genus  : f
+  type: n
+Kantinenangestellter:
+  genus  : m
+  type: n
+Kapitaen:
+  genus  : m
+  type: n
+Karosseriebauer:
+  genus  : m
+  type: n
+Karosseriebauerin:
+  genus  : f
+  type: n
+Karosseriemechaniker:
+  genus  : m
+  type: n
+Karosseriemechanikerin:
+  genus  : f
+  type: n
+Kartonagenmacher:
+  genus  : m
+  type: n
+Kartonagenmacherin:
+  genus  : f
+  type: n
+Kauffrau:
+  genus  : m
+  type: n
+Kellermeister:
+  genus  : m
+  type: n
+Kellermeisterin:
+  genus  : f
+  type: n
+Keramiker:
+  genus  : m
+  type: n
+Keramikerin:
+  genus  : f
+  type: n
+Kerammodelleinrichter:
+  genus  : m
+  type: n
+Kerammodelleinrichterin:
+  genus  : f
+  type: n
+Kerammodelleur:
+  genus  : m
+  type: n
+Kerammodelleurin:
+  genus  : f
+  type: n
+Kindergaertner:
+  genus  : m
+  type: n
+Kindergaertnerin:
+  genus  : f
+  type: n
+Klavierbauer:
+  genus  : m
+  type: n
+Klavierbauerin:
+  genus  : f
+  type: n
+Klempnerin:
+  genus  : f
+  type: n
+Komponist:
+  genus  : f
+  type: n
+Komponistin:
+  genus  : f
+  type: n
+Konditor:
+  genus  : m
+  type: n
+Konditorin:
+  genus  : f
+  type: n
+Konstrukteurin:
+  genus  : f
+  type: n
+Konstruktionsmechaniker:
+  genus  : m
+  type: n
+Konstruktionsmechanikerin:
+  genus  : f
+  type: n
+Kosmetikerin:
+  genus  : f
+  type: n
+Kraftfahrzeugmechatroniker:
+  genus  : m
+  type: n
+Kraftfahrzeugmechatronikerin:
+  genus  : f
+  type: n
+Krankenpfleger:
+  genus  : m
+  type: n
+Kriminalbeamtin:
+  genus  : f
+  type: n
+Kuechenchef:
+  genus  : m
+  type: n
+Kuechenchefin:
+  genus  : f
+  type: n
+Kundendienstberater:
+  genus  : m
+  type: n
+Kundendienstberaterin:
+  genus  : f
+  type: n
+Kunstglasmacher:
+  genus  : m
+  type: n
+Kunstglasmacherin:
+  genus  : f
+  type: n
+Kunsthaendler:
+  genus  : m
+  type: n
+Kunsthaendlerin:
+  genus  : f
+  type: n
+Kunstschmied:
+  genus  : m
+  type: n
+Kunstschmiedin:
+  genus  : f
+  type: n
+Kupferschmied:
+  genus  : m
+  type: n
+Kupferschmiedin:
+  genus  : f
+  type: n
+Kuerschner:
+  genus  : m
+  type: n
+Kuerschnerin:
+  genus  : f
+  type: n
+Kuester:
+  genus  : m
+  type: n
+Kuesterin:
+  genus  : f
+  type: n
+Lackierer:
+  genus  : m
+  type: n
+Lackiererin:
+  genus  : f
+  type: n
+Landmaschinenmechaniker:
+  genus  : m
+  type: n
+Landmaschinenmechanikerin:
+  genus  : f
+  type: n
+Landwirtin:
+  genus  : m
+  type: n
+Lebensmitteltechniker:
+  genus  : f
+  type: n
+Lebensmitteltechnikerin:
+  genus  : f
+  type: n
+Lehrerin:
+  genus  : f
+  type: n
+Linguist:
+  genus  : m
+  type: n
+Linguistin:
+  genus  : f
+  type: n
+Logotherapeut:
+  genus  : m
+  type: n
+Logotherapeutin:
+  genus  : f
+  type: n
+Lotsin:
+  genus  : f
+  type: n
+Luftheizungsbauer:
+  genus  : m
+  type: n
+Luftheizungsbauerin:
+  genus  : f
+  type: n
+Maklerin:
+  genus  : f
+  type: n
+Malerin:
+  genus  : f
+  type: n
+Managerin:
+  genus  : m
+  type: n
+Marionettenspieler:
+  genus  : m
+  type: n
+Marionettenspielerin:
+  genus  : f
+  type: n
+Maschinenglasmacher:
+  genus  : m
+  type: n
+Maschinenglasmacherin:
+  genus  : f
+  type: n
+Maschinist:
+  genus  : m
+  type: n
+Maschinistin:
+  genus  : f
+  type: n
+Maskenbildner:
+  genus  : m
+  type: n
+Maskenbildnerin:
+  genus  : f
+  type: n
+Masseur:
+  genus  : m
+  type: n
+Massschneider:
+  genus  : m
+  type: n
+Massschneiderin:
+  genus  : f
+  type: n
+Maurer:
+  genus  : m
+  type: n
+Maurerin:
+  genus  : f
+  type: n
+Mechaniker:
+  genus  : m
+  type: n
+Mechanikerin:
+  genus  : f
+  type: n
+Mechatroniker:
+  genus  : m
+  type: n
+Mechatronikerin:
+  genus  : f
+  type: n
+Mediengestalter:
+  genus  : m
+  type: n
+Mediengestalterin:
+  genus  : f
+  type: n
+Metallbauer:
+  genus  : m
+  type: n
+Metallbauerin:
+  genus  : f
+  type: n
+Metallbildner:
+  genus  : m
+  type: n
+Metallbildnerin:
+  genus  : f
+  type: n
+Metallblasinstrumentenmacher:
+  genus  : m
+  type: n
+Metallblasinstrumentenmacherin:
+  genus  : f
+  type: n
+Metallgiesser:
+  genus  : m
+  type: n
+Metallgiesserin:
+  genus  : f
+  type: n
+Metzger:
+  genus  : m
+  type: n
+Metzgerin:
+  genus  : f
+  type: n
+Mikrobiologe:
+  genus  : m
+  type: n
+Mikrobiologin:
+  genus  : f
+  type: n
+Modellbauer:
+  genus  : f
+  type: n
+Modellbauerin:
+  genus  : f
+  type: n
+Modist:
+  genus  : m
+  type: n
+Modistin:
+  genus  : f
+  type: n
+Molekularbiologe:
+  genus  : m
+  type: n
+Molekularbiologin:
+  genus  : f
+  type: n
+Motorradmechaniker:
+  genus  : m
+  type: n
+Motorradmechanikerin:
+  genus  : f
+  type: n
+Mueller:
+  genus  : m
+  type: n
+Muellerin:
+  genus  : f
+  type: n
+Musiker:
+  genus  : m
+  type: n
+Musikerin:
+  genus  : f
+  type: n
+Nachtportier:
+  genus  : m
+  type: n
+Naehmaschinenmechaniker:
+  genus  : f
+  type: n
+Naehmaschinenmechanikerin:
+  genus  : m
+  type: n
+Nautiker:
+  genus  : m
+  type: n
+Nautikerin:
+  genus  : f
+  type: n
+Niederlassungsleiter:
+  genus  : m
+  type: n
+Niederlassungsleiterin:
+  genus  : f
+  type: n
+Notarzt:
+  genus  : m
+  type: n
+Notaerztin:
+  genus  : f
+  type: n
+Oberflaechenbeschichter:
+  genus  : m
+  type: n
+Oberflaechenbeschichterin:
+  genus  : f
+  type: n
+Oberkellner:
+  genus  : m
+  type: n
+Oberkellnerin:
+  genus  : f
+  type: n
+Objektbeschichter:
+  genus  : m
+  type: n
+Objektbeschichterin:
+  genus  : f
+  type: n
+Ofenbauer:
+  genus  : m
+  type: n
+Ofenbauerin:
+  genus  : f
+  type: n
+Oekonom:
+  genus  : m
+  type: n
+Oekonomin:
+  genus  : f
+  type: n
+Oekotrophologe:
+  genus  : m
+  type: n
+Oekotrophologein:
+  genus  : f
+  type: n
+Optiker:
+  genus  : m
+  type: n
+Optikerin:
+  genus  : f
+  type: n
+Orgelbauer:
+  genus  : m
+  type: n
+Orgelbauerin:
+  genus  : f
+  type: n
+Orthopaediemechaniker:
+  genus  : m
+  type: n
+Orthopaediemechanikerin:
+  genus  : f
+  type: n
+Orthopaedieschuhmacher:
+  genus  : m
+  type: n
+Orthopaedieschuhmacherin:
+  genus  : f
+  type: n
+Papiermacher:
+  genus  : m
+  type: n
+Papiermacherin:
+  genus  : f
+  type: n
+Parkettleger:
+  genus  : m
+  type: n
+Parkettlegerin:
+  genus  : f
+  type: n
+Perueckenmacher:
+  genus  : m
+  type: n
+Perueckenmacherin:
+  genus  : f
+  type: n
+Pharmareferent:
+  genus  : m
+  type: n
+Pharmareferentin:
+  genus  : f
+  type: n
+Pilotin:
+  genus  : f
+  type: n
+Polierin:
+  genus  : f
+  type: n
+Polizist:
+  genus  : m
+  type: n
+Polizistin:
+  genus  : f
+  type: n
+Porzellanmaler:
+  genus  : m
+  type: n
+Porzellanmalerin:
+  genus  : m
+  type: n
+Postbeamtin:
+  genus  : f
+  type: n
+Postlerin:
+  genus  : f
+  type: n
+Praeparator:
+  genus  : m
+  type: n
+Praeparatorin:
+  genus  : f
+  type: n
+Programmierer:
+  genus  : m
+  type: n
+Programmiererin:
+  genus  : f
+  type: n
+Pyrotechniker:
+  genus  : m
+  type: n
+Pyrotechnikerin:
+  genus  : f
+  type: n
+Qualitaetspruefer:
+  genus  : m
+  type: n
+Qualitaetsprueferin:
+  genus  : f
+  type: n
+Rauchfangkehrer:
+  genus  : m
+  type: n
+Rauchfangkehrerin:
+  genus  : f
+  type: n
+Raumausstatter:
+  genus  : m
+  type: n
+Raumausstatterin:
+  genus  : f
+  type: n
+Rechtsanwaeltin:
+  genus  : f
+  type: n
+Reifenmacher:
+  genus  : m
+  type: n
+Reifenmacherin:
+  genus  : f
+  type: n
+Reifenmonteur:
+  genus  : m
+  type: n
+Reifenmonteurin:
+  genus  : f
+  type: n
+Reiseleiter:
+  genus  : m
+  type: n
+Reiseleiterin:
+  genus  : f
+  type: n
+Reservierungssachbearbeiter:
+  genus  : m
+  type: n
+Reservierungssachbearbeiterin:
+  genus  : f
+  type: n
+Restaurantfachfrau:
+  genus  : f
+  type: n
+Restaurantfachmann:
+  genus  : m
+  type: n
+Restaurantmeister:
+  genus  : m
+  type: n
+Restaurantmeisterin:
+  genus  : f
+  type: n
+Rettungsschwimmer:
+  genus  : m
+  type: n
+Rettungsschwimmerin:
+  genus  : f
+  type: n
+Richterin:
+  genus  : f
+  type: n
+Roomboy:
+  genus  : m
+  type: n
+Saenger:
+  genus  : m
+  type: n
+Saengerin:
+  genus  : f
+  type: n
+Sanitaeter:
+  genus  : m
+  type: n
+Sanitaeterin:
+  genus  : f
+  type: n
+Sattler:
+  genus  : m
+  type: n
+Sattlerin:
+  genus  : f
+  type: n
+Schaedlingsbekaempfer:
+  genus  : m
+  type: n
+Schaedlingsbekaempferin:
+  genus  : f
+  type: n
+Schallschutzisolierer:
+  genus  : m
+  type: n
+Schallschutzisoliererin:
+  genus  : f
+  type: n
+Schankanlagenreiniger:
+  genus  : m
+  type: n
+Schankanlagenreinigerin:
+  genus  : f
+  type: n
+Schichtfuehrer:
+  genus  : m
+  type: n
+Schichtfuehrerin:
+  genus  : f
+  type: n
+Schienenfahrzeugreiniger:
+  genus  : m
+  type: n
+Schienenfahrzeugreinigerin:
+  genus  : f
+  type: n
+Schiffbauer:
+  genus  : m
+  type: n
+Schiffbauerin:
+  genus  : f
+  type: n
+Schiffsreiniger:
+  genus  : m
+  type: n
+Schiffsreinigerin:
+  genus  : f
+  type: n
+Schiffssteward:
+  genus  : m
+  type: n
+Schiffsstewardess:
+  genus  : f
+  type: n
+Schlachterin:
+  genus  : f
+  type: n
+Schlafwagenschaffner:
+  genus  : m
+  type: n
+Schlafwagenschaffnerin:
+  genus  : f
+  type: n
+Schleiferin:
+  genus  : f
+  type: n
+Schlosser:
+  genus  : m
+  type: n
+Schlosserin:
+  genus  : f
+  type: n
+Schmiedin:
+  genus  : f
+  type: n
+Schneider:
+  genus  : m
+  type: n
+Schneiderin:
+  genus  : f
+  type: n
+Schneidwerkzeugmechaniker:
+  genus  : m
+  type: n
+Schneidwerkzeugmechanikerin:
+  genus  : f
+  type: n
+Schornsteinbauer:
+  genus  : m
+  type: n
+Schornsteinbauerin:
+  genus  : f
+  type: n
+Schornsteinfeger:
+  genus  : m
+  type: n
+Schornsteinfegerin:
+  genus  : f
+  type: n
+Schriftsetzermeister:
+  genus  : m
+  type: n
+Schriftsetzermeisterin:
+  genus  : f
+  type: n
+Schuhmacher:
+  genus  : m
+  type: n
+Schuhmacherin:
+  genus  : f
+  type: n
+Schusterin:
+  genus  : f
+  type: n
+Schweinezuechter:
+  genus  : m
+  type: n
+Schweinezuechterin:
+  genus  : f
+  type: n
+Schweisser:
+  genus  : m
+  type: n
+Schweisserin:
+  genus  : f
+  type: n
+Segelmacher:
+  genus  : m
+  type: n
+Segelmacherin:
+  genus  : f
+  type: n
+Seiler:
+  genus  : m
+  type: n
+Seilerin:
+  genus  : f
+  type: n
+Sekretaer:
+  genus  : m
+  type: n
+Sekretaerin:
+  genus  : f
+  type: n
+Servicetechniker:
+  genus  : m
+  type: n
+Servicetechnikerin:
+  genus  : f
+  type: n
+Servierer:
+  genus  : m
+  type: n
+Serviererin:
+  genus  : f
+  type: n
+Siebdrucker:
+  genus  : m
+  type: n
+Siebdruckerin:
+  genus  : f
+  type: n
+Silberschmied:
+  genus  : m
+  type: n
+Silberschmiedin:
+  genus  : f
+  type: n
+Skilehrer:
+  genus  : m
+  type: n
+Skilehrerin:
+  genus  : f
+  type: n
+Soldatin:
+  genus  : f
+  type: n
+Sozialhelfer:
+  genus  : m
+  type: n
+Sozialhelferin:
+  genus  : f
+  type: n
+Sozialwirt:
+  genus  : m
+  type: n
+Sozialwirtin:
+  genus  : f
+  type: n
+Soziologin:
+  genus  : f
+  type: n
+Spielzeugmacher:
+  genus  : m
+  type: n
+Spielzeugmacherin:
+  genus  : f
+  type: n
+Sportlehrer:
+  genus  : m
+  type: n
+Sportlehrerin:
+  genus  : f
+  type: n
+Sporttherapeut:
+  genus  : m
+  type: n
+Sporttherapeutin:
+  genus  : f
+  type: n
+Sprechwissenschaftlerin:
+  genus  : f
+  type: n
+Sprengmeister:
+  genus  : m
+  type: n
+Sprengmeisterin:
+  genus  : f
+  type: n
+Staatsanwalt:
+  genus  : m
+  type: n
+Staatsanwaeltin:
+  genus  : f
+  type: n
+Stahlbauer:
+  genus  : m
+  type: n
+Stahlbauerin:
+  genus  : f
+  type: n
+Stahlbetonbauer:
+  genus  : m
+  type: n
+Stahlbetonbauerin:
+  genus  : f
+  type: n
+Steinbildhauerin:
+  genus  : f
+  type: n
+Steinmetz:
+  genus  : m
+  type: n
+Steinmetzin:
+  genus  : f
+  type: n
+Stempelmacher:
+  genus  : m
+  type: n
+Stempelmacherin:
+  genus  : f
+  type: n
+Stickerin:
+  genus  : f
+  type: n
+Strahlenschutzfachkraft:
+  genus  : f
+  type: n
+Strassenbauer:
+  genus  : m
+  type: n
+Strassenbauerin:
+  genus  : f
+  type: n
+Strassenreiniger:
+  genus  : m
+  type: n
+Strassenreinigerin:
+  genus  : f
+  type: n
+Stricker:
+  genus  : m
+  type: n
+Strickerin:
+  genus  : f
+  type: n
+Stukkateur:
+  genus  : m
+  type: n
+Stukkateurin:
+  genus  : f
+  type: n
+Systemelektroniker:
+  genus  : m
+  type: n
+Systemelektronikerin:
+  genus  : f
+  type: n
+Systeminformatiker:
+  genus  : m
+  type: n
+Systeminformatikerin:
+  genus  : f
+  type: n
+Taenzer:
+  genus  : m
+  type: n
+Taenzerin:
+  genus  : f
+  type: n
+Taucher:
+  genus  : m
+  type: n
+Taucherin:
+  genus  : f
+  type: n
+Taxifahrerin:
+  genus  : f
+  type: n
+Techniker:
+  genus  : m
+  type: n
+Technikerin:
+  genus  : f
+  type: n
+Textilreiniger:
+  genus  : m
+  type: n
+Textilreinigerin:
+  genus  : f
+  type: n
+Theologe:
+  genus  : m
+  type: n
+Theologin:
+  genus  : f
+  type: n
+Therapeutin:
+  genus  : f
+  type: n
+Thermometermacher:
+  genus  : m
+  type: n
+Thermometermacherin:
+  genus  : f
+  type: n
+Tiefbaufacharbeiter:
+  genus  : m
+  type: n
+Tiefbaufacharbeiterin:
+  genus  : f
+  type: n
+Tiefbaufachwerker:
+  genus  : m
+  type: n
+Tiefbaufachwerkerin:
+  genus  : f
+  type: n
+Tieraerztin:
+  genus  : f
+  type: n
+Tierpfleger:
+  genus  : m
+  type: n
+Tierpflegerin:
+  genus  : f
+  type: n
+Tischlerin:
+  genus  : f
+  type: n
+Toepfer:
+  genus  : m
+  type: n
+Toepferin:
+  genus  : f
+  type: n
+Totengraeber:
+  genus  : m
+  type: n
+Touristikmanager:
+  genus  : m
+  type: n
+Touristikmanagerin:
+  genus  : f
+  type: n
+Trainerin:
+  genus  : f
+  type: n
+Trockenbaumonteur:
+  genus  : m
+  type: n
+Trockenbaumonteurin:
+  genus  : f
+  type: n
+Uhrmacherin:
+  genus  : f
+  type: n
+Umweltberater:
+  genus  : m
+  type: n
+Umweltberaterin:
+  genus  : f
+  type: n
+Umwelttechniker:
+  genus  : m
+  type: n
+Umwelttechnikerin:
+  genus  : f
+  type: n
+Veranstaltungscaterer:
+  genus  : m
+  type: n
+Verbraucherberater:
+  genus  : m
+  type: n
+Verbraucherberaterin:
+  genus  : f
+  type: n
+Vergolder:
+  genus  : m
+  type: n
+Vergolderin:
+  genus  : f
+  type: n
+  genus  : m
+  type: n
+Verhaltensforscherin:
+  genus  : f
+  type: n
+Verkaeufer:
+  genus  : m
+  type: n
+Verkaeuferin:
+  genus  : f
+  type: n
+Vermessungsingenieurin:
+  genus  : f
+  type: n
+Verpflegungsbetriebswirt:
+  genus  : m
+  type: n
+Verpflegungsbetriebswirtin:
+  genus  : f
+  type: n
+Vertreterin:
+  genus  : f
+  type: n
+Visagistin:
+  genus  : f
+  type: n
+Volkswirt:
+  genus  : m
+  type: n
+Volkswirtin:
+  genus  : f
+  type: n
+Vorarbeiterin:
+  genus  : f
+  type: n
+Vulkaniseur:
+  genus  : m
+  type: n
+Vulkaniseurin:
+  genus  : f
+  type: n
+Wachszieher:
+  genus  : m
+  type: n
+Wachszieherin:
+  genus  : f
+  type: n
+Wagenschmied:
+  genus  : m
+  type: n
+Wagenschmiedin:
+  genus  : f
+  type: n
+Wagnerin:
+  genus  : f
+  type: n
+Waldarbeiter:
+  genus  : m
+  type: n
+Waldarbeiterin:
+  genus  : f
+  type: n
+Waerter:
+  genus  : m
+  type: n
+Waerterin:
+  genus  : f
+  type: n
+Waescher:
+  genus  : m
+  type: n
+Waescherin:
+  genus  : f
+  type: n
+Wasserinstallateur:
+  genus  : m
+  type: n
+Wasserinstallateurin:
+  genus  : f
+  type: n
+Webdesigner:
+  genus  : m
+  type: n
+Webdesignerin:
+  genus  : f
+  type: n
+Weber:
+  genus  : m
+  type: n
+Weberin:
+  genus  : f
+  type: n
+Weinkuefer:
+  genus  : m
+  type: n
+Weinkueferin:
+  genus  : f
+  type: n
+Werkschutzfachkraft:
+  genus  : m
+  type: n
+Winzerin:
+  genus  : f
+  type: n
+Wirtschaftsleiter:
+  genus  : m
+  type: n
+Wirtschaftsleiterin:
+  genus  : f
+  type: n
+Zahlkellner:
+  genus  : m
+  type: n
+Zahlkellnerin:
+  genus  : f
+  type: n
+Zahnarzt:
+  genus  : m
+  type: n
+Zahnaerztin:
+  genus  : f
+  type: n
+Zahntechniker:
+  genus  : m
+  type: n
+Zahntechnikerin:
+  genus  : f
+  type: n
+Zerspanungsmechanikerin:
+  genus  : f
+  type: n
+Zimmerin:
+  genus  : f
+  type: n
+Zimmermaedchen:
+  genus  : s
+  type: n
+Zoologe:
+  genus  : m
+  type: n
+Zoologin:
+  genus  : f
+  type: n
+Zupfinstrumentenmacher:
+  genus  : m
+  type: n
+Zupfinstrumentenmacherin:
+  genus  : f
+  type: n
+Zweiradmechaniker:
+  genus  : m
+  type: n
+Zweiradmechanikerin:
+  genus  : f
+  type: n
+Schaffnerin:
+  genus  : f
+  type: n
+Lokfuehrer:
+  genus  : m
+  type: n
+Lokfuehrerin:
+  genus  : f
+  type: n
+Dedektiv:
+  genus  : m
+  type: n
+Dedektivin:
+  genus  : f
+  type: n
+Baumeister:
+  genus  : m
+  type: n
+Berufsdetektiv:
+  genus  : m
+  type: n
+Berufsdetektivin:
+  genus  : f
+  type: n
+Forstwirt:
+  genus  : m
+  type: n
+Forstwirtin:
+  genus  : f
+  type: n
+Physiotherapeut:
+  genus  : m
+  type: n
+Physiotherapeutin:
+  genus  : f
+  type: n
+Logopaede:
+  genus  : m
+  type: n
+Logopaedin:
+  genus  : f
+  type: n
+Orthoptist:
+  genus  : m
+  type: n
+Orthoptistin:
+  genus  : f
+  type: n
+Ergotherapeut:
+  genus  : m
+  type: n
+Ergotherapeutin:
+  genus  : f
+  type: n
+Notar:
+  genus  : m
+  type: n
+Notarin:
+  genus  : f
+  type: n
+Patentanwalt:
+  genus  : m
+  type: n
+Patentanwaeltin:
+  genus  : f
+  type: n
+Psychologe:
+  genus  : m
+  type: n
+Psychologin:
+  genus  : f
+  type: n
+Psychotherapeutin:
+  genus  : f
+  type: n
+Versicherungsagent:
+  genus  : m
+  type: n
+Versicherungsagentin:
+  genus  : f
+  type: n
+Versicherungmakler:
+  genus  : m
+  type: n
+Versicherungmaklerin:
+  genus  : f
+  type: n
+Steuerberater:
+  genus  : m
+  type: n
+Steuerberaterin:
+  genus  : f
+  type: n
+Wirtschaftstreuhaender:
+  genus  : m
+  type: n
 Aaron:
   type: n
 Abbigail:
@@ -103131,96 +105373,111 @@ Auskosten:
 verdorben:
   type: adj
 hafthaus:
+  genus  : s
   type: n
 flasche:
-  type: adv
+  genus  : f
+  type: n
 umklappen:
-  type: adj
+  type: vi
 Grosszuegigkeit:
+  genus  : f
   type: n
 Bakterienstamm:
+  genus  : m
   type: n
-Metabolismusumwandlungveraenderung:
-  type: n
-saftlo:
-  type: adj
 Aufpasser:
+  genus  : m
   type: n
 Delfine:
-  type: n
-Gebrdensprache:
+  genus  : f
   type: n
 abkanzeln:
   type: vi
 bausteinfoermig:
   type: adv
 Tonangebend:
-  type: n
-Baggerlffel:
-  type: n
+  type: adj
 Regulierung:
+  genus  : f
   type: n
 Erweitern:
+  genus  : s
   type: n
 Verfuehrbar:
-  type: n
+  type: adj
 fischer:
-  type: adv
-Gemeine:
+  genus  : m
   type: n
+Gemeine:
+  type: adj
 Zaehfluessigkeit:
+  genus  : f
   type: n
 reihenfolgen:
-  type: vi
-Verstorben:
+  genus  : f
   type: n
+Verstorben:
+  type: adj
 Zahnaerzte:
+  genus  : f
   type: n
 Os:
   type: n
 Elle:
+  genus  : f
   type: n
 Eine:
   type: art
 Almhuette:
+  genus  : f
   type: n
 Altausseer:
-  type: n
-gunsten:
-  type: vi
-australis:
+  genus  : m
   type: n
 eigenheim:
-  type: adj
-Gesund:
+  genus  : s
   type: n
+Gesund:
+  type: adj
 Bankabbuchung:
+  genus  : f
   type: n
 erteilung:
-  type: adj
+  genus  : f
+  type: n
 Muenchner:
+  genus  : m
   type: n
 Stiftsbibliothek:
+  genus  : f
   type: n
 Pflaume:
+  genus  : f
   type: n
 Fahrgeld:
+  genus  : s
   type: n
 Baumwollpflanze:
+  genus  : f
   type: n
 Buddeln:
-  type: n
-Allesknner:
+  genus  : s
   type: n
 Pflege:
+  genus  : f
   type: n
 Premierenfeier:
+  genus  : f
   type: n
 Vernissage:
+  genus  : f
   type: n
 fuehrungsbestimmung:
-  type: adj
+  genus  : f
+  type: n
 Aussenbereich:
+  genus  : m
   type: n
 Debrecen:
   type: n
@@ -103229,22 +105486,23 @@ auferlegen:
 Venezuela:
   type: n
 eingeweiden:
-  type: vi
-2umfangen:
-  type: vi
+  type: n
 Kuhfuss:
+  genus  : m
   type: n
 Bash:
   type: n
 bueffeln:
   type: vi
 Gefluester:
+  genus  : s
   type: n
 vs:
   type: n
 treuer:
   type: adj
 Kultstaette:
+  genus  : f
   type: n
 erstes:
   type: adv
@@ -103253,101 +105511,120 @@ aufopfern:
 freundlichen:
   type: adv
 naechtigen:
-  type: adv
+  type: vi
 aufdrehen:
-  type: adv
+  type: vi
 ototoxisch:
   type: adj
 Berggruppe:
+  genus  : f
   type: n
 selbstgemacht:
   type: adv
 belauschen:
-  type: adv
-feist:
   type: vi
+feist:
+  type: adj
 Spinnentieren:
   type: n
 kuwait:
-  type: adj
-aschenputtel:
-  type: adj
-endbrot:
-  type: adj
-Anwaltsassistent:
   type: n
-Diewaehrung:
+aschenputtel:
+  genus  : s
+  type: n
+Anwaltsassistent:
+  genus  : m
   type: n
 Druckgasspeicher:
+  genus  : m
   type: n
 entzuendlich:
   type: adv
 Grenzen:
+  genus  : f
   type: n
 Frisierkommode:
+  genus  : f
   type: n
 versteh:
-  type: adj
+  type: vi
 Kiomet:
   type: n
 gruendungsversammlung:
-  type: adj
+  genus  : f
+  type: n
 Meridian:
+  genus  : m
   type: n
 Einweisungsfahrzeug:
+  genus  : s
   type: n
 Folinsaeure:
+  genus  : f
   type: n
 Flachsspinnerei:
+  genus  : f
   type: n
 lebendige:
   type: adv
 Weizen:
+  genus  : m
   type: n
 Nadu:
   type: n
 entlausen:
   type: vi
-schlos:
-  type: adv
 Abwege:
+  genus  : f
   type: n
 generation:
+  genus  : f
   type: n
 profi:
-  type: adj
+  genus  : m
+  type: n
 Beiname:
+  genus  : m
   type: n
 Armen:
+  genus  : f
   type: n
 Sneaker:
+  genus  : m
   type: n
 Sonderausstattung:
+  genus  : f
   type: n
 unbelaestigt:
-  type: vi
+  type: adj
 beginnt:
   type: vi
 Geistesgestoerter:
   type: n
-Inkl:
-  type: n
 Vorzugsdividende:
+  genus  : f
   type: n
 Bauzustand:
+  genus  : m
   type: n
 Dualprozessorsysteme:
+  genus  : f
   type: n
 Druckregler:
+  genus  : m
   type: n
 Entstehungsort:
+  genus  : m
   type: n
 Bahnfracht:
+  genus  : f
   type: n
 Rassentrennung:
+  genus  : f
   type: n
 paerchen:
-  type: adv
+  genus  : s
+  type: n
 appetitlich:
   type: adv
 Wrmewert:
