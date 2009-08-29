@@ -3148,55 +3148,61 @@ define action shell with var current_language, var path do
     set new var input_file_name to '_input'
     set new var input_handle to handle for file name var input_file_name, read
 
-    set new array facts_to_save to an empty array
-
-    for each new var sentences_as_line from var input_handle is rw do
-        do regex using var sentences_as_line: /([?])/, "$0.", :global
-        do regex using var sentences_as_line: /[.!~]\s*?[.!~]/, "~", :global
-        do regex using var sentences_as_line: /[.!~]\s*?[.!~]/, "~", :global
+    for each new var sentences_as_line_2 from var input_handle is rw do
+        do regex using var sentences_as_line_2: /([?])/, "$0.", :global
+        do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
+        do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
         
-        set var sentences_as_line to divide_input with var sentences_as_line, var current_language
-        set new array sentences to split with /[.!~]/, var sentences_as_line
-
-        for each new var line in array sentences do
+        set var sentences_as_line_2 to divide_input with var sentences_as_line_2, var current_language
         
-            do regex using var line: /^\s+/, "", :global
-            do regex using var line: /\s+$/, "", :global
-            if not var line do
-                go to next
-            done
+        set new array sentences_as_line_array to split with /\sSTOP\s/, var sentences_as_line_2
+        for each new var sentences_as_line in array sentences_as_line_array do
+            
+            set new array facts_to_save to an empty array
+            
+            set new array sentences to split with /[.!~]/, var sentences_as_line
 
-            set new flag all_output_phrases to 0
-            if lc(var line) matches /^\/all / do
-                do regex using var line: /^\/all /, "", :global:i
-                set flag all_output_phrases to 1
+            for each new var line in array sentences do
+            
+                do regex using var line: /^\s+/, "", :global
+                do regex using var line: /\s+$/, "", :global
+                if not var line do
+                    go to next
+                done
+
+                set new flag all_output_phrases to 0
+                if lc(var line) matches /^\/all / do
+                    do regex using var line: /^\/all /, "", :global:i
+                    set flag all_output_phrases to 1
+                done
+                
+                do unlink with '_output'
+                set new hash tags to an empty hash
+                set new array output to give_output with var line, array facts_to_save, hash tags, var current_language, var path
+                do unlink with '_output'
+
+                set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
+                
+                set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
+        
+                do unlink with '_output'
+                do save_output with var final_output, var current_language, var path
+                set new var output_file_name to '_output'
+                set new var output_handle to handle for file name var output_file_name, write
+                print into var output_handle data var final_output
+                do close with var output_handle
+
+                print "Final output is..."
+                print new line
+                print "      "
+                print var final_output
+                print new line
             done
             
-            do unlink with '_output'
-            set new hash tags to an empty hash
-            set new array output to give_output with var line, array facts_to_save, hash tags, var current_language, var path
-            do unlink with '_output'
-
-            set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
-            
-            set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
-    
-            do unlink with '_output'
-            do save_output with var final_output, var current_language, var path
-            set new var output_file_name to '_output'
-            set new var output_handle to handle for file name var output_file_name, write
-            print into var output_handle data var final_output
-            do close with var output_handle
-
-            print "Final output is..."
-            print new line
-            print "      "
-            print var final_output
-            print new line
+            do save_facts with array facts_to_save, '', var current_language, var path
         done
     done
     
-    do save_facts with array facts_to_save, '', var current_language, var path
     do wait 2 seconds
     
     #set new var f1 to shift with items of array facts_to_link

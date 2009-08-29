@@ -34,7 +34,7 @@ define action divide_input with var input is rw, var lang do
         for each new var word_1 in array words do
             for each new var word_2 in array words do
                 if not var word_1 matches var word_2 do
-                    set var input to var input concat "_" concat var word_1 concat "_ = _" concat var word_2 concat "_ . "
+                    set var input to var input concat "_" concat var word_1 concat "_ = _" concat var word_2 concat "_ STOP "
                 done
             done
         done
@@ -52,7 +52,7 @@ define action divide_input with var input is rw, var lang do
         set var input to ""
         for each new var word_2 in array words do
             if not var word_1 matches var word_2 do
-                set var input to var input concat var word_1 concat " " concat var verb_be_3rd_person_singular concat " " concat var word_2 concat " . "
+                set var input to var input concat var word_1 concat " " concat var verb_be_3rd_person_singular concat " " concat var word_2 concat " STOP "
             done
         done
     done
