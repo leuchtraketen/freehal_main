@@ -3897,7 +3897,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             do regex using var word_to_check: /<[^a-zA-Z0-9]>/, "", :global:i
             set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
-        if from hash tags item { var word } first item matches /n/ do
+        if from hash tags item { var word } first item matches /n/ and not from hash tags item { var word } first item matches /linking/ do
             set var word to ucfirst with var word
         done
     done
