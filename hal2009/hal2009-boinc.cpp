@@ -71,16 +71,17 @@ void* cpu_thread (void* p) {
         boinc_report_app_status(now - start, checkpoint_cpu, frac);
         
         if ( ((now - start) / (max_seconds)) >= 1 ) {
+            
+            srand (time_seed());
+            int N = 30;
+            int M = 600;
+            usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+
             boinc_finish(0);
         }
 
         usleep(1000);
     }
-    
-    srand (time_seed());
-    int N = 30;
-    int M = 600;
-    usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
 }
 
 int main (int argc, char** argv) {
