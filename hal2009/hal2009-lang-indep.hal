@@ -40,6 +40,20 @@ define action divide_input with var input is rw, var lang do
         done
     done
 
+    if lc(var input) matches /[=].*?[=]/ do
+        do regex using var input: /\s+?[=]\s+?/, "=", :global:i
+        do regex using var input: /[=]/, "@", :global:i
+        set new array words to split with /[@]/, var input
+        set var input to ""
+        for each new var word_1 in array words do
+            for each new var word_2 in array words do
+                if not var word_1 matches var word_2 do
+                    set var input to var input concat "_" concat var word_1 concat "_ = _" concat var word_2 concat "_ STOP "
+                done
+            done
+        done
+    done
+
     if lc(var input) matches /properties: (.*?): / do
         do regex using var input: /[,]/, "@", :global:i
         do regex using var input: /properties:(.*?):/, "", :global:i
