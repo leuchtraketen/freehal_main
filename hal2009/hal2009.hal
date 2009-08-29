@@ -834,6 +834,22 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         shift from array words
     done
     # TEXT
+    # It is known that the next word WILL be a verb.
+    # So add it to "hash full_entity"
+    # <br /><br />
+    # If there isn't the same part of speech twice, add the current word to 
+    # "hash full_entity" and leave the following word as it is
+    # CODE
+    if from hash sym_noun item { from array current_tag first item } and from hash sym_verb item { from array next_tag first item } do
+        #set from hash full_entity item { var entity_key_name } to [ [ var current_word ] ]
+        #shift from array words
+        
+        #set var current_word to var next_word
+        #set array current_tag to array next_tag
+        #set var next_word to from array words item [ 0 ]
+        #set array next_tag to from hash tags item { var next_word }
+    done
+    # TEXT
     # <br /><br />
     # If there's the same part of speech twice or more times, 
     # and the first one is not declared as an entity end,
@@ -849,8 +865,8 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         
         if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
             do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+            shift from array words
         done
-        shift from array words
         
         if from global hash builtin_entity_ends item { lc(var current_word) } do
             set flag found_subject to 1
@@ -878,7 +894,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         set array next_tag to from hash tags item { var next_word }
     done
 
-    print "end of loop"
+    print "end of loop."
     print new line
     print "now:  " concat from array current_tag first item concat " - " concat var current_word
     print new line
@@ -908,6 +924,14 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # TEXT
     # The subject ends when there is a noun which is followed by an adjective or an adverb or a verb or nothing.
     # CODE
+    if from hash sym_noun item { from array current_tag item [ const TYPE ] } do
+    #    if from hash sym_verb item { from array next_tag item [ const TYPE ] } do
+    #        if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
+    #            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+    #            shift from array words
+    #        done
+    #    done
+    done
     if from hash sym_noun item { from array current_tag item [ const TYPE ] } do
         if from hash sym_adj item { from array next_tag item [ const TYPE ] } || from hash sym_art item { from array next_tag item [ const TYPE ] } || from hash sym_verb item { from array next_tag item [ const TYPE ] } || from hash sym_prep item { from array next_tag item [ const TYPE ] } do
             set flag found_subject to 1
