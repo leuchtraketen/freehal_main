@@ -67,7 +67,8 @@ set new global array cache_memory to [ ]
 # TEXT
 # An example: If the german word Baecker is not found, maybe Baeckerin is there
 # CODE
-set new array standard_suffixes to [ "", "in", "e", "s", "es", "er", "en", "em" ]
+ #, "es", "er", "en", "em"
+set new array standard_suffixes to [ "", "in", "e", "s" ]
 set new global var be_slow__last_time to time without arguments
 
 define action be_slow without arguments do

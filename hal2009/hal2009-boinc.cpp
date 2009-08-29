@@ -22,6 +22,10 @@ int hal2009_add_pro_file (char* filename);
 struct DATASET hal2009_get_csv(char* csv_request);
 const char* hal2009_make_csv(struct DATASET* set);
 
+#ifndef UCHAR_MAX
+#   define UCHAR_MAX sizeof(char)
+#endif
+
 unsigned time_seed() {
     time_t now = time (0);
     unsigned char *p = (unsigned char *)&now;
