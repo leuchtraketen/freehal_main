@@ -928,6 +928,13 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
                 //printf("(..28)\n");
     FILE* database_sql = fopen(sqlite_filename_sql, "a");
                 //printf("(..29)\n");
+    if (!database_sql) {
+        database_sql = fopen(sqlite_filename_sql, "a");
+    }
+    if (!database_sql) {
+        free(sql);
+        return 0;
+    }
     fprintf(database_sql, "%s", sql);
                 //printf("(..30)\n");
     fclose(database_sql);
