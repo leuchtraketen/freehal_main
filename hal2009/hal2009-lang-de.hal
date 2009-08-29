@@ -3259,6 +3259,8 @@ done
 
 define action stem_nouns with array phrases do
     for each new var phrase in array phrases is rw do
+        print "phrase: " concat var phrase
+        print new line
         set new array words to split using /\s/, var phrase
         for each new var noun in array words is rw do
             # TEXT
@@ -3295,6 +3297,10 @@ define action stem_nouns with array phrases do
             
             if var noun matches /ei.$/ do
                 go to next
+            done
+            
+            if var noun matches /^oder$/ do
+                set var noun to '|'
             done
             
             if var noun matches /ern$/ do
@@ -3342,6 +3348,7 @@ define action stem_nouns with array phrases do
         do regex using var phrase: /<[*]>\s/, "*", :global
         do regex using var phrase: /\s<[*]>/, "*", :global
         do regex using var phrase: /^\s+/, "", :global
+        do regex using var phrase: /\s+<[|]>/, "|", :global
         do regex using var phrase: /\s+$/, "", :global
     done
     

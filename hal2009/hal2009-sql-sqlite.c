@@ -1169,6 +1169,127 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
+        strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT subjects GLOB \"ein *\" AND NOT subjects GLOB \"eine *\") AND (objects ");
+        if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
+        else                            strcat(sql, " = ");
+        strcat(sql, " \"");
+        if (buf) strcat(sql, buf);
+        strcat(sql, "\" OR (0 ");
+        
+        if (buf && strstr(buf, "|")) {
+            int size = strlen(buf);
+            int j;
+            for (j = 0; j < size; ++j) {
+                if (buf[j] == '|') {
+                    buf[j] = '\0';
+
+                    printf("New buf (matched by '|'): %s*\n", buf);
+                    if (size) {
+                        strcat(sql, "OR objects ");
+                        if (strstr(buf, "*")) {
+                            strcat(sql, "GLOB");
+                        }
+                        else {
+                            strcat(sql, "=");
+                        }
+                        strcat(sql, " \"");
+                        strcat(sql, buf);
+                        strcat(sql, "\"");
+                        
+                        // add to synonyms
+                        {
+                                int n = 0;
+                                while (object_synonyms[n] && n < 20000) {
+                                    ++n;
+                                }
+                                object_synonyms[n] = strdup(buf);
+                        }
+                    }
+                    buf[j] = '\0';
+                    if (j-1 >= 0) ++buf;
+                    if (j-1 >= 0) buf[j-1] = '\0';
+
+                    if (j-1 >= 0) buf += j;
+                    else          buf += j+1;
+                    size = strlen(buf);
+                    j = 0;
+                }
+            }
+
+            if (size) {
+                strcat(sql, "OR objects ");
+                if (strstr(buf, "*")) {
+                    strcat(sql, "GLOB");
+                }
+                else {
+                    strcat(sql, "=");
+                }
+                strcat(sql, " \"");
+                strcat(sql, buf);
+                strcat(sql, "\"");
+                
+                // add to synonyms
+                {
+                        int n = 0;
+                        while (object_synonyms[n] && n < 20000) {
+                            ++n;
+                        }
+                        object_synonyms[n] = strdup(buf);
+                }
+            }
+        }
+        
+        strcat(sql, ") ) AND objects <> \"*\" AND subjects <> \"*\" AND adverbs = \"\"");
+        
+        if (bbuf) free(bbuf);
+        
+        printf("%s\n", sql);
+        
+        char* err;
+        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms, &object_synonyms, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        sqlite3_free(err);
+    
+        while (sqlite3_exec(sqlite_connection, sql, callback_synonyms_trio, &object_synonyms_trio, &err)) {
+            if (strstr(err, "are not unique")) {
+                break;
+            }
+            if (strstr(err, "callback requested query abort")) {
+                break;
+            }
+            printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+            if (strstr(err, "no such table")) {
+                sqlite3_free(err);
+                if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                    printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
+                }
+            }
+            else {
+                break;
+            }
+        }
+        sqlite3_free(err);
+    
+        free(sql);
+        sql = malloc(512000+sizeof(r));
+        *sql = 0;
+/*
         if (strcmp(buf, "*")) {
             strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
             if (buf && strstr(buf, "*")) {
@@ -1230,6 +1351,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             sql = malloc(512000+sizeof(r));
             *sql = 0;
         }
+*/
     }
     
     // Fetch extra synonyms (maximum: 20000)

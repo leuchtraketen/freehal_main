@@ -840,7 +840,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # add them all to the hash
     # CODE
     
-    while (from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item ) do
+    while (from hash sym_linking item { from array current_tag first item } or from hash sym_entity item { from array next_tag first item }) or ((from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item )) do
 
         print "now:  " concat from array current_tag first item concat " - " concat var current_word
         print new line
