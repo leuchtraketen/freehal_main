@@ -455,6 +455,18 @@ int sql_sqlite_add_link (const char* link, int key_1, int key_2) {
     sqlite3_free(err);
 }
 
+int is_unimportant_word(const char* word) {
+    return (
+        (0 == strcmp(word, "der"))                 ? 1 :
+        (0 == strcmp(word, "die"))                 ? 1 :
+        (0 == strcmp(word, "das"))                 ? 1 :
+        (0 == strcmp(word, "nicht"))               ? 1 :
+        (0 == strcmp(word, "in"))                  ? 1 :
+        (0 == strcmp(word, "an"))                  ? 1 :
+        0
+    );
+}
+
 int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     char* subj  = strdup(r->subjects ? r->subjects : "");
     char* obj   = strdup(r->objects  ? r->objects  : "");
@@ -482,6 +494,10 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     
     buffer = strtok(subj, " ;.)(-,");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
+        if (is_unimportant_word(buffer)) {
+            buffer = strtok(NULL, " ;.)(-,");
+            continue;
+        }
         words[*num_of_words] = strdup(buffer);
         buffer = strtok(NULL, " ;.)(-,");
         ++(*num_of_words);
@@ -490,6 +506,10 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     
     buffer = strtok( obj, " ;.)(-,");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
+        if (is_unimportant_word(buffer)) {
+            buffer = strtok(NULL, " ;.)(-,");
+            continue;
+        }
         words[*num_of_words] = strdup(buffer);
         buffer = strtok(NULL, " ;.)(-,");
         ++(*num_of_words);
@@ -498,6 +518,10 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     
     buffer = strtok(advs, " ;.)(-,");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
+        if (is_unimportant_word(buffer)) {
+            buffer = strtok(NULL, " ;.)(-,");
+            continue;
+        }
         words[*num_of_words] = strdup(buffer);
         buffer = strtok(NULL, " ;.)(-,");
         ++(*num_of_words);
@@ -507,6 +531,10 @@ int detect_words(int* num_of_words, char** words, struct RECORD* r) {
     if (extra) {
         buffer = strtok(extra, " ;.)(-,");
         while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
+            if (is_unimportant_word(buffer)) {
+                buffer = strtok(NULL, " ;.)(-,");
+                continue;
+            }
             words[*num_of_words] = strdup(buffer);
             buffer = strtok(NULL, " ;.)(-,");
             ++(*num_of_words);

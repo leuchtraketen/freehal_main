@@ -3326,7 +3326,7 @@ define action stem_nouns with array phrases do
                     do regex using var noun: /st$/, "*", :global:i
                 done
             done
-            if var noun matches /(end|ung)$/ do
+            if var noun matches /.....(end|ung)$/ do
                 do regex using var noun: /(end|ung)$/, "*", :global:i
                 
                 if var noun matches /ig$/ and not var noun matches /eig$/ do
