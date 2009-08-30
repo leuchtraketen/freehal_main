@@ -320,6 +320,8 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: /Weisst du etwas ueber /, "was ist ", :global:i
     do regex using var input: /was weisst du ueber /, "was ist ", :global:i
+    do regex using var input: /heise/, "heisse", :global:i
+    do regex using var input: /heist/, "heisst", :global:i
     do regex using var input: / has to /, " must ", :global:i
     do regex using var input: / have to /, " must ", :global:i
     do regex using var input: / had to /, " must ", :global:i
