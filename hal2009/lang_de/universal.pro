@@ -167,7 +167,6 @@ fliegen kann <> man <> nothing <> mit einem ballon in der luft <>  <>  <>  <> no
 fliegen kann <> man <> nothing <> mit einem flugzeug <>  <>  <>  <> nothing <> nothing <> 
 fliegen koennen <> flugkoerper <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 fliegen koennen <> pinguine <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 50
-fliegen koennen <> sie <> nothing <> nicht <> weil <>  <> haben <> menschen <> keine fluegel <> 
 fliegen wuerden <> sie <> nothing <>  <> wenn <>  <> haetten <> menschen <> fluegel <> 
 fliegt <> ein flugzeug <> nothing <> durch das gesetz der aerodynamik <>  <>  <>  <>  <>  <>  <> 50
 fliesst <> die spree <> nothing <> durch berlin <>  <>  <>  <>  <>  <>  <> 50
@@ -216,14 +215,13 @@ gibt <> es <> 7 weltwunder <>  <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> burger <> bei _mac_donalds_ <>  <>  <>  <> nothing <> nothing <>  <> 50
 gibt <> es <> einen gott <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 gibt <> es <> einen grund <> fuer alles <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> keinen butter <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> keinen kaese <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> keine sahne <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> kein joghurt <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> kein leben <> ohne sonne <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> kein schlagobers <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
-gibt <> es <> kein wetter <> bei mir <>  <>  <>  <> nothing <> nothing <>  <> 50
-gibt <> es <> kein wetter <> in dem computer <>  <>  <>  <> nothing <> nothing <>  <> 50
+gibt <> es <> eine butter <> nicht ohne milch <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> einen kaese <> nicht ohne milch <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> eine sahne <> nicht ohne milch <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> ein joghurt <> ohne milch <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> kein leben <> nicht ohne sonne <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> ein schlagobers <> nicht ohne milch <>  <>  <>  <> nothing <> nothing <> 
+gibt <> es <> ein wetter <> nicht bei mir <>  <>  <>  <> nothing <> nothing <>  <> 50
 gibt <> es <> leben <>  <>  <> gott es <> nothing <> so wollte <> weil <>  <> 50
 gibt <> es <> leben gott_es <> so wollte <>  <>  <>  <>  <>  <>  <> 50
 gibt  <> es <> nichts <>neues zur zeit <>  <>  <>  <>  <>  <>  <> 50
@@ -260,8 +258,8 @@ hat <> eine ki <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine ki <> eine wohnung <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine ki <> ein geschlecht <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine ki <> ein lieblingsessen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine ki <> keine eltern <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-hat <> eine ki <> kein urlaub <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+hat <> eine ki <> eine eltern <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+hat <> eine ki <> ein urlaub <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 hat <> eine ki <> nie hunger <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine ki <> nothing <> ;eine gefuehle;nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine kuenstliche intelligenz <> eine emotionen <> nicht <>  <>  <>  <>  <>  <>  <> 50
@@ -488,7 +486,6 @@ ist <> das gegenteil <> unten <> von oben <>  <>  <>  <> nothing <> nothing <>  
 ist <> das hauspferd <> die domestizierte form des wildpferdes <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> das internet <> wide web <> das world <>  <>  <>  <> nothing <> nothing <> 
 ist <> das jahr <> eine zeiteinheit <>  <>  <>  <>  <> nothing <> nothing <> 
-ist <> das keine annehmbare antwort <> nothing <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> das koffein <> ein alkaloid <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> das martinshorn <> das akustische signal <> von einsatzfahrzeugen <>  <>  <>  <>  <>  <>  <> 50
 ist <> das moulin rouge <> ein pariser varietee <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1426,7 +1423,7 @@ moechtest <> du <> nothing <> schlafen <>  <> bett <> nothing <> mit dir <> ins 
 moegen <> eltern <> nothing <> sehr viel nicht <>  <>  <>  <>  <>  <>  <> 50
 moegen <> menschen <> babys <>  <>  <>  <>  <> nothing <> nothing <> 
 moegen <> menschen <> kinder <>  <>  <>  <>  <> nothing <> nothing <> 
-moegen <> tiere <> keine ki <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+moegen <> tiere <> eine ki <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 muessen essen <> menschen <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 muessen schlafen <> lebewesen <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 muessen schlafen <> menschen <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
@@ -1603,170 +1600,6 @@ wohnen <> menschen <> nothing <> in haeusern <> nothing <> nothing <> nothing <>
 wohnt <> tobias_schulz <> nothing <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
 wurde <> die pummerin <> nothing <> aus kanonenkugeln gegossen <>  <>  <>  <>  <>  <>  <> 50
 wurde <> platon <> 80 jahre <> alt <>  <>  <>  <>  <>  <>  <> 50
-ist <> anis <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> basilikum <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> beifuss <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> berbere <> ein  gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> boxhornklee <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> bohnenkraut <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> borretsch <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gurkenkraut <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> brotklee <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> brunnenkresse <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> baerlauch <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> baerwurz <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> cardamom <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> cayennepfeffer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> chili <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> cumin <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> curryblaetter <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> currykraut <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> currypulver <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> dill <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> dost <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> oregano <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> eberraute <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> engelwurz <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> epazote <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> essig <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> weinwssig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kraeuteressig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> obstessig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> essigbaum <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> estragon <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> fenchel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> fetthenne <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> faerbersaflor <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gagel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> galgant <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gelbwurz <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kurkuma <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gewuerznelke <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gurkenkraut <> gurkenkraut <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> borretsch <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> gaensebluemchen <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> herbes fines <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> honig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ingwer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kaffernlimette <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kaffirlimette <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kaffirzitorne <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kakaopulver <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kalmus <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-sind <> kapern <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kapuzinerkresse <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kardamom <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kerbel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> knoblauch <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> koriander <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kren <> ein gewuerz <>  <>   <>  <> nothing <>  <>  <>  <> 50
-ist <> meerrettich <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kresse <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kreuzkuemmel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> koenigskerze <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kuemmel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kuerbis <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> lakritze <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> suessholz <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> lavendel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> liebstoeckel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> maggikraut <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> limette <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> lorbeer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> loeffelkraut <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> macis <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> muskatbluete <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> majoran <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> mandel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> suessmandel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> bittermandel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> meerrettich <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kren <> ein gewuerz <>  <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> melisse <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronenmelisse <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> minze <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> mohnsamen <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> muskatnuss <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> myrrhenkerbel <>ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> nelke <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> nelkenpfeffer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> nigella <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schwarzkuemmel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-sind <> orangen <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> oregano <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> pandanus <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> paprika <>ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> paradieskoerner <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> pastinake <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> peperoni <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> petersilie <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> pfeffer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> pfefferminze <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> piment <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> nelkenpfeffer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> pimpinelle <>ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> portulak <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> quendel ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> bergthymian <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ras el-hanout <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rhabarber <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rosmarin <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rotwein <>ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rouille <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rucola <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> salatrauke <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> rauke <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> safran <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> salbei <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> salz <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sambal oelek <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sambal <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sauerampfer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schabzigerklee <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schafgarbe <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schalotte <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schnittlauch <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schokolade <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> schwarzkuemmel <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> nigella <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sellerie  <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50 
-ist <> senf  <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50 
-ist <> sherry <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> silphium <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> soumbala <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> spitzwegerich <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sternanis <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> stevia <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> sumach <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> suessdolde <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> suessholz <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> lakritze <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> tabascosauce <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> tamarinde <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> thymian <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> tonkabohne <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> tripmadam <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> trueffel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> tschubritza <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> vanille <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> wacholder <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> waldmeister <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> wasabi <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> weinblaetter <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> weinraute <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> worcestershiresauce <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ysop <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zichorie <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zimt <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronengras <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronenmelisse <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronensaft <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronenschale <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronenstrauch <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitronenthymian <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zitwerwurzel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zucker <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> zwiebel <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> ein abfangjaeger <> ein militaerflugzeug <>  <> 50
 ist <> ein abfangjaeger <> ein kampfflugzeug <>  <> 50
 ist <> ein zeppelin <> ein luftschiff <>  <> 50

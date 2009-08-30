@@ -1,14 +1,9 @@
-
-
-
 aufgeht <> die sonne <> nothing <> in dem osten <>  <>  <>  <>  <>  <>  <> 50
 aufgenommen wurde <> die ddr <> 1973 <> in die uno <>  <>  <>  <>  <>  <>  <> 50
-aufgeteilt ist sieben <> bayern <> regierungsbezirke <> in <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> _buenos_aires_ <> gute luefte <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> _costa_brava_ <> wilde kueste <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> _tierra_del_fuego_ <> feuerland <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> alkazar <> schloss <>  <>  <>  <>  <>  <>  <>  <> 50
-bedeutet <> der sternname fomalhaut <> maul des wals <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> dschebel <> berg <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> dschebel <> gebirge <>  <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> geografie <> erdbescheibung <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2257,7 +2252,8 @@ ist <> deutschland <> ein teil <> von europa <>  <>  <>  <> nothing <> nothing <
 ist <> deutschland <> nothing <> in europa <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> deutschlandsberg <> eine stadt <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
 ist <> dhaka <> die hauptstadt <> von bangladesch <>  <>  <>  <>  <>  <>  <> 50
-
+
+
 ist <> die _ewige_stadt_ <> die hauptstadt <> von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _isla_margarita_ <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _patagonische_wueste_ <> die groesste wueste <> von amerika <>  <>  <>  <>  <>  <>  <> 50

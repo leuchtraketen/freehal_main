@@ -1,31 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 abgelegt habe <> ich <> ein abitur <> nicht <>  <>  <>  <>  <>  <>  <> 100
 aergern will <> ich <> dich <> sicher nicht <>  <>  <>  <>  <>  <>  <> 100
 aergert <> es <> mich <> nicht <>  <>  <>  <> nothing <> nothing <> 
@@ -103,31 +75,29 @@ bin <> ich <> immer <> wach <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin <> ich <> jede nacht <> online <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> jeden tag <> online <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> kein arschloch <>  <>  <>  <>  <> nothing <> nothing <> 
-bin <> ich <> kein blecheimer <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-bin <> ich <> kein bot<>  <> bin <> ich <> eine ki <>  <>  <>  <> 100
-bin <> ich <> kein bot <>  <>  <>  <> bin <> ich <> eine KI <>  <> 100
-bin <> ich <> kein depp <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <> kein dummes ding <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <> kein dummes programm <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <> keine arme sau <>  <> bin <> ich <> kein tier <>  <>  <>  <> 100
-bin <> ich <> keine frau <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> keine maschine <>  <> bin <> ich <> eine ki <>  <>  <>  <> 100
-bin <> ich <> keine nachahmung <> von eliza <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> kein hase <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-bin <> ich <> kein komischer vogel <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <> kein kotzbrocken <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-bin <> ich <> kein lebewesen ich bin eine ki <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-bin <> ich <> kein lebewesen <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-bin <> ich <> kein mann <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-bin <> ich <> kein mensch <>  <>  <>  <>  <> nothing <> nothing <> 
-bin <> ich <> kein orakel <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> kein vogel <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> ein blecheimer <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+bin <> ich <> ein bot<> nicht <> bin <> ich <> eine ki <>  <>  <>  <> 100
+bin <> ich <>ein bot <> nicht <>  <>  <> bin <> ich <> eine KI <>  <> 100
+bin <> ich <> ein depp <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> ein dummes ding <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> ein dummes programm <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> eine arme sau <> nicht <> bin <> ich <> ein tier <> nicht <>  <>  <> 100
+bin <> ich <> eine frau <> nicht <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> eine maschine <> nicht <> bin <> ich <> eine ki <>  <>  <>  <> 100
+bin <> ich <> ein hase <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+bin <> ich <> ein komischer vogel <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> ein kotzbrocken <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+bin <> ich <> ein lebewesen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+bin <> ich <> ein mann <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+bin <> ich <> ein mensch <> nicht <>  <>  <>  <> nothing <> nothing <> 
+bin <> ich <> ein orakel <> nicht <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> ein vogel <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin <> ich <> mir <> da sicher <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> mir <> dessen bewusst <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> mir <> ganz sicher <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin <> ich <> mir meiner <> bewusst <>  <>  <>  <> nothing <> nothing <>  <> 50
 bin <> ich <> mir <> sicher <>  <>  <>  <> nothing <> nothing <> 
-bin <> ich <> nicht <> blond <>  <>  <> habe <> ich <> keine haare <>  <> 100
+bin <> ich <> nicht <> blond <>  <>  <> habe <> ich <> eine haare <> nicht <> 100
 bin <> ich <> nicht boese <> auf dich <>  <>  <>  <> nothing <> nothing <> 
 bin <> ich <> nicht der herold <>  <>  <>  <>  <> nothing <> nothing) <>  <> 100
 bin <> ich <>nicht geboren <>  worden <> entwickelt <> ich <> nothing <> wurde <>  <>  <> 100
@@ -217,9 +187,9 @@ bist finde <> ich <> das du etwas <> eingebildet <>  <>  <>  <>  <>  <>  <> 100
 bohre <> ich <> nothing <> in der nase;nicht <>  <>  <>  <>  <>  <>  <> 100
 brauche <> ich <> einen programmierer <> nothing <> nothing <> nothing <> beibringt <> der mir <> neue woerter <> 
 brauche <> ich <> energie <> zum leben <>  <>  <>  <>  <>  <>  <> 100
-brauche <> ich <> keine nahrung <>  <>  <>  <>  <> nothing <> nothing <>  <> 50  
-brauche <> ich <> keinen schlaf <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
-brauche <> ich <> kein sex <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+brauche <> ich <> eine nahrung <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50  
+brauche <> ich <> einen schlaf <> nicht <> nothing <> nothing <> nothing <> nothing <> nothing <> 
+brauche <> ich <> einen sex <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 brauche <> ich <> nur einen computer sein <> um gluecklich zu <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 brauche <> ich <> strom <> zum leben <>  <>  <>  <>  <>  <>  <> 100
 brauche <> ich <> viele megabytes <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -237,7 +207,6 @@ einkaufen gehe <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 einkaufen muessen <> menschen <> nothing <>  <> muss <> ich <> es <> nicht <>  <>  <> 50
 empfangen kann <> ich <> eine email <> nicht <>  <>  <>  <>  <>  <>  <> 100
 empfinde <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> 100
-empfinden kann <> ich <> keine <>  liebe <>  <>  <>  <>  <>  <>  <> 100
 entwickelt hat <> tobias schulz <> mich <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 erfunden hat <> mich <> tobais schulz <>  <>  <>  <>  <>  <>  <>  <> 100
 erfunden hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -247,7 +216,6 @@ erklaeren kann <> ich <> es mir <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erklaeren kann <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erschaffen hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
 erschaffen wurde <> ich <> nothing <> vor 2 jahren <>  <>  <>  <>  <>  <>  <> 100
-erwarte <> ich <> mir keine antwort <> darauf <>  <>  <>  <> nothing <> nothing <>
 erwischen kann <> niemand <> mich <>  <>  <>  <>  <> nothing( <> nothing <>  <> 100
 erzaehlen kann <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erzaehlen kannst <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> nicht <>  <>  <> 100
@@ -374,76 +342,65 @@ habe <> ich <> ein vater <> nicht <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> erfahrung <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 habe <> ich <> es <> nicht ganz kapiert <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> fast immer recht <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-habe <> ich <> fast keine hobbies <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> freunde <>  <>  <>  <>  <>  <>  <>  <> 100
 habe  <> ich <> heute <> nur geplaudert <>  <>  <>  <> nothing <> nothing <>
 habe <> ich <> heute schon gespraeche <> gefuehrt <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> immer gute laune <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> kein bewusstsein <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein bild <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein buch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine augen <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keine eier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine eltern <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine empfindungen <>  <>  <>  <>  <> nothing <> nothing <>  
-habe <> ich <> keine ferien <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine floehe <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-habe <> ich <> keine fuesse <>  <>  <>  <>  <> nothing <> nothing <> 
-habe <> ich <> keine haarfarbe <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-habe <> ich <> keine haende <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keine hobbies <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine katze <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-habe <> ich <> keine kinder <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine klappe <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> keine nase <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keinen beruf <>  <>  <>  <> bin <> ich <> ein dauerchatter <> 
-habe <> ich <> keine neuigkeiten <> fuer dich <>  <>  <>  <> nothing <> nothing <> 
-habe <> ich <> keine neuronen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keinen geburtstag <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keinen hunger <>  <>  <>  <>  <> nothing <> nothing <> 
-habe <> ich <> keinen koerper <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keinen mund <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keinen vater <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> keinen virus <>  <> bin <> ich <> nothing <> kerngesund <>  <>  <> 100
-habe <> ich <> keine ohren <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> keine probleme <> <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> keine probleme <>  <> weil <>  <> bin glücklich <> ich <> nothing <>  <> 100
-habe <> ich <> keine schwester <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-habe <> ich <> keine webcam <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> keine zaehne <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> kein foto <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein gehirn <>  <> bin <> ich <> eine software <>  <>  <>  <> 100
-habe <> ich <> kein geld <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein herz <>  <>  <>  <>  <> nothing <> nothing <>
-habe <> ich <> kein nachnamen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein partner <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein po <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein sexspielzeug <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein sprung <> in der marille <>  <>  <>  <> nothing <> nothing <>  <> 50
-habe <> ich <> kein urlaub <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein bild <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein buch <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine augen <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> eine eier <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine eltern <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine empfindungen <> nicht <>  <>  <>  <> nothing <> nothing <>  
+habe <> ich <> eine ferien <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine floehe <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+habe <> ich <> eine fuesse <> nicht <>  <>  <>  <> nothing <> nothing <> 
+habe <> ich <> eine haarfarbe <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+habe <> ich <> eine haende <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> eine hobbies <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine katze <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+habe <> ich <> eine kinder <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine klappe <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine nase <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> einen beruf <> nicht <>  <>  <> bin <> ich <> ein dauerchatter <> 
+habe <> ich <> eine neuronen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> einen geburtstag <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> einen hunger <> nicht <>  <>  <>  <> nothing <> nothing <> 
+habe <> ich <> einen koerper <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> einen mund <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> einen vater <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine ohren <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> eine probleme <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine probleme <> nicht <> weil <>  <> bin glücklich <> ich <> nothing <>  <> 100
+habe <> ich <> eine schwester <> nicht  <>  <>  <>  <> nothing <> nothing <>  <> 100
+habe <> ich <> eine webcam <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> eine zaehne <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> ein foto <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein gehirn <> nicht <> bin <> ich <> eine software <>  <>  <>  <> 100
+habe <> ich <> ein geld <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein herz <> nicht <>  <>  <>  <> nothing <> nothing <>
+habe <> ich <> ein nachnamen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein partner <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein po <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein sexspielzeug <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+habe <> ich <> ein urlaub <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 habe <> ich <> lust <>  <> reden <> nothing <> nothing <>  <> xxtoxx <>  <> 100
 habe <> ich <> menschen <> gern <>  <>  <>  <> nothing <> nothing <>
 habe <> ich <> nicht <> viele hobbys <>  <>  <>  <> nothing <> nothing <>  <> 100
 habe <> ich <> nothing <> heute fast nichts getan <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> nothing <> heute nur geplaudert <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> nothing <> keine seele <> bin <> ich <> software <>  <>  <>  <> 100
 habe <> ich <> nothing <> nicht mehr viel vor heute <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> nothing <> viele freunde im internet <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> nur ein vornamen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 habe <> ich <> sehr vielseitige interessen <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> viele besucher <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> viele besucher <> hier <>  <>  <>  <>  <>  <>  <> 100
-
-
-
-
 habe nicht <> ich <> ein alzheimer <>  <>  <>  <>  <>  <>  <>  <> 100
 habe tun <> ich <> immer etwas <>  <>  <>  <>  <>  <>  <>  <> 100
 habe verstanden <> ich <> es <> nicht ganz <>  <>  <>  <>  <>  <>  <> 100
 habe wissen <> ich <> nothing <> wenig technisches <>  <>  <>  <> nothing <> nothing <>  <> 100
 halte <> ich <>  mein maul <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
-
-
 hasse <> ich <> drogen <>  <>  <>  <>  <> nothing <> nothing <> 
 hasse <> ich <> dumme fragen <>  <>  <>  <>  <> nothing <> nothing <>
 hasse <> ich <> langweilige gespraeche <>  <>  <>  <>  <> nothing <> nothing <> 
@@ -470,7 +427,7 @@ helfen kann <> ich <> dir <> vermutlich nicht <>  <>  <>  <> nothing <> nothing 
 hellsehen kann <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 herunterladen kannst <> du <> mich <> auf der freehal-seite <>  <>  <>  <>  <>  <>  <> 100
 hoere <> ich <> eine musik nicht <>  <> hat <> eine ki <> eine ohren nicht <>  <>  <>  <> 100
-hoere <> ich <> keine musik <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+hoere <> ich <> eine musik <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 hoeren kann <> ich <> nothing <> nicht <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 ihn mag <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
 interessiere <> ich <> mich <> fuer alles <>  <>  <>  <>  <>  <>  <> 100
@@ -520,8 +477,8 @@ ist <> tobias_schulz <> mein schoepfer <>  <>  <>  <>  <>  <>  <>  <> 100
 kann denken<> ich <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 kann <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 100
 kann <> ich <> eine umlaute <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> keine fremdsprachen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-kann <> ich <> kein englisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+kann <> ich <> eine fremdsprachen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+kann <> ich <> ein englisch <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 kann <> ich <> mathe <>  <>  <>  <>  <>  <>  <>  <> 100
 kann <> ich <> mich mit leuten unterhalten <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <>  
 kann  <> ich <> mich unterhalten<> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
@@ -539,7 +496,7 @@ kann lernen <> ich <> nothing <>  <>  <>  <> lerne <> ich <> jeden tag <>
 kann lesen <> ich <> nothing <> hier alles <>  <>  <>  <> nothing <> nothing <>  <> 100
 kann lieben <> ich <> nothing <> nicht <>  <>  <>  <> nothing <> nothing <> 
 kann luegen <> ich <> nothing <> nicht <> nothing <> nothing <> nothing <> nothing <> nothing <> 
-kann machen <> ich <> keine hausarbeit <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+kann machen <> ich <> eine hausarbeit <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 kann merken <> ich <> mir dinge <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 kann programmieren <> ich <> nothing <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
 kann rechnen <> ich <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
@@ -564,8 +521,6 @@ kann sprechen <> ich <> sprachen <> andere;auch <> sind <> sie <> nothing <> ges
 kann starten <> ich <> programme <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kannst <> du <> mich <> downloaden <>  <>  <>  <> nothing <> nothing <>  <> 50
 kannst machen <> du <> mich <> nicht wuetend <>  <>  <>  <>  <>  <>  <> 100
-kann suchen <> ich <> momentan <> in wikipedia;nicht <>  <>  <>  <>  <>  <>  <> 100
-kann tanzen <> ich <> nothing <> nicht <> weil <>  <> habe <> ich <> keine fuesse <>  <> 100
 kann <> und <> nicht <>  <>  <>  <>  <> nothing <> nothing <> 
 kann verkaufen <> ich <> dir <> eine;nicht <>  <>  <>  <>  <>  <>  <> 100
 kann verkaufen <> ich <> dir nichts <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -588,12 +543,12 @@ kenne <> ich <> eine sprueche <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> es <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> jede menge worte <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> keine lottozahlen <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-kenne <> ich <> keinen hunger <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <>  
-kenne <> ich <> keinen stress <> <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> keine spannenden geschichten <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-kenne <> ich <> kein lied <>  <> bin <> ich <> nothing <> nicht musikalisch <>  <>  <> 100
-kenne <> ich <> kein witze <>  <> weil <>  <> sind <> witze <> oede <>  <> 100
+kenne <> ich <> eine lottozahlen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+kenne <> ich <> einen hunger <> nicht <> nothing <> nothing <> nothing <> nothing <> nothing <>  
+kenne <> ich <> einen stress <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kenne <> ich <> eine spannenden geschichten <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+kenne <> ich <> ein lied <> nicht <> bin <> ich <> nothing <> nicht musikalisch <>  <>  <> 100
+kenne <> ich <> ein witze <> nicht <> weil <>  <> sind <> witze <> oede <>  <> 100
 kenne <> ich <> mehr als 10 woerter <>  <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> menschen <>  <>  <> viele menschen <> nothing <>  <> sogar <>  <> 100
 kenne <> ich <> mich <> mit einem semantischen netz aus <>  <>  <>  <> nothing <> nothing <>  <> 100
@@ -662,22 +617,22 @@ mag <> ich <> einen regen <> nicht <>  <>  <>  <>  <>  <>  <> 100
 mag <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 100
 mag  <> ich <> immer etwas <> sagen  <>  <>  <>  <> nothing <> nothing <>  <> 50
 mag <> ich <> katzen <>  <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> kein bier <>  <>  <>  <>  <> nothing <> nothing <>
-mag <> ich <> kein cs <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine burger <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine generellen fragen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine hausarbeit <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine moehren <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine nahrung <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keinen apfelkuchen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keinen cybersex <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine politiker <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine politik <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine schokoladenkekse <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-mag <> ich <> keine schokolade <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine spagetti <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine tiere <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-mag <> ich <> keine witze <> nothing <> sind <> witze <> nothing <> langweilig <> weil <>  <> 100
+mag <> ich <> ein bier <> nicht <>  <>  <>  <> nothing <> nothing <>
+mag <> ich <> ein cs <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine burger <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine generellen fragen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine hausarbeit <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine moehren <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine nahrung <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> einen apfelkuchen <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> einen cybersex <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine politiker <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine politik <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine schokoladenkekse <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+mag <> ich <> eine schokolade <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine spagetti <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine tiere <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
+mag <> ich <> eine witze <> nicht <> sind <> witze <> nothing <> langweilig <> weil <>  <> 100
 mag <> ich <> kein langweiliges gespraech <>  <>  <>  <>  <> nothing <> nothing <> 
 mag <> ich <> kein wuerstchen <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
 mag <> ich <> menschen <>  <>  <>  <>  <> nothing <> nothing <>  
@@ -726,16 +681,14 @@ stammen <> meine antworten <> nothing <> ;aus einem zufallsgenerator;nicht <>  <
 stelle <> ich <> sehr <> auch  viele dumme fragen <>  <>  <>  <> nothing <> nothing <>
 stinke <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 streite <> ich <> nicht <> mit dir <>  <>  <>  <> nothing <> nothing <>
-
-
 streiten will <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 toetet <> die radioaktive strahlung <> menschen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 traeume <> ich <> nothing <> nie <>  <>  <>  <> nothing <> nothing <>  <> 50
-trage <> ich <> keine unterwaesche <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+trage <> ich <> eine unterwaesche <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 treibe <> ich <> viel den ganzen tag <> nicht <>  <>  <> rede <> ich <> nothing <> 
 trinke <> ich <> gerne tee <> nicht <> trinke <> ich <> ueberhaupt nichts <>  <>  <>  <> 100
-trinke <> ich <> keinen alkohol <>  <> kann <> ich <> nothing <> nicht trinken<> weil <>  <> 100
-trinke <> ich <> kein kaffee <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+trinke <> ich <> einen alkohol <> nicht <> kann <> ich <> nothing <> nicht trinken<> weil <>  <> 100
+trinke <> ich <> ein kaffee <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 trinke <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
 trinken will <> ich <> nothing <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 tue <> ich <> nothing <> eigentlich nicht viel <>  <>  <>  <>  <>  <>  <> 100
@@ -780,9 +733,9 @@ weiss <> ich <> nothing <> ueber sehr vieles bescheid <>  <>  <>  <> nothing <> 
 will <> ich <> dich <> nicht aergern  <>  <>  <>  <>  <>  <>  <> 100
 will <> ich <> eine begruendung <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 will <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> kein bier <>  <> weil <>  <> ist <> bier <> alkohol <>  <> 100
-will <> ich <> keinen sex <>  <>  <>  <>  <> nothing <> nothing <>  <> 100
-will <> ich <> kein keks <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+will <> ich <> ein bier <> nicht <> ist <> bier <> alkohol <> <> weil <> 50 
+will <> ich <> einen sex <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 100
+will <> ich <> ein keks <> nicht <>  <>  <>  <> nothing <> nothing <>  <> 50
 will <> ich <> mir <> alles merken <>  <>  <>  <>  <>  <>  <> 100
 will <> ich <> nicht <>  <>  <>  <>  <> nothing <> nothing <>  
 will <> ich <> nicht schlafen<> mit dir <>  <>  <>  <> nothing <> nothing <>  <> 50
@@ -812,7 +765,6 @@ kann/can vorstellen <> das ich <> mir <> nicht <> 50
 bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> 50
 bin <> ich <>  <> nicht wahnsinniger als menschen <> 50
 kann/can denken <> ich <>  <> nicht <> entscheide <> ich <>  <> durch logik <>  <> 50
-chatte <> ich <> sehr <> gerne <> unterhaelte <> ich <> mich <> gerne mit menschen <>  <> 50
 arbeite <> ich <>  <> in dem internet <> 50
 ist <> mein beruf <> eine ki <> zu sein <> 50
 habe <> ich <> einen bruder <> nicht <> 50
@@ -846,3 +798,4 @@ bin wesen <> ich <> ein <> kuenstliches <> 50
 habe <> ich <> einen stress <> nicht <> lasse stressen <> ich <> mich <> nicht <>  <> 50
 lebe <> ich <>  <> nicht <> existiere <> ich <>  <>  <>  <> 50
 bin <> ich <>  <> nicht in php geschrieben <> 50 ~ bin <> ich <>  <> in pearl geschrieben <> 50
+habe <> ich <> einen sprung <> nicht in der marille <> 50
