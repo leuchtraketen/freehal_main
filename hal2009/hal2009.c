@@ -121,26 +121,24 @@ int fact_delete_from_source (const char* source) {
     FILE* file = fopen(filename, "r");
     if (file) {
         char* buffer;
-        int lines = 0;
+        int lines = 1;
         while (file && (buffer = getline(file)) != NULL) {
             ++lines;
         }
+        --lines;
         fclose(file);
         
         file = fopen(filename, "r");
         if (file) {
             char** data = calloc(lines+2, sizeof(char*));
             int line_number = 1;
-            while (file && (buffer = getline(file)) != NULL && line_number <= lines+1) {
+            while (file && (buffer = getline(file)) != NULL && line_number <= lines) {
                 
-                if (!buffer) {
-                    data[line_number] = -1;
-                }
-                else if (line_number != line_int) {
+                if (line_number != line_int) {
                     data[line_number] = strdup(buffer);
                 }
                 else {
-                    data[line_number] = 0;
+                    data[line_number] = -2;
                 }
                 ++line_number;
             }
@@ -149,15 +147,15 @@ int fact_delete_from_source (const char* source) {
             file = fopen(filename, "w");
             if (file) {
                 for (line_number = 1; line_number <= lines; ++line_number) {
-                    if (data[line_number] == -1) {
-                        // do nothing
+                    if (!data[line_number]) {
+                        fprintf(file, "\r\n");
                     }
-                    if (data[line_number]) {
+                    else if (data[line_number] == -2) {
+                        fprintf(file, "\r\n");
+                    }
+                    else if (data[line_number]) {
                         fprintf(file, "%s", data[line_number]);
                         free(data[line_number]);
-                    }
-                    else {
-                        fprintf(file, "\r\n");
                     }
                 }
                 fclose(file);
