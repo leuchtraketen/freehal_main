@@ -1911,7 +1911,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                         buffer = buffers[l];
                         char* buffers = malloc(strlen(r->verb)+2);
                         strcpy(buffers, buffer);
-                        if (buffers) {
+                        if (buffers && !strstr(buffers, "*")) {
                             char* buffer = strtok(buffers, "|");
                             if (buffer) {
                                 if (need_and) strcat(sql, " AND");
@@ -1975,7 +1975,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                         buffer = buffers[l];
                         char* buffers = malloc(strlen(similar_verbs[w])+2);
                         strcpy(buffers, buffer);
-                        if (buffers) {
+                        if (buffers && !strstr(buffers, "*")) {
                             char* buffer = strtok(buffers, "|");
                             if (buffer) {
                                 {
@@ -2366,7 +2366,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (r->verb && *r->verb != '0' && *r->verb != ' ' && strlen(r->verb)) {
                 char* buffers = malloc(strlen(r->verb)+2);
                 strcpy(buffers, r->verb);
-                if (buffers) {
+                if (buffers && !strstr(buffers, "*")) {
                     char* buffer = strtok(buffers, "|");
                     if (buffer) {
                         if (need_and) strcat(sql, " AND");

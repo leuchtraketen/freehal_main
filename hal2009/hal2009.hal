@@ -1623,7 +1623,7 @@ define action logic with var input, var lang, var path, hash parsed do
 
     if array request_verb_array do
         set new var num_of_verbs to items of array request_verb_array
-        if var num_of_verbs >= 2 do
+        if var num_of_verbs >= 1 do
             set new array new_verbs to an empty array
             set new flag do_removed to 0
             for each new array verb_array in array request_verb_array is rw do
@@ -1673,6 +1673,18 @@ define action logic with var input, var lang, var path, hash parsed do
                 push into array override_verb_array, array verb_array
             done
             set items of array request_verb_array to items of array new_verbs
+            
+            # if there is only one verb which is a modal verb
+            if is an empty array override_verb_array do
+                set new array verb_array to an empty array
+                push into array verb_array, "*"
+                push into array override_verb_array, array verb_array
+            done
+            if is an empty array request_verb_array do
+                set new array verb_array to an empty array
+                push into array verb_array, "*"
+                push into array request_verb_array, array verb_array
+            done
         done
         else do
             if from hash parsed item { 'verbs' } do
