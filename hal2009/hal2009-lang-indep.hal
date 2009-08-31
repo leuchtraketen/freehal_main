@@ -23,12 +23,9 @@
 define action divide_input with var input is rw, var lang do
     set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
 
-    if lc(var input) matches /learn:/ do
-        do regex using var input: /[,]/, "@", :global:i
-        do regex using var input: /learn:/, "", :global:i
-        do regex using var input: /^\s+/, "", :global:i
-        do regex using var input: /\s*@\s+/, "@", :global:i
-        do regex using var input: /\s+/, "_", :global:i
+    if lc(var input) matches /[=].*?[=]/ do
+        do regex using var input: /\s+?[=]\s+?/, "=", :global:i
+        do regex using var input: /[=]/, "@", :global:i
         set new array words to split with /[@]/, var input
         set var input to ""
         for each new var word_1 in array words do
@@ -40,9 +37,12 @@ define action divide_input with var input is rw, var lang do
         done
     done
 
-    if lc(var input) matches /[=].*?[=]/ do
-        do regex using var input: /\s+?[=]\s+?/, "=", :global:i
-        do regex using var input: /[=]/, "@", :global:i
+    if lc(var input) matches /learn:/ do
+        do regex using var input: /[,]/, "@", :global:i
+        do regex using var input: /learn:/, "", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /\s*@\s+/, "@", :global:i
+        do regex using var input: /\s+/, "_", :global:i
         set new array words to split with /[@]/, var input
         set var input to ""
         for each new var word_1 in array words do
