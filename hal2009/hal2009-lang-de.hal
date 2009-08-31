@@ -3319,7 +3319,7 @@ define action stem_nouns with array phrases do
                 do regex using var noun: /est$/, "*", :global:i
             done
             if var noun matches /e<[nr]>$/ do
-                do regex using var noun: /e<[nr]>$/, "*", :global:i
+                do regex using var noun: /e<[nr]>$/, "e*", :global:i
             done
             if var noun matches /<[bdfghklmnt]>st$/ do
                 if length(var noun) > 5 do
