@@ -2433,6 +2433,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'uebst' => "vt",
           'unreifes' => "adj",
           'wichtiger' => "adj",
+          'namen' => "n",
+          'vornamen' => "n",
+          'nachnamen' => "n",
           'roh' => "adj",
           'frei' => "adj",
           'grundlegend' => "adj",
@@ -2898,6 +2901,12 @@ define action compute_output with var output do
         
         if lc(var output) matches /(andro)/ do
             go to next
+        done
+        
+        if var output matches /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)(\s|$)/ do
+            if from global hash builtin_part_of_speech item { lc( $1 ) } matches /n/ do
+                go to next
+            done
         done
         
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global
