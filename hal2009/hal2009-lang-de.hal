@@ -1442,6 +1442,16 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'yesterday' => 1,
 };
 
+define action builtin_has_time_place_adverbs_suffix with var word do
+print var word
+print new line
+print new line
+    if var word matches /haft$/ do
+        do return with 1
+    done
+    do return with 0
+done
+
 set multi-line new global hash builtin_verb_prefixes to {
           'auf' => 1,
           'hin' => 1,

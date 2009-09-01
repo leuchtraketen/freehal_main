@@ -869,6 +869,9 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         print new line
         print "next: " concat from array next_tag first item concat " - " concat var next_word
         print new line
+        if var current_word matches var next_word do
+            go to last
+        done
         
         if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
             do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
@@ -1301,7 +1304,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 do unshift using items of that array: from hash parsed item { "extra" } end-items-of, [ var current_word ]
             done
         done
-        else if from global hash builtin_time_place_adverbs item { var current_word } or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
+        else if from global hash builtin_time_place_adverbs item { var current_word } or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word)) or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
             if var what matches "entity" do
                 print var ident
                 print "#    "
