@@ -2890,6 +2890,8 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     # CODE
     set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
+    
+    do regex using var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) /, "$0 _$1_ _no-question_ ", :global:i
     do regex using var input: /<[,]>\s/, " KOMMA ", :global:i
     do regex using var input: /(\D)<[.]>/, "${1} DOT ", :global:i
     do regex using var input: /\s+/, " ", :global:i
