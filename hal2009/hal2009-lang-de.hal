@@ -1443,9 +1443,6 @@ set multi-line new global hash builtin_time_place_adverbs to {
 };
 
 define action builtin_has_time_place_adverbs_suffix with var word do
-print var word
-print new line
-print new line
     if var word matches /haft$/ do
         do return with 1
     done
@@ -2885,6 +2882,9 @@ define action compute_output with var output do
     
     set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
     
+    print var output
+    print new line
+    
     for each new var prefix in array verb_prefixes do
         if from hash builtin_verb_prefixes_no_split item { var prefix } do
             go to next
@@ -2900,11 +2900,13 @@ define action compute_output with var output do
             go to next
         done
         
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/, " $1 $2 $0 ", :global
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)$/, " $1 $2 $0", :global
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>*?)$/, " $1 $0", :global
+        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global
+        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)$/, " $1 $2 $0", :global
+        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)$/, " $1 $0", :global
     done
     
+    print var output
+    print new line
     if var output matches /\$\$username\$\$/ do
         print new line
         print "Searching for the user's name"

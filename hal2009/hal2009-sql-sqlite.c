@@ -1408,9 +1408,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             else {
                 strcat(sql, "=");
             }
-            strcat(sql, " \"_");
+            strcat(sql, " \"");
             if (buf) strcat(sql, buf);
-            strcat(sql, "_\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
+            strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
             strcat(sql, " UNION ALL ");
             strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
             strcat(sql, "GLOB");

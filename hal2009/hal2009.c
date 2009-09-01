@@ -376,11 +376,7 @@ int hal2009_add_pro_file (char* filename) {
                     r.hash_clauses = hash_clauses;
 
                     int err;
-                    err = sql_add_record(&r);
-                    if (err) {
-                        printf("Error: %s\n", wholeline);
-                    }
-                    ++num_facts_added_during_this_run;
+                    
                     if (strstr(r.subjects, "_")) {
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
@@ -424,6 +420,13 @@ int hal2009_add_pro_file (char* filename) {
 
                         ++num_facts_added_during_this_run;
                         err = sql_add_record(&r);
+                    }
+                    else {
+                        err = sql_add_record(&r);
+                        if (err) {
+                            printf("Error: %s\n", wholeline);
+                        }
+                        ++num_facts_added_during_this_run;
                     }
                     
                     int k = 0;
