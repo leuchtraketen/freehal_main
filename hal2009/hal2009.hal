@@ -605,6 +605,11 @@ define action compute_tags with var word, var lang, var path do
     done
     
     if is an empty array tags do
+        if lc(var word) matches /[{][{][{](.+?)[}][}][}]/ do
+            set new var type to $0
+            set from array tags first item to var type
+            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
+        done
         if lc(var word) matches /no-question/ do
             set from array tags first item to "qq"
         done
@@ -2277,6 +2282,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         for each new var word in array list_of_words is rw do
             set from hash tags item { var word } to compute_tags with var word, var lang, var path
             set from hash genus_of item { lc(var word) } to from hash tags item { var word } first item
+            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
         end for
         
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
@@ -2969,6 +2975,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         for each new var word in array words is rw do
             do be_slow without arguments
             set from hash tags item { var word } to compute_tags with var word, var lang, var path
+            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
         end for
         
         # TEXT
