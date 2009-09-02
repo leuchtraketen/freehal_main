@@ -56,7 +56,7 @@ static char* sqlite_sql_create_table = ""
 
 "CREATE TABLE `clauses` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
 "`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), "
-"UNIQUE(`verb`, `subjects`, `objects`, `adverbs`, `truth`, `hash_clauses`));"
+"UNIQUE(`verb`, `subjects`, `objects`, `adverbs`, `truth`, `rel`, `truth`));"
 "CREATE INDEX `idx_clauses_rel` ON `clauses` (`rel`);"
 "CREATE INDEX `idx_clauses_truth` ON `clauses` (`truth`);"
 "CREATE INDEX `idx_clauses_verb` ON `clauses` (`verb`); "
@@ -2330,7 +2330,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, " \n\nUNION ALL "
                         "SELECT DISTINCT \n"
                         "fact.pk, fact.rel, fact.verb || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, fact.subjects, fact.objects, fact.adverbs, fact.prio, NULL, fact.truth \n"
-                        "FROM cache_facts AS main JOIN clauses AS clause ON ");
+                        "FROM facts AS main JOIN clauses AS clause ON ");
             if (important_records[0]) {
                 strcat(sql, " ( ");
                 int w = 0;
@@ -2386,7 +2386,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                         strcat(sql, "\" ");
                         ++n;
                     }
-                    strcat(sql, " ) AND (clause.objects = \"\" OR fact.objects GLOB clause.objects) AND (clause.adverbs = \"\" OR clause.adverbs = \"\" OR fact.adverbs GLOB clause.adverbs)"
+                    strcat(sql, " ) AND (clause.objects = \"\" OR fact.objects GLOB clause.objects OR fact.objects GLOB main.objects) AND (clause.adverbs = \"\" OR clause.adverbs = \"\" OR fact.adverbs GLOB clause.adverbs)"
                     "\n AND (((fact.objects <> \"\" OR fact.adverbs <> \"\") AND fact.objects <> \"\") OR NOT (fact.verbgroup = \"be\"))\n");
                 }
             }
