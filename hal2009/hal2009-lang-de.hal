@@ -2366,6 +2366,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'waschen' => "vt",
           'schief' => "adj",
           'saeugetier' => "n",
+          'nutte' => "n",
           'bringst' => "vt",
           'fuenfzehn' => "adj",
           'meiste' => "adj",
