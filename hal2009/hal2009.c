@@ -516,7 +516,7 @@ int hal2009_add_pro_file (char* filename) {
     fflush(stdout);
     sql_end();
     
-    fprintf(output(), "\nAdded %d facts.", num_facts_added_during_this_run);
+    fprintf(output(), "\nAdded %d facts.", num_facts_added_during_this_run > 0 ? num_facts_added_during_this_run : 0);
     fprintf(output(), "\nNot added %d facts because they already exist in the database.", num_facts_not_added_during_this_run_because_exist);
     fprintf(output(), "\nNot added %d facts because of an other error.", num_facts_not_added_during_this_run_because_other_error);
     fprintf(output(), "\n(%d facts)", num_facts_added_during_this_run
