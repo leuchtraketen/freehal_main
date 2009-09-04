@@ -2672,11 +2672,6 @@ define action update_list_of_pro_file with var file, var lang, var path do
                 set new var output_list to handle for file name var file_output, append
                 
                 set new hash tags to an empty hash
-                set new array words to split with /\s[-;?,!.]/, from array output_line item [ 1 ]
-                
-                for each new var word in array words is rw do
-                    set from hash tags item { var word } to compute_tags with var word, var lang, var path
-                end for
                 
                 set new var final_output to upper_case_correction with from array output_line item [ 1 ], hash tags, var lang, var path
                 print into var output_list data var final_output
