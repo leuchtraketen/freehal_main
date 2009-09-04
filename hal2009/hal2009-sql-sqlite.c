@@ -1019,6 +1019,33 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     return 0;
 }
 
+char* replace_in_select(const char* var, char** syn) {
+    char res[20000];
+    strcpy(res, "");
+    int n = 0;
+    while (syn[n] && n < 20000) {
+        strcat(res, "replace(");
+        ++n;
+    }
+    strcat(res, var);
+    n = 0;
+    while (syn[n] && n < 20000) {
+        if (strlen(syn[n])) {
+            char* synon = strdup(syn[n]);
+            if (synon[0] == "*") {
+                ++synon;
+            }
+            
+            strcat(res, ", ");
+            strcat(res, synon);
+            strcat(res, "\"\") ");
+            strcat(res, "");
+        }
+    }
+
+    return res;
+}
+
 struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     if (0 == sqlite_connection) {
         printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
@@ -1196,7 +1223,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
-        strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT subjects GLOB \"ein *\" AND NOT subjects GLOB \"eine *\") AND (objects ");
+        strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND ((NOT subjects GLOB \"ein *\" AND NOT subjects GLOB \"eine *\") OR ((subjects GLOB \"ein *\" OR subjects GLOB \"eine *\") AND (objects GLOB \"ein *\" OR objects GLOB \"eine *\"))) AND (objects ");
         if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
         else                            strcat(sql, " = ");
         strcat(sql, " \"");
@@ -1827,8 +1854,11 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         strcat(sql, ");");
     }
 
+
     /////////////////////////// First, select the normal facts ///////////////////////////
-    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
+    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, ");
+    strcat(sql, replace_in_select("`nmain`.`objects`", subject_synonyms));
+    strcat(sql, ", `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
                     " LEFT JOIN rel_fact_flag AS rff ON rff.fact = nmain.pk");
     
     if (r->everything_q != EVERYTHING) {

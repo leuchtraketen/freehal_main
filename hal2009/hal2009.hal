@@ -605,11 +605,6 @@ define action compute_tags with var word, var lang, var path do
     done
     
     if is an empty array tags do
-        if lc(var word) matches /[{][{][{](.+?)[}][}][}]/ do
-            set new var type to $0
-            set from array tags first item to var type
-            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
-        done
         if lc(var word) matches /no-question/ do
             set from array tags first item to "qq"
         done
@@ -2145,7 +2140,10 @@ done
 define action to_array_from_pro_line with var line, var lang do
     set new array results to an empty array
     set new array result to an empty array
+    push into array result, an empty array
+
     set new array parts to split with / [<][>] /, var line
+    do pop with items of array parts
     
     set new array clause to an empty array
     push into array clause, from array parts item [ 0 ]
@@ -2162,9 +2160,16 @@ define action to_array_from_pro_line with var line, var lang do
         push into array clause, from array parts item [ var i + 2 ]
         push into array clause, from array parts item [ var i + 3 ]
         push into array clause, from array parts item [ var i + 4 ]
-        push into array result, array clause
         
         set var i to var i + 5
+        
+        if from array clause item [ 0 ] matches 50 do
+            go to next
+        done
+        if from array clause item [ 0 ] matches 100 do
+            go to next
+        done
+        push into array result, array clause
     done
     
     push into array results, array result
@@ -2282,7 +2287,6 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         for each new var word in array list_of_words is rw do
             set from hash tags item { var word } to compute_tags with var word, var lang, var path
             set from hash genus_of item { lc(var word) } to from hash tags item { var word } first item
-            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
         end for
         
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
@@ -2649,19 +2653,35 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
     do reread_pro_file with var pro_file_name, var lang
 done
 
-define action update_list_of_pro_file with var file, var lang do
+define action update_list_of_pro_file with var file, var lang, var path do
     set new var input_pro to handle for file name var file, read
     set new var file_output to var file
     do regex using var file_output: /.pro/, ".list", :global
     set new var output_list to handle for file name var file_output, write
+    do close with output_list
     
     for each new var line from var input_pro do
         set new array results to to_array_from_pro_line with var line, var lang
         set new hash parsed to fake_hash_parsed without arguments
         set new array output_array to phrase with var lang, "default", array results, hash parsed
+        
         for each new array output_line in array output_array do
-            print into var output_list data from array output_line item [ 1 ]
-            print into var output_list data new line
+            if from array output_line item [ 1 ] do
+                set new var output_list to handle for file name var file_output, append
+                
+                set new hash tags to an empty hash
+                set new array words to split with /\s[-;?,!.]/, from array output_line item [ 1 ]
+                
+                for each new var word in array words is rw do
+                    set from hash tags item { var word } to compute_tags with var word, var lang, var path
+                end for
+                
+                set new var final_output to upper_case_correction with from array output_line item [ 1 ], hash tags, var lang, var path
+                print into var output_list data var final_output
+                print into var output_list data new line
+                
+                do close with output_list
+            done
         done
     done
 done
@@ -2673,8 +2693,6 @@ define action reread_pro_file with var file, var lang do
     set new var output_handle to handle for file name "_output__add_pro_file", write
     print into var output_handle data var file
     do close with var output_handle
-    
-    do update_list_of_pro_file with var file, var lang
 done
 
 define action execute_exe with var appname do
@@ -2975,7 +2993,6 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         for each new var word in array words is rw do
             do be_slow without arguments
             set from hash tags item { var word } to compute_tags with var word, var lang, var path
-            do regex using var word: /[{][{][{](.+?)[}][}][}]/, "", :global:i
         end for
         
         # TEXT
@@ -3031,7 +3048,7 @@ define action init_prot_files with var current_language, var path do
             if not var file matches /prot$/ do
                 go to next
             done
-
+            
             set new var pro_file to var file
             do regex using var pro_file: /t$/, "", :i
             do unlink with var pro_file
@@ -3087,6 +3104,33 @@ done
 define action init with var current_language, var path do
     do init_prot_files with var current_language, var path
     do init_pro_files with var current_language, var path
+done
+
+define action update_list_of_pro_files with var current_language, var path do
+    set new var save_path to var path concat '/saved/'
+    do mkdir with var save_path
+    set new array sub_directories to [ '', '/thesaurus' ]
+    push into array sub_directories, '/namen'   
+    push into array sub_directories, '/berufe'
+    
+    for each new var sub_dir in array sub_directories is copy do
+        set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+
+        do opendir with new var dir_handle, var language_directory
+        set new array files to [ readdir(var dir_handle) ]
+        # TEXT
+        # Read all .pro files by sending a signal to the C thread
+        # CODE
+        for each new var file_name in array files is rw do
+            set new var file to var language_directory concat '/' concat var file_name
+
+            if not var file matches /\.pro$/ do
+                go to next
+            done
+            do update_list_of_pro_file with var file, var current_language, var path
+
+        done
+    done
 done
 
 define action init_pro_files with var current_language, var path do
@@ -3255,6 +3299,10 @@ define action shell with var current_language, var path do
                 if lc(var line) matches /^\/all / do
                     do regex using var line: /^\/all /, "", :global:i
                     set flag all_output_phrases to 1
+                done
+                if lc(var line) matches /^\/gen all/ do
+                    do update_list_of_pro_files with var current_language, var path
+                    go to next
                 done
                 
                 do unlink with '_output'

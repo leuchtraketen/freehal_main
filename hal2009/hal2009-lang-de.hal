@@ -2866,6 +2866,10 @@ define action get_verb with var verb, var person do
 done
 
 define action compute_output with var output do
+    if not var output do
+        do return with var output
+    done
+
     do regex using var output: /in dem/, "im", :global:i
     do regex using var output: /an dem/, "am", :global:i
     
