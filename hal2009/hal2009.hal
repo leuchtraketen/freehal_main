@@ -3103,7 +3103,7 @@ define action init with var current_language, var path do
     do init_pro_files with var current_language, var path
 done
 
-define action update_list_of_pro_files with var current_language, var path do
+define action update_list_of_pro_files with var pattern, var current_language, var path do
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
@@ -3122,6 +3122,9 @@ define action update_list_of_pro_files with var current_language, var path do
             set new var file to var language_directory concat '/' concat var file_name
 
             if not var file matches /\.pro$/ do
+                go to next
+            done
+            if not var file matches /$pattern/ do
                 go to next
             done
             do update_list_of_pro_file with var file, var current_language, var path
@@ -3298,7 +3301,8 @@ define action shell with var current_language, var path do
                     set flag all_output_phrases to 1
                 done
                 if lc(var line) matches /^\/gen list/ do
-                    do update_list_of_pro_files with var current_language, var path
+                    do regex using var line: /^\/gen list /, "", :global:i
+                    do update_list_of_pro_files with var line, var current_language, var path
                     go to next
                 done
                 
