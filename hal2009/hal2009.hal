@@ -2100,7 +2100,7 @@ define action phrase with var lang, var mode, array results, hash parsed do
                     push into array sentence, items of array proper_verbs
                 done
                 
-                if var final_sentence do
+                if var final_sentence and items of array sentence do
                     set var final_sentence to var final_sentence concat ', '
                 done
                 
