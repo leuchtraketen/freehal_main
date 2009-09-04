@@ -2151,7 +2151,8 @@ define action to_array_from_pro_line with var line, var lang do
     set new array result to an empty array
     push into array result, an empty array
 
-    set new array parts to split with / [<][>] /, var line
+    do regex using var line: / [<][>] /, "<>", :global
+    set new array parts to split with /[<][>]/, var line
     do pop with items of array parts
     
     set new array clause to an empty array
