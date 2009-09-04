@@ -2586,6 +2586,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'sechzehnte' => "adj",
           'teressieren' => "vt",
           'zehnte' => "adj",
+          'everest' => "n",
           'hundert' => "adj",
           'bisin' => "prep",
           'barocke' => "adj",
