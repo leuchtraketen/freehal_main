@@ -2139,6 +2139,13 @@ define action phrase with var lang, var mode, array results, hash parsed do
     do return using array phrases
 done
 
+define action filter_nothing with var text do
+    if var text matches /nothing/ do
+        do return with ""
+    done
+    do return with var text
+done
+
 define action to_array_from_pro_line with var line, var lang do
     set new array results to an empty array
     set new array result to an empty array
@@ -2148,20 +2155,20 @@ define action to_array_from_pro_line with var line, var lang do
     do pop with items of array parts
     
     set new array clause to an empty array
-    push into array clause, from array parts item [ 0 ]
-    push into array clause, from array parts item [ 1 ]
-    push into array clause, from array parts item [ 2 ]
-    push into array clause, from array parts item [ 3 ]
+    push into array clause, filter_nothing(from array parts item [ 0 ])
+    push into array clause, filter_nothing(from array parts item [ 1 ])
+    push into array clause, filter_nothing(from array parts item [ 2 ])
+    push into array clause, filter_nothing(from array parts item [ 3 ])
     push into array result, array clause
     
     set new var i to 4
     while var i < 100 do
         set new array clause to an empty array
-        push into array clause, from array parts item [ var i + 0 ]
-        push into array clause, from array parts item [ var i + 1 ]
-        push into array clause, from array parts item [ var i + 2 ]
-        push into array clause, from array parts item [ var i + 3 ]
-        push into array clause, from array parts item [ var i + 4 ]
+        push into array clause, filter_nothing(from array parts item [ var i + 0 ])
+        push into array clause, filter_nothing(from array parts item [ var i + 1 ])
+        push into array clause, filter_nothing(from array parts item [ var i + 2 ])
+        push into array clause, filter_nothing(from array parts item [ var i + 3 ])
+        push into array clause, filter_nothing(from array parts item [ var i + 4 ])
         
         set var i to var i + 5
         
@@ -3302,6 +3309,10 @@ define action shell with var current_language, var path do
                 done
                 if lc(var line) matches /^\/gen list/ do
                     do regex using var line: /^\/gen list /, "", :global:i
+                    do regex using var line: /^\/gen list/, "", :global:i
+                    if not var line do
+                        set var line to ""
+                    done
                     do update_list_of_pro_files with var line, var current_language, var path
                     go to next
                 done
