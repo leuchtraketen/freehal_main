@@ -2107,6 +2107,8 @@ define action phrase with var lang, var mode, array results, hash parsed do
                 set var final_sentence to var final_sentence concat join ' ', items of array sentence
             done
         done
+        
+        do regex using var final_sentence: /<[,]>\s*?/, "", :global
 
         if var final_sentence matches / dacht/ and not var final_sentence matches /<[,]>/ do
             # TEXT
