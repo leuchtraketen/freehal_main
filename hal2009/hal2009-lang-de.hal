@@ -2587,6 +2587,10 @@ set multi-line new global hash builtin_part_of_speech to {
           'teressieren' => "vt",
           'zehnte' => "adj",
           'everest' => "n",
+          'hoechste' => "adj",
+          'hoechster' => "adj",
+          'hoechst' => "adj",
+          'welt' => "n",
           'hundert' => "adj",
           'bisin' => "prep",
           'barocke' => "adj",
@@ -3308,7 +3312,12 @@ define action stem_nouns with array phrases do
             done
             if var noun matches /^(der|die|das|den|dem|des)$/ and not items of array words is 1 do
                 #do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
-                do regex using var noun: /^(der|die|das|den|dem|des)$/, "", :global:i
+                if items of array words > 2 do
+                    do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
+                done
+                else do
+                    do regex using var noun: /^(der|die|das|den|dem|des)$/, "", :global:i
+                done
                 go to next
             done
             

@@ -3300,7 +3300,7 @@ define action shell with var current_language, var path do
                     do regex using var line: /^\/all /, "", :global:i
                     set flag all_output_phrases to 1
                 done
-                if lc(var line) matches /^\/gen all/ do
+                if lc(var line) matches /^\/gen list/ do
                     do update_list_of_pro_files with var current_language, var path
                     go to next
                 done
