@@ -434,7 +434,7 @@ int sql_sqlite_add_link (const char* link, int key_1, int key_2) {
     strcat(sql, ");");
     
     strcpy(sql, sql_sqlite_mask_sql(sql));
-    printf("%s", sql);
+    //printf("%s", sql);
 
     char* err;
     while (sqlite3_exec(sqlite_connection, sql, NULL, NULL, &err)) {
@@ -676,6 +676,15 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         printf ("!(4)");
         return INVALID;
     }*/
+    if (    (!r->subjects     || !strlen(r->subjects))
+         && (!r->objects      || !strlen(r->objects))
+         && (!r->adverbs      || !strlen(r->adverbs))
+         && (!r->verb         || !strlen(r->verb))
+         && (!r->questionword || !strlen(r->questionword) || 1==strlen(r->questionword))
+        ) {
+            
+        return INVALID;
+    }
     
     if (r->verb) {
         char* override_verb = halmalloc(strlen(r->verb)*2+1, "sql_sqlite_add_record");
@@ -934,7 +943,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             int n;
             for (n = 0; n <= r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
                 if (sql_sqlite_add_record(r->clauses[n], key)) {
-                    printf("break\n");
+                    //printf("break\n");
                     r->clauses[n] = 0;
                     break;
                 }
