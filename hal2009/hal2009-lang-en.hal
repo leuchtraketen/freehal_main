@@ -3075,6 +3075,10 @@ define action verb_category with var verb do
     done
 done
 
+define action noun_for_anonymous without arguments do
+    do return with "one"
+done
+
 define action upper_case_correction with var phrase, hash tags do
     do return with var phrases
 done

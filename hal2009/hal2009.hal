@@ -2079,6 +2079,10 @@ define action phrase with var lang, var mode, array results, hash parsed do
                     done
                 done
                 
+                if from array clause item [1] matches "_" do
+                    set from array clause item [1] to noun_for_anonymous without arguments
+                done
+                
                 if from array clause item [2] matches "NULL" do
                     push into array sentence, from array clause item [1]
                     push into array sentence, items of array auxiliary_verbs
@@ -2108,7 +2112,8 @@ define action phrase with var lang, var mode, array results, hash parsed do
             done
         done
         
-        do regex using var final_sentence: /<[,]>\s*?/, "", :global
+        do regex using var final_sentence: /<[,]>\s*?$/, "", :global
+        do regex using var final_sentence: /<[,]>$/, "", :global
 
         if var final_sentence matches / dacht/ and not var final_sentence matches /<[,]>/ do
             # TEXT
@@ -2121,7 +2126,7 @@ define action phrase with var lang, var mode, array results, hash parsed do
             go to next
         done
         
-        if var final_sentence matches / [=] / and not var final_sentence matches /<[,]>/ do
+        if var final_sentence matches / <[=]>/ do
             # TEXT
             # A Sentence must not have the verb "="
             # CODE
@@ -2133,6 +2138,10 @@ define action phrase with var lang, var mode, array results, hash parsed do
         done
         
         set var final_sentence to compute_output with var final_sentence
+        
+        do regex using var final_sentence: /<[,]>\s*?$/, "", :global
+        do regex using var final_sentence: /<[,]>$/, "", :global
+        
         push into array phrases, [ var primary_key, var final_sentence ]
     done
     

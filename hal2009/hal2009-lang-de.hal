@@ -3925,6 +3925,10 @@ define action verb_category with var verb do
     done
 done
 
+define action noun_for_anonymous without arguments do
+    do return with "man"
+done
+
 define action upper_case_correction with var phrase, hash tags, var lang, var path do
     set new array words to split with /\s+?/, var phrase
     

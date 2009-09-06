@@ -1028,6 +1028,11 @@ char* replace_in_select(const char* var, char** syn) {
         ++n;
     }
     strcat(res, var);
+    
+    if (n >= 20) {
+        return var;
+    }
+    
     n = 0;
     while (syn[n] && n < 20000) {
         if (strlen(syn[n])) {
@@ -1036,11 +1041,13 @@ char* replace_in_select(const char* var, char** syn) {
                 ++synon;
             }
             
-            strcat(res, ", ");
+            strcat(res, ", \"");
             strcat(res, synon);
-            strcat(res, "\"\") ");
+            strcat(res, "\", \"\") ");
             strcat(res, "");
+            free(synon);
         }
+        ++n;
     }
 
     return res;
@@ -1108,7 +1115,34 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
         else                            strcat(sql, " = ");
         strcat(sql, " \"");
-        if (buf) strcat(sql, buf);
+        if (buf) {
+            if (strlen(buf) <= 2) {
+                strcat(sql, buf);
+            }
+            else if (buf[0] == '*') {
+                strcat(sql, "* ");
+                strcat(sql, buf+1);
+            }
+            else {
+                strcat(sql, buf);
+            }
+        }
+        strcat(sql, "\" OR subjects ");
+        if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
+        else                            strcat(sql, " = ");
+        strcat(sql, " \"");
+        if (buf) {
+            if (strlen(buf) <= 2) {
+                strcat(sql, buf);
+            }
+            else if (buf[0] == '*') {
+                strcat(sql, "");
+                strcat(sql, buf+1);
+            }
+            else {
+                strcat(sql, buf);
+            }
+        }
         strcat(sql, "\" OR (1 ");
         
         if (buf && !strstr(buf, "*")) {
@@ -1126,12 +1160,12 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     buf[j] = '\0';
 
                     printf("New buf (matched by '*'): %s*\n", buf);
-                    if (size) {
+                    if (size && strlen(buf)) {
                         strcat(sql, "AND subjects ");
                         strcat(sql, "GLOB");
-                        strcat(sql, " \"");
+                        strcat(sql, " \"* ");
                         strcat(sql, buf);
-                        strcat(sql, "*\"");
+                        strcat(sql, "\"");
                     }
                     buf[j] = '*';
                     if (j-1 >= 0) buf[j-1] = '\0';
@@ -1146,9 +1180,9 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (size) {
                 strcat(sql, "AND subjects ");
                 strcat(sql, "GLOB");
-                strcat(sql, " \"");
+                strcat(sql, " \"* ");
                 strcat(sql, buf);
-                strcat(sql, "*\"");
+                strcat(sql, "\"");
             }
         }
         
@@ -1227,7 +1261,34 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
         if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
         else                            strcat(sql, " = ");
         strcat(sql, " \"");
-        if (buf) strcat(sql, buf);
+        if (buf) {
+            if (strlen(buf) <= 2) {
+                strcat(sql, buf);
+            }
+            else if (buf[0] == '*') {
+                strcat(sql, "* ");
+                strcat(sql, buf+1);
+            }
+            else {
+                strcat(sql, buf);
+            }
+        }
+        strcat(sql, "\" OR objects ");
+        if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
+        else                            strcat(sql, " = ");
+        strcat(sql, " \"");
+        if (buf) {
+            if (strlen(buf) <= 2) {
+                strcat(sql, buf);
+            }
+            else if (buf[0] == '*') {
+                strcat(sql, "");
+                strcat(sql, buf+1);
+            }
+            else {
+                strcat(sql, buf);
+            }
+        }
         strcat(sql, "\" OR (0 ");
         
         if (buf && strstr(buf, "|")) {
@@ -1247,7 +1308,18 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                             strcat(sql, "=");
                         }
                         strcat(sql, " \"");
-                        strcat(sql, buf);
+                        if (buf) {
+                            if (strlen(buf) <= 2) {
+                                strcat(sql, buf);
+                            }
+                            else if (buf[0] == '*') {
+                                strcat(sql, "* ");
+                                strcat(sql, buf+1);
+                            }
+                            else {
+                                strcat(sql, buf);
+                            }
+                        }
                         strcat(sql, "\"");
                         
                         // add to synonyms
@@ -1279,7 +1351,18 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                     strcat(sql, "=");
                 }
                 strcat(sql, " \"");
-                strcat(sql, buf);
+                if (buf) {
+                    if (strlen(buf) <= 2) {
+                        strcat(sql, buf);
+                    }
+                    else if (buf[0] == '*') {
+                        strcat(sql, "* ");
+                        strcat(sql, buf+1);
+                    }
+                    else {
+                        strcat(sql, buf);
+                    }
+                }
                 strcat(sql, "\"");
                 
                 // add to synonyms
@@ -1435,17 +1518,49 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, "=");
             }
             strcat(sql, " \"");
-            if (buf) strcat(sql, buf);
+            if (buf) {
+                if (strlen(buf) <= 2) {
+                    strcat(sql, buf);
+                }
+                else if (buf[0] == '*') {
+                    strcat(sql, "* ");
+                    strcat(sql, buf+1);
+                }
+                else {
+                    strcat(sql, buf);
+                }
+            }
             strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
             strcat(sql, " UNION ALL ");
             strcat(sql, "SELECT subjects, pk, `from` FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
             strcat(sql, "GLOB");
-            strcat(sql, " \"* ");
-            if (buf) strcat(sql, buf);
+            strcat(sql, " \" ");
+            if (buf) {
+                if (strlen(buf) <= 2) {
+                    strcat(sql, buf);
+                }
+                else if (buf[0] == '*') {
+                    strcat(sql, buf+1);
+                }
+                else {
+                    strcat(sql, buf);
+                }
+            }
             strcat(sql, "\" OR objects ");
             strcat(sql, "GLOB");
             strcat(sql, " \"");
-            if (buf) strcat(sql, buf);
+            if (buf) {
+                if (strlen(buf) <= 2) {
+                    strcat(sql, buf);
+                }
+                else if (buf[0] == '*') {
+                    strcat(sql, "* ");
+                    strcat(sql, buf+1);
+                }
+                else {
+                    strcat(sql, buf);
+                }
+            }
             strcat(sql, "\") AND subjects <> \"*\" AND objects <> \"*\" AND adverbs = \"\"");
             
             if (bbuf) free(bbuf);
