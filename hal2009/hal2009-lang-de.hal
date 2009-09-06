@@ -2918,6 +2918,12 @@ define action compute_output with var output do
             if from global hash builtin_part_of_speech item { lc( $1 ) } matches /n/ do
                 go to next
             done
+            if from global hash builtin_part_of_speech item { lc( $2 ) } matches /art/ do
+                go to next
+            done
+            if from global hash builtin_part_of_speech item { lc( $2 ) } matches /adj/ do
+                go to next
+            done
         done
         
         do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global

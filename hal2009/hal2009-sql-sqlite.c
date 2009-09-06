@@ -680,7 +680,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
          && (!r->objects      || !strlen(r->objects))
          && (!r->adverbs      || !strlen(r->adverbs))
          && (!r->verb         || !strlen(r->verb))
-         && (!r->questionword || !strlen(r->questionword) || 1==strlen(r->questionword))
+         && (!r->questionword || !strlen(r->questionword) || 1<=strlen(r->questionword) || r->questionword[0] == ' ' || r->questionword[0] == '\r' || r->questionword[0] == '\n')
         ) {
             
         return INVALID;
@@ -1028,7 +1028,14 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
     return 0;
 }
 
-char* replace_in_select(const char* var, char** syn) {
+char* replace_in_select(const char* var, char** syn, char** rep) {
+    if (!rep) {
+        return var;
+    }
+    if (0 == strlen(rep)) {
+        return var;
+    }
+    
     char res[20000];
     strcpy(res, "");
     int n = 0;
@@ -1052,7 +1059,9 @@ char* replace_in_select(const char* var, char** syn) {
             
             strcat(res, ", \"");
             strcat(res, synon);
-            strcat(res, "\", \"\") ");
+            strcat(res, "\", \"");
+            strcat(res, rep);
+            strcat(res, "\") ");
             strcat(res, "");
             free(synon);
         }
@@ -1981,7 +1990,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
     /////////////////////////// First, select the normal facts ///////////////////////////
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`rel`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, ");
-    strcat(sql, replace_in_select("`nmain`.`objects`", subject_synonyms));
+    strcat(sql, replace_in_select("`nmain`.`objects`", object_synonyms, objects_buffer));
     strcat(sql, ", `nmain`.`adverbs`, `nmain`.`prio`, `nmain`.`from`, `nmain`.`truth` FROM `cache_facts` AS nmain "
                     " LEFT JOIN rel_fact_flag AS rff ON rff.fact = nmain.pk");
     
@@ -2281,7 +2290,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
             int n = 0;
             while (object_synonyms[n] && n < 20000) {
-                if (strlen(object_synonyms[n])) {
+                if (strlen(object_synonyms[n]) && strcmp(object_synonyms[n], subjects_buffer)) {
                     strcat(sql, "\n OR nmain.objects GLOB \"");
                     strcat(sql, object_synonyms[n]);
                     strcat(sql, "\" ");
@@ -2643,84 +2652,35 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
                 if (need_and) strcat(sql, " AND");
                 else          strcat(sql, "WHERE");
-                strcat(sql, " ( ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
+                strcat(sql, "\n ( \n");
+                
+                strcat(sql, "       (       main.subjects = \"*\" AND (\n\"");
                 strcat(sql, r->subjects);
-                strcat(sql, "\" GLOB main.subjects OR \"");
+                strcat(sql, "\" GLOB fact.subjects OR fact.subjects GLOB\n\"");
                 strcat(sql, r->subjects);
-                strcat(sql, "\" GLOB main.objects OR main.subjects ");
-                if (strstr(r->subjects, "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
+                strcat(sql, "\" )\n");
+                strcat(sql, "       )\n");
+                strcat(sql, " OR    (       main.subjects <> \"*\" AND (\n\"");
                 strcat(sql, r->subjects);
-                strcat(sql, "\" OR main.objects ");
-                if (strstr(r->subjects, "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
+                strcat(sql, "\" GLOB main.subjects OR main.subjects GLOB \n\"");
                 strcat(sql, r->subjects);
-                strcat(sql, "\" )");
-                strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
-                if (strstr(r->subjects, "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, r->subjects);
-                strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
-                if (strstr(r->subjects, "*")) {
-                    strcat(sql, "GLOB \"");
-                }
-                else {
-                    strcat(sql, "= \"");
-                }
-                strcat(sql, r->subjects);
-                strcat(sql, "\")");
+                strcat(sql, "\" )\n");
+                strcat(sql, "       )\n");
+                
                 int n = 0;
                 while (subject_synonyms[n] && n < 20000) {
-                    strcat(sql, " OR ((main.subjects = \"\") OR (main.objects = \"\" AND clause.subjects = \"\") OR \"");
+                    strcat(sql, " OR    (       main.subjects = \"*\" AND (\n\"");
                     strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" GLOB main.subjects OR \"");
+                    strcat(sql, "\" GLOB fact.subjects OR fact.subjects GLOB\n\"");
                     strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" GLOB main.objects OR main.subjects ");
-                    if (strstr(subject_synonyms[n], "*")) {
-                        strcat(sql, "GLOB \"");
-                    }
-                    else {
-                        strcat(sql, "= \"");
-                    }
+                    strcat(sql, "\" )\n");
+                    strcat(sql, "       )\n");
+                    strcat(sql, " OR    (       main.subjects <> \"*\" AND (\n\"");
                     strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR main.objects ");
-                    if (strstr(subject_synonyms[n], "*")) {
-                        strcat(sql, "GLOB \"");
-                    }
-                    else {
-                        strcat(sql, "= \"");
-                    }
+                    strcat(sql, "\" GLOB main.subjects OR main.subjects GLOB \n\"");
                     strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" )");
-                    strcat(sql, " AND ( main.subjects <> \"*\" OR fact.subjects ");
-                    if (strstr(subject_synonyms[n], "*")) {
-                        strcat(sql, "GLOB \"");
-                    }
-                    else {
-                        strcat(sql, "= \"");
-                    }
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\" OR fact.objects = \"\" OR main.objects = \"\" OR fact.objects ");
-                    if (strstr(subject_synonyms[n], "*")) {
-                        strcat(sql, "GLOB \"");
-                    }
-                    else {
-                        strcat(sql, "= \"");
-                    }
-                    strcat(sql, subject_synonyms[n]);
-                    strcat(sql, "\")");
+                    strcat(sql, "\" )\n");
+                    strcat(sql, "       )\n");
                     free(subject_synonyms[n]);
                     ++n;
                 }
@@ -2730,32 +2690,57 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             if (r->objects && *r->objects != '0' && strlen(r->objects)) {
                 if (need_and) strcat(sql, " AND");
                 else          strcat(sql, "WHERE");
-                strcat(sql, " ( ( \"");
+                strcat(sql, "\n ( \n");
+                
+                strcat(sql, "       (       (main.objects IN (\"*\",\"\")) AND (\n\"");
                 strcat(sql, r->objects);
-                strcat(sql, "\" GLOB main.objects OR \"");
+                strcat(sql, "\" GLOB fact.objects OR \n\"");
                 strcat(sql, r->objects);
-                strcat(sql, "\" GLOB main.subjects )");
-                strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
+                strcat(sql, "\" GLOB fact.subjects OR fact.objects GLOB\n\"");
                 strcat(sql, r->objects);
-                strcat(sql, "\" GLOB main.objects OR \"");
+                strcat(sql, "\" OR fact.subjects GLOB\n\"");
                 strcat(sql, r->objects);
-                strcat(sql, "\" GLOB main.subjects )");
+                strcat(sql, "\" )\n");
+                strcat(sql, "       )\n");
+                strcat(sql, " OR    (       main.objects <> \"*\" AND main.objects <> \"\" AND (\n\"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.objects OR \n\"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" GLOB main.subjects OR main.objects GLOB \n\"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" OR main.subjects GLOB \n\"");
+                strcat(sql, r->objects);
+                strcat(sql, "\" )\n");
+                strcat(sql, "       )\n");
                 int n = 0;
                 while (object_synonyms[n] && n < 20000) {
-                    strcat(sql, " OR ( \"");
-                    strcat(sql, object_synonyms[n]);
-                    strcat(sql, "\" GLOB main.objects OR \"");
-                    strcat(sql, object_synonyms[n]);
-                    strcat(sql, "\" GLOB main.objects )");
-                    strcat(sql, " AND ( main.objects <> \"*\" OR main.objects <> \"\" OR \"");
-                    strcat(sql, object_synonyms[n]);
-                    strcat(sql, "\" GLOB main.objects OR \"");
-                    strcat(sql, object_synonyms[n]);
-                    strcat(sql, "\" GLOB main.objects )");
+                    if (strlen(object_synonyms[n]) && strcmp(object_synonyms[n], subjects_buffer)) {
+                        strcat(sql, " OR    (       (main.objects IN (\"*\",\"\")) AND (\n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" GLOB fact.objects OR \n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" GLOB fact.subjects OR fact.objects GLOB\n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" OR fact.subjects GLOB\n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" )\n");
+                        strcat(sql, "       )\n");
+                        strcat(sql, " OR    (       main.objects <> \"*\" AND main.objects <> \"\" AND (\n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" GLOB main.objects OR \n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" GLOB main.subjects OR main.objects GLOB \n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" OR main.subjects GLOB \n\"");
+                        strcat(sql, object_synonyms[n]);
+                        strcat(sql, "\" )\n");
+                        strcat(sql, "       )\n");
+                    }
                     free(object_synonyms[n]);
                     ++n;
                 }
-                strcat(sql, " ) ");
+                
+                strcat(sql, " ) \n");
                 need_and = 1;
             }
             if (r->adverbs && *r->adverbs != '0' && strlen(r->adverbs)) {
