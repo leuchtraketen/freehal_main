@@ -2894,45 +2894,6 @@ define action compute_output with var output do
     done
     do regex using var output: /=>/, "", :global:i
     
-    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
-    
-    print var output
-    print new line
-    
-    for each new var prefix in array verb_prefixes do
-        if from hash builtin_verb_prefixes_no_split item { var prefix } do
-            go to next
-        done
-        if from hash builtin_auxiliary_verbs item { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs item { var prefix } do
-            go to next
-        done
-        if var output matches /kann|soll|muss|muess|darf/ do
-            go to next
-        done
-        
-        if lc(var output) matches /(andro)/ do
-            go to next
-        done
-        
-        if var output matches /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)(\s|$)/ do
-            if from global hash builtin_part_of_speech item { lc( $1 ) } matches /n/ do
-                go to next
-            done
-            if from global hash builtin_part_of_speech item { lc( $2 ) } matches /art/ do
-                go to next
-            done
-            if from global hash builtin_part_of_speech item { lc( $2 ) } matches /adj/ do
-                go to next
-            done
-        done
-        
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)$/, " $1 $2 $0", :global
-        do regex using var output: /\s($prefix)(<[a-zA-Z0-9]>+?)$/, " $1 $0", :global
-    done
-    
-    print var output
-    print new line
     if var output matches /\$\$username\$\$/ do
         print new line
         print "Searching for the user's name"
@@ -3941,7 +3902,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     for each new var word in array words do
         if not from hash tags item { var word } do
             set new var word_to_check to var word
-            do regex using var word_to_check: /<[^a-zA-Z0-9]>/, "", :global:i
+            do regex using var word_to_check: /<[^a-zA-Z0-9-]>/, "", :global:i
             set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
         if from hash tags item { var word } first item matches /n/ and not from hash tags item { var word } first item matches /linking/ do
@@ -3950,6 +3911,40 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     done
     
     set var phrase to join ' ', items of array words
+    
+    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
+    
+    for each new var prefix in array verb_prefixes do
+        if from hash builtin_verb_prefixes_no_split item { var prefix } do
+            go to next
+        done
+        if from hash builtin_auxiliary_verbs item { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs item { var prefix } do
+            go to next
+        done
+        if var phrase matches /kann|soll|muss|muess|darf/ do
+            go to next
+        done
+        
+        if lc(var phrase) matches /(andro)/ do
+            go to next
+        done
+        
+        if var phrase matches /\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
+            print "possible verb: "
+            print lc( $0 concat $1 )
+            print " = "
+            print from hash tags item { lc( $0 concat $1 ) } first item
+            print new line
+            
+            if not from hash tags item { lc( $0 concat $1 ) } first item matches /v/ do
+                go to next
+            done
+        done
+        
+        #do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global
+        do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s.*?)$/, " $1$2 $0", :global
+        #do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)$/, " $1 $0", :global
+    done
     
     do return with var phrase
 done
