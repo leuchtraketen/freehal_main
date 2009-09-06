@@ -737,7 +737,6 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
             strcat(sql, "facts");
         }
         strcat(sql, " order by 1 desc limit 1;");
-        printf(sql);
     
         //printf ("(.9)\n");
         char key[99];
@@ -751,7 +750,6 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         if (key && key[0]) {
             num_of_records[relation_to?1:0] = atol(key);
         }
-        printf("%i", num_of_records[relation_to?1:0]);
     }
     ++(num_of_records[relation_to?1:0]);
 
