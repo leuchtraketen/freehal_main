@@ -2445,6 +2445,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'heisser' => "adj",
           'natural' => "adj",
           'spaet' => "adj",
+          'loesung' => "n",
           'nachher' => "adj",
           'damit' => "questionword",
           'vieler' => "adj",
