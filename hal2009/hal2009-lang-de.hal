@@ -3907,6 +3907,11 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
         if from hash tags item { var word } first item matches /n/ and not from hash tags item { var word } first item matches /linking/ do
+            set new array parts_of_word to split with /<[-]>/, var word
+            for each new var part in array parts_of_word do
+                set var part to ucfirst with var part
+            done
+            set var word to join '-', items of array parts_of_word
             set var word to ucfirst with var word
         done
     done
