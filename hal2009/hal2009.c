@@ -265,6 +265,7 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     sline_ref = replace(sline_ref, "\"", "'");
+                    sline_ref = replace(sline_ref, "()", "");
                     sline_ref = replace(sline_ref, " <> ", "^");
                     sline_ref = replace(sline_ref, "<>", "^");
                     sline_ref = replace(sline_ref, " ^", "^");
