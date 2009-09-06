@@ -941,11 +941,16 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
 
         if (r->clauses && r->clauses[0] && !relation_to) {
             int n;
+            int broken = 0;
             for (n = 0; n <= r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
+                if (broken) {
+                    continue;
+                }
                 if (sql_sqlite_add_record(r->clauses[n], key)) {
                     //printf("break\n");
-                    r->clauses[n] = 0;
-                    break;
+                    //r->clauses[n] = 0;
+                    //break;
+                    broken = 1;
                 }
                 //free(r->clauses[n]);
                 //r->clauses[n] = 0;
