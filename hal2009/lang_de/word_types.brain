@@ -1,3 +1,558 @@
+Blaeschen:
+  genus  : f
+  type: n
+moment:
+  type: n
+blaufelchen:
+  genus  : s
+  type: n
+piranha:
+  genus  : m
+  type: n
+suesswasserfisch:
+  genus  : m
+  type: n
+sardine:
+  genus  : f
+  type: n
+stockfisch:
+  genus  : m
+  type: n
+babbage:
+  type: n
+service:
+  genus  : s
+  type: n
+Bps:
+  type: n
+bits:
+  genus  : f
+  type: n
+sekunde:
+  genus  : f
+  type: n
+central:
+  type: adj
+operating:
+  type: n
+digital:
+  type: adj
+subscriber:
+  type: n
+line:
+  type: n
+versatile:
+  type: adj
+electronic:
+  type: n
+graphics:
+  type: n
+interchange:
+  type: adj
+hypertext:
+  genus  : m
+  type: n
+language:
+  genus  : f
+  type: n
+portable:
+  type: adj
+document:
+  genus  : s
+  type: n
+practical:
+  type: adj
+extraction:
+  type: n
+and:
+  type: linking
+reporting:
+  genus  : s
+  type: n
+Png:
+  type: n
+network:
+  genus  : s
+  type: n
+office:
+  genus  : s
+  type: n
+kurznachrichtendienst:
+  genus  : m
+  type: vi
+private:
+  type: adj
+Andwendungsprogramme:
+  genus  : f
+  type: n
+adresszeile:
+  genus  : f
+  type: n
+webseite:
+  genus  : f
+  type: n
+aufruf:
+  genus  : m
+  type: n
+emfpang:
+  genus  : m
+  type: n
+tvprogrammen:
+  type: n
+banner:
+  genus  : s
+  type: n
+softwareentwicklung:
+  genus  : f
+  type: n
+webbrowser:
+  genus  : m
+  type: n
+internetseiten:
+  genus  : f
+  type: n
+Wlan:
+  genus  : s
+  type: n
+funkuebertragung:
+  genus  : f
+  type: n
+audiosignalen:
+  type: n
+finde:
+  type: vi
+windows:
+  genus  : s
+  type: n
+gates:
+  type: n
+kontextmenue:
+  genus  : s
+  type: n
+maustaste:
+  genus  : f
+  type: n
+zuse:
+  type: n
+programmierbaren:
+  type: adj
+computers:
+  type: n
+jobs:
+  type: n
+apple:
+  type: n
+carbon:
+  type: n
+copy:
+  type: n
+compact:
+  type: n
+Irc:
+  genus  : m
+  type: n
+relay:
+  genus  : s
+  type: n
+suchmaschine:
+  genus  : f
+  type: n
+Apple:
+  type: n
+Bluetooth:
+  type: n
+industriestandard:
+  genus  : m
+  type: n
+drahtlose:
+  type: adj
+vernetzung:
+  genus  : f
+  type: n
+Bmp:
+  type: n
+bildformat:
+  type: n
+Capi:
+  type: n
+isdnprogrammierschnittstelle:
+  genus  : f
+  type: n
+bios:
+  genus  : f
+  type: n
+systemprogramm:
+  genus  : s
+  type: n
+moorhuhn:
+  genus  : s
+  type: n
+beruehmteste:
+  type: adj
+speicherbausteintechnik:
+  genus  : f
+  type: n
+cyberspace:
+  genus  : m
+  type: n
+virtueller:
+  type: adj
+haftungsausschuss:
+  genus  : m
+  type: n
+navigator:
+  genus  : m
+  type: n
+internetbrowser:
+  genus  : m
+  type: n
+quellcode:
+  genus  : m
+  type: n
+programmierung:
+  genus  : f
+  type: n
+bash:
+  genus  : f
+  type: n
+unixshell:
+  genus  : f
+  type: n
+fat:
+  genus  : f
+  type: n
+dateizuordnungstabelle:
+  genus  : f
+  type: n
+maus:
+  genus  : f
+  type: n
+eingabegeraet:
+  genus  : s
+  type: n
+spacetaste:
+  genus  : f
+  type: n
+tastatur:
+  genus  : f
+  type: n
+Dreamlinux:
+  genus  : s
+  type: n
+kopierschutz:
+  genus  : m
+  type: n
+musikdateien:
+  genus  : f
+  type: n
+informationseinheit:
+  genus  : f
+  type: n
+gebrauchsgegenstand:
+  genus  : m
+  type: n
+dongle:
+  genus  : m
+  type: n
+drucker:
+  genus  : m
+  type: n
+computerzubehoer:
+  genus  : s
+  type: n
+imation:
+  type: n
+scheibenfoermiges:
+  type: adj
+speichermedium:
+  genus  : s
+  type: n
+lanparty:
+  genus  : f
+  type: n
+netzwerkparty:
+  genus  : f
+  type: n
+information:
+  genus  : f
+  type: n
+tabelle:
+  genus  : f
+  type: n
+geordnete:
+  type: adj
+hyperlink:
+  genus  : s
+  type: n
+modem:
+  genus  : s
+  type: n
+datenumwandler:
+  genus  : m
+  type: n
+tablet:
+  genus  : s
+  type: n
+thumbnail:
+  genus  : s
+  type: n
+bilddatei:
+  genus  : f
+  type: n
+update:
+  genus  : s
+  type: n
+aktualisierung:
+  genus  : f
+  type: n
+Fedora:
+  type: n
+datenmengen:
+  genus  : f
+  type: n
+Firmware:
+  genus  : f
+  type: n
+betriebssoftware:
+  genus  : f
+  type: n
+datenuebertragungsprotokoll:
+  genus  : s
+  type: n
+Gnome:
+  type: n
+file:
+  genus  : s
+  type: n
+client:
+  genus  : m
+  type: n
+computerkonzern:
+  genus  : m
+  type: n
+Icq:
+  genus  : m
+  type: n
+aeltersten:
+  type: adj
+Jpeg:
+  genus  : s
+  type: n
+Jpg:
+  genus  : s
+  type: n
+dateien:
+  genus  : f
+  type: n
+freies:
+  type: adj
+unixbasierendes:
+  type: adj
+verwandlung:
+  genus  : f
+  type: n
+anderes:
+  type: adj
+audioformat:
+  genus  : s
+  type: n
+Msdos:
+  type: n
+Open:
+  type: adj
+kostenlose:
+  type: adj
+skriptsprache:
+  genus  : f
+  type: n
+Phishing:
+  genus  : s
+  type: n
+erwerb:
+  genus  : m
+  type: n
+domain:
+  genus  : f
+  type: n
+freesoftwarefoundation:
+  genus  : f
+  type: n
+Sap:
+  type: n
+instant:
+  type: adj
+Sql:
+  type: n
+kuerzel:
+  genus  : s
+  type: n
+structuredquerylanguage:
+  genus  : f
+  type: n
+datenbanksprache:
+  genus  : f
+  type: n
+Swf:
+  type: n
+dateiendung:
+  genus  : f
+  type: n
+flashdatei:
+  genus  : f
+  type: n
+betriebsprogramm:
+  genus  : s
+  type: n
+mulitmediahandys:
+  genus  : f
+  type: n
+chatsystem:
+  genus  : s
+  type: n
+textbasierendes:
+  type: adj
+Tiff:
+  type: n
+linuxvariante:
+  genus  : f
+  type: n
+linuxdistribution:
+  genus  : f
+  type: n
+linuxderivat:
+  genus  : s
+  type: n
+Vista:
+  genus  : s
+  type: n
+wireless:
+  type: adj
+application:
+  genus  : f
+  type: n
+open:
+  type: adj
+apache:
+  type: n
+millenium:
+  type: n
+xp:
+  type: n
+videoportal:
+  genus  : s
+  type: n
+rechners:
+  type: n
+booten:
+  type: vi
+yellowbookstandard:
+  genus  : m
+  type: n
+datencd:
+  genus  : f
+  type: n
+firewall:
+  genus  : f
+  type: n
+unbefugtem:
+  type: adj
+kilobyte:
+  genus  : s
+  type: n
+megabyte:
+  genus  : s
+  type: n
+byte:
+  genus  : s
+  type: n
+vertiefungen:
+  genus  : f
+  type: n
+compactdisc:
+  genus  : f
+  type: n
+gigabyte:
+  genus  : s
+  type: n
+softwareentwickler:
+  genus  : m
+  type: n
+over:
+  type: adj
+ip:
+  genus  : f
+  type: n
+ferngespraeche:
+  genus  : f
+  type: n
+raubkopien:
+  genus  : f
+  type: n
+basic:
+  genus  : s
+  type: n
+input:
+  genus  : m
+  type: n
+output:
+  genus  : m
+  type: n
+einschalten:
+  type: vi
+high:
+  type: adj
+television:
+  genus  : f
+  type: n
+Mpeg:
+  type: n
+moving:
+  type: vi
+pictures:
+  genus  : f
+  type: n
+experts:
+  genus  : f
+  type: n
+group:
+  genus  : f
+  type: n
+Usb:
+  type: n
+serial:
+  type: adj
+wide:
+  type: adj
+pivottabelle:
+  genus  : f
+  type: n
+gruppen:
+  genus  : f
+  type: n
+videodatein:
+  genus  : f
+  type: n
+versendet:
+  type: vi
+signale:
+  genus  : f
+  type: n
+Blutooth:
+  type: n
+dezimeterwellen:
+  genus  : f
+  type: n
+fluessigkristalle:
+  genus  : f
+  type: n
+microprozessor:
+  genus  : m
+  type: n
+intel:
+  type: n
+rechenanlage:
+  genus  : f
+  type: n
 bedrohungsgefuehl:
   genus  : s
   type: n
@@ -112412,246 +112967,294 @@ Aufschieben:
   genus  : s
   type: n
 womit:
-  type: adj
+  type: adv
 demokratischen:
   type: adv
 Gewinnsteuer:
-  type: n
-Flgelspitze:
-  type: n
-Flgelholm:
+  genus  : f
   type: n
 Ophthalmologie:
+  genus  : f
   type: n
 Dienstvorgesetzte:
+  genus  : m
   type: n
 Abneigung:
+  genus  : f
   type: n
 Haarersatz:
+  genus  : m
   type: n
 toxaemie:
-  type: adj
+  genus  : f
+  type: n
 Fertigungsprogramm:
+  genus  : s
   type: n
 organen:
-  type: vi
+  type: n
 anwendbarkeit:
+  genus  : f
   type: n
 Herueber:
-  type: n
+  type: adv
 bueromobiliar:
-  type: adj
+  genus  : s
+  type: n
 Alma:
   type: n
-Flachgehuse:
-  type: n
 Widerlegung:
+  genus  : f
   type: n
 Gewichtung:
-  type: n
-Gefhlsuerung:
+  genus  : f
   type: n
 Camp:
+  genus  : s
   type: n
 Fettherz:
+  genus  : s
   type: n
 genaue:
   type: adv
 Zinsjahr:
+  genus  : s
   type: n
 Druckbeanspruchung:
+  genus  : f
   type: n
 pastillen:
-  type: vi
+  genus  : f
+  type: n
 Prozesse:
+  genus  : f
   type: n
 gasballons:
+  genus  : f
   type: n
 Einfahrt:
+  genus  : f
   type: n
 Rodgau:
   type: n
 Aspe:
+  genus  : f
   type: n
 persische:
   type: adv
 Industrie:
+  genus  : f
   type: n
 Feuervergoldung:
+  genus  : f
   type: n
 Zyklus:
+  genus  : m
   type: n
 versagen:
   type: vi
 Umlenkung:
+  genus  : f
   type: n
 Senkblei:
+  genus  : s
   type: n
 bonsai:
-  type: adj
+  genus  : m
+  type: n
 Universitaetsstadt:
+  genus  : f
   type: n
 Violinkasten:
-  type: n
-Ueberdie:
+  genus  : m
   type: n
 weinstock:
-  type: adj
+  genus  : m
+  type: n
 Alarmstart:
+  genus  : m
   type: n
 elektiv:
   type: adj
 Metalloxidhalbleiter:
+  genus  : m
   type: n
 Allwellenantenne:
+  genus  : f
   type: n
 Ketzin:
   type: n
 Durchdringverbindung:
+  genus  : f
   type: n
 gesiebtes:
   type: adv
 Ausgeleuchtet:
-  type: n
+  type: adj
 Adelsheim:
   type: n
 Echtzeitbetriebssysteme:
+  genus  : f
   type: n
 umfinanzieren:
   type: vi
 Automatisierung:
+  genus  : f
   type: n
 honen:
   type: vi
 Abbroeckeln:
+  genus  : s
   type: n
 scharwenzeln:
   type: vi
 Chateaubriand:
+  genus  : s
   type: n
 Altersfreibetraege:
+  genus  : f
   type: n
 Drucksicherheitsfaktor:
+  genus  : m
   type: n
 Gausssche:
-  type: n
+  type: adj
 Abbruchfirmen:
+  genus  : f
   type: n
 kalaschnikow:
-  type: adj
-Mefitisch:
+  genus  : f
   type: n
+Mefitisch:
+  type: adj
 Bauchmuskeln:
+  genus  : f
   type: n
 gottfried:
   type: n
 vulva:
-  type: adj
+  genus  : f
+  type: n
 verabschieden:
   type: vi
 unerwuenscht:
   type: adv
 Drahtbund:
+  genus  : m
   type: n
 Unternehmung:
+  genus  : f
   type: n
 Dialogrechner:
+  genus  : m
   type: n
 freital:
-  type: adj
-Breitseite:
   type: n
-Dmmlichkeit:
+Breitseite:
+  genus  : f
   type: n
 Error:
+  genus  : m
   type: n
 Phasewinkel:
+  genus  : m
   type: n
 Entscheidungsregel:
+  genus  : f
   type: n
 Geraeten:
   type: n
-iod:
-  type: adj
 Bauluecken:
+  genus  : f
   type: n
 Verfasserinnen:
+  genus  : f
   type: n
 Reichen:
   type: n
 Abgekoppelt:
-  type: n
+  type: adj
 texten:
   type: vi
 Agrarmarkt:
+  genus  : m
   type: n
 Giftig:
-  type: n
-schwarzenberg:
   type: adj
+schwarzenberg:
+  type: n
 Autobahnpolizei:
+  genus  : f
   type: n
 abschluss:
-  type: vt
+  genus  : m
+  type: n
 Url:
   type: n
 Starrfluegelflugzeug:
+  genus  : s
   type: n
 Obliterationverstopfung:
+  genus  : f
   type: n
 brett:
-  type: vi
-Weckamin:
+  genus  : s
   type: n
 Ansaugen:
+  genus  : s
   type: n
 ausweglosigkeit:
+  genus  : f
   type: n
 zusammenhalten:
   type: vi
 Baracken:
+  genus  : f
   type: n
 zwar:
-  type: adj
+  type: adv
 Eisenbahnpaketmarken:
+  genus  : f
   type: n
 altert:
   type: vi
-Fuwege:
-  type: n
 Gewoelbe:
+  genus  : s
   type: n
 pausenlos:
   type: adv
 Inzestuoes:
-  type: n
-achtheit:
-  type: n
-trachom:
   type: adj
 eisenkristall:
+  genus  : s
   type: n
 Anwendungsdokumentation:
+  genus  : f
   type: n
 luftverkehrsgesellschaft:
-  type: adv
+  genus  : f
+  type: n
 baut:
-  type: adj
+  type: vi
 Quellen:
+  genus  : f
   type: n
 Pro:
   type: prep
 Selbstwahrnehmung:
+  genus  : f
   type: n
 Betontransportfahrzeug:
+  genus  : s
   type: n
 verkneifen:
   type: vi
 Modern:
-  type: n
+  type: adj
 Einschmelzrohr:
   type: n
 Eigentumsuebergang:
+  genus  : f
   type: n
 fixerstuben:
   type: vi
@@ -139746,7 +140349,7 @@ Dissoziation:
 Chili:
   type: n
 computer:
-  type: adj
+  type: n
 genannt:
   type: vi
 Erzaehlerisch:
