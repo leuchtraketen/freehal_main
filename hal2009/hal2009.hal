@@ -410,9 +410,6 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     if exists: "SLOW", end test do
         print "Running in SLOW mode... "
         print new line
-        
-        #set new array result to cache_memory_get_by_name with var file_name, var name_of_entry, var lang, var path
-        #do return with array result
     done
     
     
@@ -442,6 +439,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     for each new var line from var input_handle is rw do
         # no line ending
         do chomp using var line
+        do regex using var line: /<[\r\n]>/, "", :global
         
         # line starts with a space?
         if var line matches /^\s/ do
@@ -457,6 +455,8 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
                 print new line
                 # we've found the right entry!
                 for each new var line from var input_handle is rw do
+                    do regex using var line: /<[\r\n]>/, "", :global
+                    
                     if var line matches /^\s*?(\S*?)<[var end_of_entry_line]>\s*?(\S+)/ do
                         if $0 matches "type" do
                             set var type to $1
@@ -482,93 +482,6 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
                 done
             done
         done
-    done
-    do be_slow without arguments
-
-    print "Not found do  " concat var name_of_entry concat "    \tin file " concat var file_name
-    print new line
-    do return using an empty array
-done
-
-# TEXT
-# Search in RAM for the word "name_of_entry".
-# This a version of memory_get_by_name which uses much memory, but less CPU
-# CODE
-define action cache_memory_get_by_name with var file_name, var name_of_entry, var lang, var path do
-    if is an empty global array cache_memory do
-        print "Scanning file " concat var file_name
-        print new line
-        
-        set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
-        for each new var line from var input_handle is rw do
-            push into global array cache_memory, var line
-        done
-        do close with var input_handle
-    done
-
-    do be_slow without arguments
-    print "Searching   " concat var name_of_entry concat "    \tin memory"
-    print new line
-    
-    set new var end_of_entry_line to ':'
-    set var name_of_entry to var name_of_entry concat "("
-    for each new var suffix in array standard_suffixes do
-        set var name_of_entry to var name_of_entry concat "|"
-        set var name_of_entry to var name_of_entry concat var suffix
-    done
-    set var name_of_entry to var name_of_entry concat ")"
-    set var name_of_entry to var name_of_entry concat var end_of_entry_line
-    
-    set new var type to 'q'
-    set new var genus to 'q'
-    
-    do be_slow without arguments
-    
-    # go through the lines
-    set new var k to 0
-    while from global array cache_memory item [ var k ] do
-        set new var line to from global array cache_memory item [ var k ]
-        # no line ending
-        do chomp using var line
-                
-        # line starts with a space?
-        if var line matches /^\s/ do
-            go to next
-        done
-        else do
-        
-            if var line matches /^var name_of_entry/ do
-                print "Found do      " concat var name_of_entry concat "    \tin file " concat var file_name
-                print new line
-
-                # we've found the right entry!
-                while from global array cache_memory item [ var k ] do
-                    set new var line to from global array cache_memory item [ var k ]
-
-                    if var line matches /^\s*?(\S*?)<[var end_of_entry_line]>\s*?(\S+)/ do
-                        if $0 matches "type" do
-                            set var type to $1
-                        done
-                        else if $0 matches "genus" do
-                            set var genus to $1
-                        done
-                        do be_slow without arguments
-                    done
-                    else do
-                        print "Found do      " concat var name_of_entry concat "    \tin file " concat var file_name
-                        print new line
-                        
-                        print "type do  " concat var type
-                        print new line
-                        print "genus do " concat var genus
-                        print new line
-                        do return with [ var type, var genus ]
-                    done
-                    set var k to var k + 1
-                done
-            done
-        done
-        set var k to var k + 1
     done
     do be_slow without arguments
 
