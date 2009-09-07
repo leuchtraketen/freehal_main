@@ -666,6 +666,24 @@ define action compute_tags with var word, var lang, var path do
     # TEXT
     # Look if the lower case variant of the word is a verb in the memory file.
     # CODE
+    if is an empty array tags and var word matches lc(var word) do
+        set array tags to memory_get_by_name using "word_types.memory", ucfirst(var word), var lang, var path
+        
+        if not from hash sym_noun item { from array tags first item } do
+            set array tags to an empty array
+        done
+    done
+    if is an empty array tags and var word matches lc(var word) do
+        set array tags to memory_get_by_name using "word_types.brain", lc(var word), var lang, var path
+        
+        if not from hash sym_noun item { from array tags first item } do
+            set array tags to an empty array
+        done
+    done
+
+    # TEXT
+    # Look if the lower case variant of the word is a verb in the memory file.
+    # CODE
     if is an empty array tags do
         set array tags to memory_get_by_name using "word_types.memory", lc(var word), var lang, var path
         
