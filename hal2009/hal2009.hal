@@ -2170,6 +2170,7 @@ define action filter_nothing with var text do
     if var text matches /nothing/ do
         do return with ""
     done
+    do regex using var text: /\/.*?$/, "", :global:i
     do return with var text
 done
 
