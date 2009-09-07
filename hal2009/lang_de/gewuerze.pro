@@ -56,7 +56,7 @@ ist <> huflattich <> ein gewuerz <>  <> 50
 ist <> ingwer <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> kaffernlimette <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> kaffirlimette <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> kaffirzitorne <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> kaffirzitrone <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> kakaopulver <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> kalmus <> ein gewuerz <>  <> 50
 ist <> kapuzinerkresse <> ein gewuerz <>  <> 50
@@ -152,7 +152,7 @@ ist <> wasabi <> der japanischer meerrettich <>  <> 50
 ist <> wasabi <> ein gewuerz <>  <> 50
 ist <> weinblaetter <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> weinraute <> ein gewuerz <>  <> 50
-ist <> weinwssig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> weinessig <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> worcestershiresauce <> ein gewuerz <>  <> 50
 ist <> worcestershiresauce <> eine gewuerzmischung <>  <> 50
 ist <> ysop <> ein gewuerz <>  <> 50
