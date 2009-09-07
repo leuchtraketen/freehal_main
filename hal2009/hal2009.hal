@@ -665,7 +665,7 @@ define action compute_tags with var word, var lang, var path do
     done
     
     if not is an empty array tags do
-        do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+        do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
     done
     
     # TEXT
@@ -685,6 +685,13 @@ define action compute_tags with var word, var lang, var path do
             set array tags to an empty array
         done
     done
+    if is an empty array tags and var word matches lc(var word) do
+        set array tags to memory_get_by_name using "word_types.self-taggered", ucfirst(var word), var lang, var path
+        
+        if not from hash sym_noun item { from array tags first item } do
+            set array tags to an empty array
+        done
+    done
 
     # TEXT
     # Look if the lower case variant of the word is a verb in the memory file.
@@ -698,6 +705,13 @@ define action compute_tags with var word, var lang, var path do
     done
     if is an empty array tags do
         set array tags to memory_get_by_name using "word_types.brain", lc(var word), var lang, var path
+        
+        if not from hash sym_verb item { from array tags first item } do
+            set array tags to an empty array
+        done
+    done
+    if is an empty array tags do
+        set array tags to memory_get_by_name using "word_types.self-taggered", lc(var word), var lang, var path
         
         if not from hash sym_verb item { from array tags first item } do
             set array tags to an empty array
@@ -721,6 +735,13 @@ define action compute_tags with var word, var lang, var path do
             set array tags to an empty array
         done
     done
+    if is an empty array tags do
+        set array tags to memory_get_by_name using "word_types.self-taggered", lc(var word), var lang, var path
+        
+        if not from hash sym_prep item { from array tags first item } do
+            set array tags to an empty array
+        done
+    done
     
     # TEXT
     # Look in the memory file.
@@ -730,6 +751,9 @@ define action compute_tags with var word, var lang, var path do
     done
     if is an empty array tags do
         set array tags to memory_get_by_name using "word_types.brain", var word, var lang, var path
+    done
+    if is an empty array tags do
+        set array tags to memory_get_by_name using "word_types.self-taggered", var word, var lang, var path
     done
     
     # TEXT
@@ -777,7 +801,7 @@ define action compute_tags with var word, var lang, var path do
                 set array tags to an empty array
             done
             else do
-                do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+                do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
             done
         done
     done
