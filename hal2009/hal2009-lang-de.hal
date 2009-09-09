@@ -2513,6 +2513,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'tausend' => "adj",
           'wacker' => "adj",
           'gleich' => "adj",
+          'lust' => "n",
           'lauter' => "adj",
           'gratis' => "adj",
           'schwanger' => "adj",
