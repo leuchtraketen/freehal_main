@@ -15553,7 +15553,7 @@ Allzweckschere:
 Fachausdrcke:
   genus: f
   type: n
-Amtsbefugnisse:
+Amtsbefugnise:
   genus: f
   type: n
 Substantiieren:
@@ -16967,7 +16967,7 @@ Feldforschung:
 Augenspuelung:
   genus: f
   type: n
-Sonnenfinsterniss:
+Sonnenfinsternis:
   genus: f
   type: n
 Klimarahmenkonvention:
@@ -23470,7 +23470,7 @@ sicherungskopie:
 Zauber:
   genus: m
   type: n
-diakonissen:
+diakonisen:
   genus: f
   type: n
 zyanosen:
@@ -23975,7 +23975,7 @@ Efeukurve:
   type: n
 Wissensdurstig:
   type: adj
-begraebnissitte:
+begraebnisitte:
   genus: f
   type: n
 Ersatzwaren:
@@ -36249,7 +36249,7 @@ Analogdarstellungen:
   type: n
 waltrop:
   type: n
-Erlaubniss:
+Erlaubnis:
   genus: f
   type: n
 alltaeglichkeit:
@@ -38740,7 +38740,7 @@ Aengstlichkeit:
 brandblasen:
   genus: f
   type: n
-Beduerfnisse:
+Beduerfnise:
   genus: f
   type: n
 zaenkisches:
@@ -41619,7 +41619,7 @@ vertraeglich:
 Buergerrechtskaempferinnen:
   genus: f
   type: n
-Fleischerzeugnisse:
+Fleischerzeugnise:
   genus: f
   type: n
 Versuchsobjekt:
@@ -42919,7 +42919,7 @@ Unseres:
   type: pron
 spenden:
   type: vi
-Ausreiseerlaubnisse:
+Ausreiseerlaubnise:
   genus: f
   type: n
 anfeuchten:
@@ -44657,7 +44657,7 @@ Harald:
 Bronzemedaillen:
   genus: f
   type: n
-Abschlusszeugnisse:
+Abschlusszeugnise:
   genus: f
   type: n
 Prominent:
@@ -46816,7 +46816,7 @@ Ismael:
   type: n
 sintflutartig:
   type: adv
-fuehrungszeugnisse:
+fuehrungszeugnise:
   genus: f
   type: n
 Das:
@@ -46977,7 +46977,7 @@ Ergiebig:
 Grappa:
   genus: m
   type: n
-Gestaendnisse:
+Gestaendnise:
   genus: f
   type: n
 Triebfahrzeugfuehrer:
@@ -49519,7 +49519,7 @@ Sohle:
   type: n
 Verschlungen:
   type: adj
-finsterniss:
+finsternis:
   genus: f
   type: n
 Gedichte:
@@ -51867,7 +51867,7 @@ Haftungsausschluss:
   type: n
 zurueckerinnern:
   type: vi
-Abhngigkeitsverhltnisse:
+Abhngigkeitsverhltnise:
   type: n
 Chauvihaltung:
   type: n
@@ -52532,7 +52532,7 @@ bejubeln:
   type: vi
 Tuev:
   type: n
-Besorgnisse:
+Besorgnise:
   genus: f
   type: n
 voruebergehenden:
@@ -53472,7 +53472,7 @@ saettigend:
 Besetzung:
   genus: f
   type: n
-Englischkenntnisse:
+Englischkenntnise:
   genus: f
   type: n
 Prachtexemplar:
@@ -57657,7 +57657,7 @@ Beschusshemmende:
 Schwelen:
   genus: s
   type: n
-Bekenntnisse:
+Bekenntnise:
   genus: f
   type: n
 jakutsk:
@@ -58287,7 +58287,7 @@ perfektionieren:
   type: vi
 finden:
   type: adv
-Gefaengnisse:
+Gefaengnise:
   genus: f
   type: n
 Melbourne:
@@ -64586,7 +64586,7 @@ giftstoff:
   type: n
 Iok:
   type: n
-Tennisspiel:
+Tennispiel:
   genus  : s
   type: n
 Nachstellung:
@@ -65011,7 +65011,7 @@ Detailplanung:
 Verplomben:
   genus  : s
   type: n
-Ergebniss:
+Ergebnis:
   genus  : s
   type: n
 landwirtschaftlich:
@@ -65204,7 +65204,7 @@ Ducken:
 chipkartenlesegeraet:
   genus  : s
   type: n
-Verteidigungsbuendniss:
+Verteidigungsbuendnis:
   genus  : s
   type: n
 Moralist:
@@ -66119,7 +66119,7 @@ schaetzbar:
 Entbloessungen:
   genus  : f
   type: n
-Versaeumnisse:
+Versaeumnise:
   genus  : f
   type: n
 handlungsprogramm:
@@ -68513,7 +68513,7 @@ Grausamkeit:
 Todesursache:
   genus  : f
   type: n
-Arbeitsplatzerfordernisse:
+Arbeitsplatzerfordernise:
   genus  : f
   type: n
 Abrichtung:
@@ -72810,7 +72810,7 @@ mochte:
 Aufkeimen:
   genus  : s
   type: n
-Basiskenntnisse:
+Basiskenntnise:
   genus  : f
   type: n
 Ausbeute:
@@ -73099,7 +73099,7 @@ bargeld:
 onomastik:
   genus  : f
   type: n
-Ereigniss:
+Ereignis:
   genus  : s
   type: n
 digitalisierung:
@@ -76206,7 +76206,7 @@ Reaktion:
 Erlaubnis:
   genus  : f
   type: n
-gedaechtnisses:
+gedaechtnises:
   type: adv
 Manna:
   type: n
@@ -82916,7 +82916,7 @@ Gebetsstunde:
 Exportartikel:
   genus  : m
   type: n
-Kenntnisstand:
+Kenntnistand:
   genus  : m
   type: n
 Mehrfacher:
@@ -89362,7 +89362,7 @@ Schneidbrennerspitze:
 Frauenzimmer:
   genus  : s
   type: n
-Gedaechtniss:
+Gedaechtnis:
   genus  : s
   type: n
 muemmeln:
@@ -90546,7 +90546,7 @@ Absinthium:
   type: n
 ablegen:
   type: vi
-Eigentumsverhaeltnisse:
+Eigentumsverhaeltnise:
   genus  : f
   type: n
 Windpocken:
@@ -92436,7 +92436,7 @@ Polyphon:
 Ersatzlieferungen:
   genus  : f
   type: n
-Fachkenntnisse:
+Fachkenntnise:
   genus  : f
   type: n
 Befahrbar:
@@ -95957,7 +95957,7 @@ Neckerei:
 unternehmer:
   genus  : m
   type: n
-Begraebnissitte:
+Begraebnisitte:
   genus: f
   type: n
 Einleiten:
@@ -104426,7 +104426,7 @@ Fuenfjahrplan:
 Erfolgsquoten:
   genus  : f
   type: n
-Anissamen:
+Anisamen:
   type: n
 Lotrecht:
   type: n
@@ -105685,7 +105685,7 @@ Neuerlich:
   type: adv
 jubilieren:
   type: vi
-Erkenntnisse:
+Erkenntnise:
   genus  : f
   type: n
 Reflex:
@@ -107045,7 +107045,7 @@ Klimatologie:
 nirvana:
   genus  : s
   type: n
-gedaechtnisstoerung:
+gedaechtnistoerung:
   genus  : f
   type: n
 Quirl:
@@ -112286,7 +112286,7 @@ Pflege:
 Premierenfeier:
   genus  : f
   type: n
-Vernissage:
+Vernisage:
   genus  : f
   type: n
 fuehrungsbestimmung:
@@ -115488,7 +115488,7 @@ konditorbackwaren:
   type: n
 verkauft:
   type: vi
-Gefaengnissen:
+Gefaengnisen:
   type: n
 Abgabenquote:
   genus  : f
@@ -122542,7 +122542,7 @@ Kollektivierung:
   type: n
 aerodynamisch:
   type: adj
-gedaechtnisse:
+gedaechtnise:
   type: adv
 Seestern:
   type: n
@@ -122706,7 +122706,7 @@ Deportationen:
   type: n
 Baumwollhemd:
   type: n
-Erlebnisse:
+Erlebnise:
   type: n
 Froendenberg:
   type: n
@@ -123835,7 +123835,7 @@ jeh:
   type: adj
 Vorderseite:
   type: n
-Fremdsprachenkenntnisse:
+Fremdsprachenkenntnise:
   type: n
 Etappenziel:
   type: n
@@ -125221,7 +125221,7 @@ Hunger:
   type: n
 Waermeaustauscher:
   type: n
-Ergebnisse:
+Ergebnise:
   type: n
 manipulation:
   type: n
@@ -126573,7 +126573,7 @@ Abholen:
   type: n
 Konjunkturrueckgang:
   type: n
-nissenkamm:
+nisenkamm:
   type: adj
 Honnef:
   type: n
@@ -137570,7 +137570,7 @@ Meteorsternschnuppe:
   type: n
 Fragen:
   type: n
-Zerwuerfnisse:
+Zerwuerfnise:
   type: n
 Einbaumae:
   type: n
@@ -141744,7 +141744,7 @@ Bloeder:
   type: n
 Firmenimage:
   type: n
-Bildnisse:
+Bildnise:
   type: n
 Gebuehrenbefreiung:
   type: n
@@ -152796,7 +152796,7 @@ niedermachen:
   type: adv
 Fllgut:
   type: n
-Kultereignisse:
+Kultereignise:
   type: n
 Pfingsten:
   type: n
@@ -154789,7 +154789,7 @@ griechische:
   type: adv
 Federlesen:
   type: n
-Erlaubnisschein:
+Erlaubnischein:
   type: n
 provision:
   type: n
@@ -156843,7 +156843,7 @@ Fachlehrerin:
   type: n
 Bankok:
   type: n
-Erlebniss:
+Erlebnis:
   type: n
 Detroit:
   type: n
@@ -156881,7 +156881,7 @@ konnivieren:
   type: vi
 Mikroampere:
   type: n
-Gefaengnissinsel:
+Gefaengnisinsel:
   type: n
 Bruttowertschpfung:
   type: n
@@ -158130,7 +158130,7 @@ Discountladen:
   type: n
 briefmarkensammler:
   type: adj
-Gedaechtnisschwaeche:
+Gedaechtnischwaeche:
   type: n
 Thronhimmel:
   type: n
@@ -158164,7 +158164,7 @@ Betonierfugen:
   type: n
 reversibel:
   type: adj
-Gedaechtnisses:
+Gedaechtnises:
   type: n
 Wendlingen:
   type: n
@@ -158726,7 +158726,7 @@ Beruhigend:
   type: n
 Diskussionsleiterinnen:
   type: n
-Betriebserlaubnisse:
+Betriebserlaubnise:
   type: n
 Indigniert:
   type: n
@@ -160660,7 +160660,7 @@ sinnbildlich:
   type: adv
 puste:
   type: vi
-Abbildungsverzeichnisse:
+Abbildungsverzeichnise:
   type: n
 Schlaksig:
   type: n
@@ -161248,7 +161248,7 @@ neuralgie:
   type: adj
 Verschluesselung:
   type: n
-Finsternisse:
+Finsternise:
   type: n
 Cambridge:
   type: n
@@ -163038,7 +163038,7 @@ schlapp:
   type: adj
 Asklepios:
   type: n
-Erzeugnisse:
+Erzeugnise:
   type: n
 zeitverschwendung:
   type: adj
@@ -163874,7 +163874,7 @@ Wiedergaenger:
   type: n
 konjugation:
   type: n
-Gedchtnisschwund:
+Gedchtnischwund:
   type: n
 Ausstellungsgter:
   type: n
@@ -166879,7 +166879,7 @@ Tresen:
   type: n
 annabergbuchholz:
   type: adj
-Gedaechtnisstuetze:
+Gedaechtnistuetze:
   type: n
 Ebay:
   type: n
@@ -167783,7 +167783,7 @@ ausfahren:
   type: vi
 Absatzkrise:
   type: n
-Ereignisse:
+Ereignise:
   type: n
 wohlduften:
   type: vi
@@ -167993,7 +167993,7 @@ primitiveren:
   type: vi
 Duschbad:
   type: n
-Computerkenntnisse:
+Computerkenntnise:
   type: n
 Brigant:
   type: n
@@ -171468,7 +171468,7 @@ Moenchengladbach:
   type: n
 Bffelherde:
   type: n
-Begrbnisse:
+Begrbnise:
   type: n
 Ausgabesignal:
   type: n
@@ -173336,7 +173336,7 @@ Instabilitaet:
   type: n
 zusammenarbeit:
   type: adj
-Betriebsgrenersparnisse:
+Betriebsgrenersparnise:
   type: n
 Anzapfen:
   type: n
@@ -174077,7 +174077,7 @@ Abzweigklemme:
   type: n
 Anstroemgeschwindigkeit:
   type: n
-Buendnisse:
+Buendnise:
   type: n
 Dunkelmaenner:
   type: n
@@ -175937,7 +175937,7 @@ windschatten:
   type: vi
 dauern:
   type: vi
-Zeugnisse:
+Zeugnise:
   type: n
 Schoeppenstedt:
   type: n
@@ -176638,7 +176638,7 @@ Feldbezeichner:
   type: n
 Einbrechen:
   type: n
-Gedchtnisstrungen:
+Gedchtnistrungen:
   type: n
 Entsorgungsmassnahme:
   type: n
@@ -178822,7 +178822,7 @@ Basstrommel:
   type: n
 Gemuetlichkeit:
   type: n
-Druckerzeugnisse:
+Druckerzeugnise:
   type: n
 Aufgabenfeld:
   type: n
@@ -183814,7 +183814,7 @@ Autofumatten:
   type: n
 terracotta:
   type: adj
-Bndnisse:
+Bndnise:
   type: n
 insofern:
   type: vi
@@ -186310,7 +186310,7 @@ Boersenindex:
   type: n
 gebildetes:
   type: adv
-Fertigerzeugnisse:
+Fertigerzeugnise:
   type: n
 Formteil:
   type: n
@@ -187858,11 +187858,11 @@ Epinephrin:
   type: n
 magleiche:
   type: adv
-Anisschnaps:
+Anischnaps:
   type: n
 Altersgrenze:
   type: n
-Benutzerbedrfnisse:
+Benutzerbedrfnise:
   type: n
 orthonormal:
   type: adj
@@ -187960,7 +187960,7 @@ Verstaerken:
   type: n
 Niemand:
   type: n
-Fehlerinhaltsverzeichnisse:
+Fehlerinhaltsverzeichnise:
   type: n
 Steuern:
   type: n
@@ -192803,7 +192803,7 @@ enteritis:
   type: n
 Nachvollziehbar:
   type: n
-Familienverhltnisse:
+Familienverhltnise:
   type: n
 2zweckbestimmt:
   type: vi
@@ -193086,7 +193086,7 @@ Berufsttigkeit:
   type: n
 Ungeahnt:
   type: n
-gedaechtnissen:
+gedaechtnisen:
   type: vi
 schneckenfoermig:
   type: adv
@@ -193504,7 +193504,7 @@ druebersteigen:
   type: adv
 Aktionsrder:
   type: n
-Gedaechtnisschwund:
+Gedaechtnischwund:
   type: n
 Gruppenleiter:
   type: n
@@ -198059,7 +198059,7 @@ Vorhinein:
   type: n
 Salzburg:
   type: n
-Gedaechtnisstoerungen:
+Gedaechtnistoerungen:
   type: n
 Vokabeltest:
   type: n
@@ -206158,7 +206158,7 @@ Farbauszge:
   type: n
 Infrarotleuchte:
   type: n
-Finsterniss:
+Finsternis:
   type: n
 Autobatterien:
   type: n
@@ -208849,7 +208849,7 @@ Shortdrink:
   type: n
 bauchfells:
   type: n
-Druckerlaubnisse:
+Druckerlaubnise:
   type: n
 Verwirrtheit:
   type: n
@@ -209017,7 +209017,7 @@ absorbieren:
   type: vi
 kopierschutzstecker:
   type: adj
-Forschungsergebnisse:
+Forschungsergebnise:
   type: n
 ablassschieber:
   type: adj
@@ -209838,7 +209838,7 @@ maggikraut:
   type: adj
 Maennliche:
   type: adv
-Kenntnisse:
+Kenntnise:
   type: n
 Baskenmtze:
   type: n
@@ -213104,7 +213104,7 @@ Ulcus:
   type: n
 moralvorstellungen:
   type: vi
-ergebnissen:
+ergebnisen:
   type: vi
 Stromgenerator:
   type: n
@@ -214970,7 +214970,7 @@ Mochte:
   type: vi
 Fegen:
   type: n
-Verhaeltniss:
+Verhaeltnis:
   type: n
 Faltbetten:
   type: n
@@ -215391,7 +215391,7 @@ Schifferklavier:
   type: n
 Kunstfertigkeit:
   type: n
-Begraebnisse:
+Begraebnise:
   type: n
 Bearbeitungen:
   type: n
@@ -215935,7 +215935,7 @@ Stemmloch:
   type: n
 Milchproduktion:
   type: n
-Geschehnisse:
+Geschehnise:
   type: n
 nachsichtigkeit:
   type: n
@@ -216420,7 +216420,7 @@ Dankopfer:
   type: n
 Fllkrper:
   type: n
-Fuehrungszeugnisse:
+Fuehrungszeugnise:
   genus: f
   type: n
 aufspueren:
@@ -221264,7 +221264,7 @@ Solarkollektor:
   type: n
 Verbuddeln:
   type: n
-Nissenkamm:
+nisenkamm:
   type: n
 Ueberschwemmen:
   type: n
@@ -224762,7 +224762,7 @@ Souls:
   type: n
 wahrscheinlicher:
   type: adv
-Erkenntnissen:
+Erkenntnisen:
   type: n
 Naturhistorischen:
   type: adv
@@ -225292,4 +225292,169 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            
+  type: adj            leute:
+  type: n
+anwort:
+  type: n
+menge:
+  type: n
+lge:
+  type: inter
+trume:
+  type: inter
+Sehnsuechte:
+  type: n
+aergere:
+  type: vi
+Sorge:
+  type: n
+Entaeuschung:
+  type: n
+Stress:
+  type: n
+Mut:
+  type: n
+Neid:
+  type: n
+Nervositaet:
+  type: n
+Gefuehhl:
+  type: inter
+unangenehme:
+  type: adj
+konkrete:
+  type: adj
+gefahr:
+  type: n
+Grossglockner:
+  type: n
+Aggressivitaet:
+  type: n
+Ueberlastet:
+  type: adj
+Unentschlossen:
+  type: adj
+Verlegen:
+  type: adj
+sekunde:
+  type: n
+anfuehrt:
+  type: vi
+mitglieder:
+  type: n
+himmlischer:
+  type: adj
+beton:
+  type: n
+nobelpreis:
+  type: n
+chemie-nobelpreis:
+  type: n
+errichtet:
+  type: vi
+erschossen:
+  type: vi
+Che:
+  type: n
+guevara:
+  type: n
+oetzi:
+  type: n
+Bremerhaven:
+  type: n
+nato:
+  type: n
+Euklid:
+  type: n
+ii:
+  type: inter
+bedeutender:
+  type: adj
+pizarro:
+  type: n
+prabhupada:
+  type: n
+hare-krishna-bewegung:
+  type: n
+nationalrat:
+  type: n
+schloss:
+  type: n
+februar:
+  type: n
+deutscheneinheit:
+  type: n
+hamburg:
+  type: n
+knesset:
+  type: n
+verteidigungsbuendnis:
+  type: n
+weltkinderhilfswerk:
+  type: n
+Ignaz:
+  type: n
+Ikarus:
+  type: n
+Politik:
+  type: n
+polis:
+  type: n
+luther:
+  type: n
+thesen:
+  type: n
+schlosskirche:
+  type: n
+Bram:
+  type: n
+breisgau:
+  type: n
+Mozart:
+  type: n
+Weu:
+  type: n
+westeuropaeische:
+  type: adj
+toetete:
+  type: vi
+schlangenbiss:
+  type: n
+gesetze:
+  type: n
+insel:
+  type: n
+watergate-affaire:
+  type: n
+bundespraesident:
+  type: n
+volksheld:
+  type: n
+superstar:
+  type: n
+pirat:
+  type: n
+Geiserich:
+  type: n
+wandalenkoenig:
+  type: n
+praesident:
+  type: n
+friedensnobelpreistraeger:
+  type: n
+Hitler:
+  type: n
+franzose:
+  type: n
+Sputnik:
+  type: n
+duerer:
+  type: n
+mainz:
+  type: n
+seattle:
+  type: n
+eroeffnet:
+  type: adj
+Verstaendnis:
+  type: n

@@ -67,7 +67,7 @@ ist <> ein dramturg <> ein berater <> in dem theater <>  <>  <>  <>  <>  <>  <> 
 ist <> eine gitarre <> ein zupfinstrument <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine redoute <> ein maskenball <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine singende saege <> ein musikinstrument <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine vernissage <> eine ausstellungseroeffnung <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> eine vernisage <> eine ausstellungseroeffnung <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein fresko <> eine wandmalerei <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein jive <> ein lateinamerikanischer tanz <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein klavier <> ein tasteninstrument <>  <>  <>  <>  <>  <>  <>  <> 50

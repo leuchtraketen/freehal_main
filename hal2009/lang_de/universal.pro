@@ -190,7 +190,7 @@ gehen <> menschen <> nothing <> zum doktor <> sind <> sie <> nothing <> krank <>
 gehen <> sie <> nothing <> zum doktor <> weil <>  <> sind <> menschen <> nothing <> 
 gehoert <> das brautpaar <> nothing <> zu einer hochzeit <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> dem mutigen <> die welt <>  <>  <>  <>  <> nothing <> nothing <> 
-gehoert <> ein langfinger <> nothing <> an die hand (sondern_ins_gefaengniss);nicht <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> ein langfinger <> nothing <> an die hand (sondern_ins_gefaengnis);nicht <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> nothing <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> so etwas <> sich <> nicht <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> spinat <> nothing <> zur gattung der gaensefussgewaechse <>  <>  <>  <>  <>  <>  <> 50
@@ -453,7 +453,7 @@ ist <> blau <> meine lieblingsfarbe <>  <>  <>  <>  <> nothing <> nothing <>  <>
 ist <> bmw <> ein autohersteller <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> boese <> das gegenteil <> von gut <>  <>  <>  <> nothing <> nothing <> 
 ist <> _boese_ <> das gegenteil <> von _gut_ <>  <>  <>  <> nothing <> nothing <> 
-ist <> boris becker <> ein tennisspieler <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> boris becker <> ein tennispieler <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> borschtsch <> ein russisches nationalgericht <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> britney spears <> eine saengerin <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _braun_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -537,7 +537,7 @@ ist <> der meister <> die hoechste qualifikationsstufe <> in dem handwerk <>  <>
 ist <> der nurek-staudamm <> der hoechste staudamm <> der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der oeltanker jahre viking <> das groesste schiff <> der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der palstek <> ein seemannsknoten <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der pastis <> ein anisschnaps <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der pastis <> ein anischnaps <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der phoenix <> ein mysthischer vogel <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> der playboy <> ein amerikanisches maennermagazin <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> der pluto <> der groesste planet <> in dem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
@@ -706,7 +706,7 @@ ist <> eine cam <> die kurzform des begriff camcorders webcam <>  <>  <>  <>  <>
 ist <> eine definition <> eine moeglichst eindeutige bestimmung eines begriffes <>  <>  <>  <>  <> nothing <> nothing <>  
 ist <> eine emotion <> ein komplexer prozess <>  <> ablaeuft <> auf verschiedenen psychischen funktionsebenen <> nothing <>  <> welcher <>  <> 50
 ist <> eine entschuldigung <> nothing <> nicht notwendig <>  <>  <>  <> nothing <> nothing <> 
-ist <> eine erfahrung <> ein erlebniss <>  <>  <>  <> hat <> das man <> nothing <>  
+ist <> eine erfahrung <> ein erlebnis <>  <>  <>  <> hat <> das man <> nothing <>  
 ist <> eine erfahrung <> nothing <> ein gefuehl <>  <>  <> haben koennen <> die nur menschen <> nothing <>
 ist <> eine erklaerung <> ein kommunikativer akt <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> eine fernsehserie glauben ein grosser busen <> alles <> mit frauen <>  <>  <>  <> nothing <> nothing <> 
@@ -927,7 +927,7 @@ ist <> eine definition <> eine moeglichst eindeutige bestimmung eines begriffes 
 ist <> eine eiche <> ein baum <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine emotion <> ein komplexer prozess <>  <> ablaeuft <> auf verschiedenen psychischen funktionsebenen <> nothing <>  <> welcher <>  <> 50
 ist <> eine entschuldigung <> nothing <> nicht notwendig <>  <>  <>  <> nothing <> nothing <> 
-ist <> eine erfahrung <> ein erlebniss <>  <>  <>  <> hat <> das man <> nothing <>  
+ist <> eine erfahrung <> ein erlebnis <>  <>  <>  <> hat <> das man <> nothing <>  
 ist <> eine erfahrung <> nothing <> ein gefuehl <>  <>  <> haben koennen <> die nur menschen <> nothing <>
 ist <> eine erklaerung <> ein kommunikativer akt <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> eine fernsehserie glauben ein grosser busen <> alles <> mit frauen <>  <>  <>  <> nothing <> nothing <> 
@@ -1065,7 +1065,7 @@ ist <> gerontologie <> die wissenschaft <> vom altern <>  <>  <>  <> nothing <> 
 ist <> gerontologie <> nothing <> die altersforschung <>  <>  <>  <>  <>  <>  <> 50
 ist <> geschlecht <> die prinzipielle unterscheidung zweier lebewesen <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> gin <> ein alkoholisches getraenk <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> glueck <> ein positives ereigniss <> in dem leben <>  <>  <>  <>  <>  <>  <> 50
+ist <> glueck <> ein positives ereignis <> in dem leben <>  <>  <>  <>  <>  <>  <> 50
 ist <> gold <> edelmetall <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> gold <> ein chemisches element <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> golf <> ein gesunder freizeitsport <>  <>  <>  <>  <>  <>  <>  <> 50

@@ -152,7 +152,7 @@ ist <> eine emmission <> die ausgabe <> von wertpapieren <>  <>  <>  <>  <>  <> 
 ist <> eine genossenschaft <> ein wirtschaftlicher verein <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine kaution <> eine sicherheitsleistung <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine kommanditgesellschaft  <> eine personengesellschaft <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine konzession <> eine verwaltungsrechtliche erlaubniss  <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> eine konzession <> eine verwaltungsrechtliche erlaubnis  <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine novation <> eine schuldumwandlung <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine obligation <> eine schuldverschreibung <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine ohg <> eine offene handelsgesellschaft <>  <>  <>  <>  <>  <>  <>  <> 50

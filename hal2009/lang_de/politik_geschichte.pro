@@ -64,7 +64,7 @@ ist <> die cdu <> eine politische partei <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die gez <> die gebuehreneinzugszentrale <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die klm <> die aelteste fluggesellschaft <> der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> die knesset <> das parlament <> von israel <>  <>  <>  <>  <>  <>  <> 50
-ist <> die nato <> ein verteidigungsbuendniss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die nato <> ein verteidigungsbuendnis <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die spd <> eine politische partei <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die unicef <> das weltkinderhilfswerk <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ignaz semmelweis <> nothing <> der _retter_der_muetter_ <>  <>  <>  <>  <>  <>  <> 50

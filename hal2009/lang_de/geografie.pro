@@ -1980,7 +1980,7 @@ ist <> der mount catherine <> der hoehste berg <> von aegypten <>  <>  <>  <>  <
 ist <> der mount cook <> 3764 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount cook <> der hoechste berg <> von neuseeland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> 8848 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mount everest <> der hoechste berg <> der welt <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mount everest <> der hoechste berg <> von der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von china <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von nepal <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg der welt <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -8229,7 +8229,7 @@ nennt <> prag <> man _goldene_stadt_ <>  <>  <>  <>  <>  <>  <>  <> 50
 nennt <> salzhaltige quellen <> man solen <>  <>  <>  <>  <>  <>  <>  <> 50
 nennt <> singapure <> man die loewenstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> ernest hemingway <> _wem die stunde schlaegt_ <>  <>  <>  <>  <>  <>  <>  <> 50
-sieht <> eine sonnenfinsterniss <> man nur bei neumond <>  <>  <>  <>  <>  <>  <>  <> 50
+sieht <> eine sonnenfinsternis <> man nur bei neumond <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> 10 berge <> hoeher als 8000 meter <> auf der erde <>  <>  <>  <>  <>  <>  <> 50
 sind <> carbonate <> die salze <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> 50
 sind <> die alpen <> eine grosse gebirgskette <> in europa <>  <>  <>  <>  <>  <>  <> 50
@@ -8331,7 +8331,7 @@ verbindet <> der simplontunnel <> die schweiz <> mit italien <>  <>  <>  <>  <> 
 verschlucken <> schwarze loecher <> licht <>  <>  <>  <>  <>  <>  <>  <> 50
 verschlucken <> schwarze loecher <> materie <>  <>  <>  <>  <>  <>  <>  <> 50
 verschlucken <> schwarze loecher <> materie bzw licht <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> alcatraz <> eine gefaengnissinsel <>  <>  <>  <>  <>  <>  <>  <> 50
+war <> alcatraz <> eine gefaengnisinsel <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> armstrong neil<> der erste mensch <> auf dem mond <>  <>  <>  <>  <>  <>  <> 50
 war <> die erste raumfaehre <> nothing <> die columbia  der nasa <>  <>  <>  <>  <>  <>  <> 50
 war <> eine huendin <> das erste tier <> in dem weltall <>  <>  <>  <>  <>  <>  <> 50

@@ -330,7 +330,7 @@ habe <> ich <> einen namen <>  <> heisse <> ich <> freehal <>  <>  <>  <> 100
 habe <> ich <> einen schnellen prozessor <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> einen vorschlag fuer dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> ein grossen speicher <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein gutes gedaechtniss <>  <>  <>  <>  <>  <>  <>  <> 50
+habe <> ich <> ein gutes gedaechtnis <>  <>  <>  <>  <>  <>  <>  <> 50
 habe <> ich <> ein handy <> nicht <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> ein hobby <>  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> ein hunger <> nicht <>  <>  <>  <>  <>  <>  <> 100

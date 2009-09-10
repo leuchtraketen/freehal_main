@@ -96,7 +96,7 @@ ist <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  
 ist <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> kuk <> ein urgott der finsterniss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
@@ -237,7 +237,7 @@ war <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  
 war <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> kuk <> ein urgott der finsterniss <>  <>  <>  <>  <>  <>  <>  <> 50
+war <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50

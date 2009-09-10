@@ -141,7 +141,7 @@
 >>> <> _bedeutenster__ <> nothing <> _bedeutendster_ <>  <>  <>  <>  <>  <>  <> 50                   
 >>> <> _bedeutesten__ <> nothing <> _bedeutendsten_ <>  <>  <>  <>  <>  <>  <> 50                    
 >>> <> _bedrouille_ <> _bredouille_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _beduerfniss__ <> _beduerfnis_ <>  <>  <>  <>  <>  <>  <>  <> 50                              
+>>> <> _beduerfnis__ <> _beduerfnis_ <>  <>  <>  <>  <>  <>  <>  <> 50                              
 >>> <> _beeinflussung__ <> _beeinflussung_ <>  <>  <>  <>  <>  <>  <>  <> 50                         
 >>> <> _beeinhalten__ <> nothing <> _beinhalten_ <>  <>  <>  <>  <>  <>  <> 50                       
 >>> <> _beeinhaltet__ <> nothing <> _beinhaltet_ <>  <>  <>  <>  <>  <>  <> 50                       
@@ -162,7 +162,7 @@
 >>> <> _beispielweise__ <> nothing <> _beispielsweise_ <>  <>  <>  <>  <>  <>  <> 50                 
 >>> <> _beitag__ <> _beitrag_ <>  <>  <>  <>  <>  <>  <>  <> 50                                      
 >>> <> _bekammen__ <> nothing <> _bekamen_ <>  <>  <>  <>  <>  <>  <> 50                             
->>> <> _bekenntniss__ <> _bekenntnis_ <>  <>  <>  <>  <>  <>  <>  <> 50                              
+>>> <> _bekenntnis__ <> _bekenntnis_ <>  <>  <>  <>  <>  <>  <>  <> 50                              
 >>> <> _benefitz__ <> _benefiz_ <>  <>  <>  <>  <>  <>  <>  <> 50                                    
 >>> <> _bennant__ <> nothing <> _benannt_ <>  <>  <>  <>  <>  <>  <> 50                              
 >>> <> _bennenung__ <> _benennung_ <>  <>  <>  <>  <>  <>  <>  <> 50                                 
@@ -390,15 +390,15 @@
 >>> <> _ereichen__ <> nothing <> _erreichen_ <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _ereichte__ <> nothing <> _erreichte_ <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _ereicht__ <> nothing <> _erreicht_ <>  <>  <>  <>  <>  <>  <> 50
->>> <> _ereignise__ <> _ereignisse_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _ereignisen__ <> _ereignissen_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _ereigniss__ <> _ereignis_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _ereignise__ <> _ereignise_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _ereignisen__ <> _ereignisen_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _ereignis__ <> _ereignis_ <>  <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _erfog__ <> _erfolg_ <>  <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _erfogreich__ <> nothing <> _erfolgreich_ <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _ergebnis__ <> _ergebnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _ergebniss_ <> _ergebnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _erkenntniss__ <> _erkenntnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
->>> <> _erkentnisse__ <> _erkenntnisse_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _ergebnis_ <> _ergebnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _erkenntnis__ <> _erkenntnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
+>>> <> _erkentnise__ <> _erkenntnise_ <>  <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _erklaehrt__ <> nothing <> _erklaert_ <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _erlebist__ <> _erlebnis_ <>  <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _erorbert__ <> nothing <> _erobert_ <>  <>  <>  <>  <>  <>  <> 50
@@ -718,11 +718,11 @@
 >>> <> _kasette__ <> _kassette_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _kasettendecke__ <> _kassettendecke_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _kathegorisch__ <> nothing <> _kategorisch_ <>  <>  <> nothing <>  <>  <>  <> 50
->>> <> _kenntniss__ <> _kenntnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+>>> <> _kenntnis__ <> _kenntnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _kennzeichnug__ <> _kennzeichnung_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _kenst_ <> nothing <> _kennst_ <>  <>  <>  <>  <>  <>  <> 50
 >>> <> _kentnis__ <> _kenntnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
->>> <> _kentnisse__ <> _kenntnisse_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+>>> <> _kentnise__ <> _kenntnise_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _kirchtum__ <> _kirchturm_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _klassichen__ <> nothing <> _klassischen_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _klassiche__ <> nothing <> _klassische_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -1543,7 +1543,7 @@
 >>> <> _zeitgenoesisch__ <> nothing <> _zeitgenoessisch_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _zeitgenoessich__ <> nothing <> _zeitgenoessisch_ <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _zerissen__ <> nothing <> _zerrissen_ <>  <>  <> nothing <>  <>  <>  <> 50
->>> <> _zeugniss__ <> _zeugnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+>>> <> _zeugnis__ <> _zeugnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _zohne__ <> _zone_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _zuammenhang__ <> _zusammenhang_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 >>> <> _zuammen__ <> nothing <> _zusammen_ <>  <>  <> nothing <>  <>  <>  <> 50
