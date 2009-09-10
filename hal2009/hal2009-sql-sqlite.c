@@ -108,16 +108,14 @@ static int callback_clause(void* arg, int argc, char **argv, char **azColName) {
     
     int i;
     for(i=0; i<argc; ++i){
-        record[i] = malloc(5);
-        strcpy(record[i], "NULL");
-    }
-
-    for(i=0; i<argc; ++i){
         printf("Entity: %s\n", argv[i]);
         if (argv[i] && strlen(argv[i])) {
-            free(record[i]);
             record[i] = malloc(strlen(argv[i])+1);
             strcpy(record[i], argv[i]);
+        }
+        else {
+            record[i] = malloc(5);
+            strcpy(record[i], "NULL");
         }
     }
     
