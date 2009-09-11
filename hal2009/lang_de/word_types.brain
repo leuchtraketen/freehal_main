@@ -1084,12 +1084,12 @@ drogen:
 team:
   genus  : s
   type: n
-FreeHal:
+Freehal:
   type: n
 mailadresse:
   genus  : f
   type: n
-infoFreeHal:
+infoFreehal:
   type: n
 hellsehen:
   type: vi
@@ -45340,8 +45340,6 @@ Irrigator:
   type: n
 Langzeittest:
   genus: m
-  type: n
-Freehal:
   type: n
 Ertragsausfall:
   genus: m
