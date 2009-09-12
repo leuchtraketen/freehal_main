@@ -3248,7 +3248,9 @@ define action toggle_entities with array entities do
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
+    print "truth = ", var truth
     if var truth < 0.5 do
+        print " = wrong", new line
         if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein/, "kein", :global:i
         done
@@ -3258,6 +3260,9 @@ define action adjust_truth with array result, var truth, var number_of_clause, v
         else do
             set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
         done
+    done
+    else do
+        print " = true", new line
     done
 done
 

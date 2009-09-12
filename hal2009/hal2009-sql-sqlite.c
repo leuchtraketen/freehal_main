@@ -693,7 +693,7 @@ int sql_sqlite_add_record(struct RECORD* r, const char* relation_to) {
         halfree(override_verb);
     }
     
-    if (num_of_records[relation_to?1:0] == 0) {
+    if (1 || num_of_records[relation_to?1:0] == 0) {
         char sql[5120];
         *sql = 0;
         strcat(sql, "SELECT pk from ");
