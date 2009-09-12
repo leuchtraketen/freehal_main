@@ -28,7 +28,7 @@ struct DATASET sql_get_records(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_get_records(r);
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_get_records(r);
     }
 }
@@ -37,7 +37,7 @@ int sql_add_record(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_add_record(r, NULL);
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_add_record(r, NULL);
     }
 }
@@ -70,7 +70,7 @@ int sql_begin() {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_begin();
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_begin();
     }
 }
@@ -80,7 +80,7 @@ int sql_end() {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         ret = sql_sqlite_end();
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
         ret = sql_semtree_end();
     }
     fprintf(output(), "%s\n", "Stop database access.");

@@ -43,10 +43,10 @@ int sql_semtree_add_record(struct RECORD* r, const char* relation_to) {
     else {
         struct fact* fact = insert_fact_into_net(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->from, r->truth);
         if (!fact || !fact->pk) {
-            printf("bug at: %s, %s, %s, %s\n", r->subjects, r->objects, r->verb, r->adverbs);
+            //printf("bug at: %s, %s, %s, %s\n", r->subjects, r->objects, r->verb, r->adverbs);
         }
         if (r->clauses && r->clauses[0]) {
-            printf("has clauses: %s, %s, %s, %s\n", r->subjects, r->objects, r->verb, r->adverbs);
+            //printf("has clauses: %s, %s, %s, %s\n", r->subjects, r->objects, r->verb, r->adverbs);
         }
         if (r->clauses && r->clauses[0] && fact && fact->pk) {
             int n;
