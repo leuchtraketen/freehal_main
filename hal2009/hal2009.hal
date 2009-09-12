@@ -1782,11 +1782,13 @@ define action logic with var input, var lang, var path, hash parsed do
     set var output to var output concat ( flag verb_flag_should || '0' )
 
 
-    do unlink with '_input__get_csv'
 
     set new var output_handle to handle for file name var output_file_name, write
     print into var output_handle data var output
     do close with var output_handle
+    do unlink with '_input__get_csv'
+    
+    do wait 3 seconds
 
     while not exists: '_input__get_csv', end test do
         do wait 0.5 seconds

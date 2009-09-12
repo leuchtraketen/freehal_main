@@ -2341,8 +2341,10 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 }
             }
             if (0 == strcmp(r->context, "q_how")) {
-                flag_should_contain = 0;
-                strcpy(buffers, "* in *;* im *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;im *;an *;from *;at *;auf *;von *;aus *");
+                if (!strstr(r->verb, "|ist|")) {
+                    flag_should_contain = 0;
+                    strcpy(buffers, "* in *;* im *;* an *;* from *;* at *;* auf *;* von *;* aus *;in *;im *;an *;from *;at *;auf *;von *;aus *");
+                }
             }
             if (0 == strcmp(r->context, "q_from_where")) {
                 strcpy(buffers, "aus *;von *;from *;aus *;durch *;* aus *;* von *;* from *;* aus *;* durch *");
