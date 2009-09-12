@@ -1004,23 +1004,27 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
     // Fetch subject before the other parameters because of the SQL join statement
     char* extras_buffer = r->extra;
     char* subjects_buffer = 0;
+    int subject_is_extra = 0;
     if (r->subjects && *r->subjects != '0' && strlen(r->subjects)) {
         subjects_buffer = r->subjects;
         extras_buffer   = r->extra;
     }
-    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how")) {
+    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how") && strcmp(r->context, "q_what_prep")) {
         subjects_buffer = r->extra;
+        subject_is_extra = 1;
     }
     
     char* objects_buffer = 0;
+    int object_is_extra = 0;
     if (r->objects && *r->objects != '0' && strlen(r->objects)) {
         objects_buffer = r->objects;
         if (!extras_buffer) {
             extras_buffer = r->extra;
         }
     }
-    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how") && strcmp(r->context, "q_what_prep") ) {
+    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how") ) {
         objects_buffer = r->extra;
+        object_is_extra = 1;
     }
 
 
@@ -1042,7 +1046,14 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf (matched by ' '): %s\n", buf);
             }
         }
-        strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (subjects ");
+        
+        if (subject_is_extra) {
+            strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (subjects ");
+        }
+        else {
+            strcat(sql, "SELECT objects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (NOT objects GLOB \"ein *\" AND NOT objects GLOB \"eine *\") AND (subjects ");
+        }
+        
         if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
         else                            strcat(sql, " = ");
         strcat(sql, " \"");
@@ -1188,7 +1199,14 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 printf("New buf: %s\n", buf);
             }
         }
-        strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND ((NOT subjects GLOB \"ein *\" AND NOT subjects GLOB \"eine *\") OR ((subjects GLOB \"ein *\" OR subjects GLOB \"eine *\") AND (objects GLOB \"ein *\" OR objects GLOB \"eine *\"))) AND (objects ");
+        
+        if (object_is_extra) {
+            strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND (objects ");
+        }
+        else {
+            strcat(sql, "SELECT subjects, pk, `from`  FROM facts WHERE truth = 1 AND verbgroup = \"be\" AND ((NOT subjects GLOB \"ein *\" AND NOT subjects GLOB \"eine *\") OR ((subjects GLOB \"ein *\" OR subjects GLOB \"eine *\") AND (objects GLOB \"ein *\" OR objects GLOB \"eine *\"))) AND (objects ");
+        }
+        
         if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
         else                            strcat(sql, " = ");
         strcat(sql, " \"");
@@ -1205,8 +1223,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             }
         }
         strcat(sql, "\" OR objects ");
-        if (buf && strstr(buf, "*"))    strcat(sql, " GLOB ");
-        else                            strcat(sql, " = ");
+        strcat(sql, " GLOB ");
         strcat(sql, " \"");
         if (buf) {
             if (strlen(buf) <= 2) {
@@ -1217,6 +1234,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, buf+1);
             }
             else {
+                strcat(sql, "* ");
                 strcat(sql, buf);
             }
         }
@@ -1480,6 +1498,29 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             sql = malloc(512000+sizeof(r));
             *sql = 0;
         }
+    }
+    
+    /// if the object was assigned to extra and the subject is null, this was done to get the object-synonyms of extra.
+    /// now swap:
+    if (object_is_extra && !subjects_buffer) {
+        void* temp;
+        
+        temp = object_synonyms_trio;
+        object_synonyms_trio = subject_synonyms_trio;
+        subject_synonyms_trio = temp;
+        
+        temp = object_synonyms;
+        object_synonyms = subject_synonyms;
+        subject_synonyms = temp;
+        
+        temp = subjects_buffer;
+        subjects_buffer = objects_buffer;
+        objects_buffer = temp;
+        
+        int z;
+        z = object_is_extra;
+        object_is_extra = subject_is_extra;
+        subject_is_extra = z;
     }
     
     int num_of_synonyms;
@@ -2105,7 +2146,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
 
             int n = 0;
             while (object_synonyms[n] && n < 20000) {
-                if (strlen(object_synonyms[n]) && strcmp(object_synonyms[n], subjects_buffer)) {
+                if (strlen(object_synonyms[n]) && (!subjects_buffer || strcmp(object_synonyms[n], subjects_buffer))) {
                     strcat(sql, "\n OR nmain.objects GLOB \"");
                     strcat(sql, object_synonyms[n]);
                     strcat(sql, "\" ");
@@ -2215,7 +2256,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 need_and = 1;
             }
         }
-        if (r->extra && *r->extra != '0' && strlen(r->extra) && r->extra != objects_buffer) {
+        if (r->extra && *r->extra != '0' && strlen(r->extra) && r->extra != objects_buffer && r->extra != subjects_buffer) {
             char* buffer = r->extra;
             if (need_and) strcat(sql, " AND");
             else          strcat(sql, "WHERE");
@@ -2514,7 +2555,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 strcat(sql, "       )\n");
                 int n = 0;
                 while (object_synonyms[n] && n < 20000) {
-                    if (strlen(object_synonyms[n]) && strcmp(object_synonyms[n], subjects_buffer)) {
+                    if (strlen(object_synonyms[n]) && (!subjects_buffer || strcmp(object_synonyms[n], subjects_buffer))) {
                         strcat(sql, " OR    (       (main.objects IN (\"*\",\"\")) AND (\n\"");
                         strcat(sql, object_synonyms[n]);
                         strcat(sql, "\" GLOB fact.objects OR \n\"");
