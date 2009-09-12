@@ -257,11 +257,11 @@ void Helper::slotNewVersionOnline(QString new_online) {
 
 int windows_invoke_runner() {
     for (int i = 0; i < 10; ++i) {
-        if (!std::system(("runner " + freehal::get_lang_str().ref()).c_str()))
+        if (!std::system(("runner " + freehal::get_lang_str().ref() + " " + database_engine).c_str()))
             return 0;
-        if (!std::system(("runner.exe " + freehal::get_lang_str().ref()).c_str()))
+        if (!std::system(("runner.exe " + freehal::get_lang_str().ref() + " " + database_engine).c_str()))
             return 0;
-        if (!std::system((".\\runner " + freehal::get_lang_str().ref()).c_str()))
+        if (!std::system((".\\runner " + freehal::get_lang_str().ref() + " " + database_engine).c_str()))
             return 0;
         freehal::msleep(1000);
     }

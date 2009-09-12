@@ -2572,6 +2572,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'mond' => "n",
           'the' => "art",
           'haettest' => "vt",
+          'elend' => "adj",
+          'Elend' => "n",
           'sagen' => "vi",
           'sagst' => "vi",
           'sage' => "vi",
