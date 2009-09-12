@@ -228,7 +228,7 @@ int hal2009_add_pro_file (char* filename) {
                     f = -1;
                     d += 2;
 
-                    int last_pk;
+                    int last_pk = 0;
                     if (!first_record_in_this_line) {
                         FILE* target = fopen("_input_key", "r");
                         if (target) {

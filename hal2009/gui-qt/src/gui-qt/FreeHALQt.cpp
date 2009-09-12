@@ -67,6 +67,7 @@ bool                        startedUp = false;
 string                      must_be_logged;
 QProcess*                   kernel_process;
 bool                        can_do_exit = false;
+std::string                 database_engine = "sqlite";
 
 bool offline_mode = false;
 bool www_surf_mode = true;
@@ -223,21 +224,24 @@ void Helper::exitNow() {
 
 
 void check_new_version() {
-	while (!version.size()) {
-		freehal::msleep(1000);
-	}
-	
-	freehal::string new_online(
-		freehal::download(
-		std::string("http://developer.freehal.org/down/version") + (is_perl?"_perl":"")));
-	new_online = new_online.replace("r", "");
-	new_online = new_online.replace("rev", "");
-	new_online = new_online.replace(".", "");
-	new_online.strip();
-	
-	if (new_online != version) {
-		emit helper->signalNewVersionOnline(QString(new_online.ref().c_str()));
-	}
+    // dont't check. It does not make sense currently
+    return;
+
+    while (!version.size()) {
+            freehal::msleep(1000);
+    }
+
+    freehal::string new_online(
+            freehal::download(
+            std::string("http://developer.freehal.org/down/version") + (is_perl?"_perl":"")));
+    new_online = new_online.replace("r", "");
+    new_online = new_online.replace("rev", "");
+    new_online = new_online.replace(".", "");
+    new_online.strip();
+
+    if (new_online != version) {
+        emit helper->signalNewVersionOnline(QString(new_online.ref().c_str()));
+    }
 }
 
 void Helper::slotNewVersionOnline(QString new_online) {
@@ -271,6 +275,14 @@ void make_connection() {
         std::exit(0);
     }
 
+    database_engine = dialog_connection->from->database_engine->currentText().toStdString();
+    if (database_engine == "disk")
+        database_engine = "sqlite";
+    if (database_engine == "ram")
+        database_engine = "semtree";
+    if (database_engine.size() < 3 || (database_engine != "semtree" && database_engine != "sqlite"))
+        database_engine = "sqlite";
+
     string ip = freehal::string(dialog_connection->from->ip->displayText().toStdString()).get_strip().ref();
 
     main_window->showWindowNormal();
@@ -286,11 +298,11 @@ void make_connection() {
     ifstream i_1("hal2009-server");
     if (i_1) {
     	boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "./hal2009-server " << freehal::get_lang_str().ref() << endl;
+        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
     else {
     	boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "hal2009-server " << freehal::get_lang_str().ref() << endl;
+        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
 #else
 # if defined(__APPLE__)
@@ -299,17 +311,17 @@ void make_connection() {
     ifstream i_1("hal2009-server");
     if (i_1) {
     	boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "./hal2009-server " << freehal::get_lang_str().ref() << endl;
+        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
     else {
     	boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "hal2009-server " << freehal::get_lang_str().ref() << endl;
+        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
 # else
     std::system("del booted");
 
 	boost::thread t_v(windows_invoke_runner);
-	cout << "runner " << freehal::get_lang_str().ref() << endl;
+        cout << "runner " << freehal::get_lang_str().ref() << " " << database_engine << endl;
 # endif
 #endif
 
@@ -356,10 +368,6 @@ int main(int argc, char* argv[]) {
     QTranslator translator;
     translator.load(QString("freehal_en"));
     translator.load(QString("freehal_") + locale);
-
-    ofstream o("temp/language.tmp");
-    o << locale.toStdString();
-    o.close();
 
     cout << locale.toStdString() << endl;
     app.installTranslator(&translator);
@@ -487,14 +495,7 @@ QScrollArea* scrollArea = new QScrollArea;
 
     main_window->user_interface_main_window->lineEdit->setFocus();
         
-    ifstream i_check("temp/already_initialized.tmp");
-    if (!i_check) {
-    	ofstream o_check("temp/already_initialized.tmp");
-    	o_check.close();
-    	dialog_view->exec();
-    } else {
-    	make_connection();
-    }
+    make_connection();
 
     return app.exec();
 }

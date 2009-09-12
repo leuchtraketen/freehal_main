@@ -697,7 +697,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     hal2009_netcom_lock();
     (*stream) << "READY:EVERYTHING_INITIALIZED" << endl;
     (*stream) << "JELIZA_FULL_VERSION:" << FULL_VERSION << endl;
-    (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << endl;
+    (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << " (database " << (sql_engine == "semtree" ? "in memory" : "at disk") << ")" << endl;
     (*stream) << "Perl:." << endl;
     hal2009_netcom_unlock();
     
@@ -885,6 +885,9 @@ void* hal2009_init_thread (void*) {
 int main(int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "sqlite");
+    if (argc >= 3 && argv[2]) {
+        strcpy(sql_engine, argv[2]);
+    }
     hal2009_clean();
     extract();
 
@@ -895,7 +898,8 @@ int main(int argc, char** argv) {
             strcpy(signal_handler_tlanguage, argv[g]);
         }
     }
-    fprintf(output(), "Language is %s\n", signal_handler_tlanguage);
+    fprintf(output(), "Language is %s.\n", signal_handler_tlanguage);
+    fprintf(output(), "Database Engine is %s.\n", sql_engine);
     base_dir = ".";
 
     {

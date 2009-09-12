@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading ui file 'connect.ui'
 **
-** Created: Sat May 30 13:11:55 2009
-**      by: Qt User Interface Compiler version 4.5.0
+** Created: Sat Sep 12 16:30:43 2009
+**      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
@@ -15,6 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
+#include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QDialogButtonBox>
 #include <QtGui/QGridLayout>
@@ -44,6 +45,8 @@ public:
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout2;
     QCheckBox *start_kernel;
+    QComboBox *database_engine;
+    QLabel *label;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout3;
     QLabel *label_4;
@@ -119,7 +122,17 @@ public:
         start_kernel->setObjectName(QString::fromUtf8("start_kernel"));
         start_kernel->setChecked(true);
 
-        gridLayout2->addWidget(start_kernel, 0, 0, 1, 1);
+        gridLayout2->addWidget(start_kernel, 0, 0, 1, 2);
+
+        database_engine = new QComboBox(groupBox_3);
+        database_engine->setObjectName(QString::fromUtf8("database_engine"));
+
+        gridLayout2->addWidget(database_engine, 1, 1, 1, 1);
+
+        label = new QLabel(groupBox_3);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout2->addWidget(label, 1, 0, 1, 1);
 
 
         gridLayout1->addWidget(groupBox_3, 1, 0, 1, 3);
@@ -212,6 +225,12 @@ public:
         radioButton_2->setText(QApplication::translate("ConnectDialog", "... a remote computer", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("ConnectDialog", "This Computer", 0, QApplication::UnicodeUTF8));
         start_kernel->setText(QApplication::translate("ConnectDialog", "If the FreeHAL service isn't running yet, start it", 0, QApplication::UnicodeUTF8));
+        database_engine->clear();
+        database_engine->insertItems(0, QStringList()
+         << QApplication::translate("ConnectDialog", "disk", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("ConnectDialog", "ram", 0, QApplication::UnicodeUTF8)
+        );
+        label->setText(QApplication::translate("ConnectDialog", "Use Database engine...", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("ConnectDialog", "A Remote Computer", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ConnectDialog", "IP Address:", 0, QApplication::UnicodeUTF8));
         ip->setText(QApplication::translate("ConnectDialog", "127.0.0.1", 0, QApplication::UnicodeUTF8));

@@ -163,13 +163,34 @@
          <set>Qt::AlignHCenter</set>
         </property>
         <layout class="QGridLayout">
-         <item row="0" column="0">
+         <item row="0" column="0" colspan="2">
           <widget class="QCheckBox" name="start_kernel">
            <property name="text">
             <string>If the FreeHAL service isn't running yet, start it</string>
            </property>
            <property name="checked">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="database_engine">
+           <item>
+            <property name="text">
+             <string>disk</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ram</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Use Database engine...</string>
            </property>
           </widget>
          </item>
