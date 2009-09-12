@@ -3165,10 +3165,11 @@ define action init_pro_files with var current_language, var path do
                 # TEXT
                 # Write the signal file
                 # CODE
+                do unlink with '_input__add_pro_file'
                 set new var output_handle to handle for file name "_output__add_pro_file", write
                 print into var output_handle data var file
                 do close with var output_handle
-                do wait 3 seconds
+                #do wait 1 seconds
 
                 # TEXT
                 # Wait...

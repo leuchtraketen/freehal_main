@@ -1475,7 +1475,7 @@ set multi-line new global hash builtin_verb_prefixes to {
           'zwischen' => 1,
           'um' => 1,
           'durch' => 1,
-#          'aus' => 1,
+          'aus' => 1,
           'fest' => 1,
 };
 
@@ -1665,6 +1665,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'sauer' => "adj",
           'rarely' => "adj",
           'a' => "n",
+          'lieblingsessen' => "n",
           'genau' => "adj",
           'ein' => "art",
           'bloed' => "adj",
