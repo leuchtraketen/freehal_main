@@ -1,4 +1,2887 @@
+Oestereich:
+  type: n
+osten:
+  genus  : m
+  type: n
+uno:
   genus  : f
+  type: n
+Buenos:
+  type: n
+luefte:
+  genus  : f
+  type: n
+Tierra:
+  type: n
+Dschebel:
+  type: n
+Sahel:
+  type: n
+klein-venedig:
+  type: n
+beherrsche:
+  type: vi
+meeresgott:
+  genus  : m
+  type: n
+erdkern:
+  type: n
+bestieg:
+  type: vi
+grenze:
+  type: n
+erdumrundung:
+  genus  : f
+  type: n
+stunde:
+  genus  : f
+  type: n
+Lassel:
+  type: n
+jewitt:
+  type: n
+nicholson:
+  type: n
+terrile:
+  type: n
+bereits:
+  type: adj
+Elara:
+  type: n
+perrine:
+  type: n
+laques:
+  type: n
+Kallisto:
+  type: n
+Pasiphae:
+  type: n
+Tethys:
+  type: n
+hawaii-inseln:
+  genus  : f
+  type: n
+seeweg:
+  genus  : m
+  type: n
+entspringt:
+  type: vi
+schwarzwald:
+  genus  : m
+  type: n
+eder:
+  type: n
+rothaargebirge:
+  type: n
+elbe:
+  type: n
+riesengebirge:
+  type: n
+wallis:
+  genus  : s
+  type: n
+mecklenburg-vorpommern:
+  type: n
+meteoriteneinschlaege:
+  type: n
+u-bahn:
+  genus  : f
+  type: n
+hanse-sail:
+  type: n
+fliegt:
+  type: vi
+canyon:
+  type: n
+asowsche:
+  type: adj
+septik:
+  type: n
+garonne:
+  genus  : f
+  type: n
+themse:
+  genus  : f
+  type: n
+neretva:
+  type: n
+falkland-inseln:
+  genus  : f
+  type: n
+falklandinseln:
+  genus  : f
+  type: n
+galapagos-inseln:
+  genus  : f
+  type: n
+andamanen:
+  type: n
+Baffinland:
+  type: n
+Celebes:
+  type: n
+bikini-atoll:
+  genus  : s
+  type: n
+sternbild:
+  genus  : s
+  type: n
+wasserschlange:
+  genus  : f
+  type: n
+isla:
+  type: n
+ellesmere-insel:
+  genus  : f
+  type: n
+osterinsel:
+  genus  : f
+  type: n
+stratosphaere:
+  genus  : f
+  type: n
+Dominica:
+  type: n
+Gibraltar:
+  type: n
+Java:
+  type: n
+Juetland:
+  type: n
+Kefalinia:
+  type: n
+Korsika:
+  type: n
+Krk:
+  type: n
+Lanzarote:
+  type: n
+Luzon:
+  type: n
+Madagaskar:
+  type: n
+Madeira:
+  type: n
+Mallorca:
+  type: n
+Marinique:
+  type: n
+Martinique:
+  type: n
+Menorca:
+  type: n
+papua-neuguinea:
+  type: n
+Niederkalifornien:
+  type: n
+Sarawak:
+  type: n
+cunha:
+  type: n
+Yukatan:
+  type: n
+stiller:
+  type: adj
+weisswurst-aequator:
+  type: n
+millionendorf:
+  genus  : s
+  type: n
+kontinente:
+  type: n
+universitaetsstadt:
+  genus  : f
+  type: n
+grenzt:
+  type: vi
+Baden-wuerttemberg:
+  type: n
+staedte:
+  genus  : f
+  type: n
+Caliban:
+  type: n
+Calypso:
+  type: n
+bundespatentamt:
+  genus  : s
+  type: n
+bundesverwaltungsgericht:
+  genus  : s
+  type: n
+kraftfahrt-bundesamt:
+  genus  : s
+  type: n
+luftfahrt-bundesamt:
+  type: n
+umweltbundesamt:
+  genus  : s
+  type: n
+pullach:
+  type: n
+nebenfluesse:
+  type: n
+sycorax:
+  type: n
+Despina:
+  type: n
+nachbarlaender:
+  type: n
+europafahne:
+  genus  : f
+  type: n
+billionen:
+  type: n
+Hamburg:
+  type: n
+dreizehntausend:
+  type: adj
+Leipzig:
+  type: n
+Liechtenstein:
+  type: n
+Mecklenburg-vorpommern:
+  type: n
+Mexiko-stadt:
+  type: n
+Nordrhein-westfalen:
+  type: n
+Potsdam:
+  type: n
+ebenfalls:
+  type: adj
+Proteus:
+  type: n
+Rheinland-pfalz:
+  type: n
+zuckerhut:
+  type: n
+Sachsen-anhalt:
+  type: n
+Schleswig-holstein:
+  type: n
+Setebos:
+  type: n
+Sycorax:
+  type: n
+Aborigines:
+  genus  : f
+  type: n
+dhabi:
+  type: n
+burg:
+  type: n
+Cardiff:
+  type: n
+hochwildstelle:
+  genus  : f
+  type: n
+danebrog:
+  type: n
+Eider:
+  type: n
+schleswig-holsteins:
+  type: n
+village:
+  type: n
+Hyde:
+  type: n
+park:
+  genus  : m
+  type: n
+feuerlandinsel:
+  genus  : f
+  type: n
+Koenigsallee:
+  genus  : f
+  type: n
+Lusaka:
+  type: n
+Macau:
+  type: n
+Malabo:
+  type: n
+aequatorial-guinea:
+  type: n
+Montmatre:
+  type: n
+burkina:
+  type: n
+Pyoengyang:
+  type: n
+Rangun:
+  type: n
+provinz:
+  genus  : f
+  type: n
+britisch-honduras:
+  type: n
+Ellwangen:
+  type: n
+Andhra:
+  type: n
+Annweiler:
+  type: n
+muender:
+  type: n
+lavanttal:
+  genus  : s
+  type: n
+soden:
+  type: n
+Bernau:
+  type: n
+Bingen:
+  type: n
+Bischofsheim:
+  type: n
+Bonndorf:
+  type: n
+Braunau:
+  type: n
+Bruck:
+  type: n
+Dietfurt:
+  type: n
+altmueh:
+  type: n
+Dillingen:
+  type: n
+burgengruppe:
+  genus  : f
+  type: n
+Endingen:
+  type: n
+kaiserstuhl:
+  genus  : m
+  type: n
+Gmuend:
+  type: n
+Haltern:
+  type: n
+Kirchdorf:
+  type: n
+Krakow:
+  type: n
+Laa:
+  type: n
+thaya:
+  type: n
+Leptis:
+  type: n
+magna:
+  type: n
+ruinenstadt:
+  genus  : f
+  type: n
+Little:
+  type: n
+Muelheim:
+  type: n
+Neuhaus:
+  type: n
+Neunburg:
+  type: n
+vorm:
+  type: prep
+orla:
+  type: n
+weinstrasse:
+  genus  : f
+  type: n
+Oberndorf:
+  type: n
+talsperre:
+  genus  : f
+  type: n
+Ponta:
+  type: n
+galapagos:
+  type: n
+andrae:
+  type: n
+cruz:
+  type: n
+tenerife:
+  type: n
+Steinau:
+  type: n
+strasse:
+  genus  : f
+  type: n
+Steinheim:
+  type: n
+Tamil:
+  type: n
+nova:
+  type: n
+Vogtsburg:
+  type: n
+kaiserstuh:
+  type: n
+Waidhofen:
+  type: n
+Wasserburg:
+  type: n
+teck:
+  type: n
+Woerth:
+  type: n
+Aach:
+  type: n
+vereinigten-arabischen-emirate:
+  genus  : f
+  type: n
+ghana:
+  type: n
+Achern:
+  type: n
+pitcairninseln:
+  genus  : f
+  type: n
+suedaustralien:
+  type: n
+Ahaus:
+  type: n
+Aichtal:
+  type: n
+hafenstadt:
+  genus  : f
+  type: n
+Alfeld:
+  type: n
+Algier:
+  type: n
+Allstedt:
+  type: n
+niue:
+  type: n
+Alsdorf:
+  type: n
+Alsleben:
+  type: n
+Altena:
+  type: n
+Altenburg:
+  type: n
+westerwald:
+  genus  : m
+  type: n
+Alzey:
+  type: n
+papaya:
+  type: n
+Andorra-:
+  type: n
+la-:
+  type: n
+lichtjahre:
+  genus  : f
+  type: n
+Angermuende:
+  type: n
+Angola:
+  type: n
+Annaberg-buchholz:
+  type: n
+Annapolis:
+  type: n
+Ansbach:
+  type: n
+Antarktis:
+  genus  : f
+  type: n
+appenzell-innerrhoden:
+  type: n
+Arktis:
+  type: n
+Arneburg:
+  type: n
+Asgabat:
+  type: n
+Asperg:
+  type: n
+Asslar:
+  type: n
+Asturien:
+  type: n
+Attnang-puchheim:
+  type: n
+Aurich:
+  type: n
+Austin:
+  type: n
+Avarua:
+  type: n
+cook-inseln:
+  genus  : f
+  type: n
+breisig:
+  type: n
+buchau:
+  type: n
+gottleuba-berggiesshuebel:
+  type: n
+herrenalb:
+  type: n
+nenndorf:
+  type: n
+neuenahr-ahrweiler:
+  type: n
+oldesloe:
+  type: n
+salzungen:
+  type: n
+saulgau:
+  type: n
+inschleswig-holstein:
+  type: inter
+soden-salmuenster:
+  type: n
+sooden-allendorf:
+  type: n
+suelze:
+  type: n
+teinach-zavelstein:
+  type: n
+urach:
+  type: n
+wildungen:
+  type: n
+wurzach:
+  type: n
+Baden-baden:
+  type: n
+suedwesten:
+  type: n
+bundesrepublik:
+  genus  : f
+  type: n
+Bahamas:
+  genus  : f
+  type: n
+Balve:
+  type: n
+Bamako:
+  type: n
+Bandar-seri-begawan:
+  type: n
+bosnien-herzegowina:
+  type: n
+gambia:
+  type: n
+Barbuda:
+  type: n
+Barby:
+  type: n
+katalonien:
+  type: n
+apulien:
+  type: n
+Barntrup:
+  type: n
+Barsinghausen:
+  type: n
+Barth:
+  type: n
+basel-stadt:
+  type: n
+Basse-terre:
+  type: n
+guadeloupe:
+  type: n
+Bassum:
+  type: n
+rouge:
+  type: n
+Bautzen:
+  type: n
+suedosten:
+  type: n
+Beelitz:
+  type: n
+Belarus:
+  type: n
+Belmopan:
+  type: n
+Benneckenstein:
+  type: n
+Bensheim:
+  type: n
+Bergkamen:
+  type: n
+Berndorf:
+  type: n
+Bernkastel-kues:
+  type: n
+Bexbach:
+  type: n
+Biesenthal:
+  type: n
+Bietigheim-bissingen:
+  type: n
+Big:
+  type: n
+Bihar:
+  type: n
+ostseebad:
+  genus  : s
+  type: n
+Birmingham:
+  type: n
+Bischkek:
+  type: n
+Bischofshofen:
+  type: n
+Bishkek:
+  type: n
+guinea-bissau:
+  type: n
+Bitburg:
+  type: n
+Bitterfeld-wolfen:
+  type: n
+Blankenhain:
+  type: n
+Bleckede:
+  type: n
+Bleiburg:
+  type: n
+Bludenz:
+  type: n
+Bodenwerder:
+  type: n
+emiglia-romagna:
+  type: n
+Bonn:
+  type: n
+Bopfingen:
+  type: n
+Boppard:
+  type: n
+Borkum:
+  type: n
+Borna:
+  type: n
+Bornheim:
+  type: n
+Brake:
+  type: n
+Bramsche:
+  type: n
+Brand-erbisdorf:
+  type: n
+Braunlage:
+  type: n
+Brazzaville:
+  type: n
+Bremen:
+  type: n
+Bretten:
+  type: n
+Breuberg:
+  type: n
+Bruchkoebel:
+  type: n
+Brueel:
+  type: n
+Bruessow:
+  type: n
+Buchloe:
+  type: n
+Budapest:
+  type: vi
+Bueren:
+  type: n
+Buergel:
+  type: n
+Burgdorf:
+  type: n
+Burglengenfeld:
+  type: n
+Burgstaedt:
+  type: n
+Burkina:
+  type: n
+Calau:
+  type: n
+Canberra:
+  type: n
+weltraumbahnhof:
+  genus  : m
+  type: n
+Castrop-rauxel:
+  type: n
+franzoesischguayana:
+  type: adj
+Chennai:
+  type: n
+Chihuahua:
+  type: n
+Chur:
+  type: n
+Cidade:
+  type: n
+Clausthal-zellerfeld:
+  type: n
+Coburg:
+  type: n
+Colditz:
+  type: n
+hamphshire:
+  type: n
+Connecticut:
+  type: n
+Cornwall:
+  type: n
+zentralamerika:
+  type: n
+Cottbus:
+  type: n
+Dahlen:
+  type: n
+Dahn:
+  type: n
+Dakar:
+  type: n
+Dannenberg:
+  type: n
+bayer-kreuz:
+  type: n
+bonner:
+  type: adj
+columbus-center:
+  type: n
+gasometer:
+  type: n
+great:
+  type: n
+nordostkueste:
+  genus  : f
+  type: n
+ingolstaedter:
+  type: adj
+kolosseum:
+  type: n
+kroenchen:
+  type: n
+kurhaus:
+  type: n
+matterhorn:
+  genus  : s
+  type: n
+mekong-delta:
+  genus  : s
+  type: n
+nordertor:
+  type: n
+opernhaus:
+  type: n
+riesenrad:
+  genus  : s
+  type: n
+roentgen-museum:
+  type: n
+salzkammergut:
+  genus  : s
+  type: n
+schwalbennest:
+  genus  : s
+  type: vi
+schweriner:
+  type: adj
+steintord:
+  type: n
+universitaetshochhaus:
+  type: n
+tian-an-men-platz:
+  genus  : m
+  type: n
+weserbergland:
+  type: n
+Debrezin:
+  type: n
+Deidesheim:
+  type: n
+Deiningen:
+  type: n
+eueres:
+  type: art
+lago:
+  type: n
+meeresspiegel:
+  genus  : m
+  type: n
+agung:
+  type: n
+wasserfall:
+  genus  : m
+  type: n
+ararat:
+  genus  : m
+  type: n
+baerengraben:
+  genus  : m
+  type: n
+bamberger:
+  type: n
+bettelwurf:
+  type: n
+blue-mountain-peak:
+  type: n
+bobotov:
+  type: n
+schwarzem:
+  type: adj
+bukit:
+  type: n
+timah:
+  type: n
+carrantuchill:
+  type: n
+cerr-de-las-minas:
+  type: n
+pital:
+  type: n
+mogotn:
+  type: n
+cerro-chirripo:
+  type: n
+cerro-de-las-animas:
+  type: n
+chaine-de-la-selle:
+  type: n
+chappal-waddi:
+  type: n
+chiemsee:
+  genus  : m
+  type: n
+erloschener:
+  type: adj
+chimborazo:
+  type: n
+chinook:
+  type: n
+citlaltepetl:
+  type: n
+clyde:
+  type: n
+coit:
+  type: n
+pedrosa:
+  type: n
+cordillera-de-caaguazu:
+  type: n
+dachstein:
+  genus  : m
+  type: n
+daravica:
+  type: n
+demawend:
+  type: n
+chambi:
+  type: n
+dolohmwar:
+  type: n
+east:
+  type: n
+eisack:
+  type: n
+kausasus:
+  genus  : m
+  type: n
+elbrusist:
+  type: vi
+kiometer:
+  type: inter
+felsendom:
+  genus  : m
+  type: n
+foho-tatamailau:
+  type: n
+fudschijama:
+  genus  : m
+  type: n
+fujiyama:
+  genus  : m
+  type: n
+gardasee:
+  genus  : m
+  type: n
+golem:
+  genus  : m
+  type: adj
+korab:
+  type: n
+mazedoinen:
+  type: n
+golfstrom:
+  genus  : m
+  type: n
+meerestroemung:
+  genus  : f
+  type: n
+urkaine:
+  genus  : f
+  type: n
+grundlsee:
+  genus  : m
+  type: n
+halla-san:
+  type: adj
+haltiatunturi:
+  type: n
+hermon:
+  type: n
+hkakabo-raziist:
+  type: vi
+hombon-tondo:
+  type: n
+hubbard-gletscher:
+  type: n
+huyten:
+  type: n
+orgil:
+  type: n
+inyangani:
+  type: n
+nabi:
+  type: n
+shuayb:
+  type: n
+sawda:
+  type: n
+saudi-arabien:
+  type: n
+jabal-sham:
+  type: n
+jahrhundertturm:
+  genus  : m
+  type: n
+karl-marx-kopf:
+  type: n
+stachus:
+  genus  : m
+  type: n
+kasbek:
+  type: n
+georgien:
+  type: n
+kediet-ijill:
+  type: n
+kekes:
+  type: n
+kibo:
+  type: n
+kinyeti:
+  type: n
+koenigsberger:
+  type: n
+kaliningrad:
+  type: n
+suedosteuropa:
+  type: n
+kula:
+  type: n
+kyffhaeusergebirge:
+  genus  : s
+  type: n
+ladogasee:
+  genus  : m
+  type: n
+maglic:
+  type: n
+maromokotro:
+  type: n
+meron:
+  type: n
+diablotin:
+  type: n
+mondsee:
+  genus  : m
+  type: n
+blanc:
+  type: n
+zentralafrika:
+  type: n
+binga:
+  type: n
+marino:
+  type: n
+bagzane:
+  type: n
+heha:
+  type: n
+hillaby:
+  type: n
+kosciusko:
+  type: n
+mulanje:
+  type: n
+ali:
+  type: n
+huascaran:
+  type: adj
+linh:
+  type: n
+njesuthi:
+  type: n
+nurek-staudamm:
+  type: n
+nyki-plateau:
+  type: n
+oraefajoelull:
+  type: n
+paektu-san:
+  type: adj
+weltmeere:
+  genus  : f
+  type: n
+petersdom:
+  genus  : m
+  type: n
+phnum-aoral:
+  type: n
+pico-cristoba-colon:
+  type: n
+pico-do-cano:
+  type: n
+pico-turquino:
+  type: n
+pik:
+  type: n
+piton-de-la-petite-riviere-noire:
+  type: n
+plutotag:
+  type: n
+jaya:
+  type: n
+qulla-ismoili-somoni:
+  type: n
+strassentunnel:
+  genus  : m
+  type: n
+retraeder:
+  type: n
+rysy:
+  type: n
+sachsenring:
+  type: n
+sajama:
+  type: n
+sankt-gotthard-tunnel:
+  type: n
+euerem:
+  type: adj
+touristenattraktion:
+  genus  : f
+  type: n
+schlossturm:
+  genus  : m
+  type: n
+seikan-tunnel:
+  genus  : m
+  type: n
+serra-da-estrela:
+  type: n
+soira:
+  type: n
+stuttgarter:
+  type: n
+ntlenyana:
+  type: n
+hoechstgelegene:
+  type: adj
+schiffbare:
+  type: adj
+trockenheisse:
+  type: adj
+ubangi:
+  type: n
+uhrturm:
+  type: n
+victorasee:
+  genus  : m
+  type: n
+vidzerne:
+  type: n
+volcan-de-chiriqui:
+  type: n
+bucht:
+  type: n
+krakau:
+  type: n
+wenzelplatz:
+  genus  : m
+  type: n
+wolfgangsee:
+  genus  : m
+  type: n
+yding-skovho:
+  type: n
+zytglogge-turm:
+  type: n
+altausseer:
+  type: n
+klopeiner:
+  type: n
+obertrumer:
+  type: n
+Des:
+  type: art
+Dessau-rosslau:
+  type: n
+Deutsch-wagram:
+  type: n
+Dhaka:
+  type: n
+ponte:
+  type: n
+vecchio:
+  type: n
+granada:
+  type: n
+alzette:
+  type: n
+amstel:
+  type: n
+atacama-wueste:
+  type: adj
+sibirien:
+  type: n
+lombard:
+  type: n
+cheops-pyramide:
+  genus  : f
+  type: n
+christusstatue:
+  genus  : f
+  type: n
+danziger:
+  type: n
+nordhalbkugel:
+  genus  : f
+  type: n
+eremitage:
+  genus  : f
+  type: n
+europabruecke:
+  genus  : f
+  type: n
+fontaene:
+  type: n
+gerlsdorfer:
+  type: n
+grauspitze:
+  genus  : f
+  type: n
+ilm:
+  type: n
+raumstadtion:
+  genus  : f
+  type: n
+kocher:
+  type: n
+lacke:
+  genus  : f
+  type: n
+galaxis:
+  genus  : f
+  type: n
+dippoldiswalde:
+  type: n
+hochbruecke:
+  type: n
+rinnenspitze:
+  genus  : f
+  type: n
+saar:
+  type: n
+salvatorkirche:
+  genus  : f
+  type: n
+salzach:
+  type: n
+neutraler:
+  type: adj
+severi-kirche:
+  genus  : f
+  type: n
+siegessaeule:
+  genus  : f
+  type: n
+sigismundssaeule:
+  genus  : f
+  type: n
+stiftsbibliothek:
+  genus  : f
+  type: n
+troposphaere:
+  genus  : f
+  type: n
+scheibe:
+  genus  : f
+  type: n
+hoechster:
+  type: adj
+Dierdorf:
+  type: n
+Dingelstaedt:
+  type: n
+Dinslaken:
+  type: n
+Dippoldiswalde:
+  type: n
+Dodoma:
+  type: n
+isle:
+  type: n
+Drosendorf-zissersdorf:
+  type: n
+tadshikistan:
+  type: n
+Ebermannstadt:
+  type: n
+Ebersberg:
+  type: n
+Eberswalde:
+  type: n
+Ebreichsdorf:
+  type: n
+Eckartsberga:
+  type: n
+Egeln:
+  type: n
+Eggenfelden:
+  type: n
+Eibelstadt:
+  type: n
+landenge:
+  type: n
+adria:
+  type: n
+kathedrale-notre-dame:
+  type: n
+Eisenach:
+  type: n
+Eisenhuettenstadt:
+  type: n
+sagenumwobene:
+  type: adj
+Elsterberg:
+  type: n
+Elterlein:
+  type: n
+Eltville:
+  type: n
+Elzach:
+  type: n
+Ennepetal:
+  type: n
+Eppelheim:
+  type: n
+Erkelenz:
+  type: n
+Erlenbach:
+  type: n
+Eschwege:
+  type: n
+Esens:
+  type: n
+Espelkamp:
+  type: n
+fuenftel:
+  type: n
+eurasischen:
+  type: adj
+landmasse:
+  genus  : f
+  type: n
+Fehring:
+  type: n
+Fellbach:
+  type: n
+Felsberg:
+  type: n
+Fidschi:
+  type: n
+Finnland:
+  type: n
+Finsterwalde:
+  type: n
+Fischamend:
+  type: n
+Flying-fish-cove:
+  type: n
+Forst:
+  genus  : m
+  type: n
+Fort-de-france:
+  type: n
+Frankenberg:
+  type: n
+Frankenthal:
+  type: n
+Frauenfeld:
+  type: n
+Fredericton:
+  type: n
+Freilassing:
+  type: n
+Freinsheim:
+  type: n
+Freising:
+  type: n
+Freudenberg:
+  type: n
+Freyburg:
+  type: n
+Freyung:
+  type: n
+Friedrichroda:
+  type: n
+Friedrichstadt:
+  type: n
+Friedrichsthal:
+  type: n
+Friesack:
+  type: n
+Friesoythe:
+  type: n
+Frohburg:
+  type: n
+Fuerstenfeld:
+  type: n
+Fuerstenfeldbruck:
+  type: n
+Fuerstenwalde:
+  type: n
+kreisstadt:
+  type: n
+tuvalu:
+  type: n
+Funchal:
+  type: n
+Futa:
+  type: n
+Gaggenau:
+  type: n
+Galatasaray:
+  type: n
+Gambia:
+  type: n
+Gau-algesheim:
+  type: n
+Gebesee:
+  genus  : m
+  type: n
+Gefell:
+  type: n
+Gefrees:
+  type: n
+Geilenkirchen:
+  type: n
+Geisenfeld:
+  type: n
+Geisingen:
+  type: n
+Gelsenkirchen:
+  type: n
+zwillinge:
+  type: n
+Geodaesie:
+  type: n
+kaimaninseln:
+  genus  : f
+  type: n
+Georgien:
+  type: n
+Gernrode:
+  type: n
+Gernsheim:
+  type: n
+Geseke:
+  type: n
+Gevelsberg:
+  type: n
+Geyer:
+  type: n
+Gfoehl:
+  type: n
+Ghana:
+  type: n
+Gijon:
+  type: n
+Glinde:
+  type: n
+Gmunden:
+  type: n
+Goldkronach:
+  type: n
+Gommern:
+  type: n
+Goslar:
+  type: n
+Grafenwoehr:
+  type: n
+Gransee:
+  genus  : m
+  type: n
+Graz:
+  type: n
+Grebenstein:
+  type: n
+Greven:
+  type: n
+urlaubsland:
+  genus  : s
+  type: n
+Griesheim:
+  type: n
+Grieskirchen:
+  type: n
+Grimma:
+  type: n
+Groeditz:
+  type: n
+Gross-bieberau:
+  type: n
+Gross-enzersdorf:
+  type: n
+Gross-gerau:
+  type: n
+Gross-gerungs:
+  type: n
+Gross-siegharts:
+  type: n
+Gross-umstadt:
+  type: n
+Grossalmerode:
+  type: n
+Grossbottwar:
+  type: n
+Grossenehrich:
+  type: n
+Gruenberg:
+  type: n
+Gruenhain-beierfeld:
+  type: n
+Gudensberg:
+  type: n
+Guentersberge:
+  type: n
+Guessing:
+  type: n
+Guetersloh:
+  type: n
+Gundelfingen:
+  type: n
+Hadamar:
+  type: n
+Hagenow:
+  type: n
+Haidarabad:
+  type: n
+tropeninsel:
+  genus  : f
+  type: n
+Hainfeld:
+  type: n
+Halver:
+  type: n
+bermudainseln:
+  genus  : f
+  type: n
+Hanau:
+  type: n
+Hardegg:
+  type: n
+Haren:
+  type: n
+Hartford:
+  type: n
+Harzgerode:
+  type: n
+Hattersheim:
+  type: n
+Havana:
+  type: n
+Havelberg:
+  type: n
+Havelsee:
+  genus  : m
+  type: n
+Hawaii:
+  type: n
+Hecklingen:
+  type: n
+Heidenau:
+  type: n
+Heidenheim:
+  type: n
+Heiligenhafen:
+  type: n
+Heiligenhaus:
+  type: n
+Heilsbronn:
+  type: n
+Heinsberg:
+  type: n
+Hemsbach:
+  type: n
+Hennigsdorf:
+  type: n
+Herborn:
+  type: n
+Heringen:
+  type: n
+appenzell-ausserrhoden:
+  type: n
+Hermagor:
+  type: n
+Hermsdorf:
+  type: n
+Herrieden:
+  type: n
+Hersbruck:
+  type: n
+Herten:
+  type: n
+Herzogenaurach:
+  type: n
+Herzogenburg:
+  type: n
+nordbrabant:
+  type: n
+Herzogenrath:
+  type: n
+Hettstedt:
+  type: n
+Hirschau:
+  type: n
+Hochheim:
+  type: n
+Hoehr-grenzhausen:
+  type: n
+Hofheim:
+  type: n
+Hohenberg:
+  type: n
+Hohenems:
+  type: n
+Hohenmoelsen:
+  type: n
+Hohenstein-ernstthal:
+  type: n
+Hohnstein:
+  type: n
+Hollabrunn:
+  type: n
+Hollfeld:
+  type: n
+Holzgerlingen:
+  type: n
+Homburg:
+  type: n
+Hondo:
+  type: n
+Horb:
+  type: n
+Horn-bad:
+  type: n
+Huerth:
+  type: n
+Ibbenbueren:
+  type: n
+Idar-oberstein:
+  type: n
+Inaccessible:
+  type: n
+Ingelheim:
+  type: n
+Iqaluit:
+  type: n
+Iraklion:
+  type: n
+missisippi:
+  genus  : m
+  type: n
+Jakarta:
+  type: n
+jakutien:
+  type: n
+Jessnitz:
+  type: n
+Joehstadt:
+  type: n
+Juelich:
+  type: n
+Juneau:
+  type: n
+Kaisersesch:
+  type: n
+westufer:
+  genus  : s
+  type: n
+Kamp-lintfort:
+  type: n
+Kapfenberg:
+  type: n
+Kapstadt:
+  type: n
+Kasachstan:
+  type: n
+Kastellaun:
+  type: n
+Katalanisch:
+  type: n
+Katar:
+  type: n
+Kaub:
+  type: n
+Kerpen:
+  type: n
+Khartoum:
+  type: n
+ukraine:
+  genus  : f
+  type: n
+Kindberg:
+  type: n
+Kirchhain:
+  type: n
+Kischinau:
+  type: n
+Kitzbuehel:
+  type: n
+Kitzscher:
+  type: n
+Klingenthal:
+  type: n
+Klosterneuburg:
+  type: n
+Knittelfeld:
+  type: n
+Koelleda:
+  type: n
+wusterhausen:
+  type: n
+Koenigsberg:
+  type: n
+Koenigsee:
+  genus  : m
+  type: n
+Kohren-sahlis:
+  type: n
+Kolbermoor:
+  type: n
+teilrepublik:
+  genus  : f
+  type: n
+Konyo:
+  type: n
+Korbach:
+  type: n
+Korntal-muenchingen:
+  type: n
+Koror:
+  type: n
+Krautheim:
+  type: n
+Krefeld:
+  type: n
+Kreolisch:
+  type: n
+Kroatien:
+  type: n
+Kronach:
+  type: n
+Kuehlungsborn:
+  type: n
+Kulmbach:
+  type: n
+Ladenburg:
+  type: n
+Lahnstein:
+  type: n
+Lahr:
+  type: n
+Landstuhl:
+  type: n
+Langenlois:
+  type: n
+Lassan:
+  type: n
+Laubach:
+  type: n
+Lauchhammer:
+  type: n
+Lauchheim:
+  type: n
+Lauda-koenigshofen:
+  type: n
+Laufenburg:
+  type: n
+Lauingen:
+  type: n
+Lauta:
+  type: n
+Lehesten:
+  type: n
+Leinefelde-worbis:
+  type: n
+Leinfelden-echterdingen:
+  type: n
+Lengerich:
+  type: n
+Leonberg:
+  type: n
+Leutenberg:
+  type: n
+Leutkirch:
+  type: n
+Lich:
+  type: n
+Lichtenstein:
+  type: n
+Liebenwalde:
+  type: n
+Liestal:
+  type: n
+basel-landschaft:
+  type: n
+Limbach-oberfrohna:
+  type: n
+Linz:
+  type: n
+Lippstadt:
+  type: n
+Lissabon:
+  type: n
+Loeffingen:
+  type: n
+Loehne:
+  type: n
+Loessnitz:
+  type: n
+Loewenstein:
+  type: n
+Loitz:
+  type: n
+Lome:
+  type: n
+Longyearbyen:
+  type: n
+svalbard:
+  type: n
+Ludwigsstadt:
+  type: n
+mecklenburg:
+  type: n
+Luebz:
+  type: n
+Luedenscheid:
+  type: n
+Luedinghausen:
+  type: n
+Lueneburg:
+  type: n
+Luetjenburg:
+  type: n
+Luetten:
+  type: n
+rostocker:
+  type: n
+Lugau:
+  type: n
+zambia:
+  type: n
+Lychen:
+  type: n
+Mahon:
+  type: n
+Mainbernheim:
+  type: n
+Mainz:
+  type: n
+rhreinland-pfalz:
+  type: n
+Malawi:
+  type: n
+Mamoutzou:
+  type: n
+mayotte:
+  type: n
+nikaragua:
+  type: n
+Manhatten:
+  type: n
+Manila:
+  type: n
+Markneukirchen:
+  type: n
+Marktheidenfeld:
+  type: n
+Marlow:
+  type: n
+Maulbronn:
+  type: n
+Mauretanien:
+  type: n
+Maxhuette-haidhof:
+  type: n
+Mechernich:
+  type: n
+Meckenheim:
+  type: n
+Meerane:
+  type: n
+bundesstaats:
+  type: n
+Melle:
+  type: n
+Merseburg:
+  type: n
+Meschede:
+  type: n
+Meuselwitz:
+  type: n
+Meyenburg:
+  type: n
+Mirow:
+  type: n
+Missouri:
+  type: n
+Moerfelden-walldorf:
+  type: n
+Moldawien:
+  type: n
+Monheim:
+  type: n
+ligurischen:
+  type: adj
+Montenegro:
+  type: n
+Moosburg:
+  type: n
+Mosambik:
+  type: n
+Muelheim-kaerlich:
+  type: n
+Muenchberg:
+  type: n
+Munster:
+  type: n
+Murau:
+  type: n
+Murrhardt:
+  type: n
+Ndjamena:
+  type: n
+Nauen:
+  type: n
+Neckargemuend:
+  type: n
+Netzschkau:
+  type: n
+Neu-anspach:
+  type: n
+Neu-isenburg:
+  type: n
+Neu-ulm:
+  type: n
+Neubraunschweig:
+  type: n
+Neubukow:
+  type: n
+Neuenburg:
+  type: n
+Neuffen:
+  type: n
+Neukirchen:
+  type: n
+Neukirchen-vluyn:
+  type: n
+Neukloster:
+  type: n
+Neukoelln:
+  type: n
+Neumark:
+  type: n
+Neumarkt-sankt:
+  type: n
+Neumond:
+  type: n
+vollmond:
+  genus  : m
+  type: n
+Neusalza-spremberg:
+  type: n
+Neuss:
+  type: n
+Neustadt-glewe:
+  type: n
+Nicosia:
+  type: n
+Nieder-olm:
+  type: n
+Niederoesterreich:
+  type: n
+Niederstetten:
+  type: n
+Niemegk:
+  type: n
+Nigeria:
+  type: n
+Nordbrabant:
+  type: n
+Norderney:
+  type: n
+Noumea:
+  type: n
+Nuku-alofa:
+  type: n
+tonga:
+  type: n
+Nuuk:
+  type: n
+Nyon:
+  type: n
+uefa:
+  type: n
+Ober-ramstadt:
+  type: n
+Oberhof:
+  type: n
+Oberlungwitz:
+  type: n
+Oberwesel:
+  type: n
+Ochsenfurt:
+  type: n
+Oderberg:
+  type: n
+Oederan:
+  type: n
+Oelde:
+  type: n
+Oelsnitz:
+  type: n
+Oer-erkenschwick:
+  type: n
+Oestrich-winkel:
+  type: n
+Oestringen:
+  type: n
+Olbernhau:
+  type: n
+Oldenburg:
+  type: n
+Olpe:
+  type: n
+Olsberg:
+  type: n
+Oppenau:
+  type: n
+Oranienbaum:
+  type: n
+Orlamuende:
+  type: n
+Osterholz-scharmbeck:
+  type: n
+Ottweiler:
+  type: n
+burkina-faso:
+  type: n
+Overath:
+  type: n
+Pakistan:
+  type: n
+Papeete:
+  type: n
+franzoesischpolynesien:
+  type: n
+Papua-neuguinea:
+  type: n
+Penig:
+  type: n
+Penkun:
+  type: n
+Penzberg:
+  type: n
+Penzlin:
+  type: n
+Perth:
+  type: n
+Pfungstadt:
+  type: n
+Philippsburg:
+  type: n
+Phnom:
+  type: n
+Pinneberg:
+  type: n
+Piraeus:
+  type: n
+Pirna:
+  type: n
+Plattling:
+  type: n
+Plettenberg:
+  type: n
+naehrstoffarmer:
+  type: adj
+papuaneuguinea:
+  type: n
+Port-au-prince:
+  type: n
+Port-of-spain:
+  type: n
+Port-vila:
+  type: n
+Porto-novo:
+  type: n
+Pottenstein:
+  type: n
+Prag:
+  type: n
+Prettin:
+  type: n
+Pretzsch:
+  type: n
+Pritzwalk:
+  type: n
+rhrode:
+  type: n
+Purkersdorf:
+  type: n
+Quedlinburg:
+  type: n
+Querfurt:
+  type: n
+ekuador:
+  type: n
+Radebeul:
+  type: n
+Radeburg:
+  type: n
+Radenthein:
+  type: n
+Radolfzell:
+  type: n
+Ramstein-miesenbach:
+  type: n
+Ransbach-baumbach:
+  type: n
+Rastenberg:
+  type: n
+Ratingen:
+  type: n
+Ratzeburg:
+  type: n
+Rees:
+  type: n
+Regis-breitingen:
+  type: n
+Rehburg-loccum:
+  type: n
+Reichelsheim:
+  type: n
+Reinickendorf:
+  type: n
+Remda-teichel:
+  type: n
+Remscheid:
+  type: n
+Rennerod:
+  type: n
+Reykjavik:
+  type: n
+Rheda-wiedenbrueck:
+  type: n
+Rheinfelden:
+  type: n
+Rhinow:
+  type: n
+Ribnitz-damgarten:
+  type: n
+innkreis:
+  type: n
+saudi:
+  type: n
+Road:
+  type: n
+Rodenberg:
+  type: n
+Rodewisch:
+  type: n
+Roesrath:
+  type: n
+Roettingen:
+  type: n
+Roetz:
+  type: n
+Ronneburg:
+  type: n
+Rosenfeld:
+  type: n
+Rosenheim:
+  type: n
+Rosenthal:
+  type: n
+Rotenburg:
+  type: n
+Rottenmann:
+  type: n
+Rudolfsheim-fuenfhaus:
+  type: n
+Rudolstadt:
+  type: n
+Ruethen:
+  type: n
+Rust:
+  type: n
+Saalburg-ebersdorf:
+  type: n
+Saarburg:
+  type: n
+mittel-oestlichen:
+  type: adj
+Saint-denis:
+  type: n
+reunion:
+  type: n
+Saint-georges:
+  type: n
+greneda:
+  type: n
+Saint-peter-port:
+  type: n
+guernsey:
+  type: n
+Salem:
+  type: n
+Salt-lake-city:
+  type: n
+Salzwedel:
+  type: n
+San-jose:
+  type: n
+San-juan:
+  type: n
+San-salvador:
+  type: n
+Sana:
+  type: n
+Sandersleben:
+  type: n
+Sangerhausen:
+  type: n
+andreasberg:
+  genus  : m
+  type: n
+goarshausen:
+  type: n
+poelten:
+  type: n
+Santander:
+  type: n
+Santo:
+  type: n
+domingo:
+  type: n
+Santo-domingo:
+  type: n
+Sapporo:
+  type: n
+Sarnen:
+  type: n
+obwalden:
+  type: n
+Sassnitz:
+  type: n
+Saudi-arabien:
+  type: n
+Sayda:
+  type: n
+Schaan:
+  type: n
+Schauenstein:
+  type: n
+Schesslitz:
+  type: n
+Schieder-schwalenberg:
+  type: n
+Schillingsfuerst:
+  type: n
+Schiltach:
+  type: n
+Schleiz:
+  type: n
+Schlettau:
+  type: n
+Schoensee:
+  genus  : m
+  type: n
+Schopfheim:
+  type: n
+Schorndorf:
+  type: n
+Schrattenthal:
+  type: n
+Schwabach:
+  type: n
+Schwalmstadt:
+  type: n
+Schwarzenberg:
+  type: n
+Schwarzenborn:
+  type: n
+Schwedt:
+  type: n
+Schweich:
+  type: n
+Sebnitz:
+  type: n
+Seekirchen:
+  type: n
+Seesen:
+  type: n
+Seligenstadt:
+  type: n
+Selm:
+  type: n
+Senftenberg:
+  type: n
+Sesslach:
+  type: n
+Simmering:
+  type: n
+Sindelfingen:
+  type: n
+Sinsheim:
+  type: n
+Skylab:
+  type: n
+Solms:
+  type: n
+Spaichingen:
+  type: n
+Spenge:
+  type: n
+Speyer:
+  type: n
+Spittal:
+  type: n
+Springfield:
+  type: n
+St-gallen:
+  type: n
+St-poelten:
+  type: n
+Stadtallendorf:
+  type: n
+Stadthagen:
+  type: n
+Stadtlengsfeld:
+  type: n
+Stadtlohn:
+  type: n
+Stadtoldendorf:
+  type: n
+Stadtschlaining:
+  type: n
+Stadtsteinach:
+  type: n
+Stans:
+  type: n
+Staufenberg:
+  type: n
+zehlendorf:
+  type: n
+Steinbach-hallenberg:
+  type: n
+Stendal:
+  type: n
+Steyr:
+  type: n
+Stockerau:
+  type: n
+Stolberg:
+  type: n
+Stolpen:
+  type: n
+kultstaette:
+  genus  : f
+  type: n
+Storkow:
+  type: n
+Stralsund:
+  type: n
+Strasburg:
+  type: n
+Straubing:
+  type: n
+Stromberg:
+  type: n
+Stuehlingen:
+  type: n
+Sucre:
+  type: n
+Suhl:
+  type: n
+Sulingen:
+  type: n
+Sulzbach-rosenberg:
+  type: n
+sauerland:
+  type: n
+gesellschaftsinseln:
+  genus  : f
+  type: n
+Tallahassee:
+  genus  : m
+  type: n
+Tambach-dietharz:
+  type: n
+Taschhkent:
+  type: n
+Tegernsee:
+  genus  : m
+  type: n
+Teheran:
+  type: n
+Tengen:
+  type: n
+Teterow:
+  type: n
+Teupitz:
+  type: n
+Thale:
+  type: n
+Thalheim:
+  type: n
+The-valley:
+  type: n
+anguilla:
+  type: n
+Tibet:
+  type: n
+verwaltungsgebiet:
+  genus  : s
+  type: n
+Timor-leste:
+  type: n
+Titisee-neustadt:
+  type: n
+Tittmoning:
+  type: n
+Togo:
+  type: n
+kastillien-la:
+  type: n
+Tonga:
+  type: n
+Topeka:
+  type: n
+Traben-trarbach:
+  type: n
+Traismauer:
+  type: n
+Treffurt:
+  type: n
+Trenton:
+  type: n
+Treuen:
+  type: n
+Treuenbrietzen:
+  type: n
+Triptis:
+  type: n
+Trofaiach:
+  type: n
+Trostberg:
+  type: n
+Tschad:
+  type: n
+ortsname:
+  type: n
+Tuvalu:
+  type: n
+Uebach-palenberg:
+  type: n
+Uebigau-wahrenbrueck:
+  type: n
+Uffenheim:
+  type: n
+Ukraine:
+  type: n
+bator:
+  type: n
+transkei:
+  type: n
+Unkel:
+  type: n
+Unterschleissheim:
+  type: n
+Vaduz:
+  type: n
+baden-wuerttemb:
+  type: n
+Vechta:
+  type: n
+Vellberg:
+  type: n
+Vellmar:
+  type: n
+Versmold:
+  type: n
+Vetschau:
+  type: n
+Vientiane:
+  type: n
+Villingen-schwenningen:
+  type: n
+Vilsbiburg:
+  type: n
+Viscaya:
+  type: n
+Voelklingen:
+  type: n
+Voerde:
+  type: n
+Volkach:
+  type: n
+Waechtersbach:
+  type: n
+Waehring:
+  type: n
+Waiblingen:
+  type: n
+Waibstadt:
+  type: n
+Waischenfeld:
+  type: n
+Waldenburg:
+  type: n
+Waldershof:
+  type: n
+Waldshut-tiengen:
+  type: n
+Waltershausen:
+  type: n
+Wandelstern:
+  type: n
+allgaeu:
+  type: n
+Wehr:
+  type: n
+oberpfalz:
+  type: n
+Weikersheim:
+  type: n
+Weilburg:
+  type: n
+Weismain:
+  type: n
+Weissenstadt:
+  type: n
+Weissenthurm:
+  type: n
+Weisswasser:
+  type: n
+Weiterstadt:
+  type: n
+Wels:
+  type: n
+Werder:
+  type: n
+Werl:
+  type: n
+Wernau:
+  type: n
+Werneuchen:
+  type: n
+Wesenberg:
+  type: n
+Wesselburen:
+  type: n
+Wesseling:
+  type: n
+Westerburg:
+  type: n
+Westsahara:
+  type: n
+Wiehl:
+  type: n
+Wieselburg:
+  type: n
+Wildenfels:
+  type: n
+Wilkau-hasslau:
+  type: n
+niederlaendischen-antillen:
+  type: n
+Windischeschenbach:
+  type: n
+Winnenden:
+  type: n
+Wipperfuerth:
+  type: n
+Wirges:
+  type: n
+Wittingen:
+  type: n
+Wittmund:
+  type: n
+Witzenhausen:
+  type: n
+Woerlitz:
+  type: n
+Wolfenbuettel:
+  type: n
+Wolframs-eschenbach:
+  type: n
+Wolfstein:
+  type: n
+Wolgast:
+  type: n
+Wolkenstein:
+  type: n
+Wuerzburg:
+  type: n
+Wyk:
+  type: n
+Zahna:
+  type: n
+Zeil:
+  type: n
+Zella-mehlis:
+  type: n
+Zeulenroda-triebes:
+  type: n
+Zeven:
+  type: n
+Zistersdorf:
+  type: n
+Zwiesel:
+  type: n
+Zwoenitz:
+  type: n
+oberer:
+  type: adj
+riesiger:
+  type: n
+holte-stukenbrock:
+  type: n
+gemeindebezirke:
+  type: n
+unterteilt:
+  type: adj
+-meridian:
+  type: n
+Karthago:
+  type: n
+gran:
+  type: n
+kurden:
+  type: n
+oberlausitz:
+  type: n
+leuchtet:
+  type: vi
+sued-amerika:
+  type: n
+dolomiten:
+  type: n
+wasserfaelle:
+  genus  : f
+  type: n
+wolomombifaelle:
+  type: n
+yosemite-faelle:
+  type: n
+dalmatinischen:
+  type: adj
+cayman-inseln:
+  genus  : f
+  type: n
+kilimandscharo-nationalpark:
+  genus  : m
+  type: n
+teutoburger:
+  type: n
+compostela:
+  type: n
+Alcatraz:
+  type: n
+aserbaidscham:
+  type: n
+Benares:
+  type: n
+biscaya:
+  type: n
+muensterland:
+  type: n
+Bordeaux:
+  type: n
+balkanhalbinsel:
+  type: n
+Braga:
+  type: n
+aetnas:
+  type: n
+michigansee:
+  genus  : m
+  type: n
+eriesee:
+  genus  : m
+  type: n
+Cordoba:
+  type: n
+elbmuendung:
+  type: n
+moscoviense:
+  type: n
+changaigebirge:
+  type: n
+hubertusstock:
+  type: n
+ningaloo:
+  type: n
+zagrosgebirge:
+  genus  : s
+  type: n
+oranje-freistaat:
+  type: n
+alto:
+  type: n
+comer:
+  type: n
+aermelkanal:
+  type: n
+freycinet-nationalpark:
+  genus  : m
+  type: n
+westafrika:
+  type: n
+iguazu-nationalpark:
+  genus  : m
+  type: n
+kuiper-guertel:
+  type: n
+schlossberg:
+  type: n
+zentralafrikansichen:
+  type: inter
+tauerntunnel:
+  genus  : m
+  type: n
+Dessau:
+  type: n
+dominikanische:
+  type: adj
+canossa:
+  type: n
+fraueninsel:
+  genus  : f
+  type: n
+herreninsel:
+  genus  : f
+  type: n
+kalahari:
+  genus  : f
+  type: n
+mojave:
+  type: n
+reeperbahn:
+  genus  : f
+  type: n
+hamburger:
+  type: n
+saualpe:
+  type: n
+Doberlug-kirchhain:
+  type: n
+Doebern:
+  type: n
+Donauwoerth:
+  type: n
+Dornstetten:
+  type: n
+Dorsten:
+  type: n
+Drensteinfurt:
+  type: n
+Drolshagen:
+  type: n
+Eindhofen:
+  type: n
+lac:
+  type: n
+leman:
+  type: adj
+Hassloch:
+  type: n
+finnischen-meerbusen:
+  type: n
+ganges-delta:
+  type: n
+Kappadokien:
+  type: n
+Kirklees:
+  type: n
+Labrador:
+  type: n
+seine-muendung:
+  genus  : f
+  type: n
+bengalen:
+  type: n
+Mantua:
+  type: n
+Marbella:
+  type: n
+steirisch-niederoesterreichischen:
+  type: adj
+grenzgebiet:
+  type: n
+noerdlich:
+  type: adj
+Meran:
+  type: n
+tasan:
+  type: adj
+nanga:
+  type: n
+mont-blanc:
+  type: n
+westalpen:
+  type: n
+tasman-gletscher:
+  genus  : m
+  type: n
+zentraleuropa:
+  type: n
+Olmuetz:
+  type: n
+Orleans:
+  type: n
+Orvieto:
+  type: n
+Ostende:
+  type: n
+venetien:
+  type: n
+Panmunjom:
+  type: n
+harbor:
+  type: n
+Peshawar:
+  type: n
+us-bundestaat:
+  type: n
+Potosi:
+  type: n
+Schengen:
+  type: n
+bergischen:
+  type: adj
+suedwesteuropa:
+  type: n
+Transsilvanien:
+  type: n
+suedchinesischen:
+  type: adj
+selenter:
+  type: n
+liegtan:
+  type: adj
+furt:
+  type: n
+kordilleren:
+  type: n
+maori:
+  type: n
+molukken:
+  type: n
+tulpen:
+  type: n
+felsenmassiv:
+  type: n
+padaung:
+  type: n
+sternschnuppenschwarm:
+  type: n
+faeroeer:
+  type: n
+ueberlandbusse:
+  type: n
+dajak:
+  type: n
+eisheiligen:
+  type: n
+djibouti:
+  type: n
+startete:
+  type: vi
+loewentor:
+  type: n
+Gmt:
+  type: n
+mean:
+  type: adj
+museo:
+  type: n
+prado:
+  type: n
+bolschoi-theater:
+  genus  : s
+  type: n
+giuseppe-meazza-stadion:
+  type: n
+gulbenkian-museum:
+  genus  : s
+  type: n
+porsche:
+  type: n
+stuttgart-zuffenhausen:
+  type: n
+uluru-nationalpark:
+  genus  : m
+  type: n
+dogenpalast:
+  genus  : m
+  type: vi
+eiffel:
+  genus  : f
+  type: n
+habenbeck:
+  type: n
+aol-arena:
+  type: n
+rialtobruecke:
+  genus  : f
+  type: n
+sankt-nepomuk-bruecke:
+  genus  : f
+  type: n
+wallfahrtskirche:
+  genus  : f
+  type: n
+trennt:
+  type: vi
+untergeht:
+  type: vi
+gagarin:
+  type: n
+kolonie:
+  type: n
+streichhoelzer:
+  genus  : f
+  type: n
+tiefte:
+  type: adj
 anwort:
   type: n
 aergere:
@@ -120842,735 +123725,883 @@ Freizeitzentrum:
   genus  : s
   type: n
 nichtregierungsorganisation:
+  genus  : f
   type: n
 Gutartige:
-  type: n
+  type: adj
 Jur:
   type: n
 Bauchschlagader:
+  genus  : f
   type: n
 gras:
+  genus  : s
   type: n
-ebeleben:
-  type: vi
 Saalfelden:
   type: n
 Extraktionszange:
+  genus  : f
   type: n
 Taipei:
   type: n
 Eurythmie:
+  genus  : f
   type: n
 Utah:
   type: n
 Dulden:
+  genus  : s
   type: n
 forensische:
   type: adv
 geografischen:
   type: adv
 unverbindlichst:
-  type: vi
+  type: adj
 Haekelei:
+  genus  : f
   type: n
 Schutzheiliger:
   type: n
 Kuerbisgewaechs:
+  genus  : s
   type: n
 Gedankengespraech:
+  genus  : s
   type: n
 Ungeschickter:
-  type: n
+  type: adj
 Raumstation:
+  genus  : f
   type: n
 Atomversuch:
+  genus  : m
   type: n
 vorpreschen:
-  type: adv
+  type: vi
 teletext:
-  type: adj
+  genus  : m
+  type: n
 Dichtkoerperoeffnung:
+  genus  : f
   type: n
 Aschermittwoch:
+  genus  : m
   type: n
 ethnizitaet:
-  type: adj
-Evangelisch:
+  genus  : f
   type: n
+Evangelisch:
+  type: adj
 Waescheklammer:
+  genus  : f
   type: n
 Aussaat:
+  genus  : f
   type: n
 nominell:
   type: adj
 carbonfaser:
-  type: adj
-behalt:
-  type: vi
+  genus  : f
+  type: n
 Scharlachrot:
+  genus  : s
   type: n
 Betragsausrechnung:
+  genus  : f
   type: n
-unterbrech:
-  type: adj
 parfum:
-  type: adj
+  genus  : s
+  type: n
 harnabsonderung:
-  type: adj
+  genus  : f
+  type: n
 Gewitter:
+  genus  : s
   type: n
 Herab:
-  type: n
+  type: adv
 Bezauberungen:
+  genus  : f
   type: n
 zungenschlag:
-  type: adj
-seneszenz:
-  type: adj
+  genus  : m
+  type: n
 militaerkrankenhaus:
+  genus  : s
   type: n
 Myelomatose:
+  genus  : f
   type: n
 Fleissig:
-  type: n
+  type: adj
 Wacklig:
-  type: n
+  type: adj
 praeemptiv:
   type: adj
 deftig:
   type: adv
 Bockleiter:
+  genus  : f
   type: n
 Fahnenweihe:
+  genus  : f
   type: n
 albuminoen:
-  type: adj
+  genus  : s
+  type: n
 Begriffserklaerung:
+  genus  : f
   type: n
 Furnieren:
+  genus  : s
   type: n
 prunkvoll:
   type: adj
 Arbeitsbeschaffung:
+  genus  : f
   type: n
 Blechhauben:
+  genus  : f
   type: n
 Ausgleichsprozess:
+  genus  : m
   type: n
 Ortsvorsteher:
+  genus  : m
   type: n
 diskutierenden:
-  type: vi
+  type: adj
 streitsuechtig:
   type: adv
 Wendehals:
+  genus  : m
   type: n
 Anspritzrest:
+  genus  : m
   type: n
 hastig:
   type: adv
 Datenumwandler:
+  genus  : m
   type: n
 Pontische:
-  type: n
+  type: adj
 Ruebe:
-  type: n
-Bevlkerungszunahme:
+  genus  : f
   type: n
 atemlos:
   type: adv
 Deklamator:
+  genus  : m
   type: n
 Eingebung:
-  type: n
-Kiometene:
+  genus  : f
   type: n
 Anschriftsfeld:
+  genus  : s
   type: n
 Kuehlmittel:
+  genus  : s
   type: n
 Beratungsvertraege:
+  genus  : f
   type: n
 Zirkulator:
-  type: n
-Fliefhigkeit:
+  genus  : m
   type: n
 gepflogenheit:
+  genus  : f
   type: n
 verschuldung:
-  type: adj
+  genus  : f
+  type: n
 Vacha:
   type: n
 Baunebenkosten:
+  genus  : f
   type: n
 Gliederreissen:
+  genus  : s
   type: n
 Figuerlich:
   type: adv
 Dank:
+  genus  : m
   type: n
 Zusammenschneiden:
-  type: n
-Einfamilienhuser:
+  genus  : s
   type: n
 Bildtelegramm:
+  genus  : s
   type: n
 Jahren:
   type: n
 Ausgabekurs:
+  genus  : m
   type: n
 Druckvorschau:
+  genus  : f
   type: n
 respekt:
-  type: vi
+  genus  : m
+  type: n
 Dampflok:
+  genus  : f
   type: n
 Formerfordernis:
+  genus  : f
   type: n
 amarillo:
-  type: adj
-Mitreissen:
   type: n
-tretung:
-  type: adj
+Mitreissen:
+  genus  : s
+  type: n
 Daugava:
   type: n
 Uebertragungsfehler:
+  genus  : m
   type: n
 vorbild:
-  type: adj
+  genus  : s
+  type: n
 Pfruende:
+  genus  : f
   type: n
 Geweih:
+  genus  : s
   type: n
 Hirsch:
+  genus  : m
   type: n
 Egoist:
+  genus  : m
   type: n
 domo:
-  type: adj
+  type: n
 Fluggastbruecken:
+  genus  : f
   type: n
 Fils:
   type: n
 Markus:
   type: n
 wirtschaft:
-  type: adv
+  genus  : f
+  type: n
 Intoxikation:
+  genus  : f
   type: n
 hineinrennen:
   type: vi
-lichtbildauswei:
-  type: adj
 niederoesterreich:
-  type: adj
+  type: n
 Achterdeck:
+  genus  : s
   type: n
 Lederstrumpfgeschichten:
+  genus  : f
   type: n
 Kriegsmarine:
+  genus  : f
   type: n
 Allegro:
+  genus  : s
   type: n
 aushorchertaetigkeit:
+  genus  : f
   type: n
 loeffel:
-  type: adj
+  genus  : m
+  type: n
 projekt:
-  type: vi
+  genus  : s
+  type: n
 mutlosigkeit:
+  genus  : f
   type: n
 Altenstift:
+  genus  : s
   type: n
 Flen:
   type: n
 Kameliendame:
+  genus  : f
   type: n
 bekoestigung:
-  type: adj
-Abfallbehlter:
+  genus  : f
   type: n
 Minimum:
+  genus  : s
   type: n
 Seychellois:
   type: n
 Piezoelektrizitaet:
+  genus  : f
   type: n
 schaltwerk:
-  type: adj
-Zusammen:
+  genus  : s
   type: n
+Zusammen:
+  type: adv
 gab:
   type: vi
 Friedefreudeeierkuchen:
+  genus  : m
   type: n
 Jones:
   type: n
 bruellen:
   type: vi
 Kameraueberwachung:
+  genus  : f
   type: n
 Ueberlagerung:
+  genus  : f
   type: n
 Mischwanne:
+  genus  : f
   type: n
 Gruess:
+  genus  : m
   type: n
 herzen:
   type: vi
 Buffen:
-  type: n
-Uebergro:
+  genus  : s
   type: n
 Widerspiegeln:
+  genus  : s
   type: n
 Bruederschaft:
+  genus  : f
   type: n
-sichtsrat:
-  type: adj
 Gehoerlosigkeit:
+  genus  : f
   type: n
 Belehren:
+  genus  : s
   type: n
 Tshirt:
+  genus  : s
   type: n
 Lehren:
+  genus  : f
   type: n
 Unambitioniert:
-  type: n
+  type: adj
 Feuchtwalze:
+  genus  : f
   type: n
 Ekd:
   type: n
 schrottanleihe:
-  type: adv
+  genus  : f
+  type: n
 Pm:
   type: n
 Designpruefung:
+  genus  : f
   type: n
 Arterie:
+  genus  : f
   type: n
 Komischerweise:
-  type: n
+  type: adv
 Erwaehnungen:
+  genus  : f
   type: n
 Orgelpfeifen:
+  genus  : f
   type: n
 Blickbar:
-  type: n
+  type: adj
 Bentzer:
   type: n
 lucka:
-  type: adj
-lag:
-  type: prep
+  type: n
 skizzen:
-  type: vi
+  genus  : f
+  type: n
 Erysipel:
   type: n
 Staenderfachwerk:
+  genus  : s
   type: n
-berwinden:
-  type: vi
 direkte:
-  type: vi
+  type: adj
 Schluesselposition:
+  genus  : f
   type: n
 erniedrigen:
-  type: adv
+  type: vi
 Spd:
   type: n
 Kuesse:
+  genus  : f
   type: n
 verminderten:
-  type: vi
-malocher:
   type: adj
+malocher:
+  genus  : m
+  type: n
 Gleis:
+  genus  : s
   type: n
 Rauschgift:
+  genus  : s
   type: n
 Unzweideutig:
-  type: n
+  type: adj
 Zugipsen:
+  genus  : s
   type: n
 Antreiben:
+  genus  : s
   type: n
 Beschleunigungsbegrenzer:
+  genus  : m
   type: n
 richtiggehen:
-  type: adv
-Flchenschwerpunkt:
-  type: n
-rasierstift:
   type: vi
+rasierstift:
+  genus  : m
+  type: n
 dompteur:
-  type: adj
+  genus  : m
+  type: n
 Messegelaende:
+  genus  : s
   type: n
 achtung:
-  type: adj
+  genus  : f
+  type: n
 Lendenschurz:
+  genus  : m
   type: n
 Startbahn:
+  genus  : f
   type: n
 Mdr:
   type: n
 Brechbacke:
+  genus  : f
   type: n
 Auflagezunge:
+  genus  : f
   type: n
 Zufahrtsstrasse:
-  type: n
-Abprodukte:
+  genus  : f
   type: n
 Antwortspektrum:
+  genus  : s
   type: n
 installierte:
-  type: vi
+  type: adj
 aufrechnen:
   type: vi
 Abzweigungen:
+  genus  : f
   type: n
 Anbraeunen:
+  genus  : s
   type: n
 lehrstuhlinhaber:
-  type: adj
+  genus  : m
+  type: n
 qwerty:
-  type: adj
+  type: n
 bentz:
-  type: adj
+  type: n
 Jasager:
+  genus  : m
   type: n
 Aufbaukurs:
+  genus  : m
   type: n
 Auftakt:
+  genus  : m
   type: n
-standsregel:
-  type: adj
 Rascheln:
+  genus  : s
   type: n
 Betriebsstoff:
+  genus  : m
   type: n
 Krisengewinner:
+  genus  : m
   type: n
 Rhoen:
   type: n
 ventarisierung:
-  type: adj
-Bgeleisen:
+  genus  : f
   type: n
 Sortimentsbuchhaendler:
+  genus  : m
   type: n
 Fehlerfrei:
-  type: n
-Intelligente:
-  type: n
-Europaeisch:
-  type: n
-Einzelhandelsgeschfte:
-  type: n
-asa:
   type: adj
-Beutezge:
+Intelligente:
+  type: adj
+Europaeisch:
+  type: adj
+asa:
   type: n
 Oberkochen:
+  genus  : s
   type: n
 Nutzbringend:
-  type: n
+  type: adj
 Schimpfe:
+  genus  : f
   type: n
 haelften:
   type: vi
 maennlicher:
   type: adv
 dysplasien:
-  type: adj
+  genus  : f
+  type: n
 Abladeplaetze:
+  genus  : f
   type: n
 abgrund:
-  type: adj
+  genus  : m
+  type: n
 Ausbildungsgebuehren:
+  genus  : f
   type: n
 Typographisch:
-  type: n
-barracuda:
   type: adj
+barracuda:
+  genus  : m
+  type: n
 Setzling:
+  genus  : m
   type: n
 Sicherheitsleistung:
+  genus  : f
   type: n
 Zeitalter:
+  genus  : s
   type: n
-speek:
-  type: adj
-zerknllen:
-  type: vi
 Ratenkredit:
+  genus  : m
   type: n
 forschend:
   type: adj
 Zitronenthymiane:
+  genus  : f
   type: n
 Plu:
   type: n
 koennten:
-  type: adv
+  type: vi
 Drainagebronchus:
+  genus  : m
   type: n
 Einreichfrist:
+  genus  : f
   type: n
 Bedienungsanleitung:
+  genus  : f
   type: n
 Wappnen:
+  genus  : s
   type: n
 minu:
-  type: adj
+  type: n
 Entdeckung:
+  genus  : f
   type: n
 nebenbei:
   type: adj
 Eintrittsbedingung:
+  genus  : f
   type: n
 Dammbrueche:
+  genus  : f
   type: n
 alternativen:
-  type: adj
+  genus  : f
+  type: n
 kongo:
-  type: adj
+  type: n
 haushaelterisch:
   type: adj
 Schlau:
-  type: n
+  type: adj
 kassette:
-  type: vi
-Aortenstenose:
+  genus  : f
   type: n
-Mehrsystemschreibermultifunktionsstiftmultipen:
+Aortenstenose:
+  genus  : f
   type: n
 entzwei:
   type: adj
 Alphablocker:
+  genus  : m
   type: n
 Linuxdistribution:
+  genus  : f
   type: n
 Zimmerer:
+  genus  : m
   type: n
 Lautstruktur:
+  genus  : f
   type: n
 Kostenrechnung:
+  genus  : f
   type: n
 oberweiten:
-  type: vi
+  genus  : f
+  type: n
 Abgrenzungsproblem:
+  genus  : s
   type: n
 Skopu:
   type: n
 Ankerkette:
+  genus  : f
   type: n
 Mindern:
+  genus  : s
   type: n
 verstauchung:
-  type: adj
-Balsam:
+  genus  : f
   type: n
-Bierkrge:
+Balsam:
+  genus  : m
   type: n
 Schwank:
+  genus  : m
   type: n
 Indiskretion:
+  genus  : f
   type: n
 Konversation:
+  genus  : f
   type: n
 disharmonien:
-  type: adj
+  genus  : f
+  type: n
 traenken:
   type: vi
 dekodieren:
   type: vi
 wischtuch:
-  type: adj
+  genus  : s
+  type: n
 Erbfeind:
+  genus  : m
   type: n
 Haengen:
+  genus  : s
   type: n
 Bewusstseinsstoerung:
+  genus  : f
   type: n
 Unveraendert:
-  type: n
+  type: adj
 Losmachen:
+  genus  : s
   type: n
 Wurfspiess:
+  genus  : m
   type: n
-tichambrieren:
-  type: vi
 schnackenburg:
-  type: adj
+  type: n
 Armbrustbolzen:
+  genus  : m
   type: n
 Grossbieberau:
   type: n
 Funktelegramm:
+  genus  : s
   type: n
 gewinnschwelle:
-  type: adv
-salzisomerien:
-  type: adj
-Irgendwelche:
+  genus  : f
   type: n
+Irgendwelche:
+  type: pron
 Abwehrstoffe:
+  genus  : f
   type: n
 blicklos:
   type: adv
 Brechbacken:
   type: n
-tropenfeen:
-  type: adj
 Geigen:
   type: n
 popel:
-  type: adj
+  genus  : m
+  type: n
 Chain:
   type: n
-Biogefhrdung:
-  type: n
-nutzungsdau:
-  type: adj
 Abstandssensoren:
+  genus  : f
   type: n
 Drohung:
+  genus  : f
   type: n
 Heuschober:
+  genus  : m
   type: n
 splitternackt:
-  type: vi
+  type: adj
 Freiexemplare:
+  genus  : f
   type: n
 teich:
-  type: adj
+  genus  : m
+  type: n
 geheimdienst:
-  type: vi
+  genus  : m
+  type: n
 Freigeld:
+  genus  : s
   type: n
 einst:
-  type: vi
+  type: adv
 Caligula:
   type: n
 weitblick:
-  type: adj
+  genus  : m
+  type: n
 wahrlich:
   type: adv
 Prediger:
+  genus  : m
   type: n
 foulen:
   type: vi
 Haettest:
   type: vi
 Berufskolleginnen:
-  type: n
-Abhrgesetze:
+  genus  : f
   type: n
 Chaotisieren:
+  genus  : s
   type: n
 Zugkraft:
+  genus  : f
   type: n
 mitreden:
   type: vi
 Hundeblume:
+  genus  : f
   type: n
 Luftdicht:
-  type: n
+  type: adj
 Eschatologie:
+  genus  : f
   type: n
 Taiwan:
   type: n
 Politologie:
+  genus  : f
   type: n
 Huntington:
   type: n
 Einwanderungsquote:
+  genus  : f
   type: n
 einfuellen:
   type: vi
 Nachpruefung:
+  genus  : f
   type: n
-ruenen:
-  type: vi
 Fronttruppen:
+  genus  : f
   type: n
 Dmon:
   type: n
 basti:
-  type: adj
+  type: n
 Kopfbedeckung:
+  genus  : f
   type: n
 hospitanz:
-  type: adj
+  genus  : f
+  type: n
 Kauderwelsch:
+  genus  : s
   type: n
 untermengen:
   type: vi
 Weihnachtszuwendung:
+  genus  : f
   type: n
 Arbeitnehmerorganisationen:
+  genus  : f
   type: n
 Breiter:
-  type: n
+  type: adj
 Masern:
+  genus  : f
   type: n
 Gleiswechsel:
-  type: n
-Auenmikrometer:
+  genus  : m
   type: n
 Herausloesen:
+  genus  : s
   type: n
 Ausgerichtetes:
-  type: n
+  type: adj
 wickeln:
   type: vi
 Begleichen:
+  genus  : s
   type: n
 Erwachsenen:
   type: n
 Arrest:
+  genus  : m
   type: n
 turnen:
   type: vi
 herabwuerdigen:
-  type: adv
+  type: vi
 Abtrennungsregel:
+  genus  : f
   type: n
 winterlich:
   type: adv
 Bauen:
+  genus  : s
   type: n
 Kleinholz:
+  genus  : s
   type: n
 Schindel:
+  genus  : f
   type: n
-mad:
-  type: adj
 Einschweissen:
+  genus  : s
   type: n
 Cierva:
   type: n
 Urgeschichte:
+  genus  : f
   type: n
 Oberbayern:
   type: n
 Rueckstaende:
+  genus  : f
   type: n
 Erfolgsfaktor:
+  genus  : s
   type: n
 infiltrieren:
   type: vi
 Dato:
   type: n
 zusammenprall:
-  type: adj
-Gegenwaertiger:
+  genus  : m
   type: n
+Gegenwaertiger:
+  type: adj
 dekorieren:
   type: vi
 Karlsplatz:
@@ -121580,254 +124611,301 @@ Jolie:
 expressiv:
   type: adj
 Einzelhandelsgeschaefte:
+  genus  : f
   type: n
 keramik:
-  type: adj
+  genus  : f
+  type: n
 Abstandslos:
-  type: n
+  type: adj
 Unerlaubt:
-  type: n
+  type: adj
 Bdsg:
   type: n
 Beschliessen:
+  genus  : s
   type: n
-tuen:
-  type: adj
 widersacher:
-  type: adj
+  genus  : m
+  type: n
 Zentrierschluessel:
+  genus  : m
   type: n
 abbruchreif:
   type: adj
 zweit:
-  type: adj
+  type: adv
 Wissenschaft:
+  genus  : f
   type: n
 Wurmfortsatz:
+  genus  : m
   type: n
 klarmachen:
-  type: adv
+  type: vi
 abgaskanal:
-  type: adj
+  genus  : m
+  type: n
 Benoetigen:
+  genus  : s
   type: n
 praxisbezogen:
-  type: vi
+  type: adj
 animalisch:
   type: adj
 tagtraum:
-  type: adj
+  genus  : m
+  type: n
 Maurice:
   type: n
 Hinweis:
+  genus  : m
   type: n
 Offensiv:
-  type: n
+  type: adj
 Bolzenkupplung:
+  genus  : f
   type: n
 Erklaerungsdruck:
+  genus  : m
   type: n
 zweifach:
   type: adj
 atomar:
   type: adj
 Elliptisch:
-  type: n
+  type: adj
 Herabgesetzt:
-  type: n
-gender:
-  type: adv
-tantal:
   type: adj
 Bescheidenheit:
+  genus  : f
   type: n
 widerhandlung:
-  type: adj
+  genus  : f
+  type: n
 Dreiraumwohnung:
+  genus  : f
   type: n
 ld:
-  type: prep
-Rckfrage:
   type: n
 Bewahrungsverfahren:
-  type: n
-Aufspannflche:
+  genus  : s
   type: n
 Phonetik:
+  genus  : f
   type: n
 Gedern:
   type: n
 taschen:
-  type: adv
+  genus  : f
+  type: n
 Firstbalken:
+  genus  : m
   type: n
 Vladivostok:
   type: n
 Bindedraht:
+  genus  : m
   type: n
 Anzeigemodus:
+  genus  : m
   type: n
 Zusammenfuehrung:
+  genus  : f
   type: n
 pesen:
-  type: vi
+  type: n
 Canada:
   type: n
 Tischlerei:
+  genus  : f
   type: n
 Infrarotsensor:
+  genus  : m
   type: n
 wider:
   type: adj
 Kaengurus:
+  genus  : f
   type: n
 Sperrgebiet:
+  genus  : s
   type: n
 Mantisse:
+  genus  : f
   type: n
 neunzehnte:
   type: adv
 geschlechtsverkehr:
-  type: adj
+  genus  : m
+  type: n
 Aufgabestoessel:
+  genus  : m
   type: n
 Schamlosigkeit:
+  genus  : f
   type: n
 Rollschuh:
+  genus  : m
   type: n
 tanzbein:
-  type: adj
-Drehtr:
+  genus  : s
   type: n
 Verabscheuungswert:
-  type: n
+  type: adj
 elegisch:
   type: adj
 Reisegepaeck:
+  genus  : s
   type: n
 Reflexreaktion:
+  genus  : f
   type: n
 Danebengehen:
-  type: n
-Flssigkeitsverluste:
+  genus  : s
   type: n
 Bankdirektor:
-  type: n
-Fernsprechgebhren:
+  genus  : m
   type: n
 Studio:
+  genus  : s
   type: n
 Vertrag:
+  genus  : m
   type: n
 geartet:
   type: adv
 Eineinhalb:
-  type: n
+  type: adj
 vergaellen:
   type: vi
-Strucher:
-  type: n
 schenkte:
   type: vi
 earl:
-  type: adj
+  type: n
 Essigfliegen:
+  genus  : f
   type: n
 besaiten:
   type: vi
 Lichtspielhaus:
+  genus  : s
   type: n
 Leiste:
+  genus  : f
   type: n
 Ansprechwert:
+  genus  : m
   type: n
 Verhexung:
+  genus  : f
   type: n
 Antifaltencreme:
+  genus  : f
   type: n
 Anwaermregler:
+  genus  : m
   type: n
 Allokation:
+  genus  : f
   type: n
 Sinekure:
   type: n
 Abstinent:
-  type: n
+  type: adj
 bewaehrt:
-  type: vi
+  type: adj
 Ellipsoid:
+  genus  : m
   type: n
 Parteimitglied:
+  genus  : s
   type: n
 Auswirkung:
+  genus  : f
   type: n
 Streicheln:
+  genus  : s
   type: n
 Einwirkungen:
+  genus  : f
   type: n
 Absolventinnen:
+  genus  : f
   type: n
 Brotmesser:
+  genus  : s
   type: n
 Einsehbar:
-  type: n
+  type: adj
 Gutshoefe:
+  genus  : f
   type: n
 Kompaktheit:
-  type: n
-Stracks:
+  genus  : f
   type: n
 Kahlenberg:
+  genus  : m
   type: n
 Endplazierungen:
+  genus  : f
   type: n
 Extremsport:
+  genus  : m
   type: n
 Gebruell:
+  genus  : s
   type: n
 Brief:
+  genus  : m
   type: n
 Flaechenschleifmaschine:
+  genus  : f
   type: n
-randen:
-  type: vi
 ueberlebt:
   type: vi
 Sterbezeit:
+  genus  : f
   type: n
 suedpolargebiet:
-  type: adj
+  genus  : s
+  type: n
 Inken:
   type: n
 Gefaehrte:
+  genus  : m
   type: n
 romanschriftsteller:
   genus: m
   type: n
 Korrektheit:
+  genus  : f
   type: n
 foerdert:
   type: vi
 ausfuehrer:
-  type: adj
-ausfllen:
-  type: vi
+  genus  : m
+  type: n
 Ausstellerverzeichnis:
+  genus  : s
   type: n
 Wohlbeleibt:
-  type: n
+  type: adj
 automatischer:
   type: adj
 Amtsantritte:
+  genus  : f
   type: n
 Wo:
   type: fw
 Autosuggestion:
+  genus  : f
   type: n
 copyright:
-  type: vi
-Anormal:
+  genus  : s
   type: n
+Anormal:
+  type: adj
 Niederlausitz:
   type: n
 ruft:
@@ -121835,199 +124913,236 @@ ruft:
 ein:
   type: art
 Empathie:
+  genus  : f
   type: n
 Waehlen:
+  genus  : s
   type: n
 Antioxidantien:
+  genus  : f
   type: n
 saekularisation:
+  genus  : f
   type: n
 Badeschuh:
+  genus  : m
   type: n
 Hinuntersteigen:
+  genus  : s
   type: n
 vorsorglich:
   type: adv
 Geldgeschenk:
+  genus  : s
   type: n
 Provokatorisch:
-  type: n
+  type: adj
 Nordhausen:
   type: n
 Hobart:
   type: n
-alcen:
-  type: adj
 Mikroversicherung:
+  genus  : f
   type: n
 unentschieden:
-  type: vi
-Penetrationstestpenetrationtestpentest:
-  type: n
+  type: adj
 foermlich:
   type: adv
 rechenvorschrift:
-  type: vi
+  genus  : f
+  type: n
 Befestigungsniet:
+  genus  : m
   type: n
 quelltext:
-  type: adj
-Menschenzentriert:
+  genus  : m
   type: n
+Menschenzentriert:
+  type: adj
 Begleitbriefe:
+  genus  : f
   type: n
 Blaise:
   type: n
 Wer:
   type: fw
 Show:
+  genus  : f
   type: n
 aktenmaessig:
   type: adv
 Muskels:
   type: n
-schirmdienst:
-  type: vi
 trojanischen:
   type: adv
 Erschiessen:
+  genus  : s
   type: n
 Badevorleger:
+  genus  : m
   type: n
 rueckkaufswert:
-  type: vi
-Obusoberleitungsbusoberleitungsomnibusobustrolleybus:
+  genus  : m
   type: n
 Ausreissversuch:
+  genus  : m
   type: n
 Einsatzfahrzeugen:
   type: n
 Extrazug:
+  genus  : m
   type: n
 Geliebt:
-  type: n
-Durchlssigkeitsgrad:
-  type: n
+  type: adj
 mehrjaehrige:
   type: adv
 einholen:
   type: vi
 Bandspannungsregulierung:
+  genus  : f
   type: n
 Prohibition:
+  genus  : f
   type: n
 Beobachtungsflaechen:
+  genus  : f
   type: n
 egoist:
-  type: vi
+  genus  : m
+  type: n
 Mutterkuchen:
+  genus  : m
   type: n
 Anteilhaber:
   type: n
 Informell:
-  type: n
+  type: adj
 Ausgabepreis:
+  genus  : m
   type: n
 muskelerkrankung:
-  type: adj
+  genus  : f
+  type: n
 dikator:
-  type: adj
-Pflaumezwetschgezwetschke:
+  genus  : m
   type: n
 aengstlich:
   type: adv
 frisoer:
-  type: adj
+  genus  : m
+  type: n
 wohnhaft:
   type: adv
 elementar:
   type: adj
 Nationalfeiertag:
+  genus  : m
   type: n
 Uslar:
   type: n
 nunmehr:
-  type: adj
+  type: adv
 Abflugterminal:
+  genus  : s
   type: n
 rentabilitaetsschwellen:
-  type: vi
+  genus  : f
+  type: n
 Bruttobezug:
+  genus  : m
   type: n
 Bloedmann:
+  genus  : m
   type: n
 Einsatzleitgruppe:
+  genus  : f
   type: n
 unbeherrscht:
   type: adv
 Gastland:
+  genus  : s
   type: n
 theokratie:
-  type: adj
+  genus  : f
+  type: n
 Putzgrund:
+  genus  : m
   type: n
 angemessenheit:
+  genus  : f
   type: n
 Bambuszellstoff:
+  genus  : m
   type: n
 marterl:
-  type: adj
+  genus  : s
+  type: n
 Stephen:
   type: n
 innenministerium:
-  type: adj
+  genus  : s
+  type: n
 Rezensieren:
+  genus  : s
   type: n
 Verblasst:
-  type: n
+  type: adj
 Anlernling:
+  genus  : m
   type: n
 bratscher:
-  type: adj
+  type: n
 Werksanlagen:
+  genus  : f
   type: n
 Arbeitskampfmassnahme:
+  genus  : f
   type: n
 Ausraeumen:
+  genus  : s
   type: n
 zweibettzimmer:
-  type: adj
+  genus  : s
+  type: n
 verarbeiten:
   type: vi
 Petechienpunktfoermige:
-  type: n
+  type: adj
 Luftfahrtbundesamt:
+  genus  : s
   type: n
-2verhaetscheln:
-  type: vi
 Ruhrpott:
+  genus  : m
   type: n
 kinderheilkunden:
-  type: vi
+  genus  : f
+  type: n
 Epaulette:
+  genus  : f
   type: n
 Lausitzer:
+  genus  : m
   type: n
 Assemblerdirektive:
+  genus  : f
   type: n
 Bersenbrueck:
   type: n
 anhaengekupplung:
-  type: adj
-Integer:
+  genus  : f
   type: n
-buerostuhl:
+Integer:
   type: adj
-their:
-  type: art
-Auenstelle:
+buerostuhl:
+  genus  : m
   type: n
 tun:
-  type: adj
+  type: vi
 Wagehals:
+  genus  : m
   type: n
 Reisefertig:
-  type: n
+  type: adj
 Buntwaran:
   type: n
 speichert:
@@ -122035,193 +125150,231 @@ speichert:
 Hartberg:
   type: n
 Wiederbelebung:
-  type: n
-Schluepfriger:
+  genus  : f
   type: n
 betoneinbringung:
-  type: adj
+  genus  : f
+  type: n
 Papstkronetiara:
+  genus  : f
   type: n
 Fluessigkeitsraketen:
+  genus  : f
   type: n
 Kragarm:
   type: n
-terdisziplinaer:
-  type: adj
 produktiv:
   type: adj
 Antriebssystem:
+  genus  : s
   type: n
 Unklug:
-  type: n
+  type: adj
 gericht:
-  type: adv
+  genus  : s
+  type: n
 Mobiltelefon:
+  genus  : s
   type: n
 gewandt:
-  type: vi
+  type: adj
 Grenztaster:
+  genus  : m
   type: n
 Flugstrecke:
-  type: n
-Brgerschaft:
+  genus  : f
   type: n
 vorsaetzlich:
   type: adv
 Widerspruechlichkeit:
+  genus  : f
   type: n
 Eifrig:
-  type: n
+  type: adj
 Ohrentzuendungotitis:
+  genus  : f
   type: n
 gondeln:
   type: vi
 Alpaka:
   type: n
 Persuasion:
+  genus  : f
   type: n
 Bolivar:
   type: n
 Tiefer:
-  type: n
+  type: adj
 Beulen:
+  genus  : f
   type: n
 allerings:
-  type: n
+  type: adv
 Delfin:
+  genus  : m
   type: n
 Wortedrechsler:
+  genus  : m
   type: n
 gewinne:
-  type: adv
+  type: vi
 Haarspalterisch:
-  type: n
+  type: adj
 ausduenstung:
   genus: f
   type: n
 Erythropoetin:
+  genus  : f
   type: n
 zartheit:
-  type: n
+  genus  : f
+  type: m
 Spenderinnen:
+  genus  : f
   type: n
 badenbaden:
-  type: vi
+  type: n
 Aussondern:
+  genus  : s
   type: n
 ungerechte:
-  type: vi
+  type: adj
 definitionslos:
   type: adv
 Kradmelder:
+  genus  : m
   type: n
 bimstein:
-  type: adj
+  genus  : m
+  type: n
 Reorganisation:
+  genus  : f
   type: n
 Abflughaefen:
+  genus  : f
   type: n
 Effekthascherei:
+  genus  : f
   type: n
 Slowakei:
+  genus  : f
   type: n
 Bedienelemente:
+  genus  : f
   type: n
 Umorientierung:
+  genus  : f
   type: n
 hatten:
   type: vi
 Zylindrisch:
-  type: n
+  type: adj
 Payroll:
   type: n
 Fussangel:
   genus: f
   type: n
 Boerdelwerkzeug:
+  genus  : s
   type: n
 Durchgangsverkehr:
+  genus  : m
   type: n
 doppelkreuzungsweichen:
-  type: adv
-stolpen:
-  type: adj
+  genus  : f
+  type: n
 Abbruchloeffel:
+  genus  : m
   type: n
 unsterblich:
   type: adv
 Verblueht:
-  type: n
+  type: adj
 strafanzeige:
-  type: adv
+  genus  : f
+  type: n
 Garantieleistung:
+  genus  : f
   type: n
 wuerdevoll:
   type: adj
 Codec:
+  genus  : m
   type: n
 Sparbuch:
+  genus  : s
   type: n
 Auflodern:
+  genus  : s
   type: n
 playboy:
-  type: adj
+  genus  : m
+  type: n
 hinaushaengen:
   type: vi
 Wohnungslos:
-  type: n
+  type: adj
 Aisch:
   type: n
 Anhaenglichkeit:
+  genus  : f
   type: n
 Verflossener:
   type: n
 Clement:
   type: n
 missbilligen:
-  type: adv
+  type: vi
 ernstlich:
   type: adv
 Schrittmacher:
+  genus  : m
   type: n
 Musketiere:
+  genus  : f
   type: n
 Erich:
   type: n
 geisenfeld:
-  type: adj
+  type: n
 gasturbolader:
-  type: adj
+  genus  : m
+  type: n
 uebersteigen:
-  type: adv
+  type: vi
 Dresche:
+  genus  : f
   type: n
 Wassenberg:
   type: n
 Brennpunkte:
+  genus  : f
   type: n
 Warenabsatz:
+  genus  : m
   type: n
 Salomoninseln:
+  genus  : f
   type: n
 Alterssicherung:
+  genus  : f
   type: n
 Etikett:
+  genus  : s
   type: n
 Fotobiologie:
+  genus  : f
   type: n
 liebesverhaeltnis:
-  type: n
-Weltkenntni:
+  genus  : s
   type: n
 Unrettbar:
-  type: n
-Aufhrtbarkeit:
-  type: n
+  type: adj
 Workshop:
+  genus  : m
   type: n
 galatea:
-  type: adj
+  type: n
 Dnjepr:
   type: n
 Mutmasslich:
@@ -122229,79 +125382,90 @@ Mutmasslich:
 abends:
   type: adv
 Koten:
+  genus  : s
   type: n
 Unerschoepflich:
   type: adv
 Austauschen:
+  genus  : s
   type: n
 Ouguiya:
   type: n
 Bartmannkrug:
+  genus  : m
   type: n
 York:
   type: n
-Bhne:
-  type: n
 Beschmutzer:
+  genus  : m
   type: n
 Postleitzahl:
-  type: n
-2wenngleich:
+  genus  : f
   type: n
 unterschiedlich:
   type: adv
 Kausalprinzip:
+  genus  : s
   type: n
 Gewaesch:
+  genus  : s
   type: n
 Flagrant:
-  type: n
+  type: adj
 Exotik:
+  genus  : f
   type: n
 Misanthropie:
+  genus  : f
   type: n
 erinnerungsverlust:
-  type: vi
+  genus  : m
+  type: n
 Damenvelo:
+  genus  : s
   type: n
 Kartographie:
+  genus  : f
   type: n
 stoerungsfrei:
   type: adj
 Durban:
+  genus  : m
   type: n
 Fuchspelze:
+  genus  : f
   type: n
 Meduse:
+  genus  : f
   type: n
-timaterie:
-  type: adj
 Schilddruesenfunktionsstoerung:
+  genus  : f
   type: n
 reichen:
   type: adv
-vorau:
-  type: adj
 Fete:
+  genus  : f
   type: n
 bestatten:
-  type: adv
+  type: vi
 mokieren:
   type: vi
 spuelbecken:
-  type: vi
-alternsforschung:
-  type: adj
-Stahlerzeuger:
+  genus  : s
   type: n
-varum:
-  type: adj
+alternsforschung:
+  genus  : f
+  type: n
+Stahlerzeuger:
+  genus  : m
+  type: n
 gaeren:
   type: vi
 umbriel:
-  type: adj
+  type: n
 brausetablette:
-  type: vi
+  genus  : f
+  type: n
 Chalkogen:
   type: n
 Friedens:
@@ -122309,41 +125473,45 @@ Friedens:
 saemtlichen:
   type: adv
 Bildungsfernsehen:
+  genus  : s
   type: n
 Doppelbuchstaben:
-  type: n
-Fhnrich:
+  genus  : f
   type: n
 Finanzdienstleister:
   type: n
 Fuehrungshuelsen:
+  genus  : f
   type: n
 baujahr:
-  type: adj
-wintersport:
-  type: vi
-Harnisch:
+  genus  : s
   type: n
-Erstklsslerin:
+wintersport:
+  genus  : m
+  type: n
+Harnisch:
+  genus  : m
   type: n
 mosambikisch:
   type: adj
 Festrednerinnen:
+  genus  : f
   type: n
 Gewollt:
-  type: n
+  type: adj
 Angeles:
   type: n
 Menagerie:
+  genus  : f
   type: n
 anstechen:
-  type: adv
-optimalwert:
   type: vi
-Yak:
+optimalwert:
+  genus  : m
   type: n
-endmahlzeit:
-  type: adj
+Yak:
+  genus  : s
+  type: n
 Hobbi:
   type: n
 beiden:
@@ -122351,551 +125519,666 @@ beiden:
 kreisrund:
   type: adj
 Knallhart:
-  type: n
+  type: adj
 knechten:
   type: vi
 Ersichtlich:
   type: adv
 Gans:
+  genus  : f
   type: n
 Herzen:
-  type: n
-Adressrume:
+  genus  : f
   type: n
 parallelismus:
   genus: m
   type: n
 disziplin:
-  type: adj
+  genus  : f
+  type: n
 Eurowaehrung:
+  genus  : f
   type: n
 prima:
   type: adj
 Feldrechner:
+  genus  : m
   type: n
 Zehdenick:
   type: n
 Emulsionen:
+  genus  : f
   type: n
 sozialkapital:
-  type: adj
-cunnilingu:
-  type: adj
+  genus  : s
+  type: n
 Auslieferungszustand:
+  genus  : m
   type: n
 Binaerbaum:
+  genus  : m
   type: n
-anfgen:
-  type: vi
 Dachrinne:
+  genus  : f
   type: n
 weichste:
-  type: vi
-befehl:
   type: adj
+befehl:
+  genus  : m
+  type: n
 Ausgleichskondensatoren:
+  genus  : f
   type: n
 Duerre:
+  genus  : f
   type: n
 liebsten:
   type: adv
 bestuerzen:
   type: vi
 Abblaseschnellschlussventil:
+  genus  : s
   type: n
 such:
-  type: adj
+  type: vi
 Unbesetzte:
-  type: n
+  type: adj
 Fleckenreiniger:
+  genus  : m
   type: n
 Kausalitaetsprinzip:
+  genus  : s
   type: n
 mir:
-  type: n
+  type: pron
 Buntling:
-  type: n
-Fhrungsschild:
   type: n
 Krimmler:
   type: n
 Rotterdam:
   type: n
-Mescalbuttonspellotepeyotepeyotl:
-  type: n
-defaetismus:
-  type: n
-2widerrufen:
-  type: vi
 Flashback:
+  genus  : s
   type: n
 Hauptbalken:
+  genus  : m
   type: n
 Verarbeitung:
+  genus  : f
   type: n
 zusammenlegen:
   type: vi
 Geben:
+  genus  : s
   type: n
 sonderparteitag:
-  type: adj
-Bombenschtzen:
+  genus  : m
   type: n
 Sonderzug:
+  genus  : m
   type: n
 Basketballplatz:
+  genus  : m
   type: n
 Umreissen:
+  genus  : s
   type: n
 Umdrehungen:
+  genus  : f
   type: n
 Laie:
+  genus  : m
   type: n
 Begleitschaden:
+  genus  : m
   type: n
 Umschlagplatz:
+  genus  : m
   type: n
 Anschlussschraube:
+  genus  : f
   type: n
 Bergahorn:
   type: n
 Aufleben:
+  genus  : s
   type: n
 ausleuchten:
   type: vi
 Laendle:
+  genus  : s
   type: n
 Wischer:
+  genus  : m
   type: n
 Hartgummischeibe:
+  genus  : f
   type: n
 Ausschalfrist:
+  genus  : f
   type: n
 animieren:
   type: vi
 fraeulein:
-  type: adj
+  genus  : s
+  type: n
 niederschreien:
-  type: adj
+  type: vi
 Hinwerfen:
+  genus  : s
   type: n
 Stetigkeit:
+  genus  : f
   type: n
 Langaermeliges:
-  type: n
+  type: adj
 guenstigsten:
-  type: vi
+  type: adj
 Anlagenbestand:
+  genus  : m
   type: n
 theseus:
   type: n
 Achsmuttern:
+  genus  : f
   type: n
 Exportgueter:
+  genus  : f
   type: n
 Fee:
+  genus  : f
   type: n
 neper:
-  type: adj
+  type: n
 nie:
   type: prep
 geschwind:
   type: adj
-trsten:
-  type: vi
 massstab:
-  type: adj
+  genus  : m
+  type: n
 Fertigungsgemeinkosten:
+  genus  : f
   type: n
 Bluetenrispe:
+  genus  : f
   type: n
 klopf:
-  type: adj
-rodelschlitten:
   type: vi
+rodelschlitten:
+  genus  : m
+  type: n
 Niedersachsen:
   type: n
 zugewandten:
-  type: vi
+  type: adj
 spurten:
   type: vi
 Vorsteher:
+  genus  : m
   type: n
 Erdungshuelsen:
+  genus  : f
   type: n
 Kind:
+  genus  : s
   type: n
 Filmdarstellerin:
+  genus  : f
   type: n
 verstreichen:
-  type: adv
+  type: vi
 Eroeffnungsfeier:
+  genus  : f
   type: n
 luftfuehrung:
-  type: adj
+  genus  : f
+  type: n
 lehrte:
   type: vi
 Flankenangriffe:
+  genus  : f
   type: n
 patch:
-  type: adj
+  genus  : m
+  type: n
 quaelgeist:
-  type: vi
+  genus  : m
+  type: n
 Abschreibungsbuchung:
+  genus  : f
   type: n
 pilgern:
   type: vi
 ri:
-  type: adj
+  type: n
 Brennstoffwaehler:
+  genus  : m
   type: n
 Besorgnis:
+  genus  : f
   type: n
 schnellste:
-  type: vi
+  type: adj
 Partie:
+  genus  : f
   type: n
 unpassierbar:
   type: adj
 Verrammeln:
+  genus  : s
   type: n
 unbefangen:
-  type: vi
+  type: adj
 dreikoenigsfeen:
-  type: adj
-Erwarte:
+  genus  : f
   type: n
-nebensprechen:
-  type: adv
+Erwarte:
+  type: vi
 knilch:
-  type: adj
+  genus  : m
+  type: n
 Tajumulco:
   type: n
 Azubi:
+  genus  : m
   type: n
 Altentreptow:
   type: n
 Bonbon:
+  genus  : s
   type: n
 postmortal:
   type: adj
 argongas:
+  genus  : s
   type: n
 Mittelmass:
+  genus  : s
   type: n
 Darlington:
   type: n
 Kapitalanleger:
-  type: n
-u:
-  type: adj
-Auendienstleiter:
+  genus  : m
   type: n
 Temperatursturz:
+  genus  : m
   type: n
 Felszeichnungen:
+  genus  : f
   type: n
 inhaftiert:
-  type: vi
-compilaen:
   type: adj
 Auswaertsspiel:
+  genus  : s
   type: n
 Rayon:
   type: n
 Muellplatz:
-  type: n
-Besttigungstasten:
+  genus  : m
   type: n
 Elektroerosion:
+  genus  : f
   type: n
 Auftragsforschungsinstitut:
+  genus  : s
   type: n
 Rennweg:
+  genus  : m
   type: n
 Ballonfahren:
+  genus  : s
   type: n
 Eroberungskrieg:
+  genus  : m
   type: n
 Koriann:
   type: n
 Morgenessen:
+  genus  : s
   type: n
 Empfangsantenne:
+  genus  : f
   type: n
 Gewandtheit:
+  genus  : f
   type: n
 Hueterin:
   genus: f
   type: n
 Qualifizierender:
-  type: n
-ueb:
   type: adj
+ueb:
+  type: vi
 permutierbar:
   type: adj
 Gefaehrlichkeit:
+  genus  : f
   type: n
 reflex:
-  type: adj
+  genus  : m
+  type: n
 mamoutzou:
-  type: adj
+  type: n
 Asynchronmaschine:
+  genus  : f
   type: n
 Elfenreigen:
+  genus  : m
   type: n
 Darstellungsarten:
-  type: n
-Eilzge:
+  genus  : f
   type: n
 Quakenbrueck:
   type: n
 Stimmabgabe:
+  genus  : f
   type: n
 Arbeitsheft:
+  genus  : s
   type: n
 ranch:
-  type: adj
+  genus  : f
+  type: n
 entfaerben:
   type: vi
 zustaendigkeit:
+  genus  : f
   type: n
 Adiabate:
   type: n
 schulterschluss:
+  genus  : m
   type: n
 Muecken:
+  genus  : f
   type: n
 Leuchtkaefer:
+  genus  : m
   type: n
 Bugleinen:
+  genus  : f
   type: n
 Bruder:
+  genus  : m
   type: n
 Inhalt:
+  genus  : m
   type: n
 steinlawinen:
-  type: vi
+  genus  : f
+  type: n
 Bilgenwasser:
+  genus  : s
   type: n
 Abgleichklemme:
+  genus  : f
   type: n
 Angeknabbert:
-  type: n
+  type: adj
 verkehren:
   type: vi
 computertomografien:
-  type: adj
+  genus  : f
+  type: n
 Fruehchen:
+  genus  : s
   type: n
 Misston:
   type: n
 Vordruck:
+  genus  : m
   type: n
 Schlagsahne:
+  genus  : f
   type: n
 Leierkastenfrauen:
+  genus  : f
   type: n
 Kollektivierung:
+  genus  : f
   type: n
 aerodynamisch:
   type: adj
 gedaechtnise:
-  type: adv
+  genus  : f
+  type: n
 Seestern:
+  genus  : m
   type: n
 Affin:
+  genus  : f
   type: n
 uebungsheft:
-  type: vi
+  genus  : s
+  type: n
 Kuh:
-  type: prep
+  genus  : f
+  type: n
 Auslegekran:
+  genus  : m
   type: n
 paraveno:
-  type: adj
-abrcken:
-  type: vi
+  type: n
 Teilgebiet:
+  genus  : s
   type: n
 Reserverad:
+  genus  : s
   type: n
 Arbeitszeugnis:
+  genus  : s
   type: n
 Aufpasserin:
+  genus  : f
   type: n
 Beleg:
+  genus  : m
   type: n
 lebensraum:
-  type: adj
+  genus  : m
+  type: n
 Klapperstorch:
+  genus  : m
   type: n
 zypriotisch:
   type: adj
 Auftragsnummer:
+  genus  : f
   type: n
 hochfliegen:
   type: vi
 produktfaelscher:
-  type: adj
-kunftszeit:
-  type: adj
+  genus  : m
+  type: n
 Jobabwicklung:
+  genus  : f
   type: n
 Bogen:
+  genus  : m
   type: n
 dkp:
-  type: adj
-Reproduktionsvermgen:
   type: n
 retrograd:
-  type: adj
+  type: n
 Mode:
+  genus  : f
   type: n
 Ergattern:
+  genus  : s
   type: n
 Eibenstock:
+  genus  : m
   type: n
 Verwehren:
+  genus  : s
   type: n
 Weihnachtsbaum:
+  genus  : m
   type: n
 bewegungskrankheit:
+  genus  : f
   type: n
-Filmvorfhrungen:
-  type: n
-erblhen:
-  type: adv
 Belinda:
   type: n
 narkotisieren:
   type: vi
 Baerenfelle:
+  genus  : f
   type: n
 Pointieren:
+  genus  : s
   type: n
 Koptisch:
-  type: n
+  type: adj
 Basisstationen:
+  genus  : f
   type: n
 reinigung:
-  type: adj
+  genus  : f
+  type: n
 Sekt:
+  genus  : m
   type: n
 Ausgleicher:
+  genus  : m
   type: n
 Weltwirtschaftsgipfel:
+  genus  : m
   type: n
 Eierstoecke:
+  genus  : f
   type: n
 phosphoresziert:
-  type: vi
-mosambik:
   type: adj
+mosambik:
+  type: n
 Adresskennsatz:
+  genus  : m
   type: n
 anfangsbuchstaben:
-  type: vi
-Feuchtigkeitsmesser:
+  genus  : f
   type: n
-verrgern:
-  type: vi
+Feuchtigkeitsmesser:
+  genus  : m
+  type: n
 Eingaben:
+  genus  : f
   type: n
 Bienenhaus:
+  genus  : m
   type: n
 glaeubig:
   type: adv
 Azalee:
+  genus  : f
   type: n
 Gasduesen:
+  genus  : f
   type: n
 Hinterher:
-  type: n
+  type: adv
 Abgassystem:
+  genus  : s
   type: n
 bangui:
-  type: adj
+  type: n
 Fruehpensionist:
+  genus  : m
   type: n
 saum:
-  type: adj
+  genus  : m
+  type: n
 schiffsausbesserungswerk:
-  type: adj
+  genus  : s
+  type: n
 e2e4:
   type: n
 Menue:
+  genus  : s
   type: n
 Arbeitsanzug:
+  genus  : m
   type: n
 Malle:
-  type: n
-Arbeitsverhltnis:
   type: n
 Steffenmaeuschen:
   type: n
 Unreife:
-  type: adv
+  genus  : f
+  type: n
 nordische:
   type: adv
 Eisenbahnverkehr:
+  genus  : m
   type: n
 angebotsfrist:
-  type: vi
+  genus  : f
+  type: n
 Frueherkennung:
+  genus  : f
   type: n
 Bundesstaaten:
+  genus  : f
   type: n
 Korbballspieler:
+  genus  : m
   type: n
 Bieruntersetzer:
+  genus  : m
   type: n
-nehmensberater:
-  type: adj
-willkrlich:
-  type: adv
 Fruechtchen:
+  genus  : s
   type: n
 referenzpunkt:
-  type: vi
+  genus  : m
+  type: n
 laufen:
-  type: adv
+  type: vi
 Deportationen:
+  genus  : f
   type: n
 Baumwollhemd:
+  genus  : s
   type: n
 Erlebnise:
+  genus  : f
   type: n
 Froendenberg:
   type: n
 Bahnlinien:
+  genus  : f
   type: n
 Boersenhaendler:
+  genus  : m
   type: n
 groben:
-  type: vi
-Strfling:
-  type: n
+  type: adj
 Entkoerperlichung:
+  genus  : f
   type: n
 buendel:
   genus: s
   type: n
 Eingewirkt:
-  type: n
+  type: adj
 gefaehrt:
-  type: vi
+  genus  : s
+  type: n
 solche:
   type: adv
 Rotznaesig:
-  type: n
+  type: adj
 Abdrueckmutter:
+  genus  : f
   type: n
 vielfalt:
-  type: vi
+  genus  : f
+  type: n
 absacken:
   type: vi
 Andacht:
+  genus  : f
   type: n
 kesser:
   type: adj
@@ -122903,69 +126186,82 @@ Uebermacht:
   genus: f
   type: n
 Durchfuehrbarkeitsuntersuchung:
+  genus  : f
   type: n
 Fuehrungstraeger:
+  genus  : m
   type: n
 Broschren:
   type: n
 verachten:
   type: vi
 Stift:
+  genus  : m
   type: n
 ueberziehungskredit:
-  type: adj
+  genus  : m
+  type: n
 Blechdose:
+  genus  : f
   type: n
 Ausreise:
+  genus  : f
   type: n
 Bildhauerinnen:
+  genus  : f
   type: n
 armen:
-  type: vi
+  type: adj
 Semmeln:
+  genus  : f
   type: n
 hassloch:
-  type: adj
+  type: n
 Nas:
   type: n
 schnipsen:
   type: vi
 Schlammig:
-  type: n
+  type: adj
 Wiehe:
   type: n
-Ausgleichsvergtung:
-  type: n
 Verwerfen:
+  genus  : s
   type: n
 verdummen:
   type: vi
 Schmuddelig:
-  type: n
+  type: adj
 wesenlos:
   type: adv
 geschmacklos:
   type: adv
 Bearbeitungsgebuehren:
+  genus  : f
   type: n
 Abschreckungsfunktion:
+  genus  : f
   type: n
 Erziehungsanstalten:
+  genus  : f
   type: n
 tausendsassa:
-  type: adj
+  genus  : m
+  type: n
 Kaufleute:
+  genus  : f
   type: n
 Skalieren:
-  type: n
-Campingfhrer:
+  genus  : s
   type: n
 Durchsetzungskraft:
+  genus  : f
   type: n
 exhumieren:
   type: vi
 parlamentaer:
-  type: adj
+  genus  : m
+  type: n
 damit:
   type: adj
 Verinnerlichen:
@@ -122973,22 +126269,29 @@ Verinnerlichen:
 Karlsbruecke:
   type: n
 Sexspielzeug:
+  genus  : s
   type: n
 Promotion:
+  genus  : f
   type: n
 chitinpanzer:
-  type: adj
+  genus  : m
+  type: n
 Diskussionsrunde:
+  genus  : f
   type: n
 Flugzeugkatapulte:
+  genus  : f
   type: n
 Keloid:
+  genus  : m
   type: n
 tapsen:
   type: vi
 Breiig:
-  type: n
+  type: adj
 Ausknobeln:
+  genus  : s
   type: n
 Nierenbume:
   type: n
@@ -123001,515 +126304,612 @@ Zagreb:
 wirst:
   type: vi
 Unkraut:
+  genus  : s
   type: n
 uebelnehmerisch:
   type: adj
-Binrzahlen:
-  type: n
 regensburg:
-  type: adj
+  type: n
 Dieb:
+  genus  : m
   type: n
 Hoden:
+  genus  : f
   type: n
 Ausbeutungsbetriebe:
+  genus  : f
   type: n
-perver:
-  type: adj
 Wechselkurs:
+  genus  : m
   type: n
 rheuma:
-  type: adj
+  genus  : s
+  type: n
 barbara:
   type: n
 Systemfunktionalitaet:
   genus: f
   type: n
 Bergfuehrerin:
+  genus  : f
   type: n
 Marienberg:
   type: n
 Druckminderventil:
+  genus  : s
   type: n
 fettleibig:
   type: adv
 Automatisch:
-  type: n
+  type: adj
 Detoxikation:
+  genus  : f
   type: n
 Dunkelheit:
+  genus  : f
   type: n
 Burenkrieg:
+  genus  : m
   type: n
 Phthiriasis:
+  genus  : m
   type: n
 professionell:
   type: adj
 Staubteufel:
+  genus  : m
   type: n
 Duernstein:
   type: n
 Entschwinden:
+  genus  : s
   type: n
 Schubfaecher:
   genus: f
   type: n
 Anschlussblech:
+  genus  : s
   type: n
 Grossspurigkeit:
+  genus  : f
   type: n
 Schatzinsel:
+  genus  : f
   type: n
-lueckenlo:
-  type: adj
 ahlmann:
-  type: adj
+  type: n
 dokumentarfilm:
-  type: adj
+  genus  : m
+  type: n
 Oberherrschaft:
+  genus  : f
   type: n
 Denn:
   type: adv
 yves:
-  type: adj
+  type: n
 Datenverlust:
+  genus  : m
   type: n
 Pirouetten:
+  genus  : f
   type: n
 Tafelbild:
+  genus  : s
   type: n
 Ueberanstrengung:
+  genus  : f
   type: n
 verzaertelt:
-  type: vi
-Anfangsvermgen:
-  type: n
+  type: adj
 Druckbrueche:
+  genus  : f
   type: n
 Kurzem:
-  type: n
-Filtereinstze:
-  type: n
+  type: adj
 Betriebswerk:
+  genus  : s
   type: n
 Anspruchsvoll:
-  type: n
+  type: adj
 Exhaustor:
+  genus  : m
   type: n
 Selbstherrschaft:
+  genus  : f
   type: n
 Nachforschen:
+  genus  : s
   type: n
 Freudenfest:
+  genus  : s
   type: n
 Spornstreichs:
   type: n
 Arrestierung:
+  genus  : f
   type: n
 nutte:
-  type: vi
+  genus  : m
+  type: n
 Operationsverstaerker:
+  genus  : m
   type: n
 Broetchengeber:
+  genus  : m
   type: n
 Dekadent:
-  type: n
+  type: adj
 Badeanstalt:
+  genus  : f
   type: n
 Althochdeutsch:
-  type: n
-wofuer:
   type: adj
+wofuer:
+  type: adv
 Adressennummer:
+  genus  : f
   type: n
 wiederholt:
   type: vi
 platzenlassen:
   type: vi
 Salbungsvoll:
-  type: n
+  type: adj
 Laudakoenigshofen:
   type: n
 Trennungsstriche:
+  genus  : f
   type: n
 akzentuieren:
   type: vi
 voyager:
-  type: adj
+  genus  : f
+  type: n
 dilettantisch:
   type: adj
 Delfinschwimmen:
+  genus  : s
   type: n
 Flosdorf:
   type: n
 Egge:
+  genus  : f
   type: n
 gnu:
-  type: adj
-Gemtlichkeit:
+  genus  : s
   type: n
 Windschluepfrig:
-  type: n
+  type: adj
 katzbuckeln:
   type: vi
-Brderchen:
-  type: n
-Brcken:
-  type: n
 dringen:
   type: vi
 emutionen:
-  type: vi
-Todkrank:
+  genus  : f
   type: n
+Todkrank:
+  type: adj
 vertreiben:
   type: vi
 zweifluegler:
-  type: adj
+  genus  : m
+  type: n
 spiegelung:
-  type: adj
+  genus  : f
+  type: n
 Schoeningen:
   type: n
 limnologien:
-  type: adj
+  genus  : f
+  type: n
 schuerfen:
   type: vi
 Federband:
+  genus  : s
   type: n
 beschaemung:
-  type: adj
-Entkrperlichung:
+  genus  : f
   type: n
 Flugstrecken:
+  genus  : f
   type: n
 kassenschlager:
-  type: adj
-Wenige:
+  genus  : m
   type: n
+Wenige:
+  type: adj
 Entlastungszeugen:
+  genus  : f
   type: n
 Einzelfrage:
+  genus  : f
   type: n
 Musterfall:
+  genus  : m
   type: n
 glasfasern:
-  type: vi
+  genus  : f
+  type: n
 pkw:
-  type: adj
+  genus  : m
+  type: n
 Imperativ:
+  genus  : m
   type: n
 Datenbearbeitungssprachen:
+  genus  : f
   type: n
 informationssystem:
-  type: adj
-Vorstehender:
+  genus  : s
   type: n
+Vorstehender:
+  type: adj
 Absatzchance:
+  genus  : f
   type: n
 Fettfleck:
+  genus  : m
   type: n
 studieren:
   type: vi
 bastard:
-  type: adj
+  genus  : m
+  type: n
 Antragsformular:
+  genus  : s
   type: n
 geratewohl:
   type: adj
 Kalium:
+  genus  : s
   type: n
 Gehaltskosten:
-  type: n
-Endanflge:
+  genus  : f
   type: n
 Spesen:
+  genus  : f
   type: n
 Nacl:
   type: n
 Auma:
   type: n
 Vorderarm:
+  genus  : m
   type: n
 Achselstueck:
   genus: s
   type: n
 Erzaehlrahmen:
+  genus  : m
   type: n
 Eingangshallen:
+  genus  : f
   type: n
 Muskau:
   type: n
 oktober:
-  type: adj
+  genus  : m
+  type: n
 Esplanade:
+  genus  : f
   type: n
 Mailand:
   type: n
 Bonusprogramm:
-  type: n
-Strnde:
+  genus  : s
   type: n
 Esoteriker:
   type: n
 assi:
-  type: adj
+  type: n
 flausen:
-  type: vi
+  genus  : f
+  type: n
 prompt:
   type: adj
 Einsatzhundertschaften:
+  genus  : f
   type: n
 Palmieri:
   type: n
 Pastor:
+  genus  : m
   type: n
 Kokett:
-  type: n
+  type: adj
 Biker:
+  genus  : m
   type: n
 deuten:
   type: vi
 Gerissen:
-  type: n
+  type: adj
 zurueckgehend:
   type: adj
-Crazy:
-  type: n
 Emissionsbereich:
+  genus  : m
   type: n
 Jumper:
+  genus  : m
   type: n
 liebstoeckel:
-  type: adj
+  genus  : s
+  type: n
 Beschmungen:
+  genus  : s
   type: n
 Holprig:
-  type: n
+  type: adj
 Leuchtfeuer:
   genus: s
   type: n
 reproduzieren:
   type: vi
 Feldzeugwesen:
+  genus  : s
   type: n
 Anlagenrechnung:
+  genus  : f
   type: n
 Wahrheitsgemaess:
-  type: n
+  type: adj
 Aktionsradius:
+  genus  : m
   type: n
 diskothek:
-  type: adj
-aushrten:
-  type: vi
+  genus  : f
+  type: n
 Postanschrift:
+  genus  : f
   type: n
 Eselsohren:
+  genus  : f
   type: n
 Funktionsaufruf:
+  genus  : m
   type: n
 Befestigungsstreben:
+  genus  : f
   type: n
 Divers:
-  type: n
+  type: adj
 Toronto:
   type: n
 Koenigreich:
+  genus  : s
   type: n
 staatsangehoerigkeit:
+  genus  : f
   type: n
 Delfinfleisch:
+  genus  : s
   type: n
 lokaler:
   type: adj
 steilhang:
-  type: adj
+  genus  : m
+  type: n
 liebstadt:
-  type: vi
+  type: n
 dalkebach:
-  type: adj
+  type: n
 Akkumulationsquote:
+  genus  : f
   type: n
 Unterbesetzt:
-  type: n
+  type: adj
 Wurmmittel:
+  genus  : s
   type: n
 Anschlussgerte:
-  type: n
-Einsteckschweien:
+  genus  : f
   type: n
 einberaumen:
   type: vi
 kueste:
-  type: vi
+  genus  : f
+  type: n
 Ausruesten:
+  genus  : s
   type: n
 Uffizien:
+  genus  : f
   type: n
 verwundert:
-  type: vi
+  type: adj
 Dreistigkeiten:
+  genus  : f
   type: n
 Neozoon:
   type: n
-2verwandt:
-  type: vi
 Enthaltung:
+  genus  : f
   type: n
 hackebeil:
-  type: adj
+  genus  : s
+  type: n
 geis:
+  genus  : f
   type: n
 kupfern:
-  type: vi
-edelstahl:
   type: adj
+edelstahl:
+  genus  : s
+  type: n
 Anschlussgeraet:
   genus: s
   type: n
-Fnfkampf:
-  type: n
 Souffles:
+  genus  : f
   type: n
 bergarbeiter:
-  type: vi
+  genus  : m
+  type: n
 funktional:
   type: adj
 kernstueck:
-  type: adj
+  genus  : s
+  type: n
 dogmatisch:
   type: adj
 Geschaeftsvorfall:
+  genus  : m
   type: n
 Fehlentscheidungen:
+  genus  : f
   type: n
 Baugelaende:
+  genus  : s
   type: n
 Widerwille:
+  genus  : m
   type: n
 Autofabrik:
+  genus  : f
   type: n
 spritpreisen:
-  type: vi
+  type: n
 einszuein:
   type: adj
 Habilitationsschrift:
+  genus  : f
   type: n
 Barausschuettung:
+  genus  : f
   type: n
 Bluetenpracht:
+  genus  : f
   type: n
 Ersatzsektorentabelle:
+  genus  : f
   type: n
 Uferdaemme:
+  genus  : f
   type: n
 Zahnrad:
+  genus  : s
   type: n
 wodenstag:
-  type: adj
+  type: n
 buergergesellschaft:
-  type: adv
+  genus  : f
+  type: n
 Stiefelchen:
+  genus  : f
   type: n
 reiter:
-  type: adj
+  genus  : m
+  type: n
 Persiflage:
+  genus  : f
   type: n
 Landwirtschaftliche:
   type: adv
 Anzeigefehler:
   type: n
-uebermittl:
-  type: adj
 Parole:
+  genus  : f
   type: n
 verzerrung:
-  type: adj
+  genus  : f
+  type: n
 Bargeschaeft:
+  genus  : s
   type: n
 Sode:
   type: n
 elektrische:
   type: adv
 baissier:
+  genus  : m
   type: adj
-How:
-  type: fw
 Weinbau:
+  genus  : m
   type: n
 Methansaeure:
+  genus  : f
   type: n
 Erdschicht:
+  genus  : f
   type: n
 rezeptiv:
   type: adj
 Kleinstlebewesen:
-  type: n
-Morsekegelmorsekonus:
+  genus  : s
   type: n
 Bearbeitungsentgelte:
-  type: n
-Pfingstenpfingstfest:
+  genus  : f
   type: n
 Grundbesitz:
+  genus  : m
   type: n
 Waschkueche:
+  genus  : f
   type: n
 Wuchten:
+  genus  : s
   type: n
-praxi:
-  type: adj
 Bustakt:
+  genus  : m
   type: n
 debattieren:
   type: vi
 Nuance:
+  genus  : f
   type: n
 Befunde:
+  genus  : f
   type: n
 Kommissionen:
+  genus  : f
   type: n
 Datenbanksystem:
-  type: n
-Ossiostdeutscher:
+  genus  : s
   type: n
 cointreau:
-  type: adj
+  genus  : m
+  type: n
 Diesseits:
+  genus  : s
   type: n
 Angegriffen:
-  type: n
+  type: adj
 Nationalismus:
+  genus  : m
   type: n
 braeunen:
   type: vi
-flchtig:
-  type: adv
 Korn:
+  genus  : s
   type: n
 raumfahrzeug:
-  type: adj
+  genus  : s
+  type: n
 Armloch:
+  genus  : s
   type: n
 Freischaltungen:
+  genus  : f
   type: n
 alaska:
-  type: adj
+  type: n
 abreisen:
   type: vi
 china:
-  type: adj
+  type: n
 Beizbad:
+  genus  : s
   type: n
 Entruestet:
-  type: n
-Datenbltter:
-  type: n
+  type: adj
 Fischkunde:
+  genus  : f
   type: n
 Durchschaubar:
   type: adj
 Benutzermodus:
+  genus  : m
   type: n
 Fahnenfluechtiger:
   type: n
@@ -123517,15 +126917,17 @@ Einfederungshoehe:
   genus: f
   type: n
 Einstelllehre:
+  genus  : f
   type: n
 gebuehren:
-  type: vi
+  genus  : f
+  type: n
 sapphismus:
+  genus  : m
   type: n
 Unkenruf:
+  genus  : m
   type: n
-2vergeuden:
-  type: vi
 Gaensen:
   type: n
 niedrig:
@@ -123533,476 +126935,567 @@ niedrig:
 aufschluesseln:
   type: vi
 Arbeitergewerkschaft:
+  genus  : f
   type: n
 Dachdaemmung:
+  genus  : f
   type: n
 Fleischkloesschen:
+  genus  : f
   type: n
 Knochen:
+  genus  : m
   type: n
 behueten:
   type: vi
 Bremsfallschirme:
+  genus  : f
   type: n
 Fronarbeit:
+  genus  : f
   type: n
 abfraesen:
   type: vi
 Ueberaltert:
-  type: n
+  type: adj
 Heiss:
-  type: n
+  type: adj
 Blumenkraenze:
+  genus  : f
   type: n
 Praeambel:
   type: n
 Roentgenuntersuchung:
+  genus  : f
   type: n
 Auslandsinvestitionen:
+  genus  : f
   type: n
 Abzocke:
-  type: n
-Bugrder:
+  genus  : f
   type: n
 altvaeterlich:
   type: adv
 strahlung:
-  type: adj
+  genus  : f
+  type: n
 Inkompetenz:
+  genus  : f
   type: n
 Deichmann:
   type: n
 ausdehnung:
-  type: adj
+  genus  : f
+  type: n
 ueberarbeiten:
   type: vi
 barium:
-  type: adj
+  genus  : s
+  type: n
 raedchenschneider:
-  type: adj
+  genus  : m
+  type: n
 Nordostamerika:
   type: n
 Aufenthaltsgenehmigung:
+  genus  : f
   type: n
 Energiesparlampen:
-  type: n
-Flligstellung:
+  genus  : f
   type: n
 Mineralien:
+  genus  : f
   type: n
 schelte:
-  type: vi
+  genus  : f
+  type: n
 mustergueltig:
   type: adv
 unglasierten:
-  type: vi
+  type: adj
 Draussen:
-  type: n
+  type: adj
 uebergeblieben:
-  type: vi
+  type: adj
 Gesundheitsaufwendungen:
+  genus  : f
   type: n
 Reputierlich:
   type: adv
 aufgeblasen:
-  type: vi
+  type: adj
 Ausnutzen:
+  genus  : s
   type: n
 roedental:
-  type: adj
+  type: n
 Deckenfries:
+  genus  : s
   type: n
 kirchlich:
   type: adv
-Abschlussprfungen:
-  type: n
 Peitz:
   type: n
 Tankstelle:
-  type: n
-Bcherei:
+  genus  : f
   type: n
 Sattheit:
+  genus  : f
   type: n
 verlust:
-  type: vi
+  genus  : m
+  type: n
 Selbstverstaendlich:
   type: adv
 dieselkraftstoff:
-  type: adj
-Helikopt:
+  genus  : m
   type: n
 dudelsack:
-  type: adj
+  genus  : m
+  type: n
 dichtungsmittel:
-  type: adj
+  genus  : s
+  type: n
 Einzelgerte:
+  genus  : f
   type: n
 liebevoll:
   type: adj
 Zylinderstift:
+  genus  : m
   type: n
 brueten:
   type: vi
-think:
-  type: adj
 hueten:
   type: vi
 Nennen:
+  genus  : s
   type: n
 caldera:
-  type: adj
-Volksverhetzer:
+  genus  : f
   type: n
-Organistorgelmusikerorgelspieler:
+Volksverhetzer:
+  genus  : m
   type: n
 Menschen:
+  genus  : f
   type: n
 Pyridoxin:
+  genus  : s
   type: n
 wachstumsstimulieren:
   type: vi
 beefeater:
-  type: vi
-Befrchtungen:
+  genus  : m
   type: n
 verkehrsampel:
-  type: adj
+  genus  : f
+  type: n
 Regeln:
+  genus  : f
   type: n
 gebaeuden:
-  type: vi
-Innern:
   type: n
 Unbar:
-  type: n
-Mohammedanermoslemmuselmannmuslim:
-  type: n
+  type: adj
 Postmeilensaeule:
+  genus  : f
   type: n
 Fahrzeugfuehrer:
+  genus  : m
   type: n
 Durchblick:
+  genus  : m
   type: n
 Barytwasser:
+  genus  : s
   type: n
 Anfuehrung:
+  genus  : f
   type: n
-herrschaftslo:
-  type: adj
 Federal:
-  type: n
+  type: adj
 Blase:
+  genus  : f
   type: n
 Drehumsetzstationen:
+  genus  : f
   type: n
 Betrug:
+  genus  : m
   type: n
 Auftraege:
+  genus  : f
   type: n
 roulette:
-  type: vi
+  genus  : s
+  type: n
 anbringen:
   type: vi
 vorurteilsvoll:
   type: adj
 Blaeser:
+  genus  : m
   type: n
 Appenzell:
   type: n
 Entbindung:
+  genus  : f
   type: n
 verzagtheit:
+  genus  : f
   type: n
 pfandhaus:
+  genus  : s
   type: n
 tatterich:
-  type: adj
+  genus  : m
+  type: n
 schladming:
-  type: adj
+  type: n
 Artillerist:
+  genus  : m
   type: n
 Abgabenpflichtig:
-  type: n
+  type: adj
 Bundeshauptstadt:
   genus: f
   type: n
 Bordscheibe:
+  genus  : f
   type: n
 Schamlaeuse:
+  genus  : f
   type: n
 Gedns:
   type: n
-Fhrungsgre:
-  type: n
-zurckverfolgen:
-  type: vi
 teuschnitz:
-  type: adj
+  type: n
 Killer:
+  genus  : m
   type: n
 Daempfungssystem:
+  genus  : s
   type: n
 aufgetaucht:
   type: adv
 Heraufbeschwoeren:
+  genus  : s
   type: n
 einsamkeit:
+  genus  : f
   type: n
 Entsprechen:
-  type: n
-person:
   type: adj
+person:
+  genus  : f
+  type: n
 Ferientag:
+  genus  : m
   type: n
 beliebter:
-  type: vi
+  type: adj
 unsinnig:
   type: adv
 Jenner:
   type: n
 einband:
-  type: adj
-Abhrgerte:
+  genus  : m
   type: n
 Atomkrieg:
+  genus  : m
   type: n
 wuestenei:
-  type: adj
+  genus  : f
+  type: n
 Auffangpilz:
+  genus  : m
   type: n
 religionslos:
   type: adv
 erhaltung:
-  type: adj
+  genus  : f
+  type: n
 tragen:
-  type: adv
+  type: vi
 laendlich:
   type: adv
 Unerwartetes:
-  type: n
+  type: adj
 Leierkastenfrau:
+  genus  : f
   type: n
 Konservierung:
+  genus  : f
   type: n
 mundtot:
   type: adj
 Dickbuche:
+  genus  : f
   type: n
 Fallschirmabspruenge:
+  genus  : f
   type: n
 Verriegelung:
+  genus  : f
   type: n
-darussen:
-  type: vi
 Lobpreisen:
+  genus  : s
   type: n
 Anzeigesysteme:
+  genus  : f
   type: n
 Ausschank:
+  genus  : f
   type: n
 Edinburgh:
   type: n
 pokal:
-  type: adj
+  genus  : m
+  type: n
 songtext:
-  type: adj
+  genus  : m
+  type: n
 Oper:
+  genus  : f
   type: n
 Gehaltsstufe:
+  genus  : f
   type: n
 azubi:
-  type: adj
+  genus  : m
+  type: n
 grunden:
   type: vi
 dreizehn:
   type: adv
 ziel:
-  type: adj
+  genus  : s
+  type: n
 Trickreich:
-  type: n
+  type: adj
 Konstant:
-  type: n
+  type: adj
 Passfoto:
+  genus  : s
   type: n
 Ukw:
   type: n
 Gewoelbestein:
+  genus  : m
   type: n
 Bahnbetriebswerk:
+  genus  : s
   type: n
 Applaudieren:
+  genus  : s
   type: n
 Ethischen:
   type: n
 Axialkraefte:
+  genus  : f
   type: n
 Baukastensysteme:
+  genus  : f
   type: n
 Briefwahl:
+  genus  : f
   type: n
 wulstig:
   type: adv
 Ami:
   type: n
 Eiweiss:
+  genus  : s
   type: n
 bekannt:
   type: adv
 Bangemacherin:
+  genus  : f
   type: n
 Abgearbeitet:
-  type: n
+  type: adj
 Parbat:
   type: n
 Bimsstein:
+  genus  : m
   type: n
 Verweben:
+  genus  : s
   type: n
 Anlagefonds:
+  genus  : f
   type: n
 Datenschutzgesetz:
+  genus  : s
   type: n
 Dummen:
-  type: n
+  type: adj
 Fortwaehrend:
-  type: n
+  type: adj
 Gebieter:
-  type: n
-Architektenbro:
+  genus  : m
   type: n
 Flugregeln:
+  genus  : f
   type: n
-berflieen:
-  type: adj
 gefeiert:
   type: vi
 katabolismus:
+  genus  : m
   type: n
 Kapitalismus:
+  genus  : m
   type: n
 Datumszeile:
+  genus  : f
   type: n
 Gasflasche:
+  genus  : f
   type: n
 Hoechste:
-  type: n
+  type: adj
 Grabensee:
+  genus  : m
   type: n
 interface:
-  type: adj
-Tftdisplay:
+  genus  : s
   type: n
-rendezvou:
-  type: adj
-Briefffner:
+Tftdisplay:
+  genus  : s
   type: n
 Creosotestrauch:
+  genus  : m
   type: n
 fragestellung:
-  type: adj
+  genus  : f
+  type: n
 verdorren:
   type: vi
 lupus:
   type: n
 Umkehr:
+  genus  : f
   type: n
 bundesgesundheitsministerium:
-  type: adj
-schreitung:
-  type: adj
+  genus  : s
+  type: n
 Entbindungsraum:
+  genus  : m
   type: n
 drossel:
-  type: adj
+  genus  : f
+  type: n
 frozzeln:
   type: vi
 Absteigen:
+  genus  : s
   type: n
 alexandria:
-  type: adj
+  type: n
 betrunkenheit:
+  genus  : f
   type: n
 Notfall:
+  genus  : m
   type: n
 Entomophobie:
+  genus  : f
   type: n
 Rufweiterleitung:
+  genus  : f
   type: n
 Taschenratte:
+  genus  : f
   type: n
 Ausstattung:
-  type: n
-Eichelhher:
-  type: n
-Ergtzen:
-  type: n
+  genus  : f
 Schrammig:
-  type: n
+  type: adj
 Betriebsschliessung:
+  genus  : f
   type: n
 Plus:
+  genus  : s
   type: n
 offline:
   type: adv
 Gast:
+  genus  : m
   type: n
 Absperrung:
+  genus  : f
   type: n
 Cham:
   type: n
 compilat:
-  type: adj
-Hautfarben:
+  genus  : s
   type: n
+Hautfarben:
+  type: adj
 Hannibal:
   type: n
 Drahtseilakt:
+  genus  : m
   type: n
 Herrnhut:
+  genus  : m
   type: n
 Fettpoelsterchen:
+  genus  : s
   type: n
 durchschreibpapier:
-  type: adj
+  genus  : s
+  type: n
 zweckbeziehung:
-  type: adj
+  genus  : f
+  type: n
 Parasiten:
+  genus  : f
   type: n
 Weissbrotwuerfel:
+  genus  : f
   type: n
 haeufung:
-  type: adj
-Entgeltbetrge:
+  genus  : f
   type: n
 Schiffsgeschwindigkeit:
+  genus  : f
   type: n
 Defaultwert:
+  genus  : m
   type: n
 rekuperator:
-  type: adj
+  genus  : m
+  type: n
 Suende:
+  genus  : f
   type: n
 Trivial:
-  type: n
-Enthllung:
-  type: n
+  type: adj
 Gefuehlsregung:
+  genus  : f
   type: n
 jeh:
   type: adj
 Vorderseite:
+  genus  : f
   type: n
 Fremdsprachenkenntnise:
+  genus  : f
   type: n
 Etappenziel:
+  genus  : s
   type: n
 Elektrolufterhitzer:
+  genus  : m
   type: n
 Bibliotheksfuehrung:
+  genus  : f
   type: n
 claim:
-  type: adj
+  genus  : m
+  type: n
 Apro:
   type: n
 Sobernheim:
@@ -124010,365 +127503,435 @@ Sobernheim:
 Niedenstein:
   type: n
 Sudanesischene:
-  type: n
+  type: adj
 Programmiersprache:
+  genus  : f
   type: n
 Aufnahmegebuehr:
   genus: f
   type: n
 fahrausweisautomat:
-  type: adj
+  genus  : m
+  type: n
 Leishmaniose:
+  genus  : f
   type: n
 schlagpapier:
-  type: adj
+  genus  : s
+  type: n
 Fahrzeugverkehr:
+  genus  : m
   type: n
 Achtziger:
-  type: n
-Picklig:
-  type: n
-apo:
   type: adj
+Picklig:
+  type: adj
+apo:
+  type: n
 buchis:
   type: n
 Flusskraftwerk:
-  type: n
-Frhbucherrabatt:
-  type: n
-Charakterzge:
-  type: n
-Amokschtze:
+  genus  : s
   type: n
 Verdampfbarkeit:
+  genus  : f
   type: n
 Pfote:
+  genus  : f
   type: n
 einschuetten:
   type: vi
 landau:
-  type: adj
+  type: n
 Beiladung:
+  genus  : f
   type: n
 geising:
-  type: adj
+  type: n
 Taxler:
+  genus  : m
   type: n
 kreislaeufig:
   type: adv
-quelltexen:
-  type: adj
 boulevardblatt:
-  type: vi
+  genus  : s
+  type: n
 streicheln:
   type: vi
-waertsentwicklung:
-  type: adj
 Vollendung:
+  genus  : f
   type: n
 Monolog:
-  type: n
-Fhrtenfinder:
+  genus  : m
   type: n
 Wann:
   type: fw
 Wortgut:
+  genus  : s
   type: n
 Buchweizenkrankheit:
+  genus  : f
   type: n
 Ergonomikerin:
+  genus  : f
   type: n
 Draengeln:
+  genus  : s
   type: n
 pfeffern:
   type: vi
 Groelen:
+  genus  : s
   type: n
 Moco:
   type: n
 capo:
-  type: adj
+  type: n
 Ausgleichschale:
+  genus  : f
   type: n
 freien:
   type: adv
 mittelwert:
-  type: vi
+  genus  : m
+  type: n
 Vertragswerk:
+  genus  : s
   type: n
 nagelhautentzuendung:
-  type: adj
+  genus  : f
+  type: n
 Raumstadtion:
+  genus  : f
   type: n
 Ritterschaft:
+  genus  : f
   type: n
-Tiermedizin:
+Tiermedizin:´
+  genus  : f
   type: n
 Eisenbahnstation:
+  genus  : f
   type: n
 durchschnitt:
-  type: vi
+  genus  : m
+  type: n
 Allquantor:
   type: n
 prag:
-  type: adj
+  type: n
 Messerklinge:
+  genus  : f
   type: n
 Schaenden:
+  genus  : f
   type: n
 stein:
-  type: adj
+  genus  : m
+  type: n
 verkleben:
   type: vi
 ungeborenen:
-  type: vi
-Verzgerung:
-  type: n
+  type: adj
 Teuerungsrate:
+  genus  : f
   type: n
 abfahrtszeitpunkt:
-  type: vi
+  genus  : m
+  type: n
 Jeden:
   type: adv
 grossgeschrieben:
-  type: vi
-wilden:
-  type: vi
-Graduell:
-  type: n
-Programmiert:
-  type: n
-ablasskanal:
   type: adj
+wilden:
+  type: adj
+Graduell:
+  type: adj
+Programmiert:
+  type: vi
+ablasskanal:
+  genus  : m
+  type: n
 Anpassungseinrichtung:
+  genus  : f
   type: n
 Abcb:
   type: n
 verbringen:
   type: vi
 Verwundern:
+  genus  : s
   type: n
 gegangen:
   type: vi
 Komposition:
+  genus  : f
   type: n
 rechthaberische:
   type: adv
 hudeln:
   type: vi
-nutzni:
-  type: adj
 hinunterschlingen:
   type: vi
 Erfuellung:
+  genus  : f
   type: n
 monotonem:
   type: adv
 forderungsuebergang:
-  type: adj
+  genus  : m
+  type: n
 ertragen:
-  type: adv
+  type: vi
 Zahnbelag:
+  genus  : m
   type: n
 hochlandbewohner:
-  type: adj
+  type: n
 Palmwein:
+  genus  : m
   type: n
 abschnittsweisen:
-  type: vi
+  type: adj
 Tamarinde:
+  genus  : f
   type: n
-nahmebescheinigung:
-  type: adj
 ausstechen:
-  type: adv
-Naiv:
-  type: n
-energietraeger:
-  type: adj
-ausbildungsniveau:
-  type: adj
-dergestalt:
   type: vi
+Naiv:
+  type: adj
+energietraeger:
+  genus  : m
+  type: n
+ausbildungsniveau:
+  genus  : s
+  type: n
 Umdrehen:
+  genus  : s
   type: n
 Fortdauer:
+  genus  : f
   type: n
 Rechtsnachfolger:
+  genus  : m
   type: n
 Monatsverdienst:
+  genus  : m
   type: n
 Dock:
+  genus  : s
   type: n
 morgenland:
-  type: adj
+  genus  : s
+  type: n
 Moskito:
+  genus  : m
   type: n
 Konzis:
   type: n
 zugreifbar:
   type: adj
 Entbehrungsvoll:
-  type: n
+  type: adj
 Vorauszahlung:
+  genus  : f
   type: n
 Sari:
   type: n
 Wendepunkt:
+  genus  : m
   type: n
 lagerung:
-  type: adj
+  genus  : f
+  type: n
 Disput:
+  genus  : m
   type: n
 Zeitungsvertraeger:
+  genus  : m
   type: n
 trojanische:
   type: adv
 bezueglich:
-  type: adv
+  type: prep
 Balancekuenstler:
+  genus  : m
   type: n
 Fotokopie:
+  genus  : f
   type: n
 Macht:
-  type: vi
-Voraussetzungen:
+  genus  : f
   type: n
-Pseudotumor:
+Voraussetzungen:
+  genus  : f
   type: n
 Index:
+  genus  : m
   type: n
 pressluftflasche:
-  type: adv
+  genus  : f
+  type: n
 Radlaufkurve:
+  genus  : f
   type: n
 niederlaendische:
   type: adv
 Noe:
   type: n
 Wochengehalt:
+  genus  : s
   type: n
 Rueckzahlung:
+  genus  : f
   type: n
 Ruecksprache:
+  genus  : f
   type: n
 gliederschmerzen:
-  type: vi
+  genus  : f
+  type: n
 Sparkassenkarte:
+  genus  : f
   type: n
 shaten:
-  type: vi
+  type: n
 Akathisie:
+  genus  : f
   type: n
 Ausfuehrlich:
   type: adv
 gucker:
-  type: adj
+  genus  : m
+  type: n
 schlips:
+  genus  : m
   type: n
 abtruennig:
   type: adv
 Geistigkeit:
+  genus  : f
   type: n
 Totensonntag:
+  genus  : m
   type: n
 Malaise:
+  genus  : m
   type: n
 betreuen:
-  type: adj
+  type: vi
 Demolieren:
+  genus  : s
   type: n
 Tunnelportal:
+  genus  : s
   type: n
 Bodenkultur:
+  genus  : f
   type: n
 abspalten:
   type: vi
 Donator:
+  genus  : m
   type: n
 Zufolge:
-  type: n
+  type: prep
 Schlappen:
-  type: n
+  type: adj
 auschecken:
   type: vi
 Ums:
-  type: n
+  type: prep
 Konserve:
+  genus  : f
   type: n
-tuberkulo:
-  type: adj
 tigris:
+  genus  : m
   type: n
 Rahmkaese:
+  genus  : m
   type: n
 beplankung:
-  type: adj
+  genus  : f
+  type: n
 versetzen:
   type: vi
 entfetten:
   type: vi
 Stufensteuerung:
+  genus  : f
   type: n
 wasserloesliches:
   type: adv
-brechreizhemmen:
-  type: vi
 Ribero:
   type: n
 anfuehrungszeichen:
-  type: adv
+  genus  : s
+  type: n
 Produktion:
+  genus  : f
   type: n
 instinktiv:
   type: adj
 Semifinale:
+  genus  : s
   type: n
 Penetrieren:
+  genus  : s
   type: n
 glutamatunvertraeglichkeit:
+  genus  : f
   type: n
 zugenaeht:
   type: vi
 handschriftlich:
   type: adv
-strau:
-  type: adj
 blitzlicht:
-  type: adv
+  genus  : s
+  type: n
 Vorbehalt:
+  genus  : m
   type: n
 tupfen:
   type: vi
 staudamm:
-  type: adj
+  genus  : m
+  type: n
 Orgelmusiker:
+  genus  : m
   type: n
 Hypothermie:
+  genus  : f
   type: n
 Softschnitt:
+  genus  : m
   type: n
 Anthropomorphisieren:
+  genus  : s
   type: n
 trittbrettfahrer:
-  type: adj
-gebi:
-  type: adj
+  genus  : m
+  type: n
 haemmern:
   type: vi
 Identifikator:
+  genus  : m
   type: n
 Hausbetreuer:
+  genus  : m
   type: n
 anspruechen:
-  type: adv
+  type: n
 kreditgeber:
-  type: adj
+  genus  : m
+  type: n
 sportlich:
   type: adv
 hebung:
-  type: adj
+  genus  : f
+  type: n
 Ungerade:
+  genus  : f
   type: n
 unops:
   type: n
@@ -124377,94 +127940,119 @@ dritte:
 sagbar:
   type: adj
 Goeltztalbruecke:
+  genus  : f
   type: n
 uppercut:
-  type: adj
+  genus  : m
+  type: n
 Lichtjahr:
+  genus  : s
   type: n
 Pentagon:
+  genus  : s
   type: n
 tumor:
-  type: adj
+  genus  : m
+  type: n
 Einwendung:
+  genus  : f
   type: n
 Potenziometer:
+  genus  : s
   type: n
 Gutachtergremium:
+  genus  : s
   type: n
 rettungsanker:
-  type: adj
+  genus  : m
+  type: n
 Allerlei:
+  genus  : s
   type: n
 Zugeben:
+  genus  : s
   type: n
 isbn:
-  type: adj
+  type: n
 ruhestoerer:
-  type: adj
+  genus  : m
+  type: n
 kehlkopf:
-  type: adj
+  genus  : m
+  type: n
 zukost:
-  type: vi
+  genus  : f
+  type: n
 genitivus:
+  genus  : m
   type: n
 Weisseler:
   type: n
 Artillerie:
+  genus  : f
   type: n
 Wohlbefinden:
+  genus  : s
   type: n
-siehen:
-  type: adv
 fuhrgenehmigung:
-  type: adj
-deadlinen:
-  type: vi
-Dubios:
+  genus  : f
   type: n
+Dubios:
+  type: adj
 antichambrieren:
   type: vi
 suesslich:
   type: adv
 Konstitutionell:
-  type: n
-nachaefferei:
   type: adj
-Farbstark:
+nachaefferei:
+  genus  : f
   type: n
+Farbstark:
+  type: adj
 Zurueckerstatten:
+  genus  : s
   type: n
 Weihnachtsmarkt:
+  genus  : m
   type: n
 Leclanchelement:
+  genus  : s
   type: n
 tragfaehigkeit:
+  genus  : f
   type: n
 fesselnd:
   type: adj
 Scheibenfoermig:
-  type: n
+  type: adj
 Sozialkapital:
+  genus  : s
   type: n
 schick:
   type: adj
 Nebelpartikel:
+  genus  : m
   type: n
 Grundkodierung:
+  genus  : f
   type: n
 Maserung:
+  genus  : f
   type: n
 pcba:
-  type: adj
-Teilstrecke:
   type: n
-greinen:
-  type: vi
+Teilstrecke:
+  genus  : f
+  type: n
 Situation:
+  genus  : f
   type: n
 farn:
-  type: adj
+  genus  : m
+  type: n
 Saison:
+  genus  : f
   type: n
 Naiad:
   type: n
@@ -124474,39 +128062,48 @@ Energieausbrueche:
 Massgeblich:
   type: adv
 peitscherlbua:
-  type: adj
+  genus  : m
+  type: n
 ur:
-  type: adj
+  type: n
 aktienaufteilung:
-  type: adj
+  genus  : f
+  type: n
 Verschleppung:
+  genus  : f
   type: n
 rundsteuertechnik:
-  type: adj
-Definieren:
+  genus  : f
   type: n
-zunaechen:
-  type: adv
+Definieren:
+  genus  : s
+  type: n
 Intercity:
+  genus  : m
   type: n
 Gesoeff:
+  genus  : s
   type: n
 charaktereigenschaft:
-  type: adv
-gelbwurz:
-  type: adj
-Geknickt:
+  genus  : f
   type: n
+gelbwurz:
+  genus  : f
+  type: n
+Geknickt:
+  type: adj
 Schrumpfen:
+  genus  : s
   type: n
 Servus:
+  genus  : s
   type: n
 Empoert:
-  type: n
+  type: adj
 Aufwaerts:
   type: adj
 Extern:
-  type: n
+  type: adj
 entschieden:
   type: vi
 Unzugaenglich:
@@ -124514,27 +128111,35 @@ Unzugaenglich:
 abbezahlen:
   type: vi
 Geklaeffe:
+  genus  : s
   type: n
 Bandbreite:
+  genus  : f
   type: n
 Neuausrichtung:
+  genus  : f
   type: n
 Kratzspur:
+  genus  : f
   type: n
 bummerlsalat:
-  type: adj
+  genus  : m
+  type: n
 Immigrieren:
+  genus  : s
   type: n
 fehlerhafte:
-  type: vi
+  type: adj
 steuerraum:
-  type: adj
-dpa:
-  type: adj
-Militaerischer:
+  genus  : m
   type: n
+dpa:
+  type: n
+Militaerischer:
+  type: adj
 blueten:
-  type: vi
+  genus  : f
+  type: n
 echauffieren:
   type: vi
 weh:
@@ -124542,6 +128147,7 @@ weh:
 klug:
   type: adj
 Aufhellen:
+  genus  : s
   type: n
 saftig:
   type: adv
@@ -124550,335 +128156,422 @@ nachsenden:
 verschuett:
   type: vi
 Motorrad:
+  genus  : s
   type: n
 Dateiumwandlung:
+  genus  : f
   type: n
 rutschbahn:
-  type: adj
+  genus  : f
+  type: n
 bajonett:
-  type: vi
+  genus  : s
+  type: n
 iterieren:
   type: vi
 gierigkeit:
+  genus  : f
   type: n
 juli:
-  type: adj
+  genus  : m
+  type: n
 ungenuegen:
-  type: vi
+  genus  : s
+  type: n
 luftueberlegenheitsjaeger:
-  type: adj
+  genus  : m
+  type: n
 beifussblaettrigen:
   type: adv
 Einleitende:
-  type: n
+  type: adj
 betonieren:
   type: vi
 Walten:
+  genus  : s
   type: n
 sueddeutschen:
   type: adv
 Angriff:
+  genus  : m
   type: n
 benzin:
-  type: adj
+  genus  : s
+  type: n
 Anfordern:
+  genus  : s
   type: n
 Vanillezucker:
+  genus  : m
   type: n
 korrelieren:
   type: vi
 grammatik:
-  type: adj
+  genus  : f
+  type: m
 Befassen:
+  genus  : s
   type: n
 walfisch:
-  type: adj
+  genus  : m
+  type: n
 Bedrohungsgefuehl:
+  genus  : s
   type: n
 uebrigen:
   type: adv
 Ohio:
   type: n
 Fassade:
+  genus  : f
   type: n
 aufforsten:
   type: vi
 Entzueckung:
+  genus  : f
   type: n
 Jammern:
+  genus  : s
   type: n
 Aufwandskonto:
+  genus  : s
   type: n
 goetterdaemmerung:
-  type: adj
+  genus  : f
+  type: n
 kategorisieren:
   type: vi
 gewebeband:
-  type: adj
+  genus  : s
+  type: n
 unruheherd:
-  type: adj
+  genus  : m
+  type: n
 Beeilen:
+  genus  : s
   type: n
 nationalistisch:
   type: adj
 Komparabel:
-  type: n
+  type: adj
 Gesamtlaenge:
+  genus  : f
   type: n
 knapp:
   type: adj
 reinickendorf:
-  type: adj
-Wirtschaftsangelegenheitenwirtschaftsminister:
   type: n
 Salzquelle:
+  genus  : f
   type: n
 Heisswasserkocher:
+  genus  : m
   type: n
 straucheln:
   type: vi
 Ruecksicht:
+  genus  : f
   type: n
 Ehehaelfte:
+  genus  : f
   type: n
 schauung:
-  type: adj
+  genus  : f
+  type: n
 Leistungsabgabe:
+  genus  : f
   type: n
 Frischling:
+  genus  : m
   type: n
 Tasman:
   type: n
 proposition:
+  genus  : f
   type: n
 angelgeraet:
-  type: vt
+  genus  : s
+  type: n
 Baeume:
+  genus  : f
   type: n
 Schilling:
+  genus  : m
   type: n
 Wahrhaft:
-  type: n
+  type: adj
 Verzagen:
+  genus  : s
   type: n
 anteil:
-  type: adj
+  genus  : m
+  type: n
 vorteilhaft:
   type: adv
 Torfkopf:
+  genus  : m
   type: n
 Talismann:
+  genus  : m
   type: n
 getraenk:
-  type: adj
-gemagert:
-  type: vi
-Bergsteigen:
+  genus  : s
   type: n
-windwaert:
-  type: vi
+Bergsteigen:
+  genus  : s
+  type: n
 Bergschuh:
+  genus  : m
   type: n
 Siegen:
+  genus  : s
   type: n
 nasennebenhoehlenentzuendung:
-  type: adj
+  genus  : f
+  type: n
 Wiederherstellung:
+  genus  : f
   type: n
 Ruehrig:
-  type: n
+  type: adj
 struppig:
   type: adv
-naturwissenschaftl:
-  type: adj
 anthropomorphisieren:
-  type: vi
+  genus  : s
+  type: n
 smog:
-  type: adj
+  genus  : m
+  type: n
 swasiland:
-  type: adj
+  type: n
 Milchstrasse:
+  genus  : f
   type: n
 schellen:
   type: vi
 koppel:
-  type: adj
+  genus  : f
+  type: n
 bekehren:
   type: vi
 faehig:
   type: adv
 Eingegangen:
-  type: n
+  type: adj
 verlautbaren:
   type: vi
 Fehlerkorrektur:
-  type: n
-Pfostenstaenderwandpfosten:
+  genus  : f
   type: n
 Gleichrangig:
-  type: n
+  type: adj
 Cosinus:
+  genus  : m
   type: n
 umschlingen:
   type: vi
 Reassekuranz:
+  genus  : f
   type: n
 aufrisszeichnung:
-  type: adj
+  genus  : f
+  type: n
 akkreditiv:
-  type: adj
+  genus  : s
+  type: n
 kieselig:
   type: adv
 diaphoresen:
-  type: vi
-schos:
-  type: n
+  type: adj
 Agio:
   type: n
 Siegreich:
-  type: n
+  type: adj
 Redefreiheit:
+  genus  : f
   type: n
 runzlig:
   type: adv
 Publikum:
+  genus  : s
   type: n
 strahl:
-  type: adj
-Palynologepollenanalytikerpollenforscher:
+  genus  : m
   type: n
 gliedern:
   type: vi
 Nachtwandeln:
+  genus  : s
   type: n
 Erstaunen:
+  genus  : s
   type: n
 Zeitabschnitt:
+  genus  : m
   type: n
 leseschwaeche:
-  type: adv
+  genus  : f
+  type: n
 mediok:
-  type: adj
+  type: n
 verstimmen:
   type: vi
 Elementgruppe:
+  genus  : f
   type: n
 Kernkraft:
+  genus  : f
   type: n
 Altklug:
-  type: n
+  type: adj
 Flucht:
+  genus  : f
   type: n
 Luftfeuchte:
+  genus  : f
   type: n
 Makellos:
-  type: n
+  type: adj
 Keuchen:
+  genus  : s
   type: n
 Behaebig:
-  type: n
+  type: adj
 Argusschmidtrohr:
+  genus  : s
   type: n
 Flussbild:
+  genus  : s
   type: n
 Rockmusik:
+  genus  : f
   type: n
 Herausstellen:
+  genus  : s
   type: n
 Scifi:
   type: n
 Nachhaltig:
-  type: n
+  type: adj
 Finalteilnehmer:
+  genus  : m
   type: n
 Esswaren:
+  genus  : f
   type: n
 kurzaermelige:
   type: adv
 staatsgesinnung:
-  type: adj
+  genus  : f
+  type: n
 geheimnummer:
-  type: adv
+  genus  : f
+  type: n
 gehaltlos:
   type: adv
 Mag:
   type: vi
 bh:
-  type: adj
+  genus  : m
+  type: n
 Abfuehrmittel:
+  genus  : s
   type: n
 Koerpereigenes:
-  type: n
+  type: adj
 operation:
+  genus  : f
   type: n
 alliteration:
+  genus  : f
   type: n
 Stange:
+  genus  : f
   type: n
 Thematisieren:
+  genus  : s
   type: n
 Kompensieren:
+  genus  : s
   type: n
 schmelz:
-  type: adj
-bedingungslo:
-  type: adj
+  genus  : m
+  type: n
 regionalentwicklung:
-  type: adj
+  genus  : f
+  type: n
 argwoehnisch:
   type: adj
 Nadeln:
+  genus  : f
   type: n
 Beiseite:
+  genus  : f
   type: n
 Anzeigenkunde:
+  genus  : f
   type: n
 truebsal:
-  type: adj
+  genus  : m
+  type: n
 Wachsmalkreide:
+  genus  : f
   type: n
 Sachlage:
+  genus  : f
   type: n
 wirklichkeitsfremd:
   type: adj
 ei:
-  type: adj
+  genus  : s
+  type: n
 Prunk:
+  genus  : m
   type: n
 Gewindestift:
+  genus  : m
   type: n
 drehimpulssatz:
-  type: adj
+  genus  : m
+  type: n
 Pyelitis:
+  genus  : f
   type: n
 Diderot:
   type: n
 vitamin:
-  type: adj
+  genus  : s
+  type: n
 Schadensersatzklage:
+  genus  : f
   type: n
 Zottelig:
-  type: n
+  type: adj
 Pittoresk:
-  type: n
+  type: adj
 Koepfe:
+  genus  : f
   type: n
 Portieren:
+  genus  : s
   type: n
 Rennen:
+  genus  : s
   type: n
 olympisches:
   type: adv
 Massenfertigung:
+  genus  : f
   type: n
 theorielastig:
   type: adv
 Supplementaer:
-  type: n
+  type: adj
 runden:
   type: vi
 knechtschaft:
-  type: adv
+  genus  : f
+  type: n
 praezisieren:
   type: vi
 deswegen:
@@ -124886,35 +128579,40 @@ deswegen:
 warzenfoermig:
   type: adv
 Schwerpunkt:
+  genus  : m
   type: n
 schadhaft:
   type: adv
 Darum:
-  type: n
+  type: adv
 Kirchentonarten:
+  genus  : f
   type: n
 spielverderber:
-  type: adj
-vitalkapazitaeen:
-  type: adj
+  genus  : m
+  type: n
 Satellit:
+  genus  : m
   type: n
 Volksvertreter:
+  genus  : m
   type: n
 rassistische:
   type: adv
 Grobian:
+  genus  : m
   type: n
-drueckpackung:
-  type: adj
 Passivsaldounterbilanz:
+  genus  : f
   type: n
 August:
+  genus  : m
   type: n
 druckraum:
-  type: adj
-Redet:
+  genus  : m
   type: n
+Redet:
+  type: vi
 Muengstener:
   type: n
 uebrige:
@@ -124922,152 +128620,189 @@ uebrige:
 Vierte:
   type: adv
 Vorrangverletzung:
+  genus  : f
   type: n
 Engstirnigkeit:
+  genus  : f
   type: n
 aufstellen:
   type: vi
 ausklinken:
   type: vi
-Plattierenplattierung:
-  type: n
 Abkoemmlinge:
+  genus  : f
   type: n
 bestellzettel:
-  type: adj
-gebetsteppich:
-  type: adj
-Boesartige:
+  genus  : m
   type: n
+gebetsteppich:
+  genus  : m
+  type: n
+Boesartige:
+  type: adj
 Wachsen:
+  genus  : s
   type: n
 japanischer:
   type: adj
 Alias:
+  genus  : s
   type: n
 Glutaminsaeure:
+  genus  : f
   type: n
 Abfallcontainer:
+  genus  : m
   type: n
 gliederreissen:
-  type: vi
+  genus  : s
+  type: n
 Intonation:
+  genus  : f
   type: n
 Mausen:
+  genus  : s
   type: n
 unverletzlich:
   type: adv
 Luftkissenfahrzeug:
+  genus  : s
   type: n
 freiherr:
-  type: adj
+  genus  : m
+  type: n
 momenten:
-  type: vi
+  type: n
 Organspenderausweis:
+  genus  : m
   type: n
 missverstaendlich:
   type: adv
 Schadenfreude:
+  genus  : f
   type: n
 Rufnummer:
+  genus  : f
   type: n
 Allmaechtiger:
-  type: n
-gestein:
   type: adj
+gestein:
+  genus  : s
+  type: n
 Spielsachen:
+  genus  : f
   type: n
 Erwaermen:
+  genus  : s
   type: n
 disk:
-  type: adj
+  genus  : f
+  type: n
 quelloffenheit:
+  genus  : f
   type: n
 zecher:
-  type: adj
+  genus  : m
+  type: n
 muenchen:
-  type: adv
+  type: n
 nervositaet:
-  type: adj
+  genus  : f
+  type: n
 Ganterich:
+  genus  : m
   type: n
 Maggie:
   type: n
-orthopaedien:
-  type: adj
 Racine:
   type: n
 Luminanz:
+  genus  : f
   type: n
 aber:
   type: prep
 Luzid:
-  type: n
+  type: adj
 indianer:
+  genus  : m
   type: n
 Nachschiebebetrieb:
+  genus  : m
   type: n
 Loyalitaet:
+  genus  : f
   type: n
 Rosmarine:
   type: n
 bewusste:
   type: adv
 Uebernahme:
+  genus  : f
   type: n
 Fachbegriff:
+  genus  : m
   type: n
 todsicher:
   type: adj
 zeitarbeit:
-  type: adj
+  genus  : f
+  type: n
 zusammengestellt:
   type: vi
 Indignation:
+  genus  : f
   type: n
 Polizeiwacherevier:
+  genus  : s
   type: n
 kontrafaktische:
   type: adv
 antizipieren:
   type: vi
 Brauchtum:
+  genus  : s
   type: n
 verunstalten:
   type: vi
 Verwuerfelung:
+  genus  : f
   type: n
 dienstag:
-  type: adj
+  genus  : m
+  type: n
 Familienplanung:
+  genus  : f
   type: n
 oesterreich:
-  type: adj
-bloc:
-  type: adj
+  type: n
 horribili:
-  type: adj
+  type: n
 Westfalica:
   type: n
 Kopfstimme:
+  genus  : f
   type: n
 Gebaeudes:
   type: n
 blaeschenbildung:
-  type: adj
+  genus  : f
+  type: n
 befragen:
   type: vi
 Treffer:
+  genus  : m
   type: n
 klimaaenderung:
-  type: adj
+  genus  : f
+  type: n
 Redner:
+  genus  : m
   type: n
 Mietleitung:
-  type: n
-Zweit:
+  genus  : f
   type: n
 Millennium:
+  genus  : s
   type: n
 dreieckig:
   type: adv
@@ -125076,365 +128811,428 @@ aperiodisch:
 anrichten:
   type: vi
 expertin:
-  type: adj
+  genus  : f
+  type: n
 Unmenschlichkeit:
+  genus  : f
   type: n
 Anhoerung:
+  genus  : f
   type: n
 Gatte:
+  genus  : m
   type: n
 Abelsches:
-  type: n
+  type: adj
 Italiener:
+  genus  : m
   type: n
 Aktenlage:
+  genus  : f
   type: n
 Bestand:
+  genus  : m
   type: n
 ankaufkurs:
+  genus  : m
   type: n
 traumhaft:
   type: adv
 krallen:
   type: vi
 dichtungsring:
-  type: adj
+  genus  : m
+  type: n
 Der:
   type: art
 Stoffes:
   type: n
 coprozessor:
-  type: adj
+  genus  : m
+  type: n
 Eisenbahnkreuzung:
+  genus  : f
   type: n
 Wirkmaechtig:
-  type: n
+  type: adj
 Ueberirdisch:
-  type: n
+  type: adj
 Geschlechtlichkeit:
+  genus  : f
   type: n
 lebensfroh:
   type: adj
 despotismus:
+  genus  : m
   type: n
 Zugsfuehrer:
+  genus  : m
   type: n
 Akanthus:
   type: n
 Ruecksendung:
+  genus  : f
   type: n
 Pfeilerbruecke:
+  genus  : f
   type: n
 Sandalette:
+  genus  : f
   type: n
 jaehlings:
-  type: n
-vampir:
   type: adj
+vampir:
+  genus  : m
+  type: n
 Ungluecksfall:
+  genus  : m
   type: n
 Verlosung:
+  genus  : f
   type: n
 justizvollzugsanstalt:
-  type: vi
+  genus  : f
+  type: n
 suchender:
-  type: adj
+  type: n
 Rechtswidrigkeit:
+  genus  : f
   type: n
 Rueckstrahlungsvermoegen:
+  genus  : s
   type: n
 Selbstgefaellig:
-  type: n
-zichorien:
   type: adj
+zichorien:
+  type: n
 Thimphu:
   type: n
 gutmuetigkeit:
+  genus  : f
   type: n
 Aquamarin:
-  type: n
-bolusinjektion:
+  genus  : m
   type: n
 welch:
   type: fw
 Lieferbetrieb:
+  genus  : m
   type: n
 Obwohl:
-  type: n
+  type: prep
 Bern:
   type: n
 Blisterpackung:
+  genus  : f
   type: n
 einbringen:
   type: vi
 Hauer:
+  genus  : m
   type: n
 Nachblaettern:
+  genus  : s
   type: n
 Verhandlungsbasis:
+  genus  : f
   type: n
 Paechter:
+  genus  : m
   type: n
-wandskonto:
-  type: adj
 verlieren:
-  type: adv
+  type: ci
 haette:
   type: vi
 Polyvalent:
-  type: n
+  type: adj
 Vertretungsplan:
+  genus  : m
   type: n
 Taxifahrern:
   type: n
 terror:
-  type: adj
-Einhellig:
+  genus  : m
   type: n
-temperatursturz:
+Einhellig:
   type: adj
+temperatursturz:
+  genus  : m
+  type: n
 zeitlebens:
   type: adv
 Zuwegung:
+  genus  : f
   type: n
 Frugal:
-  type: n
+  type: adj
 Datenprojektor:
+  genus  : m
   type: n
 Flugsport:
+  genus  : m
   type: n
 Puder:
-  type: n
-Menschenfreundphilanthropwohltaeter:
+  genus  : s
   type: n
 nadelstich:
-  type: adj
+  genus  : m
+  type: n
 Menorrhagie:
+  genus  : f
   type: n
 Hauptlinie:
   type: n
-loschmidtschen:
-  type: adv
 Fussdeformation:
+  genus  : f
   type: n
 versehrt:
-  type: vi
-Auszusetzen:
-  type: n
+  type: adj
 Nahender:
-  type: n
+  type: adj
 Vorfahrt:
+  genus  : f
   type: n
 Pappig:
-  type: n
+  type: adj
 Weckerl:
+  genus  : s
   type: n
 schnittskur:
-  type: adj
-replik:
-  type: adj
-Datenanalyse:
+  genus  : f
   type: n
-uebeltaen:
-  type: adj
+replik:
+  genus  : f
+  type: n
+Datenanalyse:
+  genus  : f
+  type: n
 Wirtel:
+  genus  : m
   type: n
 einheitspartei:
-  type: adj
+  genus  : f
+  type: n
 Geldangebot:
+  genus  : s
   type: n
 Produktionsmittel:
   type: n
 Verschwenderisch:
-  type: n
+  type: adj
 Tragetasche:
+  genus  : f
   type: n
 plancksche:
   type: adv
 stuetzpfeiler:
-  type: adj
+  genus  : m
+  type: n
 wuerfelig:
   type: adv
-koemmling:
-  type: adj
 eingeschlechtlichen:
   type: adv
-funktionsgemae:
-  type: adj
-Public:
-  type: n
 felsenfest:
-  type: vi
+  type: adj
 verringerung:
-  type: adj
-allg:
-  type: adj
+  genus  : f
+  type: n
 Gebrueder:
+  genus  : f
   type: n
 Amphibolie:
+  genus  : f
   type: n
 wimper:
-  type: adj
+  genus  : f
+  type: n
 Turnier:
+  genus  : s
   type: n
 Zdiode:
-  type: n
-Vereinesvereinsobmann:
+  genus  : f
   type: n
 Slowmotion:
+  genus  : f
   type: n
 Uebelnehmerisch:
-  type: n
+  type: adj
 Hinblaettern:
+  genus  : s
   type: n
 suizidgefaehrdung:
-  type: adj
-tereinanderstellung:
-  type: adj
+  genus  : f
+  type: n
 mittwoch:
-  type: adj
+  genus  : m
+  type: n
 Hasenloch:
+  genus  : s
   type: n
 Deadlocksituation:
+  genus  : f
   type: n
 strudeln:
   type: vi
 Waerme:
+  genus  : f
   type: n
 Niederschreiben:
+  genus  : s
   type: n
 georgischen:
   type: adv
 Purpurfarbig:
-  type: n
+  type: adj
 topfit:
   type: adj
 tschechei:
-  type: adj
+  genus  : f
+  type: n
 Thessaloniki:
   type: n
 wandeln:
   type: vi
-Prinzipiene:
-  type: n
 Stromabnehmer:
+  genus  : m
   type: n
-nehmbar:
-  type: adj
 Herbstanfang:
+  genus  : m
   type: n
 Permeabilitaet:
+  genus  : f
   type: n
 Puffmais:
+  genus  : m
   type: n
 werte:
-  type: vi
+  genus  : f
+  type: n
 Unterleib:
+  genus  : m
   type: n
 rezept:
-  type: adj
+  genus  : s
+  type: n
 Eimer:
+  genus  : m
   type: n
 Achsabstand:
+  genus  : m
   type: n
 Aufblenden:
+  genus  : s
   type: n
 stellenwert:
-  type: vi
+  genus  : m
+  type: n
 Selbsterhaltungstrieb:
+  genus  : m
   type: n
 Germanisch:
-  type: n
+  type: adj
 Wagn:
   type: n
-doppeldeckerbu:
-  type: adj
 Verpfuschen:
+  genus  : s
   type: n
-epigastralgie:
-  type: adj
 Taschenkrebs:
+  genus  : m
   type: n
 Uebriggeblieben:
-  type: n
+  type: adj
 Auflesen:
+  genus  : s
   type: n
 schwankung:
-  type: adj
+  genus  : f
+  type: n
 Cm:
   type: n
 unerfreulich:
   type: adv
 Zusteuern:
+  genus  : s
   type: n
 Gerberei:
+  genus  : f
   type: n
 enthaltsamkeit:
+  genus  : f
   type: n
 Ausserbetriebnahme:
+  genus  : f
   type: n
 Giftgas:
+  genus  : s
   type: n
 Hunger:
+  genus  : m
   type: n
 Waermeaustauscher:
+  genus  : m
   type: n
 Ergebnise:
+  genus  : f
   type: n
 manipulation:
+  genus  : f
   type: n
 okkupationstruppen:
-  type: adj
+  genus  : f
+  type: n
 Einzelheit:
+  genus  : f
   type: n
 Portulak:
+  genus  : m
   type: n
 waerest:
   type: vi
 tadellos:
   type: adv
 Wesenlos:
-  type: n
-derswo:
   type: adj
 Schelm:
+  genus  : m
   type: n
 Aufgelaufene:
-  type: n
-serioen:
   type: adj
 umschweif:
-  type: adj
-Which:
-  type: fw
-2zuhauen:
-  type: adj
+  genus  : m
+  type: n
 facettenreich:
   type: adj
 Aufheizung:
+  genus  : f
   type: n
 ruebensirup:
-  type: adj
+  genus  : m
+  type: n
 Leichte:
   type: adv
 Wirtschaftsleistung:
+  genus  : f
   type: n
-postprandial:
-  type: adj
 Lebensfuehrungskosten:
+  genus  : f
   type: n
 Maid:
+  genus  : f
   type: n
 Taetigkeitsbereich:
+  genus  : m
   type: n
 Druckluftwerkzeug:
+  genus  : s
   type: n
 Walfisch:
+  genus  : m
   type: n
 verzauberung:
-  type: adj
-Wissender:
+  genus  : f
   type: n
+Wissender:
+  type: adj
 voller:
   type: adj
 ausdiskutieren:
@@ -125442,27 +129240,27 @@ ausdiskutieren:
 archaeologisches:
   type: adv
 Sorgfaeltig:
-  type: n
-belehrung:
   type: adj
-geschmackt:
-  type: vi
+belehrung:
+  genus  : f
+  type: n
 Episode:
+  genus  : f
   type: n
 Demokratischen:
-  type: n
+  type: adj
 verabscheuen:
-  type: adj
-wahrheitsgemaen:
-  type: adj
+  type: vi
 Hundeexkremente:
+  genus  : f
   type: n
 Frueh:
   type: adv
 Zehren:
+  genus  : s
   type: n
 chnoebli:
-  type: adj
+  type: n
 andersartig:
   type: adv
 nephrotisch:
@@ -125470,615 +129268,738 @@ nephrotisch:
 locker:
   type: adj
 Schrottanleihe:
+  genus  : f
   type: n
 Zugehoerigkeit:
+  genus  : f
   type: n
 unterbewerten:
   type: vi
 Naechtliche:
   type: adv
 luftverwirbelung:
-  type: adj
+  genus  : f
+  type: n
 Gedankenuebertragung:
+  genus  : f
   type: n
 schweif:
-  type: adj
+  genus  : m
+  type: n
 berauscht:
   type: adv
 Missbrauchriskanter:
-  type: n
+  type: adj
 Sinnlosigkeit:
+  genus  : f
   type: n
 voellig:
   type: adv
 hohem:
   type: adv
 Kantonshauptstadt:
+  genus  : f
   type: n
 Gluecksspieler:
+  genus  : m
   type: n
 Vergoettlichung:
+  genus  : f
   type: n
 Petz:
   type: n
 Angeschwollen:
-  type: n
+  type: adj
 tierisches:
   type: adv
 zoo:
-  type: adj
+  genus  : m
+  type: n
 Ermittler:
+  genus  : m
   type: n
 sachkenntnis:
+  genus  : f
   type: n
 Raunen:
+  genus  : s
   type: n
 handels:
   type: n
 Bell:
-  type: vi
-Aufgeregt:
   type: n
+Aufgeregt:
+  type: adj
 Bewaesserungsanlage:
   genus: f
   type: n
 Tenor:
+  genus  : m
   type: n
 Polarbaer:
+  genus  : m
   type: n
 Kreisel:
+  genus  : m
   type: n
 Jazzkapelle:
+  genus  : f
   type: n
 Beurkunden:
+  genus  : s
   type: n
 Abfertigen:
+  genus  : s
   type: n
 Schlips:
+  genus  : m
   type: n
 File:
+  genus  : s
   type: n
 wacholder:
-  type: adj
+  genus  : m
+  type: n
 Messgeraet:
+  genus  : s
   type: n
 informativ:
   type: adj
 Oktroyieren:
+  genus  : s
   type: n
 pruriginoes:
   type: adj
 tauglichkeit:
+  genus  : f
   type: n
 Fruchtlos:
-  type: n
+  type: adj
 Eigenkapitalrendite:
+  genus  : f
   type: n
 Konkordant:
-  type: n
+  type: adj
 Emaildienst:
+  genus  : m
   type: n
 Orientierungslos:
-  type: n
+  type: adj
 Vino:
   type: n
 angeregt:
-  type: vi
+  type: adj
 Rohstoff:
   type: n
 Sackgeld:
+  genus  : s
   type: n
 kapital:
-  type: adj
+  genus  : s
+  type: n
 klammern:
   type: vi
 Ausbildungsniveau:
+  genus  : s
   type: n
 clever:
   type: adj
 Bildlich:
   type: adv
 fruchtpasten:
-  type: vi
-trigon:
-  type: adj
-Romantisch:
+  genus  : f
   type: n
+trigon:
+  genus  : s
+  type: n
+Romantisch:
+  type: adj
 Triggerereignis:
+  genus  : s
   type: n
 Wortwechsel:
+  genus  : m
   type: n
 Serviertisch:
+  genus  : m
   type: n
 Herzrasen:
+  genus  : s
   type: n
 Anwendungsbezogen:
-  type: n
+  type: adj
 Monotone:
   type: adv
-Nordrheinwedtfalen:
-  type: n
 Ultrahochfrequenz:
+  genus  : f
   type: n
 Eigenes:
-  type: n
+  type: adj
 dateneinheit:
+  genus  : f
   type: n
 Abwaschwasser:
+  genus  : s
   type: n
 erdenklich:
   type: adv
 Ergaunern:
+  genus  : s
   type: n
 Expansionsmuffe:
+  genus  : f
   type: n
-notabenen:
-  type: vi
 viehisch:
   type: adj
 Dokumentensammlung:
+  genus  : f
   type: n
 Entfernen:
+  genus  : s
   type: n
 Caritas:
+  genus  : f
   type: n
 nullmeridian:
-  type: adj
+  genus  : f
+  type: n
 Einzelfaelle:
   genus: f
   type: n
-Palaestinapalaestinensische:
-  type: n
-ratio:
-  type: adj
 phaenotypisch:
   type: adj
 Segregation:
+  genus  : f
   type: n
 darob:
   type: adj
 objekte:
-  type: vi
+  genus  : f
+  type: n
 Jauche:
+  genus  : f
   type: n
 umfallen:
   type: vi
 Waerest:
   type: vi
 Abreden:
+  genus  : s
   type: n
 Unbeantwortet:
-  type: n
+  type: adj
 Provisorisch:
-  type: n
+  type: adj
 Trabant:
+  genus  : m
   type: n
 semikubischen:
   type: adv
 Einplanen:
+  genus  : s
   type: n
 seehund:
-  type: adj
+  genus  : m
+  type: n
 Isbnummer:
+  genus  : f
   type: n
 Prostituieren:
+  genus  : s
   type: n
 Koennte:
-  type: n
+  type: vi
 Untersucher:
+  genus  : m
   type: n
 Streich:
+  genus  : m
   type: n
 ganzen:
   type: adv
 Alphabetisches:
-  type: n
+  type: adj
 Aklohol:
+  genus  : m
   type: n
 Vorausgehen:
+  genus  : s
   type: n
 Gewinde:
+  genus  : s
   type: n
 Handschellen:
+  genus  : f
   type: n
 Parkes:
   type: n
 loesemechanismus:
+  genus  : m
   type: n
-kes:
-  type: adj
 Gestorben:
-  type: n
-Herabsetzen:
-  type: n
-schnittsprei:
   type: adj
-What:
-  type: fw
+Herabsetzen:
+  genus  : s
+  type: n
 Bellizismus:
+  genus  : m
   type: n
 Natural:
-  type: adv
+  genus  : s
+  type: n
 Zusatzklausel:
+  genus  : f
   type: n
 irgendein:
   type: adj
 Netzhaut:
+  genus  : f
   type: n
 Exsikkation:
+  genus  : f
   type: n
 Androloge:
+  genus  : m
   type: n
 Korbball:
+  genus  : m
   type: n
 kommst:
   type: vi
-gesundungsprozen:
-  type: adv
 Aufbereitung:
+  genus  : f
   type: n
-verfassungsgemaen:
-  type: adj
 Gluehlampe:
+  genus  : f
   type: n
 ergebnisorientiert:
-  type: vi
+  type: adj
 Marktposition:
+  genus  : f
   type: n
 Soda:
+  genus  : s
   type: n
 Emirate:
+  genus  : f
   type: n
 Gefeixe:
+  genus  : s
   type: n
 Davon:
-  type: n
+  type: adv
 vieh:
-  type: adj
+  genus  : s
+  type: n
 Mittel:
+  genus  : s
   type: n
 Aluminium:
+  genus  : s
   type: n
 gasscheiben:
-  type: vi
+  genus  : f
+  type: n
 Theresia:
   type: n
 Einhuellen:
+  genus  : s
   type: n
 erdenbuerger:
-  type: adj
+  type: n
 keulen:
   type: vi
 aufschwung:
-  type: adj
+  genus  : m
+  type: n
 Variosystem:
+  genus  : s
   type: n
 transmutation:
+  genus  : f
   type: n
 leistungsverbesserung:
-  type: adj
+  genus  : f
+  type: n
 Sonnennaehe:
+  genus  : f
   type: n
 Kinder:
+  genus  : f
   type: n
 Determiniert:
-  type: n
+  type: adj
 nervieren:
   type: vi
 Dritte:
-  type: adv
+  genus  : m
+  type: n
 beteuerung:
-  type: adj
+  genus  : f
+  type: n
 Hyperbel:
+  genus  : f
   type: n
 geschrei:
-  type: adj
+  genus  : s
+  type: n
 Ungleichartigkeit:
+  genus  : f
   type: n
 ungrazio:
-  type: adj
+  type: n
 betaetigung:
-  type: adj
+  genus  : f
+  type: n
 Nachbereitung:
+  genus  : f
   type: n
 Beschenken:
+  genus  : s
   type: n
 Solche:
-  type: n
-faustkampf:
   type: adj
+faustkampf:
+  genus  : m
+  type: n
 Halbstundentakt:
+  genus  : m
   type: n
 schwang:
-  type: adj
-seitsstellung:
-  type: adj
+  type: n
 kaufstark:
   type: adj
 antragsformular:
-  type: adj
+  genus  : s
+  type: n
 Entlasten:
+  genus  : s
   type: n
 Grenzlinie:
+  genus  : f
   type: n
-putschmittel:
-  type: adj
 stellen:
   type: vi
 notwasserung:
-  type: adj
-francisco:
-  type: adj
-Methanmethylwasserstoffsumpfgas:
+  genus  : f
   type: n
-gefasen:
-  type: vi
+francisco:
+  type: n
 Weltkrieges:
   type: n
-taktlo:
-  type: adj
 Unwillkommen:
-  type: n
+  type: adj
 widerstandsfaehig:
   type: adv
 Webadresse:
+  genus  : f
   type: n
 Uteri:
   type: n
 Schnaupe:
+  genus  : f
   type: n
 ablieferung:
-  type: adj
+  genus  : f
+  type: n
 Fettdurchfall:
+  genus  : m
   type: n
 stuemperhaftigkeit:
+  genus  : f
   type: n
 allgemeingueltig:
   type: adv
 Mal:
-  type: adv
+  genus  : s
+  type: n
 rechenschwaechen:
   type: adv
 unglaublich:
   type: adv
 vorbeugung:
-  type: adj
+  genus  : f
+  type: n
 nativ:
   type: adj
 Citron:
   type: n
 sent:
-  type: adj
+  type: n
 flussbett:
-  type: vi
+  genus  : s
+  type: n
 kontrolleinrichtung:
-  type: adj
+  genus  : f
+  type: n
 kaffee:
-  type: adj
+  genus  : m
+  type: n
 blaurot:
   type: adj
 Arzneistofftraeger:
+  genus  : m
   type: n
 regelgerecht:
   type: adv
 Abundant:
-  type: n
-bulimia:
   type: adj
+bulimia:
+  type: n
 Animateur:
+  genus  : m
   type: n
 bejahend:
   type: adj
 kreuzprodukt:
-  type: vi
+  genus  : s
+  type: n
 Abhilfe:
+  genus  : f
   type: n
 bete:
   type: vi
 Kannibalismus:
+  genus  : m
   type: n
 halsbinder:
-  type: adj
+  genus  : m
+  type: n
 Ballungsraum:
+  genus  : m
   type: n
 rueberschieben:
   type: vi
-fas:
-  type: n
 Weltraumserie:
+  genus  : f
   type: n
 sperrzeit:
-  type: adj
-Beflissen:
+  genus  : f
   type: n
+Beflissen:
+  type: adj
 Kneipier:
+  genus  : m
   type: n
 Verdraengen:
+  genus  : s
   type: n
 deplacieren:
   type: vi
 Zerschellen:
+  genus  : s
   type: n
 Homonym:
+  genus  : m
   type: n
 Formbarkeit:
+  genus  : f
   type: n
 umlegen:
   type: vi
 Punkpunker:
+  genus  : m
   type: n
 beisammen:
-  type: vi
+  type: adv
 anwesen:
-  type: vi
+  genus  : s
+  type: n
 Flugkrankheit:
+  genus  : f
   type: n
 behindern:
   type: vi
 samtartig:
   type: adv
 Spechthaut:
+  genus  : f
   type: n
 Verschuldet:
-  type: n
+  type: adj
 zusammensetzen:
   type: vi
 donaustadt:
-  type: vi
+  type: n
 Ekchymose:
+  genus  : f
   type: n
 erbgut:
-  type: adj
+  genus  : s
+  type: n
 leerem:
   type: adj
-Pilspilsenerpilsner:
-  type: n
 beirren:
   type: vi
 makulopapuloes:
-  type: adj
-Meeresstrasseschiffahrtsstrasseschifffahrtsrouteseeweg:
   type: n
-between:
-  type: prep
 See:
+  genus  : f
   type: n
 Erforscher:
+  genus  : m
   type: n
 klebeband:
-  type: adj
+  genus  : s
+  type: n
 Mephitisch:
-  type: n
-Gestylte:
-  type: n
-pumpsprueher:
   type: adj
+Gestylte:
+  type: adj
+pumpsprueher:
+  genus  : m
+  type: n
 begruenden:
   type: vi
 Defensiv:
-  type: n
+  type: adj
 Fehlzuendung:
   genus: f
   type: n
 Traenenvoll:
-  type: n
-nichtsnutz:
   type: adj
+nichtsnutz:
+  genus  : m
+  type: n
 gute:
   type: adv
 angriffslust:
-  type: vi
+  genus  : f
+  type: n
 prostituieren:
   type: vi
 Weg:
-  type: prep
+  genus  : m
+  type: n
 Kappen:
+  genus  : s
   type: n
 phantasie:
-  type: adj
-Schmalspurig:
+  genus  : f
   type: n
+Schmalspurig:
+  type: adj
 Systematik:
+  genus  : f
   type: n
 Eingelegtes:
-  type: n
+  type: adj
 hirtenstab:
-  type: adj
+  genus  : m
+  type: n
 guinea:
-  type: adj
+  type: n
 einlagern:
   type: vi
 unzulaenglichkeit:
+  genus  : f
   type: n
 Hilfswerk:
+  genus  : s
   type: n
 zwischenstueck:
-  type: adj
+  genus  : s
+  type: n
 Disposition:
+  genus  : f
   type: n
 blauaeugig:
   type: adv
 Akkordeon:
+  genus  : s
   type: n
 Traubenlese:
+  genus  : f
   type: n
 Hofer:
   type: n
 Konferieren:
+  genus  : s
   type: n
 Kupplungsschacht:
+  genus  : m
   type: n
 Maeusisch:
-  type: n
+  type: adj
 gertenschlank:
   type: adj
-otiert:
-  type: vi
 detoxikation:
   type: n
 nonnengans:
+  genus  : f
   type: n
 Wiki:
   type: n
 Ausgiessung:
+  genus  : f
   type: n
 Fortsehen:
+  genus  : s
   type: n
 rumaenien:
-  type: adj
+  type: n
 verteilt:
   type: vi
 dampfgarer:
-  type: adj
-Meckerernoergler:
+  genus  : m
   type: n
 anheizen:
   type: vi
 feixen:
-  type: adj
+  type: vi
 brueckenpfeiler:
+  genus  : m
   type: adj
 erwerbstaetige:
   type: adv
-Wiederbelebungreanimationwiederbelebung:
-  type: n
 Anzeichen:
+  genus  : s
   type: n
 Machbarkeit:
+  genus  : f
   type: n
 Kontosaldo:
+  genus  : m
   type: n
 persoenlichkeitsstoerung:
-  type: adj
+  genus  : f
+  type: n
 Kontrolleur:
+  genus  : m
   type: n
 Pappverpackung:
+  genus  : f
   type: n
 Kronleuchter:
+  genus  : m
   type: n
 nuklearenergie:
-  type: adj
-empfehlung:
-  type: adj
-Trist:
+  genus  : f
   type: n
+empfehlung:
+  genus  : f
+  type: n
+Trist:
+  type: adj
 normalerweise:
   type: adv
 bewachen:
-  type: adv
+  type: vi
 Bedrucken:
+  genus  : s
   type: n
 Neuseeland:
   type: n
-Meierei:
-  type: n
 Schleppkurve:
+  genus  : f
   type: n
 Auswuchs:
+  genus  : m
   type: n
 arithmetischen:
   type: adv
 Molluskeweichtier:
+  genus  : s
   type: n
 koordinatentransformation:
   type: n
@@ -128543,6 +132464,7 @@ Albumkarton:
 Gutschriften:
   type: n
 Vorbehalte:
+  genus  : f
   type: n
 Bademaentel:
   genus: f
@@ -160109,6 +164031,7 @@ v:
 Erdschlussreaktanz:
   type: n
 Vertretung:
+  genus  : f
   type: n
 Zugfahrkarte:
   type: n
@@ -169983,7 +173906,8 @@ Erschoepfung:
 Erdatmosphre:
   type: n
 anstandsregel:
-  type: adj
+  genus  : f
+  type: n
 neonga:
   type: adj
 reduktionsziel:
@@ -177430,6 +181354,7 @@ Stative:
 Manganmn:
   type: n
 Umranden:
+  genus  : s
   type: n
 Netze:
   type: n
@@ -182358,6 +186283,7 @@ Fernsehjournalist:
 zeichnen:
   type: vi
 Anstandsregel:
+  genus  : f
   type: n
 nachholbedarf:
   type: adj

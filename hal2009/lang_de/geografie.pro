@@ -16,11 +16,11 @@ bedeutet <> wladiwostok <> _beherrsche_den_osten_ <>  <>  <>  <>  <>  <>  <>  <>
 befindet <> der k2 <> sich <> in dem karakorum <>  <>  <>  <>  <>  <>  <> 50
 befindet <> der mount cook <> sich <> in neuseeland <>  <>  <>  <>  <>  <>  <> 50
 befindet <> der taj mahal <> sich <> in agra <>  <>  <>  <>  <>  <>  <> 50
-befindet <> der tiefste punkt <> sich <> der erde;in dem marianengraben <>  <>  <>  <>  <>  <>  <> 50
+befindet <> der tiefste punkt <>  <> von der erde in dem marianengraben <> 50
 befindet <> die _spanische_treppe_ <> sich <> in rom <>  <>  <>  <>  <>  <>  <> 50
 befindet <> mesopotamien <> sich <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
 beginnt <> der fruehling <> nothing <> in dem maerz <>  <>  <>  <>  <>  <>  <> 50
-beginnt <> der herbst <> nothing <> in dem september <>  <>  <>  <>  <>  <>  <> 50
+beginnt <> der herbst <>  <> in dem september <> 50
 beginnt <> der sommer <> nothing <> in dem juni <>  <>  <>  <>  <>  <>  <> 50
 benannt ist <> die venus <> nothing <> nach der roemischen goettin der liebe <>  <>  <>  <>  <>  <>  <> 50
 benannt ist <> neptun <> nothing <> nach dem roemischen meeresgott <>  <>  <>  <>  <>  <>  <> 50
@@ -155,7 +155,7 @@ erstreckt <> russland <> sich <> ueber 2 erdteile <>  <>  <>  <>  <>  <>  <> 50
 erzeugt wird <> die meiste wolle <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
 exportiert <> brasilien <> den meisten kaffee <>  <>  <>  <>  <>  <>  <>  <> 50
 findet <> die hanse-sail <> nothing <>  in rostock statt <>  <>  <>  <>  <>  <>  <> 50
-fleisst <> der nelson <> nothing <> durch;kanada <>  <>  <> nothing <>  <>  <>  <> 50
+fliesst <> der nelson <> nothing <> durch;kanada <>  <>  <> nothing <>  <>  <>  <> 50
 fliegt seit <> die iss <> 1998 <> in dem all <>  <>  <>  <>  <>  <>  <> 50
 fliese <> der ebro <> nothing <> durch spanien <>  <>  <>  <>  <>  <>  <> 50
 fliese <> der mersey <> river <> durch liverpool <>  <>  <>  <>  <>  <>  <> 50
@@ -448,7 +448,7 @@ hat <> der kongo <> eine laenge <> von 4700 kilometer <>  <>  <> nothing <>  <> 
 hat <> der kongo <> eine laenge <> von;4700;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der mars <> 2 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der marsmond deimos <> einen durchmesser <> von 13 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der marsmond phobos <> einen durchmesser <> von 22 kilomter <>  <>  <>  <>  <>  <>  <> 50
+hat <> der marsmond phobos <> einen durchmesser <> von 22 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der mekong <> eine laenge <> von 4500 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der mekong <> eine laenge <> von;4500;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der merkur <> eine monde <> nicht <>  <>  <>  <>  <>  <>  <> 50
@@ -530,7 +530,7 @@ hat <> der yangtse <> eine laenge <> von 5800 kilometer <>  <>  <>  <>  <>  <>  
 hat <> der yukon <> eine laenge <> von 3185 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der yukon <> eine laenge <> von;3185;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> der zdf <> nothing <> seinen sitz in mainz <>  <>  <>  <>  <>  <>  <> 50
-hat <> derneptunmond despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der neptunmond despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> desdemona <> einen durchmesser <> von 68 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> despina <> einen durchmesser <> von 148 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -673,7 +673,7 @@ hat <>der uranusmond bianca <> einen durchmesser <> ;von 44 kilometer <>  <>  <>
 hat <>der uranusmond cordelia <> einen durchmesser <> von 26 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <>der uranusmond ophelia <> einen durchmesser <> von 32 kilometer <>  <>  <>  <>  <>  <>  <> 50
 heissen <> aborigines <> die ureinwohner <> von australien <>  <>  <>  <>  <>  <>  <> 50
-heissen <> die 5 kontinente <> asien-afrika-europa-amerika-australien <>  <>  <>  <>  <>  <>  <>  <> 50
+heissen <> die 5 kontinente <> asien afrika europa amerika australien <>  <>  <>  <>  <>  <>  <>  <> 50
 heissen <> kantone <> die bundeslaender <> der schweiz <>  <>  <>  <>  <>  <>  <> 50
 heisst <> _abu_dhabi_ <> die hauptstadt <> der _vereinigten_arabischen_emirate_ <>  <>  <>  <>  <>  <>  <> 50
 heisst <> _port_moresby_ <> die hauptstadt <> von papua-neuguinea <>  <>  <>  <>  <>  <>  <> 50
@@ -1501,7 +1501,7 @@ ist <> das mekong-delta  <>  das bedeutenste flussdelta<> in asien <>  <>  <>  <
 ist <> das muenster moenchengladbach <> das wahrzeichen <> von moenchengladbach <>  <>  <>  <>  <>  <>  <> 50
 ist <> das neue rathaus <> das wahrzeichen <> von hannover <>  <>  <>  <>  <>  <>  <> 50
 ist <> das nikolaiviertel <> der historische kern <> von berlin <>  <>  <>  <>  <>  <>  <> 50
-ist <> das nordertor <> das wahrzeiche <>   von flensburg <>  <>  <>  <>  <>  <>  <> 50
+ist <> das nordertor <> das wahrzeichen <>   von flensburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> das opernhaus <> das wahrzeichen <> von sydney <>  <>  <>  <>  <>  <>  <> 50
 ist <> das parsec <> eine astronomische laengeneinheit <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> das rathaus bamberg <> ein wahrzeichen <> von bamberg <>  <>  <>  <>  <>  <>  <> 50
@@ -1860,7 +1860,7 @@ ist <> der k2 <> der hoechste berg <> von pakistan <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kamerunberg <> 4070 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kamerunberg <> der hoechste berg <> vom kamerun <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kanchenjunga <> 8598 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der kanchenjunga <> der hoechte berg <> von indien <>  <>  <>  <>  <>  <>  <> 50
+ist <> der kanchenjunga <> der hoechste berg <> von indien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kanton tessin <> der suedlichste kanton <> von der schweiz <>  <>  <>  <>  <>  <>  <> 50
 ist <> der karisimbi <> 4507 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der karisimbi <> der hoechste berg <> von ruanda <>  <>  <>  <>  <>  <>  <> 50
@@ -1959,7 +1959,7 @@ ist <> der mont blanc <> der hoechste berg <> von frankreich <>  <>  <>  <>  <> 
 ist <> der mont iboundji <> 1575 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mont iboundji <> der hoechste berg <> von gabun <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mont kayagangiri <> 1420 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mont kayagangiri <> der hochste berg <> von zentralafrika <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mont kayagangiri <> der hoechste berg <> von zentralafrika <>  <>  <>  <>  <>  <>  <> 50
 ist <> der monte binga <> 2436 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der monte binga <> der hoechste berg <> von mosambik <>  <>  <>  <>  <>  <>  <> 50
 ist <> der monte roraima <> 2810 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1976,16 +1976,14 @@ ist <> der mount berongou <> 903 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount berongou <> der hoechste berg <> vom kongo <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount catherine <> 2629 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount catherine <> der hoechste berg <> von aegypten <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mount catherine <> der hoehste berg <> von aegypten <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount cook <> 3764 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount cook <> der hoechste berg <> von neuseeland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> 8848 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von china <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von nepal <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mount everest <> der hoechste berg der welt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount gimie <> 950 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mount gimie <> der hoechste berg lucia <> von saint <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mount gimie <> der hoechste berg  <> von saint lucia <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount heha <> 2670 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount heha <> der hoechste berg <> von burundi <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount hillaby <> 336 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -4183,7 +4181,7 @@ ist <> ploen <> eine stadt <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 5
 ist <> plymouth <> die hauptstadt <> von montserrat <>  <>  <>  <>  <>  <>  <> 50
 ist <> pocking <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> podgoricia <> hauptstadt <> von montenegro <>  <>  <>  <>  <>  <>  <> 50
-ist <> podsol <> ein sauerer naehrstoffarmer boden <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> podsol <> ein saurer naehrstoffarmer boden <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> poechlarn <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> poessneck <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> pohlheim <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
@@ -4221,7 +4219,7 @@ ist <> pregarten <> eine stadt <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 
 ist <> premnitz <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> prenzlau <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> pressath <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> pretoria <> die hauptstadt  <> der rupublik suedafrika<>  <>  <>  <>  <>  <>  <> 50
+ist <> pretoria <> die hauptstadt  <> der republik suedafrika<>  <>  <>  <>  <>  <>  <> 50
 ist <> pretoria <> die hauptstadt <> von suedafrika <>  <>  <>  <>  <>  <>  <> 50
 ist <> prettin <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> pretzsch <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
@@ -8344,3 +8342,5 @@ wiegt <> die erde <> 5972 trillionen tonnen <>  <>  <>  <>  <>  <>  <>  <> 50
 wird <> 70 prozent <> nothing <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>  <>  <> 50
 wurde <> das erste planetarium <> nothing <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
 wurden <> die streichhoelzer <> nothing <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50
+ist  <> neapel <> eine stadt <> in italien <> 50
+ist <> florenz <> eine stadt <> in italien <> 50

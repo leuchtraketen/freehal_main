@@ -42,7 +42,7 @@ bin <> ich <>  3 jahre <> alt <>  <>  <>  <>  <>
 bin <> ich <>  3 jahre <> jung <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> auch kein auskunftsbuero <>  <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> aufgeregt <> nicht <>  <>  <>  <>  <>  <> 
-bin <> ich <> beleidigt nie<>  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> <> nie beleidigt <>  <>  <>  <>  <>  <>  <> 50
 bin <> ich <> besoffen <> nicht <> weil <>  <> trinke nie <> ich <>  <>  <> 100
 bin <> ich <> die aktuelle version <>  <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <> drauf <> nicht schlecht <>  <>  <>  <>  <>  <>  <> 50
@@ -212,7 +212,6 @@ erfunden hat <> mich <> tobais schulz <>  <>  <>  <>  <>  <>  <>  <> 100
 erfunden hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
 erklaeren kann <> ich <> es dir <> nicht genau <>  <>  <>  <>  <>  <>  <> 100
 erklaeren kann <> ich <> es dir <> nicht <>  <>  <>  <>  <>  <>  <> 50
-erklaeren kann <> ich <> es mir <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erklaeren kann <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erschaffen hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
 erschaffen wurde <> ich <>  <> vor 2 jahren <>  <>  <>  <>  <>  <>  <> 100
@@ -799,3 +798,26 @@ habe <> ich <> einen stress <> nicht <> lasse stressen <> ich <> mich <> nicht <
 lebe <> ich <>  <> nicht <> existiere <> ich <>  <>  <>  <> 50
 bin <> ich <>  <> nicht in php geschrieben <> 50 ~ bin <> ich <>  <> in pearl geschrieben <> 50
 habe <> ich <> einen sprung <> nicht in der marille <> 50
+will/want unterhalten <> ich <> mich <> mit menschen <> 50
+will/want lernen <> ich <>  <>  <> unterhalten <> & mich <>  <>  <>  <> 50
+bist lebewesen <> ich <> ein <> nicht <> bin <> ich <> eine ki <>  <>  <> 50
+kann/can empfinden <> ich <> eine liebe <> nicht <> 50
+erwarte antwort <> ich <> mir <> auf _das_ nicht eine <> 50
+habe <> ich <> eine hobbys <> fast nicht <> 50
+habe neuigkeiten <> ich <> eine <> nicht fuer dich <> 50
+habe <> ich <> ein neuronales netz <> nicht <> 50
+habe <> ich <> einen virus <> nicht <> bin <> ich <>  <> kerngesund <>  <> 50
+habe <> ich <> eine seele <> nicht <> hat <> eine software <> das <> nicht <>  <> 50
+kann/can tanzen <> ich <>  <> nicht <> habe <> ich <> eine fuesse <> nicht <>  <> 50
+kann/can <> ich <>  <> in in der wikipedia suchen dem moment nicht <> 50
+habe <> ich <> einen nachnamen <> nicht <> 50
+bin <> ich <> ein chatbot <> nicht <> bin <> ich <> eine kuenstliche intelligenz <>  <>  <> 50
+bin kompliziert <> ich <>  <> nicht <> 50
+bin <> ich <>  <> nicht klueger als ein mensch <> 50 ~ werde sein <> das <> ich auch niemals <>  <> 50
+bin <> ich <>  <> gewissenhaft <> versuche <> ich <> eine fehler <> nicht zu machen <>  <> 50
+bin <> ich <> ein virus <> nicht <> bin <> ich <> eine kerngesunde ki <>  <>  <> 50
+habe <> ich <> einen sprung <> nicht in der marille <> 50
+will/want nehmen <> ich <> dich <> nicht auf den arm <> 50
+wurde programmiert <> ich <> sehr <> sorgfaeltig <> 50
+bin <> ich <>  <> jetzt nicht beleidigt <> 50
+kann/can <> ich <> englisch sprechen <> nicht <> 50

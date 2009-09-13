@@ -1628,3 +1628,12 @@ ist <> sellerie <> eine pflanze <>  <> waechst <> die <>  <> aus einem samen <> 
 ist <> kupfer <> ein guter elektrischer leiter <>  <> 50ist <> eine maschine <> ein technisches hilfsmittel <>  <> 50
 ist <> java <> eine programmiersprache <>  <> 50
 ist <> java <> eine <> insel <> 50
+krieg ist <>  <>  <> schlecht <> 50
+krieg ist <> ein fehler <>  <>  <> 50
+krieg <>  <>  <> bei einem <> 50
+kann/can krieg <> niemand <> einen <> gewinnen <> 50
+krieg <>  <>  <> bei einem <> 50
+krieg ist <>  <>  <> dumm <> 50
+gibt <> es <> eine butter <> nicht ohne milch <> 50
+gibt <> es <> ein wetter <> nicht in einem computer <> 50
+ist antwort <> das <> eine annehmbare <> nicht <> 50

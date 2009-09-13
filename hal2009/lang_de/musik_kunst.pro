@@ -314,3 +314,4 @@ wurde <> hermann_hesse <> nothing <> in calw geboren <>  <>  <>  <>  <>  <>  <> 
 wurde <> romy schneider <> 44 jahre <> alt <>  <>  <>  <>  <>  <>  <> 50
 hat <> karl may <> winnetou <> geschrieben <> 50
 war <> karl may <> ein schriftsteller <>  <> 50
+war <> karl may <> ein schriftsteller <>  <> 50
