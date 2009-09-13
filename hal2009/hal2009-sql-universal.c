@@ -76,6 +76,9 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
                 }
             }
         }
+        if (fact && fact->pk && is_engine("disk")) {
+            free(fact);
+        }
     }
     return 0;
 }

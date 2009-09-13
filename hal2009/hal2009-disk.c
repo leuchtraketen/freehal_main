@@ -509,10 +509,10 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
         free(sql);
     }
 
-    struct fact fact;
-    fact.pk = pk;
+    struct fact* fact = calloc(sizeof(struct fact), 1);;
+    fact->pk = pk;
     
-    return &fact;
+    return fact;
 }
 
 struct word* disk_set_word(const char* name) {
