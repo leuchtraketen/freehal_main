@@ -186,6 +186,9 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: / ein jeder /, " _jeder_ ", :global:i
 
+    do regex using var input: / du jetzt /, " du ", :global:i
+    do regex using var input: / ich jetzt /, " ich ", :global:i
+    
     do regex using var input: / befindet sich /, " liegt ", :global:i
     do regex using var input: / befinden sich /, " liegen ", :global:i
     do regex using var input: / befinde mich /, " liege ", :global:i
