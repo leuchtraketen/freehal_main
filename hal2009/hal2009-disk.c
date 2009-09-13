@@ -377,18 +377,20 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     char* sql = malloc(102400);
     *sql = 0;
     
-    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`from`, `nmain`.`truth` ");
-    strcat(sql, " FROM facts AS nmain JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact JOIN rel_word_fact ON nmain.pk = rel_word_fact.fact WHERE 0 ");
+    strcat(sql, "delete from cache_facts;");
+    strcat(sql, "INSERT INTO cache_facts SELECT DISTINCT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts JOIN rel_word_fact ON facts.pk = rel_word_fact.fact WHERE 0 ");
 
     int n, m, q;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
     for (n = 0; can_be_a_pointer(words[n]); ++n) {
         int is_new = 1;
-        for (q = 0; words[q] && q+1 < n; ++q) {
-            if (words[n] == words[q])
-                is_new = 0;
+        if (can_be_a_pointer(words[n][0])) {
+            for (q = 0; words[q] && q+1 < n; ++q) {
+                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0])
+                    is_new = 0;
+            }
         }
-        debugf("synonym no %d: %p, %p, %s\n",
+        debugf("synonym no %d: %d, %p, %s\n",
             n,
             can_be_a_pointer(words[n]),
             can_be_a_pointer(words[n]) ? words[n][0] : 0,
@@ -410,14 +412,15 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 strcat(sql, "\"");
             }
             else {
-                strcat(sql, "OR rel_word_fact.word GLOB \"* ");
-                strcat(sql, words[n][m]->name);
-                strcat(sql, "\" OR rel_word_fact.word = \"");
+                strcat(sql, "OR rel_word_fact.word = \"");
                 strcat(sql, words[n][m]->name);
                 strcat(sql, "\"");
             }
         }
     }
+    strcat(sql, ";");
+    strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`from`, `nmain`.`truth` ");
+    strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
     
     return sql;

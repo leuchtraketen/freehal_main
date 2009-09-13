@@ -105,7 +105,7 @@ struct word*** get_stored_synonyms(const char* exp) {
 }
 
 struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, int* position, int* allocated_until) {
-    struct fact** facts = search_facts(subj, obj, verb, adverbs, "", "");
+    struct fact** facts = search_facts(subj, obj, verb, adverbs, "", "", "default");
     
     // count the facts
     int size, f;
@@ -340,8 +340,8 @@ struct word* set_word(const char* name) {
     }
 }
 
-struct DATASET search_facts_as_dataset(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword) {
-    return as_dataset(search_facts(subjects, objects, verbs, adverbs, extra, questionword));
+struct DATASET search_facts_as_dataset(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+    return as_dataset(search_facts(subjects, objects, verbs, adverbs, extra, questionword, context));
 }
 struct DATASET search_clauses_as_dataset(int rel) {
     return as_dataset(search_clauses(rel));
@@ -416,11 +416,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                 int m;
                 for (m = 0; words[m] && words[m]->name; ++m) {
                     if (matches(words[m]->name, request_words[u][v]->name)) {
-                        debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                        //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         does_match_here = 1;
                     }
                     else {
-                        debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                        //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                     }
                 }
             }
@@ -439,28 +439,28 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 
 int fact_matches_subject_by_subject(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->subjects, EXACT);
-    debugf("subject by subject: %p\n", does_match);
+    debugf("subject by subject: %d\n", does_match);
     if (does_match == -1)
         does_match = 1;
     return does_match;
 }
 int fact_matches_object_by_subject(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->subjects, EXACT);
-    debugf("object by subject:  %p\n", does_match);
+    debugf("object by subject:  %d\n", does_match);
     if (does_match == -1)
         does_match = 0;
     return does_match;
 }
 int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, EXACT);
-    debugf("subject by object:  %p\n", does_match);
+    debugf("subject by object:  %d\n", does_match);
     if (does_match == -1)
         does_match = 0;
     return does_match;
 }
 int fact_matches_object_by_object(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->objects, EXACT);
-    debugf("object by object:   %p\n", does_match);
+    debugf("object by object:   %d\n", does_match);
     if (does_match == -1)
         does_match = 1;
     return does_match;
@@ -469,7 +469,7 @@ int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->adverbs, request->adverbs, WEAK);
     if (does_match == -1)
         does_match = 1;
-    debugf("adverb by adverb:   %p\n", does_match);
+    debugf("adverb by adverb:   %d\n", does_match);
     return does_match;
 }
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
@@ -480,10 +480,161 @@ int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
         || fact_matches_entity_by_entity(fact->extra,    request->extra, WEAK)
     ;
     // TODO: -1, see above
-    debugf("anything by extra:  %p\n", does_match);
+    debugf("anything by extra:  %d\n", does_match);
     return does_match;
 }
 
+int fact_matches_questionword_rules_of_q_what_weakly(struct fact* fact, struct request* request) {
+    int does_match = 0;
+    
+    int i;
+    if (can_be_a_pointer(fact->subjects)) {
+        for (i = 0; can_be_a_pointer(fact->subjects[i]) && can_be_a_pointer(fact->subjects[i]->name); ++i) {
+            if (0 == strcmp(fact->subjects[i]->name, "ein") || 0 == strcmp(fact->subjects[i]->name, "eine")) {
+                does_match = 1;
+            }
+        }
+    }
+    if (can_be_a_pointer(fact->objects)) {
+        for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
+            if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
+                does_match = 1;
+            }
+        }
+    }
+    
+    debugf("q_what_weakly: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules_of_q_who(struct fact* fact, struct request* request) {
+    int does_match = 1;
+    
+    int i;
+    if (can_be_a_pointer(fact->subjects)) {
+        for (i = 0; can_be_a_pointer(fact->subjects[i]) && can_be_a_pointer(fact->subjects[i]->name); ++i) {
+            if (0 == strcmp(fact->subjects[i]->name, "ein") || 0 == strcmp(fact->subjects[i]->name, "eine")) {
+                does_match = 0;
+            }
+        }
+    }
+    if (can_be_a_pointer(fact->objects)) {
+        for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
+            if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
+                does_match = 0;
+            }
+        }
+    }
+    
+    debugf("q_who: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules_of_q_where(struct fact* fact, struct request* request) {
+    int does_match = 0;
+    
+    int verb_is_be = 0;
+    if (can_be_a_pointer(request->verbs) && can_be_a_pointer(request->verbs[0]) && can_be_a_pointer(request->verbs[0]->name)) {
+        if (strstr(request->verbs[0]->name, "|ist|")) {
+            verb_is_be = 1;
+        }
+    }
+    
+    int i;
+    if (can_be_a_pointer(fact->adverbs)) {
+        for (i = 0; can_be_a_pointer(fact->adverbs[i]) && can_be_a_pointer(fact->adverbs[i]->name); ++i) {
+            printf("adverb: %s\n", fact->adverbs[i]->name);
+            if (    0 == strcmp(fact->adverbs[i]->name, "in")
+                 || 0 == strcmp(fact->adverbs[i]->name, "an")
+                 || 0 == strcmp(fact->adverbs[i]->name, "from")
+                 || 0 == strcmp(fact->adverbs[i]->name, "at")
+                 || 0 == strcmp(fact->adverbs[i]->name, "auf")
+                 || 0 == strcmp(fact->adverbs[i]->name, "aus")
+                 || (!verb_is_be && 0 == strcmp(fact->adverbs[i]->name, "von"))
+            ) {
+                does_match = 1;
+            }
+        }
+    }
+    
+    debugf("q_where: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules_of_q_how(struct fact* fact, struct request* request) {
+    int does_match = 1;
+    
+    int verb_is_be = 0;
+    if (can_be_a_pointer(request->verbs) && can_be_a_pointer(request->verbs[0]) && can_be_a_pointer(request->verbs[0]->name)) {
+        if (strstr(request->verbs[0]->name, "|ist|")) {
+            verb_is_be = 1;
+        }
+    }
+    
+    if (verb_is_be) {
+        return 1;
+    }
+    
+    int i;
+    if (can_be_a_pointer(fact->adverbs)) {
+        for (i = 0; can_be_a_pointer(fact->adverbs[i]) && can_be_a_pointer(fact->adverbs[i]->name); ++i) {
+
+            if (    0 == strcmp(fact->adverbs[i]->name, "in")
+                 || 0 == strcmp(fact->adverbs[i]->name, "an")
+                 || 0 == strcmp(fact->adverbs[i]->name, "from")
+                 || 0 == strcmp(fact->adverbs[i]->name, "at")
+                 || 0 == strcmp(fact->adverbs[i]->name, "auf")
+                 || 0 == strcmp(fact->adverbs[i]->name, "aus")
+                 || 0 == strcmp(fact->adverbs[i]->name, "von")
+            ) {
+                does_match = 0;
+            }
+        }
+    }
+    
+    debugf("q_how: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules_of_q_from_where(struct fact* fact, struct request* request) {
+    int does_match = 0;
+    
+    int i;
+    if (can_be_a_pointer(fact->adverbs)) {
+        for (i = 0; can_be_a_pointer(fact->adverbs[i]) && can_be_a_pointer(fact->adverbs[i]->name); ++i) {
+
+            if (    0 == strcmp(fact->adverbs[i]->name, "aus")
+                 || 0 == strcmp(fact->adverbs[i]->name, "von")
+                 || 0 == strcmp(fact->adverbs[i]->name, "from")
+                 || 0 == strcmp(fact->adverbs[i]->name, "durch")
+                 || 0 == strcmp(fact->adverbs[i]->name, "von")
+            ) {
+                does_match = 1;
+            }
+        }
+    }
+    
+    debugf("q_from_where: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules(struct fact* fact, struct request* request) {
+    
+    if (can_be_a_pointer(request->context)) {
+        if (0 == strcmp(request->context, "q_what_weakly"))
+            return fact_matches_questionword_rules_of_q_what_weakly(fact, request);
+        if (0 == strcmp(request->context, "q_who"))
+            return fact_matches_questionword_rules_of_q_who(fact, request);
+        if (0 == strcmp(request->context, "q_where"))
+            return fact_matches_questionword_rules_of_q_where(fact, request);
+        if (0 == strcmp(request->context, "q_how"))
+            return fact_matches_questionword_rules_of_q_how(fact, request);
+        if (0 == strcmp(request->context, "q_from_where"))
+            return fact_matches_questionword_rules_of_q_from_where(fact, request);
+    }
+    
+    return 1;
+}
 int fact_matches_verb(struct fact* fact, struct request* request) {
     if (!request->verbs[0]) {
         return 1;
@@ -530,6 +681,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
          && ( fact_matches_object_by_object   (fact, request) || fact_matches_object_by_object  (fact, request) )
          && fact_matches_adverb_by_adverb     (fact, request)
          && fact_matches_anything_by_extra    (fact, request)
+         && fact_matches_questionword_rules   (fact, request)
     
          ?  fact
          :  (struct fact*)-1
@@ -596,21 +748,22 @@ void print_word_list_3rd_order(struct word*** list) {
             debugf(" - %s\n", list[i][j]->name);
         }
         if (j == 0) {
-            debugf("   array at %p: first = %p, second = %p\n", list[i], list[i][0], list[i][0]?list[i][1]:0);
+            debugf("   array at %p: first = %p, second = %p\n", list[i], list[i][0], can_be_a_pointer(list[i][0])&&can_be_a_pointer(list[i][1])?list[i][1]:0);
         }
         debugf(")\n");
     }
     debugf("\n");
 }
 
-struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword) {
+struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct request* fact = calloc(sizeof(struct request), 1);
     fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
     fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
     fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
     fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
     fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
-    fact->questionword = strdup(questionword);
+    fact->questionword =          strdup(questionword);
+    fact->context      =          strdup(context);
     fact->truth        = 1;
 
     debugf(
@@ -645,17 +798,27 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         fact
     );
 
-    /*  Do not free, because search_synonyms returns WORD->synonyms, which has be kept
+    /*  Do not free, because search_synonyms returns WORD->synonyms, which has to be kept
     
     
-        free(fact->verbs);
         free(fact->subjects);
         free(fact->objects);
         free(fact->adverbs);
         free(fact->extra);
     */
-    free(fact->questionword);
-    free(fact);
+    if (is_engine("ram")) {
+        free(fact->verbs);
+        free(fact->questionword);
+        free(fact->context);
+        free(fact);
+    }
+    else {
+        free_words_weak(fact->verbs);
+        free(fact->questionword);
+        free(fact->context);
+        free(fact);
+    }
+    
     
     return list;
 }

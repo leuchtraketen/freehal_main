@@ -85,6 +85,6 @@ struct DATASET sql_universal_get_records(struct RECORD* r) {
         // return search_clauses_as_dataset(to_number(r->pkey));
         return as_dataset(0);
     }
-    return search_facts_as_dataset(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword);
+    return search_facts_as_dataset(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->context);
 }
 
