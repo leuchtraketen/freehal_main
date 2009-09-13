@@ -2670,9 +2670,9 @@ define action guess_part_of_speech with var word do
     if var word matches lc(var word) and var word matches /iv$/ do
         set var guessed to 'adj'
     done
-    if var word matches lc(var word) and var word matches /an$/ do
-        set var guessed to 'adj'
-    done
+    #if var word matches lc(var word) and var word matches /an$/ do
+    #    set var guessed to 'adj'
+    #done
     if var word matches lc(var word) and var word matches /em$/ do
         set var guessed to 'adj'
     done
