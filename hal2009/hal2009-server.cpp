@@ -884,7 +884,7 @@ void* hal2009_init_thread (void*) {
 
 int main(int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
-    strcpy(sql_engine, "sqlite");
+    strcpy(sql_engine, "disk");
     if (argc >= 3 && argv[2]) {
         strcpy(sql_engine, argv[2]);
     }

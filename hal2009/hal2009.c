@@ -20,7 +20,7 @@
 */
 
 static int position_in_insertions = 0;
-static char* sql_engine = 0;
+char* sql_engine = 0;
 
 void* halfilecalloc( long s, long si, char* str ) {
     void* p = calloc( s, si );

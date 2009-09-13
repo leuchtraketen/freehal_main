@@ -118,7 +118,10 @@ FILE* unset_output_pipe();
 #define SINGLE 1
 #define MULTI 2
 
-static char* sql_engine;
+#ifdef USE_CXX
+extern "C"
+#endif
+char* sql_engine;
 
 #define MAX_CLAUSES 10
 #define LINE_SIZE 4096
