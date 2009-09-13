@@ -278,6 +278,8 @@ void make_connection() {
     database_engine = dialog_connection->from->database_engine->currentText().toStdString();
     if (database_engine == "disk (traditional)")
         database_engine = "sqlite";
+    if (database_engine == "semtree")
+        database_engine = "disk";
     if (database_engine.size() < 3 || (database_engine != "ram" && database_engine != "disk" && database_engine != "sqlite"))
         database_engine = "disk";
 
