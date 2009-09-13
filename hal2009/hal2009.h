@@ -209,6 +209,8 @@ extern "C" {
     void* halfilefree( void* s );
     int sql_begin();
     int sql_end();
+    const char* engine();
+    const char* is_engine(const char*);
     char* sql_del_record(struct RECORD* r);
     int fact_delete_from_source(const char* source);
 #ifdef __cplusplus

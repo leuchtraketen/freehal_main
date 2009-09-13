@@ -19,8 +19,10 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+//#include "hal2009-sql-semtree.c"
+#include "hal2009-sql-universal.c"
+
 #include "hal2009-sql-sqlite.c"
-#include "hal2009-sql-semtree.c"
 
 static int database_used = 0;
 
@@ -28,8 +30,11 @@ struct DATASET sql_get_records(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_get_records(r);
     }
-    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_get_records(r);
+    }
+    */ else {
+        return sql_universal_get_records(r);
     }
 }
 
@@ -37,8 +42,11 @@ int sql_add_record(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_add_record(r, NULL);
     }
-    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_add_record(r, NULL);
+    }
+    */ else {
+        return sql_universal_add_record(r, NULL);
     }
 }
 
@@ -46,8 +54,11 @@ char* sql_del_record(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_del_record(r);
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_del_record(r);
+    }
+    */ else {
+        return sql_universal_del_record(r);
     }
 }
 
@@ -55,8 +66,11 @@ int sql_add_link (char* link, int key_1, int key_2) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_add_link(link, key_1, key_2);
     }
-    if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_add_link(link, key_1, key_2);
+    }
+    */ else {
+        return sql_universal_add_link(link, key_1, key_2);
     }
 }
 
@@ -70,8 +84,11 @@ int sql_begin() {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_begin();
     }
-    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         return sql_semtree_begin();
+    }
+    */ else {
+        return sql_universal_begin();
     }
 }
 
@@ -80,8 +97,11 @@ int sql_end() {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         ret = sql_sqlite_end();
     }
-    else { //if (sql_engine && matchstr(sql_engine, "semtree")) {
+    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
         ret = sql_semtree_end();
+    }
+    */ else {
+        ret = sql_universal_end();
     }
     fprintf(output(), "%s\n", "Stop database access.");
     database_used = 0;
@@ -89,3 +109,9 @@ int sql_end() {
     return ret;
 }
 
+const char* engine() {
+    return sql_engine;
+}
+const char* is_engine(const char* m) {
+    return (0 == strcmp(sql_engine, m));
+}
