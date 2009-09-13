@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'connect.ui'
 **
-** Created: Sat Sep 12 16:30:43 2009
+** Created: Sun Sep 13 18:08:58 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -229,6 +229,7 @@ public:
         database_engine->insertItems(0, QStringList()
          << QApplication::translate("ConnectDialog", "disk", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("ConnectDialog", "ram", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("ConnectDialog", "disk (traditional)", 0, QApplication::UnicodeUTF8)
         );
         label->setText(QApplication::translate("ConnectDialog", "Use Database engine...", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("ConnectDialog", "A Remote Computer", 0, QApplication::UnicodeUTF8));
