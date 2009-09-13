@@ -2542,6 +2542,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'uebe' => "vt",
           'simple' => "adj",
           'inka' => "n",
+          'sprechen' => "vi",
           'inkas' => "n",
           'kein' => "adj",
           'guter' => "adj",
