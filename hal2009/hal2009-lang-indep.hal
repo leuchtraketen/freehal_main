@@ -522,7 +522,9 @@ define action compute_input with var input is rw, var lang, var path do
     if var lang matches "de" do
         do regex using var input: /(^|\s)im jahre (\d\d\d\d) /, "$0$1 ", :global:i
         do regex using var input: /(^|\s)im jahr (\d\d\d\d) /, "$0$1 ", :global:i
-        do regex using var input: /(^|\s)(\d\d\d\d) /, "$0in_jahre_$1 ", :global:i
+        if not var input matches /\svon\s(\d\d\d\d)\s/ do
+            do regex using var input: /(^|\s)(\d\d\d\d) /, "$0in_jahre_$1 ", :global:i
+        done
     done
 
     print "Computed input (no. 5) ... ", var input

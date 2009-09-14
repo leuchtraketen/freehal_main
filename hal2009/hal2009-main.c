@@ -78,7 +78,7 @@ int main (int argc, char** argv) {
     strcpy(programming_language, "perl5");
     strcpy(language, "de");
     strcpy(base_dir, ".");
-    strcpy(sql_engine, "sqlite");
+    strcpy(sql_engine, "disk");
 
     while ((c = getopt (argc, argv, "b:q:i:m:p:l:c:e:d:s")) != -1) {
         switch (c) {
