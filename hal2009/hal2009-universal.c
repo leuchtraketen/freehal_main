@@ -307,7 +307,7 @@ const char* from_number(int i) {
 }
 
 int is_bad(const char* s) {
-    return (!s || !s[0] || s[0] == '0' || s[0] == ' ');
+    return (!s || !s[0] || ((s[0] == ' ' || s[0] == '0') && strlen(s) < 2));
 }
 int is_good(const char* s) {
     return (!is_bad(s));

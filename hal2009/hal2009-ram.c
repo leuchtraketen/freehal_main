@@ -159,7 +159,7 @@ int insert_fact_at_key(int rel, struct fact* fact) {
 
 
 struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects)) || is_bad(verbs)) {
+    if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
     
@@ -182,7 +182,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
 }
 
 struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects)) || is_bad(verbs)) {
+    if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
 

@@ -58,7 +58,7 @@ struct request_get_facts_for_words {
 static char* sqlite_sql_create_table = ""
 "CREATE TABLE `facts` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
 "`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), "
-"UNIQUE(`verb`, `subjects`, `objects`, `adverbs`, `truth`));"
+"UNIQUE(`verb`, `subjects`, `objects`, `adverbs`, `truth`, `from`));"
 "CREATE INDEX `idx_facts_rel` ON `facts` (`rel`);"
 "CREATE INDEX `idx_facts_truth` ON `facts` (`truth`);"
 "CREATE INDEX `idx_facts_verb` ON `facts` (`verb`); "
