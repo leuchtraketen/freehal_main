@@ -127,7 +127,6 @@ ist <> ra <> der aegyptische sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> re <> der vater aller goetter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> schai <> die goettin des schicksals <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> seth <> gott der wueste <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> seth <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> sokar <> eine der totengoetter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> taweret <> schutzgoettin der schwangeren frauen <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> thor <> der nordische gott des donners <>  <>  <>  <>  <>  <>  <>  <> 50

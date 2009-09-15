@@ -22,10 +22,10 @@ befindet <> mesopotamien <> sich <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
 beginnt <> der fruehling <> nothing <> in dem maerz <>  <>  <>  <>  <>  <>  <> 50
 beginnt <> der herbst <>  <> in dem september <> 50
 beginnt <> der sommer <> nothing <> in dem juni <>  <>  <>  <>  <>  <>  <> 50
-benannt ist <> die venus <> nothing <> nach der roemischen goettin der liebe <>  <>  <>  <>  <>  <>  <> 50
-benannt ist <> neptun <> nothing <> nach dem roemischen meeresgott <>  <>  <>  <>  <>  <>  <> 50
-benannt wurde <> der saturn <> nothing <> nach dem roemischen gott der saat <>  <>  <>  <>  <>  <>  <> 50
-bergen ist <> die zweitgroesste stadt <> nothing <> von norwegen <>  <>  <>  <>  <>  <>  <> 50
+istbenannt  <> die venus <>  <> nach der roemischen goettin der liebe <> 50
+ist benannt <> der neptun <>  <> nach dem roemischen meeresgott <> 50
+wurde benannt <> der saturn <>  <> nach dem roemischen gott von der saat <> 50
+ist <> bergen <> die zweitgroesste stadt <> von norwegen <> 50
 beruehmt ist <> carrara <> fuer <> seinen weissen marmor <>  <>  <>  <>  <>  <>  <> 50
 bestehen <> die azoren <> nothing <> aus 9 inseln <>  <>  <>  <>  <>  <>  <> 50
 besteht <> der grosse wagen <> nothing <> aus 7 sternen <>  <>  <>  <>  <>  <>  <> 50
@@ -36,21 +36,17 @@ betraegt <> der erdumfang <> 407504 km <>  <>  <>  <>  <>  <>  <>  <> 50
 betraegt <> die temperatur <> etwa 15 millionen grad <> in dem zentrum der sonne <>  <>  <>  <>  <>  <>  <> 50
 betrat <> der erste mensch <> die mondoberflaeche <> 1969 <>  <>  <>  <>  <>  <>  <> 50
 bezeichnet <> _ <> das ruhr gebiet als _kohlenpott_ <>  <>  <>  <>  <>  <>  <>  <> 50
-bezeichnet <> als schwarzes loch <> man ein astronomisches objekt <>  <> ist <> dessen gravitation <> nothing <> so hoch <>  <>  ;; dieses liegt <> die fluchtgeschwindigkeit fuer <> objekt <> (dem_ereignishorizont);ab einer gewissen grenze <> dass <>  ;; dieses liegt <> die fluchtgeschwindigkeit fuer <> hoeher als die lichtgeschwindigkeit <> (dem_ereignishorizont);ab einer gewissen grenze <> dass <>  <> 50
-bin <> ich <> ein mann <> nicht <> bin <> ich <> ein kuenstliches wesen <>  <>  <>  <> 100
-bin <> ich <> eine frau <> nicht <> bin <> ich <> ein kuenstliches wesen <>  <>  <>  <> 100
 braucht <> das licht <> 8 minuten <> von der sonne zur erde <>  <>  <>  <>  <>  <>  <> 50
 braucht <> das licht <> eineinviertel sekunden <> vom mond zur erde <>  <>  <>  <>  <>  <>  <> 50
 braucht <> der mond <> etwa 27 tage fuer eine erdumrundung <>  <>  <>  <>  <>  <>  <>  <> 50
-buchen liegt <> nothing <> nothing <> an dem rand vom odenwald <>  <>  <>  <>  <>  <>  <> 50
-dauert <> der umlauf des _halleyschen_kometen_ <> etwa 76 jahre <>  <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buchen <> nothing <> an dem rand vom odenwald <>  <>  <>  <>  <>  <>  <> 50
 dauert <> der umlauf des halleyschen kometen <> etwa 76 jahre <>  <>  <>  <>  <>  <>  <>  <> 50
 dauert <> einen tag <> die umdrehung <> der erde um ihre eigene achse <>  <>  <>  <>  <>  <>  <> 50
-dern liegt <> italien <> apenninenhalbinsel <> auf <>  <>  <>  <>  <>  <>  <> 50
-don hat <> der <> eine laenge <> von;1970;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-don ist <> der <> 1970 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-don ist <> der <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-don liegt <> der <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
+liegt <> italien <>  <> auf der apenninenhalbinsel <> 50
+hat <> der don <> eine laenge <> von;1970;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der don <> 1970 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der don <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+liegt <> der don <>  <> in europa <> 50
 donau hat <> die <> eine laenge <> von;2850;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 donau ist <> die <> 2850 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
 donau ist <> die <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
