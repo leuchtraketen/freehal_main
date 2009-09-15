@@ -1,3 +1,4 @@
+ist <> ein name <>  <> fidel <> 50
 ist <> fabia <> ein name <>  <> 50
 ist <> fabian <> ein name <>  <> 50
 ist <> fabiana <> ein name <>  <> 50
@@ -39,7 +40,6 @@ ist <> ferdinanda <> ein name <>  <> 50
 ist <> ferdinande <> ein name <>  <> 50
 ist <> fernandine <> ein name <>  <> 50
 ist <> festina <> ein name <>  <> 50
-ist <> ein name <>  <> fidel <> 50
 ist <> fidelis <> ein name <>  <> 50
 ist <> fidelius <> ein name <>  <> 50
 ist <> fido <> ein name <>  <> 50
@@ -73,6 +73,7 @@ ist <> folke <> ein name <>  <> 50
 ist <> folko <> ein name <>  <> 50
 ist <> fortunat <> ein name <>  <> 50
 ist <> fortunatus <> ein name <>  <> 50
+ist <> fraenzi <> ein name <>  <> 50
 ist <> franciscus <> ein name <>  <> 50
 ist <> frank <> ein name <>  <> 50
 ist <> franka <> ein name <>  <> 50
@@ -119,10 +120,10 @@ ist <> friedhold <> ein name <>  <> 50
 ist <> friedrich <> ein name <>  <> 50
 ist <> friedwart <> ein name <>  <> 50
 ist <> frieso <> ein name <>  <> 50
+ist <> frisch <> ein name <> 50
 ist <> friso <> ein name <>  <> 50
 ist <> frithjof <> ein name <>  <> 50
 ist <> fritz <> ein name <>  <> 50
 ist <> frodo <> ein name <>  <> 50
 ist <> frowin <> ein name <>  <> 50
-ist <> fränzi <> ein name <>  <> 50
 ist <> fulvio <> ein name <>  <> 50

@@ -4,12 +4,12 @@ begraben liegt <> karl_marx <> nothing <> in london <>  <>  <>  <>  <>  <>  <> 5
 bemalte <> michelangelo <> die decke  <> der sixtinischen kapelle<>  <>  <>  <>  <>  <>  <> 50
 besang <> falco <> jeanny <>  <>  <>  <>  <>  <>  <>  <> 50
 besteht <> eine sinfonie <> nothing <> aus mehreren saetzen <>  <>  <>  <>  <>  <>  <> 50
-dern erhielt <> sigrid undset <> 1928 literaturnobelpreis <>  <>  <>  <>  <>  <>  <>  <> 50
-entwickelt <> ludwig <> esperanto zamenhof <>  <>  <>  <>  <>  <>  <>  <> 50
+erhielt <> sigrid undset <> 1928 den literaturnobelpreis <>  <>  <>  <>  <>  <>  <>  <> 50
+entwickelt <> ludwig zamenhof <>  <> 50
 erfand <> james kruess <> _tim_thaler_ <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> christa wolf <> 1980 den georg-buechner-preis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> elias canetti <> 1981 den nobelpreis <> fuer literatur <>  <>  <>  <>  <>  <>  <> 50
-erhielt gerhart <> hauptmann <> 1912 den nobelpreis <> fuer literatur <>  <>  <>  <>  <>  <>  <> 50
+erhielt <> gerhart hauptmann <> 1912 den nobelpreis <> fuer literatur <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> golo mann <> 1968 den georg-buechner-preis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> gottfried benn <> 1951 den georg-buechner-preis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> heinrich_boell <> 1972 den literatur-nobelpreis <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -18,7 +18,7 @@ erhielt <> hermann hesse <> einen nobelpreis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> nelly sachs <> 1966 den literatur-nobelpreis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> paul celan <> 1960 den georg-buechner-preis <>  <>  <>  <>  <>  <>  <>  <> 50
 erhielt <> peter hanke <> 1973 den georg-buechner-preis <>  <>  <>  <>  <>  <>  <>  <> 50
-fand <> der songcontest <> nothing <> in tallinn statt;von 2002 <>  <>  <>  <>  <>  <>  <> 50
+fand <> der songcontest 2002 <> nothing <> in tallinn statt   <> 50
 flog <> nils holgerson <> nothing <> mit den gaensen durch suedschweden <>  <>  <>  <>  <>  <>  <> 50
 fluestert <> der souffleur <> den schauspielern stichwoerter <> ein <>  <>  <>  <>  <>  <>  <> 50
 geschrieben haben <> die brueder grimm <> das maerchen _rumpelstilzchen_ <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -29,8 +29,7 @@ gestorben ist <> charlie chaplin<>  <> 1977 <>  <>  <>  <>  <>  <>  <> 50
 gestorben ist <> freddie mercury <> nothing <> an dem 24 november 1991 <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> 4 teletubbies <>  <>  <>  <>  <>  <>  <>  <> 50
 haengt <> die_mona_lisa <> im louvre <> in paris <>  <>  <>  <>  <>  <>  <> 100
-hat <> felix_salten <> _bambi_ <> geschreiben <>  <>  <>  <>  <>  <>  <> 50
-hat <> indien <> die groesste filmindurstrie <> der welt <>  <>  <>  <>  <>  <>  <> 50
+hat <> felix_salten <> _bambi_ <> geschrieben <>  <>  <>  <>  <>  <>  <> 50
 hat <> indien <> die groesste filmindustrie <> der welt <>  <>  <>  <>  <>  <>  <> 50
 hat komponiert <> _wolfgang_amadeus_mozart_ <>die oesterreichische bundeshymne <> <>  <>  <>  <>  <>  <>  <> 50
 heisst <> angkor wat <> das groesste hinduistische bauwerk suedostasiens <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -60,10 +59,10 @@ ist <> die manege <> die buehne der zirkuskuenstler <>  <>  <>  <>  <>  <>  <>  
 ist <> die prosseniumsloge <> die erste loge <> neben der buehne <>  <>  <>  <>  <>  <>  <> 50
 ist <> die quadrille <> der tanz <> auf baellen um mitternacht <>  <>  <>  <>  <>  <>  <> 50
 ist <> die rezension <> die beurteilung <> von einem buch <>  <>  <>  <>  <>  <>  <> 50
-ist <> dur <> das tongeschlecht terz <> mit grosser <>  <>  <>  <>  <>  <>  <> 50
+ist <> dur <> das tongeschlecht <> mit grosser terz<>  <>  <>  <>  <>  <>  <> 50
 ist <> ein calamus <> ein schreibgeraet aus zuckerrohr bzw einem schilfhalm<>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein cembalo <> ein historisches tasteninstrument <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein dramturg <> ein berater <> in dem theater <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein dramaturg <> ein berater <> in dem theater <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine gitarre <> ein zupfinstrument <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine redoute <> ein maskenball <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine singende saege <> ein musikinstrument <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -86,7 +85,7 @@ ist <> fidelio <> eine oper <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> friedrich duerrenmatt <> ein lyriker <> nicht <>  <>  <>  <>  <>  <>  <> 50
 ist <> fruehlings-erwachen <> das bedeutendste drama <> von frank wedekind<>  <>  <>  <>  <>  <>  <> 50
 ist <> george_lazenby <> ein schauspieler <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> graceland <> das anwesen presley <> von elvis <>  <>  <>  <>  <>  <>  <> 50
+ist <> graceland <> das anwesen  <> von elvis presley<>  <>  <>  <>  <>  <>  <> 50
 ist <> grisu <> ein kleiner drache <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> henning_mankell <> der autor <> von mittsommermord <>  <>  <>  <>  <>  <>  <> 50
 ist <> homer <> der autor <> von der ilias <>  <>  <>  <>  <>  <>  <> 50
@@ -99,12 +98,12 @@ ist <> jolly_jumper <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> jon <> das herrchen <> von garfield <>  <>  <>  <>  <>  <>  <> 50
 ist <> _kabale_und_liebe_ <> ein roman <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kalevala <> das nationalepos <> der finnen <>  <>  <>  <>  <>  <>  <> 50
-ist <> lara croft <> eine figur raider <> in tomb <>  <>  <>  <>  <>  <>  <> 50
+ist <> lara croft <> eine figur <> in tomb raider<>   <> 50
 ist <> _locus_solus_ <> ein roman <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> lucky luke <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> madonna <> eine saengerin <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> meister lampe <> ein fabelname <> fuer den hasen <>  <>  <>  <>  <>  <>  <> 50
-ist <> miss_piggy <> das schwein show <> in der muppet <>  <>  <>  <>  <>  <>  <> 50
+ist <> miss_piggy <> das schwein <> in der muppet show>  <>  50
 ist <> miss_piggy <> nothing <> in kermit verliebt <>  <>  <>  <>  <>  <>  <> 50
 ist <> mondbasis alpha eins <> eine weltraumserie <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> nelly furtado <> eine saengerin <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -132,7 +131,7 @@ komponierte <> johann strauss <> den zigeunerbaron <>  <>  <>  <>  <>  <>  <>  <
 komponierte <> karl kratzl <> _das_glueck_is_a_vogerl_ <>  <>  <>  <>  <>  <>  <>  <> 50
 komponierte <> puccini <> die oper _tosca_ <>  <>  <>  <>  <>  <>  <>  <> 50
 komponierte <> ravel <> den bolero <>  <>  <>  <>  <>  <>  <>  <> 50
-komponierte <> richard wagner <> nothing <> _der_fliegende_hollaender_ <>  <>  <>  <>  <>  <>  <> 50
+komponierte <> richard wagner <> nothing <> _den_fliegende_hollaender_ <>  <>  <>  <>  <>  <>  <> 50
 komponiertest <> edward elgar <> die _enigma_variations_ <>  <>  <>  <>  <>  <>  <>  <> 50
 komponierte <> _wolfgang_amadeus_mozart_ <> die spatzenmesse <>  <>  <>  <>  <>  <>  <>  <> 50
 komponierte <> _wolfgang_amadeus_mozart_ <> die zauberfloete <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -149,16 +148,13 @@ schrieb <> alice walker <> _die_farbe_lila_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> _andrew_loyd_webber_ <> cats <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> _andrew_loyd_webber_ <> das musical cats <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> anna seghers <> _das_siebte_kreuz_ <>  <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> anna_seghers <> _das_siebte_kreuz_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> astrid lindgren <> _karlsson <> vom dach_ <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> boris pasternak <> den roman _doktor_schiwago_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> boris_pasternak <> _doktor_schiwago_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> broch <> _der_tod_des_vergil_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> caesar <> _de_bello_gallico_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> carlo collodi <> pinoccio <>  <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> carl zuckmayer <> den hauptmann  von koepenick <> <> <>  <>  <>  <>  <>  <> 50
-schrieb <> carl_zuckmayer <> der hauptmann <> von koepenick <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> carl_zuckmayer <> _der_hauptmann_von_koepenick_ <>  <>  <>  <>  <>  <>  <>  <> 50
+schrieb <> carl zuckmayer <> den hauptmann  von koepenick <>  <> 50
 schrieb <> cervantes <> _don_quijote_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> charles darwin <> _die_entstehung_der_arten_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> charles schulz <> die peanuts <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -206,7 +202,7 @@ schrieb <> kaestner <> _emil_und_die_detektive_ <>  <>  <>  <>  <>  <>  <>  <> 5
 schrieb <> klabund <> der kreidekreis <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> lessing <> _emilia_galotti_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> lessing <> _nathan_der_weise_ <>  <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> lewis caroll <> _alice_in_dem_wunderland_ <>  <>  <>  <>  <>  <>  <>  <> 50
+schrieb <> lewis caroll <> _alice_im_wunderland_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> marek <> _goetter_graeber_und_gelehrte_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> margaret mitchell <> _vom winde verweht_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> max_frisch <> _andorra_ <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -231,14 +227,12 @@ schrieb <> schnitzler <> den reigen <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> shakespeare <> _der_kaufmann_von_venedig_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> shakespeare <> _ein_sommernachtstraum_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> shakespeare <> romeo und julia<>  <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> shakespeare <> _romeo_und_julia_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> shakespeare <> _viel_laerm_um_nichts_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> siegfried lenz <> die _deutschstunde_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> sophokles <> antigone <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> stefan zweig <> _die_schachnovelle_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> stephen king <> _friedhof_der_kuscheltiere_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> theodor storm <> den _schimmelreiter_ <>  <>  <>  <>  <>  <>  <>  <> 50
-schrieb <> theodor storm <> _der_schimmelreiter_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> thomas malory <> _le morte darthur_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> thomas mann <> die _buddenbrooks_ <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> tolstoj <> _anna_karenina_ <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -260,7 +254,6 @@ spielte <> angelina jolie <> lara croft <>  <>  <>  <>  <>  <>  <>  <> 50
 spielte <> martin landau <> die hauptrolle <> in mondbasis alpha eins <>  <>  <>  <>  <>  <>  <> 50
 spielt <> madame butterfly <> nothing <> in japan <>  <>  <>  <>  <>  <>  <> 50
 spielt <> _romeo und julia_<> nothing <> in verona <>  <>  <>  <>  <>  <>  <> 50
-sprach <> doktor doolittle <> nothing <> mit seinen tieren <>  <>  <>  <>  <>  <>  <> 50
 sprach <> doktor _doolittle_ <> nothing <> mit seinen tieren <>  <>  <>  <>  <>  <>  <> 50
 stammt <> der bolero <> nothing <> von ravel <>  <>  <>  <>  <>  <>  <> 50
 stammt <> _der_ewige_frieden_ <> nothing <> von immanuel_kant <>  <>  <>  <>  <>  <>  <> 50
@@ -303,7 +296,7 @@ war <> richard loewenherz <> gefangener <> in duernstein <>  <>  <>  <>  <>  <> 
 war <> robin_hood <> ein raeuberhauptmann <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> sappho <> eine griechische dichterin <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> theodor mommsen <> der erste deutsche literatur-nobelpreistraeger <>  <>  <>  <>  <>  <>  <>  <> 50
-werden wollte <> grisu <> feuerwehrmann <>  <>  <>  <>  <>  <>  <>  <> 50
+wollte werden <> grisu <> feuerwehrmann <>  <>  <>  <>  <>  <>  <>  <> 50
 wird wird <> der emmy <> nothing <> jaehrlich vergeben <>  <>  <>  <>  <>  <>  <> 50
 wurde <> bruno bettelheim <> nothing <> in wien geboren <>  <>  <>  <>  <>  <>  <> 50
 wurde <> charlie chaplin<>  <> in london geboren <>  <>  <>  <>  <>  <>  <> 50

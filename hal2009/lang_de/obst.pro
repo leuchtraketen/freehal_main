@@ -207,3 +207,7 @@ enthaelt <> obst <> viele vitamine <>  <> 50
 ist <> obst <> ein gesundes nahrungsmittel <>  <> 50
 hat gehalt <> obst <> einen hohen <> an mineralsalzen <> 50
 sollte gegessen werden <> obst <>  <> taeglich <> 50
+ist <> obst <> nahrung <>  <> 50
+ist <> obst <> essbar <>   <> 50
+ist <> obst <> ein nahrungsmittel <>  <> 50
+enthaelt <> obst <> viele vitamine <>  <>  <> 50
