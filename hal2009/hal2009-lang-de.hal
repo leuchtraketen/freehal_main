@@ -3967,6 +3967,12 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             if not from hash tags item { lc( $0 concat $1 ) } first item matches /v/ or from hash tags item { lc( $0 concat $1 ) } first item matches /adv/ do
                 go to next
             done
+            
+            if var phrase matches /\s(<[a-zA-Z0-9]>+?)\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
+                if not from hash tags item { lc( $0 ) } first item matches /v/ or from hash tags item { lc( $0 ) } first item matches /adv/ do
+                    go to next
+                done
+            done
         done
         
         #do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global

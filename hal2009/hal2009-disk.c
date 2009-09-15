@@ -133,6 +133,23 @@ static int select_primary_key(void* key, int argc, char **argv, char **azColName
 }
 
 int get_last_pk(int rel) {
+    // cache
+    static int cache_clauses = -1;
+    static int cache_facts = -1;
+    if (rel) {
+        if (cache_clauses > -1) {
+            ++cache_clauses;
+            return cache_clauses;
+        }
+    }
+    else {
+        if (cache_facts > -1) {
+            ++cache_facts;
+            return cache_facts;
+        }
+    }
+    
+    // no cache
     char sql[5120];
     *sql = 0;
     strcat(sql, "SELECT pk from ");
@@ -140,13 +157,17 @@ int get_last_pk(int rel) {
     strcat(sql, " order by 1 desc limit 1;");
 
     char key[99];
-    char* err;
-    if (sqlite3_exec(sqlite_connection, sql, select_primary_key, key, &err)) {
-        printf("Error while executing SQL: %s\n\n%s\n\n", sql, err);
-    }
-    sqlite3_free(err);
+    int error = sql_execute(sql, select_primary_key, key);
     
-    return to_number(key);
+    if (rel) {
+        cache_clauses = to_number(key);
+    }
+    else {
+        cache_facts = to_number(key);
+        printf("cache_facts: %d\n", cache_facts);
+    }
+    
+    return (rel?cache_clauses:cache_facts);
 }
 
 int detect_words(int* num_of_words, char** words, const char* r_subjects, const char* r_objects, const char* r_adverbs, const char* r_extra) {
@@ -232,10 +253,12 @@ int detect_words(int* num_of_words, char** words, const char* r_subjects, const 
     free(extra);
 }
 
-char* gen_sql_add_entry(int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     
-    char* sql = malloc(102400);
-    *sql = 0;
+    if (0 == sql) {
+        sql = malloc(102400);
+        *sql = 0;
+    }
     strcat(sql, "INSERT INTO ");
     strcat(sql, rel ? "clauses" : "facts");
     strcat(sql, " (`pk`, `mix_1`, `verb`, `verbgroup`, `subjects`, `objects`, `adverbs`, `questionword`, `prio`, `from`, `rel`, `truth`) VALUES (");
@@ -285,13 +308,15 @@ char* gen_sql_add_entry(int pk, int rel, const char* subjects, const char* objec
     return sql;
 }
 
-char* gen_sql_add_verb_flags(int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     
     char key[101];
     snprintf(key, 100, "%d", pk);
     
-    char* sql = malloc(102400);
-    *sql = 0;
+    if (0 == sql) {
+        sql = malloc(102400);
+        *sql = 0;
+    }
     strcat(sql, "INSERT INTO rel_");
     strcat(sql, rel ? "clause" : "fact");
     strcat(sql, "_flag (`fact`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
@@ -311,13 +336,15 @@ char* gen_sql_add_verb_flags(int pk, int rel, const char* subjects, const char* 
     return sql;
 }
 
-char* gen_sql_add_word_fact_relations(int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
 
     char key[101];
     snprintf(key, 100, "%d", pk);
     
-    char* sql = malloc(102400);
-    *sql = 0;
+    if (0 == sql) {
+        sql = malloc(102400);
+        *sql = 0;
+    }
     
     int num_of_words = 0;
     char** words = calloc(501*sizeof(char*), 1);
@@ -353,6 +380,8 @@ char* gen_sql_add_word_fact_relations(int pk, int rel, const char* subjects, con
         --num_of_words;
     }
     free(words);
+
+    strcat(sql, ";\n");
     
     return sql;
 }
@@ -468,17 +497,10 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
     int pk = get_last_pk(rel)+1;
 
     {
-        char* sql = gen_sql_add_entry(pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
-        int error = sql_execute(sql, NULL, NULL);
-        free(sql);
-    }
-    {
-        char* sql = gen_sql_add_verb_flags(pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
-        int error = sql_execute(sql, NULL, NULL);
-        free(sql);
-    }
-    {
-        char* sql = gen_sql_add_word_fact_relations(pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        char* sql = 0;
+        sql = gen_sql_add_entry(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        sql = gen_sql_add_verb_flags(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
@@ -494,22 +516,16 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     int pk = get_last_pk(0)+1;
 
     {
-        char* sql = gen_sql_add_entry(pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
-        int error = sql_execute(sql, NULL, NULL);
-        free(sql);
-    }
-    {
-        char* sql = gen_sql_add_verb_flags(pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
-        int error = sql_execute(sql, NULL, NULL);
-        free(sql);
-    }
-    {
-        char* sql = gen_sql_add_word_fact_relations(pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        char* sql = 0;
+        sql = gen_sql_add_entry(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        //printf("%s\n", sql);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
 
-    struct fact* fact = calloc(sizeof(struct fact), 1);;
+    struct fact* fact = calloc(sizeof(struct fact), 1);
     fact->pk = pk;
     
     return fact;
