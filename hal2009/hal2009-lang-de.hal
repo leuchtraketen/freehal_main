@@ -3964,7 +3964,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             print from hash tags item { lc( $0 concat $1 ) } first item
             print new line
             
-            if not from hash tags item { lc( $0 concat $1 ) } first item matches /v/ do
+            if not from hash tags item { lc( $0 concat $1 ) } first item matches /v/ or from hash tags item { lc( $0 concat $1 ) } first item matches /adv/ do
                 go to next
             done
         done
