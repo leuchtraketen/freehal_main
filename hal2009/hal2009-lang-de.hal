@@ -3041,7 +3041,8 @@ define action compute_output with var output do
 
     if var output matches /\sein/ and lc(var output) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
         do regex using var output: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
-        do regex using var output: /\sein/, " kein", :global:i
+        do regex using var output: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
+        do regex using var output: /\sein(.?.?.?)$/, " kein$0", :global:i
     done
     
     set new var time_now to time without arguments
@@ -3957,7 +3958,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             go to next
         done
         
-        if var phrase matches /\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
+        if var phrase matches /\s($prefix)(<[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?)(\s|$)/ do
             print "possible verb: "
             print lc( $0 concat $1 )
             print " = "
