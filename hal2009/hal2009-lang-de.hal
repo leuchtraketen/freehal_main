@@ -1467,7 +1467,6 @@ set multi-line new global hash builtin_verb_prefixes to {
           'weg' => 1,
           'zer' => 1,
           'her' => 1,
-          'ueber' => 1,
           'unter' => 1,
           'neben' => 1,
           'herunter' => 1,
