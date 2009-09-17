@@ -1,3 +1,4 @@
+
 aufgeht <> die sonne <> nothing <> in dem osten <>  <>  <>  <>  <>  <>  <> 50
 aufgenommen wurde <> die ddr <> 1973 <> in die uno <>  <>  <>  <>  <>  <>  <> 50
 bedeutet <> _buenos_aires_ <> gute luefte <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -22,10 +23,6 @@ befindet <> mesopotamien <> sich <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
 beginnt <> der fruehling <> nothing <> in dem maerz <>  <>  <>  <>  <>  <>  <> 50
 beginnt <> der herbst <>  <> in dem september <> 50
 beginnt <> der sommer <> nothing <> in dem juni <>  <>  <>  <>  <>  <>  <> 50
-istbenannt  <> die venus <>  <> nach der roemischen goettin der liebe <> 50
-ist benannt <> der neptun <>  <> nach dem roemischen meeresgott <> 50
-wurde benannt <> der saturn <>  <> nach dem roemischen gott von der saat <> 50
-ist <> bergen <> die zweitgroesste stadt <> von norwegen <> 50
 beruehmt ist <> carrara <> fuer <> seinen weissen marmor <>  <>  <>  <>  <>  <>  <> 50
 bestehen <> die azoren <> nothing <> aus 9 inseln <>  <>  <>  <>  <>  <>  <> 50
 besteht <> der grosse wagen <> nothing <> aus 7 sternen <>  <>  <>  <>  <>  <>  <> 50
@@ -39,26 +36,11 @@ bezeichnet <> _ <> das ruhr gebiet als _kohlenpott_ <>  <>  <>  <>  <>  <>  <>  
 braucht <> das licht <> 8 minuten <> von der sonne zur erde <>  <>  <>  <>  <>  <>  <> 50
 braucht <> das licht <> eineinviertel sekunden <> vom mond zur erde <>  <>  <>  <>  <>  <>  <> 50
 braucht <> der mond <> etwa 27 tage fuer eine erdumrundung <>  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buchen <> nothing <> an dem rand vom odenwald <>  <>  <>  <>  <>  <>  <> 50
 dauert <> der umlauf des halleyschen kometen <> etwa 76 jahre <>  <>  <>  <>  <>  <>  <>  <> 50
 dauert <> einen tag <> die umdrehung <> der erde um ihre eigene achse <>  <>  <>  <>  <>  <>  <> 50
-liegt <> italien <>  <> auf der apenninenhalbinsel <> 50
-hat <> der don <> eine laenge <> von;1970;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der don <> 1970 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der don <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der don <>  <> in europa <> 50
-donau hat <> die <> eine laenge <> von;2850;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-donau ist <> die <> 2850 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-donau ist <> die <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-donau liegt <> die <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-douro fliesst <> der <> nothing <> durch;portugal <>  <>  <> nothing <>  <>  <>  <> 50
-douro hat <> der <> eine laenge <> von;776;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-douro ist <> der <> 776 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-douro ist <> der <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-douro liegt <> der <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-dreht <> der_mond <> sich um die erde <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
+dreht <> der_mond <> sich um die erde <> nothing <>  <>  <>  <>  <>  <> 
 dreht <> die erde <> sich <> in einer stunde um 15 grad <>  <>  <>  <>  <>  <>  <> 50
-dreht <> die erde <> sich um die_sonne <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
+dreht <> die erde <> sich um die_sonne <>  <>  <>  <>  <>  <>  <> 
 durchquert <> der indus <> pakistan <>  <>  <>  <>  <>  <>  <>  <> 50
 entdeckt <> _voyager_ii_ <> despina 1989 <>  <>  <>  <>  <>  <>  <>  <> 50
 entdeckt <> _voyager_ii_ <> galatea 1989 <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -80,12 +62,12 @@ entdeckt wurde <> cressida <> 1986  <> durch voyager ii <>  <>  <>  <>  <>  <>  
 entdeckt wurde <> der jupiter <> bereits <> in der antike <>  <>  <>  <>  <>  <>  <> 50
 entdeckt wurde <> der mond <> phobos <> an dem 1877 durch asaph hall <>  <>  <>  <>  <>  <>  <> 50
 entdeckt wurde <> der mond phobos <> 1877 <> durch asaph hall <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der neptun <> nothing <> 1846 <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der neptun <> nothing <> in dem 19 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der pluto <> nothing <> 1930 <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der pluto <> nothing <> in dem 20 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der pluto <> nothing <> zuletzt <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> der uranus <> nothing <> in dem 18 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der neptun <>  <> 1846 <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der neptun <>  <> in dem 19 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der pluto <>  <> 1930 <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der pluto <>  <> in dem 20 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der pluto <>  <> zuletzt <>  <>  <>  <>  <>  <>  <> 50
+entdeckt wurde <> der uranus <>  <> in dem 18 jahrhundert <>  <>  <>  <>  <>  <>  <> 50
 entdeckt wurde <> desdemona <> 1986  <> durch voyager ii  <>  <>  <>  <>  <>  <>  <> 50
 entdeckt wurde <> dione <> 1684 <> durch cassini <>  <>  <>  <>  <>  <>  <> 50
 entdeckt wurde <> elara <> 1905 <> durch perrine <>  <>  <>  <>  <>  <>  <> 50
@@ -136,217 +118,188 @@ entdeckte <> herschel <> den uranus <>  <>  <>  <>  <>  <>  <>  <> 50
 entdeckte <> james cook <> als erster die hawaii-inseln <>  <>  <>  <>  <>  <>  <>  <> 50
 entdeckte <> vasco da gama <> den seeweg <> nach indien <>  <>  <>  <>  <>  <>  <> 50
 enthaelt <> der baikalsee <> das meiste suesswasser <>  <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> der euphrat <> nothing <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> die donau <> nothing <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> die eder <> nothing <>  in dem rothaargebirge <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> die elbe <> nothing <>  in dem riesengebirge <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> die rhone <> nothing <> in dem kanton wallis<>  <>  <>  <>  <>  <>  <> 50
-entspringt <> nothing <> nothing <> die elbe in tschechien <>  <>  <>  <>  <>  <>  <> 50
-entspringt <> nothing <> nothing <> die havel in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-entstanden <> die mondkrater <> nothing <> durch meteoriteneinschlaege <>  <>  <>  <>  <>  <>  <> 50
-entstanden ist <> das universum <> nothing <> durch den urknall <>  <>  <>  <> nothing <> nothing <>  <> 50
-entsteht <> ein maar <> nothing <> durch eine vulkanische gasexplosion <>  <>  <>  <>  <>  <>  <> 50
-errichtet wurde <> die erste u-bahn <> nothing <> in london <>  <>  <>  <>  <>  <>  <> 50
+entspringt <>  <>  <> die elbe in tschechien <>  <>  <>  <>  <>  <>  <> 50
+entspringt <>  <>  <> die havel in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+entspringt <> der euphrat <>  <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+entspringt <> die donau <>  <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+entspringt <> die eder <>  <>  in dem rothaargebirge <>  <>  <>  <>  <>  <>  <> 50
+entspringt <> die elbe <>  <>  in dem riesengebirge <>  <>  <>  <>  <>  <>  <> 50
+entspringt <> die rhone <>  <> in dem kanton wallis<>  <>  <>  <>  <>  <>  <> 50
+entstanden <> die mondkrater <>  <> durch meteoriteneinschlaege <>  <>  <>  <>  <>  <>  <> 50
+entstanden ist <> das universum <>  <> durch den urknall <>  <>  <>  <>  <>  <>  <> 50
+entsteht <> ein maar <>  <> durch eine vulkanische gasexplosion <>  <>  <>  <>  <>  <>  <> 50
+errichtet wurde <> die erste u-bahn <>  <> in london <>  <>  <>  <>  <>  <>  <> 50
 erstreckt <> russland <> sich <> ueber 2 erdteile <>  <>  <>  <>  <>  <>  <> 50
-erzeugt wird <> die meiste wolle <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
+erzeugt wird <> die meiste wolle <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
 exportiert <> brasilien <> den meisten kaffee <>  <>  <>  <>  <>  <>  <>  <> 50
-findet <> die hanse-sail <> nothing <>  in rostock statt <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der nelson <> nothing <> durch;kanada <>  <>  <> nothing <>  <>  <>  <> 50
+findet <> die hanse-sail <>  <>  in rostock statt <>  <>  <>  <>  <>  <>  <> 50
 fliegt seit <> die iss <> 1998 <> in dem all <>  <>  <>  <>  <>  <>  <> 50
-fliese <> der ebro <> nothing <> durch spanien <>  <>  <>  <>  <>  <>  <> 50
-fliese <> der mersey <> river <> durch liverpool <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> bei <> cuxhaven <> die elbe;in die nordsee <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der <> nothing <> amur;durch;russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der <> nothing <> po;durch;italien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _huang_ho_ <> nothing <> durch china <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _huang_ho_ <> nothing <> durch;china <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _rio_de_la_plata_ <> duch argentinien & uruguay <>  <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _rio_grande_ <> nothing <> durch die usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _sankt_lorenz_ <> nothing <> durch kananda & die usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _sao_francisco_ <> nothing <> durch brasilien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der _sao_francisco_ <> nothing <> durch;brasilien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der amazonas <> nothing <> durch brasilien <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der amur <> nothing <> durch russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der angara <> nothing <> durch russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der brahmaputra <> nothing <> durch indien <>  <>  <> nothing <>  <>  <>  <> 50
+fliesst <> der _huang_ho_ <>  <> durch china <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der _rio_de_la_plata_ <> duch argentinien & uruguay <>  <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der _rio_grande_ <>  <> durch die usa <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der _sankt_lorenz_ <>  <> durch kananda & die usa <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der _sao_francisco_ <>  <> durch brasilien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der amazonas <>  <> durch brasilien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der amur <>  <> durch russland <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der angara <>  <> durch russland <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der angara <> durch russland <> <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der brahmaputra <> durch indien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der colorado <>  <> durch die usa <>  <>  <>  <>  <>  <>  <> 50
 fliesst <> der colorado <> <> durch den gand canyon<>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der colorado <> nothing <> durch die usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der colorado <> nothing <> durch;die;usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der columbia <> nothing <> durch die usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der columbia <> nothing <> durch;die;usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der dnjepr <> nothing <> durch weissrussland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der dnjepr <> nothing <> durch;weissrussland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der don <> nothing <> in das asowsche meer<>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der douro <> nothing <> durch portugal <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der ebro <> nothing <> durch spanien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der euphrat <> den  durch irak <>  <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der euphrat <> den  durch iran <>  <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der euphrat <> nothing <> durch;den;irak <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der euphrat <> nothing <> durch;den;iran <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der ganges <> nothing <> durch indien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der ganges <> nothing <> durch;indien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der kongo <> nothing <> durch zaire <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der kongo <> nothing <> durch;zaire <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der kongo <> nothing <> in der naehe von timbuktu <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der mackenzie <> nothing <> durch die usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der mekong <> nothing <> durch vietnam <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der mekong <> nothing <> durch;vietnam <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der mississippi <> nothing <> in den golf von mexiko <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der murray <> nothing <> durch australien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der murray <> nothing <> durch;australien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der nil <> nothing <> durch aegyueten <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der po <> nothing <> durch italien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der po <> nothing <> durch turin <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der rhein <> nothing <> durch koeln <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der rhein <> nothing <> in die nordsee <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der salween <> nothing <> durch china <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der salween <> nothing <> durch;china <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der septik <> nothing <> der septik durch _papua_neuguinea_ <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> der song <> nothing <> koi;durch;vietnam <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der song koi <> nothing <> durch vietnam <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> der yangtse<> nothing <> durch china <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die donau <> nothing <> durch budapest <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die elbe <> nothing <> durch deutschland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die elbe <> nothing <> durch;deutschland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die garonne <> nothing <> durch frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die garonne <> nothing <> durch;frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die isar <> nothing <> durch muenchen <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die isar <> nothing <> in die donau <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die leine <> nothing <> durch hannover <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die lena <> nothing <> durch russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die lena <> nothing <> durch;russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die loire <> nothing <> durch frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die loire <> nothing <> durch;frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die moldau <> nothing <> durch prag <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die nahe <> nothing <> durch bad_kreuzbach <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die rhone <> nothing <> durch den genfer see <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die rhone <> nothing <> durch frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die rhone <> nothing <> durch;frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die seine <> nothing <> durch frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die seine <> nothing <> durch;frankreich <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die spree <> nothing <> durch berlin <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> die weichsel <> nothing <> durch polen <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die weichsel <> nothing <> durch;polen <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> die wolga <> nothing <> durch russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;_rio_grande_;durch;die;usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;_sankt_lorenz_;durch;kananda;&;die;usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;angara;durch;russland <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;brahmaputra;durch;indien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;ebro;durch;spanien <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> der;mackenzie;durch;die;usa <>  <>  <> nothing <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> die themse durch london <>  <>  <>  <>  <>  <>  <> 50
-fliesst <> nothing <> nothing <> die wien durch wien <>  <>  <>  <>  <>  <>  <> 50
-flog <> die erste frau <> nothing <> 1963  ins weltall <>  <>  <>  <>  <>  <>  <> 50
-fuehrt <> die bruecke <> nothing <> ueber die neretva;von mostar <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> die falkland-inseln <> nothing <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> die falklandinseln <> nothing <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> die galapagos-inseln <> nothing <>  zu ecuador <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> die komoren <> nothing <> die komoren zu afrika <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> die nikobaren <> nothing <> zu indien <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> inseln <> nothing <> die andamanen;zu indien <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> ozean <> nothing <> die malediven zum indischen <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <>die kanarischen inseln <> nothing <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <>die kanarischen inseln <> nothing <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
-gehoert  <> _sankt_helena_ <> nothing <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> _la_palma_ <> nothing <> zu den kanarischen inseln<>  <>  <>  <>  <>  <>  <> 50
-gehoert <> baffinland <> nothing <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> bali <> nothing <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> barbados <> nothing <> zu den antillen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> bayern <> nothing <> zu deutschland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> bocholt <> borken <> zum kreis <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> bornholm <> nothing <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> british columbia <> nothing <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> celebes <> nothing <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> das bikini-atoll <> nothing <> zu den marshallinseln <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> das kap hoorn <> nothing <> zu chile <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> der algol <> perseus <> zum sternbild <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> der alphard <> nothing <> zum sternbild der wasserschlange <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> der atair <> adler <> zum sternbild <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> der polarstern <> kleiner baer <> zum sternbild <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die _isla_margarita_ <> nothing <>  zu venezuela <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die ellesmere-insel <> nothing <>  zu kanada <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die erde <> nothing <> zur milchstrasse <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die osterinsel <> nothing <> zu chile <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die ozonschicht <> nothing <> zur stratosphaere <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> dominica <> nothing <> zu amerika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> elba <> nothing <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> formentera <> nothing <> zu den pityusen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> gibraltar <> nothing <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> goa <> nothing <> zu indien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> gotland <> nothing <> zu schweden <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> groenland <> nothing <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> ibiza <> nothing <> zu den pityusen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> java <> nothing <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> juetland <> nothing <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> kap_verde <> nothing <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> kefalinia <> nothing <> zu griechenland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> korfu <> nothing <> zu griechenland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> korsika <> nothing <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> krk <> nothing <> die insel;zu kroatien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> lanzarote <> nothing <> zu den kanarischen inseln<>  <>  <>  <>  <>  <>  <> 50
-gehoert <> luzon <> nothing <> zu den philippinen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> madagaskar <> nothing <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> madeira <> nothing <> zu portugal <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> maine <> nothing <> zu neuengland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mallorca <> nothing <> zu den balearen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mallorca <> nothing <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> marinique <> nothing <> zu den antillen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> martinique <> nothing <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mauritius <> nothing <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> menorca <> nothing <> zu den balearen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mexiko <> nothing <> zu lateinamerika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mexiko <> nothing <> zu mittelamerika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> mindanao <> nothing <> zu den philippinen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> neubritannien <> nothing <> zu papua-neuguinea <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> niederkalifornien <> nothing <> zu mexiko <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> nothing <> nothing <> das _kap_trafalgar_ zu spanien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> nothing <> nothing <> der peloponnes zu griechenland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> nunavut <> nothing <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> oeland <> nothing <> zu schweden <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> oesel <> nothing <> zu estland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> puerto rico <> nothing <> zu mittelamerika <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> sachalin <> nothing <> zu russland <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> sansibar <> nothing <> zu tansania <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> sarawak <> nothing <> zu malaysien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> sardinien <> nothing <> zu italien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> sizilien <> nothing <> zu italien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der columbia <>  <> durch die usa <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der dnjepr <>  <> durch weissrussland <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der don <>  <> in das asowsche meer<>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der douro <>  <> durch portugal <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der ebro <>  <> durch spanien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der ebro <>  <> durch spanien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der euphrat <> den  durch irak <>  <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der euphrat <> den  durch iran <>  <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der ganges <>  <> durch indien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der kongo <>  <> durch zaire <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der kongo <>  <> in der naehe von timbuktu <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der mackenzie <>  <> durch die usa <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der mackenzie <> durch die usa <>   <>  <> 50
+fliesst <> der mekong <>  <> durch vietnam <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der mersey <> river <> durch liverpool <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der mississippi <>  <> in den golf von mexiko <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der murray <>  <> durch australien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der nelson <>  <> durch kanada <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der nil <>  <> durch aegyueten <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der po <>  <> durch italien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der po <>  <> durch turin <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der rhein <>  <> durch koeln <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der rhein <>  <> in die nordsee <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der salween <>  <> durch china <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der septik <>  <>  durch _papua_neuguinea_ <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der song koi <>  <> durch vietnam <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der yangtse<>  <> durch china <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> der_sankt_lorenz_ <> durch kananda & die usa <>   <>  <> 50
+fliesst <> die donau <>  <> durch budapest <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die elbe <>  <> durch deutschland <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die elbe <> bei cuxhaven <> in die nordsee <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die garonne <>  <> durch frankreich <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die isar <>  <> durch muenchen <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die isar <>  <> in die donau <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die leine <>  <> durch hannover <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die lena <>  <> durch russland <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die loire <>  <> durch frankreich <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die moldau <>  <> durch prag <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die nahe <>  <> durch bad_kreuzbach <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die rhone <>  <> durch den genfer see <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die rhone <>  <> durch frankreich <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die seine <>  <> durch frankreich <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die spree <>  <> durch berlin <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die themse <> durch london <>   <>  <> 50
+fliesst <> die weichsel <>  <> durch polen <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die wien <> durch wien <>  <>  <>  <>  <>  <>  <> 50
+fliesst <> die wolga <>  <> durch russland <>  <>  <>  <>  <>  <>  <> 50
+flog <> die erste frau <>  <> 1963  ins weltall <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die andamanen inseln <> zu indien <>   <>  <> 50
+gehoeren <> die falklandinseln <>  <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die falkland-inseln <>  <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die galapagos-inseln <>  <>  zu ecuador <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die komoren <>  <> die komoren zu afrika <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die malediven <>  zum indischen ozean <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <> die nikobaren <>  <> zu indien <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <>die kanarischen inseln <>  <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
+gehoeren <>die kanarischen inseln <>  <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
+gehoert  <> _sankt_helena_ <>  <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> _la_palma_ <>  <> zu den kanarischen inseln<>  <>  <>  <>  <>  <>  <> 50
+gehoert <> baffinland <>  <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> bali <>  <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> barbados <>  <> zu den antillen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> bayern <>  <> zu deutschland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> bocholt <> zum kreis borken <>  <>  <> 50
+gehoert <> bornholm <>  <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> british columbia <>  <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> celebes <>  <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> das _kap_trafalgar_ <>  zu spanien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> das bikini-atoll <>  <> zu den marshallinseln <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> das kap hoorn <>  <> zu chile <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> der algol <> zum sternbild perseus <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> der alphard <>  <> zum sternbild der wasserschlange <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> der atair <> zum sternbild adler <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> der peloponnes <> zu griechenland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> der polarstern <> zum sternbild kleiner baer <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die _isla_margarita_ <>  <>  zu venezuela <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die ellesmere-insel <>  <>  zu kanada <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die erde <>  <> zur milchstrasse <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die insel krk <> zu kroatien <>  <>  <> 50
+gehoert <> die insel madeira <> portugal <>  <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die osterinsel <>  <> zu chile <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> die ozonschicht <>  <> zur stratosphaere <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> dominica <>  <> zu amerika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> elba <>  <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> formentera <>  <> zu den pityusen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> gibraltar <>  <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> goa <>  <> zu indien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> gotland <>  <> zu schweden <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> groenland <>  <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> ibiza <>  <> zu den pityusen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> java <>  <> zu indonesien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> juetland <>  <> zu daenemark <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> kap_verde <>  <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> kefalinia <>  <> zu griechenland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> korfu <>  <> zu griechenland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> korsika <>  <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> lanzarote <>  <> zu den kanarischen inseln<>  <>  <>  <>  <>  <>  <> 50
+gehoert <> luzon <>  <> zu den philippinen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> madagaskar <>  <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> madeira <>  <> zu portugal <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> maine <>  <> zu neuengland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mallorca <>  <> zu den balearen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mallorca <>  <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> marinique <>  <> zu den antillen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> martinique <>  <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mauritius <>  <> zu afrika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> menorca <>  <> zu den balearen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mexiko <>  <> zu lateinamerika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mexiko <>  <> zu mittelamerika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> mindanao <>  <> zu den philippinen <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> neubritannien <>  <> zu papua-neuguinea <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> niederkalifornien <>  <> zu mexiko <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> nunavut <>  <> zu kanada <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> oeland <>  <> zu schweden <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> oesel <>  <> zu estland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> puerto rico <>  <> zu mittelamerika <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> sachalin <>  <> zu russland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> sansibar <>  <> zu tansania <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> sarawak <>  <> zu malaysien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> sardinien <>  <> zu italien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> sizilien <>  <> zu italien <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> suedtirol <> seit 1916 <> zu italien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> tahiti <> nothing <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> teneriffa <> nothing <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> texel <> nothing <> zu den von niederlande <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> tristan da cunha <> nothing <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> wellington <> nothing <> zu chile <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> yukatan <> nothing <> zum groessten teil zu mexiko <>  <>  <>  <>  <>  <>  <> 50
-gehoert <>die insel madeira <> portugal <>  <>  <>  <>  <>  <>  <>  <> 50
-gehoert vermont <> nothing <> nothing <> zu neuengland <>  <>  <>  <>  <>  <>  <> 50
-genannt wird <> auch stiller <> ozean <> der pazifik <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> tahiti <>  <> zu frankreich <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> teneriffa <>  <> zu spanien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> texel <>  <> zu den von niederlande <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> tristan da cunha <>  <> zu grossbritannien <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> vermont <> zu neuengland <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> wellington <>  <> zu chile <>  <>  <>  <>  <>  <>  <> 50
+gehoert <> yukatan <>  <> zum groessten teil zu mexiko <>  <>  <>  <>  <>  <>  <> 50
 genannt wird <> der main <> der weisswurst-aequator <>  <>  <>  <>  <>  <>  <>  <> 50
+genannt wird <> der pazifik <> auch stiller ozean <>  <>  <> 50
 genannt wird <> detroit <> auch motown <>  <>  <>  <>  <>  <>  <>  <> 50
 genannt wird <> dresden <> auch elbflorenz <>  <>  <>  <>  <>  <>  <>  <> 50
-genannt wird <> irland <> nothing <> die _gruene_insel_ <>  <>  <>  <>  <>  <>  <> 50
+genannt wird <> irland <>  <> die _gruene_insel_ <>  <>  <>  <>  <>  <>  <> 50
 genannt wird <> muenchen <> das millionendorf <>  <>  <>  <>  <>  <>  <>  <> 50
 genannt wird <> mynamar <> auch birma <>  <>  <>  <>  <>  <>  <>  <> 50
-genannt wurde <> die tuerkei <> nothing <> das _reich_der_osmanen_ <>  <>  <>  <>  <>  <>  <> 50
+genannt wurde <> die tuerkei <> das _reich_der_osmanen_ <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> 16 bundeslaender <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> 80 pyramiden <> in aegypten <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> ein methan <> in der atmosphaere der venus;nicht <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> ein methan <> in der atmosphaere vom mars;nicht <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> einen sauerstoff <> in der atmosphaere der venus;nicht <>  <>  <>  <>  <>  <>  <> 50
+gibt <> es <> ein methan <> in der atmosphaere der venus <> nicht <>  <>  <>  <>  <>  <> 50
+gibt <> es <> ein methan <> in der atmosphaere vom mars <> nicht <>  <>  <>  <>  <>  <> 50
+gibt <> es <> einen sauerstoff <> in der atmosphaere der venus <> nicht <>  <>  <>  <>  <>  <> 50
 gibt <> es <> etwa 1000 sprachen <> auf den philippinen <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> fuenf_kontinente <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+gibt <> es <> fuenf_kontinente <>  <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> in amsterdam <> grachten  <>  <>  <>  <>  <>  <>  <> 50
 gibt <> es <> keine gletscher <> in australien <>  <>  <>  <>  <>  <>  <> 50
-giessen ist <> eine universitaetsstadt <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-giessen liegt <> nothing <> nothing <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> andorra <> nothing <> an frankreich <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> costa_rica <> nothing <> in dem im sueden an panama <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> costa_rica <> nothing <> in dem norden an nicaragua <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> vorarlberg <> nothing <> an deutschland <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> vorarlberg <> nothing <> an die schweiz <>  <>  <>  <>  <>  <>  <> 50
-grenzt <> vorarlberg <> nothing <> an lichtenstein <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> heute abend  <> nichts vor  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> kein bild <> von mir <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> kein foto <> von mir <>  <>  <>  <>  <>  <>  <> 100
+giessen ist <> eine universitaetsstadt <>  <>  <>  <>  <>  <>  <>  <>  <> 50
+giessen liegt <> an der lahn <> <>  <> 50
+grenzt <> andorra <>  <> an frankreich <>  <>  <>  <>  <>  <>  <> 50
+grenzt <> costa_rica <> in dem im sueden an panama <>   <>  <> 50
+grenzt <> costa_rica <> in dem norden an nicaragua <>    <>  <> 50
+grenzt <> vorarlberg <> an deutschland <>  <> <>  <> 50
+grenzt <> vorarlberg <> an die schweiz <>  <> <>  <> 50
+grenzt <> vorarlberg <> an lichtenstein <>  <>  <>  <>  <>  <>  <> 50
 haben <> japaner <> die groesste lebenserwartung <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> _st_petersburg_ <> etwa 5 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> adrastea <> einen durchmesser <> von 20 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -359,7 +312,7 @@ hat <> bayern <> 315 staedte <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> bayern <> die groesste flaeche aller bundeslaender <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> bayern <> mehr einwohner als oesterreich <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> belinda <> einen durchmesser <> von 68 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> berlin <> nothing <> dreimillionenvierhunderttausend einwohner <>  <>  <>  <>  <>  <>  <> 50
+hat <> berlin <> dreimillionenvierhunderttausend einwohner <>  <>  <>  <>  <>  <>  <> 50
 hat <> bianca <> einen durchmesser <> von 44 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> brandenburg <> 112 staedte <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> buenos aires <> etwa 13 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -368,57 +321,42 @@ hat <> calypso <> einen durchmesser <> von 26 kilometer <>  <>  <>  <>  <>  <>  
 hat <> carme <> einen durchmesser <> von 40 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> casablanca <> etwa 3 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> charon <> einen durchmesser <> von 1172 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> china <> nothing <> die meisten einwohner <>  <>  <>  <>  <>  <>  <> 50
+hat <> china <> die meisten einwohner <>  <>  <>  <>  <>  <>  <> 50
 hat <> cordelia <> einen durchmesser <> von 26 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> cressida <> einen durchmesser <> von 66 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> das bundeskriminalamt <> nothing <> seinen sitz in wiesbaden <>  <>  <>  <>  <>  <>  <> 50
-hat <> das bundespatentamt <> nothing <> seinen sitz in muenchen <>  <>  <>  <>  <>  <>  <> 50
-hat <> das bundesverwaltungsgericht <> nothing <> seinen sitz in leipzig <>  <>  <>  <>  <>  <>  <> 50
-hat <> das burgenland <> nothing <> die wenigsten einwohner in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-hat <> das kraftfahrt-bundesamt <> nothing <> seinen sitz in flensburg <>  <>  <>  <>  <>  <>  <> 50
-hat <> das luftfahrt-bundesamt <> nothing <> seinen sitz in braunschweig <>  <>  <>  <>  <>  <>  <> 50
+hat <> das bundeskriminalamt <> seinen sitz in wiesbaden <>  <>  <>  <>  <>  <>  <> 50
+hat <> das bundespatentamt <> seinen sitz in muenchen <>  <>  <>  <>  <>  <>  <> 50
+hat <> das bundesverwaltungsgericht <> seinen sitz in leipzig <>  <>  <>  <>  <>  <>  <> 50
+hat <> das burgenland <>  <> die wenigsten einwohner in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+hat <> das kraftfahrt-bundesamt <> seinen sitz in flensburg <>  <>  <>  <>  <>  <>  <> 50
+hat <> das luftfahrt-bundesamt <> seinen sitz in braunschweig <>  <>  <>  <>  <>  <>  <> 50
 hat <> das tote meer <> den hoechsten salzgehalt <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> das tote meer <> einen abfluss <> nicht <>  <>  <>  <>  <>  <>  <> 50
-hat <> das umweltbundesamt <> nothing <> seinen sitz in dessau <>  <>  <>  <>  <>  <>  <> 50
+hat <> das umweltbundesamt <> seinen sitz in dessau <>  <>  <>  <>  <>  <>  <> 50
 hat <> deimos <> einen durchmesser <> von 13 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der <> eine laenge <> amur;von;4510;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der <> eine laenge <> indus;von;3180;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der <> eine laenge <> po;von;676;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der <> niger eine laenge <> von;4030;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _amu_darya_ <> eine laenge <> von 2620 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _amu_darya_ <> eine laenge <> von;2620;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _huang_ho_ <> eine laenge <> von 4845 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _huang_ho_ <> eine laenge <> von;4845;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _rio_de_la_plata_ <> eine laenge <> von 4700 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _rio_de_la_plata_ <> eine laenge <> von;4700;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _rio_grande_ <> eine laenge <> von 2870 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _sankt_lorenz_ <> eine laenge <> von 3100 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _sao_francisco_ <> eine laenge <> von 2900 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der _sao_francisco_ <> eine laenge <> von;2900;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der _amu_darya_ <> eine laenge <> von 2620 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der _huang_ho_ <> eine laenge <> von 4845 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der _rio_de_la_plata_ <> eine laenge <> von 4700 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der _rio_grande_ <> eine laenge <> von 2870 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der _sankt_lorenz_ <> eine laenge <> von 3100 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der _sao_francisco_ <> eine laenge <> von 2900 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der amazonas <> eine laenge <> von 6516 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der amur <> eine laenge <> von 4510 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der angara <> eine laenge <> von 5550 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der brahmaputra <> eine laenge <> von 2900 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der bundesnachrichtendienst <> nothing <> seinen sitz in pullach <>  <>  <>  <>  <>  <>  <> 50
-hat <> der bundesrechnungshof <> nothing <> seinen sitz in frankfurt an dem main <>  <>  <>  <>  <>  <>  <> 50
-hat <> der colorado <> eine laenge <> von 3200 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der colorado <> eine laenge <> von;3200;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der columbia <> eine laenge <> von;2250;kilometer;lang <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der columbia <> eine laenge lang <> von 2250 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der daugava <> eine laenge <> von 1020 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der daugava <> eine laenge <> von;1020;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der dnjepr <> eine laenge <> von 2850 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der dnjepr <> eine laenge <> von;2850;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der don <> eine laenge <> von 1970 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der douro <> eine laenge <> von 776 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ebro <> eine laenge <> von 927 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der euphrat <> eine laenge <> von 2900 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der euphrat <> eine laenge <> von;2900;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ganges <> eine laenge <> von 2700 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ganges <> eine laenge <> von;2700;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der indus <> eine laenge <> von 3180 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der irrawaddy <> eine laenge <> von 2150 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der irrawaddy <> eine laenge <> von;2150;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der amur <> eine laenge <> von 4510 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der angara <> eine laenge <> von 5550 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der brahmaputra <> eine laenge <> von 2900 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der bundesnachrichtendienst <>  <> seinen sitz in pullach <>  <>  <>  <>  <>  <>  <> 50
+hat <> der bundesrechnungshof <>  <> seinen sitz in frankfurt an dem main <>  <>  <>  <>  <>  <>  <> 50
+hat <> der colorado <> eine laenge <> von 3200 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der columbia <> eine laenge lang <> von 2250 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der daugava <> eine laenge <> von 1020 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der dnjepr <> eine laenge <> von 2850 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der don <> eine laenge <> von 1970 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der douro <> eine laenge <> von 776 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der ebro <> eine laenge <> von 927 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der euphrat <> eine laenge <> von 2900 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der ganges <> eine laenge <> von 2700 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der indus <> eine laenge <> von 3180 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der irrawaddy <> eine laenge <> von 2150 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jangtsekiang <> eine laenge <> von 6300 km <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupiter <> 61 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupiter <> die groesste anziehungskraft <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -439,45 +377,39 @@ hat <> der jupitermond metis <> einen durchmesser <> von 40 kilometer <>  <>  <>
 hat <> der jupitermond pasiphae <> einen durchmesser <> von 50 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupitermond sinope <> einen durchmesser <> von 36 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der jupitermond thebe <> einen durchmesser <> von 100 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der kanton zuerich <> nothing <> die meisten einwohner in der schweiz <>  <>  <>  <>  <>  <>  <> 50
-hat <> der kongo <> eine laenge <> von 4700 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der kongo <> eine laenge <> von;4700;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der kanton zuerich <>  <> die meisten einwohner in der schweiz <>  <>  <>  <>  <>  <>  <> 50
+hat <> der kongo <> eine laenge <> von 4700 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der mars <> 2 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der marsmond deimos <> einen durchmesser <> von 13 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der marsmond phobos <> einen durchmesser <> von 22 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der mekong <> eine laenge <> von 4500 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der mekong <> eine laenge <> von;4500;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der mekong <> eine laenge <> von 4500 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der merkur <> eine monde <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> der merkur <> einen durchmesser <> von 4900 km <>  <>  <>  <>  <>  <>  <> 50
 hat <> der merkur <> einen mond <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> der mississippi <> eine laenge <> von 6019 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der mond <> einen durchmesser <> von 3475 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der mond <> einen radius <> von 1737 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der murray <> eine laenge <> von 2570 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der murray <> eine laenge <> von;2570;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ndr <> nothing <> seinen sitz in hamburg <>  <>  <>  <>  <>  <>  <> 50
+hat <> der murray <> eine laenge <> von 2570 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der ndr <>  <> seinen sitz in hamburg <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptun <> 11 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptun <> einen durchmesser <> von 49532 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der neptunmond despina <> einen durchmesser <> von 148 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der neptunmond despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond larissa <> einen durchmesser <> von 193 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond naiad <> einen durchmesser <> von 58 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond nereid <> einen durchmesser <> von 340 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond proteus <> einen durchmesser <> von 418 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond thalassa <> einen durchmesser <> von 80 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der neptunmond triton <> einen durchmesser <> von 418 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der niger <> eine laenge <> von 4030 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der niger <> eine laenge <> von 4030 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der nil <> eine laenge <> von 6671 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der orinoco <> eine laenge <> von 2500 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der orinoco <> eine laenge <> von;2500;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der orinoco <> eine laenge <> von 2500 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der pluto <> 3 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der plutomond charon <> einen durchmesser <> von 1172 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der po <> eine laenge <> von 676 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der rhein <> eine laenge <> von 1360 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der po <> eine laenge <> von 676 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der rhein <> eine laenge <> von 1360 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der rhein <> viele nebenfluesse <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> der salween <> eine laenge <> von 3200 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der salween <> eine laenge <> von;3200;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der sambesi <> eine laenge <> von 2660 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der sambesi <> eine laenge <> von;2660;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der salween <> eine laenge <> von 3200 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der sambesi <> eine laenge <> von 2660 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der saturn <> 33 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der saturnmond atlas <> einen durchmesser <> von 30 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der saturnmond calypso <> einen durchmesser <> von 26 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -497,13 +429,10 @@ hat <> der saturnmond rhea <> einen durchmesser <> von 1530 kilometer <>  <>  <>
 hat <> der saturnmond telesto <> einen durchmesser <> von 29 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der saturnmond tethys <> einen durchmesser <> von 1060 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der saturnmond titan <> einen durchmesser <> von 5150 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der song <> eine laenge <> koi;von;800;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der song koi <> eine laenge <> von 800 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der song koi <> eine laenge <> von 800 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der sudan <> die groesste flaeche <> der laender von afrika <>  <>  <>  <>  <>  <>  <> 50
-hat <> der tarim <> eine laenge <> von 2000 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der tarim <> eine laenge <> von;2000;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ural <> eine laenge <> von 2534 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der ural <> eine laenge <> von;2534;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> der tarim <> eine laenge <> von 2000 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der ural <> eine laenge <> von 2534 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der uranus <> 24 monde <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> der uranusmond  cressida <> einen durchmesser <> von 66 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der uranusmond ariel <> einen durchmesser <> von 1158 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -521,60 +450,44 @@ hat <> der uranusmond stephano <> einen durchmesser <> von 30 kilometer <>  <>  
 hat <> der uranusmond sycorax <> einen durchmesser <> von 120 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der uranusmond titania <> einen durchmesser <> von 1158 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> der uranusmond umbriel <> einen durchmesser <> von 1170 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der wdr <> nothing <> seinen sitz in koeln <>  <>  <>  <>  <>  <>  <> 50
+hat <> der wdr <>  <> seinen sitz in koeln <>  <>  <>  <>  <>  <>  <> 50
 hat <> der yangtse <> eine laenge <> von 5800 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> der yukon <> eine laenge <> von 3185 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der yukon <> eine laenge <> von;3185;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> der zdf <> nothing <> seinen sitz in mainz <>  <>  <>  <>  <>  <>  <> 50
-hat <> der neptunmond despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der yukon <> eine laenge <> von 3185 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> der zdf <>  <> seinen sitz in mainz <>  <>  <>  <>  <>  <>  <> 50
 hat <> desdemona <> einen durchmesser <> von 68 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> despina <> einen durchmesser <> von 148 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> despina <> einen durchmesser <> von 158 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> deutschland <> 16 bundeslaender <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> deutschland <> 8243800 einwohner <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+hat <> deutschland <> 8243800 einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> deutschland <> 9 nachbarlaender <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> die donau <> eine laenge <> von 2850 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die elbe <>  eine laenge<> von 1165 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die elbe <> eine laenge <> von;1165;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> die donau <> eine laenge <> von 2850 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die elbe <>  eine laenge<> von 1165 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> die europafahne <> 12 sterne <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> die garonne <> eine laenge <> von 650 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die garonne <> eine laenge <> von;650;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die gez <> nothing <> ihren sitz in koeln <>  <>  <>  <>  <>  <>  <> 50
-hat <> die lena <> eine laenge <> von 4270 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die lena <> eine laenge <> von;4270;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die loire <> eine laenge <> von 1020 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die loire <> eine laenge <> von;1020;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die oder <> eine laenge <> von 912 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die oder <> eine laenge <> von;912;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die rhone <> eine laenge <> von 812 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die rhone <> eine laenge <> von;812;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> die garonne <> eine laenge <> von 650 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die gez <>  <> ihren sitz in koeln <>  <>  <>  <>  <>  <>  <> 50
+hat <> die lena <> eine laenge <> von 4270 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die loire <> eine laenge <> von 1020 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die oder <> eine laenge <> von 912 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die rhone <> eine laenge <> von 812 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> die schweiz <> 26 kantone <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> die schweiz <> 4 amtssprachen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> die schweiz <> 7 523 934 einwohner <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-hat <> die seine <> eine laenge <> von 776 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die seine <> eine laenge <> von;776;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> die schweiz <> 7 523 934 einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
+hat <> die seine <> eine laenge <> von 776 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> die venus <> eine monde <> nicht <>  <>  <>  <>  <>  <>  <> 50
 hat <> die venus <> einen durchmesser <> von 12104 km <>  <>  <>  <>  <>  <>  <> 50
 hat <> die venus <> einen mond <> nicht <>  <>  <>  <>  <>  <>  <> 50
-hat <> die weichsel <> eine laenge <> von 1095 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die weichsel <> eine laenge <> von;1095;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> die wolga <>  eine laenge<> von 3688 kilometer <>  <>  <> nothing <>  <>  <>  <> 50
+hat <> die weichsel <> eine laenge <> von 1095 kilometer <>  <>  <>  <>  <>  <>  <> 50
+hat <> die wolga <>  eine laenge<> von 3688 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> dione <> einen durchmesser <> von 1120 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> ein lichtjahr <> 94605 billionen kilometer <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> ein neutronenstern <> eine extrem hohe dichte <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> ein neutronenstern <> einen durchmesser <> von 20 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> eine grossstadt <> mindestens eine million einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;_rio_grande_;von;2870;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;_sankt_lorenz_;von;3100;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;angara;von;5550;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;brahmaputra;von;2900;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;ebro;von;927;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
-hat <> eine laenge <> nothing <> der;rhein;von;1360;kilometer <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> eine pyramide <> 8 kanten <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> elara <> einen durchmesser <> von 76 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> enceladus <> einen durchmesser <> von 498 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> epimetheus <> einen durchmesser <> von 115 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> euer sonnensystem <> acht planeten <>  <>  <>  <>  <> nothing <> nothing <> 
+hat <> euer sonnensystem <> acht planeten <>  <>  <>  <>  <>  <>  <> 
 hat <> frankfurt <> den groessten passagierflughafen <> von europa <>  <>  <>  <>  <>  <>  <> 50
 hat <> ganymed <> einen durchmesser <> von 5262 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> griechenland <> mehr als 1000 inseln <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -595,7 +508,7 @@ hat <> italien <> die form <> eines stiefels <>  <>  <>  <>  <>  <>  <> 50
 hat <> janus <> einen durchmesser <> von 178 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> japan <> etwa 130 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> julia <> einen durchmesser <> von 84 kilometer <>  <>  <>  <>  <>  <>  <> 50
-hat <> kalifornien <> nothing <> die meisten einwohner in den usa <>  <>  <>  <>  <>  <>  <> 50
+hat <> kalifornien <>  <> die meisten einwohner in den usa <>  <>  <>  <>  <>  <>  <> 50
 hat <> kalisto <> einen durchmesser <> von 4800 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> kanada <> etwa 30 millionen einwohnern <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> larissa <> einen durchmesser <> von 193 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -619,9 +532,9 @@ hat <> nordrhein-westfalen <> 268 staedte <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> nordrhein-westfalen <>die meisten einwohner  <> aller bundeslaender <>  <>  <>  <>  <>  <>  <> 50
 hat <> nuernberg <> 500000 einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> oesterreich <> 8 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> oesterreich <> 8308906 einwohner <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+hat <> oesterreich <> 8308906 einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> oesterreich <> 9 bundeslaender <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ontario <> nothing <> die meisten einwohner von kanada <>  <>  <>  <>  <>  <>  <> 50
+hat <> ontario <>  <> die meisten einwohner von kanada <>  <>  <>  <>  <>  <>  <> 50
 hat <> ophelia <> einen durchmesser <> von 32 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> pan <> einen durchmesser <> von 20 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> pandora <> einen durchmesser <> von 84 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -660,11 +573,11 @@ hat <> toronto <> etwa 5 millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
 hat <> triton <> einen durchmesser <> von 418 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> umbriel <> einen durchmesser <> von 1170 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <> unser sonnensystem <> 8 planeten <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> unser sonnensystem <> neun planeten <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <>
-hat <> vatikanstadt <> nothing <> die wenigsten einwohner von europa <>  <>  <>  <>  <>  <>  <> 50
+hat <> unser sonnensystem <> neun planeten <>  <>  <>  <>  <>  <>  <>
+hat <> vatikanstadt <>  <> die wenigsten einwohner von europa <>  <>  <>  <>  <>  <>  <> 50
+hat <> wien <>  <> die meisten einwohner in oesterreich <>  <>  <>  <>  <>  <>  <> 50
 hat <> wien <> eine grenze <> nicht;zum ausland <>  <>  <>  <>  <>  <>  <> 50
 hat <> wien <> eineinhalb millionen einwohner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wien <> nothing <> die meisten einwohner in oesterreich <>  <>  <>  <>  <>  <>  <> 50
 hat <>der uranusmond bianca <> einen durchmesser <> ;von 44 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <>der uranusmond cordelia <> einen durchmesser <> von 26 kilometer <>  <>  <>  <>  <>  <>  <> 50
 hat <>der uranusmond ophelia <> einen durchmesser <> von 32 kilometer <>  <>  <>  <>  <>  <>  <> 50
@@ -679,15 +592,14 @@ heisst <> augusta <> die hauptstadt <> von maine <>  <>  <>  <>  <>  <>  <> 50
 heisst <> bangui <> die hauptstadt <> der _zentralafrikanischen_republik_ <>  <>  <>  <>  <>  <>  <> 50
 heisst <> cardiff <> die hauptstadt <> von wales <>  <>  <>  <>  <>  <>  <> 50
 heisst <> castres <> die hauptstadt <> von _saint_lucia_ <>  <>  <>  <>  <>  <>  <> 50
-heisst <> colombo <> die hauptstadt <> von _sri_lanka_ <>  <>  <>  <>  <>  <>  <> 50
 heisst <> colombo <> die hauptstadt <> von sri lanka<>  <>  <>  <>  <>  <>  <> 50
-heisst <> das wahrzeichen <> nothing <> von paris <>  <>  <>  <>  <>  <>  <> 50
+heisst <> das wahrzeichen <>  <> von paris <>  <>  <>  <>  <>  <>  <> 50
 heisst <> der hoechste berg der steiermark <> hochwildstelle <>  <>  <>  <>  <>  <>  <>  <> 50
 heisst <> der polarstern <> auch nordstern <>  <>  <>  <>  <>  <>  <>  <> 50
 heisst <> die daenische flagge <> danebrog <>  <>  <>  <>  <>  <>  <>  <> 50
-heisst <> die groesste deutsche insel <> ruegen <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+heisst <> die groesste deutsche insel <> ruegen <>  <>  <>  <>  <>  <>  <>  <> 50
+heisst <> die hauptstadt <>  <> von argentinien <>  <>  <>  <>  <>  <>  <> 50
 heisst <> die hauptstadt <> duschanbe <> von tadschikistan <>  <>  <>  <>  <>  <>  <> 50
-heisst <> die hauptstadt <> nothing <> von argentinien <>  <>  <>  <>  <>  <>  <> 50
 heisst <> die hauptstadt <> sacramento <> von kalifornien <>  <>  <>  <>  <>  <>  <> 50
 heisst <> eider <> der laengste fluss <> von schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
 heisst <> eider <> der laengste fluss schleswig-holsteins <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -722,16 +634,9 @@ heisst <> yamoussoukro <> die hauptstadt <> der elfenbeinkueste <>  <>  <>  <>  
 hiess <> belize <> britisch-honduras <> frueher <>  <>  <>  <>  <>  <>  <> 50
 hiess <> new_york <> frueher new amsterdam <>  <>  <>  <>  <>  <>  <>  <> 50
 ist  <> ellwangen <> eine stadt <>  in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+ist  <> neapel <> eine stadt <> in italien <> 50
 ist  <>das schloss esterhazy <> das wahrzeichen <> von eisenstadt <>  <>  <>  <>  <>  <>  <> 50
 ist  <>luebben<> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-ist <> 1360 kilometer <> lang <> der;rhein <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 2870 kilometer <> lang <> der;_rio_grande_ <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 2900 kilometer <> lang <> der;brahmaputra <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 3100 kilometer <> lang <> der;_sankt_lorenz_ <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 4250 kilometer <> lang <> der;mackenzie <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 5550 kilometer <> lang <> der;angara <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> 6300 km <> der radius <> der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> 927 kilometer <> lang <> der;ebro <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> _al_manama_ <> die hauptstadt <> von bahrain <>  <>  <>  <>  <>  <>  <> 50
 ist <> _altdorf_bei_nuernberg_ <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> _andhra_pradesh_ <> ein bundesstaat <> von indien <>  <>  <>  <>  <>  <>  <> 50
@@ -752,7 +657,7 @@ ist <> _british_columbia_ <> eine provinz <> in kanada <>  <>  <>  <>  <>  <>  <
 ist <> _bruck_an_der_leitha_ <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> _dietfurt_an_der_altmueh_ l <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> _dillingen_an_der_donau_ <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> _drei_gleichen_ <> nothing <> einen burgengruppe in thueringen <>  <>  <>  <>  <>  <>  <> 50
+ist <> _drei_gleichen_ <>  <> einen burgengruppe in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> _ebersbach_an_der_fils_ <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> _endingen_am_kaiserstuhl_<> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> _freiberg_an_dem_neckar_ <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -817,6 +722,7 @@ ist <> _weilheim_an_der_teck_ <> eine stadt <> in baden-wuerttemberg <>  <>  <> 
 ist <> _woerth_an_dem_main_ <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> _woerth_an_dem_rhein_ <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> _woerth_an_der_donau_ <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+ist <> 6300 km <> der radius <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> aach <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> aachen <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> aachen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -913,7 +819,7 @@ ist <> anatolien <> der asiatische teil <> der tuerkei <>  <>  <>  <>  <>  <>  <
 ist <> andernach <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> andorra <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> andorra- la- vella <> die hauptstadt <> von andorra <>  <>  <>  <>  <>  <>  <> 50
-ist <> andromeda <> ungefaehr 29000 lichtjahre <> von der erde entfernt <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> andromeda <> ungefaehr 29000 lichtjahre <> von der erde entfernt <>  <>  <>  <>  <>  <>  <> 50
 ist <> angermuende <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> angola <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ankara <> die hauptstadt <> von der tuerkei <>  <>  <>  <>  <>  <>  <> 50
@@ -1166,8 +1072,8 @@ ist <> belgien <> ein land <> von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> belgien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> belgrad <> die hauptstadt <> von jugoslawien <>  <>  <>  <>  <>  <>  <> 50
 ist <> belgrad <> die hauptstadt <> von serbien <>  <>  <>  <>  <>  <>  <> 50
+ist <> belinda <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> belinda <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> belinda <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> belize <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> bellinzona <>  der hauptort <> vom kanton tessin<>  <>  <>  <>  <>  <>  <> 50
 ist <> bellinzona <> die hautstadt <>  vom kanton tessin<>  <>  <>  <>  <>  <>  <> 50
@@ -1178,7 +1084,8 @@ ist <> benin <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> benneckenstein <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> bensheim <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> berching <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> bergbaumuseum <> das wahrzeichen <> das deutsche;von bochum <>  <>  <>  <>  <>  <>  <> 50
+ist <> das deutsche bergbaumuseum <> das wahrzeichen von bochum<> <>   <>  <> 50
+ist <> bergen <> die zweitgroesste stadt <> von norwegen <> 50
 ist <> bergen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bergheim <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bergisch gladbach <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -1202,8 +1109,8 @@ ist <> betzenstein <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> beverungen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bexbach <> eine stadt <> in dem saarland <>  <>  <>  <>  <>  <>  <> 50
 ist <> bhutan <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> bianca <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> bianca <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> bianca <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> biedenkopf <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bielefeld <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> bielefeld <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -1261,8 +1168,8 @@ ist <> borgholzhausen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>
 ist <> borken <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> borkum <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> borna <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+ist <> borneo <>  <> die drittgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> borneo <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> borneo <> nothing <> die drittgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> bornheim <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bornhom <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> borussia <> der lateinische name <> fuer preussen <>  <>  <>  <>  <>  <>  <> 50
@@ -1278,15 +1185,15 @@ ist <> braeunlingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <
 ist <> brake <> eine stadt <>  in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> brakel <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> bramsche <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-ist <> brand-erbisdorf <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> brandenburg <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> brandenburg <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+ist <> brand-erbisdorf <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> brandis <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> brasilia <> die hauptstadt <> von brasilien <>  <>  <>  <>  <>  <>  <> 50
+ist <> brasilien <>  <> das groesste land von lateinamerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> brasilien <>  ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> brasilien <> der fuenftgroesste staat <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> brasilien <> ein staat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> brasilien <> nothing <> das groesste land von lateinamerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> bratislava <> die hauptstadt <> von der slowakei <>  <>  <>  <>  <>  <>  <> 50
 ist <> braubach <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> braunfels <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
@@ -1367,8 +1274,8 @@ ist <> buxtehude <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> cagliari <> die groesste stadt <> auf sardinien <>  <>  <>  <>  <>  <>  <> 50
 ist <> calau <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> calbe <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+ist <> caliban <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> caliban <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> caliban <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> calw <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> calypso <> ein mond <> vom saturn <>  <>  <>  <>  <>  <>  <> 50
 ist <> calypso <> ein saturnmond <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1419,8 +1326,8 @@ ist <> concord <> die hauptstadt  <> von new hamphshire<>  <>  <>  <>  <>  <>  <
 ist <> concord <> die hauptstadt <> von new_hampshire <>  <>  <>  <>  <>  <>  <> 50
 ist <> connecticut <> ein bundesstaat <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> cookinseln <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> cordelia <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> cordelia <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> cordelia <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> cornwall <> eine englische grafschaft <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> costa rica <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> costa rica <> ein staat <> in zentralamerika <>  <>  <>  <>  <>  <>  <> 50
@@ -1430,8 +1337,8 @@ ist <> cottbus <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> cottbus <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> crailsheim <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> creglingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+ist <> cressida <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> cressida <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> cressida <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> creussen <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> creuzburg <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> crimmitschau <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
@@ -1449,9 +1356,9 @@ ist <> dannenberg <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 5
 ist <> dargun <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> darmstadt <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> darmstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> das _kangaroo_island_ <> nothing <> die drittgroesste insel von australien <>  <>  <>  <>  <>  <>  <> 50
+ist <> das _kangaroo_island_ <>  <> die drittgroesste insel von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> das _kap_der guten hoffnung_ <> die suedspitze <> von afrika <>  <>  <>  <>  <>  <>  <> 50
-ist <> das _kreuz des suedens_ <> sternbild <> in der suedlichen milchstrasse <>  <>  <>  <>  <>  <>  <> 50
+ist <> das _kreuz des suedens_ <> ein sternbild <> in der suedlichen milchstrasse <>  <>  <>  <>  <>  <>  <> 50
 ist <> das amphietheater <> das wahrzeichen <> von pula <>  <>  <>  <>  <>  <>  <> 50
 ist <> das atomium <> das wahrzeichen <> von bruessel <>  <>  <>  <>  <>  <>  <> 50
 ist <> das atomium <> ein wahrzeichen <> von bruessel <>  <>  <>  <>  <>  <>  <> 50
@@ -1473,9 +1380,8 @@ ist <> das gasometer <> das wahrzeichen <> von oldenburg <>  <>  <>  <>  <>  <> 
 ist <> das gewandhaus zwickau <> das wahrzeichen <> von zwickau <>  <>  <>  <>  <>  <>  <> 50
 ist <> das goldene dachl <> das wahrzeichen <> von innsbruck <>  <>  <>  <>  <>  <>  <> 50
 ist <> das great barrier reef <> das groesste korallenriff <> der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> das groesste korallenriff <> der nordostkueste australiens vorgelagert <> der erde; <>  <>  <>  <>  <>  <>  <> 50
-ist <> das groesste meer <> nothing <> der pazifik  der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> das groesste unterirdische schienennetz <> nothing <> in new_york  der erde <>  <>  <>  <>  <>  <>  <> 50
+ist <> das groesste meer <>  <> der pazifik  der erde <>  <>  <>  <>  <>  <>  <> 50
+ist <> das groesste unterirdische schienennetz <>  <> in new_york  der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> das grossmuenster <> das wahrzeichen <> von zuerich <>  <>  <>  <>  <>  <>  <> 50
 ist <> das hagener rathaus <> das wahrzeichen <> von hagen <>  <>  <>  <>  <>  <>  <> 50
 ist <> das hermannsdenkmal <> das wahrzeichen <> von detmold <>  <>  <>  <>  <>  <>  <> 50
@@ -1488,7 +1394,7 @@ ist <> das karakorum <> eine gebirgskette <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> das kaspische meer <> der groesste see <> der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> das kaspischen meer <> ein see <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> das kolosseum <> das wahrzeichen <> von rom <>  <>  <>  <>  <>  <>  <> 50
-ist <> das kontrollzentrum <> nothing <> in houston  der nasa <>  <>  <>  <>  <>  <>  <> 50
+ist <> das kontrollzentrum <>  <> in houston  der nasa <>  <>  <>  <>  <>  <>  <> 50
 ist <> das kroenchen <> das wahrzeichen <> von siegen <>  <>  <>  <>  <>  <>  <> 50
 ist <> das kurhaus <> das wahrzeichen <> von wiesbaden <>  <>  <>  <>  <>  <>  <> 50
 ist <> das lichtjahr <> eine einheit <> der laenge <>  <>  <>  <>  <>  <>  <> 50
@@ -1524,12 +1430,12 @@ ist <> das stadtmonument <> das wahrzeichen <> von salzgitter <>  <>  <>  <>  <>
 ist <> das steintord <> das wahrzeichen <> das steintor  von rostock <>  <>  <>  <>  <>  <>  <> 50
 ist <> das sternenbanner <> die flagge <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> das strassburger muenster <> das wahrzeichen <> von strassburg <>  <>  <>  <>  <>  <>  <> 50
-ist <> das tiefste hoehlensystem <> nothing <> in frankreich  der erde <>  <>  <>  <>  <>  <>  <> 50
+ist <> das tiefste hoehlensystem <> in frankreich <>  der erde  <>  <>  <>  <>  <>  <>  <> 50
 ist <> das ulmer muenster <> das wahrzeichen <> von ulm <>  <>  <>  <>  <>  <>  <> 50
 ist <> das universitaetshochhaus jena <> das wahrzeichen <> von jena <>  <>  <>  <>  <>  <>  <> 50
-ist <> das universum <> die gesamtheit der schoepfung <>  <>  <>  <>  <> nothing <> nothing <> 
+ist <> das universum <> die gesamtheit der schoepfung <>  <>  <>  <>  <>  <>  <> 
 ist <> das voelkerschlachtdenkmal <> das wahrzeichen <> von leipzig <>  <>  <>  <>  <>  <>  <> 50
-ist <> das wahrzeichen <> nothing <> der tian-an-men-platz  von peking <>  <>  <>  <>  <>  <>  <> 50
+ist <> das wahrzeichen <>  <> der tian-an-men-platz  von peking <>  <>  <>  <>  <>  <>  <> 50
 ist <> das weisse haus <> das wahrzeichen <> von washington <>  <>  <>  <>  <>  <>  <> 50
 ist <> das wiesengebirge <> ein hoehenzug <> in dem weserbergland <>  <>  <>  <>  <>  <>  <> 50
 ist <> das_tote_meer <> ein see <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1551,25 +1457,16 @@ ist <> delmenhorst <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 
 ist <> demmin <> eine hansestadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> demmin <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> denpasar <> die hauptstadt <> von bali <>  <>  <>  <>  <>  <>  <> 50
-ist <> der 3 oktober <> der nationalfeiertag <> von deutschland <>  <>  <>  <>  <>  <>  <> 50
-ist <> der <> 3180 kilometer lang <> indus <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> 4510 kilometer lang <> amur <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> 676 kilometer lang <> po <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> ein fluss <> amur <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> ein fluss <> indus <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> ein fluss <> po <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> niger 4030 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der <> niger ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> der _ olympus mons_ <> der groesste bekannte berg eueres sonnensystems <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der _amu_darya_ <> 2620 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _amu_darya_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der _amu_darya_ <> 2620 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _amu_darya_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _ben_nevis_  <>  der hoechste berg<>   von schottland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _grand_canyon_ <> die groesste schlucht <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _grosse_hund_ <> ein sternbild des suedlichen himmels <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der _huang_ho_ <> 4845 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _huang_ho_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der _huang_ho_ <> 4845 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _huang_ho_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _k2_ <> der zweithoechste berg <> der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> der _lago_eriquillo_ <> ein see <> nothing <>   <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _lago_eriquillo_ <> ein see <>  <>   <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _lago_eriquillo_ <>40 meter <> unter dem meeresspiegel <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _mont_orohena_ <> der hoechste berg <> von tahiti <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _monte_rosa_ <> der zweithoechste berg <>   von europa <>  <>  <>  <>  <>  <>  <> 50
@@ -1578,14 +1475,21 @@ ist <> der _mount_mckinley_ <> der hoechste berg <> von alaska <>  <>  <>  <>  <
 ist <> der _mount_wilhelm_ <> der hoechste berg <> von _papua_neuguinea_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _ojos_del_salado_ <> der dritthoechste berg <> der anden <>  <>  <>  <>  <>  <>  <> 50
 ist <> der _petronas_tower_ <> 450 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der _rio_de_la_plata_ <> 4700 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _rio_de_la_plata_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _rio_grande_ <> 2870 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _rio_grande_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _sankt_lorenz_ <> 3100 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _sankt_lorenz_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _sao_francisco_ <> 2900 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der _sao_francisco_ <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der _rio_de_la_plata_ <> 4700 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _rio_de_la_plata_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _rio_grande_ <> 2870 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _rio_grande_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _sankt_lorenz_ <> 3100 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _sankt_lorenz_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _sao_francisco_ <> 2900 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der _sao_francisco_ <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> 3180 kilometer lang <> indus <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> 4510 kilometer lang <> amur <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> ein fluss <> amur <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> ein fluss <> indus <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> niger 4030 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der <> niger ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der 3 oktober <> der nationalfeiertag <> von deutschland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aachener dom <> das wahrzeichen <> von aachen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der achensee <> 7 quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aconcagua <> der hoechste berg <> von amerika <>  <>  <>  <>  <>  <>  <> 50
@@ -1599,15 +1503,15 @@ ist <> der agung <> ein vulkan <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aldebaran <> ein stern <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aletschgletscher <> der groesste gletscher <> der alpen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der almsee <> 80 hektar <> gross <>  <>  <>  <>  <>  <>  <> 50
-ist <> der alpenzoo <> nothing <> in innsbruck <>  <>  <>  <>  <>  <>  <> 50
+ist <> der alpenzoo <>  <> in innsbruck <>  <>  <>  <>  <>  <>  <> 50
 ist <> der amazonas <> 6516 kilometer <> lang <>  <>  <>  <>  <>  <>  <> 50
 ist <> der amazonas <> der laengste fluss <> von amerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> der amazonas <> der wasserreichste fluss <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der amazonas <> der zweitlaengste fluss <> der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> der amur <> 4510 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der amur <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der angara <> 5550 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der angara <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der amur <> 4510 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der amur <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der angara <> 5550 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der angara <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der angelfall <> der hoechste wasserfall <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aragats <> 4090 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der aragats <> der hoechste berg <> von armenien <>  <>  <>  <>  <>  <>  <> 50
@@ -1644,8 +1548,8 @@ ist <> der bodensee <> der groesste see <> von deutschland <>  <>  <>  <>  <>  <
 ist <> der bosporus <> die meerenge zwischen mittelmeer meer und schwarzem meer<>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der botrange <> 694 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der botrange<> der hoechste berg <>  von belgien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der brahmaputra <> 2900 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der brahmaputra <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der brahmaputra <> 2900 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der brahmaputra <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der brandberg <> 2606 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der brandberg <> der hoechste berg <> von namibia <>  <>  <>  <>  <>  <>  <> 50
 ist <> der braunschweiger loewe <> das wahrzeichen <> von braunschweig <>  <>  <>  <>  <>  <>  <> 50
@@ -1681,18 +1585,18 @@ ist <> der chinook <> ein fallwind <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der citlaltepetl <> 570 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der citlaltepetl <> der hoechste berg <> von mexiko <>  <>  <>  <>  <>  <>  <> 50
 ist <> der clyde <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der clyde <> ein fluss <> nothing <>  <>  <>  <>  <>  <>  <> 50
-ist <> der coit tower <> ein denkmal <> in san francisco <>  <>  <>  <> nothing <> nothing <>
-ist <> der colorado <> 3200 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der clyde <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der coit tower <> ein denkmal <> in san francisco <>  <>  <>  <>  <>  <>
+ist <> der colorado <> 3200 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der colorado <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der colorado <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der columbia <> 2250 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der columbia <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der colorado <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der columbia <> 2250 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der columbia <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der coma pedrosa <> 2946 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der coma pedrosa <> der hoechste berg <> von andorra <>  <>  <>  <>  <>  <>  <> 50
 ist <> der cordillera-de-caaguazu <> 70 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der cordillera-de-caaguazu <> der hoechste berg <> von paraguay <>  <>  <>  <>  <>  <>  <> 50
-ist <> der cotopaxi <> ein vulkan <> nothing <>  <>  <>  <>  <>  <>  <> 50
+ist <> der cotopaxi <> ein vulkan <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der cuanza <> der laengste fluss <> von angola <>  <>  <>  <>  <>  <>  <> 50
 ist <> der cuanza <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dachstein <> 2995 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1700,8 +1604,8 @@ ist <> der dachstein <> der hoechste berg <> von oberoesterreich <>  <>  <>  <> 
 ist <> der daravica <> 2656 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der daravica <> der hoechste berg <> von serbien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der darling <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der daugava <> 1020 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der daugava <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der daugava <> 1020 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der daugava <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der daumenquetscherbrunnen <> das wahrzeichen <> von ratingen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der demawend <> 5671 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der demawend <> der hoechste berg <> vom iran <>  <>  <>  <>  <>  <>  <> 50
@@ -1710,30 +1614,32 @@ ist <> der dinara <> der hoechste berg <> von kroatien <>  <>  <>  <>  <>  <>  <
 ist <> der djebel chambi <> 1544 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der djebel chambi <> der hoechste berg <> von tunesien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dnjep <> der drittlaengste fluss <>   von europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> der dnjepr <> 2850 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der dnjepr <> 2850 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dnjepr <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der dnjepr <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der dnjepr <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der doi inthanon <> 2576 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der doi inthanon <> der hoechste berg <> von thailand <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dolohmwar <> 791 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dolohmwar <> der hoechste berg <> von mikronesien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dom <> das wahrzeichen <> von helsinki <>  <>  <>  <>  <>  <>  <> 50
-ist <> der don <> 1970 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der don <> 1970 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der don <> 1970 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der don <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der don <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der douro <> 776 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der douro <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der don <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der don <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der douro <> 776 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der douro <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dserschinsk <> 346 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der dserschinsk <> der hoechste berg <> von belarus <>  <>  <>  <>  <>  <>  <> 50
 ist <> der durchmesser <> 12756 kilometer <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der durmitor <> 2528 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der east river <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ebro <> 927 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der ebro <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der ebro <> 927 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der ebro <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der eifelturm <> 25 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der eifelturm <> 25 meter <> hoch <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> der eifelturm <> 25 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der eifelturm <> 25 meter hoch <> (der_eiffelturm_in_paris_30) <>  <>  <>  <>  <>  <>  <> 50
-ist <> der eiffelturm <> 300 meter <> hoch <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> der eiffelturm <> 300 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der eiffelturm <> das wahrzeichen <> von paris <>  <>  <>  <>  <>  <>  <> 50
 ist <> der eisack <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der elbrus <> der hoechste berg <> vom kausasus <>  <>  <>  <>  <>  <>  <> 50
@@ -1743,13 +1649,13 @@ ist <> der emi koussi <> 3415 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der emi koussi <> der hoechste berg <> vom tschad <>  <>  <>  <>  <>  <>  <> 50
 ist <> der emlembe <> 1862 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der emlembe <> der hoechste berg <> von swasiland <>  <>  <>  <>  <>  <>  <> 50
-ist <> der erdumfang <> nothing <> ueber 40000 kilometer <>  <>  <>  <>  <>  <>  <> 50
+ist <> der erdumfang <>  <> ueber 40000 kilometer <>  <>  <>  <>  <>  <>  <> 50
 ist <> der erebus <> ein berg <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der erebus <> ein vulkan <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der erlaufsee <> 58 hektar <> gross <>  <>  <>  <>  <>  <>  <> 50
-ist <> der euphrat <> 2900 kiometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der euphrat <> 2900 kiometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der euphrat <> der laengste fluss <> von vorderasien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der euphrat <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der euphrat <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der feldberg <> der hoechste berg <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> der felsendom <> ein wahrzeichen <> von jerusalem <>  <>  <>  <>  <>  <>  <> 50
 ist <> der fernsehturm in berlin<> 365 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1767,10 +1673,10 @@ ist <> der futa jalon <> der hoechste berg <>  vom senegal <>  <>  <>  <>  <>  <
 ist <> der galdhoppingen <> 2470 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der galdhoppingen <> der hoechste berg <> von norwegen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ganges <> 2511 km <> lang <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ganges <> 2700 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der ganges <> 2700 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ganges <> der laengste fluss <> von indien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ganges <> der laengste strom <> von indien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ganges <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der ganges <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der gangtschhendsoenga <> der dritthoechste berg <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der gardasee <> der groesste see <> von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der genfer see <> der groesste see <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
@@ -1790,8 +1696,8 @@ ist <> der gosausee <> 60 hektar <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der gowerla <> 2061 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der gowerla <> der hoechste berg <> der urkaine <>  <>  <>  <>  <>  <>  <> 50
 ist <> der grabensee <> _1,3_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
-ist <> der groesste bahnhof <> nothing <> in leipzig  von europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> der groesste mond <> nothing <> der titan  vom saturn <>  <>  <>  <>  <>  <>  <> 50
+ist <> der groesste bahnhof <>  <> in leipzig  von europa <>  <>  <>  <>  <>  <>  <> 50
+ist <> der groesste mond <>  <> der titan  vom saturn <>  <>  <>  <>  <>  <>  <> 50
 ist <> der grossglockner <> 3798 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der grossglockner <> der hoechste berg <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> der grossvenediger <> 3674 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1808,7 +1714,7 @@ ist <> der haltiatunturi <> 1328 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der haltiatunturi <> der hoechste berg <> von finnland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der hermon <> 2814 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der hermon <> der hoechste berg <> von syrien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der himalaya <> nothing <> das groesste gebirge  der welt <>  <>  <>  <>  <>  <>  <> 50
+ist <> der himalaya <>  <> das groesste gebirge  der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der hkakabo-raziist <> 5881 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der hkakabo-raziist <> der hoechste berg <> von mynamar <>  <>  <>  <>  <>  <>  <> 50
 ist <> der hochzeitsturm <> das wahrzeichen <> von darmstadt <>  <>  <>  <>  <>  <>  <> 50
@@ -1820,16 +1726,16 @@ ist <> der hudson river <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der huyten orgil <> 4374 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der huyten orgil <> der hoechste berg <> von der mongolei <>  <>  <>  <>  <>  <>  <> 50
 ist <> der illimani <> der zweithoechste berg <> von amerika <>  <>  <>  <>  <>  <>  <> 50
-ist <> der indus <> 3180 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der indus <> 3180 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der indus <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der indus <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der indus <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der inn <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der innerste <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der inyangani <> 2592 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der inyangani <> der hoechste berg <> von simbabwe <>  <>  <>  <>  <>  <>  <> 50
 ist <> der iran <> ein staat <> in vorderasien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der irrawaddy <> 2150 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der irrawaddy <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der irrawaddy <> 2150 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der irrawaddy <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der irrsee <> _3,5_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der jabal ad dukhan <> 122 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der jabal ad dukhan <> der hoechste berg <> von bahrein <>  <>  <>  <>  <>  <>  <> 50
@@ -1861,7 +1767,7 @@ ist <> der kanton tessin <> der suedlichste kanton <> von der schweiz <>  <>  <>
 ist <> der karisimbi <> 4507 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der karisimbi <> der hoechste berg <> von ruanda <>  <>  <>  <>  <>  <>  <> 50
 ist <> der karl-marx-kopf <> das wahrzeichen <>   von chemnitz <>  <>  <>  <>  <>  <>  <> 50
-ist <> der karlsplatz <> nothing <> der stachus  in muenchen <>  <>  <>  <>  <>  <>  <> 50
+ist <> der karlsplatz <>  <> der stachus  in muenchen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kartala <> 2361 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kartala <> der hoechste berg <> der komoren <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kasbek <> 5033 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1886,9 +1792,9 @@ ist <> der kinyeti <> 3178 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kinyeti <> der hoechste berg <> vom sudan <>  <>  <>  <>  <>  <>  <> 50
 ist <> der koelner dom <> das wahrzeichen <> von koeln <>  <>  <>  <>  <>  <>  <> 50
 ist <> der koenigsberger dom <> das wahrzeichen <> von kaliningrad <>  <>  <>  <>  <>  <>  <> 50
-ist <> der kongo <> 4700 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der kongo <> 4700 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kongo <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der kongo <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der kongo <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der korab <> 2764 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der korab <> der hoechste berg <> von albanien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kosovo <> eine region <> in suedosteuropa <>  <>  <>  <>  <>  <>  <> 50
@@ -1898,13 +1804,13 @@ ist <> der kula kangri <> der hoechste berg <> von bhutan <>  <>  <>  <>  <>  <>
 ist <> der kulpenberg <> der hoechste berg <> in dem kyffhaeusergebirge <>  <>  <>  <>  <>  <>  <> 50
 ist <> der kwai <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ladogasee <> der groesste see <> in europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> der laengste fluss <> nothing <> die wolga  von europa <>  <>  <>  <>  <>  <>  <> 50
+ist <> der laengste fluss <>  <> die wolga  von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> der le beffroi <> das wahrzeichen <> von lausanne <>  <>  <>  <>  <>  <>  <> 50
 ist <> der lhotse <> der vierthoechste berg <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> der limpopo <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der lindwurm <> das wahrzeichen <> von klagenfurt <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mackenzie <> 4250 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der mackenzie <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der mackenzie <> 4250 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mackenzie <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der maenneken pis <> ein wahrzeichen <> von bruessel <>  <>  <>  <>  <>  <>  <> 50
 ist <> der magdeburger dom <> ein wahrzeichen <> von magdeburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> der maglic <> 2387 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -1920,13 +1826,13 @@ ist <> der martinsturm <> das wahrzeichen <> von bregenz <>  <>  <>  <>  <>  <> 
 ist <> der mattsee <> _3,5_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mauga silisili <> 1858 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mauga silisili <> der hoechste berg <> von samoa <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mekong <> 4500 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der mekong <> 4500 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mekong <> der laengste fluss <> von vietnam <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mekong <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mekong <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der mekong <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der merkur <>  <> der sonne an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
 ist <> der merkur <> der schnellste planet <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der merkur <> ein planet <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der merkur <> nothing <> der sonne an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
 ist <> der meron <> 1208 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der meron <> der hoechste berg <> von israel <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mersey <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -1940,10 +1846,10 @@ ist <> der moldoveanu <> 2543 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der moldoveanu <> der hoechste berg <> von rumaenien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mome diablotin <> 1447 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mome diablotin <> der hoechste berg <> von dominika <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mond <> der einzige natuerliche satellit der erde <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> der mond <> der trabant <> der erde <> nothing <> nothing <> nothing <> nothing <> nothing <> 
+ist <> der mond <> der einzige natuerliche satellit der erde <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mond <> der trabant <> der erde <>  <>  <>  <>  <>  <> 
 ist <> der mond <> ein trabant <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mond <> kleiner als die erde <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> der mond <> kleiner als die erde <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mondsee <> _13,8_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mont agel <> 140 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mont agel <> der hoechste berg <> von monaco <>  <>  <>  <>  <>  <>  <> 50
@@ -1975,8 +1881,8 @@ ist <> der mount catherine <> der hoechste berg <> von aegypten <>  <>  <>  <>  
 ist <> der mount cook <> 3764 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount cook <> der hoechste berg <> von neuseeland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> 8848 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
-ist <> der mount everest <> der hoechste berg <> von der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von china <>  <>  <>  <>  <>  <>  <> 50
+ist <> der mount everest <> der hoechste berg <> von der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount everest <> der hoechste berg <> von nepal <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount gimie <> 950 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mount gimie <> der hoechste berg  <> von saint lucia <>  <>  <>  <>  <>  <>  <> 50
@@ -2004,13 +1910,13 @@ ist <> der mulanje <> 300 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mulanje <> der hoechste berg <> von malawi <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mulhacen <> 3478 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der mulhacen <> der hoechste berg <> von spanien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der murray <> 2570 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der murray <> 2570 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der murray <> der groesste fluss <> von australien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der murray <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der murray <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der musa ali <> 2063 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der musala <> 2925 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der musala <> der hoechste berg <> von bulgarien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der nelson <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der nelson <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der neusiedlersee <> der groesste see <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> der nevado huascaran <> 6768 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der nevado huascaran <> der hoechste berg <> von peru <>  <>  <>  <>  <>  <>  <> 50
@@ -2018,9 +1924,9 @@ ist <> der nevado ojos del salado <> 6863 meter <> hoch <>  <>  <>  <>  <>  <>  
 ist <> der nevado ojos del salado <> der hoechste berg <> von chile <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ngoc linh <> 3143 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ngoc linh <> der hoechste berg <> von vietnam <>  <>  <>  <>  <>  <>  <> 50
-ist <> der niger <> 4030 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der niger <> 4030 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der niger <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der niger <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der niger <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der nil <> 6671 kilometer <> lang <>  <>  <>  <>  <>  <>  <> 50
 ist <> der nil <> der laengste fluss <> afrikas <>    <>  <>  <>  <>  <>  <> 50
 ist <> der nil <> der laengste fluss <> der welt <>  <>  <>  <>  <>  <>  <> 50
@@ -2043,13 +1949,13 @@ ist <> der olymp <> 2917 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der olymp <> der hoechste berg <> von griechenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der oraefajoelull <> 2119 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der oraefajoelull <> der hoechste berg <> von island <>  <>  <>  <>  <>  <>  <> 50
-ist <> der orinoco <> 2500 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der orinoco <> 2500 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der orinoco <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der orinoco <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der orinoco <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ortler <> ein berg <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der paektu-san <> 2744 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der paektu-san <> der hoechste berg <> von nordkorea <>  <>  <>  <>  <>  <>  <> 50
-ist <> der pazifik <> nothing <>  der groesste der drei weltmeere <>  <>  <>  <>  <>  <>  <> 50
+ist <> der pazifik <>  <>  der groesste der drei weltmeere <>  <>  <>  <>  <>  <>  <> 50
 ist <> der perlachturm <> ein wahrzeichen <> von augsburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> der petersdom <> das wahrzeichen <> von vatikanstadt <>  <>  <>  <>  <>  <>  <> 50
 ist <> der phnum-aoral <> 1810 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -2079,17 +1985,18 @@ ist <> der pik pobedy <> der hoechste berg <> von kirgistan <>  <>  <>  <>  <>  
 ist <> der piton-de-la-petite-riviere-noire <> 826 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der piz buin <> 3312 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der piz buin <> der hoechste berg <> von vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-ist <> der planet merkur <> nothing <> der sonne an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
+ist <> der planet merkur <>  <> der sonne an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
 ist <> der plansee <> _2,7_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der plattensee <> der groesste see <> von mitteleuropa <>  <>  <>  <>  <>  <>  <> 50
 ist <> der pluto <> der groesste planet <> in dem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
 ist <> der pluto <> der kaelteste planet <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der pluto <> ein planet <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der plutotag <> 6 tage 9 stunden <> lang <>  <>  <>  <>  <>  <>  <> 50
-ist <> der po <> 676 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der po <> 676 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der po <> 676 kilometer lang <>  <> 50
 ist <> der po <> der groesste fluss <> von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der po <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der po <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der po <> ein fluss <>  <> 50
 ist <> der poestlingberg <> das wahrzeichen <> von linz <>  <>  <>  <>  <>  <>  <> 50
 ist <> der popocatpetl <> ein vulkan <> in mexiko <>  <>  <>  <>  <>  <>  <> 50
 ist <> der puncak jaya <> 5030 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -2104,7 +2011,7 @@ ist <> der regensburger dom <> das wahrzeichen <> von regensburg <>  <>  <>  <> 
 ist <> der rennsteigtunnel <> der laengste strassentunnel <> von deutschland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der rennsteigtunnel <> der laengste strassentunnel deutschlands <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der retraeder <> ein wahrzeichen <> von bottrop <>  <>  <>  <>  <>  <>  <> 50
-ist <> der rhein <> 1360 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der rhein <> 1360 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der rhein <> der laengste fluss <> von der schweiz <>  <>  <>  <>  <>  <>  <> 50
 ist <> der rhein <> der laengste fluss <> von deutschland <>  <>  <>  <>  <>  <>  <> 50
 ist <> der rhein <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2115,10 +2022,10 @@ ist <> der rysy <> der hoechste berg <> von polen <>  <>  <>  <>  <>  <>  <> 50
 ist <> der sachsenring <> eine rennstrecke <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der sajama <> 6542 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der sajama <> der hoechste berg <> von bolivien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der salween <> 3200 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der salween <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der sambesi <> 2660 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der sambesi <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der salween <> 3200 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der salween <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der sambesi <> 2660 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der sambesi <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der sankt-gotthard-tunnel <> etwa 16 kilometer  <> lang <>  <>  <>  <>  <>  <>  <> 50
 ist <> der saturn <> der zweitgroesste planet <> in dem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
 ist <> der saturn <> der zweitgroesste planet <> von euerem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
@@ -2138,10 +2045,10 @@ ist <> der sirius <> der hellste stern <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der sirius <> ein stern <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der soira <> 3018 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der soira <> der hoechste berg <> von eritrea <>  <>  <>  <>  <>  <>  <> 50
-ist <> der song <> 800 kilometer lang <> koi <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der song <> ein fluss <> koi <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der song koi <> 800 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der song koi <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der song <> 800 kilometer lang <> koi <>  <>  <>  <>  <>  <>  <> 50
+ist <> der song <> ein fluss <> koi <>  <>  <>  <>  <>  <>  <> 50
+ist <> der song koi <> 800 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der song koi <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der spremberger turm <> das wahrzeichen <> von cottbus <>  <>  <>  <>  <>  <>  <> 50
 ist <> der stephansdom <> ein wahrzeichen <> von wien <>  <>  <>  <>  <>  <>  <> 50
 ist <> der stuttgarter fernsehturm <> das wahrzeichen <> von stuttgart <>  <>  <>  <>  <>  <>  <> 50
@@ -2154,8 +2061,8 @@ ist <> der tahat <> der hoechste berg <> von algerien <>  <>  <>  <>  <>  <>  <>
 ist <> der tajumulco <> 4220 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tajumulco <> der hoechste berg <> von guatemala <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tallinner dom <> das wahrzeichen <> von tallinn <>  <>  <>  <>  <>  <>  <> 50
-ist <> der tarim <> 2000 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der tarim <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der tarim <> 2000 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der tarim <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tejo <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tene kouron <> 747 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tene kouron <> der hoechste berg <> burkina faso <>  <>  >< 50
@@ -2169,17 +2076,17 @@ ist <> der toplitzsee <> 50 hektar <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der traunsee <> _24,5_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> der triglav <> 2864 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der triglav <> der hoechste berg <> von slowenien <>  <>  <>  <>  <>  <>  <> 50
-ist <> der trockenheisse wuestensturm <> nothing <> der samum  in der sahara <>  <>  <>  <>  <>  <>  <> 50
+ist <> der trockenheisse wuestensturm <>  <> der samum  in der sahara <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tsodilo hill <> 1375 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der tsodilo hill <> der hoechste berg <> von botswana <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ubangi ein fluss <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> der ubangi ein fluss <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> der uhrturm <> das wahrzeichen <> von graz <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ural <> 2534 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der ural <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der ural <>  <> ueber 200 km lang <>  <>  <>  <>  <>  <>  <> 50
+ist <> der ural <> 2534 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der ural <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ural <> ein gebirge <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der ural <> ein gebirgszug <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ural <> nothing <> ueber 200 km lang <>  <>  <>  <>  <>  <>  <> 50
-ist <> der urknall <> der beginn des universums <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> der urknall <> der beginn des universums <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der vaalserberg <> 321 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der vaalserberg <> der hoechste berg <> der niederlande <>  <>  <>  <>  <>  <>  <> 50
 ist <> der vaalserberg <> m <> 321  hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -2209,8 +2116,8 @@ ist <> der yding-skovho <> 173 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der yding-skovho <> hoechste berg <> von daenemark <>  <>  <>  <>  <>  <>  <> 50
 ist <> der yu shan <> 3997 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> der yu shan <> der hoechste berg <> von taiwan <>  <>  <>  <>  <>  <>  <> 50
-ist <> der yukon <> 3185 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> der yukon <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> der yukon <> 3185 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> der yukon <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der zenit <> der scheitelpunkt <> an dem himmel <>  <>  <>  <>  <>  <>  <> 50
 ist <> der zwinger <> ein wahrzeichen <> von dresden <>  <>  <>  <>  <>  <>  <> 50
 ist <> der zytglogge-turm <> das wahrzeichen <>   von bern <>  <>  <>  <>  <>  <>  <> 50
@@ -2232,31 +2139,29 @@ ist <> der_rio_grande <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> der_zeller_see <> _4,4_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> derenburg <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> des moines <>die hauptstadt <> von iowa <>  <>  <>  <>  <>  <>  <> 50
+ist <> desdemona <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> desdemona <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> desdemona <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> despina <> ein mond <> vom neptun <>  <>  <>  <>  <>  <>  <> 50
 ist <> despina <> ein neptunmond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> dessau-rosslau <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> detmold <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> dettelbach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> deutsch-wagram <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> deutschland <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> deutschland <>  ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> deutschland <> ein bundesstaat <> in europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> deutschland <> ein teil <> von europa <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> deutschland <> nothing <> in europa <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> deutschland <> ein teil <> von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> deutschlandsberg <> eine stadt <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+ist <> deutsch-wagram <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> dhaka <> die hauptstadt <> von bangladesch <>  <>  <>  <>  <>  <>  <> 50
-
-
 ist <> die _ewige_stadt_ <> die hauptstadt <> von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _isla_margarita_ <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die _patagonische_wueste_ <> die groesste wueste <> von amerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> die aare <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die aelterste bruecke <> nothing <> die _ponte_vecchio_  in florenz <>  <>  <>  <>  <>  <>  <> 50
+ist <> die aelterste bruecke <>  <> die _ponte_vecchio_  in florenz <>  <>  <>  <>  <>  <>  <> 50
 ist <> die aisch <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die akashi kaikyo bruecke <> die groesste bruecke <> der welt <>  <>  <>  <>  <>  <>  <> 50
+ist <> die akropolis <>  <> ein wahrzeichen <>  <>  <>  <>  <>  <>  <> 50
 ist <> die akropolis <> das wahrzeichen <>  von athen <>  <>  <>  <>  <>  <>  <> 50
-ist <> die akropolis <> nothing <> ein wahrzeichen <>  <>  <>  <>  <>  <>  <> 50
 ist <> die algarve <> die suedlichste provinz <> von portugal <>  <>  <>  <>  <>  <>  <> 50
 ist <> die algarve <> eine landschaft <> in portugal <>  <>  <>  <>  <>  <>  <> 50
 ist <> die alhambra <> das wahrzeichen <> von granada <>  <>  <>  <>  <>  <>  <> 50
@@ -2264,13 +2169,13 @@ ist <> die aller <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die alte bruecke <> das wahrzeichen <> von heidelberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> die altmuehl <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die altstaedter kirche <> das wahrzeichen <> von erlangen <>  <>  <>  <>  <>  <>  <> 50
-ist <> die alzette <> ein fluss <> nothing <>  <>  <>  <>  <>  <>  <> 50
+ist <> die alzette <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die amper <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die amstel <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die amtssprache <> englisch <> der _dominikanischen_republik_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> die antarktis <> ein kontinent  <> an dem suedpol <>  <>  <>  <>  <>  <>  <> 100
 ist <> die astrologie <> die sterndeutung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die astronomie <> die lehre <> von den gestirnen <>  <>  <>  <> nothing <> nothing <>
+ist <> die astronomie <> die lehre <> von den gestirnen <>  <>  <>  <>  <>  <>
 ist <> die atacama-wueste  <> die trockenste wueste <> der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> die bahnhofstrasse <> die hauptgeschaeftsstrasse <> von zuerich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die beringstrasse <> die meerenge zwischen sibirien und alaska<>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2282,21 +2187,21 @@ ist <> die cheops-pyramide <> 139 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> die chinesische mauer <> 6250 kilometer <> lang <>  <>  <>  <>  <>  <>  <> 50
 ist <> die christusstatue <> das wahrzeichen  <> von rio de janeiro<>  <>  <>  <>  <>  <>  <> 50
 ist <> die danziger marienkirche <> das wahrzeichen <> von danzig <>  <>  <>  <>  <>  <>  <> 50
-ist <> die don <> ein fluss <> <> nothing <>  <>  <>  <>  <>  <> 50
-ist <> die donau <> 2850 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die don <> ein fluss <> <>  <>  <>  <>  <>  <>  <> 50
+ist <> die donau <> 2850 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die donau <> der laengste fluss <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die donau <> der zweitlaengste fluss <> von europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> die donau <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die donau <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die dufourspitze <> der hoechste berg <> von der schweiz <>  <>  <>  <>  <>  <>  <> 50
-ist <> die eder  <> nothing <> die eder <>  <>  <>  <>  <>  <>  <> 50
+ist <> die eder  <>  <> die eder <>  <>  <>  <>  <>  <>  <> 50
 ist <> die eger <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die eidechse <> ein sternbild <> der nordhalbkugel <>  <>  <>  <>  <>  <>  <> 50
+ist <> die elbe <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die elbe <>  ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die elbe <> 1165 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die elbe <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die elbe <> 1165 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die ems <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die erde <>  <> 4,6 milliarden jahre alt <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> die erde <> ein planet <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> die erde <>  <> 4,6 milliarden jahre alt <>  <>  <>  <>  <>  <>  <> 50
+ist <> die erde <> ein planet <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die eremitage <> das wahrzeichen <> von sankt petersburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> die erimitage <> ein kunstmuseum <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die etsch <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2309,9 +2214,9 @@ ist <> die frauenkirche <> ein wahrzeichen <> von dresden <>  <>  <>  <>  <>  <>
 ist <> die freiheitsstatue <> das wahrzeichen  <> von new york<>  <>  <>  <>  <>  <>  <> 50
 ist <> die fulda <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die gaenseliesel <> das wahrzeichen <> von goettingen <>  <>  <>  <>  <>  <>  <> 50
-ist <> die garonne <> 650 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die garonne <> 650 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die garonne <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die garonne <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die garonne <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die gerlsdorfer spitze <> 2665 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> die gerlsdorfer spitze <> der hoechste berg <> der slowakei <>  <>  <>  <>  <>  <>  <> 50
 ist <> die goeltztalbruecke <> die groesste ziegelbruecke <> der welt <>  <>  <>  <>  <>  <>  <> 50
@@ -2319,9 +2224,9 @@ ist <> die golden gate bridge <> das wahrzeichen  <> von san francisco<>  <>  <>
 ist <> die grabeskirche <> ein wahrzeichen <> von jerusalem <>  <>  <>  <>  <>  <>  <> 50
 ist <> die grauspitze <> 2599 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> die grauspitze <> der hoechste berg <> von liechtenstein <>  <>  <>  <>  <>  <>  <> 50
-ist <> die groesste wueste <> nothing <> die sahara  der welt <>  <>  <>  <>  <>  <>  <> 50
+ist <> die groesste wueste <>  <> die sahara  der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> die hagia sophia <> das wahrzeichen <> von istanbul <>  <>  <>  <>  <>  <>  <> 50
-ist <> die havel <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die havel <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die heidecksburg <> das wahrzeichen <> von rudolstadt <>  <>  <>  <>  <>  <>  <> 50
 ist <> die heimat der tuareg <> afrika <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die hochwildstelle <> 2447 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
@@ -2330,8 +2235,8 @@ ist <> die hochwildstelle <> der hoechste berg <> von der steiermark <>  <>  <> 
 ist <> die hohe acht <> der hoechste berg <> der eifel <>  <>  <>  <>  <>  <>  <> 50
 ist <> die hunte <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die iller <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die ilm  <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
-ist <> die ilm <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die ilm  <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die ilm <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die isar <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die iss <> eine raumstadtion <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die kaiserburg <> das wahrzeichen <> von nuernberg <>  <>  <>  <>  <>  <>  <> 50
@@ -2341,20 +2246,20 @@ ist <> die kathedrale von vilnius<> das wahrzeichen <> von vilnius <>  <>  <>  <
 ist <> die kilianskirche <> das wahrzeichen <> von heilbronn <>  <>  <>  <>  <>  <>  <> 50
 ist <> die klagemauer <> ein wahrzeichen <> von jerusalem <>  <>  <>  <>  <>  <>  <> 50
 ist <> die kleine meerjungfrau <> das wahrzeichen <> von kopenhagen <>  <>  <>  <>  <>  <>  <> 50
-ist <> die kocher <> nothing <> in fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die kocher <>  <> in fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die kraemerbruecke <> ein wahrzeichen <> von erfurt <>  <>  <>  <>  <>  <>  <> 50
 ist <> die kuh <> ein heiliges tier <> in indien <>  <>  <>  <>  <>  <>  <> 50
 ist <> die lahn <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die lange lacke <> _1,6_ quadratkilometer <> gross <>  <>  <>  <>  <>  <>  <> 50
 ist <> die lech <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die leine <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die lena <> 4270 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die lena <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die lena <> 4270 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die lena <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die loire  <> der laengste fluss <>   von frankreich <>  <>  <>  <>  <>  <>  <> 50
-ist <> die loire <> 1020 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die loire <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die loire <> 1020 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die loire <> der laengste fluss <> frankreichs <>  <>  <>  <>  <>  <>  <> 50
-ist <> die loire <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die loire <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die loire <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die ludwigskirche saarbruecken <> das wahrzeichen <> von saarbruecken <>  <>  <>  <>  <>  <>  <> 50
 ist <> die maas <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die marienkirche <> das wahrzeichen <> von reutlingen <>  <>  <>  <>  <>  <>  <> 50
@@ -2378,10 +2283,10 @@ ist <> die neckar <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die neris <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die newa <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die oder  <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die oder <> 912 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die oker <> nothing <>  ein fluss<>  <>  <>  <>  <>  <>  <> 50
-ist <> die oos  <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
-ist <> die ostseeinsel hiddensee <> nothing <> autofrei <>  <>  <>  <>  <>  <>  <> 50
+ist <> die oder <> 912 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die oker <>  <>  ein fluss<>  <>  <>  <>  <>  <>  <> 50
+ist <> die oos  <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die ostseeinsel hiddensee <>  <> autofrei <>  <>  <>  <>  <>  <>  <> 50
 ist <> die pasterze <> der groesste gletscher <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die pegnitz <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die pont d avignon <> das wahrzeichen <> von avignon <>  <>  <>  <>  <>  <>  <> 50
@@ -2394,12 +2299,12 @@ ist <> die reinoldikirche <> das wahrzeichen <> von dortmund <>  <>  <>  <>  <> 
 ist <> die rendsburger hochbruecke <> das wahrzeichen <> von rendsburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> die reuss <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die rhoen <> ein mittelgebirge <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die rhone <> 812 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die rhone <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die rhone <> 812 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die rhone <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die rinnenspitze <> ein berg <> in;dem;stubaital <>  <>  <>  <>  <>  <>  <> 50
 ist <> die roehn <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die ruhr  <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
-ist <> die ruhr <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die ruhr  <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die ruhr <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die rur <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die saale <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die saar <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2410,25 +2315,25 @@ ist <> die salzach <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die schwarza <> ein nebenfluss <> der saale <>  <>  <>  <>  <>  <>  <> 50
 ist <> die schweiz <> ein neutraler staat <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die schwinge <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die seine <> 776 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die seine <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die seine <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die seine <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die seine <> 776 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die seine <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die semperoper <> ein wahrzeichen <> von dresden <>  <>  <>  <>  <>  <>  <> 50
 ist <> die senne <>  ein fluss<>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die severi-kirche <> ein wahrzeichen <>   von erfurt <>  <>  <>  <>  <>  <>  <> 50
 ist <> die siegessaeule <> ein wahrzeichen <> von berlin <>  <>  <>  <>  <>  <>  <> 50
 ist <> die sigismundssaeule <> das wahrzeichen <> von warschau <>  <>  <>  <>  <>  <>  <> 50
+ist <> die sonne <>  <> gelb <>  <>  <>  <>  <>  <>  <> 50
 ist <> die sonne <> 5600 grad celsius <> heiss <>  <>  <>  <>  <>  <>  <> 50
-ist <> die sonne <> ein fixstern <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
+ist <> die sonne <> ein fixstern <>  <>  <>  <>  <>  <>  <> 
 ist <> die sonne <> ein stern <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die sonne <> nothing <> gelb <>  <>  <>  <>  <>  <>  <> 50
 ist <> die sparrenburg <> das wahrzeichen <> von bielefeld <>  <>  <>  <>  <>  <>  <> 50
-ist <> die spree <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die spree <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die steiermark <> ein bundesland <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die stiftsbibliothek <> ein kulturerbe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die teck <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die temperatur <> etwa 15 millionen grad <> in dem zentrum der sonne <>  <>  <>  <>  <>  <>  <> 50
-ist <> die themse <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die themse <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die trave <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die troposphaere <> die unterste schicht <> der erdatmosphaere <>  <>  <>  <>  <>  <>  <> 50
 ist <> die venus <> ein planet <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -2438,22 +2343,22 @@ ist <> die wartburg <> das wahrzeichen <> von eisenach <>  <>  <>  <>  <>  <>  <
 ist <> die wasserkuppe <> 950 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wasserkuppe <> der hoechste berg <> von hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wasserkuppe <> die hoechste erhebung <> der rhoen <>  <>  <>  <>  <>  <>  <> 50
-ist <> die weichsel <> 1095 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die weichsel <> 1095 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die weichsel <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die weichsel <> ein fluss <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> die welt <> ein planet <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> die welt <> keine scheibe <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> die welt <> nothing <> rund <>  <>  <>  <> nothing <> nothing <>  <> 50 
+ist <> die weichsel <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die welt <>  <> rund <>  <>  <>  <>  <>  <>  <> 50 
+ist <> die welt <> ein planet <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die welt <> keine scheibe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die werra <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die weser <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wied <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die wien <> nothing <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
+ist <> die wien <>  <> ein fluss <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wildspitze <> 3774 meter <> hoch <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wildspitze <> der hoechste berg <> von tirol <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wildspitze <> der zweithoechste berg <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wildspitze <> der zweithoechste berg <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wipper <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die wolga <>  3688 kilometer lang <>  <>  <>  <> nothing <>  <>  <>  <> 50
+ist <> die wolga <>  3688 kilometer lang <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wolga <>  ein fluss<>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wolga <> der laengste fluss  <>von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> die wueste gobi <> die groesste wueste <> von asien <>  <>  <>  <>  <>  <>  <> 50
@@ -2532,28 +2437,25 @@ ist <> eibelstadt <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> eibenstock <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> eichstaett <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> eilenburg <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein fixstern <> eine sonne <>  <>  <>  <>  <> nothing <> nothing <> 
-ist <> ein fluss <> nothing <> der;_rio_grande_ <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> der;_sankt_lorenz_ <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> der;angara <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> der;brahmaputra <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> der;ebro <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> der;mackenzie <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein fluss <> nothing <> die wolga <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> ein gebirge <> eine kette bzw gruppe <> von bergen <>  <>  <>  <> nothing <> nothing <> 
+ist <> ein fixstern <> eine sonne <>  <>  <>  <>  <>  <>  <> 
+ist <> ein fluss <>  <> der;_sankt_lorenz_ <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein fluss <>  <> der;ebro <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein fluss <>  <> der;mackenzie <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein fluss <>  <> die wolga <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein gebirge <> eine kette bzw gruppe <> von bergen <>  <>  <>  <>  <>  <> 
 ist <> ein gneis <> ein gestein <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein isthmus <> eine landenge <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein kollapsar <>ein schwarzes loch <> in dem universum <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein meer <> nothing <> die adria <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein meer <>  <> die adria <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein meridian <> ein laengengrad <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein neutronenstern <> ein astronomisches objekt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein stern <> eine sonne <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein wahrzeichen <> nothing <> die kathedrale-notre-dame  von paris <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein wahrzeichen <>  <> die kathedrale-notre-dame  von paris <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein wind 12 <> ein orkan <> mit windstaerke <>  <>  <>  <>  <>  <>  <> 50
 ist <> einbeck <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine aeolische erosion <> eine abtragung <> durch wind <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine astronomische einheit <> etwa 150 billionen kilometer gross <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine halbinsel <> nothing <> der peloponnes <>  <>  <>  <>  <>  <>  <> 50
+ist <> eine halbinsel <>  <> der peloponnes <>  <>  <>  <>  <>  <>  <> 50
 ist <> eine stadt <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> eisenach <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> eisenberg <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
@@ -2626,7 +2528,7 @@ ist <> erlangen <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> erlangen <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> erlenbach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> erwitte <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-ist <> es <> nothing <> auf dem saturn  immer kalt <>  <>  <>  <>  <>  <>  <> 50
+ist <> es <>  <> auf dem saturn  immer kalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> eschborn <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> eschenbach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> eschershausen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
@@ -2640,13 +2542,13 @@ ist <> esslingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  
 ist <> estland <>  ein name <>  <>  <>  <>  <>  <>  <>  <> 50i
 ist <> ettenheim <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> ettlingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-ist <> euboea <> nothing <> die zweitgroesste insel von griechenland <>  <>  <>  <>  <>  <>  <> 50
-ist <> euer sonnensystem <> nothing <> in der milchstrasse <>  <>  <>  <>  <>  <>  <> 50
+ist <> euboea <>  <> die zweitgroesste insel von griechenland <>  <>  <>  <>  <>  <>  <> 50
+ist <> euer sonnensystem <>  <> in der milchstrasse <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> das westliche fuenftel <> der eurasischen landmasse <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> ein erdteil <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> ein jupitermond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> ein kontinent <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> europa <> ein kontinent <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> europa <> ein kontinent <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> ein mond <> vom jupiter <>  <>  <>  <>  <>  <>  <> 50
 ist <> europa <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> euskirchen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -2680,6 +2582,7 @@ ist <> flensburg <> eine stadt <> in schleswig-holstein <>  <>  <>  <>  <>  <>  
 ist <> floeha <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> floersheim <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> florenz <> die hauptstadt <> der toskana <>  <>  <>  <>  <>  <>  <> 50
+ist <> florenz <> eine stadt <> in italien <> 50
 ist <> floridsdorf <> ein stadtteil <> von wien <>  <>  <>  <>  <>  <>  <> 50
 ist <> florstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> flying-fish-cove <> die hauptstadt <> der weihnachtsinseln <>  <>  <>  <>  <>  <>  <> 50
@@ -2912,21 +2815,21 @@ ist <> groeningen <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 
 ist <> groitzsch <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gronau <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gronau <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossalmerode <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gross-bieberau <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossbottwar <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossbritannien <>  <> die groesste insel von europa <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossbritannien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossenehrich <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+ist <> grossenhain <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gross-enzersdorf <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> gross-gerau <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gross-gerungs <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-ist <> gross-siegharts <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-ist <> gross-umstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossalmerode <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossbottwar <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossbritannien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossbritannien <> nothing <> die groesste insel von europa <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossenehrich <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-ist <> grossenhain <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> grossraeschen <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> grossroehrsdorf <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> grossschirma <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+ist <> gross-siegharts <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> gross-umstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gruenberg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gruenhain-beierfeld <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> gruensfeld <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -3137,7 +3040,7 @@ ist <> holzgerlingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  
 ist <> holzminden <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> homberg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> homburg <> eine stadt <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-ist <> hondo <> nothing <> die groesste insel von japan <>  <>  <>  <>  <>  <>  <> 50
+ist <> hondo <>  <> die groesste insel von japan <>  <>  <>  <>  <>  <>  <> 50
 ist <> honduras <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> hong kong <> eine stadt <> in china <>  <>  <>  <>  <>  <>  <> 50
 ist <> hongkong <> die dicht besiedelte stadt <> der welt <>  <>  <>  <>  <>  <>  <> 50
@@ -3147,8 +3050,8 @@ ist <> honiara <> die hauptstadt <> von den salomoninseln <>  <>  <>  <>  <>  <>
 ist <> honolulu <> die hauptstadt <> von hawaii <>  <>  <>  <>  <>  <>  <> 50
 ist <> horb <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> horn <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-ist <> horn-bad meinberg <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> hornbach <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+ist <> horn-bad meinberg <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> hornberg <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> horstmar <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> houston <> eine stadt <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -3202,9 +3105,9 @@ ist <> irland <> ein inselstaat <> von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> irland <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> iserlohn <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> islamabad <> die hauptstadt <> von pakistan <>  <>  <>  <>  <>  <>  <> 50
+ist <> island <>  <> die zweitgroesste insel von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> island <> die groesste vulkaninsel <> von der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> island <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> island <> nothing <> die zweitgroesste insel von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> israel <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> israel <> ein staat  <> in dem nahen osten <>  <>  <>  <>  <>  <>  <> 50
 ist <> israel <> ein staat <> in dem nahen osten <>  <>  <>  <>  <>  <>  <> 50
@@ -3220,8 +3123,8 @@ ist <> jamaika <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> jamestown <> die hauptstadt  <> von saint helena <>  <>  <>  <>  <>  <>  <> 50
 ist <> janus <> ein mond <> vom saturn <>  <>  <>  <>  <>  <>  <> 50
 ist <> janus <> ein saturnmond <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> japan <>  <> das land der aufgehenden sonne <>  <>  <>  <>  <>  <>  <> 50
 ist <> japan <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> japan <> nothing <> das land der aufgehenden sonne <>  <>  <>  <>  <>  <>  <> 50
 ist <> jarmen <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> java <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> jefferson city <> die hauptstadt <> von missouri <>  <>  <>  <>  <>  <>  <> 50
@@ -3243,8 +3146,8 @@ ist <> judenburg <> eine stadt <> in der steiermark <>  <>  <>  <>  <>  <>  <> 5
 ist <> juelich <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> jueterbog <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> juetland <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> julia <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> julia <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> julia <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> juneau <> die hauptstadt <> von alaska <>  <>  <>  <>  <>  <>  <> 50
 ist <> jupiter <> der groesste planet <> in euerem sonnensystem <>  <>  <>  <>  <>  <>  <> 50
 ist <> kaarst <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -3272,8 +3175,8 @@ ist <> kambodscha <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kamen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kamenz <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kamerun <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kamp-lintfort <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kampala <> die hauptstadt <> von uganda <>  <>  <>  <>  <>  <>  <> 50
+ist <> kamp-lintfort <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kanada <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kanada <> eine nation <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> kandel <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
@@ -3404,8 +3307,8 @@ ist <> krefeld <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <
 ist <> kremmen <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> krems <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> kreolisch <> eine amtssprache <> von haiti <>  <>  <>  <>  <>  <>  <> 50
-ist <> kreta <> nothing <> die groesste griechische insel <>  <>  <>  <>  <>  <>  <> 50
-ist <> kreta <> nothing <> die groesste insel von griechenland <>  <>  <>  <>  <>  <>  <> 50
+ist <> kreta <>  <> die groesste griechische insel <>  <>  <>  <>  <>  <>  <> 50
+ist <> kreta <>  <> die groesste insel von griechenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> kreuzberg <> ein berliner stadtteil <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kreuztal <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kroatien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -3414,9 +3317,9 @@ ist <> kronach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> kronberg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> kroppenstedt <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> krumbach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+ist <> kuba <>  <> die groesste insel von lateinamerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> kuba <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> kuba <> floridas ein inselstaat <> vor der kueste <>  <>  <>  <>  <>  <>  <> 50
-ist <> kuba <> nothing <> die groesste insel von lateinamerika <>  <>  <>  <>  <>  <>  <> 50
 ist <> kuehlungsborn <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> kuelsheim <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> kuenzelsau <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -3624,9 +3527,9 @@ ist <> luzon <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> lychen <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> lysithea <> ein jupitermond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> lysithea <> ein mond <> vom jupiter <>  <>  <>  <>  <>  <>  <> 50
+ist <> madagaskar <>  <> die groesste insel von afrika <>  <>  <>  <>  <>  <>  <> 50
+ist <> madagaskar <>  <> die viertgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> madagaskar <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> madagaskar <> nothing <> die groesste insel von afrika <>  <>  <>  <>  <>  <>  <> 50
-ist <> madagaskar <> nothing <> die viertgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> madeira <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> madison <> die hauptstadt <> von wisconsin <>  <>  <>  <>  <>  <>  <> 50
 ist <> madrid <> die hauptstadt <> von spanien <>  <>  <>  <>  <>  <>  <> 50
@@ -3660,9 +3563,9 @@ ist <> mali <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> mallorca <> die hauptinsel <> der balearen <>  <>  <>  <>  <>  <>  <> 50
 ist <> mallorca <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> malmoe <> die hauptstadt <> von schonen <>  <>  <>  <>  <>  <>  <> 50
+ist <> malta <>  <> das kleinste land in der _eu_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> malta <> der dicht besiedeltste inselstaat <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> malta <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> malta <> nothing <> das kleinste land in der _eu_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> maltesisch <> eine amtssprache <> von malta <>  <>  <>  <>  <>  <>  <> 50
 ist <> mamoutzou <> die hauptstadt <> von mayotte <>  <>  <>  <>  <>  <>  <> 50
 ist <> managua <> die hauptstadt <> von nikaragua <>  <>  <>  <>  <>  <>  <> 50
@@ -3745,7 +3648,7 @@ ist <> mendig <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> mengen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> meppen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> merkendorf <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> merkur <> der kleinste planet eueres sonnensystems <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> merkur <> der kleinste planet eueres sonnensystems <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> merseburg <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> merzig <> eine stadt <> in saarland <>  <>  <>  <>  <>  <>  <> 50
 ist <> meschede <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -3774,8 +3677,8 @@ ist <> mindelheim <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> minden <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> minnesota <> ein bundesstaat  <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> minsk <> die hauptstadt <> von belarus <>  <>  <>  <>  <>  <>  <> 50
+ist <> miranda <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> miranda <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> miranda <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> mirow <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> missouri <> ein bundesstaat <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> mistelbach <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
@@ -3813,8 +3716,8 @@ ist <> moringen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> moroni <> die hauptstadt <> der komoren <>  <>  <>  <>  <>  <>  <> 50
 ist <> mosambik <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> mosbach <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+ist <> moskau <>  <> in russland <>  <>  <>  <>  <>  <>  <> 50
 ist <> moskau <> die hauptstadt <> von russland <>  <>  <>  <>  <>  <>  <> 50
-ist <> moskau <> nothing <> in russland <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> muecheln <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> muegeln <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> muehlacker <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -3848,7 +3751,6 @@ ist <> mureck <> eine stadt <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
 ist <> murrhardt <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> muscat <> die hauptstadt <> vom oman <>  <>  <>  <>  <>  <>  <> 50
 ist <> myanmar <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> n'djamena <> die hauptstadt <> vom tschad <>  <>  <>  <>  <>  <>  <> 50
 ist <> nabburg <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> nagold <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> naiad <> ein mond <> vom neptun <>  <>  <>  <>  <>  <>  <> 50
@@ -3866,6 +3768,7 @@ ist <> naumburg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> naumburg <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> naunhof <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> nauru <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> n'djamena <> die hauptstadt <> vom tschad <>  <>  <>  <>  <>  <>  <> 50
 ist <> nebra <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> nebraska <> ein bundesstaat <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> neckarbischofsheim <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -3882,8 +3785,6 @@ ist <> netphen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <
 ist <> nettetal <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> netzschkau <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> neu-anspach <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> neu-isenburg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> neu-ulm <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neubau <> ein stadtteil <> von wien <>  <>  <>  <>  <>  <>  <> 50
 ist <> neubrandenburg <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neubraunschweig <> eine kanadische provinz <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -3903,8 +3804,9 @@ ist <> neufeld <> eine stadt <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> neuffen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> neufundland <> eine insel <> vor der ostkueste von kanada <>  <>  <>  <>  <>  <>  <> 50
 ist <> neugersdorf <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-ist <> neuguinea <> nothing <> die zweitgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> neukaledonien <> nothing <> die groesste insel von frankreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> neuguinea <>  <> die zweitgroesste insel der erde <>  <>  <>  <>  <>  <>  <> 50
+ist <> neu-isenburg <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+ist <> neukaledonien <>  <> die groesste insel von frankreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> neukalen <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neukirchen <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> neukirchen-vluyn <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -3933,6 +3835,7 @@ ist <> neustadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> neustadt-glewe <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neustrelitz <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neutraubling <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+ist <> neu-ulm <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> neuwied <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> nevada <> ein bundesstaat <> der usa <>  <>  <>  <>  <>  <>  <> 50
 ist <> nevada <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -3953,13 +3856,13 @@ ist <> nidderau <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> nideggen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> niebuell <> eine stadt <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
 ist <> niedenstein <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-ist <> nieder-olm <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederkassel <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederlaendisch <> die amtssprache <> in surinam <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederlaendisch <> eine amtssprache <> der _niederlaendischen_antillen_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederlande <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> niedernhall <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederoesterreich <> ein bundesland <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> nieder-olm <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> niedersachsen <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederstetten <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> niederstotzingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -3986,23 +3889,22 @@ ist <> nordrhein-westfalen <> ein land  <> in dem westen der bundesrepublik deut
 ist <> nordzypern <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> northeim <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> nortorf <> eine stadt <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+ist <> norwegen <>  <> das reichste land von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> norwegen <> ein land <> in nordeuropa <>  <>  <>  <>  <>  <>  <> 50
 ist <> norwegen <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> norwegen <> nothing <> das reichste land von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> nossen <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> nouakchott <> die hauptstadt <> von mauretanien <>  <>  <>  <>  <>  <>  <> 50
 ist <> noumea <> die hauptstadt <> von neukaledonien <>  <>  <>  <>  <>  <>  <> 50
 ist <> nuernberg <> die zweitgroesste stadt <> von bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> nuernberg <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> nuernberg <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-ist <> nuernberg <> eine stadt <> in bayern <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> nuernberg <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> nuku-alofa <> die hauptstadt <> von tonga <>  <>  <>  <>  <>  <>  <> 50
 ist <> nunavut <> das groesste territorium <> in kanada <>  <>  <>  <>  <>  <>  <> 50
 ist <> nunavut <> ein territorium <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> nunavut <> ein territorium <> von kanada <>  <>  <>  <>  <>  <>  <> 50
 ist <> nuuk <> die hauptstadt <> von groenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> nyon <> der sitz <> der _uefa_ <>  <>  <>  <>  <>  <>  <> 50
-ist <> ober-ramstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberasbach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberhausen <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberhausen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -4015,9 +3917,10 @@ ist <> obernburg <> eine stadt <> an dem main;in bayern <>  <>  <>  <>  <>  <>  
 ist <> oberndorf <> eine stadt <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> obernkirchen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberoesterreich <> ein bundesland <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> oberon <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberon <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> oberon <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberpullendorf <> eine stadt <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+ist <> ober-ramstadt <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberriexingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> obertshausen <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> oberursel <> eine stadt <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
@@ -4060,8 +3963,8 @@ ist <> olpe <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 5
 ist <> olsberg <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> olympia <> die hauptstadt <> von washington <>  <>  <>  <>  <>  <>  <> 50
 ist <> oman <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ophelia <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> ophelia <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> ophelia <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> oppenau <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> oppenheim <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> oranienbaum <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
@@ -4160,7 +4063,7 @@ ist <> phobus <> ein mond <> vom mars <>  <>  <>  <>  <>  <>  <> 50
 ist <> phoebe <> ein mond <> vom saturn <>  <>  <>  <>  <>  <>  <> 50
 ist <> phoebe <> ein saturnmond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> phoenix <> die hauptstadt <> von arizona <>  <>  <>  <>  <>  <>  <> 50
-ist <> phuket <> nothing <> die groesste insel von tailand <>  <>  <>  <>  <>  <>  <> 50
+ist <> phuket <>  <> die groesste insel von tailand <>  <>  <>  <>  <>  <>  <> 50
 ist <> pilipino <> die amtssprache <> der philippinen <>  <>  <>  <>  <>  <>  <> 50
 ist <> pinkafeld <> eine stadt <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> pinneberg <> eine stadt <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
@@ -4182,25 +4085,25 @@ ist <> poechlarn <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <
 ist <> poessneck <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> pohlheim <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> polch <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+ist <> polen <>  <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> polen <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> polen <> ein staat <> in mitteleuropa <>  <>  <>  <>  <>  <>  <> 50
-ist <> polen <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> port louis <> die hautpstadt <> von mauritius <>  <>  <>  <>  <>  <>  <> 50
 ist <> port moresby <> die hauptstadt <> von papuaneuguinea <>  <>  <>  <>  <>  <>  <> 50
-ist <> port-au-prince <> die hauptstadt <> von haiti <>  <>  <>  <>  <>  <>  <> 50
-ist <> port-of-spain <> die hauptstadt <> von trinidad tobago<>  <>  <>  <>  <>  <>  <> 50
-ist <> port-vila <> die hauptstadt <> von vanuatu <>  <>  <>  <>  <>  <>  <> 50
 ist <> porta westfalica <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+ist <> port-au-prince <> die hauptstadt <> von haiti <>  <>  <>  <>  <>  <>  <> 50
+ist <> portia <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> portia <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> portia <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> portland <> die groesste stadt <> von oregon <>  <>  <>  <>  <>  <>  <> 50
 ist <> porto <> die drittgroesste stadt <> von portugal <>  <>  <>  <>  <>  <>  <> 50
+ist <> port-of-spain <> die hauptstadt <> von trinidad tobago<>  <>  <>  <>  <>  <>  <> 50
 ist <> porto-novo <> die hauptstadt <> von benin <>  <>  <>  <>  <>  <>  <> 50
 ist <> portugal <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> portugiesisch  <> die amtssprache <> in brasilien <>  <>  <>  <>  <>  <>  <> 50
 ist <> portugiesisch <> die amtssprache <> in _kap_verde_ <>  <>  <>  <>  <>  <>  <> 50
 ist <> portugiesisch <> die amtssprache <> in angola <>  <>  <>  <>  <>  <>  <> 50
 ist <> portugiesisch <> die amtssprache <> in masambik <>  <>  <>  <>  <>  <>  <> 50
+ist <> port-vila <> die hauptstadt <> von vanuatu <>  <>  <>  <>  <>  <>  <> 50
 ist <> potsdam <> die hauptstadt <> von brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> potsdam <> die landeshauptstadt <> von brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> potsdam <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -4223,14 +4126,14 @@ ist <> preussisch oldendorf <> eine stadt <> in nordrhein-westfalen <>  <>  <>  
 ist <> prichsenstadt <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> pritzwalk <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> prometheus <> ein saturnmond <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> prospero <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> prospero <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> prospero <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> proteus <> ein mond <> vom neptun <>  <>  <>  <>  <>  <>  <> 50
 ist <> proteus <> ein neptunmond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> providence <> die hauptstadt  <> von rhrode island<>  <>  <>  <>  <>  <>  <> 50
 ist <> pruem <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+ist <> puck <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> puck <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> puck <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> puerto baquerizo <> die hauptstadt  <> der galapagos inseln <>  <>  <>  <>  <>  <>  <> 50
 ist <> puettlingen <> eine stadt <> in saarland <>  <>  <>  <>  <>  <>  <> 50
 ist <> pulheim <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
@@ -4363,8 +4266,8 @@ ist <> rom <> die hauptstadt <> von lazio <>  <>  <>  <>  <>  <>  <> 50
 ist <> romrod <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> ronneburg <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> ronnenberg <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+ist <> rosalind <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> rosalind <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> rosalind <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> rosbach <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 ist <> roseau <> die hauptstadt <> von dominica <>  <>  <>  <>  <>  <>  <> 50
 ist <> rosenfeld <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -4400,11 +4303,11 @@ ist <> ruhland <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> rumaenien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> rumaenien <> eine republik <> in europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> runkel <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+ist <> russland <>  <> das groesste land der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> russland <> der flaechenmaessig groesste staat <> der welt <>  <>  <>  <>  <>  <>  <> 50
-ist <> russland <> ein land <> in dem osten von europa <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> russland <> ein land <> in dem osten von europa <>  <>  <>  <>  <>  <>  <> 50
 ist <> russland <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> russland <> ein staat <> in dem noerdlichen eurasien <>  <>  <>  <>  <>  <>  <> 50
-ist <> russland <> nothing <> das groesste land der welt <>  <>  <>  <>  <>  <>  <> 50
 ist <> rust <> eine stadt <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
 ist <> saalburg-ebersdorf <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> saalfeld <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
@@ -4429,10 +4332,10 @@ ist <> saint helier <> die hauptstadt <> von jersey <>  <>  <>  <>  <>  <>  <> 5
 ist <> saint johns <> die hauptstadt <> von antigua <>  <>  <>  <>  <>  <>  <> 50
 ist <> saint lucia <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> saint paul <> die hauptstadt <> von minnesota <>  <>  <>  <>  <>  <>  <> 50
+ist <> saint_lucia <> ein inselstaat <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> saint-denis <> die hauptstadt <> von reunion <>  <>  <>  <>  <>  <>  <> 50
 ist <> saint-georges <> die hauptstadt <> von greneda <>  <>  <>  <>  <>  <>  <> 50
 ist <> saint-peter-port <> die hauptstadt <> von guernsey <>  <>  <>  <>  <>  <>  <> 50
-ist <> saint_lucia <> ein inselstaat <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> salem <> die hauptstadt <> von oregon <>  <>  <>  <>  <>  <>  <> 50
 ist <> salomonen <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> saloniki <> die zweitgroesste stadt <> von griechenland <>  <>  <>  <>  <>  <>  <> 50
@@ -4451,21 +4354,21 @@ ist <> samoa <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> san antonio <> eine stadt <> in texas <>  <>  <>  <>  <>  <>  <> 50
 ist <> san marino <> die hauptstadt  <> von san marino <>  <>  <>  <>  <>  <>  <> 50
 ist <> san marino <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> san-jose <> die hauptstadt rica <> von cosa <>  <>  <>  <>  <>  <>  <> 50
-ist <> san-juan <> die hauptstadt  <> von puerto rico <>  <>  <>  <>  <>  <>  <> 50
-ist <> san-salvador <> die hauptstadt <> von el salvador <>  <>  <>  <>  <>  <>  <> 50
 ist <> sana <> die hauptstadt <> vom jemen <>  <>  <>  <>  <>  <>  <> 50
 ist <> sana <> die hauptstadt jemen <> der republik <>  <>  <>  <>  <>  <>  <> 50
 ist <> sanaa <> die hauptstadt <> vom yemen <>  <>  <>  <>  <>  <>  <> 50
 ist <> sandau <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> sandersleben <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> sangerhausen <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+ist <> san-jose <> die hauptstadt rica <> von cosa <>  <>  <>  <>  <>  <>  <> 50
+ist <> san-juan <> die hauptstadt  <> von puerto rico <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt andreasberg <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt augustin <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt goar <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt goarshausen <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt poelten <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> sankt valent <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> san-salvador <> die hauptstadt <> von el salvador <>  <>  <>  <>  <>  <>  <> 50
 ist <> sansibar <> eine inselgruppe <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> santa fe <> die hauptstadt <> von new  mexiko<>  <>  <>  <>  <>  <>  <> 50
 ist <> santander <> die hauptstadt <> von kantabrien <>  <>  <>  <>  <>  <>  <> 50
@@ -4587,7 +4490,7 @@ ist <> schwyz <>  der hauptort <> vom kanton schwyz<>  <>  <>  <>  <>  <>  <> 50
 ist <> sebnitz <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> seehausen <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 ist <> seekirchen <> eine stadt <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-ist <> seeland <> nothing <> die zweitgroesste insel von daenemark <>  <>  <>  <>  <>  <>  <> 50
+ist <> seeland <>  <> die zweitgroesste insel von daenemark <>  <>  <>  <>  <>  <>  <> 50
 ist <> seelow <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> seelze <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> seesen <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
@@ -4607,8 +4510,8 @@ ist <> seoul <> die hauptstadt <> von korea <>  <>  <>  <>  <>  <>  <> 50
 ist <> seoul <> die hauptstadt <> von suedkorea <>  <>  <>  <>  <>  <>  <> 50
 ist <> serbien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> sesslach <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+ist <> setebos <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> setebos <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> setebos <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> sevilla <> die hauptstadt <> von andalusien <>  <>  <>  <>  <>  <>  <> 50
 ist <> seychellen <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> shaba <> eine provinz  <> der deomokratischen republik kongo<>  <>  <>  <>  <>  <>  <> 50
@@ -4624,8 +4527,8 @@ ist <> simmering <> ein stadtteil <> von wien <>  <>  <>  <>  <>  <>  <> 50
 ist <> simmern <> eine stadt <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
 ist <> simmern <> eine stadt <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 ist <> sindelfingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+ist <> singapur <>  <> das dicht besiedeltste land der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> singapur <> die hauptstadt <> von singapur <>  <>  <>  <>  <>  <>  <> 50
-ist <> singapur <> nothing <> das dicht besiedeltste land der erde <>  <>  <>  <>  <>  <>  <> 50
 ist <> singen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> sinope <> ein jupitermond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> sinope <> ein mond <> vom jupiter <>  <>  <>  <>  <>  <>  <> 50
@@ -4635,9 +4538,9 @@ ist <> sirius <> der hellste fixsstern eueres himmels <>  <>  <>  <>  <>  <>  <>
 ist <> sirius <> der hellste fixstern <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> sitten <>  der hauptort <> vom kanton wallis<>  <>  <>  <>  <>  <>  <> 50
 ist <> sitten <> die hauptstadt  <> vom kanton wallis<>  <>  <>  <>  <>  <>  <> 50
+ist <> sizilien <>  <> die groesste insel in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
+ist <> sizilien <>  <> die groesste insel von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> sizilien <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sizilien <> nothing <> die groesste insel in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
-ist <> sizilien <> nothing <> die groesste insel von italien <>  <>  <>  <>  <>  <>  <> 50
 ist <> skopje <> die hauptstadt <> von mazedonien <>  <>  <>  <>  <>  <>  <> 50
 ist <> skylab <> ein weltraumlabor <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> soemmerda <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
@@ -4666,9 +4569,6 @@ ist <> spremberg <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 ist <> springe <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> springfield <> die hauptstadt <> von illinois <>  <>  <>  <>  <>  <>  <> 50
 ist <> sprockhoevel <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-ist <> st-gallen <>  der hauptort <> vom kanton st-gallen<>  <>  <>  <>  <>  <>  <> 50
-ist <> st-poelten <> die hauptstadt <> von niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-ist <> st-poelten <> die landeshauptstadt <> von niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> stade <> eine stadt <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> stadt wehlen <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> stadtallendorf <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
@@ -4700,11 +4600,12 @@ ist <> steinbach-hallenberg <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <
 ist <> steinfurt <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> steinheim <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> stendal <> eine stadt <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+ist <> stephano <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> stephano <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> stephano <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> sternberg <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> steyr <> eine stadt <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> steyregg <> eine stadt <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> st-gallen <>  der hauptort <> vom kanton st-gallen<>  <>  <>  <>  <>  <>  <> 50
 ist <> stockach <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> stockerau <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> stockholm <> die hauptstadt <> von schweden <>  <>  <>  <>  <>  <>  <> 50
@@ -4715,6 +4616,8 @@ ist <> stollberg <> eine stadt <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 5
 ist <> stolpen <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> stonehenge <> eine kultstaette <> in suedengland <>  <>  <>  <>  <>  <>  <> 50
 ist <> storkow <> eine stadt <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+ist <> st-poelten <> die hauptstadt <> von niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+ist <> st-poelten <> die landeshauptstadt <> von niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> straelen <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> stralsund <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
 ist <> strasburg <> eine stadt <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
@@ -4742,8 +4645,8 @@ ist <> sulzburg <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <
 ist <> sundern <> eine stadt <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
 ist <> sundern <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 ist <> suva <> die hauptstadt <> der fidschi <>  <>  <>  <>  <>  <>  <> 50
+ist <> sycorax <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> sycorax <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> sycorax <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> sydney <> die hauptstadt <> von neusuedwales <>  <>  <>  <>  <>  <>  <> 50
 ist <> sydney <> die stadt <> mit den meisten einwohnern in australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> sydney <> eine stadt <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -4768,9 +4671,9 @@ ist <> tanna <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> tansania <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tarawa <> die hauptstadt <> von kiribati <>  <>  <>  <>  <>  <>  <> 50
 ist <> taschhkent <> die hauptstadt <> von usbekistan <>  <>  <>  <>  <>  <>  <> 50
+ist <> tasmanien <>  <> die groesste insel von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> tasmanien <> der kleinste bundesstaat <> von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> tasmanien <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tasmanien <> nothing <> die groesste insel von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> tasmanien <> suedlich <> die insel  von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <> tauberbischofsheim <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> taucha <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
@@ -4809,10 +4712,10 @@ ist <> thalheim <> eine stadt <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
 ist <> thalheim <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> thannhausen <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> tharandt <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-ist <> the-valley <> die hauptstadt <> von anguilla <>  <>  <>  <>  <>  <>  <> 50
 ist <> thebe <> ein jupitermond <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> thebe <> ein mond <> vom jupiter <>  <>  <>  <>  <>  <>  <> 50
 ist <> themar <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+ist <> the-valley <> die hauptstadt <> von anguilla <>  <>  <>  <>  <>  <>  <> 50
 ist <> thimphu <> die hauptstadt <> von bhutan <>  <>  <>  <>  <>  <>  <> 50
 ist <> thueringen <> ein freistaat  <> in der mitte der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
 ist <> thueringen <> ein freistaat <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -4821,15 +4724,15 @@ ist <> thum <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> tibet <> ein verwaltungsgebiet <> von china <>  <>  <>  <>  <>  <>  <> 50
 ist <> tibisti <> ein gebirge <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tiflis <> die hauptstadt <> von georgien <>  <>  <>  <>  <>  <>  <> 50
-ist <> timbuktu <> eine oasenstadt <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> timbuktu <> eine oasenstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> timor-leste <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tirana <> die hauptstadt <> von albanien <>  <>  <>  <>  <>  <>  <> 50
 ist <> tirol <> ein bundesland <> von oesterreich <>  <>  <>  <>  <>  <>  <> 50
 ist <> tirschenreuth <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> titan <> ein mond <> vom saturn <>  <>  <>  <>  <>  <>  <> 50
 ist <> titan <> ein saturnmond <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> titania <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> titania <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> titania <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> titisee-neustadt <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> tittmoning <> eine stadt <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 ist <> todtnau <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
@@ -4882,7 +4785,7 @@ ist <> truro <> die hauptstadt <> von cornwall <>  <>  <>  <>  <>  <>  <> 50
 ist <> tschad <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tschechien <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tschernobyl <> eine stadt <> in der ukraine <>  <>  <>  <>  <>  <>  <> 50
-ist <> tsukuba <> ein japanischer ortsname <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> tsukuba <> ein japanischer ortsname <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tuebingen <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> tuerkei <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> tulln <> eine stadt <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
@@ -4907,8 +4810,8 @@ ist <> ulan bator <> die hauptstadt <> von der mongolei <>  <>  <>  <>  <>  <>  
 ist <> ulm <> eine grossstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ulm <> eine stadt <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 ist <> ulrichstein <> eine stadt <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+ist <> umbriel <>  <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> umbriel <> ein mond <> vom uranus <>  <>  <>  <>  <>  <>  <> 50
-ist <> umbriel <> nothing <> ein uranusmond <>  <>  <>  <>  <>  <>  <> 50
 ist <> ummerstadt <> eine stadt <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
 ist <> umtata <> die hauptstadt <> der transkei <>  <>  <>  <>  <>  <>  <> 50
 ist <> ungarn <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -5230,11 +5133,12 @@ ist <> zwoenitz <> eine stadt <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 ist <> zypern <> ein name <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> zypern <> eine insel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <>der oberer see <> der groesste see <> von amerika <>  <>  <>  <>  <>  <>  <> 50
-ist <>der septik <> ein fluss <> nothing <>  <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <>der septik <> ein fluss <>  <>  <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <>die grosse sandwueste <> die groesste wueste <> von australien <>  <>  <>  <>  <>  <>  <> 50
 ist <>die tower bridge <> das wahrzeichen <> von london <>  <>  <>  <>  <>  <>  <> 50
 ist <>loch ness <> ein riesiger see <> in schottland <>  <>  <>  <>  <>  <>  <> 50
 ist <>schloss holte-stukenbrock <> eine stadt <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+ist benannt <> der neptun <>  <> nach dem roemischen meeresgott <> 50
 ist ist <> die mosel <> ein fluss <>  <>  <>  <>  <>  <>  <>  <> 50
 ist tief <> der achensee <> 133 meter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist tief <> der almsee <> 5 meter <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -5274,2947 +5178,2940 @@ ist tief <> der_obertrumer_see <> 35 meter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist tief <> der_ossiacher_see <> 52 meter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist tief <> der_zeller_see <> 68 meter <>  <>  <>  <>  <>  <>  <>  <> 50
 ist tief <> die lange lacke <> 1 meter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist unterteilt <> wien <> nothing <> in 23 gemeindebezirke <>  <>  <>  <>  <>  <>  <> 50
+ist unterteilt <> wien <>  <> in 23 gemeindebezirke <>  <>  <>  <>  <>  <>  <> 50
+istbenannt  <> die venus <>  <> nach der roemischen goettin der liebe <> 50
 kenne <> ich <> alle 193 laender <> der welt <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> alle laender <> auf der welt <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> die goetter <> aus der antike <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <> viele goetter <> der antike <>  <>  <>  <>  <>  <>  <> 100
-kommt <> die venus <> nothing <> der erde an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
-laeuft <> der null-meridian <> nothing <> durch greenwich <>  <>  <>  <>  <>  <>  <> 50
-laeuft <> nothing <> nothing <> der null-meridian durch greenwich <>  <>  <>  <>  <>  <>  <> 50
-lag <> das antike babylon <> nothing <> in dem heutigen irak <>  <>  <>  <>  <>  <>  <> 50
-lag <> karthago <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+kommt <> die venus <>  <> der erde an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
+laeuft <>  <>  <> der null-meridian durch greenwich <>  <>  <>  <>  <>  <>  <> 50
+laeuft <> der null-meridian <>  <> durch greenwich <>  <>  <>  <>  <>  <>  <> 50
+lag <> das antike babylon <>  <> in dem heutigen irak <>  <>  <>  <>  <>  <>  <> 50
+lag <> karthago <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
 las <> palmas <> canaria <> auf gran <>  <>  <>  <>  <>  <>  <> 50
-laufen liegt <> nothing <> nothing <> an der salzach <>  <>  <>  <>  <>  <>  <> 50
-laufen liegt <> nothing <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+laufen liegt <>  <>  <> an der salzach <>  <>  <>  <>  <>  <>  <> 50
+laufen liegt <>  <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 lautet <> siam <> ein alter namen fuer thailand <>  <>  <>  <>  <>  <>  <>  <> 50
-leben <> 112986600 menschen <> nothing <> in indien <>  <>  <>  <> nothing <> nothing <>  <> 50
-leben <> beduinen <> nothing <> in vorderasien und in nordafrika <>  <>  <>  <>  <>  <>  <> 50
-leben <> die herero<> nothing <> die herero in dem suedwesten afrikas  <>  <>  <>  <>  <>  <>  <> 50
+leben <> 112986600 menschen <>  <> in indien <>  <>  <>  <>  <>  <>  <> 50
+leben <> beduinen <>  <> in vorderasien und in nordafrika <>  <>  <>  <>  <>  <>  <> 50
+leben <> die herero<>  <> die herero in dem suedwesten afrikas  <>  <>  <>  <>  <>  <>  <> 50
 leben <> die iban <>  <> auf der insel borneo<>  <>  <>  <>  <>  <>  <> 50
-leben <> die katalanen <> nothing <> in dem suedosten von spanien <>  <>  <>  <>  <>  <>  <> 50
-leben <> die meisten kurden <> nothing <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-leben <> die sarden <> nothing <> auf sardinien <>  <>  <>  <>  <>  <>  <> 50
-leben <> die sorben <> nothing <> an der niederlausitz <>  <>  <>  <>  <>  <>  <> 50
-leben <> die sorben <> nothing <> an der oberlausitz <>  <>  <>  <>  <>  <>  <> 50
-leben <> die yanomami <> nothing <> an dem orinoco <>  <>  <>  <>  <>  <>  <> 50
+leben <> die katalanen <>  <> in dem suedosten von spanien <>  <>  <>  <>  <>  <>  <> 50
+leben <> die meisten kurden <>  <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+leben <> die sarden <>  <> auf sardinien <>  <>  <>  <>  <>  <>  <> 50
+leben <> die sorben <>  <> an der niederlausitz <>  <>  <>  <>  <>  <>  <> 50
+leben <> die sorben <>  <> an der oberlausitz <>  <>  <>  <>  <>  <>  <> 50
+leben <> die yanomami <>  <> an dem orinoco <>  <>  <>  <>  <>  <>  <> 50
 leben <> in japan <> die menschen <>  an dem laengsten <>  <>  <>  <>  <>  <>  <> 50
-leben <> in mexico city <> nothing <> die meisten menschen <>  <>  <>  <>  <>  <>  <> 50
+leben <> in mexico city <>  <> die meisten menschen <>  <>  <>  <>  <>  <>  <> 50
 leuchtet <> ein fixstern <> selbst <>  <>  <>  <>  <>  <>  <>  <> 50
 lieg <> bernburg <> tin sachsen-anhalt <>  <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die _liparischen_inseln_ <> nothing <> in dem nordosten von sizilien <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die anden <> nothing <> in sued-amerika <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die azoren <> nothing <> in dem atlantik <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die dolomiten <> nothing <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die falklandinseln <> nothing <> an der suedspitze von amerika <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die highlands <> nothing <> in schottland <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die krimmler wasserfaelle <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegen <>  <>  <> die appalachen in dem osten der usa <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die _liparischen_inseln_ <>  <> in dem nordosten von sizilien <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die anden <>  <> in sued-amerika <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die azoren <>  <> in dem atlantik <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die dolomiten <>  <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die falklandinseln <>  <> an der suedspitze von amerika <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die highlands <>  <> in schottland <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die krimmler wasserfaelle <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
 liegen <> die nikobaren <> ozean <> in dem indischen <>  <>  <>  <>  <>  <>  <> 50
 liegen <> die pyrenaeen <> zwischen spanien und frankreich <>  <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die uffizien <> nothing <> in florenz <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die wolomombifaelle <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
-liegen <> die yosemite-faelle <> nothing <>  in kalifornien <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die uffizien <>  <> in florenz <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die wolomombifaelle <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegen <> die yosemite-faelle <>  <>  in kalifornien <>  <>  <>  <>  <>  <>  <> 50
 liegen <> inseln <> meer <> die dalmatinischen;in dem adriatischen <>  <>  <>  <>  <>  <>  <> 50
-liegen <> nothing <> nothing <> die appalachen in dem osten der usa <>  <>  <>  <>  <>  <>  <> 50
-liegen <> suedlich <> nothing <> die cayman-inseln  von kuba <>  <>  <>  <>  <>  <>  <> 50
-liegen <>die st elias_mountains <> nothing <> in kanada <>  <>  <>  <>  <>  <>  <> 50
-liegt  <> saarland <> nothing <> in dem suedwesten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt  <>schloss orth <> nothing <> an dem traunsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <>  der _huang_ho_<> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <>  der kilimandscharo-nationalpark<> nothing <> in tansania <>  <>  <>  <>  <>  <>  <> 50
-liegt <>  die elbe<> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> _abu_simbel_ <> nothing <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _altdorf_bei_nuernberg_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _annweiler_an_dem_trifels_ <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bad_muender_an_dem_deister_ <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bad_neustadt_an_der_saale_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bad_sankt_leonhard_in_dem_lavanttal_  <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bad_soden_an_dem_taunus_ <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bergen_auf_ruegen_ <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bernau_bei_berlin_ <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bingen_an_dem_rhein_ <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bischofsheim_an_der_rhoen_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bonndorf_in_dem_schwarzwald_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _braunau_an_dem_inn_ <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _bruck_an_der_leitha_ <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _dietfurt_an_der_altmueh_ l <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _dillingen_an_der_donau_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _dissen_an_dem_teutoburger_wald_ <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _ebersbach_an_der_fils_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _endingen_an_dem_kaiserstuhl_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _fort_knox_ <> nothing <> in kentucky <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _freiberg_an_dem_neckar_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _giessen_ <> nothing <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _gmuend_in_kaernten_ <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _haltern_an_dem_see_ <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _kirchdorf_an_der_krems_ <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _krakow_an_dem_see_ <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _laa_an_der_thaya_ <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _las_vegas_ <> nothing <> in nevada <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _leptis_magna_ <> nothing <> in libyen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _machu_piccu_ <> nothing <> in peru <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neuhaus_an_dem_rennweg_ <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neunburg_vorm_wald_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_dem_kulm_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_dem_ruebenberge_ <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_der_aisch_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_der_donau_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_der_orla_ <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_der_waldnaab_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_an_der_weinstrasse_ <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_bei_coburg_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_in_holstein_ <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _neustadt_in_sachsen_ <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _oberndorf_an_dem_neckar_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _owen_falls_ <> nothing <> in uganda <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _plau_an_dem_see_ <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _port_elizabeth_ <> nothing <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _raabs_an_der_thaya_ <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _rothenburg_ob_der_taube_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _saint_louis_ <> nothing <> an dem mississippi <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _saint_louis_ <> nothing <> in missouri <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _saint_lucia_ <> nothing <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _san_fransisco_ <> nothing <> an der westkueste der usa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _san_marino_ <> nothing <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _sankt_andrae_in_dem_lavantta_ l <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _sankt_helena_ <> nothing <> in dem atlantik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _sankt_johann_in_dem_pongau_ <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _sankt_veit_an_der_glan_ <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _santiago_de_compostela_ <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _schwarzenbach_an_dem_wald_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _st_petersburg_ <> nothing <> an der newa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _steinau_an_der_strasse_ <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _steinheim_an_der_murr_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _tel_aviv_ <> nothing <> in israel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _vogtsburg_in_dem_kaiserstuh_ l <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _waidhofen_an_der_thaya_ <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _waidhofen_an_der_ybbs_ <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _wasserburg_an_dem_inn_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _weilheim_an_der_teck_ <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _woerth_an_dem_main_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _woerth_an_dem_rhein_ <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> _woerth_an_der_donau_ <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aachen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aalen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> abenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> abensberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> achern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> achim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> adelsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> adenau <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aegypten <> nothing <> in nordostafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ahaus <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ahlen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ahrensburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aichach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aichtal <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aken <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aken <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> albstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegen <> suedlich <>  <> die cayman-inseln  von kuba <>  <>  <>  <>  <>  <>  <> 50
+liegen <>die st elias_mountains <>  <> in kanada <>  <>  <>  <>  <>  <>  <> 50
+liegt  <> saarland <>  <> in dem suedwesten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt  <>schloss orth <>  <> an dem traunsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> das _tal_der_koenige_ in aegypten <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der _mount_tasan_ in neuseeland <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der _nanga_parbat_ in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der mont-blanc in den westalpen <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der tasman-gletscher in neuseeland <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der wiegenberg in tasmanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der;ebro;in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der;mackenzie;in;nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> der;rhein;in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  der _huang_ho_<>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  der kilimandscharo-nationalpark<>  <> in tansania <>  <>  <>  <>  <>  <>  <> 50
+liegt <>  die elbe<>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _abu_simbel_ <>  <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _altdorf_bei_nuernberg_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _annweiler_an_dem_trifels_ <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bad_muender_an_dem_deister_ <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bad_neustadt_an_der_saale_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bad_sankt_leonhard_in_dem_lavanttal_  <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bad_soden_an_dem_taunus_ <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bergen_auf_ruegen_ <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bernau_bei_berlin_ <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bingen_an_dem_rhein_ <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bischofsheim_an_der_rhoen_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bonndorf_in_dem_schwarzwald_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _braunau_an_dem_inn_ <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _bruck_an_der_leitha_ <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _dietfurt_an_der_altmueh_ l <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _dillingen_an_der_donau_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _dissen_an_dem_teutoburger_wald_ <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _ebersbach_an_der_fils_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _endingen_an_dem_kaiserstuhl_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _fort_knox_ <>  <> in kentucky <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _freiberg_an_dem_neckar_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _giessen_ <>  <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _gmuend_in_kaernten_ <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _haltern_an_dem_see_ <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _kirchdorf_an_der_krems_ <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _krakow_an_dem_see_ <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _laa_an_der_thaya_ <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _las_vegas_ <>  <> in nevada <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _leptis_magna_ <>  <> in libyen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _machu_piccu_ <>  <> in peru <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neuhaus_an_dem_rennweg_ <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neunburg_vorm_wald_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_dem_kulm_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_dem_ruebenberge_ <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_der_aisch_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_der_donau_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_der_orla_ <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_der_waldnaab_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_an_der_weinstrasse_ <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_bei_coburg_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_in_holstein_ <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _neustadt_in_sachsen_ <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _oberndorf_an_dem_neckar_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _owen_falls_ <>  <> in uganda <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _plau_an_dem_see_ <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _port_elizabeth_ <>  <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _raabs_an_der_thaya_ <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _rothenburg_ob_der_taube_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _saint_louis_ <>  <> an dem mississippi <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _saint_louis_ <>  <> in missouri <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _saint_lucia_ <>  <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _san_fransisco_ <>  <> an der westkueste der usa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _san_marino_ <>  <> in italien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _sankt_andrae_in_dem_lavantta_ l <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _sankt_helena_ <>  <> in dem atlantik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _sankt_johann_in_dem_pongau_ <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _sankt_veit_an_der_glan_ <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _santiago_de_compostela_ <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _schwarzenbach_an_dem_wald_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _st_petersburg_ <>  <> an der newa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _steinau_an_der_strasse_ <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _steinheim_an_der_murr_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _tel_aviv_ <>  <> in israel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _vogtsburg_in_dem_kaiserstuh_ l <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _waidhofen_an_der_thaya_ <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _waidhofen_an_der_ybbs_ <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _wasserburg_an_dem_inn_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _weilheim_an_der_teck_ <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _woerth_an_dem_main_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _woerth_an_dem_rhein_ <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> _woerth_an_der_donau_ <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aachen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aalen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> abenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> abensberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> achern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> achim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> adelsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> adenau <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aegypten <>  <> in nordostafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ahaus <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ahlen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ahrensburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aichach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aichtal <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aken <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aken <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> albstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 liegt <> alcatraz <> francisco <> in der bucht von san <>  <>  <>  <>  <>  <>  <> 50
 liegt <> alexandrette <> hatay <> in der tuerkischen provinz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alexandria <> nothing <> in aegypten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alfeld <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> allendorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> allentsteig <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> allstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alpirsbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alsdorf <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alsfeld <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alsleben <> nothing <> an der saale <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alsleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altena <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenau <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenburg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenkirchen <> nothing <> an der wied <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenkirchen <> nothing <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altenkirchen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altensteig <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altentreptow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altheim <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> althofen <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altlandsberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> altoetting <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alzenau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> alzey <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amarillo <> nothing <> in texas <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amoeneburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amorbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amsterdam <> nothing <> an der amstel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> amstetten <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> anderlecht <> nothing <> in belgien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> andernach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> andorra <> nothing <> in den pyrenaeen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> angermuende <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> anklam <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> annaberg-buchholz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> annaburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ansbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ansfelden <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> antwerpen <> nothing <> in belgien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> apolda <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aragonien <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arendsee <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alexandria <>  <> in aegypten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alfeld <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> allendorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> allentsteig <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> allstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alpirsbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alsdorf <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alsfeld <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alsleben <>  <> an der saale <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alsleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altena <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenau <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenburg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenkirchen <>  <> an der wied <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenkirchen <>  <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altenkirchen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altensteig <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altentreptow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altheim <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> althofen <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altlandsberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> altoetting <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alzenau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> alzey <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amarillo <>  <> in texas <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amoeneburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amorbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amsterdam <>  <> an der amstel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> amstetten <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> anderlecht <>  <> in belgien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> andernach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> andorra <>  <> in den pyrenaeen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> angermuende <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> anklam <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> annaberg-buchholz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> annaburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ansbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ansfelden <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> antwerpen <>  <> in belgien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> apolda <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aragonien <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arendsee <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
 liegt <> armenien <> in dem bergland  <>  zwischen georgien aserbaidschan dem iran und der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arneburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arnis <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arnsberg <> nothing <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arnsberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arnstadt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arnstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aruba <> nothing <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> arzberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aschaffenburg <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aschaffenburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aschersleben <> nothing <> an der wipper <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aschersleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> asperg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> asslar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> assuan <> nothing <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
-liegt <> athen <> nothing <> auf der halbinsel  attika<>  <>  <>  <>  <>  <>  <> 50
-liegt <> attendorn <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> attnang-puchheim <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aub <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aue <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> augsburg <> nothing <> an der lech <>  <>  <>  <>  <>  <>  <> 50
-liegt <> augsburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> augustusburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aulendorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> auma <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aurich <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> aurich <> nothing <> in ostfriesland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> babenhausen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bacharach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> backnang <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad aibling <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad arolsen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad aussee <> nothing <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad bentheim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad bergzabern <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad berka <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad berleburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad bevensen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad bibra <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad blankenburg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad bramstedt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad breisig <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad brueckenau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad buchau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad camberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad doberan <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad driburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad dueben <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad duerkheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad duerrenberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad duerrheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad elster <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad ems <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad fallingbostel <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad freienwalde <> nothing <> an deroder <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad friedrichshall <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad gandersheim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad gottleuba-berggiesshuebel <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad grund <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad hall<> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad harzburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad herrenalb <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad hersfeld <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad hoenningen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad honnef <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad iburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad ischl <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad karlshafen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad kissingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad koenig <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad koesen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad koestritz <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad kreuzbach <> nothing <> an der nahe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad kreuznach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad krozingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad laasphe <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad langensalza <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad lauchstaedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad lausick <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad leonfelden <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad liebenstein <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad liebenwerda <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad liebenzell <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad lippspringe <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad lobenstein <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad marienberg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad muenstereifel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad muskau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad nauheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad nenndorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad neuenahr-ahrweiler <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad oeynhausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad oldesloe <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad orb <> nothing <> in dem spessart <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad pyrmont <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad radkersburg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad rappenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad reichenhall <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad rodach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad sachsa <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad saeckingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad salzdetfurth <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad salzuflen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad salzungen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad saulgau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad schandau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad schmiedeberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad schussenried <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad schwalbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arneburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arnis <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arnsberg <>  <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arnsberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arnstadt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arnstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aruba <>  <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> arzberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aschaffenburg <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aschaffenburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aschersleben <>  <> an der wipper <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aschersleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> asperg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> asslar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> assuan <>  <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
+liegt <> athen <>  <> auf der halbinsel  attika<>  <>  <>  <>  <>  <>  <> 50
+liegt <> attendorn <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> attnang-puchheim <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aub <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aue <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> augsburg <>  <> an der lech <>  <>  <>  <>  <>  <>  <> 50
+liegt <> augsburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> augustusburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aulendorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> auma <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aurich <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> aurich <>  <> in ostfriesland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> babenhausen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bacharach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> backnang <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad aibling <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad arolsen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad aussee <>  <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad bentheim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad bergzabern <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad berka <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad berleburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad bevensen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad bibra <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad blankenburg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad bramstedt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad breisig <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad brueckenau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad buchau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad camberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad doberan <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad driburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad dueben <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad duerkheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad duerrenberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad duerrheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad elster <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad ems <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad fallingbostel <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad freienwalde <>  <> an deroder <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad friedrichshall <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad gandersheim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad gottleuba-berggiesshuebel <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad grund <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad hall<>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad harzburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad herrenalb <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad hersfeld <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad hoenningen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad honnef <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad iburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad ischl <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad karlshafen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad kissingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad koenig <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad koesen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad koestritz <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad kreuzbach <>  <> an der nahe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad kreuznach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad krozingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad laasphe <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad langensalza <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad lauchstaedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad lausick <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad leonfelden <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad liebenstein <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad liebenwerda <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad liebenzell <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad lippspringe <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad lobenstein <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad marienberg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad muenstereifel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad muskau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad nauheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad nenndorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad neuenahr-ahrweiler <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad oeynhausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad oldesloe <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad orb <>  <> in dem spessart <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad pyrmont <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad radkersburg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad rappenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad reichenhall <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad rodach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad sachsa <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad saeckingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad salzdetfurth <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad salzuflen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad salzungen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad saulgau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad schandau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad schmiedeberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad schussenried <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad schwalbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> bad schwartau <> inschleswig-holstein <>  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad segeberg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad sobernheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad soden-salmuenster <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad sooden-allendorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad staffelstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad suelze <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad sulza <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad teinach-zavelstein <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad tennstedt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad toelz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad urach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad vilbel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad voeslau <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad waldsee <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wildbad <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wildungen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wilsnack <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wimpfen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad windsheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad woerishofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wuennenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad wurzach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad_freienwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad_marienberg <> nothing <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad_mergentheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bad_orb <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> badajoz <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baden <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baden-baden <> nothing <> an der oos <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baden-baden <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baernau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baernbach <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baesweiler <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bagdad <> nothing <> an dem tigris <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baiersdorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> balingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ballenstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> balve <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bamako <> nothing <> an dem niger <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bamberg <> nothing <> an der regnitz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bamberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bangui <> nothing <> an dem ubangi <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barby <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barcelona <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bargteheide <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barmstedt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barntrup <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barsinghausen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> barth <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> basel <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bassum <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> battenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baumholder <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baunach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> baunatal <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bautzen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bayreuth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bebra <> nothing <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bebra <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beckum <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bedburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beelitz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beerfelden <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beeskow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beilngries <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beilstein <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beira <> nothing <> in mosambik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> belgern <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> belzig <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> benares <> nothing <> an dem ganges <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bendorf <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> benneckenstein <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bensheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> berching <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bergen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bergheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bergisch gladbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bergkamen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bergneustadt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> berlin <> nothing <> an der spree <>  <>  <>  <>  <>  <>  <> 50
-liegt <> berlin <> nothing <> in deutschland <>  <>  <>  <> nothing <> nothing <>  <> 50
-liegt <> bern <> nothing <> an der aare <>  <>  <>  <>  <>  <>  <> 50
-liegt <> berndorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bernkastel-kues <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bernsdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bersenbrueck <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> besigheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> betzdorf <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> betzenstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> beverungen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bexbach <> nothing <> in dem saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bhutan <> nothing <> in asien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> biarritz <> nothing <> an dem _golf_von_biscaya_ <>  <>  <>  <>  <>  <>  <> 50
-liegt <> biedenkopf <> nothing <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> biedenkopf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bielefeld <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> biesenthal <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bietigheim-bissingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bilbao <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> billerbeck <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> binz <> nothing <> auf ruegen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> birkenfeld <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bischofshofen <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bischofswerda <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bitburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bitterfeld-wolfen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blackburn <> nothing <> in england <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blankenburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blankenhain <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blaubeuren <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bleckede <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bleiburg <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bleicherode <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blieskastel <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blomberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bludenz <> nothing <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> blumberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bobingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bocholt <> nothing <> in dem westlichen muensterland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bocholt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bochum <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bockenem <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bodenwerder <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> boeblingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> boehlen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> boennigheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bogen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bolivien <> nothing <> an der kueste von suedamerika;nicht <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad segeberg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad sobernheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad soden-salmuenster <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad sooden-allendorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad staffelstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad suelze <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad sulza <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad teinach-zavelstein <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad tennstedt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad toelz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad urach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad vilbel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad voeslau <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad waldsee <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wildbad <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wildungen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wilsnack <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wimpfen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad windsheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad woerishofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wuennenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad wurzach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad_freienwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad_marienberg <>  <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad_mergentheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bad_orb <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> badajoz <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baden <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baden-baden <>  <> an der oos <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baden-baden <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baernau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baernbach <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baesweiler <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bagdad <>  <> an dem tigris <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baiersdorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> balingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ballenstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> balve <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bamako <>  <> an dem niger <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bamberg <>  <> an der regnitz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bamberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bangui <>  <> an dem ubangi <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barby <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barcelona <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bargteheide <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barmstedt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barntrup <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barsinghausen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> barth <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> basel <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bassum <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> battenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baumholder <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baunach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> baunatal <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bautzen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bayreuth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bebra <>  <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bebra <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beckum <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bedburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beelitz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beerfelden <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beeskow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beilngries <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beilstein <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beira <>  <> in mosambik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> belgern <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> belzig <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> benares <>  <> an dem ganges <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bendorf <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> benneckenstein <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bensheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> berching <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bergen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bergheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bergisch gladbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bergkamen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bergneustadt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> berlin <>  <> an der spree <>  <>  <>  <>  <>  <>  <> 50
+liegt <> berlin <>  <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bern <>  <> an der aare <>  <>  <>  <>  <>  <>  <> 50
+liegt <> berndorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bernkastel-kues <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bernsdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bersenbrueck <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> besigheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> betzdorf <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> betzenstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> beverungen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bexbach <>  <> in dem saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bhutan <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> biarritz <>  <> an dem _golf_von_biscaya_ <>  <>  <>  <>  <>  <>  <> 50
+liegt <> biedenkopf <>  <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> biedenkopf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bielefeld <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> biesenthal <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bietigheim-bissingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bilbao <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> billerbeck <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> binz <>  <> auf ruegen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> birkenfeld <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bischofshofen <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bischofswerda <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bitburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bitterfeld-wolfen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blackburn <>  <> in england <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blankenburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blankenhain <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blaubeuren <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bleckede <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bleiburg <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bleicherode <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blieskastel <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blomberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bludenz <>  <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> blumberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bobingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bocholt <>  <> in dem westlichen muensterland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bocholt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bochum <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bockenem <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bodenwerder <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> boeblingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> boehlen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> boennigheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bogen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bolivien <>  <> an der kueste von suedamerika;nicht <>  <>  <>  <>  <>  <>  <> 50
 liegt <> bombay <> meer <> an dem arabischen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bonn <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bonn <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bopfingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> boppard <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bordeaux <> nothing <> an der garonne <>  <>  <>  <>  <>  <>  <> 50
-liegt <> borgentreich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> borgholzhausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> borken <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> borkum <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> borna <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bornheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bosnien und herzegowina<> nothing <> in dem westlichen teil der balkanhalbinsel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bottrop <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> boxberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bozen <> nothing <> an der eisack <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brackenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braeunlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braga <> nothing <> in portugal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brake <> nothing <>  in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brakel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bramsche <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brand-erbisdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brandenburg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brandenburg <> nothing <> in dem nordosten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt <> brandis <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brasilien <> nothing <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braubach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braunfels <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braunlage <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braunsbedra <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braunschweig <> nothing <> an der oker <>  <>  <>  <>  <>  <>  <> 50
-liegt <> braunschweig <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> breckerfeld <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bredstedt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bregenz <> nothing <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brehna <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> breisach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bremen <> nothing <> an der weser <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bremen <> nothing <> in bremen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bonn <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bonn <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bopfingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> boppard <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bordeaux <>  <> an der garonne <>  <>  <>  <>  <>  <>  <> 50
+liegt <> borgentreich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> borgholzhausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> borken <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> borkum <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> borna <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bornheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bosnien und herzegowina<>  <> in dem westlichen teil der balkanhalbinsel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bottrop <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> boxberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bozen <>  <> an der eisack <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brackenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braeunlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braga <>  <> in portugal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brake <>  <>  in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brakel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bramsche <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brandenburg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brandenburg <>  <> in dem nordosten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt <> brand-erbisdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brandis <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brasilien <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braubach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braunfels <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braunlage <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braunsbedra <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braunschweig <>  <> an der oker <>  <>  <>  <>  <>  <>  <> 50
+liegt <> braunschweig <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> breckerfeld <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bredstedt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bregenz <>  <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brehna <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> breisach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bremen <>  <> an der weser <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bremen <>  <> in bremen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bremerhaven <>  <> in bremen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> bremerhaven <> bremen <> in land <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bremerhaven <> nothing <> in bremen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bremervoerde <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bretten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> breuberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brilon <> nothing <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brilon <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brisbane <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brotterode <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bruchkoebel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bruchsal <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brueck <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brueel <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bruessel <> nothing <> an der senne <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bruessow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brunei <> nothing <> auf borneo <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brunei <> nothing <> in suedostasien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> brunsbuettel <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buchloe <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> budapest <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bueckeburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buedelsdorf <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buedingen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buehl <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buende <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bueren <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buergel <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buerstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buetzow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burg stargard <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgbernheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgdorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burghausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgkunstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burglengenfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgstaedt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burgwedel <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burladingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bursa <> nothing <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> burscheid <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buttelstedt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buttstaedt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> butzbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> buxtehude <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> calau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> calbe <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> calgary <> nothing <> in alberta <>  <>  <>  <>  <>  <>  <> 50
-liegt <> calw <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> camburg <> nothing <> inthueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bremervoerde <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bretten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> breuberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brilon <>  <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brilon <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brisbane <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brotterode <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bruchkoebel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bruchsal <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brueck <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brueel <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bruessel <>  <> an der senne <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bruessow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brunei <>  <> auf borneo <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brunei <>  <> in suedostasien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> brunsbuettel <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buchen <>  <> an dem rand vom odenwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buchloe <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> budapest <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bueckeburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buedelsdorf <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buedingen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buehl <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buende <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bueren <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buergel <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buerstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buetzow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burg stargard <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgbernheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgdorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burghausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgkunstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burglengenfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgstaedt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burgwedel <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burladingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> bursa <>  <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> burscheid <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buttelstedt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buttstaedt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> butzbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> buxtehude <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> calau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> calbe <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> calgary <>  <> in alberta <>  <>  <>  <>  <>  <>  <> 50
+liegt <> calw <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> camburg <>  <> inthueringen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> casa <> bianca <> an dem atlantik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> casablanca <> nothing <> in marokko <>  <>  <>  <>  <>  <>  <> 50
-liegt <> castrop-rauxel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> casablanca <>  <> in marokko <>  <>  <>  <>  <>  <>  <> 50
+liegt <> castrop-rauxel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> catania <> des aetnas <> an dem fusse <>  <>  <>  <>  <>  <>  <> 50
-liegt <> celle <> nothing <> an der aller <>  <>  <>  <>  <>  <>  <> 50
-liegt <> celle <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cham <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> chania <> nothing <> auf kreta <>  <>  <>  <>  <>  <>  <> 50
-liegt <> chemnitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> chicago <> nothing <> an dem michigansee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> chicago <> nothing <> in illinois <>  <>  <>  <>  <>  <>  <> 50
-liegt <> clausthal-zellerfeld <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cleveland <> nothing <> an dem eriesee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> clingen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cloppenburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coburg <> nothing <> an der itz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coburg <> nothing <> in oberfranken <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cochabamba <> nothing <> in bolivien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cochem <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coesfeld <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coimbra <> nothing <> in portugal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> colditz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cordoba <> nothing <> an dem guadalquivir <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coswig <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> coswig <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cottbus <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> crailsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> creglingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cremona <> nothing <> in der lombardei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> creussen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> creuzburg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> crimmitschau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> crivitz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cuxhaven <> nothing <> an der elbmuendung <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cuxhaven <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> cuxhaven <> nothing <> in niedesachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dachau <> nothing <> an der amper <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dachau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dahlen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dahn  <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> damme <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dannenberg <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dannenberg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dargun <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> darmstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das _mare_moscoviense_ <> nothing <> auf dem mond <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das altai gebirge <> nothing <> in china <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das burgenland <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das changaigebirge <> nothing <> in der mongolei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das etschtal <> nothing <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das groednertal <> nothing <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das jagdschloss hubertusstock <> nothing <> an dem werbellinsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das ningaloo reef <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das pontische gebirge <> nothing <> in dem norden der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das sagrosgebirge <> nothing <> in dem iran <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das tibisti gebirge <> nothing <> in dem tschad <>  <>  <>  <>  <>  <>  <> 50
-liegt <> das zagrosgebirge <> nothing <> in dem iran <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dassel <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dassow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> celle <>  <> an der aller <>  <>  <>  <>  <>  <>  <> 50
+liegt <> celle <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cham <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> chania <>  <> auf kreta <>  <>  <>  <>  <>  <>  <> 50
+liegt <> chemnitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> chicago <>  <> an dem michigansee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> chicago <>  <> in illinois <>  <>  <>  <>  <>  <>  <> 50
+liegt <> clausthal-zellerfeld <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cleveland <>  <> an dem eriesee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> clingen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cloppenburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coburg <>  <> an der itz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coburg <>  <> in oberfranken <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cochabamba <>  <> in bolivien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cochem <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coesfeld <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coimbra <>  <> in portugal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> colditz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cordoba <>  <> an dem guadalquivir <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coswig <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> coswig <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cottbus <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> crailsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> creglingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cremona <>  <> in der lombardei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> creussen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> creuzburg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> crimmitschau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> crivitz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cuxhaven <>  <> an der elbmuendung <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cuxhaven <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> cuxhaven <>  <> in niedesachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dachau <>  <> an der amper <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dachau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dahlen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dahn  <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> damme <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dannenberg <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dannenberg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dargun <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> darmstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das _mare_moscoviense_ <>  <> auf dem mond <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das altai gebirge <>  <> in china <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das burgenland <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das changaigebirge <>  <> in der mongolei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das etschtal <>  <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das groednertal <>  <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das jagdschloss hubertusstock <>  <> an dem werbellinsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das ningaloo reef <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das pontische gebirge <>  <> in dem norden der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das sagrosgebirge <>  <> in dem iran <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das tibisti gebirge <>  <> in dem tschad <>  <>  <>  <>  <>  <>  <> 50
+liegt <> das zagrosgebirge <>  <> in dem iran <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dassel <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dassow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> datteln <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> datteln <> gebiet <> in dem ruhr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> datteln <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> daun <> nothing <> in der eifel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> daun <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> debrecen <> nothing <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deggendorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deidesheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deinerzhagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deiningen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> delaware <> nothing <> an dem atlantik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> delbrueck <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> delitzsch <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> delmenhorst <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> demmin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der <> nothing <> amur;in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der <> nothing <> indus;in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der <> nothing <> po;in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _agulhas_negras_ <> nothing <> der _agulhas_negras_ in brasilien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _amu_darya_ <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _amu_darya_ <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _cradle_mountain_ <> nothing <> in tasmanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _grand_canyon_ <> nothing <> in arizona <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _huang_ho_ <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _lago_eriquillo_  <> nothing <>   auf haiti <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _mount_everest_ <> nothing <> in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _mount_everest_ <> nothing <> in nepal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _mount_mckinley_ <> nothing <> in alaska <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _oranje-freistaat_ <> nothing <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _pico_alto_ <> nothing <>  auf den azoren <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _pico_bolivar_ <> nothing <> in venezuela <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der _rio_de_la_plata_ <> nothing <> in suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _rio_de_la_plata_ <> nothing <> in;suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _rio_grande_ <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _sankt_lorenz_ <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _sao_francisco_ <> nothing <> in suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der _sao_francisco_ <> nothing <> in;suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der achensee <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der aetna <> nothing <> auf sizilien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der afritzer see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der agung <> nothing <> auf bali <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der aldebaran <> nothing <> auf der suedhalbkugel;nicht <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der almsee <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der altausseer see <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der amazonas <> nothing <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der amur <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der angara <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der angelfall <> nothing <> in venezuela <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der aralsee <> nothing <> in kasachstan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der arlbergtunnel <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der atlas <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der attersee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der bodensee <> nothing <>teilweise in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der brahmaputra <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der brocken <> nothing <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der bundesstaat goa <> nothing <> in indien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der chiemsee <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der clyde <> nothing <>  in schottland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der colorado <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der colorado <> nothing <> in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der columbia <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der columbia <> nothing <> in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
+liegt <> daun <>  <> in der eifel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> daun <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> debrecen <>  <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deggendorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deidesheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deinerzhagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deiningen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> delaware <>  <> an dem atlantik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> delbrueck <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> delitzsch <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> delmenhorst <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> demmin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _agulhas_negras_ <>  <> der _agulhas_negras_ in brasilien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _amu_darya_ <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _cradle_mountain_ <>  <> in tasmanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _grand_canyon_ <>  <> in arizona <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _huang_ho_ <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _lago_eriquillo_  <>  <>   auf haiti <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _mount_everest_ <>  <> in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _mount_everest_ <>  <> in nepal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _mount_mckinley_ <>  <> in alaska <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _oranje-freistaat_ <>  <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _pico_alto_ <>  <>  auf den azoren <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _pico_bolivar_ <>  <> in venezuela <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _rio_de_la_plata_ <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _rio_grande_ <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _sankt_lorenz_ <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _sao_francisco_ <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der _sao_francisco_ <>  <> in;suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der <>  <> amur;in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der <>  <> indus;in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der achensee <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der aetna <>  <> auf sizilien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der afritzer see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der agung <>  <> auf bali <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der aldebaran <>  <> auf der suedhalbkugel;nicht <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der almsee <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der altausseer see <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der amazonas <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der amur <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der angara <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der angelfall <>  <> in venezuela <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der aralsee <>  <> in kasachstan <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der arlbergtunnel <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der atlas <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der attersee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der bodensee <>  <>teilweise in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der brahmaputra <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der brocken <>  <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der bundesstaat goa <>  <> in indien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der chiemsee <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der clyde <>  <>  in schottland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der colorado <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der colorado <>  <> in;nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der columbia <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der columbia <>  <> in;nordamerika <>  <>  <>  <>  <>  <>  <> 50
 liegt <> der comer <> see <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der cotopaxi <> nothing <>  in ecuador <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der darling <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der daugava <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der daugava <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der dnjepr <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der dnjepr <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der don <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der douro <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der durmitor <> nothing <> in jugoslawien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der ebro <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der erbeskopf <> nothing <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der erebus <> nothing <> in der antarktis <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der erlaufsee <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der euphrat <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der euphrat <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der eurotunnel <> nothing <> unter dem aermelkanal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der faaker see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der freycinet-nationalpark <> nothing <>  auf tasmanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der fuji <> nothing <> auf honshu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der fuschlsee <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der gabun <> nothing <> in westafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der ganges <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der ganges <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der gleinkersee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der glittertind <> nothing <> in norwegen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der gosausee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der cotopaxi <>  <>  in ecuador <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der darling <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der daugava <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der daugava <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der dnjepr <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der dnjepr <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der don <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der don <>  <> in europa <> 50
+liegt <> der douro <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der durmitor <>  <> in jugoslawien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ebro <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der erbeskopf <>  <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der erebus <>  <> in der antarktis <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der erlaufsee <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der euphrat <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der euphrat <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der eurotunnel <>  <> unter dem aermelkanal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der faaker see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der freycinet-nationalpark <>  <>  auf tasmanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der fuji <>  <> auf honshu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der fuschlsee <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der gabun <>  <> in westafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ganges <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ganges <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der gleinkersee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der glittertind <>  <> in norwegen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der gosausee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
 liegt <> der grosse <> sklavensee <> in kanada <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der grosse baerensee <> nothing <> in kanada <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der grossvenediger <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der grundlsee <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hallstaetter see <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der heiterwanger see <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hoechste berg <> nothing <> in alaska;von nordamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hoechste berg <> nothing <> in argentinien;von amerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hoechste berg <> nothing <> in argentinien;von suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hoechste berg von amerika<> nothing <> in chile <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der hoellerersee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der iguazu-nationalpark <> nothing <>  in argentinien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der illimani <> nothing <> in den bloivianischen anden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der inarisee <> nothing <> in finnland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der indus <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der irak <> nothing <> in vorderasien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der irrawaddy <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der irrawaddy <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der irrsee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der kahlenberg <> nothing <> in dem norden von wien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der keutschacher see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der kilimandscharo <> nothing <> in tansania <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der kilimanscharo <> nothing <> in tansania <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der klopeiner see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der kongo <> nothing <> in afrika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der kongo <> nothing <> in;afrika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der kwai <> nothing <> in thailand <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der ladogasee <> nothing <> in russland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der limpopo <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der lunzer see <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mackenzie <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der makalu <> nothing <> in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der malojapass <> nothing <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mattsee <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mekong <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der mekong <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der millstaetter see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mississippi <> nothing <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mondsee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der mondsee <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der murray <> nothing <> in australien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der murray <> nothing <> in;australien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der nelson <> nothing <> in nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der nelson <> nothing <> in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der neufelder see <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der neusiedler see <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der neusiedlersee <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der nil <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der obertrumer see <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der oedensee <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der offensee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der orinoco <> nothing <> in suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der orinoco <> nothing <> in;suedamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der ortler <> nothing <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der ossiacher see <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der plansee <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der plattensee <> nothing <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der pluto <> nothing <> in dem in dem kuiper-guertel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der po <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der popocatpetl <> nothing <> in mexiko <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der prater <> nothing <> in wien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der rhein <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der rursee <> nothing <> in der eifel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der salween <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der salween <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der sambesi <> nothing <> in afrika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der sambesi <> nothing <> in;afrika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der schlossberg <> nothing <> in graz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der song <> nothing <> koi;in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der song koi <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
+liegt <> der grosse baerensee <>  <> in kanada <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der grossvenediger <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der grundlsee <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hallstaetter see <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der heiterwanger see <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hoechste berg <>  <> in alaska;von nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hoechste berg <>  <> in argentinien;von amerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hoechste berg <>  <> in argentinien;von suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hoechste berg von amerika<>  <> in chile <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der hoellerersee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der iguazu-nationalpark <>  <>  in argentinien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der illimani <>  <> in den bloivianischen anden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der inarisee <>  <> in finnland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der indus <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der irak <>  <> in vorderasien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der irrawaddy <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der irrawaddy <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der irrsee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kahlenberg <>  <> in dem norden von wien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der keutschacher see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kilimandscharo <>  <> in tansania <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kilimanscharo <>  <> in tansania <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der klopeiner see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kongo <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kongo <>  <> in;afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der kwai <>  <> in thailand <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ladogasee <>  <> in russland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der limpopo <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der lunzer see <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mackenzie <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der makalu <>  <> in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der malojapass <>  <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mattsee <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mekong <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mekong <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der millstaetter see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mississippi <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mondsee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der mondsee <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der murray <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der murray <>  <> in;australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der nelson <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der nelson <>  <> in;nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der neufelder see <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der neusiedler see <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der neusiedlersee <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der nil <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der obertrumer see <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der oedensee <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der offensee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der orinoco <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der orinoco <>  <> in;suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ortler <>  <> in italien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ossiacher see <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der plansee <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der plattensee <>  <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der pluto <>  <> in dem in dem kuiper-guertel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der po <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der popocatpetl <>  <> in mexiko <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der prater <>  <> in wien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der rhein <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der rursee <>  <> in der eifel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der salween <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der salween <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der sambesi <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der schlossberg <>  <> in graz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der song koi <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
 liegt <> der tanganjikasee <> graben <> in dem zentralafrikansichen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der tarim <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der tarim <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der tauerntunnel <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der tiefste punkt von europa<> nothing <> in den  niederlanden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der titicacasee <> nothing <> in 3810 m hoehe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der titicacasee <> nothing <> in den anden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der titisee <> nothing <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der toplitzsee <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der traunsee <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der ural <> nothing <> in asien & europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der ural <> nothing <> in;asien;&;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> der urisee <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der vesuv <> nothing <> an dem golf von neapel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der vesuv <> nothing <> in italien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der tarim <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der tauerntunnel <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der tiefste punkt von europa<>  <> in den  niederlanden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der titicacasee <>  <> in 3810 m hoehe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der titicacasee <>  <> in den anden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der titisee <>  <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der toplitzsee <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der traunsee <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der ural <>  <> in asien & europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der urisee <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der vesuv <>  <> an dem golf von neapel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der vesuv <>  <> in italien <>  <>  <>  <>  <>  <>  <> 50
 liegt <> der vierwaldstaetter <> see <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
 liegt <> der vulkan hekla<>  <> in island <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der wallersee <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der weissensee <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der widseder berg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der wolfgangsee <> nothing <> in dem salzkammergut <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der yangtse <> nothing <> in asien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der zeller see <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> der zicksee <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> derenburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dessau <> nothing <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dessau-rosslau <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> detmold <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der wallersee <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der weissensee <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der widseder berg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der wolfgangsee <>  <> in dem salzkammergut <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der yangtse <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der zeller see <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> der zicksee <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> derenburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dessau <>  <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dessau-rosslau <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> detmold <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> detroit <>  <> in michigan <>  <>  <>  <>  <>  <>  <> 50
 liegt <> detroit <> michigan <> in dem bundesstaat <>  <>  <>  <>  <>  <>  <> 50
-liegt <> detroit <> nothing <> in michigan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dettelbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deutsch-wagram <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> deutschland <> nothing <> in europa <>  <>  <>  <> nothing <> nothing <>  <> 50
-liegt <> deutschlandsberg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dettelbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deutschland <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deutschlandsberg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> deutsch-wagram <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die _dominikanische_republik_ <> hispaniola <> auf der insel <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die _halbinsel_krim_ <> meer <> an dem schwarzen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die burg <> canossa <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die don <> nothing <> in russland  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die donau <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die eifel <> nothing <> in nordrhein-westfalen und rheinland-pfalz<>  <>  <>  <>  <>  <>  <> 50
-liegt <> die elbe <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die fraueninsel <> nothing <> in dem chiemsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die garonne <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die garonne <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die groesste wueste <> nothing <> der erde;in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die groesste wueste von amerika<> nothing <> in argentinien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die herreninsel <> nothing <> in dem chiemsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die kalahari wueste <> nothing <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die klagemauer <> nothing <> in jerusalem <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die lange lacke <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die lena <> nothing <> in asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die lena <> nothing <> in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die loire <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die loire <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die mojave wueste <> nothing <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die don <>  <> in russland  <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die donau <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die eifel <>  <> in nordrhein-westfalen und rheinland-pfalz<>  <>  <>  <>  <>  <>  <> 50
+liegt <> die elbe <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die fraueninsel <>  <> in dem chiemsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die garonne <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die garonne <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die groesste wueste <>  <> der erde;in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die groesste wueste von amerika<>  <> in argentinien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die herreninsel <>  <> in dem chiemsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die kalahari wueste <>  <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die klagemauer <>  <> in jerusalem <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die lange lacke <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die lena <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die lena <>  <> in;asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die loire <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die loire <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die mojave wueste <>  <> in nordamerika <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die mongolei <>  <>zwischen russland und china<>  <>  <>  <>  <>  <>  <> 50
-liegt <> die nubische wueste <> nothing <> in dem sudan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die oder <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die oder <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die pampa <> nothing <> in argentinien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die nubische wueste <>  <> in dem sudan <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die oder <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die oder <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die pampa <>  <> in argentinien <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die reeperbahn <> st pauli <> in dem hamburger stadtteil <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die rhone <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die rhone <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die sahara <> nothing <> in nordafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die sandwueste karakum <> nothing <> in trukmenistan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die saualpe <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die seine <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die seine <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die sierra madre <> nothing <> in mexiko <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die stadt oran <> nothing <> in algerien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die steiermark <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die rhone <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die rhone <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die sahara <>  <> in nordafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die sandwueste karakum <>  <> in trukmenistan <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die saualpe <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die seine <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die seine <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die sierra madre <>  <> in mexiko <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die stadt oran <>  <> in algerien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die steiermark <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
 liegt <> die tschuktschensee <> zwischen russland und alaska<>  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die tuerkei <> nothing <> in 2 erdteilen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die walachei <> nothing <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die weichsel <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die weichsel <> nothing <> in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die weihnachtsinsel <> nothing <> in dem indischen ozean<>  <>  <>  <>  <>  <>  <> 50
-liegt <> die wildspitze <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> die wolga <> nothing <> in europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> die_wueste_gobi <> nothing <> in asien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dieburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> diemelstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> diepholz <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dierdorf <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dietenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dietzenbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> diez <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dillenburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dingelstaedt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dingolfing <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dinkelsbuehl <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dinklage <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dinslaken <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dippoldiswalde <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ditzingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> doberlug-kirchhain <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> doebeln <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> doebern <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> doemitz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dohna <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dominica <> nothing <> in dem karibischen meer <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dominica <> nothing <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dommitzsch <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> donaueschingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> donauwoerth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> donzdorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dorfen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dormagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dornbirn <> nothing <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dornhan <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dornstetten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dorsten <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dortmund <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dransfeld <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> drebkau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dreieich <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> drensteinfurt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dresden <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dresden <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> drolshagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> drosendorf-zissersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duderstadt <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duelmen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dueren <> nothing <> an der rur <>  <>  <>  <>  <>  <>  <> 50
-liegt <> dueren <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duernstein <> nothing <> in der wachau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duernstein <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duesseldorf <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duesseldorf <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> duisburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> durban <> nothing <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebeleben <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebenfurth <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eberbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebermannstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebern <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebersbach <> nothing <> an der fils <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebersberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eberswalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ebreichsdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> echternach <> nothing <> in luxemburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eckartsberga <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eckernfoerde <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> edenkoben <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eferding <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> egeln <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eggenburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eggenfelden <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eggesin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ehingen <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ehingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ehrenfriedersdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eibelstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eibenstock <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eichstaett <> nothing <> an der altmuehl <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eichstaett <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eilenburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> einbeck <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die tuerkei <>  <> in 2 erdteilen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die walachei <>  <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die weichsel <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die weichsel <>  <> in;europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die weihnachtsinsel <>  <> in dem indischen ozean<>  <>  <>  <>  <>  <>  <> 50
+liegt <> die wildspitze <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die wolga <>  <> in europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> die_wueste_gobi <>  <> in asien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dieburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> diemelstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> diepholz <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dierdorf <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dietenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dietzenbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> diez <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dillenburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dingelstaedt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dingolfing <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dinkelsbuehl <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dinklage <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dinslaken <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dippoldiswalde <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ditzingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> doberlug-kirchhain <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> doebeln <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> doebern <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> doemitz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dohna <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dominica <>  <> in dem karibischen meer <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dominica <>  <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dommitzsch <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> donaueschingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> donauwoerth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> donzdorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dorfen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dormagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dornbirn <>  <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dornhan <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dornstetten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dorsten <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dortmund <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dransfeld <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> drebkau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dreieich <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> drensteinfurt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dresden <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dresden <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> drolshagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> drosendorf-zissersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duderstadt <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duelmen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dueren <>  <> an der rur <>  <>  <>  <>  <>  <>  <> 50
+liegt <> dueren <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duernstein <>  <> in der wachau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duernstein <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duesseldorf <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duesseldorf <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> duisburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> durban <>  <> in suedafrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebeleben <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebenfurth <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eberbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebermannstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebern <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebersbach <>  <> an der fils <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebersberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eberswalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ebreichsdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> echternach <>  <> in luxemburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eckartsberga <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eckernfoerde <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> edenkoben <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eferding <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> egeln <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eggenburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eggenfelden <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eggesin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ehingen <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ehingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ehrenfriedersdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eibelstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eibenstock <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eichstaett <>  <> an der altmuehl <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eichstaett <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eilenburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> einbeck <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eindhofen <>  <> in den von niederlande <>  <>  <>  <>  <>  <>  <> 50
 liegt <> eindhofen <> nordbrabant <> in der provinz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eindhofen <> nothing <> in den von niederlande <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenach <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenberg <> nothing <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenerz <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenhuettenstadt <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisenstadt <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eisfeld <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elbingerode <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ellingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ellwangen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elmshorn <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elsfleth <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elsterberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elsterwerda <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elstra <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elterlein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eltmann <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eltville <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elzach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> elze <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> emden <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> emmendingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> emmerich <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> emmerich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> emsdetten <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> engen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> enger <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ennepetal <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ennigerloh <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> enns <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eppelheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eppingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eppstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erbach <> nothing <> in dem odenwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erbendorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erding <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erftstadt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erfurt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erkelenz <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erkner <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erkrath <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erlangen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erlenbach <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erlenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> erwitte <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschborn <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschenbach <> nothing <> in der oberpfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschershausen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschwege <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eschweiler <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> esens <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> espelkamp <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> essen <> nothing <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> essen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> esslingen <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> esslingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ettenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ettlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> euer sonnensystem <> nothing <> in der milchstrasse <>  <>  <>  <>  <>  <>  <> 50
-liegt <> euskirchen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> eutin <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> falkensee <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> falkenstein <> nothing <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> falkenstein <> nothing <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> falkenstein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> falkenstein <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fehmarn <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fehring <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> feldbach <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> feldkirch <> nothing <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> feldkirchen <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fellbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> felsberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ferlach <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> feuchtwangen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> feuerland <> nothing <> in chile <>  <>  <>  <>  <>  <>  <> 50
-liegt <> filderstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> finsterwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fischamend <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fladungen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> flensburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> floeha <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> floersheim <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> floersheim <> nothing <> an dem main;in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> floersheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> florenz <> nothing <> an dem arno <>  <>  <>  <>  <>  <>  <> 50
-liegt <> florstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> forchheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> forchtenberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> forst <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankenau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankenberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankenthal <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankfurt <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frankfurt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> franzburg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frauenkirchen <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frechen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freiberg <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freiberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freiberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freiburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freilassing <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freinsheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freising <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freistadt <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freital <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freren <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freudenberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freudenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freudenstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freyburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freystadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> freyung <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fridingen <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fridingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedberg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedland <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedland <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichroda <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichsdorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichshafen <> nothing <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichshafen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichstadt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friedrichsthal <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friesach <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friesack <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> friesoythe <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fritzlar <> nothing <> an der eder <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fritzlar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> froendenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frohburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> frohnleiten <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuenfkirchen <> nothing <> in;in ungarn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenau <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenberg <> nothing <> an der havel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenfeld <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenfeldbruck <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenwalde <> nothing <> an der spree <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerstenwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuerth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fuessen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fulda <> nothing <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
-liegt <> fulda <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> furth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> furtwangen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> furtwangen <> nothing <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gadebusch <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gaenserndorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gaggenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gaildorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gallipoli <> nothing <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gallneukirchen <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gammertingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> garbsen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenach <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenberg <>  <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenerz <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenhuettenstadt <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisenstadt <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eisfeld <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elbingerode <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ellingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ellwangen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elmshorn <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elsfleth <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elsterberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elsterwerda <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elstra <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elterlein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eltmann <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eltville <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elzach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> elze <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> emden <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> emmendingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> emmerich <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> emmerich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> emsdetten <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> engen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> enger <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ennepetal <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ennigerloh <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> enns <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eppelheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eppingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eppstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erbach <>  <> in dem odenwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erbendorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erding <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erftstadt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erfurt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erkelenz <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erkner <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erkrath <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erlangen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erlenbach <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erlenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> erwitte <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschborn <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschenbach <>  <> in der oberpfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschershausen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschwege <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eschweiler <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> esens <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> espelkamp <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> essen <>  <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
+liegt <> essen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> esslingen <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> esslingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ettenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ettlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> euer sonnensystem <>  <> in der milchstrasse <>  <>  <>  <>  <>  <>  <> 50
+liegt <> euskirchen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> eutin <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> falkensee <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> falkenstein <>  <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> falkenstein <>  <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> falkenstein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> falkenstein <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fehmarn <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fehring <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> feldbach <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> feldkirch <>  <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> feldkirchen <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fellbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> felsberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ferlach <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> feuchtwangen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> feuerland <>  <> in chile <>  <>  <>  <>  <>  <>  <> 50
+liegt <> filderstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> finsterwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fischamend <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fladungen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> flensburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> floeha <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> floersheim <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> floersheim <>  <> an dem main;in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> floersheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> florenz <>  <> an dem arno <>  <>  <>  <>  <>  <>  <> 50
+liegt <> florstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> forchheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> forchtenberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> forst <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankenau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankenberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankenthal <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankfurt <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frankfurt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> franzburg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frauenkirchen <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frechen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freiberg <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freiberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freiberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freiburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freilassing <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freinsheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freising <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freistadt <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freital <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freren <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freudenberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freudenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freudenstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freyburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freystadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> freyung <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fridingen <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fridingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedberg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedland <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedland <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichroda <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichsdorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichshafen <>  <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichshafen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichstadt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friedrichsthal <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friesach <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friesack <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> friesoythe <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fritzlar <>  <> an der eder <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fritzlar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> froendenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frohburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> frohnleiten <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuenfkirchen <>  <> in;in ungarn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenau <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenberg <>  <> an der havel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenfeld <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenfeldbruck <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenwalde <>  <> an der spree <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerstenwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuerth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fuessen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fulda <>  <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
+liegt <> fulda <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> furth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> furtwangen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> furtwangen <>  <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gadebusch <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gaenserndorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gaggenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gaildorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gallipoli <>  <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gallneukirchen <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gammertingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> garbsen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> garching <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 liegt <> garching <> bei muenchen <>  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> garching <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gardelegen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> garding <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gartz <> nothing <> an der oder <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gartz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> garz <> nothing <> auf ruegen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> garz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gau-algesheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gebesee <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gedern <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geesthacht <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gefell <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gefrees <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gehrden <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gehren <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geilenkirchen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geisa <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geiselhoering <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geisenfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geising <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geisingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geislingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geithain <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geldern <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gelnhausen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gelsenkirchen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gemuenden <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gemuenden <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gemuenden <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gardelegen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> garding <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gartz <>  <> an der oder <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gartz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> garz <>  <> auf ruegen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> garz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gau-algesheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gebesee <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gedern <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geesthacht <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gefell <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gefrees <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gehrden <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gehren <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geilenkirchen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geisa <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geiselhoering <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geisenfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geising <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geisingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geislingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geithain <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geldern <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gelnhausen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gelsenkirchen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gemuenden <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gemuenden <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gemuenden <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> genf <> <> an dem lac leman <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gengenbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> genthin <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> georgsmarienhuette <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gera <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerabronn <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerasdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerbstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geretsried <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geringswalde <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> germering <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> germersheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gernrode <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gernsbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gernsheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerolstein <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gerolzhofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gersfeld <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gersthofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gescher <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geseke <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gevelsberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> geyer <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gfoehl <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gibraltar <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> giengen <> nothing <> an der brenz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> giengen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> giessen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gifhorn <> nothing <> an der aller <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gifhorn <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gladbeck <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gladenbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> glasgow <> nothing <> an dem clyde <>  <>  <>  <>  <>  <>  <> 50
-liegt <> glashuette <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> glauchau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gleisdorf <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> glinde <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gloggnitz <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gluecksburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> glueckstadt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gmuend <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gmunden <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gnoien <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goch <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goeppingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goerlitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goessnitz <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goeteborg <> nothing <> in schweden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goettingen <> nothing <> an der leine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goettingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goldberg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goldkronach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> golssen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gommern <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> goslar <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gotha <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grabow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> graefenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> graefenhainichen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> graefenthal <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grafenau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grafenwoehr <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gengenbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> genthin <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> georgsmarienhuette <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gera <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerabronn <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerasdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerbstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geretsried <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geringswalde <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> germering <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> germersheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gernrode <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gernsbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gernsheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerolstein <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gerolzhofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gersfeld <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gersthofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gescher <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geseke <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gevelsberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> geyer <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gfoehl <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gibraltar <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> giengen <>  <> an der brenz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> giengen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> giessen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gifhorn <>  <> an der aller <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gifhorn <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gladbeck <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gladenbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> glasgow <>  <> an dem clyde <>  <>  <>  <>  <>  <>  <> 50
+liegt <> glashuette <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> glauchau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gleisdorf <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> glinde <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gloggnitz <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gluecksburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> glueckstadt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gmuend <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gmunden <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gnoien <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goch <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goeppingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goerlitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goessnitz <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goeteborg <>  <> in schweden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goettingen <>  <> an der leine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goettingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goldberg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goldkronach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> golssen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gommern <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> goslar <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gotha <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grabow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> graefenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> graefenhainichen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> graefenthal <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grafenau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grafenwoehr <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 liegt <> grafing <> bei muenchen <>  <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gransee <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> graz <> nothing <> an der mur <>  <>  <>  <>  <>  <>  <> 50
-liegt <> graz <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grebenau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grebenstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> greding <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> greifswald <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grein <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> greussen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> greven <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grevenbroich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grevesmuehlen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> griesheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grieskirchen <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grimma <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grimmen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> groebzig <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> groeditz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> groeningen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> groitzsch <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gronau <> nothing <> an der leine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gronau <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gronau <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-bieberau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-enzersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-gerau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-gerungs <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-siegharts <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gross-umstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossalmerode <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossbottwar <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossenehrich <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossenhain <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossraeschen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossroehrsdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> grossschirma <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gruenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gruenhain-beierfeld <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gruensfeld <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gruenstadt <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guam <> nothing <> in dem pazifik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guben <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gudensberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gueglingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guentersberge <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guenzburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guessing <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guesten <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guestrow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guetersloh <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guetzkow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> guinea <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gummersbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gundelfingen <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gundelfingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gundelsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> gunzenhausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haag <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haan <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hachenburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hadamar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hagenbach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hagenow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haiger <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haigerloch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hainburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hainfeld <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hainichen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haiterbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gransee <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> graz <>  <> an der mur <>  <>  <>  <>  <>  <>  <> 50
+liegt <> graz <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grebenau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grebenstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> greding <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> greifswald <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grein <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> greussen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> greven <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grevenbroich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grevesmuehlen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> griesheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grieskirchen <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grimma <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grimmen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> groebzig <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> groeditz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> groeningen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> groitzsch <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gronau <>  <> an der leine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gronau <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gronau <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossalmerode <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-bieberau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossbottwar <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossenehrich <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossenhain <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-enzersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-gerau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-gerungs <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossraeschen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossroehrsdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> grossschirma <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-siegharts <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gross-umstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gruenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gruenhain-beierfeld <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gruensfeld <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gruenstadt <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guam <>  <> in dem pazifik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guben <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gudensberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gueglingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guentersberge <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guenzburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guessing <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guesten <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guestrow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guetersloh <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guetzkow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> guinea <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gummersbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gundelfingen <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gundelfingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gundelsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> gunzenhausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haag <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haan <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hachenburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hadamar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hagenbach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hagenow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haiger <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haigerloch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hainburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hainfeld <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hainichen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haiterbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 liegt <> haiti <> hispaniola <> auf der insel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> halberstadt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haldensleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> halle <> nothing <> an der saale <>  <>  <>  <>  <>  <>  <> 50
-liegt <> halle <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hallein <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hallenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hallstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> halver <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hamburg <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hameln <> nothing <> an der weser <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hameln <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hamm <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hammelburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hammerfest <> nothing <> in norwegen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hamminkeln <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hanau <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hanau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hannover <> nothing <> an der leine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hannover <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> harburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hardegg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hardegsen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haren <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> harsewinkel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hartberg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hartenstein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hartha <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> harzgerode <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> haseluenne <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hasselfelde <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hassfurt <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hassfurt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hassloch <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hattersheim <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hattersheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hattingen <> nothing <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hattingen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hatzfeld <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hausach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hauzenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> havelberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> havelsee <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hayingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hechingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hecklingen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heide <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heideck <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidelberg <> nothing <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidelberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidenau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidenheim <> nothing <> an der brenz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heidenreichstein <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heilbad heiligenstadt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heilbronn <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heiligenhafen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heiligenhaus <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heilsbronn <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heimbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heimsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heinsberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heitersheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heldrungen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> helgoland <> nothing <> in der nordsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> helmbrechts <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> helmstedt <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> helsingborg <> nothing <> in schweden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> helsinki <> nothing <> an dem finnischen-meerbusen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hemau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hemer <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hemmingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hemmoor <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hemsbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hennef <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hennigsdorf <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heppenheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herbolzheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herborn <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herbrechtingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herbstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herdecke <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herdorf <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herford <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heringen <> nothing <> an der werra <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heringen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heringen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hermagor <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hermannstadt <> nothing <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hermeskeil <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hermsdorf <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herne <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herrenberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herrieden <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herrnhut <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hersbruck <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herten <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herzberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herzberg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herzogenaurach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herzogenburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> herzogenrath <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hessisch lichtenau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hessisch oldendorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hettingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hettstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heubach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> heusenstamm <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hilchenbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hildburghausen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hilden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hildesheim <> nothing <> an der innerste <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hildesheim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hillesheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hilpoltstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hirschau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hirschberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hirschhorn <> nothing <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hirschhorn <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hitzacker <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hitzacker <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hochheim <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hochheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hockenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoechstadt <> nothing <> an der aisch <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoechstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoechstaedt <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoechstaedt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoehr-grenzhausen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoerstel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoexter <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hof <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hofgeismar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hofheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hofheim <> nothing <> in unterfranken <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohen neuendorf <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenberg <> nothing <> an der eger <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenems <> nothing <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenleuben <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenmoelsen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohenstein-ernstthal <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hohnstein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hollabrunn <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hollfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> holzgerlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> holzminden <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> homberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> homburg <> nothing <> an der saar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> homburg <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> horb <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> horb <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> horn <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> horn-bad meinberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hornbach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hornberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> horstmar <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoya <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoyerswerda <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hoym <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hueckelhoven <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hueckeswagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> huefingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> huenfeld <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> huerth <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> hungen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> husum <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ibbenbueren <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ichenhausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> idar-oberstein <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> idstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> illertissen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ilmenau <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ilsenburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ilshofen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> immenhausen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> immenstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> immenstadt <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> imst <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> indien <> nothing <> in suedasien <>  <>  <>  <> nothing <> nothing <>  <> 50
-liegt <> ingelfingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ingelheim <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ingelheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ingolstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> innsbruck <> nothing <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> innsbruck <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> iphofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> iserlohn <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> halberstadt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haldensleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> halle <>  <> an der saale <>  <>  <>  <>  <>  <>  <> 50
+liegt <> halle <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hallein <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hallenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hallstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> halver <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hamburg <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hameln <>  <> an der weser <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hameln <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hamm <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hammelburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hammerfest <>  <> in norwegen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hamminkeln <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hanau <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hanau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hannover <>  <> an der leine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hannover <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> harburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hardegg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hardegsen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haren <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> harsewinkel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hartberg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hartenstein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hartha <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> harzgerode <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> haseluenne <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hasselfelde <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hassfurt <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hassfurt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hassloch <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hattersheim <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hattersheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hattingen <>  <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hattingen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hatzfeld <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hausach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hauzenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> havelberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> havelsee <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hayingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hechingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hecklingen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heide <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heideck <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidelberg <>  <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidelberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidenau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidenheim <>  <> an der brenz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heidenreichstein <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heilbad heiligenstadt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heilbronn <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heiligenhafen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heiligenhaus <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heilsbronn <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heimbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heimsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heinsberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heitersheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heldrungen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> helgoland <>  <> in der nordsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> helmbrechts <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> helmstedt <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> helsingborg <>  <> in schweden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> helsinki <>  <> an dem finnischen-meerbusen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hemau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hemer <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hemmingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hemmoor <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hemsbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hennef <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hennigsdorf <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heppenheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herbolzheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herborn <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herbrechtingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herbstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herdecke <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herdorf <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herford <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heringen <>  <> an der werra <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heringen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heringen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hermagor <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hermannstadt <>  <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hermeskeil <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hermsdorf <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herne <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herrenberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herrieden <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herrnhut <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hersbruck <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herten <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herzberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herzberg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herzogenaurach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herzogenburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> herzogenrath <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hessisch lichtenau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hessisch oldendorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hettingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hettstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heubach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> heusenstamm <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hilchenbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hildburghausen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hilden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hildesheim <>  <> an der innerste <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hildesheim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hillesheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hilpoltstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hirschau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hirschberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hirschhorn <>  <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hirschhorn <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hitzacker <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hitzacker <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hochheim <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hochheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hockenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoechstadt <>  <> an der aisch <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoechstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoechstaedt <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoechstaedt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoehr-grenzhausen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoerstel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoexter <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hof <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hofgeismar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hofheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hofheim <>  <> in unterfranken <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohen neuendorf <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenberg <>  <> an der eger <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenems <>  <> in vorarlberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenleuben <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenmoelsen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohenstein-ernstthal <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hohnstein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hollabrunn <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hollfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> holzgerlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> holzminden <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> homberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> homburg <>  <> an der saar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> homburg <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> horb <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> horb <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> horn <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hornbach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> horn-bad meinberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hornberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> horstmar <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoya <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoyerswerda <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hoym <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hueckelhoven <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hueckeswagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> huefingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> huenfeld <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> huerth <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> hungen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> husum <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ibbenbueren <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ichenhausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> idar-oberstein <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> idstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> illertissen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ilmenau <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ilsenburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ilshofen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> immenhausen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> immenstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> immenstadt <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> imst <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> indien <>  <> in suedasien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ingelfingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ingelheim <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ingelheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ingolstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> innsbruck <>  <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> innsbruck <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> iphofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> iserlohn <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> iskenderun <> hatay <> in der tuerkischen provinz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> isny <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> israel <> nothing <> in vorderasien (im_nahen_osten) <>  <>  <>  <>  <>  <>  <> 50
-liegt <> isselburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> istanbul <> nothing <> an dem bosporus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> istanbul <> nothing <> auf zwei erdteilen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> itzehoe <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jamaika <> nothing <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jarmen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jena <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jennersdorf <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jerichow <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jerusalem <> nothing <> in israel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jessen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jessnitz <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jever <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> joachimsthal <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> joehstadt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> johanngeorgenstadt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> judenburg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> juelich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> jueterbog <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaarst <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaernten <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kahla <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kairo <> nothing <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaisersesch <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaiserslautern <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kalbe <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kalemie <> nothing <> in dem kongo <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kalkar <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kalkutta <> nothing <> in dem ganges-delta <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaltenkirchen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaltennordheim <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kamen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kamenz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kamp-lintfort <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kandel <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kandern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kapfenberg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kappadokien <> nothing <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kappeln <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> karben <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> karlsruhe <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> karlstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kassel <> nothing <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kassel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kastellaun <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> katzenelnbogen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaub <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kaufbeuren <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kecskemet <> nothing <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kehl <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kelbra <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kelheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kelkheim <> nothing <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kelkheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kellinghusen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kelsterbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kemberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kemnath <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kempen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kempten <> nothing <> an der iller <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kempten <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kempten <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kenzingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kerbela <> nothing <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kerpen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ketzin <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kevelaer <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kiel <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kierspe <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kiew <> nothing <> an dem dnjepr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kindberg <> nothing <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kindelbrueck <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchberg <> nothing <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchberg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchenlamitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchhain <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchheimbolanden <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirchschlag <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirklees <> nothing <> in grossbritanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirn <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kirtorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kitzbuehel <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kitzingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kitzscher <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> klagenfurt <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kleve <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> klingenthal <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kloetze <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> klosterneuburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kluetz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> knittelfeld <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> knittlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koblenz <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koeflach <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koelleda <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koeln <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koeln <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigs wusterhausen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigsberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigsbrueck <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigsbrunn <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigsee <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigslutter <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigstein <> nothing <> in hessen;in dem taunus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koenigswinter <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> koethen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kohren-sahlis <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kolbermoor <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> komi <> nothing <> in russland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> konstanz <> nothing <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> konstanz <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> konz <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> korbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> korneuburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> korntal-muenchingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kornwestheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> korschenbroich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kraichtal <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kranichfeld <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> krautheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> krefeld <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kremmen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> krems <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kreuztal <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kristianstad <> nothing <> in schweden <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kroepelin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kronach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kronberg <> nothing <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kronberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kronstadt <> nothing <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kroppenstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> krumbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kuehlungsborn <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kuelsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kuenzelsau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kufstein <> nothing <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kufstein <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kulmbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> isny <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> israel <>  <> in vorderasien (im_nahen_osten) <>  <>  <>  <>  <>  <>  <> 50
+liegt <> isselburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> istanbul <>  <> an dem bosporus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> istanbul <>  <> auf zwei erdteilen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> italien <>  <> auf der apenninenhalbinsel <> 50
+liegt <> itzehoe <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jamaika <>  <> in der karibik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jarmen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jena <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jennersdorf <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jerichow <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jerusalem <>  <> in israel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jessen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jessnitz <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jever <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> joachimsthal <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> joehstadt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> johanngeorgenstadt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> judenburg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> juelich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> jueterbog <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaarst <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaernten <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kahla <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kairo <>  <> an dem nil <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaisersesch <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaiserslautern <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kalbe <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kalemie <>  <> in dem kongo <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kalkar <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kalkutta <>  <> in dem ganges-delta <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaltenkirchen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaltennordheim <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kamen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kamenz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kamp-lintfort <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kandel <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kandern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kapfenberg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kappadokien <>  <> in der tuerkei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kappeln <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> karben <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> karlsruhe <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> karlstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kassel <>  <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kassel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kastellaun <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> katzenelnbogen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaub <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kaufbeuren <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kecskemet <>  <> in ungarn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kehl <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kelbra <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kelheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kelkheim <>  <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kelkheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kellinghusen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kelsterbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kemberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kemnath <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kempen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kempten <>  <> an der iller <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kempten <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kempten <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kenzingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kerbela <>  <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kerpen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ketzin <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kevelaer <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kiel <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kierspe <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kiew <>  <> an dem dnjepr <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kindberg <>  <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kindelbrueck <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchberg <>  <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchberg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchenlamitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchhain <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchheimbolanden <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirchschlag <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirklees <>  <> in grossbritanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirn <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kirtorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kitzbuehel <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kitzingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kitzscher <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> klagenfurt <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kleve <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> klingenthal <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kloetze <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> klosterneuburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kluetz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> knittelfeld <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> knittlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koblenz <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koeflach <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koelleda <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koeln <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koeln <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigs wusterhausen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigsberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigsbrueck <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigsbrunn <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigsee <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigslutter <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigstein <>  <> in hessen;in dem taunus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koenigswinter <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> koethen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kohren-sahlis <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kolbermoor <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> komi <>  <> in russland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> konstanz <>  <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> konstanz <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> konz <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> korbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> korneuburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> korntal-muenchingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kornwestheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> korschenbroich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kraichtal <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kranichfeld <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> krautheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> krefeld <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kremmen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> krems <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kreuztal <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kristianstad <>  <> in schweden <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kroepelin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kronach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kronberg <>  <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kronberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kronstadt <>  <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kroppenstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> krumbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kuehlungsborn <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kuelsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kuenzelsau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kufstein <>  <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kufstein <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kulmbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
 liegt <> kumran <> meer <> an dem toten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kuppenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kusel <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kyllburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> kyritz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laage <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laakirchen <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laatzen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> labrador <> nothing <> in nordostamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ladenburg <> nothing <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ladenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lage <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lahnstein <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lahr <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lahr <> nothing <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laichingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lake placid <> nothing <> in dem bundesstaat new_york<>  <>  <>  <>  <>  <>  <> 50
-liegt <> lambrecht <> nothing <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lambrecht <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lampertheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landau <> nothing <> an der isar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landau <> nothing <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landau <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landeck <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landsberg <> nothing <> an dem lech <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landsberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landsberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landshut <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> landstuhl <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langelsheim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenfeld <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenhagen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenlois <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenselbold <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langenzenn <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> langewiesen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lassan <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laubach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laucha <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauchhammer <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauchheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauda-koenigshofen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauenburg <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauenburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laufen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laufenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauffen <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauffen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauingen <> nothing <> an in donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> laupheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lausanne <> nothing <> an dem genfer see <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauscha <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauta <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauter <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauterbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lauterecken <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kuppenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kusel <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kyllburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> kyritz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laage <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laakirchen <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laatzen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> labrador <>  <> in nordostamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ladenburg <>  <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ladenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lage <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lahnstein <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lahr <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lahr <>  <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laichingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lake placid <>  <> in dem bundesstaat new_york<>  <>  <>  <>  <>  <>  <> 50
+liegt <> lambrecht <>  <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lambrecht <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lampertheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landau <>  <> an der isar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landau <>  <> in der pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landau <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landeck <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landsberg <>  <> an dem lech <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landsberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landsberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landshut <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> landstuhl <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langelsheim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenfeld <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenhagen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenlois <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenselbold <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langenzenn <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> langewiesen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lassan <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laubach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laucha <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauchhammer <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauchheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauda-koenigshofen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauenburg <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauenburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laufen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laufenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauffen <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauffen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauingen <>  <> an in donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> laupheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lausanne <>  <> an dem genfer see <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauscha <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauta <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauter <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauterbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lauterecken <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 liegt <> le <> havre <> an der seine-muendung <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lebach <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lebus <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leer <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leer <> nothing <> in ostfriesland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lehesten <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lehrte <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leibnitz <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leichlingen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leimen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leinefelde-worbis <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leinfelden-echterdingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leipheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leipzig <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leisnig <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lemberg <> nothing <> in der ukraine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lemgo <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lengefeld <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lengenfeld <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lengerich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lennestadt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lenzen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leoben <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leonberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leonding <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leun <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leuna <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leutenberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leutershausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leutkirch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leutkirch <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> leverkusen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lich <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenau <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenfels <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenfels <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lichtenstein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> liebenau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> liebenwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lieberose <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> liebstadt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lienz <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> liezen <> nothing <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lilienfeld <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> limbach-oberfrohna <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> limburg <> nothing <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> limburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindau <> nothing <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindau <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> linden <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindenberg <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindenfels <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lindow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> linnich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> linz <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> linz <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lippstadt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lissabon <> nothing <> an dem tejo <>  <>  <>  <>  <>  <>  <> 50
-liegt <> litschau <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> liverpool <> nothing <> an dem mersey <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loebau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loebejuen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loeffingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loehne <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loeningen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loerrach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loessnitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loewenstein <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lohmar <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lohne <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lohne <> nothing <> in oldenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lohr <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lohr <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> loitz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lollar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lommatzsch <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> london <> nothing <> an der themse <>  <>  <>  <>  <>  <>  <> 50
-liegt <> london <> nothing <> in england <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lorch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lorch <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lorsch <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> los angeles <> nothing <> an der westkueste der usa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lucka <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luckau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luckenwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ludwigsburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ludwigsfelde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ludwigshafen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ludwigslust <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ludwigsstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebbecke <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebben <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebben <> nothing <> in dem spreewald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebbenau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebeck <> nothing <> an der trave <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebeck <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebtheen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luebz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luechow <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luedenscheid <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luedinghausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luegde <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lueneburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luenen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luetjenburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luetzen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lugano <> nothing <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lebach <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lebus <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leer <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leer <>  <> in ostfriesland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lehesten <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lehrte <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leibnitz <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leichlingen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leimen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leinefelde-worbis <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leinfelden-echterdingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leipheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leipzig <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leisnig <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lemberg <>  <> in der ukraine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lemgo <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lengefeld <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lengenfeld <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lengerich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lennestadt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lenzen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leoben <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leonberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leonding <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leun <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leuna <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leutenberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leutershausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leutkirch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leutkirch <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> leverkusen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lich <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenau <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenfels <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenfels <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lichtenstein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> liebenau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> liebenwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lieberose <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> liebstadt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lienz <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> liezen <>  <> in steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lilienfeld <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> limbach-oberfrohna <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> limburg <>  <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> limburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindau <>  <> an dem bodensee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindau <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> linden <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindenberg <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindenfels <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lindow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> linnich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> linz <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> linz <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lippstadt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lissabon <>  <> an dem tejo <>  <>  <>  <>  <>  <>  <> 50
+liegt <> litschau <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> liverpool <>  <> an dem mersey <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loebau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loebejuen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loeffingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loehne <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loeningen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loerrach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loessnitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loewenstein <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lohmar <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lohne <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lohne <>  <> in oldenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lohr <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lohr <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> loitz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lollar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lommatzsch <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> london <>  <> an der themse <>  <>  <>  <>  <>  <>  <> 50
+liegt <> london <>  <> in england <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lorch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lorch <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lorsch <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> los angeles <>  <> an der westkueste der usa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lucka <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luckau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luckenwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ludwigsburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ludwigsfelde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ludwigshafen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ludwigslust <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ludwigsstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebbecke <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebben <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebben <>  <> in dem spreewald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebbenau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebeck <>  <> an der trave <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebeck <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebtheen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luebz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luechow <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luedenscheid <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luedinghausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luegde <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lueneburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luenen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luetjenburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luetzen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lugano <>  <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
 liegt <> lugano <> tessin <> in dem kanton <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lugau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lunzenau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luxemburg <> nothing <> an der alzette <>  <>  <>  <>  <>  <>  <> 50
-liegt <> luzern <> nothing <> an der reuss <>  <>  <>  <>  <>  <>  <> 50
-liegt <> lychen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> maastricht <> nothing <> in den von niederlande <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lugau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lunzenau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luxemburg <>  <> an der alzette <>  <>  <>  <>  <>  <>  <> 50
+liegt <> luzern <>  <> an der reuss <>  <>  <>  <>  <>  <>  <> 50
+liegt <> lychen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> maastricht <>  <> in den von niederlande <>  <>  <>  <>  <>  <>  <> 50
 liegt <> madeira <> westlich <> von marokko <>  <>  <>  <>  <>  <>  <> 50
-liegt <> madras <> nothing <> an dem golf von bengalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> maerkisch buchholz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> magdala <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> magdeburg <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> magdeburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mahlberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mainbernheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mainz <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mainz <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> maissau <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> malchin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> malchow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> malta <> nothing <> in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
-liegt <> manderscheid <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> manhatten <> nothing <> in new_york <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mank <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mannersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mannheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mansfeld <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mantua <> nothing <> in der lombardei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marbach <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marbella <> nothing <> in spanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marburg <> nothing <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marchegg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marchtrenk <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mariazell <> nothing <> in dem steirisch-niederoesterreichischen grenzgebiet <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mariazell <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marienberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marienmuenster <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> markdorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> markgroeningen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> markkleeberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> markneukirchen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> markranstaedt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktbreit <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktheidenfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktleuthen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktoberdorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktredwitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marktsteft <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marl <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marlow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marne <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marokko <> nothing <> in afrika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> marsberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mattersburg <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mattighofen <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> maulbronn <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mauretanien <> nothing <> in dem westen von afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> madras <>  <> an dem golf von bengalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> maerkisch buchholz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> magdala <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> magdeburg <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> magdeburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mahlberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mainbernheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mainz <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mainz <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> maissau <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> malchin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> malchow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> malta <>  <> in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
+liegt <> manderscheid <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> manhatten <>  <> in new_york <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mank <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mannersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mannheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mansfeld <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mantua <>  <> in der lombardei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marbach <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marbella <>  <> in spanien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marburg <>  <> an der lahn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marchegg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marchtrenk <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mariazell <>  <> in dem steirisch-niederoesterreichischen grenzgebiet <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mariazell <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marienberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marienmuenster <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> markdorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> markgroeningen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> markkleeberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> markneukirchen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> markranstaedt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktbreit <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktheidenfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktleuthen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktoberdorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktredwitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marktsteft <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marl <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marlow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marne <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marokko <>  <> in afrika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> marsberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mattersburg <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mattighofen <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> maulbronn <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mauretanien <>  <> in dem westen von afrika <>  <>  <>  <>  <>  <>  <> 50
 liegt <> mauritius <>  <> in dem indischen ozean<>  <>  <>  <>  <>  <>  <> 50
-liegt <> mauritius <> nothing <> in dem indischen ozean<>  <>  <>  <>  <>  <>  <> 50
-liegt <> mautern <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> maxhuette-haidhof <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mayen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mechernich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meckenheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mecklenburg-vorpommern <> nothing <> in dem nordosten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt <> medebach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mauritius <>  <> in dem indischen ozean<>  <>  <>  <>  <>  <>  <> 50
+liegt <> mautern <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> maxhuette-haidhof <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mayen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mechernich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meckenheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mecklenburg-vorpommern <>  <> in dem nordosten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt <> medebach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> meer <> noerdlich <> das schwarze;von der tuerkei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meerane <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meerbusch <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meersburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meisenheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meissen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meldorf <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> melk <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> melle <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mellrichstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> melsungen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> memmingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> menden <> nothing <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> menden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mendig <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mengen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meppen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meran <> nothing <> an der etsch <>  <>  <>  <>  <>  <>  <> 50
-liegt <> merkendorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> merseburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> merzig <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meschede <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> messkirch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> messstetten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mettmann <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> metzingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meuselwitz <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> meyenburg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> miami <> nothing <> in florida <>  <>  <>  <>  <>  <>  <> 50
-liegt <> michelstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> miesbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> miltenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mindelheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> minden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mirow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mistelbach <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mittenwalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mitterteich <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mittweida <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moeckern <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moeckmuehl <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moedling <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moelln <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moenchengladbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moerfelden-walldorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moers <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> monheim <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> monheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> monheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> monschau <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> montabaur <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> montreux <> nothing <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moosburg <> nothing <> an der isar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moosburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> moringen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mosbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mosul <> nothing <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muecheln <> nothing <> in dem geiseltal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muecheln <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muegeln <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlacker <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehldorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlhausen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlheim <> nothing <> an dem main;in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlheim <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehlheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muehltroff <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muelheim <> nothing <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muelheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muelheim-kaerlich <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muellheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenchberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muencheberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenchen <> nothing <> an der isar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenchenbernsdorf <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muennerstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muensingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenster <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenstermaifeld <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muenzenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> muerzzuschlag <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> munderkingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> munster <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> murau <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mureck <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> murrhardt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> mutterstadt <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nabburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nagold <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> naila <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> namur <> nothing <> in belgien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nassau <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nastaetten <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nauen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> naumburg <> nothing <> an der saale <>  <>  <>  <>  <>  <>  <> 50
-liegt <> naumburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> naumburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> naunhof <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nebra <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neckarbischofsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neckargemuend <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neckarsteinach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neckarsulm <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nerchau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neresheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> netphen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nettetal <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> netzschkau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neu-anspach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neu-isenburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neu-ulm <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neubrandenburg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neubukow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neubulach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuburg <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neudenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenbuerg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenburg <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenburg <> nothing <> an dem rhein;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenhaus <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenrade <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuenstein <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuerburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neufeld <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuffen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neugersdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neukalen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neukirchen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neukirchen-vluyn <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neukloster <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neulengbach <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neumark <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neumarkt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neumarkt <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neumarkt-sankt veit <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neumuenster <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neunkirchen <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neunkirchen <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuoetting <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuruppin <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neusaess <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neusalza-spremberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuschottland <> nothing <> in kanada <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neusiedl <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuss <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neustadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neustadt-glewe <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neustrelitz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neutraubling <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> neuwied <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meerane <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meerbusch <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meersburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meisenheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meissen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meldorf <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> melk <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> melle <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mellrichstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> melsungen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> memmingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> menden <>  <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> menden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mendig <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mengen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meppen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meran <>  <> an der etsch <>  <>  <>  <>  <>  <>  <> 50
+liegt <> merkendorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> merseburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> merzig <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meschede <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> messkirch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> messstetten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mettmann <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> metzingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meuselwitz <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> meyenburg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> miami <>  <> in florida <>  <>  <>  <>  <>  <>  <> 50
+liegt <> michelstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> miesbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> miltenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mindelheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> minden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mirow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mistelbach <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mittenwalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mitterteich <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mittweida <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moeckern <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moeckmuehl <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moedling <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moelln <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moenchengladbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moerfelden-walldorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moers <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> monheim <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> monheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> monheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> monschau <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> montabaur <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> montreux <>  <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moosburg <>  <> an der isar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moosburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> moringen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mosbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mosul <>  <> in dem irak <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muecheln <>  <> in dem geiseltal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muecheln <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muegeln <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlacker <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehldorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlhausen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlheim <>  <> an dem main;in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlheim <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehlheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muehltroff <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muelheim <>  <> an der ruhr <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muelheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muelheim-kaerlich <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muellheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenchberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muencheberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenchen <>  <> an der isar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenchenbernsdorf <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muennerstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muensingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenster <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenstermaifeld <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muenzenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> muerzzuschlag <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> munderkingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> munster <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> murau <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mureck <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> murrhardt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> mutterstadt <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nabburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nagold <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> naila <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> namur <>  <> in belgien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nassau <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nastaetten <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nauen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> naumburg <>  <> an der saale <>  <>  <>  <>  <>  <>  <> 50
+liegt <> naumburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> naumburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> naunhof <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nebra <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neckarbischofsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neckargemuend <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neckarsteinach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neckarsulm <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nerchau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neresheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> netphen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nettetal <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> netzschkau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neu-anspach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neubrandenburg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neubukow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neubulach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuburg <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neudenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenbuerg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenburg <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenburg <>  <> an dem rhein;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenhaus <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenrade <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuenstein <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuerburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neufeld <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuffen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neugersdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neu-isenburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neukalen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neukirchen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neukirchen-vluyn <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neukloster <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neulengbach <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neumark <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neumarkt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neumarkt <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neumarkt-sankt veit <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neumuenster <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neunkirchen <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neunkirchen <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuoetting <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuruppin <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neusaess <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neusalza-spremberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuschottland <>  <> in kanada <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neusiedl <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuss <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neustadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neustadt-glewe <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neustrelitz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neutraubling <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neu-ulm <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> neuwied <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
 liegt <> new <> york <> an dem hudson <>  <>  <>  <>  <>  <>  <> 50
 liegt <> new <> york <> auf einem breitengrad mit rom <>  <>  <>  <>  <>  <>  <> 50
 liegt <> new york <> river <> an dem east <>  <>  <>  <>  <>  <>  <> 50
-liegt <> new_york <> nothing <> an der ostkueste der usa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nidda <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niddatal <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nidderau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nideggen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niebuell <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niedenstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nieder-olm <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niederkassel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niedernhall <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niederoesterreich <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niedersachsen <> nothing  <> in dem nordwestender bundesrepublik deutschland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niederstetten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niederstotzingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nieheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niemegk <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nienburg <> nothing <> an derweser <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nienburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nienburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> niesky <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nittenau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nizza <> nothing <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> noerdlingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> norden <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nordenham <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> norderney <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> norderstedt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nordhausen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nordhorn <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> northeim <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nortorf <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nossen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> das _tal_der_koenige_ in aegypten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der _mount_tasan_ in neuseeland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der _nanga_parbat_ in dem himalaya <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der mont-blanc in den westalpen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der tasman-gletscher in neuseeland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der wiegenberg in tasmanien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;_rio_grande_;in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;_sankt_lorenz_;in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;angara;in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;brahmaputra;in;asien <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;ebro;in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;mackenzie;in;nordamerika <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> der;rhein;in;europa <>  <>  <> nothing <>  <>  <>  <> 50
-liegt <> nothing <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nuernberg <> nothing <> an der pegnitz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nuernberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nuertingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> nyon <> nothing <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ober-ramstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberasbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberhausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberhof <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberkirch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberkochen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberlungwitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> obermoschel <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> obernburg <> nothing <> an dem main;in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberndorf <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> obernkirchen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberoesterreich <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberpullendorf <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberriexingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> obertshausen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberursel <> nothing <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberursel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberviechtach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberwart <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberweissbach <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberwesel <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberwiesenthal <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oberwoelz <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> obrigheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ochsenfurt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ochsenhausen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ochtrup <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oderberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oebisfelde <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oederan <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oehringen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oelde <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oelsnitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oer-erkenschwick <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oerlinghausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> new_york <>  <> an der ostkueste der usa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nidda <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niddatal <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nidderau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nideggen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niebuell <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niedenstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niederkassel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niedernhall <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niederoesterreich <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nieder-olm <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niedersachsen <>   <> in dem nordwestender bundesrepublik deutschland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niederstetten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niederstotzingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nieheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niemegk <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nienburg <>  <> an derweser <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nienburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nienburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> niesky <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nittenau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nizza <>  <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> noerdlingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> norden <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nordenham <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> norderney <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> norderstedt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nordhausen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nordhorn <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> northeim <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nortorf <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nossen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nuernberg <>  <> an der pegnitz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nuernberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nuertingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> nyon <>  <> in der schweiz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberasbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberhausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberhof <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberkirch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberkochen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberlungwitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> obermoschel <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> obernburg <>  <> an dem main;in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberndorf <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> obernkirchen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberoesterreich <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberpullendorf <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ober-ramstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberriexingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> obertshausen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberursel <>  <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberursel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberviechtach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberwart <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberweissbach <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberwesel <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberwiesenthal <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oberwoelz <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> obrigheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ochsenfurt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ochsenhausen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ochtrup <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oderberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oebisfelde <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oederan <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oehringen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oelde <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oelsnitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oer-erkenschwick <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oerlinghausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> oesterreich <>  <> in zentraleuropa <> 50
-liegt <> oestrich-winkel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oestringen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oettingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> offenbach <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> offenbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> offenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ohrdruf <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> olbernhau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oldenburg <> nothing <> an der hunte <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oldenburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oldenburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> olfen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> olmuetz <> nothing <> in tschechien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> olpe <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> olsberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oppenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oppenheim <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oranienbaum <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oranienburg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> orlamuende <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> orleans <> nothing <> an der loire <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ornbau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ortenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ortrand <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> orvieto <> nothing <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oschatz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> oschersleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osnabrueck <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ostende <> nothing <> an der nordsee <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterburken <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterfeld <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterhofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterholz-scharmbeck <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterode <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osterwieck <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ostfildern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ostheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> osthofen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ostritz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ottawa <> nothing <> an dem ottawa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> otterberg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> otterndorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ottweiler <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> overath <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> padua <> nothing <> in venetien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> panmunjom <> nothing <> in korea <>  <>  <>  <>  <>  <>  <> 50
-liegt <> paraguay <> nothing <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> paris <> nothing <> an der seine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> passau <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> passau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> patagonien <> nothing <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pattensen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pausa <> nothing <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pausa <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pearl harbor <> nothing <> auf hawaii <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pegau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pegnitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> peine <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> peitz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> penig <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> penkun <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> penzberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> penzlin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> perg <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> perleberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> peshawar <> nothing <> in pakistan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> petershagen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> peuerbach <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfaffenhofen <> nothing <> an der ilm <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfarrkirchen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pforzheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfreimd <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfullendorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfullingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pfungstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> philadelphia <> nothing <> in dem us-bundestaat pennsylvania <>  <>  <>  <>  <>  <>  <> 50
-liegt <> philippsburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pinkafeld <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pinneberg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pirmasens <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pirna <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pisa <> nothing <> an dem arno <>  <>  <>  <>  <>  <>  <> 50
-liegt <> plattling <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> plaue <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> plauen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oestrich-winkel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oestringen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oettingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> offenbach <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> offenbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> offenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ohrdruf <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> olbernhau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oldenburg <>  <> an der hunte <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oldenburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oldenburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> olfen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> olmuetz <>  <> in tschechien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> olpe <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> olsberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oppenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oppenheim <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oranienbaum <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oranienburg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> orlamuende <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> orleans <>  <> an der loire <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ornbau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ortenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ortrand <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> orvieto <>  <> in italien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oschatz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> oschersleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osnabrueck <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ostende <>  <> an der nordsee <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterburken <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterfeld <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterhofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterholz-scharmbeck <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterode <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osterwieck <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ostfildern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ostheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> osthofen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ostritz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ottawa <>  <> an dem ottawa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> otterberg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> otterndorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ottweiler <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> overath <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> padua <>  <> in venetien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> panmunjom <>  <> in korea <>  <>  <>  <>  <>  <>  <> 50
+liegt <> paraguay <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> paris <>  <> an der seine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> passau <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> passau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> patagonien <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pattensen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pausa <>  <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pausa <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pearl harbor <>  <> auf hawaii <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pegau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pegnitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> peine <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> peitz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> penig <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> penkun <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> penzberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> penzlin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> perg <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> perleberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> peshawar <>  <> in pakistan <>  <>  <>  <>  <>  <>  <> 50
+liegt <> petershagen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> peuerbach <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfaffenhofen <>  <> an der ilm <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfarrkirchen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pforzheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfreimd <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfullendorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfullingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pfungstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> philadelphia <>  <> in dem us-bundestaat pennsylvania <>  <>  <>  <>  <>  <>  <> 50
+liegt <> philippsburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pinkafeld <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pinneberg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pirmasens <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pirna <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pisa <>  <> an dem arno <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plattling <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plaue <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plauen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> playa del ingles <>  <> auf gran canaria<>  <>  <>  <>  <>  <>  <> 50
-liegt <> plettenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pleystein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> plochingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ploen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> plovdiv <> nothing <> in bulgarien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pocking <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> podolien <> nothing <> in der ukraine <>  <>  <>  <>  <>  <>  <> 50
-liegt <> poechlarn <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> poessneck <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pohlheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> polch <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> porta westfalica <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> potosi <> nothing <> in bolivien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> potsdam <> nothing <> an der havel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> potsdam <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pottenstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> poysdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> prag <> nothing <> an der moldau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> preetz <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pregarten <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> premnitz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> prenzlau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pressath <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pressburg <> nothing <> in der slowakei <>  <>  <>  <>  <>  <>  <> 50
-liegt <> prettin <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pretzsch <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pretzsch <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> preussisch oldendorf <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> prichsenstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> princeton <> nothing <> in den usa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pritzwalk <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pruem <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> puettlingen <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pulheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pulkau <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> pulsnitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> purbach <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> purkersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> putbus <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> putlitz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> puttgarden <> nothing <> auf fehmarn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> quakenbrueck <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> quedlinburg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> queensland <> nothing <> in australien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> queensland <> nothing <> in dem nordosten von australien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> querfurt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> quickborn <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rabenau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radeberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radebeul <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radeburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radegast <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radenthein <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radevormwald <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radolfzell <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> radstadt <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> raguhn <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rahden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rain <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ramstein-miesenbach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ranis <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ransbach-baumbach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rastatt <> nothing <> an der murg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rastatt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rastenberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rathenow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ratingen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rattenberg <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ratzeburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rauenberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> raunheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rauschenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ravensburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ravenstein <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> recklinghausen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rees <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> regen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> regensburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> regis-breitingen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rehau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rehburg-loccum <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rehna <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reichelsheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reichelsheim <> nothing <> in wetterau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reichenbach <> nothing <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reichenbach <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reinbek <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reinfeld <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reinheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> remagen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> remda-teichel <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> remscheid <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> remseck <> nothing <> an dem neckar;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> renchen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rendsburg <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rennerod <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> renningen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rerik <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rethem <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> retz <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> reutlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheda-wiedenbrueck <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rhede <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinbach <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheine <> nothing <> an der ems <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheine <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinfelden <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinland-pfalz <> nothing <> in dem suedwesten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinsberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rheinstetten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rhens <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rhinow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rhode islang <> nothing <> in dem nordosten der usa <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ribnitz-damgarten <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> richtenberg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ried <> nothing <> in oberoesterreich;in dem innkreis <>  <>  <>  <>  <>  <>  <> 50
-liegt <> riedenburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> riedlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> riedstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rieneck <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> riesa <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rietberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rinteln <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rochlitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rockenhausen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rodalben <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rodenberg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rodewisch <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rodgau <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roding <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roebel <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roedental <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roedermark <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roemhild <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roesrath <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roetha <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roethenbach <> nothing <> an der pegnitz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roethenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roettingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roetz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rohrbach <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plettenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pleystein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plochingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ploen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> plovdiv <>  <> in bulgarien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pocking <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> podolien <>  <> in der ukraine <>  <>  <>  <>  <>  <>  <> 50
+liegt <> poechlarn <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> poessneck <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pohlheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> polch <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> porta westfalica <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> potosi <>  <> in bolivien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> potsdam <>  <> an der havel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> potsdam <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pottenstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> poysdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> prag <>  <> an der moldau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> preetz <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pregarten <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> premnitz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> prenzlau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pressath <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pressburg <>  <> in der slowakei <>  <>  <>  <>  <>  <>  <> 50
+liegt <> prettin <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pretzsch <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pretzsch <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> preussisch oldendorf <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> prichsenstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> princeton <>  <> in den usa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pritzwalk <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pruem <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> puettlingen <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pulheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pulkau <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> pulsnitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> purbach <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> purkersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> putbus <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> putlitz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> puttgarden <>  <> auf fehmarn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> quakenbrueck <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> quedlinburg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> queensland <>  <> in australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> queensland <>  <> in dem nordosten von australien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> querfurt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> quickborn <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rabenau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radeberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radebeul <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radeburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radegast <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radenthein <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radevormwald <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radolfzell <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> radstadt <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> raguhn <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rahden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rain <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ramstein-miesenbach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ranis <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ransbach-baumbach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rastatt <>  <> an der murg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rastatt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rastenberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rathenow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ratingen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rattenberg <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ratzeburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rauenberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> raunheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rauschenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ravensburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ravenstein <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> recklinghausen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rees <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> regen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> regensburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> regis-breitingen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rehau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rehburg-loccum <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rehna <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reichelsheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reichelsheim <>  <> in wetterau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reichenbach <>  <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reichenbach <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reinbek <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reinfeld <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reinheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> remagen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> remda-teichel <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> remscheid <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> remseck <>  <> an dem neckar;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> renchen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rendsburg <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rennerod <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> renningen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rerik <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rethem <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> retz <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> reutlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheda-wiedenbrueck <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rhede <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinbach <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheine <>  <> an der ems <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheine <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinfelden <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinland-pfalz <>  <> in dem suedwesten der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinsberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rheinstetten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rhens <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rhinow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rhode islang <>  <> in dem nordosten der usa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ribnitz-damgarten <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> richtenberg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ried <>  <> in oberoesterreich;in dem innkreis <>  <>  <>  <>  <>  <>  <> 50
+liegt <> riedenburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> riedlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> riedstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rieneck <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> riesa <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rietberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rinteln <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rochlitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rockenhausen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rodalben <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rodenberg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rodewisch <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rodgau <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roding <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roebel <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roedental <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roedermark <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roemhild <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roesrath <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roetha <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roethenbach <>  <> an der pegnitz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roethenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roettingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roetz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rohrbach <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
 liegt <> rom <> des tiber <> an dem ufer <>  <>  <>  <>  <>  <>  <> 50
 liegt <> rom <>an dem tiber <>  <>  <>  <>  <>  <>  <>  <> 100
-liegt <> romrod <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ronneburg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ronnenberg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosenfeld <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosenheim <> nothing <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosenheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosenthal <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rossleben <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rosswein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rostock <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rotenburg <> nothing <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rotenburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rotenburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> roth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rothenburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rothenfels <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rottenburg <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rottenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rottenburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rottenmann <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rottweil <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> rudolstadt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruedesheim <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruedesheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruesselsheim <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruesselsheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruethen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruhla <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ruhland <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> runkel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> russland <> nothing <> in dem osten von europa <>  <>  <>  <> nothing <> nothing <>  <> 50
-liegt <> rust <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saalburg-ebersdorf <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saalfeld <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saalfelden <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saarbruecken <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saarburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> saarlouis <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sachsen-anhalt <> nothing <> in dem noerdlichen teil der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt <> sachsenhagen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sachsenheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> romrod <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ronneburg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ronnenberg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosenfeld <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosenheim <>  <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosenheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosenthal <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rossleben <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rosswein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rostock <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rotenburg <>  <> an der fulda <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rotenburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rotenburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> roth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rothenburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rothenfels <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rottenburg <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rottenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rottenburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rottenmann <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rottweil <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rudolstadt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruedesheim <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruedesheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruesselsheim <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruesselsheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruethen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruhla <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ruhland <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> runkel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> russland <>  <> in dem osten von europa <>  <>  <>  <>  <>  <>  <> 50
+liegt <> rust <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saalburg-ebersdorf <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saalfeld <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saalfelden <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saarbruecken <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saarburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> saarlouis <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sachsen-anhalt <>  <> in dem noerdlichen teil der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt <> sachsenhagen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sachsenheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
 liegt <> salt <> lake city <> in utah <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzburg <> nothing <> an der salzach <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzburg <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzburg <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzgitter <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzkotten <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> salzwedel <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sandau <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sandau <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sandersleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sangerhausen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt andreasberg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt augustin <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt goar <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt goarshausen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt poelten <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sankt valent <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sarstedt <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sassenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sassnitz <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sayda <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schaan <> nothing <> in liechtenstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schaebisch <> nothing <> hall;an der kocher <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schaerding <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schaffhausen <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schalkau <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schauenstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> scheer <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> scheibbs <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> scheibenberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> scheinfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schelklingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schenefeld <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schengen <> nothing <> in luxemburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schesslitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schieder-schwalenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schifferstadt <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schildau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schillingsfuerst <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schiltach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schirgiswalde <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schkeuditz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schkoelen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schladming <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schleiden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schleiz <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schleswig <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schleswig-holstein <> nothing <> in dem norden der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
-liegt <> schlettau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schleusingen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schlieben <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schlitz <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schlotheim <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schluechtern <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schluesselfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schmalkalden <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schmallenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schmoelln <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schnackenburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schnaittenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schneeberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schneverdingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoemberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenau <> nothing <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenberg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenebeck <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenebeck <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoeneck <> nothing <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoeneck <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenewalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoeningen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoensee <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoenwald <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schoeppenstedt <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schongau <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schopfheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schorndorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schortens <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schotten <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schramberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schraplau <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schrattenthal <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schrems <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schriesheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schrobenhausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schrozberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schuettorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwaan <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwabach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwabmuenchen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwaebisch <> nothing <> hall;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwaebisch gmuend <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwaigern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwalbach <> nothing <> an dem taunus;in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwalmstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwandorf <> nothing <> an der naab <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwandorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwanebeck <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwanenstadt <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenbach <> nothing <> an der saale <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenbek <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenberg <> nothing <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzenborn <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwarzheide <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwaz <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwechat <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwedt <> nothing <> an der oder <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwedt <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schweich <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schweinfurt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwelm <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwentinental <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwerin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwerte <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> schwetzingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sebnitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seehausen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seekirchen <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seelow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seelze <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seesen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sehnde <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seifhennersdorf <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> selb <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> selbitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> seligenstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> selm <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> selters <> nothing <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> selters <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> senden<> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sendenhorst <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> senftenberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sesslach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sevilla <> nothing <> an dem guadalquivir <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sfax <> nothing <> in tunesien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> siebenbuergen <> nothing <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> siegburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> siegen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sigmaringen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> simbach <> nothing <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> simbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> simmern <> nothing <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
-liegt <> simmern <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sindelfingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> singen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sinsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sinzig <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> soemmerda <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> soest <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzburg <>  <> an der salzach <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzburg <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzburg <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzgitter <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzkotten <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> salzwedel <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sandau <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sandau <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sandersleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sangerhausen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt andreasberg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt augustin <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt goar <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt goarshausen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt poelten <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sankt valent <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sarstedt <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sassenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sassnitz <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sayda <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schaan <>  <> in liechtenstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schaebisch <>  <> hall;an der kocher <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schaerding <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schaffhausen <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schalkau <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schauenstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> scheer <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> scheibbs <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> scheibenberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> scheinfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schelklingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schenefeld <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schengen <>  <> in luxemburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schesslitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schieder-schwalenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schifferstadt <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schildau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schillingsfuerst <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schiltach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schirgiswalde <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schkeuditz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schkoelen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schladming <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schleiden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schleiz <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schleswig <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schleswig-holstein <>  <> in dem norden der bundesrepublik deutschland<>  <>  <>  <>  <>  <>  <> 50
+liegt <> schlettau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schleusingen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schlieben <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schlitz <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schlotheim <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schluechtern <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schluesselfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schmalkalden <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schmallenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schmoelln <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schnackenburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schnaittenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schneeberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schneverdingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoemberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenau <>  <> in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenberg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenebeck <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenebeck <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoeneck <>  <> in dem vogtland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoeneck <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenewalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoeningen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoensee <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoenwald <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schoeppenstedt <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schongau <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schopfheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schorndorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schortens <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schotten <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schramberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schraplau <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schrattenthal <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schrems <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schriesheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schrobenhausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schrozberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schuettorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwaan <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwabach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwabmuenchen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwaebisch <>  <> hall;in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwaebisch gmuend <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwaigern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwalbach <>  <> an dem taunus;in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwalmstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwandorf <>  <> an der naab <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwandorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwanebeck <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwanenstadt <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenbach <>  <> an der saale <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenbek <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenberg <>  <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzenborn <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwarzheide <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwaz <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwechat <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwedt <>  <> an der oder <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwedt <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schweich <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schweinfurt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwelm <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwentinental <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwerin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwerte <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> schwetzingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sebnitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seehausen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seekirchen <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seelow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seelze <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seesen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sehnde <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seifhennersdorf <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> selb <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> selbitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> seligenstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> selm <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> selters <>  <> in dem westerwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> selters <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> senden<>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sendenhorst <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> senftenberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sesslach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sevilla <>  <> an dem guadalquivir <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sfax <>  <> in tunesien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> siebenbuergen <>  <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> siegburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> siegen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sigmaringen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> simbach <>  <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> simbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> simmern <>  <> in dem hunsrueck <>  <>  <>  <>  <>  <>  <> 50
+liegt <> simmern <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sindelfingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> singen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sinsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sinzig <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> soemmerda <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> soest <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> solingen <>  <> in dem bergischen land<>  <>  <>  <>  <>  <>  <> 50
-liegt <> solingen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> solms <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> soltau <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sondershausen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sonneberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sonnewalde <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sonthofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sontra <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> spaichingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> spalt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> spangenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> solingen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> solms <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> soltau <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sondershausen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sonneberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sonnewalde <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sonthofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sontra <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spaichingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spalt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spangenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> spanien <>  <> in suedwesteuropa <> 50
-liegt <> spenge <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> speyer <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> spittal <> nothing <> an der drau;in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> split <> nothing <> in kroatien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> spremberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> springe <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sprockhoevel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stade <> nothing <> an der schwinge <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stade <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadt wehlen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtallendorf <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtbergen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadthagen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtilm <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtlengsfeld <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtlohn <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtoldendorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtprozelten <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtroda <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtschlaining <> nothing <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stadtsteinach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> starnberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stassfurt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> staufen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> staufen <> nothing <> in dem breisgau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> staufenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stavenhagen <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinach <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinbach <> nothing <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinbach-hallenberg <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinfurt <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steinheim <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stendal <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sternberg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stettin <> nothing <> an der oder <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steyr <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> steyregg <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stockach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stockerau <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stoessen <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stolberg <> nothing <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stolberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stollberg <> nothing <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stolpen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> storkow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> straelen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stralsund <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> strasburg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> strassburg <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> straubing <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> strausberg <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> strehla <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stromberg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stuehlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stutensee <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stuttgart <> nothing <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> stuttgart <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> suessen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> suhl <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulz <> nothing <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulz <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulzbach <> nothing <> an der saar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulzbach <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulzbach-rosenberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sulzburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sundern <> nothing <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> sundern <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> surinam <> nothing <> in sued-amerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> suriname <> nothing <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-liegt <> syke <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tahiti <> nothing <> in dem suedpazifik <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tambach-dietharz <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tangerhuette <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tangermuende <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tann <> nothing <> an der rhoen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tann <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tanna <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> taormina <> nothing <> auf sizilien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tauberbischofsheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> taucha <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> taunusstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tecklenburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tegernsee <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> telgte <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teltow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> templin <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tengen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ternitz <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tessin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teterow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tettnang <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teublitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teuchern <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teupitz <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> teuschnitz <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> thale <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> thalheim <> nothing <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
-liegt <> thalheim <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> thannhausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tharandt <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> themar <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> thum <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tilsit <> nothing <> an der memel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> timbuktu <> nothing <> in mali <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tirol <> nothing <> in dem westen von oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tirol <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tirschenreuth <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> titisee-neustadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tittmoning <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> todtnau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> toeging <> nothing <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
-liegt <> toeging <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> toenisvorst <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> toenning <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tokio <> nothing <> auf hondo <>  <>  <>  <>  <>  <>  <> 50
-liegt <> torgau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> torgelow <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tornesch <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traben-trarbach <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traiskirchen <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traismauer <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> transsilvanien <> nothing <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traun <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traunreut <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> traunstein <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trebbin <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trebsen <> nothing <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trebsen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> treffurt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trendelburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> treuchtlingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> treuen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> treuenbrietzen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> triberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> triberg <> nothing <> in dem in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tribsees <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trieben <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trier <> nothing <> an der mosel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trier <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> triest <> nothing <> an der adria <>  <>  <>  <>  <>  <>  <> 50
-liegt <> triest <> nothing <> in italien <>  <>  <>  <>  <>  <>  <> 50
-liegt <> triptis <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trochtelfingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trofaiach <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> troisdorf <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trossingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> trostberg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tuebingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tulln <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> turku <> nothing <> in finnland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> tuttlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> twistringen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uebach-palenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ueberlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uebigau-wahrenbrueck <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ueckermuende <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uelzen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uetersen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uffenheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uhingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ulm <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ulrichstein <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ummerstadt <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> unkel <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> unna <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> unterschleissheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> usbekistan <> nothing <> in kasachstan <>  <>  <>  <>  <>  <>  <> 50
-liegt <> usedom <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ushuaia <> nothing <> an dem beaglekanal <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ushuaia <> nothing <> auf feuerland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> usingen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> uslar <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vacha <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vaiaku <> nothing <> auf funafuti <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vaihingen <> nothing <> in baden-wuerttemb <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vallendar <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vancouver <> nothing <> in _british_columbia_ <>  <>  <>  <>  <>  <>  <> 50
-liegt <> varanasi <> nothing <> an dem ganges <>  <>  <>  <>  <>  <>  <> 50
-liegt <> varel <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vechta <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> velbert <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> velburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> velden <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vellberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vellmar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> velten <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spenge <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> speyer <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spittal <>  <> an der drau;in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> split <>  <> in kroatien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> spremberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> springe <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sprockhoevel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stade <>  <> an der schwinge <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stade <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadt wehlen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtallendorf <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtbergen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadthagen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtilm <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtlengsfeld <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtlohn <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtoldendorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtprozelten <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtroda <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtschlaining <>  <> in dem burgenland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stadtsteinach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> starnberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stassfurt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> staufen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> staufen <>  <> in dem breisgau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> staufenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stavenhagen <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinach <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinbach <>  <> in dem taunus <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinbach-hallenberg <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinfurt <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steinheim <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stendal <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sternberg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stettin <>  <> an der oder <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steyr <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> steyregg <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stockach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stockerau <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stoessen <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stolberg <>  <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stolberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stollberg <>  <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stolpen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> storkow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> straelen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stralsund <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> strasburg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> strassburg <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> straubing <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> strausberg <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> strehla <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stromberg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stuehlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stutensee <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stuttgart <>  <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> stuttgart <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> suessen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> suhl <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulz <>  <> an der neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulz <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulzbach <>  <> an der saar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulzbach <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulzbach-rosenberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sulzburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sundern <>  <> in dem sauerland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> sundern <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> surinam <>  <> in sued-amerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> suriname <>  <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
+liegt <> syke <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tahiti <>  <> in dem suedpazifik <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tambach-dietharz <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tangerhuette <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tangermuende <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tann <>  <> an der rhoen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tann <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tanna <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> taormina <>  <> auf sizilien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tauberbischofsheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> taucha <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> taunusstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tecklenburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tegernsee <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> telgte <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teltow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> templin <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tengen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ternitz <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tessin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teterow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tettnang <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teublitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teuchern <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teupitz <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> teuschnitz <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> thale <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> thalheim <>  <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
+liegt <> thalheim <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> thannhausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tharandt <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> themar <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> thum <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tilsit <>  <> an der memel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> timbuktu <>  <> in mali <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tirol <>  <> in dem westen von oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tirol <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tirschenreuth <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> titisee-neustadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tittmoning <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> todtnau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> toeging <>  <> an dem inn <>  <>  <>  <>  <>  <>  <> 50
+liegt <> toeging <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> toenisvorst <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> toenning <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tokio <>  <> auf hondo <>  <>  <>  <>  <>  <>  <> 50
+liegt <> torgau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> torgelow <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tornesch <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traben-trarbach <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traiskirchen <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traismauer <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> transsilvanien <>  <> in rumaenien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traun <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traunreut <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> traunstein <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trebbin <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trebsen <>  <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trebsen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> treffurt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trendelburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> treuchtlingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> treuen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> treuenbrietzen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> triberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> triberg <>  <> in dem in dem schwarzwald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tribsees <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trieben <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trier <>  <> an der mosel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trier <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> triest <>  <> an der adria <>  <>  <>  <>  <>  <>  <> 50
+liegt <> triest <>  <> in italien <>  <>  <>  <>  <>  <>  <> 50
+liegt <> triptis <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trochtelfingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trofaiach <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> troisdorf <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trossingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> trostberg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tuebingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tulln <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> turku <>  <> in finnland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> tuttlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> twistringen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uebach-palenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ueberlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uebigau-wahrenbrueck <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ueckermuende <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uelzen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uetersen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uffenheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uhingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ulm <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ulrichstein <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ummerstadt <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> unkel <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> unna <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> unterschleissheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> usbekistan <>  <> in kasachstan <>  <>  <>  <>  <>  <>  <> 50
+liegt <> usedom <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ushuaia <>  <> an dem beaglekanal <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ushuaia <>  <> auf feuerland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> usingen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> uslar <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vacha <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vaiaku <>  <> auf funafuti <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vaihingen <>  <> in baden-wuerttemb <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vallendar <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vancouver <>  <> in _british_columbia_ <>  <>  <>  <>  <>  <>  <> 50
+liegt <> varanasi <>  <> an dem ganges <>  <>  <>  <>  <>  <>  <> 50
+liegt <> varel <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vechta <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> velbert <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> velburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> velden <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vellberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vellmar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> velten <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
 liegt <> venedig <> meer <> an dem adriatischen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> verden <> nothing <> an der aller <>  <>  <>  <>  <>  <>  <> 50
-liegt <> verden <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> veringenstadt<> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> verona <> nothing <> an der etsch <>  <>  <>  <>  <>  <>  <> 50
-liegt <> versmold <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vetschau <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vetschau <> nothing <> in dem spreewald <>  <>  <>  <>  <>  <>  <> 50
-liegt <> viechtach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vienenburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> viernheim <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> viersen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vietnam <> nothing <> an dem suedchinesischen meer<>  <>  <>  <>  <>  <>  <> 50
-liegt <> villach <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> villingen-schwenningen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vilnius <> nothing <> an der neris <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vils <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vilsbiburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vilseck <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vilshofen <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vilshofen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> visselhoevede <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vlotho <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voecklabruck <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voehrenbach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voehringen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voelkermarkt <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voelklingen <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voerde <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vohburg <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vohburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vohenstrauss <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> voitsberg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> volkach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> volkmarsen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vorarlberg <> nothing <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> vreden <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wadern <> nothing <> in saarland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waechtersbach <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waghaeusel <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wahlstedt <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waiblingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waibstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waischenfeld <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldbroel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldeck <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldenbuch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldenburg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldenburg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldershof <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldheim <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldkappel <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldkirch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldkirchen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldkraiburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldmuenchen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldsassen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waldshut-tiengen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> walldorf <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wallduern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wallenfels <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> walsrode <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waltershausen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waltrop <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wanfried <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wangen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wangen <> nothing <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wanzleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warburg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> waren <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warendorf <> nothing <> an der ems <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warendorf <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warschau <> nothing <> an der weichsel <>  <>  <>  <>  <>  <>  <> 50
-liegt <> warstein <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wassenberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wassertruedingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wasungen <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wedel <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weener <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wegberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wegeleben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wehr <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weida <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weiden <> nothing <> in der oberpfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weiden<> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weikersheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weilburg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weilheim <> nothing <> an der teck <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weilheim <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weilheim <> nothing <> in oberbayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weimar <> nothing <> an der ilm <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weimar <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weingarten <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weinheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weinsberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weinstadt <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weismain <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenberg <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenfels <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenhorn <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissensee <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenstadt <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weissenthurm <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weisswasser <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weiterstadt <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weitra <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> weiz <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wels <> nothing <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> welzheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> welzow <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wemding <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wendlingen <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wendlingen <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werben <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werdau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werder <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werdohl <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werl <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wermelskirchen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wernau <> nothing <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wernau <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werne <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werneuchen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wernigerode <> nothing <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wernigerode <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wertheim <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> werther <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wertingen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wesel <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wesenberg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wesselburen <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wesseling <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> westerburg <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> westerland <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> westerstede <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wetter <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wetter <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wettin <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wetzlar <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> widdern <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiehe <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiehl <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> verden <>  <> an der aller <>  <>  <>  <>  <>  <>  <> 50
+liegt <> verden <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> veringenstadt<>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> verona <>  <> an der etsch <>  <>  <>  <>  <>  <>  <> 50
+liegt <> versmold <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vetschau <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vetschau <>  <> in dem spreewald <>  <>  <>  <>  <>  <>  <> 50
+liegt <> viechtach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vienenburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> viernheim <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> viersen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vietnam <>  <> an dem suedchinesischen meer<>  <>  <>  <>  <>  <>  <> 50
+liegt <> villach <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> villingen-schwenningen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vilnius <>  <> an der neris <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vils <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vilsbiburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vilseck <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vilshofen <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vilshofen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> visselhoevede <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vlotho <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voecklabruck <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voehrenbach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voehringen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voelkermarkt <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voelklingen <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voerde <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vohburg <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vohburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vohenstrauss <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> voitsberg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> volkach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> volkmarsen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vorarlberg <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> vreden <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wadern <>  <> in saarland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waechtersbach <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waghaeusel <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wahlstedt <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waiblingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waibstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waischenfeld <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldbroel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldeck <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldenbuch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldenburg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldenburg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldershof <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldheim <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldkappel <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldkirch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldkirchen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldkraiburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldmuenchen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldsassen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waldshut-tiengen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> walldorf <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wallduern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wallenfels <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> walsrode <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waltershausen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waltrop <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wanfried <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wangen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wangen <>  <> in dem allgaeu <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wanzleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warburg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> waren <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warendorf <>  <> an der ems <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warendorf <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warschau <>  <> an der weichsel <>  <>  <>  <>  <>  <>  <> 50
+liegt <> warstein <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wassenberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wassertruedingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wasungen <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wedel <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weener <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wegberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wegeleben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wehr <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weida <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weiden <>  <> in der oberpfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weiden<>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weikersheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weilburg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weilheim <>  <> an der teck <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weilheim <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weilheim <>  <> in oberbayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weimar <>  <> an der ilm <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weimar <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weingarten <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weinheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weinsberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weinstadt <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weismain <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenberg <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenfels <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenhorn <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissensee <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenstadt <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weissenthurm <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weisswasser <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weiterstadt <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weitra <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> weiz <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wels <>  <> in oberoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> welzheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> welzow <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wemding <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wendlingen <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wendlingen <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werben <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werdau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werder <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werdohl <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werl <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wermelskirchen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wernau <>  <> an dem neckar <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wernau <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werne <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werneuchen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wernigerode <>  <> in dem harz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wernigerode <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wertheim <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> werther <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wertingen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wesel <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wesenberg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wesselburen <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wesseling <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> westerburg <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> westerland <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> westerstede <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wetter <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wetter <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wettin <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wetzlar <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> widdern <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiehe <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiehl <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wien <>  <> an der donau <>  <>  <>  <>  <>  <>  <> 50
 liegt <> wien <>  <> in oesterreich <> 50
-liegt <> wien <> nothing <> an der donau <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiener neustadt <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiesbaden <> nothing <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiesbaden <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wieselburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiesensteig <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiesloch <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wiesmoor <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wildberg <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wildemann <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wildenfels <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wildeshausen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilhelmsburg <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilhelmshaven <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilkau-hasslau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> willebadessen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> willich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilsdruff <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilster <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wilthen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> windischeschenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> windsbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> winnenden <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> winsen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> winterberg <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiener neustadt <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiesbaden <>  <> an dem rhein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiesbaden <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wieselburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiesensteig <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiesloch <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wiesmoor <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wildberg <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wildemann <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wildenfels <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wildeshausen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilhelmsburg <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilhelmshaven <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilkau-hasslau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> willebadessen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> willich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilsdruff <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilster <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wilthen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> windischeschenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> windsbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> winnenden <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> winsen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> winterberg <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
 liegt <> winterthur <> zuerich <> in dem kanton <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wipperfuerth <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wirges <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wismar <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wissen <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> witten <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittenberg <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittenberge <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittenburg <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittichenau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittingen <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittlich <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittmund <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wittstock <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> witzenhausen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> woergl <> nothing <> in tirol <>  <>  <>  <>  <>  <>  <> 50
-liegt <> woerlitz <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> woldegk <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfach <> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfenbuettel <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfhagen <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolframs-eschenbach <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfratshausen <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfsberg <> nothing <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfsburg <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolfstein <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolgast <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolkenstein <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolkersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wolmirstedt <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> worms <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wriezen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuelfrath <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuerselen <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuerzburg <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuerzburg <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wunsiedel <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wunstorf <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuppertal <> nothing <> an der wupper <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wuppertal <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wurzbach <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wurzen <> nothing <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wurzen <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wustrow <> nothing <> in dem wendland <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wustrow <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> wyk auf foehr<> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ybbs <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zahna <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zarrentin <> nothing <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zehdenick <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeil <> nothing <> an dem main <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeil <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeitz <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zell <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zell an dem harmersbach<> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zell an dem see<> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zell in dem wiesental<> nothing <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zella-mehlis <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeltweg <> nothing <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zerbst <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeulenroda-triebes <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zeven <> nothing <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ziegenrueck <> nothing <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zierenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> ziesar <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zirndorf <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zistersdorf <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zittau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zoeblitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zoerbig <> nothing <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zossen <> nothing <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zschopau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zuelpich <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zweibruecken <> nothing <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwenkau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwettl <> nothing <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwickau <> nothing <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwickau <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwiesel <> nothing <> in bayern <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwingenberg <> nothing <> in hessen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zwoenitz <> nothing <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
-liegt <> zypern <> nothing <> in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
-liegt <>der selenter see <> nothing <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
-liegt <>die blaue grotte <> nothing <> auf der insel capri<>  <>  <>  <>  <>  <>  <> 50
-liegt <>loch ness <> nothing <> in schottland <>  <>  <>  <>  <>  <>  <> 50
-liegt <>schloss holte-stukenbrock <> nothing <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
-liegt werben <> nothing <> nothing <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wipperfuerth <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wirges <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wismar <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wissen <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> witten <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittenberg <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittenberge <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittenburg <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittichenau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittingen <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittlich <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittmund <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wittstock <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> witzenhausen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> woergl <>  <> in tirol <>  <>  <>  <>  <>  <>  <> 50
+liegt <> woerlitz <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> woldegk <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfach <>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfenbuettel <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfhagen <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolframs-eschenbach <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfratshausen <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfsberg <>  <> in kaernten <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfsburg <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolfstein <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolgast <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolkenstein <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolkersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wolmirstedt <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> worms <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wriezen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuelfrath <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuerselen <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuerzburg <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuerzburg <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wunsiedel <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wunstorf <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuppertal <>  <> an der wupper <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wuppertal <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wurzbach <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wurzen <>  <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wurzen <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wustrow <>  <> in dem wendland <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wustrow <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> wyk auf foehr<>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ybbs <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zahna <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zarrentin <>  <> in mecklenburg-vorpommern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zehdenick <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeil <>  <> an dem main <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeil <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeitz <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zell <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zell an dem harmersbach<>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zell an dem see<>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zell in dem wiesental<>  <> in baden-wuerttemberg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zella-mehlis <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeltweg <>  <> in der steiermark <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zerbst <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeulenroda-triebes <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zeven <>  <> in niedersachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ziegenrueck <>  <> in thueringen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zierenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> ziesar <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zirndorf <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zistersdorf <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zittau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zoeblitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zoerbig <>  <> in sachsen-anhalt <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zossen <>  <> in brandenburg <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zschopau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zuelpich <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zweibruecken <>  <> in rheinland-pfalz <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwenkau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwettl <>  <> in niederoesterreich <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwickau <>  <> an der mulde <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwickau <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwiesel <>  <> in bayern <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwingenberg <>  <> in hessen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zwoenitz <>  <> in sachsen <>  <>  <>  <>  <>  <>  <> 50
+liegt <> zypern <>  <> in dem mittelmeer <>  <>  <>  <>  <>  <>  <> 50
+liegt <>der selenter see <>  <> in schleswig-holstein <>  <>  <>  <>  <>  <>  <> 50
+liegt <>die blaue grotte <>  <> auf der insel capri<>  <>  <>  <>  <>  <>  <> 50
+liegt <>loch ness <>  <> in schottland <>  <>  <>  <>  <>  <>  <> 50
+liegt <>schloss holte-stukenbrock <>  <> in nordrhein-westfalen <>  <>  <>  <>  <>  <>  <> 50
+liegt werben <>  <>  <> an der elbe <>  <>  <>  <>  <>  <>  <> 50
 liegtan <> waren <> der mueritz <>  <>  <>  <>  <>  <>  <>  <> 50
-lisgt <> der grabensee <> nothing <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der don <> nothing<> in das asowsche meer<>  <>  <>  <>  <>  <>  <> 50
-muendet <> der hudon river <> nothing <> in den atlantik <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der inn <> nothing <> in die donau <>  <>  <>  <>  <>  <>  <> 50
+lisgt <> der grabensee <>  <> in salzburg <>  <>  <>  <>  <>  <>  <> 50
+muendet <>  <>  <> der ubangi in den kongo <>  <>  <>  <>  <>  <>  <> 50
+muendet <>  <>  <> die ruhr in die maas <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der don <> <> in das asowsche meer<>  <>  <>  <>  <>  <>  <> 50
+muendet <> der hudon river <>  <> in den atlantik <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der inn <>  <> in die donau <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der jordan <>  <> in das_tote_meer <>  <>  <>  <>  <>  <>  <> 50
 muendet <> der jordan <> meer <> ins tote <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der jordan <> nothing <> in das_tote_meer <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der kongo <> nothing <> in den atlantik <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der mississippi <> nothing <> in den golf von mexiko <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der missouri <> nothing <> in den mississippi <>  <>  <>  <>  <>  <>  <> 50
-muendet <> der nil <> nothing <> in das mittelmeer <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der kongo <>  <> in den atlantik <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der mississippi <>  <> in den golf von mexiko <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der missouri <>  <> in den mississippi <>  <>  <>  <>  <>  <>  <> 50
+muendet <> der nil <>  <> in das mittelmeer <>  <>  <>  <>  <>  <>  <> 50
 muendet <> die donau <> meer <> in das schwarze <>  <>  <>  <>  <>  <>  <> 50
-muendet <> die isar <> nothing <> in die donau <>  <>  <>  <>  <>  <>  <> 50
-muendet <> die rur <> nothing <> in die maas <>  <>  <>  <>  <>  <>  <> 50
-muendet <> die salzach <> nothing <>  in den inn <>  <>  <>  <>  <>  <>  <> 50
-muendet <> die wolga <> nothing <> in das kaspische  meer<>  <>  <>  <>  <>  <>  <> 50
-muendet <> die wolga <> nothing <> in das kaspischen meer <>  <>  <>  <>  <>  <>  <> 50
-muendet <> nothing <> nothing <> der ubangi in den kongo <>  <>  <>  <>  <>  <>  <> 50
-muendet <> nothing <> nothing <> die ruhr in die maas <>  <>  <>  <>  <>  <>  <> 50
+muendet <> die isar <>  <> in die donau <>  <>  <>  <>  <>  <>  <> 50
+muendet <> die rur <>  <> in die maas <>  <>  <>  <>  <>  <>  <> 50
+muendet <> die salzach <>  <>  in den inn <>  <>  <>  <>  <>  <>  <> 50
+muendet <> die wolga <>  <> in das kaspische  meer<>  <>  <>  <>  <>  <>  <> 50
+muendet <> die wolga <>  <> in das kaspischen meer <>  <>  <>  <>  <>  <>  <> 50
 nennen <> die eskimos <> sich selbst inuit <>  <>  <>  <>  <>  <>  <>  <> 50
 nennt <> china <> man <> das _reich_der_mitte_ <>  <>  <>  <>  <>  <>  <> 50
 nennt <> eine seichte stelle <> man furt <> in dem fluss <>  <>  <>  <>  <>  <>  <> 50
@@ -8224,6 +8121,7 @@ nennt <> salzhaltige quellen <> man solen <>  <>  <>  <>  <>  <>  <>  <> 50
 nennt <> singapure <> man die loewenstadt <>  <>  <>  <>  <>  <>  <>  <> 50
 schrieb <> ernest hemingway <> _wem die stunde schlaegt_ <>  <>  <>  <>  <>  <>  <>  <> 50
 sieht <> eine sonnenfinsternis <> man nur bei neumond <>  <>  <>  <>  <>  <>  <>  <> 50
+sind <>  <>  <> die dajak die einwohner von borneo <>  <>  <>  <>  <>  <>  <> 50
 sind <> 10 berge <> hoeher als 8000 meter <> auf der erde <>  <>  <>  <>  <>  <>  <> 50
 sind <> carbonate <> die salze <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> 50
 sind <> die alpen <> eine grosse gebirgskette <> in europa <>  <>  <>  <>  <>  <>  <> 50
@@ -8235,108 +8133,106 @@ sind <> die kordilleren <> das laengste faltengebirgssystem <> der erde <>  <>  
 sind <> die kordilleren <> ein gebirgszug <> in amerika <>  <>  <>  <>  <>  <>  <> 50
 sind <> die maori <> die ureinwohner <>   von neuseeland <>  <>  <>  <>  <>  <>  <> 50
 sind <> die molukken <> eine inselgruppe <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> die niederlande <> nothing <> das land der tulpen <>  <>  <>  <>  <>  <>  <> 50
+sind <> die niederlande <>  <> das land der tulpen <>  <>  <>  <>  <>  <>  <> 50
 sind <> die orgelpfeifen <> ein felsenmassiv <> in dem erzgebirge <>  <>  <>  <>  <>  <>  <> 50
-sind <> die padaung <> nothing <> in myanmar zu hause <>  <>  <>  <>  <>  <>  <> 50
+sind <> die padaung <>  <> in myanmar zu hause <>  <>  <>  <>  <>  <>  <> 50
 sind <> die perseiden <> ein sternschnuppenschwarm <>  <>  <>  <>  <>  <>  <>  <> 50
 sind <> die petronas twin towers <> das wahrzeichen  <> von kuala lumpur<>  <>  <>  <>  <>  <>  <> 50
 sind <> die usa <> die vereinigten staaten <> von amerika <>  <>  <>  <>  <>  <>  <> 50
 sind <> die_faeroeer_inseln <> ein teil <> von daenemark <>  <>  <>  <>  <>  <>  <> 50
-sind <> eine inselgruppe <> nothing <> die antillen  in der karibik <>  <>  <>  <>  <>  <>  <> 50
-sind <> eine inselgruppe <> nothing <> die balearen <>  <>  <>  <>  <>  <>  <> 50
+sind <> eine inselgruppe <>  <> die antillen  in der karibik <>  <>  <>  <>  <>  <>  <> 50
+sind <> eine inselgruppe <>  <> die balearen <>  <>  <>  <>  <>  <>  <> 50
 sind <> greyhounds <> ueberlandbusse <> in den usa <>  <>  <>  <>  <>  <>  <> 50
-sind <> nothing <> nothing <> die dajak die einwohner von borneo <>  <>  <>  <>  <>  <>  <> 50
-sind <> tage <> nothing <> die eisheiligen  in dem mai <>  <>  <>  <>  <>  <>  <> 50
+sind <> tage <>  <> die eisheiligen  in dem mai <>  <>  <>  <>  <>  <>  <> 50
 spricht <> ladinisch <> man <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
 spricht <> man <> ladinisch <> in suedtirol <>  <>  <>  <>  <>  <>  <> 50
 st <> der musa ali <> der hoechste berg <> von djibouti <>  <>  <>  <>  <>  <>  <> 50
-stammt <> das wort astronomie <> nothing <> aus dem griechischen <>  <>  <>  <>  <>  <>  <> 50
+stammt <> das wort astronomie <>  <> aus dem griechischen <>  <>  <>  <>  <>  <>  <> 50
 startete <> ariane <> 1979 <> zum ersten mal <>  <>  <>  <>  <>  <>  <> 50
-startete <> das erste spaceshuttle <> nothing <> 1981 <>  <>  <>  <>  <>  <>  <> 50
-stehen <> 50 sterne <> nothing <> auf der flagge der usa <>  <>  <>  <>  <>  <>  <> 50
-stehen <> nothing <> nothing <> die _ruinen_von_palmyra_ in syrien <>  <>  <>  <>  <>  <>  <> 50
-steht <>  das loewentor<> nothing <>  in mykene <>  <>  <>  <>  <>  <>  <> 50
+startete <> das erste spaceshuttle <>  <> 1981 <>  <>  <>  <>  <>  <>  <> 50
+stehen <>  <>  <> die _ruinen_von_palmyra_ in syrien <>  <>  <>  <>  <>  <>  <> 50
+stehen <> 50 sterne <>  <> auf der flagge der usa <>  <>  <>  <>  <>  <>  <> 50
+steht <>  <>  <> das holstentor in luebeck <>  <>  <>  <>  <>  <>  <> 50
+steht <>  das loewentor<>  <>  in mykene <>  <>  <>  <>  <>  <>  <> 50
 steht <> _gmt_ <> fuer _greenwich_mean_time_ <>  <>  <>  <>  <>  <>  <>  <> 50
-steht <> das _museo_del_prado_ <> nothing <> in madrid <>  <>  <>  <>  <>  <>  <> 50
-steht <> das atomium <> nothing <> in bruessel <>  <>  <>  <>  <>  <>  <> 50
-steht <> das bolschoi-theater <> nothing <> in moskau <>  <>  <>  <>  <>  <>  <> 50
-steht <> das brandenburger tor <> nothing <> in berlin <>  <>  <>  <>  <>  <>  <> 50
-steht <> das burgtheater <> nothing <> in wien <>  <>  <>  <>  <>  <>  <> 50
-steht <> das giuseppe-meazza-stadion <> nothing <> in mailand <>  <>  <>  <>  <>  <>  <> 50
-steht <> das guggenheim museum <> nothing <> in new_york <>  <>  <>  <>  <>  <>  <> 50
-steht <> das gulbenkian-museum <> nothing <> in lissabon <>  <>  <>  <>  <>  <>  <> 50
-steht <> das hauptwerk von porsche<> nothing <> in stuttgart-zuffenhausen <>  <>  <>  <>  <>  <>  <> 50
+steht <> das _museo_del_prado_ <>  <> in madrid <>  <>  <>  <>  <>  <>  <> 50
+steht <> das atomium <>  <> in bruessel <>  <>  <>  <>  <>  <>  <> 50
+steht <> das bolschoi-theater <>  <> in moskau <>  <>  <>  <>  <>  <>  <> 50
+steht <> das brandenburger tor <>  <> in berlin <>  <>  <>  <>  <>  <>  <> 50
+steht <> das burgtheater <>  <> in wien <>  <>  <>  <>  <>  <>  <> 50
+steht <> das giuseppe-meazza-stadion <>  <> in mailand <>  <>  <>  <>  <>  <>  <> 50
+steht <> das guggenheim museum <>  <> in new_york <>  <>  <>  <>  <>  <>  <> 50
+steht <> das gulbenkian-museum <>  <> in lissabon <>  <>  <>  <>  <>  <>  <> 50
+steht <> das hauptwerk von porsche<>  <> in stuttgart-zuffenhausen <>  <>  <>  <>  <>  <>  <> 50
 steht <> das hermannsdenkmal <>  <> in dem teutoburger wald<>  <>  <>  <>  <>  <>  <> 50
-steht <> das kolosseum <> nothing <> in rom <>  <>  <>  <>  <>  <>  <> 50
-steht <> das riesenrad <> nothing <> in dem prater <>  <>  <>  <>  <>  <>  <> 50
-steht <> das riesenrad <> nothing <> in wien <>  <>  <>  <>  <>  <>  <> 50
-steht <> das schloss schoenbrunn <> nothing <> in wien <>  <>  <>  <>  <>  <>  <> 50
-steht <> das stedelijk museum <> nothing <> in amsterdam <>  <>  <>  <>  <>  <>  <> 50
-steht <> der _ayers_rock_ <> nothing <> in dem uluru-nationalpark <>  <>  <>  <>  <>  <>  <> 50
+steht <> das kolosseum <>  <> in rom <>  <>  <>  <>  <>  <>  <> 50
+steht <> das riesenrad <>  <> in dem prater <>  <>  <>  <>  <>  <>  <> 50
+steht <> das riesenrad <>  <> in wien <>  <>  <>  <>  <>  <>  <> 50
+steht <> das schloss schoenbrunn <>  <> in wien <>  <>  <>  <>  <>  <>  <> 50
+steht <> das stedelijk museum <>  <> in amsterdam <>  <>  <>  <>  <>  <>  <> 50
+steht <> der _ayers_rock_ <>  <> in dem uluru-nationalpark <>  <>  <>  <>  <>  <>  <> 50
 steht <> der _madison_sqare_garden_ <> york <> in new <>  <>  <>  <>  <>  <>  <> 50
-steht <> der _petronas_tower_ <> nothing <> in malaysia <>  <>  <>  <>  <>  <>  <> 50
-steht <> der _sears_tower_ <> nothing <> in chicago <>  <>  <>  <>  <>  <>  <> 50
-steht <> der beruehmte schiefe turm <> nothing <> in pisa <>  <>  <>  <>  <>  <>  <> 50
-steht <> der dogenpalast <> nothing <> in venedig <>  <>  <>  <>  <>  <>  <> 50
-steht <> der eifelturm <> nothing <> bei boos <>  <>  <>  <> nothing <> nothing <>  <> 50
+steht <> der _petronas_tower_ <>  <> in malaysia <>  <>  <>  <>  <>  <>  <> 50
+steht <> der _sears_tower_ <>  <> in chicago <>  <>  <>  <>  <>  <>  <> 50
+steht <> der beruehmte schiefe turm <>  <> in pisa <>  <>  <>  <>  <>  <>  <> 50
+steht <> der dogenpalast <>  <> in venedig <>  <>  <>  <>  <>  <>  <> 50
+steht <> der eifelturm <>  <> bei boos <>  <>  <>  <>  <>  <>  <> 50
 steht <> der eiffel turm <>  <> in paris <> ist <> er <> 300 meter <> hoch <>  <>  <> 50
-steht <> der eiffelturm <> nothing <> in paris <>  <>  <>  <> nothing <> nothing <>  <> 50
-steht <> der groesste kaminzuggrill <> nothing <> der welt;in thueringen <>  <>  <>  <>  <>  <>  <> 50
-steht <> der habenbeck tierpark <> nothing <> in hamburg <>  <>  <>  <>  <>  <>  <> 50
-steht <> der hoechste kirchturm <> nothing <> der welt;in ulm <>  <>  <>  <>  <>  <>  <> 50
-steht <> der hradschin <> nothing <> in prag <>  <>  <>  <>  <>  <>  <> 50
-steht <> der kreml <> nothing <> in moskau <>  <>  <>  <>  <>  <>  <> 50
-steht <> der schwammerlturm <> nothing <> in leoben <>  <>  <>  <>  <>  <>  <> 50
-steht <> der stefansdom <> nothing <> in wien <>  <>  <>  <>  <>  <>  <> 50
-steht <> der uhrturm <> nothing <> auf dem schlossberg <>  <>  <>  <>  <>  <>  <> 50
-steht <> der zuckerhut <> nothing <> in rio_de_janeiro <>  <>  <>  <>  <>  <>  <> 50
-steht <> die _blaue_moschee_ <> nothing <> in istanbul <>  <>  <>  <>  <>  <>  <> 50
-steht <> die _hagia_sophia_ <> nothing <> in istanbul <>  <>  <>  <>  <>  <>  <> 50
-steht <> die akropolis <> nothing <> in athen <>  <>  <>  <>  <>  <>  <> 50
-steht <> die amalienborg  <> nothing <> in kopenhagen <>  <>  <>  <>  <>  <>  <> 50
-steht <> die aol-arena <> nothing <> in hamburg <>  <>  <>  <>  <>  <>  <> 50
-steht <> die bergisel schanze <> nothing <> in innsbruck <>  <>  <>  <>  <>  <>  <> 50
-steht <> die frauenkirche <> nothing <> in muenchen <>  <>  <>  <>  <>  <>  <> 50
+steht <> der eiffelturm <>  <> in paris <>  <>  <>  <>  <>  <>  <> 50
+steht <> der groesste kaminzuggrill <>  <> der welt;in thueringen <>  <>  <>  <>  <>  <>  <> 50
+steht <> der habenbeck tierpark <>  <> in hamburg <>  <>  <>  <>  <>  <>  <> 50
+steht <> der hoechste kirchturm <>  <> der welt;in ulm <>  <>  <>  <>  <>  <>  <> 50
+steht <> der hradschin <>  <> in prag <>  <>  <>  <>  <>  <>  <> 50
+steht <> der kreml <>  <> in moskau <>  <>  <>  <>  <>  <>  <> 50
+steht <> der schwammerlturm <>  <> in leoben <>  <>  <>  <>  <>  <>  <> 50
+steht <> der stefansdom <>  <> in wien <>  <>  <>  <>  <>  <>  <> 50
+steht <> der uhrturm <>  <> auf dem schlossberg <>  <>  <>  <>  <>  <>  <> 50
+steht <> der zuckerhut <>  <> in rio_de_janeiro <>  <>  <>  <>  <>  <>  <> 50
+steht <> die _blaue_moschee_ <>  <> in istanbul <>  <>  <>  <>  <>  <>  <> 50
+steht <> die _hagia_sophia_ <>  <> in istanbul <>  <>  <>  <>  <>  <>  <> 50
+steht <> die akropolis <>  <> in athen <>  <>  <>  <>  <>  <>  <> 50
+steht <> die amalienborg  <>  <> in kopenhagen <>  <>  <>  <>  <>  <>  <> 50
+steht <> die aol-arena <>  <> in hamburg <>  <>  <>  <>  <>  <>  <> 50
+steht <> die bergisel schanze <>  <> in innsbruck <>  <>  <>  <>  <>  <>  <> 50
+steht <> die frauenkirche <>  <> in muenchen <>  <>  <>  <>  <>  <>  <> 50
 steht <> die hagia sophia<>  <> in istanbul <>  <>  <>  <>  <>  <>  <> 50
-steht <> die kaaba <> nothing <> in mekka <>  <>  <>  <>  <>  <>  <> 50
-steht <> die kraemerbruecke <> nothing <> in erfurt <>  <>  <>  <>  <>  <>  <> 50
-steht <> die meerjungfrau <> nothing <>  in kopenhagen <>  <>  <>  <>  <>  <>  <> 50
-steht <> die rialtobruecke <> nothing <> in venedig <>  <>  <>  <>  <>  <>  <> 50
-steht <> die sankt-nepomuk-bruecke <> nothing <>  in prag <>  <>  <>  <>  <>  <>  <> 50
+steht <> die kaaba <>  <> in mekka <>  <>  <>  <>  <>  <>  <> 50
+steht <> die kraemerbruecke <>  <> in erfurt <>  <>  <>  <>  <>  <>  <> 50
+steht <> die meerjungfrau <>  <>  in kopenhagen <>  <>  <>  <>  <>  <>  <> 50
+steht <> die rialtobruecke <>  <> in venedig <>  <>  <>  <>  <>  <>  <> 50
+steht <> die sankt-nepomuk-bruecke <>  <>  in prag <>  <>  <>  <>  <>  <>  <> 50
 steht <> die sonne <> an dem 26 juni <>  an dem suedlichen wendekreis <>  <>  <>  <>  <>  <>  <> 50
 steht <> die stiftsbibliothek <> gallen <> in st <>  <>  <>  <>  <>  <>  <> 50
-steht <> die tower bridge <> nothing <> in london <>  <>  <>  <>  <>  <>  <> 50
-steht <> die_porta_nigra <> nothing <> in trier <>  <>  <>  <>  <>  <>  <> 50
+steht <> die tower bridge <>  <> in london <>  <>  <>  <>  <>  <>  <> 50
+steht <> die_porta_nigra <>  <> in trier <>  <>  <>  <>  <>  <>  <> 50
 steht <> in mariazell <> die beruehmteste wallfahrtskirche <>  von oesterreich <>  <>  <>  <>  <>  <>  <> 50
-steht <> nothing <> nothing <> das holstentor in luebeck <>  <>  <>  <>  <>  <>  <> 50
-steht <> taipeh 101 <> nothing <> in taiwan <>  <>  <>  <>  <>  <>  <> 50
+steht <> taipeh 101 <>  <> in taiwan <>  <>  <>  <>  <>  <>  <> 50
 trennt <> der bosporus <> europa <> von asien <>  <>  <>  <>  <>  <>  <> 50
 trennt <> der ural <> asien <> von europa <>  <>  <>  <>  <>  <>  <> 50
 trennt <> der ural <> europa <> von asien <>  <>  <>  <>  <>  <>  <> 50
 umrundet <> der mond <> die erde <> in einem monat <>  <>  <>  <>  <>  <>  <> 50
 umrundet <> die erde <> die sonne <> in einem jahr <>  <>  <>  <>  <>  <>  <> 50
-untergeht <> die sonne <> nothing <> in dem westen <>  <>  <>  <>  <>  <>  <> 50
+untergeht <> die sonne <>  <> in dem westen <>  <>  <>  <>  <>  <>  <> 50
 verbinden <> die dardanellen <> das marmarameer meer <> mit dem aegaeischen meer<>  <>  <>  <>  <>  <>  <> 50
 verbindet <> der arlbergtunnel <> tirol <> mit vorarlberg <>  <>  <>  <>  <>  <>  <> 50
 verbindet <> der bosporus <> das schwarze meer <>   mit dem marmarameer <>  <>  <>  <>  <>  <>  <> 50
 verbindet <> der eurotunnel <> frankreich <> mit england <>  <>  <>  <>  <>  <>  <> 50
-verbindet <> der panamakanal <> nothing <> den atlantik mit dem pazifik <>  <>  <>  <>  <>  <>  <> 50
+verbindet <> der panamakanal <>  <> den atlantik mit dem pazifik <>  <>  <>  <>  <>  <>  <> 50
 verbindet <> der simplontunnel <> die schweiz <> mit italien <>  <>  <>  <>  <>  <>  <> 50
 verschlucken <> schwarze loecher <> licht <>  <>  <>  <>  <>  <>  <>  <> 50
 verschlucken <> schwarze loecher <> materie <>  <>  <>  <>  <>  <>  <>  <> 50
 verschlucken <> schwarze loecher <> materie bzw licht <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> alcatraz <> eine gefaengnisinsel <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> armstrong neil<> der erste mensch <> auf dem mond <>  <>  <>  <>  <>  <>  <> 50
-war <> die erste raumfaehre <> nothing <> die columbia  der nasa <>  <>  <>  <>  <>  <>  <> 50
+war <> die erste raumfaehre <>  <> die columbia  der nasa <>  <>  <>  <>  <>  <>  <> 50
 war <> eine huendin <> das erste tier <> in dem weltall <>  <>  <>  <>  <>  <>  <> 50
 war <> jurij gagarin <> der erste mensch <> in dem weltraum <>  <>  <>  <>  <>  <>  <> 50
-war <> otto von bismarck<> nothing <> der erste deutsche kanzler <>  <>  <>  <>  <>  <>  <> 50
+war <> otto von bismarck<>  <> der erste deutsche kanzler <>  <>  <>  <>  <>  <>  <> 50
 war <> suedafrika <> eine deutsche kolonie <> nicht <>  <>  <>  <>  <>  <>  <> 50
-weht <> der mistral <> nothing <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
+weht <> der mistral <>  <> in frankreich <>  <>  <>  <>  <>  <>  <> 50
 weht <> der schirokko <> nur <> in dem fruehling <>  <>  <>  <>  <>  <>  <> 50
 wiegt <> die erde <> 5972 trillionen tonnen <>  <>  <>  <>  <>  <>  <>  <> 50
-wird <> 70 prozent <> nothing <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>  <>  <> 50
-wurde <> das erste planetarium <> nothing <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
-wurden <> die streichhoelzer <> nothing <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50
-ist  <> neapel <> eine stadt <> in italien <> 50
-ist <> florenz <> eine stadt <> in italien <> 50
+wird <> 70 prozent <>  <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>  <>  <> 50
+wurde <> das erste planetarium <>  <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
+wurde benannt <> der saturn <>  <> nach dem roemischen gott von der saat <> 50
+wurden <> die streichhoelzer <>  <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50

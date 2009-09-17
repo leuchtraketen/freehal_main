@@ -199006,7 +199006,7 @@ Tragkraft:
 Klagemauer:
   type: n
 muessen:
-  type: adv
+  type: vi
 Nationengemeinschaft:
   type: n
 isegrim:
@@ -205898,7 +205898,8 @@ Bietenden:
 Begriffssystem:
   type: n
 Alt:
-  type: adv
+  genus  : m
+  type: n
 Buchumschlge:
   type: n
 Begrenzungsleuchte:
@@ -220046,7 +220047,8 @@ schall:
 Oxidationsmitteloxydationsmittel:
   type: n
 nacht:
-  type: adv
+  genus: f
+  type: n
 Satzaussage:
   type: n
 Windrschen:
