@@ -1329,10 +1329,10 @@
 = <> _diagonal_ <> nothing <> _quer_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _diagonal_ <> nothing <> _schief_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _diagonal_ <> nothing <> _schraeg_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _diakonisse_ <> _diakonissin_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _diakonisse_ <> _schwester_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _diakonissin_ <> _diakonisse_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _diakonissin_ <> _schwester_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _diakonise_ <> _diakonisin_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _diakonise_ <> _schwester_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _diakonisin_ <> _diakonise_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _diakonisin_ <> _schwester_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _dialekt_ <> _kulturdialekt_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _dialekt_ <> _mundart_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _dialektologe_ <> _mundartforscher_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -8152,8 +8152,8 @@
 = <> _schwer_verstaendlich_ <> nothing <> _verzwickt_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _schwer_verstaendlich_ <> nothing <> _vielschichtig_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _schwer_verstaendlich_ <> nothing <> _zusammengesetzt_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _schwester_ <> _diakonisse_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _schwester_ <> _diakonissin_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _schwester_ <> _diakonise_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _schwester_ <> _diakonisin_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _schwierig_ <> _kein_zuckerschlecken_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _schwierig_ <> _knifflig_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _schwierig_ <> _komplex_ <>  <>  <>  <> nothing <>  <>  <>  <> 50

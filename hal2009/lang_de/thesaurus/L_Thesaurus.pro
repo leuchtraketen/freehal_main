@@ -53,7 +53,7 @@
 = <> _laeufer_ <> _teppichvorleger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _laeusebefall_ <> _pedikulose_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _laeusebefall_ <> _phthiriasis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _laeusekamm_ <> _nissenkamm_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _laeusekamm_ <> _nisenkamm_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _lagenweise_ <> nothing <> _schichtweise_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _lage_ <> _position_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _lagerbestandswechsel_ <> _lagerumsatz_ <>  <>  <>  <> nothing <>  <>  <>  <> 50

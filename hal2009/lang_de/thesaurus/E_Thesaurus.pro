@@ -3066,11 +3066,11 @@
 = <> _erlauben_ <> nothing <> _konzedieren_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erlauben_ <> nothing <> _zugestehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erlaubnis_ <> _erlaubniskarte_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _erlaubnis_ <> _erlaubnisschein_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _erlaubnis_ <> _erlaubnischein_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erlaubniskarte_ <> _erlaubnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _erlaubniskarte_ <> _erlaubnisschein_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _erlaubnisschein_ <> _erlaubniskarte_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _erlaubnisschein_ <> _erlaubnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _erlaubniskarte_ <> _erlaubnischein_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _erlaubnischein_ <> _erlaubniskarte_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _erlaubnischein_ <> _erlaubnis_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erlebnisbad_ <> _freizeitbad_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erlebnisbad_ <> _spassbad_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _erledigt_sein_ <> nothing <> _fertig_sein_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3162,7 +3162,7 @@
 = <> _ernst_ <> nothing <> _verbissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ernst_ <> nothing <> _zeremoniell_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _eroberer_ <> _invasor_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _eroeffnung_einer_kunstausstellung_ <> _vernissage_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _eroeffnung_einer_kunstausstellung_ <> _vernisage_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _eroeffnung_ <> _einfuehrung_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _eroeffnung_ <> _einleitung_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _eroeffnungsveranstaltung_ <> _premierenfeier_ <>  <>  <>  <> nothing <>  <>  <>  <> 50

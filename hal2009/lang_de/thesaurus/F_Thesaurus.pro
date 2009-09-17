@@ -2264,7 +2264,7 @@
 = <> _freiheitlich_ <> nothing <> _liberal_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsberaubung_ <> _freiheitsentzug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsentzug_ <> _freiheitsstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _freiheitsentzug_ <> _gefaengnisstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _freiheitsentzug_ <> _gefaengnistrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsentzug_ <> _haftstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsgrade_ <> _parameter_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitskaempfer_ <> _freischaerler_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2277,7 +2277,7 @@
 = <> _freiheitskampf_ <> _untergrundkampf_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitskampf_ <> _widerstand_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsstrafe_ <> _freiheitsentzug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _freiheitsstrafe_ <> _gefaengnisstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _freiheitsstrafe_ <> _gefaengnistrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheitsstrafe_ <> _haftstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheit_ <> _unabhaengigkeit_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _freiheit_ <> _ungebundenheit_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3120,9 +3120,9 @@
 = <> _gefaehrt_ <> _fahrzeug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gefaehrt_ <> _vehikel_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gefaehrt_ <> _verkehrsmittel_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _gefaengnisstrafe_ <> _freiheitsentzug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _gefaengnisstrafe_ <> _freiheitsstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _gefaengnisstrafe_ <> _haftstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _gefaengnistrafe_ <> _freiheitsentzug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _gefaengnistrafe_ <> _freiheitsstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _gefaengnistrafe_ <> _haftstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gefleckt_ <> nothing <> _fleckig_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gefleckt_ <> nothing <> _gescheckt_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _gefleckt_ <> nothing <> _scheckig_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3617,7 +3617,7 @@
 = <> _haeufig_gestellte_fragen_ <> _frequently_asked_questions_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _haftstrafe_ <> _freiheitsentzug_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _haftstrafe_ <> _freiheitsstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _haftstrafe_ <> _gefaengnisstrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _haftstrafe_ <> _gefaengnistrafe_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hain_ <> _forst_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hain_ <> _tann_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hain_ <> _wald_ <>  <>  <>  <> nothing <>  <>  <>  <> 50

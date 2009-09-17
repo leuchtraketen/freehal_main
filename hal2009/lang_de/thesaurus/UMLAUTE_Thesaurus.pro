@@ -611,7 +611,7 @@
 = <> _drauf_haben_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _drauf_haben_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _drauf_haben_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _drauf_haben_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _drauf_haben_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _drauf_haben_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _drauf_haben_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _dreistigkeit_ <> _keckheit_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -1849,7 +1849,7 @@
 = <> _kennen_ <> nothing <> _drauf_haben_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _kennen_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _kennen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _kennen_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _kennen_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _kennen_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _kennen_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _klaeren_ <> nothing <> _nachschauen_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2377,7 +2377,7 @@
 = <> _nachvollziehen_ <> nothing <> _drauf_haben_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _nachvollziehen_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _nachvollziehen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _nachvollziehen_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _nachvollziehen_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _nachvollziehen_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _nachvollziehen_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _nachweisbar_ <> nothing <> _beobachtbar_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3869,7 +3869,7 @@
 = <> _ueberblicken_ <> nothing <> _drauf_haben_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberblicken_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberblicken_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueberblicken_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueberblicken_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberblicken_ <> nothing <> _uebersehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberblicken_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberblicken_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -4148,12 +4148,12 @@
 = <> _ueberkandidelt_ <> nothing <> _eingebildet_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberkandidelt_ <> nothing <> _hochnaesig_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberkandidelt_ <> nothing <> _schnippisch_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> nothing <> _drauf_haben_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _ueber_kenntnisse_verfuegen_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> nothing <> _drauf_haben_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _ueber_kenntnise_verfuegen_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberkirchlich_ <> nothing <> _oekumenisch_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberkirchlich_ <> nothing <> _zwischenkirchlich_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _ueberkreuzen_ <> nothing <> _verschraenken_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -5227,7 +5227,7 @@
 = <> _verstehen_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _verstehen_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _verstehen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _verstehen_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _verstehen_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _verstehen_ <> nothing <> _wissen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _verstiegen_ <> nothing <> _extravagant_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _verstiegen_ <> nothing <> _ueberspannt_ <>  <>  <> nothing <>  <>  <>  <> 50
@@ -5545,7 +5545,7 @@
 = <> _wissen_ <> nothing <> _kennen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _wissen_ <> nothing <> _nachvollziehen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _wissen_ <> nothing <> _ueberblicken_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _wissen_ <> nothing <> _ueber_kenntnisse_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
+= <> _wissen_ <> nothing <> _ueber_kenntnise_verfuegen_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _wissen_ <> _verstehen_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _wohlbeleibt_ <> _fett_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _wohlbeleibt_ <> nothing <> _beleibt_ <>  <>  <> nothing <>  <>  <>  <> 50
