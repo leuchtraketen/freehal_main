@@ -373,13 +373,9 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, append
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
-    print into var output_handle data "  type: "
-    print into var output_handle data from array tags item [ 0 ]
-    print into var output_handle data new line
+    print into var output_handle data "  type: " concat from array tags item [ 0 ] concat new line
     if not from array tags item [ 1 ] matches /q/ do
-        print into var output_handle data "  genus: "
-        print into var output_handle data from array tags item [ 1 ]
-        print into var output_handle data new line
+        print into var output_handle data "  genus: " concat from array tags item [ 1 ] concat new line
     done
 
     do close with var output_handle
@@ -390,17 +386,15 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/protocol.memory", append
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
-    print into var output_handle data "  type: "
-    print into var output_handle data from array tags item [ 0 ]
-    print into var output_handle data new line
+    print into var output_handle data "  type: " concat from array tags item [ 0 ] concat new line
     if not from array tags item [ 1 ] matches /q/ do
-        print into var output_handle data "  genus: "
-        print into var output_handle data from array tags item [ 1 ]
-        print into var output_handle data new line
+        print into var output_handle data "  genus: " concat from array tags item [ 1 ] concat new line
     done
 
     do close with var output_handle
 done
+
+set new hash content_of_memory_file to an empty hash
 
 # TEXT
 # Search in the memory file for the word "name_of_entry".
@@ -412,12 +406,26 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         print new line
     done
     
+    set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
+    
+    if not from hash content_of_memory_file item { var file_name } do
+        # read file into cache if there is no cache yet
+        do be_slow without arguments
+        print "Caching file " concat var file_name concat "..."
+        print new line
+        
+        for each new var line from var input_handle is rw do
+            # no line ending
+            do chomp using var line
+            do regex using var line: /<[\r\n]>/, "", :global
+            do push with items of that array: from hash content_of_memory_file item { var file_name } end-items-of, var line
+        done
+    done
     
     do be_slow without arguments
     print "Searching   " concat var name_of_entry concat "    \tin file " concat var file_name
     print new line
     
-    set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
     set new var end_of_entry_line to ':'
     do regex using var name_of_entry: /[\(\)]/, "", :global:i
     set var name_of_entry to var name_of_entry concat "("
@@ -435,14 +443,15 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     
     do be_slow without arguments
     
+    set new var i to 0
+    set new array contents to from hash content_of_memory_file item { var file_name }
     # go through the lines
-    for each new var line from var input_handle is rw do
-        # no line ending
-        do chomp using var line
-        do regex using var line: /<[\r\n]>/, "", :global
+    while var i < items of array contents do
+        set new var line to from array contents item [ var i ]
         
         # line starts with a space?
         if var line matches /^\s/ do
+            set var i to var i + 1
             go to next
         done
         else do
@@ -453,9 +462,10 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
                 print new line
                 print var line
                 print new line
+                set var i to var i + 1
                 # we've found the right entry!
-                for each new var line from var input_handle is rw do
-                    do regex using var line: /<[\r\n]>/, "", :global
+                while var i < items of array contents do
+                    set new var line to from array contents item [ var i ]
                     
                     if var line matches /^\s*?(\S*?)<[var end_of_entry_line]>\s*?(\S+)/ do
                         if $0 matches "type" do
@@ -469,6 +479,8 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
                     else do
                         go to last
                     done
+                    
+                    set var i to var i + 1
                 done
                 if (not var type matches "q") or (not var genus matches "q") do
                     print "Found do      " concat var name_of_entry concat "    \tin file " concat var file_name
@@ -482,6 +494,8 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
                 done
             done
         done
+        
+        set var i to var i + 1
     done
     do be_slow without arguments
 

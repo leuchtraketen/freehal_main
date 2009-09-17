@@ -3271,10 +3271,12 @@ define action adjust_truth with array result, var truth, var number_of_clause, v
     if var truth < 0.5 do
         print " = wrong", new line
         if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein/, "kein", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
         else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein/, "kein", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
         else do
             set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]

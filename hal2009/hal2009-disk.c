@@ -435,7 +435,19 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 continue;
             }
             
-            if (strstr(words[n][m]->name, "*")) {
+            if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
+                if (strstr(words[n][m]->name+1, "*")) {
+                    strcat(sql, "OR rel_word_fact.word GLOB \"");
+                    strcat(sql, words[n][m]->name+1);
+                    strcat(sql, "\"");
+                }
+                else {
+                    strcat(sql, "OR rel_word_fact.word = \"");
+                    strcat(sql, words[n][m]->name+1);
+                    strcat(sql, "\"");
+                }
+            }
+            else if (strstr(words[n][m]->name, "*")) {
                 strcat(sql, "OR rel_word_fact.word GLOB \"");
                 strcat(sql, words[n][m]->name);
                 strcat(sql, "\"");
