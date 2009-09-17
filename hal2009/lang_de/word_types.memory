@@ -1,3 +1,817 @@
+beleidige:
+  type: vi
+beibringt:
+  type: vi
+Emailadresse:
+  genus  : f
+  type: n
+Mailadresse:
+  genus  : f
+  type: n
+netter:
+  type: adj
+FreeHal:
+  type: n
+infoFreeHal:
+  type: n
+unterhalte:
+  type: n
+seele:
+  genus  : f
+  type: n
+tuerkischer:
+  type: adj
+Adem:
+  type: n
+Ahmed:
+  type: n
+Ahmet:
+  type: n
+Akin:
+  type: n
+Alara:
+  type: n
+Aleyna:
+  type: n
+Aliye:
+  type: n
+Alkim:
+  type: n
+Alparslan:
+  type: n
+Alpay:
+  type: n
+Altair:
+  type: n
+Anvi:
+  type: n
+Argun:
+  type: n
+Arife:
+  type: n
+Arslan:
+  type: n
+Arzu:
+  type: n
+Asiye:
+  type: n
+Asuman:
+  type: n
+Aydin:
+  type: n
+Ayfer:
+  type: n
+Ayhan:
+  type: n
+Aykut:
+  type: n
+Ayla:
+  type: n
+Aylin:
+  type: n
+Ayse:
+  type: n
+Ayseguel:
+  type: n
+Aysun:
+  type: n
+Aytac:
+  type: n
+Azdin:
+  type: n
+Azize:
+  type: n
+Bahar:
+  type: n
+Bahire:
+  type: n
+Banu:
+  type: n
+Baran:
+  type: n
+Batu:
+  type: n
+Batuhan:
+  type: n
+Bayram:
+  type: n
+Bebisim:
+  type: n
+Beguem:
+  type: n
+Bekir:
+  type: n
+Belim:
+  type: n
+Belma:
+  type: n
+Benan:
+  type: n
+Berfin:
+  type: n
+Berkan:
+  type: n
+Berkant:
+  type: n
+Berkay:
+  type: n
+Bertan:
+  type: n
+Betuel:
+  type: n
+Beyza:
+  type: n
+Billur:
+  type: n
+Buelent:
+  type: n
+Buenyamin:
+  type: n
+Buersa:
+  type: n
+Bumin:
+  type: n
+Burak:
+  type: n
+Burcu:
+  type: n
+Burhan:
+  type: n
+Cagdas:
+  type: n
+Canan:
+  type: n
+Caner:
+  type: n
+Cansu:
+  type: n
+Cem:
+  type: n
+Cemil:
+  type: n
+Cengiz:
+  type: n
+Cenk:
+  type: n
+Ceren:
+  type: n
+Cevat:
+  type: n
+Cevet:
+  type: n
+Ceyda:
+  type: n
+Ceylan:
+  type: n
+Ceylin:
+  type: n
+Cigdem:
+  type: n
+Cihan:
+  type: n
+Cueneyd:
+  type: n
+Damla:
+  type: n
+Danis:
+  type: n
+Dawoud:
+  type: n
+Defne:
+  type: n
+Demir:
+  type: n
+Deniz:
+  type: n
+Derya:
+  type: n
+Devran:
+  type: n
+Dilara:
+  type: n
+Dilay:
+  type: n
+Dilek:
+  type: n
+Duenya:
+  type: n
+Duygu:
+  type: n
+Ebru:
+  type: n
+Ecrin:
+  type: n
+Efe:
+  type: n
+Ehab:
+  type: n
+Ekrem:
+  type: n
+Elanur:
+  type: n
+Elif:
+  type: n
+Elife:
+  type: n
+Eljesa:
+  type: n
+Elma:
+  type: n
+Elvan:
+  type: n
+Emel:
+  type: n
+Emina:
+  type: n
+Emine:
+  type: n
+Emir:
+  type: n
+Emirhan:
+  type: n
+Emrah:
+  type: n
+Emre:
+  type: n
+Ender:
+  type: n
+Enes:
+  type: n
+Enver:
+  type: n
+Erdal:
+  type: n
+Erdem:
+  type: n
+Erguen:
+  type: n
+Erhan:
+  type: n
+Erkan:
+  type: n
+Erol:
+  type: n
+Eron:
+  type: n
+Ersan:
+  type: n
+Ersen:
+  type: n
+Ertan:
+  type: n
+Esma:
+  type: n
+Faruk:
+  type: n
+Fathin:
+  type: n
+Fehim:
+  type: n
+Fehime:
+  type: n
+Fehmi:
+  type: n
+Ferhat:
+  type: n
+Feridi:
+  type: n
+Fethullah:
+  type: n
+Feyza:
+  type: n
+Fidan:
+  type: n
+Fikret:
+  type: n
+Filiz:
+  type: n
+Firat:
+  type: n
+Firdevs:
+  type: n
+Fuat:
+  type: n
+Funda:
+  type: n
+Furkan:
+  type: n
+Gamze:
+  type: n
+Gizem:
+  type: n
+Goekhan:
+  type: n
+Guel:
+  type: n
+Guelbin:
+  type: n
+Guelcan:
+  type: n
+Guelhan:
+  type: n
+Guelistan:
+  type: n
+Guelnaz:
+  type: n
+Guelsah:
+  type: n
+Guelten:
+  type: n
+Guenes:
+  type: n
+Guerbis:
+  type: n
+Gueven:
+  type: n
+Hadice:
+  type: n
+Hakan:
+  type: n
+Hakime:
+  type: n
+Halil:
+  type: n
+Halime:
+  type: n
+Halit:
+  type: n
+Hamdi:
+  type: n
+Hamide:
+  type: n
+Handan:
+  type: n
+Hanife:
+  type: n
+Hatce:
+  type: n
+Hayat:
+  type: n
+Hicran:
+  type: n
+Hilal:
+  type: n
+Hmanit:
+  type: n
+Huedanur:
+  type: n
+Huelya:
+  type: n
+Huerriyet:
+  type: n
+Hueseyin:
+  type: n
+Ilayda:
+  type: n
+Ilhan:
+  type: n
+Ilker:
+  type: n
+Ipek:
+  type: n
+Ired:
+  type: n
+Irem:
+  type: n
+Ismet:
+  type: n
+Iteri:
+  type: n
+Izel:
+  type: n
+Izzetin:
+  type: n
+Jale:
+  type: n
+Kaan:
+  type: n
+Kadir:
+  type: n
+Karanfil:
+  type: n
+Kaya:
+  type: n
+Kayra:
+  type: n
+Kemal:
+  type: n
+Kerem:
+  type: n
+Kerim:
+  type: n
+Kiymet:
+  type: n
+Koray:
+  type: n
+Korut:
+  type: n
+Kuebra:
+  type: n
+Lamya:
+  type: n
+Levent:
+  type: n
+Leyla:
+  type: n
+Lokman:
+  type: n
+Maali:
+  type: n
+Mahir:
+  type: n
+Mahmud:
+  type: n
+Mahoud:
+  type: n
+Maide:
+  type: n
+Makbule:
+  type: n
+Medine:
+  type: n
+Mehmed:
+  type: n
+Mehmet:
+  type: n
+Mehtap:
+  type: n
+Melda:
+  type: n
+Melek:
+  type: n
+Melih:
+  type: n
+Meliha:
+  type: n
+Melika:
+  type: n
+Melike:
+  type: n
+Meltem:
+  type: n
+Meral:
+  type: n
+Merdin:
+  type: n
+Mert:
+  type: n
+Merve:
+  type: n
+Meryem:
+  type: n
+Mesut:
+  type: n
+Metin:
+  type: n
+Meyra:
+  type: n
+Milana:
+  type: n
+Mirac:
+  type: n
+Miray:
+  type: n
+Mirza:
+  type: n
+Muege:
+  type: n
+Muejgan:
+  type: n
+Murat:
+  type: n
+Mustafa:
+  type: n
+Muzafer:
+  type: n
+Muzaffer:
+  type: n
+Nadira:
+  type: n
+Nasir:
+  type: n
+Necati:
+  type: n
+Necela:
+  type: n
+Nergis:
+  type: n
+Nergiz:
+  type: n
+Nermin:
+  type: n
+Neslihan:
+  type: n
+Nesrin:
+  type: n
+Neval:
+  type: n
+Nevin:
+  type: n
+Nevzat:
+  type: n
+Nihan:
+  type: n
+Nilay:
+  type: n
+Niyazi:
+  type: n
+Nura:
+  type: n
+Nurdan:
+  type: n
+Oemuer:
+  type: n
+Oender:
+  type: n
+Oezge:
+  type: n
+Oezguer:
+  type: n
+Oezkan:
+  type: n
+Oezlem:
+  type: n
+Oezuer:
+  type: n
+Okan:
+  type: n
+Oktay:
+  type: n
+Onur:
+  type: n
+Orcun:
+  type: n
+Orhan:
+  type: n
+Ozan:
+  type: n
+Pelin:
+  type: n
+Pervin:
+  type: n
+Pinar:
+  type: n
+Rabia:
+  type: n
+Ramazan:
+  type: n
+Ramiz:
+  type: n
+Rasim:
+  type: n
+Recep:
+  type: n
+Remzi:
+  type: n
+Reyhan:
+  type: n
+Rifat:
+  type: n
+Rojin:
+  type: n
+Rona:
+  type: n
+Ruhsar:
+  type: n
+Rukiye:
+  type: n
+Ruveyda:
+  type: n
+Sahin:
+  type: n
+Salah:
+  type: n
+Salih:
+  type: n
+Samet:
+  type: n
+Sami:
+  type: n
+Samya:
+  type: n
+Satet:
+  type: n
+Savas:
+  type: n
+Seckin:
+  type: n
+Seda:
+  type: n
+Sedat:
+  type: n
+Sefika:
+  type: n
+Selcuk:
+  type: n
+Selda:
+  type: n
+Selim:
+  type: n
+Selin:
+  type: n
+Selver:
+  type: n
+Selvi:
+  type: n
+Semih:
+  type: n
+Semiha:
+  type: n
+Semra:
+  type: n
+Sena:
+  type: n
+Sener:
+  type: n
+Serap:
+  type: n
+Serdar:
+  type: n
+Serhat:
+  type: n
+Serkan:
+  type: n
+Serpil:
+  type: n
+Sertac:
+  type: n
+Seval:
+  type: n
+Sevda:
+  type: n
+Sevgi:
+  type: n
+Sevil:
+  type: n
+Sevim:
+  type: n
+Sevinc:
+  type: n
+Seyma:
+  type: n
+Sezer:
+  type: n
+Shermin:
+  type: n
+Shirin:
+  type: n
+Sibel:
+  type: n
+Sinan:
+  type: n
+Sinem:
+  type: n
+Songuel:
+  type: n
+Sudenaz:
+  type: n
+Sueheyla:
+  type: n
+Suekrue:
+  type: n
+Sueleyman:
+  type: n
+Suleiman:
+  type: n
+Sultan:
+  type: n
+Taha:
+  type: n
+Tahira:
+  type: n
+Taner:
+  type: n
+Tansel:
+  type: n
+Tarek:
+  type: n
+Tarik:
+  type: n
+Tariq:
+  type: n
+Tarkan:
+  type: n
+Tayfun:
+  type: n
+Taylan:
+  type: n
+Tayyip:
+  type: n
+Tekin:
+  type: n
+Timucin:
+  type: n
+Timur:
+  type: n
+Tolga:
+  type: n
+Tuelay:
+  type: n
+Tufan:
+  type: n
+Tugba:
+  type: n
+Tuncay:
+  type: n
+Uemit:
+  type: n
+Uenal:
+  type: n
+Ufuk:
+  type: n
+Ugur:
+  type: n
+Umut:
+  type: n
+Usman:
+  type: n
+Veysel:
+  type: n
+Volkan:
+  type: n
+Yagmur:
+  type: n
+Yakup:
+  type: n
+Yaren:
+  type: n
+Yasar:
+  type: n
+Yasemin:
+  type: n
+Yasin:
+  type: n
+Yavuz:
+  type: n
+Yeliz:
+  type: n
+Yesim:
+  type: n
+Yessin:
+  type: n
+Yildiz:
+  type: n
+Yonca:
+  type: n
+Yorgi:
+  type: n
+Yudum:
+  type: n
+Yunus:
+  type: n
+Zafer:
+  type: n
+Zafire:
+  type: n
+Zahir:
+  type: n
+Zaim:
+  type: n
+Zaima:
+  type: n
+Zaynab:
+  type: n
+Zehra:
+  type: n
+Zeliha:
+  type: n
+Zelis:
+  type: n
+Zelisa:
+  type: n
+Zeqije:
+  type: n
+Zeynep:
+  type: n
+menschenaehnlichen:
+  type: adj
+Haushaltsgeraet:
+  genus  : s
+  type: n
+ueblicherweise:
+  type: adj
+Privathaushalt:
+  genus  : m
+  type: n
+gummihuhn:
+  genus  : s
+  type: n
+wesens:
+  type: n
+Lebensphase:
+  genus  : f
+  type: n
+Kindheit:
+  genus  : f
+  type: n
+Saeugling:
+  genus  : m
+  type: n
+Zeitraum:
+  genus  : m
+  type: n
+geschlechtlichen:
+  type: adj
 stiefelchen:
   genus  : s
   type: n
@@ -232813,4 +233627,5 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            
+  type: adj            arkan:
+  type: n
