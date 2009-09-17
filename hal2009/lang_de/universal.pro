@@ -1637,3 +1637,9 @@ krieg ist <>  <>  <> dumm <> 50
 gibt <> es <> eine butter <> nicht ohne milch <> 50
 gibt <> es <> ein wetter <> nicht in einem computer <> 50
 ist antwort <> das <> eine annehmbare <> nicht <> 50
+ist <> eine puppe <> eine figuerliche nachbildung  <> von einem menschen oder menschenaehnlichen wesens <> 50
+ist <> ein haushaltsgeraet <> ein mechanisches oder elektrisches geraet <>  <> benutzt wird <> das <>  <> in dem privathaushalt <>  <> 50
+ist <> ein kind <> ein mensch <>  <>  <> der sich <>  <> in der lebensphase von der kindheit befindet <>  <> 50
+ist <> ein saeugling <> ein kind <> in dem ersten lebensjahr <> 50
+ist <> ein baby <> ein kind <> in dem ersten lebensjahr <> 50
+ist <> die kindheit <> der zeitraum <> in dem leben von einem menschen von der geburt bis zur_geschlechtlichen_entwicklung <> 50
