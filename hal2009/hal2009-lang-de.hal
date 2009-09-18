@@ -2462,6 +2462,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'hautfarben' => "n",
           'fuenfte' => "adj",
           'manchmal' => "adj",
+          'luegen' => "vi",
+          'Luegen' => "n",
           'die' => "art",
           'findet' => "vt",
           'streng' => "adj",
