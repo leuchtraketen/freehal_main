@@ -403,10 +403,10 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
 
 char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int limit, int* position) {
 
-    char* sql = malloc(102400);
+    char* sql = malloc(512000);
     *sql = 0;
     
-    strcat(sql, "delete from cache_facts;");
+    strcat(sql, "delete from cache_facts ");
 
     int n, m, q;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
@@ -431,7 +431,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         
         for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
             if (n == 0 || n % 100 == 0) {
-                strcat(sql, "INSERT INTO cache_facts SELECT DISTINCT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts JOIN rel_word_fact ON facts.pk = rel_word_fact.fact WHERE 0 ");
+                strcat(sql, " ; INSERT INTO cache_facts SELECT DISTINCT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts JOIN rel_word_fact ON facts.pk = rel_word_fact.fact WHERE 0 ");
             }
 
             if (is_a_trivial_word(words[n][m]->name)) {
