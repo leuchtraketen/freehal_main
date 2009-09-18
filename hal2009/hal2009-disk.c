@@ -505,7 +505,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
 }
 
 struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || is_bad(questionword)) {
+    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
 
@@ -524,7 +524,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
 }
 
 struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || is_bad(questionword)) {
+    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
 
@@ -610,7 +610,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->extra        = divide_words("");
     fact->questionword = strdup("");
     fact->from         = strdup(argv[5] ? argv[5] : "");
-    fact->truth        = !argv[6] || argv[6][0] || argv[6][0] == '0' ? 0.0 : 1.0;
+    fact->truth        = !argv[6] || !argv[6][0] || argv[6][0] == '0' ? 0.0 : 1.0;
     
     req->facts[*req->position] = fact;
     debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);

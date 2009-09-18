@@ -3044,6 +3044,12 @@ define action compute_output with var output do
     do regex using var output: / von den /, " der ", :global:i
     do regex using var output: / von dem /, " des ", :global:i
     
+    do regex using var output: /\/must/, "", :global:i
+    do regex using var output: /\/may/, "", :global:i
+    do regex using var output: /\/can/, "", :global:i
+    do regex using var output: /\/want/, "", :global:i
+    do regex using var output: /\/should/, "", :global:i
+    
     do regex using var output: / nicht noch /, " noch nicht ", :global:i
 
     do regex using var output: / in jahre_/, " im Jahre ", :global:i
