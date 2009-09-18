@@ -40,8 +40,8 @@ static char* traditional_sqlite_sql_create_table = ""
 "CREATE INDEX `idx_facts_mix_1` ON `facts` (`mix_1`); "
 
 "CREATE TABLE `cache_facts` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
-"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), "
-"UNIQUE(`verb`, `subjects`, `objects`, `adverbs`, `truth`, `hash_clauses`));"
+"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50)"
+");"
 "CREATE INDEX `idx_cache_facts_rel` ON `cache_facts` (`rel`);"
 "CREATE INDEX `idx_cache_facts_truth` ON `cache_facts` (`truth`);"
 "CREATE INDEX `idx_cache_facts_verb` ON `cache_facts` (`verb`); "
@@ -2576,7 +2576,8 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 if (buffer) {
                     if (need_and) strcat(sql, " AND");
                     else          strcat(sql, "WHERE");
-                    strcat(sql, "(  (main.subjects IN (\"*\", \"\")) OR (main.objects IN (\"*\", \"\") AND clause.subjects IN (\"*\", \"\")) OR (");
+                    /// (main.subjects IN (\"*\", \"\")) OR (main.objects IN (\"*\", \"\") AND clause.subjects IN (\"*\", \"\")) OR 
+                    strcat(sql, "(  (");
                     strcat(sql, " ( main.mix_1 GLOB \"*");
                     strcat(sql, buffer);
                     strcat(sql, "*\")");

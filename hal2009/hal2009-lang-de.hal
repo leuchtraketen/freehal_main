@@ -2449,6 +2449,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'erfunden' => "adj",
           'untertaucht' => "vt",
           'besetzt' => "adj",
+          'haelt' => "vi",
           'derb' => "adj",
           'your' => "art",
           'neuen' => "adj",
@@ -3082,7 +3083,9 @@ define action compute_output with var output do
     set new var name to from array builtin_male_names item [ var random_number ]
 
     do regex using var output: /\$\$randomname\$\$/, "var name", :global:i
-    do regex using var output: /<[*]>/, "var name", :global:i
+    if not var output matches /......./ do
+        do regex using var output: /<[*]>/, "var name", :global:i
+    done
 
     do regex using var output: / von den /, " der ", :global:i
     do regex using var output: / von dem /, " des ", :global:i
