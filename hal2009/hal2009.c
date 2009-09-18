@@ -345,6 +345,13 @@ int hal2009_add_pro_file (char* filename) {
                         sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
                         strcpy(r.extra, "");
                         
+                        // a common error in malformed pro files
+                        if (0 == strcmp(sub_clause->questionword, "50")) {
+                            free(r.clauses[i]);
+                            r.clauses[i] = NULL;
+                            break;
+                        }
+                        
                         r.verb_flag_want    = 0;
                         r.verb_flag_must    = 0;
                         r.verb_flag_can     = 0;

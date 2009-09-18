@@ -1311,6 +1311,11 @@ set multi-line new global array builtin_entity_ends_pair to [
           [ 'das', 'eine' ],
 ];
 
+set multi-line new global hash builtin_entity_does_not_end to {
+          'mac' => 1,
+          
+};
+
 set multi-line new global hash builtin_entity_ends to {
           'i' => 1,
           'h' => 1,
@@ -1707,6 +1712,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'wichtigem' => "adj",
           'grob' => "adj",
           'bisher' => "adj",
+          'sehen' => "vi",
           'jetzt' => "adj",
           'viel' => "adj",
           'berufst' => "vt",
@@ -3192,11 +3198,17 @@ define action toggle_verbs with array verbs, array entities do
     done
     
     if not flag continue do
+        print "Does not contain a personal pronoun."
+        print new line
         do return with array verbs
     done
+    print "Contains a personal pronoun."
+    print new line
     
     for each new array verb_array in array verbs is rw do
         set new var verb to lc with from array verb_array first item
+        print "verb: " concat var verb
+        print new line
         if var verb matches "ist" do
             go to next
         done
@@ -3226,6 +3238,12 @@ define action toggle_verbs with array verbs, array entities do
         done
         else if var verb matches /weiss$/ do
             do regex using var verb: /weiss$/, "weisst", :global:i
+        done
+        else if var verb matches /musst$/ do
+            do regex using var verb: /musst$/, "muss", :global:i
+        done
+        else if var verb matches /muss$/ do
+            do regex using var verb: /muss$/, "musst", :global:i
         done
         else if var verb matches /laesst/ do
             do regex using var verb: /laesst$/, "lasse", :global:i

@@ -446,7 +446,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     set new var i to 0
     set new array contents to from hash content_of_memory_file item { var file_name }
     # go through the lines
-    while array contents and var i < items of array contents do
+    while var i < items of array contents do
         set new var line to from array contents item [ var i ]
         
         # line starts with a space?
@@ -871,6 +871,10 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         
         
         if from array words item [ 0 ] matches var next_word do
+            print "next word is current word, maybe a parser bug, exiting loop"
+            print new line
+            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+            shift from array words
             go to last
         done
         set var current_word to var next_word
@@ -1817,6 +1821,10 @@ define action logic with var input, var lang, var path, hash parsed do
     for each new var line from var input_handle is rw do
         print var line
         print new line
+        if var line matches /^<[\^]>/ do
+            go to next
+        done
+        
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
         
@@ -2438,6 +2446,24 @@ define action sort_out with array results, var mode, hash parsed do
     for each new array result in array results do
         set new var primary_key to shift with items of array result
         
+        for each new array clause in array result do
+            if lc( from array clause item [1] ) matches /(00000)/ do
+                go to next
+            done
+            if lc( from array clause item [2] ) matches /(00000)/ do
+                go to next
+            done
+            if lc( from array clause item [1] ) matches /(50|0\.0|1\.0|100)/ and length( from array clause item [1] ) < 5 do
+                go to next
+            done
+            if lc( from array clause item [2] ) matches /(50|0\.0|1\.0|100)/ and length( from array clause item [2] ) < 5 do
+                go to next
+            done
+            if lc( from array clause item [3] ) matches /(50|0\.0|1\.0|100)/ and length( from array clause item [3] ) < 5 do
+                go to next
+            done
+        done
+    
         set new flag is_proper to 1
         set new flag is_important to 0
         for each new array clause in array result do
