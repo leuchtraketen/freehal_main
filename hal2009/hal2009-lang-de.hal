@@ -3086,6 +3086,7 @@ define action compute_output with var output do
     if not var output matches /......./ do
         do regex using var output: /<[*]>/, "var name", :global:i
     done
+    do regex using var output: /<[*]>/, "", :global:i
 
     do regex using var output: / von den /, " der ", :global:i
     do regex using var output: / von dem /, " des ", :global:i

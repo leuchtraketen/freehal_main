@@ -934,6 +934,10 @@ char* replace_in_select(const char* var, char** syn, char** rep) {
     if (0 == strlen(rep)) {
         return var;
     }
+    if (rep[0] == '*' || strstr(rep, "*")) {
+        return var;
+    }
+    
     
     char res[20000];
     strcpy(res, "");
@@ -952,8 +956,10 @@ char* replace_in_select(const char* var, char** syn, char** rep) {
     while (syn[n] && n < 20000) {
         if (strlen(syn[n])) {
             char* synon = strdup(syn[n]);
-            if (synon[0] == "*") {
-                ++synon;
+            if (synon[0] == '*') {
+                ++n;
+                free(synon);
+                continue;
             }
             
             strcat(res, ", \"");
