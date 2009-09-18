@@ -930,7 +930,7 @@ int append_on_dataset_record(int offset, int limit, char** record, struct fact**
             record[offset+(d*6)+3] = join_words(list[d]->adverbs);
             record[offset+(d*6)+4] = strdup(list[d]->questionword ? list[d]->questionword : "");
             record[offset+(d*6)+5] = calloc(sizeof(char), 10);
-            sprintf(record[offset+(d*6)+5], "%p.0", (int)(list[d]->truth));
+            sprintf(record[offset+(d*6)+5], "%d.0", (int)(list[d]->truth));
             
             column_count = offset+(d*6)+6;
             
@@ -966,7 +966,7 @@ struct DATASET as_dataset(struct fact** list) {
         if (list[d] != -1) {
             char** record = calloc(sizeof(char*), sizeof(struct fact)*100);
             record[0] = calloc(sizeof(char), 10);
-            sprintf(record[0], "%p", (int)(list[d]->pk));
+            sprintf(record[0], "%d", (int)(list[d]->pk));
             record[1] = join_words(list[d]->verbs);
             record[2] = join_words(list[d]->subjects);
             record[3] = join_words(list[d]->objects);
@@ -974,7 +974,7 @@ struct DATASET as_dataset(struct fact** list) {
             record[5] = strdup("50");
             record[6] = strdup(list[d]->from ? list[d]->from : "");
             record[7] = calloc(sizeof(char), 10);
-            sprintf(record[7], "%p.0", (int)(list[d]->truth));
+            sprintf(record[7], "%d.0", (int)(list[d]->truth));
             
             int column_count = append_on_dataset_record(8, 100, record, search_clauses(list[d]->pk));
             if (column_count > set.column_count)
