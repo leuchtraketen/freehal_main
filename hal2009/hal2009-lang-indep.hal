@@ -350,8 +350,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /n<['`']>t/, " not", :global:i
     do regex using var input: /gehts/, "geht es", :global:i
     do regex using var input: /geht<['`']>s/, "geht es", :global:i
-    do regex using var input: /gibt es /, "was ist ", :global:i
-    do regex using var input: /gibt es/, "was ist", :global:i
+    do regex using var input: /^(.?.?.?.?)gibt es /, "$0was ist ", :global:i
+    do regex using var input: /^(.?.?.?.?)gibt es/, "$0was ist", :global:i
     do regex using var input: /was ist neues/, "was gibt es neues", :global:i
     set var input to var input concat ' '
     do regex using var input: /geht es so<[?\s]>/, "geht es$0", :global:i
