@@ -446,7 +446,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     set new var i to 0
     set new array contents to from hash content_of_memory_file item { var file_name }
     # go through the lines
-    while var i < items of array contents do
+    while array contents and var i < items of array contents do
         set new var line to from array contents item [ var i ]
         
         # line starts with a space?
