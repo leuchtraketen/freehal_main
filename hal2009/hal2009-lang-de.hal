@@ -1531,6 +1531,49 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'laesst' => 1,
           'laesst' => 1,
           'lassen' => 1,
+          
+          'bin/be' => 1,
+          'bist/be' => 1,
+          'ist/be' => 1,
+          'sind/be' => 1,
+          'seid/be' => 1,
+          
+          'habe/have' => 1,
+          'hab/have' => 1,
+          'hast/have' => 1,
+          'hat/have' => 1,
+          'haben/have' => 1,
+          'habt/have' => 1,
+          
+          'werde' => 1,
+          'werd' => 1,
+          'wirst' => 1,
+          'wird' => 1,
+          'werden' => 1,
+          'werdet' => 1,
+          
+          'kann/can' => 1,
+          'kannst/can' => 1,
+          'kann/can' => 1,
+          'koennen/can' => 1,
+          'koennt/can' => 1,
+          
+          'will/want' => 1,
+          'willst/want' => 1,
+          'will/want' => 1,
+          'wollen/want' => 1,
+          'wollt/want' => 1,
+          
+          'muss/must' => 1,
+          'musst/must' => 1,
+          'muss/must' => 1,
+          'muessen/must' => 1,
+          'muesst/must' => 1,
+          
+          'lasse' => 1,
+          'laesst' => 1,
+          'laesst' => 1,
+          'lassen' => 1,
 };
 
 set multi-line new global hash builtin_part_of_speech to {
