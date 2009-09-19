@@ -3419,6 +3419,9 @@ define action stem_nouns with array phrases do
             if var noun matches /sen$/ do
                 go to next
             done
+            if var noun matches /ul.$/ do
+                go to next
+            done
             if var noun matches /ern$/ do
                 do regex using var noun: /ern$/, "*", :global:i
             done
