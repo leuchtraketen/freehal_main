@@ -745,6 +745,7 @@ void print_word_list_3rd_order(struct word*** list) {
         debugf("(\n");
         int j;
         for (j = 0; can_be_a_pointer(list[i][j]) && can_be_a_pointer(list[i][j]->name); ++j) {
+            debugf(" 1: %p, 2: %p\n", list[i][j], list[i][j]->name);
             debugf(" - %s\n", list[i][j]->name);
         }
         if (j == 0) {
