@@ -131,7 +131,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 && can_be_a_pointer(facts[f]->subjects)
                 && can_be_a_pointer(facts[f]->subjects[0])
             ) {
-                struct word** temp = calloc(sizeof(facts[f]->subjects), 1);
+                struct word** temp = calloc(sizeof(facts[f]->subjects), 2);
                 *temp = *(facts[f]->subjects);
                 synonyms[*position] = temp;
                 ++(*position);
@@ -145,7 +145,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 && can_be_a_pointer(facts[f]->objects)
                 && can_be_a_pointer(facts[f]->objects[0])
             ) {
-                struct word** temp = calloc(sizeof(facts[f]->objects), 1);
+                struct word** temp = calloc(sizeof(facts[f]->objects), 2);
                 *temp = *(facts[f]->objects);
                 synonyms[*position] = temp;
                 ++(*position);
@@ -363,16 +363,24 @@ int matches(const char* a, const char* b) {
         strncpy(c, b, 5120);
         if (c[0] == '*') {
             ++c;
+            return strstr(a, c);
         }
-        if (strstr(c, "*")) {
+        else if (strstr(c, "*")) {
             int i;
             int size = strlen(c);
+            int q = 1;
             for (i = 0; i < size; ++i) {
-                c[i] = c[i] == '*' ? (i >= size-2 ? '\0' : ' ') : c[i];
+                if (c[i] == '*') {
+                    c[i] = '\0';
+                    q = q && strstr(a, c);
+                    c[i] = i >= size-2 ? '\0' : ' ';
+                }
             }
+            return q;
         }
-        
-        return strstr(a, c);
+        else {
+            return strstr(a, c);
+        }
     }
     
     return 0;
@@ -744,13 +752,16 @@ void print_word_list_3rd_order(struct word*** list) {
     for (i = 0; can_be_a_pointer(list[i]); ++i) {
         debugf("(\n");
         int j;
-        for (j = 0; can_be_a_pointer(list[i][j]) && can_be_a_pointer(list[i][j]->name); ++j) {
-            debugf(" 1: %p, 2: %p\n", list[i][j], list[i][j]->name);
-            debugf(" - %s\n", list[i][j]->name);
+        for (j = 0; can_be_a_pointer(list[i][j]); ++j) {
+            debugf(" 1: %p\n", list[i][j]);
+            if (can_be_a_pointer(list[i][j]->name)) {
+                debugf(" 2: %p\n", list[i][j]->name);
+                debugf(" - %s\n", list[i][j]->name);
+            }
         }
-        if (j == 0) {
-            debugf("   array at %p: first = %p, second = %p\n", list[i], list[i][0], can_be_a_pointer(list[i][0])&&can_be_a_pointer(list[i][1])?list[i][1]:0);
-        }
+        //if (j == 0) {
+            //debugf("   array at %p: first = %p, second = %p\n", list[i], list[i][0], can_be_a_pointer(list[i][0])&&can_be_a_pointer(list[i][1])?list[i][1]:0);
+        //}
         debugf(")\n");
     }
     debugf("\n");
