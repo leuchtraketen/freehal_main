@@ -528,6 +528,7 @@ int fact_matches_questionword_rules_of_q_who(struct fact* fact, struct request* 
     }
     if (can_be_a_pointer(fact->objects)) {
         for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
+            debugf("q_who: %s\n", fact->objects[i]->name);
             if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
                 does_match = 0;
             }
@@ -689,7 +690,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
          && ( fact_matches_object_by_object   (fact, request) || fact_matches_object_by_object  (fact, request) )
          && fact_matches_adverb_by_adverb     (fact, request)
          && fact_matches_anything_by_extra    (fact, request)
-         && fact_matches_questionword_rules   (fact, request)
+         //&& fact_matches_questionword_rules   (fact, request)
     
          ?  fact
          :  (struct fact*)-1
@@ -700,8 +701,8 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
 }
 
 struct fact** filter_list_by_rules(struct fact** list, struct request* request) {
-    int b, count_of_true_facts;
-    for (b = 0, count_of_true_facts = 0; list[b]; ++b) {
+    int b, count_of_true_facts, count_of_context_matching_facts;
+    for (b = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
         if (list[b] != -1) {
             list[b] = filter_fact_by_rules(list[b], request);
         }
@@ -710,12 +711,27 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
                 ++count_of_true_facts;
             }
         }
+        if (list[b] != -1) {
+            if (fact_matches_questionword_rules(list[b], request)) {
+                ++count_of_context_matching_facts;
+            }
+        }
     }
     
     if (count_of_true_facts >= 1) {
-        for (b = 0, count_of_true_facts = 0; list[b]; ++b) {
+        for (b = 0; list[b]; ++b) {
             if (list[b] != -1) {
                 if (!fact_matches_truth(list[b], request)) {
+                    list[b] = (struct fact*)-1;
+                }
+            }
+        }
+    }
+    
+    if (count_of_context_matching_facts >= 1) {
+        for (b = 0; list[b]; ++b) {
+            if (list[b] != -1) {
+                if (!fact_matches_questionword_rules(list[b], request)) {
                     list[b] = (struct fact*)-1;
                 }
             }
