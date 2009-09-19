@@ -677,7 +677,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     fact = 
     
             fact_matches_verb                 (fact, request)
-         && ( fact_matches_subject_by_subject (fact, request) || fact_matches_object_by_subject (fact, request) )
+         && ( fact_matches_subject_by_subject (fact, request) || (strcmp(request->context, "q_what_weakly") && fact_matches_object_by_subject (fact, request)) )
          && ( fact_matches_object_by_object   (fact, request) || fact_matches_object_by_object  (fact, request) )
          && fact_matches_adverb_by_adverb     (fact, request)
          && fact_matches_anything_by_extra    (fact, request)
