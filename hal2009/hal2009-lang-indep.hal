@@ -586,9 +586,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
 
-    do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
-    do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
-    do regex using var input: /what is /, "ISUNKNOWN ", :global:i
+    #do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
+    #do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
+    #do regex using var input: /what is /, "ISUNKNOWN ", :global:i
     
     set new var mark to "\""
 
