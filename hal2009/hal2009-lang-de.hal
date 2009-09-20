@@ -2366,6 +2366,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'jedes' => "adj",
           'lebe' => "vi",
           'Leben' => "n",
+          'test' => "n",
+          'testen' => "vi",
           'leben' => "vi",
           'zeitlebens' => "adj",
           'einem' => "art",
@@ -3445,8 +3447,10 @@ define action stem_nouns with array phrases do
             if var noun matches /<[bdfghklmnrt]>s$/ do
                 do regex using var noun: /s$/, "*", :global:i
             done
-            if var noun matches /est$/ do
-                do regex using var noun: /est$/, "*", :global:i
+            if length(var noun) > 5 do
+                if var noun matches /est$/ do
+                    do regex using var noun: /est$/, "*", :global:i
+                done
             done
             if var noun matches /e<[nr]>$/ do
                 do regex using var noun: /e<[nr]>$/, "e*", :global:i

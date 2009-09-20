@@ -871,10 +871,12 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         
         
         if from array words item [ 0 ] matches var next_word do
-            print "next word is current word, maybe a parser bug, exiting loop"
+            print "next word " concat var next_word concat " is current word, maybe a parser bug, exiting loop"
             print new line
-            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
-            shift from array words
+            if from hash sym_noun item { var next_word } do
+                do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                shift from array words
+            done
             go to last
         done
         set var current_word to var next_word
@@ -2574,10 +2576,17 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
             set var subject to from array subject first item
         done
         set new array objects to from hash parsed item { 'objects' }
+        set new array adverbs to from hash parsed item { 'adverbs' }
         for each new array object in array objects do
+            if from array object first item matches /^(nicht|not)$/ do
+                set new array temp to an empty array
+                push into array temp, from array object first item
+                push into array adverbs, array temp
+                set var object to ''
+                go to next
+            done
             set var object to from array object first item
         done
-        set new array adverbs to from hash parsed item { 'adverbs' }
         for each new array adverb in array adverbs do
             set var adverb to from array adverb first item
         done
