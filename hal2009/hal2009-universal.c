@@ -679,7 +679,15 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
             }
         }
         
-        does_match = does_match && does_match_here;
+        if (v && does_match) {
+            // don't change
+        }
+        if (v && !does_match && does_match_here) {
+            does_match = does_match_here;
+        }
+        else {
+            does_match = does_match_here;
+        }
         
         for (p = 0; splitted_by_pipe[p]; ++p) {
             free(splitted_by_pipe[p]);
