@@ -375,7 +375,7 @@ int matches(const char* a, const char* b) {
         strncpy(c, b, 5120);
         if (c[0] == '*') {
             ++c;
-            return strstr(a, c);
+            return matches(a, c);
         }
         else if (strstr(c, "*")) {
             int i;
