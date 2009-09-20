@@ -1669,16 +1669,19 @@ define action logic with var input, var lang, var path, hash parsed do
             set items of array request_verb_array to items of array new_verbs
             
             # if there is only one verb which is a modal verb
-            if is an empty array override_verb_array do
-                set new array verb_array to an empty array
-                push into array verb_array, "*"
-                push into array override_verb_array, array verb_array
-            done
-            if is an empty array request_verb_array do
-                set new array verb_array to an empty array
-                push into array verb_array, "*"
-                push into array request_verb_array, array verb_array
-            done
+            #
+            # then do nothing!
+            #
+            ##if is an empty array override_verb_array do
+            ##    set new array verb_array to an empty array
+            ##    push into array verb_array, "*"
+            ##    push into array override_verb_array, array verb_array
+            ##done
+            ##if is an empty array request_verb_array do
+            ##    set new array verb_array to an empty array
+            ##    push into array verb_array, "*"
+            ##    push into array request_verb_array, array verb_array
+            ##done
         done
         else do
             if from hash parsed item { 'verbs' } do
