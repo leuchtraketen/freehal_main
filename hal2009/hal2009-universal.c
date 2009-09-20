@@ -131,11 +131,17 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 && can_be_a_pointer(facts[f]->subjects)
                 && can_be_a_pointer(facts[f]->subjects[0])
             ) {
-                struct word** temp = calloc(sizeof(facts[f]->subjects), 2);
-                *temp = *(facts[f]->subjects);
+                int c;
+                for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) { }
+                struct word** temp = calloc(sizeof(facts[f]->subjects), (c+2));
+                for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) {
+                    temp[c] = facts[f]->subjects[c];
+                }
+                temp[c] = 0;
                 synonyms[*position] = temp;
                 ++(*position);
-                debugf("Added synonym %s by search, position is now %p.\n", facts[f]->subjects[0]->name ? facts[f]->subjects[0]->name : "(useless)", *position);
+                debugf("Added synonym %s by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                debugf("         (... %s)\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
             }
         }
     }
@@ -145,11 +151,17 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 && can_be_a_pointer(facts[f]->objects)
                 && can_be_a_pointer(facts[f]->objects[0])
             ) {
-                struct word** temp = calloc(sizeof(facts[f]->objects), 2);
-                *temp = *(facts[f]->objects);
+                int c;
+                for (c = 0; can_be_a_pointer(facts[f]->objects[c]); ++c) { }
+                struct word** temp = calloc(sizeof(facts[f]->objects), (c+2));
+                for (c = 0; can_be_a_pointer(facts[f]->objects[c]); ++c) {
+                    temp[c] = facts[f]->objects[c];
+                }
+                temp[c] = 0;
                 synonyms[*position] = temp;
                 ++(*position);
-                debugf("Added synonym %s by search, position is now %p.\n", facts[f]->objects[0]->name ? facts[f]->objects[0]->name : "(useless)", *position);
+                debugf("Added synonym %s by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                debugf("         (... %s)\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
             }
         }
     }
