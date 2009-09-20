@@ -2162,7 +2162,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             *buffers = 0;
             short flag_should_contain = 1;
             
-            if (0 == strcmp(r->context, "q_what_weakly")) {
+            if (0 == strcmp(r->context, "q_what_weakly") || 0 == strcmp(r->context, "q_what_extra")) {
                 if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") == r->verb || strstr(r->verb, "war") == r->verb)) {
                     strcpy(buffers, "* ein*");
                 }
@@ -2413,7 +2413,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
                 *buffers = 0;
                 short flag_should_contain = 1;
                 
-                if (0 == strcmp(r->context, "q_what_weakly")) {
+                if (0 == strcmp(r->context, "q_what_weakly") || 0 == strcmp(r->context, "q_what_extra")) {
                     if (r->verb && *r->verb != '0' && *r->verb != ' ' && (strstr(r->verb, "ist") || strstr(r->verb, "war"))) {
                         if ( !(r->adverbs && *r->adverbs != '0' && strlen(r->adverbs))) {
                             strcpy(buffers, "ein*");

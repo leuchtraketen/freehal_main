@@ -1585,6 +1585,9 @@ define action compute_context with hash parsed do
         if from array verb_array first item matches "bist" do
             do return with "q_what_exactly"
         done
+        else if from array extra_array first item first item do
+            do return with "q_what_extra"
+        done
         else do
             do return with "q_what_weakly"
         done

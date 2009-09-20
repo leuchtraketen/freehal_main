@@ -495,6 +495,13 @@ int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
 int fact_matches_questionword_rules_of_q_what_weakly(struct fact* fact, struct request* request) {
     int does_match = 0;
     
+    debugf("q_what_weakly: %d\n", does_match);
+    return does_match;
+}
+
+int fact_matches_questionword_rules_of_q_what_extra(struct fact* fact, struct request* request) {
+    int does_match = 1;
+    
     int i;
     if (can_be_a_pointer(fact->subjects)) {
         for (i = 0; can_be_a_pointer(fact->subjects[i]) && can_be_a_pointer(fact->subjects[i]->name); ++i) {
@@ -511,7 +518,7 @@ int fact_matches_questionword_rules_of_q_what_weakly(struct fact* fact, struct r
         }
     }
     
-    debugf("q_what_weakly: %d\n", does_match);
+    debugf("q_what_extra: %d\n", does_match);
     return does_match;
 }
 
@@ -632,6 +639,8 @@ int fact_matches_questionword_rules(struct fact* fact, struct request* request) 
     if (can_be_a_pointer(request->context)) {
         if (0 == strcmp(request->context, "q_what_weakly"))
             return fact_matches_questionword_rules_of_q_what_weakly(fact, request);
+        if (0 == strcmp(request->context, "q_what_extra"))
+            return fact_matches_questionword_rules_of_q_what_extra(fact, request);
         if (0 == strcmp(request->context, "q_who"))
             return fact_matches_questionword_rules_of_q_who(fact, request);
         if (0 == strcmp(request->context, "q_where"))
@@ -686,7 +695,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     fact = 
     
             fact_matches_verb                 (fact, request)
-         && ( fact_matches_subject_by_subject (fact, request) || (strcmp(request->context, "q_what_weakly") && fact_matches_object_by_subject (fact, request)) )
+         && ( fact_matches_subject_by_subject (fact, request) || (strcmp(request->context, "q_what_extra") && fact_matches_object_by_subject (fact, request)) )
          && ( fact_matches_object_by_object   (fact, request) || fact_matches_object_by_object  (fact, request) )
          && fact_matches_adverb_by_adverb     (fact, request)
          && fact_matches_anything_by_extra    (fact, request)

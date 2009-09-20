@@ -309,6 +309,8 @@ define action compute_input with var input is rw, var lang, var path do
     done
     
     do regex using var input: /wie heisst du mit /, "du ", :global:i
+    
+    do regex using var input: /was macht /, "was ", :global:i
 
     do regex using var input: /(^|\s)?wie wird /, "$0 wie ist ", :global:i
     do regex using var input: /Wie ist das Wetter heute/, "Wie ist das Wetter ", :global:i
