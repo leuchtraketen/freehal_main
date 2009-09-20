@@ -225,7 +225,7 @@ struct word** divide_words(const char* str) {
                 list = realloc(list, sizeof(struct word*)*(count+1));
                 list[count] = 0;
                 list[count-1] = word;
-                debugf("divided(1): %s\n", name);
+                //debugf("divided(1): %s\n", name);
                 a = e+1;
             }
         }
@@ -241,11 +241,11 @@ struct word** divide_words(const char* str) {
         list = realloc(list, sizeof(struct word*)*(count+1));
         list[count] = 0;
         list[count-1] = word;
-        debugf("divided(2): %s\n", name);
+        //debugf("divided(2): %s\n", name);
         a = e;
     }
     
-    debugf("name: %s (a = %p, e = %p), count = %p, list = %p\n", str && str[0] ? str : "(useless)", a, e, count, list);
+    //debugf("name: %s (a = %p, e = %p), count = %p, list = %p\n", str && str[0] ? str : "(useless)", a, e, count, list);
     
     return list;
 }
@@ -712,6 +712,8 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
 
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     
+    printf("Filtering next fact...\n");
+    
     fact = 
     
             fact_matches_verb                 (fact, request)
@@ -730,8 +732,10 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
 }
 
 struct fact** filter_list_by_rules(struct fact** list, struct request* request) {
-    int b, count_of_true_facts, count_of_context_matching_facts;
-    for (b = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
+    printf("Starting fact filter!\n");
+    
+    int b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
+    for (b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
         if (list[b] != -1) {
             list[b] = filter_fact_by_rules(list[b], request);
         }
@@ -746,6 +750,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
             }
         }
     }
+    count_of_facts = b;
     
     if (count_of_true_facts >= 1) {
         for (b = 0; list[b]; ++b) {
@@ -766,6 +771,8 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
             }
         }
     }
+    
+    printf("Filtered %d (true: %d, in context: %d) facts.\n", count_of_facts, count_of_true_facts, count_of_context_matching_facts);
 
     return list;
 }
@@ -1056,7 +1063,6 @@ int is_a_trivial_word(const char* word) {
     return (
             0 == strcmp(word, "the")
          || 0 == strcmp(word, "a")
-         || 0 == strcmp(word, "an")
     
          || 0 == strcmp(word, "der")
          || 0 == strcmp(word, "die")
@@ -1071,8 +1077,6 @@ int is_a_trivial_word(const char* word) {
          || 0 == strcmp(word, "einen")
          || 0 == strcmp(word, "eines")
          || 0 == strcmp(word, "nicht")
-         || 0 == strcmp(word, "in")
-         || 0 == strcmp(word, "an")
     
          ?  1
          :  0
