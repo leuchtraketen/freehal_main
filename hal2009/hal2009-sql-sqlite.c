@@ -1014,7 +1014,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             extras_buffer = r->extra;
         }
     }
-    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how") ) {
+    else if (r->extra && *r->extra != '0' && strlen(r->extra) && strcmp(r->context, "q_how") && strcmp(r->context, "q_what_prep") ) {
         objects_buffer = r->extra;
         object_is_extra = 1;
     }
