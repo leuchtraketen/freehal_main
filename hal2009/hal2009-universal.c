@@ -509,7 +509,7 @@ int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
 }
 
 int fact_matches_questionword_rules_of_q_what_weakly(struct fact* fact, struct request* request) {
-    int does_match = 0;
+    int does_match = 1;
     
     debugf("q_what_weakly: %d\n", does_match);
     return does_match;
