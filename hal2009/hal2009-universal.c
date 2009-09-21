@@ -192,8 +192,8 @@ struct word*** search_synonyms(const char* exp) {
 
         in_search_synonyms = 1;
         
-        synonyms = add_synonyms_by_search(exp, "", "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
-        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search(exp, "", "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
 
         store_synonyms(exp, synonyms);
         in_search_synonyms = 0;
@@ -429,23 +429,27 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             }
             
             int does_match_here = 0;
+            int should_match_here = 0;
             
             if (   (count_of_words <= count_of_words_request+2 && flags == EXACT)
                 || (                                              flags == WEAK)) {
                     
                 int m;
                 for (m = 0; words[m] && words[m]->name; ++m) {
-                    if (matches(words[m]->name, request_words[u][v]->name)) {
-                        //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
-                        does_match_here = 1;
-                    }
-                    else {
-                        //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                    if (!is_a_trivial_word(words[m]->name)) {
+                        if (matches(words[m]->name, request_words[u][v]->name)) {
+                            //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            ++does_match_here;
+                        }
+                        else {
+                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                        }
+                        ++should_match_here;
                     }
                 }
             }
             
-            does_match_with_this_synonym   += does_match_here;
+            does_match_with_this_synonym   += (does_match_here && does_match_here == should_match_here) ? 1 : 0;
             should_match_with_this_synonym += 1;
         }
         
