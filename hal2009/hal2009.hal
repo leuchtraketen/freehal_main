@@ -2559,7 +2559,7 @@ define action sort_out with array results, var mode, hash parsed do
     done
 done
 
-define action save_facts with array facts_parsed, var pro_file_name, var lang, var path do
+define action save_facts with array facts_parsed, var pro_file_name, var prepend, var lang, var path do
     if not var pro_file_name do
         set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
     done
@@ -2681,6 +2681,7 @@ define action save_facts with array facts_parsed, var pro_file_name, var lang, v
     set new var line to join with var divisor, items of array line_array
     
     if var line do
+        print into var pro_file data var prepend
         print into var pro_file data lc(var line)
         print into var pro_file data new line
     done
@@ -2989,6 +2990,13 @@ define action fake_hash_parsed without arguments do
 done
 
 define action work_prot_line with var input, var file_name, var lang, var path do
+
+    set new var classification to ''
+    if var input matches /^(\S+?[:][:])/ do
+        set var classification to $0
+        do regex using var input: /^(\S+?)[:][:]/, "", :global
+    done
+
     do be_slow without arguments
     do regex using var input: /(<[.!?]>)/, "", :global
     # TEXT
@@ -3054,7 +3062,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         done
     done
     if not is an empty hash parsed do
-        do save_facts with [ hash parsed ], var file_name, var lang, var path
+        do save_facts with [ hash parsed ], var file_name, var classification, var lang, var path
     done
 done
 
@@ -3125,7 +3133,7 @@ define action init_prot_files with var current_language, var path do
                 set new var translation_input_handle to handle for file name var file, read
                 for each new var line from var translation_input_handle is rw do
                     do be_slow without arguments
-                    set new var line to work_prot_line with var line, var pro_file, var current_language, var path
+                    do work_prot_line with var line, var pro_file, var current_language, var path
                 done
                 do close using var translation_input_handle
             done
@@ -3369,7 +3377,7 @@ define action shell with var current_language, var path do
                 print new line
             done
             
-            do save_facts with array facts_to_save, '', var current_language, var path
+            do save_facts with array facts_to_save, '', '', var current_language, var path
         done
     done
     
