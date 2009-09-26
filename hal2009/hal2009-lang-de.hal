@@ -2576,6 +2576,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'wahr' => "adj",
           'interessiere' => "vt",
           'millionen' => "adj",
+          'pokern' => "vi",
+          'Pokern' => "n",
           'folgende' => "adj",
           'muedes' => "adj",
           'moegen' => "vt",
@@ -3433,13 +3435,13 @@ define action stem_nouns with array phrases do
                 go to next
             done
             if var noun matches /ern$/ do
-                do regex using var noun: /ern$/, "*", :global:i
+                do regex using var noun: /ern$/, "er*", :global:i
             done
             if var noun matches /ger$/ do
                 do regex using var noun: /ger$/, "ge*", :global:i
             done
             if var noun matches /e<[mnrs]>$/ do
-                do regex using var noun: /e<[mnrs]>$/, "*", :global:i
+                do regex using var noun: /e<[mnrs]>$/, "e*", :global:i
             done
             if var noun matches /e$/ do
                 do regex using var noun: /e$/, "*", :global:i
