@@ -33,7 +33,7 @@
 #define USE_SUBJECTS 11
 #define USE_OBJECTS  12
 
-#define DEBUG       1
+#define DEBUG       0
 
 #if DEBUG
 # define debugf      printf

@@ -2542,6 +2542,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'immer' => "adj",
           'dererseits' => "adj",
           'wirst' => "vt",
+          'gewaschen' => "vi",
           'intelligent' => "adj",
           'vereinigten' => "adj",
           'untertauche' => "vt",
