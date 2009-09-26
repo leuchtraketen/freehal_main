@@ -348,7 +348,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\szwangslaeufig(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\szweifellos(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sbloederweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sund(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /^\s+?und(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\saber(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sa so(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sach so(<[\s!.,?]>+)/, "$0", :global:i
