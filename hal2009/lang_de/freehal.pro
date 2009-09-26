@@ -481,6 +481,7 @@ kann <> ich <> nicht fernsehen <>  <>  <>  <>  <>  <>  <>  <> 50
 kann <> ich <> nicht <>  <>  <>  <>  <>  <>  <> 50
 kann <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  50
 kann <> ich <> viel <> aber nicht alles <>  <>  <>  <>  <>  <> 50
+kann/can fuehlen <> ich <> <> nicht <> 50 
 kann/can <> ich <> viele sprachen <>  <> lernt <> man sie <> mir <>  <> wenn <> 50
 kann lachen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kann laufen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
@@ -805,3 +806,4 @@ kann/can <> ich <> englisch sprechen <> nicht <> 50
 habe <> ich <> heute abend  <> nichts vor  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> kein bild <> von mir <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> kein foto <> von mir <>  <>  <>  <>  <>  <>  <> 100
+war <> ich <>  <> gestern hier <> bin <> ich <>  <> immer hier <>  <> 50

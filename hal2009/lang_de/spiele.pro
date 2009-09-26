@@ -584,7 +584,7 @@ ist <> _tic_tac_toe_ <> ein zweipersonenspiel <>  <> 50
 ist <> tichu <> ein ostasiatisches kartenspiel <>  <> 50
 ist <> ticken <>ein gelaendespiel <>  <>  <> 50
 ist <> tikal <> ein brettspiel <>  <> 50
- ist <> tippen <> ein kartengluecksspiel <>  <>  <> 50
+ist <> tippen <> ein kartengluecksspiel <>  <>  <> 50
 ist <> tipp-kick <> ein tischfußball <>  <> 50
 ist <> das tischkegelspiel <> ein geschicklichkeitsspiel <>  <> 50
 ist <> titan <> ein fantasy-brettspiel <>  <> 50

@@ -59,6 +59,7 @@ ist <> ein baer <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein delphin <> ein saeugetier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ein dinosaurier <> eine ausgestorbene riesenechse <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ein einhorn <> ein fabeltier <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein elefant <> ein saeugetier <>  <> 50
 ist <> ein emu <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein fisch <> ein tier <>  <>  <>  <>  <> das <> nothing <> 
 ist <> ein fisch <> ein wirbeltier <>  <> 50
@@ -71,6 +72,7 @@ ist <> ein haflinger <> ein pferd <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein hahn <> ein maennliches huhn <>  <>  <>  <>  <> nothing <> nothing <> 
 ist <> ein hengst <> ein maennliches pferd <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein huchen <> ein donaulachs <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein hund <> der beste freund <> von dem menschen <> 50
 ist <> ein hund <> ein haustier das <> vom wolf abstammt <>  <>  <>  <> nothing <> nothing <>
 ist <> ein hund <> nothing <> ein saeugetier <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein insektenforscher <> ein entomologe <>  <>  <>  <>  <>  <>  <>  <> 50
@@ -151,4 +153,3 @@ stammt <> der pekinese <> nothing <> aus china <>  <>  <>  <>  <>  <>  <> 50
 verlieren <> hirsche <> jedes jahr hirsche geweih <>  <>  <>  <>  <>  <>  <>  <> 50
 war <> der tyrannosaurus <> ein dinosaurier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 wird <> ein maikaefer <> nothing <> aus einem engerling <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein hund <> der beste freund <> von dem menschen <> 50
