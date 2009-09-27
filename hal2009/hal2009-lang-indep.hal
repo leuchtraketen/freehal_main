@@ -433,7 +433,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /sag was /, "was ist ", :global:i
     do regex using var input: /sag etwas /, "was ist ", :global:i
     do regex using var input: /sag /, "was ist ", :global:i
-    do regex using var input: / du heute /, " du ", :global:i
+    #do regex using var input: / du heute /, " du ", :global:i
     do regex using var input: /(ich glaube) (<[a-zA-Z]>)/, "$0 , $1", :global:i
     do regex using var input: /(ich denke) (<[a-zA-Z]>)/, "$0 , $1", :global:i
     do regex using var input: /stelle mir eine frage/, "was ist ", :global:i
@@ -510,7 +510,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /can you tell me whether\s/, "", :global:i
     do regex using var input: /can you tell me (who|how|where|when|if|what)/, "$0 ", :global:i
     do regex using var input: /can you tell me\s/, "what is ", :global:i
-    do regex using var input: /gemacht\s+?<[?]>/, " ?", :global:i
+    #do regex using var input: /gemacht\s+?<[?]>/, " ?", :global:i
     
     do regex using var input: /^sobald\s*?(.*),\s*?(.*)$/, "$0, wenn $1", :global:i
     do regex using var input: /^(.*),\s*?sobald\s*?(.*)$/, "$1, wenn $0", :global:i
@@ -650,8 +650,6 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /<[=]>/, " = ", :global:i
     do regex using var input: /wofuer steht /, "was ist ", :global:i
     do regex using var input: / schon mal /, " ", :global:i
-    do regex using var input: /^(...*?) hast du /, "du hast $0 ", :global:i
-    do regex using var input: /^(...*?) habe ich /, "ich habe $0 ", :global:i
     do regex using var input: /hast du schon mal von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du schon von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du von (.*?) gehoert/, "was ist $0", :global:i
@@ -660,6 +658,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /hast du schon was von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du was von (.*?) gehoert/, "was ist $0", :global:i
     do regex using var input: /hast du was mal von (.*?) gehoert/, "was ist $0", :global:i
+    do regex using var input: /^(...*?) hast du /, "du hast $0 ", :global:i
+    do regex using var input: /^(...*?) habe ich /, "ich habe $0 ", :global:i
     
     if length(var input) > 24 and var input matches /(question|fact)next/ do
         do regex using var input: /^weisst du<ws><[,]>*<ws>/, "", :global:i
