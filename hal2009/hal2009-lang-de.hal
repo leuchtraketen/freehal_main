@@ -1557,6 +1557,11 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'werden' => 1,
           'werdet' => 1,
           
+          'wurde' => 1,
+          'wurdest' => 1,
+          'wurden' => 1,
+          'wurdet' => 1,
+          
           'kann/can' => 1,
           'kannst/can' => 1,
           'kann/can' => 1,
