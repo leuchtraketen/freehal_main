@@ -210,7 +210,9 @@ define action get_score with array words, var sentence, var lang, var path do
     do regex using var sentence: /<[?]>|<[!.,\-]>/, "", :global
     set new var sum to 1
     set new var num_words to items of array words
+    set new var index_of_this_word to -1
     for each new var word in array words do
+        set var index_of_this_word to var index_of_this_word + 1
         set new var input_file_name to var path concat '/lang_' concat var lang concat '/index_of_combination.cfg'
         set new var input_handle to handle for file name var input_file_name, read
         for each new var line from var input_handle do
@@ -237,7 +239,12 @@ define action get_score with array words, var sentence, var lang, var path do
 
                             # print "score_here:" concat var score_here concat new line
                             if (0+var score_here) > -1 do
-                                set var sum to var sum + 20*var score_here*(10/var sum) + 1 
+                                if var index_of_this_word is 0 do
+                                    set var sum to var sum + 100*var score_here*(10/var sum) + 1
+                                done
+                                else do
+                                    set var sum to var sum + 20*var score_here*(10/var sum) + 1 
+                                done
                             done
                             else do
                                 #set var num_words to var num_words - 1
@@ -255,6 +262,9 @@ define action get_score with array words, var sentence, var lang, var path do
     done
 
     set var sum to (var sum + 1) / var num_words 
+    if var sum < 1 do
+        set var sum to 1
+    done
     
     do return with var sum
 done
