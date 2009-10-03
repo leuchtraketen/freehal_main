@@ -3148,13 +3148,13 @@ define action compute_output with var output do
     set new var isdst to from array date_time_array item [ 8 ]
     
     if not var min matches /../ do
-        set var min to " " concat var min
+        set var min to "0" concat var min
     done
     if not var sec matches /../ do
-        set var sec to " " concat var sec
+        set var sec to "0" concat var sec
     done
     if not var hour matches /../ do
-        set var hour to " " concat var hour
+        set var hour to "0" concat var hour
     done
     
     set new var weekday to 'nichts'
