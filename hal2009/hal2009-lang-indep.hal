@@ -165,6 +165,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^kein(.*)/, "ein$0 nicht", :global:i
     do regex using var input: /wozu braucht man /, "was ist ", :global:i
     do regex using var input: /(brauch)(st|e|en)(.*?)zu\s(haben)/, "$0$1$2 $3/, "
+    do regex using var input: /welche uhrzeit\s/, "wie uhr ", :global:i
     do regex using var input: /\suhr\shaben\swir\s/, " uhr ist es ", :global:i
     do regex using var input: /\suhr\shaben\swir<[?]>/, " uhr ist es?", :global:i
     do regex using var input: /aneinander /, "aneinander", :global:i
@@ -179,6 +180,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\snoch[-](nie|nicht)(<[\s!.,?]>+)/, " noch $0$1", :global:i
     do regex using var input: /(^|<[\s!.,?]>+)(so)\setwas(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
     do regex using var input: /(^|<[\s!.,?]>+)(so)was(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
+    do regex using var input: /\sauch(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\setwa(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sungefaehr(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdenn(<[\s!.,?]>+)/, "$0", :global:i
@@ -524,6 +526,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /wie heisst du mit /, "du ", :global:i
     
     do regex using var input: /was macht /, "was ", :global:i
+    
+    do regex using var input: /kannst du (.*?isch)($|(?:.?.?.?.?$))/, "kannst du $0 sprechen $1", :global:i
+    do regex using var input: /kann ich (.*?isch)($|(?:.?.?.?.?$))/, "kann ich $0 sprechen $1", :global:i
 
     do regex using var input: /(^|\s)?wie wird /, "$0 wie ist ", :global:i
     do regex using var input: /Wie ist das Wetter heute/, "Wie ist das Wetter ", :global:i

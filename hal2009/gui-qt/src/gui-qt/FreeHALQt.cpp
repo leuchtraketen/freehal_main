@@ -48,7 +48,7 @@ using boost::shared_ptr;
 
 
 double*                     JELIZA_PROGRESS;
-FreeHALWindow*               main_window;
+FreeHALWindow*              main_window;
 Dialog1*                    dialog_options;
 Dialog3*                    dialog_help;
 Dialog4*                    dialog_changelog;
@@ -833,17 +833,17 @@ void FreeHALWindow::on_not_is_noun_clicked() {
 void FreeHALWindow::on_abbr_1_clicked() {
     freehal::comm_send("HERE_IS_GENUS:EXIT");
     cout << "HERE_IS_GENUS:EXIT" << endl;
-//    main_window->user_interface_main_window->msg_box_2->hide();
+    main_window->user_interface_main_window->msg_box_2->hide();
 }
 void FreeHALWindow::on_abbr_3_clicked() {
     freehal::comm_send("HERE_IS_NOUN_OR_NOT:EXIT");
     cout << "HERE_IS_NOUN_OR_NOT:EXIT" << endl;
-//    main_window->user_interface_main_window->msg_box_3->hide();
+    main_window->user_interface_main_window->msg_box_3->hide();
 }
 void FreeHALWindow::on_abbr_2_clicked() {
     freehal::comm_send("HERE_IS_WORD_TYPE:EXIT");
     cout << "HERE_IS_WORD_TYPE:EXIT" << endl;
-//    main_window->user_interface_main_window->msg_box->hide();
+    main_window->user_interface_main_window->msg_box->hide();
 }
 
 void Helper::showMsgWindow() {

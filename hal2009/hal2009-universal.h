@@ -33,7 +33,7 @@
 #define USE_SUBJECTS 11
 #define USE_OBJECTS  12
 
-#define DEBUG       0
+#define DEBUG       1
 
 #if DEBUG
 # define debugf      printf
@@ -125,6 +125,7 @@ char* join_words(struct word** words);
 char* join_words_by(const char* by, struct word** words);
 int append_on_dataset_record(int offset, int limit, char** record, struct fact** list);
 struct DATASET as_dataset(struct fact** list);
+int can_be_a_synonym(const char*);
 
 
 
