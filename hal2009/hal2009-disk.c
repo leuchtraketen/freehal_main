@@ -406,6 +406,10 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     char* sql = malloc(512000);
     *sql = 0;
     
+    if (0 == can_be_a_pointer(words[0])) {
+        return sql;
+    }
+    
     strcat(sql, "delete from cache_facts ");
 
     int n, m, q;
@@ -431,7 +435,10 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         
         for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
             if (n == 0 || n % 100 == 0) {
-                strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts JOIN rel_word_fact ON facts.pk = rel_word_fact.fact WHERE 0 ");
+                if (n) {
+                    strcat(sql, ")");
+                }
+                strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM rel_word_fact WHERE 0 ");
             }
 
             if (is_a_trivial_word(words[n][m]->name)) {
@@ -461,6 +468,9 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 strcat(sql, "\"");
             }
         }
+    }
+    if (n) {
+        strcat(sql, ")");
     }
     strcat(sql, ";");
     strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`from`, `nmain`.`truth` ");
