@@ -138,6 +138,14 @@ if (!$_IP) $_IP = $_SERVER[X_HTTP_FORWARD_FOR];
 if (!$_IP) { $_IP = $_SERVER[REMOTE_ADDR]; }
 if ($_POST[q]) {
 
+	$_POST[q] = str_replace("ä", "ae", $_POST[q]);
+	$_POST[q] = str_replace("ö", "oe", $_POST[q]);
+	$_POST[q] = str_replace("ü", "ue", $_POST[q]);
+	$_POST[q] = str_replace("ß", "ss", $_POST[q]);
+	$_POST[q] = str_replace("Ä", "Ae", $_POST[q]);
+	$_POST[q] = str_replace("Ö", "Oe", $_POST[q]);
+	$_POST[q] = str_replace("Ü", "Ue", $_POST[q]);
+
 	$time = time();
 #	`./hal2009-cgi "$_POST[q]" 2>&1 > protocol.log`;
 ?> <pre style="height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
