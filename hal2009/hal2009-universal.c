@@ -858,6 +858,16 @@ void print_word_list_3rd_order(struct word*** list) {
     debugf("\n");
 }
 
+int count_list(void** list) {
+    int i, size;
+    for (i = 0, size = 0; can_be_a_pointer(list[i]) || -1 == list[i]; ++i) {
+        if (can_be_a_pointer(list[i]) && list[i] != -1) {
+            ++size;
+        }
+    }
+    return size;
+}
+
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list;
     
@@ -920,7 +930,14 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         }
     }
     
-    if ((!list || is_bad(list[0])) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
+    printf("Do we need the Thesaurus search?\n");
+    
+    if ((!can_be_a_pointer(list) || !can_be_a_pointer(list[0]) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
+        printf("We do.\n");
+        if (can_be_a_pointer(list)) {
+            free(list);
+        }
+    
         struct request* fact = calloc(sizeof(struct request), 1);
         fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
         fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
@@ -957,10 +974,12 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         );
         
         int l;
-        for (l = 0; can_be_a_pointer(list[l]); ++l) {
-            if (can_be_a_pointer(list[l]->verbs)) {
-                free(list[l]->verbs);
-                list[l]->verbs = divide_words("equal");
+        for (l = 0; can_be_a_pointer(list[l]) || list[l] == -1; ++l) {
+            if (can_be_a_pointer(list[l])) {
+                if (can_be_a_pointer(list[l]->verbs)) {
+                    free(list[l]->verbs);
+                    list[l]->verbs = divide_words("equal");
+                }
             }
         }
 
