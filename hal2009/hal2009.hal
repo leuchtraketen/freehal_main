@@ -400,6 +400,8 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     if not from array tags item [ 1 ] matches /q/ do
         print into var output_handle data "  genus: " concat from array tags item [ 1 ] concat new line
     done
+    
+    set hash content_of_memory_file to an empty hash
 
     do close with var output_handle
 done

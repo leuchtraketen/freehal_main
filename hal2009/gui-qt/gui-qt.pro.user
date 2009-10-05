@@ -48,7 +48,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FCpv75s7Pp,guid=45748c40936d4bc0da65cd5c4a54849a</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-GYF97P24c5,guid=9f78d2efb419d7b4175e330e4a8cfd67</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -56,9 +56,9 @@
     <value type="QString" >GDM_LANG=de_DE.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=4887</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-rkCk1J/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-dz88gm/S.gpg-agent:4989:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=24213</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-A8JHx9/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-pxycG5/S.gpg-agent:24312:1</value>
     <value type="QString" >GTK_IM_MODULE=scim-bridge</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/tobias/.gtkrc-1.2-gnome2</value>
@@ -72,16 +72,16 @@
     <value type="QString" >PWD=/home/tobias</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_IM_MODULE=scim-bridge</value>
-    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/4899</value>
+    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/24225</value>
     <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SSH_AGENT_PID=4965</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-rkCk1J/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=24290</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-A8JHx9/socket.ssh</value>
     <value type="QString" >USER=tobias</value>
     <value type="QString" >USERNAME=tobias</value>
     <value type="QString" >WINDOWPATH=7</value>
     <value type="QString" >XAUTHORITY=/home/tobias/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1247052952.749304-1833002827</value>
+    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1250753894.70443-179079929</value>
     <value type="QString" >XMODIFIERS=@im=SCIM</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
@@ -101,7 +101,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-FCpv75s7Pp,guid=45748c40936d4bc0da65cd5c4a54849a</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-GYF97P24c5,guid=9f78d2efb419d7b4175e330e4a8cfd67</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -109,9 +109,9 @@
     <value type="QString" >GDM_LANG=de_DE.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=4887</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-rkCk1J/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-dz88gm/S.gpg-agent:4989:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=24213</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-A8JHx9/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-pxycG5/S.gpg-agent:24312:1</value>
     <value type="QString" >GTK_IM_MODULE=scim-bridge</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/tobias/.gtkrc-1.2-gnome2</value>
@@ -125,16 +125,16 @@
     <value type="QString" >PWD=/home/tobias</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_IM_MODULE=scim-bridge</value>
-    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/4899</value>
+    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/24225</value>
     <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SSH_AGENT_PID=4965</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-rkCk1J/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=24290</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-A8JHx9/socket.ssh</value>
     <value type="QString" >USER=tobias</value>
     <value type="QString" >USERNAME=tobias</value>
     <value type="QString" >WINDOWPATH=7</value>
     <value type="QString" >XAUTHORITY=/home/tobias/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1247052952.749304-1833002827</value>
+    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1250753894.70443-179079929</value>
     <value type="QString" >XMODIFIERS=@im=SCIM</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
