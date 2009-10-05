@@ -1938,7 +1938,7 @@ define action logic with var input, var lang, var path, hash parsed do
     do return using array results
 done
 
-define action phrase with var lang, var mode, array results, hash parsed do
+define action phrase with var lang, var path, var mode, array results, hash parsed do
     set new array phrases to an empty array
 
     # TEXT
@@ -2034,7 +2034,30 @@ define action phrase with var lang, var mode, array results, hash parsed do
             # TEXT
             # Build the final sentence.
             # CODE
-            if items of array auxiliary_verbs or items of array proper_verbs or from array clause item [1] do
+            if from array proper_verbs first item matches "equal" do
+                set new array subject_props to compute_tags with from array clause item [1], var lang, var path
+                set new array object_props to compute_tags with from array clause item [2], var lang, var path
+                set new var subject_genus to from array subject_props item [ 2 ]
+                set new var object_genus to from array  object_props item [ 2 ]
+                set new var subject_article to get_article with var subject_genus, "subject", "indefinite"
+                set new var object_article to get_article with var object_genus, "object", "indefinite"
+                set new var subject_person to get_person with from array clause item [1]
+                set new var verb to get_verb with "be", var subject_person
+                
+                push into array sentence, var subject_article
+                push into array sentence, from array clause item [1]
+                push into array sentence, var verb
+                push into array sentence, var object_article
+                push into array sentence, from array clause item [2]
+                push into array sentence, from array clause item [3]
+                
+                if var final_sentence do
+                    set var final_sentence to var final_sentence concat ', '
+                done
+                
+                set var final_sentence to var final_sentence concat join ' ', items of array sentence
+            done
+            else if items of array auxiliary_verbs or items of array proper_verbs or from array clause item [1] do
                 print "auxiliary verbs: "
                 print items of array auxiliary_verbs
                 print new line
@@ -2247,7 +2270,7 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
-        set array results_link_order to phrase with var lang, var mode, array results_link_order, hash parsed
+        set array results_link_order to phrase with var lang, var path, var mode, array results_link_order, hash parsed
         set new var i_random to rand with items of array results_link_order
         set new var result_link_order to from array results_link_order item [ var i_random ]
         if var result_link_order do
@@ -2263,7 +2286,7 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
-        set array results_link_order to phrase with var lang, var mode, array results_link_order, hash parsed
+        set array results_link_order to phrase with var lang, var path, var mode, array results_link_order, hash parsed
         set new var i_random to rand with items of array results_link_order
         set new var result_link_order to from array results_link_order item [ var i_random ]
         if var result_link_order do
@@ -2481,7 +2504,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         ##push into array facts_to_link, var key
     done
     set array results to sort_out with array results, var mode, hash parsed
-    set new array phrases to phrase with var lang, var mode, array results, hash parsed
+    set new array phrases to phrase with var lang, var path, var mode, array results, hash parsed
     
     do return with array phrases
 done
@@ -2741,7 +2764,7 @@ define action update_list_of_pro_file with var file, var lang, var path do
     for each new var line from var input_pro do
         set new array results to to_array_from_pro_line with var line, var lang
         set new hash parsed to fake_hash_parsed without arguments
-        set new array output_array to phrase with var lang, "default", array results, hash parsed
+        set new array output_array to phrase with var lang, var path, "default", array results, hash parsed
         
         for each new array output_line in array output_array do
             if from array output_line item [ 1 ] do

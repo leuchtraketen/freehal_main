@@ -2141,6 +2141,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'allgemein' => "adj",
           'pages' => "n",
           'must' => "vt",
+          'equal' => "adj",
           'mueder' => "adj",
           'essen' => "vt",
           'wir' => "n",

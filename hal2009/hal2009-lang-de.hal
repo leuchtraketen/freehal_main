@@ -2183,6 +2183,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'hautfarbe' => "n",
           'ihre' => "art",
           'haetten' => "vt",
+          'equal' => "vi",
           'heute' => "adj",
           'zeichen' => "n",
           'e' => "n",
@@ -2780,6 +2781,63 @@ define action guess_part_of_speech with var word do
     done
     
     do return using var guessed
+done
+
+define action get_article with var genus, var part_of_sentence, var def do
+    if var def matches /indef/ do
+        # object
+        if var part_of_sentence matches "object" do
+            if var genus matches /m/ do
+                do return with "einen"
+            done
+            else if var genus matches /f/ do
+                do return with "eine"
+            done
+            else do
+                do return with "ein"
+            done
+        done
+        # subject
+        else do
+            if var genus matches /m/ do
+                do return with "ein"
+            done
+            else if var genus matches /f/ do
+                do return with "eine"
+            done
+            else do
+                do return with "ein"
+            done
+        done
+    done
+    else do
+        # object
+        if var part_of_sentence matches "object" do
+            if var genus matches /m/ do
+                do return with "den"
+            done
+            else if var genus matches /f/ do
+                do return with "die"
+            done
+            else do
+                do return with "das"
+            done
+        done
+        # subject
+        else do
+            if var genus matches /m/ do
+                do return with "der"
+            done
+            else if var genus matches /f/ do
+                do return with "die"
+            done
+            else do
+                do return with "das"
+            done
+        done
+    done
+    
+    do return with ""
 done
 
 define action get_person with var _noun do
