@@ -298,6 +298,8 @@ define action get_tag_part_of_speech with var word, var lang do
     done
 done
 
+set new hash content_of_memory_file to an empty hash
+
 # TEXT
 # Save the word "name_of_entry" in the memory file.
 # The memory file contains the parts of speech.
@@ -405,8 +407,6 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
 
     do close with var output_handle
 done
-
-set new hash content_of_memory_file to an empty hash
 
 # TEXT
 # Search in the memory file for the word "name_of_entry".
