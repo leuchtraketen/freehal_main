@@ -1826,7 +1826,7 @@ define action logic with var input, var lang, var path, hash parsed do
     do close with var output_handle
     do unlink with '_input__get_csv'
     
-    do wait 0.5 seconds
+    do wait 1 seconds
 
     while not exists: '_input__get_csv', end test do
         do wait 0.5 seconds

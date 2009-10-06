@@ -112,7 +112,7 @@ struct word*** get_stored_synonyms(const char* exp) {
 }
 
 struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, int* position, int* allocated_until) {
-    struct fact** facts = search_facts(subj, obj, verb, adverbs, "", "", "default");
+    struct fact** facts = search_facts_simple(subj, obj, verb, adverbs, "", "", "default");
     
     // count the facts
     int size, f;
@@ -746,7 +746,7 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
         for (p = 0; splitted_by_pipe[p]; ++p) {
             int m;
             for (m = 0; fact->verbs[m] && fact->verbs[m]->name; ++m) {
-                debugf("Does %s match %s?\n", fact->verbs[m]->name, splitted_by_pipe[p]);
+                //debugf("Does %s match %s?\n", fact->verbs[m]->name, splitted_by_pipe[p]);
                 if (0 == strcmp(fact->verbs[m]->name, splitted_by_pipe[p]) || fact->verbs[m]->name == strstr(fact->verbs[m]->name, splitted_by_pipe[p])) {
                     does_match_here = 1;
                 }
@@ -1302,7 +1302,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     
     printf("Do we need the Thesaurus search?\n");
     
-    if ((!can_be_a_pointer(list) || !can_be_a_pointer(list[0]) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
+    if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("We do.\n");
         
         struct fact** _list = search_facts_thesaurus(subjects, objects, verbs, adverbs, extra, questionword, context);
@@ -1319,7 +1319,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     
     printf("Do we need the deep search?\n");
     
-    if (!can_be_a_pointer(list) || !can_be_a_pointer(list[0]) || !count_list(list)) {
+    if (!can_be_a_pointer(list) || !count_list(list)) {
         printf("We do.\n");
         
         struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context);

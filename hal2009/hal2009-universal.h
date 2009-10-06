@@ -117,6 +117,8 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 struct fact** search_in_net(struct request* fact, struct fact** list);
 void print_word_list_3rd_order(struct word*** list);
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
+struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
+struct fact** search_facts_thesaurus(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_clauses(int rel);
 int free_words_weak(struct word** words);
 int free_words_deep(struct word** words);
