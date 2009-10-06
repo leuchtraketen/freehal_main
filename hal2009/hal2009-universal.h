@@ -114,7 +114,7 @@ int fact_matches_verb(struct fact* fact, struct request* request);
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request);
 struct fact** filter_list_by_rules(struct fact** list, struct request* request);
 int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
-struct fact** search_in_net(struct request* fact);
+struct fact** search_in_net(struct request* fact, struct fact** list);
 void print_word_list_3rd_order(struct word*** list);
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_clauses(int rel);

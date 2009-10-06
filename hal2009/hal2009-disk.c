@@ -391,7 +391,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     char* sql = malloc(102400);
     *sql = 0;
     
-    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`from`, `nmain`.`truth` ");
+    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth` ");
     strcat(sql, " FROM clauses AS nmain JOIN rel_clause_flag AS rff ON nmain.pk = rff.fact WHERE nmain.rel = ");
     char rel_str[10];
     snprintf(rel_str, 9, "%d", rel);
@@ -473,7 +473,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         strcat(sql, ")");
     }
     strcat(sql, ";");
-    strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`from`, `nmain`.`truth` ");
+    strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
     
@@ -618,9 +618,9 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->objects      = divide_words(argv[3] ? argv[3] : "");
     fact->adverbs      = divide_words(argv[4] ? argv[4] : "");
     fact->extra        = divide_words("");
-    fact->questionword = strdup("");
-    fact->from         = strdup(argv[5] ? argv[5] : "");
-    fact->truth        = !argv[6] || !argv[6][0] || argv[6][0] == '0' ? 0.0 : 1.0;
+    fact->questionword = strdup(argv[5] ? argv[5] : "");
+    fact->from         = strdup(argv[6] ? argv[6] : "");
+    fact->truth        = !argv[7] || !argv[7][0] || argv[7][0] == '0' ? 0.0 : 1.0;
     
     req->facts[*req->position] = fact;
     debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
