@@ -2096,6 +2096,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'linkem' => "adj",
           'seit' => "prep",
           'seinem' => "art",
+          'berufe' => "n",
+          'beruf' => "n",
           'auf' => "prep",
           'hin' => "adj",
           'eher' => "adj",

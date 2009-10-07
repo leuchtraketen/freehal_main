@@ -419,6 +419,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\smacht man mit\s/, " ist ", :global:i
     do regex using var input: /\sist mit\s/, " ist-mit ", :global:i
 
+    do regex using var input: /Was fuer (.*?) kennst du.*/, "was ist $0 ?", :global:i
+
     do regex using var input: /^was\sgeht<ws><[?]>/, "wie geht es dir?", :global:i
     do regex using var input: /^was\sgeht$/, "wie geht es dir?", :global:i
     do regex using var input: /^was\sgeht\sab<ws><[?]>/, "wie geht es dir?", :global:i
@@ -458,27 +460,28 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /wie denkst du ueber /, "was ist ", :global:i
     do regex using var input: /was haeltst du von /, "was ist ", :global:i
     do regex using var input: /was haelst du von /, "was ist ", :global:i
-    do regex using var input: /erzaehl mir was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehl mir etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle mir was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle mir etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehl mir bitte was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehl mir bitte etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle mir bitte was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle mir bitte etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzael mir was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzael mir etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaele mir was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaele mir etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehl was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehl etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaehle etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzael was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzael etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaele was((<[\s!?.]>.*)|$)/, "was ist?", :global:i
-    do regex using var input: /erzaele etwas((<[\s!?.]>.*)|$)/, "was ist?", :global:i
+    do regex using var input: /erzaehl mir was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehl mir etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle mir was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle mir etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehl mir bitte was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehl mir bitte etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle mir bitte was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle mir bitte etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzael mir was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzael mir etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaele mir was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaele mir etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehl was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehl etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaehle etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzael was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzael etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaele was(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
+    do regex using var input: /erzaele etwas(?:(<[\s!?.]>?.*?$)|$)/, "was ist $0 ?", :global:i
     do regex using var input: /Erzaehlst du .*/, "was ist?", :global:i
+    do regex using var input: /was ist\s+?ueber /, "was ist ", :global:i
     
     if lc(var input) matches /(was heisst) ([a-z])/ do
         set new var temp to ucfirst with $1
