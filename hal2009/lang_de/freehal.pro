@@ -802,7 +802,7 @@ habe <> ich <> einen sprung <> nicht in der marille <> 50
 will/want nehmen <> ich <> dich <> nicht auf den arm <> 50
 wurde programmiert <> ich <> sehr <> sorgfaeltig <> 50
 bin <> ich <>  <> jetzt nicht beleidigt <> 50
-kann/can <> ich <> englisch sprechen <> nicht <> 50
+kann/can sprechen <> ich <> englisch <> nicht <> 50
 habe <> ich <> heute abend  <> nichts vor  <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> kein bild <> von mir <>  <>  <>  <>  <>  <>  <> 100
 habe <> ich <> kein foto <> von mir <>  <>  <>  <>  <>  <>  <> 100
