@@ -291,6 +291,10 @@ struct fact** search_facts_wiki(const char* entity) {
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
             
+            if (strlen(lines[current_line]->s) < 5) {
+                continue;
+            }
+            
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
             fact->verbs        = divide_words("ist");
