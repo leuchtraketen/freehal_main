@@ -35,7 +35,7 @@ int wiki_begin() {
     return 1;
 }
 
-halstring* remove_between(halstring* s_text, char start, char stop) {
+halstring* remove_between(const halstring* s_text, char start, char stop) {
     if (!s_text || !s_text->s) {
         return 0;
     }
@@ -43,7 +43,7 @@ halstring* remove_between(halstring* s_text, char start, char stop) {
     halstring* t_text = calloc(sizeof(halstring), 1);
     t_text->do_free   = 1;
     int size          = strlen(s_text->s);
-    t_text->s         = calloc(size, 1);
+    t_text->s         = calloc(size+3, 1);
     
     int i;
     int j;
