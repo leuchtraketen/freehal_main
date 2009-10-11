@@ -36,6 +36,10 @@ int wiki_begin() {
 }
 
 halstring* remove_between(halstring* s_text, char start, char stop) {
+    if (!s_text || !s_text->s) {
+        return 0;
+    }
+    
     halstring* t_text = calloc(sizeof(halstring), 1);
     t_text->do_free   = 1;
     int size          = strlen(s_text->s);
@@ -277,6 +281,9 @@ struct fact** search_facts_wiki(const char* entity) {
             if (strstr(lines[current_line]->s, "bezeichnet:")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "benannt:")) {
+                continue;
+            }
             if (strstr(lines[current_line]->s, "Koordinaten")) {
                 continue;
             }
@@ -286,10 +293,17 @@ struct fact** search_facts_wiki(const char* entity) {
             if (strstr(lines[current_line]->s, "</div")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "<li")) {
+                continue;
+            }
             
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
+            
+            if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
+                continue;
+            }
             
             if (strlen(lines[current_line]->s) < 5) {
                 continue;
