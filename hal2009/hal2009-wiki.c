@@ -117,7 +117,10 @@ char* transform_sentence(char* sentence) {
     if (verb_str = strstr(sentence, "hrt zu ")) {
         verb_str += 7;
     }
-    if (verb_str = strstr(sentence, " ist ")) {
+    else if (verb_str = strstr(sentence, " bezeichnet ")) {
+        verb_str += 12;
+    }
+    else if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
     }
     else if (verb_str = strstr(sentence, " sind ")) {
@@ -303,6 +306,11 @@ struct fact** search_facts_wiki(const char* entity) {
             
             if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
                 continue;
+            }
+            
+            char* ascii_text = ascii(lines[current_line]->s);
+            if (ascii_text) {
+                lines[current_line]->s = ascii_text;
             }
             
             if (strlen(lines[current_line]->s) < 5) {
