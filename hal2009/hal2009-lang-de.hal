@@ -3501,7 +3501,7 @@ define action stem_nouns with array phrases do
             if var noun matches /ul.$/ do
                 go to next
             done
-            if var noun matches /(ff|lk)e$/ do
+            if var noun matches /(ff|lk|ns)e$/ do
                 go to next
             done
             if var noun matches /ger$/ do
@@ -3519,9 +3519,9 @@ define action stem_nouns with array phrases do
             if var noun matches /e<[mnrs]>$/ do
                 do regex using var noun: /e<[mnrs]>$/, "e*", :global:i
             done
-            if var noun matches /e$/ do
-                do regex using var noun: /e$/, "*", :global:i
-            done
+            #if var noun matches /e$/ do
+            #    do regex using var noun: /e$/, "*", :global:i
+            #done
             if var noun matches /<[bdfghklmnrt]>s$/ do
                 do regex using var noun: /s$/, "*", :global:i
             done
