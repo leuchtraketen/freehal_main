@@ -483,6 +483,9 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         
         does_match = does_match || (should_match_with_this_synonym && does_match_with_this_synonym == should_match_with_this_synonym);
     }
+    if (u == 0) {
+        return -1;
+    }
     
     does_match = does_match || (!u);
     
@@ -507,7 +510,7 @@ int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, EXACT);
     debugf("subject by object:  %d\n", does_match);
     if (does_match == -1)
-        does_match = 0;
+        does_match = 1;
     return does_match;
 }
 int fact_matches_object_by_object(struct fact* fact, struct request* request) {

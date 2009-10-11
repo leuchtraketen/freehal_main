@@ -169,7 +169,7 @@ char* transform_sentence(char* sentence) {
         ++j;
     }
     
-    if (number_of_spaces > 12) {
+    if (number_of_spaces > 20) {
         object[maybe_end] = '\0';
     }
     
