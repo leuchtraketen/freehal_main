@@ -110,6 +110,9 @@ char* transform_sentence(char* sentence) {
     printf("sentence: %s\n", sentence);
     
     char* verb_str = 0;
+    if (verb_str = strstr(sentence, "hrt zu ")) {
+        verb_str += 7;
+    }
     if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
     }
@@ -249,10 +252,10 @@ struct fact** search_facts_wiki(const char* entity) {
             if (0 < in_script || 0 < in_table) {
                 continue;
             }
-            if (strstr(lines[current_line]->s, "action=edit")) {
+            if (strstr(lines[current_line]->s, "action=edit") && !strstr(lines[current_line]->s, "redlink")) {
                 continue;
             }
-            if (strstr(lines[current_line]->s, ":")) {
+            if (strstr(lines[current_line]->s, "bezeichnet:")) {
                 continue;
             }
             
@@ -266,7 +269,7 @@ struct fact** search_facts_wiki(const char* entity) {
             fact->subjects     = divide_words(entity);
             char* object       = transform_sentence(lines[current_line]->s);
             fact->objects      = divide_words(object);
-            fact->adverbs      = divide_words("");
+            fact->adverbs      = divide_words(";)");
             fact->extra        = divide_words("");
             fact->questionword = strdup("");
             fact->from         = strdup("");
