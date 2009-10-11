@@ -299,10 +299,12 @@ struct fact** search_facts_wiki(const char* entity) {
             if (strstr(lines[current_line]->s, "<li")) {
                 continue;
             }
+            printf("(1): %s\n", lines[current_line]->s);
             
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
+            printf("(2): %s\n", lines[current_line]->s);
             
             if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
                 continue;
@@ -312,6 +314,7 @@ struct fact** search_facts_wiki(const char* entity) {
             if (ascii_text) {
                 lines[current_line]->s = ascii_text;
             }
+            printf("(3): %s\n", lines[current_line]->s);
             
             if (strlen(lines[current_line]->s) < 5) {
                 continue;
@@ -322,6 +325,7 @@ struct fact** search_facts_wiki(const char* entity) {
                 free(object);
                 break;
             }
+            printf("(4): %s\n", object);
             
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
