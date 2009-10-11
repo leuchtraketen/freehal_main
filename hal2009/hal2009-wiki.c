@@ -169,7 +169,7 @@ char* transform_sentence(char* sentence) {
         ++j;
     }
     
-    if (number_of_spaces > 4) {
+    if (number_of_spaces > 12) {
         object[maybe_end] = '\0';
     }
     
@@ -225,7 +225,7 @@ struct fact** search_facts_wiki(const char* entity) {
     char*  url                    = replace_spaces(_url);
     printf("url: %s\n", url);
     halstring* file               = download_from_url(url);
-    free(entity_upper);
+    /// entity_upper is free'd at the end of the function
     free(entity_without_stars);
     free( _url);
     free(  url);
@@ -320,17 +320,19 @@ struct fact** search_facts_wiki(const char* entity) {
                 continue;
             }
             
-            char* object       = transform_sentence(lines[current_line]->s);
-            if (strstr(object, "bezeichnet")) {
-                free(object);
+            char* _object      = transform_sentence(lines[current_line]->s);
+            if (strstr(_object, "bezeichnet")) {
+                free(_object);
                 break;
             }
-            printf("(4): %s\n", object);
+            printf("(4): %s\n", _object);
+            char* object       = delete_articles(_object);
+            printf("(5): %s\n", object);
             
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
-            fact->verbs        = divide_words("ist");
-            fact->subjects     = divide_words(entity);
+            fact->verbs        = divide_words("equal");
+            fact->subjects     = divide_words(entity_upper);
             fact->objects      = divide_words(object);
             fact->adverbs      = divide_words("...");
             fact->extra        = divide_words("");
@@ -345,6 +347,7 @@ struct fact** search_facts_wiki(const char* entity) {
                 break;
             }
             free(object);
+            free(_object);
         }
     }
     
@@ -363,6 +366,7 @@ struct fact** search_facts_wiki(const char* entity) {
     if (file->do_free) {
         free(file->s);
     }
+    free(entity_upper);
     
     return facts;
 }

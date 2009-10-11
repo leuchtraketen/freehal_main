@@ -470,14 +470,14 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             ++does_match_here;
                         }
                         else {
-                            //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
                 }
             }
             
-            does_match_with_this_synonym   += (does_match_here && does_match_here == should_match_here) ? 1 : 0;
+            does_match_with_this_synonym   += (does_match_here && (does_match_here == should_match_here || does_match_here >= should_match_here + 1 - count_of_words_request)) ? 1 : 0;
             should_match_with_this_synonym += 1;
         }
         
@@ -491,21 +491,21 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 
 int fact_matches_subject_by_subject(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->subjects, EXACT);
-    //debugf("subject by subject: %d\n", does_match);
+    debugf("subject by subject: %d\n", does_match);
     if (does_match == -1)
         does_match = 1;
     return does_match;
 }
 int fact_matches_object_by_subject(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->subjects, EXACT);
-    //debugf("object by subject:  %d\n", does_match);
+    debugf("object by subject:  %d\n", does_match);
     if (does_match == -1)
         does_match = 0;
     return does_match;
 }
 int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, EXACT);
-    //debugf("subject by object:  %d\n", does_match);
+    debugf("subject by object:  %d\n", does_match);
     if (does_match == -1)
         does_match = 0;
     return does_match;
