@@ -3501,7 +3501,7 @@ define action stem_nouns with array phrases do
             if var noun matches /ul.$/ do
                 go to next
             done
-            if var noun matches /ffe$/ do
+            if var noun matches /(ff|lk)e$/ do
                 go to next
             done
             if var noun matches /ger$/ do
