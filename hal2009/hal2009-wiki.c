@@ -147,6 +147,25 @@ char* transform_sentence(char* sentence) {
         ++j;
     }
     
+    int maybe_end = j;
+    int number_of_spaces = 0;
+    for (; i < size; ++i) {
+        if (verb_str[i] == ',') {
+            break;
+        }
+        
+        if (verb_str[i] == ' ') {
+            ++number_of_spaces;
+        }
+        
+        object[j] = verb_str[i];
+        ++j;
+    }
+    
+    if (number_of_spaces > 4) {
+        object[maybe_end] = '\0';
+    }
+    
     printf("object:   %s\n", object);
     
     return object;
@@ -258,6 +277,15 @@ struct fact** search_facts_wiki(const char* entity) {
             if (strstr(lines[current_line]->s, "bezeichnet:")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "Koordinaten")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "latitude")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "</div")) {
+                continue;
+            }
             
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
@@ -269,7 +297,7 @@ struct fact** search_facts_wiki(const char* entity) {
             fact->subjects     = divide_words(entity);
             char* object       = transform_sentence(lines[current_line]->s);
             fact->objects      = divide_words(object);
-            fact->adverbs      = divide_words(";)");
+            fact->adverbs      = divide_words("...");
             fact->extra        = divide_words("");
             fact->questionword = strdup("");
             fact->from         = strdup("");
