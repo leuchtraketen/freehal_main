@@ -2116,6 +2116,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     set from array clause item [1] to noun_for_anonymous without arguments
                 done
                 
+                if var final_sentence do
+                    if from array clause item [4] do
+                        push into array sentence, from array clause item [4]
+                    done
+                done
+                
                 if from array clause item [2] matches "NULL" or not from array clause item [2] do
                     if items of array proper_verbs do
                         push into array sentence, from array clause item [1]
