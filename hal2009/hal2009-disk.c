@@ -413,6 +413,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     strcat(sql, "delete from cache_facts ");
 
     int n, m, q;
+    int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
     for (n = 0; can_be_a_pointer(words[n]); ++n) {
         int is_new = 1;
@@ -435,10 +436,12 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         
         for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
             if (n == 0 || n % 100 == 0) {
-                if (n) {
+                if (in_bracket) {
                     strcat(sql, ")");
+                    in_bracket = 0;
                 }
                 strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM rel_word_fact WHERE 0 ");
+                in_bracket = 1;
             }
 
             if (is_a_trivial_word(words[n][m]->name)) {
@@ -469,7 +472,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             }
         }
     }
-    if (n) {
+    if (in_bracket) {
         strcat(sql, ")");
     }
     strcat(sql, ";");

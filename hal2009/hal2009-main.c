@@ -20,6 +20,7 @@
 */
 
 #include "hal2009.h"
+#include "hal2009-wiki-dummy.c"
 
 #include <getopt.h>
 

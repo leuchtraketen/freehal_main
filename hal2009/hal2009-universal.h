@@ -85,6 +85,9 @@ struct list {
 };
 
 
+int wiki_begin();
+struct fact** search_facts_wiki(const char* entity);
+
 int universal_begin();
 int universal_end();
 struct word* get_word(const char* name);

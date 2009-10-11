@@ -19,9 +19,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#include "hal2009.h"
-#include "hal2009-wiki.c"
+#include "hal2009-universal.h"
 
-int cstat (char* c, struct stat* s) {
-    return stat(c, s);
+
+int wiki_begin() {
+    return 0;
+}
+
+struct fact** search_facts_wiki(const char* entity) {
+    return 0;
 }

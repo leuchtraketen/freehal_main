@@ -24,6 +24,7 @@
 #define DONT_DECLARE_STD 1
 #define USE_CXX 1
 #include "hal2009.h"
+#include "hal2009-download.cpp"
 
 #include <pthread.h>
 

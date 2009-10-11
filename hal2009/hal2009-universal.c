@@ -1334,6 +1334,30 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("No.\n");
     }
     
+    printf("Do we need the wiki search?\n");
+    
+    if (!can_be_a_pointer(list) || !count_list(list)) {
+        printf("We do.\n");
+        
+        if (wiki_begin()) {
+            printf("Wiki search is allowed.\n");
+            
+            struct fact** _list = search_facts_wiki(subjects);
+            if (can_be_a_pointer(_list)) {
+                if (can_be_a_pointer(list)) {
+                    free(list);
+                }
+                list = _list;
+            }
+        }
+        else {
+            printf("Wiki search is NOT allowed.\n");
+        }
+    }
+    else {
+        printf("No.\n");
+    }
+    
     return list;
 }
 
