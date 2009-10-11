@@ -317,11 +317,16 @@ struct fact** search_facts_wiki(const char* entity) {
                 continue;
             }
             
+            char* object       = transform_sentence(lines[current_line]->s);
+            if (strstr(object, "bezeichnet")) {
+                free(object);
+                break;
+            }
+            
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
             fact->verbs        = divide_words("ist");
             fact->subjects     = divide_words(entity);
-            char* object       = transform_sentence(lines[current_line]->s);
             fact->objects      = divide_words(object);
             fact->adverbs      = divide_words("...");
             fact->extra        = divide_words("");
