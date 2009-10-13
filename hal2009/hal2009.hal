@@ -2130,9 +2130,16 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         push into array sentence, items of array proper_verbs
                     done
                     else do
-                        push into array sentence, from array clause item [1]
-                        push into array sentence, items of array auxiliary_verbs
-                        push into array sentence, from array clause item [3]
+                        if from array clause item [3] matches /.../ do
+                            push into array sentence, from array clause item [3]
+                            push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [1]
+                        done
+                        else do
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [3]
+                        done
                     done
                 done
                 else if from array clause item [3] matches /von/ do
