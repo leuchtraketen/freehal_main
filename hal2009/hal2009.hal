@@ -1610,6 +1610,16 @@ define action compute_context with hash parsed do
         set from hash parsed item { 'extra' } to array extra_array
         do return with "enum_all"
     done
+    
+    # TEXT
+    # Look for something like "Das habe ich nicht gemeint"
+    # CODE
+    for each new var verb in array verb_array do
+        if var verb first item matches /mein<[et]>/ do
+            do return with "not_meant"
+        done
+    done
+
 
     do return with "default"
 done

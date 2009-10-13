@@ -157,10 +157,13 @@ char* transform_sentence(char* sentence) {
     int maybe_end = j;
     int number_of_spaces = 0;
     for (; i < size; ++i) {
-        if (verb_str[i] == ',') {
+        if (verb_str[i] == '.') {
             break;
         }
-        if (i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
+        if (number_of_spaces > 10 && verb_str[i] == ',') {
+            break;
+        }
+        if (number_of_spaces > 10 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
             break;
         }
         
@@ -216,25 +219,149 @@ char* delete_articles(const char* s) {
     return n;
 }
 
-struct fact** search_facts_wiki(const char* entity) {
-    char* entity_without_stars    = delete_stars(entity);
-    printf("entity_without_stars: %s\n", entity_without_stars);
-    char* entity_without_articles = delete_articles(entity_without_stars);
-    printf("entity_without_stars: %s\n", entity_without_stars);
-    char* entity_upper            = upper(entity_without_articles);
-    printf("entity_upper: %s\n", entity_upper);
-    char* _url                    = concat("de.wikipedia.org/wiki/", entity_upper);
-    printf("_url: %s\n", _url);
+halstring** search_results        = 0;
+int         search_results_lines  = 0;
+halstring*  search_results_line   = 0;
+halstring*  search_results_entity = 0;
+
+struct fact** search_facts_wiki_page(const char*, const char*);
+
+struct fact** search_facts_wiki(const char* entity, short todo) {
+    char* entity_without_stars = 0;
+    char* entity_without_articles = 0;
+    char* entity_upper = 0;
+    char* _url = 0;
+    char* url = 0;
+    halstring** lines = 0;
+    int number_of_lines = 0;
+    
+    entity_without_stars    = delete_stars(entity);
+    entity_without_articles = delete_articles(entity_without_stars);
+    entity_upper            = upper(entity_without_articles);
+    /// if NEW
+    if (todo == NEW) {
+        _url                    = concat("de.wikipedia.org/wiki/Spezial:Suche/", entity_upper);
+        url                     = replace_spaces(_url);
+        printf("url: %s\n", url);
+        halstring* file         = download_from_url(url);
+        /// entity_upper is free'd at the end of the function
+        free( _url);
+        free(  url);
+        
+        if (!file) {
+            free(entity_without_stars);
+            free(entity_upper);
+            return 0;
+        }
+
+        if (search_results) {
+            int current_line;
+            for (current_line = 0; current_line < search_results_lines; ++current_line) {
+                if (0 == search_results[current_line])
+                    break;
+                if (0 == search_results[current_line]->s)
+                    break;
+                halfree(search_results[current_line]->s);
+                halfree(search_results[current_line]);
+                search_results[current_line] = 0;
+                continue;
+            }
+            search_results = 0;
+        }
+        if (search_results_entity) {
+            free(search_results_entity);
+            search_results_entity = 0;
+        }
+    
+        search_results_entity   = strdup(entity_upper);
+
+        number_of_lines = 0;
+        lines = stringtoarray(file, '\n', &number_of_lines);
+        search_results = lines;
+        search_results_lines = number_of_lines;
+        
+        if (!file) {
+            printf("Was not successful: download_from_url\n");
+            return 0;
+        }
+        if (file->do_free) {
+            free(file->s);
+        }
+    }
+    /// if CONTINUE
+    else if (search_results && search_results_entity) {
+        lines = search_results;
+        number_of_lines = search_results_lines;
+    }
+    else {
+        free(entity_without_stars);
+        free(entity_upper);
+        return 0;
+    }
+    free(entity_without_stars);
+    free(entity_upper);
+    
+    
+    struct fact** facts = 0;
+    
+    int current_line;
+    if (todo == NEW) {
+        current_line = 0;
+    }
+    else {
+        current_line = search_results_line;
+    }
+    printf("(%i lines / search_results_line = %i / current_line = %i)\n", number_of_lines, search_results_line, current_line);
+    for (++current_line; current_line < number_of_lines; ++current_line) {
+        printf("- %i\n", current_line);
+        if (0 == lines[current_line])
+            break;
+        if (0 == lines[current_line]->s)
+            break;
+        if (strlen(lines[current_line]->s) <= 1) {
+            halfree(lines[current_line]->s);
+            halfree(lines[current_line]);
+            lines[current_line] = 0;
+            continue;
+        }
+        
+        
+        if (strstr(lines[current_line]->s, "<li><a href=\"/wiki/")) {
+            char* start = strstr(lines[current_line]->s, "\"");
+            if (!start) continue;
+            ++start;
+            
+            char* stop = strstr(start, "\"");
+            if (!stop) continue;
+            stop[0] = '\0';
+            
+            printf("page: \"%s\"\n", start);
+            
+            facts = search_facts_wiki_page(start, search_results_entity);
+            if (facts) {
+                search_results_line = current_line;
+                break;
+            }
+        }
+    }
+    
+    
+    return facts;
+}
+
+struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper) {
+    printf("page: __url: %s\n", __url);
+    char* _url                    = concat("de.wikipedia.org", __url);
+    printf("page: _url: %s\n", _url);
     char*  url                    = replace_spaces(_url);
-    printf("url: %s\n", url);
+    printf("page: url: %s\n", url);
     halstring* file               = download_from_url(url);
     /// entity_upper is free'd at the end of the function
-    free(entity_without_stars);
     free( _url);
     free(  url);
     
     if (!file) {
-        printf("Was not successful: download_from_url\n");
+        printf("page: Was not successful: download_from_url\n");
         return 0;
     }
     
@@ -243,7 +370,7 @@ struct fact** search_facts_wiki(const char* entity) {
     int number_of_lines = 0;
     halstring** lines = stringtoarray(file, '\n', &number_of_lines);
     int current_line;
-    printf("(%i lines)\n", number_of_lines);
+    printf("page: (%i lines)\n", number_of_lines);
     int in_header = 1;
     int in_table = 0;
     int in_script = 0;
@@ -302,12 +429,10 @@ struct fact** search_facts_wiki(const char* entity) {
             if (strstr(lines[current_line]->s, "<li")) {
                 continue;
             }
-            printf("(1): %s\n", lines[current_line]->s);
             
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
-            printf("(2): %s\n", lines[current_line]->s);
             
             if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
                 continue;
@@ -317,7 +442,6 @@ struct fact** search_facts_wiki(const char* entity) {
             if (ascii_text) {
                 lines[current_line]->s = ascii_text;
             }
-            printf("(3): %s\n", lines[current_line]->s);
             
             if (strlen(lines[current_line]->s) < 5) {
                 continue;
@@ -328,9 +452,7 @@ struct fact** search_facts_wiki(const char* entity) {
                 free(_object);
                 break;
             }
-            printf("(4): %s\n", _object);
             char* object       = delete_articles(_object);
-            printf("(5): %s\n", object);
             
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
@@ -369,7 +491,6 @@ struct fact** search_facts_wiki(const char* entity) {
     if (file->do_free) {
         free(file->s);
     }
-    free(entity_upper);
     
     return facts;
 }

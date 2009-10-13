@@ -32,6 +32,8 @@
 #define WEAK         3
 #define USE_SUBJECTS 11
 #define USE_OBJECTS  12
+#define NEW          21
+#define CONTINUE     22
 
 #define DEBUG       1
 
@@ -86,7 +88,7 @@ struct list {
 
 
 int wiki_begin();
-struct fact** search_facts_wiki(const char* entity);
+struct fact** search_facts_wiki(const char*, short);
 
 int universal_begin();
 int universal_end();

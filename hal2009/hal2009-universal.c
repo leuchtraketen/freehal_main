@@ -1301,9 +1301,48 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list = 0;
     
-    list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context);
+    printf("Do we need the 'not meant' search?\n");
+    if (0 == strcmp(context, "not_meant")) {
+        if (!can_be_a_pointer(list) || !count_list(list)) {
+            printf("We do.\n");
+            
+            if (wiki_begin()) {
+                printf("'not meant' search is allowed.\n");
+                
+                struct fact** _list = search_facts_wiki(subjects, CONTINUE);
+                if (can_be_a_pointer(_list)) {
+                    if (can_be_a_pointer(list)) {
+                        free(list);
+                    }
+                    list = _list;
+                }
+            }
+            else {
+                printf("'not meant' search is NOT allowed.\n");
+            }
+        }
+    }
+    else {
+        printf("No.\n");
+    }
     
-    printf("Do we need the Thesaurus search?\n");
+    printf("Do we need the simple search?\n");
+    if (!can_be_a_pointer(list) || !count_list(list)) {
+        printf("We do.\n");
+        
+        struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context);
+        if (can_be_a_pointer(_list)) {
+            if (can_be_a_pointer(list)) {
+                free(list);
+            }
+            list = _list;
+        }
+    }
+    else {
+        printf("No.\n");
+    }
+    
+    printf("Do we need the thesaurus search?\n");
     
     if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("We do.\n");
@@ -1328,7 +1367,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         if (wiki_begin()) {
             printf("Wiki search is allowed.\n");
             
-            struct fact** _list = search_facts_wiki(subjects);
+            struct fact** _list = search_facts_wiki(subjects, NEW);
             if (can_be_a_pointer(_list)) {
                 if (can_be_a_pointer(list)) {
                     free(list);
