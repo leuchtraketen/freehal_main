@@ -160,6 +160,9 @@ char* transform_sentence(char* sentence) {
         if (verb_str[i] == ',') {
             break;
         }
+        if (i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
+            break;
+        }
         
         if (verb_str[i] == ' ') {
             ++number_of_spaces;
