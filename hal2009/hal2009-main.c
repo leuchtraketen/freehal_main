@@ -236,7 +236,8 @@ void hal2009_handle_signal(void* arg) {
         fprintf(output(), "Memory is released.\n");
     }
     else if (0 == strcmp(type, "_output")) {
-        fprintf(output(), "\nFreeHAL: %s\n", text);
+        fprintf(output(), "\n\n--------------------------------------------------------------------------------\n\n", text);
+        fprintf(output(), "FreeHAL: %s\n\n--------------------------------------------------------------------------------\n\n", text);
     }
     else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
         exit(0);
