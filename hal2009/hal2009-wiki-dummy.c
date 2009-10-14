@@ -26,6 +26,6 @@ int wiki_begin() {
     return 0;
 }
 
-struct fact** search_facts_wiki(const char* entity) {
+struct fact** search_facts_wiki(const char* entity, short dummy) {
     return 0;
 }
