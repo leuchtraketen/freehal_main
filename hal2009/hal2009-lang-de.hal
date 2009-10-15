@@ -1451,6 +1451,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'tomorrow' => 1,
           'usually' => 1,
           'yesterday' => 1,
+          'entfernt' => 1,
 };
 
 define action builtin_has_time_place_adverbs_suffix with var word do
@@ -1848,6 +1849,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'zaeh' => "adj",
           'duester' => "adj",
           'zwei' => "adj",
+          'entfernt' => "adj",
           'rechten' => "adj",
           'welk' => "adj",
           'schlau' => "adj",
