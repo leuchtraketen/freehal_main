@@ -1265,3 +1265,22 @@ void hal2009_init(char* planguage, char* tlanguage, char* base_dir) {
     halfree(content);
 }
 
+int hal2009_set_text_language(const char* s) {
+    if (!s) {
+        return INVALID;
+    }
+    if (hal2009_text_language) {
+        free(hal2009_text_language);
+        hal2009_text_language = 0;
+    }
+    hal2009_text_language = strdup(s);
+}
+
+const char* hal2009_get_text_language() {
+    if (!hal2009_text_language) {
+        hal2009_text_language = strdup("de");
+    }
+    return hal2009_text_language;
+}
+
+

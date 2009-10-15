@@ -149,6 +149,9 @@ char* transform_sentence(char* sentence) {
         if (j == 0 && (verb_str[i] == ' ' || verb_str[i] == '\t')) {
             continue;
         }
+        if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
+            continue;
+        }
         
         object[j] = verb_str[i];
         ++j;
@@ -165,6 +168,9 @@ char* transform_sentence(char* sentence) {
         }
         if (number_of_spaces > 10 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
             break;
+        }
+        if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
+            continue;
         }
         
         if (verb_str[i] == ' ') {
@@ -240,7 +246,8 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     entity_upper            = upper(entity_without_articles);
     /// if NEW
     if (todo == NEW) {
-        _url                    = concat("de.wikipedia.org/wiki/Spezial:Suche/", entity_upper);
+        _url                    = concat("de.wikipedia.org/w/index.php?title=Spezial%3ASuche&fulltext=Volltext&search=", entity_upper);
+        // _url                    = concat("de.wikipedia.org/wiki/Spezial:Suche/", entity_upper);
         url                     = replace_spaces(_url);
         printf("url: %s\n", url);
         halstring* file         = download_from_url(url);
@@ -464,6 +471,38 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             fact->questionword = strdup("");
             fact->from         = strdup("");
             fact->truth        = 1.0;
+            
+            /// write to prot file
+            {
+                char file[501];
+                snprintf(file, 500, "lang_%s/wiki.prot", hal2009_get_text_language());
+                char line[501];
+                char* object_working = object;
+                char* end;
+                while (end = strstr(object_working, ",")) {
+                    
+                    char* i;
+                    short found_big_letter = 0;
+                    for (i = object_working; i != end; ++i) {
+                        if (i[0] >= 'A' && i[0] <= 'Z' && (strstr(i, " ") == 0 || strstr(i, " ") > end)) ++found_big_letter;
+                    }
+                    
+                    if (found_big_letter) {
+                        end[0] = '\0';
+                        break;
+                    }
+                    else {
+                        end[0] = ' ';
+                        object_working = end+1;
+                    }
+                }
+                snprintf(line, 500, "%s ~~~ %s\n", entity_upper, object);
+                FILE* prot_out = fopen(file, "a");
+                if (prot_out) {
+                    fprintf(prot_out, "%s", line);
+                    fclose(prot_out);
+                }
+            }
             
             facts[0] = fact;
             

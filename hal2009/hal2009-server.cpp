@@ -975,6 +975,7 @@ void hal2009_handle_signal(void* arg) {
         halclose(target);
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
+        hal2009_set_text_language(signal_handler_tlanguage);
         struct DATASET set = hal2009_get_csv(text);
         FILE* target = fopen("_input__get_csv", "w+b");
         const char* csv_data = hal2009_make_csv(&set);

@@ -2684,6 +2684,11 @@ define action save_facts with array facts_parsed, var pro_file_name, var prepend
         for each new array adverb in array adverbs do
             set var adverb to from array adverb first item
         done
+        
+        if from array verbs first item matches "~~~" do
+            set from hash parsed item { 'adverbs' } to an empty array
+            set from array verbs first item to "="
+        done
 
         set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
         set var line to var line concat ' <> '
