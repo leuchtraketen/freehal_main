@@ -752,11 +752,13 @@ define action compute_input with var input is rw, var lang, var path do
     for each new var temp in array replace_array do
         set new var a to from array temp item [ 0 ]
         set new var b to from array temp item [ 1 ]
-        do regex using var input: /var a/, "var b", :global:i
-        print "#var a# --> #var b#"
-        print new line
-        print var input
-        print new line
+        if var a and var b do
+            do regex using var input: /var a/, "var b", :global:i
+            print "#var a# --> #var b#"
+            print new line
+            print var input
+            print new line
+        done
     done
 
     do regex using var input: /kind of /, "kind_of_", :global:i

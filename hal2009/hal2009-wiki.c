@@ -497,10 +497,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                     }
                 }
                 snprintf(line, 500, "%s ~~~ %s\n", entity_upper, object);
-                FILE* prot_out = fopen(file, "a");
-                if (prot_out) {
-                    fprintf(prot_out, "%s", line);
-                    fclose(prot_out);
+                if (strlen(entity_upper) >= 3 && entity_upper[0] != '0') {
+                    FILE* prot_out = fopen(file, "a");
+                    if (prot_out) {
+                        fprintf(prot_out, "%s", line);
+                        fclose(prot_out);
+                    }
                 }
             }
             
