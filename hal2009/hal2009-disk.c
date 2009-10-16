@@ -561,15 +561,19 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     }
 
     int pk = get_last_pk(0)+1;
-
+    int error = 0;
     {
         char* sql = 0;
         sql = gen_sql_add_entry(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
         sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
         sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
         //printf("%s\n", sql);
-        int error = sql_execute(sql, NULL, NULL);
+        error = sql_execute(sql, NULL, NULL);
         free(sql);
+    }
+    
+    if (error) {
+        return 0;
     }
 
     struct fact* fact = calloc(sizeof(struct fact), 1);
