@@ -170,7 +170,8 @@ int get_last_pk(int rel) {
     return (rel?cache_clauses:cache_facts);
 }
 
-int detect_words(int* num_of_words, char** words, const char* r_subjects, const char* r_objects, const char* r_adverbs, const char* r_extra) {
+int detect_words(int* num_of_words, char** words, const char* r_verbs, const char* r_subjects, const char* r_objects, const char* r_adverbs, const char* r_extra) {
+    char* verbs = strdup(r_verbs    ? r_verbs    : "");
     char* subj  = strdup(r_subjects ? r_subjects : "");
     char* obj   = strdup(r_objects  ? r_objects  : "");
     char* advs  = strdup(r_adverbs  ? r_adverbs  : "");
@@ -180,6 +181,11 @@ int detect_words(int* num_of_words, char** words, const char* r_subjects, const 
     *num_of_words = 1;
     words[0] = strdup("0");
 
+    if (strcmp(subj, "0")) {
+        words[*num_of_words] = strdup(verbs);
+        ++(*num_of_words);
+    }
+    
     if (strcmp(subj, "0")) {
         words[*num_of_words] = strdup(subj);
         ++(*num_of_words);
@@ -194,6 +200,19 @@ int detect_words(int* num_of_words, char** words, const char* r_subjects, const 
         words[*num_of_words] = strdup(advs);
         ++(*num_of_words);
     }
+    
+    buffer = strtok(verbs, " ;.)(-,");
+    while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
+        if (is_a_trivial_word(buffer)) {
+            buffer = strtok(NULL, " ;.)(-,");
+            continue;
+        }
+        words[*num_of_words] = strdup(buffer);
+        buffer = strtok(NULL, " ;.)(-,");
+        ++(*num_of_words);
+        if (*num_of_words >= 500) break;
+    }
+    
     
     buffer = strtok(subj, " ;.)(-,");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
@@ -348,7 +367,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     
     int num_of_words = 0;
     char** words = calloc(501*sizeof(char*), 1);
-    detect_words(&num_of_words, words, subjects, objects, adverbs, "");
+    detect_words(&num_of_words, words, verbs, subjects, objects, adverbs, "");
     
     while (num_of_words >= 0) {
         if (words[num_of_words]) {

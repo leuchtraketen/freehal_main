@@ -234,7 +234,7 @@ struct word** divide_words(const char* str) {
     int p;
     int length = strlen(str);
     for (p = 0; p < length; ++p) {
-        if (str[p] == ' ' || str[p] == '_') {
+        if (str[p] == ' ') {
             e = p;
             if (e - a > 0) {
                 char* name = calloc(e-a+2, 1);
@@ -798,6 +798,9 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
                  && (0 == strcmp(request->context, "search_reasons"))
                  && fact_matches_questionword_rules_of_search_reasons(fact, request)
                 )
+            ||  (
+                    (0 == strcmp(request->context, "just_verb"))
+                )
             )
          && fact_matches_adverb_by_adverb     (fact, request)
          && fact_matches_anything_by_extra    (fact, request)
@@ -879,9 +882,14 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         facts = calloc(1, sizeof(struct fact*)*(limit+1));
     }
     
+    struct fact*** verbs = calloc(sizeof(struct fact***), 2);
+    verbs[0] = fact->verbs;
+    verbs[1] = 0;
+    
     int position = 0;
     search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
     search_facts_for_words_in_net(fact->objects, facts, limit, &position);
+    search_facts_for_words_in_net(verbs, facts, limit, &position);
     search_facts_for_words_in_net(fact->adverbs, facts, limit, &position);
     search_facts_for_words_in_net(fact->extra, facts, limit, &position);
     
