@@ -2249,6 +2249,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'schmal' => "adj",
           'pulls' => "vt",
           'user' => "art",
+          '$$anyone$$' => "n",
           'tag' => "n",
           'allgemeines' => "adj",
           'erst' => "adj",
