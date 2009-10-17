@@ -687,7 +687,7 @@ struct fact** disk_search_clauses(int rel) {
     
     {
         char* sql = gen_sql_get_clauses_for_rel(rel, clauses, limit, &position);
-        printf("%s\n", sql);
+        //printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
