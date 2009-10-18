@@ -589,6 +589,9 @@ define action compute_tags with var word, var lang, var path do
         if var word matches /<[_]>/ do
             set from array tags first item to "n"
         done
+        if var word matches /\s/ do
+            set from array tags first item to "n"
+        done
         if lc(var word) matches var word and var lang matches "de" do
             if var word matches /ist$/ do
                 set from array tags first item to "n"
@@ -2214,6 +2217,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         do regex using var final_sentence: /<[,]>$/, "", :global
 
         if var final_sentence matches / dacht/ and not var final_sentence matches /<[,]>/ do
+            # TEXT
+            # A Sentence must not end with e.g. dachte
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
+        if var final_sentence matches /[$][$]anyone[$][$]/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
             # CODE

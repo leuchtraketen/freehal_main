@@ -461,7 +461,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                 int m;
                 for (m = 0; words[m] && words[m]->name; ++m) {
                     if (!is_a_trivial_word(words[m]->name)) {
-                        if (words[m]->name[0] == '$') {
+                        if (words[m]->name[0] == '$' && strcmp(words[m]->name, "$$anyone$$")) {
                             debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
