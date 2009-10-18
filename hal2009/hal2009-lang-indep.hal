@@ -19,6 +19,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+set new array replace_array to an empty array
 
 define action divide_input with var input is rw, var lang do
     set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
@@ -724,31 +725,31 @@ define action compute_input with var input is rw, var lang, var path do
     # Here was the chapter about replacing user defined strings
     # CODE
 
-    set new var output_file_name to '_output__get_csv'
-    set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
-    do unlink with '_input__get_csv'
-    set new var output_handle to handle for file name var output_file_name, write
-    print into var output_handle data var csv_output
-    do close with var output_handle
-    while not exists: '_input__get_csv', end test do
-        do wait 0.5 seconds
+    if is an empty array replace_array do
+        set new var output_file_name to '_output__get_csv'
+        set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
+        do unlink with '_input__get_csv'
+        set new var output_handle to handle for file name var output_file_name, write
+        print into var output_handle data var csv_output
+        do close with var output_handle
+        while not exists: '_input__get_csv', end test do
+            do wait 0.5 seconds
+        done
+        set new var input_file_name to '_input__get_csv'
+        set new var input_handle to handle for file name var input_file_name, read
+        for each new var line from var input_handle is rw do
+            print var line
+            print new line
+            set new array result to an empty array
+            set new array rawresult to split using /\^/, var line
+            if var line do
+                set new array temp to an empty array
+                push into array temp, from array rawresult item [ 2 ]
+                push into array temp, from array rawresult item [ 3 ]
+                push into array replace_array, array temp
+            done
+        done
     done
-    set new array replace_array to an empty array
-    set new var input_file_name to '_input__get_csv'
-    set new var input_handle to handle for file name var input_file_name, read
-    for each new var line from var input_handle is rw do
-        #~ print var line
-        #~ print new line
-        #~ set new array result to an empty array
-        #~ set new array rawresult to split using /\^/, var line
-        #~ if var line do
-            #~ set new array temp to an empty array
-            #~ push into array temp, from array rawresult item [ 2 ]
-            #~ push into array temp, from array rawresult item [ 3 ]
-            #~ push into array replace_array, array temp
-        #~ done
-    done
-
     #~ for each new var temp in array replace_array do
         #~ set new var a to from array temp item [ 0 ]
         #~ set new var b to from array temp item [ 1 ]
