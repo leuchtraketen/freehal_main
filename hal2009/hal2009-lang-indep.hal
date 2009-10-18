@@ -724,19 +724,19 @@ define action compute_input with var input is rw, var lang, var path do
     # Here was the chapter about replacing user defined strings
     # CODE
 
-    #~ set new var output_file_name to '_output__get_csv'
-    #~ set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
-    #~ do unlink with '_input__get_csv'
-    #~ set new var output_handle to handle for file name var output_file_name, write
-    #~ print into var output_handle data var csv_output
-    #~ do close with var output_handle
-    #~ while not exists: '_input__get_csv', end test do
-        #~ do wait 0.5 seconds
-    #~ done
-    #~ set new array replace_array to an empty array
-    #~ set new var input_file_name to '_input__get_csv'
-    #~ set new var input_handle to handle for file name var input_file_name, read
-    #~ for each new var line from var input_handle is rw do
+    set new var output_file_name to '_output__get_csv'
+    set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
+    do unlink with '_input__get_csv'
+    set new var output_handle to handle for file name var output_file_name, write
+    print into var output_handle data var csv_output
+    do close with var output_handle
+    while not exists: '_input__get_csv', end test do
+        do wait 0.5 seconds
+    done
+    set new array replace_array to an empty array
+    set new var input_file_name to '_input__get_csv'
+    set new var input_handle to handle for file name var input_file_name, read
+    for each new var line from var input_handle is rw do
         #~ print var line
         #~ print new line
         #~ set new array result to an empty array
@@ -747,7 +747,7 @@ define action compute_input with var input is rw, var lang, var path do
             #~ push into array temp, from array rawresult item [ 3 ]
             #~ push into array replace_array, array temp
         #~ done
-    #~ done
+    done
 
     #~ for each new var temp in array replace_array do
         #~ set new var a to from array temp item [ 0 ]
