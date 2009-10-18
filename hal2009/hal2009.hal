@@ -3263,16 +3263,6 @@ define action init_prot_files with var current_language, var path do
 
             if not var i is var j do
 
-                do be_slow without arguments
-                set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
-                for each new var line from var copy_input_handle is rw do
-                    print into var copy_output_handle data var line
-                    print into var copy_output_handle data new line
-                done
-                do close using var copy_output_handle
-                do close using var copy_input_handle
-
                 print "Read (prot) file "
                 print var file
                 print new line
@@ -3301,6 +3291,17 @@ define action init_prot_files with var current_language, var path do
                     done
                 done
                 do close using var translation_input_handle
+
+                do be_slow without arguments
+                set new var copy_input_handle to handle for file name var file, read
+                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                for each new var line from var copy_input_handle is rw do
+                    print into var copy_output_handle data var line
+                    print into var copy_output_handle data new line
+                done
+                do close using var copy_output_handle
+                do close using var copy_input_handle
+
             done
         done
     done
@@ -3381,15 +3382,6 @@ define action init_pro_files with var current_language, var path do
 
             if not var i is var j do
 
-                set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
-                for each new var line from var copy_input_handle is rw do
-                    print into var copy_output_handle data var line
-                    print into var copy_output_handle data new line
-                done
-                do close using var copy_output_handle
-                do close using var copy_input_handle
-
                 print "Read file "
                 print var file
                 print new line
@@ -3409,6 +3401,16 @@ define action init_pro_files with var current_language, var path do
                 while not exists: '_input__add_pro_file', end test do
                     do wait 0.1 seconds
                 done
+
+                set new var copy_input_handle to handle for file name var file, read
+                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                for each new var line from var copy_input_handle is rw do
+                    print into var copy_output_handle data var line
+                    print into var copy_output_handle data new line
+                done
+                do close using var copy_output_handle
+                do close using var copy_input_handle
+
             done
             else do
                 print "No changes have been made in file "
