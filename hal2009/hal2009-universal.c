@@ -886,6 +886,8 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     search_facts_for_words_in_net(fact->adverbs, facts, limit, &position);
     search_facts_for_words_in_net(fact->extra, facts, limit, &position);
     
+    free(verbs);
+    
     return facts;
 }
 
