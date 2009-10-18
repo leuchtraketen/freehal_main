@@ -1483,3 +1483,5 @@ wohnen <> menschen <>  <> in haeusern <>  <>  <>  <>  <>  <> 50
 wohnt <> tobias_schulz <>  <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
 wurde <> die pummerin <>  <> aus kanonenkugeln gegossen <>  <>  <>  <>  <>  <>  <> 50
 wurde <> platon <> 80 jahre <> alt <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein blackberry <> ein tragbares geraet zum_lesen_und schreiben <> von e-mails <> 50
+ist <> ein mixer <> ein kuechengeraet zur_zerkleinerung_und vermischung <> von lebensmitteln <> 50

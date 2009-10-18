@@ -8236,3 +8236,5 @@ wird <> 70 prozent <>  <> der erdoberflaeche;von meer bedeckt <>  <>  <>  <>  <>
 wurde <> das erste planetarium <>  <> in muenchen  eroeffnet <>  <>  <>  <>  <>  <>  <> 50
 wurde benannt <> der saturn <>  <> nach dem roemischen gott von der saat <> 50
 wurden <> die streichhoelzer <>  <> in daenemark erfunden <>  <>  <>  <>  <>  <>  <> 50
+ist <> eine mondfinsternis <>  <>  <>  <> die erde <> dem mond <> in der sonne steht <> wenn <> 50
+ist <> eine sonnenfinsternis <>  <>  <>  <> der mond <>  <> zwischen erde und sonne steht <> wenn <> 50

@@ -523,7 +523,6 @@
 = <> _hauskatze_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hauskatze_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hauskatze_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _hauskatze_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hauskatze_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hauskatze_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _hauskatze_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2024,8 +2023,6 @@
 = <> _katze_ <> _hauskatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _katze_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _katze_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _katze_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _katze_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _katze_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _katze_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _kaufmann_ <> _handelsvertreter_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2494,13 +2491,11 @@
 = <> _miezekatze_ <> _hauskatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _miezekatze_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _miezekatze_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _miezekatze_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _mieze_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _miezekatze_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _miezekatze_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _miezekatze_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _mieze_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _mieze_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _mieze_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _mieze_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _mieze_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2563,13 +2558,6 @@
 = <> _murksen__ <> nothing <> _unordentlich_arbeiten_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _murksen__ <> nothing <> _vermasseln_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _murksen__ <> nothing <> _versauen_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _hauskatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _muschi_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _myokardinfarkt_ <> _herzinfarkt_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _myokardinfarkt_ <> _herzkasper_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _myokardinfarkt_ <> _herzmuskelinfarkt_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -2960,7 +2948,6 @@
 = <> _pussy_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _pussy_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _pussy_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _pussy_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _pussy_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _pussy_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _pusteblume_ <> _hundeblume_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3186,7 +3173,6 @@
 = <> _samtpfote_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _samtpfote_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _samtpfote_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _samtpfote_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _samtpfote_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _samtpfote_ <> _stubentiger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _sanatorium_ <> _heilanstalt_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -3653,7 +3639,6 @@
 = <> _stubentiger_ <> _katze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _stubentiger_ <> _miezekatze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _stubentiger_ <> _mieze_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
-= <> _stubentiger_ <> _muschi_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _stubentiger_ <> nothing <> _pussy_ <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _stubentiger_ <> _samtpfote_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
 = <> _studentische_hilfskraft_ <> _hilfswilliger_ <>  <>  <>  <> nothing <>  <>  <>  <> 50
