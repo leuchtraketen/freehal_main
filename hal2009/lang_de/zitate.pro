@@ -100,7 +100,6 @@ sind <> alle kriege <> nur raubzuege <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die gerechte entruestung <> leider viel seltener <> als;die;ungerechte;ruestung <>  <>  <> nothing <>  <>  <>  <> 50
 beschmutzt <> krieg <> nothing <> die;welt;unter;den;menschen <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> die kritik <> nothing <> an;anderen;einem;die;eigene;leistung;erspart;nicht <>  <>  <> nothing <>  <>  <>  <> 50
-lobt <> $$anyone$$ <> lieber <> von;den;richtigen;kritisiert;als;von;den;falschen <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die kunst <> eine vermittlerin des unaussprechlichen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 wird <> kuenstler <> man <> aus;verzweiflung <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> die kunst <> das handwerk noetiger  die kunst <> als;das;handwerk <>  <>  <> nothing <>  <>  <>  <> 50
@@ -145,7 +144,6 @@ ist <> die verleumdung <> nothing <> die;tochter;des;neides <>  <>  <> nothing <
 ist <> ein tag <> sagt der optimist <> morgen;auch <>  <>  <> nothing <>  <>  <>  <> 50
 ist selbst <> jede partei <> nothing <> fuer;das;volk;da;und;nicht;fuer;sich <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die partei <> nothing <> die;kampfgemeinschaft;von;intimfeinden <>  <>  <> nothing <>  <>  <>  <> 50
-bestimmt <> $$anyone$$ <> das <> los;der;parteien;von;den;parteilosen <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> phantasie <> unser guter genius <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> phantasie <> unser daemon <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die philosophie <> nothing <> eine;art;rache;an;der;wirklichkeit <>  <>  <> nothing <>  <>  <>  <> 50

@@ -31,7 +31,6 @@ sind <> aerzte <> nothing <> des;herrgotts;menschenflicker <>  <>  <> nothing <>
 sitzt <> man <> nothing <> auch;auf;dem;hoechsten;thron;auf;dem;eigenen;hintern <>  <>  <> nothing <>  <>  <>  <> 50
 braucht <> glueck <> nothing <> auch;der;tuechtige <>  <>  <> nothing <>  <>  <>  <> 50
 starken <> stier <> menschen <> (_die_ihm_den_hals_umdrehen);auch;fuer;einen <>  <>  <> nothing <>  <>  <>  <> 50
-baut <> $$anyone$$ <> nothing <> auch;rom;an;einem;tag;nicht <>  <>  <> nothing <>  <>  <>  <> 50
 mischt <> man <> es <> mit;malz;und;hopfen <> wird <> auch <> nothing <> zum_edlen_tropfen <> wasser <>  <> 50
 ist <> volk <> haerter <> immer <>  <>  <> nothing <>  <>  <>  <> 50
 lernt <> man <> kochen <> auf;alten;pfannen <>  <>  <> nothing <>  <>  <>  <> 50
@@ -142,10 +141,8 @@ wartet <> die haelfte <> soldat vergebens <> seines;lebens;komma <>  <>  <> noth
 laesst <> die katze <> mausen <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 holen <> nothing <> nothing <> die;kuh;vom;eis <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die lage <> ernst <> () <>  <>  <> nothing <>  <>  <>  <> 50
-= <> $$anyone$$ <> die <> ersten <>  <>  <> nothing <>  <>  <>  <> 50
 verlassen <> die ratten <> schiff <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> die schweine <> nothing <> die;schinken;von;morgen;von;heute <>  <>  <> nothing <>  <>  <>  <> 50
-gessen <> $$anyone$$ <> die suppe <> nicht;so;heiss <> $$anyone$$ <>  <> nothing  sie gekocht <>  <> wie <>  <> 50
 liegt <> die wahrheit <> nothing <> in;der;mitte <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die wahrheit <> luege <> von;heute;von;morgen <>  <>  <> nothing <>  <>  <>  <> 50
 heilt <> alle <> wunden <> die;zeit <>  <>  <> nothing <>  <>  <>  <> 50
@@ -217,7 +214,6 @@ ist <> es <> sich <>  <> fragen <> nothing <> nothing <>  <> xxtoxx <>  <> 50
 ist <> es <> alles gold <> nicht <> glaenzt <>  <> nothing <>  <> was <>  <> 50
 ist <> es <> nothing <> gut;nicht <> huepfen wollen <> die baenke <> nothing <> auf;den;tisch <> wenn <>  <> 50
 gefallen ist <> es <> nothing <> meister;nicht;vom;himmel <>  <>  <> nothing <>  <>  <>  <> 50
-gessen <> $$anyone$$ <> es <> nichts;so;heiss <> $$anyone$$ <>  <> nothing  es gekocht <>  <> wie <>  <> 50
 haett <> et <> nothing <> imma;jot;jejannge <>  <>  <> nothing <>  <>  <>  <> 50
 brennt <> mir <> nothing <> etwas;auf;den;naegeln <>  <>  <> nothing <>  <>  <>  <> 100
 ist verkehrt <> ganz <> nothing <> fast;richtig <>  <>  <> nothing <>  <>  <>  <> 50
@@ -227,13 +223,10 @@ greife <> fehlt es <> nothing <> an;dem;wind;komma;so;zum_ruder <>  <>  <> nothi
 ist <> feigheit <> zeichen <> manchmal;von;klugheit <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> frisch <> halb gewonnen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 gefreit <> nothing <> nothing <> frueh <> gereut <> schnell <> nothing <>  <>  <>  <> 50
-kruemmt <> nothing <> sich <> frueh <> will <> $$anyone$$ <> ein  nothing  haken <>  <> was <>  <> 50
-uebt <> nothing <> sich <> frueh <> bringt will <> $$anyone$$ <> . frucht <> fruehe;zucht <> was <> ein    meister <> 50
 kennt <> fuechse <> man <> an;dem;schwanz;bald <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> fuenf minuten <> puenktlichkeit <> vor;der;zeit;komma <>  <>  <> nothing <>  <>  <>  <> 50
 macht <> nothing <> nothing <> fuer;jede;dummheit;findet;sich;einer;komma;der;sie <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> geben <> nehmen <>  <>  <>  <> nothing <>  <>  <>  <> 50
-wird <> gefaehrlich <> es <>  <> $$anyone$$ <>  <> nothing <> die;dummen;fleissig <> wenn <>  <> 50
 gewachsen ist <> nothing <> kraut <> gegen;den;tod;nicht <>  <>  <> nothing <>  <>  <>  <> 50
 selbst <> goetter <> vergebens <> gegen;dummheit;kaempfen <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> geiz <> nothing <> die;groesste;armut <>  <>  <> nothing <>  <>  <>  <> 50
@@ -384,7 +377,6 @@ besen kehren <> gut <> nothing <> neue <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> neun leben <> katze <>  <>  <>  <> nothing <>  <>  <>  <> 50
 schnacken <> nothing <> nothing <> nicht;lang;(kopf_in'_nacken_) <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> gelber <> nothing <> nichts;als;gelb;selber <>  <>  <> nothing <>  <>  <>  <> 50
-gessen <> $$anyone$$ <> nothing <> so;heiss;nichts <> $$anyone$$ <>  <> nothing  es gekocht <>  <> wie <>  <> 50
 geht <> nobel <> nothing <> die;welt;zu;grunde <>  <>  <> nothing <>  <>  <>  <> 50
 macht <> erfinderisch <> nothing <> not <>  <>  <> nothing <>  <>  <>  <> 50
 kommt <> nothing <> nothing <> an;die;quelle <> schwimmt <> nur <> nothing <> gegen;den;strom <> wer <>  <> 50
@@ -436,7 +428,6 @@ vergeht <> unkraut <> nothing <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 gedeihet <> unrecht <> nothing <> gut;nicht <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> der einaeugige <> koenig <> unter;blinden <>  <>  <> nothing <>  <>  <>  <> 50
 kommt <> unverhofft <> nothing <> oft <>  <>  <> nothing <>  <>  <>  <> 50
-ist <> $$anyone$$ <> vater schwer <> nicht <> dagegen sehr sein <> vater <> nothing <>  <>  <>  <> 50
 sind <> vergesslichkeit und faulheit <> geschwisterkinder <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> viele jaeger <> nothing <> des;hasen;tod <>  <>  <> nothing <>  <>  <>  <> 50
 verderben <> viele koeche <> nothing <> den;brei <>  <>  <> nothing <>  <>  <>  <> 50
@@ -491,7 +482,6 @@ ausreisst <> bart <> sich <>  <> leiht <> nothing <> nothing <>  <> wer <>  <> 5
 macht <> krumme <> furchen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 wird <> fertig <> nothing <> nicht <> anfaengt <>  <> nothing <> nicht <> wer <>  <> 50
 wird <> wirt <> nothing <>  <> wird <> nichts <> nothing <>  <> wer <>  <> 50
-brinn <> $$anyone$$ <> nothing <> auch;nie;etwas;zustande <> anfaengt <> niemals <> nothing <>  <> wer <>  <> 50
 hat <> boese fahren <> nothing <>  <> ladet <> schief <> nothing <>  <> wer <>  <> 50
 suendigt <> schlaeft <> nothing <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 uebel zieht <> sie <> nothing <> heraus;oft <>  <>  <> nothing <>  <>  <>  <> 50
@@ -502,7 +492,6 @@ ist <> schlauer <> nothing <>  <> kommt <> nothing <> nothing <> vom;rathaus <> 
 gewinnt <> nothing <> nothing <>  <> wagt <> nothing <> nothing <>  <> wer <>  <> 50
 gehe sitze <> pferd <> nothing <> ab;und;zu;fuss <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> brot <> nothing <> schinken <> wurst <>  <> nothing <>  <> wer <>  <> 50
-satt <> $$anyone$$ <> alle tage <>  <>  <>  <> nothing <>  <>  <>  <> 50
 bespuckt selbst <> nothing <> sich <>  <>  <>  <> nothing <> zum_himmel_emporspuckt <> wer <>  <> 50
 bestraft <> nothing <> nothing <> das;leben <>  <>  <> nothing <>  <>  <>  <> 50
 wird <> nothing <> man angesehen <> so <> aussieht <> nothing  man <> nothing <>  <> wie <>  <> 50
