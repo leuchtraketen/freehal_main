@@ -2227,7 +2227,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if var final_sentence matches /[$][$]anyone[$][$]/ do
+        if var final_sentence matches /anyone/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
             # CODE
