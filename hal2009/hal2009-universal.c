@@ -422,18 +422,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     if (!request_words[0]) {
         return -1;
     }
-    //debugf("entity 0: %s\n", request_words[0]                                                                ? request_words[0]->name : "(null)");
-    //debugf("entity 1: %s\n", request_words[0] && request_words[1]                                            ? request_words[1]->name : "(null)");
-    //debugf("entity 2: %s\n", request_words[0] && request_words[1] && request_words[2]                        ? request_words[2]->name : "(null)");
-    //debugf("entity 3: %s\n", request_words[0] && request_words[1] && request_words[2] && request_words[3]    ? request_words[3]->name : "(null)");
     
     int count_of_words;
     for (count_of_words = 0; words[count_of_words] && words[count_of_words]->name; ++count_of_words) {
     }
 
-    //if (!count_of_words) {
-    //    return -1;
-    //}
     
     int does_match = 0;
     
