@@ -360,6 +360,10 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
 }
 
 struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper) {
+    if (!entity_upper || strlen(entity_upper) < 3) {
+        return 0;
+    }
+    
     printf("page: __url: %s\n", __url);
     char* _url                    = concat("de.wikipedia.org", __url);
     printf("page: _url: %s\n", _url);
