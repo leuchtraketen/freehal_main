@@ -2293,6 +2293,7 @@ set multi-line new global hash builtin_part_of_speech to {
           '>>>' => "vt",
           'wurdest' => "vt",
           'takt' => "adj",
+          'gottesdienst' => "n",
           'falsch' => "adj",
           'bitter' => "adj",
           'wohne' => "vt",
