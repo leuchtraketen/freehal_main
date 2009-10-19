@@ -1487,7 +1487,7 @@ char* join_words_by(const char* by, struct word** words) {
         size += 3+strlen(words[c]->name);
     }
     
-    char* string = calloc(sizeof(char), size);
+    char* string = calloc(sizeof(char), size+1);
     for (c = 0; words[c]; ++c) {
         if (c) {
             strcat(string, by);
@@ -1551,7 +1551,8 @@ struct DATASET as_dataset(struct fact** list) {
     int d;
     for (d = 0; list[d]; ++d) {
         if (list[d] != -1) {
-            char** record = calloc(sizeof(char*), sizeof(struct fact)*100);
+            //char** record = calloc(sizeof(char*), sizeof(struct fact)*100);
+            char** record = calloc(sizeof(char*), 100);
             record[0] = calloc(sizeof(char), 10);
             sprintf(record[0], "%d", (int)(list[d]->pk));
             record[1] = join_words(list[d]->verbs);

@@ -630,12 +630,17 @@ const char* hal2009_make_csv(struct DATASET* set) {
             for (m = 0; m < set->column_count; ++m) {
                 if (set->data[j][m]) {
                     strcat(csv_data, set->data[j][m]);
+                    free(set->data[j][m]);
                 }
                 if (m+1 < set->column_count) {
                     strcat(csv_data, "^");
                 }
             }
             strcat(csv_data, "\n");
+        }
+        if (set->data[j]) {
+            printf("free()'ing %d\n", set->data[j]);
+            free(set->data[j]);
         }
     }
     fprintf(output(), "Data copied.\n");

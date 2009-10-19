@@ -70,6 +70,14 @@ int disk_begin() {
     return 0;
 }
 
+int disk_free_wordlist(int i, int k) {
+    int g;
+    for (g = 0; g < disk_net[i][k]->size; ++g) {
+        free(disk_net[i][k]->list[g]);
+        disk_net[i][k]->list[g] = 0;
+    }
+}
+
 int disk_end() {
     if (0 == sqlite_connection) {
         printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
@@ -85,6 +93,39 @@ int disk_end() {
     sqlite3_free(err);
     sqlite3_close(sqlite_connection);
     sqlite_connection = 0;
+    
+    int i;
+    for (i = n('a'); i <= n('z'); ++i) {
+        int k;
+        for (k = n('a'); k <= n('z'); ++k) {
+            disk_free_wordlist(i, k);
+            free(disk_net[i][k]);
+            disk_net[i][k] = 0;
+        }
+        
+        k = WRONG;
+        disk_free_wordlist(i, k);
+        free(disk_net[i][k]);
+        disk_net[i][k] = 0;
+        
+        free(disk_net[i]);
+        disk_net[i] = 0;
+    }
+    i = WRONG;
+    int k;
+    for (k = n('a'); k <= n('z'); ++k) {
+        disk_free_wordlist(i, k);
+        free(disk_net[i][k]);
+        disk_net[i][k] = 0;
+    }
+    k = WRONG;
+    disk_free_wordlist(i, k);
+    free(disk_net[i][k]);
+    disk_net[i][k] = 0;
+    free(disk_net[i]);
+    disk_net[i] = 0;
+    free(disk_net);
+    disk_net = 0;
 }
 
 int sql_sqlite_set_filename(const char* filename) {
