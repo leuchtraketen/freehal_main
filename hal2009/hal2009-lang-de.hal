@@ -2203,6 +2203,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'feucht' => "adj",
           'gehe' => "vt",
           'scharf' => "adj",
+          'unterwelt' => "n",
           'leichter' => "adj",
           'alle' => "adj",
           'moechtest' => "vt",
