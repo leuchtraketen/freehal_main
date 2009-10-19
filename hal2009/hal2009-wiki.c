@@ -166,8 +166,11 @@ char* transform_sentence(char* sentence) {
         if (verb_str[i] == '.') {
             break;
         }
-        if (number_of_spaces > 10 && verb_str[i] == ',') {
-            break;
+        if (verb_str[i] == ',') {
+            if (number_of_spaces > 10) {
+                break;
+            }
+            number_of_spaces -= 5;
         }
         if (number_of_spaces > 10 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
             break;

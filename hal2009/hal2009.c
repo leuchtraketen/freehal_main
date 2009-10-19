@@ -639,7 +639,6 @@ const char* hal2009_make_csv(struct DATASET* set) {
             strcat(csv_data, "\n");
         }
         if (set->data[j]) {
-            printf("free()'ing %d\n", set->data[j]);
             free(set->data[j]);
         }
     }
