@@ -461,12 +461,11 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             
-            char* _object      = transform_sentence(lines[current_line]->s);
-            if (strstr(_object, "bezeichnet")) {
-                free(_object);
+            char* object      = transform_sentence(lines[current_line]->s);
+            if (strstr(object, "bezeichnet")) {
+                free(object);
                 break;
             }
-            char* object       = delete_articles(_object);
             
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
@@ -520,7 +519,6 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 break;
             }
             free(object);
-            free(_object);
         }
     }
     

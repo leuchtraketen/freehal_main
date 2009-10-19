@@ -735,3 +735,11 @@ struct fact** disk_search_clauses(int rel) {
     
     return clauses;
 }
+
+int disk_set_to_invalid_value(void** p) {
+    if (!p) return 1;
+    if (*p && can_be_a_pointer(*p)) free(*p);
+    *p = -1;
+    return 0;
+}
+

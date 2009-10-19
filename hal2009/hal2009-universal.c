@@ -67,9 +67,12 @@ long can_be_a_pointer(void* _p) {
 }
 
 int set_to_invalid_value(void** p) {
-    if (!p) return 1;
-    if (*p && can_be_a_pointer(*p)) free(*p);
-    *p = -1;
+    if (is_engine("ram")) {
+        return ram_set_to_invalid_value(p);
+    }
+    else {
+        return disk_set_to_invalid_value(p);
+    }
     return 0;
 }
 
@@ -89,6 +92,20 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
     }
     ++(*position);
     free(words);
+    
+    if (exp[0] == '*' && strlen(exp) > 1) {
+        struct word**  words    = divide_words(exp+1);
+        synonyms[*position]     = calloc(sizeof(struct word*), strlen(exp)+10);
+        int f, g;
+        for (f = 0, g = 0; words && words[f]; ++f) {
+            if (can_be_a_pointer(words[f])) {
+                synonyms[*position][g] = words[f];
+                ++g;
+            }
+        }
+        ++(*position);
+        free(words);
+    }
     
     debugf("Added synonym %s by string, position is now %p.\n", exp, *position);
     

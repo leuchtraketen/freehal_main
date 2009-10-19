@@ -332,3 +332,10 @@ struct fact** ram_search_clauses(int rel) {
     }
     return 0;
 }
+
+int ram_set_to_invalid_value(void** p) {
+    if (!p) return 1;
+    *p = -1;
+    return 0;
+}
+

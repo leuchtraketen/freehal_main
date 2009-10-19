@@ -2082,10 +2082,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_person to get_person with from array clause item [1]
                 set new var verb to get_verb with "be", var subject_person
                 
-                push into array sentence, var subject_article
+                if not from array clause item [1] matches /\s/ do
+                    push into array sentence, var subject_article
+                done
                 push into array sentence, from array clause item [1]
                 push into array sentence, var verb
-                push into array sentence, var object_article
+                if not from array clause item [2] matches /\s/ do
+                    push into array sentence, var object_article
+                done
                 push into array sentence, from array clause item [2]
                 push into array sentence, from array clause item [3]
                 
@@ -2382,6 +2386,11 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     if flag is_a_greeting do
         set new var greeting to greet with ''
         do return with [ var greeting ]
+    done
+    set new flag is_a_thanks to check_for_thanks using var input
+    if flag is_a_thanks do
+        set new var thanks to say_answer_thanks with ''
+        do return with [ var thanks ]
     done
     set new flag is_math to check_for_math using var input
     if flag is_math do
