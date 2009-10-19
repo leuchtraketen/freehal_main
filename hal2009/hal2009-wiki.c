@@ -239,6 +239,10 @@ halstring*  search_results_entity = 0;
 struct fact** search_facts_wiki_page(const char*, const char*);
 
 struct fact** search_facts_wiki(const char* entity, short todo) {
+    if (is_a_trivial_word(entity)) {
+        return 0;
+    }
+    
     char* entity_without_stars = 0;
     char* entity_without_articles = 0;
     char* entity_upper = 0;

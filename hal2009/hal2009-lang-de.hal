@@ -3643,9 +3643,6 @@ done
 define action check_for_thanks with var input do
     set new array thanks_from_user to an empty array
     push into array thanks_from_user, 'danke'
-    push into array thanks_from_user, 'guten tag'
-    push into array thanks_from_user, 'guten morgen'
-    push into array thanks_from_user, 'hi'
 
     for each new var thank in array thanks_from_user do
         if lc(var input) matches /((\s)|<[,.\-!?]>|^)var thank((\s)|<[,.\-!?]>|$)/ do

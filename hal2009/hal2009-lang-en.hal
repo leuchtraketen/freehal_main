@@ -2820,6 +2820,29 @@ define action check_for_math with var input do
     return 0
 done
 
+define action check_for_thanks with var input do
+    set new array thanks_from_user to an empty array
+    push into array thanks_from_user, 'thanks'
+    push into array thanks_from_user, 'thank you'
+
+    for each new var thank in array thanks_from_user do
+        if lc(var input) matches /((\s)|<[,.\-!?]>|^)var thank((\s)|<[,.\-!?]>|$)/ do
+            return 1
+        done
+    done
+    
+    return 0
+done
+
+define action say_answer_thanks with var user do
+    set new array answers to an empty array
+    push into array answers, "Okay"
+    set new var random_number to rand using items of array answers
+    set new var answer to from array answers item [ var random_number ]
+    
+    do return with [ 0, var answer ]
+done
+
 define action check_for_greeting with var input do
     set new array greetings_from_user to an empty array
     push into array greetings_from_user, 'hello'
