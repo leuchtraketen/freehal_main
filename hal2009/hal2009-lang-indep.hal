@@ -748,7 +748,7 @@ define action compute_input with var input is rw, var lang, var path do
             set new var a to from array rawresult item [ 2 ]
             set new var b to from array rawresult item [ 3 ]
             if var a and var b do
-                do regex using var input: /var a/, "var b", :global:i
+                do regex using var input: /(^|\s)var a(\s|$)/, "$0var b$1", :global:i
                 print "#var a# --> #var b#"
                 print new line
                 print var input

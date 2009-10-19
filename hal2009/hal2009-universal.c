@@ -875,18 +875,22 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         facts = calloc(1, sizeof(struct fact*)*(limit+1));
     }
     
-    struct fact*** verbs = calloc(sizeof(struct fact***), 2);
-    verbs[0] = fact->verbs;
-    verbs[1] = 0;
     
     int position = 0;
     search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
     search_facts_for_words_in_net(fact->objects, facts, limit, &position);
-    search_facts_for_words_in_net(verbs, facts, limit, &position);
     search_facts_for_words_in_net(fact->adverbs, facts, limit, &position);
     search_facts_for_words_in_net(fact->extra, facts, limit, &position);
-    
-    free(verbs);
+
+    if (fact->verbs && fact->verbs[0] && fact->verbs[0]->name && 0 == strcmp(fact->verbs[0]->name, ">>>")) {
+        struct fact*** verbs = calloc(sizeof(struct fact***), 2);
+        verbs[0] = fact->verbs;
+        verbs[1] = 0;
+        
+        search_facts_for_words_in_net(verbs, facts, limit, &position);
+        
+        free(verbs);
+    }
     
     return facts;
 }
