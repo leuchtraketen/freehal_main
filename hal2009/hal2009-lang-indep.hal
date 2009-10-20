@@ -604,6 +604,7 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /(^|\s)es leben/, "$0leben", :global:i
 
+    do regex using var input: /nenne mir (.*)/, "zaehle $0 auf", :global:i
     do regex using var input: /nenne (.*)/, "zaehle $0 auf", :global:i
 
     do regex using var input: /Zaehle mir alle (.*)en auf.*/, "ENUMALL ein $0e", :global:i
@@ -641,6 +642,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /Zaehle die (.*) auf.*/, "ENUMALL eine $0", :global:i
     do regex using var input: /Zaehle den (.*) auf.*/, "ENUMALL ein $0", :global:i
     do regex using var input: /Zaehle das (.*) auf.*/, "ENUMALL ein $0", :global:i
+    
+    do regex using var input: /Zaehle (.*) auf.*/, "ENUMALL $0", :global:i
 
     do regex using var input: /Welche\s+Farbe\s+hat\s+/, "welche Farbe ist ", :global:i
 
