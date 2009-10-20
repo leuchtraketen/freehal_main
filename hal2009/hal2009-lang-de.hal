@@ -376,6 +376,7 @@ set multi-line new global array builtin_male_names to [
           "ferhard",
           "ferhart",
           "fidelius",
+          "firma",
           "florentin",
           "florentius",
           "florenz",
