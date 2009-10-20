@@ -977,9 +977,11 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_output__get_csv")) {
         hal2009_set_text_language(signal_handler_tlanguage);
         struct DATASET set = hal2009_get_csv(text);
-        FILE* target = fopen("_input__get_csv", "w+b");
         const char* csv_data = hal2009_make_csv(&set);
+        FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
+        halclose(target);
+        target = fopen("_input__get_csv__written", "w+b");
         halclose(target);
         fprintf(output(), "Release memory now.\n");
         free((void*)csv_data);

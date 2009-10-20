@@ -231,6 +231,8 @@ void hal2009_handle_signal(void* arg) {
         FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
         halclose(target);
+        target = fopen("_input__get_csv__written", "w+b");
+        halclose(target);
         fprintf(output(), "Release memory now.\n");
         free(csv_data);
         fprintf(output(), "Memory is released.\n");
