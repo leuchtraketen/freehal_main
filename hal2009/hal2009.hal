@@ -274,6 +274,10 @@ done
 # CODE
 
 define action get_tag_part_of_speech with var word, var lang do
+    if (not var word) or (var word matches /^\s*?$/) do
+        do return with "q"
+    done
+    
     set new var output_file_name to '_output__pos'
     set new var output_handle to handle for file name var output_file_name, write
     print into var output_handle data var word
