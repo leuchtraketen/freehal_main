@@ -143,7 +143,7 @@ void flush_streams() {
         }
 
 
-        asio::deadline_timer timer(io_service, boost::posix_time::milliseconds(500));
+        asio::deadline_timer timer(io_service, boost::posix_time::milliseconds(2000));
         timer.wait();
     }
 }
