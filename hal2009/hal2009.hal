@@ -493,6 +493,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     # go through the lines
     while array contents and var i < items of array contents do
         set new var line to from array contents item [ var i ]
+        do regex using var line: /\s*?<[var end_of_entry_line]>/, "var end_of_entry_line", :global
         
         if var line matches /^\s*?(\S*?)<[var end_of_entry_line]>\s*?(\S+)/ do
             set new var t to $1
