@@ -83,17 +83,20 @@ char* replace_spaces(const char* s) {
 }
 
 
-char* delete_stars(const char* s) {
+char* delete_bad_chars(const char* s) {
     int size          = strlen(s);
     char* n           = calloc(size+3, 1);
     
     int i;
     int j;
     for (i = 0, j = 0; i < size; ++i) {
-        if (s[i] == '*') {
+        if (s[i] == '*' || (s[i] == '_' && i == 0) || (s[i] == '_' && i+1 >= size)) {
             continue;
         }
         n[j] = s[i];
+        if (s[i] == '_') {
+            n[j] = ' ';
+        }
         ++j;
     }
     n[j] = '\0';
@@ -116,6 +119,9 @@ char* transform_sentence(char* sentence) {
     char* verb_str = 0;
     if (verb_str = strstr(sentence, "hrt zu ")) {
         verb_str += 7;
+    }
+    else if (verb_str = strstr(sentence, " bezeichnet man ")) {
+        verb_str += 16;
     }
     else if (verb_str = strstr(sentence, " bezeichnet ")) {
         verb_str += 12;
@@ -257,7 +263,7 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     halstring** lines = 0;
     int number_of_lines = 0;
     
-    entity_without_stars    = delete_stars(entity);
+    entity_without_stars    = delete_bad_chars(entity);
     entity_without_articles = delete_articles(entity_without_stars);
     entity_upper            = upper(entity_without_articles);
     /// if NEW
@@ -480,7 +486,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             }
             
             char* object      = transform_sentence(lines[current_line]->s);
-            if (strstr(object, "bezeichnet")) {
+            if (strstr(object, ":")-object > strlen(object)-5 && strstr(object, ":")-object < strlen(object)+1) {
                 free(object);
                 break;
             }
