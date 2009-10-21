@@ -505,9 +505,6 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                         if (i[0] >= 'A' && i[0] <= 'Z' && (strstr(i, " ") == 0 || strstr(i, " ") > end)) {
                             ++found_big_letter;
                         }
-                        if (strstr(i, "und") == i || strstr(i, "oder") == i) {
-                            i[0] = '\0';
-                        }
                     }
                     
                     if (found_big_letter) {
@@ -517,6 +514,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                     else {
                         end[0] = ' ';
                         object_working = end+1;
+                    }
+                }
+                char* i;
+                for (i = object; i[0]; ++i) {
+                    if (strstr(i, "und") == i || strstr(i, "oder") == i) {
+                        i[0] = '\0';
                     }
                 }
                 snprintf(line, 500, "%s ~~~ %s\n", entity_upper, object);
