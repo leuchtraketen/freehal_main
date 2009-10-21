@@ -123,6 +123,12 @@ char* transform_sentence(char* sentence) {
     else if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
     }
+    else if (verb_str = strstr(sentence, " war ")) {
+        verb_str += 5;
+    }
+    else if (verb_str = strstr(sentence, " waren ")) {
+        verb_str += 7;
+    }
     else if (verb_str = strstr(sentence, " sind sie ")) {
         verb_str += 10;
     }
