@@ -796,7 +796,7 @@ halstring **stringtoarray(halstring *string, char delimiter, int *size) {
     halstring* s = halmalloc(sizeof(halstring), "stringtoarray");
     //s->s = strdup(oldptr);
     s->s = halmalloc(line_size + 100, "stringtoarray");
-    strcpy(s->s, oldptr);
+    strncpy(s->s, oldptr, line_size + 99);
     s->do_free = 1;
     array[count] = s;
   

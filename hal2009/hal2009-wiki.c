@@ -163,16 +163,16 @@ char* transform_sentence(char* sentence) {
     int maybe_end = j;
     int number_of_spaces = 0;
     for (; i < size; ++i) {
-        if (verb_str[i] == '.') {
+        if (verb_str[i] == '.' && (i+2 >= size || verb_str[i+1] < '0' || verb_str[i+1] > '9')) {
             break;
         }
         if (verb_str[i] == ',') {
-            if (number_of_spaces > 10) {
+            if (number_of_spaces > 15) {
                 break;
             }
             number_of_spaces -= 5;
         }
-        if (number_of_spaces > 10 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
+        if (number_of_spaces > 15 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
             break;
         }
         if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
