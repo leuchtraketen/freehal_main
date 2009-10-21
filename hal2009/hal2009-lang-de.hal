@@ -3807,6 +3807,12 @@ define action find_mode with var input do
 
         do return with "question"
     done
+    else if lc(var input) matches /enumall/ do
+        print "Sentence contains a enumeration request"
+        print new line
+
+        do return with "question"
+    done
     do return with "statement"
 done
 
