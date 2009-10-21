@@ -119,6 +119,7 @@ halstring* cpp_download_from_url(const char* _url) {
         }
         if (error) {
             cerr << error << endl;
+            return 0;
         }
 
         cout << "=" << flush;
