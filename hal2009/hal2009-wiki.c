@@ -502,7 +502,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                     char* i;
                     short found_big_letter = 0;
                     for (i = object_working; i != end; ++i) {
-                        if (i[0] >= 'A' && i[0] <= 'Z' && (strstr(i, " ") == 0 || strstr(i, " ") > end)) ++found_big_letter;
+                        if (i[0] >= 'A' && i[0] <= 'Z' && (strstr(i, " ") == 0 || strstr(i, " ") > end)) {
+                            ++found_big_letter;
+                        }
+                        if (strstr(i, "und") == i || strstr(i, "oder") == i) {
+                            i[0] = '\0';
+                        }
                     }
                     
                     if (found_big_letter) {
