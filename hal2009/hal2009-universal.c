@@ -129,7 +129,7 @@ struct word*** get_stored_synonyms(const char* exp) {
 }
 
 struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, int* position, int* allocated_until) {
-    struct fact** facts = search_facts_simple(subj, obj, verb, adverbs, "", "", "default");
+    struct fact** facts = search_facts_synonyms(subj, obj, verb, adverbs, "", "", "default");
     
     // count the facts
     int size, f;
@@ -471,11 +471,14 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                 int m;
                 for (m = 0; words[m] && words[m]->name; ++m) {
                     if (!is_a_trivial_word(words[m]->name)) {
+                        /*
                         if (words[m]->name[0] == '$' && strcmp(words[m]->name, "$$anyone$$")) {
                             debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
-                        else if (matches(words[m]->name, request_words[u][v]->name)) {
+                        else
+                        */
+                        if (matches(words[m]->name, request_words[u][v]->name)) {
                             debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
@@ -991,6 +994,62 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
                 }
             }
         }
+
+        if (is_engine("ram")) {
+            free(fact->verbs);
+            free(fact->questionword);
+            free(fact->context);
+            free(fact);
+        }
+        else {
+            free_words_weak(fact->verbs);
+            free(fact->questionword);
+            free(fact->context);
+            free(fact);
+        }
+    }
+    
+    return list;
+}
+
+struct fact** search_facts_synonyms(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+    struct fact** list = 0;
+    
+    {
+        struct request* fact = calloc(sizeof(struct request), 1);
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->questionword =          strdup(questionword);
+        fact->context      =          strdup(context);
+        fact->truth        = 1;
+
+        debugf(
+            "Searching answers for:\n"
+            "    subjects (was: %s):\n", subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+        print_word_list_3rd_order(fact->subjects);
+        debugf(
+            "    objects (was: %s):\n" , objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        print_word_list_3rd_order(fact->objects);
+        debugf(
+            "    verbs:\n - %s\n"
+            "    adverbs:\n",
+            verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : ""
+        );
+        print_word_list_3rd_order(fact->adverbs);
+        debugf(
+            "    extra:\n");
+        print_word_list_3rd_order(fact->extra);
+        debugf(
+            "    questionword:\n - %s\n",
+            questionword);
+
+        list = filter_list_by_rules (
+            search_in_net(fact, list),
+            fact
+        );
 
         if (is_engine("ram")) {
             free(fact->verbs);
