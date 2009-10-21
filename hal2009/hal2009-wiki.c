@@ -450,6 +450,10 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             if (strstr(lines[current_line]->s, "<li")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "Vorlage:Infobox")) {
+                continue;
+            }
+            
             
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
