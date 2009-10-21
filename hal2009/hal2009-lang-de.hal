@@ -1779,6 +1779,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'bringen' => "vt",
           'milliarde' => "adj",
           'tauche' => "vt",
+          'auch' => "adj",
           'uhr' => "n",
           'meinen' => "art",
           'wegen' => "prep",
