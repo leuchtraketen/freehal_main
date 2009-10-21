@@ -531,6 +531,8 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /wie heisst du mit /, "du ", :global:i
     
+    do regex using var input: / (<[A-Z]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?er)\s+?(<[A-Z]><[a-z]>+?) /, " _$0_$1_ ", :global:i
+    
     do regex using var input: /was macht /, "was ", :global:i
     
     do regex using var input: /kannst du (.*?isch)($|(?:.?.?.?.?$))/, "kannst du $0 sprechen $1", :global:i
