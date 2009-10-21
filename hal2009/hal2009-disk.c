@@ -413,7 +413,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
             if (words[num_of_words][0] != '0') {
-                strcat(sql, "INSERT OR IGNORE INTO rel_word_fact (`word`, `fact`, `table`, `verb_flag_want`, `verb_flag_must`, `verb_flag_can`, `verb_flag_may`, `verb_flag_should`) VALUES (");
+                strcat(sql, "INSERT OR IGNORE INTO rel_word_fact (`word`, `fact`, `table`) VALUES (");
                 strcat(sql, "\n\"");
                 strcat(sql, words[num_of_words]);
                 strcat(sql, "\", \n");
@@ -432,6 +432,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     free(words);
 
     strcat(sql, ";\n");
+    printf("%s\n\n", sql);
     
     return sql;
 }

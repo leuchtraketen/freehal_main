@@ -454,6 +454,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
+            lines[current_line] = remove_between(lines[current_line], '&', ';');
             
             if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
                 continue;
