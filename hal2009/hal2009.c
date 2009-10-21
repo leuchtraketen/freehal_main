@@ -712,6 +712,10 @@ char* ascii(const char* not_ascii) {
 
 /* a replace function */
 halstring* replace(halstring *src, const char *from, const char *to) {
+    if (0 == strstr(src->s, from)) {
+        return src;
+    }
+    
     char* full_string_pointer = src->s;
     src->s = halmalloc(line_size + 100, "replace");
     strcpy(src->s, full_string_pointer);

@@ -421,16 +421,6 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                 strcat(sql, ", \n\"");
                 strcat(sql, rel ? "clauses" : "facts");
                 strcat(sql, "\"");
-                strcat(sql, ", ");
-                strcat(sql, verb_flag_want?"1":"0");
-                strcat(sql, ", ");
-                strcat(sql, verb_flag_must?"1":"0");
-                strcat(sql, ", ");
-                strcat(sql, verb_flag_can?"1":"0");
-                strcat(sql, ", ");
-                strcat(sql, verb_flag_may?"1":"0");
-                strcat(sql, ", ");
-                strcat(sql, verb_flag_should?"1":"0");
                 strcat(sql, ");");
 
                 free(words[num_of_words]);

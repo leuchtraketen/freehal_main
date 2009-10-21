@@ -100,7 +100,6 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_link_f2` ON `linking` (`f2`);"
 
 "CREATE TABLE `rel_word_fact` (`word` varchar(50), `fact` INTEGER, `table` varchar(50), "
-"verb_flag_want char(2),verb_flag_must char(2),verb_flag_can char(2),verb_flag_may char(2),verb_flag_should char(2),"
 "UNIQUE(`word`, `fact`));"
 "CREATE INDEX `idx_rel_word_fact_word` ON `rel_word_fact` (`word`);"
 "CREATE INDEX `idx_rel_word_fact_fact` ON `rel_word_fact` (`fact`);"

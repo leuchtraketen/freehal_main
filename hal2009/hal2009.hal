@@ -1886,6 +1886,9 @@ define action logic with var input, var lang, var path, hash parsed do
         if var line matches /^<[\^]>/ do
             go to next
         done
+        if length(var line) < 3 do
+            go to next
+        done
         
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
@@ -1949,7 +1952,7 @@ define action logic with var input, var lang, var path, hash parsed do
     # TEXT
     # Exception: If we are in the "enum_all" context, all subjects together are the object
     # CODE
-    if var request_context_string matches "enum_all" do
+    if var request_context_string matches "enum_all" and items of array results do
         set new hash subjects to an empty hash
     
         for each new array result in array results do
