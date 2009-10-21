@@ -493,7 +493,10 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             /// write to prot file
             {
                 char file[501];
-                snprintf(file, 500, "lang_%s/wiki.prot", hal2009_get_text_language());
+                char* first_character = strdup(entity_upper);
+                first_character[1] = '\0';
+                snprintf(file, 500, "lang_%s/wiki/%s-wiki.prot", hal2009_get_text_language(), first_character);
+                free(first_character);
                 char line[501];
                 char* object_working = object;
                 char* end;
