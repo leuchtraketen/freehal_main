@@ -366,8 +366,8 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
-    if var name_of_entry matches /[-]$/ do
-        print "Do not save words with minus at the end: " concat var name_of_entry
+    if var name_of_entry matches /[-]/ do
+        print "Do not save words with minus: " concat var name_of_entry
         print new line
         do return without arguments
     done
@@ -477,18 +477,17 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     set new array contents to an empty array
     set new var end_of_entry_line to ':'
     do regex using var name_of_entry: /[\[\]]/, "", :global:i
-    set var name_of_entry to var name_of_entry concat var end_of_entry_line
     
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry }
+        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
     done
     do regex using var name_of_entry: /[\(\)]/, "", :global:i
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry }
+        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
     done
     for each new var suffix in array standard_suffixes do
         if (not array contents) or is an empty array contents do
-            set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix }
+            set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix concat var end_of_entry_line }
         done
     done
     
