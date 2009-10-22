@@ -268,8 +268,9 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     entity_upper            = upper(entity_without_articles);
     /// if NEW
     if (todo == NEW) {
-        _url                    = concat("de.wikipedia.org/w/index.php?title=Spezial%3ASuche&fulltext=Volltext&search=", entity_upper);
-        // _url                    = concat("de.wikipedia.org/wiki/Spezial:Suche/", entity_upper);
+        char* __url             = concat(".wikipedia.org/w/index.php?title=Spezial%3ASuche&fulltext=Volltext&search=", entity_upper);
+        _url                    = concat(hal2009_get_text_language(), __url);
+        free(__url);
         url                     = replace_spaces(_url);
         printf("url: %s\n", url);
         halstring* file         = download_from_url(url);
@@ -384,7 +385,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
     }
     
     printf("page: __url: %s\n", __url);
-    char* _url                    = concat("de.wikipedia.org", __url);
+    char* ___url                  = concat(".wikipedia.org", __url);
+    char* _url                    = concat(hal2009_get_text_language(), ___url);
+    free(___url);
     printf("page: _url: %s\n", _url);
     char*  url                    = replace_spaces(_url);
     printf("page: url: %s\n", url);
