@@ -2745,8 +2745,19 @@ define action save_facts with array facts_parsed, var pro_file_name, var prepend
             set var adverb to from array adverb first item
         done
         
+        # TEXT
+        # Replace ~~~ with =
+        # CODE
         if from array verbs first item matches "~~~" do
             set from hash parsed item { 'adverbs' } to an empty array
+            set from array verbs first item to "="
+        done
+        
+        # TEXT
+        # Delete all other verbs if there is a "="
+        # CODE
+        if from array verbs first item matches "=" do
+            set array verbs to an empty array
             set from array verbs first item to "="
         done
 
