@@ -695,6 +695,9 @@ char* ascii(const char* not_ascii) {
 	    else if (y == 223) {
 	        strcat(ascii, "ss");
 	    }
+        else if (y == 226) {
+            x += 2;
+        }
 
         else {
             char array[2];

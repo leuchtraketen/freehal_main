@@ -165,7 +165,13 @@ char* transform_sentence(char* sentence) {
             continue;
         }
         if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
-            continue;
+            if (verb_str+2 == strstr(verb_str, "also")) {
+                verb_str[i+1] = verb_str[i];
+                i += 1;
+            }
+            else {
+                continue;
+            }
         }
         
         object[j] = verb_str[i];

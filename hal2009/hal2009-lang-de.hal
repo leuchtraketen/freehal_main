@@ -2358,6 +2358,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'ihren' => "art",
           'breit' => "adj",
           'hessen' => "n",
+          'nil' => "n",
           'unerlaubt' => "adj",
           'unerlaubte' => "adj",
           'unerlaubter' => "adj",

@@ -371,6 +371,11 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
+    if not var name_of_entry do
+        print "Do not save empty words: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
 
     do be_slow without arguments
     print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name
