@@ -1,3 +1,1386 @@
+Grabkammer:
+  genus  : f
+  type: n
+grabmal:
+  genus  : s
+  type: n
+grabstaette:
+  genus  : f
+  type: n
+gruft:
+  genus  : f
+  type: n
+altaegyptischer:
+  type: adj
+Steuerzeichen:
+  genus  : s
+  type: n
+Ortsgemeinde:
+  genus  : f
+  type: n
+Landkreis:
+  genus  : m
+  type: n
+Bernkastel-Wittlich:
+  type: n
+Rheinland-Pfalz:
+  type: n
+Pflanzengattung:
+  genus  : f
+  type: n
+Bananengewaechse:
+  genus  : f
+  type: n
+einkeimblaettrigen:
+  type: adj
+Wohnzwecken:
+  type: n
+Siedlungsgebiet:
+  genus  : s
+  type: n
+Tschuktschen-Halbinsel:
+  genus  : f
+  type: n
+Nordostsibiriens:
+  type: n
+sternensystem:
+  genus  : s
+  type: n
+Alpha:
+  type: n
+Centauri:
+  type: n
+Datenbanklinks:
+  genus  : f
+  type: n
+Asteroidenguertel:
+  genus  : m
+  type: n
+Ansammlung:
+  genus  : f
+  type: n
+Kleinplaneten:
+  genus  : f
+  type: n
+Quasar:
+  genus  : m
+  type: n
+aktiven:
+  type: adj
+sichtbaren:
+  type: adj
+nahezu:
+  type: adj
+erscheint:
+  type: vi
+Monokultur:
+  genus  : f
+  type: n
+Bodenbewirtschaftung:
+  genus  : f
+  type: n
+kastriertes:
+  type: adj
+Risotto:
+  genus  : s
+  type: n
+norditalienisches:
+  type: adj
+Variationen:
+  genus  : f
+  type: n 
+>>>:
+  type: vt
+abhaengikeit:
+  genus  : f
+  type: n
+abhaengkeit:
+  genus  : f
+  type: n
+abolvieren:
+  type: vi
+abolviert:
+  type: vi
+absolviert:
+  type: vi
+absorbtion:
+  genus  : f
+  type: n
+abwaegig:
+  type: adj
+addresse:
+  genus  : f
+  type: n
+adresse:
+  genus  : f
+  type: n
+addressiert:
+  type: vi
+adressiert:
+  type: vi
+adjudant:
+  genus  : m
+  type: n
+aenlich:
+  type: adj
+agendas:
+  genus  : f
+  type: n
+agenden:
+  genus  : f
+  type: n
+agressiv:
+  type: adj
+Excel:
+  genus  : s
+  type: n
+Porsche:
+  genus  : m
+  type: n
+Automobilen:
+  type: n
+Stuttgart-Zuffenhausen:
+  type: n
+riesenechse:
+  genus  : f
+  type: n
+Bavaria:
+  type: n
+Blu:
+  type: n
+Schimmelkaese:
+  genus  : m
+  type: n
+blau-gruenlich:
+  type: adj
+erscheinende:
+  type: adj
+Edelschimmelpilze:
+  genus  : f
+  type: n
+Penicillium:
+  genus  : s
+  type: n
+gorgonzola:
+  genus  : m
+  type: n
+roqueforti:
+  genus  : m
+  type: n
+eingesetzt:
+  type: vi
+Spinatknoedel:
+  genus  : m
+  type: n
+geroesteten:
+  type: adj
+Brotstuecken:
+  type: n
+Fruechten:
+  type: n
+APC-Resistenz:
+  genus  : f
+  type: n
+Achalasie:
+  genus  : f
+  type: n
+Aganglionose:
+  genus  : f
+  type: n
+Agranulozytose:
+  genus  : f
+  type: n
+Akinetischer:
+  type: adj
+Mutismus:
+  genus  : m
+  type: n
+Akromegalie:
+  genus  : f
+  type: n
+Aktinomykose:
+  genus  : f
+  type: n
+Akute:
+  type: adj
+Bronchiolitis:
+  genus  : f
+  type: n
+Bronchitis:
+  genus  : f
+  type: n
+Hoehenkrankheit:
+  genus  : f
+  type: n
+Akutes:
+  type: adj
+Alexander-Krankheit:
+  genus  : f
+  type: n
+Alkohol-Hepatitis:
+  genus  : f
+  type: n
+Allergische:
+  type: adj
+Amyloidose:
+  genus  : f
+  type: n
+Analfistel:
+  genus  : s
+  type: n
+Androgenresistenz:
+  genus  : f
+  type: n
+Anhidrose:
+  genus  : f
+  type: n
+Argyrie:
+  genus  : f
+  type: n
+Arterielle:
+  type: adj
+Verschlusskrankheit:
+  genus  : f
+  type: n
+Arthrogryposis:
+  genus  : f
+  type: n
+multiplex:
+  type: adj
+congenita:
+  genus  : f
+  type: n
+Knochennekrose:
+  genus  : f
+  type: n
+Asthma:
+  genus  : s
+  type: n
+cardiale:
+  type: adj
+Atmungsinsuffizienz:
+  genus  : f
+  type: n
+Augenrauschen:
+  genus  : s
+  type: n
+Australische:
+  type: adj
+Bartter-Syndrom:
+  genus  : s
+  type: n
+Naevus:
+  genus  : f
+  type: n
+Benignitaet:
+  genus  : f
+  type: n
+Beugekontraktur:
+  genus  : f
+  type: n
+Biliom:
+  genus  : s
+  type: n
+Bleikinder:
+  genus  : f
+  type: n
+Blepharospasmus:
+  genus  : m
+  type: n
+Blount-Krankheit:
+  genus  : f
+  type: n
+Blutstauungsoedem:
+  genus  : s
+  type: n
+Boerhaave-Syndrom:
+  genus  : s
+  type: n
+Brenner-Tumor:
+  genus  : m
+  type: n
+Bromhidrosis:
+  genus  : f
+  type: n
+CREST-Syndrom:
+  genus  : s
+  type: n
+Canaliculitis:
+  genus  : f
+  type: n
+Castleman:
+  type: n
+Tumor:
+  genus  : m
+  type: n
+Chiari-Frommel-Syndrom:
+  genus  : s
+  type: n
+Chondromatose:
+  genus  : f
+  type: n
+senile:
+  type: adj
+Ciguatera:
+  genus  : f
+  type: n
+spinalis:
+  genus  : f
+  type: n
+Cluster-Kopfschmerz:
+  genus  : m
+  type: n
+Darmperforation:
+  genus  : f
+  type: n
+Dekompressionserkrankung:
+  genus  : f
+  type: n
+Demyelinisierende:
+  type: adj
+Dermalsinus:
+  genus  : m
+  type: n
+Dilatative:
+  type: adj
+Kardiomyopathie:
+  genus  : f
+  type: n
+Dysostose:
+  genus  : f
+  type: n
+Eichelentzuendung:
+  genus  : f
+  type: n
+Eisenmangelanaemie:
+  genus  : f
+  type: n
+Embryopathie:
+  genus  : f
+  type: n
+Enthesiopathie:
+  genus  : f
+  type: n
+Entrapment-Syndrom:
+  genus  : s
+  type: n
+Epicondylitis:
+  genus  : f
+  type: n
+Epiglottitis:
+  genus  : f
+  type: n
+Thrombozythaemie:
+  genus  : f
+  type: n
+Etagenwechsel:
+  genus  : s
+  type: n
+Fabella-Syndrom:
+  genus  : s
+  type: n
+Facies:
+  type: n
+Farmerlunge:
+  genus  : f
+  type: n
+Favismus:
+  genus  : m
+  type: n
+Fettstoffwechselstoerung:
+  genus  : f
+  type: n
+Fibromyalgie:
+  genus  : f
+  type: n
+Fieberkrampf:
+  genus  : m
+  type: n
+Filariose:
+  genus  : f
+  type: n
+Floride:
+  type: adj
+Fokale:
+  type: adj
+Fourman-Fourman-Syndrom:
+  genus  : s
+  type: n
+Gaming:
+  type: n
+Sickness:
+  type: n
+Gangraen:
+  type: n
+Gelenkkrankheit:
+  genus  : f
+  type: n
+Gingivitis:
+  genus  : f
+  type: n
+Gliederschmerz:
+  genus  : m
+  type: n
+Glossitis:
+  genus  : f
+  type: n
+Glykogenspeicherkrankheit:
+  genus  : f
+  type: n
+Haarzunge:
+  genus  : f
+  type: n
+Halsschmerzen:
+  genus  : f
+  type: n
+Heberden-Arthrose:
+  genus  : f
+  type: n
+Hemicrania:
+  genus  : f
+  type: n
+continua:
+  genus  : f
+  type: n
+Herdenzephalitis:
+  genus  : f
+  type: n
+leonina:
+  type: n
+motorisch-sensorische:
+  type: adj
+Neuropathie:
+  genus  : f
+  type: n
+Herz-Kreislauferkrankung:
+  genus  : f
+  type: n
+Hirnoedem:
+  genus  : s
+  type: n
+Hodenektopie:
+  genus  : f
+  type: n
+Hospitalismus:
+  genus  : m
+  type: n
+Hypalbuminaemie:
+  genus  : f
+  type: n
+Hyperammonaemie:
+  genus  : f
+  type: n
+Hyperexzitabilitaet:
+  genus  : f
+  type: n
+Hyperhidrose:
+  genus  : f
+  type: n
+Hyperlipoproteinaemie:
+  genus  : f
+  type: n
+Hypermobilitaet:
+  genus  : f
+  type: n
+Hyperparathyreoidismus:
+  genus  : m
+  type: n
+Hypofunktioneller:
+  type: adj
+Hypokalzaemie:
+  genus  : f
+  type: n
+Hypophyseninsuffizienz:
+  genus  : f
+  type: n
+Hypothyreose:
+  genus  : f
+  type: n
+Hypoxaemie:
+  genus  : f
+  type: n
+Haemarthrose:
+  genus  : f
+  type: n
+Haemhidrose:
+  genus  : f
+  type: n
+Haemopyrrollaktamurie:
+  genus  : f
+  type: n
+Haemorrhoiden:
+  genus  : f
+  type: n
+Hoehenhirnoedem:
+  genus  : s
+  type: n
+Hoehenlungenoedem:
+  genus  : s
+  type: n
+Hoerempfindlichkeit:
+  genus  : f
+  type: n
+Hoerverlust:
+  genus  : m
+  type: n
+Idiopathie:
+  genus  : f
+  type: n
+Infarkt:
+  genus  : m
+  type: n
+Infarktnetzwerk:
+  genus  : s
+  type: n
+Infektarthritis:
+  genus  : f
+  type: n
+Itai-Itai-Krankheit:
+  genus  : f
+  type: n
+Kashin-Beck-Krankheit:
+  genus  : f
+  type: n
+Katarrh:
+  genus  : m
+  type: n
+Kaverne:
+  genus  : f
+  type: n
+Ketoazidose:
+  genus  : f
+  type: n
+Kiloh-Nevin-Syndrom:
+  genus  : s
+  type: n
+Klippel-Feil-Syndrom:
+  genus  : s
+  type: n
+Klumpfuss:
+  genus  : m
+  type: n
+Knalltrauma:
+  genus  : s
+  type: n
+Kolpitis:
+  genus  : f
+  type: n
+Komorbiditaet:
+  genus  : f
+  type: n
+Konglomerattumor:
+  genus  : m
+  type: n
+Krankheitserreger:
+  type: n
+Krankheitsgewinn:
+  genus  : m
+  type: n
+Kretinismus:
+  genus  : m
+  type: n
+Kryoglobulinaemie:
+  genus  : f
+  type: n
+Kryptitis:
+  genus  : f
+  type: n
+Kryptogen:
+  type: adj
+Kryptosporidiose:
+  genus  : f
+  type: n
+Kupfervergiftung:
+  genus  : f
+  type: n
+Kuru:
+  type: n
+Kurzdarmsyndrom:
+  genus  : s
+  type: n
+Kwashiorkor:
+  type: n
+Kaeltekopfschmerz:
+  genus  : m
+  type: n
+Laryngitis:
+  genus  : f
+  type: n
+Lebensmittelvergiftung:
+  genus  : f
+  type: n
+Leberabszess:
+  genus  : m
+  type: n
+Leberzirrhose:
+  genus  : f
+  type: n
+Leistenbruch:
+  genus  : m
+  type: n
+Leukoplakie:
+  genus  : f
+  type: n
+Lichtallergie:
+  genus  : f
+  type: n
+Lipoedem:
+  genus  : s
+  type: n
+Lungenembolie:
+  genus  : f
+  type: n
+Lungenemphysem:
+  genus  : s
+  type: n
+Lungenfibrose:
+  genus  : f
+  type: n
+Lungeninsuffizienz:
+  genus  : f
+  type: n
+Lungenoedem:
+  genus  : s
+  type: n
+Lyme-Borreliose:
+  genus  : f
+  type: n
+Lymphangioleiomyomatose:
+  genus  : f
+  type: n
+Lymphoedem:
+  genus  : s
+  type: n
+Laesion:
+  genus  : f
+  type: n
+Madonnenfinger:
+  genus  : m
+  type: n
+Magengeschwuer:
+  genus  : s
+  type: n
+Mangelerkrankung:
+  genus  : f
+  type: n
+Mangelkrankheit:
+  genus  : f
+  type: n
+Marasmus:
+  genus  : m
+  type: n
+Mariske:
+  genus  : f
+  type: n
+Marschenfieber:
+  genus  : s
+  type: n
+Mastozytose:
+  genus  : f
+  type: n
+Meatusstenose:
+  genus  : f
+  type: n
+Medikamentinduzierter:
+  type: adj
+Migraene:
+  genus  : f
+  type: n
+Mikrometastase:
+  genus  : f
+  type: n
+Miller-Fisher-Syndrom:
+  genus  : s
+  type: n
+Minamata-Krankheit:
+  genus  : f
+  type: n
+Modekrankheit:
+  genus  : f
+  type: n
+Monoklonale:
+  type: adj
+Gammopathie:
+  genus  : f
+  type: n
+Adamantiades-Behcet:
+  type: n
+Basedow:
+  type: n
+Bleuler:
+  type: n
+Conn:
+  type: n
+Crohn:
+  type: n
+Crouzon:
+  type: n
+Dupuytren:
+  type: n
+Ledderhose:
+  genus  : f
+  type: n
+Meulengracht:
+  type: n
+Osler:
+  type: n
+Paget:
+  type: n
+Waldenstroem:
+  type: n
+Mukoviszidose:
+  genus  : f
+  type: n
+Multisemie:
+  genus  : f
+  type: n
+Mundfaeule:
+  genus  : f
+  type: n
+Muschelvergiftung:
+  genus  : f
+  type: n
+Muskelkrankheit:
+  genus  : f
+  type: n
+Muskelverhaertung:
+  genus  : f
+  type: n
+Myasthenia:
+  type: n
+gravis:
+  type: n
+pseudoparalytica:
+  genus  : f
+  type: n
+Mykoplasmose:
+  genus  : f
+  type: n
+Myzetom:
+  genus  : s
+  type: n
+Nervenzusammenbruch:
+  genus  : m
+  type: n
+Normaldruckhydrozephalus:
+  genus  : m
+  type: n
+Naegelbeissen:
+  genus  : s
+  type: n
+Okklusion:
+  genus  : f
+  type: n
+Opsoklonus:
+  genus  : m
+  type: n
+Osteochondrosis:
+  genus  : f
+  type: n
+Osteomyelitis:
+  genus  : f
+  type: n
+Pachyostose:
+  genus  : f
+  type: n
+Paget-Syndrom:
+  genus  : s
+  type: n
+Paget-von-Schroetter-Syndrom:
+  genus  : s
+  type: n
+Palipraxie:
+  genus  : f
+  type: n
+Panhypopituitarismus:
+  genus  : m
+  type: n
+Pankarditis:
+  genus  : f
+  type: n
+Pankreatitis:
+  genus  : f
+  type: n
+Panmyelopathie:
+  genus  : f
+  type: n
+Parainfluenza:
+  genus  : f
+  type: n
+Paramyotonia:
+  genus  : f
+  type: n
+Parasitaere:
+  type: adj
+Parasomnie:
+  genus  : f
+  type: n
+Perianalthrombose:
+  genus  : f
+  type: n
+Periostitis:
+  genus  : f
+  type: n
+Perityphlitischer:
+  type: adj
+Pharyngitis:
+  genus  : f
+  type: n
+Phosphorwasserstoffvergiftung:
+  genus  : f
+  type: n
+Phrenitis:
+  genus  : f
+  type: n
+Poland-Syndrom:
+  genus  : s
+  type: n
+Polyglobulie:
+  genus  : f
+  type: n
+Polymyositis:
+  genus  : f
+  type: n
+Polyneuropathie:
+  genus  : f
+  type: n
+neuroektodermaler:
+  type: adj
+ischaemischer:
+  type: adj
+Progredienz:
+  genus  : f
+  type: n
+Promyelozytenleukaemie:
+  genus  : f
+  type: n
+Proteus-Syndrom:
+  genus  : s
+  type: n
+Praesentismus:
+  genus  : m
+  type: n
+Pseudokrupp:
+  genus  : f
+  type: n
+Pseudotumor:
+  genus  : m
+  type: n
+cerebri:
+  type: n
+Pseudoxanthoma:
+  genus  : f
+  type: n
+elasticum:
+  genus  : s
+  type: n
+Pulmonale:
+  type: adj
+Nebengeraeusche:
+  genus  : f
+  type: n
+Quecksilbervergiftung:
+  genus  : f
+  type: n
+Radikulopathie:
+  genus  : f
+  type: n
+Rasmussen-Enzephalitis:
+  genus  : f
+  type: n
+Retroperitonealfibrose:
+  genus  : f
+  type: n
+Rett-Syndrom:
+  genus  : s
+  type: n
+Rheumatisches:
+  type: adj
+Rhizarthrose:
+  genus  : f
+  type: n
+Rippenfraktur:
+  genus  : f
+  type: n
+Rubinstein-Taybi-Syndrom:
+  genus  : s
+  type: n
+Saisonkrankheit:
+  genus  : f
+  type: n
+Sarkoidose:
+  genus  : f
+  type: n
+Scharlach:
+  genus  : m
+  type: n
+Schenkelblock:
+  genus  : m
+  type: n
+Scheuermann-Krankheit:
+  genus  : f
+  type: n
+Schleudertrauma:
+  genus  : s
+  type: n
+Schultersteife:
+  genus  : f
+  type: n
+Schnappatmung:
+  genus  : f
+  type: n
+Schneeberger:
+  type: n
+Schockniere:
+  genus  : f
+  type: n
+Sehstoerung:
+  genus  : f
+  type: n
+Sekundaere:
+  type: adj
+Hypertonie:
+  genus  : f
+  type: n
+Siechtum:
+  genus  : s
+  type: n
+Sigmadivertikulitis:
+  genus  : f
+  type: n
+Simulator:
+  genus  : m
+  type: n
+Sinterungsbruch:
+  genus  : m
+  type: n
+Sinustachykardie:
+  genus  : f
+  type: n
+Sklerodermie:
+  genus  : f
+  type: n
+Skoliose:
+  genus  : f
+  type: n
+Spannungskopfschmerz:
+  genus  : m
+  type: n
+Spastische:
+  type: adj
+Spinalparalyse:
+  genus  : f
+  type: n
+Spondylarthrose:
+  genus  : f
+  type: n
+Spondylodiszitis:
+  genus  : f
+  type: n
+Still-Krankheit:
+  genus  : f
+  type: n
+Stimmbandfehlfunktion:
+  genus  : f
+  type: n
+Strahlenkolitis:
+  genus  : f
+  type: n
+Strahlenkrankheit:
+  genus  : f
+  type: n
+Strahlensyndrom:
+  genus  : s
+  type: n
+Syndrom:
+  genus  : s
+  type: n
+Systemische:
+  type: adj
+Systemisches:
+  type: adj
+inflammatorisches:
+  type: adj
+Response-Syndrom:
+  genus  : s
+  type: n
+Tabaklunge:
+  genus  : f
+  type: n
+Tanzwut:
+  genus  : f
+  type: n
+calcarea:
+  genus  : f
+  type: n
+Tinnitus:
+  genus  : m
+  type: n
+Tracheomalazie:
+  genus  : f
+  type: n
+Traumatische:
+  type: adj
+Trinukleotiderkrankungen:
+  genus  : f
+  type: n
+Tubenkatarrh:
+  genus  : m
+  type: n
+Typhlitis:
+  genus  : f
+  type: n
+Undine-Syndrom:
+  genus  : s
+  type: n
+Unhappy:
+  type: n
+Unterernaehrung:
+  genus  : f
+  type: n
+Vasookklusion:
+  genus  : f
+  type: n
+Verkaesung:
+  genus  : f
+  type: n
+Vibex:
+  type: n
+Volkmannsche:
+  type: adj
+Kontraktur:
+  genus  : f
+  type: n
+Wabenlunge:
+  genus  : f
+  type: n
+Wallenberg-Syndrom:
+  genus  : s
+  type: n
+Wetterfuehligkeit:
+  genus  : f
+  type: n
+Wirbelblockierung:
+  genus  : f
+  type: n
+Wirbelgleiten:
+  genus  : s
+  type: n
+Yersinia-Arthritis:
+  genus  : f
+  type: n
+Yips:
+  type: n
+Yusho-Krankheit:
+  genus  : f
+  type: n
+Zahnschmerzen:
+  genus  : f
+  type: n
+Zellweger-Syndrom:
+  genus  : s
+  type: n
+Zentraler:
+  type: adj
+Zivilisationskrankheit:
+  genus  : f
+  type: n
+Zuckerintoleranz:
+  genus  : f
+  type: n
+Zyklothymie:
+  genus  : f
+  type: n
+Zystinose:
+  genus  : f
+  type: n
+Zystom:
+  genus  : s
+  type: n
+ADHS:
+  type: n
+Aicardi-Syndrom:
+  genus  : s
+  type: n
+Darmverschluss:
+  genus  : m
+  type: n
+Kleinkindern:
+  type: n
+Dellwarzen:
+  genus  : f
+  type: n
+Diphtherie:
+  genus  : f
+  type: n
+Drei-Monats-Kolik:
+  genus  : f
+  type: n
+Dreitagefieber:
+  genus  : s
+  type: n
+Enuresis:
+  genus  : f
+  type: n
+Epithelioma:
+  genus  : f
+  type: n
+contagiosum:
+  genus  : s
+  type: n
+molluscum:
+  genus  : s
+  type: n
+Fallotsche:
+  type: adj
+Tetralogie:
+  genus  : f
+  type: n
+Fieberkraempfe:
+  genus  : f
+  type: n
+Retinopathie:
+  genus  : f
+  type: n
+Fruehkindliche:
+  type: adj
+Regulationsstoerung:
+  genus  : f
+  type: n
+Zerebralparese:
+  type: adj
+Invagination:
+  genus  : f
+  type: n
+Keuchhusten:
+  genus  : m
+  type: n
+Knick-Senkfuss:
+  genus  : m
+  type: n
+subglottica:
+  genus  : f
+  type: n
+Mittelohrentzuendung:
+  genus  : f
+Molluscum:
+  genus  : s
+  type: n
+Muskulaerer:
+  type: adj
+Nasenpolypen:
+  genus  : f
+  type: n
+Ringelroeteln:
+  genus  : f
+  type: n
+Rotavirus-Gastroenteritis:
+  genus  : f
+  type: n
+Rotavirus-Infektion:
+  genus  : f
+  type: n
+bifida:
+  type: n
+Varizellen-Zoster:
+  genus  : m
+  type: n
+Wilms-Tumor:
+  genus  : m
+  type: n
+Windeldermatitis:
+  genus  : f
+  type: n
+Zahnkaries:
+  genus  : m
+  type: n
+umkapselte:
+  type: adj
+Gewebseinschmelzung:
+  genus  : f
+  type: n
+praeformierten:
+  type: adj
+Koerperhoehle:
+  genus  : f
+  type: n
+schimmelkaese:
+  genus  : m
+  type: n
+bavaria:
+  type: n
+blu:
+  type: n
+Ouzo:
+  genus  : m
+  type: n
+Frikatelle:
+  genus  : f
+  type: n
+fleischkloss:
+  genus  : m
+  type: n
+fleischkuechle:
+  genus  : s
+  type: n
+fleischlaberl:
+  genus  : s
+  type: n
+fleischlaiberl:
+  genus  : s
+  type: n
+Salzburger:
+  type: n
+Nockerln:
+  genus  : f
+  type: n
+Suessspeisen-Spezialitaet:
+  genus  : f
+  type: n
+Humer:
+  genus  : m
+  type: n
+Orgel:
+  genus  : f
+  type: n
+spielbares:
+  type: adj
+Borkenkaefer:
+  genus  : m
+  type: n
+Unterfamilie:
+  genus  : f
+  type: n
+Ruesselkaefer:
+  genus  : m
+  type: n
+religioes:
+  type: adj
+motivierte:
+  type: adj
+messe:
+  genus  : f
+  type: n
+Gipfelkreuz:
+  genus  : s
+  type: n
+Huegels:
+  type: n
+Gipfelmarkierung:
+  genus  : f
+  type: n
+Standardmodell:
+  genus  : s
+  type: n
+Norddeutschen:
+  type: adj
+NDR:
+  type: n
+Cairol-roboter:
+  genus  : m
+  type: n
+getreten:
+  type: vi
+brennpunkten:
+  type: n
+mythologischen:
+  type: adj
+Weltbildern:
+  type: n
+Kultur-spezifischen:
+  type: adj
+Varianten:
+  genus  : f
+  type: n
+auftaucht:
+  type: vi
+Kultur-Spezifischen:
+  type: adj
+Schaufelbagger:
+  genus  : m
+  type: n
+Baumaschine:
+  genus  : f
+  type: n
+insbesondere:
+  type: adv
+Wiederverfuellen:
+  genus  : s
+  type: n
+Erdvertiefungen:
+  genus  : f
+  type: n
+Rechtschreibung:
+  genus  : f
+  type: n
+fehlschreibung:
+  genus  : f
+  type: n
+rechtschreibfehler:
+  genus  : m
+  type: n
+orthografie:
+  genus  : f
+  type: n
+orthographie:
+  genus  : f
+  type: n
+Sonnensegel:
+  genus  : s
+  type: n
+unerprobter:
+  type: adj
+Raumfahrzeugen:
+  type: n
+Strahlungsdruck:
+  genus  : m
+  type: n
+Sonnenlichtes:
+  type: n
+Photonentriebwerk:
+  genus  : s
+  type: n
+Warpantrieb:
+  genus  : m
+  type: n
+Science:
+  type: n
+Fiction:
+  type: n
+beschrieben:
+  type: adj
+mythisches:
+  type: adj
+Inselreich:
+  genus  : s
+  type: n
+erwaehnte:
+  type: vi
+Steinbock:
+  genus  : m
+  type: n
+komplizierter:
+  type: adj
+interner:
+  type: adj
+Iphone:
+  genus  : s
+  type: n
+Smartphone:
+  genus  : s
+  type: n
+iPod-aehnlichen:
+  type: adj
+Medienspieler:
+  genus  : m
+  type: n
+verfuegt:
+  type: vi
+gesteuert:
+  type: vi
+IPhone:
+  genus  : s
+  type: n
 Primatengattung:
   genus  : f
   type: n
@@ -170001,141 +171384,165 @@ Trickkuenstler:
 Gastwirt:
   genus  : m
   type: n
-Olympic:
-  type: n
 kyritz:
-  type: adj
-gehtnichtmehr:
-  type: adj
+  type: n
 plata:
-  type: adj
+  type: n
 Ausbilderinnen:
+  genus  : f
   type: n
 unachtsamkeit:
+  genus  : f
   type: n
 Nachzipf:
+  genus  : m
   type: n
 Schaedel:
-  type: n
-Unterfhrungen:
+  genus  : m
   type: n
 praemenstruell:
   type: adj
 streit:
-  type: adj
+  genus  : m
+  type: n
 stefan:
-  type: adj
+  type: n
 delicti:
-  type: adj
+  type: n
 Aergern:
+  genus  : s
   type: n
 antiblockiersystem:
-  type: adj
-Bequem:
+  genus  : s
   type: n
+Bequem:
+  type: adj
 Abfahrtslaeufer:
+  genus  : m
   type: n
 Menelik:
   type: n
 Blindekuh:
+  genus  : f
   type: n
 verstuemmelung:
-  type: adj
+  genus  : f
+  type: n
 Sonderlich:
   type: adv
 Betriebsanzeigen:
+  genus  : f
   type: n
 Neunter:
-  type: n
-plastik:
   type: adj
+plastik:
+  genus  : s
+  type: n
 menden:
-  type: vi
+  type: n
 Schaufel:
+  genus  : f
   type: n
 Dreistaerkenlinsen:
+  genus  : f
   type: n
 Conakry:
   type: n
 entflammen:
   type: vi
-Fingerabdrcke:
-  type: n
 unbedenklich:
   type: adv
 tongewinnung:
-  type: adj
+  genus  : f
+  type: n
 Ueberstreichen:
+  genus  : s
   type: n
 Ausbildungsdauer:
+  genus  : f
   type: n
 Ueberbrueckungsdraht:
+  genus  : m
   type: n
 Mikro:
+  genus  : s
   type: n
-stellbar:
-  type: adj
 Gegenwerte:
+  genus  : f
   type: n
 Elze:
   type: n
 Versilbern:
+  genus  : s
   type: n
-voguen:
-  type: adj
 Beinbrueche:
+  genus  : f
   type: n
 Vorbeimarsch:
-  type: n
-Betrger:
+  genus  : m
   type: n
 Unmaessigkeit:
+  genus  : f
   type: n
 Baumwollkapseln:
+  genus  : f
   type: n
 Wirkungslosigkeit:
+  genus  : f
   type: n
 kraftaufwand:
-  type: adj
+  genus  : m
+  type: n
 einweisen:
   type: vi
 Miteinbeziehen:
+  genus  : s
   type: n
 Hausnummern:
+  genus  : f
   type: n
 Bettlaken:
+  genus  : s
   type: n
 Regierungsform:
-  type: n
-Dankeschn:
+  genus  : f
   type: n
 Einflussfaktor:
+  genus  : m
   type: n
 Allgemeintoleranzen:
+  genus  : f
   type: n
 Waehrenddessen:
-  type: n
+  type: adv
 lindenbaum:
-  type: adj
+  genus  : m
+  type: n
 Alkazar:
   type: n
 Batteriegerte:
+  genus  : f
   type: n
 Garantiescheine:
+  genus  : f
   type: n
 Wallenfels:
   type: n
 dreiphasenwechselstrom:
-  type: adj
+  genus  : m
+  type: n
 Scharfmacher:
+  genus  : f
   type: n
 Wireless:
-  type: n
+  type: adj
 Verstaerkt:
-  type: n
+  type: adj
 rechte:
-  type: adv
+  genus  : f
+  type: n
 Blattgroesse:
+  genus  : f
   type: n
 zweiraederiges:
   type: adv
@@ -170144,78 +171551,90 @@ froh:
 zusammenfassen:
   type: vi
 Errechnen:
+  genus  : s
   type: n
 Nichtsdestotrotz:
-  type: n
+  type: adv
 mefitisch:
   type: adj
 publizieren:
   type: vi
-Droben:
-  type: n
 Pueblo:
+  genus  : s
   type: n
 Association:
+  genus  : f
   type: n
 faelligkeitsdatum:
-  type: adj
+  genus  : s
+  type: n
 Absprungzone:
+  genus  : f
   type: n
 Wuenschelrutengaenger:
+  genus  : m
   type: n
 Pensionieren:
+  genus  : s
   type: n
 rehburgloccum:
-  type: adj
+  type: n
 tortur:
-  type: adj
+  genus  : f
+  type: n
 Radixschreibweise:
+  genus  : f
   type: n
 Badetuch:
+  genus  : s
   type: n
 obernburg:
-  type: adj
+  type: n
 Andachtsbuecher:
+  genus  : f
   type: n
 bundeskanzleramt:
-  type: vi
+  genus  : s
+  type: n
 ludwigsburg:
-  type: adj
+  type: n
 Vektorrechner:
+  genus  : m
   type: n
 Ideenarm:
-  type: n
-qual:
   type: adj
+qual:
+  genus  : f
+  type: n
 platzen:
   type: vi
 Glenn:
   type: n
 Arterienklemme:
+  genus  : f
   type: n
 op:
-  type: adj
+  genus  : f
+  type: n
 Gaenseschmalz:
+  genus  : s
   genus: s
   type: n
 streitigkeiten:
-  type: vi
+  genus  : f
+  type: n
 Zentimeter:
   type: n
-By:
-  type: prep
 jungfernzeugung:
-  type: adj
-gernrode:
-  type: adv
-schutzschicht:
-  type: adv
-Altersschwerhrigkeit:
+  genus  : f
   type: n
-Bemhung:
+gernrode:
+  type: n
+schutzschicht:
+  genus  : f
   type: n
 Bisherig:
-  type: n
+  type: adj
 bequem:
   type: adj
 Altistin:
@@ -207373,6 +208792,7 @@ informiert:
 Bohrfraese:
   type: n
 Urknall:
+  genus  : m
   type: n
 Unruheherd:
   type: n
@@ -236221,7 +237641,8 @@ kredenzen:
 germanisch:
   type: adj
 gottesdienst:
-  type: vi
+  genus  : m
+  type: n
 Adenauer:
   type: n
 Novellieren:
