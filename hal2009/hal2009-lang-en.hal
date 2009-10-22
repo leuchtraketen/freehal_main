@@ -3055,12 +3055,28 @@ define action use_random with var input, var current_language, var path, var mod
         print "Input is: "
         print var input
         print new line
-        if lc(" " concat var input concat " ") matches /(\sja\s)|(\snein\s)|(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ do
-            push into array random, "Why not?"
+        if lc(" " concat var input concat " ") matches /(\syes\s)|(\sno\s)|(\sok\s)|(\sis\sright\s)/ do
             push into array random, "Yes."
             push into array random, "Well."
             push into array random, "Okay."
             push into array random, "Of course."
+            push into array random, items of array random
+        done
+        else if lc(" " concat var input concat " ") matches /(\swho\s)|(\swhat\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhose\s)|(\swhom\s)/ do
+            push into array random, "I don't know."
+            push into array random, "I don't know..."
+            push into array random, "I don't know."
+            push into array random, "I don't know."
+            push into array random, "I don't know."
+            push into array random, "I don't know."
+            push into array random, "I don't know."
+            push into array random, "I don't know."
+            push into array random, "I really don't know."
+            push into array random, "I don't know."
+            push into array random, "I have never heard about that."
+            push into array random, "I have never heard about it."
+            push into array random, "I have never heard about this."
+            push into array random, "Can you tell me?"
             push into array random, items of array random
         done
         else do
