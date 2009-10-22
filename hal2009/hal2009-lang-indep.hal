@@ -383,6 +383,13 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sui(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sui je(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\salso(<[\s!.,?]>+)/, "$0", :global:i
+    
+    do regex using var input: /\swell(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\sso(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /do you know /, "", :global:i
+    do regex using var input: /^\s+/, "", :global
+    do regex using var input: /^you know (wh)/, "$0", :global:i
+    
     do regex using var input: /^\s+/, "", :global
 
     do regex using var input: /(^|\s)du hast (.*?) aus /, "$0du bekommst $1 aus ", :global:i
