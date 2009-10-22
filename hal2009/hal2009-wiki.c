@@ -164,14 +164,8 @@ char* transform_sentence(char* sentence) {
         if (j == 0 && (verb_str[i] == ' ' || verb_str[i] == '\t')) {
             continue;
         }
-        if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
-            if (verb_str+2 == strstr(verb_str, "also")) {
-                verb_str[i+1] = verb_str[i];
-                i += 1;
-            }
-            else {
-                continue;
-            }
+        if (i+1 < size && verb_str[i] == ',' && verb_str[i+1] == ' ') {
+            continue;
         }
         
         object[j] = verb_str[i];
@@ -193,7 +187,7 @@ char* transform_sentence(char* sentence) {
         if (number_of_spaces > 15 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
             break;
         }
-        if (i+1 < size && verb_str[i] == ' ' && verb_str[i+1] == ',') {
+        if (i+1 < size && verb_str[i] == ',' && verb_str[i+1] == ' ') {
             continue;
         }
         
