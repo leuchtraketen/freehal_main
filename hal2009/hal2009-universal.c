@@ -356,7 +356,7 @@ const char* from_number(int i) {
 }
 
 int is_bad(const char* s) {
-    return (!can_be_a_pointer(s) || !s || !s[0] || ((s[0] == ' ' || s[0] == '0' || s[0] == ')' || ((s[0] < 'a' || s[0] > 'Z') && s[0] != '_')) && strlen(s) < 2));
+    return (!can_be_a_pointer(s) || !s || !s[0] || ((s[0] == ' ' || s[0] == '0' || s[0] == ')' || ((s[0] < 'a' || s[0] > 'Z') && s[0] != '_')) && strlen(s) < 1));
 }
 int is_good(const char* s) {
     return (!is_bad(s));
