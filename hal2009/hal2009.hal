@@ -351,6 +351,11 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
+    if var name_of_entry matches /^[0-9]+?m$/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
     if var name_of_entry matches /__$/ do
         print "Illegal word: " concat var name_of_entry
         print new line
@@ -368,6 +373,11 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
     if var name_of_entry matches /[-]/ do
         print "Do not save words with minus: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if from array tags first item is 1 and var name_of_entry matches /zu/ do
+        print "Do not save verbs with 'zu': " concat var name_of_entry
         print new line
         do return without arguments
     done

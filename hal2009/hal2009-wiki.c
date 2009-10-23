@@ -433,6 +433,24 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             in_header = 0;
             continue;
         }
+        if (strstr(lines[current_line]->s, "<li><a href=\"/wiki/")) {
+            char* start = strstr(lines[current_line]->s, "\"");
+            if (!start) continue;
+            ++start;
+            
+            char* stop = strstr(start, "\"");
+            if (!stop) continue;
+            stop[0] = '\0';
+            
+            printf("page: \"%s\"\n", start);
+            
+            struct fact** temp = search_facts_wiki_page(start, search_results_entity);
+            if (temp) {
+                if (facts) free(facts);
+                facts = temp;
+                break;
+            }
+        }
         
         if (0 == in_header) {
             if (strstr(lines[current_line]->s, "<table")) {
@@ -473,6 +491,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             if (strstr(lines[current_line]->s, "Vorlage:Infobox")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "Siehe auch:")) {
                 continue;
             }
             
