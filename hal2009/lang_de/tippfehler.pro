@@ -1709,3 +1709,4 @@
 >>> <> _zusehen_ <> _zu_sehen_ <>  <> 50
 >>> <> _zusehens_ <> _zusehends_ <>  <> 50
 >>> <> _zustaetzlich_ <> _zusaetzlich_ <>  <> 50
+>>> <> die ehe <> _die_ehe_ <>  <> 50

@@ -171638,114 +171638,131 @@ Bisherig:
 bequem:
   type: adj
 Altistin:
+  genus  : f
   type: n
 Fanklub:
+  genus  : m
   type: n
 Tsunami:
+  genus  : m
   type: n
 meppen:
-  type: adj
+  type: n
 Bildkommunikation:
+  genus  : f
   type: n
 Zwecklosigkeit:
+  genus  : f
   type: n
 selbstklebeetikett:
-  type: vi
+  genus  : s
+  type: n
 Reihen:
   type: n
-Anfgung:
-  type: n
 Billardstoecke:
+  genus  : f
   type: n
 monatslohn:
-  type: adj
+  genus  : m
+  type: n
 Gebuertig:
-  type: n
+  type: adj
 Schwiemelig:
-  type: n
+  type: adj
 Gleiten:
   type: n
 Rumaenien:
   type: n
 Anschlussspannung:
+  genus  : f
   type: n
 Assemblerprotokoll:
+  genus  : s
   type: n
 photon:
-  type: adj
+  genus  : s
+  type: n
 Echolot:
+  genus  : s
   type: n
 phobus:
+  genus  : m
   type: n
 Duktil:
-  type: n
+  type: adj
 Allergie:
-  type: n
-Betriebsvermgen:
+  genus  : f
   type: n
 london:
-  type: adj
+  type: n
 Beule:
+  genus  : f
   type: n
 rotation:
+  genus  : f
   type: n
 Uneingeschraenktes:
-  type: n
+  type: adj
 diagonal:
   type: adj
 Dorftrottel:
-  type: n
-Bauernfnger:
+  genus  : m
   type: n
 spoettisch:
   type: adj
 Abenteuerspielplatz:
+  genus  : m
   type: n
 Demarkationslinie:
+  genus  : f
   type: n
 Unterjochung:
+  genus  : f
   type: n
 buntstift:
-  type: vi
-badhomburg:
-  type: adj
-Bildschirmabdrucke:
+  genus  : m
   type: n
-Eingieen:
+badhomburg:
+  type: n
+Bildschirmabdrucke:
+  genus  : f
   type: n
 Nuetzlichkeit:
+  genus  : f
   type: n
-Nehebkau:
-  type: n
-hpfen:
-  type: vi
 rueckstroemen:
   type: vi
-gletsch:
-  type: adj
 besorgniserregen:
   type: vi
 photograph:
-  type: adj
+  genus  : m
+  type: n
 Leuchtdiode:
+  genus  : f
   type: n
 Gebirgsscharte:
+  genus  : f
   type: n
 schlachten:
   type: vi
 oligurie:
-  type: adj
+  genus  : f
+  type: n
 Ferienlager:
+  genus  : s
   type: n
 beliebten:
   type: adv
 Dienstvertraege:
+  genus  : f
   type: n
 Hueckeswagen:
   type: n
 Kirchengaenger:
+  genus  : m
   type: n
 Beschneidung:
+  genus  : f
   type: n
 Pokern:
   type: n
