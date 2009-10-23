@@ -572,6 +572,8 @@ define action compute_tags with var word, var lang, var path do
         
         if not from array tags first item do
             set array tags to an empty array
+            print "NOT built in: " concat var word
+            print new line
         done
         else do
             print "built in: " concat from array tags first item
@@ -579,11 +581,13 @@ define action compute_tags with var word, var lang, var path do
         done
     done
     if is an empty array tags do
-        set array tags to memory_get_by_name using "word_types.brain", ucfirst(var word), var lang, var path
+        set array tags to memory_get_by_name using "word_types.brain", lc(var word), var lang, var path
         set from array tags first item to from global hash builtin_part_of_speech item { lc(var word) }
         
         if not from array tags first item do
             set array tags to an empty array
+            print "NOT built in: " concat var word
+            print new line
         done
         else do
             print "built in: " concat from array tags first item
@@ -660,14 +664,14 @@ define action compute_tags with var word, var lang, var path do
     # Look if the lower case variant of the word is a verb in the memory file.
     # CODE
     if is an empty array tags and lc(var word) matches var word do
-        set array tags to memory_get_by_name using "word_types.memory", ucfirst(var word), var lang, var path
+        set array tags to memory_get_by_name using "word_types.brain", ucfirst(var word), var lang, var path
         
         if not from hash sym_noun item { from array tags first item } do
             set array tags to an empty array
         done
     done
     if is an empty array tags and lc(var word) matches var word do
-        set array tags to memory_get_by_name using "word_types.brain", ucfirst(var word), var lang, var path
+        set array tags to memory_get_by_name using "word_types.memory", ucfirst(var word), var lang, var path
         
         if not from hash sym_noun item { from array tags first item } do
             set array tags to an empty array
@@ -735,10 +739,10 @@ define action compute_tags with var word, var lang, var path do
     # Look in the memory file.
     # CODE
     if is an empty array tags do
-        set array tags to memory_get_by_name using "word_types.memory", var word, var lang, var path
+        set array tags to memory_get_by_name using "word_types.brain", var word, var lang, var path
     done
     if is an empty array tags do
-        set array tags to memory_get_by_name using "word_types.brain", var word, var lang, var path
+        set array tags to memory_get_by_name using "word_types.memory", var word, var lang, var path
     done
     if is an empty array tags do
         set array tags to memory_get_by_name using "word_types.self-taggered", var word, var lang, var path
