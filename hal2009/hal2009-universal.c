@@ -1427,7 +1427,10 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     
     printf("Do we need the wiki search?\n");
     
-    if (!can_be_a_pointer(list) || !count_list(list)) {
+    if (!strstr(context, "what")) {
+        printf("No, no what-context.\n");
+    }
+    else if (!can_be_a_pointer(list) || !count_list(list)) {
         printf("We do.\n");
         
         if (wiki_begin()) {

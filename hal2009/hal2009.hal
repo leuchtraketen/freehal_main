@@ -234,7 +234,7 @@ define action get_score with array words, var sentence, var lang, var path do
                         done
                         if lc(var line_2) matches /var sentence/ do
                             set new array parts to split with ":", var line_2
-                            set new var score_here to from array parts item [ 1 ]
+                            set new var score_here to from array parts second item
                             do regex using var score_here: /\s/, "", :global
 
                             # print "score_here:" concat var score_here concat new line
@@ -381,40 +381,40 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name
     print new line
     
-    if not from array tags item [ 0 ] do
-        set from array tags item [ 0 ] to 'q'
+    if not from array tags first item do
+        set from array tags first item to 'q'
     done
-    if not from array tags item [ 1 ] do
-        set from array tags item [ 1 ] to 'q'
+    if not from array tags second item do
+        set from array tags second item to 'q'
     done
 
-    if from array tags item [ 0 ] is 1 do
-        set from array tags item [ 0 ] to 'vi'
+    if from array tags first item is 1 do
+        set from array tags first item to 'vi'
     done
-    if from array tags item [ 0 ] is 2 do
-        set from array tags item [ 0 ] to 'n'
+    if from array tags first item is 2 do
+        set from array tags first item to 'n'
     done
-    if from array tags item [ 0 ] is 3 do
-        set from array tags item [ 0 ] to 'adj'
+    if from array tags first item is 3 do
+        set from array tags first item to 'adj'
     done
-    if from array tags item [ 0 ] is 5 do
-        set from array tags item [ 0 ] to 'questionword'
+    if from array tags first item is 5 do
+        set from array tags first item to 'questionword'
     done
-    if from array tags item [ 0 ] is 6 do
-        set from array tags item [ 0 ] to 'prep'
+    if from array tags first item is 6 do
+        set from array tags first item to 'prep'
     done
-    if from array tags item [ 0 ] is 7 do
-        set from array tags item [ 0 ] to 'inter'
+    if from array tags first item is 7 do
+        set from array tags first item to 'inter'
     done
 
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, append
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
-    print into var output_handle data "  type: " concat from array tags item [ 0 ] concat new line
-    do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags item [ 0 ]
-    if not from array tags item [ 1 ] matches /q/ do
-        print into var output_handle data "  genus: " concat from array tags item [ 1 ] concat new line
-        do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags item [ 1 ]
+    print into var output_handle data "  type: " concat from array tags first item concat new line
+    do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    if not from array tags second item matches /q/ do
+        print into var output_handle data "  genus: " concat from array tags second item concat new line
+        do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
 
     do close with var output_handle
@@ -425,11 +425,11 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/protocol.memory", append
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
-    print into var output_handle data "  type: " concat from array tags item [ 0 ] concat new line
-    do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags item [ 0 ]
-    if not from array tags item [ 1 ] matches /q/ do
-        print into var output_handle data "  genus: " concat from array tags item [ 1 ] concat new line
-        do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags item [ 1 ]
+    print into var output_handle data "  type: " concat from array tags first item concat new line
+    do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    if not from array tags second item matches /q/ do
+        print into var output_handle data "  genus: " concat from array tags second item concat new line
+        do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
     
 
@@ -836,9 +836,9 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # TEXT
     # Here the current word and the following word are assigned to variables.
     # CODE
-    set new var current_word to from array words item [ 0 ]
+    set new var current_word to from array words first item
     set new array current_tag to from hash tags item { var current_word }
-    set new var next_word to from array words item [ 1 ]
+    set new var next_word to from array words second item
     set new array next_tag to from hash tags item { var next_word }
 
     print var ident
@@ -871,7 +871,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         
         #set var current_word to var next_word
         #set array current_tag to array next_tag
-        #set var next_word to from array words item [ 0 ]
+        #set var next_word to from array words first item
         #set array next_tag to from hash tags item { var next_word }
     done
     # TEXT
@@ -911,7 +911,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         set new array pairs to global array builtin_entity_ends_pair
         for each new array pair in array pairs do
             
-            if lc(var current_word) matches from array pair item [ 0 ] and lc(var next_word) matches from array pair item [ 1 ] do
+            if lc(var current_word) matches from array pair first item and lc(var next_word) matches from array pair second item do
                 set flag found_subject to 1
                 set var entity_key_name to "subjects"
                 if flag found_subject do
@@ -921,7 +921,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
         
         
-        if from array words item [ 0 ] matches var next_word do
+        if from array words first item matches var next_word do
             print "next word " concat var next_word concat " is current word, maybe a parser bug, exiting loop"
             print new line
             if from hash sym_noun item { var next_word } do
@@ -932,7 +932,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
         set var current_word to var next_word
         set array current_tag to array next_tag
-        set var next_word to from array words item [ 0 ]
+        set var next_word to from array words first item
         set array next_tag to from hash tags item { var next_word }
     done
 
@@ -954,7 +954,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     set new array pairs to global array builtin_entity_ends_pair
     for each new array pair in array pairs do
         
-        if lc(var current_word) matches from array pair item [ 0 ] and lc(var next_word) matches from array pair item [ 1 ] do
+        if lc(var current_word) matches from array pair first item and lc(var next_word) matches from array pair second item do
             set flag found_subject to 1
             set var entity_key_name to "subjects"
             if flag found_subject do
@@ -1050,7 +1050,7 @@ define action parse_using_verb with var lang, array words, hash tags, flag found
     
     set new array full_entity to an empty array
     
-    set new var current_word to from array words item [ 0 ]
+    set new var current_word to from array words first item
     push into array full_entity, [ var current_word ]
     shift from array words
     
@@ -1087,9 +1087,9 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
     # It is known that the next word WILL be either a noun, an adjective or an article.
     # So push it into "hash full_entity"
     # CODE
-    set new var current_word to from array words item [ 0 ]
+    set new var current_word to from array words first item
     set new array current_tag to from hash tags item { var current_word }
-    set new var next_word to from array words item [ 1 ]
+    set new var next_word to from array words second item
     set new array next_tag to from hash tags item { var next_word }
 
     set new var entity to var current_word
@@ -1136,9 +1136,9 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                     if from hash parsed item { var key } do
                         set new array new_value to from hash parsed item { var key }
                         for each new var value in array new_value is rw do
-                            set var value to from array value item [ 0 ]
+                            set var value to from array value first item
                         done
-                        # push into array new_value, items of that array: [ values items of hash parsed ] item [ 0 ] end items of
+                        # push into array new_value, items of that array: [ values items of hash parsed ] first item end items of
                         if is not an empty array new_value do
                             set var entity to var entity concat ' ' concat do join using " ", items of array new_value
                         done
@@ -1149,7 +1149,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 # Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie
                 # CODE
                 if from hash sym_verb item { from hash tags item { from array words first item } first item } do
-                    if from hash sym_noun item { from hash tags item { from array words item [ 1 ] } first item } do
+                    if from hash sym_noun item { from hash tags item { from array words second item } first item } do
                         set var entity to var entity concat ' ' concat from array words first item
                         do shift with items of array words
                         set var entity to var entity concat ' ' concat from array words first item
@@ -1195,9 +1195,9 @@ define action parse_using_questionword with var lang, array words, hash tags, fl
     # It is known that the next word WILL be either a noun, an adjective or an article.
     # So push it into "hash full_entity"
     # CODE
-    set new var current_word to from array words item [ 0 ]
+    set new var current_word to from array words first item
     set new array current_tag to from hash tags item { var current_word }
-    set new var next_word to from array words item [ 1 ]
+    set new var next_word to from array words second item
     set new array next_tag to from hash tags item { var next_word }
     set new var nextnext_word to from array words item [ 2 ]
     set new array nextnext_tag to from hash tags item { var nextnext_word }
@@ -1248,18 +1248,18 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
     # So push it into "hash full_entity"
     # CODE
     shift from array words
-    set new var current_word to from array words item [ 0 ]
+    set new var current_word to from array words first item
     set new array current_tag to from hash tags item { var current_word }
-    set new var next_word to from array words item [ 1 ]
+    set new var next_word to from array words second item
     set new array next_tag to from hash tags item { var next_word }
 
         # Fetch all words.
     while var current_word do
         do push using items of that array: from hash full_entity item { "extra" } end-items-of, [ var current_word ]
         shift from array words
-        set var current_word to from array words item [ 0 ]
+        set var current_word to from array words first item
         set array current_tag to from hash tags item { var current_word }
-        set var next_word to from array words item [ 1 ]
+        set var next_word to from array words second item
         set array next_tag to from hash tags item { var next_word }
         
         if from hash sym_prep item { from array current_tag first item } do
@@ -1299,9 +1299,9 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
     
         do be_slow without arguments
 
-        set new var current_word to from array words item [ 0 ]
+        set new var current_word to from array words first item
         set new array current_tag to from hash tags item { var current_word }
-        set new var next_word to from array words item [ 1 ]
+        set new var next_word to from array words second item
         set new array next_tag to from hash tags item { var next_word }
         
         if not var current_word do
@@ -1440,9 +1440,9 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             done
             
             set new var preposition to var current_word
-            set var current_word to from array words item [ 0 ]
+            set var current_word to from array words first item
             set array current_tag to from hash tags item { var current_word }
-            set var next_word to from array words item [ 1 ]
+            set var next_word to from array words second item
             set array next_tag to from hash tags item { var next_word }
             while from hash sym_linking item { from array current_tag item [ const TYPE ] } do
                 set from array words first item to var preposition concat " " concat from array words first item
@@ -1454,9 +1454,9 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                     set from hash parsed item { var key } to array new_value
                 done
 
-                set var current_word to from array words item [ 0 ]
+                set var current_word to from array words first item
                 set array current_tag to from hash tags item { var current_word }
-                set var next_word to from array words item [ 1 ]
+                set var next_word to from array words second item
                 set array next_tag to from hash tags item { var next_word }
             done
         done
@@ -1613,7 +1613,7 @@ define action parse with var lang, array words, hash tags do
 done
 
 define action compute_context with hash parsed do
-    set new array questionword_array to from hash parsed item { 'questionword' } item [ 0 ]
+    set new array questionword_array to from hash parsed item { 'questionword' } first item
     set new array verb_array to from hash parsed item { 'verbs' }
     set new array extra_array to from hash parsed item { 'extra' }
     
@@ -1963,25 +1963,25 @@ define action logic with var input, var lang, var path, hash parsed do
         set new hash subjects to an empty hash
     
         for each new array result in array results do
-            print from array result item [ 1 ] item [ 0 ] concat new line
-            print from array result item [ 1 ] item [ 1 ] concat new line
-            print from array result item [ 1 ] item [ 2 ] concat new line
-            print from array result item [ 1 ] item [ 3 ] concat new line
-            print from array result item [ 1 ] item [ 4 ] concat new line
-            print from array result item [ 1 ] item [ 5 ] concat new line
-            print from array result item [ 1 ] item [ 6 ] concat new line
-            print from array result item [ 1 ] item [ 7 ] concat new line
+            print from array result second item first item concat new line
+            print from array result second item second item concat new line
+            print from array result second item item [ 2 ] concat new line
+            print from array result second item item [ 3 ] concat new line
+            print from array result second item item [ 4 ] concat new line
+            print from array result second item item [ 5 ] concat new line
+            print from array result second item item [ 6 ] concat new line
+            print from array result second item item [ 7 ] concat new line
             print "---"
             print new line
             print new line
         
-            set from hash subjects item { from array result item [ 1 ] item [ 1 ] } to 1
+            set from hash subjects item { from array result second item second item } to 1
         done
 
         set new array overall_result to an empty array
         do unshift with items of array overall_result, 0
         push into array overall_result, an empty array
-        set from array overall_result item [ 1 ] item [ 1 ] to join ', ', keys of hash subjects
+        set from array overall_result second item second item to join ', ', keys of hash subjects
 
         set array results to an empty array
         push into array results, array overall_result
@@ -2091,8 +2091,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             if from array proper_verbs first item matches "equal" do
                 set new array subject_props to compute_tags with from array clause item [1], var lang, var path
                 set new array object_props to compute_tags with from array clause item [2], var lang, var path
-                set new var subject_genus to from array subject_props item [ 1 ]
-                set new var object_genus to from array  object_props item [ 1 ]
+                set new var subject_genus to from array subject_props second item
+                set new var object_genus to from array  object_props second item
                 set new var subject_article to get_article with var subject_genus, "subject", "indefinite"
                 set new var object_article to get_article with var object_genus, "object", "indefinite"
                 set new var subject_person to get_person with from array clause item [1]
@@ -2303,8 +2303,8 @@ define action to_array_from_pro_line with var line, var lang do
     do pop with items of array parts
     
     set new array clause to an empty array
-    push into array clause, filter_nothing(from array parts item [ 0 ])
-    push into array clause, filter_nothing(from array parts item [ 1 ])
+    push into array clause, filter_nothing(from array parts first item)
+    push into array clause, filter_nothing(from array parts second item)
     push into array clause, filter_nothing(from array parts item [ 2 ])
     push into array clause, filter_nothing(from array parts item [ 3 ])
     push into array result, array clause
@@ -2320,10 +2320,10 @@ define action to_array_from_pro_line with var line, var lang do
         
         set var i to var i + 5
         
-        if from array clause item [ 0 ] matches 50 do
+        if from array clause first item matches 50 do
             go to next
         done
-        if from array clause item [ 0 ] matches 100 do
+        if from array clause first item matches 100 do
             go to next
         done
         push into array result, array clause
@@ -2667,7 +2667,7 @@ define action sort_out with array results, var mode, hash parsed do
         done
     done
     
-    set new array questionword_array to from hash parsed item { 'questionword' } item [ 0 ]
+    set new array questionword_array to from hash parsed item { 'questionword' } first item
     # TEXT
     # First, prefer important answers
     # CODE
@@ -2709,7 +2709,7 @@ define action sort_out with array results, var mode, hash parsed do
     done
 done
 
-define action save_facts with array facts_parsed, var pro_file_name, var prepend, var lang, var path do
+define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, var lang, var path do
     if not var pro_file_name do
         set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
     done
@@ -2733,7 +2733,12 @@ define action save_facts with array facts_parsed, var pro_file_name, var prepend
         done
         set new array objects to from hash parsed item { 'objects' }
         set new array adverbs to from hash parsed item { 'adverbs' }
+        set new flag clear_all_objects to 0
         for each new array object in array objects do
+            if flag clear_all_objects do
+                set var object to ''
+                go to next
+            done
             if from array object first item matches /^(nicht|not)$/ do
                 set new array temp to an empty array
                 push into array temp, from array object first item
@@ -2741,7 +2746,14 @@ define action save_facts with array facts_parsed, var pro_file_name, var prepend
                 set var object to ''
                 go to next
             done
+            
             set var object to from array object first item
+            
+            if from array verbs first item matches "~~~" do
+                if from hash tags item { var object } and from hash sym_noun item { from hash tags item { var object } first item } do
+                    set flag clear_all_objects to 1
+                done
+            done
         done
         for each new array adverb in array adverbs do
             set var adverb to from array adverb first item
@@ -2870,12 +2882,12 @@ define action update_list_of_pro_file with var file, var lang, var path do
         set new array output_array to phrase with var lang, var path, "default", array results, hash parsed
         
         for each new array output_line in array output_array do
-            if from array output_line item [ 1 ] do
+            if from array output_line second item do
                 set new var output_list to handle for file name var file_output, append
                 
                 set new hash tags to an empty hash
                 
-                set new var final_output to upper_case_correction with from array output_line item [ 1 ], hash tags, var lang, var path
+                set new var final_output to upper_case_correction with from array output_line second item, hash tags, var lang, var path
                 print into var output_list data var final_output
                 print into var output_list data new line
                 
@@ -3051,12 +3063,12 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
     # We try to use the answer as a judgement
     # CODE
     set new array score to check_score using var input
-    if from array score item [ 1 ] do
+    if from array score second item do
         if from array score first item do
-            do set_score_for_num with from array score item [ 1 ], from array score first item, var current_language, var path
+            do set_score_for_num with from array score second item, from array score first item, var current_language, var path
         done
         else do
-            do set_score_for_last with from array score item [ 1 ], var current_language, var path
+            do set_score_for_last with from array score second item, var current_language, var path
         done
 
         set new var answer to get_score_answer without arguments
@@ -3084,9 +3096,9 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
     print "Output is..."
     print new line
     for each new array sentence in array sentences do
-        if from array sentence item [ 1 ] do
+        if from array sentence second item do
             print "    - "
-            print from array sentence item [ 1 ]
+            print from array sentence second item
             print new line
         done
     done
@@ -3110,10 +3122,10 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
     print into var flowchart_log data "textcontent 000000 Answers:"
     print into var flowchart_log data new line
     for each new array sentence in array sentences do
-        if from array sentence item [ 1 ] do
-            print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence item [ 0 ] concat ": " concat from array sentence item [ 1 ]
+        if from array sentence second item do
+            print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence first item concat ": " concat from array sentence second item
             print into var flowchart_log data new line
-            print into var flowchart_log data "property    pk     " concat from array sentence item [ 0 ]
+            print into var flowchart_log data "property    pk     " concat from array sentence first item
             print into var flowchart_log data new line
         done
         else do
@@ -3184,13 +3196,14 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     set from hash parsed item { 'adverbs' } to an empty array
     set from hash parsed item { 'questionword' } to an empty array
     set new flag number_of_clause to 0
+    set new hash tags to an empty hash
     for each new var clause in array clauses_input do
         do be_slow without arguments
 
         # TEXT
         # Split the sentence.
         # CODE
-        set new hash tags to an empty hash
+        
         set new array words to split with " ", var clause
         
         # TEXT
@@ -3228,7 +3241,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         done
     done
     if not is an empty hash parsed do
-        do save_facts with [ hash parsed ], var file_name, var classification, var lang, var path
+        do save_facts with [ hash parsed ], hash tags, var file_name, var classification, var lang, var path
     done
 done
 
@@ -3500,8 +3513,8 @@ define action decide with array output, var input, flag all_output_phrases, var 
         set new array words to split with " ", lc(var input)
         set new array rel_output to an empty array
         for each new array _item in array output do
-            print "Score of " concat from array _item item [ 1 ] concat " is "
-            set new var score to get_score with array words, from array _item item [ 1 ], var lang, var path
+            print "Score of " concat from array _item second item concat " is "
+            set new var score to get_score with array words, from array _item second item, var lang, var path
             print var score
             print new line
             set new var k to 0
@@ -3557,6 +3570,7 @@ define action shell with var current_language, var path do
         for each new var sentences_as_line in array sentences_as_line_array do
             
             set new array facts_to_save to an empty array
+            set new hash tags to an empty hash
             
             set new array sentences to split with /[.!~]/, var sentences_as_line
 
@@ -3584,7 +3598,6 @@ define action shell with var current_language, var path do
                 done
                 
                 do unlink with '_output'
-                set new hash tags to an empty hash
                 set new array output to give_output with var line, array facts_to_save, hash tags, var current_language, var path
                 do unlink with '_output'
 
@@ -3606,7 +3619,7 @@ define action shell with var current_language, var path do
                 print new line
             done
             
-            do save_facts with array facts_to_save, '', '', var current_language, var path
+            do save_facts with array facts_to_save, hash tags, '', '', var current_language, var path
         done
     done
     

@@ -101,6 +101,8 @@ static inline void convert_to_perl5_structure (halstring* hals) {
     hals = replace(hals, "global array ", "array ::");
     hals = replace(hals, "global var ", "var ::");
     hals = replace(hals, "first item", "item [ 0 ]");
+    hals = replace(hals, "second item", "item [ 1 ]");
+    hals = replace(hals, "third item", "item [ 2 ]");
     hals = replace(hals, "is an empty array ", "0 == @$");
     hals = replace(hals, "is an empty hash ", "0 == %$");
     hals = replace(hals, "that array is empty: ", "0 == @{ ");
