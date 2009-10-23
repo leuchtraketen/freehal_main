@@ -559,6 +559,8 @@ done
 # Find out the part of speech
 # CODE
 define action compute_tags with var word, var lang, var path do
+    do regex using var word: /<[\x80-\xFF]>/, "", :global
+
     set new array tags to an empty array
     
     # TEXT
