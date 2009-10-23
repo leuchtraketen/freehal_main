@@ -182,7 +182,7 @@ char* transform_sentence(char* sentence, const char* entity) {
     int maybe_end = j;
     int number_of_spaces = 0;
     for (; i < size; ++i) {
-        if (verb_str[i] == '.' && (i+2 >= size || verb_str[i+1] < '0' || verb_str[i+1] > '9') && (i>2 || verb_str[i-1] < '0' || verb_str[i-1] > '9')) {
+        if (verb_str[i] == '.' && (i+2 >= size || verb_str[i+1] < '0' || verb_str[i+1] > '9') && (i<=2 || verb_str[i-1] < '0' || verb_str[i-1] > '9')) {
             break;
         }
         if (verb_str[i] == ',') {
