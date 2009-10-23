@@ -203188,7 +203188,8 @@ aerosol:
 ermitteln:
   type: vi
 betriebssystem:
-  type: vi
+  genus  : s
+  type: n
 Segeltene:
   type: n
 Augewsser:
