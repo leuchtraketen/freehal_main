@@ -2524,6 +2524,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'us-amerikanischen' => "adj",
           'us-amerikanischem' => "adj",
           'us-amerikanisches' => "adj",
+          'mittels' => "prep",
           'fies' => "adj",
           'anstatt' => "questionword",
           'schmuck' => "adj",
