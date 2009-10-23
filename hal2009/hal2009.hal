@@ -2110,7 +2110,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_person to get_person with from array clause item [1]
                 set new var verb to get_verb with "be", var subject_person
                 
-                if not from array clause item [1] matches /\s/ do
+                if (not from array clause item [1] matches /\s/) and (not from array clause item [2] matches /\s/) do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
@@ -2775,16 +2775,19 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         # Replace ~~~ with =
         # CODE
         if from array verbs first item matches "~~~" do
-            set from hash parsed item { 'adverbs' } to an empty array
+            set from array verbs to an empty array
             set from array verbs first item to "="
+            set from hash parsed item { 'verbs' } to array verbs
         done
         
         # TEXT
         # Delete all other verbs if there is a "="
         # CODE
         if from array verbs first item matches "=" do
-            set array verbs to an empty array
+            set from array verbs to an empty array
             set from array verbs first item to "="
+            set from hash parsed item { 'verbs' } to array verbs
+            set from hash parsed item { 'adverbs' } to an empty array
         done
 
         set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
