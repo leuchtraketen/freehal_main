@@ -112,9 +112,13 @@ char* concat(const char* a, const char* b) {
     return c;
 }
 
-char* transform_sentence(char* sentence) {
+char* transform_sentence(char* sentence, const char* entity) {
     
     printf("sentence: %s\n", sentence);
+    
+    char _verb_1[100];
+    strcpy(_verb_1, "");
+    snprintf(_verb_1, 99, " ist %s ", entity);
     
     char* verb_str = 0;
     if (verb_str = strstr(sentence, "hrt zu ")) {
@@ -125,6 +129,9 @@ char* transform_sentence(char* sentence) {
     }
     else if (verb_str = strstr(sentence, " bezeichnet ")) {
         verb_str += 12;
+    }
+    else if (verb_str = strstr(sentence, _verb_1)) {
+        verb_str += strlen(_verb_1);
     }
     else if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
@@ -184,7 +191,7 @@ char* transform_sentence(char* sentence) {
             }
             number_of_spaces -= 5;
         }
-        if (number_of_spaces > 15 && i + 4 < size && verb_str+i == strstr(verb_str+i, "und")) {
+        if (number_of_spaces > 15 && i >= 3 && i + 4 < size && (verb_str+i == strstr(verb_str+i, " und") || verb_str+i == strstr(verb_str+i, " oder")) && *(verb_str+i-1) != '-') {
             break;
         }
         if (i+1 < size && verb_str[i] == ',' && verb_str[i+1] == ' ') {
@@ -488,7 +495,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             
-            char* object      = transform_sentence(lines[current_line]->s);
+            char* object      = transform_sentence(lines[current_line]->s, entity_upper);
             if (strstr(object, ":")-object > strlen(object)-5 && strstr(object, ":")-object < strlen(object)+1) {
                 free(object);
                 break;
@@ -536,7 +543,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 }
                 char* i;
                 for (i = object; i[0]; ++i) {
-                    if (strstr(i, "und") == i || strstr(i, "oder") == i) {
+                    if ((strstr(i, " und") == i || strstr(i, " oder") == i) && i - object > 3 && *(i-1) != '-') {
                         i[0] = '\0';
                     }
                 }

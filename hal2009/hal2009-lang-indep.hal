@@ -382,6 +382,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\stja(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sui(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sui je(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\smeist(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\salso(<[\s!.,?]>+)/, "$0", :global:i
     
     do regex using var input: /\swell(<[\s!.,?]>+)/, "$0", :global:i
@@ -404,6 +405,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: / von was /, " was ", :global:i
     
     do regex using var input: / ein jeder /, " _jeder_ ", :global:i
+    
+    do regex using var input: / (<[a-z]>+?)<[-]> (und|oder) (<[a-z]>+?)(haltig|artig|ig|haft)(es|er|en|em|e|) /, " $0$3$4 $1 $2$3$4 ", :global:i
+    
+    do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?)<[,\sund]>*?\s(<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 $3 ", :global:i
+    do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 ", :global:i
 
     do regex using var input: / du jetzt /, " du ", :global:i
     do regex using var input: / ich jetzt /, " ich ", :global:i
