@@ -113,7 +113,10 @@ char* concat(const char* a, const char* b) {
 }
 
 const char* define_general_verb(char* sentence, const char* entity) {
-    if (strstr(sentence, " sind ")) {
+    if (strstr(sentence, "ezeichnung ")) {
+        return "equal-in";
+    }
+    else if (strstr(sentence, " sind ")) {
         return "equal-pl";
     }
     else if (strstr(sentence, " waren ")) {
@@ -122,7 +125,7 @@ const char* define_general_verb(char* sentence, const char* entity) {
     else if (strstr(sentence, " nennt man ")) {
         return "equal-pl";
     }
-    return "equal";
+    return "equal-sg";
 }
 
 char* transform_sentence(char* sentence, const char* entity) {
