@@ -560,7 +560,11 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 lines[current_line]->s = ascii_text;
             }
             
-            if (strlen(lines[current_line]->s) < 15) {
+            while (lines[current_line]->s[0] == ' ' || lines[current_line]->s[0] == '\t') {
+                strcpy(lines[current_line]->s, lines[current_line]->s+1);
+            }
+            
+            if (strlen(lines[current_line]->s) < 30) {
                 continue;
             }
             
