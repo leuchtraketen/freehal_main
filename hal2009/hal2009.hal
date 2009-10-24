@@ -346,12 +346,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
-    if var name_of_entry matches /^[0-9]+?$/ do
-        print "Illegal word: " concat var name_of_entry
-        print new line
-        do return without arguments
-    done
-    if var name_of_entry matches /^[0-9]+?(?:m|km|mm|cm|dm|ha|g|kg|t)$/ do
+    if var name_of_entry matches /[0-9]+?/ do
         print "Illegal word: " concat var name_of_entry
         print new line
         do return without arguments
