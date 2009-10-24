@@ -2382,6 +2382,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'atomaren' => "adj",
           'kinder' => "n",
           'kindern' => "n",
+          'flughafen' => "n",
           'geborgenheit' => "n",
           'elter' => "n",
           'eltern' => "n",
@@ -3810,7 +3811,7 @@ define action find_mode with var input do
 
         do return with "question"
     done
-    else if (not var input matches /_no-question_/) and (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         print "Sentence contains a question word"
         print new line
 
@@ -4196,6 +4197,9 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
         done
         
         if lc(var phrase) matches /(andro)/ do
+            go to next
+        done
+        if lc(var phrase) matches /\.\.\./ do
             go to next
         done
         

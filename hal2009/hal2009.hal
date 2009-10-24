@@ -2104,7 +2104,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             # TEXT
             # Build the final sentence.
             # CODE
-            if from array proper_verbs first item matches "equal" do
+            if from array proper_verbs first item matches /^equal/ do
                 set new array subject_props to compute_tags with from array clause item [1], var lang, var path
                 set new array object_props to compute_tags with from array clause item [2], var lang, var path
                 set new var subject_genus to from array subject_props second item
@@ -2112,9 +2112,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_article to get_article with var subject_genus, "subject", "indefinite"
                 set new var object_article to get_article with var object_genus, "object", "indefinite"
                 set new var subject_person to get_person with from array clause item [1]
+                if from array proper_verbs first item matches /^equal-pl/ do
+                    set var subject_person to "3p"
+                done
                 set new var verb to get_verb with "be", var subject_person
                 
-                if (not from array clause item [1] matches /\s/) and (not from array clause item [2] matches /\s/) do
+                if (not from array clause item [1] matches /\s/) and (from array clause item [2] matches /ein/ or not from array clause item [2] matches /\s/) do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]

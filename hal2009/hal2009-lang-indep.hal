@@ -811,7 +811,7 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /(^|\s)?(nicht|not)(\s)/, "$0", :global:i
     done
 
-    do regex using var input: /(herr|frau|mr|mrs|miss|doktor|dr|firma)\.? (\S+?)($|\s)/, "_$0_$1_ $2", :global:i
+    do regex using var input: /(herr|frau|mr|mrs|miss|doktor|dr|firma)\.? (\S\S\S+?)($|\s)/, "_$0_$1_ $2", :global:i
 
     do regex using var input: /sth\./, "something", :global:i
     do regex using var input: /sth\s/, "something ", :global:i

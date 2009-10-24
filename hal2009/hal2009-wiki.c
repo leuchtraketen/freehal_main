@@ -112,6 +112,19 @@ char* concat(const char* a, const char* b) {
     return c;
 }
 
+const char* define_general_verb(char* sentence, const char* entity) {
+    if (strstr(sentence, " sind ")) {
+        return "equal-pl";
+    }
+    else if (strstr(sentence, " waren ")) {
+        return "equal-pl";
+    }
+    else if (strstr(sentence, " nennt man ")) {
+        return "equal-pl";
+    }
+    return "equal";
+}
+
 char* transform_sentence(char* sentence, const char* entity) {
     
     printf("sentence: %s\n", sentence);
@@ -124,20 +137,23 @@ char* transform_sentence(char* sentence, const char* entity) {
     if (verb_str = strstr(sentence, "hrt zu ")) {
         verb_str += 7;
     }
+    else if (verb_str = strstr(sentence, " ist ")) {
+        verb_str += 5;
+    }
+    else if (verb_str = strstr(sentence, " war ")) {
+        verb_str += 5;
+    }
     else if (verb_str = strstr(sentence, " bezeichnet man ")) {
         verb_str += 16;
+    }
+    else if (verb_str = strstr(sentence, " nennt man ")) {
+        verb_str += 11;
     }
     else if (verb_str = strstr(sentence, " bezeichnet ")) {
         verb_str += 12;
     }
     else if (verb_str = strstr(sentence, _verb_1)) {
         verb_str += strlen(_verb_1);
-    }
-    else if (verb_str = strstr(sentence, " ist ")) {
-        verb_str += 5;
-    }
-    else if (verb_str = strstr(sentence, " war ")) {
-        verb_str += 5;
     }
     else if (verb_str = strstr(sentence, " waren ")) {
         verb_str += 7;
@@ -147,6 +163,12 @@ char* transform_sentence(char* sentence, const char* entity) {
     }
     else if (verb_str = strstr(sentence, " sind ")) {
         verb_str += 6;
+    }
+    else if (verb_str = strstr(sentence, " wird ")) {
+        verb_str += 6;
+        if (strstr(sentence, " bezeichnet")) {
+            strstr(sentence, " bezeichnet")[0] = '\0';
+        }
     }
     else if (verb_str = sentence) {
         // do nothing
@@ -417,6 +439,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
     int in_header = 1;
     int in_table = 0;
     int in_script = 0;
+    int in_ul = 0;
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
         if (0 == lines[current_line])
             break;
@@ -433,7 +456,10 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             in_header = 0;
             continue;
         }
-        if (strstr(lines[current_line]->s, "<li><a href=\"/wiki/")) {
+        if (strstr(lines[current_line]->s, "<ul>")) {
+            in_ul = 1;
+        }
+        if (in_ul && strstr(lines[current_line]->s, "<a href=\"/wiki/")) {
             char* start = strstr(lines[current_line]->s, "\"");
             if (!start) continue;
             ++start;
@@ -473,6 +499,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             if (strstr(lines[current_line]->s, "bezeichnet:")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "bezeichnet") && !strstr(lines[current_line]->s, ". ")) {
                 continue;
             }
             if (strstr(lines[current_line]->s, "benannt:")) {
@@ -516,6 +545,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             
+            const char* general_verb = define_general_verb(lines[current_line]->s, entity_upper);
             char* object      = transform_sentence(lines[current_line]->s, entity_upper);
             if (strstr(object, ":")-object > strlen(object)-5 && strstr(object, ":")-object < strlen(object)+1) {
                 free(object);
@@ -524,7 +554,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
-            fact->verbs        = divide_words("equal");
+            fact->verbs        = divide_words(general_verb);
             fact->subjects     = divide_words(entity_upper);
             fact->objects      = divide_words(object);
             fact->adverbs      = divide_words("...");
