@@ -472,26 +472,11 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             in_header = 0;
             continue;
         }
-        if (strstr(lines[current_line]->s, "<ul>")) {
-            in_ul = 1;
+        if (strstr(lines[current_line]->s, "<ul")) {
+            ++in_ul;
         }
-        if (in_ul && strstr(lines[current_line]->s, "<a href=\"/wiki/")) {
-            char* start = strstr(lines[current_line]->s, "\"");
-            if (!start) continue;
-            ++start;
-            
-            char* stop = strstr(start, "\"");
-            if (!stop) continue;
-            stop[0] = '\0';
-            
-            printf("page: \"%s\"\n", start);
-            
-            struct fact** temp = search_facts_wiki_page(start, entity_upper);
-            if (temp) {
-                if (facts) free(facts);
-                facts = temp;
-                break;
-            }
+        if (strstr(lines[current_line]->s, "</ul>")) {
+            --in_ul;
         }
         
         if (0 == in_header) {
@@ -510,6 +495,24 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             
             if (0 < in_script || 0 < in_table) {
                 continue;
+            }
+            if (in_ul && strstr(lines[current_line]->s, "<a href=\"/wiki/")) {
+                char* start = strstr(lines[current_line]->s, "\"");
+                if (!start) continue;
+                ++start;
+                
+                char* stop = strstr(start, "\"");
+                if (!stop) continue;
+                stop[0] = '\0';
+                
+                printf("page: \"%s\"\n", start);
+                
+                struct fact** temp = search_facts_wiki_page(start, entity_upper);
+                if (temp) {
+                    if (facts) free(facts);
+                    facts = temp;
+                    break;
+                }
             }
             if (strstr(lines[current_line]->s, "action=edit") && !strstr(lines[current_line]->s, "redlink")) {
                 continue;

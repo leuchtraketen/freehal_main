@@ -366,7 +366,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print new line
         do return without arguments
     done
-    if var name_of_entry matches /[-]/ do
+    if var name_of_entry matches /[-]$/ do
         print "Do not save words with minus: " concat var name_of_entry
         print new line
         do return without arguments
@@ -2112,12 +2112,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 set new var verb to get_verb with "be", var subject_person
                 
-                if (from array proper_verbs first item matches /^equal-sg/) and (not from array clause item [1] matches /\s/) and (from array clause item [2] matches /ein/ or not from array clause item [2] matches /\s/) do
+                if (from array proper_verbs first item matches /^equal-sg/) and (not from array clause item [1] matches /\s|<[_]>/) and (from array clause item [2] matches /ein/ or not from array clause item [2] matches /\s|<[_]>/) do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
                 push into array sentence, var verb
-                if not from array clause item [2] matches /\s/ do
+                if not from array clause item [2] matches /\s|<[_]>/ do
                     push into array sentence, var object_article
                 done
                 push into array sentence, from array clause item [2]
