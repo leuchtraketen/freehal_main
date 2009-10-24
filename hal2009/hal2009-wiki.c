@@ -83,18 +83,18 @@ char* replace_spaces(const char* s) {
 }
 
 
-char* delete_bad_chars(const char* s) {
+char* delete_bad_chars(const char* s, int with_star, int with_underscore) {
     int size          = strlen(s);
     char* n           = calloc(size+3, 1);
     
     int i;
     int j;
     for (i = 0, j = 0; i < size; ++i) {
-        if (s[i] == '*' || (s[i] == '_' && i == 0) || (s[i] == '_' && i+1 >= size)) {
+        if ((with_star && s[i] == '*') || (with_underscore && (s[i] == '_' && i == 0) || (s[i] == '_' && i+1 >= size))) {
             continue;
         }
         n[j] = s[i];
-        if (s[i] == '_') {
+        if (with_underscore && s[i] == '_') {
             n[j] = ' ';
         }
         ++j;
@@ -287,6 +287,7 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
         return 0;
     }
     
+    char* entity_without_bad_chars = 0;
     char* entity_without_stars = 0;
     char* entity_without_articles = 0;
     char* entity_to_save_without_articles = 0;
@@ -297,11 +298,12 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     halstring** lines = 0;
     int number_of_lines = 0;
     
-    entity_without_stars            = delete_bad_chars(entity);
-    entity_without_articles         = delete_articles(entity_without_stars);
+    entity_without_bad_chars        = delete_bad_chars(entity, 1, 1);
+    entity_without_articles         = delete_articles(entity_without_bad_chars);
     entity_upper                    = upper(entity_without_articles);
     
-    entity_to_save_without_articles = delete_articles(entity);
+    entity_without_stars            = delete_bad_chars(entity, 1, 0);
+    entity_to_save_without_articles = delete_articles(entity_without_stars);
     entity_to_save_upper            = upper(entity_to_save_without_articles);
     /// if NEW
     if (todo == NEW) {
@@ -366,6 +368,7 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
         return 0;
     }
     free(entity_without_stars);
+    free(entity_without_bad_chars);
     free(entity_upper);
     free(entity_to_save_without_articles);
     free(entity_to_save_upper);

@@ -2780,13 +2780,13 @@ set multi-line new global hash builtin_part_of_speech to {
         
 define action guess_part_of_speech with var word do
     set new var guessed to ''
-    if var word matches lc(var word) and var word matches /iv$/ do
+    if lc(var word) matches var word and var word matches /iv$/ do
         set var guessed to 'adj'
     done
     #if var word matches lc(var word) and var word matches /an$/ do
     #    set var guessed to 'adj'
     #done
-    if var word matches lc(var word) and var word matches /em$/ do
+    if lc(var word) matches var word and var word matches /em$/ do
         set var guessed to 'adj'
     done
     if var word matches /ste$/ do
