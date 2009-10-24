@@ -3272,7 +3272,7 @@ define action transform_psprot_line with var line, var main_word, var current_la
     do regex using var line: /\s+$/, "", :global
     do regex using var line: /\s+/, " ", :global
     set new array words to an empty array
-    set array words to split with /<[",.-;!?]>/, var line
+    set array words to split with /<[",.;!?]>/, var line
     
     set new array lines to an empty array
     if not lc(var main_word) matches var main_word do
@@ -3364,6 +3364,10 @@ define action init_prot_files with var current_language, var path do
                 for each new var _line from var translation_input_handle is rw do
                     do be_slow without arguments
                     
+                    print "in init_prot_files (1): "
+                    print var _line
+                    print new line
+                
                     set new array lines to an empty array
                     if var file matches /ps-(.*?).prot/ do
                         set new var main_word to $0
@@ -3374,6 +3378,9 @@ define action init_prot_files with var current_language, var path do
                     done
                     
                     for each new var line in array lines do
+                        print "in init_prot_files (2): "
+                        print var line
+                        print new line
                         do work_prot_line with var line, var pro_file, var current_language, var path
                     done
                 done

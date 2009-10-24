@@ -289,15 +289,20 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     
     char* entity_without_stars = 0;
     char* entity_without_articles = 0;
+    char* entity_to_save_without_articles = 0;
     char* entity_upper = 0;
+    char* entity_to_save_upper = 0;
     char* _url = 0;
     char* url = 0;
     halstring** lines = 0;
     int number_of_lines = 0;
     
-    entity_without_stars    = delete_bad_chars(entity);
-    entity_without_articles = delete_articles(entity_without_stars);
-    entity_upper            = upper(entity_without_articles);
+    entity_without_stars            = delete_bad_chars(entity);
+    entity_without_articles         = delete_articles(entity_without_stars);
+    entity_upper                    = upper(entity_without_articles);
+    
+    entity_to_save_without_articles = delete_articles(entity);
+    entity_to_save_upper            = upper(entity_to_save_without_articles);
     /// if NEW
     if (todo == NEW) {
         char* __url             = concat(".wikipedia.org/w/index.php?title=Spezial%3ASuche&fulltext=Volltext&search=", entity_upper);
@@ -335,7 +340,7 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
             search_results_entity = 0;
         }
     
-        search_results_entity   = strdup(entity_upper);
+        search_results_entity   = strdup(entity_to_save_upper);
 
         number_of_lines = 0;
         lines = stringtoarray(file, '\n', &number_of_lines);
@@ -362,6 +367,8 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     }
     free(entity_without_stars);
     free(entity_upper);
+    free(entity_to_save_without_articles);
+    free(entity_to_save_upper);
     
     
     struct fact** facts = 0;
@@ -473,7 +480,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             
             printf("page: \"%s\"\n", start);
             
-            struct fact** temp = search_facts_wiki_page(start, search_results_entity);
+            struct fact** temp = search_facts_wiki_page(start, entity_upper);
             if (temp) {
                 if (facts) free(facts);
                 facts = temp;
