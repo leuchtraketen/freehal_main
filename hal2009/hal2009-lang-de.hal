@@ -2588,6 +2588,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'beispielsweise' => "adj",
           'erster' => "adj",
           'beeinflusst' => "vi",
+          '/' => "linking",
           'beeinflussen' => "vi",
           'beeinflusse' => "vi",
           'beeinflussend' => "adj",

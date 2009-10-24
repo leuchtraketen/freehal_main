@@ -3272,7 +3272,7 @@ define action transform_psprot_line with var line, var main_word, var current_la
     do regex using var line: /\s+$/, "", :global
     do regex using var line: /\s+/, " ", :global
     set new array words to an empty array
-    if var line matches /<[,]>/ do
+    if var line matches /<[,"]>/ do
         set array words to split with /<[,.-;!?]>/, var line
     done
     else do
