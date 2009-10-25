@@ -3362,6 +3362,12 @@ define action init_prot_files with var current_language, var path do
                     print "in init_prot_files (1): "
                     print var _line
                     print new line
+                    
+                    if var _line matches /<[#]>/ do
+                        print into var pro_file data var _line
+                        print into var pro_file data new line
+                        go to next
+                    done
                 
                     set new array lines to an empty array
                     if var file matches /ps-(.*?).prot/ do
