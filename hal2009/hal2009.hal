@@ -284,7 +284,7 @@ define action get_tag_part_of_speech with var word, var lang do
     do close with var output_handle
 
     set new var timeout to 120
-    while var timeout > 0 and (exists: "_doing__pos", end test or exists: "_output__pos", end test) do
+    while var timeout > 0 and ( exists: "_doing__pos", end test or exists: "_output__pos", end test) do
         set new var input_file_name to '_input__pos'
         set new var input_handle to handle for file name var input_file_name, read
 
