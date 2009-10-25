@@ -35,6 +35,26 @@ int wiki_begin() {
     return 1;
 }
 
+char *strstri(char *t, const char *s) {
+    int i, j;
+    for (i=0; t[i] != '\0'; i++) {
+        for(j=0; s[j] != '\0'; j++) {
+            if (toupper(s[j])==toupper(t[i+j]))
+                continue; 
+            else 
+                break;
+        }
+
+        /*if the whole string was successfully compared, break the loop*/
+        if (s[j] == '\0')
+            break;
+    }
+    if (s[j] == '\0')
+        return (i+t); /*returns a pointer to the first occurrence of s within t, just like the original strstr*/
+    else
+        return '\0'; /*return NULL*/
+}
+
 halstring* remove_between(const halstring* s_text, char start, char stop) {
     if (!s_text || !s_text->s) {
         return 0;
@@ -113,10 +133,16 @@ char* concat(const char* a, const char* b) {
 }
 
 const char* define_general_verb(char* sentence, const char* entity) {
-    if (strstr(sentence, "ezeichnung ")) {
+    if (strstr(sentence, " ist ") && (strstr(sentence, "ein") < strstr(sentence, " ist ") || strstr(sentence, "Ein") < strstr(sentence, " ist "))) {
+        return "equal-in";
+    }
+    else if (strstr(sentence, "ezeichnung ")) {
         return "equal-in";
     }
     else if (strstr(sentence, " sind ")) {
+        return "equal-pl";
+    }
+    else if (strstr(sentence, " heissen ")) {
         return "equal-pl";
     }
     else if (strstr(sentence, " waren ")) {
@@ -146,6 +172,9 @@ char* transform_sentence(char* sentence, const char* entity) {
     else if (verb_str = strstr(sentence, " war ")) {
         verb_str += 5;
     }
+    else if (verb_str = strstr(sentence, " heissen ")) {
+        verb_str += 9;
+    }
     else if (verb_str = strstr(sentence, " versteht man ")) {
         verb_str += 14;
     }
@@ -172,7 +201,10 @@ char* transform_sentence(char* sentence, const char* entity) {
     }
     else if (verb_str = strstr(sentence, " wird ")) {
         verb_str += 6;
-        if (strstr(sentence, " bezeichnet")) {
+        if (strstr(sentence, " bezeichnet, ")) {
+            strcpy(strstr(sentence, " bezeichnet, "), strstr(sentence, " bezeichnet, ") + strlen(" bezeichnet, ") - 1);
+        }
+        else if (strstr(sentence, " bezeichnet")) {
             strstr(sentence, " bezeichnet")[0] = '\0';
         }
     }
@@ -210,7 +242,19 @@ char* transform_sentence(char* sentence, const char* entity) {
     int maybe_end = j;
     int number_of_spaces = 0;
     for (; i < size; ++i) {
-        if (verb_str[i] == '.' && (i+2 >= size || verb_str[i+1] < '0' || verb_str[i+1] > '9') && (i<=2 || verb_str[i-1] < '0' || verb_str[i-1] > '9') && (i<=5 || verb_str+i-3 != strstr(verb_str+i-3, "bzw"))) {
+        if (       verb_str[i] == '.'
+                && (i+2 >= size || verb_str[i+1] < '0' || verb_str[i+1] > '9')
+                && (i<=2 || verb_str[i-1] < '0' || verb_str[i-1] > '9')
+                && (i<=5 || (
+                            verb_str+i-4 != strstri(verb_str+i-4, "bspw")
+                        &&  verb_str+i-3 != strstri(verb_str+i-3, "mio")
+                        &&  verb_str+i-3 != strstri(verb_str+i-3, "mrd")
+                        &&  verb_str+i-2 != strstri(verb_str+i-2, "mr")
+                        &&  verb_str+i-3 != strstri(verb_str+i-3, "mrs")
+                        &&  verb_str+i-2 != strstri(verb_str+i-2, "dr")
+                        &&  verb_str+i-4 != strstri(verb_str+i-4, "dres")
+                ))
+        ) {
             break;
         }
         if (verb_str[i] == ',') {
@@ -542,6 +586,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             if (strstr(lines[current_line]->s, "Siehe auch:")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "iehe:")) {
                 continue;
             }
             
