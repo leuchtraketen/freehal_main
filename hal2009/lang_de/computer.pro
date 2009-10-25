@@ -131,7 +131,7 @@ ist <> _swf_ <> die dateiendung <> fuer eine flashdatei <>  <>  <>  <>  <>  <>  
 ist <> symbian <> ein betriebsprogramm <> fuer mulitmedia-handys <>  <>  <>  <>  <>  <>  <> 50
 ist textbasierendes <> irc <> ein chat-system <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> _tiff_ <> ein bildformat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ubunto <> eine linuxvariante <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
+ist <> ubuntu <> eine linuxvariante <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> ubuntu <> eine linux distribution <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ubuntu <> eine linuxdistribution <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ubuntu <> ein linuxderivat <>  <>  <>  <>  <>  <>  <>  <> 50
