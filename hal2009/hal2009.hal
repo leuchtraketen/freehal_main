@@ -3330,7 +3330,6 @@ define action init_prot_files with var current_language, var path do
             
             set new var pro_file to var file
             do regex using var pro_file: /t$/, "", :i
-            do unlink with var pro_file
             
             #if (not var pro_file matches /data/) or exists: var pro_file, end test do
             #    go to next
