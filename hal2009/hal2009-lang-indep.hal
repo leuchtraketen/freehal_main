@@ -897,6 +897,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\s+<[=]><[>]>/, ", =>", :global:i
     do regex using var input: /<[,]>+/, ",", :global:i
     do regex using var input: /\s+/, " ", :global:i
+    do regex using var input: /<[_]>+/, "_", :global:i
     
     if var input matches /<[?]>/ do
         set var input to lcfirst with var input

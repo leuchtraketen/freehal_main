@@ -230,7 +230,7 @@ struct word*** search_synonyms(const char* exp) {
         in_search_synonyms = 1;
         
         synonyms = add_synonyms_by_search(exp, "", "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
-        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
 
         store_synonyms(exp, synonyms);
         in_search_synonyms = 0;
@@ -479,7 +479,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                         else
                         */
                         if (matches(words[m]->name, request_words[u][v]->name)) {
-                            debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
                         else {
@@ -937,7 +937,7 @@ void print_word_list_3rd_order(struct word*** list) {
 
 int count_list(void** list) {
     int i, size;
-    for (i = 0, size = 0; can_be_a_pointer(list[i]) || -1 == list[i]; ++i) {
+    for (i = 0, size = 0; list[i] || -1 == list[i]; ++i) {
         if (can_be_a_pointer(list[i]) && list[i] != -1) {
             ++size;
         }
