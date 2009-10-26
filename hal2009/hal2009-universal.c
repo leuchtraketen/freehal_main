@@ -988,7 +988,7 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
         for (l = 0; can_be_a_pointer(list[l]) || -1 == list[l]; ++l) {
             if (can_be_a_pointer(list[l])) {
                 if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
-                    if (strstr(list[l]->verbs[0]->name, "=")) {
+                    if (strstr(list[l]->verbs[0]->name, "=") && strstr(list[l]->from, "thes")) {
                         set_to_invalid_value(&(list[l]));
                     }
                 }
