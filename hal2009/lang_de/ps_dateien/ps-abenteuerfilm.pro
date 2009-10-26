@@ -126,8 +126,7 @@
 = <> _flucht_nach_athena_ <> _abenteuerfilm_ <>  <> 50
 = <> _der_flug_des_aquanauten_ <> _abenteuerfilm_ <>  <> 50
 = <> _der_flug_des_phoenix_ <> _abenteuerfilm_ <>  <> 50
-= <> _die_folterkammer_des_dr_ <> _abenteuerfilm_ <>  <> 50
-= <> _ fu man chu_ <> _abenteuerfilm_ <>  <> 50
+= <> _die_folterkammer_des_doktor_fu_man_chu_ <> _abenteuerfilm_ <>  <> 50
 = <> _forever_young_ <> _abenteuerfilm_ <>  <> 50
 = <> _free_willy_ <> _abenteuerfilm_ <>  <> 50
 = <> _frauen_die_man_toeterinnen_nannte_ <> _abenteuerfilm_ <>  <> 50
@@ -171,7 +170,7 @@
 = <> _harry_potter_und_der_halbblutprinz_ <> _abenteuerfilm_ <>  <> 50
 = <> _harry_potter_ <> _abenteuerfilm_ <>  <> 50
 = <> _hatari_ <> _abenteuerfilm_ <>  <> 50
-= <> _herbie:_fully_loaded_–_ein_toller_kaefer_startet_durch_ <> _abenteuerfilm_ <>  <> 50
+= <> _herbie_fully_loaded_–_ein_toller_kaefer_startet_durch_ <> _abenteuerfilm_ <>  <> 50
 = <> _herkules_und_die_koenigin_der_amazonen_ <> _abenteuerfilm_ <>  <> 50
 = <> _der__herr_der___sieben_meere_ <> _abenteuerfilm_ <>  <> 50
 = <> _hidalgo_–_in_jahre_3000_meilen_zum_ruhm__ <> _abenteuerfilm_ <>  <> 50
@@ -184,8 +183,7 @@
 = <> _hundra_ <> _abenteuerfilm_ <>  <> 50
 = <> _hunting_party_–_wenn_der_jaeger_zum_gejagten_wird__ <> _abenteuerfilm_ <>  <> 50
 = <> _ice_age_ <> _abenteuerfilm_ <>  <> 50
-= <> _ich_dr_ <> _abenteuerfilm_ <>  <> 50
-= <> _ fu man chu_ <> _abenteuerfilm_ <>  <> 50
+= <> _ich_doktor_fu_man_chu_ <> _abenteuerfilm_ <>  <> 50
 = <> _im_banne_des_kalifen_ <> _abenteuerfilm_ <>  <> 50
 = <> _im_fadenkreuz_des_todes_ <> _abenteuerfilm_ <>  <> 50
 = <> _im_mond_des_jaegers_ <> _abenteuerfilm_ <>  <> 50
@@ -206,9 +204,7 @@
 = <> _die_insel_der_blutigen_plantage_ <> _abenteuerfilm_ <>  <> 50
 = <> _into_the_blue_ <> _abenteuerfilm_ <>  <> 50
 = <> _into_the_wild_ <> _abenteuerfilm_ <>  <> 50
-= <> _invasion_u_ <> _abenteuerfilm_ <>  <> 50
-= <> _s_ <> _abenteuerfilm_ <>  <> 50
-= <> _a_ <> _abenteuerfilm_ <>  <> 50
+= <> _invasion_u_s_a__ <> _abenteuerfilm_ <>  <> 50
 = <> _iron_warrior_ <> _abenteuerfilm_ <>  <> 50
 = <> _iron_will_–_der_wille_zum_sieg__ <> _abenteuerfilm_ <>  <> 50
 = <> _ist_irre_–_in_der_wueste_fliesst_nicht_ein_wasser_ <> _abenteuerfilm_ <>  <> 50
@@ -339,8 +335,7 @@
 = <> _piraten_in_dem_karibischen_meer_ <> _abenteuerfilm_ <>  <> 50
 = <> _piraten_von_tortuga_ <> _abenteuerfilm_ <>  <> 50
 = <> _die_piratenkoenigin_ <> _abenteuerfilm_ <>  <> 50
-= <> _pirates_of_the_caribbean_–_an_dem_ende_der_wel_ <> _abenteuerfilm_ <>  <> 50
-= <> _t_ <> _abenteuerfilm_ <>  <> 50
+= <> _pirates_of_the_caribbean_–_an_dem_ende_der_welt_ <> _abenteuerfilm_ <>  <> 50
 = <> _fluch_der_karibik_ <> _abenteuerfilm_ <>  <> 50
 = <> _plunkett_&_macleane_–_gegen_tod_und_teufel_ <> _abenteuerfilm_ <>  <> 50
 = <> _porco_rosso_ <> _abenteuerfilm_ <>  <> 50
@@ -354,8 +349,7 @@
 = <> _the_quest_–_jagd_nach_dem_speer_des_schicksals_ <> _abenteuerfilm_ <>  <> 50
 = <> _quigley_der_australier_ <> _abenteuerfilm_ <>  <> 50
 = <> _race_the_sun_–_in_dem_wettlauf_mit_der_zeit_ <> _abenteuerfilm_ <>  <> 50
-= <> _die_rache_des_dr_ <> _abenteuerfilm_ <>  <> 50
-= <> _ fu man chu_ <> _abenteuerfilm_ <>  <> 50
+= <> _die_rache_des_doktor_fu_man_chu_ <> _abenteuerfilm_ <>  <> 50
 = <> _radhapura_–_endstation_der_verdammten_ <> _abenteuerfilm_ <>  <> 50
 = <> _rapa_nui_–_rebellion_in_dem_paradies_ <> _abenteuerfilm_ <>  <> 50
 = <> _raubzug_der_wikinger_ <> _abenteuerfilm_ <>  <> 50
@@ -412,9 +406,7 @@
 = <> _der_skipper_ <> _abenteuerfilm_ <>  <> 50
 = <> _snowdogs_–_acht_helden_auf_vier_pfoten_ <> _abenteuerfilm_ <>  <> 50
 = <> _der_sohn_des_scheik_ <> _abenteuerfilm_ <>  <> 50
-= <> _s_ <> _abenteuerfilm_ <>  <> 50
-= <> _o_ <> _abenteuerfilm_ <>  <> 50
-= <> _s_ <> _abenteuerfilm_ <>  <> 50
+= <> _s_o_s_feuer_an_bord_ <> _abenteuerfilm_ <>  <> 50
 = <> _sos-sos-sos_bermuda-dreieck_ <> _abenteuerfilm_ <>  <> 50
 = <> _das_spiel_mit_dem_feuer_ <> _abenteuerfilm_ <>  <> 50
 = <> _spiel_mit_dem_schicksal_ <> _abenteuerfilm_ <>  <> 50
@@ -463,8 +455,7 @@
 = <> _die_tiefe_ <> _abenteuerfilm_ <>  <> 50
 = <> _der_tiger_von_eschnapur_ <> _abenteuerfilm_ <>  <> 50
 = <> _time_bandits_ <> _abenteuerfilm_ <>  <> 50
-= <> _der_todeskuss_des_dr_ <> _abenteuerfilm_ <>  <> 50
-= <> _ fu man chu_ <> _abenteuerfilm_ <>  <> 50
+= <> _der_todeskuss_des_doktor_fu_man_chu_ <> _abenteuerfilm_ <>  <> 50
 = <> _der_todesschrei_der_kannibalen_ <> _abenteuerfilm_ <>  <> 50
 = <> _todestrommeln_an_dem_grossen_fluss_ <> _abenteuerfilm_ <>  <> 50
 = <> _toedliches_geheimnis_ <> _abenteuerfilm_ <>  <> 50

@@ -86,8 +86,7 @@
 = <> _azumi_2_–_death_or_love__ <> _actionfilm_ <>  <> 50
 = <> _der_babynator__ <> _actionfilm_ <>  <> 50
 = <> _der_babysitter-cop_–_one_2_ka_4__ <> _actionfilm_ <>  <> 50
-= <> _backdraft_–_maenner_ <> _actionfilm_ <>  <> 50
-= <> _ <> die _actionfilm_ <>  <> 50
+= <> _backdraft_–_maenner_die_durchs_feuer_gehen__ <> _actionfilm_ <>  <> 50
 = <> _bad_boys_2__ <> _actionfilm_ <>  <> 50
 = <> _bad_boys_–_harte_jungs__ <> _actionfilm_ <>  <> 50
 = <> _bad_company_–_die_welt_ist_in_guten_haenden__ <> _actionfilm_ <>  <> 50
@@ -163,8 +162,7 @@
 = <> _bmx-bandits__ <> _actionfilm_ <>  <> 50
 = <> _the_bodyguard__ <> _actionfilm_ <>  <> 50
 = <> _bomben_bei_kilometer_92__ <> _actionfilm_ <>  <> 50
-= <> _bon_cop_ <> _actionfilm_ <>  <> 50
-= <> _ bad cop _ <> _actionfilm_ <>  <> 50
+= <> _bon_cop_bad_cop__ <> _actionfilm_ <>  <> 50
 = <> _born_2_die__ <> _actionfilm_ <>  <> 50
 = <> _born_to_fight__ <> _actionfilm_ <>  <> 50
 = <> _born_to_fight_–_dynamite_warrior__ <> _actionfilm_ <>  <> 50
@@ -245,6 +243,7 @@
 = <> _crying_freeman_–_der_sohn_des_drachen__ <> _actionfilm_ <>  <> 50
 = <> _cusack_–_der_schweigsame__ <> _actionfilm_ <>  <> 50
 = <> _cutaway_–_jede_sekunde_zaehlt_ <> _actionfilm_ <>  <> 50
+= <> _ _ <> _actionfilm_ <>  <> 50
 = <> _the_cutter__ <> _actionfilm_ <>  <> 50
 = <> _cyborg__ <> _actionfilm_ <>  <> 50
 = <> _cyborg_2__ <> _actionfilm_ <>  <> 50
@@ -317,6 +316,7 @@
 = <> _downtown_torpedos__ <> _actionfilm_ <>  <> 50
 = <> _dragon_ball_hey_ <> _actionfilm_ <>  <> 50
 = <> _ seine freunde kehren zurueck_ <> _actionfilm_ <>  <> 50
+= <> _ _ <> _actionfilm_ <>  <> 50
 = <> _dragon_lord__ <> _actionfilm_ <>  <> 50
 = <> _dragonball_z_special_die_geschichte_von_trunks_–_das_trunks_special__ <> _actionfilm_ <>  <> 50
 = <> _dragonball_z_special_son-gokus_vater_–_das_bardock_special__ <> _actionfilm_ <>  <> 50
@@ -339,8 +339,7 @@
 = <> _driven_to_kill__ <> _actionfilm_ <>  <> 50
 = <> _driver__ <> _actionfilm_ <>  <> 50
 = <> _drop_zone__ <> _actionfilm_ <>  <> 50
-= <> _drueber_ <> _actionfilm_ <>  <> 50
-= <> _ drunter und drauf _ <> _actionfilm_ <>  <> 50
+= <> _drueber_drunter_und_drauf__ <> _actionfilm_ <>  <> 50
 = <> _drunken_master__ <> _actionfilm_ <>  <> 50
 = <> _die_duellisten__ <> _actionfilm_ <>  <> 50
 = <> _ein_duke_kommt_selten_allein__ <> _actionfilm_ <>  <> 50
@@ -385,9 +384,11 @@
 = <> _fight_of_the_dragon__ <> _actionfilm_ <>  <> 50
 = <> _the_fighters__ <> _actionfilm_ <>  <> 50
 = <> _fighting__ <> _actionfilm_ <>  <> 50
+= <> _final_call_–_wenn_er_auflegt_muss_sie_sterben__ <> _actionfilm_ <>  <> 50
 = <> _the_final_cut_–_toedliches_risiko__ <> _actionfilm_ <>  <> 50
 = <> _final_punch__ <> _actionfilm_ <>  <> 50
 = <> _final_speed_–_stoppt_den_todeszug_ <> _actionfilm_ <>  <> 50
+= <> _ _ <> _actionfilm_ <>  <> 50
 = <> _fire_down_below__ <> _actionfilm_ <>  <> 50
 = <> _fire_on_the_amazon__ <> _actionfilm_ <>  <> 50
 = <> _first_shot_–_das_attentat__ <> _actionfilm_ <>  <> 50
@@ -442,8 +443,7 @@
 = <> _der_goldene_kompass__ <> _actionfilm_ <>  <> 50
 = <> _goldfieber__ <> _actionfilm_ <>  <> 50
 = <> _goldfinger__ <> _actionfilm_ <>  <> 50
-= <> _good_cop_ <> _actionfilm_ <>  <> 50
-= <> _ bad cop _ <> _actionfilm_ <>  <> 50
+= <> _good_cop_bad_cop__ <> _actionfilm_ <>  <> 50
 = <> _the_good_cop__ <> _actionfilm_ <>  <> 50
 = <> _gotcha_ <> _actionfilm_ <>  <> 50
 = <> _ <> trip _ _actionfilm_ <>  <> 50
@@ -509,8 +509,7 @@
 = <> _hydrotoxin_–_die_bombe_tickt_in_dir__ <> _actionfilm_ <>  <> 50
 = <> _ichi_the_killer__ <> _actionfilm_ <>  <> 50
 = <> _ignition_–_toedliche_zuendung__ <> _actionfilm_ <>  <> 50
-= <> _ilsa_ <> _actionfilm_ <>  <> 50
-= <> _ wolf <> _ _actionfilm_ <>  <> 50
+= <> _ilsa_she_wolf_of_the_ss__ <> _actionfilm_ <>  <> 50
 = <> _im_angesicht_des_todes__ <> _actionfilm_ <>  <> 50
 = <> _im_auftrag_des_drachen__ <> _actionfilm_ <>  <> 50
 = <> _im_banne_des_kalifen__ <> _actionfilm_ <>  <> 50
@@ -598,8 +597,7 @@
 = <> _king_arthur__ <> _actionfilm_ <>  <> 50
 = <> _king_kong__ <> _actionfilm_ <>  <> 50
 = <> _king_of_new_york_–_koenig_zwischen_tag_und_nacht__ <> _actionfilm_ <>  <> 50
-= <> _kiss_kiss_ <> _actionfilm_ <>  <> 50
-= <> _ bang bang _ <> _actionfilm_ <>  <> 50
+= <> _kiss_kiss_bang_bang__ <> _actionfilm_ <>  <> 50
 = <> _kiss_of_death__ <> _actionfilm_ <>  <> 50
 = <> _kiss_of_the_dragon__ <> _actionfilm_ <>  <> 50
 = <> _die_klapperschlange__ <> _actionfilm_ <>  <> 50
@@ -620,8 +618,7 @@
 = <> _krull__ <> _actionfilm_ <>  <> 50
 = <> _kuffs_–_ein_kerl_zum_schiessen___ <> _actionfilm_ <>  <> 50
 = <> _der_kugelsichere_moench__ <> _actionfilm_ <>  <> 50
-= <> _kull_ <> _actionfilm_ <>  <> 50
-= <> _ <> der eroberer _ _actionfilm_ <>  <> 50
+= <> _kull_der_eroberer__ <> _actionfilm_ <>  <> 50
 = <> _kung_fu_panda__ <> _actionfilm_ <>  <> 50
 = <> _kunoichi_–_lady_ninja__ <> _actionfilm_ <>  <> 50
 = <> _kunoichi_–_lady_ninja_2_blutige_rache__ <> _actionfilm_ <>  <> 50
@@ -675,6 +672,7 @@
 = <> _der_mann_ohne_nerven__ <> _actionfilm_ <>  <> 50
 = <> _mann_unter_feuer__ <> _actionfilm_ <>  <> 50
 = <> _ein_mann_wie_taffin__ <> _actionfilm_ <>  <> 50
+= <> _der_mann_der_niemals_aufgibt__ <> _actionfilm_ <>  <> 50
 = <> _maenner_des_gesetzes__ <> _actionfilm_ <>  <> 50
 = <> _el_mariachi__ <> _actionfilm_ <>  <> 50
 = <> _marines_–_gehetzt_und_verraten__ <> _actionfilm_ <>  <> 50
@@ -685,8 +683,7 @@
 = <> _matrix_revolutions__ <> _actionfilm_ <>  <> 50
 = <> _maximum_risk__ <> _actionfilm_ <>  <> 50
 = <> _maximum_speed__ <> _actionfilm_ <>  <> 50
-= <> _mcquade_ <> _actionfilm_ <>  <> 50
-= <> _ <> der wolf _ _actionfilm_ <>  <> 50
+= <> _mcquade_der_wolf__ <> _actionfilm_ <>  <> 50
 = <> _the_mechanik__ <> _actionfilm_ <>  <> 50
 = <> _das_medaillon__ <> _actionfilm_ <>  <> 50
 = <> _mein_name_ist_gator__ <> _actionfilm_ <>  <> 50
@@ -748,7 +745,6 @@
 = <> _navy_seals_–_die_haerteste_elitetruppe_der_welt__ <> _actionfilm_ <>  <> 50
 = <> _das_netz_20__ <> _actionfilm_ <>  <> 50
 = <> _nevada_pass__ <> _actionfilm_ <>  <> 50
-= <> _new_police_story__ <> _actionfilm_ <>  <> 50
 = <> _new_york_taxi__ <> _actionfilm_ <>  <> 50
 = <> _next__ <> _actionfilm_ <>  <> 50
 = <> _nichts_als_aerger__ <> _actionfilm_ <>  <> 50
@@ -846,17 +842,14 @@
 = <> _das_relikt__ <> _actionfilm_ <>  <> 50
 = <> _rent-a-cop__ <> _actionfilm_ <>  <> 50
 = <> _repoman__ <> _actionfilm_ <>  <> 50
-= <> _resident_evil_apocalypse__ <> _actionfilm_ <>  <> 50
 = <> _the_restless__ <> _actionfilm_ <>  <> 50
 = <> _resurrection_of_the_little_match_girl__ <> _actionfilm_ <>  <> 50
 = <> _retrograde_–_krieg_auf_dem_eisplaneten__ <> _actionfilm_ <>  <> 50
-= <> _rette_deine_haut_ <> _actionfilm_ <>  <> 50
-= <> _ killer _ <> _actionfilm_ <>  <> 50
+= <> _rette_deine_haut_killer__ <> _actionfilm_ <>  <> 50
 = <> _returner_–_kampf_um_die_zukunft__ <> _actionfilm_ <>  <> 50
 = <> _revenge_–_eine_gefaehrliche_affaere__ <> _actionfilm_ <>  <> 50
 = <> _ricochet_–_der_aufprall__ <> _actionfilm_ <>  <> 50
-= <> _ride_or_die_–_fahr_zur_hoelle__ <> _actionfilm_ <>  <> 50
-= <> _ baby_ <> _actionfilm_ <>  <> 50
+= <> _ride_or_die_–_fahr_zur_hoelle_baby__ <> _actionfilm_ <>  <> 50
 = <> _ _ <> _actionfilm_ <>  <> 50
 = <> _riders__ <> _actionfilm_ <>  <> 50
 = <> _the_riffs_–_die_gewalt_sind_wir__ <> _actionfilm_ <>  <> 50
@@ -868,14 +861,14 @@
 = <> _road_rage__ <> _actionfilm_ <>  <> 50
 = <> _rob_roy__ <> _actionfilm_ <>  <> 50
 = <> _robin_hood_–_koenig_der_diebe__ <> _actionfilm_ <>  <> 50
-= <> _robin_hood_ <> _actionfilm_ <>  <> 50
-= <> _ koenig <> der vagabunden _ _actionfilm_ <>  <> 50
+= <> _robin_hood_koenig_der_vagabunden__ <> _actionfilm_ <>  <> 50
 = <> _robocop_2__ <> _actionfilm_ <>  <> 50
 = <> _the_rock_–_fels_der_entscheidung__ <> _actionfilm_ <>  <> 50
 = <> _rock_einen_rolla__ <> _actionfilm_ <>  <> 50
 = <> _rocketeer__ <> _actionfilm_ <>  <> 50
 = <> _rocky_iv_–_der_kampf_des_jahrhunderts__ <> _actionfilm_ <>  <> 50
 = <> _rollerball__ <> _actionfilm_ <>  <> 50
+= <> _romeo_musst_die__ <> _actionfilm_ <>  <> 50
 = <> _romper_stomper__ <> _actionfilm_ <>  <> 50
 = <> _ronin__ <> _actionfilm_ <>  <> 50
 = <> _rookie_–_der_anfaenger__ <> _actionfilm_ <>  <> 50
@@ -913,12 +906,10 @@
 = <> _die_schlange_in_dem_schatten_des_adlers__ <> _actionfilm_ <>  <> 50
 = <> _die_schutzengel__ <> _actionfilm_ <>  <> 50
 = <> _schwerter_des_koenigs_–_dungeon_siege__ <> _actionfilm_ <>  <> 50
-= <> _scorpio_ <> _actionfilm_ <>  <> 50
-= <> _ <> der killer _ _actionfilm_ <>  <> 50
+= <> _scorpio_der_killer__ <> _actionfilm_ <>  <> 50
 = <> _the_scorpion_king__ <> _actionfilm_ <>  <> 50
 = <> _scott_&_huutsch__ <> _actionfilm_ <>  <> 50
-= <> _sechs_tage_ <> _actionfilm_ <>  <> 50
-= <> _ <> sieben naechte _ _actionfilm_ <>  <> 50
+= <> _sechs_tage_sieben_naechte__ <> _actionfilm_ <>  <> 50
 = <> _second_in_command__ <> _actionfilm_ <>  <> 50
 = <> _selbstjustiz_–_ein_cop_zwischen_liebe_und_gesetz__ <> _actionfilm_ <>  <> 50
 = <> _shadow_man_–_kurier_des_todes__ <> _actionfilm_ <>  <> 50
@@ -929,6 +920,7 @@
 = <> _shaft__ <> _actionfilm_ <>  <> 50
 = <> _shaft_in_afrika__ <> _actionfilm_ <>  <> 50
 = <> _shaft_–_fragen_ <> _actionfilm_ <>  <> 50
+= <> _ _ <> _actionfilm_ <>  <> 50
 = <> _shakedown__ <> _actionfilm_ <>  <> 50
 = <> _shang-high_noon__ <> _actionfilm_ <>  <> 50
 = <> _shanghai_knights__ <> _actionfilm_ <>  <> 50
@@ -969,6 +961,7 @@
 = <> _spider-man__ <> _actionfilm_ <>  <> 50
 = <> _spider-man_2__ <> _actionfilm_ <>  <> 50
 = <> _spider-man_3__ <> _actionfilm_ <>  <> 50
+= <> _der_spion_der_mich_liebte__ <> _actionfilm_ <>  <> 50
 = <> _spion_wider_willen__ <> _actionfilm_ <>  <> 50
 = <> _sprengkommando_atlantik__ <> _actionfilm_ <>  <> 50
 = <> _spur_der_verwuestung__ <> _actionfilm_ <>  <> 50
@@ -1045,7 +1038,6 @@
 = <> _timecop__ <> _actionfilm_ <>  <> 50
 = <> _timecop_2_–_entscheidung_in_berlin__ <> _actionfilm_ <>  <> 50
 = <> _timelock__ <> _actionfilm_ <>  <> 50
-= <> _titan_ae__ <> _actionfilm_ <>  <> 50
 = <> _to_kill_a_killer__ <> _actionfilm_ <>  <> 50
 = <> _die_tochter_des_praesidenten_in_toedlicher_gefahr__ <> _actionfilm_ <>  <> 50
 = <> _tod_in_den_augen__ <> _actionfilm_ <>  <> 50
@@ -1127,8 +1119,7 @@
 = <> _waechter_des_tages_–_dnevnoi_dozor__ <> _actionfilm_ <>  <> 50
 = <> _waist_deep__ <> _actionfilm_ <>  <> 50
 = <> _wake_of_death__ <> _actionfilm_ <>  <> 50
-= <> _walker_ <> _actionfilm_ <>  <> 50
-= <> _ texas ranger feuertaufe _ <> _actionfilm_ <>  <> 50
+= <> _walker_texas_ranger_feuertaufe__ <> _actionfilm_ <>  <> 50
 = <> _walking_tall_–_auf_eigene_faust__ <> _actionfilm_ <>  <> 50
 = <> _walking_tall_lone_justice__ <> _actionfilm_ <>  <> 50
 = <> _walking_tall_the_payback__ <> _actionfilm_ <>  <> 50
@@ -1138,6 +1129,7 @@
 = <> _weirdsville__ <> _actionfilm_ <>  <> 50
 = <> _welcome_to_the_jungle__ <> _actionfilm_ <>  <> 50
 = <> _james_bond_007_–_die_welt_ist_nicht_genug__ <> _actionfilm_ <>  <> 50
+= <> _wenn_er_in_die_hoelle_will_lasse_ihn_gehen__ <> _actionfilm_ <>  <> 50
 = <> _white_raven_–_diamant_des_todes__ <> _actionfilm_ <>  <> 50
 = <> _white_squall_–_reissende_stroemung__ <> _actionfilm_ <>  <> 50
 = <> _wieder_allein_zu_haus__ <> _actionfilm_ <>  <> 50
