@@ -5,12 +5,12 @@
 = <> _beaufort__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _bestie_krieg__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _birdy__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _brotherhood_–_wenn_brueder_aufeinander_schiessen_muessen__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _brotherhood_-_wenn_brueder_aufeinander_schiessen_muessen__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_bruecke__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_bruecke_an_dem_kwai__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_bruecke_von_arnheim__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _catch-22_–_der_boese_trick__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _coming_home_–_sie_kehren_heim__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _catch-22_-_der_boese_trick__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _coming_home_-_sie_kehren_heim__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _der_tag_danach__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_durch_die_hoelle_gehen__ <> _anti_kriegsfilm_ <>  <> 50
 = <> __dr_seltsam___oder_wie_ich_lernte_die_bombe_zu_lieben__ <> _anti_kriegsfilm_ <>  <> 50
@@ -25,9 +25,9 @@
 = <> _im_morgengrauen_ist_es_still__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _im_westen_nichts_neues__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _in_the_year_of_the_pig_jakob_der_luegner__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _jarhead_–_willkommen_in_dem_dreck__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _jarhead_-_willkommen_in_dem_dreck__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _johnny_zieht_in_den_krieg__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _the_killing_fields_–_schreiendes_land__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _the_killing_fields_-_schreiendes_land__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _der_letzte_akt__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_letzte_nacht_des_boris_gruschenko__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _die_letzten_gluehwuermchen__ <> _anti_kriegsfilm_ <>  <> 50
@@ -42,7 +42,7 @@
 = <> _der_schmale_grat__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _taxi_nach_tobruk__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _three_kings__ <> _anti_kriegsfilm_ <>  <> 50
-= <> _u_47_–_kapitaenleutnant_prien__ <> _anti_kriegsfilm_ <>  <> 50
+= <> _u_47_-_kapitaenleutnant_prien__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _under_fire__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _der_untergang__ <> _anti_kriegsfilm_ <>  <> 50
 = <> _wege_zum_ruhm___ <> _anti_kriegsfilm_ <>  <> 50

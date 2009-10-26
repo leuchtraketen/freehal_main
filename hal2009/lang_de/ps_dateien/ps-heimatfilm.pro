@@ -3,9 +3,9 @@
 = <> _bei_der_blonden_kathrein__ <> _heimatfilm_ <>  <> 50
 = <> _bergfuehrer_lorenz__ <> _heimatfilm_ <>  <> 50
 = <> _der_bockerer__ <> _heimatfilm_ <>  <> 50
-= <> _der_bockerer_2_–_oesterreich_ist_frei__ <> _heimatfilm_ <>  <> 50
-= <> _der_bockerer_3_–_die_bruecke_von_andau__ <> _heimatfilm_ <>  <> 50
-= <> _der_bockerer_4_–_prager_fruehling__ <> _heimatfilm_ <>  <> 50
+= <> _der_bockerer_2_-_oesterreich_ist_frei__ <> _heimatfilm_ <>  <> 50
+= <> _der_bockerer_3_-_die_bruecke_von_andau__ <> _heimatfilm_ <>  <> 50
+= <> _der_bockerer_4_-_prager_fruehling__ <> _heimatfilm_ <>  <> 50
 = <> _brieftraeger_mueller__ <> _heimatfilm_ <>  <> 50
 = <> _daheim_sterben_die_leut__ <> _heimatfilm_ <>  <> 50
 = <> _einmal_die_heimat_sehen__ <> _heimatfilm_ <>  <> 50
@@ -20,9 +20,9 @@
 = <> _gruen_ist_die_heide__ <> _heimatfilm_ <>  <> 50
 = <> _heidi_und_peter__ <> _heimatfilm_ <>  <> 50
 = <> _heidi_und_ihre_freunde__ <> _heimatfilm_ <>  <> 50
-= <> _heimat_3_–_chronik_von_einer_zeitenwende__ <> _heimatfilm_ <>  <> 50
-= <> _heimat_–_eine_deutsche_chronik__ <> _heimatfilm_ <>  <> 50
-= <> _heimat-fragmente_–_die_frauen__ <> _heimatfilm_ <>  <> 50
+= <> _heimat_3_-_chronik_von_einer_zeitenwende__ <> _heimatfilm_ <>  <> 50
+= <> _heimat_-_eine_deutsche_chronik__ <> _heimatfilm_ <>  <> 50
+= <> _heimat-fragmente_-_die_frauen__ <> _heimatfilm_ <>  <> 50
 = <> _heiraten_verboten__ <> _heimatfilm_ <>  <> 50
 = <> _heisse_ernte__ <> _heimatfilm_ <>  <> 50
 = <> _herbstmilch__ <> _heimatfilm_ <>  <> 50
@@ -60,5 +60,5 @@
 = <> _wenn_die_abendglocken_laeuten__ <> _heimatfilm_ <>  <> 50
 = <> _wer_frueher_stirbt_ist_laenger_tot__ <> _heimatfilm_ <>  <> 50
 = <> _wetterleuchten_um_maria__ <> _heimatfilm_ <>  <> 50
-= <> _die_zweite_heimat_–_chronik_von_einer_jugend__ <> _heimatfilm_ <>  <> 50
+= <> _die_zweite_heimat_-_chronik_von_einer_jugend__ <> _heimatfilm_ <>  <> 50
 = <> _die_zwillinge_vom_immenhof__ <> _heimatfilm_ <>  <> 50
