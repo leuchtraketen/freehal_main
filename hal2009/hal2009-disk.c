@@ -497,6 +497,9 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             if (is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
+            if (is_bad(words[n][m]->name)) {
+                continue;
+            }
             
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
                 if (strstr(words[n][m]->name+1, "*")) {
