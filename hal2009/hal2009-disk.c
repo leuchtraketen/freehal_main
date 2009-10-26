@@ -485,7 +485,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         }
         
         for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
-            if (n == 0 || n % 100 == 0) {
+            if (n == 0 || n % 10 == 0) {
                 if (in_bracket) {
                     strcat(sql, ")");
                     in_bracket = 0;
@@ -502,23 +502,23 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 if (strstr(words[n][m]->name+1, "*")) {
                     strcat(sql, "OR rel_word_fact.word GLOB \"");
                     strcat(sql, words[n][m]->name+1);
-                    strcat(sql, "\"");
+                    strcat(sql, "\" ");
                 }
                 else {
                     strcat(sql, "OR rel_word_fact.word = \"");
                     strcat(sql, words[n][m]->name+1);
-                    strcat(sql, "\"");
+                    strcat(sql, "\" ");
                 }
             }
             else if (strstr(words[n][m]->name, "*")) {
                 strcat(sql, "OR rel_word_fact.word GLOB \"");
                 strcat(sql, words[n][m]->name);
-                strcat(sql, "\"");
+                strcat(sql, "\" ");
             }
             else {
                 strcat(sql, "OR rel_word_fact.word = \"");
                 strcat(sql, words[n][m]->name);
-                strcat(sql, "\"");
+                strcat(sql, "\" ");
             }
         }
     }
