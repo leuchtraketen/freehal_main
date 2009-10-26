@@ -251,7 +251,7 @@ struct word** divide_words(const char* str) {
     int p;
     int length = strlen(str);
     for (p = 0; p < length; ++p) {
-        if (str[p] == ' ') {
+        if (str[p] == ' ' || str[p] == '-') {
             e = p;
             if (e - a > 0) {
                 char* name = calloc(e-a+2, 1);
