@@ -192,6 +192,7 @@ static int num_facts_not_added_during_this_run_because_other_error = 0;
 #ifdef __cplusplus
 extern "C" {
 #endif
+    char* halgetline(FILE *handle);
     static char* hal2009_text_language;
     int hal2009_set_text_language(const char*);
     const char* hal2009_get_text_language();
