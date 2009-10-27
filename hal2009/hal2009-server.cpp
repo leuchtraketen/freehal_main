@@ -112,9 +112,9 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
 
     ifstream arp_file("/proc/net/arp");
     string buffer;
-    halgetline(arp_file, buffer);
+    getline(arp_file, buffer);
     while (arp_file) {
-        halgetline(arp_file, buffer);
+        getline(arp_file, buffer);
         if (0 == buffer.size()) {
             break;
         }
@@ -212,7 +212,7 @@ void* hal2009_netcom_do_accept(void* arg) {
         ofstream pro_file(filename, ios::out | ios::app);
         string buffer;
         while (stream && *stream) {
-            halgetline(*stream, buffer);
+            getline(*stream, buffer);
             if (buffer[0] == 'E' && buffer[1] == 'X' && buffer[2] == 'I' && buffer[3] == 'T') {
                 break;
             }
@@ -250,7 +250,7 @@ void* hal2009_netcom_do_give(void* arg) {
         string buffer;
         hal2009_netcom_lock();
         while (stream && *stream && pro_file) {
-            halgetline(pro_file, buffer);
+            getline(pro_file, buffer);
             if (0 == buffer.size()) {
                 break;
             }
@@ -578,12 +578,12 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         ifstream output_stream("_output2");
         usleep(500);
         string output;
-        halgetline(output_stream, output);
+        getline(output_stream, output);
         if (output.size() == 0) {
             ifstream output_stream("_output2");
             usleep(500);
             string output;//
-            halgetline(output_stream, output);
+            getline(output_stream, output);
         }
         unlink("_output2");
         answer_from_c = output.c_str();
@@ -703,7 +703,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     hal2009_netcom_unlock();
     
     string username;
-    halgetline(*stream, username);
+    getline(*stream, username);
     replace_all(username, "USER:", "");
     trim(username);
     
@@ -718,7 +718,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     }
 
     string line;
-    while (*stream && stream->rdbuf() != 0 && halgetline(*stream, line)) {
+    while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
         ofstream booted_file("booted");
         booted_file.close();
 
@@ -844,7 +844,7 @@ char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
     cout << "Wait for stream." << endl;
     std::vector<std::string>* result;
     string line;
-    while (*stream && stream->rdbuf() != 0 && halgetline(*stream, line)) {
+    while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
         if ( line.size() != 0 ) {
             cout << line << endl;
             result = simple_split(line, ":" );

@@ -100,7 +100,7 @@ void hal2009_distrib_server_start() {
 
 void hal2009_distrib_client_connection(tcp::iostream* stream) {
     std::string func;
-    halgetline(*stream, func);
+    getline(*stream, func);
     while (func.size() && ( func[func.size()-1] == '\r' || func[func.size()-1] == '\n' )) {
         func[func.size()-1] = '\0';
     }
@@ -110,11 +110,11 @@ void hal2009_distrib_client_connection(tcp::iostream* stream) {
 
     std::string data;
     std::string line;
-    halgetline(*stream, line);
+    getline(*stream, line);
     printf("I'm going to get %i lines.\n", length);
     int line_num;
     for (line_num = 0; line_num < length; ++line_num) {
-        halgetline(*stream, line);
+        getline(*stream, line);
         data += line;
     }
     printf("I got:\n----\n%s\n----\n", data.c_str());
@@ -195,7 +195,7 @@ const char* hal2009_distrib_invoke_on(const char* host, unsigned short port, con
                 string line;
                 string result;
                 while (*stream && stream->rdbuf()->is_open()) {
-                    halgetline(*stream, line);
+                    getline(*stream, line);
                     result += line;
                     line = "";
                 }
