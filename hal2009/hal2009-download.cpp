@@ -154,7 +154,7 @@ halstring* cpp_download_from_url(const char* _url) {
         unsigned int status_code;
         response_stream >> status_code;
         std::string status_message;
-        std::getline(response_stream, status_message);
+        std::halgetline(response_stream, status_message);
         if (!response_stream || http_version.substr(0, 5) != "HTTP/") {
             cerr << "Invalid response\n";
             return 0;
@@ -169,7 +169,7 @@ halstring* cpp_download_from_url(const char* _url) {
 
         // Process the response headers.
         std::string header;
-        while (std::getline(response_stream, header) && header != "\r") {
+        while (std::halgetline(response_stream, header) && header != "\r") {
             std::cout << header << "\n";
         }
         std::cout << "\n";

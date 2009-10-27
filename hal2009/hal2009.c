@@ -40,7 +40,7 @@ void* halfilefree( void* s ) {
     return 0;
 }
 
-char* getline(FILE *handle) {
+char* halgetline(FILE *handle) {
     char *line;
     char zeichen;
     int length;
@@ -122,7 +122,7 @@ int fact_delete_from_source (const char* source) {
     if (file) {
         char* buffer;
         int lines = 1;
-        while (file && (buffer = getline(file)) != NULL) {
+        while (file && (buffer = halgetline(file)) != NULL) {
             ++lines;
         }
         --lines;
@@ -132,7 +132,7 @@ int fact_delete_from_source (const char* source) {
         if (file) {
             char** data = calloc(lines+2, sizeof(char*));
             int line_number = 1;
-            while (file && (buffer = getline(file)) != NULL && line_number <= lines) {
+            while (file && (buffer = halgetline(file)) != NULL && line_number <= lines) {
                 
                 if (line_number != line_int) {
                     data[line_number] = strdup(buffer);
@@ -213,7 +213,7 @@ int hal2009_add_pro_file (char* filename) {
         char* wholeline;
         int k = 0;
         int line_number = 0;
-        while ((wholeline = getline(input)) != NULL) {
+        while ((wholeline = halgetline(input)) != NULL) {
             ++line_number;
             
             int d;

@@ -181,7 +181,7 @@ void shell(char* programming_language, char* language, char* base_dir) {
     while (1) {
         fprintf(stdout, "Human: ");
         fflush(stdout);
-        char* input = getline(stdin);
+        char* input = halgetline(stdin);
         if (0 == input || 0 == strlen(input)) continue;
         input[strlen(input)-1] = 0;
         char* copy_of_programming_language = (char*)halmalloc(16, "hal2009_server_statement");

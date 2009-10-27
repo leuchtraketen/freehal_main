@@ -200,10 +200,30 @@ define action set_score_for_num with var score, var num, var lang, var path do
     done
 done
 
+set new hash content_of_score_file to an empty hash
+
 define action get_score with array words, var sentence, var lang, var path do
     set new array maybe_is_score to check_score with var sentence
     if array maybe_is_score and from array maybe_is_score item [1] do
         return 0
+    done
+
+    if is an empty hash content_of_score_file do
+        set new var input_file_name to var path concat '/lang_' concat var lang concat '/index_of_combination.cfg'
+        set new var input_handle to handle for file name var input_file_name, read
+        set new var last_word to ""
+        for each new var line from var input_handle do
+            do regex using var line: /<[\s\r\n]>+?/, "", :global
+            if not var line matches /<[:]>/ do
+            done
+            else if var line matches /[\[]/ do
+                set var last_word to var line
+            done
+            else do
+                push into that array: from hash content_of_score_file item { var last_word } (end array), var line
+            done
+        done
+        do close with var input_handle
     done
 
     set var sentence to lc with var sentence
@@ -213,48 +233,31 @@ define action get_score with array words, var sentence, var lang, var path do
     set new var index_of_this_word to -1
     for each new var word in array words do
         set var index_of_this_word to var index_of_this_word + 1
-        set new var input_file_name to var path concat '/lang_' concat var lang concat '/index_of_combination.cfg'
-        set new var input_handle to handle for file name var input_file_name, read
-        for each new var line from var input_handle do
-        
-            set new flag redo to 1
-            while flag redo do
-                set flag redo to 0
-                
-                do regex using var word: /<[?]>|<[!.,\-]>/, "", :global
-                if not var line matches /[+]/ and var line matches /\[var word\]/ do
-                    for each new var line_2 from var input_handle do
-                        if var line_2 matches "" do
-                            go to last
-                        done
-                        if var line_2 matches /[\[\]]/ do
-                            set var line to var line_2
-                            set flag redo to 1
-                            go to last
-                        done
-                        if lc(var line_2) matches /var sentence/ do
-                            set new array parts to split with ":", var line_2
-                            set new var score_here to from array parts second item
-                            do regex using var score_here: /\s/, "", :global
 
-                            # print "score_here:" concat var score_here concat new line
-                            if (0+var score_here) > -1 do
-                                if var index_of_this_word is 0 do
-                                    set var sum to var sum + 100*var score_here*(10/var sum) + 1
-                                done
-                                else do
-                                    set var sum to var sum + 20*var score_here*(10/var sum) + 1 
-                                done
-                            done
-                            else do
-                                #set var num_words to var num_words - 1
-                            done
-                        done
+        if from hash content_of_score_file item { "\[var word\]:" } do
+            set new var line_no to -1
+            set new var size to size of that array: from hash content_of_score_file item { "\[var word\]:" } (end array)
+            do regex using var word: /<[?]>|<[!.,\-]>/, "", :global
+
+            while var line_no < var size do
+                set var line_no to var line_no + 1
+
+                set new var line_2 to from hash content_of_score_file item { "\[var word\]:" } item [ var line_no ]
+
+                if var line_2 matches "" do
+                    go to last
+                done
+                if var line_2 matches /var sentence/ do
+                    set new array parts to split with ":", var line_2
+                    set new var score_here to from array parts second item
+                    do regex using var score_here: /\s/, "", :global
+
+                    if (0+var score_here) > -1 do
+                        set var sum to var sum + (100/(var index_of_this_word+1))*var score_here*(10/var sum) + 1
                     done
                 done
             done
         done
-        do close with var input_handle
     done
 
     if var num_words < 1 do
@@ -420,10 +423,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
     print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
-        do push with items of that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+        do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
 
     do close with var output_handle
@@ -435,10 +438,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
     print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
-        do push with items of that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
     
 
@@ -469,12 +472,12 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
             # no line ending
             do chomp using var line
             do regex using var line: /<[\r\n]>/, "", :global
-            #do push with items of that array: from hash content_of_memory_file item { var file_name } end-items-of, var line
+            #do push into that array: from hash content_of_memory_file item { var file_name } end-items-of, var line
             if not var line matches /^\s/ do
                 set var entry to var line
             done
             else do
-                do push with items of that array: from hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
+                do push into that array: from hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
             done
         done
     done
@@ -1535,25 +1538,25 @@ define action pre_parse with array list_of_words, hash tags, var lang, var path 
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
             push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
-            do push with items of that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
         done
         else if from hash sym_linking item { from hash tags item { var word } first item } and from hash sym_verb item { from hash tags item { from array list_of_words item [ var i - 1 ] } first item } and from hash sym_prep item { from hash tags item { from array list_of_words item [ var i + 1 ] } first item } do
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
             push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
-            do push with items of that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
         done
         else if from hash sym_linking item { from hash tags item { var word } first item } and from hash sym_verb item { from hash tags item { from array list_of_words item [ var i + 1 ] } first item } do
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
             push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
-            do push with items of that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
         done
         else do
-            do push with items of that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
             
             if from hash sym_questionword item { from hash tags item { var word } first item } do
-                do push with items of that array: from array list_of_questionwords item [ var array_index ] end-items-of, var word
+                do push into that array: from array list_of_questionwords item [ var array_index ] end-items-of, var word
             done
         done
 

@@ -77,6 +77,8 @@ static inline void convert_to_perl5_structure (halstring* hals) {
     
     hals = replace(hals, "# TEXT", "#---------------------------------------");
     hals = replace(hals, "# CODE", "#---------------------------------------");
+    hals = replace(hals, "(end array)", "}");
+    hals = replace(hals, "(end hash)", "}");
     hals = replace(hals, "variable ", "var ");
     hals = replace(hals, "$15", "$16");
     hals = replace(hals, "$14", "$15");
@@ -110,7 +112,9 @@ static inline void convert_to_perl5_structure (halstring* hals) {
     hals = replace(hals, "that array not is empty: ", "0 != @{ ");
     hals = replace(hals, "that hash not is empty: ", "0 != %{ ");
     hals = replace(hals, "end check", " }");
+    hals = replace(hals, "push into that", "do push with items of that");
     hals = replace(hals, "push into", "do push with into");
+    hals = replace(hals, "shift from that", "do shift with items of that");
     hals = replace(hals, "shift from", "do shift with into");
     hals = replace(hals, "into array ", "@$");
     hals = replace(hals, "into hash ", "%$");
@@ -118,12 +122,20 @@ static inline void convert_to_perl5_structure (halstring* hals) {
     hals = replace(hals, "items of hash ", "%$");
     hals = replace(hals, "of array ", "@$");
     hals = replace(hals, "of hash ", "%$");
+    hals = replace(hals, "size of", "items of");
     hals = replace(hals, "items of that array: ", "@{");
     hals = replace(hals, "items of that hash: ", "%{");
     hals = replace(hals, "items of that array ", "@{");
     hals = replace(hals, "items of that hash ", "%{");
     hals = replace(hals, "end-items-of", "}");
     hals = replace(hals, "end items of", "}");
+    hals = replace(hals, " of that ", " of ");
+    hals = replace(hals, "items of hash: ", "%{");
+    hals = replace(hals, "items of array: ", "@{");
+    hals = replace(hals, "end-array", "}");
+    hals = replace(hals, "end-hash", "}");
+    hals = replace(hals, "end array", "}");
+    hals = replace(hals, "end hash", "}");
     hals = replace(hals, " is rw", " ");
     hals = replace(hals, " is copy", " ");
     hals = replace(hals, "var ", "$");

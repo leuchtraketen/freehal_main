@@ -52,6 +52,8 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     if (strstr(hals->s, "~" )) {
         hals = replace(hals, "~", "$");
     }
+    hals = replace(hals, "(end array)", ")");
+    hals = replace(hals, "(end hash)", ")");
     hals = replace(hals, " is not ", " not is ");
     hals = replace(hals, "global hash ", "hash main::");
     hals = replace(hals, "global array ", "array main::");
@@ -71,12 +73,20 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     hals = replace(hals, "items of hash ", "%");
     hals = replace(hals, "of array ", "@");
     hals = replace(hals, "of hash ", "%");
+    hals = replace(hals, "size of", "items of");
     hals = replace(hals, "items of that array: ", "(");
     hals = replace(hals, "items of that hash: ", "(");
     hals = replace(hals, "items of that array ", "(");
     hals = replace(hals, "items of that hash ", "(");
     hals = replace(hals, "end-items-of", ")");
     hals = replace(hals, "end items of", ")");
+    hals = replace(hals, " of that ", " of ");
+    hals = replace(hals, "items of hash: ", "(");
+    hals = replace(hals, "items of array: ", "(");
+    hals = replace(hals, "end-array", ")");
+    hals = replace(hals, "end-hash", ")");
+    hals = replace(hals, "end array", ")");
+    hals = replace(hals, "end hash", ")");
     hals = replace(hals, "shift ", "do shift with ");
     hals = replace(hals, "from array ", "@");
     hals = replace(hals, "from hash ", "%");
