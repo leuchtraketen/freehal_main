@@ -523,7 +523,7 @@ int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, EXACT);
     debugf("subject by object:  %d\n", does_match);
     if (does_match == -1)
-        does_match = 1;
+        does_match = 0;
     return does_match;
 }
 int fact_matches_object_by_object(struct fact* fact, struct request* request) {
