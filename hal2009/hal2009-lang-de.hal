@@ -2398,7 +2398,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'dreist' => "adj",
           'spricht' => "vt",
           'bruder' => "n",
-          'schimpfwort' => "vi",
+          'schimpfwort' => "n",
           'brueder' => "n",
           'gut' => "adj",
           'beschlossen' => "vt",
