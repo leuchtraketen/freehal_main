@@ -1651,7 +1651,7 @@ define action compute_context with hash parsed do
         do return with "q_who"
     done
     if lc(from array questionword_array first item) matches "was" or lc(from array questionword_array first item) matches "what" do
-        if from array verb_array first item matches "bist" do
+        if from array verb_array first item first item matches /^(bist|bi|bin)$/ do
             do return with "q_what_exactly"
         done
         else if from array extra_array first item first item do

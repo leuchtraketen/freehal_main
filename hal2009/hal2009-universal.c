@@ -587,6 +587,29 @@ int fact_matches_questionword_rules_of_q_what_extra(struct fact* fact, struct re
     return does_match;
 }
 
+int fact_matches_questionword_rules_of_q_what_exactly(struct fact* fact, struct request* request) {
+    int does_match = 0;
+    
+    int i;
+    if (can_be_a_pointer(fact->subjects)) {
+        for (i = 0; can_be_a_pointer(fact->subjects[i]) && can_be_a_pointer(fact->subjects[i]->name); ++i) {
+            if (0 == strcmp(fact->subjects[i]->name, "ein") || 0 == strcmp(fact->subjects[i]->name, "eine")) {
+                does_match = 1;
+            }
+        }
+    }
+    if (can_be_a_pointer(fact->objects)) {
+        for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
+            if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
+                does_match = 1;
+            }
+        }
+    }
+    
+    debugf("q_what_exactly: %d\n", does_match);
+    return does_match;
+}
+
 int fact_matches_questionword_rules_of_q_who(struct fact* fact, struct request* request) {
     int does_match = 1;
     
@@ -727,6 +750,8 @@ int fact_matches_questionword_rules(struct fact* fact, struct request* request) 
     if (can_be_a_pointer(request->context)) {
         if (0 == strcmp(request->context, "q_what_weakly"))
             return fact_matches_questionword_rules_of_q_what_weakly(fact, request);
+        if (0 == strcmp(request->context, "q_what_exactly"))
+            return fact_matches_questionword_rules_of_q_what_exactly(fact, request);
         if (0 == strcmp(request->context, "q_what_extra"))
             return fact_matches_questionword_rules_of_q_what_extra(fact, request);
         if (0 == strcmp(request->context, "q_who"))
