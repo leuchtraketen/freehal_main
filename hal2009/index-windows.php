@@ -173,7 +173,6 @@ document.getElementById("sc").style.float = "right";
 	fclose($logf);
 }
 echo "<div class='pre'>";
-#echo `tail -n 30 log/$_IP | perl -n -e 's/([0-9]+?\.[0-9]+?\.[0-9]+?\.[0-9]+?[:])/<u style="width: 150px; display: inline-block;">$1<\/u>/igm; s/($_IP [:])/<b>$1<\/b>/igmx; print; print qq{<br>};'`;
 echo str_replace("\n", "<br>", file_get_contents("log/$_IP"));
 echo "</div>";
 ?>
