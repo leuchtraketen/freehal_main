@@ -147,7 +147,7 @@ if ($_POST[q]) {
 	$_POST[q] = str_replace("Ü", "Ue", $_POST[q]);
 
 	$time = time();
-?> <pre style="height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
+?> <pre style="display: none; height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
 $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('hal2009-online-demo.exe "'.$q.'"', "r");
 while ($read = fread($handle, 4)) {
