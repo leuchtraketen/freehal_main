@@ -8,5 +8,5 @@ zip -r fh-102.zip lang_en/thesaurus/*.pro
 zip -r fh-102.zip lang_en/*/*.pro
 zip -r fh-102.zip lang_en/word_*
 zip -d fh-102.zip lang_en/facts.pro
-zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm
+zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm *.php
 
