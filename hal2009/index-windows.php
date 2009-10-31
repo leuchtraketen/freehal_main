@@ -150,7 +150,7 @@ if ($_POST[q]) {
 ?> <pre style="display: none; height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
 $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('hal2009-online-demo.exe "'.$q.'"', "r");
-$_log = fopen("last_question.log", "a");
+$_log = fopen("last_question.log", "w");
 while ($read = fread($handle, 4)) {
 	echo $read;
 	fwrite($_log, $read);
