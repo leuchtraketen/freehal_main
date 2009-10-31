@@ -22,7 +22,7 @@
 #define HAL2009_CGI_MODE 1
 
 #include "hal2009.h"
-#include "hal2009-wiki-dummy.c"
+#include "hal2009-wiki.c"
 
 #include <getopt.h>
 
@@ -46,7 +46,7 @@ int main (int argc, char** argv) {
     strcpy(programming_language, "perl5");
     strcpy(language, "de");
     strcpy(base_dir, ".");
-    strcpy(sql_engine, "sqlite");
+    strcpy(sql_engine, "disk");
 
     {
         char* sqlite_filename = calloc(OPTION_SIZE + 1, 1);
@@ -75,31 +75,6 @@ int main (int argc, char** argv) {
     return 0;
 }
 
-void shell(char* programming_language, char* language, char* base_dir) {
-    fprintf(stdout, "Programming language is %s\n", programming_language);
-    fprintf(stdout, "Text language is %s\n", language);
-    pthread_t signal_thread = hal2009_start_signal_handler(strdup(programming_language), strdup(language), MULTI);
-    fprintf(stdout, "Shell started...\nThis is %s.\n\n", FULL_NAME);
-    while (1) {
-        fprintf(stdout, "Human: ");
-        fflush(stdout);
-        char* input = halgetline(stdin);
-        if (0 == input || 0 == strlen(input)) continue;
-        input[strlen(input)-1] = 0;
-        char* copy_of_programming_language = (char*)halmalloc(16, "hal2009_server_statement");
-        strcpy(copy_of_programming_language, programming_language);
-        char* copy_of_language             = (char*)halmalloc(16, "hal2009_server_statement");
-        strcpy(copy_of_language,             language);
-        char* copy_of_base_dir             = (char*)halmalloc(16, "hal2009_server_statement");
-        strcpy(copy_of_base_dir,             base_dir);
-        char* copy_of_input                = (char*)halmalloc(1025, "hal2009_server_statement");
-        strncpy(copy_of_input,               input, 1024);
-        pthread_t answer_thread = hal2009_answer(copy_of_input, copy_of_programming_language, copy_of_language, copy_of_base_dir, NOT_JOIN, MULTI);
-//        sleep(2);
-        pthread_join(answer_thread, NULL);
-    }
-}
-
 void hal2009_handle_signal(void* arg) {
     char* type       = ((void**)arg)[0];
     char* text       = ((void**)arg)[1];
@@ -107,7 +82,7 @@ void hal2009_handle_signal(void* arg) {
     
     if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
-        scanf("%s", text);
+        strcpy(text, "q");
         FILE* target = fopen("_input__pos", "w+b");
         halwrite(text, 1, strlen(text), target);
         halclose(target);
@@ -119,8 +94,8 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
         struct DATASET set = hal2009_get_csv(text);
-        FILE* target = fopen("_input__get_csv", "w+b");
         const char* csv_data = hal2009_make_csv(&set);
+        FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
         halclose(target);
         fprintf(output(), "Release memory now.\n");
