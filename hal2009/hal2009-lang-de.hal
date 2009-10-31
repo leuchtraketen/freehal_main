@@ -3550,9 +3550,9 @@ define action stem_nouns with array phrases do
             #if var noun matches /e<[mnrs]>$/ do
             #    do regex using var noun: /e<[mnrs]>$/, "e*", :global:i
             #done
-            if var noun matches /e$/ do
-                do regex using var noun: /e$/, "*", :global:i
-            done
+            #if var noun matches /e$/ do
+            #    do regex using var noun: /e$/, "*", :global:i
+            #done
             #if var noun matches /<[bdfghklmnrt]>s$/ do
             #    do regex using var noun: /s$/, "*", :global:i
             #done
@@ -3569,13 +3569,13 @@ define action stem_nouns with array phrases do
                     do regex using var noun: /st$/, "*", :global:i
                 done
             done
-            if var noun matches /.....(end|ung)$/ do
-                do regex using var noun: /(end|ung)$/, "*", :global:i
-                
-                #if var noun matches /ig$/ and not var noun matches /eig$/ do
-                #    do regex using var noun: /ig$/, "*", :global:i
-                #done
-            done
+            #if var noun matches /.....(end|ung)$/ do
+            #    do regex using var noun: /(end|ung)$/, "*", :global:i
+            #    
+            #    #if var noun matches /ig$/ and not var noun matches /eig$/ do
+            #    #    do regex using var noun: /ig$/, "*", :global:i
+            #    #done
+            #done
             #if var noun matches /....(ig|ik|isch)$/ and not var noun matches /e(ig|ik|isch)$/ do
             #    do regex using var noun: /(ig|ik|isch)$/, "*", :global:i
             #done

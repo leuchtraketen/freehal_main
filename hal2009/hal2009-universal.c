@@ -107,6 +107,26 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         free(words);
     }
     
+    if (exp[0] == '_' && strlen(exp) > 3) {
+        char* cpy_of_exp = strdup(exp+1);
+        char* offset_of_last_underscore = strstr(cpy_of_exp+strlen(cpy_of_exp)-3, "_");
+        if (offset_of_last_underscore) {
+            offset_of_last_underscore[0] = '\0';
+            struct word**  words    = divide_words(cpy_of_exp+1);
+            synonyms[*position]     = calloc(sizeof(struct word*), strlen(cpy_of_exp)+10);
+            int f, g;
+            for (f = 0, g = 0; words && words[f]; ++f) {
+                if (can_be_a_pointer(words[f])) {
+                    synonyms[*position][g] = words[f];
+                    ++g;
+                }
+            }
+            ++(*position);
+            free(words);
+        }
+        free(cpy_of_exp);
+    }
+    
     debugf("Added synonym %s by string, position is now %p.\n", exp, *position);
     
     return synonyms;
@@ -420,6 +440,31 @@ int matches(const char* a, const char* b) {
             int q = 1;
             for (i = 0; i < size; ++i) {
                 if (c[i] == '*') {
+                    c[i] = '\0';
+                    q = q && strstr(a, c);
+                    c[i] = i >= size-2 ? '\0' : ' ';
+                }
+            }
+            return q;
+        }
+        else {
+            return strstr(a, c);
+        }
+    }
+    if (b[0] == '_' || strstr(b, "_")) {
+        char _c[5123];
+        char* c = _c;
+        strncpy(c, b, 5120);
+        if (c[0] == '_') {
+            ++c;
+            return matches(a, c);
+        }
+        else if (strstr(c, "_")) {
+            int i;
+            int size = strlen(c);
+            int q = 1;
+            for (i = 0; i < size; ++i) {
+                if (c[i] == '_') {
                     c[i] = '\0';
                     q = q && strstr(a, c);
                     c[i] = i >= size-2 ? '\0' : ' ';
