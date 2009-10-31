@@ -151,7 +151,7 @@ if ($_POST[q]) {
 ?> <pre style="height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
 $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('./hal2009-cgi "'.$q.'"', "r");
-while ($read = fread($handle, 4)) {
+while ($read = fread($handle, 4000)) {
 	echo $read;
 }
 pclose($handle);
