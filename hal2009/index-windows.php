@@ -171,7 +171,7 @@ document.getElementById("sc").style.float = "right";
 <?
 	$time = time() - $time;
 @mkdir("log");
-	$content_of_log = file_get_contents("log/$_IP");
+	$content_of_log = @file_get_contents("log/$_IP");
 	$logf = fopen("log/$_IP", "w");
 	fwrite($logf, "<span style=\"color: silver !important;\">$_IP:</span> <b>$_POST[q]</b>\n");
 	fwrite($logf, "<span style=\"color: silver !important; width: 150px !important; display: inline-block;\">FreeHAL:</span>");

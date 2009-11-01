@@ -924,7 +924,7 @@ define action compute_input with var input is rw, var lang, var path do
         set var input to replace_he with var input, var last_male_substantive
     done
     if var last_female_substantive do
-        set var input to replace_he with var input, var last_female_substantive
+        set var input to replace_she with var input, var last_female_substantive
     done
 
     print "Computed input ... ... ", var input
