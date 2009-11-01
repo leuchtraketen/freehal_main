@@ -3486,7 +3486,7 @@ long vtohl(long n);
 #endif
 
 #ifndef __cplusplus
-#if !(defined(UNDER_CE) || defined(SYMBIAN))
+#if !(defined(UNDER_CE) || defined(SYMBIAN) || defined(HALWINDOWS))
 Uid_t getuid (void);
 Uid_t geteuid (void);
 Gid_t getgid (void);
