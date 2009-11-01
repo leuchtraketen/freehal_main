@@ -126,6 +126,10 @@ a:hover {
 <i>This FreeHAL only speaks German! An english version is not yet available.</i><br />
 
 
+<form method="post">
+<input type="text" name="q" />
+<button type="submit">Ask</button>
+</form>
 <?
 
 ob_implicit_flush(true);
@@ -163,16 +167,12 @@ document.getElementById("sc").style.height = 500;
 document.getElementById("sc").style.width = 200;
 document.getElementById("sc").style.float = "right";
 </script>
-<form method="post">
-<input type="text" name="q" />
-<button type="submit">Ask</button>
-</form>
 
 <?
 	$time = time() - $time;
-
+mkdir("log");
 	$content_of_log = file_get_contents("log/$_IP");
-	$logf = fopen("log/$_IP", "2");
+	$logf = fopen("log/$_IP", "w");
 	fwrite($logf, "$_IP: $_POST[q]\n");
 	fwrite($logf, "<span style=\"width: 150px !important; display: inline-block;\">FreeHAL:</span>");
 	$datei = file("lang_de/output.history");
