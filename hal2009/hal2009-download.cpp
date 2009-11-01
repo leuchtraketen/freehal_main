@@ -198,6 +198,7 @@ halstring* cpp_download_from_url(const char* _url) {
         return content;
     }
     catch (boost::system::system_error e) {
+        std::cerr << e.what() << std::endl;
         return 0;
     }
 }
