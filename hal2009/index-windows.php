@@ -163,27 +163,29 @@ document.getElementById("sc").style.height = 500;
 document.getElementById("sc").style.width = 200;
 document.getElementById("sc").style.float = "right";
 </script>
+<form method="post">
+<input type="text" name="q" />
+<button type="submit">Ask</button>
+</form>
+
 <?
 	$time = time() - $time;
 
-	$logf = fopen("log/$_IP", "a");
+	$content_of_log = file_get_contents("log/$_IP");
+	$logf = fopen("log/$_IP", "2");
 	fwrite($logf, "$_IP: $_POST[q]\n");
 	fwrite($logf, "<span style=\"width: 150px !important; display: inline-block;\">FreeHAL:</span>");
 	$datei = file("lang_de/output.history");
 	$letzte_zeile = array_pop($datei);
 	fwrite($logf, trim($letzte_zeile));
 	fwrite($logf, " ($time sec)\n");
+	fwrite($logf, $content_of_log);
 	fclose($logf);
 }
 echo "<div class='pre'>";
 echo str_replace("\n", "<br>", file_get_contents("log/$_IP"));
 echo "</div>";
 ?>
-
-<form method="post">
-<input type="text" name="q" />
-<button type="submit">Ask</button>
-</form>
 
 </div>
 
