@@ -1200,17 +1200,13 @@ void* hal2009_answer_thread(void* parameters) {
     FILE* startfile = fopen(tempfile, "w");
     char* content = halmalloc(1024, "hal2009_answer_thread");
     strcpy(content, ""
-#ifndef HAL2009_CGI_MODE    
     "compile source hal2009-lang-");
     strcat(content, tlanguage);
     strcat(content, ".hal\n"
-#endif
     "require source hal2009-lang-");
     strcat(content, tlanguage);
     strcat(content, ".hal\n"
-#ifndef HAL2009_CGI_MODE    
     "compile source hal2009.hal\n"
-#endif
     "require source hal2009.hal\n"
     "set new var current_language to '");
     strcat(content, tlanguage);
@@ -1218,12 +1214,10 @@ void* hal2009_answer_thread(void* parameters) {
     "set new var path to \"");
     strcat(content, base_dir);
     strcat(content, "\"\n");
-#ifndef HAL2009_CGI_MODE    
     if (start_type == SINGLE) {
         strcat(content, ""
         "do init with var current_language, var path\n");
     }
-#endif
     strcat(content, ""
     "do shell with var current_language, var path\n"
     "do exit with 0");
@@ -1270,9 +1264,7 @@ void hal2009_init(char* planguage, char* tlanguage, char* base_dir) {
     strcat(content, base_dir);
     strcat(content, "\"\n"
     "do init with var current_language, var path\n");
-#ifndef HAL2009_CGI_MODE    
     hal2009_execute_code(content, planguage);
-#endif
     halfree(content);
 }
 
