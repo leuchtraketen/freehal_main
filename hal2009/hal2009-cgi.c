@@ -58,7 +58,7 @@ int main (int argc, char** argv) {
     }
     
     strcpy(input, argv[1]);
-    
+
     hal2009_clean();
     chdir(base_dir);
     
