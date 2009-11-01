@@ -170,7 +170,7 @@ document.getElementById("sc").style.float = "right";
 
 <?
 	$time = time() - $time;
-mkdir("log");
+@mkdir("log");
 	$content_of_log = file_get_contents("log/$_IP");
 	$logf = fopen("log/$_IP", "w");
 	fwrite($logf, "$_IP: $_POST[q]\n");
