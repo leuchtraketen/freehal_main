@@ -623,7 +623,6 @@
 = <> _pandorum__ <> _horrorfilm_ <>  <> 50
 = <> _paranormal_act_4_ity__ <> _horrorfilm_ <>  <> 50
 = <> _parasiten-moerder__ <> _horrorfilm_ <>  <> 50
-= <> _penetration_angst_-_fick_mich_und_du_bist_tot__ <> _horrorfilm_ <>  <> 50
 = <> _pfui_teufel_-_daddy_ist_ein_kannibale__ <> _horrorfilm_ <>  <> 50
 = <> _das_phantom_der_oper__ <> _horrorfilm_ <>  <> 50
 = <> _das_phantom_in_dem_paradies__ <> _horrorfilm_ <>  <> 50

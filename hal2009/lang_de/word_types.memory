@@ -252977,4 +252977,143 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            
+  type: adj            und/oder:
+  type: inter
+count::
+  type: inter
+niederlaendisch-britischer:
+  type: adj
+zusammenhaengend:
+  type: adj
+nordrhein:
+  type: adj
+westfalen:
+  type: adj
+aufgehaengt:
+  type: adj
+gekennzeichnet:
+  type: adj
+unverschiebliche:
+  type: adj
+horizontaler:
+  type: adj
+sichergestellt:
+  type: adj
+sein{{{art}}}:
+  type: inter
+baaz:
+  type: n
+braveheart:
+  type: n
+cagliostro:
+  type: n
+excalibur:
+  type: n
+feuerball:
+  type: n
+feuerwalze:
+  type: n
+goldfieber:
+  type: n
+hatari:
+  type: n
+hook:
+  type: n
+hundra:
+  type: n
+jumanji:
+  type: n
+militia:
+  type: n
+mogambo:
+  type: n
+muenchhausen:
+  type: n
+papillon:
+  type: n
+rocketeer:
+  type: n
+supergirl:
+  type: n
+verwuenscht:
+  type: adj
+astrpa:
+  type: n
+baerenbrueder:
+  type: n
+breakdown:
+  type: n
+casper:
+  type: n
+dinotopia:
+  type: n
+dororo:
+  type: n
+dragonheart:
+  type: n
+hellboy:
+  type: n
+hellphone:
+  type: n
+klick:
+  type: n
+krabat:
+  type: n
+krull:
+  type: n
+mariken:
+  type: n
+mirrormask:
+  type: n
+mondmann:
+  type: n
+moonwalker:
+  type: n
+powder:
+  type: n
+schneewittchen:
+  type: n
+tideland:
+  type: n
+tron:
+  type: n
+turtles:
+  type: n
+willow:
+  type: n
+aag:
+  type: n
+abschiedsblicke:
+  type: n
+aelita:
+  type: n
+afterwards:
+  type: n
+agonia:
+  type: n
+anand:
+  type: n
+apocalypto:
+  type: n
+apostel:
+  type: n
+appaloosa:
+  type: n
+ausgecheckt:
+  type: adj
+australia:
+  type: n
+aviator:
+  type: n
+awake:
+  type: n
+balalayka:
+  type: n
+bandenkrieg:
+  type: n
+bandini:
+  type: n
+hijo:
+  type: n
+algo:
+  type: n

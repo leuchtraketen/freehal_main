@@ -61,3 +61,4 @@
 = <> musicalfilm <> ein eigenname  <> <> 50
 = <> horrorfilm <> ein eigenname  <> <> 50
 = <> filmkomoedie <> ein eigenname  <> <> 50
+= <> monitor <> bildschirm <> <> 50
