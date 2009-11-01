@@ -156,7 +156,7 @@ $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('hal2009-online-demo.exe "'.$q.'"', "r");
 $_log = fopen("last_question.log", "w");
 while ($read = fread($handle, 4000)) {
-	echo $read;
+#	echo $read;
 	fwrite($_log, $read);
 }
 pclose($handle);
