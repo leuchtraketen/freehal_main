@@ -542,20 +542,31 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     }
     
     int count_of_words;
-    for (count_of_words = 0; words[count_of_words] && words[count_of_words]->name; ++count_of_words) {
+    int c;
+    for (c = 0, count_of_words = 0; words[c] && words[c]->name; ++c) {
+        if (!is_a_trivial_word(words[c]->name)) {
+            count_of_words++;
+        }
     }
 
     
     int does_match = 0;
     
+    int request_words_all = 0;
     int u;
     for (u = 0; request_words[u] && request_words[u][0]; ++u) {
         int does_match_with_this_synonym   = 0;
         int should_match_with_this_synonym = 0;
         
         int count_of_words_request;
-        for (count_of_words_request = 0; request_words[u][count_of_words_request] && request_words[u][count_of_words_request]->name; ++count_of_words_request)
-        { }
+        int c;
+        for (c = 0, count_of_words_request = 0; request_words[u][c] && request_words[u][c]->name; ++c)
+        {
+            if (!is_a_trivial_word(request_words[u][c]->name)) {
+                count_of_words_request++;
+            }
+        }
+        request_words_all += count_of_words_request;
         
         int v;
         for (v = 0; request_words[u][v] && request_words[u][v]->name; ++v) {
@@ -580,7 +591,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                         else
                         */
                         if (matches(words[m]->name, request_words[u][v]->name)) {
-                            //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
                         else {
@@ -597,11 +608,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         
         does_match = does_match || (should_match_with_this_synonym && does_match_with_this_synonym == should_match_with_this_synonym);
     }
-    if (u == 0) {
+    if (request_words_all == 0) {
         return -1;
     }
     
-    does_match = does_match || (!u);
+    does_match = does_match || (!request_words_all);
     
     return does_match;
 }
@@ -1809,6 +1820,7 @@ int is_a_trivial_word(const char* word) {
         can_be_a_pointer(word) && (
             0 == strcmp(word, "the")
          || 0 == strcmp(word, "a")
+         || 0 == strcmp(word, "an")
     
          || 0 == strcmp(word, "der")
          || 0 == strcmp(word, "die")
