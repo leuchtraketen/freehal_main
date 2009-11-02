@@ -3662,15 +3662,15 @@ define action shell with var current_language, var path do
                 
                 set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
         
+                set new var time_second to time without arguments
+                set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
+
                 do unlink with '_output'
                 do save_output with var final_output, var current_language, var path
                 set new var output_file_name to '_output'
                 set new var output_handle to handle for file name var output_file_name, write
                 print into var output_handle data var final_output
                 do close with var output_handle
-
-                set new var time_second to time without arguments
-                set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
 
                 print "Final output is..."
                 print new line
