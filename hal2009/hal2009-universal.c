@@ -174,12 +174,65 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
     // add to synonyms matrix
     if (use_what == USE_SUBJECTS) {
         for (f = 0; facts[f]; ++f) {
-            if (   can_be_a_pointer(facts[f])
+printf(",%d%d%d%s%s%s",
+
+can_be_a_pointer(facts[f]),
+
+can_be_a_pointer(facts[f])
+                && can_be_a_pointer(facts[f]->subjects)
+                && can_be_a_pointer(facts[f]->subjects[0])
+                && can_be_a_pointer(facts[f]->subjects[0]->name),
+
+can_be_a_pointer(facts[f])
                 && can_be_a_pointer(facts[f]->subjects)
                 && can_be_a_pointer(facts[f]->subjects[0])
                 && can_be_a_pointer(facts[f]->subjects[0]->name)
-                && can_be_a_synonym(facts[f]->subjects[0]->name)
+                && can_be_a_synonym(facts[f]->subjects[0]->name),
+
+can_be_a_pointer(facts[f])
+                && can_be_a_pointer(facts[f]->subjects)
+                && can_be_a_pointer(facts[f]->subjects[0])
+                && can_be_a_pointer(facts[f]->subjects[0]->name)
+? facts[f]->subjects[0]->name : "a",
+
+can_be_a_pointer(facts[f])
+                && can_be_a_pointer(facts[f]->objects)
+                && can_be_a_pointer(facts[f]->objects[0])
+                && can_be_a_pointer(facts[f]->objects[0]->name)
+? facts[f]->objects[0]->name : "b",
+
+can_be_a_pointer(facts[f])
+                && can_be_a_pointer(facts[f]->verbs)
+                && can_be_a_pointer(facts[f]->verbs[0])
+                && can_be_a_pointer(facts[f]->verbs[0]->name)
+? facts[f]->verbs[0]->name : "c"
+
+);
+            if (   can_be_a_pointer(facts[f])
+                && can_be_a_pointer(facts[f]->subjects)
+                && (
+                (
+                       can_be_a_pointer(facts[f]->subjects[0])
+                    && can_be_a_pointer(facts[f]->subjects[0]->name)
+                    && can_be_a_synonym(facts[f]->subjects[0]->name)
+                )
+                || (
+                       can_be_a_pointer(facts[f]->subjects[0])
+                    && can_be_a_pointer(facts[f]->subjects[1])
+                    && can_be_a_pointer(facts[f]->subjects[1]->name)
+                    && can_be_a_synonym(facts[f]->subjects[1]->name)
+                )
+                || (
+                       can_be_a_pointer(facts[f]->subjects[0])
+                    && can_be_a_pointer(facts[f]->subjects[1])
+                    && can_be_a_pointer(facts[f]->subjects[2])
+                    && can_be_a_pointer(facts[f]->subjects[2]->name)
+                    && can_be_a_synonym(facts[f]->subjects[2]->name)
+                )
+                )
+
             ) {
+printf(";");
                 int c;
                 for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) { }
                 struct word** temp = calloc(sizeof(facts[f]->subjects), (c+2));
@@ -271,6 +324,9 @@ struct word** divide_words(const char* str) {
     int p;
     int length = strlen(str);
     for (p = 0; p < length; ++p) {
+        if ((str[p] == ' ' || str[p] == '-') && (str[p+1] == ' ' || str[p+1] == '-')) {
+            ++p;
+        }
         if (str[p] == ' ' || str[p] == '-') {
             e = p;
             if (e - a > 0) {
@@ -528,7 +584,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             ++does_match_here;
                         }
                         else {
-                            //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }

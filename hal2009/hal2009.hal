@@ -3612,6 +3612,8 @@ done
 define action shell with var current_language, var path do
     set new var input_file_name to '_input'
     set new var input_handle to handle for file name var input_file_name, read
+    
+    set new var time_first to time without arguments
 
     for each new var sentences_as_line_2 from var input_handle is rw do
         do regex using var sentences_as_line_2: /[?]+/, "?", :global
@@ -3666,6 +3668,9 @@ define action shell with var current_language, var path do
                 set new var output_handle to handle for file name var output_file_name, write
                 print into var output_handle data var final_output
                 do close with var output_handle
+
+                set new var time_second to time without arguments
+                set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
 
                 print "Final output is..."
                 print new line
