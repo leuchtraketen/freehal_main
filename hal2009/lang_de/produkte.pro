@@ -21,7 +21,7 @@ besteht <> _ilife_ <>  <> aus _itunes_ <>  <> _imovie_ <>  <>  <>  ;;  <> _iphot
 ist <> _iwork_ <> das office-packet <> von _apple_ <> 50
 ist <> _pages_ <> eine textverarbeitungs-software <> von _apple_ <> 50
 ist <> _numbers_ <> eine tabellenkalkulations-software <> von _apple_ <> 50
-ist <> _keynote_ <> eine präsentations-software <> von _apple_ <> 50
+ist <> _keynote_ <> eine praesentations-software <> von _apple_ <> 50
 besteht <> _iwork_ <>  <> aus _pages_ <>  <> _numbers_ und _keynote_ <>  <>  <>  <> 50
 ist <> _final_cut_ <> eine videobearbeitungs-software <> von _apple_ <> 50
 ist <> _aperture_ <> eine fotobearbeitungs-software <> von _apple_ <> 50
@@ -198,21 +198,21 @@ ist <> _logitech_ <> ein hersteller <> von tastaturen <> 50
 ist <> _logitech_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _logitech_ <> ein hersteller <> von webcams <> 50
 ist <> _cherry_ <> ein hersteller <> von tastaturen <> 50
-ist <> _cherry_ <> ein hersteller <> von computer-mäusen <> 50
+ist <> _cherry_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _microsoft_ <> ein hersteller <> von tastaturen <> 50
-ist <> _microsoft_ <> ein hersteller <> von computer-mäusen <> 50
+ist <> _microsoft_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _wacom_ <> ein hersteller <> von grafik-tablets <> 50
 ist <> _aiptek_ <> ein hersteller <> von grafik-tablets <> 50
 ist <> _ch_products_ <> ein hersteller <> von joysticks <> 50
 ist <> _saitek_ <> ein hersteller <> von joysticks <> 50
 ist <> _saitek_ <> ein hersteller <> von tastaturen <> 50
 ist <> _thrustmaster_ <> ein hersteller <> von joysticks <> 50
-ist <> _ocz_ <> ein hersteller <> von computer-mäusen <> 50
-ist <> _razer_ <> ein hersteller <> von computer-mäusen <> 50
+ist <> _ocz_ <> ein hersteller <> von computer-maeusen <> 50
+ist <> _razer_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _razer_ <> ein hersteller <> von tastaturen <> 50
-ist <> _saitek_ <> ein hersteller <> von computer-mäusen <> 50
+ist <> _saitek_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _saitek_ <> ein hersteller <> von tastaturen <> 50
-ist <> _raptor-gaming_ <> ein hersteller <> von computer-mäusen <> 50
+ist <> _raptor-gaming_ <> ein hersteller <> von computer-maeusen <> 50
 ist <> _raptor-gaming_ <> ein hersteller <> von tastaturen <> 50
 ist <> _apple_ <> ein hersteller <> von tastaturen <> 50
 ist <> _enermax_ <> ein hersteller <> von tastaturen <> 50
@@ -302,6 +302,6 @@ ist <> _pelikan_ <> ein hersteller <> von stiften <> 50
 ist <> _schneider_ <> ein hersteller <> von stiften <> 50
 ist <> _edding_ <> ein hersteller <> von stiften <> 50
 ist <> _faber-castell_ <> ein hersteller <> von stiften <> 50
-ist <> _leitz_ <> ein hersteller <> von büro-bedarf <> 50
-ist <> _belkin_ <> ein hersteller <> von computer-zubehör <> 50
-ist <> _hama_ <> ein hersteller <> von computer-zubehör <> 50
+ist <> _leitz_ <> ein hersteller <> von buero-bedarf <> 50
+ist <> _belkin_ <> ein hersteller <> von computer-zubehoer <> 50
+ist <> _hama_ <> ein hersteller <> von computer-zubehoer <> 50
