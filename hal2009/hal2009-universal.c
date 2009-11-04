@@ -1867,21 +1867,28 @@ int can_be_a_synonym(const char* word) {
     );
 }
 
-const char small_identifier(const char* word) {
-    return (
-          (strlen(word) > 2 && word[0] == '_') ? small_identifier(word+1)
-        : (strlen(word) > 1 
-                            && word[0] != ' '
-                            && word[0] != '-'
-                            && word[0] != '='
-                            && word[0] != '&'
-                            && word[0] != '('
-                            && word[0] != ')'
-                            && word[0] != '<'
-                            && word[0] != '>') ? word[0]
-        : '_'
-    );
+const char* small_identifier(const char* word) {
+    if (strlen(word) > 2 && word[0] == '_') {
+        return small_identifier(word+1);
+    }
+    if (strlen(word) == 0) {
+        return "__";
+    }
+    
+    char identifier[3];
+    identifier[2] = 0;
+    
+    identifier[0] =  word[0] >= 'a' && word[0] <= 'z'
+                  ?  word[0]
+                  :  '_'
+                  ;
+
+    identifier[1] =  word[1]
+                  && word[1] >= 'a' && word[1] <= 'z'
+                  ?  word[1]
+                  :  '_'
+                  ;
+
+    return identifier;
 }
-
-
 

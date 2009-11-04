@@ -425,11 +425,10 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                     strcat(sql, ");");
                 }*/
 
-                const char smid = small_identifier(words[num_of_words]);
+                const char* smid = small_identifier(words[num_of_words]);
                 {
                     strcat(sql, "INSERT OR IGNORE INTO rel_word_fact__");
-                    sql[strlen(sql)+1] = 0;
-                    sql[strlen(sql)] = smid;
+                    strcat(sql, smid);
                     strcat(sql, " (`word`, `fact`, `table`) VALUES (");
                     strcat(sql, "\n\"");
                     strcat(sql, words[num_of_words]);
@@ -523,10 +522,9 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 else {
                     strcat(sql, " rel_word_fact__general AS rel_word_fact ");
                 }*/
-                const char smid = small_identifier(words[n][m]->name);
+                const char* smid = small_identifier(words[n][m]->name);
                 strcat(sql, " rel_word_fact__");
-                sql[strlen(sql)+1] = 0;
-                sql[strlen(sql)] = smid;
+                strcat(sql, smid);
                 strcat(sql, " AS rel_word_fact ");
                 
                 strcat(sql, " WHERE 0 ");
