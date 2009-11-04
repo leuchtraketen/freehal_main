@@ -179,6 +179,7 @@ document.getElementById("sc").style.float = "right";
 	$letzte_zeile = array_pop($datei);
 	fwrite($logf, trim($letzte_zeile));
 #	fwrite($logf, " ($time sec)\n");
+	fwrite($logf, "\n");
 	fwrite($logf, $content_of_log);
 	fclose($logf);
 }
