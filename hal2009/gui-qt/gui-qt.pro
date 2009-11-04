@@ -40,8 +40,7 @@ unix {
     INCLUDEPATH += /usr/include/python2.5/
     INCLUDEPATH += /usr/include/qt4/
     LIBS += -lm \
-        -lboost_thread \
-        -lboost_system-mt
+        -lboost_thread-mt -lboost_system-mt
     TARGET = bin/freehal
     SOURCES += src/speech/speak_linux.cpp
     QMAKE_CXXFLAGS += -g \

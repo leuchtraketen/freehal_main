@@ -155,7 +155,7 @@ if ($_POST[q]) {
 $q = str_replace("\"", "", $_POST[q]);
 $handle = popen('hal2009-online-demo.exe "'.$q.'"', "r");
 $_log = fopen("last_question.log", "w");
-while ($read = fread($handle, 4000)) {
+while ($read = fread($handle, 1000)) {
 #	echo $read;
 	fwrite($_log, $read);
 }
@@ -178,7 +178,7 @@ document.getElementById("sc").style.float = "right";
 	$datei = file("lang_de/output.history");
 	$letzte_zeile = array_pop($datei);
 	fwrite($logf, trim($letzte_zeile));
-	fwrite($logf, " ($time sec)\n");
+#	fwrite($logf, " ($time sec)\n");
 	fwrite($logf, $content_of_log);
 	fclose($logf);
 }
