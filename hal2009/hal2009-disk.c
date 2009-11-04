@@ -413,15 +413,33 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
             if (words[num_of_words][0] != '0') {
-                strcat(sql, "INSERT OR IGNORE INTO rel_word_fact (`word`, `fact`, `table`) VALUES (");
-                strcat(sql, "\n\"");
-                strcat(sql, words[num_of_words]);
-                strcat(sql, "\", \n");
-                strcat(sql, key);
-                strcat(sql, ", \n\"");
-                strcat(sql, rel ? "clauses" : "facts");
-                strcat(sql, "\"");
-                strcat(sql, ");");
+                /*{
+                    strcat(sql, "INSERT OR IGNORE INTO rel_word_fact__general (`word`, `fact`, `table`) VALUES (");
+                    strcat(sql, "\n\"");
+                    strcat(sql, words[num_of_words]);
+                    strcat(sql, "\", \n");
+                    strcat(sql, key);
+                    strcat(sql, ", \n\"");
+                    strcat(sql, rel ? "clauses" : "facts");
+                    strcat(sql, "\"");
+                    strcat(sql, ");");
+                }*/
+
+                const char smid = small_identifier(words[num_of_words]);
+                {
+                    strcat(sql, "INSERT OR IGNORE INTO rel_word_fact__");
+                    sql[strlen(sql)+1] = 0;
+                    sql[strlen(sql)] = smid;
+                    strcat(sql, " (`word`, `fact`, `table`) VALUES (");
+                    strcat(sql, "\n\"");
+                    strcat(sql, words[num_of_words]);
+                    strcat(sql, "\", \n");
+                    strcat(sql, key);
+                    strcat(sql, ", \n\"");
+                    strcat(sql, rel ? "clauses" : "facts");
+                    strcat(sql, "\"");
+                    strcat(sql, ");");
+                }
 
                 free(words[num_of_words]);
                 words[num_of_words] = 0;
@@ -455,14 +473,14 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
 
     char* sql = malloc(512000);
     *sql = 0;
+    int n, m, q;
     
     if (0 == can_be_a_pointer(words[0])) {
         return sql;
     }
-    
+
     strcat(sql, "delete from cache_facts ");
 
-    int n, m, q;
     int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
     for (n = 0; can_be_a_pointer(words[n]); ++n) {
@@ -485,21 +503,36 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         }
         
         for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
-            if (n == 0 || n % 30 == 0) {
-                if (in_bracket) {
-                    strcat(sql, ")");
-                    in_bracket = 0;
-                }
-                strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM rel_word_fact WHERE 0 ");
-                in_bracket = 1;
-            }
-
             if (is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
             if (is_bad(words[n][m]->name)) {
                 continue;
             }
+
+            //if (n == 0 || n % 30 == 0) {
+            {
+                if (in_bracket) {
+                    strcat(sql, ")");
+                    in_bracket = 0;
+                }
+                strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM ");
+                /*if (0 == strcmp(part_of_database, "freehal")) {
+                    strcat(sql, " rel_word_fact__freehal AS rel_word_fact ");
+                }
+                else {
+                    strcat(sql, " rel_word_fact__general AS rel_word_fact ");
+                }*/
+                const char smid = small_identifier(words[n][m]->name);
+                strcat(sql, " rel_word_fact__");
+                sql[strlen(sql)+1] = 0;
+                sql[strlen(sql)] = smid;
+                strcat(sql, " AS rel_word_fact ");
+                
+                strcat(sql, " WHERE 0 ");
+                in_bracket = 1;
+            }
+
             
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
                 if (strstr(words[n][m]->name+1, "*")) {

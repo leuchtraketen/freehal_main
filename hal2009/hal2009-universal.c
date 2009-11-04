@@ -595,7 +595,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             ++does_match_here;
                         }
                         else {
-                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+//                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
@@ -1866,3 +1866,22 @@ int can_be_a_synonym(const char* word) {
          :  0
     );
 }
+
+const char small_identifier(const char* word) {
+    return (
+          (strlen(word) > 2 && word[0] == '_') ? small_identifier(word+1)
+        : (strlen(word) > 1 
+                            && word[0] != ' '
+                            && word[0] != '-'
+                            && word[0] != '='
+                            && word[0] != '&'
+                            && word[0] != '('
+                            && word[0] != ')'
+                            && word[0] != '<'
+                            && word[0] != '>') ? word[0]
+        : '_'
+    );
+}
+
+
+
