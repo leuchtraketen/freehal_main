@@ -2297,6 +2297,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
+        if var final_sentence matches /[>][>][>]/ do
+            # TEXT
+            # A Sentence must not end with e.g. dachte
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
         if lc(var final_sentence) matches / (ist|sind|sein|equal.?.?.?) (ein.?.?)? (name|eigenname)/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
