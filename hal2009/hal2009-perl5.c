@@ -52,12 +52,16 @@ void xs_init (pTHX);
 #endif
 
 /* PERL 5 convert functions */
-static inline void convert_to_perl5_structure (halstring* hals) {
+static inline void convert_to_perl5_structure (halstring* hals, int just_compile) {
     hals = replace(hals, "\r", "");
     if (strstr(hals->s, "compile source " )) {
         hals = replace(hals, "compile source ", "");
         convert_to_perl5_convert_file(hals->s);
         strcpy(hals->s, "");
+        return;
+    }
+
+    if (just_compile) {
         return;
     }
     
@@ -317,6 +321,10 @@ static inline void convert_to_perl5_structure (halstring* hals) {
         hals = replace(hals, " the next line from ", " <");
         strcat(hals->s, ">");
     }
+    if (strstr(hals->s, " all lines from " )) {
+        hals = replace(hals, " all lines from ", " <");
+        strcat(hals->s, ">");
+    }
     if (strstr(hals->s, "set " ) && strstr(hals->s, " to" )) {
         hals = replace(hals, "set ", "");
         hals = replace(hals, " set to ", " = ");
@@ -366,7 +374,7 @@ static inline void convert_to_perl5_structure (halstring* hals) {
     return;
 }
 
-char* convert_to_perl5 (char* hals) {
+char* convert_to_perl5 (char* hals, int just_compile) {
     int number_of_lines;
     halstring string;
     string.s = hals;
@@ -400,7 +408,7 @@ char* convert_to_perl5 (char* hals) {
         s.s = newline;
         s.do_free = 1;
         
-        convert_to_perl5_structure(&s);
+        convert_to_perl5_structure(&s, just_compile);
         strcat(newcode, s.s);
         strcat(newcode, "\n");
         if ( lines[current_line]->do_free )
@@ -440,31 +448,57 @@ int convert_to_perl5_convert_file(char* filename) {
     stat(filename, &stbuf);
     int file_size = &stbuf ? stbuf.st_size : 0;
     char* code = halmalloc(file_size+1, "convert_to_perl5_convert_file");
-    
     fread(code, 1, file_size, source);
     halclose(source);
     
-    FILE* target;
+    int just_compile = 0;
+    /// Look whether nothing has changed
     {
-        char targetname[100];
-        strcpy(targetname, filename);
-        strcat(targetname, ".pl");
-        
-        target = fopen(targetname, "w");
+        char* filename_tmp = calloc(strlen(filename)+10, 1);
+        strcpy(filename_tmp, filename);
+        strcat(filename_tmp, ".tmp");
+        FILE* source_tmp = fopen(filename_tmp, "r");
+        if ( !source_tmp ) {
+            fprintf(output(), "\nPerl5 source file not found(1): %s\n", filename_tmp);
+        }
+        else {
+            stat(filename_tmp, &stbuf);
+            file_size = &stbuf ? stbuf.st_size : 0;
+            char* code_tmp = halmalloc(file_size+1, "convert_to_perl5_convert_file");
+            fread(code_tmp, 1, file_size, source_tmp);
+            halclose(source_tmp);
+
+            if (0 == strcmp(code, code_tmp) && !strstr(filename, "temp")) {
+                fprintf(output(), "Nothing has changed in %s\n", filename);
+                just_compile = 1;
+            }
+        }
+        FILE* target;
+        target = fopen(filename_tmp, "w");
+        halwrite(code, 1, strlen(code), target);
+        halclose(target);
+        halfree(filename_tmp);
     }
-    if ( !target ) {
-        fprintf(output(), "\nPerl5 source file: unable to create: %s\n", filename);
-        return 1;
-    }
+    
     fprintf(output(), "Compile %s (filesize is %i)...", filename, file_size);
-    char* targetcode;
-    {
-        targetcode = convert_to_perl5(code);
+    char* targetcode = convert_to_perl5(code, just_compile);
+    if (!just_compile) {
+        FILE* target;
+        {
+            char targetname[100];
+            strcpy(targetname, filename);
+            strcat(targetname, ".pl");
+            
+            target = fopen(targetname, "w");
+        }
+        if ( !target ) {
+            fprintf(output(), "\nPerl5 source file: unable to create: %s\n", filename);
+            return 1;
+        }
+        halwrite(targetcode, 1, strlen(targetcode), target);
+        halclose(target);
+        halfree(targetcode);
     }
-    // DEBUG: fprintf(output(), "%s\n", targetcode);
-    halwrite(targetcode, 1, strlen(targetcode), target);
-    halclose(target);
-    halfree(targetcode);
 
     if (last_filename)
         free(last_filename);
