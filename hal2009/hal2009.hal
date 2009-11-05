@@ -428,10 +428,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
     print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push into that array: from hash content_of_memory_file item { var file_name } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
-        do push into that array: from hash content_of_memory_file item { var file_name } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+        do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
 
     do close with var output_handle
@@ -443,10 +443,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
     print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
-        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
     
 
@@ -477,10 +477,10 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         set items of array lines to all lines from var input_handle
         for each new var line in array lines is rw do
             # no line ending
-#            do regex using var line: /<[\r\n]>/, "", :global
+            do regex using var line: /<[\r\n]>/, "", :global
             
             if var line matches /^ / do
-                do push into that array: from hash content_of_memory_file item { var file_name } item { substr(var entry, 0, 2) } item { var entry } end-items-of, var line
+                do push into that array: from hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
             done
             else do
                 set var entry to var line
@@ -497,15 +497,15 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     do regex using var name_of_entry: /[\[\]]/, "", :global:i
     
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat var end_of_entry_line }
+        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
     done
     do regex using var name_of_entry: /[\(\)]/, "", :global:i
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat var end_of_entry_line }
+        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
     done
     for each new var suffix in array standard_suffixes do
         if (not array contents) or is an empty array contents do
-            set array contents to from hash content_of_memory_file item { var file_name } item { substr(var name_of_entry, 0, 2) } item { var name_of_entry concat var suffix concat var end_of_entry_line }
+            set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix concat var end_of_entry_line }
         done
     done
     
@@ -2221,7 +2221,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         push into array sentence, items of array proper_verbs
                     done
                     else do
-                        if from array clause item [3] matches /.../ do
+                        if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s/ do
                             push into array sentence, from array clause item [3]
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [1]
