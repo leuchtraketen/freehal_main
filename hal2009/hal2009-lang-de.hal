@@ -1619,6 +1619,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'vor' => "prep",
           'nach' => "prep",
           'zurueck' => "prep",
+          '~~~' => "vi",
+          'internet' => "n",
           'weg' => "prep",
           'zer' => "prep",
           'her' => "prep",
