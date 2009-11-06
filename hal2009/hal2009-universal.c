@@ -595,14 +595,15 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             ++does_match_here;
                         }
                         else {
-//                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            if (strstr(words[m]->name, "apfel") || strstr(request_words[u][v]->name, "apfel"))
+                                debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
                 }
             }
             
-            does_match_with_this_synonym   += (does_match_here && (does_match_here == should_match_here || does_match_here >= should_match_here + 1 - count_of_words_request)) ? 1 : 0;
+            does_match_with_this_synonym   += (does_match_here > 0 && (does_match_here == should_match_here || does_match_here >= should_match_here + (count_of_words_request>=2?3:1) - (count_of_words_request>=2?3:count_of_words_request))) ? 1 : 0;
             should_match_with_this_synonym += 1;
         }
         
@@ -611,8 +612,6 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     if (request_words_all == 0) {
         return -1;
     }
-    
-    does_match = does_match || (!request_words_all);
     
     return does_match;
 }
@@ -1835,6 +1834,10 @@ int is_a_trivial_word(const char* word) {
          || 0 == strcmp(word, "einen")
          || 0 == strcmp(word, "eines")
          || 0 == strcmp(word, "nicht")
+    
+         || 0 == strcmp(word, "sehr")
+         || 0 == strcmp(word, "viel")
+         || 0 == strcmp(word, "viele")
         )
          ?  1
          :  0
