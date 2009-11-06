@@ -478,10 +478,11 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         return sql;
     }
 
-    strcat(sql, "delete from cache_facts ");
+    strcat(sql, "delete from cache_facts ; delete from cache_indices ");
 
     int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
+    char* last_smid = 0;
     for (n = 0; can_be_a_pointer(words[n]); ++n) {
         int is_new = 1;
         if (can_be_a_pointer(words[n][0])) {
@@ -510,26 +511,28 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             }
 
             //if (n == 0 || n % 30 == 0) {
-            {
+            const char* smid = small_identifier(words[n][m]->name);
+            if (!last_smid || strcmp(last_smid, smid)) {
                 if (in_bracket) {
                     strcat(sql, ")");
                     in_bracket = 0;
                 }
-                strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM ");
+                //strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM ");
+                strcat(sql, " ; INSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
                 /*if (0 == strcmp(part_of_database, "freehal")) {
                     strcat(sql, " rel_word_fact__freehal AS rel_word_fact ");
                 }
                 else {
                     strcat(sql, " rel_word_fact__general AS rel_word_fact ");
                 }*/
-                const char* smid = small_identifier(words[n][m]->name);
                 strcat(sql, " rel_word_fact__");
                 strcat(sql, smid);
                 strcat(sql, " AS rel_word_fact ");
                 
                 strcat(sql, " WHERE 0 ");
-                in_bracket = 1;
+                //in_bracket = 1;
             }
+            last_smid = strdup(smid);
 
             
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
@@ -556,10 +559,14 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             }
         }
     }
+    if (last_smid)
+        free(last_smid);
     if (in_bracket) {
         strcat(sql, ")");
     }
     strcat(sql, ";");
+    strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT i FROM cache_indices);");
+                
     strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");

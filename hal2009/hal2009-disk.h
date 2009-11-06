@@ -115,6 +115,10 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_v2_rel_verb_verb` ON `rel_verb_verb` (`v2`);"
 
 
+"CREATE TABLE `cache_indices` (`i` integer);"
+"CREATE INDEX `idx_i_cache_indices` ON `cache_indices` (`i`);"
+
+
 //"CREATE TABLE `rel_word_fact__a` (`word` varchar(50), `fact` INTEGER, `table` varchar(50), "
 //"UNIQUE(`word`, `fact`));"
 //"CREATE INDEX `idx_rel_word_fact_word` ON `rel_word_fact` (`word`);"
