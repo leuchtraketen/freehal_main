@@ -3517,6 +3517,8 @@ define action init_pro_files with var current_language, var path do
             for each new var line from var check_input_handle_two is rw do
                 set var j to var j + 1 + length(var line)
             done
+            
+            print var i concat "<->" concat var j
 
             if not var i is var j do
 
