@@ -174,40 +174,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
     // add to synonyms matrix
     if (use_what == USE_SUBJECTS) {
         for (f = 0; facts[f]; ++f) {
-printf(",%d%d%d%s%s%s",
 
-can_be_a_pointer(facts[f]),
-
-can_be_a_pointer(facts[f])
-                && can_be_a_pointer(facts[f]->subjects)
-                && can_be_a_pointer(facts[f]->subjects[0])
-                && can_be_a_pointer(facts[f]->subjects[0]->name),
-
-can_be_a_pointer(facts[f])
-                && can_be_a_pointer(facts[f]->subjects)
-                && can_be_a_pointer(facts[f]->subjects[0])
-                && can_be_a_pointer(facts[f]->subjects[0]->name)
-                && can_be_a_synonym(facts[f]->subjects[0]->name),
-
-can_be_a_pointer(facts[f])
-                && can_be_a_pointer(facts[f]->subjects)
-                && can_be_a_pointer(facts[f]->subjects[0])
-                && can_be_a_pointer(facts[f]->subjects[0]->name)
-? facts[f]->subjects[0]->name : "a",
-
-can_be_a_pointer(facts[f])
-                && can_be_a_pointer(facts[f]->objects)
-                && can_be_a_pointer(facts[f]->objects[0])
-                && can_be_a_pointer(facts[f]->objects[0]->name)
-? facts[f]->objects[0]->name : "b",
-
-can_be_a_pointer(facts[f])
-                && can_be_a_pointer(facts[f]->verbs)
-                && can_be_a_pointer(facts[f]->verbs[0])
-                && can_be_a_pointer(facts[f]->verbs[0]->name)
-? facts[f]->verbs[0]->name : "c"
-
-);
             if (   can_be_a_pointer(facts[f])
                 && can_be_a_pointer(facts[f]->subjects)
                 && (
