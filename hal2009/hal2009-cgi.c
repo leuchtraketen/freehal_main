@@ -47,6 +47,9 @@ int main (int argc, char** argv) {
     strcpy(language, "de");
     strcpy(base_dir, ".");
     strcpy(sql_engine, "disk");
+    if (argc > 1) {
+        strcpy(sql_engine, argv[2]);
+    }
 
     {
         char* sqlite_filename = calloc(OPTION_SIZE + 1, 1);
