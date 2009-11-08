@@ -100,7 +100,7 @@ struct word* ram_get_word(const char* name) {
     int g;
     for (g = 0; g < ram_net[i][k]->size; ++g) {
         if (length == list[g]->length && 0 == strcmp(list[g]->name, name)) {
-            debugf("found: %s = %d.\n", name, list[g]);
+            //debugf("found: %s = %d.\n", name, list[g]);
             return list[g];
         }
     }
@@ -125,7 +125,7 @@ int insert_fact_by_list_into_ram_net(struct word** list, struct fact* fact) {
         list[n]->related_facts->list[list[n]->related_facts->size] = fact;
         ++(list[n]->related_facts->size);
 
-        debugf("added fact %d to word %s (%d)\n", fact, list[n]->name, list[n]);
+        //debugf("added fact %d to word %s (%d)\n", fact, list[n]->name, list[n]);
     }
     
     
@@ -290,7 +290,7 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
                 }
                 if (add_the_fact) {
                     facts[*position] = words[n][m]->related_facts->list[z];
-                    debugf("Added fact no %d at %d.\n", *position, facts[*position]);
+                    //debugf("Added fact no %d at %d.\n", *position, facts[*position]);
                     ++(*position);
                 }
             }
