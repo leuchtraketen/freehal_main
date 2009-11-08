@@ -1035,8 +1035,8 @@ void* hal2009_signal_handler(void* parameters) {
     halclose(signal_handler_lock);
     
     
-    int number_of_files_to_check = 6;
-    char files_to_check[7][100] = { "_output", "_output__link", "_output__pos", "_output__add_pro_file", "_output__get_csv", "_exit" };
+    int number_of_files_to_check = 7;
+    char files_to_check[8][100] = { "_output", "_output__link", "_output__pos", "_output__add_pro_file", "_output__get_csv", "_exit", "_cgi_request" };
     int i;
     
     while ( 1 ) {
@@ -1162,7 +1162,10 @@ pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* ba
     if ( join == JOIN ) {
         pthread_join(thread_no_1, NULL);
     }
-    sleep(1);
+    //sleep(1);
+    
+    target = fopen("_done", "w");
+    halclose(target);
 
     return thread_no_1;
 }

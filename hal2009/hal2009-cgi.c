@@ -28,15 +28,18 @@
 
 #define OPTION_SIZE 512
 
+char* base_dir;
+char* programming_language;
+char* language;
+
 int main (int argc, char** argv) {
     char* method = calloc(OPTION_SIZE + 1, 1);
-    char* input = calloc(OPTION_SIZE + 1, 1);
-    char* programming_language = calloc(OPTION_SIZE + 1, 1);
     char* compile_file = calloc(OPTION_SIZE + 1, 1);
     char* execute_file = calloc(OPTION_SIZE + 1, 1);
     char* doc_file = calloc(OPTION_SIZE + 1, 1);
-    char* base_dir = calloc(OPTION_SIZE + 1, 1);
-    char* language = calloc(OPTION_SIZE + 1, 1);
+    base_dir = calloc(OPTION_SIZE + 1, 1);
+    programming_language = calloc(OPTION_SIZE + 1, 1);
+    language = calloc(OPTION_SIZE + 1, 1);
     sql_engine = calloc(OPTION_SIZE + 1, 1);
     char* exe_name = argv[0];
     int c;
@@ -60,20 +63,15 @@ int main (int argc, char** argv) {
         sql_sqlite_set_filename(sqlite_filename);
     }
     
-    strcpy(input, argv[1]);
-
     hal2009_clean();
     chdir(base_dir);
     
-    char* copy_of_programming_language = (char*)halmalloc(16, "hal2009_server_statement");
-    strcpy(copy_of_programming_language, programming_language);
-    char* copy_of_language             = (char*)halmalloc(16, "hal2009_server_statement");
-    strcpy(copy_of_language,             language);
-    pthread_t signal_thread = hal2009_start_signal_handler(copy_of_programming_language, copy_of_language, SINGLE);
-    sleep(2);
-    pthread_t answer_thread = hal2009_answer(input, programming_language, language, base_dir, NOT_JOIN, SINGLE);
-    //pthread_join(signal_thread, NULL);
-    pthread_join(answer_thread, NULL);
+    pthread_t signal_thread = hal2009_start_signal_handler(strdup(programming_language), strdup(language), MULTI);
+    hal2009_init(strdup(programming_language), strdup(language), strdup(base_dir));
+
+    while (1) {
+        sleep(1);
+    }
     
     return 0;
 }
@@ -107,11 +105,13 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
-        ///pthread_exit(0);
-        exit(0);
     }
-    else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
-        exit(0);
+    else if (0 == strcmp(type, "_cgi_request")) {
+        unlink("_cgi_answer");
+        char* input = calloc(OPTION_SIZE + 1, 1);
+        strcpy(input, text);
+
+        pthread_t answer_thread = hal2009_answer(strdup(input), strdup(programming_language), strdup(language), strdup(base_dir), NOT_JOIN, MULTI);
     }
 }
 
