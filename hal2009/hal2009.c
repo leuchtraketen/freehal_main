@@ -1165,6 +1165,7 @@ pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* ba
     //sleep(1);
     
     target = fopen("_done", "w");
+    halwrite("1", 1, strlen("1"), target);
     halclose(target);
 
     return thread_no_1;
