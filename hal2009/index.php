@@ -180,7 +180,10 @@ $input_file = fopen("_cgi_request", "w");
 fwrite($input_file, $q);
 fclose($input_file);
 unlink("_done");
-while (!file_get_contents("_done")) {
+sleep(2);
+unlink("_done");
+
+while (!@file_get_contents("_done")) {
 	sleep(1);
 }
 unlink("_done");
