@@ -123,14 +123,36 @@ a:hover {
 
 	</p>
 
-<i>This FreeHAL only speaks German! An english version is not yet available.</i><br />
+</p>
+
+<ul>
+<li>- Freehal ist ein Forschungsprojekt und kein Chatbot. Freehal arbeitet nach
+den Grundlagen der deutschen Sprache. </li>
+
+<li>- Wenn ihr euch mit Freehal unterhaltet, dann bitte in klaren, kurzen S&auml;tzen.
+Freehal zerlegt die S&auml;tze nach den Regeln der deutschen Grammatik &nbsp;&nbsp;und sucht
+auf dieser Basis nach m&ouml;glichen Antworten. </li>
+
+<li>- Auf Eingaben wie "Und was machste", "Was haste an", "Wie alt" oder "Woher"
+werdet ihr keine vern&uuml;nftige Antwort erhalten. </li>
+
+<li>- Mit vern&uuml;nftigen Dialogen helft ihr auch dem Team Freehal weiter zu
+entwickeln und so zur positiven Entwicklung des Projektes beizutragen. </li>
+
+<li><br /><div
+ style="text-align: center;"><span
+ style="font-weight: bold;">Diese Onlineversion von Freehal
+ben&ouml;etigt zwischen 15 und 30 Sekunden f&uuml;er eine Antwort. Bitte nicht
+ungeduldig werden.</span></div></li>
+
+</ul><br />
 
 
 <form method="post">
 <input type="text" name="q" />
 <button type="submit">Ask</button>
 </form>
-<?
+<?php
 
 ob_implicit_flush(true);
 ob_end_flush();
@@ -151,16 +173,17 @@ if ($_POST[q]) {
 	$_POST[q] = str_replace("Ü", "Ue", $_POST[q]);
 
 	$time = time();
-?> <pre style="display: none; height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?
+?> <pre style="display: none; height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?php
 $q = str_replace("\"", "", $_POST[q]);
-$handle = popen('hal2009-online-demo.exe "'.$q.'"', "r");
-$_log = fopen("last_question.log", "w");
-while ($read = fread($handle, 1000)) {
-#	echo $read;
-	fwrite($_log, $read);
+
+$input_file = fopen("_cgi_request", "w");
+fwrite($input_file, $q);
+fclose($input_file);
+unlink("_done");
+while (!file_get_contents("_done")) {
+	sleep(1);
 }
-pclose($handle);
-fclose($_log);
+unlink("_done");
 ?> </pre>
 <script type="text/javascript">
 document.getElementById("sc").style.height = 500;
@@ -168,7 +191,7 @@ document.getElementById("sc").style.width = 200;
 document.getElementById("sc").style.float = "right";
 </script>
 
-<?
+<?php
 	$time = time() - $time;
 @mkdir("log");
 	$content_of_log = @file_get_contents("log/$_IP");
@@ -178,13 +201,12 @@ document.getElementById("sc").style.float = "right";
 	$datei = file("lang_de/output.history");
 	$letzte_zeile = array_pop($datei);
 	fwrite($logf, trim($letzte_zeile));
-#	fwrite($logf, " ($time sec)\n");
-	fwrite($logf, "\n");
+  fwrite($logf, "\n");  
 	fwrite($logf, $content_of_log);
 	fclose($logf);
 }
 echo "<div class='pre'>";
-echo str_replace("\n", "<br>", file_get_contents("log/$_IP"));
+echo str_replace("\n", "<br>", @file_get_contents("log/$_IP"));
 echo "</div>";
 ?>
 
