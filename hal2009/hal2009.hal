@@ -1932,6 +1932,16 @@ define action logic with var input, var lang, var path, hash parsed do
         set new var primary_key to shift with items of array rawresult
         
         # TEXT
+        # Be sure that the modal verbs are matched
+        # CODE
+        set new var modal_verb_template to var verb_flag_want concat var verb_flag_must concat var verb_flag_can concat var verb_flag_may concat var verb_flag_should
+        if not from array rawresult item [ 0 ] matches /var modal_verb_template/ do
+            print "Not matching to: " concat var modal_verb_template
+            print new line
+            go to next
+        done
+        
+        # TEXT
         # Divide main clause and sub clauses
         # CODE
         push into array result, an empty array

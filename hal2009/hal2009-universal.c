@@ -1504,19 +1504,14 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         if (!can_be_a_pointer(list) || !count_list(list)) {
             printf("We do.\n");
             
-            if (wiki_begin()) {
-                printf("'not meant' search is allowed.\n");
+            printf("'not meant' search is allowed.\n");
                 
-                struct fact** _list = search_facts_wiki(subjects, CONTINUE);
-                if (can_be_a_pointer(_list)) {
-                    if (can_be_a_pointer(list)) {
-                        free(list);
-                    }
-                    list = _list;
+            struct fact** _list = search_facts_wiki(subjects, CONTINUE);
+            if (can_be_a_pointer(_list)) {
+                if (can_be_a_pointer(list)) {
+                    free(list);
                 }
-            }
-            else {
-                printf("'not meant' search is NOT allowed.\n");
+                list = _list;
             }
         }
     }
@@ -1542,7 +1537,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     
     printf("Do we need the wiki search?\n");
     
-    if (!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) {
+    if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strlen(adverbs) >= 3) {
         printf("No, no what-context.\n");
     }
     else if (!can_be_a_pointer(list) || !count_list(list)) {

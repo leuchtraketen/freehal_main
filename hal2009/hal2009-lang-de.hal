@@ -2144,6 +2144,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'mehrmals' => "adj",
           'berg' => "n",
           'haeltst' => "vt",
+          'trage' => "vi",
           'duerfen' => "vt",
           'verwendet' => "vt",
           'hirn' => "n",
@@ -4214,7 +4215,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             go to next
         done
         
-        if var phrase matches /\s($prefix)(<[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?)(\s|$)/ do
+        if var phrase matches /\s($prefix)(<[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?)(\s|$)/ do
             print "possible verb: "
             print lc( $0 concat $1 )
             print " = "
@@ -4222,21 +4223,22 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             print new line
             
             if (not from hash tags item { lc( $0 concat $1 ) } first item matches /v/) or from hash tags item { lc( $0 concat $1 ) } first item matches /adv/ or from hash tags item { lc( $0 concat $1 ) } first item matches /adj/ do
+                print "no verb to replace... (1)"
+                print new line
                 go to next
             done
             
-            if var phrase matches /\s(<[a-zA-Z0-9]>+?)\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
-                if (not from hash tags item { lc( $0 ) } first item matches /v/) or from hash tags item { lc( $0 ) } first item matches /adv/ or from hash tags item { lc( $0 ) } first item matches /adj/ do
-                    go to next
-                done
-            done
+            #if var phrase matches /(^|\s)(<[a-zA-Z0-9]>+?)\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
+            #    if (not from hash tags item { lc( $0 ) } first item matches /v/) or from hash tags item { lc( $0 ) } first item matches /ad./ do
+            #        print "no verb to replace... (2)"
+            #        print new line
+            #        go to next
+            #    done
+            #done
             
-            do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s.*?)$/, " $1$2 $0", :global
+            do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)<[,]>/, " $1$2 $0,", :global
+            do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)$/, " $1$2 $0", :global
         done
-        
-        #do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)\s(<[a-zA-Z0-9]>+?)\s/, " $1 $2 $0 ", :global
-        
-        #do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)$/, " $1 $0", :global
     done
     
     do return with var phrase

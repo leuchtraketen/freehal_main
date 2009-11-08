@@ -305,6 +305,29 @@ int hal2009_add_pro_file (char* filename) {
                     r.verb_flag_may     = 0;
                     r.verb_flag_should  = 0;
                     
+                    if (strstr(r.verb, "/")) {
+                        if (strstr(r.verb, "/want")) {
+                            r.verb_flag_want = 1;
+                            strcpy(strstr(r.verb, "/want"), strstr(r.verb, "/want")+5);
+                        }
+                        if (strstr(r.verb, "/must")) {
+                            r.verb_flag_must = 1;
+                            strcpy(strstr(r.verb, "/must"), strstr(r.verb, "/must")+5);
+                        }
+                        if (strstr(r.verb, "/can")) {
+                            r.verb_flag_can = 1;
+                            strcpy(strstr(r.verb, "/can"), strstr(r.verb, "/can")+4);
+                        }
+                        if (strstr(r.verb, "/may")) {
+                            r.verb_flag_may = 1;
+                            strcpy(strstr(r.verb, "/may"), strstr(r.verb, "/may")+4);
+                        }
+                        if (strstr(r.verb, "/should")) {
+                            r.verb_flag_should = 1;
+                            strcpy(strstr(r.verb, "/should"), strstr(r.verb, "/should")+7);
+                        }
+                    }
+                    
                     r.prio = 50;
                     
                     buffer = strtok(NULL, "^");

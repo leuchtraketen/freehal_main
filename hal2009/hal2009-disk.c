@@ -609,7 +609,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
 }
 
 struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || (questionword && questionword[0] == ')')) {
+    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
 
@@ -628,7 +628,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
 }
 
 struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
-    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs)) || (questionword && questionword[0] == ')')) {
+    if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
 
