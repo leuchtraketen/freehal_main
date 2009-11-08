@@ -1163,10 +1163,6 @@ pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* ba
         pthread_join(thread_no_1, NULL);
     }
     //sleep(1);
-    
-    target = fopen("_done", "w");
-    halwrite("1", 1, strlen("1"), target);
-    halclose(target);
 
     return thread_no_1;
 }
@@ -1244,6 +1240,13 @@ void* hal2009_answer_thread(void* parameters) {
     halfree(input);
     
     halfree(parameters);
+    
+    {
+        FILE* file_done = fopen("_done", "w");
+        halwrite("1", 1, strlen("1"), file_done);
+        halclose(file_done);
+    }
+    
     pthread_exit(0);
     return 0;
 }
