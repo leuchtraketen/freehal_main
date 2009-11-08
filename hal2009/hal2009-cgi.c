@@ -50,8 +50,8 @@ int main (int argc, char** argv) {
     strcpy(language, "de");
     strcpy(base_dir, ".");
     strcpy(sql_engine, "disk");
-    if (argc > 1) {
-        strcpy(sql_engine, argv[2]);
+    if (argc >= 2) {
+        strcpy(sql_engine, argv[1]);
     }
 
     {
