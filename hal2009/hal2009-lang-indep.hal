@@ -391,6 +391,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^\s+/, "", :global
     do regex using var input: /^you know (wh)/, "$0", :global:i
     
+    do regex using var input: /world wide web/, "_world_wide_web_", :global:i
     do regex using var input: /Hersteller von/, "Hersteller fuer", :global
     
     do regex using var input: /^\s+/, "", :global
