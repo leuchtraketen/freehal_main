@@ -568,7 +568,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT i FROM cache_indices);");
                 
     strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth` ");
-    strcat(sql, " FROM cache_facts AS nmain"); // LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact
+    strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
     
     return sql;
