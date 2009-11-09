@@ -3495,10 +3495,10 @@ define action stem_nouns with array phrases do
                 if var noun matches /^ein.?.?$/ do
                     do regex using var noun: /^ein.?.?$/, "*", :global:i
                 done
-                if var noun matches /ein.?.?$/ do
+                if var noun matches /^ein.?.?$/ do
                     do regex using var noun: /ein.?.?$/, "ei*", :global:i
                 done
-                if var noun matches /ein$/ do
+                if var noun matches /^ein$/ do
                     do regex using var noun: /ein$/, "*", :global:i
                 done
             done
