@@ -569,7 +569,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                 }
             }
             
-            does_match_with_this_synonym   += (does_match_here > 0 && (does_match_here == should_match_here || does_match_here+1 >= should_match_here + (count_of_words_request>=2?3:1) - (count_of_words_request>=2?3:count_of_words_request))) ? 1 : 0;
+            does_match_with_this_synonym   += (does_match_here > 0); // && (does_match_here == should_match_here || does_match_here >= should_match_here + (count_of_words_request>=2?3:1) - (count_of_words_request>=2?3:count_of_words_request))) ? 1 : 0;
             should_match_with_this_synonym += 1;
         }
         
