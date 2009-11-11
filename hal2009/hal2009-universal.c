@@ -529,7 +529,6 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 
     
     int does_match = 0;
-    
     int request_words_all = 0;
     int u;
     for (u = 0; request_words[u] && request_words[u][0]; ++u) {
