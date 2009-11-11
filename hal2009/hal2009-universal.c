@@ -518,7 +518,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     int count_of_words_with_trivial;
     int c;
     for (c = 0, count_of_words = 0; words[c] && words[c]->name; ++c) {
-        if (is_good(words[c]->name) && strlen(words[c]->name)) > 2) {
+        if (is_good(words[c]->name) && strlen(words[c]->name) > 2) {
             if (!is_a_trivial_word(words[c]->name)) {
                 count_of_words++;
             }
