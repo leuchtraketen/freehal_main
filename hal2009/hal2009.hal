@@ -1901,7 +1901,7 @@ define action logic with var input, var lang, var path, hash parsed do
     print into var output_handle data var output
     do close with var output_handle
     
-    do wait 0.2 seconds
+    do wait 0.3 seconds
 
     while not exists: '_input__get_csv', end test do
         do wait 0.1 seconds
@@ -1935,7 +1935,7 @@ define action logic with var input, var lang, var path, hash parsed do
         # Be sure that the modal verbs are matched
         # CODE
         set new var modal_verb_template to var verb_flag_want concat var verb_flag_must concat var verb_flag_can concat var verb_flag_may concat var verb_flag_should
-        if not from array rawresult item [ 0 ] matches /var modal_verb_template/ do
+        if (not from array rawresult item [ 0 ] matches /var modal_verb_template/) and from array rawresult item [ 0 ] matches /([01])([01])([01])([01])([01])/ do
             print "Not matching to: " concat var modal_verb_template
             print new line
             go to next
@@ -3528,8 +3528,6 @@ define action init_pro_files with var current_language, var path do
                 set var j to var j + 1 + length(var line)
             done
             
-            print var i concat "<->" concat var j
-
             if not var i is var j do
 
                 print "Read file "
