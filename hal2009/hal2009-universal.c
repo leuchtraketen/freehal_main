@@ -161,6 +161,12 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
             ++size;
         }
     }
+
+    for (f = 0; facts[f]; ++f) {
+        if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name)) {
+            set_to_invalid_value(&(facts[f]));
+        }
+    }
     
     // allocate more memory
     *allocated_until += size;
@@ -509,11 +515,13 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     }
     
     int count_of_words;
+    int count_of_words_with_trivial;
     int c;
     for (c = 0, count_of_words = 0; words[c] && words[c]->name; ++c) {
         if (!is_a_trivial_word(words[c]->name)) {
             count_of_words++;
         }
+        count_of_words_with_trivial++;
     }
 
     
@@ -526,12 +534,14 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         int should_match_with_this_synonym = 0;
         
         int count_of_words_request;
+        int count_of_words_request_with_trivial;
         int c;
         for (c = 0, count_of_words_request = 0; request_words[u][c] && request_words[u][c]->name; ++c)
         {
             if (!is_a_trivial_word(request_words[u][c]->name)) {
                 count_of_words_request++;
             }
+            count_of_words_request_with_trivial++;
         }
         request_words_all += count_of_words_request;
         
@@ -573,7 +583,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             should_match_with_this_synonym += 1;
         }
         
-        does_match = does_match || (should_match_with_this_synonym && does_match_with_this_synonym == should_match_with_this_synonym);
+        does_match = does_match || (should_match_with_this_synonym && does_match_with_this_synonym == should_match_with_this_synonym && count_of_words_request_with_trivial + 2 > count_of_words_with_trivial);
     }
     if (request_words_all == 0) {
         return -1;
