@@ -1844,10 +1844,13 @@ int can_be_a_synonym(const char* word) {
 }
 
 const char* small_identifier(const char* word) {
-    if (strlen(word) > 2 && word[0] == '_') {
+    if (word[0] == '_') {
         return small_identifier(word+1);
     }
-    if (strlen(word) == 0) {
+    if (word[0] == '=') {
+        return "__";
+    }
+    if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 2) {
         return "__";
     }
     
