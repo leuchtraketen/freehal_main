@@ -570,11 +570,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                         else
                         */
                         if (matches(words[m]->name, request_words[u][v]->name)) {
-                            //debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
                         else {
-                            //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
