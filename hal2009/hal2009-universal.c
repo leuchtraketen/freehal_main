@@ -514,14 +514,15 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         return -1;
     }
     
-    int count_of_words;
-    int count_of_words_with_trivial;
+    int count_of_words = 0;
+    int count_of_words_with_trivial = 0;
     int c;
     for (c = 0, count_of_words = 0; words[c] && words[c]->name; ++c) {
         if (is_good(words[c]->name) && strlen(words[c]->name) > 1) {
             if (!is_a_trivial_word(words[c]->name)) {
-                count_of_words++;
+                ++count_of_words;
             }
+            ++count_of_words_with_trivial;
         }
     }
 
@@ -533,15 +534,15 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         int does_match_with_this_synonym   = 0;
         int should_match_with_this_synonym = 0;
         
-        int count_of_words_request;
-        int count_of_words_request_with_trivial;
+        int count_of_words_request = 0;
+        int count_of_words_request_with_trivial = 0;
         int c;
         for (c = 0, count_of_words_request = 0; request_words[u][c] && request_words[u][c]->name; ++c)
         {
             if (!is_a_trivial_word(request_words[u][c]->name)) {
-                count_of_words_request++;
+                ++count_of_words_request;
             }
-            count_of_words_request_with_trivial++;
+            ++count_of_words_request_with_trivial;
         }
         request_words_all += count_of_words_request;
         
