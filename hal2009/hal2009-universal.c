@@ -584,13 +584,15 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             should_match_with_this_synonym += 1;
         }
         
+        /*
         debugf("should_match_with_this_synonym: %d\n", should_match_with_this_synonym);
         debugf("(does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3): %d\n", (does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3));
         debugf("(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3): %d\n", (does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3));
         debugf("count_of_words_request_with_trivial + 2 > count_of_words_with_trivial: %d\n", count_of_words_request_with_trivial + 2 > count_of_words_with_trivial);
         debugf("count_of_words_request_with_trivial: %d\n", count_of_words_request_with_trivial);
         debugf("count_of_words_with_trivial: %d\n", count_of_words_with_trivial);
-        does_match = does_match || (should_match_with_this_synonym && ((does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3)||(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3)) && count_of_words_request_with_trivial + 2 > count_of_words_with_trivial);
+        */
+        does_match = does_match || (should_match_with_this_synonym && ((does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3)||(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3)) && count_of_words_request_with_trivial + 1 > count_of_words_with_trivial);
     }
     if (request_words_all == 0) {
         return -1;
