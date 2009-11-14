@@ -3,3 +3,11 @@
 - Changelog-Datei hinzugefuegt
 
 
+675:
+
+- Bug korrigiert, durch den FreeHAL nicht verstanden hat, dass "ein XYZ" und "XYZ" das selbe sind,
+  was man bei "An welchem Fluss liegt Innsbruck?" merkt; "ein Fluss" <-> "Fluss"
+
+676:
+
+- Changelog aktualisiert
