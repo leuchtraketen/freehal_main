@@ -463,7 +463,12 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     char rel_str[10];
     snprintf(rel_str, 9, "%d", rel);
     strcat(sql, rel_str);
-    strcat(sql, ";");
+    strcat(sql, " UNION ALL ");
+    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth` ");
+    strcat(sql, " FROM facts AS nmain JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact WHERE nmain.pk IN ");
+    strcat(sql, " (SELECT f2 FROM `linking` WHERE f1 = ");
+    strcat(sql, rel_str);
+    strcat(sql, " );");
     
     return sql;
 }
@@ -483,7 +488,11 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
     char* last_smid = 0;
-    for (n = 0; can_be_a_pointer(words[n]); ++n) {
+    for (n = 0; words[n]; ++n) {
+        if (!can_be_a_pointer(words[n])) {
+            continue;
+        }
+        
         int is_new = 1;
         if (can_be_a_pointer(words[n][0])) {
             for (q = 0; words[q] && q+1 < n; ++q) {
@@ -491,18 +500,23 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                     is_new = 0;
             }
         }
-        debugf("synonym no %d: %d, %p, %s\n",
-            n,
-            can_be_a_pointer(words[n]),
-            can_be_a_pointer(words[n]) ? words[n][0] : 0,
-            can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0]) ? words[n][0]->name : "(null)"
-        );
+        if (can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0])) {
+            debugf("synonym no %d: %d, %p, %s\n",
+                n,
+                can_be_a_pointer(words[n]),
+                can_be_a_pointer(words[n]) ? words[n][0] : 0,
+                can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0]) ? words[n][0]->name : "(null)"
+            );
+        }
         if (!is_new) {
             debugf("not new.\n");
             continue;
         }
         
-        for (m = 0; can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
+        for (m = 0; words[n][m]; ++m) {
+            if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
+                continue;
+            }
             if (is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
@@ -773,4 +787,30 @@ int disk_set_to_invalid_value(void** p) {
     *p = -1;
     return 0;
 }
+
+int disk_add_link (const char* link, int key_1, int key_2) {
+    if (!link) {
+        return INVALID;
+    }
+
+    char sql[5120];
+    *sql = 0;
+    strcat(sql, "INSERT INTO linking (`link`, `f1`, `f2`) VALUES (\"");
+
+    char str_fact_1[40];
+    snprintf(str_fact_1, 39, "%d", key_1);
+    char str_fact_2[40];
+    snprintf(str_fact_2, 39, "%d", key_2);
+
+    strcat(sql, link);
+    strcat(sql, "\", ");
+    strcat(sql, str_fact_1);
+    strcat(sql, ", ");
+    strcat(sql, str_fact_2);
+    strcat(sql, ");");
+    
+    int error = sql_execute(sql, NULL, NULL);
+    return error;
+}
+
 

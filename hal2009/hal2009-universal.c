@@ -63,6 +63,9 @@ long can_be_a_pointer(void* _p) {
     if (p > 10000) {
         return 1;
     }
+    if (p == -1) {
+        return 0;
+    }
     return 0;
 }
 
@@ -530,15 +533,22 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     int does_match = 0;
     int request_words_all = 0;
     int u;
-    for (u = 0; request_words[u] && request_words[u][0]; ++u) {
+    for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
+        if (!can_be_a_pointer(request_words[u])) {
+            continue;
+        }
+        
         int does_match_with_this_synonym   = 0;
         int should_match_with_this_synonym = 0;
         
         int count_of_words_request = 0;
         int count_of_words_request_with_trivial = 0;
         int c;
-        for (c = 0, count_of_words_request = 0; request_words[u][c] && request_words[u][c]->name; ++c)
-        {
+        for (c = 0, count_of_words_request = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
+            if (!can_be_a_pointer(request_words[u][c])) {
+                continue;
+            }
+            
             if (!is_a_trivial_word(request_words[u][c]->name)) {
                 ++count_of_words_request;
             }
@@ -547,7 +557,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         request_words_all += count_of_words_request;
         
         int v;
-        for (v = 0; request_words[u][v] && request_words[u][v]->name; ++v) {
+        for (v = 0; request_words[u][v] && (-1 == request_words[u][v] || request_words[u][v]->name); ++v) {
+            if (!can_be_a_pointer(request_words[u][v])) {
+                continue;
+            }
+            
             if (is_a_trivial_word(request_words[u][v]->name)) {
                 continue;
             }
@@ -1072,6 +1086,64 @@ int count_list(void** list) {
     return size;
 }
 
+int delete_in_first_if_second(struct word*** list, const char* exp) {
+    if (!strlen(exp)) {
+        return 0;
+    }
+    
+    int found_one = 1;
+    while (found_one) {
+        found_one = 0;
+    
+        int i;
+        for (i = 0; !found_one && (-1 == list[i] || can_be_a_pointer(list[i])); ++i) {
+            if (found_one) {
+                break;
+            }
+            
+            int j;
+            for (j = 0; !found_one && (-1 == list[i] || can_be_a_pointer(list[i][j])); ++j) {
+                if (found_one) {
+                    break;
+                }
+                
+                if (can_be_a_pointer(list[i][j]->name)) {
+                    if (strstr(list[i][j]->name, exp)) {
+                        int no_more_items = 1;
+                        if (j) {
+                            int k;
+                            for (k = j+1; -1 == list[i] || can_be_a_pointer(list[i][k]); ++k) {
+                                list[i][k-1] = list[i][k];
+                                no_more_items = 0;
+                            }
+                            if (!can_be_a_pointer(list[i][j])) {
+                                list[i][j] = 0;
+                            }
+                        }
+                        if (!j || no_more_items) {
+                            no_more_items = 1;
+                            int k;
+                            for (k = i+1; -1 == list[k] || can_be_a_pointer(list[k]); ++k) {
+                                list[k-1] = list[k];
+                                no_more_items = 0;
+                            }
+                            if (!can_be_a_pointer(list[i])) {
+                                list[i] = 0;
+                            }
+                        }
+                        if (no_more_items) {
+                            list[i] = 0;
+                        }
+                        
+                        found_one = 1;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
 struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list = 0;
     
@@ -1085,6 +1157,8 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
+        
+        delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
             "Searching answers for:\n"
@@ -1158,6 +1232,8 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
+        
+        delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
             "Searching answers for:\n"
@@ -1334,6 +1410,8 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup("search_reasons");
         fact->truth        = 1;
+        
+        delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
             "Searching reasons of:\n"
@@ -1461,6 +1539,8 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
+        
+        delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
             "Searching thesaurus entries for:\n"
@@ -1555,7 +1635,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     
     printf("Do we need the wiki search?\n");
     
-    if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strlen(adverbs) >= 3) {
+    if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
         printf("No, no what-context.\n");
     }
     else if (!can_be_a_pointer(list) || !count_list(list)) {
@@ -1780,7 +1860,7 @@ struct DATASET as_dataset(struct fact** list) {
                 set.column_count = column_count;
             
             set.data[d] = record;
-            //printf("transformed record no %d.\n", d);
+            printf("transformed record no %d.\n", d);
         }
     }
     
@@ -1822,6 +1902,8 @@ int is_a_trivial_word(const char* word) {
          || 0 == strcmp(word, "noch")
          || 0 == strcmp(word, "schon")
          || 0 == strcmp(word, "bereits")
+         || 0 == strcmp(word, "nur")
+         || 0 == strcmp(word, "zu")
         )
          ?  1
          :  0
@@ -1880,5 +1962,16 @@ const char* small_identifier(const char* word) {
                   ;
 
     return identifier;
+}
+
+int sql_universal_add_link (const char* link, int key_1, int key_2) {
+    int r = 0;
+    if (is_engine("ram")) {
+        r = ram_add_link(link, key_1, key_2);
+    }
+    else {
+        r = disk_add_link(link, key_1, key_2);
+    }
+    return r;
 }
 

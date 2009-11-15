@@ -11,3 +11,12 @@
 676:
 
 - Changelog aktualisiert
+
+679:
+
+- Aufspaltung der Suche in (in dieser Reihenfolge):
+  - .memory
+  - .self-taggered
+  - .brain
+- Behebung eines Satzbaufehlers
+- Neue Implementierung des "~"-Features, alte Version war inkompatibel zum aktuellen Code

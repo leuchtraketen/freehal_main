@@ -65,6 +65,13 @@ int ram_begin() {
     ram_fact_by_key->allocated_until = 0;
     ram_fact_by_key->list            = calloc(sizeof(struct fact*), ram_fact_by_key->allocated_until+1);
     
+    
+    // initialize ram_linking array
+    ram_linking                  = calloc(sizeof(struct list), 1);
+    ram_linking->size            = 0;
+    ram_linking->allocated_until = 10;
+    ram_linking->list            = calloc(sizeof(struct fact*), ram_linking->allocated_until+1);
+    
     // done
     called = 1;
     
@@ -338,4 +345,21 @@ int ram_set_to_invalid_value(void** p) {
     *p = -1;
     return 0;
 }
+
+int ram_add_link (const char* link, int key_1, int key_2) {
+    if (ram_linking->size >= ram_linking->allocated_until) {
+        ram_linking->allocated_until += 20;
+        ram_linking->list = realloc(ram_linking->list, sizeof(struct fact*)*(ram_linking->allocated_until+1));
+    }
+    
+    struct linking_entity* entity = calloc(sizeof(struct linking_entity), 1);
+    entity->_1 = key_1;
+    entity->_2 = key_2;
+    entity->type = strdup(link);
+    ram_linking->list[ram_linking->size] = entity;
+    
+    ++ram_linking->size;
+    return 0;
+}
+
 

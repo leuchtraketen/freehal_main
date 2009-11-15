@@ -24,6 +24,13 @@
 
 static struct list*** ram_net = 0;
 static struct list*   ram_fact_by_key = 0;
+static struct list*   ram_linking = 0;
+
+struct linking_entity {
+    int _1;
+    int _2;
+    char* type;
+};
 
 int ram_begin();
 int ram_end();

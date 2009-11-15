@@ -38,8 +38,6 @@ int sql_universal_end() {
     return universal_end();
 }
 
-int sql_universal_add_link (const char* link, int key_1, int key_2) {}
-
 char* sql_universal_del_record(struct RECORD* r) {
 }
 
@@ -49,6 +47,14 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
     }
     else {
         struct fact* fact = add_fact(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->from, r->truth, r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should);
+        
+        if (fact && fact->pk) {
+            FILE* input_key = fopen("_input_key", "w+b");
+            if (input_key) {
+                fprintf(input_key, "%d", fact->pk);
+                fclose(input_key);
+            }
+        }
         if (r->clauses && r->clauses[0] && fact && fact->pk) {
             int n;
             int broken = 0;

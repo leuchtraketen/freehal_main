@@ -327,10 +327,39 @@ int         search_results_lines  = 0;
 halstring*  search_results_line   = 0;
 halstring*  search_results_entity = 0;
 
+int is_no_wiki_word(const char* word) {
+    return (
+        can_be_a_pointer(word) && (
+            0 == strcmp(word, "ich")
+         || 0 == strcmp(word, "du")
+         || 0 == strcmp(word, "er")
+         || 0 == strcmp(word, "sie")
+         || 0 == strcmp(word, "es")
+         || 0 == strcmp(word, "wir")
+         || 0 == strcmp(word, "ihr")
+         || 0 == strcmp(word, "sie")
+         || 0 == strcmp(word, "i")
+         || 0 == strcmp(word, "you")
+         || 0 == strcmp(word, "he")
+         || 0 == strcmp(word, "she")
+         || 0 == strcmp(word, "it")
+         || 0 == strcmp(word, "we")
+         || 0 == strcmp(word, "us")
+         || 0 == strcmp(word, "they")
+         || 0 == strcmp(word, "them")
+        )
+         ?  1
+         :  0
+    );
+}
+
 struct fact** search_facts_wiki_page(const char*, const char*);
 
 struct fact** search_facts_wiki(const char* entity, short todo) {
     if (is_a_trivial_word(entity)) {
+        return 0;
+    }
+    if (is_no_wiki_word(entity)) {
         return 0;
     }
     
