@@ -2814,7 +2814,6 @@
 = <> _was_frauen_wollen__ <> _filmkomoedie_ <>  <> 50
 = <> _was_fuer_ein_genie__ <> _filmkomoedie_ <>  <> 50
 = <> _was_gibt_es_neues_pussy__ <> _filmkomoedie_ <>  <> 50
-hast = <> ich <> _was_in_dem_krieg_gemacht_pappi__ _filmkomoedie_ <>  <> 50
 = <> _was_ist_bloss_mit_willi_los__ <> _filmkomoedie_ <>  <> 50
 = <> _was_ist-mit_bob__ <> _filmkomoedie_ <>  <> 50
 = <> _was_maedchen_wollen__ <> _filmkomoedie_ <>  <> 50

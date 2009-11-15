@@ -274,7 +274,6 @@ ist <> hinterher <> man schlauer <>  <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> hinterher <> offiziere schlauer <>  <>  <>  <> nothing <>  <>  <>  <> 50
 kommt <> hochmut <> nothing <> vor;dem;fall <>  <>  <> nothing <>  <>  <>  <> 50
 grasen <> nothing <> nothing <> auf;der;die;narren <> ist <> hoffnung <> nothing <> die <> wiese <>  <> 50
-bin <> ich <> mann <>  <> sagte <> der dieb <> nothing <> (da_er_an_dem_schandpfahl_stand) <>  <>  <> 100
 ist <> ich <> nothing <> tue;als;ein;guter;christ;nicht;mehr;komma;als;mir;befohlen <>  <>  <> nothing <>  <>  <>  <> 100
 ersaufen <> mehr leute <> nothing <> in;dem;becher;als;in;dem;bach <>  <>  <> nothing <>  <>  <>  <> 50
 ist munkeln <> gut <> nothing <> in;dem;dunkeln;() <>  <>  <> nothing <>  <>  <>  <> 50
