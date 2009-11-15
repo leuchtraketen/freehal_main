@@ -1780,7 +1780,7 @@ struct DATASET as_dataset(struct fact** list) {
                 set.column_count = column_count;
             
             set.data[d] = record;
-            printf("transformed record no %d.\n", d);
+            //printf("transformed record no %d.\n", d);
         }
     }
     
@@ -1818,6 +1818,10 @@ int is_a_trivial_word(const char* word) {
          || 0 == strcmp(word, "sehr")
          || 0 == strcmp(word, "viel")
          || 0 == strcmp(word, "viele")
+         || 0 == strcmp(word, "weder")
+         || 0 == strcmp(word, "noch")
+         || 0 == strcmp(word, "schon")
+         || 0 == strcmp(word, "bereits")
         )
          ?  1
          :  0

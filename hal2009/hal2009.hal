@@ -910,7 +910,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     
     set new flag count to 20
     
-    while (from hash sym_linking item { from array current_tag first item } or from hash sym_entity item { from array next_tag first item }) or ((from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item )) do
+    while (not from hash sym_verb item { from array next_tag first item }) and ((from hash sym_linking item { from array current_tag first item } or from hash sym_entity item { from array next_tag first item }) or ((from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item ))) do
     
         set flag count to flag count - 1
         if flag count <= 0 do
@@ -1144,6 +1144,10 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 # A question word was found! DO NOT add everything to the "adverbs" column.
                 # Instead, add everything where it fits best.
                 # CODE
+                print "A question word was found! DO NOT add everything to the \"adverbs\" column."
+                print new line
+                print "Instead, add everything where it fits best."
+                print new line
                 
                 set new array keys to [ keys of hash parsed ]
                 for each new var key in array keys do
@@ -1155,8 +1159,12 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
             else do
                 # TEXT
                 # No question word found...
+                # Add everything to the \"adverbs\" column.
                 # CODE
-                    
+                print "No question word found..."
+                print new line
+                print "Add everything to the \"adverbs\" column."
+                print new line
                 
                 set new array keys to [ 'adverbs', 'subjects', 'objects' ]
                 for each new var key in array keys do
@@ -1164,6 +1172,9 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                         set new array new_value to from hash parsed item { var key }
                         for each new var value in array new_value is rw do
                             set var value to from array value first item
+                            
+                            print "Found a value: ", var value
+                            print new line
                         done
                         # push into array new_value, items of that array: [ values items of hash parsed ] first item end items of
                         if is not an empty array new_value do
@@ -1176,6 +1187,10 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 # Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie
                 # CODE
                 if from hash sym_verb item { from hash tags item { from array words first item } first item } do
+                    print "Verb-inside feature activated."
+                    print new line
+                    print "Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie."
+                    print new line
                     if from hash sym_noun item { from hash tags item { from array words second item } first item } do
                         set var entity to var entity concat ' ' concat from array words first item
                         do shift with items of array words
@@ -1387,6 +1402,10 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             for each new var key in array keys do
                 set new array new_value to from hash parsed item { var key }
                 push into array new_value, items of that array: from hash add_parsed item { var key } end items of
+                if from hash add_parsed item { var key } and from hash add_parsed item { var key } first item do
+                    print "adding to: ", var key, " data: ", from hash add_parsed item { var key } first item first item
+                done
+                print new line
                 set from hash parsed item { var key } to array new_value
             done
 
@@ -1394,7 +1413,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 if from hash sym_noun item { from array current_tag item [ const TYPE ] } do
                     print var ident
                     print "#    "
-                    print "End do parse_what(->5)."
+                    print "End do parse_what(->6)."
                     print new line
                     set var ident to var ident concat "\b\b"
                     do return using hash parsed

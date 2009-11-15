@@ -624,6 +624,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /die du kennst\s/, " ", :global:i
     
     do regex using var input: /(^|\s)es leben/, "$0leben", :global:i
+    
+    do regex using var input: / (\d+?)\s*?(gb|gigabyte|mb|megabyte|kb|kilobyte|byte)\s*?(ram|arbeitsspeicher|festplatte|speicher)/, " _$0_$1_$2_ ", :global:i
+    
+    do regex using var input: / brauchst du /, " du brauchst ", :global:i
+    do regex using var input: / brauche ich /, " ich brauche ", :global:i
 
     do regex using var input: /nenne mir (.*)/, "zaehle $0 auf", :global:i
     do regex using var input: /nenne (.*)/, "zaehle $0 auf", :global:i
