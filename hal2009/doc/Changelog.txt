@@ -1,3 +1,7 @@
+682:
+
+- Bug in der Unterscheidung Thesaurus <-> normaler "="-Fakt behoben
+
 681:
 
 - Bug in der Funktion matches() behoben
