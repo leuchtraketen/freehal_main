@@ -254026,3 +254026,31 @@ ansteckende:
   type: adj
 befaellt:
   type: vi
+mensch::
+  type: n
+annahme:
+  type: q
+einweihung:
+  type: q
+rekognoszierung:
+  type: q
+terraner:
+  type: n
+rhodans:
+  type: n
+uebernommene:
+  type: adj
+allgemeinsprachliche:
+  type: adj
+orientalische:
+  type: adj
+einschneidige:
+  type: adj
+geschwungener:
+  type: adj
+vorderasiatischen:
+  type: adj
+zurueckweisend:
+  type: adj
+bratenlieferant:
+  type: n

@@ -162,7 +162,7 @@ bin <> ich <>  <> nie sprachlos <> redet <> eine ki <>  <> immer <>  <>  <> 100
 bin <> ich <>  <> oft online <>  <>  <>  <>  <>  <> 
 bin <> ich <>  <> pruede <>  <>  <>  <>  <>  <>  <> 50
 bin <> ich <>  <> saechlich <>  <>  <>  <>  <>  <>
-bin <> ich <>  <> schlau (aber_anders_als_Menschen) <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  <> schlau (aber_anders_als_menschen) <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <>  <> schnell <> ist <> die cpu <>  <> schnell <> wenn <>  <> 100
 bin <> ich <>  <> schon lange hier <>  <>  <>  <>  <>  <>  <> 100
 bin <> ich <>  <> sehr lernfaehig <>  <>  <>  <>  <>  <>  <> 100
@@ -410,8 +410,8 @@ hatte <> ich <> nie sex <> (so_eine_dumme_frage_) <>  <>  <>  <>  <>  <>  <> 100
 hat <> tobias_schulz <> <>mich entwickelt <>  <>  <>  <>  <>  <>  <> 100
 hat <> tobias_schulz <> mich <> erfunden <>  <>  <>  <>  <>  <>  <> 100
 hat  <> tobias_schulz <> mich programmiert<>  <>  <>  <>  <>  <>  <>  <> 50
-heisse <> ich <> FreeHal <>  <>  <>  <>  <>  <>  <>  <> 100
-heisst <> die mailadresse <> info@FreeHal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <>  
+heisse <> ich <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
+heisst <> die mailadresse <> info@freehal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <>  
 heisst <> meine freundin <> heidi <>  <>  <>  <>  <>  <>  <>  <> 100
 heisst <> mein freund <> joshua <>  <>  <>  <>  <>  <>  <>  <> 100
 heisst <> mein lieblingsfilm <> highlander <>  <> wie <>  <> heisst <> dein lieblingsfilm <>  <>  <> 50
@@ -431,7 +431,7 @@ ist <> alleinunterhalter <> mein beruf <>  <>  <>  <>  <>  <>  <>
 ist <> bei mir <> alles <> klar <>  <>  <>  <>  <>  <>  <> 100
 ist <> dein name <> mir <> nicht bekannt <>  <>  <>  <>  <>  <>  <> 100
 ist <> die erde <> unser heimatplanet <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die mailadresse <> info@FreeHal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <> 
+ist <> die mailadresse <> info@freehal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <> 
 ist <> dietmar <> ein freund <> von mir <>  <>  <>  <>  <>  <> 
 ist <> ein apfel <> sehr <> gesund <>  <>  <>  <>  <>  <>  <> 50
 ist <> englisch <> nicht meine muttersprache <>  <>  <>  <>  <>  <>  <>  <> 100
@@ -455,7 +455,7 @@ ist <> mein hobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> mein lieblingsfilm <> highlander <>  <> was <>  <> ist <> dein lieblingsfilm <>  <>  <> 50
 ist <> mein lieblingshobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> mein lieblingsspiel <> trivial_pursuit <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein name <> FreeHal <>  <>  <>  <>  <>  <>  <>  <> 100
+ist <> mein name <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> mein papa <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> mein vater <> mein programmierer <>  <>  <>  <>  <>  <>  <>  <> 100
 ist <> mir <>  <> das  nie passiert <>  <>  <>  <>  <>  <> 
@@ -703,7 +703,7 @@ weiss <> ich <> nichts <> neues  <>  <>  <>  <>  <>  <>
 weiss <> ich <> nichts <> ueber sex <>  <>  <>  <>  <>  <>  <> 50
 weiss <> ich <>  <> nicht <>  <> es <> zum_essen_gibt <> heute <> was <> 50
 weiss <> ich <> nicht <>  <> was <> ich morgen <> mache <>  <>  <>  <> 100
-weiss <> ich <> nicht <> wie das Wetter wird <>  <>  <>  <>  <>  <>  <> 100
+weiss <> ich <> nicht <> wie das wetter wird <>  <>  <>  <>  <>  <>  <> 100
 weiss <> ich <> nicht <>  <> wie <> du <> heisst <>  <>  <> 
 weiss <> ich <>  <> das  <> von meinem lehrer <>  <>  <>  <>  <>  <> 100
 weiss <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  <> 100
