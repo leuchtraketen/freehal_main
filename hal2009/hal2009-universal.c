@@ -469,12 +469,28 @@ int matches(const char* a, const char* b) {
         else if (strstr(c, "*")) {
             int i;
             int size = strlen(c);
-            int q = 1;
-            for (i = 0; i < size; ++i) {
-                if (c[i] == '*') {
+            int q = 0;
+            for (i = 0; i < size || i == size; ++i) {
+                if (c[i] == '*' || i == size) {
                     c[i] = '\0';
-                    q = q && strstr(a, c);
-                    c[i] = i >= size-2 ? '\0' : ' ';
+                    printf("Is '%s' in '%s'? ", a, c);
+                    q = q || strstr(a, c);
+                    if (q) {
+                        printf("yes.\n");
+                    }
+                    else {
+                        printf("no.\n");
+                    }
+                    if (i >= size-2) {
+                        printf("break;\n", a, c);
+                        break;
+                    }
+                    else {
+                        printf("going on...\n", a, c);
+                        c += i+1;
+                        size -= i;
+                        i = -1;
+                    }
                 }
             }
             return q;
@@ -551,8 +567,14 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             
             if (!is_a_trivial_word(request_words[u][c]->name)) {
                 ++count_of_words_request;
+                if (strstr(request_words[u][c]->name, "*")) {
+                    ++count_of_words_request;
+                }
             }
             ++count_of_words_request_with_trivial;
+            if (strstr(request_words[u][c]->name, "*")) {
+                ++count_of_words_request_with_trivial;
+            }
         }
         request_words_all += count_of_words_request;
         
@@ -598,15 +620,15 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             should_match_with_this_synonym += 1;
         }
         
-        /*
+        
         debugf("should_match_with_this_synonym: %d\n", should_match_with_this_synonym);
         debugf("(does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3): %d\n", (does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3));
         debugf("(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3): %d\n", (does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3));
         debugf("count_of_words_request_with_trivial + 2 > count_of_words_with_trivial: %d\n", count_of_words_request_with_trivial + 2 > count_of_words_with_trivial);
         debugf("count_of_words_request_with_trivial: %d\n", count_of_words_request_with_trivial);
         debugf("count_of_words_with_trivial: %d\n", count_of_words_with_trivial);
-        */
-        does_match = does_match || (should_match_with_this_synonym && ((does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3)||(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3)) && (count_of_words_request_with_trivial + 1 > count_of_words_with_trivial || count_of_words_request >= count_of_words));
+        
+        does_match = does_match || (should_match_with_this_synonym && ((does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3)||(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3)) && (count_of_words_request_with_trivial + 1 > count_of_words_with_trivial || count_of_words_request + 1 >= count_of_words));
     }
     if (request_words_all == 0) {
         return -1;
@@ -1091,8 +1113,10 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
         return 0;
     }
     
+    int timeout = 50;
     int found_one = 1;
-    while (found_one) {
+    while (found_one && timeout > 0) {
+        --timeout;
         found_one = 0;
     
         int i;
@@ -1108,7 +1132,8 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
                 }
                 
                 if (can_be_a_pointer(list[i][j]->name)) {
-                    if (strstr(list[i][j]->name, exp)) {
+                    if (strstr(list[i][j]->name, exp) && strlen(list[i][j]->name)-3 <= strlen(exp)) {
+                        printf("Deleting synonym: %s\n", list[i][j]->name);
                         int no_more_items = 1;
                         if (j) {
                             int k;
@@ -1116,6 +1141,7 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
                                 list[i][k-1] = list[i][k];
                                 no_more_items = 0;
                             }
+                            list[i][k-1] = list[i][k];
                             if (!can_be_a_pointer(list[i][j])) {
                                 list[i][j] = 0;
                             }
@@ -1126,6 +1152,9 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
                             for (k = i+1; -1 == list[k] || can_be_a_pointer(list[k]); ++k) {
                                 list[k-1] = list[k];
                                 no_more_items = 0;
+                            }
+                            if (k && !can_be_a_pointer(list[k-1])) {
+                                list[k-1] = 0;
                             }
                             if (!can_be_a_pointer(list[i])) {
                                 list[i] = 0;
