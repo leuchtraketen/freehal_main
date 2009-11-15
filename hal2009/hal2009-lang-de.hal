@@ -1827,6 +1827,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'beschaedigt' => "adj",
           'welchen' => "questionword",
           'on' => "prep",
+          'sterben' => "vi",
+          'sterbe' => "vi",
           'muedem' => "adj",
           'euers' => "art",
           'flau' => "adj",

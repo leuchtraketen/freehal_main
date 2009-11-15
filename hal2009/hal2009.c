@@ -375,11 +375,11 @@ int hal2009_add_pro_file (char* filename) {
                             break;
                         }
                         
-                        r.verb_flag_want    = 0;
-                        r.verb_flag_must    = 0;
-                        r.verb_flag_can     = 0;
-                        r.verb_flag_may     = 0;
-                        r.verb_flag_should  = 0;
+                        sub_clause->verb_flag_want    = 0;
+                        sub_clause->verb_flag_must    = 0;
+                        sub_clause->verb_flag_can     = 0;
+                        sub_clause->verb_flag_may     = 0;
+                        sub_clause->verb_flag_should  = 0;
 
 
                         sub_clause->prio  = 50;
