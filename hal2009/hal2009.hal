@@ -593,6 +593,13 @@ define action compute_tags with var word, var lang, var path do
             else do
                 print "built in: " concat from array tags first item
                 print new line
+                
+                # TEXT
+                # If no noun, we need no genus, so skip the rest
+                # CODE
+                if not from array tags first item matches /n/ do
+                    go to last
+                done
             done
         done
         
@@ -662,6 +669,7 @@ define action compute_tags with var word, var lang, var path do
         
         if not is an empty array tags do
             do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
+            go to last
         done
         
         # TEXT
@@ -713,6 +721,7 @@ define action compute_tags with var word, var lang, var path do
                     set array tags to an empty array
                     set from array tags first item to get_tag_part_of_speech using var word, var lang
                     do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+                    go to last
                 done
             done
         done
@@ -743,9 +752,15 @@ define action compute_tags with var word, var lang, var path do
                 done
                 else do
                     do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
+                    go to last
                 done
             done
         done
+        
+        if not is an empty array tags do
+            go to last
+        done
+        
         do be_slow without arguments
     done
     # TEXT
