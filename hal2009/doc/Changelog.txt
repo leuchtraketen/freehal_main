@@ -1,3 +1,7 @@
+687:
+
+- (maybe:) Problem mit Nichtauslesen/Nichtbeschreiben der .memory/.self-taggered geloest
+
 686:
 
 - Changelog aktualisiert
