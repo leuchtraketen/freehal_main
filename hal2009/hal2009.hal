@@ -722,6 +722,19 @@ define action compute_tags with var word, var lang, var path do
             do memory_set_by_name with "NO PROTOCOL word_types.memory", var word, array tags, var lang, var path
             go to last
         done
+
+        # TEXT
+        # Look for similar words.
+        # CODE
+        #if is an empty array tags do
+        #    set new var modified_word to var word
+        #    for each new var suffix in array standard_suffixes do
+        #        do regex using var modified_word: /var suffix$/, "", :global
+        #    done
+        #    
+        #    set array tags to memory_get_by_name using var main_file, var modified_word, var lang, var path
+        #done
+        do be_slow without arguments
         
         if not is an empty array tags do
             go to last
@@ -741,19 +754,6 @@ define action compute_tags with var word, var lang, var path do
             done
         done
     done
-
-    # TEXT
-    # Look for similar words.
-    # CODE
-    if is an empty array tags do
-        set new var modified_word to var word
-        for each new var suffix in array standard_suffixes do
-            do regex using var modified_word: /var suffix$/, "", :global
-        done
-        
-        set array tags to memory_get_by_name using var main_file, var modified_word, var lang, var path
-    done
-    do be_slow without arguments
     
     # TEXT
     # Guess.
