@@ -1,3 +1,11 @@
+686:
+
+- Changelog aktualisiert
+
+685:
+
+- (maybe:) Problem mit Nichtauslesen/Nichtbeschreiben der .memory/.self-taggered geloest
+
 682:
 
 - Bug in der Unterscheidung Thesaurus <-> normaler "="-Fakt behoben
