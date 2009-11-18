@@ -1,2 +1,407 @@
-zuckersuesse:
+Weisswurst:
+  type: vi
+Tut:
+  type: prep
+leid:
+  type: n
+  genus: s
+In:
+  type: prep
+Marktwirtschaft:
+  type: n
+  genus: f
+Grundfragen:
+  type: n
+  genus: f
+dezentral:
   type: adj
+entschieden:
+  type: n
+  genus: s
+Apfelstrudel:
+  type: n
+  genus: m
+traditionelle:
+  type: adj
+oesterreichische:
+  type: adv
+Suessspeise:
+  type: n
+bekannteste:
+  type: adv
+Strudelart:
+  type: n
+  genus: f
+Eiffelturm:
+  type: n
+Eifelturm:
+  type: n
+  genus: m
+Wahrzeichen:
+  type: n
+franzoesischen:
+  type: adj
+Hauptstadt:
+  type: n
+  genus: f
+Paris:
+  type: n
+Flugzeugtraeger:
+  type: n
+  genus: m
+Kriegsschiff:
+  type: n
+  genus: s
+dem:
+  type: art
+Militaerflugzeuge:
+  type: n
+  genus: f
+starten:
+  type: n
+  genus: s
+Hardware:
+  type: n
+  genus: f
+Ich:
+  type: n
+  genus: s
+Hardwarehacker:
+  type: n
+  genus: m
+entwickeln:
+  type: n
+Bezeichnung:
+  type: n
+eigene:
+  type: adv
+separate:
+  type: adj
+individuelle:
+  type: adj
+Identitaet:
+  type: n
+  genus: f
+menschlichen:
+  type: adv
+natuerlichen:
+  type: adv
+Person:
+  type: n
+  genus: f
+zurueckweisend:
+  type: adj
+Selbst:
+  type: n
+  genus: s
+Aussagenden:
+  type: adj
+Krummsaebel:
+  type: n
+  genus: m
+Englischen:
+  type: adj
+uebernommene:
+  type: adj
+allgemeinsprachliche:
+  type: adj
+Sammelbezeichnung:
+  type: n
+  genus: f
+orientalische:
+  type: adj
+Saebel:
+  type: n
+  genus: m
+einschneidige:
+  type: adj
+Stichwaffen:
+  type: n
+  genus: f
+geschwungener:
+  type: adj
+Klinge:
+  type: n
+  genus: f
+Form:
+  type: n
+  genus: f
+vorderasiatischen:
+  type: adj
+Ursprung:
+  type: n
+erkennen:
+  type: n
+Kontaktlinse:
+  type: n
+Kontaktlinsen:
+  type: n
+  genus: f
+Brille:
+  type: n
+  genus: f
+Sehhilfen:
+  type: n
+  genus: f
+Leopard:
+  type: n
+  genus: m
+Art:
+  type: n
+innerhalb:
+  type: prep
+Familie:
+  type: n
+  genus: f
+Katzen:
+  type: n
+  genus: f
+Afrika:
+  type: n
+Mein:
+  type: art
+Name:
+  type: n
+  genus: m
+US-amerikanische:
+  type: adj
+Relativitaetstheorie:
+  type: n
+  genus: f
+Die:
+  type: art
+Struktur:
+  type: n
+  genus: f
+Raum:
+  type: n
+  genus: m
+Schwarzwald:
+  type: n
+  genus: m
+Deutschlands:
+  type: n
+groesstes:
+  type: adj
+zusammenhaengendes:
+  type: adj
+Mittelgebirge:
+  type: n
+  genus: s
+Salat:
+  type: n
+Zubereitung:
+  type: n
+  genus: f
+urspruenglich:
+  type: adv
+Tobias:
+  type: n
+Schulz:
+  type: n
+  genus: m
+deutscher:
+  type: n
+Schauspieler:
+  type: n
+  genus: m
+Zuckerhut:
+  type: n
+  genus: m
+Spitze:
+  type: n
+abgerundeter:
+  type: adj
+Kegel:
+  type: n
+  genus: m
+Zucker:
+  type: n
+Keine:
+  type: pron
+Ahnung:
+  type: n
+  genus: f
+Beuschel:
+  type: n
+  genus: s
+Gericht:
+  type: n
+  genus: s
+traditionellen:
+  type: adj
+Wiener:
+  type: fw
+oesterreichischen:
+  type: adv
+bayerischen:
+  type: adv
+Kueche:
+  type: n
+  genus: f
+Hm:
+  type: inter
+Groestl:
+  type: n
+  genus: s
+traditionelles:
+  type: adj
+Resteessen:
+  type: n
+  genus: s
+Kartoffeln:
+  type: n
+  genus: f
+Stuecken:
+  type: n
+geschnittenem:
+  type: adj
+Schweinefleisch:
+  type: n
+gemeinsam:
+  type: adj
+gehackter:
+  type: adj
+Zwiebel:
+  type: n
+  genus: f
+Butterschmalz:
+  type: n
+  genus: s
+Pfanne:
+  type: n
+  genus: f
+angeroestet:
+  type: adj
+Da:
+  type: n
+leider:
+  type: adv
+Antwort:
+  type: n
+  genus: f
+Krapfen:
+  type: n
+  genus: m
+Alter:
+  type: adv
+krapfen:
+  type: n
+  genus: m
+Arschloch:
+  type: n
+  genus: s
+filmkomoedie:
+  type: n
+  genus: f
+anus:
+  type: n
+  genus: m
+arsch:
+  type: n
+  genus: s
+hurensohn:
+  type: n
+zuhoerer:
+  type: n
+  genus: m
+Otto:
+  type: n
+Fernschreiber:
+  type: n
+  genus: m
+Faxgeraet:
+  type: n
+Uebertragung:
+  type: n
+mehrerer:
+  type: 4
+Wenn:
+  type: fw
+wuesste:
+  type: vi
+Schuh:
+  type: n
+filmparodie:
+  type: q
+western:
+  type: n
+filmparodie:
+  type: q
+Der:
+  type: art
+schuh:
+  type: n
+manitu:
+  type: n
+davon:
+  type: adv
+nie:
+  type: prep
+singen:
+  type: n
+  genus: s
+Nein:
+  type: n
+direkt:
+  type: adj
+darueber:
+  type: adv
+reden:
+  type: n
+Kinder:
+  type: n
+  genus: f
+bekommen:
+  type: n
+  genus: s
+Ein:
+  type: art
+Wort:
+  type: fw
+zusammengefuegte:
+  type: adj
+Buchstaben:
+  type: n
+  genus: f
+verstanden:
+  type: vi
+Fisch:
+  type: n
+  genus: m
+Eine:
+  type: art
+sardine:
+  type: n
+  genus: f
+fisch:
+  type: n
+  genus: m
+Raeuber:
+  type: n
+  genus: m
+hotzenplotz:
+  type: n
+Figur:
+  type: n
+Meister:
+  type: n
+  genus: m
+yoda:
+  type: n
+Dieser:
+  type: art
+Artikel:
+  type: n
+  genus: m
+wichtigsten:
+  type: adj
+eder:
+  type: n
+Titel:
+  type: n
+  genus: m
+deutschen:
+  type: n
+Fernsehserie:
+  type: n
