@@ -1,3 +1,11 @@
+692:
+
+- eine weitere Fehlerbereinigung der word_types.brain
+
+691:
+
+- eine weitere Fehlerbereinigung der word_types.brain
+
 689:
 
 - beim Uebernehmen aus der .brain wurde auch in die .protocol geschrieben
