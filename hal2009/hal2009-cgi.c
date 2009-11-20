@@ -76,6 +76,25 @@ int main (int argc, char** argv) {
     return 0;
 }
 
+void for__input__add_pro_file(void* arg) {
+    char* text = (char*)arg;
+    
+    hal2009_add_pro_file(text);
+    FILE* target = fopen("_input__add_pro_file", "w+b");
+    halclose(target);
+}
+
+void for__input__get_csv(void* arg) {
+    struct DATASET set = hal2009_get_csv(text);
+    const char* csv_data = hal2009_make_csv(&set);
+    FILE* target = fopen("_input__get_csv", "w+b");
+    halwrite(csv_data, 1, strlen(csv_data), target);
+    halclose(target);
+    fprintf(output(), "Release memory now.\n");
+    free(csv_data);
+    fprintf(output(), "Memory is released.\n");
+}
+
 void hal2009_handle_signal(void* arg) {
     char* type       = ((void**)arg)[0];
     char* text       = ((void**)arg)[1];
@@ -89,19 +108,11 @@ void hal2009_handle_signal(void* arg) {
         halclose(target);
     }
     else if (0 == strcmp(type, "_output__add_pro_file")) {
-        hal2009_add_pro_file(text);
-        FILE* target = fopen("_input__add_pro_file", "w+b");
-        halclose(target);
+        pthread_t thread;
+        pthread_create (&thread, NULL, for__input__add_pro_file, (void*)text);
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
-        struct DATASET set = hal2009_get_csv(text);
-        const char* csv_data = hal2009_make_csv(&set);
-        FILE* target = fopen("_input__get_csv", "w+b");
-        halwrite(csv_data, 1, strlen(csv_data), target);
-        halclose(target);
-        fprintf(output(), "Release memory now.\n");
-        free(csv_data);
-        fprintf(output(), "Memory is released.\n");
+
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);

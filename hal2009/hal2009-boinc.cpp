@@ -85,7 +85,7 @@ void* cpu_thread (void* p) {
 }
 
 int main (int argc, char** argv) {
-    boinc_init();
+    //boinc_init();
     
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "ram");
