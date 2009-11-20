@@ -138,8 +138,6 @@ int can_be_a_synonym(const char*);
 
 
 
-int _debugf(const char* c, ...) {
-}
 
 
 
