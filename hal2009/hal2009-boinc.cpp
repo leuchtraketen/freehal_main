@@ -1,6 +1,7 @@
 #define NOT_HEADER_ONLY 1
 #define USE_CXX 1
 #include "hal2009.h"
+#include "hal2009-download.cpp"
 
 #include <BOINC/boinc_api.h>
 #include <BOINC/boinc_zip.h>
