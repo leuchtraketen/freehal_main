@@ -93,7 +93,7 @@ int main (int argc, char** argv) {
     srand (time_seed());
     int N = 30;
     int M = 300;
-    usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+    //usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
     
     extract();
     
