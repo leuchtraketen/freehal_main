@@ -3140,7 +3140,7 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
     
     print "Input is computed... Going on."
     print new line
-    set new var mode to find_mode using var input
+    set new var mode to find_mode using var input, var current_language, var path
     set new array sentences to use_mode with var input, array facts_to_save, hash tags, var current_language, var path, var mode
     print "Output is..."
     print new line

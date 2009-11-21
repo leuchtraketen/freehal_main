@@ -3801,7 +3801,7 @@ define action multiple_choices_verb with var verb do
     do return with var verbs
 done
 
-define action find_mode with var input do
+define action find_mode with var input, var lang, var path do
     if var input matches /<[?]>/ do
         print "Sentence contains a question mark"
         print new line
@@ -3813,6 +3813,15 @@ define action find_mode with var input do
         print new line
         
         do return with "question"
+    done
+    else if (not var input matches /_no-question_/) and lc(var input) matches /^(<[A-Za-z]>+?)\s/ do
+        set new array tags to compute_tags with $0, var lang, var path
+        if from array tags first item matches /v/ and not from array tags first item matches /adv/ do
+            print "Sentence contains a verb as first word..."
+            print new line
+            
+            do return with "question"
+        done
     done
     else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
         print "Sentence contains a question word and sub clauses"

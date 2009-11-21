@@ -3000,7 +3000,7 @@ define action multiple_choices_verb with var verb do
     do return with var verbs
 done
 
-define action find_mode with var input do
+define action find_mode with var input, var lang, var path do
     if var input matches /<[?]>/ do
         print "Sentence contains a question mark"
         print new line
