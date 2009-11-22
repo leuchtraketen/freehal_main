@@ -609,7 +609,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             ++does_match_here;
                         }
                         else {
-                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
@@ -1933,6 +1933,9 @@ int is_a_trivial_word(const char* word) {
          || 0 == strcmp(word, "bereits")
          || 0 == strcmp(word, "nur")
          || 0 == strcmp(word, "zu")
+         || 0 == strcmp(word, "mit")
+         || 0 == strcmp(word, "ohne")
+         || 0 == strcmp(word, "in")
         )
          ?  1
          :  0
@@ -1959,6 +1962,13 @@ int can_be_a_synonym(const char* word) {
             !is_a_trivial_word(word)
          && strcmp(word, "es")
          && strcmp(word, "*")
+         && strcmp(word, "in")
+         && strcmp(word, "im")
+         && strcmp(word, "an")
+         && strcmp(word, "am")
+         && strcmp(word, "von")
+         && strcmp(word, "vom")
+         && strcmp(word, "auf")
          
          ?  1
          :  0

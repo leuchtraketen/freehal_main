@@ -88,7 +88,7 @@ int main (int argc, char** argv) {
     boinc_init();
     
     sql_engine = (char*)calloc(64, 1);
-    strcpy(sql_engine, "ram");
+    strcpy(sql_engine, "disk");
     
     srand (time_seed()+(int)((void*)(sql_engine)));
     int N = 30;
@@ -104,9 +104,7 @@ int main (int argc, char** argv) {
     
     {
         char* sqlite_filename = (char*)calloc(OPTION_SIZE + 1, 1);
-        strcat(sqlite_filename, ".");
-        strcat(sqlite_filename, "/lang_de");
-        strcat(sqlite_filename, "/database.db");
+        strcat(sqlite_filename, "./database.db");
         sql_sqlite_set_filename(sqlite_filename);
     }
 
