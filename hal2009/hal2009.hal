@@ -3381,6 +3381,9 @@ define action init_prot_files with var current_language, var path do
             if not var file matches /prot$/ do
                 go to next
             done
+            if var file matches /wiki\// do
+                go to next
+            done
             
             set new var pro_file to var file
             do regex using var pro_file: /t$/, "", :i
