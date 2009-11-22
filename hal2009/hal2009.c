@@ -35,7 +35,7 @@ int halusleep(double seconds) {
         if (seconds >= 1) {
             sleep((unsigned int) seconds);
         } else {
-            halusleep((int)fmod(seconds*1000000, 1000000));
+            usleep((int)fmod(seconds*1000000, 1000000));
         }
         seconds = end_time - time(NULL);
         if (seconds <= 0) break;

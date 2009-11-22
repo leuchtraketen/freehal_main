@@ -526,7 +526,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
 
             //if (n == 0 || n % 30 == 0) {
             const char* smid = small_identifier(words[n][m]->name);
-            if (!last_smid || strcmp(last_smid, smid)) {
+            if ((!last_smid || strcmp(last_smid, smid)) && smid) {
                 if (in_bracket) {
                     strcat(sql, ")");
                     in_bracket = 0;

@@ -1656,6 +1656,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'fern' => "adj",
           'lau' => "adj",
           'schaust' => "vi",
+          'weisswurst' => "n",
           'schaue' => "vi",
           'schauen' => "vi",
           'dann' => "adj",

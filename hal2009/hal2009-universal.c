@@ -1982,7 +1982,7 @@ const char* small_identifier(const char* word) {
     if (word[0] == '=') {
         return "__";
     }
-    if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 2) {
+    if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 3) {
         return "__";
     }
     
