@@ -94,7 +94,7 @@ void hal2009_distrib_server_start() {
             std::cerr << e.what() << std::endl;
         }
         
-        usleep(2000);
+        halusleep(2000);
     }
 }
 
@@ -136,13 +136,13 @@ void hal2009_distrib_server_run() {
         {
             std::cerr << "(1): " << e.what() << std::endl;
             if ( stream ) delete stream;
-            usleep(2000);
+            halusleep(2000);
             continue;
         }
         try {
             if (!distrib_server_acceptor) {
                 hal2009_distrib_server_start();
-                usleep(2000);
+                halusleep(2000);
             }
             if (!distrib_server_acceptor) {
                 delete stream;
@@ -154,7 +154,7 @@ void hal2009_distrib_server_run() {
         {
             std::cerr << "(2): " << e.what() << std::endl;
             if ( stream ) delete stream;
-            usleep(2000);
+            halusleep(2000);
             continue;
         }
         try {
@@ -163,7 +163,7 @@ void hal2009_distrib_server_run() {
         catch (std::exception& e)
         {
             std::cerr << "(3): " << e.what() << std::endl;
-            usleep(2000);
+            halusleep(2000);
         }
     }
 }

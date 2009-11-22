@@ -11,6 +11,8 @@
 
 #if defined (__MINGW) || defined(__MINGW32__)
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif
 
 extern "C" {
@@ -75,12 +77,12 @@ void* cpu_thread (void* p) {
             srand (time_seed());
             int N = 30;
             int M = 600;
-            usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+            halusleep(1000*(M + uniform_deviate (rand()) * (N - M)));
 
             boinc_finish(0);
         }
 
-        usleep(1000);
+        halusleep(1000);
     }
 }
 
@@ -90,10 +92,11 @@ int main (int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
     
-    srand (time_seed()+(int)((void*)(sql_engine)));
+    srand (time_seed()+(int)((void*)(sql_engine))%77);
     int N = 30;
     int M = 600;
-    usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+    printf("%d\n", (N + rand() % (M - N)) );
+    //halusleep(1000*(N + rand() % (M - N)));
     
     extract();
     

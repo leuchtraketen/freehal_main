@@ -75,7 +75,7 @@ std::vector<std::string>* simple_split (const string text, const string search) 
 int locked_netcom = 0;
 void hal2009_netcom_lock() {
     while (locked_netcom) {
-        usleep(50);
+        halusleep(50);
         --locked_netcom;
     }
     locked_netcom = 15*1000/50;
@@ -223,7 +223,7 @@ void* hal2009_netcom_do_accept(void* arg) {
         fprintf(output(), "(hal2009_netcom_do_accept) Close socket for pro file %s...\n", filename);
         stream->close();
         free(filename);
-        usleep(1500);
+        halusleep(1500);
         if ( stream ) delete stream;
     }
     catch (std::exception& e) {
@@ -263,7 +263,7 @@ void* hal2009_netcom_do_give(void* arg) {
         fprintf(output(), "(hal2009_netcom_do_give)   Close socket for pro file %s...\n", filename);
         stream->close();
         free(filename);
-        usleep(2000);
+        halusleep(2000);
         /*
         it is in the stack!!
         
@@ -328,7 +328,7 @@ void* hal2009_netcom_run_accept(void*) {
             continue;
         }
         try {
-            usleep(1000);
+            halusleep(1000);
             if (i_am_giving == false) {
                 pthread_t t;
                 pthread_create (&t, NULL, hal2009_netcom_do_accept, (void*)stream);
@@ -416,7 +416,7 @@ void* hal2009_netcom_run_give(void*) {
 
                 int timeout = 30;
                 while (num_of_probethreads != 0 && timeout >= 0) {
-                    usleep(100);
+                    halusleep(100);
                     timeout -= 0.1;
                 }
                 
@@ -564,24 +564,24 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
 
         cout << "Start threads (language: " << language_copy << ")." << endl;
         pthread_t answer_thread = hal2009_answer(strdup(input), strdup(programming_language), strdup(language_copy), strdup(base_dir), NOT_JOIN, MULTI);
-        usleep(1000);
+        halusleep(1000);
         //pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
         pthread_join(answer_thread, NULL);
 
         FILE* f;
         while (!(f = fopen("_output2", "r"))) {
-            usleep(1000);
+            halusleep(1000);
         }
         if (f) {
             fclose(f);
         }
         ifstream output_stream("_output2");
-        usleep(500);
+        halusleep(500);
         string output;
         getline(output_stream, output);
         if (output.size() == 0) {
             ifstream output_stream("_output2");
-            usleep(500);
+            halusleep(500);
             string output;//
             getline(output_stream, output);
         }
@@ -592,7 +592,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         hal2009_clean();
     }
     if (0 == strlen(answer_from_c)) {
-        answer_from_c = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
+        answer_from_c = "<i>FreeHAL halsleeps... Unable to get an answer. Try again later.</i>";
     }
     else {
         last_input_time = 0;
@@ -684,7 +684,7 @@ void hal2009_log_streamer(tcp::iostream* stream) {
     char* line = (char*)cxxhalmalloc(10000,  "hal2009_log_streamer");
     while (stream > 0 && stdout > 0) {
         long int current_line_number_from_log = 0;
-        usleep(10000);
+        halusleep(10000);
     }
     cxxhalfree(code);
 */
@@ -714,7 +714,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     strcpy(language,             signal_handler_tlanguage);
     
     while (init_thread_ended <= 0) {
-        usleep(1000);
+        halusleep(1000);
     }
 
     string line;
@@ -834,7 +834,7 @@ void hal2009_server_stop() {
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
     cout << "Get stream." << endl;
     while (0 == hal2009_server_clients.size()) {
-        usleep(1000);
+        halusleep(1000);
     }
     tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
     

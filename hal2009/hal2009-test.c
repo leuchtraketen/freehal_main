@@ -7,7 +7,7 @@ int main (int argc, char** argv) {
     sql_sqlite_set_filename("test.db");
     hal2009_add_pro_file("test.pro");
     
-    sleep(10000);
+    halsleep(10000);
 
     return 0;
 }

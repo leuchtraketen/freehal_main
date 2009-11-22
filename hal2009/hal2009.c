@@ -25,6 +25,28 @@ char* sql_engine = 0;
 int _debugf(const char* c, ...) {
 }
 
+int halusleep(double seconds) {
+    seconds /= 1000;
+#ifdef _WIN32
+    Sleep((int)(1000*seconds));
+#else
+    double end_time = time(NULL) + seconds - 0.01;
+    while (1) {
+        if (seconds >= 1) {
+            sleep((unsigned int) seconds);
+        } else {
+            halusleep((int)fmod(seconds*1000000, 1000000));
+        }
+        seconds = end_time - time(NULL);
+        if (seconds <= 0) break;
+    }
+#endif
+}
+int halsleep(double seconds) {
+    halusleep(seconds*1000);
+}
+
+
 void* halfilecalloc( long s, long si, char* str ) {
     void* p = calloc( s, si );
     char fn[500];
@@ -1069,7 +1091,7 @@ void* hal2009_signal_handler(void* parameters) {
         for (i = 0; i < number_of_files_to_check; ++i) {
             FILE* source = NULL;
             if ( source = fopen("_change_text_language", "r") ) {
-                usleep(500);
+                halusleep(500);
                 halclose(source);
                 source = fopen("_change_text_language", "r");
                 if (source && tlanguage) fread(tlanguage, 1, 2, source);
@@ -1088,7 +1110,7 @@ void* hal2009_signal_handler(void* parameters) {
             }
 
             if ( source = fopen(files_to_check[i], "r+b") ) {
-                usleep(500);
+                halusleep(500);
                 halclose(source);
                 source = fopen(files_to_check[i], "r+b");
             }
@@ -1104,7 +1126,7 @@ void* hal2009_signal_handler(void* parameters) {
                 }
                 halclose(source);
                 if (!strlen(code) && strcmp(files_to_check[i], "_exit")) {
-                    usleep(1000);
+                    halusleep(1000);
                     source = fopen(files_to_check[i], "r+b");
                     fprintf(output(), "File reopened: %s\n", files_to_check[i]);
                     if ( fread(buffer, 1, 10240, source) ) {
@@ -1131,7 +1153,7 @@ void* hal2009_signal_handler(void* parameters) {
             }
         }
 
-        usleep(1000);
+        halusleep(1000);
     }
     
     halfree(temporary_memory);

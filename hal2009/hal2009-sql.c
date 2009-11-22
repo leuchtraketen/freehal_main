@@ -77,7 +77,7 @@ int sql_add_link (char* link, int key_1, int key_2) {
 int sql_begin() {
     while (database_used) {
         fprintf(output(), "Wait while database is used.\n");
-        sleep(1);
+        halsleep(1);
     }
     fprintf(output(), "%s\n", "Start database access.");
     database_used = 1;

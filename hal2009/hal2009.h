@@ -65,6 +65,21 @@ void *calloc (size_t, size_t);
 void *realloc (void*, size_t);
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+#ifdef USE_CXX
+extern "C" {
+#endif
+int halsleep(double);
+int halusleep(double);
+#ifdef __cplusplus
+}
+#endif
+#ifdef USE_CXX
+}
+#endif
+
 #if defined (__MINGW) || defined(__MINGW32__)
 #include <windows.h>
 #define sleep(x) Sleep(1000*(x))

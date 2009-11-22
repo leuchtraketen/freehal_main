@@ -74,16 +74,26 @@ set new global var be_slow__last_time to time without arguments
 define action be_slow without arguments do
     if exists: "SLOW", end test do
         set new var be_slow__new_time to time without arguments
-        set new var diff to var be_slow__new_time - var be_slow__last_time - 1
+        set new var diff to var be_slow__new_time - var be_slow__last_time
         if var diff > 3 do
             set var diff to 3
         done
-        if var diff > 1 do
+        if var diff >= 0.5 do
             print STDERR "Micro-managing freehal process: "
             print STDERR var diff
             print STDERR " cpu seconds were used."
             print STDERR new line
-            do wait 25 * var diff seconds
+            
+            set new var timeout to 25 * var diff
+            set new var last_time to time without arguments
+            while var timeout > 0 do
+                do wait var timeout seconds
+                
+                set new var new_time to time without arguments
+                set var timeout to var timeout - var new_time + var last_time
+                set var last_time to var new_time
+            done
+            
             set var be_slow__last_time to time without arguments
         done
     done
@@ -3488,6 +3498,7 @@ define action init_pro_files with var current_language, var path do
         # Read all .pro files by sending a signal to the C thread
         # CODE
         for each new var file_name in array files is rw do
+            do be_slow without arguments
             set new var file to var language_directory concat '/' concat var file_name
 
             if not var file matches /\.pro$/ do

@@ -70,7 +70,7 @@ int main (int argc, char** argv) {
     hal2009_init(strdup(programming_language), strdup(language), strdup(base_dir));
 
     while (1) {
-        sleep(1);
+        halsleep(1);
     }
     
     return 0;

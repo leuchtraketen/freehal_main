@@ -160,7 +160,7 @@ int main (int argc, char** argv) {
         char* copy_of_language             = (char*)halmalloc(16, "hal2009_server_statement");
         strcpy(copy_of_language,             language);
         pthread_t signal_thread = hal2009_start_signal_handler(copy_of_programming_language, copy_of_language, SINGLE);
-        sleep(2);
+        halsleep(2);
         pthread_t answer_thread = hal2009_answer(input, programming_language, language, base_dir, NOT_JOIN, SINGLE);
         //pthread_join(signal_thread, NULL);
         pthread_join(answer_thread, NULL);
@@ -194,7 +194,7 @@ void shell(char* programming_language, char* language, char* base_dir) {
         strncpy(copy_of_input,               input, 1024);
         pthread_t answer_thread = hal2009_answer(copy_of_input, copy_of_programming_language, copy_of_language, copy_of_base_dir, NOT_JOIN, MULTI);
         pthread_join(answer_thread, NULL);
-        sleep(1);
+        halsleep(1);
     }
 }
 
