@@ -90,9 +90,9 @@ int main (int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "ram");
     
-    srand (time_seed());
+    srand (time_seed()+(int)((void*)(sql_engine)));
     int N = 30;
-    int M = 300;
+    int M = 600;
     usleep(1000*(M + uniform_deviate (rand()) * (N - M)));
     
     extract();
