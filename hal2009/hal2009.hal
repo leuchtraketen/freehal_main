@@ -2973,6 +2973,11 @@ define action update_list_of_pro_file with var file, var lang, var path do
 done
 
 define action reread_pro_file with var file, var lang do
+    if exists: "SLOW", end test do
+        print "Don't read a .pro file in SLOW mode."
+        print new line
+        do return with 1
+    done
     # TEXT
     # Write the signal file for re-reading
     # CODE
@@ -3500,6 +3505,12 @@ define action update_list_of_pro_files with var pattern, var current_language, v
 done
 
 define action init_pro_files with var current_language, var path do
+    if exists: "SLOW", end test do
+        print "Don't read the .pro files in SLOW mode."
+        print new line
+        do return with 1
+    done
+
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
