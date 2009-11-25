@@ -1534,6 +1534,11 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'will' => 1,
           'wollen' => 1,
           'wollt' => 1,
+
+          'moechte' => 1,
+          'moechtest' => 1,
+          'moechten' => 1,
+          'moechtet' => 1,
           
           'muss' => 1,
           'musst' => 1,

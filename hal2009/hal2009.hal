@@ -2265,11 +2265,20 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 else do
                     if items of array proper_verbs do
-                        push into array sentence, from array clause item [1]
-                        push into array sentence, items of array auxiliary_verbs
-                        push into array sentence, from array clause item [2]
-                        push into array sentence, from array clause item [3]
-                        push into array sentence, items of array proper_verbs
+                        if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [3]
+                            push into array sentence, from array clause item [2]
+                            push into array sentence, items of array proper_verbs
+                        done
+                        else do
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [2]
+                            push into array sentence, from array clause item [3]
+                            push into array sentence, items of array proper_verbs
+                        done
                     done
                     else do
                         push into array sentence, from array clause item [1]
