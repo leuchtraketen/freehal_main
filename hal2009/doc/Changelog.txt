@@ -1,3 +1,11 @@
+722:
+
+- Changelog aktualisiert
+
+721:
+
+- Satzstellung verbessert
+
 720:
 
 - Changelog aktualisiert
