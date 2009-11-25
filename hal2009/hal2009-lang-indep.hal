@@ -254,7 +254,6 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sdermassen(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sderzeit(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdes weiteren(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdessen(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdeswegen(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdochnoch(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdurchwegs(<[\s!.,?]>+)/, "$0", :global:i

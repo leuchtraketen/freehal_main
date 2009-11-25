@@ -3100,6 +3100,24 @@ define action modify_input with var input, var current_language, var path do
             set var input to "warum " concat var last_output
         done
     done
+    if lc(var input) matches /(^|\s)dessen(\s|$)/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', read
+        set new var last_output to ''
+        for each new var line from var input_handle do
+            if var line matches /\s/ do
+                if length(var line) >= 10 do
+                    if not var line matches /<[,]>/ do
+                        set var last_output to var line
+                    done
+                done
+            done
+        done
+        
+        if var last_output do
+            do regex using var input: /(^|\s)dessen(\s|$)/, "$0$1", :global:i
+            do regex using var input: /(<[?!.]>|$)/, ", dass var last_output$0", :i
+        done
+    done
     if var input matches /^weil/ do
         set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/input.history', read
         set new var last_input to ''
@@ -3125,6 +3143,7 @@ define action save_input with var input, var current_language, var path do
 done
 
 define action save_output with var input, var current_language, var path do
+    do regex using var input: /\(.*/, "", :global
     set new var output_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', append
     set new array outputs to split with /([<]br[>].*?\s)/, var input
     for each new var output in array outputs do
