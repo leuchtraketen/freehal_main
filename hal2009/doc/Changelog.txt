@@ -1,7 +1,18 @@
+720:
+
+- Changelog aktualisiert
+
+719:
+
+- Versuch, den Absturzfehler zu finden
+
+718:
+
+- Parserbug korrigiert
+
 704:
 
 - Die word_types. brain ist bis zur Zeile 200.000 korrigiert. Das sind 78,25% 
-
 
 692:
 
