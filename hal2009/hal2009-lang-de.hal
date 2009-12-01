@@ -1711,6 +1711,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'dumpf' => "adj",
           'leicht' => "adj",
           'when' => "questionword",
+          'wort' => "n",
           'tlerweile' => "adj",
           'weshalb' => "questionword",
           'deutsche' => "adj",

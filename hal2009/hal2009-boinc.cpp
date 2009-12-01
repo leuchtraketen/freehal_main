@@ -44,9 +44,10 @@ double uniform_deviate ( int seed ) {
 
 void* cpu_thread (void* p) {
     BOINC_OPTIONS options;
-    boinc_options_defaults(options);   // set defaults
-    options.direct_process_action = 1;          // set values as needed
+    options.direct_process_action = 0;
     options.send_status_msgs      = 1;
+    boinc_options_defaults(options);   // set defaults
+//    options.direct_process_action = 1;          // set values as needed
 
     
     long max_seconds = 60 * 90;
