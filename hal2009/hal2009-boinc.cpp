@@ -43,13 +43,6 @@ double uniform_deviate ( int seed ) {
 }
 
 void* cpu_thread (void* p) {
-    BOINC_OPTIONS options;
-    options.direct_process_action = 0;
-    options.send_status_msgs      = 1;
-    boinc_options_defaults(options);   // set defaults
-//    options.direct_process_action = 1;          // set values as needed
-
-    
     long max_seconds = 60 * 90;
     long checkpoint_sec = 60;
     long checkpoint_cpu = 0;
@@ -88,7 +81,13 @@ void* cpu_thread (void* p) {
 }
 
 int main (int argc, char** argv) {
-    boinc_init();
+    BOINC_OPTIONS options;
+    memset(&options, 0, sizeof(options));
+    options.main_program = true;
+    options.check_heartbeat = true;
+    options.handle_process_control = true;
+    boinc_init_options(&options);
+    fprintf(stderr, "freehal 2009: starting...\n");
     
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
@@ -117,6 +116,7 @@ int main (int argc, char** argv) {
     pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
     hal2009_execute_file("hal2009-boinc.hal", "perl5");
     pthread_join((pthread_t)(signal_thread), NULL);
+    pthread_join((pthread_t)(thread_cpu));
     
     return 0;
 }
