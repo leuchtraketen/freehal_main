@@ -54,9 +54,6 @@ void* cpu_thread (void* p) {
     long checkpoint_sec = 60;
     long checkpoint_cpu = 0;
 
-    FILE* o_finished_1 = fopen("boinc_finish_called", "w");
-    halclose(o_finished_1);
-    
     time_t start;
     time(&start);
     while (1) {
@@ -80,6 +77,9 @@ void* cpu_thread (void* p) {
             int M = 600;
             halusleep(1000*(M + uniform_deviate (rand()) * (N - M)));
 
+	    FILE* o_finished_1 = fopen("boinc_finish_called", "w");
+	    halclose(o_finished_1);
+    
             boinc_finish(0);
         }
 
@@ -96,8 +96,8 @@ int main (int argc, char** argv) {
     srand (time_seed()+(int)((void*)(sql_engine))%77);
     int N = 30;
     int M = 600;
-    printf("%d\n", (N + rand() % (M - N)) );
-    //halusleep(1000*(N + rand() % (M - N)));
+    //printf("%d\n", (N + rand() % (M - N)) );
+    halusleep(1000*(N + rand() % (M - N)));
     
     extract();
     
@@ -160,9 +160,6 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
         ///pthread_exit(0);
-    }
-    else if (0 == strcmp(type, "_exit")) {
-        exit(0);
     }
 }
 
