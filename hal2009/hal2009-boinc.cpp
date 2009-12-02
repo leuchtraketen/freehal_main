@@ -116,7 +116,7 @@ int main (int argc, char** argv) {
     pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
     hal2009_execute_file("hal2009-boinc.hal", "perl5");
     pthread_join((pthread_t)(signal_thread), NULL);
-    pthread_join((pthread_t)(thread_cpu));
+    pthread_join((pthread_t)(thread_cpu), NULL);
     
     return 0;
 }
