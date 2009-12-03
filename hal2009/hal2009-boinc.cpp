@@ -6,6 +6,7 @@
 #include <BOINC/boinc_zip.h>
 
 #include <getopt.h>
+#include <signal.h>
 
 #define OPTION_SIZE 512
 
@@ -81,6 +82,7 @@ void* cpu_thread (void* p) {
 }
 
 int main (int argc, char** argv) {
+    signal(SIGTRAP, SIG_IGN);
     BOINC_OPTIONS options;
     memset(&options, 0, sizeof(options));
     options.main_program = true;
