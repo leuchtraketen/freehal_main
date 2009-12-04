@@ -87,18 +87,22 @@ int main (int argc, char** argv) {
     memset(&options, 0, sizeof(options));
     options.main_program = true;
     options.check_heartbeat = false;
-    options.handle_process_control = true;
+    options.handle_process_control = false;
     boinc_init_options(&options);
     fprintf(stderr, "freehal 2009: starting...\n");
     
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
     
-    srand (time_seed()+(int)((void*)(sql_engine))%77);
+    srand (time_seed()+(int)((void*)(sql_engine))%17);
     int N = 30;
     int M = 600;
     //printf("%d\n", (N + rand() % (M - N)) );
     halusleep(1000*(N + rand() % (M - N)));
+    void* rand_1 = malloc(2);
+    halusleep(1000*((int)((void*)(rand_1))%257));
+    void* rand_2 = malloc(2);
+    halusleep(1000*((int)((void*)(rand_2))%257));
     
     extract();
     
