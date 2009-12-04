@@ -86,7 +86,7 @@ int main (int argc, char** argv) {
     BOINC_OPTIONS options;
     memset(&options, 0, sizeof(options));
     options.main_program = true;
-    options.check_heartbeat = true;
+    options.check_heartbeat = false;
     options.handle_process_control = true;
     boinc_init_options(&options);
     fprintf(stderr, "freehal 2009: starting...\n");
