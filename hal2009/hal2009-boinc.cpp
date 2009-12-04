@@ -81,6 +81,10 @@ void* cpu_thread (void* p) {
     }
 }
 
+#ifndef SIGTRAP
+#define SIGTRAP 5
+#endif
+
 int main (int argc, char** argv) {
     signal(SIGTRAP, SIG_IGN);
     BOINC_OPTIONS options;
