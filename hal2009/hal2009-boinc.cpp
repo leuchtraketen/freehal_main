@@ -55,8 +55,6 @@ void* cpu_thread (void* p) {
         time_t now;
         time(&now);
         
-//        double frac = 1.0 / (max_seconds - 60*5) * (now - start);
-        
         double frac = 1.0 / (max_seconds) * (now - start);
         boinc_fraction_done(frac);
         if ((now - start) % checkpoint_sec == 0 ) {
@@ -70,15 +68,27 @@ void* cpu_thread (void* p) {
             int N = 30;
             int M = 600;
             halusleep(1000*(M + uniform_deviate (rand()) * (N - M)));
-
-	    FILE* o_finished_1 = fopen("boinc_finish_called", "w");
-	    halclose(o_finished_1);
     
             boinc_finish(0);
         }
 
         halusleep(1000);
     }
+    boinc_finish(0);
+}
+
+void* app_thread (void* p) {
+    {
+        char* sqlite_filename = (char*)calloc(OPTION_SIZE + 1, 1);
+        strcat(sqlite_filename, "./database.db");
+        sql_sqlite_set_filename(sqlite_filename);
+    }
+
+    hal2009_clean();
+    
+    pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
+    hal2009_execute_file("hal2009-boinc.hal", "perl5");
+    pthread_join((pthread_t)(signal_thread), NULL);
 }
 
 #ifndef SIGTRAP
@@ -92,6 +102,7 @@ int main (int argc, char** argv) {
     options.main_program = true;
     options.check_heartbeat = false;
     options.handle_process_control = false;
+    options.send_status_msgs = true;
     boinc_init_options(&options);
     fprintf(stderr, "freehal 2009: starting...\n");
     
@@ -101,32 +112,25 @@ int main (int argc, char** argv) {
     srand (time_seed()+(int)((void*)(sql_engine))%17);
     int N = 30;
     int M = 600;
-    //printf("%d\n", (N + rand() % (M - N)) );
     halusleep(1000*(N + rand() % (M - N)));
-    void* rand_1 = malloc(2);
+    void* rand_1 = malloc(17);
     halusleep(1000*((int)((void*)(rand_1))%257));
-    void* rand_2 = malloc(2);
-    halusleep(1000*((int)((void*)(rand_2))%257));
     
     extract();
     
-    pthread_t thread_cpu;
+    void* rand_2 = malloc(7);
+    halusleep(1000*((int)((void*)(rand_2))%257));
+    
+    // pthread_t thread_cpu;
+    // int nul = NULL;
+    // pthread_create (&thread_cpu, NULL, cpu_thread, &nul);
+    // pthread_join((pthread_t)(thread_cpu), NULL);
+    
+    pthread_t thread_app;
     int nul = NULL;
-    pthread_create (&thread_cpu, NULL, cpu_thread, &nul);
+    pthread_create (&thread_app, NULL, app_thread, &nul);
     
-    
-    {
-        char* sqlite_filename = (char*)calloc(OPTION_SIZE + 1, 1);
-        strcat(sqlite_filename, "./database.db");
-        sql_sqlite_set_filename(sqlite_filename);
-    }
-
-    hal2009_clean();
-    
-    pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
-    hal2009_execute_file("hal2009-boinc.hal", "perl5");
-    pthread_join((pthread_t)(signal_thread), NULL);
-    pthread_join((pthread_t)(thread_cpu), NULL);
+    thread_cpu(nul);
     
     return 0;
 }
@@ -169,7 +173,6 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);
-        ///pthread_exit(0);
     }
 }
 
