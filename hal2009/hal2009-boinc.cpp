@@ -130,7 +130,7 @@ int main (int argc, char** argv) {
     int nul = NULL;
     pthread_create (&thread_app, NULL, app_thread, &nul);
     
-    cpu_thread(nul);
+    cpu_thread(&nul);
     
     return 0;
 }
