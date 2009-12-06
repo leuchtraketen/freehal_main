@@ -2311,6 +2311,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
+        if var final_sentence matches /<[,]> 50/ do
+            # TEXT
+            # A Sentence must not end with e.g. dachte
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
         if var final_sentence matches /anyone/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
