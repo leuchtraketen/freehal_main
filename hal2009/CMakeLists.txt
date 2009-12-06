@@ -33,7 +33,10 @@ target_link_libraries (hal2009-3dnetz m crypt pthread perl dl z libaw_sdk.a)
 add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
 target_link_libraries (hal2009-server m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/boinc_graphics2.a /usr/lib/boinc_zip.a /usr/lib/boinc_api.a /usr/lib/boinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c) 
+add_executable (hal2009-cgi hal2009-cgi.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp) 
+target_link_libraries (hal2009-cgi m crypt pthread perl dl z boost_thread-mt boost_system-mt)
+
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/boinc_graphics2.a /usr/lib/boinc_zip.a /usr/lib/boinc_api.a /usr/lib/boinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c) 
 target_link_libraries (hal2009-boinc m crypt pthread dl boinc_api boinc_zip boinc_graphics2 boinc z /usr/lib/libperl.a) 
 
 install(PROGRAMS hal2009 DESTINATION bin)
