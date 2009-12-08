@@ -1364,6 +1364,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'noch' => 1,
           'etwa' => 1,
           'ungefaehr' => 1,
+          'keinesfalls' => 1,
           'ca' => 1,
           'mal' => 1,
           'bestimmte' => 1,
@@ -1693,6 +1694,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'fuenf' => "adj",
           'elfte' => "adj",
           'kuenftig' => "adj",
+          'keinesfalls' => "adj",
           'ewig' => "adj",
           'leichten' => "adj",
           'nett' => "adj",
@@ -2912,6 +2914,13 @@ define action get_person with var _noun do
     done
     
     do return with "3s"
+done
+
+define action get_plural with var str do
+    if var str matches /e$/ do
+        do regex using var str: /e$/, "", :i
+    done
+    do return with var str
 done
 
 define action get_verb with var verb, var person do

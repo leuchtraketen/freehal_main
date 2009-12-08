@@ -1,5 +1,9 @@
 740:
 
+- Bug 454 korrigiert
+
+740:
+
 - Bug 455 korrigiert
 - Bug 456 korrigiert
 

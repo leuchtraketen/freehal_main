@@ -2535,6 +2535,10 @@ define action get_person with var _noun do
     do return with "3s"
 done
 
+define action get_plural with var str do
+    do return with var str
+done
+
 define action get_verb with var verb, var person do
 
     if var verb matches "be" do

@@ -1831,6 +1831,10 @@ define action logic with var input, var lang, var path, hash parsed do
     set new var request_adverbs_string to join using ' ', items of array request_adverbs
     set new var request_extra_string to join using ' ', items of array request_extra
 
+    if var request_context_string matches "enum_all" do
+        set var request_extra_string to get_plural with var request_extra_string
+    done
+
     if var request_verb_string or var request_subjects_string or var request_objects_string or var request_adverbs_string do
         set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
         print into var flowchart_log data "begin box"
