@@ -3615,7 +3615,7 @@ done
 define action check_for_math with var input do
     set new var math to var input
     
-    do regex using var math: /<[=?!.]>/, "", :global:i
+    do regex using var math: /<[=?!._]>/, "", :global:i
     do regex using var math: /hoch/, "**", :global:i
     do regex using var math: /\^/, "**", :global:i
     do regex using var math: /wie/, "", :global:i
@@ -3628,11 +3628,13 @@ define action check_for_math with var input do
     do regex using var math: /sind/, "", :global:i
     do regex using var math: /what/, "", :global:i
     do regex using var math: /is/, "", :global:i
+    do regex using var math: /in/, "", :global:i
     do regex using var math: /does/, "", :global:i
     do regex using var math: /makes/, "", :global:i
     do regex using var math: /ergibt/, "", :global:i
     do regex using var math: /gibt/, "", :global:i
     do regex using var math: /aus/, " ", :global:i
+    do regex using var math: /jahre/, " ", :global:i
     do regex using var math: /sich/, " ", :global:i
     do regex using var math: /der|die|das/, " ", :global:i
     do regex using var math: / plus /, "+", :global:i
