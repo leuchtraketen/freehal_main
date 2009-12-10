@@ -1,3 +1,11 @@
+743:
+
+- Changelog aktualisiert
+
+742:
+
+- Bug 453 korrigiert
+
 740:
 
 - Bug 454 korrigiert
