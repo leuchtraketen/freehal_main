@@ -395,9 +395,11 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /^\s+/, "", :global
     
-    do regex using var input: /^((?:ein|eine)\s+?)(.+?)\s+?(ist|sind)\s+?((?:ein|eine)\s+?)(.+?)$/, "$1 = $4", :global
-    do regex using var input: /^((?:der|die|das)\s+?)(.+?)\s+?(ist|sind)\s+?((?:der|die|das)\s+?)(.+?)$/, "$1 = $4", :global
-    do regex using var input: /^(.+?)\s+?(ist|sind)\s+?((?:ein|eine|der|die|das)\s+?)(.+?)$/, "$0 = $3", :global
+    if not ( var input matches /(^|\s)(von|fuer)(\s|$)/ or var input matches /<[,]>/ ) do
+        do regex using var input: /^((?:ein|eine)\s+?)(.+?)\s+?(ist|sind)\s+?((?:ein|eine)\s+?)(.+?)$/, "$1 = $4", :global
+        do regex using var input: /^((?:der|die|das)\s+?)(.+?)\s+?(ist|sind)\s+?((?:der|die|das)\s+?)(.+?)$/, "$1 = $4", :global
+        do regex using var input: /^(.+?)\s+?(ist|sind)\s+?((?:ein|eine|der|die|das)\s+?)(.+?)$/, "$0 = $3", :global
+    done
 
     do regex using var input: /(^|\s)du hast (.*?) aus /, "$0du bekommst $1 aus ", :global:i
     do regex using var input: /(^|\s)woher hast du /, "$0woher bekommst du ", :global:i

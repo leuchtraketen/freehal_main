@@ -1889,7 +1889,7 @@ struct DATASET as_dataset(struct fact** list) {
                 set.column_count = column_count;
             
             set.data[d] = record;
-            printf("transformed record no %d.\n", d);
+            // printf("transformed record no %d.\n", d);
         }
     }
     
