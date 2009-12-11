@@ -1,3 +1,7 @@
+744:
+
+- Bug 421 korrigiert
+
 743:
 
 - Changelog aktualisiert

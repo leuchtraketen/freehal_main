@@ -3732,6 +3732,7 @@ define action shell with var current_language, var path do
                 if lc(var line) matches /^\/gen list/ do
                     do regex using var line: /^\/gen list /, "", :global:i
                     do regex using var line: /^\/gen list/, "", :global:i
+                    do regex using var line: /.pro/, "", :global:i
                     if not var line do
                         set var line to ""
                     done
