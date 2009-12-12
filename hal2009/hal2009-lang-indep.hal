@@ -249,6 +249,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sbemerkenswerterweise(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sbetraechtlich(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdann und wann(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\sdamit(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdemnaechst(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdennoch(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdermassen(<[\s!.,?]>+)/, "$0", :global:i
@@ -334,7 +335,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sueberraschenderweise(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sueblicherweise(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sumsomehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\suteranderem(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\sunteranderem(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\surspruenglich(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sunterdessen(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sunverstaendlicherweise(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sunzweifelhaft(<[\s!.,?]>+)/, "$0", :global:i
@@ -418,10 +420,10 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: / ein jeder /, " _jeder_ ", :global:i
     
-    do regex using var input: / (<[a-z]>+?)<[-]> (und|oder) (<[a-z]>+?)(haltig|artig|ig|haft)(es|er|en|em|e|) /, " $0$3$4 $1 $2$3$4 ", :global:i
+    #do regex using var input: / (<[a-z]>+?)<[-]> (und|oder) (<[a-z]>+?)(haltig|artig|ig|haft)(es|er|en|em|e|) /, " $0$3$4 $1 $2$3$4 ", :global:i
     
-    do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?)<[,\sund]>*?\s(<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 $3 ", :global:i
-    do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 ", :global:i
+    #do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?)<[,\sund]>*?\s(<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 $3 ", :global:i
+    #do regex using var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) /, " $0 $1 $2 ", :global:i
 
     do regex using var input: / du jetzt /, " du ", :global:i
     do regex using var input: / ich jetzt /, " ich ", :global:i
@@ -446,6 +448,24 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sist mit\s/, " ist-mit ", :global:i
 
     do regex using var input: /Was fuer (.*?) kennst du.*/, "was ist $0 ?", :global:i
+
+    do regex using var input: /dem Begriff der /, "der ", :global:i
+    do regex using var input: /den Begriff der /, "die ", :global:i
+    do regex using var input: /der Begriff der /, "die ", :global:i
+    do regex using var input: /dem Begriff des /, "dem ", :global:i
+    do regex using var input: /den Begriff des /, "das ", :global:i
+    do regex using var input: /der Begriff des /, "das ", :global:i
+
+    for 1 .. 1 do
+        do regex using var input: /(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        do regex using var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/, "$0 $2 $1 $2 $3", :global:i
+        
+    end for
 
     do regex using var input: /^was\sgeht<ws><[?]>/, "wie geht es dir?", :global:i
     do regex using var input: /^was\sgeht$/, "wie geht es dir?", :global:i

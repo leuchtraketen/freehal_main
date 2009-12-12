@@ -582,12 +582,12 @@ done
 # TEXT
 # For BOINC
 # CODE
-define boinc_guess_part_of_speech with var word, var lang, var path do
+define action boinc_guess_part_of_speech with var word, var lang, var path do
     if var word matches /[A-Z]/ do
-        do return with var "n"
+        do return with "n"
     done
     else do
-        do return with var "adj"
+        do return with "adj"
     done
 done
 
@@ -959,6 +959,15 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
                 do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
                 shift from array words
             done
+            while from hash sym_linking item { var next_word } do
+                do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                shift from array words
+                
+                if from hash sym_noun item { var next_word } do
+                    do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                    shift from array words
+                done
+            done
             go to last
         done
         set var current_word to var next_word
@@ -1036,7 +1045,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         # Otherwise it will be empty
         # CODE
         set new hash parsed to parse_what with var lang, array words, hash tags, var what, flag found_subject
-        if defined hash parsed && is an empty hash parsed do
+        if defined hash parsed and is an empty hash parsed do
             # TEXT
             # It's empty. The "1", which is returned as the second array element,
             # means that there's another following part of speech, probably a verb
@@ -1134,7 +1143,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
         # The word is a preposition. Search an entitiy after this word.
         set new hash parsed to parse_what with var lang, array words, hash tags, "nothing", flag found_subject
         
-        if defined hash parsed && that hash is not empty: hash parsed end check do
+        if defined hash parsed and that hash is not empty: hash parsed end check do
             # TEXT
             # It's not empty.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
@@ -1584,6 +1593,105 @@ define action pre_parse with array list_of_words, hash tags, var lang, var path 
             push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
             do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
         done
+        else if from hash sym_linking item { from hash tags item { var word } first item } and from hash sym_entity item { from hash tags item { from array list_of_words item [ var i + 1 ] } first item } do
+            # A is B and C and D and E and F
+            set var array_index to var array_index + 1
+            push into array list_of_list_of_words, an empty array
+            if from array list_of_questionwords item [ var array_index - 1 ] do
+                push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
+            done
+            
+            print "Template found: 'A is B and C and D and E and F'."
+            print new line
+            
+            # set current part to last part
+            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, items of that array: from array list_of_list_of_words item [ var array_index - 1 ] end-items-of,
+            
+            # current part (= last part) has an article near the end?
+            set new var part_size to size of that array: from array list_of_list_of_words item [ var array_index ] end-items-of
+            # "near the end" is defined as 4 words
+            set new var near_end to var part_size - 4
+            if var near_end < 0 do
+                set var near_end to 0
+            done
+            
+            set new var the_end to -1
+            set new var d to var part_size - 1
+            while var d >= var near_end do
+                set new var word_d to from array list_of_list_of_words item [ var array_index ] item [ var d ]
+                
+                if from hash sym_art item { from hash tags item { var word_d } first item } do
+                    set var the_end to var d
+                done
+                
+                set var d to var d - 1
+            done
+            
+            if not var the_end is -1 do
+                print "found an article."
+                print new line
+            done
+            
+            # found an article? if not, search last adjective
+            if var the_end is -1 do
+                print "found no article."
+                print new line
+                
+                set new var d to var part_size - 1
+                while var d >= var near_end do
+                    set new var word_d to from array list_of_list_of_words item [ var array_index ] item [ var d ]
+                    
+                    if from hash sym_adj item { from hash tags item { var word_d } first item } do
+                        set var the_end to var d
+                    done
+                    
+                    set var d to var d - 1
+                done
+            done
+
+            if not var the_end is -1 do
+                print "found an adjective."
+                print new line
+            done
+
+            # found an adjective? if not, search last noun
+            if var the_end is -1 do
+                print "found no adjective."
+                print new line
+                
+                set new var d to var part_size - 1
+                while var d >= var near_end do
+                    set new var word_d to from array list_of_list_of_words item [ var array_index ] item [ var d ]
+                    
+                    if from hash sym_noun item { from hash tags item { var word_d } first item } do
+                        set var the_end to var d
+                    done
+                    if from hash sym_verb item { from hash tags item { var word_d } first item } do
+                        go to last
+                    done
+                    
+                    set var d to var d - 1
+                done
+            done
+            
+            if not var the_end is -1 do
+                print "found a noun."
+                print new line
+            done
+            else do
+                print "found no noun."
+                print new line
+            done
+
+            # found anything?
+            if not var the_end is -1 do
+                # then cut off the rest
+                set new var diff to var part_size - var the_end
+                for 1 .. var diff do
+                    do pop using items of that array: from array list_of_list_of_words item [ var array_index ] end-items-of
+                done
+            done
+        done
         else do
             do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
             
@@ -1594,6 +1702,26 @@ define action pre_parse with array list_of_words, hash tags, var lang, var path 
 
         set var i to var i + 1
     done
+    
+    print new line
+    print "Pre-Parser (index: var array_index size: "
+    set new var temp_size to items of array list_of_list_of_words
+    print var temp_size
+    print ")"
+    print new line
+    print "-------------------------------------------------------"
+    print new line
+    for each new var subarray in array list_of_list_of_words do
+        print "- "
+        for each new var subitem in array subarray do
+            print var subitem
+            print ", "
+        done
+        print new line
+    done
+    print "-------------------------------------------------------"
+    print new line
+    print new line
     
     do return with array list_of_list_of_words
 done
