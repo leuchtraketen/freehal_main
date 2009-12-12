@@ -580,6 +580,18 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
 done
 
 # TEXT
+# For BOINC
+# CODE
+define boinc_guess_part_of_speech with var word, var lang, var path do
+    if var word matches /[A-Z]/ do
+        do return with var "n"
+    done
+    else do
+        do return with var "adj"
+    done
+done
+
+# TEXT
 # Find out the part of speech
 # CODE
 define action compute_tags with var word, var lang, var path do
@@ -765,6 +777,11 @@ define action compute_tags with var word, var lang, var path do
         if not is an empty array tags do
             go to last
         done
+    done
+    
+    if is an empty array tags and exists: "SLOW", end test do
+        set from array tags first item to boinc_guess_part_of_speech, var word, var lang, var path
+        go to last
     done
     
     # TEXT

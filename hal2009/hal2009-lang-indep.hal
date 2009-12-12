@@ -348,6 +348,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\swiederum(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\szeitlebens(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\szunehmend(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\szunaechst(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\szwangslaeufig(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\szweifellos(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sbloederweise(<[\s!.,?]>+)/, "$0", :global:i

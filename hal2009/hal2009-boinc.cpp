@@ -141,7 +141,7 @@ void hal2009_handle_signal(void* arg) {
     
     if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
-        strcpy(text, "2");
+        strcpy(text, "n");
         FILE* target = fopen("_input__pos", "w+b");
         halwrite(text, 1, strlen(text), target);
         halclose(target);
