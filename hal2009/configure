@@ -1,5 +1,10 @@
 #!/bin/bash
 
+grep -- "-boinc" CMakeLists.txt  && (
+	cat CMakeLists.txt > CMakeLists.txt.tmp
+	grep -v -- '-boinc' CMakeLists.txt.tmp > CMakeLists.txt
+)
+
 cmake . >/dev/null 2>&1
 cmake .
 
