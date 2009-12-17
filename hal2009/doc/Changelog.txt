@@ -1,3 +1,11 @@
+749:
+
+- Changelog aktualisiert
+
+748:
+
+- Bug 461 korrigiert
+
 746:
 
 - Tagger verbessert
