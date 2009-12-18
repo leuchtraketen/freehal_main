@@ -448,6 +448,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print into var output_handle data "  genus: " concat from array tags second item concat new line
         do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
+    
+    if not var file_name matches /brain/ do
+        print into var output_handle data "  count: 1" concat new line
+    done
 
     do close with var output_handle
 
@@ -533,7 +537,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     
     set new var type to 'q'
     set new var genus to 'q'
-    set new var count to '1'
+    set new var count to 0
     
     do be_slow without arguments
     
@@ -617,6 +621,7 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
     for each new var line in array lines is rw do
         if var line matches /var matched_id/ do
             set var entry to var line
+            
             go to next
         done
         
@@ -625,10 +630,6 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
                 set var line to "  count: " concat var count concat new line
                 go to last
             done
-        done
-        
-        if var entry and not var line matches /^ / do
-            set var line to "  count: " concat var count concat new line concat var line
         done
     done
     

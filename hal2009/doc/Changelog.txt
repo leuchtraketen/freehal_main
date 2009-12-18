@@ -1,3 +1,7 @@
+755:
+
+- allgemeine Verbesserung der Implementierung der memory_plus-Funktion zum Updaten den count-Wertes
+
 754:
 
 - Changelog aktualisiert
