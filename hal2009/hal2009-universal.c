@@ -169,6 +169,9 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
         if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name)) {
             set_to_invalid_value(&(facts[f]));
         }
+        if (can_be_a_pointer(facts[f]) && facts[f]->truth < 0.5) {
+            set_to_invalid_value(&(facts[f]));
+        }
     }
     
     // allocate more memory
