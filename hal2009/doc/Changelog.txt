@@ -1,3 +1,11 @@
+754:
+
+- Changelog aktualisiert
+
+753:
+
+- Implementierung der memory_plus-Funktion zum Updaten den count-Wertes
+
 752:
 
 - Changelog aktualisiert
