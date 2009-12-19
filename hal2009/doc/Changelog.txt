@@ -1,6 +1,10 @@
+756:
+
+- Implementierung der memory_limit-Funktion zum Aufraeumen der Memory mit Hilfe des count-Wertes
+
 755:
 
-- allgemeine Verbesserung der Implementierung der memory_plus-Funktion zum Updaten den count-Wertes
+- allgemeine Verbesserung der Implementierung der memory_plus-Funktion zum Updaten des count-Wertes
 
 754:
 
@@ -8,7 +12,7 @@
 
 753:
 
-- Implementierung der memory_plus-Funktion zum Updaten den count-Wertes
+- Implementierung der memory_plus-Funktion zum Updaten des count-Wertes
 
 752:
 

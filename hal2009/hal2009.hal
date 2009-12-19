@@ -601,6 +601,140 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
 done
 
 # TEXT
+# Ensure the memory limit
+# CODE
+define action memory_limit with var file_name, var lang, var path do
+    if var file_name matches /brain/ do
+        do return without arguments
+    done
+    
+    set new var limit to 2
+    
+    print "There is a memory limit of " concat var limit concat ", file " concat var file_name
+    print new line
+    
+    # TEXT
+    # read file
+    # CODE
+    set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
+    set new var average_count to 0
+    set new var count_items to 1
+    set new var entry to ""
+    set new array lines to an empty array
+    set new array names to an empty array
+    set new hash file_to_limit to an empty hash
+    set new hash count_values to an empty hash
+    set items of array lines to all lines from var input_handle
+    do close with var input_handle
+    for each new var line in array lines is rw do
+        # no line ending
+        do regex using var line: /<[\r\n]>/, "", :global
+        
+        if var line matches /^ / do
+            do push into that array: from hash file_to_limit item { var entry } end-items-of, var line
+            
+            if var line matches /count..(.*)/ do
+                set var average_count to var average_count + $0
+                set var count_items to var count_items + 1
+                
+                do push into that array: from hash count_values item { var entry } end-items-of, $0
+            done
+        done
+        else do
+            set var entry to var line
+            do push into array names, var entry
+        done
+    done
+    
+    set var average_count to var average_count / var count_items
+    
+    print "Average is " concat var average_count
+    print new line
+    
+    # TEXT
+    # ensure that the limit is not exceeded
+    # CODE
+    
+    set new var count_over_avg to 0
+    set new var count_under_avg to 0
+    set new array entries_over_avg to an empty array
+    set new array entries_under_avg to an empty array
+    for each new var entry_name in array names do
+        if from hash count_values item { var entry } >= var average_count do
+            set var count_over_avg to var count_over_avg + 1
+            push into array entries_over_avg, var entry_name
+        done
+        if from hash count_values item { var entry } < var average_count do
+            set var count_under_avg to var count_under_avg + 1
+            push into array entries_under_avg, var entry_name
+        done
+    done
+    
+    print "Over  average: " concat var count_over_avg concat new line
+    print "Under average: " concat var count_under_avg concat new line
+    print "All          : " concat items of array names concat new line
+    
+    set items of array entries_over_avg to sort with items of array entries_over_avg
+    set items of array entries_under_avg to sort with items of array entries_under_avg
+    set items of array entries_over_avg to reverse with items of array entries_over_avg
+    set items of array entries_under_avg to reverse with items of array entries_under_avg
+    
+    if var count_over_avg > var limit do
+        set new var count_to_remove to var count_over_avg - var limit
+        print "Remove over  average: " concat var count_to_remove concat new line
+        while var count_to_remove > 0 do
+            do shift with items of array entries_over_avg
+        
+            set var count_to_remove to var count_to_remove - 1
+        done
+    done
+    if var count_under_avg > var limit do
+        set new var count_to_remove to var count_under_avg - var limit
+        print "Remove under average: " concat var count_to_remove concat new line
+        while var count_to_remove > 0 do
+            do shift with items of array entries_under_avg
+        
+            set var count_to_remove to var count_to_remove - 1
+        done
+    done
+    
+    set items of array entries_over_avg to reverse with items of array entries_over_avg
+    set items of array entries_under_avg to reverse with items of array entries_under_avg
+    
+    # TEXT
+    # save everything
+    # CODE
+    set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, write
+    for each new var entry in array entries_over_avg is rw do
+        print into var output_handle data var entry
+        print into var output_handle data new line
+        
+        set new array lines to from hash file_to_limit item { var entry }
+        
+        if array lines do
+            for each new var line in array lines is rw do
+                print into var output_handle data var line
+                print into var output_handle data new line
+            done
+        done
+    done
+    for each new var entry in array entries_under_avg is rw do
+        print into var output_handle data var entry
+        print into var output_handle data new line
+        
+        set new array lines to from hash file_to_limit item { var entry }
+        
+        if array lines do
+            for each new var line in array lines is rw do
+                print into var output_handle data var line
+                print into var output_handle data new line
+            done
+        done
+    done
+    do close with var output_handle
+done
+
+# TEXT
 # Update the "count" value
 # CODE
 define action memory_plus with var file_name, var matched_id, var count, var lang, var path do
@@ -621,7 +755,6 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
     for each new var line in array lines is rw do
         if var line matches /var matched_id/ do
             set var entry to var line
-            
             go to next
         done
         
@@ -3975,6 +4108,9 @@ define action shell with var current_language, var path do
             do save_facts with array facts_to_save, hash tags, '', '', var current_language, var path
         done
     done
+    
+    do memory_limit with "word_types.memory", var current_language, var path
+    do memory_limit with "word_types.self-taggered", var current_language, var path
     
     #set new var f1 to shift with items of array facts_to_link
     #set new var f2 to shift with items of array facts_to_link
