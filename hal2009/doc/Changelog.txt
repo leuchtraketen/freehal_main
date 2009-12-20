@@ -1,4 +1,12 @@
-763:
+766:
+
+- Changelog aktualisiert
+
+765:
+
+- Bug 432 korrigiert
+
+764:
 
 - Bug korrigiert: FreeHAL kommt nun mit dem "kann" klar, erwartet aber in den .pro-Dateien den neuen Regeln nach "kann/can", "kannst/can" bzw. "koennen/can"
 - Bug 428 korrigiert
