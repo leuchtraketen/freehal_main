@@ -2396,8 +2396,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             # Tag and sort all verbs.
             # CODE
             set new array raw_verbs to [ split ' ', from array clause item [0] ]
-            set new array proper_verbs to an empty array
-            set new array auxiliary_verbs to an empty array
+            set new hash proper_verbs_hash to an empty hash
+            set new hash auxiliary_verbs_hash to an empty hash
             
             for each new var verb in array raw_verbs do
                 if var verb matches /=>/ do
@@ -2421,35 +2421,35 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     if var is_want do
                         set new var new_verb to get_verb with "want", var person
                         if var new_verb do
-                            push into array auxiliary_verbs, var new_verb
+                            set from hash auxiliary_verbs_hash item { var new_verb } to 1
                         done
                     done
                     
                     if var is_must do
                         set new var new_verb to get_verb with "must", var person
                         if var new_verb do
-                            push into array auxiliary_verbs, var new_verb
+                            set from hash auxiliary_verbs_hash item { var new_verb } to 1
                         done
                     done
                     
                     if var is_can do
                         set new var new_verb to get_verb with "can", var person
                         if var new_verb do
-                            push into array auxiliary_verbs, var new_verb
+                            set from hash auxiliary_verbs_hash item { var new_verb } to 1
                         done
                     done
                     
                     if var is_may do
                         set new var new_verb to get_verb with "may", var person
                         if var new_verb do
-                            push into array auxiliary_verbs, var new_verb
+                            set from hash auxiliary_verbs_hash item { var new_verb } to 1
                         done
                     done
                     
                     if var is_should do
                         set new var new_verb to get_verb with "should", var person
                         if var new_verb do
-                            push into array auxiliary_verbs, var new_verb
+                            set from hash auxiliary_verbs_hash item { var new_verb } to 1
                         done
                     done
                     
@@ -2457,12 +2457,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 
                 if from global hash builtin_auxiliary_verbs item { var verb } do
-                    push into array auxiliary_verbs, var verb
+                    set from hash auxiliary_verbs_hash item { var verb } to 1
                 done
                 else do
-                    push into array proper_verbs, var verb
+                    set from hash proper_verbs_hash item { var verb } to 1
                 done
             done
+            
+            set new array auxiliary_verbs to an empty array
+            set items of array auxiliary_verbs to keys with items of hash auxiliary_verbs_hash
+            set new array proper_verbs to an empty array
+            set items of array proper_verbs to keys with items of hash proper_verbs_hash
             
             print from array clause item [3]
             print new line
@@ -2471,10 +2476,13 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 do regex using from array clause item [3]: /(^|\s)zu(\s|$)/, "$0", :global
             done
             
+            print "-" concat from array proper_verbs first item concat "-"
+            print new line
+            
             # TEXT
             # Build the final sentence.
             # CODE
-            if from array proper_verbs first item matches /^equal/ do
+            if from array proper_verbs first item and from array proper_verbs first item matches /^equal/ do
                 set new var _no_user_ask to handle for file name "_no_user_ask", write
                 do close with var _no_user_ask
 
@@ -3127,24 +3135,24 @@ define action sort_out with array results, var mode, hash parsed do
         if is an empty array results_variable_answer or (items of array results_variable_answer)+50 < (items of array results_proper) do
             print "-> results_proper (1): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
             print new line
-            return array results_proper
+            do return with array results_proper
         done
         else do
             print "-> results_variable_answer (2): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
             print new line
-            return array results_variable_answer
+            do return with array results_variable_answer
         done
     done
     else do
         if is an empty array results_proper do
             print "-> results_variable_answer (1): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
             print new line
-            return array results_variable_answer
+            do return with array results_variable_answer
         done
         else do
             print "-> results_proper (2): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
             print new line
-            return array results_proper
+            do return with array results_proper
         done
     done
 done
