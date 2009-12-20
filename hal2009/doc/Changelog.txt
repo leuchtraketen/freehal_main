@@ -1,6 +1,10 @@
-759:
+761:
 
-- Der Bug mit dem ", 50 nicht" wurde korrigiert
+- Changelog aktualisiert
+
+760:
+
+- Bug 418 korrigiert
 
 758:
 
