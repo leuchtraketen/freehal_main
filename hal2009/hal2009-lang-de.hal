@@ -1434,7 +1434,6 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'noch' => 1,
           'zeitlebens' => 1,
           'stets' => 1,
-          'ewig' => 1,
           'always' => 1,
           'schon' => 1,
           'bisher' => 1,

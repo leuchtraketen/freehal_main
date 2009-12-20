@@ -71,11 +71,11 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
                         ((struct RECORD*)(r->clauses[n]))->questionword,
                         ((struct RECORD*)(r->clauses[n]))->from,
                         ((struct RECORD*)(r->clauses[n]))->truth,
-                        r->verb_flag_want,
-                        r->verb_flag_must,
-                        r->verb_flag_can,
-                        r->verb_flag_may,
-                        r->verb_flag_should
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_want,
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_must,
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_can,
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_may,
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_should
                 )) {
                 
                     broken = 1;
