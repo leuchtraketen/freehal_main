@@ -608,7 +608,7 @@ define action memory_limit with var file_name, var lang, var path do
         do return without arguments
     done
     
-    set new var limit to 2
+    set new var limit to 1000
     
     print "There is a memory limit of " concat var limit concat ", file " concat var file_name
     print new line
