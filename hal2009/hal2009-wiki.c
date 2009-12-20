@@ -716,16 +716,18 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             free(object);
         }
     }
-    
-    for (current_line = 0; current_line < number_of_lines; ++current_line) {
+    for (; current_line < number_of_lines; ++current_line) {
         if (0 == lines[current_line])
-            break;
+            continue;
         if (0 == lines[current_line]->s)
-            break;
-        halfree(lines[current_line]->s);
-        halfree(lines[current_line]);
-        lines[current_line] = 0;
-        continue;
+            continue;
+        
+        {
+            halfree(lines[current_line]->s);
+            halfree(lines[current_line]);
+            lines[current_line] = 0;
+            continue;
+        }
     }
     
     

@@ -425,7 +425,11 @@ char* convert_to_perl5 (char* hals, int just_compile) {
     halfree(lines);
     halfree(hals);
     
-    return newcode;
+    char* newcode_return = halmalloc(strlen(newcode) + 2, "convert_to_perl5/10");
+    strcpy(newcode_return, newcode);
+    halfree(newcode);
+    
+    return newcode_return;
 }
 
 int convert_to_perl5_convert_file(char* filename) {
@@ -497,8 +501,8 @@ int convert_to_perl5_convert_file(char* filename) {
         }
         halwrite(targetcode, 1, strlen(targetcode), target);
         halclose(target);
-        halfree(targetcode);
     }
+    halfree(targetcode);
 
     if (last_filename)
         free(last_filename);

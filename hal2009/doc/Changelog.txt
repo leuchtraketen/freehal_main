@@ -1,3 +1,7 @@
+772:
+
+- Memory-Bug korrigiert, hauptsaechlich in hal2009_perl5.c
+
 771:
 
 - Versuch, den endlos-type:q-Bug zu korrigieren
