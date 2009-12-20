@@ -1,3 +1,11 @@
+758:
+
+- memory_limit-Funktion korrigiert
+
+757:
+
+- //
+
 756:
 
 - Implementierung der memory_limit-Funktion zum Aufraeumen der Memory mit Hilfe des count-Wertes
