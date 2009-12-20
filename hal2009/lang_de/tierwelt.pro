@@ -4,10 +4,10 @@ ernaehrt <> ein koalabaer <> sich <> von eukalyptus <>  <>  <>  <>  <>  <>  <> 5
 ernaehrt <> nothing <> sich <> der geier  von aas <>  <>  <>  <>  <>  <>  <> 50
 essen <> voegel <> fische <>  <>  <>  <>  <> nothing <> nothing <>
 fangen <> katzen <> maeuse <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-fliegen kann <> ein pinguin <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 50
-fliegen kann <> ein vogel <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
+fliegen kann/can <> ein pinguin <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 50
+fliegen kann/can <> ein vogel <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
 fliegen koennen <> schwaene <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-gehen kann <> ein pinguin <> nothing <> schlecht <>  <>  <>  <>  <>  <>  <> 50
+gehen kann/can <> ein pinguin <> nothing <> schlecht <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> das lama <> nothing <> zur familie der kamele <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> die zecke <> nothing <> zu den spinnentieren <>  <>  <>  <>  <>  <>  <> 50
 gehoert <> nothing <> nothing <> die elster zu den rabenvoegeln <>  <>  <>  <>  <>  <>  <> 50
@@ -94,7 +94,7 @@ ist <> ein schwein <> ein paarhufer <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein schwein <> ein specklieferant <>  <> 50
 ist <> ein schwein <> en nutztier <>  <> 50
 ist <> ein truthahn <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein vogel <> ein tier <>  <>  <>  <> fliegen kann <> das <> nothing <> 
+ist <> ein vogel <> ein tier <>  <>  <>  <> fliegen kann/can <> das <> nothing <> 
 ist <> ein vogel <> ein tier <> mit fluegeln <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein vogel <> ein tier <>das fliegt  <>  <>  <>  <>  <>  <>  <> 50
 ist <> ein vogel <> ein wirbeltier <>  <> 50
@@ -115,8 +115,8 @@ ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
 ist <> guano <> vogelkot <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> zoologie <> die lehre <> von den tieren <>  <>  <>  <>  <>  <>  <> 50
-kann schwimmen <> ein fisch <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
-kann springen <> ein floh <> 35 zentimeter <> weit <>  <>  <>  <>  <>  <>  <> 50
+kann/can schwimmen <> ein fisch <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
+kann/can springen <> ein floh <> 35 zentimeter <> weit <>  <>  <>  <>  <>  <>  <> 50
 kleine sind <> ponys <> pferde <>  <>  <>  <>  <>  <>  <>  <> 50
 leben <> fische <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>
 leben <> woelfe <> nothing <> in rudeln <>  <>  <>  <>  <>  <>  <> 50
@@ -124,7 +124,7 @@ lebt <> der maulwurf <> nothing <> unter der erde <>  <>  <>  <>  <>  <>  <> 50
 lebt <> ein delphin <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>  <> 50
 legt <> ein huhn <> 20 eier <> in dem jahr <>  <>  <>  <>  <>  <>  <> 50
 legt <> ein huhn <> eier <>  <>  <>  <>  <> nothing <> nothing <> 
-melken muss <> man <> die kuh <>  <> wenn <>  <> willst <> man <> milch <>bekommen kann <>  
+melken muss <> man <> die kuh <>  <> wenn <>  <> willst <> man <> milch <>bekommen kann/can <>  
 saeugetier ist <> ein <> ein wirbeltier <>  <> 50
 saeugetiere sind <> wirbeltiere <>  <>  <> 50
 schwimmt <> ein fisch <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <> 

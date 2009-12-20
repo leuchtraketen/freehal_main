@@ -13,7 +13,7 @@ aehneln vorfahren <> die zaliter <> nothing <> ihren;in ihrem aussehen stark <> 
 aeltesten zaehlt <> das finanzgenie homer gershwin adams <> weggefaehrten <> zu perry_rhodans <>  <>  <> nothing <>  <>  <>  <> 50
 aeusserlich unterscheiden <> die akonen <> sich <> kaum;von terranern <>  <>  <> nothing <>  <>  <>  <> 50
 aeusserlich unterscheiden <> plophoser <> nothing <> in keiner weise von menschen der erde <>  <>  <> nothing <>  <>  <>  <> 50
-aeusserst einstellen kann <> perry_rhodan <> sich <> auf neue situationen;rasch <>  <>  <> nothing <>  <>  <>  <> 50
+aeusserst einstellen kann/can <> perry_rhodan <> sich <> auf neue situationen;rasch <>  <>  <> nothing <>  <>  <>  <> 50
 agieren <> roboter cairol <> der kosmokraten <> als beauftragte;mit dem namen <>  <>  <> nothing <>  <>  <>  <> 50
 agiert kuehl <> atlan <> nothing <> in der regel <>  <>  <> nothing <>  <>  <>  <> 50
 allen benutzten <> die lemurer <> kugelraumschiffe groessen <> in <>  <>  <> nothing <>  <>  <>  <> 50
@@ -196,7 +196,7 @@ ist <> unith <> der dritte planet unatha <> der sonne <>  <>  <> nothing <>  <> 
 ist <> zalit <> 3402 lichtjahre <> von terra entfernt <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> zalit <> der vierte planet der riesensonne voga <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> zalit <> nothing <> (lichtjahre_von_arkon_entfernt);nur <>  <>  <> nothing <>  <>  <>  <> 50
-kann veraendern <> icho_tolot <> seine struktur <>  <>  <>  <> nothing <>  <>  <>  <> 50
+kann/can veraendern <> icho_tolot <> seine struktur <>  <>  <>  <> nothing <>  <>  <>  <> 50
 kurzen sind <> naats <> drei meter hohe geschoepfe <> mit <> staemmigen <> saeulenbeinen <> nothing <>  <>  <>  <> 50
 leben <> kosmokraten <> hinter den materiequellen <>  <>  <>  <> nothing <>  <>  <>  <> 50
 leben sind <> terraner <> menschen <> auf der erde;die <>  <>  <> nothing <>  <>  <>  <> 50

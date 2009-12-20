@@ -48,7 +48,7 @@ heisst <> die aesthetik <> erfolg <> unserer;tage <>  <>  <> nothing <>  <>  <> 
 = <> eine erkenntnis <> nothing <> von;heute;kann;die;tochter;eines;irrtums;von;gestern <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> ein eingriff <> nothing <> das;familienleben;in;das;privatleben <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> die arbeit <> etwas unnatuerliches <>  <>  <>  <> nothing <>  <>  <>  <> 50
-krankarbeiten krankfaulenzen <> man kann sich viel <> leichter <> als <>  <>  <> nothing <>  <>  <>  <> 50
+krankarbeiten krankfaulenzen <> man kann/can sich viel <> leichter <> als <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> nichtstun und <> eine der groessten verhaeltnismaessig leicht <> zu;beseitigenden;dummheiten <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> unsere fehlschlaege <> erfolgreicher <> als;unsere;erfolge;oft <>  <>  <> nothing <>  <>  <>  <> 50
 fremde haben verbessert will <> lieber fehler <> nothing <> jeder;als;eigene <>  <>  <> nothing <>  <>  <>  <> 50
@@ -75,7 +75,7 @@ leben <> die meisten <> nothing <> in;den;ruinen;ihrer;gewohnheiten <>  <>  <> n
 fingerabdruecke sind <> gewohnheiten <> die <> des;geistes <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> glueck <> selbstgenuegsamkeit <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> glueck <> talent <> fuer;das;schicksal <>  <>  <> nothing <>  <>  <>  <> 50
-lieben <> man <> kann gott nur <> auf;eigene;kosten <>  <>  <> nothing <>  <>  <>  <> 50
+lieben <> man <> kann/can gott nur <> auf;eigene;kosten <>  <>  <> nothing <>  <>  <>  <> 50
 abhaengt <> die groesse <> nothing <> eines;menschen;nicht;von;der;groesse;seines;wirkungsfeldes <>  <>  <> nothing <>  <>  <>  <> 50
 besitzen macht <> nothing <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
 heisst <> der preis <> verantwortung <> der;groesse <>  <>  <> nothing <>  <>  <>  <> 50
@@ -135,7 +135,7 @@ ist <> ein einziger schoener klang <> schoener <> als;langes;gerede <>  <>  <> n
 ist <> moderne musik <> instrumentenstimmen <> nach;noten <>  <>  <> nothing <>  <>  <>  <> 50
 geschrieben ist <> das buch <> nothing <> der;natur;mit;mathematischen;symbolen <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> jaeten <> zensur <> an;der;natur <>  <>  <> nothing <>  <>  <>  <> 50
-= <> unmoeglich kann ein naturhaftes begehren <> vergeblich <>  <>  <>  <> nothing <>  <>  <>  <> 50
+= <> unmoeglich kann/can ein naturhaftes begehren <> vergeblich <>  <>  <>  <> nothing <>  <>  <>  <> 50
 kommt <> die schwaermerei <> nothing <> fuer;die;natur;von;der;unbewohnbarkeit;der;staedte <>  <>  <> nothing <>  <>  <>  <> 50
 sind <> natuerliche dinge <> unanstaendig <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 beste ist <> die <> waerterin ruhe <> der;natur <>  <>  <> nothing <>  <>  <>  <> 50

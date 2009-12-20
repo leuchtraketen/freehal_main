@@ -316,7 +316,7 @@ hofft <> jedes schaf <> davon <> zu;kommen <>  <>  <> nothing <>  <>  <>  <> 50
 kennt <> jugend <> tugend <> nicht <>  <>  <> nothing <>  <>  <>  <> 50
 gefreit <> nothing <> nothing <> jung <> bereut <>  <> nothing <> spaet <>  <>  <> 50
 pfeifen <> jungfern <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-schieben <> kannst <> karre <>  <> kannst kriegen <> du <> arbeit <>  <>  <>  <> 50
+schieben <> kannst/can <> karre <>  <> kannst/can kriegen <> du <> arbeit <>  <>  <>  <> 50
 ist <> knapp <> daneben <> auch;vorbei <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> kapital <> nothing <> eine;moral;nicht <>  <>  <> nothing <>  <>  <>  <> 50
 schliessen <> kassenschluessel <> alle schloesser <>  <>  <>  <> nothing <>  <>  <>  <> 50
@@ -328,7 +328,7 @@ gehoert <> klappern <> nothing <> zum_handwerk <>  <>  <> nothing <>  <>  <>  <>
 machen <> kleider <> leute <>  <>  <>  <> nothing <>  <>  <>  <> 50
 gern spielen <> kleine kinder <> nothing <> (grosse_viel_lieber_) <>  <>  <> nothing <>  <>  <>  <> 50
 bestraft liebe sofort <> kleine suenden <> gott <>  <>  <>  <> nothing <>  <>  <>  <> 50
-reden <> klug <> kann <> jeder <>  <>  <> nothing <>  <>  <>  <> 50
+reden <> klug <> kann/can <> jeder <>  <>  <> nothing <>  <>  <>  <> 50
 wird <> klug <> man <> nur;aus;erfahrung <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> knapp <> daneben <> auch;vorbei <>  <>  <> nothing <>  <>  <>  <> 50
 gefreut <> kurz <> nothing <>  <> gereut <> lang <> nothing <>  <>  <>  <> 50
@@ -347,7 +347,7 @@ glaubt <> man <> nothing <> einem;auge;mehr;als;zwei;ohren <>  <>  <> nothing <>
 hat regnet <> man <> nothing <> nur;einen;kopf;damit;es;nicht;in;den;hals <>  <>  <> nothing <>  <>  <>  <> 50
 hats <> man <> nothing <> leicht;nicht <> hats <> frau <> nothing <> leichter <>  <>  <> 50
 hat <> nothing <> nothing <> die;man;sich;eingebrockt <> ausloeffeln <> die <> nothing <> suppe <> muss <> man <> 50
-salzen <> nothing <> kann <> als;man <> schlachten <> man <> nothing <> nicht;mehr <> muss <>  <> 50
+salzen <> nothing <> kann/can <> als;man <> schlachten <> man <> nothing <> nicht;mehr <> muss <>  <> 50
 schmieden soll <> man <> eisen <>  <> ist <> solange es <> heiss <>  <>  <>  <> 50
 loben soll <> man <> tag <> nicht;vor;dem;abend <>  <>  <> nothing <>  <>  <>  <> 50
 loben soll <> man <> nothing <> nacht;nicht;vor;dem;morgen;die <>  <>  <> nothing <>  <>  <>  <> 50
@@ -462,7 +462,7 @@ hat <> ein <> grubengrabgeraet <>  <>  <>  <> nothing <>  <>  <>  <> 50
 ist <> aller <> witz beraubt <>  <>  <>  <> nothing <>  <>  <>  <> 50
 hat <> mehr <> nothing <> vom;leben <> angibt <> nothing <> nothing <>  <> wer <>  <> 50
 ist verrueckt <> nothing <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> 50
-ruehmen <> kann sich <> nothing <> der;keuschheit;leicht <> hat <> nothing <> nothing <> bei;den;frauen;nicht;eine;gunst <> wer <>  <> 50
+ruehmen <> kann/can sich <> nothing <> der;keuschheit;leicht <> hat <> nothing <> nothing <> bei;den;frauen;nicht;eine;gunst <> wer <>  <> 50
 sitzt <> ein <> wurm pfand <> in;dem;verstand <>  <>  <> nothing <>  <>  <>  <> 50
 blaest <> die suppe <> nothing <>  <> hat verbrannt <> das <> nothing <>  <> maul <>  <> 50
 braucht <> nothing <> nothing <>  <> hat <> den <> schaden <>  <> wer <>  ;; sorgen <> nothing <> nothing <>  <> xxtoxx <>  <> 50

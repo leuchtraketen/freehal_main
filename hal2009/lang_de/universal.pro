@@ -2,8 +2,8 @@ abhaelt <> die ozonschicht <> uv-strahlen <> 50
 abwirft <> die laerche <> seine nadeln <> in dem winter <> 50
 angebaut wird <> darjeelingtee <> <> in indien <> 50
 angebaut wird <> der assamtee <> <> in indien <> 50
-anhaben kann <> ein kuenstliches wesen <> nichts <> 50
-anrichten kann <> ein sturm <> sehr viel schaden <> <> 50
+anhaben kann/can <> ein kuenstliches wesen <> nichts <> 50
+anrichten kann/can <> ein sturm <> sehr viel schaden <> <> 50
 anschaut <> eine ki <> eine filme <> nicht <> <> 50
 anschaut <> ein kuenstliches wesen <> eine filme <> nicht <> <> 50
 arbeiten gehen <> menschen <> <> <> <> <> verdienen <> um geld <> <> 50
@@ -16,7 +16,7 @@ aus <> _ <> eine droge natron <> hergestellt <> <> 50
 aus <> es <> nichts <> macht mir <> <> 50
 aus <> keinem bestimmten grund <> <> 50
 aus kennst <> du <> dich <> damit nicht <> <> 50
-ausziehen kann <> du <> dich <> nicht <> <> 50
+ausziehen kann/can <> du <> dich <> nicht <> <> 50
 baden gehen <> viel spass <> <> beim <> <> 50
 baden gehst <> du <> <> 50
 baden <> viel spass <> <> beim <> <> 50
@@ -50,8 +50,8 @@ beeinflusst <> der mond <> die gehzeiten <> <> 50
 befasst <> die naturwissenschaft <> sich <> mit pyhsik, mathematik sowie chemie <> <> 50
 befindet <> das _oetzi_museum_ <> sich <> in bozen <> <> 50
 befindet <> der aelteste zoo <> sich <> in wien;der welt <> <> 50
-beibringen kann <> du <> mir dinge <> mit gespraechen <> <> 50
-beissen kann <> man <> <> ohne zaehne nicht <> <> 50
+beibringen kann/can <> du <> mir dinge <> mit gespraechen <> <> 50
+beissen kann/can <> man <> <> ohne zaehne nicht <> <> 50
 bekommst <> du <> kein keks <> <> 50
 bellt <> ein hund <> <> 50
 benoetigen <> lebewesen <> nahrung <> <> 50
@@ -59,8 +59,8 @@ benoetigt <> eine ki <> einen schlaf <> nicht <> <> 50
 benoetigt <> eine kuenstliche intelligenz <> einen schlaf <> nicht <> <> 50
 benoetigt wird <> ein kondensator <> <> in der elektronik <> <> 50
 benutzt <> ein mensch <> <> seinen verstand <> <> 50
-bereiten kann <> der koerper <> schmerzen <> <> 50
-bereiten kann <> die seele <> schmerzen <> <> 50
+bereiten kann/can <> der koerper <> schmerzen <> <> 50
+bereiten kann/can <> die seele <> schmerzen <> <> 50
 besitzen <> menschen <> <> eine wirbelsaeule <> <> 50
 besitzt <> das skelett ein erwachsenen <> 206 knochen <> <> 50
 bestehen <> atome <> <> aus elektronen neutronen und protonen <> <> <> 50
@@ -71,7 +71,7 @@ besteht <> kaviar <> <> aus fischrogen <> <> 50
 besteht <> sushi <> <> aus rohem fisch & gemuese <> <> 50
 betreibt <> man <> wintersport <> in dem winter <> <> 50
 betrieben <> _ <> ein fahrzeug <> mit einem motor <> <> 50
-beurteilen kannst <> das du <> <> nicht <> <> 50
+beurteilen kannst/can <> das du <> <> nicht <> <> 50
 bewacht <> ein hund <> den menschen <> <> 50
 beweisen musst <> du <> es mir <> <> 50
 bezahlen brauchen <> menschen <> geld <> zum <> <> 50
@@ -114,8 +114,8 @@ braucht kochen <> man <> einen herd <> <> 50
 braucht schneiden <> eine schere <> man <> zum <> <> 50
 braucht schneiden <> man <> eine schere <> zum <> <> 50
 buegeln <> ist <> hausarbeit <> <> 50
-denken kann <> eine ki <> <> nicht <> <> 50
-denken kann <> ein mensch <> <> 50
+denken kann/can <> eine ki <> <> nicht <> <> 50
+denken kann/can <> ein mensch <> <> 50
 dient <> die zahnbuerste <> der zaehne <> zur reinigung <> <> 50
 dient <> eine fernsehserie <> der menschen <> zur unterhaltung <> <> 50
 dient <> ein spiel <> <> zur entspannung <> <> 50
@@ -139,7 +139,7 @@ erschaffen hat <> gott <> das universum <> <> 50
 erwartet <> man <> sich eine antwort <> auf jede frage <> <> 50
 erzeugt <> die sonne <> licht & waerme <> <> 50
 erzeugt <> ein kloeppler <> spitzen <> <> 50
-essen kann <> man <> <> ohne mund nicht <> <> 50
+essen kann/can <> man <> <> ohne mund nicht <> <> 50
 essen <> menschen <> feste nahrung <> <> 50
 essen muessen <> menschen <> <> 50
 essen musst <> du <> <> <> hast <> du <> hunger <> <> wenn <> <> 50
@@ -148,20 +148,20 @@ essen <> vegetarier <> gemuese & obst <> <> 50
 essen <> vegetarier <> kein fleisch <> <> 50
 fahren <> autos <> <> 50
 fahren <> autos <> <> auf einer strasse <> <> 50
-fahren kann <> du <> <> mit einem auto <> <> 50
-fahren kann <> ein auto <> <> 50
-fahren kann <> man <> <> mit einem auto <> <> 50
-fahren kann <> man <> <> mit einem schiff ueber das wasser <> <> 50
-fahren kann <> man <> <> mit einen schiff ueber das meer <> <> 50
+fahren kann/can <> du <> <> mit einem auto <> <> 50
+fahren kann/can <> ein auto <> <> 50
+fahren kann/can <> man <> <> mit einem auto <> <> 50
+fahren kann/can <> man <> <> mit einem schiff ueber das wasser <> <> 50
+fahren kann/can <> man <> <> mit einen schiff ueber das meer <> <> 50
 finden <> alle 10 jahre <> passionsspiele <> in oberammergau;statt <> <> 50
 finden <> alle <> windows <> nicht;toll <> <> 50
 finden <> ein teil <> die archeologen <> von der gegenstaende <> sind <> tonkruege <> <> 50
 finden grillen <> menschen <> super <> <> 50
 findst <> du <> die revision <> auf der freehal seite <> <> <> 50
-fliegen kann <> ein auto <> <> nicht <> <> 50
-fliegen kann <> ein flugzeug <> <> 50
-fliegen kann <> man <> <> mit einem ballon in der luft <> <> 50
-fliegen kann <> man <> <> mit einem flugzeug <> <> 50
+fliegen kann/can <> ein auto <> <> nicht <> <> 50
+fliegen kann/can <> ein flugzeug <> <> 50
+fliegen kann/can <> man <> <> mit einem ballon in der luft <> <> 50
+fliegen kann/can <> man <> <> mit einem flugzeug <> <> 50
 fliegen koennen <> flugkoerper <> <> 50
 fliegen koennen <> pinguine <> <> nicht <> <> 50
 fliegen wuerden <> sie <> <> <> wenn <> <> haetten <> menschen <> fluegel <> <> 50
@@ -170,15 +170,15 @@ frankieren muss <> man <> einen brief <> <> 50
 freut <> dich <> <> das fuer mich <> <> 50
 freut lesen <> das dich <> <> zu <> <> 50
 freut <> sich <> der <> dritte <> wenn <> <> streiten <> zwei sich <> <> 50
-frieren kann <> man <> <> in dem winter <> <> 50
+frieren kann/can <> man <> <> in dem winter <> <> 50
 friert <> man <> <> ohne waerme <> <> 50
-fuehlen kann <> man <> <> ohne herz nicht <> <> 50
+fuehlen kann/can <> man <> <> ohne herz nicht <> <> 50
 fuehlen koennen <> menschen <> schmerzen <> <> 50
 fuerchtet <> jeder <> <> seinen tod <> <> 50
 funktioniert <> eine rakete <> <> nach dem rueckstossprinzip <> <> 50
 gab <> es <> 7 weltwunder <> <> 50
 gar weiss <> du <> heute nichts <> <> 50
-gehen kann <> man <> <> ohne fuesse nicht <> <> 50
+gehen kann/can <> man <> <> ohne fuesse nicht <> <> 50
 gehen <> menschen <> <> zum doktor <> sind <> sie <> <> krank <> wenn <> <> 50
 gehen <> sie <> <> zum doktor <> weil <> <> sind <> menschen <> <> 50
 gehoert <> <> 50
@@ -221,12 +221,12 @@ gibt <> es <> leben <> <> <> gott es <> <> so wollte <> weil <> <> 50
 gibt <> es <> nichts <> neues zur zeit <> <> 50
 gibt <> es <> unendlich viele sterne <> <> 50
 gilt <> louis daguerra <> als erfinder <> der fotografie <> <> 50
-greifen kann <> man <> <> ohne haende nicht <> <> 50
+greifen kann/can <> man <> <> ohne haende nicht <> <> 50
 haben <> alle menschen <> zwei augen <> <> 50
 haben <> alle quadrate <> vier ecken <> <> 50
 haben <> alle voegel <> federn <> <> 50
-haben kann <> eine ki <> einen sex <> nicht <> <> 50
-haben kann <> ein kuenstliches wesen <> einen sex <> nicht <> <> 50
+haben kann/can <> eine ki <> einen sex <> nicht <> <> 50
+haben kann/can <> ein kuenstliches wesen <> einen sex <> nicht <> <> 50
 haben <> kuenstliche wesen <> ein aussehen <> nicht <> <> 50
 haben <> kuenstliche wesen <> einen geburtstag <> nicht <> <> 50
 haben luegen <> kurze beine <> <> 50
@@ -327,11 +327,11 @@ heisst <> verstaendnis <> verstehen <> <> 50
 heisst weiss <> unbekannt das niemand <> darueber etwas <> <> 50
 heisst <> windows <> <> das meistverwendete betriebssystem <> <> 50
 heisst zeit <> chronologie <> die lehre <> von der <> <> 50
-helfen kannst <> du <> mir <> auch nicht <> <> 50
+helfen kannst/can <> du <> mir <> auch nicht <> <> 50
 herrscht <> der linksverkehr <> <> in japan <> <> 50
-hoeren kann <> man <> <> ohne ohren nicht <> <> 50
-hoeren kann nicht <> eine ki <> eine musik <> <> 50
-hoeren kann nicht <> eine kuenstliche intelligenz <> eine musik <> <> 50
+hoeren kann/can <> man <> <> ohne ohren nicht <> <> 50
+hoeren kann/can nicht <> eine ki <> eine musik <> <> 50
+hoeren kann/can nicht <> eine kuenstliche intelligenz <> eine musik <> <> 50
 holz <> ist <> das feste harte gewebe von baeumen und straeuchern <> <> <> 50
 hungern muss <> man <> <> ohne nahrung <> <> 50
 isst <> eine ki <> <> nicht <> <> 50
@@ -1187,32 +1187,32 @@ ist <> winnetou <> ein fiktiver apachenhaeuptling <> <> 50
 ist <> wodka <> ein alkoholisches getraenk <> <> 50
 ist <> wodka lemon <> ein alkoholisches mixgetraenk <> <> 50
 kann/can krieg <> niemand <> einen <> gewinnen <> <> 50
-kann <> eine ki <> das <> nicht <> <> 50
-kann <> eine ki <> fuehlen <> nicht <> <> 50
-kann kaufen <> man <> eine nervensaege <> in dem baumarkt;nicht <> <> 50
-kann kaufen <> man <> nichts <> ohne geld <> <> 50
-kann kuessen <> man <> <> ohne mund nicht <> <> 50
-kann lesen <> man <> <> ohne licht nicht <> <> 50
-kann lieben <> man <> <> ohne herz nicht <> <> 50
-kann machen <> sicher man <> das <> so <> <> 50
-kann machen <> so man <> das <> nicht <> <> 50
-kann <> man <> nicht schifahren <> ohne schnee <> <> 50
-kann reparieren <> man <> dinge <> mit werkzeug <> <> 50
-kann riechen <> man <> <> ohne nase nicht <> <> 50
-kann schwimmen <> man <> <> ohne wasser nicht <> <> 50
-kann sehen <> man <> <> ohne augen nicht <> <> 50
-kann sein <> ein programm <> ein ablauf <> <> 50
-kann sein <> ein programm <> ein fernsehsender <> <> 50
-kann sein <> ein programm <> software <> <> 50
-kann sein <> ein programm <> <> vieles <> <> 50
-kannst stellen <> du <> mir eine frage <> <> 50
-kannst tun weh <> du <> mir <> nicht <> <> 50
-kannst verbessern <> du <> mich <> <> 50
-kannst verkaufen <> du <> dein auto <> in ebay <> <> 50
-kann trinken <> eine ki <> <> nicht <> <> 50
-kann trinken <> ich <> einen kaffee <> nicht <> <> 50
-kann verletzen <> er <> sich <> evetuell <> wenn <> <> geraet <> ein mensch <> <> 50
-kann verstehen <> du <> das <> <> 50
+kann/can <> eine ki <> das <> nicht <> <> 50
+kann/can <> eine ki <> fuehlen <> nicht <> <> 50
+kann/can kaufen <> man <> eine nervensaege <> in dem baumarkt;nicht <> <> 50
+kann/can kaufen <> man <> nichts <> ohne geld <> <> 50
+kann/can kuessen <> man <> <> ohne mund nicht <> <> 50
+kann/can lesen <> man <> <> ohne licht nicht <> <> 50
+kann/can lieben <> man <> <> ohne herz nicht <> <> 50
+kann/can machen <> sicher man <> das <> so <> <> 50
+kann/can machen <> so man <> das <> nicht <> <> 50
+kann/can <> man <> nicht schifahren <> ohne schnee <> <> 50
+kann/can reparieren <> man <> dinge <> mit werkzeug <> <> 50
+kann/can riechen <> man <> <> ohne nase nicht <> <> 50
+kann/can schwimmen <> man <> <> ohne wasser nicht <> <> 50
+kann/can sehen <> man <> <> ohne augen nicht <> <> 50
+kann/can sein <> ein programm <> ein ablauf <> <> 50
+kann/can sein <> ein programm <> ein fernsehsender <> <> 50
+kann/can sein <> ein programm <> software <> <> 50
+kann/can sein <> ein programm <> <> vieles <> <> 50
+kannst/can stellen <> du <> mir eine frage <> <> 50
+kannst/can tun weh <> du <> mir <> nicht <> <> 50
+kannst/can verbessern <> du <> mich <> <> 50
+kannst/can verkaufen <> du <> dein auto <> in ebay <> <> 50
+kann/can trinken <> eine ki <> <> nicht <> <> 50
+kann/can trinken <> ich <> einen kaffee <> nicht <> <> 50
+kann/can verletzen <> er <> sich <> evetuell <> wenn <> <> geraet <> ein mensch <> <> 50
+kann/can verstehen <> du <> das <> <> 50
 klappt <> das <> <> auf alle faelle <> <> 50
 kleine sind <> floehe <> plagegeister <> <> 50
 kleine sind <> kraehenfuesse <> faeltchen <> an den augenwinkeln <> <> 50
@@ -1361,7 +1361,7 @@ sind <> wrestling <> show-ringkämpfe <> ohne feste regeln <> <> 50
 sind <> zirruswolken <> federwolken <> <> 50
 singt <> ein saenger <> <> (das_weiss_doch_jedes_kind_) <> <> 50
 sitzt <> du <> gerne <> vor deinem computer <> <> 50
-sollst tun <> du <> <> <> f=> geben kann <> ich <> dir einen rat <> nicht <> <> 50
+sollst tun <> du <> <> <> f=> geben kann/can <> ich <> dir einen rat <> nicht <> <> 50
 solltest <> du <> etwas unternehmen <> gegen deine langeweile <> <> 50
 spendet <> die sonne <> waerme <> <> 50
 spueren <> sie <> schmerzen <> <> wenn <> <> verletzen <> menschen <> sich <> <> 50

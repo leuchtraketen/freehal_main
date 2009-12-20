@@ -58,8 +58,8 @@ entsteht <> polyvinylchlorid <>  <> durch polymerisation <>  <>  <>  <>  <>  <> 
 entwickelt hat <> alessandro_graf_volta <> die theorie des elektrischen stroms <>  <>  <>  <>  <>  <>  <>  <> 50
 erhoeht <> glukagon <> den blutzuckerspiegel <>  <>  <>  <>  <>  <>  <>  <> 50
 erkennt <> das alter der baeume<> man <> an den jahresringen <>  <>  <>  <>  <>  <>  <> 50
-erzeugen kann <> eine solarzelle <> energie <>  <>  <>  <>  <>  <>  <>  <> 50
-erzeugen kann <> man <> elektrische energie <> mit einer solarzelle <>  <>  <>  <>  <>  <>  <> 50
+erzeugen kann/can <> eine solarzelle <> energie <>  <>  <>  <>  <>  <>  <>  <> 50
+erzeugen kann/can <> man <> elektrische energie <> mit einer solarzelle <>  <>  <>  <>  <>  <>  <> 50
 erzeugter ist <> ein homunkulus <> ein kuenstlich mensch <>  <>  <>  <>  <>  <>  <>  <> 50
 gefriert <> wasser <> bei 32 grad fahrenheit <>  <>  <>  <>  <>  <>  <>  <> 50
 gefuellt wurden <> gasballons <>  <> mit wasserstoff <>  <>  <>  <>  <>  <>  <> 50
@@ -857,7 +857,7 @@ ist <> zinn <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 5
 ist <> zirconium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> zoelestin <> ein mineral <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> zyankali <> das giftige salz <> der blausaeure <>  <>  <>  <>  <>  <>  <> 50
-kann verchromen <> man <> gegenstaende <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> 50
+kann/can verchromen <> man <> gegenstaende <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> 50
 koennen verbrennen <> diamanten <>  <> ohne weiter rueckstaende zu kohlendioxid <>  <>  <>  <>  <>  <>  <> 50
 laesst <> aerodynamik <> flugzeuge fliegen <>  <>  <>  <>  <>  <>  <>
 laesst schmelzen <> gallium <> sich <> durch handwaerme <>  <>  <>  <>  <>  <>  <> 50

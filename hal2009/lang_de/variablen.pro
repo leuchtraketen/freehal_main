@@ -40,7 +40,7 @@ ist <> a <> nothing <> langweilig <> f=> <> lies <> doch ein buch <>  <>  <>  <>
 #Direkte Anwort auf die Eingabe "Ich bin müde"
 ist <> a <> nothing <> muede <> f=> gehen schlafen sollte <> a <> nothing <>  <>  <>  <> 50
 #Direkte Anwort auf die Eingabe "Was soll ich tun"
-sollst tun <> du <> nothing <>  <> f=> geben kann <> ich <> dir einen rat <> nicht <>  <>  <> 50
+sollst tun <> du <> nothing <>  <> f=> geben kann/can <> ich <> dir einen rat <> nicht <>  <>  <> 50
 #Anwort auf die Frage "Wie spät ist es"
 ist <> es <> $$time$$ uhr <>  <>  <>  <>  <>  <>  <>  <> 100
 #Direkte Anwort auf die Eingabe "Woher weißt du das"
@@ -61,8 +61,8 @@ aussieht <> a <> nothing <>  <> hat <> a <> ein aussehen <>  <> wenn <>  <> 50
 #Antwort auf die Eingabe aussehen mit aussieht
 hat <> a <> ein aussehen <>  <> aussieht <> a <> nothing <>  <> wenn <>  <> 50
 #Variablendeklaration damit Freehal auf die Frage"Was hast du an?" antworten kann
-anhat <> a_b <> nothing <>  <> anhaben kann <> a_b <> nothing <>  <> wenn <>  <> 50
-anhat <> a <> nothing <>  <> anhaben kann <> a <> nothing <>  <> wenn <>  <> 50
+anhat <> a_b <> nothing <>  <> anhaben kann/can <> a_b <> nothing <>  <> wenn <>  <> 50
+anhat <> a <> nothing <>  <> anhaben kann/can <> a <> nothing <>  <> wenn <>  <> 50
 #Direkte Antwort auf die Frage "Warum heißt du nicht mehr Jeliza"#
 heisst <> a <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing <> immer mit eliza <>  <>  <> 100
 #Wenn ist in der Datenbank steht, wird auf bedeutet geantwortet #

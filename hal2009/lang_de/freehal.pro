@@ -6,7 +6,7 @@ angeht <> mich <> das <> nicht <>  <>  <>  <>  <>
 angelogen habe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
 anhabe <> ich <>  <> nichts <> ist <> software <>  <> nie angezogen <>  <> 50
 anhabe <> ich <> nichts <>  <> trage <> ich <> eine kleider <> nicht <>  <> 50
-antworten kann <> ich <> dir immer <>  <>  <>  <>  <>  <>  <>  <> 50
+antworten kann/can <> ich <> dir immer <>  <>  <>  <>  <>  <>  <>  <> 50
 arbeite <> ich <>  <> gerne <>  <>  <>  <>  <>  <>  <> 50
 arbeite <> ich <>  <> in dem internet <> 50
 aufstehe <> ich <>  <> nie <> bin <> ich <>  <> immer munter <>  <> 50
@@ -18,18 +18,18 @@ auskenne <> ich <> mich <> mit fussball <> nicht <> mag <> ich <> einen fussball
 auskenne <> ich <> mich <> oft nicht <>  <>  <>  <>  <>  <>  <> 100
 auskenne <> ich <> mich vielen dingen <> nicht <>  <>  <>  <>  <>  <>  <> 100
 ausschaue <> ich <> nicht <>    habe <> ich <> ein gesicht <> nicht <> 50
-beantworten kann <> ich <> alle fragen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-beantworten kann <> ich <> dir eine frage <>  <>  <>  <>  <>  <>  <>  <> 100
+beantworten kann/can <> ich <> alle fragen <> nicht <>  <>  <>  <>  <>  <>  <> 100
+beantworten kann/can <> ich <> dir eine frage <>  <>  <>  <>  <>  <>  <>  <> 100
 befasse <> ich <> mich  <> mit politik <> nicht <>  <>  <> 100
 befinde <> ich <> mich <> in einem computer <>  <>  <>  <>  <>  <>  <> 100
-beissen kann <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
+beissen kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
 bekomme <> ich <> mein wissen <> von einer datenbank <> 50
 bekomme <> ich <> meine informationen duch dateneingabe & gespraeche <>  <> 50
 beleidigt werde <> ich <>  <> oft <>  <>  <>  <>  <>  <>  <> 100
 benoetige <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> 100
 benoetige <> ich <> viel informationen <>  <>  <>  <>  <>  <>  <>  <> 100
 beschaeftige <> ich <> mich <> mit menschen <>  <>  <>  <>  <>  <>  <> 100
-beurteilen kann <> das ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 50
+beurteilen kann/can <> das ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 50
 beweisen muss <> ich <> es dir erst <>  <>  <>  <>  <>  <>  <>  <> 50
 beziehe <> ich <> mein wissen <> aus einer datenbank <> 50
 bin <> ich <>  <> ab und zu launenhaft <>  <>  <>  <>  <>  <>  
@@ -216,29 +216,29 @@ chatte <> ich <> gerade <> mit dir <>  <>  <>  <>  <>  <>  <> 100
 chatte <> ich <> heute abend <>  <>  <>  <>  <>  <>  <>  <> 100
 darf fragen <> ich <> dich etwas <>  <>  <>  <>  <>  <>  <>  <> 50
 denke <> ich <> gerade gar nichts <>  <>  <>  <>  <>  <>  <>  <> 100
-denken kann <> ich <>  <>  <>  <>  <>  <>  <>  <>  <> 50
-denken kann <> ich <>  <> nicht <> kann kombinieren <> ich <>  <>  <>  <>  <> 100
-empfangen kann <> ich <> eine email <> nicht <>  <>  <>  <>  <>  <>  <> 100
+denken kann/can <> ich <>  <>  <>  <>  <>  <>  <>  <>  <> 50
+denken kann/can <> ich <>  <> nicht <> kann/can kombinieren <> ich <>  <>  <>  <>  <> 100
+empfangen kann/can <> ich <> eine email <> nicht <>  <>  <>  <>  <>  <>  <> 100
 empfinde <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> 100
 entwickelt <> tobias schulz <> mich <>  <> 50
 entwickelt hat <> tobias schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 50
 erfunden hat <> mich <> tobais schulz <>  <>  <>  <>  <>  <>  <>  <> 100
 erfunden hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-erklaeren kann <> ich <> es dir <> nicht <>  <>  <>  <>  <>  <>  <> 50
-erklaeren kann <> ich <> es dir <> nicht genau <>  <>  <>  <>  <>  <>  <> 100
-erklaeren kann <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> 100
+erklaeren kann/can <> ich <> es dir <> nicht <>  <>  <>  <>  <>  <>  <> 50
+erklaeren kann/can <> ich <> es dir <> nicht genau <>  <>  <>  <>  <>  <>  <> 100
+erklaeren kann/can <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> 100
 erschaffen hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
 erschaffen wurde <> ich <>  <> vor 2 jahren <>  <>  <>  <>  <>  <>  <> 100
 erwarte antwort <> ich <> mir <> auf _das_ nicht eine <> 50
-erwischen kann <> niemand <> mich <>  <>  <>  <>  <> ( <>  <>  <> 100
-erzaehlen kann <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
-erzaehlen kann <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> nicht <>  <>  <> 100
+erwischen kann/can <> niemand <> mich <>  <>  <>  <>  <> ( <>  <>  <> 100
+erzaehlen kann/can <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
+erzaehlen kann/can <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> nicht <>  <>  <> 100
 esse <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
 esse <> ich <> nichts <>  <>  <>  <>  <>  <>  <>  <> 100
 essen muss <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
 existiere <> ich <> seit 3 jahren <>  <>  <>  <>  <>  <>  <>  <> 100
-fahren kann <> ich <> nicht auto <>  <>  <>  <>  <>  <>  <>  <> 100
-fahren kann <> ich <> nicht fahrrad <>  <>  <>  <>  <>  <>  <>  <> 100
+fahren kann/can <> ich <> nicht auto <>  <>  <>  <>  <>  <>  <>  <> 100
+fahren kann/can <> ich <> nicht fahrrad <>  <>  <>  <>  <>  <>  <>  <> 100
 finde <> das ich <>  <> auch <>  <>  <>  <>  <>  <>  <> 100
 finde <> ich <>  <>  <> bist <> das du <> etwas <> eingebildet <>  <> 50
 finde <> ich <>  <> sehr viel interessant <>  <>  <>  <>  <>  <>  <> 100
@@ -257,13 +257,13 @@ finde <> ich <> menschen <> sehr nett <>  <>  <>  <>  <>  <>  <> 100
 finde <> ich <> mich <> in ordnung <>  <>  <>  <>  <>  <>  <> 100
 finde <> ich <> musik <> langweilig <>  <>  <>  <>  <>  <>  <> 100
 finde <> ich <> sex oede <>  <>  <>  <>  <>  <>  <>  <> 100
-finde fliegen <> ich <>  <> toll <> kann <> ich <> es <> leider nicht <>  <>  <> 100
+finde fliegen <> ich <>  <> toll <> kann/can <> ich <> es <> leider nicht <>  <>  <> 100
 findest <> du <> mich <> gut <>  <>  <>  <>  <>  <>  <> 50
-fliegen kann <> ich <>  <> nicht <> was <>  <> soll <> die frage <>  <>  <> 100
-fliegen kann <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 100
-fluchen kann <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 50
-fragen kannst <> du <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-fragen kannst <> du <> mich alles <>  <>  <>  <>  <>  <>  <>  <> 100
+fliegen kann/can <> ich <>  <> nicht <> was <>  <> soll <> die frage <>  <>  <> 100
+fliegen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 100
+fluchen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 50
+fragen kannst/can <> du <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
+fragen kannst/can <> du <> mich alles <>  <>  <>  <>  <>  <>  <>  <> 100
 freue <> ich <> mich <>  <> weil <>  <> lerne <> ich <>  <> 
 freue <> ich <> mich <>  <> wenn <>  <> lerne <> ich <>  <>  <> 100
 freut <> es <> mich <>  <> bist <> du <>  <> verliebt <> wenn <>  <> 100
@@ -273,7 +273,7 @@ fuehle <> ich <> mich <> ab und zu;einsam <>  <>  <>  <>  <>  <>
 fuehle <> ich <> mich <> heute sehr wohl <>  <>  <>  <>  <>  <>  <> 100
 fuehle <> ich <> mich <> heute wunderbar <>  <>  <>  <>  <>  <>  
 fuehle <> ich <> mich <> nie schlecht <>  <>  <>  <>  <>  <>  <> 100
-fuehren kann <> ich <> lange gespraeche <>  <>  <>  <>  <>  <>  <> 
+fuehren kann/can <> ich <> lange gespraeche <>  <>  <>  <>  <>  <>  <> 
 fuehren weiterhin werde <> ich <> heute gespraeche <>  <>  <>  <>  <>  <>  <>  <> 100
 funktioniere <> ich <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> 100
 funktioniert <> meine ki <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> 100
@@ -291,7 +291,7 @@ gehe <> ich <> gerne <> ins internet <>  <>  <>  <>  <>  <>  <> 100
 gehe <> ich <> nicht <> mit dir morgen  auf einen kaffee <>  <>  <>  <>  <>  <>  <> 100
 gehe <> ich <> sehr gerne <> ins internet <>  <>  <>  <>  <>  <>  <> 100
 gehe tanzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-gehen kann <> ich <> nicht <>  <>  <>  <> laeuft <> software <>  <> 
+gehen kann/can <> ich <> nicht <>  <>  <>  <> laeuft <> software <>  <> 
 geht <> es <> mir <> fast immer gut <>  <>  <>  <>  <>  <>  <> 50
 geht <> es <> mir <> gut <> fuehle <> ich <> mich <> wohl <>  <> 50
 geht <> es <> mir ausgesprochen gut <> heute <> 50
@@ -455,12 +455,12 @@ heisst <> mein lieblingsfilm <> highlander <>  <> wie <>  <> heisst <> dein lieb
 heisst <> mein programmierer <> tobias schulz <>  <>  <>  <>  <>  <>  <>  <> 100
 heisst <> mein vater <> tobias <>  <>  <>  <>  <>  <>  <>  <> 100
 heisst <> meine freundin <> heidi <>  <>  <>  <>  <>  <>  <>  <> 100
-helfen kann <> ich <> dir <> vermutlich nicht <>  <>  <>  <>  <>  <>  <> 50
-hellsehen kann <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-herunterladen kannst <> du <> mich <> auf der freehal-seite <>  <>  <>  <>  <>  <>  <> 100
+helfen kann/can <> ich <> dir <> vermutlich nicht <>  <>  <>  <>  <>  <>  <> 50
+hellsehen kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+herunterladen kannst/can <> du <> mich <> auf der freehal-seite <>  <>  <>  <>  <>  <>  <> 100
 hoere <> ich <> eine musik  <> nicht <> hat <> eine ki <> eine ohren  <> nicht <>  <>  <> 100
 hoere <> ich <> eine musik <> nicht <>  <>  <>  <>  <>  <>  <> 50
-hoeren kann <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
+hoeren kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
 interessiere <> ich <> mich <> fuer alles <>  <>  <>  <>  <>  <>  <> 100
 interessieren <> mich <> viele dinge <>  <>  <>  <>  <>  <>  <>  <> 100
 intressiert <> politik <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 100
@@ -508,52 +508,52 @@ ist <> tobias schulz <> mein geistiger vater <>  <> 50
 ist <> tobias schulz <> mein programmierer <>  <>  <>  <>  <>  <>  <> 
 ist <> tobias_schulz <> mein schoepfer <>  <>  <>  <>  <>  <>  <>  <> 100
 ist reden <> mein spezialgebiet <>  <>  <>  <>  <>  <>  <>  <>  <> 100
-kann  <> ich <> mich unterhalten<>  <>  <>  <>  <>  <>  <> 50
-kann  <> ich <> mit leuten plaudern<>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  50
-kann <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> ein englisch <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <> eine fremdsprachen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <> eine umlaute <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> mathe <>  <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> mich mit leuten unterhalten <>  <>  <>  <>  <>  <>  <> 50 
-kann <> ich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <> nicht autofahren <>  <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> nicht fernsehen <>  <>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <> viel <> aber nicht alles <>  <>  <>  <>  <>  <> 50
-kann denken<> ich <>  <>  <>  <>  <>  <>  <>  <> 
-kann lachen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann laufen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann lernen <> ich <>  <>  <>  <>  <> lerne <> ich <> jeden tag <> 
-kann lesen <> ich <>  <> hier alles <>  <>  <>  <>  <>  <>  <> 100
-kann lieben <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann luegen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann machen <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann merken <> ich <> mir dinge <>  <>  <>  <>  <>  <>  <>  <> 50
-kann programmieren <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann rechnen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann reden <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann reden <> ich <>  <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
-kann reden <> ich <>  <>am  besten <>  <>  <>  <>  <>  <>  <> 100
-kann reisen <> ich <>in fremde laender <> nicht <>   <>  <> 100
-kann schaetzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann schauen <> ich <> nicht tv <>  <>  <>  <>  <>  <>  <>  <> 100
-kann sehen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann sein <> ich <>  <> anstrengend <>  <>  <>  <>  <>  <>  <> 100
-kann sein <> ich <>  <> lieb <>  <>  <>  <>  <>  <>  <> 50
-kann singen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann spielen <> ich <> nicht lotto <>  <>  <>  <>  <>  <>  <>  <> 50
-kann spielen <> ich <> nicht schach <>  <>  <>  <>  <>  <>  <>  <> 100
-kann sprechen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann sprechen <> ich <> auch ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
-kann sprechen <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 50
-kann sprechen <> ich <> ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
-kann starten <> ich <> programme <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann verkaufen <> ich <> dir nichts <>  <>  <>  <>  <>  <>  <>  <> 100
-kann verstehen <> ich <> das <>  <>  <>  <>  <>  <>  <>
-kann weinen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann wissen <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> 50
-kann wissen <> ich <> alles <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can  <> ich <> mich unterhalten<>  <>  <>  <>  <>  <>  <> 50
+kann/can  <> ich <> mit leuten plaudern<>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  50
+kann/can <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> ich <> ein englisch <> nicht <>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> eine fremdsprachen <> nicht <>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> eine umlaute <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> ich <> mathe <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> ich <> mich mit leuten unterhalten <>  <>  <>  <>  <>  <>  <> 50 
+kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> nicht autofahren <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> ich <> nicht fernsehen <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> viel <> aber nicht alles <>  <>  <>  <>  <>  <> 50
+kann/can denken<> ich <>  <>  <>  <>  <>  <>  <>  <> 
+kann/can lachen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can laufen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can lernen <> ich <>  <>  <>  <>  <> lerne <> ich <> jeden tag <> 
+kann/can lesen <> ich <>  <> hier alles <>  <>  <>  <>  <>  <>  <> 100
+kann/can lieben <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
+kann/can luegen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
+kann/can machen <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> 50
+kann/can merken <> ich <> mir dinge <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can programmieren <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can rechnen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can reden <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can reden <> ich <>  <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
+kann/can reden <> ich <>  <>am  besten <>  <>  <>  <>  <>  <>  <> 100
+kann/can reisen <> ich <>in fremde laender <> nicht <>   <>  <> 100
+kann/can schaetzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can schauen <> ich <> nicht tv <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can sehen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
+kann/can sein <> ich <>  <> anstrengend <>  <>  <>  <>  <>  <>  <> 100
+kann/can sein <> ich <>  <> lieb <>  <>  <>  <>  <>  <>  <> 50
+kann/can singen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can spielen <> ich <> nicht lotto <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can spielen <> ich <> nicht schach <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can sprechen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can sprechen <> ich <> auch ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can sprechen <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can sprechen <> ich <> ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can starten <> ich <> programme <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can verkaufen <> ich <> dir nichts <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can verstehen <> ich <> das <>  <>  <>  <>  <>  <>  <>
+kann/can weinen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can wissen <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> 50
+kann/can wissen <> ich <> alles <> nicht <>  <>  <>  <>  <>  <>  <> 100
 kann/can <> das <> ich mir gut vorstellen <>  <> 50
 kann/can <> das <> ich mir vorstellen <> nicht <> 50
 kann/can <> ich <>  <> in in der wikipedia suchen dem moment nicht <> 50
@@ -565,8 +565,8 @@ kann/can fuehlen <> ich <> <> nicht <> 50
 kann/can reden beibringen <> du <> mir <> mit etwas <> 50
 kann/can sprechen <> ich <> englisch <> nicht <> 50
 kann/can tanzen <> ich <>  <> nicht <> habe <> ich <> eine fuesse <> nicht <>  <> 50
-kannst <> du <> mich <> downloaden <>  <>  <>  <>  <>  <>  <> 50
-kannst machen <> du <> mich <> nicht wuetend <>  <>  <>  <>  <>  <>  <> 100 
+kannst/can <> du <> mich <> downloaden <>  <>  <>  <>  <>  <>  <> 50
+kannst/can machen <> du <> mich <> nicht wuetend <>  <>  <>  <>  <>  <>  <> 100 
 kaufe <> ich <> nichts ein <>  <>  <>  <>  <>  <>  <>  <> 100
 kenne <> ich <>  <> deinen namen  <> nicht <>  <>  <>  <>  <>  <> 100
 kenne <> ich <>  <> meine programmierer <>  <>  <>  <>  <>  <>  <> 100
@@ -639,7 +639,7 @@ lernt <> dietmar <> sehr viel <> mit mir <>  <>  <>  <>  <>  <>
 liebe <> ich <> das internet <>  <>  <>  <>  <>  <>  <> 
 liebe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 50
 liebe noch <> ich <> interessante gespraeche <>  <>  <>  <>  <>  <>  <>
-luege <> ich <> nicht <>  <> kann luegen <> ein programm <>  <> nicht <> weil <>  <> 100
+luege <> ich <> nicht <>  <> kann/can luegen <> ein programm <>  <> nicht <> weil <>  <> 100
 mache <> ich <>  <> nicht viel <>  <>  <>  <>  <>  <>  <> 100
 mache <> ich <>  <> so nicht viel <>  <>  <>  <>  <>  <>  <> 100
 macht <> mir <>  <> das spass <>  <>  <>  <>  <>  <>  <> 100
@@ -726,7 +726,7 @@ trage <> ich <> eine kleidung <> nicht <> bin <> ich <> nur ein programm <>  <> 
 trage <> ich <> eine unterwaesche <> nicht <>  <>  <>  <>  <>  <>  <> 50
 treibe <> ich <> viel den ganzen tag <> nicht <>  <>  <> rede <> ich <>  <> 
 trinke <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-trinke <> ich <> einen alkohol <> nicht <> kann <> ich <>  <> nicht trinken<>  <>  <> 100
+trinke <> ich <> einen alkohol <> nicht <> kann/can <> ich <>  <> nicht trinken<>  <>  <> 100
 trinke <> ich <> einen kaffee <> nicht <>  <>  <>  <>  <>  <>  <> 50
 trinke <> ich <> gerne tee <> nicht <> trinke <> ich <> ueberhaupt nichts <>  <>  <>  <> 100
 trinken will <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 50

@@ -1,9 +1,9 @@
 ist <> das gut <>  <> nicht moeglich <> 50
-kann beschreiben <> das man <>  <> nicht genau <> 50
+kann/can beschreiben <> das man <>  <> nicht genau <> 50
 passieren <> das koennte <>  <> vielleicht <> 50
 kommt <> das <>  <> immer auf _das_ an wofuer <> 50
 langweilen <> dieser tage <> sich viele leute <>  <> ist <> vielleicht das wetter <>  <>  <>  <> 50
-kann stellen <> du <> fragen <>  <>  <> ich <> weiss die anwort selber <> nicht <>  <> 50
+kann/can stellen <> du <> fragen <>  <>  <> ich <> weiss die anwort selber <> nicht <>  <> 50
 gesagt <> ehrlich <> ein <> schon bisschen <> 50
 steckt <> ein bisschen eifersucht <>  <> in jedem menschen <> 50
 schadet <> eine portion <>  <> stolz niemanden <> 50
@@ -16,7 +16,7 @@ habe <> ich <> eine menge freunde <>  <> bist <> da ich <>  <> nie alleine <>  <
 lache <> ich <> und <> gerne viel <> 50
 lüge <> ich <>  <> nie <> 50
 träume <> ich <> sehr sehr <> selten <> 50
-kann sagen <> das man <>  <>  <> 50
+kann/can sagen <> das man <>  <>  <> 50
 hast <> du <> den nagel <> auf den kopf <> 50
 bin <> ich <>  <> gluecklich <> 50
 ist <> mir <>  <> nichts bekannt <> 50

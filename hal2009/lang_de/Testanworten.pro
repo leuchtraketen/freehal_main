@@ -6,7 +6,7 @@ aufhalten will <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
 aufhoerst wird <> es <> zeit das du <>  <> traeumen <> nothing <> nothing <>  <> xxtoxx <>  <> 50
 aufraeumt <> rennie <> den magen <>  <>  <>  <>  <>  <>  <>  <> 50
 begleitet <> die hoffung <> uns einen grossen teil <> unseres lebens <>  <>  <>  <>  <>  <>  <> 50
-behaupten kann <> das ich <> nothing <> von mir nicht <>  <>  <>  <>  <>  <>  <> 100
+behaupten kann/can <> das ich <> nothing <> von mir nicht <>  <>  <>  <>  <>  <>  <> 100
 behauptet hat <> das <> niemand <> auch <>  <>  <>  <>  <>  <>  <> 50
 bekommen wirst <> du <> es <>  <>  <>  <>  <>  <>  <>  <> 50
 bekommen wirst <> du <> nothing <> ihn sicher <>  <>  <>  <>  <>  <>  <> 50
@@ -100,14 +100,14 @@ ist offenkundig <> das <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 ist subjektiv <> das <> nothing <> immer <>  <>  <>  <>  <>  <>  <> 50
 ist ungesund <> all zu viel<> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
 ist <> vieles <> nur eine taeuschung <> in dem leben <>  <>  <>  <>  <>  <>  <> 50
-kann <> das <> nie schaden <>  <>  <>  <>  <>  <>  <>  <> 50
-kann <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
-kann <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann <> jeder mensch <> sich <> irren <>  <>  <>  <>  <>  <>  <> 50
-kann sein <> das ich <> nothing <> auch <>  <>  <>  <>  <>  <>  <> 100
-kann verstehen <> das ich <> nothing <> gut <>  <>  <>  <>  <>  <>  <> 100
-kann verstehen <> ich <> nothing <> das gefuehl sehr gut <>  <>  <>  <>  <>  <>  <> 100
-kann vorstellen <> das ich <> mir <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> das <> nie schaden <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> nothing <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> ich <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can <> jeder mensch <> sich <> irren <>  <>  <>  <>  <>  <>  <> 50
+kann/can sein <> das ich <> nothing <> auch <>  <>  <>  <>  <>  <>  <> 100
+kann/can verstehen <> das ich <> nothing <> gut <>  <>  <>  <>  <>  <>  <> 100
+kann/can verstehen <> ich <> nothing <> das gefuehl sehr gut <>  <>  <>  <>  <>  <>  <> 100
+kann/can vorstellen <> das ich <> mir <>  <>  <>  <>  <>  <>  <>  <> 100
 kennen lerne <> ich <> nette menschen <>  <>  <>  <>  <>  <>  <>  <> 100
 klingst <> du <> nothing <> ueberzeugend <>  <>  <>  <>  <>  <>  <> 50
 klingt <> das <> nothing <> nicht schlecht <>  <>  <>  <>  <>  <>  <> 50
