@@ -3399,6 +3399,12 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /trage$/ do
             do regex using var verb: /trage$/, "traegst", :global:i
         done
+        else if var verb matches /stirbst$/ do
+            do regex using var verb: /stirbst$/, "sterbe", :global:i
+        done
+        else if var verb matches /sterbe$/ do
+            do regex using var verb: /sterbe$/, "stirbst", :global:i
+        done
         else if var verb matches /nimmst$/ do
             do regex using var verb: /nimmst$/, "nehme", :global:i
         done

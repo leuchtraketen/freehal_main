@@ -2260,6 +2260,7 @@ define action logic with var input, var lang, var path, hash parsed do
     print new line
     
     set new array results to an empty array
+    set new array results_other_modal_verb to an empty array
     set new var input_file_name to '_input__get_csv'
     set new var input_handle to handle for file name var input_file_name, read
 
@@ -2280,16 +2281,6 @@ define action logic with var input, var lang, var path, hash parsed do
         # Shift Primary key
         # CODE
         set new var primary_key to shift with items of array rawresult
-        
-        # TEXT
-        # Be sure that the modal verbs are matched
-        # CODE
-        set new var modal_verb_template to var verb_flag_want concat var verb_flag_must concat var verb_flag_can concat var verb_flag_may concat var verb_flag_should
-        if (not from array rawresult item [ 0 ] matches /var modal_verb_template/) and from array rawresult item [ 0 ] matches /([01])([01])([01])([01])([01])/ do
-            print "Not matching to: " concat var modal_verb_template
-            print new line
-            go to next
-        done
         
         # TEXT
         # Divide main clause and sub clauses
@@ -2336,7 +2327,24 @@ define action logic with var input, var lang, var path, hash parsed do
         # CODE
         do unshift with items of array result, var primary_key
         
-        push into array results, array result
+        
+        
+        # TEXT
+        # Be sure that the modal verbs are matched
+        # CODE
+        set new var modal_verb_template to var verb_flag_want concat var verb_flag_must concat var verb_flag_can concat var verb_flag_may concat var verb_flag_should
+        if (not from array rawresult item [ 0 ] matches /var modal_verb_template/) and from array rawresult item [ 0 ] matches /([01])([01])([01])([01])([01])/ do
+            print "Not matching to: " concat var modal_verb_template
+            print new line
+            push into array results_other_modal_verb, array result
+        done
+        else do
+            push into array results, array result
+        done
+    done
+    
+    if is an empty array results do
+        set array results to array results_other_modal_verb
     done
 
     print "Found " concat items of array results concat " sentences"
