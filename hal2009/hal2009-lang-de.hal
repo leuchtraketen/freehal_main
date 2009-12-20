@@ -3488,7 +3488,7 @@ define action toggle_entities with array entities do
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
-    if var truth < 0.5 do
+    if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] ) do
         if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i

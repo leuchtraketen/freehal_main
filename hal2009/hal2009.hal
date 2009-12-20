@@ -2633,6 +2633,10 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 
+                if ( join ' ', items of array sentence ) matches /50/ do
+                    go to next
+                done
+                
                 if var final_sentence do
                     set var final_sentence to var final_sentence concat ', '
                 done
