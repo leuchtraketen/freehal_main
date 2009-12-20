@@ -722,7 +722,7 @@ ist <> pilot <> ein beruf <>  <> 50
 ist <> pilotin <> ein beruf <>  <> 50
 ist <> polier <> ein beruf <>  <> 50
 ist <> polierin <> ein beruf <>  <> 50
-ist <> polizist <> ein beruft <>  <> 50
+ist <> polizist <> ein beruf <>  <> 50
 ist <> polizistin <> ein beruf <>  <> 50
 ist <> portier <> ein beruf <>  <> 50
 ist <> porzellanmaler <> ein beruf <>  <> 50
