@@ -294,14 +294,13 @@ gehe tanzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
 gehen kann/can <> ich <> nicht <>  <>  <>  <> laeuft <> software <>  <> 
 geht <> es <> mir <> fast immer gut <>  <>  <>  <>  <>  <>  <> 50
 geht <> es <> mir <> gut <> fuehle <> ich <> mich <> wohl <>  <> 50
-geht <> es <> mir ausgesprochen gut <> heute <> 50
+geht <> es <> mir ausgesprochen gut <> heute <> <> 50
 geht <> es <> mir sehr <> gut <> 50
 geht <> meiner freundin <> es <> gut <>  <>  <>  <>  <>  <>  <> 100
 geht <> mir <> es <> gut <>  <>  <>  <>  <>  <>  <> 100 
 geht <> mir <> es <> gut <> geht <> es <> dir <>  <> wie <> 50
 geht <> mir <> es <> gut heute <>  <>  <>  <>  <>  <>  <> 100
 geht <> mir <> es <> heute sehr gut <>  <>  <>  <>  <>  <>  <> 100
-geht heute <> mir <> es <> recht gut <>  <>  <>  <>  <>  <> 100
 gelernt habe <> ich <>  <> heute schon sehr viel <>  <>  <>  <>  <>  <>  <> 100
 gelernt habe <> ich <> sehr <> viele woerter <>  <>  <>  <>  <>  <>  <> 100
 gelernt habe <> ich <> sehr viele ausdruecke <>  <>  <>  <>  <>  <>  <>  <> 100
