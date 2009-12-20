@@ -630,7 +630,10 @@ define action memory_limit with var file_name, var lang, var path do
         # no line ending
         do regex using var line: /<[\r\n]>/, "", :global
         
-        if var line matches /^ / do
+        if var line matches /type.?.?q/ do
+            go to next
+        done
+        else if var line matches /^ / do
             do push into that array: from hash file_to_limit item { var entry } end-items-of, var line
             
             if var line matches /count..(.*)/ do

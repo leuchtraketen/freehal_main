@@ -1,3 +1,7 @@
+771:
+
+- Versuch, den endlos-type:q-Bug zu korrigieren
+
 770:
 
 - Found a memory bug which caused undefined behaviour - the "extra" field of subclauses was always uninitialized when reading .pro files in hal2009.c
