@@ -327,14 +327,17 @@ struct word** divide_words(const char* str) {
     if (e - a > 0) {
         char* name = calloc(e-a+2, 1);
         strncpy(name, str+a, e-a);
-        struct word* word = set_word(name);
-        
-        ++count;
-        list = realloc(list, sizeof(struct word*)*(count+1));
-        list[count] = 0;
-        list[count-1] = word;
-        //debugf("divided(2): %s\n", name);
-        a = e;
+        if (is_good(name)) {
+            // printf("e-a = %i -> name = '%s'\n", e-a, name);
+            struct word* word = set_word(name);
+            
+            ++count;
+            list = realloc(list, sizeof(struct word*)*(count+1));
+            list[count] = 0;
+            list[count-1] = word;
+            //debugf("divided(2): %s\n", name);
+            a = e;
+        }
     }
     
     //debugf("name: %s (a = %p, e = %p), count = %p, list = %p\n", str && str[0] ? str : "(useless)", a, e, count, list);

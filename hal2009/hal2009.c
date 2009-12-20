@@ -399,7 +399,7 @@ int hal2009_add_pro_file (char* filename) {
                         buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         strcat(sub_clause->from, ":");
                         sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
-                        strcpy(r.extra, "");
+                        strcpy(sub_clause->extra, "");
                         
                         // a common error in malformed pro files
                         if (0 == strcmp(sub_clause->questionword, "50")) {

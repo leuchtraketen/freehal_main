@@ -40,6 +40,31 @@ int ram_begin() {
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
+        for (k = n('0'); k <= n('9'); ++k) {
+            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k]->size = 0;
+            ram_net[i][k]->list = 0;
+        }
+        
+        k = WRONG;
+        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k]->size = 0;
+        ram_net[i][k]->list = 0;
+    }
+    for (i = n('0'); i <= n('9'); ++i) {
+        ram_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
+        
+        int k;
+        for (k = n('a'); k <= n('z'); ++k) {
+            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k]->size = 0;
+            ram_net[i][k]->list = 0;
+        }
+        for (k = n('0'); k <= n('9'); ++k) {
+            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k]->size = 0;
+            ram_net[i][k]->list = 0;
+        }
         
         k = WRONG;
         ram_net[i][k] = calloc(sizeof(struct list), 1);
@@ -50,6 +75,11 @@ int ram_begin() {
     ram_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
     int k;
     for (k = n('a'); k <= n('z'); ++k) {
+        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k]->size = 0;
+        ram_net[i][k]->list = 0;
+    }
+    for (k = n('0'); k <= n('9'); ++k) {
         ram_net[i][k] = calloc(sizeof(struct list), 1);
         ram_net[i][k]->size = 0;
         ram_net[i][k]->list = 0;
@@ -131,8 +161,6 @@ int insert_fact_by_list_into_ram_net(struct word** list, struct fact* fact) {
         
         list[n]->related_facts->list[list[n]->related_facts->size] = fact;
         ++(list[n]->related_facts->size);
-
-        //debugf("added fact %d to word %s (%d)\n", fact, list[n]->name, list[n]);
     }
     
     
@@ -229,10 +257,10 @@ struct word* ram_set_word(const char* name) {
     }
     
     if (0 == ram_net[i][k]->list) {
-        debugf("empty list wile inserting %s.\n", name);
+        // debugf("empty list wile inserting %s.\n", name);
     }
     else {
-        0 && debugf("not empty list wile inserting %s: %d, %d entries, last entry = %s\n", name, ram_net[i][k]->list, ram_net[i][k]->size, ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size-1]->name);
+        // debugf("not empty list wile inserting %s: %d, %d entries, last entry = %s\n", name, ram_net[i][k]->list, ram_net[i][k]->size, ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size-1]->name);
     }
     
     if (ram_net[i][k]->size == 0) {
