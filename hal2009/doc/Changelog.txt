@@ -1,3 +1,7 @@
+776:
+
+- Bug 443 korrigiert
+
 775:
 
 - Bug 430 korrigiert
