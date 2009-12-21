@@ -838,7 +838,7 @@ halstring* replace(halstring *src, const char *from, const char *to) {
 
 /* a split function */
 halstring **stringtoarray(halstring *string, char delimiter, int *size) { 
-  halstring **array = NULL;
+  halstring **array = halmalloc(sizeof(halstring*), "stringtoarray");
   char *ptr, *oldptr;
   int flag = 1;
   int count;
@@ -1244,6 +1244,12 @@ void* hal2009_answer_thread(void* parameters) {
     if (planguage == NULL || tlanguage == NULL) {
         return 0;
     }
+    
+    static int stuck_here = 0;
+    while (stuck_here) {
+        halsleep(1);
+    }
+    stuck_here = 1;
 
     reset_stdout();
 
@@ -1305,7 +1311,7 @@ void* hal2009_answer_thread(void* parameters) {
         halwrite("1", 1, strlen("1"), file_done);
         halclose(file_done);
     }
-    
+    stuck_here = 0;
     pthread_exit(0);
     return 0;
 }

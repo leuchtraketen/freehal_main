@@ -1,3 +1,8 @@
+773:
+
+- Ein paar kleinere Speicherfehler korrigiert
+- Die CGI Version ist bei dem Versuch, mehrere Antworten gleichzeitig zu beantworten, abgestuerzt
+
 772:
 
 - Memory-Bug korrigiert, hauptsaechlich in hal2009_perl5.c

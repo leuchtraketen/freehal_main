@@ -438,6 +438,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     if from array tags first item is 7 do
         set from array tags first item to 'inter'
     done
+    
+    if from array tags first item matches /q/ do
+        do return without arguments
+    done
 
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, append
     print into var output_handle data var name_of_entry concat ":"
@@ -450,7 +454,9 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
     
     if not var file_name matches /brain/ do
-        print into var output_handle data "  count: 1" concat new line
+        if not from array tags first item matches /q/ do
+            print into var output_handle data "  count: 1" concat new line
+        done
     done
 
     do close with var output_handle
@@ -481,6 +487,10 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     if exists: "SLOW", end test do
         print "Running in SLOW mode... "
         print new line
+    done
+    
+    if not var name_of_entry or var name_of_entry matches /^\s*?$/ do
+        do return using an empty array
     done
     
     if not from hash content_of_memory_file item { var file_name } do
@@ -761,9 +771,14 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
             go to next
         done
         
-        if var entry and var line matches /^ / do
-            if var line matches /count/ do
-                set var line to "  count: " concat var count concat new line
+        if var entry do
+            if var line matches /^ / do
+                if var line matches /count/ do
+                    set var line to "  count: " concat var count concat new line
+                    go to last
+                done
+            done
+            else do
                 go to last
             done
         done
@@ -4147,6 +4162,7 @@ define action shell with var current_language, var path do
     set new var exit_file_name to '_exit'
     set new var exit_handle to handle for file name var exit_file_name, write
     do close with var exit_handle
+    do exit with 0
 done
 
 if 0 do
