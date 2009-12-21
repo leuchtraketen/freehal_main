@@ -134,24 +134,24 @@ char* concat(const char* a, const char* b) {
 
 const char* define_general_verb(char* sentence, const char* entity) {
     if (strstr(sentence, " ist ") && (strstr(sentence, "ein") < strstr(sentence, " ist ") || strstr(sentence, "Ein") < strstr(sentence, " ist "))) {
-        return "equal-in";
+        return "equal_in";
     }
     else if (strstr(sentence, "ezeichnung ")) {
-        return "equal-in";
+        return "equal_in";
     }
     else if (strstr(sentence, " sind ")) {
-        return "equal-pl";
+        return "equal_pl";
     }
     else if (strstr(sentence, " heissen ")) {
-        return "equal-pl";
+        return "equal_pl";
     }
     else if (strstr(sentence, " waren ")) {
-        return "equal-pl";
+        return "equal_pl";
     }
     else if (strstr(sentence, " nennt man ")) {
-        return "equal-pl";
+        return "equal_pl";
     }
-    return "equal-sg";
+    return "equal_sg";
 }
 
 char* transform_sentence(char* sentence, const char* entity) {

@@ -1,3 +1,7 @@
+774:
+
+- Wiki-Bug korrigiert
+
 773:
 
 - Ein paar kleinere Speicherfehler korrigiert
