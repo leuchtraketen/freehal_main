@@ -2576,6 +2576,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'roh' => "adj",
           'frei' => "adj",
           'grundlegend' => "adj",
+          'dafuer' => "questionword",
           'darfst' => "vt",
           'heisser' => "adj",
           'natural' => "adj",

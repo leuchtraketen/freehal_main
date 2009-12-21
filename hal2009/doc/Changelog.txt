@@ -1,3 +1,7 @@
+775:
+
+- Bug 430 korrigiert
+
 774:
 
 - Wiki-Bug korrigiert

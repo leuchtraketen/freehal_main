@@ -2495,15 +2495,10 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             set new array proper_verbs to an empty array
             set items of array proper_verbs to keys with items of hash proper_verbs_hash
             
-            print from array clause item [3]
-            print new line
-            if from array clause item [3] matches /(^|\s)zu(\s|$)/ do
+            if from array clause item [3] matches /(^|\s)zu(\s|$)/ and length( from array clause item [3] ) < 5 do
                 do unshift with items of array proper_verbs, "zu"
                 do regex using from array clause item [3]: /(^|\s)zu(\s|$)/, "$0", :global
             done
-            
-            print "-" concat from array proper_verbs first item concat "-"
-            print new line
             
             # TEXT
             # Build the final sentence.
@@ -2602,7 +2597,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 
                 if var final_sentence do
                     if from array clause item [4] do
-                        push into array sentence, from array clause item [4]
+                        if not from array clause item [4] matches /^da/ do
+                            push into array sentence, from array clause item [4]
+                        done
                     done
                 done
                 
@@ -2669,6 +2666,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 
                 if ( join ' ', items of array sentence ) matches /50/ do
                     go to next
+                done
+                
+                if var final_sentence do
+                    if from array clause item [4] do
+                        if from array clause item [4] matches /^da/ do
+                            push into array sentence, from array clause item [4]
+                        done
+                    done
                 done
                 
                 if var final_sentence do
