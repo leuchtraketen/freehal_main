@@ -1358,4 +1358,53 @@ const char* hal2009_get_text_language() {
     return hal2009_text_language;
 }
 
+const char* check_config (const char* name, const char* _default) {
+    const char* config_file = "config.txt";
+    FILE* i = 0;
+    if (!i) {
+        i = fopen("config.txt", "r");
+        if (i) config_file = "config.txt";
+    }
+    if (!i) {
+        i = fopen("../config.txt", "r");
+        if (i) config_file = "../config.txt";
+    }
+    if (!i) {
+        i = fopen("../../config.txt", "r");
+        if (i) config_file = "../../config.txt";
+    }
 
+    if (i) {
+        char* temp;
+        while (i && (temp = halgetline(i)) != NULL) {
+            if (strstr(temp, name)) {
+                halstring haltemp;
+                halstring* haltemp_ref = &haltemp;
+                haltemp_ref->do_free = 0;
+                haltemp_ref->s = temp;
+                
+                haltemp_ref = replace(haltemp_ref, " =", "=");
+                haltemp_ref = replace(haltemp_ref, "= ", "=");
+                haltemp_ref = replace(haltemp_ref, "\n", "=");
+                haltemp_ref = replace(haltemp_ref, "\r", "=");
+                haltemp_ref = replace(haltemp_ref, name, "");
+                haltemp_ref = replace(haltemp_ref, "=", "");
+
+                char copy[4001];
+                strncpy(copy, haltemp_ref->s, 4000);
+                fclose(i);
+                printf("%s: %s = %s, default %s\n", config_file, name, copy, _default);
+                return copy;
+            }
+        }
+    }
+    fclose(i);
+    
+    FILE* o = fopen(config_file, "a");
+    if (o) {
+        fprintf(o, "%s = %s\n", name, _default);
+        fclose(o);
+    }
+    
+    return _default;
+}

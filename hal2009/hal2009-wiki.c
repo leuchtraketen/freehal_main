@@ -362,6 +362,10 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     if (is_no_wiki_word(entity)) {
         return 0;
     }
+    if (strcmp("1", check_config("online", "1"))) {
+        return 0;
+    }
+    
     
     char* entity_without_bad_chars = 0;
     char* entity_without_stars = 0;

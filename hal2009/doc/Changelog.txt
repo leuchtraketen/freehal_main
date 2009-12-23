@@ -1,3 +1,8 @@
+777:
+
+- Bug 379 korrigiert
+- Config-Datei hinzugefuegt und implementiert in C (server), .hal (server) und C++ (GUI)
+
 776:
 
 - Bug 443 korrigiert

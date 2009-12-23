@@ -100,6 +100,56 @@ define action be_slow without arguments do
 done
 
 # TEXT
+# ~~~~~ CONFIG CODE ~~~~~
+# CODE
+
+define action check_config with var name, var default, var lang, var path do
+    set new var file_name to "config.txt"
+
+    set new var config_path to var path concat "/" concat var file_name
+    set new var input_handle to handle for file name var config_path, read
+    if not var input_handle do
+        set var config_path to var path concat "/../" concat var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+    if not var input_handle do
+        set var config_path to var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+    if not var input_handle do
+        set var config_path to "../" concat var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+    
+    if var input_handle do
+        for each new var line from var input_handle do
+            if var line matches /var name\s*?<[=]>\s*?(.*?)\s*?$/ do
+                set new var value to $0
+                do regex using var value: /^\s+?/, "", :global
+                do regex using var value: /\s+?$/, "", :global
+                print var config_path concat ": " concat var name concat " = " concat var value
+                print new line
+                do return with var value
+            done
+        done
+    done
+    
+    set new var output_handle to handle for file name var config_path, append
+    if not var output_handle do
+        set var config_path to var path concat "/" concat var file_name
+        set var output_handle to handle for file name var config_path, append
+    done
+    if var output_handle do
+        print into var output_handle data var name concat " = " concat var default concat new line
+        do close with var output_handle
+    done
+    
+    print var config_path concat ": " concat var name concat " = ???, default = " concat var default
+    print new line
+    do return with var default
+done
+
+# TEXT
 # ~~~~~ SCORE CODE ~~~~~
 # CODE
 
@@ -304,7 +354,7 @@ define action get_tag_part_of_speech with var word, var lang do
         if var input_handle do
             set new var response to the next line from var input_handle
             if var response do
-                print "Got input."
+                print "Got input: '" concat var response concat "'"
                 print new line
                 do close with var input_handle
                 do wait 1 seconds
@@ -809,6 +859,8 @@ done
 # CODE
 define action compute_tags with var word, var lang, var path do
     do regex using var word: /<[\x80-\xFF]>/, "", :global
+    
+    set new var is_tagger_on to check_config with "tagger", 1, var lang, var path
 
     set new array tags to an empty array
     
@@ -1001,7 +1053,7 @@ define action compute_tags with var word, var lang, var path do
     # Ask the user.
     # CODE
     if is an empty array tags do
-        if exists: var path concat "/no-tagger.txt", end test do
+        if exists: var path concat "/no-tagger.txt", end test or var is_tagger_on do
             if not var word matches /\s/ do
                 set array tags to an empty array
                 set from array tags first item to get_tag_part_of_speech using var word, var lang
@@ -1015,7 +1067,7 @@ define action compute_tags with var word, var lang, var path do
     # Guess.
     # CODE
     if is an empty array tags do
-        if not exists: var path concat "/no-tagger.txt", end test do
+        if ( not exists: var path concat "/no-tagger.txt", end test ) or ( var is_tagger_on ) do
             set array tags to an empty array
             set from array tags first item to guess_part_of_speech using var word
             

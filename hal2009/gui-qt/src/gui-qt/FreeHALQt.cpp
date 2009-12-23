@@ -108,6 +108,102 @@ void FreeHALWindow::hideStartupDialog() {
     main_window->showWindowNormal();
 }
 
+const char* check_config (freehal::string name, const char* _default) {
+    ifstream i_1("config.txt");
+    ifstream i_2("../config.txt");
+    ifstream i_3("../../config.txt");
+    
+    const char* config_file = "config.txt";
+    ifstream* i = &i_1;
+    if (i_1.is_open()) {
+        i = &i_1;
+    }
+    if (i_2.is_open()) {
+        i = &i_2;
+        config_file = "../config.txt";
+    }
+    if (i_3.is_open()) {
+        i = &i_3;
+        config_file = "../../config.txt";
+    }
+    
+    if (i && i->is_open()) {
+        freehal::string temp;
+        while (*i) {
+            getline(*i, temp.ref());
+            temp.strip();
+            
+            temp = temp.replace(" =", "=");
+            temp = temp.replace("= ", "=");
+
+            if (temp.contains(name + "=")) {
+                freehal::strings parts;
+                util::split(temp, "=", parts);
+                
+                if (parts.size() >= 2) {
+                    return (parts[1].ref().c_str());
+                }
+            }
+        }
+    }
+    i_1.close();
+    i_2.close();
+    i_3.close();
+    
+    ofstream o(config_file, ios::app);
+    o << name.ref() << " = " << _default << endl;
+    o.close();
+    
+    return _default;
+}
+
+const char* set_config (freehal::string name, const char* _default) {
+    ifstream i_1("config.txt");
+    ifstream i_2("../config.txt");
+    ifstream i_3("../../config.txt");
+    
+    const char* config_file = "config.txt";
+    ifstream* i = &i_1;
+    if (i_1.is_open()) {
+        i = &i_1;
+    }
+    if (i_2.is_open()) {
+        i = &i_2;
+        config_file = "../config.txt";
+    }
+    if (i_3.is_open()) {
+        i = &i_3;
+        config_file = "../../config.txt";
+    }
+    
+    if (!i->is_open()) {
+        ofstream o("config.txt", ios::app);
+        o.close();
+        ifstream i_4("config.txt");
+        i = &i_4;
+        config_file = "config.txt";
+    }
+    
+    freehal::string file_content;
+    freehal::string temp;
+    while (*i) {
+        getline(*i, temp.ref());
+        
+        if (!temp.contains(name + "=") && !temp.contains(name + " =") && temp.size() > 2) {
+            file_content += temp;
+            file_content += "\n";
+        }
+    }
+    i->close();
+    
+    ofstream o("config.txt");
+    o << file_content.ref();
+    o << name.ref() << " = " << _default << endl;
+    o.close();
+    
+    return _default;
+}
+
 freehal::string ascii(QString qs) {
     qs = qs.replace(QString("Ã¼"), QString("ue"));
 	qs = qs.replace(QString("Ã"), QString("ss"));
@@ -494,7 +590,12 @@ QScrollArea* scrollArea = new QScrollArea;
     main_window->user_interface_main_window->textEdit->setHtml(QString("Please wait..."));
 
     main_window->user_interface_main_window->lineEdit->setFocus();
-        
+    
+    offline_mode  = !(0 == strcmp(check_config(freehal::string("online"), "1"), "1"));
+    www_surf_mode =  (0 == strcmp(check_config(freehal::string("use-www"), "1"), "1"));
+    dialog_options->user_interface_dialog->mode_offline->setCheckState(offline_mode ? Qt::Checked : Qt::Unchecked);
+    dialog_options->user_interface_dialog->mode_www->setCheckState(www_surf_mode ? Qt::Checked : Qt::Unchecked);
+    
     make_connection();
 
     return app.exec();
@@ -684,6 +785,7 @@ void FreeHALWindow::slotStatusbarUpdated(QString) {
 void Dialog1::on_mode_www_toggled() {
     www_surf_mode = !www_surf_mode;
     freehal::comm_send(string("WWW_SURF_MODE:") + ((www_surf_mode) ? "1" : "0"));
+    set_config(freehal::string("use-www"), ((www_surf_mode) ? "1" : "0"));
 }
 bool freehal::use_online_db = true;
 void Dialog1::on_access_online_db_toggled() {
@@ -702,12 +804,14 @@ void Dialog1::on_mode_offline_stateChanged(int state) {
     if (not_change_mode) return;
     offline_mode = state == Qt::Checked ? 1 : 0;
     freehal::comm_send(string("OFFLINE_MODE:") + ((offline_mode) ? "1" : "0"));
+    set_config(freehal::string("online"), ((!offline_mode) ? "1" : "0"));
 }
 
 void Dialog1::on_speech_stateChanged(int state) {
     if (not_change_mode) return;
     freehal::speech_activated = state == Qt::Checked ? 1 : 0;
     freehal::comm_send(string("SPEECH_MODE:") + ((freehal::speech_activated) ? "1" : "0"));
+    set_config(freehal::string("speech"), ((freehal::speech_activated) ? "1" : "0"));
 }
 
 void Dialog1::on_proxy_ok_clicked() {
