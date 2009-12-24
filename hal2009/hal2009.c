@@ -117,7 +117,17 @@ int hal2009_add_link (char* link, int key_1, int key_2) {
     sql_add_link(link, key_1, key_2);
 }
 
-int fact_delete_from_source (const char* source) {
+int fact_replace_in_source (const char* source, const char* _replacement) {
+    char* replacement;
+    if (_replacement) {
+        replacement = calloc(strlen(_replacement)+5, 1);
+        strcpy(replacement, _replacement);
+        strcat(replacement, "\r\n");
+    }
+    else {
+        replacement = -2;
+    }
+    
     char filename[999];
     char line[999];
     filename[0] = '\0';
@@ -165,7 +175,7 @@ int fact_delete_from_source (const char* source) {
                     data[line_number] = strdup(buffer);
                 }
                 else {
-                    data[line_number] = -2;
+                    data[line_number] = replacement;
                 }
                 ++line_number;
             }
@@ -192,10 +202,82 @@ int fact_delete_from_source (const char* source) {
     else {
         printf("Unable to open file.\n");
         
+        if (_replacement) {
+            return replacement;
+        }
+        
         return 1;
     }
     
+    if (_replacement) {
+        return replacement;
+    }
+    
     return 0;
+}
+
+int fact_delete_from_source (const char* source) {
+    int r = fact_replace_in_source (source, 0);
+    return r;
+}
+
+char* fact_read_from_source (const char* source) {
+    char filename[999];
+    char line[999];
+    filename[0] = '\0';
+    line[0] = '\0';
+    
+    int i;
+    int len = strlen(source);
+    for (i = 0; i < 999 && i < len; ++i) {
+        if (source[i] == ':')
+            break;
+        filename[i] = source[i];
+    }
+    filename[i] = '\0';
+    
+    int l_i;
+    for (l_i = 0, ++i; i < 999 && i < len; ++i, ++l_i) {
+        line[l_i] = source[i];
+    }
+    line[l_i] = '\0';
+    
+    printf("File: %s\n", filename);
+    printf("Line: %s\n", line && line[0] ? line : "no line");
+    
+    int line_int = line && line[0] ? atoi(line) : 0;
+    
+    // Manipulate file
+    
+    FILE* file = fopen(filename, "r");
+    if (file) {
+        char* buffer;
+        char* found;
+        int lines = 1;
+        while (file && (buffer = halgetline(file)) != NULL) {
+            ++lines;
+        }
+        --lines;
+        fclose(file);
+        
+        file = fopen(filename, "r");
+        if (file) {
+            int line_number = 1;
+            while (file && (buffer = halgetline(file)) != NULL && line_number <= lines) {
+                
+                if (line_number == line_int) {
+                    found = strdup(buffer);
+                }
+                ++line_number;
+            }
+            fclose(file);
+        }
+        
+        return found;
+    }
+    printf("Unable to open file.\n");
+    
+    return strdup("");
 }
 
 int remove_negation (char* line, double* truth_ref) {

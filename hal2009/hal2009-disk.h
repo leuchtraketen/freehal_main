@@ -33,6 +33,8 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
 struct word* disk_set_word(const char* name);
 int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
 struct fact** disk_search_clauses(int rel);
+char* disk_get_source(const char* key);
+char* disk_del_record(const char* key);
 
 
 static struct list*** disk_net = 0;

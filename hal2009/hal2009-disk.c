@@ -473,6 +473,55 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     return sql;
 }
 
+char* disk_get_source(const char* key) {
+    if (!key || !key[0])
+        return 1;
+    
+    char* source = calloc(512, 1);
+    {
+        char* sql = malloc(1024);
+        *sql = 0;
+        if (0 == strcmp(key, "a")) {
+            strcat(sql, "SELECT `from` FROM facts WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1);");
+        }
+        else {
+            strcat(sql, "SELECT `from` FROM facts WHERE pk = ");
+            strcat(sql, key);
+            strcat(sql, " LIMIT 1;");
+        }
+        
+        
+        int error = sql_execute(sql, select_primary_key, source);
+        free(sql);
+    }
+    
+    return source;
+}
+
+char* disk_del_record(const char* key) {
+    if (!key || !key[0])
+        return 1;
+    
+    char* source = disk_get_source(key);
+    
+    char* sql = malloc(1024);
+    *sql = 0;
+    if (0 == strcmp(key, "a")) {
+        strcat(sql, "DELETE FROM facts WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1);");
+    }
+    else {
+        strcat(sql, "DELETE FROM facts WHERE pk = ");
+        strcat(sql, key);
+        strcat(sql, ";");
+    }
+    printf("pkey (in hal2009-disk.c): %s, SQL: %s\n", key, sql);
+    
+    int error = sql_execute(sql, NULL, NULL);
+    free(sql);
+    
+    return source;
+}
+
 char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int limit, int* position) {
 
     char* sql = malloc(512000);

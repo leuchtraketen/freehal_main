@@ -146,6 +146,7 @@ public slots:
     void on_refresh_chart_clicked();
     void on_compute_output_clicked();
     void on_flowchart_fact_delete_clicked();
+    void on_flowchart_fact_edit_clicked();
     void on_pushButton_learn_clicked();
     void on_lineEdit_returnPressed();
     void on_actionGespr_ch_triggered();
@@ -169,16 +170,16 @@ public slots:
     void on_female_clicked();
     void on_thing_clicked();
     void on_no_genus_clicked();
-    void on_is_noun_clicked();
-    void on_not_is_noun_clicked();
 
     void on_abbr_1_clicked();
     void on_abbr_2_clicked();
-    void on_abbr_3_clicked();
 
     void iconActivated(QSystemTrayIcon::ActivationReason);
     void show_in_tray_icon(QString);
 
+
+private slots:
+    void on_flowchart_fact_pk_valueChanged(int );
 };
 
 class Dialog1 : public QDialog {
@@ -273,9 +274,7 @@ public slots:
     void showMsgWindow();
 	void hideMsgWindow();
 	void showMsgGenusWindow();
-	void hideMsgGenusWindow();
-	void showMsgNounOrNotWindow();
-	void hideMsgNounOrNotWindow();
+        void hideMsgGenusWindow();
     void slotEverythingReady();
     void close_view();
     void reconnect();
@@ -299,13 +298,10 @@ signals:
     void signalChangeHelpWindowText2(QString);
     void signalMsg(QString);
     void signalMsgGenus(QString);
-    void signalMsgNounOrNot(QString);
     void signalShowMsgWindow();
     void signalHideMsgWindow();
     void signalShowMsgGenusWindow();
     void signalHideMsgGenusWindow();
-    void signalShowMsgNounOrNotWindow();
-    void signalHideMsgNounOrNotWindow();
     void signalReconnect();
     void everythingReady();
     void sig_show_in_tray_icon(QString);
@@ -345,8 +341,11 @@ class FlowChart : public QWidget {
 
   signals:
     void ask_again();
+    void setFactText(QString);
 
   protected:
     void paintEvent(QPaintEvent *event);
+  public slots:
+    void setY(int);
 };
 

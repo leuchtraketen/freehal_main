@@ -35,4 +35,6 @@ void init_sql() {
         strcat(sqlite_filename, "./lang_de/database.db");
         sql_sqlite_set_filename(sqlite_filename);
     }
+    sql_engine = calloc(9999, 1);
+    strcpy(sql_engine, "disk");
 }

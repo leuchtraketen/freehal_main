@@ -2020,3 +2020,23 @@ int sql_universal_add_link (const char* link, int key_1, int key_2) {
     return r;
 }
 
+char* universal_del_record(char* key) {
+    if (is_engine("ram")) {
+        // does not exist
+    }
+    else {
+        return disk_del_record(key);
+    }
+    return 0;
+}
+
+char* universal_get_source(char* key) {
+    if (is_engine("ram")) {
+        // does not exist
+    }
+    else {
+        return disk_get_source(key);
+    }
+    return 0;
+}
+

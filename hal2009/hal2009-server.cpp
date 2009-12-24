@@ -753,6 +753,46 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             (*stream) << "DELETED:SUCCESS" << endl;
         }
         
+        if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
+            struct RECORD r;
+            strcpy(r.pkey, result->at(3).c_str());
+            printf("get .pro entry (in hal2009-server, 1): %s\n", r.pkey);
+            sql_begin();
+            char* source = sql_get_source(&r);
+            if (source) {
+                char* editable_fact_data = fact_read_from_source(source);
+                if (editable_fact_data) {
+                    (*stream) << "PROFACT:" << editable_fact_data << endl;
+                    free(editable_fact_data);
+                }
+                free(source);
+            }
+            sql_end();
+        }
+        
+        if ( result->at(0) == string("REPLACE") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
+            struct RECORD r;
+            strcpy(r.pkey, result->at(3).c_str());
+            char replacement[2001];
+            strncpy(replacement, result->at(5).c_str(), 2000);
+            while (replacement[0] && (replacement[strlen(replacement)-1] == '\r' || replacement[strlen(replacement)-1] == '\n')) {
+                replacement[strlen(replacement)-1] = '\0';
+            }
+            printf("replace .pro entry (in hal2009-server, 1): %s by '%s'\n", r.pkey, replacement);
+            sql_begin();
+            char* source = sql_get_source(&r);
+            if (source) {
+                fact_replace_in_source(source, replacement);
+                char* editable_fact_data = fact_read_from_source(source);
+                if (editable_fact_data) {
+                    (*stream) << "PROFACT:" << editable_fact_data << endl;
+                    free(editable_fact_data);
+                }
+                free(source);
+            }
+            sql_end();
+        }
+        
         if ( init_thread_ended > 0 && result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             
             string input;

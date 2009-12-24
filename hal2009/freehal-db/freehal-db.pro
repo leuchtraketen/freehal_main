@@ -23,6 +23,7 @@ SOURCES += main.cpp \
     freehal-db.c \
     ../hal2009-perl5.c \
     ../hal2009-perl6-dummy.c \
-    ../sqlite3.c
+    ../sqlite3.c \
+    ../hal2009-wiki-dummy.c
 HEADERS += freehal_db.h
 FORMS += freehal_db.ui

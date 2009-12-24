@@ -1,3 +1,9 @@
+778:
+
+- Das Chart wurde erweitert: die zum key passenden .pro-Eintraege werden ausgelesen und geaenderte Eintraege werden abgespeichert
+- Das Löschen im Chart funktioniert
+- Es gibt nun eine Scrollbar im Chart
+
 777:
 
 - Bug 379 korrigiert

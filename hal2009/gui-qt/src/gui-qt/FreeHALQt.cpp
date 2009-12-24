@@ -285,6 +285,15 @@ void FreeHALWindow::on_flowchart_fact_delete_clicked() {
     freehal::comm_send("DELETE:FACT:PK:" + qs.toStdString());
 }
 
+void FreeHALWindow::on_flowchart_fact_edit_clicked() {
+    QString qs;
+    qs.setNum(user_interface_main_window->flowchart_fact_pk->value());
+    QString replacement = main_window->user_interface_main_window->flowchart_edit->text();
+    main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
+
+    freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
+}
+
 void FreeHALWindow::on_pushButton_learn_clicked() {
     QString qs = user_interface_main_window->lineEdit->displayText();
     freehal::string ques = ascii(qs);
@@ -554,8 +563,6 @@ QScrollArea* scrollArea = new QScrollArea;
     helper->connect(&(*helper), SIGNAL(signalMsgGenus(QString)),
             main_window->user_interface_main_window->msg_2, SLOT(setHtml(QString)));
 
-    helper->connect(&(*helper), SIGNAL(signalMsgNounOrNot(QString)),
-            main_window->user_interface_main_window->msg_3, SLOT(setHtml(QString)));
 
     helper->connect(&(*helper), SIGNAL(signalShowMsgWindow()),
             &(*helper), SLOT(showMsgWindow()));
@@ -580,6 +587,11 @@ QScrollArea* scrollArea = new QScrollArea;
     		
     helper->connect(&(*helper), SIGNAL(signalNewVersionOnline(QString)),
     		&(*helper), SLOT(slotNewVersionOnline(QString)));
+
+    helper->connect(main_window->user_interface_main_window->verticalScrollBar, SIGNAL(valueChanged(int)),
+                    fc, SLOT(setY(int)));
+    helper->connect(fc, SIGNAL(setFactText(QString)),
+                    main_window->user_interface_main_window->flowchart_edit, SLOT(setText(QString)));
     		
     app.connect(&app, SIGNAL(aboutToQuit()),
              &(*helper), SLOT(exitNow()));
@@ -700,7 +712,6 @@ void FreeHALWindow::showWindowNormal() {
     user_interface_main_window->menubar->show();
     user_interface_main_window->msg_box->hide();
     user_interface_main_window->msg_box_2->hide();
-    user_interface_main_window->msg_box_3->hide();
 
     main_window->setWindowFlags(0);
     main_window->resize(700, 550);
@@ -714,7 +725,6 @@ void FreeHALWindow::showWindowFullscreen() {
     user_interface_main_window->menubar->hide();
     user_interface_main_window->msg_box->hide();
     user_interface_main_window->msg_box_2->hide();
-    user_interface_main_window->msg_box_3->hide();
 
     main_window->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     main_window->move(0,0);
@@ -922,27 +932,10 @@ void FreeHALWindow::on_no_genus_clicked() {
     main_window->user_interface_main_window->msg_box_2->hide();
 }
 
-void FreeHALWindow::on_is_noun_clicked() {
-    freehal::comm_send("HERE_IS_NOUN_OR_NOT:1");
-    cout << "HERE_IS_NOUN_OR_NOT:1" << endl;
-    main_window->user_interface_main_window->msg_box_3->hide();
-}
-
-void FreeHALWindow::on_not_is_noun_clicked() {
-    freehal::comm_send("HERE_IS_NOUN_OR_NOT:2");
-    cout << "HERE_IS_NOUN_OR_NOT:2" << endl;
-    main_window->user_interface_main_window->msg_box_3->hide();
-}
-
 void FreeHALWindow::on_abbr_1_clicked() {
     freehal::comm_send("HERE_IS_GENUS:EXIT");
     cout << "HERE_IS_GENUS:EXIT" << endl;
     main_window->user_interface_main_window->msg_box_2->hide();
-}
-void FreeHALWindow::on_abbr_3_clicked() {
-    freehal::comm_send("HERE_IS_NOUN_OR_NOT:EXIT");
-    cout << "HERE_IS_NOUN_OR_NOT:EXIT" << endl;
-    main_window->user_interface_main_window->msg_box_3->hide();
 }
 void FreeHALWindow::on_abbr_2_clicked() {
     freehal::comm_send("HERE_IS_WORD_TYPE:EXIT");
@@ -964,13 +957,6 @@ void Helper::hideMsgGenusWindow() {
     main_window->user_interface_main_window->msg_box_2->hide();
 }
 
-void Helper::showMsgNounOrNotWindow() {
-    main_window->user_interface_main_window->msg_box_3->show();
-}
-void Helper::hideMsgNounOrNotWindow() {
-    main_window->user_interface_main_window->msg_box_3->hide();
-}
-
 void Helper::slotEverythingReady() {
     main_window->user_interface_main_window->lineEdit->setEnabled(true);
     main_window->user_interface_main_window->textEdit->setEnabled(true);
@@ -982,7 +968,7 @@ FlowChart::FlowChart(QWidget* w)
 : QWidget(w) {
 }
 
-int lastX = 0, lastY = 0;
+int lastX = 0, lastY = 0, lastY_scrollbar = 0;
 int diffX = 0, diffY = 0;
 struct ClickPositionItem** clickPositions = (struct ClickPositionItem**)calloc(10000*sizeof(struct ClickPositionItem*), 1);
 void FlowChart::mousePressEvent(QMouseEvent *e) {
@@ -1037,6 +1023,12 @@ void FreeHALWindow::on_refresh_chart_clicked() {
     fc->repaint();
 }
 
+void FlowChart::setY(int y) {
+    diffY -= y - lastY_scrollbar;
+    lastY_scrollbar = y;
+    this->repaint();
+}
+
 void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
     try {
     cout << "Button released (" << e->x() << ", " << e->y() << ")." << endl;
@@ -1048,21 +1040,20 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
 
                 cout << "Repainting (" << (e->x() - lastX > 10) << ", " << (e->y() - lastY > 10) << ", " << (e->x() - lastX < -10) << ", " << (e->y() - lastY < -10) << ")..." << endl;
                 this->repaint();
-        }
+            }
 
             else {
                 this->user_interface_main_window->flowchart_fact_pk->setValue(0);
+                this->user_interface_main_window->flowchart_edit->setText(QString());
+
                 int y = e->y() - diffY;
                 for (int l = 0; l < 9999 && clickPositions[l]; ++l) {
                     if (clickPositions[l]) {
                         cout << "[from " << clickPositions[l]->beginY << " to " << clickPositions[l]->endY << "]" << endl;
                         if (y >= clickPositions[l]->beginY && y <= clickPositions[l]->endY) {
-    //                        if (clickPositions[l]->prop == QString("pk    ")) {
+                            this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
 
-                                this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
-
-                                break;
-    //                        }
+                            break;
                         }
                     }
                 }
@@ -1188,6 +1179,10 @@ void FlowChart::paintEvent(QPaintEvent *event) {
         }
     }
 
+    main_window->user_interface_main_window->verticalScrollBar->setMinimum(0);
+    main_window->user_interface_main_window->verticalScrollBar->setPageStep(margin_top-this->size().height());
+    main_window->user_interface_main_window->verticalScrollBar->setMaximum(margin_top);
+
 /*
     painter.setBrush(QBrush("#c56c00"));
     painter.drawRect(10, 15, 90, 60);
@@ -1251,6 +1246,9 @@ void freehal::comm_new(freehal::string s) {
         }
         if (s.contains("DELETED")) {
             emit fc->ask_again();
+        }
+        if (s.contains("PROFACT")) {
+            emit fc->setFactText(QString::fromStdString(parts[1].ref()));
         }
         if (s.contains("SPEAK")) {
             speak(parts[1].ref());
@@ -1324,3 +1322,11 @@ void freehal::comm_new(freehal::string s) {
 
 }
 
+void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int )
+{
+    QString qs;
+    qs.setNum(user_interface_main_window->flowchart_fact_pk->value());
+    main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
+
+    freehal::comm_send("GET:PROFACT:PK:" + qs.toStdString());
+}

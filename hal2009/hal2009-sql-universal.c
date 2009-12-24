@@ -39,6 +39,15 @@ int sql_universal_end() {
 }
 
 char* sql_universal_del_record(struct RECORD* r) {
+    if (r->pkey && r->pkey[0] && to_number(r->pkey)) {
+        universal_del_record(r->pkey);
+    }
+}
+
+char* sql_universal_get_source(struct RECORD* r) {
+    if (r->pkey && r->pkey[0] && to_number(r->pkey)) {
+        universal_get_source(r->pkey);
+    }
 }
 
 int sql_universal_add_record(struct RECORD* r, const char* relation_to) {

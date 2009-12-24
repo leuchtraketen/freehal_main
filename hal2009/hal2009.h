@@ -235,7 +235,10 @@ extern "C" {
     const char* engine();
     const char* is_engine(const char*);
     char* sql_del_record(struct RECORD* r);
+    char* sql_get_source(struct RECORD* r);
     int fact_delete_from_source(const char* source);
+    int fact_replace_in_source(const char* source, const char* replacement);
+    char* fact_read_from_source(const char* source);
 #ifdef __cplusplus
 }
 #endif

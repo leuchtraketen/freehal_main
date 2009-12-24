@@ -54,11 +54,17 @@ char* sql_del_record(struct RECORD* r) {
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_del_record(r);
     }
-    /*else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        return sql_semtree_del_record(r);
-    }
-    */ else {
+    else {
         return sql_universal_del_record(r);
+    }
+}
+
+char* sql_get_source(struct RECORD* r) {
+    if (sql_engine && matchstr(sql_engine, "sqlite")) {
+        // does not exist
+    }
+    else {
+        return sql_universal_get_source(r);
     }
 }
 
