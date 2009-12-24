@@ -1,3 +1,7 @@
+779:
+
+- GUI oeffnet sich nun wieder im ersten Tab, Bug in 778
+
 778:
 
 - Das Chart wurde erweitert: die zum key passenden .pro-Eintraege werden ausgelesen und geaenderte Eintraege werden abgespeichert
