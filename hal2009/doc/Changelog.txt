@@ -1,3 +1,11 @@
+782:
+
+- Changelog aktualisiert
+
+781:
+
+- vielleicht: Bugfix wegen Memory-"Explodieren"
+
 780:
 
 - vielleicht: Bugfix wegen Memory-"Explodieren"
