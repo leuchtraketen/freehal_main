@@ -1322,11 +1322,13 @@ void freehal::comm_new(freehal::string s) {
 
 }
 
-void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int )
+void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int i)
 {
-    QString qs;
-    qs.setNum(user_interface_main_window->flowchart_fact_pk->value());
-    main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
+    if (i) {
+        QString qs;
+        qs.setNum(i);
+        main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
 
-    freehal::comm_send("GET:PROFACT:PK:" + qs.toStdString());
+        freehal::comm_send("GET:PROFACT:PK:" + qs.toStdString());
+    }
 }

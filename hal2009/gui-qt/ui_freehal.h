@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Thu Dec 24 15:26:09 2009
+** Created: Fri Dec 25 17:15:20 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -506,7 +506,7 @@ public:
         retranslateUi(freehalWindow);
         QObject::connect(actionBeenden, SIGNAL(triggered()), freehalWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(freehalWindow);
