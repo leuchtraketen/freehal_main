@@ -1,3 +1,7 @@
+783:
+
+- vielleicht: Bugfix: FreeHAL hat die Datei- und Zeilenangabe zwischen hal2009-server und der disk-Version "vergessen"
+
 782:
 
 - Changelog aktualisiert

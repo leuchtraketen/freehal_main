@@ -756,6 +756,9 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
+            while (r.pkey[0] && (r.pkey[strlen(r.pkey)-1] == '\r' || r.pkey[strlen(r.pkey)-1] == '\n')) {
+                r.pkey[strlen(r.pkey)-1] = '\0';
+            }
             printf("get .pro entry (in hal2009-server, 1): %s\n", r.pkey);
             sql_begin();
             char* source = sql_get_source(&r);
