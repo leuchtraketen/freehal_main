@@ -300,6 +300,24 @@ int remove_negation (char* line, double* truth_ref) {
         sline_ref = replace(sline_ref, " not ", "");
         (*truth_ref) = 0.0;
     }
+    if (strstr(line, " 50")) {
+        sline_ref = replace(sline_ref, " 50", "");
+        sline_ref = replace(sline_ref, " <> 50", "");
+        (*truth_ref) = 0.5;
+    }
+    if (strstr(line, "(true)")) {
+        sline_ref = replace(sline_ref, " (true)", "");
+        sline_ref = replace(sline_ref, "(true)", "");
+        (*truth_ref) = 1.0;
+    }
+    if (strstr(line, "(maybe)")) {
+        sline_ref = replace(sline_ref, " (maybe)", "");
+        (*truth_ref) = 0.5;
+    }
+    if (strstr(line, "(false)")) {
+        sline_ref = replace(sline_ref, " (false)", "");
+        (*truth_ref) = 0.0;
+    }
     
     strncpy(line, sline_ref->s, 4196);
     if (line[0] == ' ') {

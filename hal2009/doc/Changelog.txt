@@ -1,3 +1,7 @@
+780:
+
+- vielleicht: Bugfix wegen Memory-"Explodieren"
+
 779:
 
 - GUI oeffnet sich nun wieder im ersten Tab, Bug in 778

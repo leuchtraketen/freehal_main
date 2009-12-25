@@ -505,7 +505,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     
     if not var file_name matches /brain/ do
         if not from array tags first item matches /q/ do
-            print into var output_handle data "  count: 1" concat new line
+            #print into var output_handle data "  count: 1" concat new line
         done
     done
 
@@ -815,6 +815,7 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
     set new var entry to ""
     set new array lines to an empty array
     set items of array lines to all lines from var input_handle
+    set new flag found to 0
     for each new var line in array lines is rw do
         if var line matches /var matched_id/ do
             set var entry to var line
@@ -825,10 +826,21 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
             if var line matches /^ / do
                 if var line matches /count/ do
                     set var line to "  count: " concat var count concat new line
+                    set flag found to 1
                     go to last
                 done
             done
             else do
+                go to last
+            done
+        done
+    done
+    
+    if not flag found do
+        for each new var line in array lines is rw do
+            if var line matches /var matched_id/ do
+                set var entry to var line
+                set var line to var line concat "  count: " concat var count concat new line
                 go to last
             done
         done
