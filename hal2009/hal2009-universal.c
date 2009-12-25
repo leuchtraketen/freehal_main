@@ -455,7 +455,7 @@ struct DATASET search_clauses_as_dataset(int rel) {
 }
 
 int fact_matches_truth(struct fact* fact, struct request* request) {
-    int does_match = fact->truth > 0.8;
+    int does_match = fact->truth > 0.1;
     
     return does_match;
 }
@@ -1839,7 +1839,12 @@ int append_on_dataset_record(int offset, int limit, char** record, struct fact**
             record[offset+(d*6)+3] = join_words(list[d]->adverbs);
             record[offset+(d*6)+4] = strdup(list[d]->questionword ? list[d]->questionword : "");
             record[offset+(d*6)+5] = calloc(sizeof(char), 10);
-            sprintf(record[offset+(d*6)+5], "%d.0", (int)(list[d]->truth));
+            if (list[d]->truth > 0.2 && list[d]->truth < 0.8) {
+                sprintf(record[offset+(d*6)+5], "0.5");
+            }
+            else {
+                sprintf(record[offset+(d*6)+5], "%d.0", (int)(list[d]->truth));
+            }
             
             column_count = offset+(d*6)+6;
             
@@ -1888,7 +1893,12 @@ struct DATASET as_dataset(struct fact** list) {
             record[5] = strdup("50");
             record[6] = strdup(list[d]->from ? list[d]->from : "");
             record[7] = calloc(sizeof(char), 10);
-            sprintf(record[7], "%d.0", (int)(list[d]->truth));
+            if (list[d]->truth > 0.2 && list[d]->truth < 0.8) {
+                sprintf(record[7], "0.5");
+            }
+            else {
+                sprintf(record[7], "%d.0", (int)(list[d]->truth));
+            }
             
             int column_count = append_on_dataset_record(8, 100, record, search_clauses(list[d]->pk));
             if (column_count > set.column_count)

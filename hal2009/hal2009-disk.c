@@ -781,7 +781,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->extra        = divide_words("");
     fact->questionword = strdup(argv[5] ? argv[5] : "");
     fact->from         = strdup(argv[6] ? argv[6] : "");
-    fact->truth        = !argv[7] || !argv[7][0] || argv[7][0] == '0' ? 0.0 : 1.0;
+    fact->truth        = (argv[7] && argv[7][0] && argv[7][0] == '1') ? 1.0 : ((argv[7] && argv[7][0] && argv[7][0] && argv[7][1] && argv[7][2] != '0') ? 0.5 : 0.0);
     
     req->facts[*req->position] = fact;
     debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
