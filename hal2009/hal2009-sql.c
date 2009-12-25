@@ -60,6 +60,7 @@ char* sql_del_record(struct RECORD* r) {
 }
 
 char* sql_get_source(struct RECORD* r) {
+    printf("sql_get_source: %d\n", r);
     if (sql_engine && matchstr(sql_engine, "sqlite")) {
         // does not exist
     }

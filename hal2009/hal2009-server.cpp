@@ -762,6 +762,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             printf("get .pro entry (in hal2009-server, 1): %s\n", r.pkey);
             sql_begin();
             char* source = sql_get_source(&r);
+            printf("source: '%s'\n", source ? source : "(null)");
             if (source) {
                 char* editable_fact_data = fact_read_from_source(source);
                 if (editable_fact_data) {
@@ -769,6 +770,9 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                     free(editable_fact_data);
                 }
                 free(source);
+            }
+            else {
+                (*stream) << "PROFACT:" << "Datei nicht gefunden..." << endl;
             }
             sql_end();
         }
@@ -792,6 +796,9 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                     free(editable_fact_data);
                 }
                 free(source);
+            }
+            else {
+                (*stream) << "PROFACT:" << "Datei nicht gefunden..." << endl;
             }
             sql_end();
         }

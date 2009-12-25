@@ -45,6 +45,7 @@ char* sql_universal_del_record(struct RECORD* r) {
 }
 
 char* sql_universal_get_source(struct RECORD* r) {
+    printf("sql_universal_get_source: %d, to_number(r->pkey) = %d, r->pkey = %s\n", r, to_number(r->pkey), r->pkey ? r->pkey : "(null)");
     if (r->pkey && r->pkey[0] && to_number(r->pkey)) {
         universal_get_source(r->pkey);
     }

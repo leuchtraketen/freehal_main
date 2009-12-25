@@ -474,6 +474,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
 }
 
 char* disk_get_source(const char* key) {
+    printf("disk_get_source: %s", key);
     if (!key || !key[0])
         return 1;
     
@@ -494,6 +495,7 @@ char* disk_get_source(const char* key) {
         int error = sql_execute(sql, select_primary_key, source);
         free(sql);
     }
+    printf("source: %s", source);
     
     return source;
 }
