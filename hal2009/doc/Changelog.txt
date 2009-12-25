@@ -1,6 +1,14 @@
+787:
+
+- Implementierung Bewertungssystem in der Chart, (+)- und (-)-Buttons
+
+786:
+
+- Implementierung Bewertungssystem in der Chart, (+)- und (-)-Buttons
+
 785:
 
-- vielleicht: Bugfix: FreeHAL hat die Datei- und Zeilenangabe zwischen hal2009-server und der disk-Version "vergessen"
+- Bugfix: FreeHAL hat die Datei- und Zeilenangabe zwischen hal2009-server und der disk-Version "vergessen"
 
 784:
 

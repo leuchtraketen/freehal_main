@@ -153,6 +153,23 @@ done
 # ~~~~~ SCORE CODE ~~~~~
 # CODE
 
+define action check_score_command with var possible_score, var lang, var path do
+    if var possible_score matches /^\/SCORE\s+?(<[-+0-9]>+)\s+?(.*?)$/ do
+        set new var plusminus to $0
+        set new var output to $1
+        
+        set new var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/input.history', read
+        set new var last_input to ''
+        for each new var line from var input_handle do
+            set var last_input to var line
+        done
+        set new array words to split with " ", var last_input
+        
+        do return with [ $0, array words, var output ]
+    done
+    do return with 0
+done
+
 define action check_score with var possible_score do
     set new var output_num to 0
     if var possible_score matches /^(<[0-9]>+)\s?/ do
@@ -163,28 +180,28 @@ define action check_score with var possible_score do
 
     if not var possible_score matches /[a-zA-Z]/ do
         if var possible_score matches /[+]/ do
-            return [ var output_num, 5 ]
+            do return with [ var output_num, 5 ]
         done
         if var possible_score matches /[+][+]/ do
-            return [ var output_num, 20 ]
+            do return with [ var output_num, 20 ]
         done
         if var possible_score matches /[+][+][+]/ do
-            return [ var output_num, 50 ]
+            do return with [ var output_num, 50 ]
         done
         if var possible_score matches /[+][+][+][+]/ do
-            return [ var output_num, 800 ]
+            do return with [ var output_num, 800 ]
         done
         if var possible_score matches '-' do
-            return [ var output_num, -5 ]
+            do return with [ var output_num, -5 ]
         done
         if var possible_score matches '--' do
-            return [ var output_num, -20 ]
+            do return with [ var output_num, -20 ]
         done
         if var possible_score matches '---' do
-            return [ var output_num, -50 ]
+            do return with [ var output_num, -50 ]
         done
         if var possible_score matches '----' do
-            return [ var output_num, -800 ]
+            do return with [ var output_num, -800 ]
         done
     done
 
@@ -3649,6 +3666,14 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
         else do
             do set_score_for_last with from array score second item, var current_language, var path
         done
+
+        set new var answer to get_score_answer without arguments
+        do return with [ var answer ]
+    done
+    
+    set array score to check_score_command using var input, var current_language, var path
+    if array score and from array score first item do
+        do set_score with from array score second item, from array score third item, from array score first item, var current_language, var path
 
         set new var answer to get_score_answer without arguments
         do return with [ var answer ]

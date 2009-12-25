@@ -179,6 +179,8 @@ public slots:
 
 
 private slots:
+    void on_plus_clicked();
+    void on_minus_clicked();
     void on_flowchart_fact_pk_valueChanged(int );
 };
 
@@ -325,6 +327,7 @@ struct ClickPositionItem {
     int endY;
     char* prop;
     char* value;
+    char* text;
 };
 
 class FlowChart : public QWidget {

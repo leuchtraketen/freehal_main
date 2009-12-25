@@ -1045,6 +1045,7 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
             else {
                 this->user_interface_main_window->flowchart_fact_pk->setValue(0);
                 this->user_interface_main_window->flowchart_edit->setText(QString());
+                this->user_interface_main_window->flowchart_view->setText(QString());
 
                 int y = e->y() - diffY;
                 for (int l = 0; l < 9999 && clickPositions[l]; ++l) {
@@ -1052,6 +1053,7 @@ void FlowChart::mouseReleaseEvent(QMouseEvent *e) {
                         cout << "[from " << clickPositions[l]->beginY << " to " << clickPositions[l]->endY << "]" << endl;
                         if (y >= clickPositions[l]->beginY && y <= clickPositions[l]->endY) {
                             this->user_interface_main_window->flowchart_fact_pk->setValue(QString::fromStdString(std::string(clickPositions[l]->value)).toInt(NULL, 10));
+                            this->user_interface_main_window->flowchart_view->setText(QString::fromStdString(std::string(clickPositions[l]->text)));
 
                             break;
                         }
@@ -1083,6 +1085,8 @@ void FlowChart::paintEvent(QPaintEvent *event) {
                 free(clickPositions[l]->prop);
             if (clickPositions[l]->value)
                 free(clickPositions[l]->value);
+            if (clickPositions[l]->text)
+                free(clickPositions[l]->text);
             free(clickPositions[l]);
             clickPositions[l] = 0;
         }
@@ -1151,6 +1155,13 @@ void FlowChart::paintEvent(QPaintEvent *event) {
                     painter.setPen(QColor(("#" + line.substr(12, 6)).c_str()));
                     QString prop;
                     QString value;
+                    QString text;
+                    {
+                        QStringList textList = QString::fromStdString(line.substr(12+6+1)).split(": ");
+                        if (textList.size() >= 2) {
+                            text = textList.at(1);
+                        }
+                    }
                     painter.drawText(diffX+10+padding, diffY+margin_top+padding, QString::fromStdString(line.substr(12+6+1)));
                     getline(log, line);
                     prop  = QString::fromStdString(line.substr(12, 6)); // property
@@ -1160,6 +1171,7 @@ void FlowChart::paintEvent(QPaintEvent *event) {
                         clickPositions[pos] = (struct ClickPositionItem*)calloc(sizeof(struct ClickPositionItem), 1);
                         clickPositions[pos]->prop  = strdup(prop .toStdString().c_str());
                         clickPositions[pos]->value = strdup(value.toStdString().c_str());
+                        clickPositions[pos]->text  = strdup(text .toStdString().c_str());
                         clickPositions[pos]->beginY = margin_top;
                         clickPositions[pos]->endY = margin_top + text_height;
                         ++pos;
@@ -1183,34 +1195,6 @@ void FlowChart::paintEvent(QPaintEvent *event) {
     main_window->user_interface_main_window->verticalScrollBar->setPageStep(margin_top-this->size().height());
     main_window->user_interface_main_window->verticalScrollBar->setMaximum(margin_top);
 
-/*
-    painter.setBrush(QBrush("#c56c00"));
-    painter.drawRect(10, 15, 90, 60);
-
-    painter.setBrush(QBrush("#1ac500"));
-    painter.drawRect(130, 15, 90, 60);
-
-    painter.setBrush(QBrush("#539e47"));
-    painter.drawRect(250, 15, 90, 60);
-
-    painter.setBrush(QBrush("#004fc5"));
-    painter.drawRect(10, 105, 90, 60);
-
-    painter.setBrush(QBrush("#c50024"));
-    painter.drawRect(130, 105, 90, 60);
-
-    painter.setBrush(QBrush("#9e4757"));
-    painter.drawRect(250, 105, 90, 60);
-
-    painter.setBrush(QBrush("#5f3b00"));
-    painter.drawRect(10, 195, 90, 60);
-
-    painter.setBrush(QBrush("#4c4c4c"));
-    painter.drawRect(130, 195, 90, 60);
-
-    painter.setBrush(QBrush("#785f36"));
-    painter.drawRect(250, 195, 90, 60);
-*/
     } catch (std::bad_alloc b) {
         cout << "Bad allocation in paintEvent." << endl;
     }
@@ -1331,4 +1315,16 @@ void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int i)
 
         freehal::comm_send("GET:PROFACT:PK:" + qs.toStdString());
     }
+}
+
+void FreeHALWindow::on_plus_clicked()
+{
+   QString text = this->user_interface_main_window->flowchart_view->text();
+   freehal::comm_send("QUESTION:/SCORE +10 " + text.toStdString());
+}
+
+void FreeHALWindow::on_minus_clicked()
+{
+   QString text = this->user_interface_main_window->flowchart_view->text();
+   freehal::comm_send("QUESTION:/SCORE -10 " + text.toStdString());
 }

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Fri Dec 25 17:15:20 2009
+** Created: Fri Dec 25 18:41:00 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -80,6 +80,8 @@ public:
     QPushButton *refresh_chart;
     QFrame *line_2;
     QLabel *label_3;
+    QLabel *flowchart_view;
+    QLabel *label_4;
     QLineEdit *flowchart_edit;
     QLabel *label;
     QSpinBox *flowchart_fact_pk;
@@ -288,15 +290,30 @@ public:
 
         gridLayout_3->addWidget(label_3, 4, 0, 1, 2);
 
+        flowchart_view = new QLabel(scrollAreaWidgetContents);
+        flowchart_view->setObjectName(QString::fromUtf8("flowchart_view"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(flowchart_view->sizePolicy().hasHeightForWidth());
+        flowchart_view->setSizePolicy(sizePolicy2);
+
+        gridLayout_3->addWidget(flowchart_view, 4, 2, 1, 5);
+
+        label_4 = new QLabel(scrollAreaWidgetContents);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        gridLayout_3->addWidget(label_4, 5, 0, 1, 2);
+
         flowchart_edit = new QLineEdit(scrollAreaWidgetContents);
         flowchart_edit->setObjectName(QString::fromUtf8("flowchart_edit"));
 
-        gridLayout_3->addWidget(flowchart_edit, 4, 2, 1, 5);
+        gridLayout_3->addWidget(flowchart_edit, 5, 2, 1, 5);
 
         label = new QLabel(scrollAreaWidgetContents);
         label->setObjectName(QString::fromUtf8("label"));
 
-        gridLayout_3->addWidget(label, 5, 0, 1, 2);
+        gridLayout_3->addWidget(label, 6, 0, 1, 2);
 
         flowchart_fact_pk = new QSpinBox(scrollAreaWidgetContents);
         flowchart_fact_pk->setObjectName(QString::fromUtf8("flowchart_fact_pk"));
@@ -304,35 +321,35 @@ public:
         flowchart_fact_pk->setSizePolicy(sizePolicy1);
         flowchart_fact_pk->setMaximum(999999999);
 
-        gridLayout_3->addWidget(flowchart_fact_pk, 5, 2, 1, 1);
+        gridLayout_3->addWidget(flowchart_fact_pk, 6, 2, 1, 1);
 
         plus = new QPushButton(scrollAreaWidgetContents);
         plus->setObjectName(QString::fromUtf8("plus"));
         sizePolicy1.setHeightForWidth(plus->sizePolicy().hasHeightForWidth());
         plus->setSizePolicy(sizePolicy1);
 
-        gridLayout_3->addWidget(plus, 6, 0, 1, 1);
+        gridLayout_3->addWidget(plus, 7, 0, 1, 1);
 
         minus = new QPushButton(scrollAreaWidgetContents);
         minus->setObjectName(QString::fromUtf8("minus"));
         sizePolicy1.setHeightForWidth(minus->sizePolicy().hasHeightForWidth());
         minus->setSizePolicy(sizePolicy1);
 
-        gridLayout_3->addWidget(minus, 6, 1, 1, 2);
+        gridLayout_3->addWidget(minus, 7, 1, 1, 2);
 
         flowchart_fact_edit = new QPushButton(scrollAreaWidgetContents);
         flowchart_fact_edit->setObjectName(QString::fromUtf8("flowchart_fact_edit"));
         sizePolicy1.setHeightForWidth(flowchart_fact_edit->sizePolicy().hasHeightForWidth());
         flowchart_fact_edit->setSizePolicy(sizePolicy1);
 
-        gridLayout_3->addWidget(flowchart_fact_edit, 6, 3, 1, 1);
+        gridLayout_3->addWidget(flowchart_fact_edit, 7, 3, 1, 1);
 
         flowchart_fact_delete = new QPushButton(scrollAreaWidgetContents);
         flowchart_fact_delete->setObjectName(QString::fromUtf8("flowchart_fact_delete"));
         sizePolicy1.setHeightForWidth(flowchart_fact_delete->sizePolicy().hasHeightForWidth());
         flowchart_fact_delete->setSizePolicy(sizePolicy1);
 
-        gridLayout_3->addWidget(flowchart_fact_delete, 6, 4, 1, 3);
+        gridLayout_3->addWidget(flowchart_fact_delete, 7, 4, 1, 2);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
@@ -344,21 +361,21 @@ public:
 
         msg_box_2 = new QGroupBox(centralwidget);
         msg_box_2->setObjectName(QString::fromUtf8("msg_box_2"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(msg_box_2->sizePolicy().hasHeightForWidth());
-        msg_box_2->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(msg_box_2->sizePolicy().hasHeightForWidth());
+        msg_box_2->setSizePolicy(sizePolicy3);
         msg_box_2->setMinimumSize(QSize(200, 0));
         gridLayout1 = new QGridLayout(msg_box_2);
         gridLayout1->setObjectName(QString::fromUtf8("gridLayout1"));
         msg_2 = new QTextEdit(msg_box_2);
         msg_2->setObjectName(QString::fromUtf8("msg_2"));
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Ignored);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(msg_2->sizePolicy().hasHeightForWidth());
-        msg_2->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Ignored);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(msg_2->sizePolicy().hasHeightForWidth());
+        msg_2->setSizePolicy(sizePolicy4);
         msg_2->setMinimumSize(QSize(0, 50));
 
         gridLayout1->addWidget(msg_2, 0, 0, 1, 1);
@@ -393,15 +410,15 @@ public:
 
         msg_box = new QGroupBox(centralwidget);
         msg_box->setObjectName(QString::fromUtf8("msg_box"));
-        sizePolicy2.setHeightForWidth(msg_box->sizePolicy().hasHeightForWidth());
-        msg_box->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(msg_box->sizePolicy().hasHeightForWidth());
+        msg_box->setSizePolicy(sizePolicy3);
         msg_box->setMinimumSize(QSize(200, 0));
         gridLayout2 = new QGridLayout(msg_box);
         gridLayout2->setObjectName(QString::fromUtf8("gridLayout2"));
         msg = new QTextEdit(msg_box);
         msg->setObjectName(QString::fromUtf8("msg"));
-        sizePolicy3.setHeightForWidth(msg->sizePolicy().hasHeightForWidth());
-        msg->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(msg->sizePolicy().hasHeightForWidth());
+        msg->setSizePolicy(sizePolicy4);
         msg->setMinimumSize(QSize(0, 50));
 
         gridLayout2->addWidget(msg, 0, 0, 1, 2);
@@ -545,6 +562,8 @@ public:
         compute_output->setText(QApplication::translate("freehalWindow", "Answer again!", 0, QApplication::UnicodeUTF8));
         refresh_chart->setText(QApplication::translate("freehalWindow", "Refresh", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("freehalWindow", "Output fact:", 0, QApplication::UnicodeUTF8));
+        flowchart_view->setText(QString());
+        label_4->setText(QApplication::translate("freehalWindow", "Edit fact:", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("freehalWindow", "Fact no:", 0, QApplication::UnicodeUTF8));
         plus->setText(QApplication::translate("freehalWindow", "+", 0, QApplication::UnicodeUTF8));
         minus->setText(QApplication::translate("freehalWindow", "-", 0, QApplication::UnicodeUTF8));
