@@ -700,10 +700,10 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     (*stream) << "JELIZA_FULL_VERSION:" << FULL_VERSION << endl;
     
     /// for svn versions
-    /// (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << " (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
+    (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << " (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
     
     /// for stable versions
-    (*stream) << "NAME:" << FULL_NAME << " Step 2   24.12.09   (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
+    /// (*stream) << "NAME:" << FULL_NAME << " Step 2   24.12.09   (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
     
     (*stream) << "Perl:." << endl;
     hal2009_netcom_unlock();
