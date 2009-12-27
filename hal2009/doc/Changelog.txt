@@ -1,3 +1,7 @@
+789:
+
+- Implementierung des Lernmodus
+
 788:
 
 - Implementierung von (true), (maybe) und (false)

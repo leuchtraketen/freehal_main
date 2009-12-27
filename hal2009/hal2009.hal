@@ -507,6 +507,8 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
     
     if from array tags first item matches /q/ do
+        print "POS matches 'q', exiting memory_set_by_name..."
+        print new line
         do return without arguments
     done
 
@@ -1082,12 +1084,16 @@ define action compute_tags with var word, var lang, var path do
     # Ask the user.
     # CODE
     if is an empty array tags do
+        print "Ask the user: "
+        print ( exists: var path concat "/no-tagger.txt", end test )
+        print " or "
+        print not var is_tagger_on
+        print new line
         if exists: var path concat "/no-tagger.txt", end test or not var is_tagger_on do
             if not var word matches /\s/ do
                 set array tags to an empty array
                 set from array tags first item to get_tag_part_of_speech using var word, var lang
                 do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
-                go to last
             done
         done
     done
@@ -1096,6 +1102,11 @@ define action compute_tags with var word, var lang, var path do
     # Guess.
     # CODE
     if is an empty array tags do
+        print "Guess: "
+        print ( not exists: var path concat "/no-tagger.txt", end test )
+        print " or "
+        print var is_tagger_on
+        print new line
         if ( not exists: var path concat "/no-tagger.txt", end test ) or ( var is_tagger_on ) do
             set array tags to an empty array
             set from array tags first item to guess_part_of_speech using var word
@@ -1105,7 +1116,6 @@ define action compute_tags with var word, var lang, var path do
             done
             else do
                 do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
-                go to last
             done
         done
     done
@@ -1845,7 +1855,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
         else do
             print var ident
             print "#    "
-            print "Unknown part of speech: " concat var current_word
+            print "Unknown part of speech: " concat var current_word concat "(-> " concat from array current_tag item [ const TYPE ] concat ")"
             print new line
             shift from array words
         done
@@ -2959,6 +2969,9 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     if var mode matches "statement" do
         set var save_input to "yes"
     done
+    if var mode matches "learn" do
+        set var save_input to "yes"
+    done
     if lc(var input) matches /^\/save / do
         do regex using var input: /^\/save /, "", :global:i
         set var save_input to "yes"
@@ -3472,6 +3485,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     do close with var pro_file
     
     do reread_pro_file with var pro_file_name, var lang
+    do return with var line
 done
 
 define action update_list_of_pro_file with var file, var lang, var path do
@@ -3687,7 +3701,7 @@ define action save_output with var input, var current_language, var path do
     do close with var output_handle
 done
 
-define action give_output with var input is rw, array facts_to_save, hash tags, var current_language, var path do
+define action give_output with var input is rw, var only_learn, array facts_to_save, hash tags, var current_language, var path do
     # TEXT
     # We try to use the answer as a judgement
     # CODE
@@ -3728,7 +3742,7 @@ define action give_output with var input is rw, array facts_to_save, hash tags, 
     
     print "Input is computed... Going on."
     print new line
-    set new var mode to find_mode using var input, var current_language, var path
+    set new var mode to find_mode using var input, var only_learn, var current_language, var path
     set new array sentences to use_mode with var input, array facts_to_save, hash tags, var current_language, var path, var mode
     print "Output is..."
     print new line
@@ -4208,13 +4222,26 @@ define action link_facts with var type, var f1, var f2 do
     do close with var output_handle
 done
 
+define action escape_html with var text do
+    do regex using var text: /<[<]>/, "&lt;", :global
+    do regex using var text: /<[>]>/, "&gt;", :global
+    
+    do return with var text
+done
+
 define action shell with var current_language, var path do
     set new var input_file_name to '_input'
     set new var input_handle to handle for file name var input_file_name, read
     
     set new var time_first to time without arguments
+    set new var only_learn to 0
 
     for each new var sentences_as_line_2 from var input_handle is rw do
+        if var sentences_as_line_2 matches /^learn: (.*?)$/ do
+            set var sentences_as_line_2 to $0
+            set var only_learn to 1
+        done
+    
         do regex using var sentences_as_line_2: /[?]+/, "?", :global
         do regex using var sentences_as_line_2: /([?])/, "$0.", :global
         do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
@@ -4255,7 +4282,7 @@ define action shell with var current_language, var path do
                 done
                 
                 do unlink with '_output'
-                set new array output to give_output with var line, array facts_to_save, hash tags, var current_language, var path
+                set new array output to give_output with var line, var only_learn, array facts_to_save, hash tags, var current_language, var path
                 do unlink with '_output'
 
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
@@ -4267,10 +4294,12 @@ define action shell with var current_language, var path do
 
                 do unlink with '_output'
                 do save_output with var final_output, var current_language, var path
-                set new var output_file_name to '_output'
-                set new var output_handle to handle for file name var output_file_name, write
-                print into var output_handle data var final_output
-                do close with var output_handle
+                if not var only_learn do
+                    set new var output_file_name to '_output'
+                    set new var output_handle to handle for file name var output_file_name, write
+                    print into var output_handle data var final_output
+                    do close with var output_handle
+                done
 
                 print "Final output is..."
                 print new line
@@ -4279,7 +4308,15 @@ define action shell with var current_language, var path do
                 print new line
             done
             
-            do save_facts with array facts_to_save, hash tags, '', '', var current_language, var path
+            set new var saved_data to save_facts with array facts_to_save, hash tags, '', '', var current_language, var path
+            set var saved_data to escape_html using var saved_data
+            
+            if var only_learn do
+                set new var output_file_name to '_output'
+                set new var output_handle to handle for file name var output_file_name, write
+                print into var output_handle data var saved_data
+                do close with var output_handle
+            done
         done
     done
     
