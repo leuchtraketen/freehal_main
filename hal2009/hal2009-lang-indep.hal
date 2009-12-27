@@ -144,6 +144,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\s\s/, " ", :global:i
     do regex using var input: /^<[,]>/, " ", :global:i
     do regex using var input: /\s\s/, " ", :global:i
+    
+    do regex using var input: /\(true\)/, "_(true)_", :global:i
+    do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
+    do regex using var input: /\(false\)/, "_(false)_", :global:i
+    
     do regex using var input: /\s+kein/, " nicht ein", :global:i
     do regex using var input: /(^|\s)?und sonst(\s|\$)/, " wie geht es dir ", :global:i
     do regex using var input: /(^|\s)?bevor\s/, " , bevor ", :global:i

@@ -1082,7 +1082,7 @@ define action compute_tags with var word, var lang, var path do
     # Ask the user.
     # CODE
     if is an empty array tags do
-        if exists: var path concat "/no-tagger.txt", end test or var is_tagger_on do
+        if exists: var path concat "/no-tagger.txt", end test or not var is_tagger_on do
             if not var word matches /\s/ do
                 set array tags to an empty array
                 set from array tags first item to get_tag_part_of_speech using var word, var lang
@@ -2835,7 +2835,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         done
         
         if ( var final_sentence matches / bin|bist|heisse|heisst|kann|darf|muss|kannst|darfst|musst / or var final_sentence matches /iere|ierst / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
-            print "Cannt answer with bin/bist when it has been asked for ist:"
+            print "Cannot answer with bin/bist when it has been asked for ist:"
             print new line
             print var final_sentence
             print new line
@@ -3291,6 +3291,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
 
     for each new hash parsed in array facts_parsed do
         set new var line to ''
+        set new var truth to "(maybe)"
         
         set new array verbs to from hash parsed item { 'verbs' }
         for each new array verb in array verbs do
@@ -3316,6 +3317,22 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
                 go to next
             done
             
+            if from array object first item matches /^.?\(true\).?$/ do
+                set var truth to "(true)"
+                set var object to ''
+                go to next
+            done
+            if from array object first item matches /^.?\(maybe\).?$/ do
+                set var truth to "(maybe)"
+                set var object to ''
+                go to next
+            done
+            if from array object first item matches /^.?\(false\).?$/ do
+                set var truth to "(false)"
+                set var object to ''
+                go to next
+            done
+            
             set var object to from array object first item
             
             if from array verbs first item matches "~~~" do
@@ -3325,6 +3342,22 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             done
         done
         for each new array adverb in array adverbs do
+            if from array adverb first item matches /^.?\(true\).?$/ do
+                set var truth to "(true)"
+                set var adverb to ''
+                go to next
+            done
+            if from array adverb first item matches /^.?\(maybe\).?$/ do
+                set var truth to "(maybe)"
+                set var adverb to ''
+                go to next
+            done
+            if from array adverb first item matches /^.?\(false\).?$/ do
+                set var truth to "(false)"
+                set var adverb to ''
+                go to next
+            done
+            
             set var adverb to from array adverb first item
         done
         
@@ -3422,7 +3455,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             set var number_of_clauses to var number_of_clauses + 1
         done
         set var line to var line concat ' <> '
-        set var line to var line concat '50'
+        set var line to var line concat var truth
         
         push into array line_array, var line
     done

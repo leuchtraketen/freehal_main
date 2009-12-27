@@ -390,7 +390,7 @@ int hal2009_add_pro_file (char* filename) {
                     
                     /// Add the fact
                     struct RECORD r;
-                    r.truth = 1.0;
+                    r.truth = 0.5;
                     halstring sline;
                     sline.do_free = 1;
                     halstring* sline_ref = &sline;
@@ -485,7 +485,7 @@ int hal2009_add_pro_file (char* filename) {
                         
                         r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
-                        sub_clause->truth = 1.0;
+                        sub_clause->truth = 0.5;
 
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         remove_negation(sub_clause->verb, &(sub_clause->truth));

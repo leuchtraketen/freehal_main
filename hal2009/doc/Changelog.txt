@@ -1,3 +1,7 @@
+788:
+
+- Implementierung von (true), (maybe) und (false)
+
 787:
 
 - Implementierung Bewertungssystem in der Chart, (+)- und (-)-Buttons
