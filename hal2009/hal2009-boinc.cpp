@@ -124,7 +124,7 @@ int main (int argc, char** argv) {
         resolved_name += "t";
         cerr << "Resolved file name " << resolved_name << "." << endl;
         ifstream r("boincXYZ.prot");
-        ofstream w(resolved_name);
+        ofstream w(resolved_name.c_str());
         w << r.rdbuf();
         r.close();
         w.close();
