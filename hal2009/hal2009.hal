@@ -3295,10 +3295,6 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     if not var pro_file_name do
         set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
     done
-    set new var pro_file to handle for file name var pro_file_name, append
-    
-    print "Write some facts into " concat var pro_file_name concat "."
-    print new line
 
     set new array line_array to an empty array
 
@@ -3476,15 +3472,25 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     set new var divisor to ' ~ '
     set new var line to join with var divisor, items of array line_array
     
-    if var line do
-        print into var pro_file data var prepend
-        print into var pro_file data lc(var line)
-        print into var pro_file data new line
+    if var pro_file_name matches "-" do
+        print "Do not write any facts."
+        print new line
+    done
+    else do
+        set new var pro_file to handle for file name var pro_file_name, append
+        print "Write some facts into " concat var pro_file_name concat "."
+        print new line
+
+        if var line do
+            print into var pro_file data var prepend
+            print into var pro_file data lc(var line)
+            print into var pro_file data new line
+        done
+        
+        do close with var pro_file
+        do reread_pro_file with var pro_file_name, var lang
     done
     
-    do close with var pro_file
-    
-    do reread_pro_file with var pro_file_name, var lang
     do return with var line
 done
 
@@ -4234,13 +4240,33 @@ define action shell with var current_language, var path do
     set new var input_handle to handle for file name var input_file_name, read
     
     set new var time_first to time without arguments
-    set new var only_learn to 0
+    set new var do_learn to 1
+    set new var do_talk  to 1
 
     for each new var sentences_as_line_2 from var input_handle is rw do
-        if var sentences_as_line_2 matches /^learn: (.*?)$/ do
+        if var sentences_as_line_2 matches /^do_learn_do_talk: (.*?)$/ do
             set var sentences_as_line_2 to $0
-            set var only_learn to 1
+            set var do_learn to 1
+            set var do_talk  to 1
         done
+        if var sentences_as_line_2 matches /^do_learn_no_talk: (.*?)$/ do
+            set var sentences_as_line_2 to $0
+            set var do_learn to 1
+            set var do_talk  to 0
+        done
+        if var sentences_as_line_2 matches /^no_learn_do_talk: (.*?)$/ do
+            set var sentences_as_line_2 to $0
+            set var do_learn to 0
+            set var do_talk  to 1
+        done
+        if var sentences_as_line_2 matches /^no_learn_no_talk: (.*?)$/ do
+            set var sentences_as_line_2 to $0
+            set var do_learn to 0
+            set var do_talk  to 0
+        done
+        
+        print "Do learn: " concat var do_learn concat new line
+        print "Do talk:  " concat var do_talk  concat new line
     
         do regex using var sentences_as_line_2: /[?]+/, "?", :global
         do regex using var sentences_as_line_2: /([?])/, "$0.", :global
@@ -4282,7 +4308,7 @@ define action shell with var current_language, var path do
                 done
                 
                 do unlink with '_output'
-                set new array output to give_output with var line, var only_learn, array facts_to_save, hash tags, var current_language, var path
+                set new array output to give_output with var line, (not var do_talk), array facts_to_save, hash tags, var current_language, var path
                 do unlink with '_output'
 
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
@@ -4294,7 +4320,7 @@ define action shell with var current_language, var path do
 
                 do unlink with '_output'
                 do save_output with var final_output, var current_language, var path
-                if not var only_learn do
+                if var do_talk do
                     set new var output_file_name to '_output'
                     set new var output_handle to handle for file name var output_file_name, write
                     print into var output_handle data var final_output
@@ -4308,15 +4334,25 @@ define action shell with var current_language, var path do
                 print new line
             done
             
-            set new var saved_data to save_facts with array facts_to_save, hash tags, '', '', var current_language, var path
-            set var saved_data to escape_html using var saved_data
+            set new var saved_data to ''
+            if var do_learn do
+                set var saved_data to save_facts with array facts_to_save, hash tags, '',  '', var current_language, var path
+                set var saved_data to escape_html using var saved_data
+            done
+            else do
+                set var saved_data to save_facts with array facts_to_save, hash tags, '-', '', var current_language, var path
+                set var saved_data to escape_html using var saved_data
+            done
             
-            if var only_learn do
+            if not var do_talk do
                 set new var output_file_name to '_output'
                 set new var output_handle to handle for file name var output_file_name, write
                 print into var output_handle data var saved_data
                 do close with var output_handle
             done
+            
+            print "Do learn: " concat var do_learn concat new line
+            print "Do talk:  " concat var do_talk  concat new line
         done
     done
     

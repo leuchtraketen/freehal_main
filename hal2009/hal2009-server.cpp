@@ -457,7 +457,7 @@ void hal2009_server_start() {
     }
 }
 
-void hal2009_server_statement(tcp::iostream* stream, const string s, string& username, char* language, bool only_learn) {
+void hal2009_server_statement(tcp::iostream* stream, const string s, string& username, char* language, bool do_learn, bool do_talk) {
     cout << "Begin of statement process." << endl;
     static string* to_display_talk;
     static string* to_display_learn;
@@ -477,7 +477,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         time[strlen(time)-1] = 0;
         (*to_display_learn) += "<i>" + string(time) + "</i><br /><br/>";
     }
-    string* to_display = (only_learn) ? to_display_learn : to_display_talk;
+    string* to_display = (do_learn) ? to_display_learn : to_display_talk;
     cout << "Initialize variables." << endl;
 
     if (s == "/del fact" || s == "/del fakt" || s == "/DEL FAKT" || s == "/DEL FACT" || s == "/df" || s == "/DF" || s == "/d f" || s == "/D F") {
@@ -537,12 +537,25 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     char* language_copy        = (char*)cxxhalmalloc(16, "hal2009_server_statement");
     strcpy(language_copy,        language);
     char* input                = (char*)cxxhalmalloc(1025, "hal2009_server_statement");
-    if (only_learn) {
-        strncpy(input, "learn: ", 1024);
-        strncat(input, s.c_str(), 1000);
+    if (do_learn) {
+        if (do_talk) {
+            strncpy(input, "do_learn_do_talk: ", 1024);
+            strncat(input, s.c_str(), 1000);
+        }
+        else {
+            strncpy(input, "do_learn_no_talk: ", 1024);
+            strncat(input, s.c_str(), 1000);
+        }
     }
     else {
-        strncpy(input, s.c_str(), 1024);
+        if (do_talk) {
+            strncpy(input, "no_learn_do_talk: ", 1024);
+            strncat(input, s.c_str(), 1000);
+        }
+        else {
+            strncpy(input, "no_learn_no_talk: ", 1024);
+            strncat(input, s.c_str(), 1000);
+        }
     }
 
     const char* answer_from_c = "";
@@ -567,12 +580,12 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         unlink("_output2");
         hal2009_clean();
 
-        if (only_learn) {
+        if (!do_talk) {
             (*to_display) += "<b>Input</b>: " + s + "<br />";
             (*stream) << "LEARNED:0:" << (*to_display) << endl;
         }
         else {
-            (*to_display) += "<b>" + string(username) + "</b>: " + string(input) + "<br />";
+            (*to_display) += "<b>" + string(username) + "</b>: " + s + "<br />";
             hal2009_netcom_lock();
             (*stream) << "DISPLAY:" << (*to_display) << endl;
             hal2009_netcom_unlock();
@@ -614,7 +627,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         last_input_time = 0;
     }
     
-    if (only_learn) {
+    if (!do_talk) {
         (*to_display) += "<b>Learned</b>: " + string(answer_from_c) + "<br />";
         (*stream) << "LEARNED:1:" << (*to_display) << endl;
     }
@@ -835,10 +848,10 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 input += result->at(i);
             }
             replace_all(input, "::", ":");
-            hal2009_server_statement(stream, input, username, language, false);
+            hal2009_server_statement(stream, input, username, language, true, true);
         }
         
-        if ( init_thread_ended > 0 && result->at(0) == string("LEARN") && result->at(1) != string("LEARN") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
+        if ( init_thread_ended > 0 && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             string input;
             for (int i = 1; i < result->size(); ++i) {
                 if (i != 1) {
@@ -847,7 +860,16 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 input += result->at(i);
             }
             replace_all(input, "::", ":");
-            hal2009_server_statement(stream, input, username, language, true);
+            
+            if (result->at(0) == string("LEARN") && result->at(1) != string("LEARN")) {
+                hal2009_server_statement(stream, input, username, language, true, false);
+            }
+            else if (result->at(0) == string("TALK") && result->at(1) != string("TALK")) {
+                hal2009_server_statement(stream, input, username, language, false, true);
+            }
+            else if (result->at(0) == string("TALK_LEARN") && result->at(1) != string("TALK_LEARN")) {
+                hal2009_server_statement(stream, input, username, language, true, true);
+            }
         }
         
         delete result;

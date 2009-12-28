@@ -260,17 +260,6 @@ freehal::string ascii(QString qs) {
     return ques;
 }
 
-void FreeHALWindow::on_pushButton_clicked() {
-    QString qs = user_interface_main_window->lineedit_talk->displayText();
-    freehal::string ques = ascii(qs);
-    user_interface_main_window->lineedit_talk->setText(QString());
-    if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
-        main_window->showWindowEE();
-    }
-
-    freehal::comm_send("QUESTION:" + ques);
-}
-
 int time_needed_to_learn = 1;
 int time_to_learn_begin  = 0;
 int time_to_learn_end    = 0;
@@ -286,14 +275,38 @@ void thread_learn_progress_bar(int max) {
     emit helper->signalSetTimeToLearnElapsed(0);
 }
 
-void FreeHALWindow::on_pushButton_2_clicked() {
-    QString qs = user_interface_main_window->lineedit_learn->displayText();
-    freehal::string ques = ascii(qs);
-    user_interface_main_window->lineedit_learn->setText(QString());
+void FreeHALWindow::on_pushButton_clicked() {
+    bool do_learn       = user_interface_main_window->do_learn->checkState()      == Qt::Checked;
+    bool do_talk        = user_interface_main_window->do_talk->checkState()       == Qt::Checked;
+    bool do_show_entry  = user_interface_main_window->do_show_entry->checkState() == Qt::Checked;
 
-    freehal::comm_send("LEARN:" + ques);
-    time_to_learn_begin = (int)time(NULL);
-    boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
+    QString command = "TALK:";
+    if (do_learn) {
+        if (do_talk) {
+            command = "TALK_LEARN:";
+        }
+        else {
+            command = "LEARN:";
+        }
+    }
+    else {
+        if (do_talk) {
+            command = "TALK:";
+        }
+    }
+
+    QString qs = user_interface_main_window->lineedit_talk->displayText();
+    freehal::string ques = ascii(qs);
+    user_interface_main_window->lineedit_talk->setText(QString());
+    if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
+        main_window->showWindowEE();
+    }
+
+    freehal::comm_send(command.toStdString().c_str() + ques);
+
+    if (do_learn) {
+        boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
+    }
 }
 
 void FreeHALWindow::on_compute_output_clicked() {
@@ -321,10 +334,6 @@ void FreeHALWindow::on_flowchart_fact_edit_clicked() {
 
 void FreeHALWindow::on_lineedit_talk_returnPressed() {
     on_pushButton_clicked();
-}
-
-void FreeHALWindow::on_lineedit_learn_returnPressed() {
-    on_pushButton_2_clicked();
 }
 
 void Helper::exitNow() {
@@ -567,9 +576,9 @@ QScrollArea* scrollArea = new QScrollArea;
     helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndTalk(QString)),
              main_window->user_interface_main_window->textedit_talk, SLOT(scrollToAnchor(QString)));
     helper->connect(&(*helper), SIGNAL(signalAnswerLearn(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+             main_window->user_interface_main_window->textedit_talk, SLOT(setHtml(QString)));
     helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
+             main_window->user_interface_main_window->textedit_talk, SLOT(scrollToAnchor(QString)));
 
     helper->connect(&(*helper), SIGNAL(signalUpdateStatusbar(QString)),
             main_window->user_interface_main_window->statusbar, SLOT(showMessage(QString)));
@@ -628,10 +637,7 @@ QScrollArea* scrollArea = new QScrollArea;
     main_window->user_interface_main_window->textedit_talk->setEnabled(false);
     main_window->user_interface_main_window->pushButton->setEnabled(false);
     main_window->user_interface_main_window->textedit_talk->setHtml(QString("Please wait..."));
-    main_window->user_interface_main_window->lineedit_learn->setEnabled(false);
-    main_window->user_interface_main_window->textedit_learn->setEnabled(false);
-    main_window->user_interface_main_window->pushButton_2->setEnabled(false);
-    main_window->user_interface_main_window->textedit_learn->setHtml(QString("Please wait..."));
+    main_window->user_interface_main_window->learnbar->hide();
 
     main_window->user_interface_main_window->lineedit_talk->setFocus();
     
@@ -994,11 +1000,6 @@ void Helper::slotEverythingReady() {
     main_window->user_interface_main_window->textedit_talk->setEnabled(true);
     main_window->user_interface_main_window->pushButton->setEnabled(true);
     main_window->user_interface_main_window->textedit_talk->setHtml(QString());
-
-    main_window->user_interface_main_window->lineedit_learn->setEnabled(true);
-    main_window->user_interface_main_window->textedit_learn->setEnabled(true);
-    main_window->user_interface_main_window->pushButton_2->setEnabled(true);
-    main_window->user_interface_main_window->textedit_learn->setHtml(QString());
 }
 
 FlowChart::FlowChart(QWidget* w)
@@ -1380,4 +1381,34 @@ void FreeHALWindow::on_minus_clicked()
 {
    QString text = this->user_interface_main_window->flowchart_view->text();
    freehal::comm_send("QUESTION:/SCORE -10 " + text.toStdString());
+}
+
+void FreeHALWindow::on_do_show_entry_stateChanged(int i)
+{
+    bool checked = Qt::Checked == i;
+    this->user_interface_main_window->do_talk->setChecked(!i);
+}
+
+void FreeHALWindow::on_do_talk_stateChanged(int i)
+{
+    bool checked = Qt::Checked == i;
+    this->user_interface_main_window->do_show_entry->setChecked(!i);
+}
+
+void FreeHALWindow::on_do_learn_stateChanged(int i)
+{
+    bool checked = Qt::Checked == i;
+    if (!checked) {
+        if (this->user_interface_main_window->do_show_entry->checkState() == Qt::Checked) {
+            this->user_interface_main_window->do_show_entry->setChecked(0);
+            this->user_interface_main_window->do_talk->setChecked(1);
+        }
+    }
+
+    if (checked) {
+        this->user_interface_main_window->learnbar->show();
+    }
+    else {
+        this->user_interface_main_window->learnbar->hide();
+    }
 }
