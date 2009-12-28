@@ -116,11 +116,8 @@ int main (int argc, char** argv) {
     fprintf(stderr, "freehal 2009: starting...\n");
     
     string resolved_name;
-    int retval = boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
-    if (retval) {
-        cerr << "Error to resolve file name boincXYZ.pro" << endl;
-    }
-    else {
+    boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
+    {
         resolved_name += "t";
         cerr << "Resolved file name " << resolved_name << "." << endl;
         ifstream r("boincXYZ.prot");
@@ -135,17 +132,17 @@ int main (int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
     
-    srand (time_seed()+(int)((void*)(sql_engine))%17);
+    srand (time_seed()+(long)((void*)(sql_engine))%17);
     int N = 30;
     int M = 600;
     halusleep(1000*(N + rand() % (M - N)));
     void* rand_1 = malloc(17);
-    halusleep(1000*((int)((void*)(rand_1))%257));
+    halusleep(1000*((long)((void*)(rand_1))%257));
     
     extract();
     
     void* rand_2 = malloc(7);
-    halusleep(1000*((int)((void*)(rand_2))%257));
+    halusleep(1000*((long)((void*)(rand_2))%257));
     
     // pthread_t thread_cpu;
     // int nul = NULL;
