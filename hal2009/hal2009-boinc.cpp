@@ -16,6 +16,8 @@
 #include <unistd.h>
 #endif
 
+using namespace std;
+
 extern "C" {
     void extract();
 }
