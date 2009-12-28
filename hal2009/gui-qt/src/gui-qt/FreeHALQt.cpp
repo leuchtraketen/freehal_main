@@ -275,38 +275,25 @@ void thread_learn_progress_bar(int max) {
     emit helper->signalSetTimeToLearnElapsed(0);
 }
 
-void FreeHALWindow::on_pushButton_clicked() {
-    bool do_learn       = user_interface_main_window->do_learn->checkState()      == Qt::Checked;
-    bool do_talk        = user_interface_main_window->do_talk->checkState()       == Qt::Checked;
-    bool do_show_entry  = user_interface_main_window->do_show_entry->checkState() == Qt::Checked;
-
-    QString command = "TALK:";
-    if (do_learn) {
-        if (do_talk) {
-            command = "TALK_LEARN:";
-        }
-        else {
-            command = "LEARN:";
-        }
-    }
-    else {
-        if (do_talk) {
-            command = "TALK:";
-        }
-    }
-
-    QString qs = user_interface_main_window->lineedit_talk->displayText();
+void FreeHALWindow::button_talk(QString command, QLineEdit* lineedit) {
+    QString qs = lineedit->displayText();
     freehal::string ques = ascii(qs);
-    user_interface_main_window->lineedit_talk->setText(QString());
+    lineedit->setText(QString());
     if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
         main_window->showWindowEE();
     }
 
     freehal::comm_send(command.toStdString().c_str() + ques);
+}
 
-    if (do_learn) {
-        boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
-    }
+void FreeHALWindow::on_pushButton_clicked() {
+    button_talk("TALK:", user_interface_main_window->lineedit_talk);
+}
+
+void FreeHALWindow::on_pushButton_learn_clicked() {
+    button_talk("LEARN:", user_interface_main_window->lineedit_learn);
+
+    boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
 }
 
 void FreeHALWindow::on_compute_output_clicked() {
@@ -579,6 +566,14 @@ QScrollArea* scrollArea = new QScrollArea;
              main_window->user_interface_main_window->textedit_talk, SLOT(setHtml(QString)));
     helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
              main_window->user_interface_main_window->textedit_talk, SLOT(scrollToAnchor(QString)));
+    helper->connect(&(*helper), SIGNAL(signalAnswerTalk(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndTalk(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
+    helper->connect(&(*helper), SIGNAL(signalAnswerLearn(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
 
     helper->connect(&(*helper), SIGNAL(signalUpdateStatusbar(QString)),
             main_window->user_interface_main_window->statusbar, SLOT(showMessage(QString)));
@@ -1383,32 +1378,3 @@ void FreeHALWindow::on_minus_clicked()
    freehal::comm_send("QUESTION:/SCORE -10 " + text.toStdString());
 }
 
-void FreeHALWindow::on_do_show_entry_stateChanged(int i)
-{
-    bool checked = Qt::Checked == i;
-    this->user_interface_main_window->do_talk->setChecked(!i);
-}
-
-void FreeHALWindow::on_do_talk_stateChanged(int i)
-{
-    bool checked = Qt::Checked == i;
-    this->user_interface_main_window->do_show_entry->setChecked(!i);
-}
-
-void FreeHALWindow::on_do_learn_stateChanged(int i)
-{
-    bool checked = Qt::Checked == i;
-    if (!checked) {
-        if (this->user_interface_main_window->do_show_entry->checkState() == Qt::Checked) {
-            this->user_interface_main_window->do_show_entry->setChecked(0);
-            this->user_interface_main_window->do_talk->setChecked(1);
-        }
-    }
-
-    if (checked) {
-        this->user_interface_main_window->learnbar->show();
-    }
-    else {
-        this->user_interface_main_window->learnbar->hide();
-    }
-}
