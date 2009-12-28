@@ -98,9 +98,8 @@ FreeHALWindow::FreeHALWindow(QWidget *parent)
 }
 
 void freehal::display_sentence(freehal::string s) {
-    emit helper->signalAnswer(QString((s.ref() + "<br><a name=\"anch\" id=\"anch\">&nbsp;</a>").c_str()));
-    emit helper->signalTalkingScrollEnd(QString("anch"));
-
+    emit helper->signalAnswerTalk(QString((s.ref() + "<br><a name=\"anch\" id=\"anch\">&nbsp;</a>").c_str()));
+    emit helper->signalTalkingScrollEndTalk(QString("anch"));
 }
 
 void FreeHALWindow::hideStartupDialog() {
@@ -260,15 +259,41 @@ freehal::string ascii(QString qs) {
     
     return ques;
 }
+
 void FreeHALWindow::on_pushButton_clicked() {
-    QString qs = user_interface_main_window->lineEdit->displayText();
+    QString qs = user_interface_main_window->lineedit_talk->displayText();
     freehal::string ques = ascii(qs);
-    user_interface_main_window->lineEdit->setText(QString());
+    user_interface_main_window->lineedit_talk->setText(QString());
     if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
         main_window->showWindowEE();
     }
 
     freehal::comm_send("QUESTION:" + ques);
+}
+
+int time_needed_to_learn = 1;
+int time_to_learn_begin  = 0;
+int time_to_learn_end    = 0;
+
+void thread_learn_progress_bar(int max) {
+    for (int i = 0; i < max*20; ++i) {
+        emit helper->signalSetTimeToLearnElapsed(i);
+        freehal::msleep(50);
+    }
+    freehal::msleep(1000);
+    emit helper->signalSetTimeToLearnElapsed(0);
+    freehal::msleep(10000);
+    emit helper->signalSetTimeToLearnElapsed(0);
+}
+
+void FreeHALWindow::on_pushButton_2_clicked() {
+    QString qs = user_interface_main_window->lineedit_learn->displayText();
+    freehal::string ques = ascii(qs);
+    user_interface_main_window->lineedit_learn->setText(QString());
+
+    freehal::comm_send("LEARN:" + ques);
+    time_to_learn_begin = (int)time(NULL);
+    boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
 }
 
 void FreeHALWindow::on_compute_output_clicked() {
@@ -294,20 +319,12 @@ void FreeHALWindow::on_flowchart_fact_edit_clicked() {
     freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
 }
 
-void FreeHALWindow::on_pushButton_learn_clicked() {
-    QString qs = user_interface_main_window->lineEdit->displayText();
-    freehal::string ques = ascii(qs);
-    user_interface_main_window->lineEdit->setText(QString());
-    ques = "learn:" + ques;
-    if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
-        main_window->showWindowEE();
-    }
-
-    freehal::comm_send("QUESTION:" + ques);
+void FreeHALWindow::on_lineedit_talk_returnPressed() {
+    on_pushButton_clicked();
 }
 
-void FreeHALWindow::on_lineEdit_returnPressed() {
-    on_pushButton_clicked();
+void FreeHALWindow::on_lineedit_learn_returnPressed() {
+    on_pushButton_2_clicked();
 }
 
 void Helper::exitNow() {
@@ -535,18 +552,24 @@ QScrollArea* scrollArea = new QScrollArea;
     dialog_changelog->user_interface_main_window = main_window->user_interface_main_window;
     dialog_changelog->init_changelog();
 
-
+// log
+    /*
     helper->connect(&(*helper), SIGNAL(signalLogAppend(QString)),
-             main_window->user_interface_main_window->textEdit_2, SLOT(append(QString)));
+             main_window->user_interface_main_window->textedit_talk_2, SLOT(append(QString)));
     helper->connect(&(*helper), SIGNAL(signalLogClear(QString)),
-             main_window->user_interface_main_window->textEdit_2, SLOT(setText(QString)));
+             main_window->user_interface_main_window->textedit_talk_2, SLOT(setText(QString)));
     helper->connect(&(*helper), SIGNAL(signalLogScrollEnd(QString)),
-             main_window->user_interface_main_window->textEdit_2, SLOT(scrollToAnchor(QString)));
+             main_window->user_interface_main_window->textedit_talk_2, SLOT(scrollToAnchor(QString)));
+    */
 
-    helper->connect(&(*helper), SIGNAL(signalAnswer(QString)),
-             main_window->user_interface_main_window->textEdit, SLOT(setHtml(QString)));
-    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEnd(QString)),
-             main_window->user_interface_main_window->textEdit, SLOT(scrollToAnchor(QString)));
+    helper->connect(&(*helper), SIGNAL(signalAnswerTalk(QString)),
+             main_window->user_interface_main_window->textedit_talk, SLOT(setHtml(QString)));
+    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndTalk(QString)),
+             main_window->user_interface_main_window->textedit_talk, SLOT(scrollToAnchor(QString)));
+    helper->connect(&(*helper), SIGNAL(signalAnswerLearn(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
+             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
 
     helper->connect(&(*helper), SIGNAL(signalUpdateStatusbar(QString)),
             main_window->user_interface_main_window->statusbar, SLOT(showMessage(QString)));
@@ -592,16 +615,25 @@ QScrollArea* scrollArea = new QScrollArea;
                     fc, SLOT(setY(int)));
     helper->connect(fc, SIGNAL(setFactText(QString)),
                     main_window->user_interface_main_window->flowchart_edit, SLOT(setText(QString)));
+
+    helper->connect(&(*helper), SIGNAL(signalSetTimeToLearn(int)),
+            main_window->user_interface_main_window->learnbar, SLOT(setMaximum(int)));
+    helper->connect(&(*helper), SIGNAL(signalSetTimeToLearnElapsed(int)),
+            main_window->user_interface_main_window->learnbar, SLOT(setValue(int)));
     		
     app.connect(&app, SIGNAL(aboutToQuit()),
              &(*helper), SLOT(exitNow()));
 
-    main_window->user_interface_main_window->lineEdit->setEnabled(false);
-    main_window->user_interface_main_window->textEdit->setEnabled(false);
+    main_window->user_interface_main_window->lineedit_talk->setEnabled(false);
+    main_window->user_interface_main_window->textedit_talk->setEnabled(false);
     main_window->user_interface_main_window->pushButton->setEnabled(false);
-    main_window->user_interface_main_window->textEdit->setHtml(QString("Please wait..."));
+    main_window->user_interface_main_window->textedit_talk->setHtml(QString("Please wait..."));
+    main_window->user_interface_main_window->lineedit_learn->setEnabled(false);
+    main_window->user_interface_main_window->textedit_learn->setEnabled(false);
+    main_window->user_interface_main_window->pushButton_2->setEnabled(false);
+    main_window->user_interface_main_window->textedit_learn->setHtml(QString("Please wait..."));
 
-    main_window->user_interface_main_window->lineEdit->setFocus();
+    main_window->user_interface_main_window->lineedit_talk->setFocus();
     
     offline_mode  = !(0 == strcmp(check_config(freehal::string("online"), "1"), "1"));
     www_surf_mode =  (0 == strcmp(check_config(freehal::string("use-www"), "1"), "1"));
@@ -721,7 +753,7 @@ void FreeHALWindow::showWindowNormal() {
 void FreeHALWindow::showWindowFullscreen() {
     hide();
 
-    user_interface_main_window->textEdit_2->hide();
+    // user_interface_main_window->textedit_talk_2->hide();
     user_interface_main_window->menubar->hide();
     user_interface_main_window->msg_box->hide();
     user_interface_main_window->msg_box_2->hide();
@@ -761,12 +793,12 @@ void FreeHALWindow::on_fullscreen_triggered() {
 int AKTUELLE_PROZENT = 0;
 
 void FreeHALWindow::on_actionGespr_ch_triggered() {
-    main_window->user_interface_main_window->textEdit->setHtml(QString());
+    main_window->user_interface_main_window->textedit_talk->setHtml(QString());
     freehalthread1_talking.reset(new QString());
     freehal::comm_send("CLEAR:TALKING");
 }
 void Dialog1::on_clear_screen_clicked() {
-    main_window->user_interface_main_window->textEdit->setHtml(QString());
+    main_window->user_interface_main_window->textedit_talk->setHtml(QString());
     freehalthread1_talking.reset(new QString());
     freehal::comm_send("CLEAR:TALKING");
 }
@@ -958,10 +990,15 @@ void Helper::hideMsgGenusWindow() {
 }
 
 void Helper::slotEverythingReady() {
-    main_window->user_interface_main_window->lineEdit->setEnabled(true);
-    main_window->user_interface_main_window->textEdit->setEnabled(true);
+    main_window->user_interface_main_window->lineedit_talk->setEnabled(true);
+    main_window->user_interface_main_window->textedit_talk->setEnabled(true);
     main_window->user_interface_main_window->pushButton->setEnabled(true);
-    main_window->user_interface_main_window->textEdit->setHtml(QString());
+    main_window->user_interface_main_window->textedit_talk->setHtml(QString());
+
+    main_window->user_interface_main_window->lineedit_learn->setEnabled(true);
+    main_window->user_interface_main_window->textedit_learn->setEnabled(true);
+    main_window->user_interface_main_window->pushButton_2->setEnabled(true);
+    main_window->user_interface_main_window->textedit_learn->setHtml(QString());
 }
 
 FlowChart::FlowChart(QWidget* w)
@@ -1203,7 +1240,7 @@ void FlowChart::paintEvent(QPaintEvent *event) {
 
 void freehal::comm_new(freehal::string s) {
     try {
-    if (s.contains("ĹOG")) {
+    if (s.contains("LOG")) {
         cout << s.ref() << endl;
     }
     s = s.replace(":::", "::");
@@ -1227,6 +1264,22 @@ void freehal::comm_new(freehal::string s) {
             QString qs(s.ref().c_str()+8);
             qs = qs.replace(";", ":");
             freehal::display_sentence(freehal::string(qs.toStdString()));
+        }
+        if (s.contains("LEARNED")) {
+            if (s.ref()[8] != '0') {
+                time_to_learn_end = (int)time(NULL);
+                time_needed_to_learn = (time_needed_to_learn + (time_to_learn_end - time_to_learn_begin))/2;
+                cout << "Time needed to learn: " << time_needed_to_learn << " sec" << endl;
+                emit helper->signalSetTimeToLearn(time_needed_to_learn*20);
+            }
+
+            QString qs(s.ref().c_str()+10);
+            qs = qs.replace(";", ":");
+            qs = qs.replace("lt,", "lt;");
+            qs = qs.replace("gt,", "gt;");
+            emit helper->signalAnswerLearn(QString((qs.toStdString() + "<br><a name=\"anch\" id=\"anch\">&nbsp;</a>").c_str()));
+            emit helper->signalTalkingScrollEndLearn(QString("anch"));
+            emit helper->signalSetTimeToLearnElapsed(0);
         }
         if (s.contains("DELETED")) {
             emit fc->ask_again();

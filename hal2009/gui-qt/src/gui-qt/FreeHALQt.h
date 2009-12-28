@@ -143,12 +143,13 @@ public slots:
     void on_normalscreen_clicked();
     void on_fullscreen_triggered();
     void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
     void on_refresh_chart_clicked();
     void on_compute_output_clicked();
     void on_flowchart_fact_delete_clicked();
     void on_flowchart_fact_edit_clicked();
-    void on_pushButton_learn_clicked();
-    void on_lineEdit_returnPressed();
+    void on_lineedit_talk_returnPressed();
+    void on_lineedit_learn_returnPressed();
     void on_actionGespr_ch_triggered();
     void on_actionEinstellungen_triggered();
     void on_actionInfo_triggered();
@@ -269,6 +270,7 @@ class Helper : public QObject {
     friend void check_new_version();
     friend void FreeHALWindow::on_actionNeue_Verbindung_herstellen_triggered();
     friend void client(std::string, bool, bool);
+    friend void thread_learn_progress_bar(int max);
 
 
 public slots:
@@ -286,8 +288,10 @@ public slots:
 signals:
 	void signalNewVersionOnline(QString);
 
-    void signalTalkingScrollEnd(QString);
-    void signalAnswer(QString);
+    void signalTalkingScrollEndTalk(QString);
+    void signalAnswerTalk(QString);
+    void signalTalkingScrollEndLearn(QString);
+    void signalAnswerLearn(QString);
     void signalUpdateStatusbar(QString);
     void signalUpdateProgressbar(int);
     void signalHideProgressbar();
@@ -307,6 +311,8 @@ signals:
     void signalReconnect();
     void everythingReady();
     void sig_show_in_tray_icon(QString);
+    void signalSetTimeToLearn(int);
+    void signalSetTimeToLearnElapsed(int);
 };
 
 

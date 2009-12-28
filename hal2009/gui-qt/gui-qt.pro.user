@@ -6,11 +6,23 @@
  </data>
  <data>
   <variable>RunConfiguration0-ProFile</variable>
-  <value type="QString" >/data/workspace/hal2009/gui-qt/gui-qt.pro</value>
+  <value type="QString" >gui-qt.pro</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
   <value type="QString" >gui-qt</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseDyldImageSuffix</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseTerminal</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserEnvironmentChanges</variable>
+  <valuelist type="QVariantList" />
  </data>
  <data>
   <variable>RunConfiguration0-UserSetName</variable>
@@ -41,30 +53,29 @@
   <variable>buildconfiguration-Release-buildstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Release-buildstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-GYF97P24c5,guid=9f78d2efb419d7b4175e330e4a8cfd67</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oYCbXuwDbL,guid=9ce7d3f73d054a3bf9b997c24b2e121d</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DVDCSS_CACHE=/home/tobias/.dvdcss/</value>
+    <value type="QString" >DVDCSS_METHOD=key</value>
+    <value type="QString" >DVDCSS_RAW_DEVICE=/dev/rdvd</value>
+    <value type="QString" >DVDCSS_VERBOSE=0</value>
     <value type="QString" >GDMSESSION=gnome</value>
+    <value type="QString" >GDM_KEYBOARD_LAYOUT=de</value>
     <value type="QString" >GDM_LANG=de_DE.UTF-8</value>
-    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=24213</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-A8JHx9/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-pxycG5/S.gpg-agent:24312:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=3840</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-MaR473/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-cJafAT/S.gpg-agent:3928:1</value>
     <value type="QString" >GTK_IM_MODULE=scim-bridge</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/tobias/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/tobias</value>
     <value type="QString" >LANG=de_DE.UTF-8</value>
-    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LANGUAGE=de_DE.UTF-8</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LOGNAME=tobias</value>
     <value type="QString" >MESA_NO_ASM=1</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-tobias</value>
@@ -72,16 +83,16 @@
     <value type="QString" >PWD=/home/tobias</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_IM_MODULE=scim-bridge</value>
-    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/24225</value>
+    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:@/tmp/.ICE-unix/3855,unix/tobias-laptop:/tmp/.ICE-unix/3855</value>
     <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SSH_AGENT_PID=24290</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-A8JHx9/socket.ssh</value>
+    <value type="QString" >SPEECHD_PORT=7560</value>
+    <value type="QString" >SSH_AGENT_PID=3904</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-MaR473/socket.ssh</value>
     <value type="QString" >USER=tobias</value>
     <value type="QString" >USERNAME=tobias</value>
-    <value type="QString" >WINDOWPATH=7</value>
-    <value type="QString" >XAUTHORITY=/home/tobias/.Xauthority</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1250753894.70443-179079929</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-tobias-dXufhr/database</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
+    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1261310492.776540-389305664</value>
     <value type="QString" >XMODIFIERS=@im=SCIM</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
@@ -91,33 +102,38 @@
     <value type="QString" >-r</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/qmake-qt4</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/data/workspace/hal2009/gui-qt</value>
    <value key="buildConfiguration" type="int" >0</value>
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Release-buildstep2</variable>
+  <variable>buildconfiguration-Release-buildstep1</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-GYF97P24c5,guid=9f78d2efb419d7b4175e330e4a8cfd67</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oYCbXuwDbL,guid=9ce7d3f73d054a3bf9b997c24b2e121d</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DVDCSS_CACHE=/home/tobias/.dvdcss/</value>
+    <value type="QString" >DVDCSS_METHOD=key</value>
+    <value type="QString" >DVDCSS_RAW_DEVICE=/dev/rdvd</value>
+    <value type="QString" >DVDCSS_VERBOSE=0</value>
     <value type="QString" >GDMSESSION=gnome</value>
+    <value type="QString" >GDM_KEYBOARD_LAYOUT=de</value>
     <value type="QString" >GDM_LANG=de_DE.UTF-8</value>
-    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=24213</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-A8JHx9/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-pxycG5/S.gpg-agent:24312:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=3840</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-MaR473/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-cJafAT/S.gpg-agent:3928:1</value>
     <value type="QString" >GTK_IM_MODULE=scim-bridge</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/tobias/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/tobias</value>
     <value type="QString" >LANG=de_DE.UTF-8</value>
-    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LANGUAGE=de_DE.UTF-8</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LOGNAME=tobias</value>
     <value type="QString" >MESA_NO_ASM=1</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-tobias</value>
@@ -125,16 +141,16 @@
     <value type="QString" >PWD=/home/tobias</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_IM_MODULE=scim-bridge</value>
-    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:/tmp/.ICE-unix/24225</value>
+    <value type="QString" >SESSION_MANAGER=local/tobias-laptop:@/tmp/.ICE-unix/3855,unix/tobias-laptop:/tmp/.ICE-unix/3855</value>
     <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SSH_AGENT_PID=24290</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-A8JHx9/socket.ssh</value>
+    <value type="QString" >SPEECHD_PORT=7560</value>
+    <value type="QString" >SSH_AGENT_PID=3904</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-MaR473/socket.ssh</value>
     <value type="QString" >USER=tobias</value>
     <value type="QString" >USERNAME=tobias</value>
-    <value type="QString" >WINDOWPATH=7</value>
-    <value type="QString" >XAUTHORITY=/home/tobias/.Xauthority</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1250753894.70443-179079929</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-tobias-dXufhr/database</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
+    <value type="QString" >XDG_SESSION_COOKIE=1471717160b61f93d87fd4da48ecce08-1261310492.776540-389305664</value>
     <value type="QString" >XMODIFIERS=@im=SCIM</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
@@ -152,12 +168,6 @@
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Release-cleanstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-  </valuemap>
- </data>
- <data>
   <variable>buildconfigurations</variable>
   <valuelist type="QVariantList" >
    <value type="QString" >Release</value>
@@ -167,17 +177,11 @@
   <variable>buildstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
    <value key="mkspec" type="QString" ></value>
   </valuemap>
  </data>
  <data>
-  <variable>buildstep2</variable>
+  <variable>buildstep1</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
   </valuemap>
@@ -185,7 +189,6 @@
  <data>
   <variable>buildsteps</variable>
   <valuelist type="QVariantList" >
-   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.qmake</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
@@ -198,16 +201,8 @@
   </valuemap>
  </data>
  <data>
-  <variable>cleanstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
-   <value key="clean" type="bool" >true</value>
-  </valuemap>
- </data>
- <data>
   <variable>cleansteps</variable>
   <valuelist type="QVariantList" >
-   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
  </data>

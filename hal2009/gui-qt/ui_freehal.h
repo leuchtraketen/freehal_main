@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Fri Dec 25 18:41:00 2009
+** Created: Sun Dec 27 16:52:35 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -23,6 +23,7 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
+#include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QScrollArea>
 #include <QtGui/QScrollBar>
@@ -59,13 +60,16 @@ public:
     QTabWidget *tabWidget;
     QWidget *Talk;
     QGridLayout *gridLayout;
-    QTextEdit *textEdit;
+    QTextEdit *textedit_talk;
     QPushButton *pushButton;
-    QLineEdit *lineEdit;
+    QLineEdit *lineedit_talk;
     QPushButton *normalscreen;
-    QWidget *Log;
+    QWidget *Learn;
     QGridLayout *gridLayout_2;
-    QTextEdit *textEdit_2;
+    QTextEdit *textedit_learn;
+    QLineEdit *lineedit_learn;
+    QPushButton *pushButton_2;
+    QProgressBar *learnbar;
     QWidget *tab;
     QGridLayout *gridLayout_6;
     QScrollArea *scrollArea;
@@ -180,25 +184,25 @@ public:
         Talk->setObjectName(QString::fromUtf8("Talk"));
         gridLayout = new QGridLayout(Talk);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        textEdit = new QTextEdit(Talk);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setEnabled(true);
+        textedit_talk = new QTextEdit(Talk);
+        textedit_talk->setObjectName(QString::fromUtf8("textedit_talk"));
+        textedit_talk->setEnabled(true);
         QFont font;
         font.setKerning(false);
-        textEdit->setFont(font);
-        textEdit->setReadOnly(true);
+        textedit_talk->setFont(font);
+        textedit_talk->setReadOnly(true);
 
-        gridLayout->addWidget(textEdit, 0, 0, 1, 3);
+        gridLayout->addWidget(textedit_talk, 0, 0, 1, 3);
 
         pushButton = new QPushButton(Talk);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         gridLayout->addWidget(pushButton, 1, 2, 1, 1);
 
-        lineEdit = new QLineEdit(Talk);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineedit_talk = new QLineEdit(Talk);
+        lineedit_talk->setObjectName(QString::fromUtf8("lineedit_talk"));
 
-        gridLayout->addWidget(lineEdit, 1, 0, 1, 1);
+        gridLayout->addWidget(lineedit_talk, 1, 0, 1, 1);
 
         normalscreen = new QPushButton(Talk);
         normalscreen->setObjectName(QString::fromUtf8("normalscreen"));
@@ -206,16 +210,35 @@ public:
         gridLayout->addWidget(normalscreen, 1, 1, 1, 1);
 
         tabWidget->addTab(Talk, QString());
-        Log = new QWidget();
-        Log->setObjectName(QString::fromUtf8("Log"));
-        gridLayout_2 = new QGridLayout(Log);
+        Learn = new QWidget();
+        Learn->setObjectName(QString::fromUtf8("Learn"));
+        gridLayout_2 = new QGridLayout(Learn);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        textEdit_2 = new QTextEdit(Log);
-        textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
+        textedit_learn = new QTextEdit(Learn);
+        textedit_learn->setObjectName(QString::fromUtf8("textedit_learn"));
+        textedit_learn->setEnabled(true);
+        textedit_learn->setFont(font);
+        textedit_learn->setReadOnly(true);
 
-        gridLayout_2->addWidget(textEdit_2, 0, 0, 1, 1);
+        gridLayout_2->addWidget(textedit_learn, 0, 0, 1, 2);
 
-        tabWidget->addTab(Log, QString());
+        lineedit_learn = new QLineEdit(Learn);
+        lineedit_learn->setObjectName(QString::fromUtf8("lineedit_learn"));
+
+        gridLayout_2->addWidget(lineedit_learn, 2, 0, 1, 1);
+
+        pushButton_2 = new QPushButton(Learn);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        gridLayout_2->addWidget(pushButton_2, 2, 1, 1, 1);
+
+        learnbar = new QProgressBar(Learn);
+        learnbar->setObjectName(QString::fromUtf8("learnbar"));
+        learnbar->setValue(0);
+
+        gridLayout_2->addWidget(learnbar, 1, 0, 1, 2);
+
+        tabWidget->addTab(Learn, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_6 = new QGridLayout(tab);
@@ -227,7 +250,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 406, 449));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 402, 204));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -504,7 +527,7 @@ public:
         statusbar = new QStatusBar(freehalWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         freehalWindow->setStatusBar(statusbar);
-        QWidget::setTabOrder(lineEdit, pushButton);
+        QWidget::setTabOrder(lineedit_talk, pushButton);
 
         menubar->addAction(menuDatei->menuAction());
         menubar->addAction(menuVerbindung->menuAction());
@@ -549,15 +572,21 @@ public:
         actionSemantisches_Netz->setText(QApplication::translate("freehalWindow", "Semantisches Netz", 0, QApplication::UnicodeUTF8));
         actionNeue_Verbindung_herstellen->setText(QApplication::translate("freehalWindow", "Connect to an AI", 0, QApplication::UnicodeUTF8));
         action_scan_a_text->setText(QApplication::translate("freehalWindow", "einen Text scannen", 0, QApplication::UnicodeUTF8));
-        textEdit->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        textedit_talk->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("freehalWindow", "Ask", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
         normalscreen->setText(QApplication::translate("freehalWindow", " Exit ", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Talk), QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(Log), QApplication::translate("freehalWindow", "Log", 0, QApplication::UnicodeUTF8));
+        textedit_learn->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(Learn), QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("freehalWindow", "Input text:", 0, QApplication::UnicodeUTF8));
         compute_output->setText(QApplication::translate("freehalWindow", "Answer again!", 0, QApplication::UnicodeUTF8));
         refresh_chart->setText(QApplication::translate("freehalWindow", "Refresh", 0, QApplication::UnicodeUTF8));
