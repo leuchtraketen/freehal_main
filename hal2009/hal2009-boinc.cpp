@@ -106,6 +106,23 @@ int main (int argc, char** argv) {
     boinc_init_options(&options);
     fprintf(stderr, "freehal 2009: starting...\n");
     
+    string resolved_name;
+    int retval = boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
+    if (retval) {
+        cerr << "Error to resolve file name boincXYZ.pro" << endl;
+    }
+    else {
+        resolved_name += "t";
+        cerr << "Resolved file name " << resolved_name << "." << endl;
+        ifstream r("boincXYZ.prot");
+        ofstream w(resolved_name);
+        w << r.rdbuf();
+        r.close();
+        w.close();
+    }
+    
+
+    
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
     
