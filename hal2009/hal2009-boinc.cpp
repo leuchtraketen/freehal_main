@@ -16,7 +16,14 @@
 #include <unistd.h>
 #endif
 
+// C++ headers
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <map>
 using namespace std;
+
 
 extern "C" {
     void extract();
