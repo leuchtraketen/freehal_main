@@ -119,12 +119,17 @@ int main (int argc, char** argv) {
     boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
     {
         resolved_name += "t";
-        cerr << "Resolved file name " << resolved_name << "." << endl;
-        ifstream r("boincXYZ.prot");
-        ofstream w(resolved_name.c_str());
-        w << r.rdbuf();
-        r.close();
-        w.close();
+        if (resolved_name == "boincXYZ.prot") {
+            cerr << "Don't need to resolve file name " << resolved_name << "." << endl;
+        }
+        else {
+            cerr << "Resolved file name " << resolved_name << "." << endl;
+            ifstream r("boincXYZ.prot");
+            ofstream w(resolved_name.c_str());
+            w << r.rdbuf();
+            r.close();
+            w.close();
+        }
     }
     
 
