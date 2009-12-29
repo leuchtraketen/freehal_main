@@ -1,3 +1,7 @@
+799:
+
+- Implementierung des neuen ps-prot-Features: ps-A-B-C.prot statt einzeln ps-A.prot und ps-B.prot und ps-C.prot
+
 789:
 
 - Implementierung des Lernmodus

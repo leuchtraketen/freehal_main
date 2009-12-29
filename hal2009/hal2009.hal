@@ -4013,8 +4013,12 @@ define action init_prot_files with var current_language, var path do
                 
                     set new array lines to an empty array
                     if var file matches /ps-(.*?).prot/ do
-                        set new var main_word to $0
-                        set array lines to transform_psprot_line with var _line, var main_word, var current_language, var path
+                        set new var main_words_str to $0
+                        set new array main_words to split /<[-]>/, var main_words_str
+                        for each new var main_word in array main_words do
+                            set new array subarray to transform_psprot_line with var _line, var main_word, var current_language, var path
+                            push into array lines, items of array subarray
+                        done
                     done
                     else do
                         push into array lines, var _line
