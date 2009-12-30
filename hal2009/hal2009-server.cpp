@@ -480,6 +480,9 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     string* to_display = (do_learn) ? to_display_learn : to_display_talk;
     cout << "Initialize variables." << endl;
 
+    if (s == "/q" || s == "/quit" || s == "/e" || s == "/exit" || s == "Beenden" || s == "beenden" || s == "exit" || s == "Exit" || s == "quit" || s == "Quit") {
+        exit(0);
+    }
     if (s == "/del fact" || s == "/del fakt" || s == "/DEL FAKT" || s == "/DEL FACT" || s == "/df" || s == "/DF" || s == "/d f" || s == "/D F") {
         struct RECORD r;
         strcpy(r.pkey, "a");

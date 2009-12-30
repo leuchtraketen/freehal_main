@@ -4139,38 +4139,44 @@ define action check_for_weather with var place, var lang, var path do
             do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather-city.txt " concat var url
             set new var city to handle for file name "weather-city.txt", read
             for each new var line from var city do
-                if var line matches /me_switch me_active/ do
+                if var line matches /google_kw / do
+                    do regex using var line: /google_kw/, "", :global
                     do regex using var line: /[<][^>]*?[>]/, "", :global
                     do regex using var line: /[&].*/, "", :global
                     do regex using var line: /[^a-zA-Z0-9, ]/, "", :global:i
                     do regex using var line: /,/, " in ", :global
+                    set new var unwanted_chars to '="'
+                    do regex using var line: /<[var unwanted_chars]>/, "", :global
                     if var line do
                         set var name to var line
                     done
                 done
-                if var line matches /fc_temper/ do
-                    set var line to the next line from var city
-                    if var line matches /temp_observe/ do
-                        do regex using var line: /[<][^>]*?[>]/, "", :global
-                        do regex using var line: /[&].*/, "", :global
-                        do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
-                        do regex using var line: /,/, " in ", :global
-                        if var line do
-                            set var temperature to var line
-                            
-                            print var line
-                            print new line
-                        done
-                    done
-                done
-                if var line matches /fc_temper/ do
-                    set var line to the next line from var city
+                if var line matches /deg text_l temp_w/ do
+                    set new array parts to split with /<.div>/, var line
+                    set var line to from array parts first item
                     do regex using var line: /[<][^>]*?[>]/, "", :global
                     do regex using var line: /[&].*/, "", :global
-                    do regex using var line: /[^a-zA-Z0-9, ]/, "", :global:i
+                    do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
+                    do regex using var line: /,/, " in ", :global
+                    if var line do
+                        set var temperature to var line
+                        
+                        print var line
+                        print new line
+                    done
+                done
+                if var line matches /deg text_l temp_w/ do
+                    set new array parts to split with /<.div>/, var line
+                    set var line to from array parts second item
+                    do regex using var line: /[<][^>]*?[>]/, "", :global
+                    do regex using var line: /[&].*/, "", :global
+                    do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
                     do regex using var line: /,/, " in ", :global
                     if var line do
                         set var weather to var line
+                        
+                        print var line
+                        print new line
                     done
                 done
             done
