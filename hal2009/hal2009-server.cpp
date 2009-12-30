@@ -459,8 +459,8 @@ void hal2009_server_start() {
 
 void hal2009_server_statement(tcp::iostream* stream, const string s, string& username, char* language, bool do_learn, bool do_talk) {
     cout << "Begin of statement process." << endl;
-    static string* to_display_talk;
-    static string* to_display_learn;
+    static string* to_display_talk = 0;
+    static string* to_display_learn = 0;
     if (!to_display_talk) {
         to_display_talk = new string;
         time_t t;
