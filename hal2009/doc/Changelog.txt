@@ -1,3 +1,7 @@
+801:
+
+- Erste Implementierung fuer das Zeitbewusstsein
+
 800:
 
 - Bugfix am Wetterfeature, API von wetter.com geaendert

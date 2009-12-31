@@ -21,7 +21,7 @@
 
 set new array replace_array to an empty array
 
-define action divide_input with var input is rw, var lang do
+define action divide_input with var input is rw, var lang, var path do
     set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
     
     do regex using var input: /[=][=][>]/, " reasonof ", :global:i
@@ -400,6 +400,26 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /world wide web/, "_world_wide_web_", :global:i
     do regex using var input: /Hersteller von/, "Hersteller fuer", :global
+    
+    do regex using var input: /(^|\s)(\d+?)\.\s*?januar(\s|$)/, "$0$1.01.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?jaenner(\s|$)/, "$0$1.01.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?februar(\s|$)/, "$0$1.02.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?maerz(\s|$)/, "$0$1.03.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?april(\s|$)/, "$0$1.04.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?mai(\s|$)/, "$0$1.05.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?juni(\s|$)/, "$0$1.06.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?juli(\s|$)/, "$0$1.07.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?august(\s|$)/, "$0$1.08.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?deptember(\s|$)/, "$0$1.09.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?oktober(\s|$)/, "$0$1.10.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?november(\s|$)/, "$0$1.11.$3", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.\s*?dezember(\s|$)/, "$0$1.12.$3", :global:i
+    
+    do regex using var input: /(^|\s)(\d)\.(\d+?)\.(\d+?)(\s|$)/, "$0 0$1.$2.$3$4", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.(\d)\.(\d+?)(\s|$)/, "$0$1.0$2.$3$4", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.(\d+?)\.(\d\d)(\s|$)/, "$0$1.$2.19$3$4", :global:i
+    do regex using var input: /(^|\s)(\d+?)\.(\d+?)\.(\d+?)(\s|$)/, "$1.$2.$3$4", :global
+    do regex using var input: /(^|\s)(\d+?)\.(\d+?)\.?(\s|$)/, "$1.$2.0000$4", :global
     
     do regex using var input: /^\s+/, "", :global
     
@@ -911,6 +931,8 @@ define action compute_input with var input is rw, var lang, var path do
     #do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /what is /, "ISUNKNOWN ", :global:i
+    
+    set var input to to_unixtime with var input, var lang, var path
     
     set new var mark to "\""
 

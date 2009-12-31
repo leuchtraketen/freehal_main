@@ -312,10 +312,12 @@ int remove_negation (char* line, double* truth_ref) {
     }
     if (strstr(line, "(maybe)")) {
         sline_ref = replace(sline_ref, " (maybe)", "");
+        sline_ref = replace(sline_ref, "(maybe)", "");
         (*truth_ref) = 0.5;
     }
     if (strstr(line, "(false)")) {
         sline_ref = replace(sline_ref, " (false)", "");
+        sline_ref = replace(sline_ref, "(false)", "");
         (*truth_ref) = 0.0;
     }
     

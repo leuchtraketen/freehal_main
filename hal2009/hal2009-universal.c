@@ -282,7 +282,7 @@ struct word*** search_synonyms(const char* exp) {
         in_search_synonyms = 1;
         
         synonyms = add_synonyms_by_search(exp, "", "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
-        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
 
         store_synonyms(exp, synonyms);
         in_search_synonyms = 0;
@@ -534,6 +534,7 @@ int matches(const char* a, const char* b) {
     return 0;
 }
 
+/*
 int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags) {
     if (!request_words[0]) {
         return -1;
@@ -603,19 +604,12 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                 int m;
                 for (m = 0; words[m] && words[m]->name; ++m) {
                     if (!is_a_trivial_word(words[m]->name)) {
-                        /*
-                        if (words[m]->name[0] == '$' && strcmp(words[m]->name, "$$anyone$$")) {
-                            debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
-                            ++does_match_here;
-                        }
-                        else
-                        */
                         if (matches(words[m]->name, request_words[u][v]->name)) {
                             debugf("does match:     %s and %s.\n", words[m]->name, request_words[u][v]->name);
                             ++does_match_here;
                         }
                         else {
-                            //debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
+                            debugf("does not match: %s and %s.\n", words[m]->name, request_words[u][v]->name);
                         }
                         ++should_match_here;
                     }
@@ -626,20 +620,106 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             should_match_with_this_synonym += 1;
         }
         
-        /*
-        debugf("should_match_with_this_synonym: %d\n", should_match_with_this_synonym);
-        debugf("(does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3): %d\n", (does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3));
-        debugf("(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3): %d\n", (does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3));
-        debugf("count_of_words_request_with_trivial + 2 > count_of_words_with_trivial: %d\n", count_of_words_request_with_trivial + 2 > count_of_words_with_trivial);
-        debugf("count_of_words_request_with_trivial: %d\n", count_of_words_request_with_trivial);
-        debugf("count_of_words_with_trivial: %d\n", count_of_words_with_trivial);
-        */
         does_match = does_match || (should_match_with_this_synonym && ((does_match_with_this_synonym == should_match_with_this_synonym && should_match_with_this_synonym < 3)||(does_match_with_this_synonym+1 >= should_match_with_this_synonym && should_match_with_this_synonym >= 3)) && (count_of_words_request_with_trivial + 1 > count_of_words_with_trivial || count_of_words_request >= count_of_words));
     }
     if (request_words_all == 0) {
         return -1;
     }
     
+    return does_match;
+}
+*/
+
+int word_matches_word_array(struct word* word, struct word** words, int flags) {
+    debugf("    does this word match?: %i - %s\n", word, word->name);
+    
+    int m;
+    for (m = 0; words[m] && words[m]->name; ++m) {
+        if (is_good(words[m]->name) && strlen(words[m]->name) > 1) {
+            if (!is_a_trivial_word(words[m]->name)) {
+                
+                if (matches(word->name, words[m]->name)) {
+                    debugf("      matches with     %i - %s\n", words[m], words[m]->name);
+                    return 1;
+                }
+                else {
+                    debugf("      not matches with %i - %s\n", words[m], words[m]->name);
+                }
+            }
+        }
+    }
+    
+    return 0;
+}
+
+int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags) {
+    if (!request_words[0]) {
+        return -1;
+    }
+    
+    int request_words_all = 0;
+    int u;
+    for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
+        if (can_be_a_pointer(request_words[u])) {
+            int c;
+            for (c = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
+                if (can_be_a_pointer(request_words[u][c])) {
+                    if (!is_a_trivial_word(request_words[u][c]->name)) {
+                        ++request_words_all;
+                    }
+                }
+            }
+        }
+    }
+    
+    int given_words_all = 0;
+    int m;
+    for (m = 0; words[m] && words[m]->name; ++m) {
+        if (can_be_a_pointer(words[m])) {
+            if (!is_a_trivial_word(words[m]->name)) {
+                ++given_words_all;
+            }
+        }
+    }
+    
+    int does_match = 0;
+    for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
+        if (can_be_a_pointer(request_words[u])) {
+            
+            debugf("  next synonym.\n");
+            int   does_match_this_synonym = 1;
+            int should_match_this_synonym = 1;
+    
+            int c;
+            for (c = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
+                if (can_be_a_pointer(request_words[u][c])) {
+                    if (!is_a_trivial_word(request_words[u][c]->name)) {
+                        if (strstr(request_words[u][c]->name, "time_")) {
+                            should_match_this_synonym -= 10;
+                        }
+                        else {
+                            does_match_this_synonym   += word_matches_word_array(request_words[u][c], words, flags);
+                            should_match_this_synonym += 1;
+                        }
+                    }
+                }
+            }
+            debugf("  does match this synonym: %i\n", does_match_this_synonym >= should_match_this_synonym);
+            
+            does_match = does_match || does_match_this_synonym >= should_match_this_synonym;
+            if (does_match) {
+                break;
+            }
+        }
+    }
+    
+    if (request_words_all == 0) {
+        debugf("  => %i\n\n", -1);
+        return -1;
+    }
+    
+    
+    debugf("  => %i\n\n", does_match);
     return does_match;
 }
 
@@ -1271,7 +1351,7 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
         delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
-            "Searching answers for:\n"
+            "Searching synonym-answers for:\n"
             "    subjects (was: %s):\n", subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
         print_word_list_3rd_order(fact->subjects);
         debugf(

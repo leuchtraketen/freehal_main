@@ -1310,6 +1310,7 @@ set multi-line new global array builtin_male_names to [
 set multi-line new global array builtin_entity_ends_pair to [
           [ 'das', 'ein' ],
           [ 'das', 'eine' ],
+          [ 0, 'geburtstag' ],
 ];
 
 set multi-line new global hash builtin_entity_does_not_end to {
@@ -1461,6 +1462,9 @@ set multi-line new global hash builtin_time_place_adverbs to {
 
 define action builtin_has_time_place_adverbs_suffix with var word do
     if var word matches /haft$/ do
+        do return with 1
+    done
+    if var word matches /time_/ do
         do return with 1
     done
     do return with 0
@@ -2562,6 +2566,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'us-amerikanisches' => "adj",
           'mittels' => "prep",
           'fies' => "adj",
+          'zum' => "adj",
           'anstatt' => "questionword",
           'schmuck' => "adj",
           'gesund' => "adj",
@@ -2818,7 +2823,68 @@ set multi-line new global hash builtin_part_of_speech to {
           '_q_' => "adj",
           'waren' => "vi",
 };
+
+set multi-line new global hash builtin_time_relations to {
+        "heute" =>                  [ 24*60*60,      0      ],
+        "gestern" =>                [ 24*60*60,      -1     ],
+        "vorgestern" =>             [ 24*60*60,      -2     ],
+        "vorvorgestern" =>          [ 24*60*60,      -3     ],
+        "morgen" =>                 [ 24*60*60,      +1     ],
+        "uebermorgen" =>            [ 24*60*60,      +2     ],
+        "ueberuebermorgen" =>       [ 24*60*60,      +3     ],
+        "in-tagen" =>               [ 24*60*60,      1      ],
         
+        "diese woche" =>            [ 7*24*60*60,    0      ],
+        "letzte woche" =>           [ 7*24*60*60,    -1     ],
+        "vorletzte woche" =>        [ 7*24*60*60,    -2     ],
+        "naechste woche" =>         [ 7*24*60*60,    +1     ],
+        "uebernaechste woche" =>    [ 7*24*60*60,    +2     ],
+        "in-wochen" =>              [ 7*24*60*60,    1      ],
+        
+        "in viertelstunde" =>       [ 15*60,         +1     ],
+        "vor viertelstunde" =>      [ 15*60,         -1     ],
+        "in halbe stunde" =>        [ 30*60,         +1     ],
+        "vor halbe stunde" =>       [ 30*60,         -1     ],
+        "in dreiviertelstunde" =>   [ 45*60,         +1     ],
+        "vor dreiviertelstunde" =>  [ 45*60,         -1     ],
+        "in stunde" =>              [ 60*60,         +1     ],
+        "vor stunde" =>             [ 60*60,         -1     ],
+        "in-stunden" =>             [ 60*60,         1      ],
+        "vor-stunden" =>            [ 60*60,         1      ],
+        
+};
+
+set new global array builtin_time_relations_names to an empty array
+set items of global array builtin_time_relations_names to keys with items of hash builtin_time_relations
+
+define action time_pre_transformations with var sentence, var lang, var path do
+    do regex using var sentence: /(in|vor)\s*?einer\s*?(<[a-zA-Z]>*?stund<[a-zA-Z]>*?)(\s|$)/, "$0 $1$2", :global:i
+    do regex using var sentence: /(in|vor)\s*?(<[0-9]>+?)\s*?(stunden|wochen|tagen)/, "$1* $0-$2", :global:i
+    do regex using var sentence: /(te|se)<[rnmt]>?\s*?(stunde|woche|tage)/, "$0 $1", :global:i
+    do regex using var sentence: /Anfang (letzter|dieser|naechster)/, "$0", :global:i
+    do regex using var sentence: /(^|\s)an dem (\d+?\.\d+?\.\d+?)(\s|$)/, " am-$1 ", :global:i
+    do regex using var sentence: /(^|\s)am (\d+?\.\d+?\.\d+?)(\s|$)/, " am-$1 ", :global:i
+    do regex using var sentence: /(^|\s)(?:von|seit|ab) dem (\d+?\.\d+?\.\d+?)(\s|$)/, " vom-$1 ", :global:i
+    do regex using var sentence: /(^|\s)vom (\d+?\.\d+?\.\d+?)(\s|$)/, " vom-$1 ", :global:i
+    do regex using var sentence: /(^|\s)bis zu dem (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
+    do regex using var sentence: /(^|\s)bis zum (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
+    do regex using var sentence: /(^|\s)bis (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
+    do regex using var sentence: /(^|\s)zum (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
+    
+    do return with var sentence
+done
+
+define action add_undefined_time with array clause do
+    set new var adverbs to from array clause item [3]
+    if var adverbs do
+        set var adverbs to var adverbs concat " "
+    done
+    set var adverbs to var adverbs concat "zu dieser Zeit"
+    set from array clause item [3] to var adverbs
+    
+    do return with array clause
+done
+
 define action guess_part_of_speech with var word do
     set new var guessed to ''
     if lc(var word) matches var word and var word matches /iv$/ do
@@ -3269,8 +3335,38 @@ define action compute_output with var output do
         do regex using var output: /\sein(.?.?.?)$/, " kein$0", :global:i
     done
     
-    set new var time_now to time without arguments
-    set new array date_time_array to items-returning localtime with var time_now
+
+    do regex using var output: /_/, " ", :global:i
+    # Time From <-> time from
+    do regex using var output: /time from /, "time from ", :global:i
+    # Time To   <-> time to
+    do regex using var output: /time to /, "time to ", :global:i
+
+    set new var time_begin to time without arguments
+    set new var time_end to 0
+    print var output
+    print new line
+    print new line
+    print new line
+    print new line
+    print new line
+    print new line
+    print new line
+    print new line
+    if var output matches /time_from-(<[0-9]>+?)(\s|$)/ do
+        set var time_begin to $0
+    done
+    if var output matches /time from (<[0-9]>+?)(\s|$)/ do
+        set var time_begin to $0
+    done
+    if var output matches /time_to-(<[0-9]>+?)(\s|$)/ do
+        set var time_end to $0
+    done
+    if var output matches /time to (<[0-9]>+?)(\s|$)/ do
+        set var time_end to $0
+    done
+    
+    set new array date_time_array to items-returning localtime with var time_begin
     set new var sec to from array date_time_array item [ 0 ]
     set new var min to from array date_time_array item [ 1 ]
     set new var hour to from array date_time_array item [ 2 ]
@@ -3315,6 +3411,13 @@ define action compute_output with var output do
     done
     
     set var year to var year + 1900
+    set var mon to var mon + 1
+    if var mon matches /^.$/ do
+        set var mon to "0" concat var mon
+    done
+    if var mday matches /^.$/ do
+        set var mday to "0" concat var mday
+    done
     
     do regex using var output: /\$\$time\$\$/, "var hour:var min:var sec", :global:i
     do regex using var output: /\$\$wday\$\$/, "var weekday", :global:i
@@ -3324,6 +3427,61 @@ define action compute_output with var output do
     do regex using var output: /\$\$date\$\$/, "var mday.var mon.var year", :global:i
 
     do regex using var output: /array\(.*?\)/, "", :global:i
+    
+    do regex using var output: /<[~]>time.*/, "", :global:i
+    
+    if var output matches /time from (<[0-9]>+?)(\s|$)/ do
+        set new var replacement to ''
+        if var hour matches "00" and var min matches "00" and var sec matches "00" do
+            set var replacement to var replacement concat ' vom ' concat var mday concat '.' concat var mon concat '.' concat var year
+        done
+        else if var hour or var min or var sec do
+            set var replacement to var replacement concat ' von ' concat var hour concat ':' concat var min
+        done
+        do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
+    done
+    
+    set new array date_time_array to items-returning localtime with var time_end
+    set new var sec to from array date_time_array item [ 0 ]
+    set new var min to from array date_time_array item [ 1 ]
+    set new var hour to from array date_time_array item [ 2 ]
+    set new var mday to from array date_time_array item [ 3 ]
+    set new var mon to from array date_time_array item [ 4 ]
+    set new var year to from array date_time_array item [ 5 ]
+    set new var wday to from array date_time_array item [ 6 ]
+    set new var yday to from array date_time_array item [ 7 ]
+    set new var isdst to from array date_time_array item [ 8 ]
+    
+    if not var min matches /../ do
+        set var min to "0" concat var min
+    done
+    if not var sec matches /../ do
+        set var sec to "0" concat var sec
+    done
+    if not var hour matches /../ do
+        set var hour to "0" concat var hour
+    done
+    
+    set var year to var year + 1900
+    set var mon to var mon + 1
+    if var mon matches /^.$/ do
+        set var mon to "0" concat var mon
+    done
+    if var mday matches /^.$/ do
+        set var mday to "0" concat var mday
+    done
+    
+    if var output matches /time to (<[0-9]>+?)(\s|$)/ do
+        set new var replacement to ''
+        if var hour matches "00" and var min matches "00" and var sec matches "00" do
+            set var replacement to var replacement concat ' bis zum ' concat var mday concat '.' concat var mon concat '.' concat var year
+        done
+        else if var hour or var min or var sec do
+            set var replacement to var replacement concat ' bis ' concat var hour concat ':' concat var min
+        done
+        do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
+    done
+    
     
     do regex using var output: /nothing/, "nichts", :global:i
     do regex using var output: /NULL/, "", :global:i
