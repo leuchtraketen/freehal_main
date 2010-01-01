@@ -1,3 +1,7 @@
+805:
+
+- Bugfix im Synonym-Matching behoben
+
 804:
 
 - Changelog aktualisiert

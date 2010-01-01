@@ -631,7 +631,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 */
 
 int word_matches_word_array(struct word* word, struct word** words, int flags) {
-    debugf("    does this word match?: %i - %s\n", word, word->name);
+    // debugf("    does this word match?: %i - %s\n", word, word->name);
     
     int m;
     for (m = 0; words[m] && words[m]->name; ++m) {
@@ -639,11 +639,11 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
             if (!is_a_trivial_word(words[m]->name)) {
                 
                 if (matches(word->name, words[m]->name)) {
-                    debugf("      matches with     %i - %s\n", words[m], words[m]->name);
+                    // debugf("      matches with     %i - %s\n", words[m], words[m]->name);
                     return 1;
                 }
                 else {
-                    debugf("      not matches with %i - %s\n", words[m], words[m]->name);
+                    // debugf("      not matches with %i - %s\n", words[m], words[m]->name);
                 }
             }
         }
@@ -652,11 +652,18 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
     return 0;
 }
 
+int _diff(int a, int b) {
+    if (a > b) return a-b;
+    if (b > a) return b-a;
+    return 0;
+}
+
 int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags) {
     if (!request_words[0]) {
         return -1;
     }
     
+    int request_words_all_also_trivial = 0;
     int request_words_all = 0;
     int u;
     for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
@@ -667,18 +674,21 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                     if (!is_a_trivial_word(request_words[u][c]->name)) {
                         ++request_words_all;
                     }
+                    ++request_words_all_also_trivial;
                 }
             }
         }
     }
     
     int given_words_all = 0;
+    int given_words_all_also_trivial = 0;
     int m;
     for (m = 0; words[m] && words[m]->name; ++m) {
         if (can_be_a_pointer(words[m])) {
             if (!is_a_trivial_word(words[m]->name)) {
                 ++given_words_all;
             }
+            ++given_words_all_also_trivial;
         }
     }
     
@@ -686,7 +696,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
         if (can_be_a_pointer(request_words[u])) {
             
-            debugf("  next synonym.\n");
+            // debugf("  next synonym.\n");
             int   does_match_this_synonym = 1;
             int should_match_this_synonym = 1;
     
@@ -704,7 +714,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                     }
                 }
             }
-            debugf("  does match this synonym: %i\n", does_match_this_synonym >= should_match_this_synonym);
+            // debugf("  does match this synonym: %i\n", does_match_this_synonym >= should_match_this_synonym);
             
             does_match = does_match || does_match_this_synonym >= should_match_this_synonym;
             if (does_match) {
@@ -712,6 +722,8 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             }
         }
     }
+    
+    does_match = does_match && (given_words_all_also_trivial <= 2 || _diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2);
     
     if (request_words_all == 0) {
         debugf("  => %i\n\n", -1);
