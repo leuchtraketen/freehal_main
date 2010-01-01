@@ -2832,14 +2832,16 @@ set multi-line new global hash builtin_time_relations to {
         "morgen" =>                 [ 24*60*60,      +1     ],
         "uebermorgen" =>            [ 24*60*60,      +2     ],
         "ueberuebermorgen" =>       [ 24*60*60,      +3     ],
-        "in-tagen" =>               [ 24*60*60,      1      ],
+        "in-tagen" =>               [ 24*60*60,      +1     ],
+        "vor-tagen" =>              [ 24*60*60,      -1     ],
         
         "diese woche" =>            [ 7*24*60*60,    0      ],
         "letzte woche" =>           [ 7*24*60*60,    -1     ],
         "vorletzte woche" =>        [ 7*24*60*60,    -2     ],
         "naechste woche" =>         [ 7*24*60*60,    +1     ],
         "uebernaechste woche" =>    [ 7*24*60*60,    +2     ],
-        "in-wochen" =>              [ 7*24*60*60,    1      ],
+        "in-wochen" =>              [ 7*24*60*60,    +1     ],
+        "vor-wochen" =>             [ 7*24*60*60,    -1     ],
         
         "in viertelstunde" =>       [ 15*60,         +1     ],
         "vor viertelstunde" =>      [ 15*60,         -1     ],
@@ -2849,8 +2851,8 @@ set multi-line new global hash builtin_time_relations to {
         "vor dreiviertelstunde" =>  [ 45*60,         -1     ],
         "in stunde" =>              [ 60*60,         +1     ],
         "vor stunde" =>             [ 60*60,         -1     ],
-        "in-stunden" =>             [ 60*60,         1      ],
-        "vor-stunden" =>            [ 60*60,         1      ],
+        "in-stunden" =>             [ 60*60,         +1     ],
+        "vor-stunden" =>            [ 60*60,         -1     ],
         
 };
 
@@ -3430,58 +3432,72 @@ define action compute_output with var output do
     
     do regex using var output: /<[~]>time.*/, "", :global:i
     
-    if var output matches /time from (<[0-9]>+?)(\s|$)/ do
-        set new var replacement to ''
-        if var hour matches "00" and var min matches "00" and var sec matches "00" do
-            set var replacement to var replacement concat ' vom ' concat var mday concat '.' concat var mon concat '.' concat var year
+    if var time_begin + 24*60*60 is var time_end do
+        if var output matches /time from (<[0-9]>+?)(\s|$)/ do
+            set new var replacement to ''
+            if var hour matches "00" and var min matches "00" and var sec matches "00" do
+                set var replacement to var replacement concat ' am ' concat var mday concat '.' concat var mon concat '.' concat var year
+            done
+            else if var hour or var min or var sec do
+                set var replacement to var replacement concat ' um ' concat var hour concat ':' concat var min
+            done
+            do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
+            do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "", :global:i
         done
-        else if var hour or var min or var sec do
-            set var replacement to var replacement concat ' von ' concat var hour concat ':' concat var min
+    done
+    else do
+        if var output matches /time from (<[0-9]>+?)(\s|$)/ do
+            set new var replacement to ''
+            if var hour matches "00" and var min matches "00" and var sec matches "00" do
+                set var replacement to var replacement concat ' vom ' concat var mday concat '.' concat var mon concat '.' concat var year
+            done
+            else if var hour or var min or var sec do
+                set var replacement to var replacement concat ' von ' concat var hour concat ':' concat var min
+            done
+            do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
         done
-        do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
-    done
-    
-    set new array date_time_array to items-returning localtime with var time_end
-    set new var sec to from array date_time_array item [ 0 ]
-    set new var min to from array date_time_array item [ 1 ]
-    set new var hour to from array date_time_array item [ 2 ]
-    set new var mday to from array date_time_array item [ 3 ]
-    set new var mon to from array date_time_array item [ 4 ]
-    set new var year to from array date_time_array item [ 5 ]
-    set new var wday to from array date_time_array item [ 6 ]
-    set new var yday to from array date_time_array item [ 7 ]
-    set new var isdst to from array date_time_array item [ 8 ]
-    
-    if not var min matches /../ do
-        set var min to "0" concat var min
-    done
-    if not var sec matches /../ do
-        set var sec to "0" concat var sec
-    done
-    if not var hour matches /../ do
-        set var hour to "0" concat var hour
-    done
-    
-    set var year to var year + 1900
-    set var mon to var mon + 1
-    if var mon matches /^.$/ do
-        set var mon to "0" concat var mon
-    done
-    if var mday matches /^.$/ do
-        set var mday to "0" concat var mday
-    done
-    
-    if var output matches /time to (<[0-9]>+?)(\s|$)/ do
-        set new var replacement to ''
-        if var hour matches "00" and var min matches "00" and var sec matches "00" do
-            set var replacement to var replacement concat ' bis zum ' concat var mday concat '.' concat var mon concat '.' concat var year
+        
+        set new array date_time_array to items-returning localtime with var time_end
+        set new var sec to from array date_time_array item [ 0 ]
+        set new var min to from array date_time_array item [ 1 ]
+        set new var hour to from array date_time_array item [ 2 ]
+        set new var mday to from array date_time_array item [ 3 ]
+        set new var mon to from array date_time_array item [ 4 ]
+        set new var year to from array date_time_array item [ 5 ]
+        set new var wday to from array date_time_array item [ 6 ]
+        set new var yday to from array date_time_array item [ 7 ]
+        set new var isdst to from array date_time_array item [ 8 ]
+        
+        if not var min matches /../ do
+            set var min to "0" concat var min
         done
-        else if var hour or var min or var sec do
-            set var replacement to var replacement concat ' bis ' concat var hour concat ':' concat var min
+        if not var sec matches /../ do
+            set var sec to "0" concat var sec
         done
-        do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
+        if not var hour matches /../ do
+            set var hour to "0" concat var hour
+        done
+        
+        set var year to var year + 1900
+        set var mon to var mon + 1
+        if var mon matches /^.$/ do
+            set var mon to "0" concat var mon
+        done
+        if var mday matches /^.$/ do
+            set var mday to "0" concat var mday
+        done
+        
+        if var output matches /time to (<[0-9]>+?)(\s|$)/ do
+            set new var replacement to ''
+            if var hour matches "00" and var min matches "00" and var sec matches "00" do
+                set var replacement to var replacement concat ' bis zum ' concat var mday concat '.' concat var mon concat '.' concat var year
+            done
+            else if var hour or var min or var sec do
+                set var replacement to var replacement concat ' bis ' concat var hour concat ':' concat var min
+            done
+            do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
+        done
     done
-    
     
     do regex using var output: /nothing/, "nichts", :global:i
     do regex using var output: /NULL/, "", :global:i

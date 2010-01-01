@@ -1,3 +1,7 @@
+802:
+
+- Verbesserung der Implementierung fuer das Zeitbewusstsein
+
 801:
 
 - Erste Implementierung fuer das Zeitbewusstsein

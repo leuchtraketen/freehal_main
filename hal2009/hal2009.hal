@@ -1009,6 +1009,11 @@ define action to_unixtime with var sentence, var lang, var path do
             
             set new var i_range to from hash _builtin_time_relations item { var rel } first item
             set new var i_plusminus to from hash _builtin_time_relations item { var rel } second item
+            
+            if lc(var sentence) matches /(^|\s)(\d+?)<[*]>\svar rel(\s|$)/ do
+                set var i_plusminus to var i_plusminus * $1
+            done
+            
             print "Time, interval:  "
             print var i_range
             print " sec"
@@ -1050,6 +1055,7 @@ define action to_unixtime with var sentence, var lang, var path do
             print " = ..."
             print new line
             
+            do regex using var sentence: /(^|\s)(\d+?)<[*]>\s(var rel)(\s|$)/, "$0$2$3", :i
             if lc(var sentence) matches /(von|ab|seit|since)(^|\s)var rel(\s|$)/ do
                 set var replacement to var replacement concat " time_from-" concat var i_begin
                 do regex using var sentence: /(von|ab|seit|since)(^|\s)var rel(\s|$)/, "$2", :global:i
