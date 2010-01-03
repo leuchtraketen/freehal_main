@@ -1,3 +1,7 @@
+807:
+
+- Bugfix zu der Loesung fuer Reminder 318
+
 806:
 
 - Bug in der Gebus-Abfrage behoben

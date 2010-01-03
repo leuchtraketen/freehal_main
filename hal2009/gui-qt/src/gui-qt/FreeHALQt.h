@@ -84,6 +84,7 @@
 #include "ui_ee.h"
 #include "ui_connect.h"
 #include "ui_view.h"
+#include "ui_more-info.h"
 
 using namespace std;
 
@@ -194,6 +195,8 @@ public:
 
 public slots:
 //    void on_fullscreen_clicked();
+    void on_ask_frame_toggled(bool checked);
+    void on_ask_dialog_toggled(bool checked);
 
     void on_clear_screen_clicked();
     void on_proxy_ok_clicked();
@@ -275,10 +278,11 @@ class Helper : public QObject {
 
 public slots:
     void exitNow();
+    void slotMoreInfo(QStringList);
     void showMsgWindow();
-	void hideMsgWindow();
-	void showMsgGenusWindow();
-        void hideMsgGenusWindow();
+    void hideMsgWindow();
+    void showMsgGenusWindow();
+    void hideMsgGenusWindow();
     void slotEverythingReady();
     void close_view();
     void reconnect();
@@ -303,6 +307,7 @@ signals:
     void signalChangeHelpWindowText1(QString);
     void signalChangeHelpWindowText2(QString);
     void signalMsg(QString);
+    void signalMoreInfo(QStringList);
     void signalMsgGenus(QString);
     void signalShowMsgWindow();
     void signalHideMsgWindow();
@@ -321,6 +326,26 @@ class ConnectDialog : public QDialog {
 
 public:
     Ui::ConnectDialog* from;
+};
+
+
+class MoreInfo : public QDialog {
+    Q_OBJECT
+
+public:
+    Ui::freehalWindow* user_interface_main_window;
+    Ui::MoreInfo* user_interface_dialog;
+
+public slots:
+    void on_w_v_clicked();
+    void on_w_n_clicked();
+    void on_w_a_clicked();
+    void on_w_i_clicked();
+    void on_w_c_clicked();
+    void on_w_p_clicked();
+
+private slots:
+    void on_buttonBox_clicked(QAbstractButton* button);
 };
 
 

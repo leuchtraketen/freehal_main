@@ -55,6 +55,7 @@ Dialog4*                    dialog_changelog;
 Dialog5*                    dialog_startup;
 Dialog8*                    dialog_view;
 ConnectDialog*              dialog_connection;
+MoreInfo*                   dialog_moreinfo;
 Helper*                     helper;
 FlowChart*                  fc;
 QMutex                      log_mutex;
@@ -499,6 +500,7 @@ int main(int argc, char* argv[]) {
     dialog_startup = new Dialog5;
     dialog_view = new Dialog8;
     dialog_connection = new ConnectDialog;
+    dialog_moreinfo = new MoreInfo;
 
 
     Ui::freehalWindow* user_interface_main_window = new Ui::freehalWindow();
@@ -542,11 +544,16 @@ QScrollArea* scrollArea = new QScrollArea;
     dialog_view->user_interface_dialog = user_interface_dialog_view;
     dialog_view->user_interface_main_window = main_window->user_interface_main_window;
 
-    Ui::ChangelogDialog* user_interface_dialog_changelog= new Ui::ChangelogDialog();
+    Ui::ChangelogDialog* user_interface_dialog_changelog = new Ui::ChangelogDialog();
     user_interface_dialog_changelog->setupUi(dialog_changelog);
     dialog_changelog->user_interface_dialog = user_interface_dialog_changelog;
     dialog_changelog->user_interface_main_window = main_window->user_interface_main_window;
     dialog_changelog->init_changelog();
+
+    Ui::MoreInfo* user_interface_dialog_moreinfo = new Ui::MoreInfo();
+    user_interface_dialog_moreinfo->setupUi(dialog_moreinfo);
+    dialog_moreinfo->user_interface_dialog = user_interface_dialog_moreinfo;
+    dialog_moreinfo->user_interface_main_window = main_window->user_interface_main_window;
 
 // log
     /*
@@ -589,6 +596,8 @@ QScrollArea* scrollArea = new QScrollArea;
             main_window->user_interface_main_window->msg, SLOT(setHtml(QString)));
     helper->connect(&(*helper), SIGNAL(signalMsgGenus(QString)),
             main_window->user_interface_main_window->msg_2, SLOT(setHtml(QString)));
+    helper->connect(&(*helper), SIGNAL(signalMoreInfo(QStringList)),
+            &(*helper), SLOT(slotMoreInfo(QStringList)));
 
 
     helper->connect(&(*helper), SIGNAL(signalShowMsgWindow()),
@@ -600,11 +609,6 @@ QScrollArea* scrollArea = new QScrollArea;
             &(*helper), SLOT(showMsgGenusWindow()));
     helper->connect(&(*helper), SIGNAL(signalHideMsgGenusWindow()),
             &(*helper), SLOT(hideMsgGenusWindow()));
-
-    helper->connect(&(*helper), SIGNAL(signalShowMsgNounOrNotWindow()),
-            &(*helper), SLOT(showMsgNounOrNotWindow()));
-    helper->connect(&(*helper), SIGNAL(signalHideMsgNounOrNotWindow()),
-            &(*helper), SLOT(hideMsgNounOrNotWindow()));
 
     helper->connect(&(*helper), SIGNAL(everythingReady()),
             &(*helper), SLOT(slotEverythingReady()));
@@ -883,6 +887,44 @@ void Dialog4::init_changelog() {
     }
 
     user_interface_dialog->te_changelog->setText(QString(all.ref().c_str()));
+}
+
+void MoreInfo::on_w_v_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:1");
+    cout << "HERE_IS_WORD_TYPE:1" << endl;
+    this->close();
+}
+void MoreInfo::on_w_n_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:2");
+    cout << "HERE_IS_WORD_TYPE:2" << endl;
+    this->close();
+}
+void MoreInfo::on_w_a_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:3");
+    cout << "HERE_IS_WORD_TYPE:3" << endl;
+    this->close();
+}
+void MoreInfo::on_w_i_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:7");
+    cout << "HERE_IS_WORD_TYPE:7" << endl;
+    this->close();
+}
+void MoreInfo::on_w_c_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:5");
+    cout << "HERE_IS_WORD_TYPE:5" << endl;
+    this->close();
+}
+void MoreInfo::on_w_p_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:6");
+    cout << "HERE_IS_WORD_TYPE:6" << endl;
+    this->close();
+}
+
+void MoreInfo::on_buttonBox_clicked(QAbstractButton* button)
+{
+    freehal::comm_send("HERE_IS_WORD_TYPE:EXIT");
+    cout << "HERE_IS_WORD_TYPE:EXIT" << endl;
+    this->close();
 }
 
 void FreeHALWindow::on_w_verb_clicked() {
@@ -1312,9 +1354,18 @@ void freehal::comm_new(freehal::string s) {
         }
         if (s.contains("GET_WORD_TYPE")) {
 /// <br>0. Abbruch. Keine Antwort.<br>1. Verb (z.B. sagen)<br>2. Name und Nomen (z.B Haus)<br>3. Adjektiv, Adverb oder adverbiale Bestimmung (z.B. schnell; immer, ueberall, gestern)<br>4. Pronomen (z.B er, sie, es)<br>5. Fragewort (z.B. warum, wie) oder Konjunktion<br>6. Praeposition (z.B. auf, an, unter)<br><br>Gib bitte die Nummer ein.
-
-            emit helper->signalMsg(QString(("Which part of speech is \"" + parts[1].ref() + "\"?\n\nWelche Wortart hat \"" + parts[1].ref() + "\"?").c_str()));
-            emit helper->signalShowMsgWindow();
+            if (0 == strcmp(check_config(freehal::string("more-info"), "dialog"), "frame")) {
+                emit helper->signalMsg(QString(("Which part of speech is \"" + parts[1].ref() + "\"?\n\nWelche Wortart hat \"" + parts[1].ref() + "\"?").c_str()));
+                emit helper->signalShowMsgWindow();
+            }
+            else {
+                QStringList list;
+                list.push_back(QString("Which part of speech is the following word?\nWelche Wortart hat das folgende Wort?"));
+                list.push_back(QString::fromStdString(parts[1].ref()));
+                list.push_back(parts.size() >= 3 ? QString::fromStdString(parts[2].ref()) : "");
+                list.push_back(parts.size() >= 4 ? QString::fromStdString(parts[3].ref()) : "");
+                emit helper->signalMoreInfo(list);
+            }
         }
         if (s.contains("GET_GENUS")) {
             emit helper->signalMsgGenus(QString(("Which gender has the noun \"" + parts[1].ref() + "\"?\n\nWelches grammatische Geschlecht (Genus) hat das Wort \"" + parts[1].ref() + "\"? Nennt man es \"der " + parts[1].ref() + "\", \"die " + parts[1].ref() + "\" oder \"das " + parts[1].ref() + "\"?").c_str()));
@@ -1352,7 +1403,19 @@ void freehal::comm_new(freehal::string s) {
     } catch (std::bad_alloc b) {
         cout << "Bad allocation in comm_new." << endl;
     }
+}
 
+void Helper::slotMoreInfo(QStringList list) {
+    QString text = list.takeFirst();
+    QString word = list.takeFirst();
+    QString source = list.takeFirst();
+    QString sentence = list.takeFirst();
+
+    dialog_moreinfo->user_interface_dialog->i_text->setText(text);
+    dialog_moreinfo->user_interface_dialog->i_word->setText(word);
+    dialog_moreinfo->user_interface_dialog->i_source->setText(source);
+    dialog_moreinfo->user_interface_dialog->i_sentence->setText(sentence);
+    dialog_moreinfo->show();
 }
 
 void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int i)
@@ -1378,3 +1441,13 @@ void FreeHALWindow::on_minus_clicked()
    freehal::comm_send("QUESTION:/SCORE -10 " + text.toStdString());
 }
 
+
+void Dialog1::on_ask_dialog_toggled(bool checked)
+{
+    set_config(freehal::string("more-info"), ((checked) ? "dialog" : "frame"));
+}
+
+void Dialog1::on_ask_frame_toggled(bool checked)
+{
+    set_config(freehal::string("more-info"), ((checked) ? "frame" : "dialog"));
+}

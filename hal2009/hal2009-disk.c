@@ -807,7 +807,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
         free(sql);
     }
     
-    if (req.position > limit - 10) {
+    if (*req.position > limit - 10) {
         return TOOMUCH;
     }
     
