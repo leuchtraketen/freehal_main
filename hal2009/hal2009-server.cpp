@@ -1077,6 +1077,16 @@ void hal2009_handle_signal(void* arg) {
         halclose(target);
         unlink("_doing__pos");
     }
+    else if (0 == strcmp(type, "_output__genus")) {
+        FILE* _doing = fopen("_doing__genus", "w+b");
+        halclose(_doing);
+        fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
+        text = hal2009_server_get_value_from_socket("GENUS", text);
+        FILE* target = fopen("_input__genus", "w+b");
+        halwrite(text, 1, strlen(text), target);
+        halclose(target);
+        unlink("_doing__genus");
+    }
     else if (0 == strcmp(type, "_output__link")) {
         if (strlen(text) < 99) {
             char link[99] = {0};

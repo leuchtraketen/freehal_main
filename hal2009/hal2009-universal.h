@@ -28,6 +28,8 @@
 #define is_wrong(x) (x == 'z'+1)
 #define WRONG       ('z'-'a'+2)
 
+#define TOOMUCH      -7
+
 #define EXACT        2
 #define WEAK         3
 #define USE_SUBJECTS 11

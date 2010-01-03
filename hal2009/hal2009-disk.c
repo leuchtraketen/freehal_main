@@ -807,11 +807,15 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
         free(sql);
     }
     
+    if (req.position > limit - 10) {
+        return TOOMUCH;
+    }
+    
     return 0;
 }
 
 struct fact** disk_search_clauses(int rel) {
-    int limit = 20000;
+    int limit = 8000;
     struct fact** clauses = calloc(1, sizeof(struct fact*)*(limit+1));
     int position = 0;
 

@@ -386,6 +386,39 @@ define action get_tag_part_of_speech with var word, var lang do
     do return with "q"
 done
 
+define action get_tag_genus with var word, var lang do
+    if (not var word) or (var word matches /^\s*?$/) or exists: "_no_user_ask", end test do
+        do return with "q"
+    done
+    
+    set new var output_file_name to '_output__genus'
+    set new var output_handle to handle for file name var output_file_name, write
+    print into var output_handle data var word
+    do close with var output_handle
+
+    set new var timeout to 120
+    while var timeout > 0 do
+        set new var input_file_name to '_input__genus'
+        set new var input_handle to handle for file name var input_file_name, read
+
+        if var input_handle do
+            set new var response to the next line from var input_handle
+            if var response do
+                print "Got input: '" concat var response concat "'"
+                print new line
+                do close with var input_handle
+                do wait 1 seconds
+                do unlink with '_input__genus'
+                do return using var response
+            done
+        done
+        do wait 1 seconds
+        set var timeout to var timeout - 1
+    done
+    
+    do return with "q"
+done
+
 set new hash content_of_memory_file to an empty hash
 
 # TEXT
@@ -1363,6 +1396,9 @@ define action compute_tags with var word, var lang, var path do
             if not var word matches /\s/ do
                 set array tags to an empty array
                 set from array tags first item to get_tag_part_of_speech using var word, var lang
+                if from array tags first item matches /n/ do
+                    set from array tags second item to get_tag_genus using var word, var lang
+                done
                 do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
             done
         done
@@ -1396,6 +1432,9 @@ define action compute_tags with var word, var lang, var path do
     if is an empty array tags do
         set array tags to an empty array
         set from array tags first item to get_tag_part_of_speech using var word, var lang
+        if from array tags first item matches /n/ do
+            set from array tags second item to get_tag_genus using var word, var lang
+        done
         # set from array tags first item to 'n'
         do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
     done
@@ -2657,6 +2696,10 @@ define action logic with var input, var lang, var path, hash parsed do
             go to next
         done
         
+        if "/err:TOOMUCH" matches var line do
+            do return using "TOOMUCH"
+        done
+        
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
         
@@ -3244,6 +3287,9 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order item { 'primary_key' } to var primary_key
         set new array results_link_order to logic with '', var lang, var path, hash hash_link_order
+        if array results_link_order matches "TOOMUCH" do
+            do return with var final_sentence
+        done
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
@@ -3260,6 +3306,9 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order item { 'primary_key' } to 0 - var primary_key
         set new array results_link_order to logic with '', var lang, var path, hash hash_link_order
+        if array results_link_order matches "TOOMUCH" do
+            do return with var final_sentence
+        done
         for each new array result_link_order in array results_link_order do
             set from array result_link_order first item to ''
         done
@@ -3467,6 +3516,10 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     # CODE
     if var mode matches "question" do
         set array results to logic with var input, var lang, var path, hash parsed
+        if array results matches "TOOMUCH" do
+            set new array standard_phrases to phrases_error_toomuch without arguments
+            do return with array standard_phrases
+        done
         
         set new flag bug_feature to but_feature_is_useful with var input
         if flag bug_feature do
@@ -3475,6 +3528,10 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     done
     if var mode matches "statement" do
         set array results to logic with var input, var lang, var path, hash parsed
+        if array results matches "TOOMUCH" do
+            set new array standard_phrases to phrases_error_toomuch without arguments
+            do return with array standard_phrases
+        done
     done
     if var save_input matches "yes" do
         push into array facts_to_save, hash parsed

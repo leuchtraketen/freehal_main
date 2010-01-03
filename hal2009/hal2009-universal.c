@@ -154,6 +154,10 @@ struct word*** get_stored_synonyms(const char* exp) {
 struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, int* position, int* allocated_until) {
     struct fact** facts = search_facts_synonyms(subj, obj, verb, adverbs, "", "", "default");
     
+    if (facts == TOOMUCH) {
+        return synonyms;
+    }
+    
     // count the facts
     int size, f;
     for (size = 0, f = 0; facts[f]; ++f) {
@@ -1092,6 +1096,12 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
 struct fact** filter_list_by_rules(struct fact** list, struct request* request) {
     printf("Starting fact filter!\n");
     
+    if (list == TOOMUCH) {
+        printf("Do not filter, too much data.\n");
+        printf("Not filtered.\n");
+        return TOOMUCH;
+    }
+    
     int b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
     for (b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
         if (list[b] != -1) {
@@ -1147,7 +1157,7 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 }
 
 struct fact** search_in_net(struct request* fact, struct fact** list) {
-    int limit = 20000;
+    int limit = 8000;
     struct fact** facts = 0;
     if (list) {
         facts = list;
@@ -1158,19 +1168,26 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     
     
     int position = 0;
-    search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
-    search_facts_for_words_in_net(fact->objects, facts, limit, &position);
-    search_facts_for_words_in_net(fact->adverbs, facts, limit, &position);
-    search_facts_for_words_in_net(fact->extra, facts, limit, &position);
+    
+    int succ_1 = search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
+    int succ_2 = search_facts_for_words_in_net(fact->objects,  facts, limit, &position);
+    int succ_3 = search_facts_for_words_in_net(fact->adverbs,  facts, limit, &position);
+    int succ_4 = search_facts_for_words_in_net(fact->extra,    facts, limit, &position);
+    int succ_5 = 0;
 
     if (fact->verbs && fact->verbs[0] && fact->verbs[0]->name && 0 == strcmp(fact->verbs[0]->name, ">>>")) {
         struct fact*** verbs = calloc(sizeof(struct fact***), 2);
         verbs[0] = fact->verbs;
         verbs[1] = 0;
         
-        search_facts_for_words_in_net(verbs, facts, limit, &position);
+        succ_5 = search_facts_for_words_in_net(verbs, facts, limit, &position);
         
         free(verbs);
+    }
+    
+    if (succ_1 == TOOMUCH || succ_2 == TOOMUCH || succ_3 == TOOMUCH || succ_4 == TOOMUCH || succ_5 == TOOMUCH) {
+        free(facts);
+        return TOOMUCH;
     }
     
     return facts;
@@ -1312,21 +1329,25 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
             fact
         );
         
-        int l;
-        for (l = 0; can_be_a_pointer(list[l]) || -1 == list[l]; ++l) {
-            if (can_be_a_pointer(list[l])) {
-                if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
-                    if (strstr(list[l]->verbs[0]->name, "=")) {
-                        if (strstr(list[l]->from, "thes")) {
-                            set_to_invalid_value(&(list[l]));
-                        }
-                        else {
-                            free(list[l]->verbs);
-                            list[l]->verbs = divide_words("equal");
+        if (list != TOOMUCH) {
+            
+            int l;
+            for (l = 0; can_be_a_pointer(list[l]) || -1 == list[l]; ++l) {
+                if (can_be_a_pointer(list[l])) {
+                    if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
+                        if (strstr(list[l]->verbs[0]->name, "=")) {
+                            if (strstr(list[l]->from, "thes")) {
+                                set_to_invalid_value(&(list[l]));
+                            }
+                            else {
+                                free(list[l]->verbs);
+                                list[l]->verbs = divide_words("equal");
+                            }
                         }
                     }
                 }
             }
+            
         }
 
         if (is_engine("ram")) {
@@ -1386,7 +1407,7 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
             search_in_net(fact, list),
             fact
         );
-
+        
         if (is_engine("ram")) {
             free(fact->verbs);
             free(fact->questionword);
@@ -1565,6 +1586,10 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
             fact
         );
         
+        if (list == TOOMUCH) {
+            return TOOMUCH;
+        }
+        
         free(fact->context);
         fact->context = strdup(context);
         
@@ -1612,7 +1637,7 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
                                 search_in_net(req, list),
                                 req
                             );
-
+                            
                             if (is_engine("ram")) {
                                 free(req);
                             }
@@ -1694,6 +1719,10 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
             fact
         );
         
+        if (list == TOOMUCH) {
+            return TOOMUCH;
+        }
+        
         int l;
         for (l = 0; can_be_a_pointer(list[l]) || list[l] == -1; ++l) {
             if (can_be_a_pointer(list[l])) {
@@ -1749,6 +1778,10 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("We do.\n");
         
         struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context);
+        if (_list == TOOMUCH) {
+            return TOOMUCH;
+        }
+        
         if (can_be_a_pointer(_list)) {
             if (can_be_a_pointer(list)) {
                 free(list);
@@ -1793,6 +1826,9 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("We do.\n");
         
         struct fact** _list = search_facts_thesaurus(subjects, objects, verbs, adverbs, extra, questionword, context);
+        if (_list == TOOMUCH) {
+            return TOOMUCH;
+        }
         if (can_be_a_pointer(_list)) {
             if (can_be_a_pointer(list)) {
                 free(list);
@@ -1810,6 +1846,9 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("We do.\n");
         
         struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context);
+        if (_list == TOOMUCH) {
+            return TOOMUCH;
+        }
         if (can_be_a_pointer(_list)) {
             if (can_be_a_pointer(list)) {
                 free(list);
@@ -1956,7 +1995,14 @@ int append_on_dataset_record(int offset, int limit, char** record, struct fact**
 struct DATASET as_dataset(struct fact** list) {
     struct DATASET set;
     set.size = 0;
+    set.column_count = 0;
     set.data = 0;
+    set.err  = 0;
+    
+    if (list == TOOMUCH) {
+        set.err = TOOMUCH;
+        return set;
+    }
     
     if (list == 0) {
         printf("Nothing given to transform.\n");

@@ -107,6 +107,13 @@ void hal2009_handle_signal(void* arg) {
         halwrite(text, 1, strlen(text), target);
         halclose(target);
     }
+    else if (0 == strcmp(type, "_output__genus")) {
+        fprintf(output(), "\nUnknown genus:\n\n%s\n", text);
+        strcpy(text, "q");
+        FILE* target = fopen("_input__genus", "w+b");
+        halwrite(text, 1, strlen(text), target);
+        halclose(target);
+    }
     else if (0 == strcmp(type, "_output__add_pro_file")) {
         pthread_t thread;
         pthread_create (&thread, NULL, for__input__add_pro_file, (void*)text);

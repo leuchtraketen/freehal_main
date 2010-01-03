@@ -2887,6 +2887,12 @@ define action add_undefined_time with array clause do
     do return with array clause
 done
 
+define action phrases_error_toomuch without arguments do
+    set new array phrases to an empty array
+    push into array phrases, [ 0, "Tut mir leid, diese Eingabe kann ich aufgrund zu vieler Daten nicht beantworten." ]
+    do return with array phrases
+done
+
 define action guess_part_of_speech with var word do
     set new var guessed to ''
     if lc(var word) matches var word and var word matches /iv$/ do

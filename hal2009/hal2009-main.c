@@ -210,6 +210,13 @@ void hal2009_handle_signal(void* arg) {
         halwrite(text, 1, strlen(text), target);
         halclose(target);
     }
+    else if (0 == strcmp(type, "_output__genus")) {
+        fprintf(output(), "\nUnknown genus: %s\n\nPlease type it in: ", text);
+        scanf("%s", text);
+        FILE* target = fopen("_input__genus", "w+b");
+        halwrite(text, 1, strlen(text), target);
+        halclose(target);
+    }
     else if (0 == strcmp(type, "_output__link")) {
         if (strlen(text) < 99) {
             char link[99] = {0};

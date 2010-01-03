@@ -1,3 +1,9 @@
+806:
+
+- Bug in der Gebus-Abfrage behoben
+- POS/Genus-Abfrage in der GUI modularisiert, auswaehlbar ob Dialog oder Frame (-> Config)
+- Reminder 318 geloest: Zu viele Daten -> Standardantwort
+
 805:
 
 - Bugfix im Synonym-Matching behoben

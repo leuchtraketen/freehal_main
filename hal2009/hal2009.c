@@ -757,6 +757,10 @@ struct DATASET hal2009_get_csv(char* csv_request) {
 }
 
 const char* hal2009_make_csv(struct DATASET* set) {
+    if (set->err == TOOMUCH) {
+        return strdup("/err:TOOMUCH\n");
+    }
+    
     fprintf(output(), "Compute CSV data, %li records, %li columns\n", set->size, set->column_count);
     int j;
     int m;
