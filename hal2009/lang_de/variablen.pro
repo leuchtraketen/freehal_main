@@ -17,17 +17,17 @@ geh <> nothing <> nothing <> ins bett <> f=> schlaefe <> ich <> nothing <> nie <
 #Direkte Anwort auf "Wie geht es dir so"
 geht <> es <> mir so <>  <> f=> geht <> es <> mir <> sehr gut <>  <>  <> 100
 # Ausgabe einer Variabeln
-haben <> wir <> $$month$$ <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> wir <> $$month$$ <>  <> (true)
 #Ausgabe einer Variablen
-haben <> wir <> $$year$$ <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> wir <> $$year$$ <>  <> (true)
 #Direkte Anwort auf die Eingabe "Ich habe Durst"
 hat <> a <> durst <>  <> f=> sollte trinken <> a <> etwas <>  <>  <>  ;; q=> trinkt <> a <> nichts <>  <> warum <>  <> (true)
 #Direkte Anwort auf die Frage "Wer hat dir diesen Namen gegeben"
 hat <> mir <> diesen namen <> gegeben <> f=> hat <> das team <> dir diesen namen <> gegeben <>  <>  <> (true)
 #Variablendeklaration
-ist <> $$month$$ <> ein monat <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> $$month$$ <> ein monat <>  <> (true)
 #Variablendeklaration
-ist <> $$year$$ <> ein jahr <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> $$year$$ <> ein jahr <>  <> (true)
 #Wenn Durchmesser in der Datenbank steht wird auch auf groß geantwortet
 ist <> a <> b <> gross <> hat <> a <> einen durchmesser <> von b <> wenn <>  <> (true)
 #Wenn hoch in der Datenbank steht wird auch auf groß geantwortet
@@ -42,7 +42,7 @@ ist <> a <> nothing <> muede <> f=> gehen schlafen sollte <> a <> nothing <>  <>
 #Direkte Anwort auf die Eingabe "Was soll ich tun"
 sollst tun <> du <> nothing <>  <> f=> geben kann/can <> ich <> dir einen rat <> nicht <>  <>  <> (true)
 #Anwort auf die Frage "Wie spät ist es"
-ist <> es <> $$time$$ uhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> es <> $$time$$ uhr <>  <> (true)
 #Direkte Anwort auf die Eingabe "Woher weißt du das"
 weiss <> ich <> das <>  <> f=> lerne <> ich <> nothing <> viel <>  <>  ;; f=> lernt <> das team <> viel <> mit mir <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe "Wieviel wiegst du"
@@ -52,10 +52,10 @@ will <> a <> ficken <>  <> f=> dann <>geh doch <> nothing <> in ein bordell <>  
 #Direkte Anwort auf die Frage "Wo kommst du her"
 herkomme <> ich <> nothing <>  <> f=> kommst <> du <> nothing <> aus dem internet <>  <>  ;; f=> <> nothing <> nothing <> aus dem kopf von einem programmierer <>  <>  <> (true)
 #Variablendeklaration für das Datum
-ist <> _$$mday$$_$$month$$_$$year$$_  <>ein datum <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> _$$mday$$_$$month$$_$$year$$_  <>ein datum <>  <> (true)
 #Ausgabe bei der Frage nach dem Datum
-haben <> wir <> heute den _$$mday$$_$$month$$_$$year$$_ <>  <>  <>  <>  <>  <>  <>  <> (true)
-haben <> wir <> _$$mday$$_$$month$$_$$year$$_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> wir <> heute den _$$mday$$_$$month$$_$$year$$_ <>  <> (true)
+haben <> wir <> _$$mday$$_$$month$$_$$year$$_ <>  <> (true)
 #Anwort auf die Eingabe aussieht mit Aussehen
 aussieht <> a <> nothing <>  <> hat <> a <> ein aussehen <>  <> wenn <>  <> (true)
 #Antwort auf die Eingabe aussehen mit aussieht
@@ -71,8 +71,8 @@ besitzt <> du <> a <>  <> f=> moechte <> ich <> auch a <>  <>  <>  ;; q=> schenk
 #Direkte Anwort auf die Eingabe "ich gehe jetzt"#
 geht <> a <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  ;; f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
 #Variablendeklaration für Wochentag
-ist <> $$wday$$ <> nothing <> heute <>  <>  <>  <>  <>  <>  <> (true)
-ist <> $$wday$$ <> ein tag <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> $$wday$$ <> nothing <> heute <> (true)
+ist <> $$wday$$ <> ein tag <>  <> (true)
 # Bei der Eingabe "Ich heisse oder mein Name ist ..." Wird ein Zufallsnamen aus der Datenbank ausgegeben#
 ist <> dein name <> a <>  <> dachte f=> heisst <> ich du <> $$randomname$$ <>  <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe " ? studiert ?#
