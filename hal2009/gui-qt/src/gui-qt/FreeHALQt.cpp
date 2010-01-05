@@ -324,6 +324,10 @@ void FreeHALWindow::on_lineedit_talk_returnPressed() {
     on_pushButton_clicked();
 }
 
+void FreeHALWindow::on_lineedit_learn_returnPressed() {
+    on_pushButton_learn_clicked();
+}
+
 void Helper::exitNow() {
         int ret = QMessageBox::warning(main_window, tr("FreeHAL"),
             tr("Should FreeHAL continue in the background?"),

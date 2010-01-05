@@ -1,3 +1,7 @@
+812:
+
+- Bug behoben: Haengenbleiben bei "[Satz] . (true/maybe/false)" statt ""[Satz] (true/maybe/false) ."
+
 809:
 
 - Changelog aktualisiert

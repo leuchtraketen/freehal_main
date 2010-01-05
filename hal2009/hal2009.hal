@@ -4651,6 +4651,7 @@ define action shell with var current_language, var path do
         do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
         do regex using var sentences_as_line_2: /<[.]>(\s|$)/, " STOP ", :global
         do regex using var sentences_as_line_2: /(\d) STOP /, "$0. ", :global
+        do regex using var sentences_as_line_2: / STOP \((.*)\)/, " ($0) STOP . ", :global
         
         set var sentences_as_line_2 to divide_input with var sentences_as_line_2, var current_language, var path
         

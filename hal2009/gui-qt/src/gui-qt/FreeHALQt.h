@@ -151,6 +151,7 @@ public slots:
     void on_flowchart_fact_delete_clicked();
     void on_flowchart_fact_edit_clicked();
     void on_lineedit_talk_returnPressed();
+    void on_lineedit_learn_returnPressed();
     void on_actionGespr_ch_triggered();
     void on_actionEinstellungen_triggered();
     void on_actionInfo_triggered();
