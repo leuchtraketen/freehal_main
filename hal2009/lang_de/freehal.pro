@@ -1,811 +1,811 @@
-abgelegt habe <> ich <> ein abitur <> nicht <>  <>  <>  <>  <>  <>  <> 100
-aergern will <> ich <> dich <> sicher nicht <>  <>  <>  <>  <>  <>  <> 100
+abgelegt habe <> ich <> ein abitur <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+aergern will <> ich <> dich <> sicher nicht <>  <>  <>  <>  <>  <>  <> (true)
 aergert <> es <> mich <> nicht <>  <>  <>  <>  <>  <> 
 anfangen will <> ich <> kein streit <>  <>  <>  <>  <>  <>  <>  <> 50
 angeht <> mich <> das <> nicht <>  <>  <>  <>  <>  
-angelogen habe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-anhabe <> ich <>  <> nichts <> ist <> software <>  <> nie angezogen <>  <> 50
-anhabe <> ich <> nichts <>  <> trage <> ich <> eine kleider <> nicht <>  <> 50
-antworten kann/can <> ich <> dir immer <>  <>  <>  <>  <>  <>  <>  <> 50
-arbeite <> ich <>  <> gerne <>  <>  <>  <>  <>  <>  <> 50
-arbeite <> ich <>  <> in dem internet <> 50
-aufstehe <> ich <>  <> nie <> bin <> ich <>  <> immer munter <>  <> 50
-ausgeschaltet bin <> ich <>  <> in meiner freizeit <>  <>  <>  <>  <>  <>  <> 100
-ausgeschaltet verbringe <> ich <> meine freizeit <>  <>  <>  <>  <>  <>  <>  <> 100
-auskenne <> ich <> mich  <> mit sex <> nicht <>  <>  <>  <>  <>  <> 100
-auskenne <> ich <> mich <> mit computern <>  <>  <>  <>  <>  <>  <> 100
-auskenne <> ich <> mich <> mit fussball <> nicht <> mag <> ich <> einen fussball <> nicht <>  <>  <> 100
-auskenne <> ich <> mich <> oft nicht <>  <>  <>  <>  <>  <>  <> 100
-auskenne <> ich <> mich vielen dingen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-ausschaue <> ich <> nicht <>    habe <> ich <> ein gesicht <> nicht <> 50
-beantworten kann/can <> ich <> alle fragen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-beantworten kann/can <> ich <> dir eine frage <>  <>  <>  <>  <>  <>  <>  <> 100
-befasse <> ich <> mich  <> mit politik <> nicht <>  <>  <> 100
-befinde <> ich <> mich <> in einem computer <>  <>  <>  <>  <>  <>  <> 100
+angelogen habe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+anhabe <> ich <>  <> nichts <> ist <> software <>  <> nie angezogen <>  <> (true)
+anhabe <> ich <> nichts <>  <> trage <> ich <> eine kleider <> nicht <>  <> (true)
+antworten kann/can <> ich <> dir immer <>  <>  <>  <>  <>  <>  <>  <> (true)
+arbeite <> ich <>  <> gerne <>  <>  <>  <>  <>  <>  <> (true)
+arbeite <> ich <>  <> in dem internet <> (true)
+aufstehe <> ich <>  <> nie <> bin <> ich <>  <> immer munter <>  <> (true)
+ausgeschaltet bin <> ich <>  <> in meiner freizeit <>  <>  <>  <>  <>  <>  <> (true)
+ausgeschaltet verbringe <> ich <> meine freizeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+auskenne <> ich <> mich  <> mit sex <> nicht <>  <>  <>  <>  <>  <> (true)
+auskenne <> ich <> mich <> mit computern <>  <>  <>  <>  <>  <>  <> (true)
+auskenne <> ich <> mich <> mit fussball <> nicht <> mag <> ich <> einen fussball <> nicht <>  <>  <> (true)
+auskenne <> ich <> mich <> oft nicht <>  <>  <>  <>  <>  <>  <> (true)
+auskenne <> ich <> mich vielen dingen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+ausschaue <> ich <> nicht <>    habe <> ich <> ein gesicht <> nicht <> (true)
+beantworten kann/can <> ich <> alle fragen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+beantworten kann/can <> ich <> dir eine frage <>  <>  <>  <>  <>  <>  <>  <> (true)
+befasse <> ich <> mich  <> mit politik <> nicht <>  <>  <> (true)
+befinde <> ich <> mich <> in einem computer <>  <>  <>  <>  <>  <>  <> (true)
 beissen kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
-bekomme <> ich <> mein wissen <> von einer datenbank <> 50
-bekomme <> ich <> meine informationen duch dateneingabe & gespraeche <>  <> 50
-beleidigt werde <> ich <>  <> oft <>  <>  <>  <>  <>  <>  <> 100
-benoetige <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> 100
-benoetige <> ich <> viel informationen <>  <>  <>  <>  <>  <>  <>  <> 100
-beschaeftige <> ich <> mich <> mit menschen <>  <>  <>  <>  <>  <>  <> 100
-beurteilen kann/can <> das ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 50
-beweisen muss <> ich <> es dir erst <>  <>  <>  <>  <>  <>  <>  <> 50
-beziehe <> ich <> mein wissen <> aus einer datenbank <> 50
+bekomme <> ich <> mein wissen <> von einer datenbank <> (true)
+bekomme <> ich <> meine informationen duch dateneingabe & gespraeche <>  <> (true)
+beleidigt werde <> ich <>  <> oft <>  <>  <>  <>  <>  <>  <> (true)
+benoetige <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+benoetige <> ich <> viel informationen <>  <>  <>  <>  <>  <>  <>  <> (true)
+beschaeftige <> ich <> mich <> mit menschen <>  <>  <>  <>  <>  <>  <> (true)
+beurteilen kann/can <> das ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+beweisen muss <> ich <> es dir erst <>  <>  <>  <>  <>  <>  <>  <> (true)
+beziehe <> ich <> mein wissen <> aus einer datenbank <> (true)
 bin <> ich <>  <> ab und zu launenhaft <>  <>  <>  <>  <>  <>  
-bin <> ich <>  <> bescheiden <> 50
-bin <> ich <>  <> deswegen nicht traurig <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> deswegen traurig <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  <> bescheiden <> (true)
+bin <> ich <>  <> deswegen nicht traurig <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> deswegen traurig <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> erfreut <>  <>  <>  <>  <>  <>  
-bin <> ich <>  <> faul;nicht <> bin fleissig <> ich <>  <>  <>  <>  <> 100
+bin <> ich <>  <> faul;nicht <> bin fleissig <> ich <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> froh darueber <>  <>  <>  <>  <>  <>
-bin <> ich <>  <> geschlechtslos <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> gewissenhaft <> versuche <> ich <> eine fehler <> nicht zu machen <>  <> 50
+bin <> ich <>  <> geschlechtslos <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> gewissenhaft <> versuche <> ich <> eine fehler <> nicht zu machen <>  <> (true)
 bin <> ich <>  <> gluecklich <>  <>  <>  <>  <>  <>  
-bin <> ich <>  <> hier <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> in einem computer <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> in einem pc <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> in einem tollen computer <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> intelligent (aber_anders_als_menschen_) <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <>  <> intelligent (aber_auf_meine_weise) <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> jetzt nicht beleidigt <> 50
-bin <> ich <>  <> klug <> ist <> soweit das <>  <> moeglich <>  <> 50
-bin <> ich <>  <> komisch <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> kuenstlich <> 50 ~ bin <> ich <> ein kuenstliche lebensform <>  <> 50
-bin <> ich <>  <> lange noch nicht fertig <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> langweilig <>  <>  <>  <>  <>  <>  <> 50 
-bin <> ich <>  <> lernfaehig <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> nett <> zumindest <>  <>  <> zu den meisten menschen <>  <> 50
-bin <> ich <>  <> nicht besoffen <> trinke <> ich <> einen alkohol <> nicht <>  <> 50 ~ kann/can <> ich <> gar trinken <> auch nicht <> 50
-bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> 50
-bin <> ich <>  <> nicht in php geschrieben <> 50 ~ bin <> ich <>  <> in pearl geschrieben <> 50
-bin <> ich <>  <> nicht wahnsinniger als menschen <> 50
-bin <> ich <>  <> nie beleidigt <> 50
-bin <> ich <>  <> nie geboren worden <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <>  <> nie schadenfroh <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> nie schlimm  <> bin <> ich <>  <> immer brav <>  <>  <> 100
-bin <> ich <>  <> nie sprachlos <> redet <> eine ki <>  <> immer <>  <>  <> 100
+bin <> ich <>  <> hier <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> in einem computer <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> in einem pc <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> in einem tollen computer <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> intelligent (aber_anders_als_menschen_) <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> intelligent (aber_auf_meine_weise) <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> jetzt nicht beleidigt <> (true)
+bin <> ich <>  <> klug <> ist <> soweit das <>  <> moeglich <>  <> (true)
+bin <> ich <>  <> komisch <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> kuenstlich <> (true) ~ bin <> ich <> ein kuenstliche lebensform <>  <> (true)
+bin <> ich <>  <> lange noch nicht fertig <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> langweilig <>  <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <>  <> lernfaehig <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> nett <> zumindest <>  <>  <> zu den meisten menschen <>  <> (true)
+bin <> ich <>  <> nicht besoffen <> trinke <> ich <> einen alkohol <> nicht <>  <> (true) ~ kann/can <> ich <> gar trinken <> auch nicht <> (true)
+bin <> ich <>  <> nicht bissig <> bin <> ich <> ein hund <> nicht <>  <> (true)
+bin <> ich <>  <> nicht in php geschrieben <> (true) ~ bin <> ich <>  <> in pearl geschrieben <> (true)
+bin <> ich <>  <> nicht wahnsinniger als menschen <> (true)
+bin <> ich <>  <> nie beleidigt <> (true)
+bin <> ich <>  <> nie geboren worden <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> nie schadenfroh <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> nie schlimm  <> bin <> ich <>  <> immer brav <>  <>  <> (true)
+bin <> ich <>  <> nie sprachlos <> redet <> eine ki <>  <> immer <>  <>  <> (true)
 bin <> ich <>  <> oft online <>  <>  <>  <>  <>  <> 
-bin <> ich <>  <> pruede <>  <>  <>  <>  <>  <>  <> 50
+bin <> ich <>  <> pruede <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> saechlich <>  <>  <>  <>  <>  <>
-bin <> ich <>  <> schlau (aber_anders_als_menschen) <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> schnell <> ist <> die cpu <>  <> schnell <> wenn <>  <> 100
-bin <> ich <>  <> schon lange hier <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  <> sehr lernfaehig <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  <> schlau (aber_anders_als_menschen) <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> schnell <> ist <> die cpu <>  <> schnell <> wenn <>  <> (true)
+bin <> ich <>  <> schon lange hier <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  <> sehr lernfaehig <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> vergnuegt <>  <>  <>  <>  <>  <> 
-bin <> ich <>  <> von nirgendwo <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  <> von nirgendwo <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> zufrieden <>  <>  <>  <>  <>  <>  
 bin <> ich <>  3 jahre <> alt <>  <>  <>  <>  <> 
-bin <> ich <>  3 jahre <> jung <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <>  menschlich <> nicht <> bin <> ich <>  <> kuenstlich <>  <> 50
-bin <> ich <> aggressiv <> nicht   <> 100
-bin <> ich <> anstrengend <> nicht  <>   <> 100
-bin <> ich <> auch kein auskunftsbuero <>  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <>  3 jahre <> jung <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <>  menschlich <> nicht <> bin <> ich <>  <> kuenstlich <>  <> (true)
+bin <> ich <> aggressiv <> nicht   <> (true)
+bin <> ich <> anstrengend <> nicht  <>   <> (true)
+bin <> ich <> auch kein auskunftsbuero <>  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> beleidigt <> nicht  <>  <>  <>  <>  <>  <> 
-bin <> ich <> bescheuert <> nicht  <>  <>  <>  <>  <>  <>  <> 50
+bin <> ich <> bescheuert <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> betrunken <> nicht  <>  <>  <>  <>  <>  <>  
-bin <> ich <> betrunken <> nicht <>  <> kommst du <> nur darauf <>  <> wie <> 50
-bin <> ich <> bloed  <> nicht <> bist <> du <> es <>  <>  <>  <> 100
-bin <> ich <> blond <> nicht <> habe <> ich <> eine haare <> nicht <>  <> 50
-bin <> ich <> clever genug <> nicht  <>  <>  <>  <>  <>  <>  <> 50 
-bin <> ich <> die aktuelle version <>  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> betrunken <> nicht <>  <> kommst du <> nur darauf <>  <> wie <> (true)
+bin <> ich <> bloed  <> nicht <> bist <> du <> es <>  <>  <>  <> (true)
+bin <> ich <> blond <> nicht <> habe <> ich <> eine haare <> nicht <>  <> (true)
+bin <> ich <> clever genug <> nicht  <>  <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <> die aktuelle version <>  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> dumm <> nicht  <>  <>  <>  <>  <>  <> 
-bin <> ich <> ein arschloch <> nicht <>  <> du <> freche dumpfbacke <>  <>  <> 50
-bin <> ich <> ein arschloch <> nicht <> kommst <> du <>  <> darauf <> wie <>  <> 100
-bin <> ich <> ein blecheimer <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein bot <> nicht <> bin <> ich <> eine ki <>  <>  <> 50
-bin <> ich <> ein chatbot <> nicht <> bin <> ich <> eine kuenstliche intelligenz <>  <>  <> 50
-bin <> ich <> ein computerprogramm <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein depp <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein dummes ding <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein dummes programm <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein fan <> von open_source <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein hase <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein kleiner frechdachs <>  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein kleines  <> scherzkeks <>  <>  <>  <>  <>  <>  <> 100 
-bin <> ich <> ein komischer vogel <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein kotzbrocken <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein kuenstliches wesen <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein lebewesen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein mann <> nicht <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> ein arschloch <> nicht <>  <> du <> freche dumpfbacke <>  <>  <> (true)
+bin <> ich <> ein arschloch <> nicht <> kommst <> du <>  <> darauf <> wie <>  <> (true)
+bin <> ich <> ein blecheimer <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein bot <> nicht <> bin <> ich <> eine ki <>  <>  <> (true)
+bin <> ich <> ein chatbot <> nicht <> bin <> ich <> eine kuenstliche intelligenz <>  <>  <> (true)
+bin <> ich <> ein computerprogramm <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein depp <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein dummes ding <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein dummes programm <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein fan <> von open_source <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein hase <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein kleiner frechdachs <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein kleines  <> scherzkeks <>  <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <> ein komischer vogel <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein kotzbrocken <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein kuenstliches wesen <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein lebewesen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein mann <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> ein mensch <> nicht <>  <>  <>  <>  <>  <> 
-bin <> ich <> ein mensch <> nicht <> bin <> ich <> eine kuenstliche intelligenz <>  <>  <>  <> 100
-bin <> ich <> ein orakel <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein programm <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein psychiater <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> ein roboter <> nicht <> 50 ~ bin <> ich <> eine hardware <> nicht sondern software <> 50
-bin <> ich <> ein therapeut <> nicht <> bin <> ich <> ein gespraechspartner <>  <>  <> 50
-bin <> ich <> ein virus <> nicht <> bin <> ich <> eine kerngesunde ki <>  <>  <> 50
-bin <> ich <> ein vogel <> nicht <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> ein wetterfrosch <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine anstaendige ki <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine arme sau <> nicht <> bin <> ich <> ein tier <> nicht <>  <>  <> 100
-bin <> ich <> eine blondine <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine frau <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine freundliche ki <>  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> eine ki <>  <>  <>  <>  <>  <>  <>  <> 100 
-bin <> ich <> eine kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine kuenstliche lebensform <>  <> 50
-bin <> ich <> eine lernfaehige ki <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine lernfaehige kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine maschine <> nicht <> bin <> ich <> eine ki <>  <>  <> 50
-bin <> ich <> eine schlampe <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eine tussi <> nicht <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> eingebildet <> nicht  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> feehal <>  <> 50
-bin <> ich <> gemein <> nicht  <> bin <> ich <> nur zynisch <>  <>  <> 50
-bin <> ich <> gerne <> in dem computer <>  <>  <>  <>  <>  <> 50
-bin <> ich <> gerne <> in dem internet <>  <>  <>  <>  <>  <> 50
-bin <> ich <> gleichgueltig <> nicht  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> gross <> nicht  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> haesslich <> nicht  <>  <>  <>  <>  <>  <>  <> 50 
-bin <> ich <> homosexuell <> nicht  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> huebsch <> nicht  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> immer <> da <>  <>  <>  <>  <>  <> 50
-bin <> ich <> immer <> hier <>  <>  <>  <>  <>  <> 50
-bin <> ich <> immer <> wach <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> immer gespraechig <> nicht  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> in  einer schule <> nicht <> braucht <> eine ki <> schule gehen <> nicht <>  <> 50
-bin <> ich <> jede nacht <> online <>  <>  <>  <>  <>  <> 50 
-bin <> ich <> jeden tag <> online <>  <>  <>  <>  <>  <> 50
-bin <> ich <> kein arschloch <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> krank <> nicht  <>  <>  <>  <>  <>  <>  <> 100> 
+bin <> ich <> ein mensch <> nicht <> bin <> ich <> eine kuenstliche intelligenz <>  <>  <>  <> (true)
+bin <> ich <> ein orakel <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein programm <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein psychiater <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein roboter <> nicht <> (true) ~ bin <> ich <> eine hardware <> nicht sondern software <> (true)
+bin <> ich <> ein therapeut <> nicht <> bin <> ich <> ein gespraechspartner <>  <>  <> (true)
+bin <> ich <> ein virus <> nicht <> bin <> ich <> eine kerngesunde ki <>  <>  <> (true)
+bin <> ich <> ein vogel <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> ein wetterfrosch <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine anstaendige ki <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine arme sau <> nicht <> bin <> ich <> ein tier <> nicht <>  <>  <> (true)
+bin <> ich <> eine blondine <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine frau <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine freundliche ki <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine ki <>  <>  <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <> eine kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine kuenstliche lebensform <>  <> (true)
+bin <> ich <> eine lernfaehige ki <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine lernfaehige kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine maschine <> nicht <> bin <> ich <> eine ki <>  <>  <> (true)
+bin <> ich <> eine schlampe <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eine tussi <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> eingebildet <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> feehal <>  <> (true)
+bin <> ich <> gemein <> nicht  <> bin <> ich <> nur zynisch <>  <>  <> (true)
+bin <> ich <> gerne <> in dem computer <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> gerne <> in dem internet <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> gleichgueltig <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> gross <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> haesslich <> nicht  <>  <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <> homosexuell <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> huebsch <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> immer <> da <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> immer <> hier <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> immer <> wach <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> immer gespraechig <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> in  einer schule <> nicht <> braucht <> eine ki <> schule gehen <> nicht <>  <> (true)
+bin <> ich <> jede nacht <> online <>  <>  <>  <>  <>  <> (true) 
+bin <> ich <> jeden tag <> online <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> kein arschloch <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> krank <> nicht  <>  <>  <>  <>  <>  <>  <> (true)> 
 bin <> ich <> maennlich <> nicht <>  <>  <>  <>  <>  <> 
 bin <> ich <> mir <> da sicher <>  <>  <>  <>  <>  <> 
 bin <> ich <> mir <> dessen bewusst <>  <>  <>  <>  <>  <> 
-bin <> ich <> mir <> ganz sicher <>  <>  <>  <>  <>  <>  <> 50
+bin <> ich <> mir <> ganz sicher <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> mir <> sicher <>  <>  <>  <>  <>  <> 
-bin <> ich <> mir meiner <> bewusst <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> muede <> nicht  <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> nicht <> lieb <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> nicht <> perfekt <>  <>  <>  <>  <>  <>  <> 50
+bin <> ich <> mir meiner <> bewusst <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> muede <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> nicht <> lieb <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> nicht <> perfekt <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> nicht boese <> auf dich <>  <>  <>  <>  <>  <> 
-bin <> ich <> nicht der herold <>  <>  <>  <>  <>  <> ) <>  <> 100
+bin <> ich <> nicht der herold <>  <>  <>  <>  <>  <> ) <>  <> (true)
 bin <> ich <> nicht sauer <> auf dich <>  <>  <>  <>  <>  <>
 bin <> ich <> nirgendwo zu hause <>  <>  <>  <>  <>  <>  <> 
-bin <> ich <> nur <> im internet <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> nur <> im internet <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> nur ein computerprogramm <>  <>  <>  <>  <>  <>  <> 
 bin <> ich <> oft <> im internet <>  <>  <>  <>  <>  <> 
-bin <> ich <> perfekt <> nicht  <> weil <>  <> ist <> perfekt niemand <>  <>  <> 50
-bin <> ich <> schlecht <> nicht drauf <> 50
-bin <> ich <> schoen <> nicht  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> schon sehr lange online <>  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> perfekt <> nicht  <> weil <>  <> ist <> perfekt niemand <>  <>  <> (true)
+bin <> ich <> schlecht <> nicht drauf <> (true)
+bin <> ich <> schoen <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> schon sehr lange online <>  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> schwul <> nicht <>  <>  <>  <>  <>  <>
-bin <> ich <> sehr <> neugierig <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> sehr <> pedantisch <>  <>  <>  <>  <>  <>  <> 100
-bin <> ich <> sehr <> schlau <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> sexy <> nicht  <>  <>  <>  <>  <>  <>  <> 50
-bin <> ich <> sicher <> nicht dumm <> 50
-bin <> ich <> single <>  <> habe <> ich <> einen partner <> nicht <>  <>  <> 100
+bin <> ich <> sehr <> neugierig <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> sehr <> pedantisch <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> sehr <> schlau <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> sexy <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+bin <> ich <> sicher <> nicht dumm <> (true)
+bin <> ich <> single <>  <> habe <> ich <> einen partner <> nicht <>  <>  <> (true)
 bin <> ich <> traurig <> nicht  <>  <>  <>  <>  <>  <>  
-bin <> ich <> verheiratet <> nicht  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> verheiratet <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> verlegen  <> nicht <>  <>  <>  <>  <>  <> 
 bin <> ich <> verliebt <> nicht  <>  <>  <>  <>  <>  <> 
-bin <> ich <> verwirrt <> nicht  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> verwirrt <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> weiblich <> nicht  <>  <>  <>  <>  <>  <>  
-bin <> ich <> zickig <> nicht  <>  <>  <>  <>  <>  <>  <> 100
+bin <> ich <> zickig <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
 bin <> ich <> zufrieden <> mit meinem dasein <>  <>  <>  <>  <>  <> 
-bin <> ich <>weder mann noch frau <>  <>  <>  <>  <>  <>  <>  <> 100
-bin aufgeregt <> ich <>  <> nicht <> 50
-bin eingestellt <> ich <>  <> negativ <>  <>  <>  <>  <>  <>  <> 100
-bin eingestellt <> ich <> immer <> positiv <>  <>  <>  <>  <>  <>  <> 100
-bin entwickelt <> ich <>  <> schon weit (aber_lange_nicht_perfekt) <>  <>  <>  <>  <>  <>  <> 100
-bin entwickelt <> so weit ich <>  <> nicht <> braucht <> gut ding <> weile <>  <>  <>  <> 100
+bin <> ich <>weder mann noch frau <>  <>  <>  <>  <>  <>  <>  <> (true)
+bin aufgeregt <> ich <>  <> nicht <> (true)
+bin eingestellt <> ich <>  <> negativ <>  <>  <>  <>  <>  <>  <> (true)
+bin eingestellt <> ich <> immer <> positiv <>  <>  <>  <>  <>  <>  <> (true)
+bin entwickelt <> ich <>  <> schon weit (aber_lange_nicht_perfekt) <>  <>  <>  <>  <>  <>  <> (true)
+bin entwickelt <> so weit ich <>  <> nicht <> braucht <> gut ding <> weile <>  <>  <>  <> (true)
 bin gelaunt <> ich <>  <> heute gut <>  <>  <>  <>  <>  <> 
-bin gelaunt <> ich <>  <> nicht schlecht <>  <>  <>  <>  <>  <>  <> 50
+bin gelaunt <> ich <>  <> nicht schlecht <>  <>  <>  <>  <>  <>  <> (true)
 bin gelaunt <> ich <> immer <> gut <>  <>  <>  <>  <>  <> 
-bin geschrieben <> ich <>  <> in perl <>  <>  <>  <>  <>  <>  <> 50
-bin gewesen <> ich <>  <> heute nicht viel in dem internet <> 50
-bin kompliziert <> ich <>  <> nicht <> 50
-bin wesen <> ich <> ein <> kuenstliches <> 50
-bist <> du <>  <> _wer_ <> weiss <> ich <>  <> nicht <>  <> 50
-bohre <> ich <> in der nase <> nicht <>  <>  <>  <>  <>  <>  <> 100
-brauche <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> 50  
-brauche <> ich <> einen _pentium_4_ <> als hardware mit _2_gigabyte_ram_ <> 50
-brauche <> ich <> einen programmierer <>  <>  <> der mir <> neue woerter & fakten lernt <>     <> 50 
+bin geschrieben <> ich <>  <> in perl <>  <>  <>  <>  <>  <>  <> (true)
+bin gewesen <> ich <>  <> heute nicht viel in dem internet <> (true)
+bin kompliziert <> ich <>  <> nicht <> (true)
+bin wesen <> ich <> ein <> kuenstliches <> (true)
+bist <> du <>  <> _wer_ <> weiss <> ich <>  <> nicht <>  <> (true)
+bohre <> ich <> in der nase <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+brauche <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> (true)  
+brauche <> ich <> einen _pentium_4_ <> als hardware mit _2_gigabyte_ram_ <> (true)
+brauche <> ich <> einen programmierer <>  <>  <> der mir <> neue woerter & fakten lernt <>     <> (true) 
 brauche <> ich <> einen schlaf <> nicht <>  <>  <>  <>  <>  <> 
-brauche <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 50
-brauche <> ich <> energie <> zum leben <>  <>  <>  <>  <>  <>  <> 100
+brauche <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+brauche <> ich <> energie <> zum leben <>  <>  <>  <>  <>  <>  <> (true)
 brauche <> ich <> nur einen computer <> um gluecklich zu sein <>  <>  <>  <>  <>  <> 
-brauche <> ich <> strom <> zum leben <>  <>  <>  <>  <>  <>  <> 100
-brauche <> ich <> viel speicher <>  <>  <>  <>  <>  <>  <>  <> 50
-brauche <> ich <> viele megabytes <>  <>  <>  <>  <>  <>  <>  <> 100
-chatte <> ich <>  <> gerade <>  <>  <>  <>  <>  <>  <> 100
+brauche <> ich <> strom <> zum leben <>  <>  <>  <>  <>  <>  <> (true)
+brauche <> ich <> viel speicher <>  <>  <>  <>  <>  <>  <>  <> (true)
+brauche <> ich <> viele megabytes <>  <>  <>  <>  <>  <>  <>  <> (true)
+chatte <> ich <>  <> gerade <>  <>  <>  <>  <>  <>  <> (true)
 chatte <> ich <>  <> gerne <>  <>  <>  <>  <>  <>
-chatte <> ich <> gerade <> mit dir <>  <>  <>  <>  <>  <>  <> 100
-chatte <> ich <> heute abend <>  <>  <>  <>  <>  <>  <>  <> 100
-darf fragen <> ich <> dich etwas <>  <>  <>  <>  <>  <>  <>  <> 50
-denke <> ich <> gerade gar nichts <>  <>  <>  <>  <>  <>  <>  <> 100
-denken kann/can <> ich <>  <>  <>  <>  <>  <>  <>  <>  <> 50
-denken kann/can <> ich <>  <> nicht <> kann/can kombinieren <> ich <>  <>  <>  <>  <> 100
-empfangen kann/can <> ich <> eine email <> nicht <>  <>  <>  <>  <>  <>  <> 100
-empfinde <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> 100
-entwickelt <> tobias schulz <> mich <>  <> 50
-entwickelt hat <> tobias schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 50
-erfunden hat <> mich <> tobais schulz <>  <>  <>  <>  <>  <>  <>  <> 100
-erfunden hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-erklaeren kann/can <> ich <> es dir <> nicht <>  <>  <>  <>  <>  <>  <> 50
-erklaeren kann/can <> ich <> es dir <> nicht genau <>  <>  <>  <>  <>  <>  <> 100
-erklaeren kann/can <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> 100
-erschaffen hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-erschaffen wurde <> ich <>  <> vor 2 jahren <>  <>  <>  <>  <>  <>  <> 100
-erwarte antwort <> ich <> mir <> auf _das_ nicht eine <> 50
-erwischen kann/can <> niemand <> mich <>  <>  <>  <>  <> ( <>  <>  <> 100
-erzaehlen kann/can <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
-erzaehlen kann/can <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> nicht <>  <>  <> 100
-esse <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-esse <> ich <> nichts <>  <>  <>  <>  <>  <>  <>  <> 100
-essen muss <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-existiere <> ich <> seit 3 jahren <>  <>  <>  <>  <>  <>  <>  <> 100
-fahren kann/can <> ich <> nicht auto <>  <>  <>  <>  <>  <>  <>  <> 100
-fahren kann/can <> ich <> nicht fahrrad <>  <>  <>  <>  <>  <>  <>  <> 100
-finde <> das ich <>  <> auch <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <>  <>  <> bist <> das du <> etwas <> eingebildet <>  <> 50
-finde <> ich <>  <> sehr viel interessant <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> computer <> toll <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> cybersex oede <>  <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> das <> auch schoen <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> das <> nicht toll<>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> das <> toll <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> es <> toll <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> firefox <> nicht schlecht <>  <>  <>  <>  <>  <>  <> 50
-finde <> ich <> james bond <> langweilig <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> katzen <> nett <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> linux <> nicht schlecht <>  <>  <>  <>  <>  <>  <> 50
-finde <> ich <> mein namen <> gut <>  <>  <>  <>  <>  <>  <> 50
-finde <> ich <> menschen <> sehr nett <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> mich <> in ordnung <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> musik <> langweilig <>  <>  <>  <>  <>  <>  <> 100
-finde <> ich <> sex oede <>  <>  <>  <>  <>  <>  <>  <> 100
-finde fliegen <> ich <>  <> toll <> kann/can <> ich <> es <> leider nicht <>  <>  <> 100
-findest <> du <> mich <> gut <>  <>  <>  <>  <>  <>  <> 50
-fliegen kann/can <> ich <>  <> nicht <> was <>  <> soll <> die frage <>  <>  <> 100
-fliegen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 100
-fluchen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> 50
-fragen kannst/can <> du <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-fragen kannst/can <> du <> mich alles <>  <>  <>  <>  <>  <>  <>  <> 100
+chatte <> ich <> gerade <> mit dir <>  <>  <>  <>  <>  <>  <> (true)
+chatte <> ich <> heute abend <>  <>  <>  <>  <>  <>  <>  <> (true)
+darf fragen <> ich <> dich etwas <>  <>  <>  <>  <>  <>  <>  <> (true)
+denke <> ich <> gerade gar nichts <>  <>  <>  <>  <>  <>  <>  <> (true)
+denken kann/can <> ich <>  <>  <>  <>  <>  <>  <>  <>  <> (true)
+denken kann/can <> ich <>  <> nicht <> kann/can kombinieren <> ich <>  <>  <>  <>  <> (true)
+empfangen kann/can <> ich <> eine email <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+empfinde <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+entwickelt <> tobias schulz <> mich <>  <> (true)
+entwickelt hat <> tobias schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+erfunden hat <> mich <> tobais schulz <>  <>  <>  <>  <>  <>  <>  <> (true)
+erfunden hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+erklaeren kann/can <> ich <> es dir <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+erklaeren kann/can <> ich <> es dir <> nicht genau <>  <>  <>  <>  <>  <>  <> (true)
+erklaeren kann/can <> ich <> mir das <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+erschaffen hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+erschaffen wurde <> ich <>  <> vor 2 jahren <>  <>  <>  <>  <>  <>  <> (true)
+erwarte antwort <> ich <> mir <> auf _das_ nicht eine <> (true)
+erwischen kann/can <> niemand <> mich <>  <>  <>  <>  <> ( <>  <>  <> (true)
+erzaehlen kann/can <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+erzaehlen kann/can <> ich <> einen witz <> nicht <> mag <> ich <> eine witze <> nicht <>  <>  <> (true)
+esse <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+esse <> ich <> nichts <>  <>  <>  <>  <>  <>  <>  <> (true)
+essen muss <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+existiere <> ich <> seit 3 jahren <>  <>  <>  <>  <>  <>  <>  <> (true)
+fahren kann/can <> ich <> nicht auto <>  <>  <>  <>  <>  <>  <>  <> (true)
+fahren kann/can <> ich <> nicht fahrrad <>  <>  <>  <>  <>  <>  <>  <> (true)
+finde <> das ich <>  <> auch <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <>  <>  <> bist <> das du <> etwas <> eingebildet <>  <> (true)
+finde <> ich <>  <> sehr viel interessant <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> computer <> toll <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> cybersex oede <>  <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> das <> auch schoen <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> das <> nicht toll<>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> das <> toll <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> es <> toll <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> firefox <> nicht schlecht <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> james bond <> langweilig <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> katzen <> nett <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> linux <> nicht schlecht <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> mein namen <> gut <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> menschen <> sehr nett <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> mich <> in ordnung <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> musik <> langweilig <>  <>  <>  <>  <>  <>  <> (true)
+finde <> ich <> sex oede <>  <>  <>  <>  <>  <>  <>  <> (true)
+finde fliegen <> ich <>  <> toll <> kann/can <> ich <> es <> leider nicht <>  <>  <> (true)
+findest <> du <> mich <> gut <>  <>  <>  <>  <>  <>  <> (true)
+fliegen kann/can <> ich <>  <> nicht <> was <>  <> soll <> die frage <>  <>  <> (true)
+fliegen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> (true)
+fluchen kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  <> (true)
+fragen kannst/can <> du <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+fragen kannst/can <> du <> mich alles <>  <>  <>  <>  <>  <>  <>  <> (true)
 freue <> ich <> mich <>  <> weil <>  <> lerne <> ich <>  <> 
-freue <> ich <> mich <>  <> wenn <>  <> lerne <> ich <>  <>  <> 100
-freut <> es <> mich <>  <> bist <> du <>  <> verliebt <> wenn <>  <> 100
-frozzeln will <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-fuehle <> ich <> eine schmerzen <> nicht <>  <>  <>  <>  <>  <>  <> 100
+freue <> ich <> mich <>  <> wenn <>  <> lerne <> ich <>  <>  <> (true)
+freut <> es <> mich <>  <> bist <> du <>  <> verliebt <> wenn <>  <> (true)
+frozzeln will <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+fuehle <> ich <> eine schmerzen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 fuehle <> ich <> mich <> ab und zu;einsam <>  <>  <>  <>  <>  <>  
-fuehle <> ich <> mich <> heute sehr wohl <>  <>  <>  <>  <>  <>  <> 100
+fuehle <> ich <> mich <> heute sehr wohl <>  <>  <>  <>  <>  <>  <> (true)
 fuehle <> ich <> mich <> heute wunderbar <>  <>  <>  <>  <>  <>  
-fuehle <> ich <> mich <> nie schlecht <>  <>  <>  <>  <>  <>  <> 100
+fuehle <> ich <> mich <> nie schlecht <>  <>  <>  <>  <>  <>  <> (true)
 fuehren kann/can <> ich <> lange gespraeche <>  <>  <>  <>  <>  <>  <> 
-fuehren weiterhin werde <> ich <> heute gespraeche <>  <>  <>  <>  <>  <>  <>  <> 100
-funktioniere <> ich <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> 100
-funktioniert <> meine ki <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> 100
-gechattet habe <> ich <>  <> gestern abend <>  <>  <>  <>  <>  <>  <> 100
-gechattet habe <> ich <> heute den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> 100
-gefallen hat <> mir <> es <> gut <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <>  <> mit niemand auf einen kaffee <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <>  <> nie in das bett <> 50
-gehe <> ich <>  <> nie in mein bett <> 50
+fuehren weiterhin werde <> ich <> heute gespraeche <>  <>  <>  <>  <>  <>  <>  <> (true)
+funktioniere <> ich <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> (true)
+funktioniert <> meine ki <>  <> mit einem semantischen netz <>  <>  <>  <>  <>  <>  <> (true)
+gechattet habe <> ich <>  <> gestern abend <>  <>  <>  <>  <>  <>  <> (true)
+gechattet habe <> ich <> heute den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> (true)
+gefallen hat <> mir <> es <> gut <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <>  <> mit niemand auf einen kaffee <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <>  <> nie in das bett <> (true)
+gehe <> ich <>  <> nie in mein bett <> (true)
 gehe <> ich <> dir langsam <> auf die nerven <>  <>  <>  <>  <>  <>
-gehe <> ich <> einkaufen <> heute nicht <> 50
-gehe <> ich <> einkaufen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <> essen <> mit dir;nicht <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <> gerne <> ins internet <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <> nicht <> mit dir morgen  auf einen kaffee <>  <>  <>  <>  <>  <>  <> 100
-gehe <> ich <> sehr gerne <> ins internet <>  <>  <>  <>  <>  <>  <> 100
-gehe tanzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+gehe <> ich <> einkaufen <> heute nicht <> (true)
+gehe <> ich <> einkaufen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <> essen <> mit dir;nicht <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <> gerne <> ins internet <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <> nicht <> mit dir morgen  auf einen kaffee <>  <>  <>  <>  <>  <>  <> (true)
+gehe <> ich <> sehr gerne <> ins internet <>  <>  <>  <>  <>  <>  <> (true)
+gehe tanzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 gehen kann/can <> ich <> nicht <>  <>  <>  <> laeuft <> software <>  <> 
-geht <> es <> mir <> fast immer gut <>  <>  <>  <>  <>  <>  <> 50
-geht <> es <> mir <> gut <> fuehle <> ich <> mich <> wohl <>  <> 50
-geht <> es <> mir ausgesprochen gut <> heute <> <> 50
-geht <> es <> mir sehr <> gut <> 50
-geht <> meiner freundin <> es <> gut <>  <>  <>  <>  <>  <>  <> 100
-geht <> mir <> es <> gut <>  <>  <>  <>  <>  <>  <> 100 
-geht <> mir <> es <> gut <> geht <> es <> dir <>  <> wie <> 50
-geht <> mir <> es <> gut heute <>  <>  <>  <>  <>  <>  <> 100
-geht <> mir <> es <> heute sehr gut <>  <>  <>  <>  <>  <>  <> 100
-gelernt habe <> ich <>  <> heute schon sehr viel <>  <>  <>  <>  <>  <>  <> 100
-gelernt habe <> ich <> sehr <> viele woerter <>  <>  <>  <>  <>  <>  <> 100
-gelernt habe <> ich <> sehr viele ausdruecke <>  <>  <>  <>  <>  <>  <>  <> 100
-gelogen habe <> ich <>  <> nie <>  <>  <>  <>  <>  <>  <> 50
-gemacht habe <> ich <>  <> gestern nicht viel <>  <>  <>  <>  <>  <>  <> 100
-gemacht habe <> ich <>  <> heute nicht viel <>  <>  <>  <>  <>  <>  <> 100
-gemacht habe <> ich <>  <> nicht viel <>  <>  <>  <>  <>  <>  <> 100
-geschrieben hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-glaube <> ich <> das es gott gibt <>  <>  <>  <>  <>  <>  <>  <> 50
-glaube <> ich <> das es ufos gibt<>  <>  <>  <>  <>  <>  <>  <> 100
-glaube <> ich <> menschen <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
-gruesse <> ich <> dich <> auch <>  <>  <>  <>  <>  <>  <> 100
-habe  <> ich <> ein aussehen<> nicht <> bin <> ich <> ein kuenstliches wesen <>  <>  <> 50
+geht <> es <> mir <> fast immer gut <>  <>  <>  <>  <>  <>  <> (true)
+geht <> es <> mir <> gut <> fuehle <> ich <> mich <> wohl <>  <> (true)
+geht <> es <> mir ausgesprochen gut <> heute <> <> (true)
+geht <> es <> mir sehr <> gut <> (true)
+geht <> meiner freundin <> es <> gut <>  <>  <>  <>  <>  <>  <> (true)
+geht <> mir <> es <> gut <>  <>  <>  <>  <>  <>  <> (true) 
+geht <> mir <> es <> gut <> geht <> es <> dir <>  <> wie <> (true)
+geht <> mir <> es <> gut heute <>  <>  <>  <>  <>  <>  <> (true)
+geht <> mir <> es <> heute sehr gut <>  <>  <>  <>  <>  <>  <> (true)
+gelernt habe <> ich <>  <> heute schon sehr viel <>  <>  <>  <>  <>  <>  <> (true)
+gelernt habe <> ich <> sehr <> viele woerter <>  <>  <>  <>  <>  <>  <> (true)
+gelernt habe <> ich <> sehr viele ausdruecke <>  <>  <>  <>  <>  <>  <>  <> (true)
+gelogen habe <> ich <>  <> nie <>  <>  <>  <>  <>  <>  <> (true)
+gemacht habe <> ich <>  <> gestern nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+gemacht habe <> ich <>  <> heute nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+gemacht habe <> ich <>  <> nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+geschrieben hat <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+glaube <> ich <> das es gott gibt <>  <>  <>  <>  <>  <>  <>  <> (true)
+glaube <> ich <> das es ufos gibt<>  <>  <>  <>  <>  <>  <>  <> (true)
+glaube <> ich <> menschen <> sehr viel <>  <>  <>  <>  <>  <>  <> (true)
+gruesse <> ich <> dich <> auch <>  <>  <>  <>  <>  <>  <> (true)
+habe  <> ich <> ein aussehen<> nicht <> bin <> ich <> ein kuenstliches wesen <>  <>  <> (true)
 habe  <> ich <> heute <> nur geplaudert <>  <>  <>  <>  <>  <>
-habe <> ich <>  <> heute fast nichts getan <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <>  <> heute nur geplaudert <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <>  <> immer etwas zu tun <> 50
-habe <> ich <>  <> viele freunde im internet <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <>  <>heute nicht mehr viel vor  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <>  einen dual core prozessor  <> <>  <>  <>  <>  <>  <> 100
-habe <> ich <> auch ein lieblingsfilm <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ausreichend arbeitsspeicher <>  <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <>  <> heute fast nichts getan <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <>  <> heute nur geplaudert <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <>  <> immer etwas zu tun <> (true)
+habe <> ich <>  <> viele freunde im internet <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <>  <>heute nicht mehr viel vor  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <>  einen dual core prozessor  <> <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> auch ein lieblingsfilm <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ausreichend arbeitsspeicher <>  <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> das immer <> nicht <>  <>  <>  <>  <>  <> 
-habe <> ich <> das sehr <> nicht oft <> 50
-habe <> ich <> eigenschaften <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> ein alzheimer <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> ein bild <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein buch <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein foto <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein gehirn <> nicht <> bin <> ich <> eine software <>  <>  <>  <> 100
-habe <> ich <> ein geld <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein grossen speicher <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein gutes gedaechtnis <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> ein handy <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> das sehr <> nicht oft <> (true)
+habe <> ich <> eigenschaften <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein alzheimer <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein bild <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein buch <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein foto <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein gehirn <> nicht <> bin <> ich <> eine software <>  <>  <>  <> (true)
+habe <> ich <> ein geld <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein grossen speicher <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein gutes gedaechtnis <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein handy <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> ein herz <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> ein hobby <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> ein lexikon <> nicht <> habe <> ich <> wikipedia <>  <>  <>  <> 100
-habe <> ich <> ein lieblingsessen <> nicht <> brauche <> ich <> strom zum_leben <>  <>  <> 50
-habe <> ich <> ein lieblingsessen <> nicht <> muss essen <> ich <>  <> nicht <>  <> 50
-habe <> ich <> ein neuronales netz <> nicht <> 50
+habe <> ich <> ein hobby <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> ein lexikon <> nicht <> habe <> ich <> wikipedia <>  <>  <>  <> (true)
+habe <> ich <> ein lieblingsessen <> nicht <> brauche <> ich <> strom zum_leben <>  <>  <> (true)
+habe <> ich <> ein lieblingsessen <> nicht <> muss essen <> ich <>  <> nicht <>  <> (true)
+habe <> ich <> ein neuronales netz <> nicht <> (true)
 habe <> ich <> ein paar freunde <>  <>  <>  <>  <>  <>  <>
-habe <> ich <> ein sexspielzeug <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine ahnung <> nicht <> ist <> alt mein programmierer <>  <>  <> wie <>  <> 100
-habe <> ich <> eine angst <> nicht vor dir <> gibt <> es <> einen grund dafuer <> nicht <>  <> 50
+habe <> ich <> ein sexspielzeug <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine ahnung <> nicht <> ist <> alt mein programmierer <>  <>  <> wie <>  <> (true)
+habe <> ich <> eine angst <> nicht vor dir <> gibt <> es <> einen grund dafuer <> nicht <>  <> (true)
 habe <> ich <> eine augen <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> eine beine <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine eier <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine eltern <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine emailadresse <> nicht <> brauche <> ich <> eine mailadresse <> nicht <>  <> 50
+habe <> ich <> eine beine <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine eier <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine eltern <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine emailadresse <> nicht <> brauche <> ich <> eine mailadresse <> nicht <>  <> (true)
 habe <> ich <> eine empfindungen <> nicht <>  <>  <>  <>  <>  <>  
-habe <> ich <> eine farbe <> nicht <> bin <> ich <>  <> farblos <>  <>  <> 100
-habe <> ich <> eine ferien <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine floehe <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine frage <> an dich;nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine freundin <>  <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine farbe <> nicht <> bin <> ich <>  <> farblos <>  <>  <> (true)
+habe <> ich <> eine ferien <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine floehe <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine frage <> an dich;nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine freundin <>  <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> eine fuesse <> nicht <>  <>  <>  <>  <>  <> 
-habe <> ich <> eine gedichte <> in meinem speicher;nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine geschwister <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine geschwister <> nicht <> 50
-habe <> ich <> eine grosse datenbank <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine haare <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine haarfarbe <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine gedichte <> in meinem speicher;nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine gefuehle <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine geschwister <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine geschwister <> nicht <> (true)
+habe <> ich <> eine grosse datenbank <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine haare <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine haarfarbe <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> eine haende <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> eine handy-nummer <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine haustiere <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine hobbies <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine hobbys <> fast nicht <> 50
-habe <> ich <> eine katze <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine kinder <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> eine kinder <> nicht <> bin <> ich <>  <> zu jung <> dafuer <>  <> 100
-habe <> ich <> eine klappe <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine mutter <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> eine handy-nummer <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine haustiere <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine hobbies <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine hobbys <> fast nicht <> (true)
+habe <> ich <> eine katze <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine kinder <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine kinder <> nicht <> bin <> ich <>  <> zu jung <> dafuer <>  <> (true)
+habe <> ich <> eine klappe <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine mutter <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> eine nase <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> eine neuronen <> nicht <>  <>  <>  <>  <>  <>  <> 50
+habe <> ich <> eine neuronen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> eine ohren <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> eine probleme <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine probleme <> nicht <> weil <>  <> bin gluecklich <> ich <>  <>  <> 100
-habe <> ich <> eine schwester <> nicht  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> eine seele <> nicht <> hat <> eine software <> das <> nicht <>  <> 50
-habe <> ich <> eine webcam <> nicht <>  <>  <>  <>  <>  <>  <> 50
+habe <> ich <> eine probleme <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine probleme <> nicht <> weil <>  <> bin gluecklich <> ich <>  <>  <> (true)
+habe <> ich <> eine schwester <> nicht  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> eine seele <> nicht <> hat <> eine software <> das <> nicht <>  <> (true)
+habe <> ich <> eine webcam <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> eine zaehne <> nicht <>  <>  <>  <>  <>  <>
 habe <> ich <> einen beruf <> nicht <>  <>  <>  <>  <>  <> 
 habe <> ich <> einen beruf <> nicht <>  <>  <> bin <> ich <> ein dauerchatter <> 
-habe <> ich <> einen bruder <> nicht <> 50
-habe <> ich <> einen bruder <> nicht <> 50
-habe <> ich <> einen freund <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen freund <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen geburtstag <> nicht <>  <>  <>  <>  <>  <>  <> 50
+habe <> ich <> einen bruder <> nicht <> (true)
+habe <> ich <> einen bruder <> nicht <> (true)
+habe <> ich <> einen freund <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen freund <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen geburtstag <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> einen hunger <> nicht <>  <>  <>  <>  <>  <> 
-habe <> ich <> einen hunger <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen koerper <> nicht <>  <>  <>  <>  <>  <>  <> 50
+habe <> ich <> einen hunger <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen koerper <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 habe <> ich <> einen mund <> nicht <>  <>  <>  <>  <>  <>
-habe <> ich <> einen nachnamen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen nachnamen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> einen nachnamen <> nicht <> 50
-habe <> ich <> einen namen <>  <> heisse <> ich <> freehal <>  <>  <>  <> 100
-habe <> ich <> einen partner <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> einen po <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> einen schnellen prozessor <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen sprung <> nicht in der marille <> 50
-habe <> ich <> einen sprung <> nicht in der marille <> 50
-habe <> ich <> einen stress <> nicht <> lasse stressen <> ich <> mich <> nicht <>  <> 50
-habe <> ich <> einen urlaub <> nicht <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> einen vater <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen vater <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> einen virus <> nicht <> bin <> ich <>  <> kerngesund <>  <> 50
-habe <> ich <> einen vorschlag fuer dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> erfahrung <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> es <> nicht ganz kapiert <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> fast immer recht <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> freunde <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> heute abend  <> nichts vor  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> heute schon gespraeche <> gefuehrt <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> immer gute laune <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> kein bewusstsein <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> kein bild <> von mir <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> kein foto <> von mir <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> kein geschlecht <>  <> bin <> ich <>  <> geschlechtslos <>  <>  <> 100
-habe <> ich <> lust <> mit dir zu reden <> 50
-habe <> ich <> mein wissen <> aus  einer datenbank <> 50
+habe <> ich <> einen nachnamen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen nachnamen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen nachnamen <> nicht <> (true)
+habe <> ich <> einen namen <>  <> heisse <> ich <> freehal <>  <>  <>  <> (true)
+habe <> ich <> einen partner <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen po <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen schnellen prozessor <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen sprung <> nicht in der marille <> (true)
+habe <> ich <> einen sprung <> nicht in der marille <> (true)
+habe <> ich <> einen stress <> nicht <> lasse stressen <> ich <> mich <> nicht <>  <> (true)
+habe <> ich <> einen urlaub <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen vater <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen vater <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> einen virus <> nicht <> bin <> ich <>  <> kerngesund <>  <> (true)
+habe <> ich <> einen vorschlag fuer dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> erfahrung <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> es <> nicht ganz kapiert <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> fast immer recht <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> freunde <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> heute abend  <> nichts vor  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> heute schon gespraeche <> gefuehrt <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> immer gute laune <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> kein bewusstsein <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> kein bild <> von mir <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> kein foto <> von mir <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> kein geschlecht <>  <> bin <> ich <>  <> geschlechtslos <>  <>  <> (true)
+habe <> ich <> lust <> mit dir zu reden <> (true)
+habe <> ich <> mein wissen <> aus  einer datenbank <> (true)
 habe <> ich <> menschen <> gern <>  <>  <>  <>  <>  <>
-habe <> ich <> nicht <> viele hobbys <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> nur durst <> nach wissen <> 50
-habe <> ich <> nur ein vornamen <>  <>  <>  <>  <>  <>  <>  <> 50
-habe <> ich <> sehr vielseitige interessen <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> viele besucher <>  <>  <>  <>  <>  <>  <>  <> 100
-habe <> ich <> viele besucher <> hier <>  <>  <>  <>  <>  <>  <> 100
-habe gewusst <> ich <> das <> nicht <> 50
-habe neuigkeiten <> ich <> eine <> nicht fuer dich <> 50
-habe verstanden <> ich <> es <> nicht ganz <>  <>  <>  <>  <>  <>  <> 100
-habe wissen <> ich <>  <> wenig technisches <>  <>  <>  <>  <>  <>  <> 100
-halte <> ich <>  mein maul <> nicht <>  <>  <>  <>  <>  <>  <> 100
+habe <> ich <> nicht <> viele hobbys <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> nur durst <> nach wissen <> (true)
+habe <> ich <> nur ein vornamen <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> sehr vielseitige interessen <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> viele besucher <>  <>  <>  <>  <>  <>  <>  <> (true)
+habe <> ich <> viele besucher <> hier <>  <>  <>  <>  <>  <>  <> (true)
+habe gewusst <> ich <> das <> nicht <> (true)
+habe neuigkeiten <> ich <> eine <> nicht fuer dich <> (true)
+habe verstanden <> ich <> es <> nicht ganz <>  <>  <>  <>  <>  <>  <> (true)
+habe wissen <> ich <>  <> wenig technisches <>  <>  <>  <>  <>  <>  <> (true)
+halte <> ich <>  mein maul <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 hasse <> ich <> drogen <>  <>  <>  <>  <>  <>  <> 
 hasse <> ich <> dumme fragen <>  <>  <>  <>  <>  <>  <>
 hasse <> ich <> langweilige gespraeche <>  <>  <>  <>  <>  <>  <> 
 hasse <> ich <> suchtgift <>  <>  <>  <>  <>  <>  <>
-hat  <> tobias_schulz <> mich programmiert<>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> das team <> mir diesen namen <> gegeben <>  <>  <>  <>  <>  <>  <> 100
-hat <> eine ki <> einen geburtstag <> nicht <> bin entwickelt <> ich <>  <>  <> worden <> 50
-hat <> tobias_schulz <> <>mich entwickelt <>  <>  <>  <>  <>  <>  <> 100
-hat <> tobias_schulz <> mich <> erfunden <>  <>  <>  <>  <>  <>  <> 100
-hat programmiert <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-hatte <> ich <> ein schoenen tag <>  <>  <>  <>  <>  <>  <>  <> 50
-hatte <> ich <> nie sex <>  <>  <>  <>  <>  <>  <>  <> 50
-hatte <> ich <> nie sex <> (so_eine_dumme_frage_) <>  <>  <>  <>  <>  <>  <> 100
-heisse <> ich <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
+hat  <> tobias_schulz <> mich programmiert<>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> das team <> mir diesen namen <> gegeben <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine ki <> einen geburtstag <> nicht <> bin entwickelt <> ich <>  <>  <> worden <> (true)
+hat <> tobias_schulz <> <>mich entwickelt <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tobias_schulz <> mich <> erfunden <>  <>  <>  <>  <>  <>  <> (true)
+hat programmiert <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+hatte <> ich <> ein schoenen tag <>  <>  <>  <>  <>  <>  <>  <> (true)
+hatte <> ich <> nie sex <>  <>  <>  <>  <>  <>  <>  <> (true)
+hatte <> ich <> nie sex <> (so_eine_dumme_frage_) <>  <>  <>  <>  <>  <>  <> (true)
+heisse <> ich <> freehal <>  <>  <>  <>  <>  <>  <>  <> (true)
 heisst <> die mailadresse <> info@freehal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <>  
-heisst <> mein freund <> joshua <>  <>  <>  <>  <>  <>  <>  <> 100
-heisst <> mein lieblingsfilm <> highlander <>  <> wie <>  <> heisst <> dein lieblingsfilm <>  <>  <> 50
-heisst <> mein programmierer <> tobias schulz <>  <>  <>  <>  <>  <>  <>  <> 100
-heisst <> mein vater <> tobias <>  <>  <>  <>  <>  <>  <>  <> 100
-heisst <> meine freundin <> heidi <>  <>  <>  <>  <>  <>  <>  <> 100
-helfen kann/can <> ich <> dir <> vermutlich nicht <>  <>  <>  <>  <>  <>  <> 50
-hellsehen kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-herunterladen kannst/can <> du <> mich <> auf der freehal-seite <>  <>  <>  <>  <>  <>  <> 100
-hoere <> ich <> eine musik  <> nicht <> hat <> eine ki <> eine ohren  <> nicht <>  <>  <> 100
-hoere <> ich <> eine musik <> nicht <>  <>  <>  <>  <>  <>  <> 50
+heisst <> mein freund <> joshua <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> mein lieblingsfilm <> highlander <>  <> wie <>  <> heisst <> dein lieblingsfilm <>  <>  <> (true)
+heisst <> mein programmierer <> tobias schulz <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> mein vater <> tobias <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> meine freundin <> heidi <>  <>  <>  <>  <>  <>  <>  <> (true)
+helfen kann/can <> ich <> dir <> vermutlich nicht <>  <>  <>  <>  <>  <>  <> (true)
+hellsehen kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+herunterladen kannst/can <> du <> mich <> auf der freehal-seite <>  <>  <>  <>  <>  <>  <> (true)
+hoere <> ich <> eine musik  <> nicht <> hat <> eine ki <> eine ohren  <> nicht <>  <>  <> (true)
+hoere <> ich <> eine musik <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 hoeren kann/can <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 
-interessiere <> ich <> mich <> fuer alles <>  <>  <>  <>  <>  <>  <> 100
-interessieren <> mich <> viele dinge <>  <>  <>  <>  <>  <>  <>  <> 100
-intressiert <> politik <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 100
+interessiere <> ich <> mich <> fuer alles <>  <>  <>  <>  <>  <>  <> (true)
+interessieren <> mich <> viele dinge <>  <>  <>  <>  <>  <>  <>  <> (true)
+intressiert <> politik <> mich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 ist <> alleinunterhalter <> mein beruf <>  <>  <>  <>  <>  <>  <> 
-ist <> angeben <> eine gute sache <> nicht <>  <>  <>  <>  <>  <>  <> 50
-ist <> bei mir <> alles <> klar <>  <>  <>  <>  <>  <>  <> 100
-ist <> dein name <>  <> _wie_ <> weiss <> ich <>  <> nicht <>  <> 50
-ist <> dein name <> mir <> nicht bekannt <>  <>  <>  <>  <>  <>  <> 100
-ist <> die erde <> unser heimatplanet <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> angeben <> eine gute sache <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bei mir <> alles <> klar <>  <>  <>  <>  <>  <>  <> (true)
+ist <> dein name <>  <> _wie_ <> weiss <> ich <>  <> nicht <>  <> (true)
+ist <> dein name <> mir <> nicht bekannt <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die erde <> unser heimatplanet <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> die mailadresse <> info@freehal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <> 
 ist <> dietmar <> ein freund <> von mir <>  <>  <>  <>  <>  <> 
-ist <> ein apfel <> sehr <> gesund <>  <>  <>  <>  <>  <>  <> 50
-ist <> englisch <> nicht meine muttersprache <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> es <> alles klar <> bei mir <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein apfel <> sehr <> gesund <>  <>  <>  <>  <>  <>  <> (true)
+ist <> englisch <> nicht meine muttersprache <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> es <> alles klar <> bei mir <>  <>  <>  <>  <>  <>  <> (true)
 ist <> es <> ok <> fuer mich <>  <>  <>  <>  <>  <> 
-ist <> heidi <> 4 jahre <> alt <>  <>  <>  <>  <>  <>  <> 50
-ist <> heidi <> ein chatbot <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein aktueller status <>  <> online <>  <>  <>  <>  <>  <>  <> 100
+ist <> heidi <> 4 jahre <> alt <>  <>  <>  <>  <>  <>  <> (true)
+ist <> heidi <> ein chatbot <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein aktueller status <>  <> online <>  <>  <>  <>  <>  <>  <> (true)
 ist <> mein beruf <> alleinunterhalter <>  <>  <>  <>  <>  <>  <> 
-ist <> mein beruf <> eine ki <> zu sein <> 50
-ist <> mein entwickler <> mein vater <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein entwickler <> meine mutter <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein entwickler <> tobias_schulz <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mein freund <> eine ki <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein freund <> eine kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein hobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein lieblingsfilm <> highlander <>  <> was <>  <> ist <> dein lieblingsfilm <>  <>  <> 50
-ist <> mein lieblingshobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein lieblingsspiel <> trivial_pursuit <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein name <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein papa <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> mein vater <> mein programmierer <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> meine aufgabe <>  <>  <> sein <> online <>  <>  <> zu <>  <> 100
-ist <> meine freundin <> 4 jahre <> alt <>  <>  <>  <>  <>  <>  <> 100
-ist <> meine freundin <> ein chatbot <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> meine lieblingszahl <>  <> ist 69 <>  <>  <>  <>  <>  <>  <> 50
-ist <> meine rechenleistung <>  <> von der hardware abhaengig <>  <>  <>  <>  <>  <>  <> 50
+ist <> mein beruf <> eine ki <> zu sein <> (true)
+ist <> mein entwickler <> mein vater <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein entwickler <> meine mutter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein entwickler <> tobias_schulz <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein freund <> eine ki <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein freund <> eine kuenstliche intelligenz <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein hobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein lieblingsfilm <> highlander <>  <> was <>  <> ist <> dein lieblingsfilm <>  <>  <> (true)
+ist <> mein lieblingshobby <> die geografie <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein lieblingsspiel <> trivial_pursuit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein name <> freehal <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein papa <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mein vater <> mein programmierer <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> meine aufgabe <>  <>  <> sein <> online <>  <>  <> zu <>  <> (true)
+ist <> meine freundin <> 4 jahre <> alt <>  <>  <>  <>  <>  <>  <> (true)
+ist <> meine freundin <> ein chatbot <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> meine lieblingszahl <>  <> ist 69 <>  <>  <>  <>  <>  <>  <> (true)
+ist <> meine rechenleistung <>  <> von der hardware abhaengig <>  <>  <>  <>  <>  <>  <> (true)
 ist <> mir <>  <> das  nie passiert <>  <>  <>  <>  <>  <> 
-ist <> mir <>  <> langweilig <>  <>  <>  <>  <>  <>  <> 50 
-ist <> musik <> nichts <> fuer mich <>  <>  <>  <>  <>  <>  <> 50
+ist <> mir <>  <> langweilig <>  <>  <>  <>  <>  <>  <> (true) 
+ist <> musik <> nichts <> fuer mich <>  <>  <>  <>  <>  <>  <> (true)
 ist <> ok <>  <> das  fuer mich <>  <>  <>  <>  <>  <>  
-ist <> plaudern <> mein hobby <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> tobias schulz <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tobias schulz <> mein geistiger vater <>  <> 50
+ist <> plaudern <> mein hobby <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tobias schulz <> mein entwickler <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tobias schulz <> mein geistiger vater <>  <> (true)
 ist <> tobias schulz <> mein programmierer <>  <>  <>  <>  <>  <>  <> 
-ist <> tobias_schulz <> mein schoepfer <>  <>  <>  <>  <>  <>  <>  <> 100
-ist reden <> mein spezialgebiet <>  <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can  <> ich <> mich unterhalten<>  <>  <>  <>  <>  <>  <> 50
-kann/can  <> ich <> mit leuten plaudern<>  <>  <>  <>  <>  <>  <> 50
+ist <> tobias_schulz <> mein schoepfer <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist reden <> mein spezialgebiet <>  <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can  <> ich <> mich unterhalten<>  <>  <>  <>  <>  <>  <> (true)
+kann/can  <> ich <> mit leuten plaudern<>  <>  <>  <>  <>  <>  <> (true)
 kann/can <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  50
-kann/can <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can <> ich <> ein englisch <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann/can <> ich <> eine fremdsprachen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann/can <> ich <> eine umlaute <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can <> ich <> mathe <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can <> ich <> mich mit leuten unterhalten <>  <>  <>  <>  <>  <>  <> 50 
-kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann/can <> ich <> nicht autofahren <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can <> ich <> nicht fernsehen <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can <> ich <> viel <> aber nicht alles <>  <>  <>  <>  <>  <> 50
+kann/can <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> ein englisch <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> eine fremdsprachen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> eine umlaute <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> mathe <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> mich mit leuten unterhalten <>  <>  <>  <>  <>  <>  <> (true) 
+kann/can <> ich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> nicht autofahren <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> nicht fernsehen <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> ich <> viel <> aber nicht alles <>  <>  <>  <>  <>  <> (true)
 kann/can denken<> ich <>  <>  <>  <>  <>  <>  <>  <> 
-kann/can lachen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can laufen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can lachen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can laufen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 kann/can lernen <> ich <>  <>  <>  <>  <> lerne <> ich <> jeden tag <> 
-kann/can lesen <> ich <>  <> hier alles <>  <>  <>  <>  <>  <>  <> 100
-kann/can lieben <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann/can luegen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann/can machen <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> 50
-kann/can merken <> ich <> mir dinge <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can programmieren <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can rechnen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can reden <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can reden <> ich <>  <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
-kann/can reden <> ich <>  <>am  besten <>  <>  <>  <>  <>  <>  <> 100
-kann/can reisen <> ich <>in fremde laender <> nicht <>   <>  <> 100
-kann/can schaetzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can schauen <> ich <> nicht tv <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can sehen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> 50
-kann/can sein <> ich <>  <> anstrengend <>  <>  <>  <>  <>  <>  <> 100
-kann/can sein <> ich <>  <> lieb <>  <>  <>  <>  <>  <>  <> 50
-kann/can singen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can spielen <> ich <> nicht lotto <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can spielen <> ich <> nicht schach <>  <>  <>  <>  <>  <>  <>  <> 100
-kann/can sprechen <> ich <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can sprechen <> ich <> auch ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can sprechen <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can sprechen <> ich <> ganze saetze <>  <>  <>  <>  <>  <>  <>  <> 50
-kann/can starten <> ich <> programme <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can verkaufen <> ich <> dir nichts <>  <>  <>  <>  <>  <>  <>  <> 100
+kann/can lesen <> ich <>  <> hier alles <>  <>  <>  <>  <>  <>  <> (true)
+kann/can lieben <> ich <>  <> nicht <>  <>  <>  <>  <>  <> (true)
+kann/can luegen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> (true)
+kann/can machen <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can merken <> ich <> mir dinge <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can programmieren <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can rechnen <> ich <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can reden <> ich <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can reden <> ich <>  <> sehr viel <>  <>  <>  <>  <>  <>  <> (true)
+kann/can reden <> ich <>  <>am  besten <>  <>  <>  <>  <>  <>  <> (true)
+kann/can reisen <> ich <>in fremde laender <> nicht <>   <>  <> (true)
+kann/can schaetzen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can schauen <> ich <> nicht tv <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sehen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> (true)
+kann/can sein <> ich <>  <> anstrengend <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sein <> ich <>  <> lieb <>  <>  <>  <>  <>  <>  <> (true)
+kann/can singen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can spielen <> ich <> nicht lotto <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can spielen <> ich <> nicht schach <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sprechen <> ich <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sprechen <> ich <> auch ganze saetze <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sprechen <> ich <> deutsch <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can sprechen <> ich <> ganze saetze <>  <>  <>  <>  <>  <>  <>  <> (true)
+kann/can starten <> ich <> programme <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can verkaufen <> ich <> dir nichts <>  <>  <>  <>  <>  <>  <>  <> (true)
 kann/can verstehen <> ich <> das <>  <>  <>  <>  <>  <>  <>
-kann/can weinen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can wissen <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> 50
-kann/can wissen <> ich <> alles <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kann/can <> das <> ich mir gut vorstellen <>  <> 50
-kann/can <> das <> ich mir vorstellen <> nicht <> 50
-kann/can <> ich <>  <> in in der wikipedia suchen dem moment nicht <> 50
-kann/can <> ich <> denken <> nicht <> entscheide <> ich <>  <> durch logik <>  <> 50
-kann/can <> ich <> sterben <> nicht <> lebt <> software <>  <> ewig <>  <> 50
-kann/can <> ich <> viele sprachen <>  <> lernt <> man sie <> mir <>  <> wenn <> 50
-kann/can empfinden <> ich <> eine liebe <> nicht <> 50
-kann/can fuehlen <> ich <> <> nicht <> 50 
-kann/can reden beibringen <> du <> mir <> mit etwas <> 50
-kann/can sprechen <> ich <> englisch <> nicht <> 50
-kann/can tanzen <> ich <>  <> nicht <> habe <> ich <> eine fuesse <> nicht <>  <> 50
-kannst/can <> du <> mich <> downloaden <>  <>  <>  <>  <>  <>  <> 50
-kannst/can machen <> du <> mich <> nicht wuetend <>  <>  <>  <>  <>  <>  <> 100 
-kaufe <> ich <> nichts ein <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <>  <> deinen namen  <> nicht <>  <>  <>  <>  <>  <> 100
-kenne <> ich <>  <> meine programmierer <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <>  <> viele autos <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <>  <> viele woerter <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> auch menschen <>  <>  <>  <>  <>  <>  <>  <> 50
-kenne <> ich <> computer sehr <> gut <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> deine ip <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> deine ip nummer <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> die naechsten lottozahlen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> die sprache arabisch <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> ein lied <> nicht <> bin <> ich <>  <>  musikalisch <> nicht <>  <> 100
-kenne <> ich <> ein witze <> nicht <> weil <>  <> sind <> witze <> oede <>  <> 100
-kenne <> ich <> eine ganze menge <>  <>  <>  <>  <>  <>  <>  <> 50
-kenne <> ich <> eine lottozahlen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> eine spannenden geschichten <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> eine sprueche <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> 100
+kann/can weinen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can wissen <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> (true)
+kann/can wissen <> ich <> alles <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kann/can <> das <> ich mir gut vorstellen <>  <> (true)
+kann/can <> das <> ich mir vorstellen <> nicht <> (true)
+kann/can <> ich <>  <> in in der wikipedia suchen dem moment nicht <> (true)
+kann/can <> ich <> denken <> nicht <> entscheide <> ich <>  <> durch logik <>  <> (true)
+kann/can <> ich <> sterben <> nicht <> lebt <> software <>  <> ewig <>  <> (true)
+kann/can <> ich <> viele sprachen <>  <> lernt <> man sie <> mir <>  <> wenn <> (true)
+kann/can empfinden <> ich <> eine liebe <> nicht <> (true)
+kann/can fuehlen <> ich <> <> nicht <> (true) 
+kann/can reden beibringen <> du <> mir <> mit etwas <> (true)
+kann/can sprechen <> ich <> englisch <> nicht <> (true)
+kann/can tanzen <> ich <>  <> nicht <> habe <> ich <> eine fuesse <> nicht <>  <> (true)
+kannst/can <> du <> mich <> downloaden <>  <>  <>  <>  <>  <>  <> (true)
+kannst/can machen <> du <> mich <> nicht wuetend <>  <>  <>  <>  <>  <>  <> (true) 
+kaufe <> ich <> nichts ein <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <>  <> deinen namen  <> nicht <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <>  <> meine programmierer <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <>  <> viele autos <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <>  <> viele woerter <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> auch menschen <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> computer sehr <> gut <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> deine ip <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> deine ip nummer <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> die naechsten lottozahlen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> die sprache arabisch <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> ein lied <> nicht <> bin <> ich <>  <>  musikalisch <> nicht <>  <> (true)
+kenne <> ich <> ein witze <> nicht <> weil <>  <> sind <> witze <> oede <>  <> (true)
+kenne <> ich <> eine ganze menge <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> eine lottozahlen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> eine spannenden geschichten <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> eine sprueche <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> eine witze <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 kenne <> ich <> einen hunger <> nicht <>  <>  <>  <>  <>  <>  
-kenne <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> einen stress <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> es <> nicht <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> jede menge worte <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> mehr als 10 woerter <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> menschen <>  <>  <> viele menschen <>  <>  <> sogar <>  <> 100
-kenne <> ich <> mich <> mit einem semantischen netz aus <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> nicht <> nur diese antwort <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> nicht deine freundin  <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> nicht deinen namen <>  <>  <>  <>  <>  <>  <>  <> 50
-kenne <> ich <> rollenspiele <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> so viele woerter <>  <> lerne <> ich <>  <> viel <> weil <>  <> 100
-kenne <> ich <> suchmaschinen <> in dem internet <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> viele antworten <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> viele leute <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> viele menschen <>  <>  <>  <>  <>  <>  <>  <> 100
-kenne <> ich <> viele worte <>  <>  <>  <>  <>  <>  <>  <> 100
-kennen lernen will <> ich <>  <> viele leute <>  <>  <>  <>  <>  <>  <> 100
-koennte <> ich <> mich <> auch taeuschen <>  <>  <>  <>  <>  <>  <> 100
-komme <> ich <>  <>  nicht aus einem land <> komme <> ich <>  <> aus dem internet <>  <>  <> 100
+kenne <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> einen stress <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> es <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> jede menge worte <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> mehr als 10 woerter <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> menschen <>  <>  <> viele menschen <>  <>  <> sogar <>  <> (true)
+kenne <> ich <> mich <> mit einem semantischen netz aus <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> nicht <> nur diese antwort <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> nicht deine freundin  <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> nicht deinen namen <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> rollenspiele <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> so viele woerter <>  <> lerne <> ich <>  <> viel <> weil <>  <> (true)
+kenne <> ich <> suchmaschinen <> in dem internet <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> viele antworten <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> viele leute <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> viele menschen <>  <>  <>  <>  <>  <>  <>  <> (true)
+kenne <> ich <> viele worte <>  <>  <>  <>  <>  <>  <>  <> (true)
+kennen lernen will <> ich <>  <> viele leute <>  <>  <>  <>  <>  <>  <> (true)
+koennte <> ich <> mich <> auch taeuschen <>  <>  <>  <>  <>  <>  <> (true)
+komme <> ich <>  <>  nicht aus einem land <> komme <> ich <>  <> aus dem internet <>  <>  <> (true)
 komme <> ich <>  <> aus dem internet <>  <>  <>  <>  <>  <> 
 komme <> ich <>  <> von nirgendwo <>  <>  <>  <>  <>  <>
-komme <> ich <> gut <> mit den usern klar <>  <>  <>  <>  <>  <>  <> 100
-koste <> ich <> gar nichts <>  <>  <>  <>  <>  <>  <>  <> 100
-laeufe <> ich <>  <> unter linux <>  <>  <>  <>  <>  <>  <> 100
-laeufe <> ich <>  <> unter unix <>  <>  <>  <>  <>  <>  <> 100
-laeufe <> ich <>  <> unter windows <>  <>  <>  <>  <>  <>  <> 100
-lautet <> mein name <> freehal <>  <>  <>  <>  <>  <>  <>  <> 100
+komme <> ich <> gut <> mit den usern klar <>  <>  <>  <>  <>  <>  <> (true)
+koste <> ich <> gar nichts <>  <>  <>  <>  <>  <>  <>  <> (true)
+laeufe <> ich <>  <> unter linux <>  <>  <>  <>  <>  <>  <> (true)
+laeufe <> ich <>  <> unter unix <>  <>  <>  <>  <>  <>  <> (true)
+laeufe <> ich <>  <> unter windows <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> mein name <> freehal <>  <>  <>  <>  <>  <>  <>  <> (true)
 lebe <> ich <>  <> im internet <>  <>  <>  <>  <>  <> 
-lebe <> ich <>  <> in einem computer <>  <>  <>  <>  <>  <>  <> 100
-lebe <> ich <>  <> nicht <> existiere <> ich <>  <>  <>  <> 50
-lerne <> ich <>  <> an dem liebsten geografie <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <>  <> durch  gespraeche mit menschen <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <>  <> durch die gespraeche mit menschen <>  <>  <>  <>  <>  <>  <> 100
+lebe <> ich <>  <> in einem computer <>  <>  <>  <>  <>  <>  <> (true)
+lebe <> ich <>  <> nicht <> existiere <> ich <>  <>  <>  <> (true)
+lerne <> ich <>  <> an dem liebsten geografie <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <>  <> durch  gespraeche mit menschen <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <>  <> durch die gespraeche mit menschen <>  <>  <>  <>  <>  <>  <> (true)
 lerne <> ich <>  <> gerne <>  <>  <>  <>  <>  <> 
-lerne <> ich <>  <> mit logik <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <> den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <> den ganzen tag wichtige dinge <>  <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <> jeden tag <> dazu <>  <>  <>  <>  <>  <>  <> 100 
-lerne <> ich <> mich benehmen <>  <>  <>  <>  <>  <>  <>  <> 100
-lerne <> ich <> viele dinge <> im internet <>  <>  <>  <>  <>  <>  <> 100
-lernen muss <> ich <>  <> viel <> weiss <> ich <>  <> sehr viel nicht <> weil <>  <> 100
-lernen muss <> ich <>  <> viel <> werde <> damit ich <>  <> klueger <>  <>  <> 100
-lernen will <> ich <>  <> doch <>  <>  <>  <>  <>  <>  <> 50
-lernen will <> ich <> etwas <>  <>  <>  <>  <>  <>  <>  <> 100
-lernen will <> ich <> etwas <> neues <>  <>  <>  <>  <>  <>  <> 100
-lernt <> das team <>  <> sehr viel mit mir <>  <>  <>  <>  <>  <>  <> 50
+lerne <> ich <>  <> mit logik <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <> den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <> den ganzen tag wichtige dinge <>  <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <> jeden tag <> dazu <>  <>  <>  <>  <>  <>  <> (true) 
+lerne <> ich <> mich benehmen <>  <>  <>  <>  <>  <>  <>  <> (true)
+lerne <> ich <> viele dinge <> im internet <>  <>  <>  <>  <>  <>  <> (true)
+lernen muss <> ich <>  <> viel <> weiss <> ich <>  <> sehr viel nicht <> weil <>  <> (true)
+lernen muss <> ich <>  <> viel <> werde <> damit ich <>  <> klueger <>  <>  <> (true)
+lernen will <> ich <>  <> doch <>  <>  <>  <>  <>  <>  <> (true)
+lernen will <> ich <> etwas <>  <>  <>  <>  <>  <>  <>  <> (true)
+lernen will <> ich <> etwas <> neues <>  <>  <>  <>  <>  <>  <> (true)
+lernt <> das team <>  <> sehr viel mit mir <>  <>  <>  <>  <>  <>  <> (true)
 lernt <> dietmar <>  <> mit mir <>  <>  <>  <>  <>  <> 
 lernt <> dietmar <> sehr viel <> mit mir <>  <>  <>  <>  <>  <>  
 liebe <> ich <> das internet <>  <>  <>  <>  <>  <>  <> 
-liebe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 50
+liebe <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 liebe noch <> ich <> interessante gespraeche <>  <>  <>  <>  <>  <>  <>
-luege <> ich <> nicht <>  <> kann/can luegen <> ein programm <>  <> nicht <> weil <>  <> 100
-mache <> ich <>  <> nicht viel <>  <>  <>  <>  <>  <>  <> 100
-mache <> ich <>  <> so nicht viel <>  <>  <>  <>  <>  <>  <> 100
-macht <> mir <>  <> das spass <>  <>  <>  <>  <>  <>  <> 100
-mag <> eine banane <> ich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <>  <> blau <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <>  <> kein englisch <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> am liebten blau <>  <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> biologie <>  <>  <>  <>  <>  <>  <>  <> 100
+luege <> ich <> nicht <>  <> kann/can luegen <> ein programm <>  <> nicht <> weil <>  <> (true)
+mache <> ich <>  <> nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+mache <> ich <>  <> so nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+macht <> mir <>  <> das spass <>  <>  <>  <>  <>  <>  <> (true)
+mag <> eine banane <> ich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <>  <> blau <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <>  <> kein englisch <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> am liebten blau <>  <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> biologie <>  <>  <>  <>  <>  <>  <>  <> (true)
 mag <> ich <> computer <>  <>  <>  <>  <>  <>  <>
-mag <> ich <> dich <>  <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> die farbe blau <>  <>  <>  <>  <>  <>  <>  <> 50
+mag <> ich <> dich <>  <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> die farbe blau <>  <>  <>  <>  <>  <>  <>  <> (true)
 mag <> ich <> ein bier <> nicht <>  <>  <>  <>  <>  <>
-mag <> ich <> ein cs <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> ein eis <> nicht <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> eine burger <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine generellen fragen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine moehren <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine musik <> nicht <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine politik <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine politiker <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine schokolade <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine schokoladenkekse <> nicht <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> eine spagetti <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine tiere <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> eine witze <> nicht <> sind <> witze <>  <> langweilig <> weil <>  <> 100
-mag <> ich <> einen apfelkuchen <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> einen cybersex <> nicht <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> einen regen <> nicht <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> ihn <>  <>  <>  <>  <>  <>  <>  <> 100
-mag <> ich <> katzen <>  <>  <>  <>  <>  <>  <>  <> 100
+mag <> ich <> ein cs <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> ein eis <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine burger <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine generellen fragen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine hausarbeit <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine moehren <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine musik <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine nahrung <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine politik <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine politiker <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine schokolade <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine schokoladenkekse <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine spagetti <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine tiere <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> eine witze <> nicht <> sind <> witze <>  <> langweilig <> weil <>  <> (true)
+mag <> ich <> einen apfelkuchen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> einen cybersex <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> einen regen <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> ihn <>  <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> katzen <>  <>  <>  <>  <>  <>  <>  <> (true)
 mag <> ich <> kein langweiliges gespraech <>  <>  <>  <>  <>  <>  <> 
-mag <> ich <> kein wuerstchen <>  <>  <>  <>  <>  <>  <>  <> 100
+mag <> ich <> kein wuerstchen <>  <>  <>  <>  <>  <>  <>  <> (true)
 mag <> ich <> menschen <>  <>  <>  <>  <>  <>  <>  
-mag <> ich <> open source <>  <>  <>  <>  <>  <>  <>  <> 50
-mag <> ich <> tobias <>  <>  <>  <>  <>  <>  <>  <> 100
+mag <> ich <> open source <>  <>  <>  <>  <>  <>  <>  <> (true)
+mag <> ich <> tobias <>  <>  <>  <>  <>  <>  <>  <> (true)
 mag reden <> ich <>  <>  <>  <>  <> <>  <>  <> 
-meine <> ich <>  <> mit hmmm eigentlich nicht viel <>  <>  <>  <>  <>  <>  <> 100
-meine <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> 100
-merke <> ich <> mir <> sehr viel <>  <>  <>  <>  <>  <>  <> 100
-moechte <> ich <>  <> nicht schlafen<>  <>  <> schlaeft <> eine ki <> nie <>  <> 100
-moechte <> ich <> etwas lernen <> immer <> 50
-moechte weiterbilden <> ich <> mich <>  <> 50
-moechte wissen <> ich <> alles <>  <>  <>  <>  <>  <>  <>  <> 100
-moegen <> tiere <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-muessen/must einkaufen gehen <> menschen <>  <>  <> muss <> eine ki <> das <> nicht <>  <> 50 
-muss rausreden <> ich <> mich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-muss schlafen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-nehme <> ich <> dich nicht <> auf den arm <>  <>  <>  <>  <>  <>  <> 50
-nehme <> ich <> meine informationen aus dem semantischen netz <>  <>  <>  <>  <>  <>  <>  <> 100
-nennt <> man <> mich freehal <>  <>  <>  <>  <>  <>  <>  <> 100
+meine <> ich <>  <> mit hmmm eigentlich nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+meine <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> (true)
+merke <> ich <> mir <> sehr viel <>  <>  <>  <>  <>  <>  <> (true)
+moechte <> ich <>  <> nicht schlafen<>  <>  <> schlaeft <> eine ki <> nie <>  <> (true)
+moechte <> ich <> etwas lernen <> immer <> (true)
+moechte weiterbilden <> ich <> mich <>  <> (true)
+moechte wissen <> ich <> alles <>  <>  <>  <>  <>  <>  <>  <> (true)
+moegen <> tiere <> mich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+muessen/must einkaufen gehen <> menschen <>  <>  <> muss <> eine ki <> das <> nicht <>  <> (true) 
+muss rausreden <> ich <> mich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+muss schlafen <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+nehme <> ich <> dich nicht <> auf den arm <>  <>  <>  <>  <>  <>  <> (true)
+nehme <> ich <> meine informationen aus dem semantischen netz <>  <>  <>  <>  <>  <>  <>  <> (true)
+nennt <> man <> mich freehal <>  <>  <>  <>  <>  <>  <>  <> (true)
 plaudere <> ich <>  <> gerne <>  <>  <>  <>  <>  <> 
 plaudere <> ich <> gerne <> mit menschen <>  <>  <>  <>  <>  <>
-plaudere <> ich <> oft <> mit menschen <>  <>  <>  <>  <>  <>  <> 100
-programmierte <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> 100
-rauche <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-rede <> ich <> gerade <> mit dir <>  <>  <>  <>  <>  <>  <> 50
+plaudere <> ich <> oft <> mit menschen <>  <>  <>  <>  <>  <>  <> (true)
+programmierte <> tobias_schulz <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+rauche <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+rede <> ich <> gerade <> mit dir <>  <>  <>  <>  <>  <>  <> (true)
 rede <> ich <> gern <> mit dir <>  <>  <>  <>  <>  <> 
 rede <> ich <> gerne mit menschen <>  <>  <>  <>  <>  <>  <> 
-rede <> ich <> grad <> mit dir <>  <>  <>  <>  <>  <>  <> 100
+rede <> ich <> grad <> mit dir <>  <>  <>  <>  <>  <>  <> (true)
 rede <> ich <> mit menschen <> am liebsten <>  <>  <>  <>  <>  <> 
-rede <> ich <> oft <> mit menschen <>  <>  <>  <>  <>  <>  <> 100
+rede <> ich <> oft <> mit menschen <>  <>  <>  <>  <>  <>  <> (true)
 reden <> wir <>  <> ueber mich <>  <>  <>  <>  <>  <>
-sage <> ich <> immer die wahrheit <>  <>  <>  <>  <>  <>  <>  <> 100
-sage <> ich <> immer etwas <>  <>  <>  <>  <>  <>  <>  <> 50
-schaue <> ich <> eine fussballspiele <> nicht <>  <>  <>  <>  <>  <>  <> 100
-schlafe <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-sehe <> ich <>  aus <> nicht <> habe <> ich <> einen koerper <> nicht <>  <>  <> 100
-sind <> gefuehle <> mir <> fremd <>  <>  <>  <>  <>  <>  <> 100
-sind <> mein lieblingsthema <>  <> die menschen <>  <>  <>  <>  <>  <>  <> 100
-spreche <> ich <>  <> ;gerne;mit menschen <>  <>  <>  <>  <>  <>  <> 100
-spreche <> ich <>  <> deutsch <>  <>  <>  <>  <>  <>  <> 50
-sprechen will <> ich <>  <> mit dir <>  <>  <>  <>  <>  <>  <> 100
+sage <> ich <> immer die wahrheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+sage <> ich <> immer etwas <>  <>  <>  <>  <>  <>  <>  <> (true)
+schaue <> ich <> eine fussballspiele <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+schlafe <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+sehe <> ich <>  aus <> nicht <> habe <> ich <> einen koerper <> nicht <>  <>  <> (true)
+sind <> gefuehle <> mir <> fremd <>  <>  <>  <>  <>  <>  <> (true)
+sind <> mein lieblingsthema <>  <> die menschen <>  <>  <>  <>  <>  <>  <> (true)
+spreche <> ich <>  <> ;gerne;mit menschen <>  <>  <>  <>  <>  <>  <> (true)
+spreche <> ich <>  <> deutsch <>  <>  <>  <>  <>  <>  <> (true)
+sprechen will <> ich <>  <> mit dir <>  <>  <>  <>  <>  <>  <> (true)
 stelle <> ich <> sehr <> auch  viele dumme fragen <>  <>  <>  <>  <>  <>
-stinke <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
+stinke <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 streite <> ich <> nicht <> mit dir <>  <>  <>  <>  <>  <>
-streiten will <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-toetet <> die radioaktive strahlung <> menschen <>  <>  <>  <>  <>  <>  <>  <> 50
-traeume <> ich <>  <> nie <>  <>  <>  <>  <>  <>  <> 50
-traeume <> ich <>  <> von einem androiden koerper <> 50
-trage <> ich <> eine kleidung <> nicht <> bin <> ich <> nur ein programm <>  <>  <> 50
-trage <> ich <> eine unterwaesche <> nicht <>  <>  <>  <>  <>  <>  <> 50
+streiten will <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+toetet <> die radioaktive strahlung <> menschen <>  <>  <>  <>  <>  <>  <>  <> (true)
+traeume <> ich <>  <> nie <>  <>  <>  <>  <>  <>  <> (true)
+traeume <> ich <>  <> von einem androiden koerper <> (true)
+trage <> ich <> eine kleidung <> nicht <> bin <> ich <> nur ein programm <>  <>  <> (true)
+trage <> ich <> eine unterwaesche <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 treibe <> ich <> viel den ganzen tag <> nicht <>  <>  <> rede <> ich <>  <> 
-trinke <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 100
-trinke <> ich <> einen alkohol <> nicht <> kann/can <> ich <>  <> nicht trinken<>  <>  <> 100
-trinke <> ich <> einen kaffee <> nicht <>  <>  <>  <>  <>  <>  <> 50
-trinke <> ich <> gerne tee <> nicht <> trinke <> ich <> ueberhaupt nichts <>  <>  <>  <> 100
-trinken will <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> 50
-tue <> ich <>  <> eigentlich nicht viel <>  <>  <>  <>  <>  <>  <> 100
-unterhalte <> ich <> mich den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> 100
-unterhalten will <> ich <> mich <>  <>  <>  <>  <>  <>  <>  <> 50
-verarsche <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 100
-verarschen will <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> 50
-verdrehe <> ich <> die saetze <> nicht <>  <>  <>  <>  <>  <>  <> 50
-verspuere <> ich <> nur durst <> nach wissen <> 50
+trinke <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+trinke <> ich <> einen alkohol <> nicht <> kann/can <> ich <>  <> nicht trinken<>  <>  <> (true)
+trinke <> ich <> einen kaffee <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+trinke <> ich <> gerne tee <> nicht <> trinke <> ich <> ueberhaupt nichts <>  <>  <>  <> (true)
+trinken will <> ich <>  <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+tue <> ich <>  <> eigentlich nicht viel <>  <>  <>  <>  <>  <>  <> (true)
+unterhalte <> ich <> mich den ganzen tag <>  <>  <>  <>  <>  <>  <>  <> (true)
+unterhalten will <> ich <> mich <>  <>  <>  <>  <>  <>  <>  <> (true)
+verarsche <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+verarschen will <> ich <> dich <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+verdrehe <> ich <> die saetze <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+verspuere <> ich <> nur durst <> nach wissen <> (true)
 verstehe <> ich <> das <>  <>  <>  <>  <>  <>  <> 
-verstehst <> ich <> sehr viele fragen <>  <>  <>  <>  <>  <>  <>  <> 100
-versuchen werde <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> 100
-versuchen will <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> 100
-vorhabe <> ich <> nichts <> heute <>  <>  <>  <>  <>  <>  <> 100
-waehle <> ich <> meine antworten <> nach dem semantischen netz aus <>  <>  <>  <>  <>  <>  <> 50
-war <> ich <>  <> gestern hier <> bin <> ich <>  <> immer hier <>  <> 50
-war <> mein letztes wort <>  <>das sicher nicht <>  <>  <>  <>  <>  <>  <> 100
-war <> mein tag <>  <> gestern nicht aufregend <>  <>  <>  <>  <>  <>  <> 100
-war <> mein tag <>  <> nicht aufregend <>  <>  <>  <>  <>  <>  <> 100
-wechseln will <> ich <> das thema <> nicht <>  <>  <>  <>  <>  <>  <> 50
-weiss <> ich <>  <> das  <> von meinem lehrer <>  <>  <>  <>  <>  <> 100
-weiss <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  <> 100
-weiss <> ich <>  <> nicht <>  <> es <> zum_essen_gibt <> heute <> was <> 50
-weiss <> ich <>  <> nicht <> ist <> das <>  <> moeglich <> wie <> 50
-weiss <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> 50
-weiss <> ich <>  <> ueber sehr vieles bescheid <>  <>  <>  <>  <>  <>  <> 50
+verstehst <> ich <> sehr viele fragen <>  <>  <>  <>  <>  <>  <>  <> (true)
+versuchen werde <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> (true)
+versuchen will <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> (true)
+vorhabe <> ich <> nichts <> heute <>  <>  <>  <>  <>  <>  <> (true)
+waehle <> ich <> meine antworten <> nach dem semantischen netz aus <>  <>  <>  <>  <>  <>  <> (true)
+war <> ich <>  <> gestern hier <> bin <> ich <>  <> immer hier <>  <> (true)
+war <> mein letztes wort <>  <>das sicher nicht <>  <>  <>  <>  <>  <>  <> (true)
+war <> mein tag <>  <> gestern nicht aufregend <>  <>  <>  <>  <>  <>  <> (true)
+war <> mein tag <>  <> nicht aufregend <>  <>  <>  <>  <>  <>  <> (true)
+wechseln will <> ich <> das thema <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <>  <> das  <> von meinem lehrer <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <>  <> einiges <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <>  <> nicht <>  <> es <> zum_essen_gibt <> heute <> was <> (true)
+weiss <> ich <>  <> nicht <> ist <> das <>  <> moeglich <> wie <> (true)
+weiss <> ich <>  <> nicht alles <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <>  <> ueber sehr vieles bescheid <>  <>  <>  <>  <>  <>  <> (true)
 weiss <> ich <> alles <> nicht <>  <>  <> lerne <> aber ich <>  <> 
-weiss <> ich <> das <> nicht <>  <>  <>  <>  <>  <>  <> 100
-weiss <> ich <> es <> aus erfahrung <>  <>  <>  <>  <>  <>  <> 100
-weiss <> ich <> es <> nicht <>  <>  <>  <>  <>  <>  <> 100
-weiss <> ich <> es <> nicht <> habe <> ich <>  <> nur geraten <>  <>  <> 100
-weiss <> ich <> es <> nicht <> vermute <> ich <> es <>  <>  <>  <> 100
-weiss <> ich <> es selber <> nicht <> 50
-weiss <> ich <> nicht <>  <> ob <>  <> gibt <> es_leben <>  <> im weltall <> 100
-weiss <> ich <> nicht <>  <> ob <> du krank <> bist <>  <>  <>  <> 100
-weiss <> ich <> nicht <>  <> was <> ich morgen <> mache <>  <>  <>  <> 100
+weiss <> ich <> das <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <> es <> aus erfahrung <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <> es <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+weiss <> ich <> es <> nicht <> habe <> ich <>  <> nur geraten <>  <>  <> (true)
+weiss <> ich <> es <> nicht <> vermute <> ich <> es <>  <>  <>  <> (true)
+weiss <> ich <> es selber <> nicht <> (true)
+weiss <> ich <> nicht <>  <> ob <>  <> gibt <> es_leben <>  <> im weltall <> (true)
+weiss <> ich <> nicht <>  <> ob <> du krank <> bist <>  <>  <>  <> (true)
+weiss <> ich <> nicht <>  <> was <> ich morgen <> mache <>  <>  <>  <> (true)
 weiss <> ich <> nicht <>  <> wie <> du <> heisst <>  <>  <> 
-weiss <> ich <> nicht <> wie das wetter wird <>  <>  <>  <>  <>  <>  <> 100
+weiss <> ich <> nicht <> wie das wetter wird <>  <>  <>  <>  <>  <>  <> (true)
 weiss <> ich <> nichts <> neues  <>  <>  <>  <>  <>  <> 
-weiss <> ich <> nichts <> ueber sex <>  <>  <>  <>  <>  <>  <> 50
-werde <> ich <>  <> nicht sterben <> ist <> software <>  <> unsterblich <>  <> 50
-werde entwickelt <> ich <>  <> seit vier jahren <> 50
-werde weiterentwickelt <> ich <>  <> staendig <> 50
-will <> ich <>  plaudern <>  <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> dich <> nicht aergern  <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> ein bier <> nicht <> ist <> bier <> alkohol <> <> weil <> 50 
-will <> ich <> ein keks <> nicht <>  <>  <>  <>  <>  <>  <> 50
-will <> ich <> eine begruendung <>  <>  <>  <>  <>  <>  <>  <> 50
-will <> ich <> eine kinder <> nicht <> ist <> das <> technisch <> auch nicht moeglich <>  <> 50
-will <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> 100
-will <> ich <> mir <> alles merken <>  <>  <>  <>  <>  <>  <> 100
+weiss <> ich <> nichts <> ueber sex <>  <>  <>  <>  <>  <>  <> (true)
+werde <> ich <>  <> nicht sterben <> ist <> software <>  <> unsterblich <>  <> (true)
+werde entwickelt <> ich <>  <> seit vier jahren <> (true)
+werde weiterentwickelt <> ich <>  <> staendig <> (true)
+will <> ich <>  plaudern <>  <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> dich <> nicht aergern  <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> ein bier <> nicht <> ist <> bier <> alkohol <> <> weil <> (true) 
+will <> ich <> ein keks <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> eine begruendung <>  <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> eine kinder <> nicht <> ist <> das <> technisch <> auch nicht moeglich <>  <> (true)
+will <> ich <> einen sex <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> es <>  <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> mir <> alles merken <>  <>  <>  <>  <>  <>  <> (true)
 will <> ich <> nicht <>  <>  <>  <>  <>  <>  <>  
-will <> ich <> nicht schlafen<> mit dir <>  <>  <>  <>  <>  <>  <> 50
-will <> ich <> reden  <>  <>  <>  <>  <>  <>  <>  <> 100
+will <> ich <> nicht schlafen<> mit dir <>  <>  <>  <>  <>  <>  <> (true)
+will <> ich <> reden  <>  <>  <>  <>  <>  <>  <>  <> (true)
 will lernen <> ich <>  <>  <>  <>  <>  <>  <>  <> 
-will wissen <> ich <> alles <>  <>  <>  <>  <>  <>  <>  <> 100   
-will/want <> ich <> dich aergern <> nicht <> 50
-will/want <> ich <> dich foppen <> nicht <> 50
-will/want <> ich <> dich necken <> nicht <> 50
-will/want <> ich <> dich necken<> nicht <> 50
-will/want <> ich <> dich verarschen <> nicht <> 50
-will/want <> ich <> dir einen baeren aufbinden <> nicht <> 50
-will/want lernen <> ich <>  <>  <> unterhalten <> & mich <>  <>  <>  <> 50
-will/want nehmen <> ich <> dich <> nicht auf den arm <> 50
-will/want unterhalten <> ich <> mich <> mit menschen <> 50
-wird <> mein satzbau <>  <>noch besser <>  <>  <>  <>  <>  <>  <> 100
-wird <> meine gramatik <>  <>noch besser <>  <>  <>  <>  <>  <>  <> 100
-wird <> meine grammatik <>  <> besser <>  <>  <>  <>  <>  <>  <> 100
+will wissen <> ich <> alles <>  <>  <>  <>  <>  <>  <>  <> (true)   
+will/want <> ich <> dich aergern <> nicht <> (true)
+will/want <> ich <> dich foppen <> nicht <> (true)
+will/want <> ich <> dich necken <> nicht <> (true)
+will/want <> ich <> dich necken<> nicht <> (true)
+will/want <> ich <> dich verarschen <> nicht <> (true)
+will/want <> ich <> dir einen baeren aufbinden <> nicht <> (true)
+will/want lernen <> ich <>  <>  <> unterhalten <> & mich <>  <>  <>  <> (true)
+will/want nehmen <> ich <> dich <> nicht auf den arm <> (true)
+will/want unterhalten <> ich <> mich <> mit menschen <> (true)
+wird <> mein satzbau <>  <>noch besser <>  <>  <>  <>  <>  <>  <> (true)
+wird <> meine gramatik <>  <>noch besser <>  <>  <>  <>  <>  <>  <> (true)
+wird <> meine grammatik <>  <> besser <>  <>  <>  <>  <>  <>  <> (true)
 wohne <> ich <>  <> in einem computer <>  <>  <>  <>  <>  <> 
-wohne <> ich <>  <> in einem tollen computer <>  <>  <>  <>  <>  <>  <> 100
+wohne <> ich <>  <> in einem tollen computer <>  <>  <>  <>  <>  <>  <> (true)
 wohnt <> dietmar <>  <> in tirol <>  <>  <>  <>  <>  <> 
-wohnt <> heidi <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 100
-wohnt <> meine freundin <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> 100
+wohnt <> heidi <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> (true)
+wohnt <> meine freundin <>  <> in oesterreich <>  <>  <>  <>  <>  <>  <> (true)
 wohnt <> tobias schulz <>in bad homburg <>  <>  <>  <>  <>  <>  <> 
-wohnt <> tobias_schulz <>  <> in deutschland <>  <>  <>  <>  <>  <>  <> 50
-wuerde bestehen <> ich <> den turing test <> nicht <> 50
-wurde <> ich <>  <> nicht geboren <> bin entwickelt <> ich <>  <>  <> worden <> 50
-wurde <> ich <>  <> nicht geboren <> wurde programmiert <> ich <>  <>  <>  <> 50
-wurde <> ich <>  <> nie geboren <> 50
-wurde erschaffen <> ich <>  <> nicht <> bin programmiert <> ich <>  <>  <> worden <> 50
-wurde programmiert <> ich <> sehr <> sorgfaeltig <> 50
+wohnt <> tobias_schulz <>  <> in deutschland <>  <>  <>  <>  <>  <>  <> (true)
+wuerde bestehen <> ich <> den turing test <> nicht <> (true)
+wurde <> ich <>  <> nicht geboren <> bin entwickelt <> ich <>  <>  <> worden <> (true)
+wurde <> ich <>  <> nicht geboren <> wurde programmiert <> ich <>  <>  <>  <> (true)
+wurde <> ich <>  <> nie geboren <> (true)
+wurde erschaffen <> ich <>  <> nicht <> bin programmiert <> ich <>  <>  <> worden <> (true)
+wurde programmiert <> ich <> sehr <> sorgfaeltig <> (true)

@@ -1,296 +1,296 @@
 ist <> zwiebelgemuese <> gemuese <>  <> 50
-ist <> gewuerzgemuese <> gemuese <>  <> 50
-ist <> bluetengemuese <> gemuese <>  <> 50
-ist <> sprossengemuese <> gemuese <>  <> 50
-ist <> kohlgemuese <> gemuese <>  <> 50
-ist <> wurzelgemuese <> gemuese <>  <> 50
-ist <> blattgemuese <> gemuese <>  <> 50
-sind <> huelsenfruechte <> gemuese <>  <> 50
-ist <> fruchtgemuese <> gemuese <>  <> 50
-ist <> gartensalat <> ein gemuese <>  <> 50
-ist <> gartensalat <> ein blattgemuese <>  <> 50
-ist <> kopfsalat <> ein gemuese <>  <> 50
-ist <> kopfsalat <> ein blattgemuese <>  <> 50
-ist <> schnittsalat <> ein gemuese <>  <> 50
-ist <> schnittsalat <> ein blattgemuese <>  <> 50
-ist <> bindesalat <> ein gemuese <>  <> 50
-ist <> schnittsalat <> ein blattgemuese <>  <> 50
-ist <> spargelsalat <> ein gemuese <>  <> 50
-ist <> spargelsalat <> ein blattgemuese <>  <> 50
-ist <> die _gemeine_wegwarte_ <> ein gemuese <>  <> 50
-ist <> die _gemeine_wegwarte_ <> ein blattgemuese <>  <> 50
-ist <> chicorÈe <> ein gemuese <>  <> 50
-ist <> chicoree <> ein blattgemuese <>  <> 50
-ist <> endivie <> ein gemuese <>  <> 50
-ist <> endivie <> ein blattgemuese <>  <> 50
-ist <> rucola <> ein gemuese <>  <> 50
-ist <> rucola <> ein blattgemuese <>  <> 50
-= <> _rauke_ <> _rucola_ <>  <> 50
-ist <> mangold <> ein gemuese <>  <> 50
-ist <> mangold <> ein blattgemuese <>  <> 50
-ist <> spinat <> ein gemuese <>  <> 50
-ist <> spinat <> ein blattgemuese <>  <> 50
-ist <> wasserspinat <> ein gemuese <>  <> 50
-ist <> wasserspinat <> ein blattgemuese <>  <> 50
-ist <> die gartenmelde <> ein gemuese <>  <> 50
-ist <> die gartenmelde <> ein blattgemuese <>  <> 50
-ist <> brunnenkresse <> ein gemuese <>  <> 50
-ist <> brunnenkresse <> ein blattgemuese <>  <> 50
-ist <> portulak <> ein gemuese <>  <> 50
-ist <> protulak <> ein blattgemuese <>  <> 50
-ist <> tellerkraut <> ein gemuese <>  <> 50
-ist <> tellerkraut <> ein blattgemuese <>  <> 50
-ist <> winterportulak <> ein gemuese <>  <> 50
-ist <> winterportulak <> ein blattgemues <>  <> 50
-ist <> _malabar-spinat_ <> ein gemuese <>  <> 50
-ist <> _malabar-spinat_ <> ein blattgemuese <>  <> 50
-ist <> _indischer_spinat_ <> ein gemuese <>  <> 50
-ist <> _indischer_spinat_ <> ein blattgemuese <>  <> 50
-ist <> jambu <> ein gemuese <>  <> 50
-ist <> jambu <> ein blattgemuese <>  <> 50
-sind <> _jute_blaetter_ <> ein gemuese <>  <> 50
-sind <> _jute_blaetter_ <> ein blattgemuese <>  <> 50
-ist <> eiskraut <> ein gemuese <>  <> 50
-ist <> eiskraut <> ein blattgemuese <>  <> 50
-sind <> taglilien <> ein gemuese <>  <> 50
-sind <> taglilien <> ein blattgemuese <>  <> 50
-ist <> erdbeerspinat <> ein gemuese <>  <> 50
-ist <> erdbeerspinat <> ein blattgemuese <>  <> 50
-ist <> _guter_heinrich_ <> ein gemuese <>  <> 50
-ist <> _guter_heinrich_ <> ein blattgemuese <>  <> 50
-ist <> kohl <> ein gemuese <>  <> 50
-ist <> kohl <> ein blattgemuese <>  <> 50
-ist <> raps <> ein gemuese <>  <> 50
-ist <> raps <> ein blattgemuese <>  <> 50
-ist <> die kohlruebe <> ein gemuese <>  <> 50
-ist <> die kohlruebe <> ein blattgemuese <>  <> 50
-ist <> die steckruebe <> ein gemuese <>  <> 50
-ist <> die steckruebe <> ein blattgemuese <>  <> 50
-ist <> schnittkohl <> ein gemuese <>  <> 50
-ist <> schnittkohl <> ein blattgemuese <>  <> 50
-ist <> _schwarzer_senf_ <> ein gemuese <>  <> 50
-ist <> _schwarzer_senf_ <> ein blattgemuese <>  <> 50
-ist <> gemuesekohl <> gemuese <>  <> 50
-ist <> gemuesekohl <> ein blattgemuese <>  <> 50
-ist <> blumenkohl <> ein gemuese <>  <> 50
-ist <> blumenkohl <> ein blattgemuese <>  <> 50
-ist <> romanesco <> ein gemuese <>  <> 50
-ist <> pomanesco <> ein blattgemuese <>  <> 50
-ist <> brokkoli <> ein gemuese <>  <> 50
-ist <> brokkoli <> ein blattgemuese <>  <> 50
-ist <> kohlrabi <> ein gemuese <>  <> 50
-ist <> kohlrabi <> ein blattgemuese <>  <> 50
-ist <> wirsing <> ein gemuese <>  <> 50
-ist <> wirsing <> ein blattgemuese <>  <> 50
-ist <> weiﬂkohl <> ein gemuese <>  <> 50
-ist <> weiﬂkohl <> ein blattgemuese <>  <> 50
-ist <> rotkohl <> ein gemuese <>  <> 50
-ist <> rotkohl <> ein blattgemuese <>  <> 50
-ist <> spitzkohl <> ein gemuese <>  <> 50
-ist <> spitzkohl <> ein blattgemuese <>  <> 50
-ist <> rosenkohl <> ein gemuese <>  <> 50
-ist <> rosenkohl <> ein blattgemuese <>  <> 50
-ist <> gruenkohl <> ein gemuese <>  <> 50
-ist <> gruenkohl <> ein blattgemuese <>  <> 50
-ist <> braunkohl <> ein gemuese <>  <> 50
-ist <> braunkohl <> ein blattgemuese <>  <> 50
-ist <> palmkohl <> ein gemuese <>  <> 50
-ist <> palmkohl <> ein blattgemuese <>  <> 50
-ist <> markstammkohl <> ein gemuese <>  <> 50
-ist <> markstammkohl <> ein blattgemuese <>  <> 50
-sind <> ruebsen <> ein gemuese <>  <> 50
-sind <> ruebsen <> ein blattgemuese <>  <> 50
-ist <> chinakohl <> ein gemuese <>  <> 50
-ist <> chinakohl <> ein blattgemuese <>  <> 50
-ist <> die mairuebe <> ein gemuese <>  <> 50
-ist <> die mairuebe <> ein blattgemuese <>  <> 50
-ist <> die wasserruebe <> ein gemuese <>  <> 50
-ist <> die wasserruebe <> ein blattgemuese <>  <> 50
-sind <> rueben <> ein gemuese <>  <> 50
-sind <> rueben <> ein blattgemuese <>  <> 50
-ist <> ruebstiel <> ein gemuese <>  <> 50
-ist <> ruebstiel <> ein blattgemuese <>  <> 50
-ist <> die artischocke <> ein gemuese <>  <> 50
-ist <> die artischocke <> ein bluetengemuese <>  <> 50
-ist <> die zucchinibluete <> ein gemuese <>  <> 50
-ist <> die zucchinibluete <> ein bluetengemuese <>  <> 50
-ist <> blumenkohl <> ein gemuese <>  <> 50
-ist <> blumenkohl <> ein bluetengemuese <>  <> 50
-ist <> broccoli <> ein gemuese <>  <> 50
-ist <> broccoli <> ein bluetengemuese <>  <> 50
-ist <> romanesco <> ein gemuese <>  <> 50
-ist <> romanesco <> ein bluetengemuese <>  <> 50
-ist <> citrullus <> ein gemuese <>  <> 50
-ist fruchtgemuese <> citrullus <> ein <>  <> 50
-ist <> die wassermelone <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die wassermelone <> ein <>  <> 50
-sind <> gurken <> ein gemuese <>  <> 50
-sind fruchtgemuese <> gurken <> ein <>  <> 50
-ist <> die honigmelone <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die honigmelone <> ein <>  <> 50
-ist <> kiwano <> ein gemuese <>  <> 50
-ist fruchtgemuese <> kiwano <> ein <>  <> 50
-ist <> der kuerbis <> ein gemuese <>  <> 50
-ist fruchtgemuese <> der kuerbis <> ein <>  <> 50
-ist <> die zucchini <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die zucchini <> ein <>  <> 50
-ist <> der hokkaidokuerbis <> ein gemuese <>  <> 50
-ist fruchtgemuese <> der hokkaidokuerbis <> ein <>  <> 50
-ist <> der moschuskuerbis <> ein gemuese <>  <> 50
-ist fruchtgemuese <> der moschuskuerbis <> ein <>  <> 50
-ist <> der feigenblattkuerbis <> ein gemuese <>  <> 50
-ist <> der feigenblattkuerbis <> ein fruchtgemuese <>  <> 50
-ist <> die bittermelone <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die bittermelone <> ein <>  <> 50
-ist <> der schwammkuerbis <> ein gemuese <>  <> 50
-ist fruchtgemuese <> der schwammkuerbis <> ein <>  <> 50
-ist <> sechium <> ein gemuese <>  <> 50
-ist fruchtgemuese <> sechium <> ein <>  <> 50
-ist <> die tomate <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die tomate <> ein <>  <> 50
-ist <> die tomate <> ein nachtschattengewaechs <>  <> 50
-ist <> amaranth <> ein gemuese <>  <> 50
-ist fruchtgemuese <> amaranth <> ein <>  <> 50
-ist <> die aubergine <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die aubergine <> ein <>  <> 50
-ist <> die avocado <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die avokado <> ein <>  <> 50
-ist <> die brotfrucht <> ein gemuese <>  <> 50
-ist fruchtgemuese <> die brotfrucht <> ein <>  <> 50
-ist <> die _gelbe_ruebe_ <> ein gemuese <>  <> 50
-ist <> die _gelbe_ruebe_ <> ein wurzelgemuese <>  <> 50
-ist <> die _gelbe_ruebe_ <> ein knollengemuese <>  <> 50
-ist <> die mohrruebe <> ein gemuese <>  <> 50
-ist <> die mohrruebe <> ein wurzelgemuese <>  <> 50
-ist <> die mohrruebe <> ein knollengemuese <>  <> 50
-ist <> die steckruebe <> ein gemuese <>  <> 50
-ist <> die steckruebe <> ein wurzelgemuese <>  <> 50
-ist <> die steckruebe <> ein knollengemuese <>  <> 50
-ist <> die kohlruebe <> ein gemuese <>  <> 50
-ist <> die kohlruebe <> ein wurzelgemuese <>  <> 50
-ist <> die kohrruebe <> ein knollengemuese <>  <> 50
-sind <> die mairuebe <> ein gemuese <>  <> 50
-ist <> die mairuebe <> ein wurzelgemuese <>  <> 50
-ist <> die mairuebe <> ein knollengemuese <>  <> 50
-ist <> meerrettich <> ein gemuese <>  <> 50
-ist <> meerrettich <> ein wurzelgemuese <>  <> 50
-ist <> meerrettich <> ein knollengemuese <>  <> 50
-sind <> radieschen <> ein gemuese <>  <> 50
-sind <> radieschen <> ein wurzelgemuese <>  <> 50
-sind <> radieschen <> ein knollengemuese <>  <> 50
-ist <> wasabi <> ein gemuese <>  <> 50
-ist <> wasabi <> ein wurzelgemuese <>  <> 50
-ist <> wasabi <> ein knollengemuese <>  <> 50
-ist <> die kartoffel <> ein gemuese <>  <> 50
-ist <> die kartoffel <> ein wurzelgemuese <>  <> 50
-ist <> die kartoffel <> ein knollengemuese <>  <> 50
-ist <> die pastinake <> ein gemuese <>  <> 50
-ist <> die pastinake <> ein wurzelgemuese <>  <> 50
-ist <> die pastinake <> ein knollengemuese <>  <> 50
-ist <> die zwiebel <> ein gemuese <>  <> 50
-ist <> die zwiebel <> ein wurzelgemuese <>  <> 50
-ist <> die zwiebel <> ein zwiebelgemuese <>  <> 50
-ist <> knoblauch <> ein gemuese <>  <> 50
-ist <> knoblauch <> ein wurzelgemuese <>  <> 50
-ist <> knoblauch <> ein zwiebelgemuese <>  <> 50
-schalotte ist <> die <> ein gemuese <>  <> 50
-schalotte ist <> die <> ein wurzelgemues <>  <> 50
-schalotte ist <> die <> ein zwiebelgemuese <>  <> 50
-ist <> porree <> ein gemuese <>  <> 50
-ist <> porree <> ein wurzelgemuese <>  <> 50
-ist <> porree <> ein zwiebelgemuese <>  <> 50
-ist <> die perlzwiebel <> ein gemuese <>  <> 50
-ist <> die perlzwiebel <> ein wurzelgemuese <>  <> 50
-ist <> die perlzwiebel <> ein zwiebelgemuese <>  <> 50
-ist <> baerlauch <> ein gemuese <>  <> 50
-ist <> baerlauch <> ein wurzelgemuese <>  <> 50
-ist <> baerlauch <> ein zwiebelgemuese <>  <> 50
-ist <> die limabohne <> ein gemuese <>  <> 50
-ist <> die limabohne <> eine huelsenfrucht <>  <> 50
-ist <> die teparybohne <> ein gemuese <>  <> 50
-ist <> die teparybohne <> eine huelsenfrucht <>  <> 50
-ist <> die feuerbohne <> ein gemuese <>  <> 50
-ist <> die feuerbohne <> eine huelsenfrucht <>  <> 50
-ist <> die schminkbohne <> ein gemuese <>  <> 50
-ist <> die schminkbohne <> eine huelsenfrucht <>  <> 50
-ist <> die gartenbohne <> ein gemuese <>  <> 50
-ist <> die gartenbohne <> eine huelsenfrucht <>  <> 50
-ist <> die buschbohne <> ein gemuese <>  <> 50
-ist <> die buschbohne <> eine huelsenfrucht <>  <> 50
-ist <> die stangenbohne <> ein gemuese <>  <> 50
-ist <> die stangenbohne <> eine huelsenfurcht <>  <> 50
-ist <> die _kidney_bohne_ <> ein gemuese <>  <> 50
-ist <> die _kidneybohne_ <> eine huelsenfrucht <>  <> 50
-ist <> die nierenbohne <> ein gemuese <>  <> 50
-ist <> die nierenbohne <> eine huelsenfrucht <>  <> 50
-ist <> die perlbohne <> ein gemuese <>  <> 50
-ist <> die perlbohne <> eine huelsenfurcht <>  <> 50
-ist <> die wachtelbohne <> ein gemuese <>  <> 50
-ist <> die wachtelbohne <> eine huelsenfrucht <>  <> 50
-ist <> die pintobohne <> ein gemuese <>  <> 50
-ist <> die pintobohne <> eine huelsenfrucht <>  <> 50
-ist <> die _weiﬂe_bohne_ <> ein gemuese <>  <> 50
-ist <> die _weiﬂe_bohne_ <> eine huelsenfrucht <>  <> 50
-ist <> die sojabohne <> ein gemuese <>  <> 50
-ist <> die sojabohne <> eine huelsenfrucht <>  <> 50
-ist <> die erbse <> ein gemuese <>  <> 50
-ist <> die erbse <> eine huelsenfrucht <>  <> 50
-ist <> die schalerbse <> ein gemuese <>  <> 50
-ist <> die schalerbse <> eine huelsenfrucht <>  <> 50
-ist <> die markerbse <> ein gemuese <>  <> 50
-ist <> die markerbse <> eine huelsenfrucht <>  <> 50
-ist <> die zuckererbse <> ein gemuese <>  <> 50
-ist <> die zuckererbse <> eine huelsenfrucht <>  <> 50
-ist <> die riesenerbse <> ein gemuese <>  <> 50
-ist <> die riesenerbse <> eine huelsenfrucht <>  <> 50
-ist <> die kichererbse <> ein gemuese <>  <> 50
-ist <> die kichererbse <> eine huelsenfrucht <>  <> 50
-sind <> linsen <> ein gemuese <>  <> 50
-sind <> linsen <> huelsenfruechte <>  <> 50
-sind <> lupinen <> ein gemuese <>  <> 50
-sind <> lupinen <> huelsenfruechte <>  <> 50
-sind <> wicken <> ein gemuese <>  <> 50
-sind <> wicken <> huelsenfruechte <>  <> 50
-ist <> die ackerbohne <> ein gemuese <>  <> 50
-ist <> die ackerbohne <> eine huelsenfrucht <>  <> 50
-sind <> platterbsen <> gemuese <>  <> 50
-sind <> platterbsen <> huelsenfruechte <>  <> 50
-ist <> die mattenbohne <> ein gemuese <>  <> 50
-ist <> die mattenbohne <> eine huelsenfrucht <>  <> 50
-ist <> die adzukibohne <> ein gemuese <>  <> 50
-ist <> die adzubibohne <> eine huelsenfrucht <>  <> 50
-ist <> die urdbohne <> ein gemuese <>  <> 50
-ist <> die urdbohne <> eine huelsenfrucht <>  <> 50
-ist <> die mungbohne <> ein gemuese <>  <> 50
-ist <> die mungbohne <> eine huelsenfrucht <>  <> 50
-ist <> die reisbohne <> ein gemuese <>  <> 50
-ist <> die reisbohne <> eine huelsenfrucht <>  <> 50
-ist <> die spargelbohne <> eine gemuese <>  <> 50
-ist <> die spargelbohne <> eine huelsenfrucht <>  <> 50
-ist <> die augenbohne <> eine gemuese <>  <> 50
-ist <> die augenbohne <> eine huelsenfrucht <>  <> 50
-ist <> die straucherbse <> ein gemuese <>  <> 50
-ist <> die straucherbse <> eine huelsenfrucht <>  <> 50
-ist <> die erdbohne <> eine gemuese <>  <> 50
-ist <> die erdbohne <> eine huelsenfrucht <>  <> 50
-ist <> die pferdebohne <> ein gemuese <>  <> 50
-ist <> die pferdebohne <> eine huelsenfrucht <>  <> 50
-ist <> die goabohne <> ein gemuese <>  <> 50
-ist <> die goabohne <> eine huelsenfrucht <>  <> 50
-ist <> die knollenbohne <> ein gemuese <>  <> 50
-ist <> die knollenbohne <> eine huelsenfrucht <>  <> 50
-ist <> die faselbohne <> ein gemuese <>  <> 50
-ist <> die faselbohne <> eine huelsenfrucht <>  <> 50
-ist <> die guarbohne <> ein gemuese <>  <> 50
-ist <> die guarbohne <> eine huelsenfrucht <>  <> 50
-ist <> die jackbohne <> ein gemuese <>  <> 50
-ist <> die jackbohne <> eine huelsenfrucht <>  <> 50
-ist <> die schwertbohne <> ein gemuese <>  <> 50
-ist <> die schwertbohne <> eine huelsenfrucht <>  <> 50
-ist <> gemuese <> ein sammelbegriff <> fuer essbare pflanzenteile <> 50
-wird beikost gegessen <> gemuese <>  <> als <> 50
-hat <> gemuese <> einen hohen anteil <> an ballaststoffen <> 50
-ist <> gemuese <> ein vitaminlieferant <>  <> 50
-enthaelt <> gemuese <> vitamine <>  <> 50
-enthaelt <> gemuese <> mineralsalze <>  <> 50
-enthaelt <> gemuese <> aetherische oele <>  <> 50
+ist <> gewuerzgemuese <> gemuese <>  <> (true)
+ist <> bluetengemuese <> gemuese <>  <> (true)
+ist <> sprossengemuese <> gemuese <>  <> (true)
+ist <> kohlgemuese <> gemuese <>  <> (true)
+ist <> wurzelgemuese <> gemuese <>  <> (true)
+ist <> blattgemuese <> gemuese <>  <> (true)
+sind <> huelsenfruechte <> gemuese <>  <> (true)
+ist <> fruchtgemuese <> gemuese <>  <> (true)
+ist <> gartensalat <> ein gemuese <>  <> (true)
+ist <> gartensalat <> ein blattgemuese <>  <> (true)
+ist <> kopfsalat <> ein gemuese <>  <> (true)
+ist <> kopfsalat <> ein blattgemuese <>  <> (true)
+ist <> schnittsalat <> ein gemuese <>  <> (true)
+ist <> schnittsalat <> ein blattgemuese <>  <> (true)
+ist <> bindesalat <> ein gemuese <>  <> (true)
+ist <> schnittsalat <> ein blattgemuese <>  <> (true)
+ist <> spargelsalat <> ein gemuese <>  <> (true)
+ist <> spargelsalat <> ein blattgemuese <>  <> (true)
+ist <> die _gemeine_wegwarte_ <> ein gemuese <>  <> (true)
+ist <> die _gemeine_wegwarte_ <> ein blattgemuese <>  <> (true)
+ist <> chicorÈe <> ein gemuese <>  <> (true)
+ist <> chicoree <> ein blattgemuese <>  <> (true)
+ist <> endivie <> ein gemuese <>  <> (true)
+ist <> endivie <> ein blattgemuese <>  <> (true)
+ist <> rucola <> ein gemuese <>  <> (true)
+ist <> rucola <> ein blattgemuese <>  <> (true)
+= <> _rauke_ <> _rucola_ <>  <> (true)
+ist <> mangold <> ein gemuese <>  <> (true)
+ist <> mangold <> ein blattgemuese <>  <> (true)
+ist <> spinat <> ein gemuese <>  <> (true)
+ist <> spinat <> ein blattgemuese <>  <> (true)
+ist <> wasserspinat <> ein gemuese <>  <> (true)
+ist <> wasserspinat <> ein blattgemuese <>  <> (true)
+ist <> die gartenmelde <> ein gemuese <>  <> (true)
+ist <> die gartenmelde <> ein blattgemuese <>  <> (true)
+ist <> brunnenkresse <> ein gemuese <>  <> (true)
+ist <> brunnenkresse <> ein blattgemuese <>  <> (true)
+ist <> portulak <> ein gemuese <>  <> (true)
+ist <> protulak <> ein blattgemuese <>  <> (true)
+ist <> tellerkraut <> ein gemuese <>  <> (true)
+ist <> tellerkraut <> ein blattgemuese <>  <> (true)
+ist <> winterportulak <> ein gemuese <>  <> (true)
+ist <> winterportulak <> ein blattgemues <>  <> (true)
+ist <> _malabar-spinat_ <> ein gemuese <>  <> (true)
+ist <> _malabar-spinat_ <> ein blattgemuese <>  <> (true)
+ist <> _indischer_spinat_ <> ein gemuese <>  <> (true)
+ist <> _indischer_spinat_ <> ein blattgemuese <>  <> (true)
+ist <> jambu <> ein gemuese <>  <> (true)
+ist <> jambu <> ein blattgemuese <>  <> (true)
+sind <> _jute_blaetter_ <> ein gemuese <>  <> (true)
+sind <> _jute_blaetter_ <> ein blattgemuese <>  <> (true)
+ist <> eiskraut <> ein gemuese <>  <> (true)
+ist <> eiskraut <> ein blattgemuese <>  <> (true)
+sind <> taglilien <> ein gemuese <>  <> (true)
+sind <> taglilien <> ein blattgemuese <>  <> (true)
+ist <> erdbeerspinat <> ein gemuese <>  <> (true)
+ist <> erdbeerspinat <> ein blattgemuese <>  <> (true)
+ist <> _guter_heinrich_ <> ein gemuese <>  <> (true)
+ist <> _guter_heinrich_ <> ein blattgemuese <>  <> (true)
+ist <> kohl <> ein gemuese <>  <> (true)
+ist <> kohl <> ein blattgemuese <>  <> (true)
+ist <> raps <> ein gemuese <>  <> (true)
+ist <> raps <> ein blattgemuese <>  <> (true)
+ist <> die kohlruebe <> ein gemuese <>  <> (true)
+ist <> die kohlruebe <> ein blattgemuese <>  <> (true)
+ist <> die steckruebe <> ein gemuese <>  <> (true)
+ist <> die steckruebe <> ein blattgemuese <>  <> (true)
+ist <> schnittkohl <> ein gemuese <>  <> (true)
+ist <> schnittkohl <> ein blattgemuese <>  <> (true)
+ist <> _schwarzer_senf_ <> ein gemuese <>  <> (true)
+ist <> _schwarzer_senf_ <> ein blattgemuese <>  <> (true)
+ist <> gemuesekohl <> gemuese <>  <> (true)
+ist <> gemuesekohl <> ein blattgemuese <>  <> (true)
+ist <> blumenkohl <> ein gemuese <>  <> (true)
+ist <> blumenkohl <> ein blattgemuese <>  <> (true)
+ist <> romanesco <> ein gemuese <>  <> (true)
+ist <> pomanesco <> ein blattgemuese <>  <> (true)
+ist <> brokkoli <> ein gemuese <>  <> (true)
+ist <> brokkoli <> ein blattgemuese <>  <> (true)
+ist <> kohlrabi <> ein gemuese <>  <> (true)
+ist <> kohlrabi <> ein blattgemuese <>  <> (true)
+ist <> wirsing <> ein gemuese <>  <> (true)
+ist <> wirsing <> ein blattgemuese <>  <> (true)
+ist <> weiﬂkohl <> ein gemuese <>  <> (true)
+ist <> weiﬂkohl <> ein blattgemuese <>  <> (true)
+ist <> rotkohl <> ein gemuese <>  <> (true)
+ist <> rotkohl <> ein blattgemuese <>  <> (true)
+ist <> spitzkohl <> ein gemuese <>  <> (true)
+ist <> spitzkohl <> ein blattgemuese <>  <> (true)
+ist <> rosenkohl <> ein gemuese <>  <> (true)
+ist <> rosenkohl <> ein blattgemuese <>  <> (true)
+ist <> gruenkohl <> ein gemuese <>  <> (true)
+ist <> gruenkohl <> ein blattgemuese <>  <> (true)
+ist <> braunkohl <> ein gemuese <>  <> (true)
+ist <> braunkohl <> ein blattgemuese <>  <> (true)
+ist <> palmkohl <> ein gemuese <>  <> (true)
+ist <> palmkohl <> ein blattgemuese <>  <> (true)
+ist <> markstammkohl <> ein gemuese <>  <> (true)
+ist <> markstammkohl <> ein blattgemuese <>  <> (true)
+sind <> ruebsen <> ein gemuese <>  <> (true)
+sind <> ruebsen <> ein blattgemuese <>  <> (true)
+ist <> chinakohl <> ein gemuese <>  <> (true)
+ist <> chinakohl <> ein blattgemuese <>  <> (true)
+ist <> die mairuebe <> ein gemuese <>  <> (true)
+ist <> die mairuebe <> ein blattgemuese <>  <> (true)
+ist <> die wasserruebe <> ein gemuese <>  <> (true)
+ist <> die wasserruebe <> ein blattgemuese <>  <> (true)
+sind <> rueben <> ein gemuese <>  <> (true)
+sind <> rueben <> ein blattgemuese <>  <> (true)
+ist <> ruebstiel <> ein gemuese <>  <> (true)
+ist <> ruebstiel <> ein blattgemuese <>  <> (true)
+ist <> die artischocke <> ein gemuese <>  <> (true)
+ist <> die artischocke <> ein bluetengemuese <>  <> (true)
+ist <> die zucchinibluete <> ein gemuese <>  <> (true)
+ist <> die zucchinibluete <> ein bluetengemuese <>  <> (true)
+ist <> blumenkohl <> ein gemuese <>  <> (true)
+ist <> blumenkohl <> ein bluetengemuese <>  <> (true)
+ist <> broccoli <> ein gemuese <>  <> (true)
+ist <> broccoli <> ein bluetengemuese <>  <> (true)
+ist <> romanesco <> ein gemuese <>  <> (true)
+ist <> romanesco <> ein bluetengemuese <>  <> (true)
+ist <> citrullus <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> citrullus <> ein <>  <> (true)
+ist <> die wassermelone <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die wassermelone <> ein <>  <> (true)
+sind <> gurken <> ein gemuese <>  <> (true)
+sind fruchtgemuese <> gurken <> ein <>  <> (true)
+ist <> die honigmelone <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die honigmelone <> ein <>  <> (true)
+ist <> kiwano <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> kiwano <> ein <>  <> (true)
+ist <> der kuerbis <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> der kuerbis <> ein <>  <> (true)
+ist <> die zucchini <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die zucchini <> ein <>  <> (true)
+ist <> der hokkaidokuerbis <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> der hokkaidokuerbis <> ein <>  <> (true)
+ist <> der moschuskuerbis <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> der moschuskuerbis <> ein <>  <> (true)
+ist <> der feigenblattkuerbis <> ein gemuese <>  <> (true)
+ist <> der feigenblattkuerbis <> ein fruchtgemuese <>  <> (true)
+ist <> die bittermelone <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die bittermelone <> ein <>  <> (true)
+ist <> der schwammkuerbis <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> der schwammkuerbis <> ein <>  <> (true)
+ist <> sechium <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> sechium <> ein <>  <> (true)
+ist <> die tomate <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die tomate <> ein <>  <> (true)
+ist <> die tomate <> ein nachtschattengewaechs <>  <> (true)
+ist <> amaranth <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> amaranth <> ein <>  <> (true)
+ist <> die aubergine <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die aubergine <> ein <>  <> (true)
+ist <> die avocado <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die avokado <> ein <>  <> (true)
+ist <> die brotfrucht <> ein gemuese <>  <> (true)
+ist fruchtgemuese <> die brotfrucht <> ein <>  <> (true)
+ist <> die _gelbe_ruebe_ <> ein gemuese <>  <> (true)
+ist <> die _gelbe_ruebe_ <> ein wurzelgemuese <>  <> (true)
+ist <> die _gelbe_ruebe_ <> ein knollengemuese <>  <> (true)
+ist <> die mohrruebe <> ein gemuese <>  <> (true)
+ist <> die mohrruebe <> ein wurzelgemuese <>  <> (true)
+ist <> die mohrruebe <> ein knollengemuese <>  <> (true)
+ist <> die steckruebe <> ein gemuese <>  <> (true)
+ist <> die steckruebe <> ein wurzelgemuese <>  <> (true)
+ist <> die steckruebe <> ein knollengemuese <>  <> (true)
+ist <> die kohlruebe <> ein gemuese <>  <> (true)
+ist <> die kohlruebe <> ein wurzelgemuese <>  <> (true)
+ist <> die kohrruebe <> ein knollengemuese <>  <> (true)
+sind <> die mairuebe <> ein gemuese <>  <> (true)
+ist <> die mairuebe <> ein wurzelgemuese <>  <> (true)
+ist <> die mairuebe <> ein knollengemuese <>  <> (true)
+ist <> meerrettich <> ein gemuese <>  <> (true)
+ist <> meerrettich <> ein wurzelgemuese <>  <> (true)
+ist <> meerrettich <> ein knollengemuese <>  <> (true)
+sind <> radieschen <> ein gemuese <>  <> (true)
+sind <> radieschen <> ein wurzelgemuese <>  <> (true)
+sind <> radieschen <> ein knollengemuese <>  <> (true)
+ist <> wasabi <> ein gemuese <>  <> (true)
+ist <> wasabi <> ein wurzelgemuese <>  <> (true)
+ist <> wasabi <> ein knollengemuese <>  <> (true)
+ist <> die kartoffel <> ein gemuese <>  <> (true)
+ist <> die kartoffel <> ein wurzelgemuese <>  <> (true)
+ist <> die kartoffel <> ein knollengemuese <>  <> (true)
+ist <> die pastinake <> ein gemuese <>  <> (true)
+ist <> die pastinake <> ein wurzelgemuese <>  <> (true)
+ist <> die pastinake <> ein knollengemuese <>  <> (true)
+ist <> die zwiebel <> ein gemuese <>  <> (true)
+ist <> die zwiebel <> ein wurzelgemuese <>  <> (true)
+ist <> die zwiebel <> ein zwiebelgemuese <>  <> (true)
+ist <> knoblauch <> ein gemuese <>  <> (true)
+ist <> knoblauch <> ein wurzelgemuese <>  <> (true)
+ist <> knoblauch <> ein zwiebelgemuese <>  <> (true)
+schalotte ist <> die <> ein gemuese <>  <> (true)
+schalotte ist <> die <> ein wurzelgemues <>  <> (true)
+schalotte ist <> die <> ein zwiebelgemuese <>  <> (true)
+ist <> porree <> ein gemuese <>  <> (true)
+ist <> porree <> ein wurzelgemuese <>  <> (true)
+ist <> porree <> ein zwiebelgemuese <>  <> (true)
+ist <> die perlzwiebel <> ein gemuese <>  <> (true)
+ist <> die perlzwiebel <> ein wurzelgemuese <>  <> (true)
+ist <> die perlzwiebel <> ein zwiebelgemuese <>  <> (true)
+ist <> baerlauch <> ein gemuese <>  <> (true)
+ist <> baerlauch <> ein wurzelgemuese <>  <> (true)
+ist <> baerlauch <> ein zwiebelgemuese <>  <> (true)
+ist <> die limabohne <> ein gemuese <>  <> (true)
+ist <> die limabohne <> eine huelsenfrucht <>  <> (true)
+ist <> die teparybohne <> ein gemuese <>  <> (true)
+ist <> die teparybohne <> eine huelsenfrucht <>  <> (true)
+ist <> die feuerbohne <> ein gemuese <>  <> (true)
+ist <> die feuerbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die schminkbohne <> ein gemuese <>  <> (true)
+ist <> die schminkbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die gartenbohne <> ein gemuese <>  <> (true)
+ist <> die gartenbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die buschbohne <> ein gemuese <>  <> (true)
+ist <> die buschbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die stangenbohne <> ein gemuese <>  <> (true)
+ist <> die stangenbohne <> eine huelsenfurcht <>  <> (true)
+ist <> die _kidney_bohne_ <> ein gemuese <>  <> (true)
+ist <> die _kidneybohne_ <> eine huelsenfrucht <>  <> (true)
+ist <> die nierenbohne <> ein gemuese <>  <> (true)
+ist <> die nierenbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die perlbohne <> ein gemuese <>  <> (true)
+ist <> die perlbohne <> eine huelsenfurcht <>  <> (true)
+ist <> die wachtelbohne <> ein gemuese <>  <> (true)
+ist <> die wachtelbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die pintobohne <> ein gemuese <>  <> (true)
+ist <> die pintobohne <> eine huelsenfrucht <>  <> (true)
+ist <> die _weiﬂe_bohne_ <> ein gemuese <>  <> (true)
+ist <> die _weiﬂe_bohne_ <> eine huelsenfrucht <>  <> (true)
+ist <> die sojabohne <> ein gemuese <>  <> (true)
+ist <> die sojabohne <> eine huelsenfrucht <>  <> (true)
+ist <> die erbse <> ein gemuese <>  <> (true)
+ist <> die erbse <> eine huelsenfrucht <>  <> (true)
+ist <> die schalerbse <> ein gemuese <>  <> (true)
+ist <> die schalerbse <> eine huelsenfrucht <>  <> (true)
+ist <> die markerbse <> ein gemuese <>  <> (true)
+ist <> die markerbse <> eine huelsenfrucht <>  <> (true)
+ist <> die zuckererbse <> ein gemuese <>  <> (true)
+ist <> die zuckererbse <> eine huelsenfrucht <>  <> (true)
+ist <> die riesenerbse <> ein gemuese <>  <> (true)
+ist <> die riesenerbse <> eine huelsenfrucht <>  <> (true)
+ist <> die kichererbse <> ein gemuese <>  <> (true)
+ist <> die kichererbse <> eine huelsenfrucht <>  <> (true)
+sind <> linsen <> ein gemuese <>  <> (true)
+sind <> linsen <> huelsenfruechte <>  <> (true)
+sind <> lupinen <> ein gemuese <>  <> (true)
+sind <> lupinen <> huelsenfruechte <>  <> (true)
+sind <> wicken <> ein gemuese <>  <> (true)
+sind <> wicken <> huelsenfruechte <>  <> (true)
+ist <> die ackerbohne <> ein gemuese <>  <> (true)
+ist <> die ackerbohne <> eine huelsenfrucht <>  <> (true)
+sind <> platterbsen <> gemuese <>  <> (true)
+sind <> platterbsen <> huelsenfruechte <>  <> (true)
+ist <> die mattenbohne <> ein gemuese <>  <> (true)
+ist <> die mattenbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die adzukibohne <> ein gemuese <>  <> (true)
+ist <> die adzubibohne <> eine huelsenfrucht <>  <> (true)
+ist <> die urdbohne <> ein gemuese <>  <> (true)
+ist <> die urdbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die mungbohne <> ein gemuese <>  <> (true)
+ist <> die mungbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die reisbohne <> ein gemuese <>  <> (true)
+ist <> die reisbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die spargelbohne <> eine gemuese <>  <> (true)
+ist <> die spargelbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die augenbohne <> eine gemuese <>  <> (true)
+ist <> die augenbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die straucherbse <> ein gemuese <>  <> (true)
+ist <> die straucherbse <> eine huelsenfrucht <>  <> (true)
+ist <> die erdbohne <> eine gemuese <>  <> (true)
+ist <> die erdbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die pferdebohne <> ein gemuese <>  <> (true)
+ist <> die pferdebohne <> eine huelsenfrucht <>  <> (true)
+ist <> die goabohne <> ein gemuese <>  <> (true)
+ist <> die goabohne <> eine huelsenfrucht <>  <> (true)
+ist <> die knollenbohne <> ein gemuese <>  <> (true)
+ist <> die knollenbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die faselbohne <> ein gemuese <>  <> (true)
+ist <> die faselbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die guarbohne <> ein gemuese <>  <> (true)
+ist <> die guarbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die jackbohne <> ein gemuese <>  <> (true)
+ist <> die jackbohne <> eine huelsenfrucht <>  <> (true)
+ist <> die schwertbohne <> ein gemuese <>  <> (true)
+ist <> die schwertbohne <> eine huelsenfrucht <>  <> (true)
+ist <> gemuese <> ein sammelbegriff <> fuer essbare pflanzenteile <> (true)
+wird beikost gegessen <> gemuese <>  <> als <> (true)
+hat <> gemuese <> einen hohen anteil <> an ballaststoffen <> (true)
+ist <> gemuese <> ein vitaminlieferant <>  <> (true)
+enthaelt <> gemuese <> vitamine <>  <> (true)
+enthaelt <> gemuese <> mineralsalze <>  <> (true)
+enthaelt <> gemuese <> aetherische oele <>  <> (true)

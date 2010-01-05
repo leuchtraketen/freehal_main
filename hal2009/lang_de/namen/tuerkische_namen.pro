@@ -1,810 +1,810 @@
-ist <> abdul <> ein name <>  <> 50
-ist <> abdul <> ein tuerkischer Vorname <>  <> 50
-ist <> ada <> ein name <>  <> 50
-ist <> ada <> ein tuerkischer Vorname <>  <> 50
-ist <> adem <> ein name <>  <> 50
-ist <> adem <> ein tuerkischer Vorname <>  <> 50
-ist <> ahmed <> ein name <>  <> 50
-ist <> ahmed <> ein tuerkischer Vorname <>  <> 50
-ist <> ahmet <> ein name <>  <> 50
-ist <> ahmet <> ein tuerkischer Vorname <>  <> 50
-ist <> akin <> ein name <>  <> 50
-ist <> akin <> ein tuerkischer Vorname <>  <> 50
-ist <> alara <> ein name <>  <> 50
-ist <> alara <> ein tuerkischer Vorname <>  <> 50
-ist <> aleyna <> ein name <>  <> 50
-ist <> aleyna <> ein tuerkischer Vorname <>  <> 50
-ist <> aliye <> ein name <>  <> 50
-ist <> aliye <> ein tuerkischer Vorname <>  <> 50
-ist <> alkim <> ein name <>  <> 50
-ist <> alkim <> ein tuerkischer Vorname <>  <> 50
-ist <> alparslan <> ein name <>  <> 50
-ist <> alparslan <> ein tuerkischer Vorname <>  <> 50
-ist <> alpay <> ein name <>  <> 50
-ist <> alpay <> ein tuerkischer Vorname <>  <> 50
-ist <> altair <> ein name <>  <> 50
-ist <> altair <> ein tuerkischer Vorname <>  <> 50
-ist <> anvi <> ein name <>  <> 50
-ist <> anvi <> ein tuerkischer Vorname <>  <> 50
-ist <> argun <> ein name <>  <> 50
-ist <> argun <> ein tuerkischer Vorname <>  <> 50
-ist <> arife <> ein name <>  <> 50
-ist <> arife <> ein tuerkischer Vorname <>  <> 50
-ist <> arslan <> ein name <>  <> 50
-ist <> arslan <> ein tuerkischer Vorname <>  <> 50
-ist <> arzu <> ein name <>  <> 50
-ist <> arzu <> ein tuerkischer Vorname <>  <> 50
-ist <> asiye <> ein name <>  <> 50
-ist <> asiye <> ein tuerkischer Vorname <>  <> 50
-ist <> asuman <> ein name <>  <> 50
-ist <> asuman <> ein tuerkischer Vorname <>  <> 50
-ist <> aydin <> ein name <>  <> 50
-ist <> aydin <> ein tuerkischer Vorname <>  <> 50
-ist <> ayfer <> ein name <>  <> 50
-ist <> ayfer <> ein tuerkischer Vorname <>  <> 50
-ist <> ayhan <> ein name <>  <> 50
-ist <> ayhan <> ein tuerkischer Vorname <>  <> 50
-ist <> aykut <> ein name <>  <> 50
-ist <> aykut <> ein tuerkischer Vorname <>  <> 50
-ist <> ayla <> ein name <>  <> 50
-ist <> ayla <> ein tuerkischer Vorname <>  <> 50
-ist <> aylin <> ein name <>  <> 50
-ist <> aylin <> ein tuerkischer Vorname <>  <> 50
-ist <> ayse <> ein name <>  <> 50
-ist <> ayse <> ein tuerkischer Vorname <>  <> 50
-ist <> ayseguel <> ein name <>  <> 50
-ist <> ayseguel <> ein tuerkischer Vorname <>  <> 50
-ist <> aysun <> ein name <>  <> 50
-ist <> aysun <> ein tuerkischer Vorname <>  <> 50
-ist <> aytac <> ein name <>  <> 50
-ist <> aytac <> ein tuerkischer Vorname <>  <> 50
-ist <> azdin <> ein name <>  <> 50
-ist <> azdin <> ein tuerkischer Vorname <>  <> 50
-ist <> azize <> ein name <>  <> 50
-ist <> azize <> ein tuerkischer Vorname <>  <> 50
-ist <> bahar <> ein name <>  <> 50
-ist <> bahar <> ein tuerkischer Vorname <>  <> 50
-ist <> bahire <> ein name <>  <> 50
-ist <> bahire <> ein tuerkischer Vorname <>  <> 50
-ist <> banu <> ein name <>  <> 50
-ist <> banu <> ein tuerkischer Vorname <>  <> 50
-ist <> baran <> ein name <>  <> 50
-ist <> baran <> ein tuerkischer Vorname <>  <> 50
-ist <> baris <> ein name <>  <> 50
-ist <> baris <> ein tuerkischer Vorname <>  <> 50
-ist <> batu <> ein name <>  <> 50
-ist <> batu <> ein tuerkischer Vorname <>  <> 50
-ist <> batuhan <> ein name <>  <> 50
-ist <> batuhan <> ein tuerkischer Vorname <>  <> 50
-ist <> bayram <> ein name <>  <> 50
-ist <> bayram <> ein tuerkischer Vorname <>  <> 50
-ist <> bebisim <> ein name <>  <> 50
-ist <> bebisim <> ein tuerkischer Vorname <>  <> 50
-ist <> beguem <> ein name <>  <> 50
-ist <> beguem <> ein tuerkischer Vorname <>  <> 50
-ist <> bekir <> ein name <>  <> 50
-ist <> bekir <> ein tuerkischer Vorname <>  <> 50
-ist <> belim <> ein name <>  <> 50
-ist <> belim <> ein tuerkischer Vorname <>  <> 50
-ist <> belma <> ein name <>  <> 50
-ist <> belma <> ein tuerkischer Vorname <>  <> 50
-ist <> benan <> ein name <>  <> 50
-ist <> benan <> ein tuerkischer Vorname <>  <> 50
-ist <> berfin <> ein name <>  <> 50
-ist <> berfin <> ein tuerkischer Vorname <>  <> 50
-ist <> berin <> ein name <>  <> 50
-ist <> berin <> ein tuerkischer Vorname <>  <> 50
-ist <> berkan <> ein name <>  <> 50
-ist <> berkan <> ein tuerkischer Vorname <>  <> 50
-ist <> berkant <> ein name <>  <> 50
-ist <> berkant <> ein tuerkischer Vorname <>  <> 50
-ist <> berkay <> ein name <>  <> 50
-ist <> berkay <> ein tuerkischer Vorname <>  <> 50
-ist <> bertan <> ein name <>  <> 50
-ist <> bertan <> ein tuerkischer Vorname <>  <> 50
-ist <> betuel <> ein name <>  <> 50
-ist <> betuel <> ein tuerkischer Vorname <>  <> 50
-ist <> beyza <> ein name <>  <> 50
-ist <> beyza <> ein tuerkischer Vorname <>  <> 50
-ist <> billur <> ein name <>  <> 50
-ist <> billur <> ein tuerkischer Vorname <>  <> 50
-ist <> buelent <> ein name <>  <> 50
-ist <> buelent <> ein tuerkischer Vorname <>  <> 50
-ist <> buenyamin <> ein name <>  <> 50
-ist <> buenyamin <> ein tuerkischer Vorname <>  <> 50
-ist <> buersa <> ein name <>  <> 50
-ist <> buersa <> ein tuerkischer Vorname <>  <> 50
-ist <> bumin <> ein name <>  <> 50
-ist <> bumin <> ein tuerkischer Vorname <>  <> 50
-ist <> burak <> ein name <>  <> 50
-ist <> burak <> ein tuerkischer Vorname <>  <> 50
-ist <> burcu <> ein name <>  <> 50
-ist <> burcu <> ein tuerkischer Vorname <>  <> 50
-ist <> burhan <> ein name <>  <> 50
-ist <> burhan <> ein tuerkischer Vorname <>  <> 50
-ist <> cagdas <> ein name <>  <> 50
-ist <> cagdas <> ein tuerkischer Vorname <>  <> 50
-ist <> canan <> ein name <>  <> 50
-ist <> canan <> ein tuerkischer Vorname <>  <> 50
-ist <> caner <> ein name <>  <> 50
-ist <> caner <> ein tuerkischer Vorname <>  <> 50
-ist <> cansu <> ein name <>  <> 50
-ist <> cansu <> ein tuerkischer Vorname <>  <> 50
-ist <> casin <> ein name <>  <> 50
-ist <> casin <> ein tuerkischer Vorname <>  <> 50
-ist <> celan <> ein name <>  <> 50
-ist <> celan <> ein tuerkischer Vorname <>  <> 50
-ist <> cem <> ein name <>  <> 50
-ist <> cem <> ein tuerkischer Vorname <>  <> 50
-ist <> cemil <> ein name <>  <> 50
-ist <> cemil <> ein tuerkischer Vorname <>  <> 50
-ist <> cengiz <> ein name <>  <> 50
-ist <> cengiz <> ein tuerkischer Vorname <>  <> 50
-ist <> cenk <> ein name <>  <> 50
-ist <> cenk <> ein tuerkischer Vorname <>  <> 50
-ist <> ceren <> ein name <>  <> 50
-ist <> ceren <> ein tuerkischer Vorname <>  <> 50
-ist <> cevat <> ein name <>  <> 50
-ist <> cevat <> ein tuerkischer Vorname <>  <> 50
-ist <> cevet <> ein name <>  <> 50
-ist <> cevet <> ein tuerkischer Vorname <>  <> 50
-ist <> ceyda <> ein name <>  <> 50
-ist <> ceyda <> ein tuerkischer Vorname <>  <> 50
-ist <> ceylan <> ein name <>  <> 50
-ist <> ceylan <> ein tuerkischer Vorname <>  <> 50
-ist <> ceylin <> ein name <>  <> 50
-ist <> ceylin <> ein tuerkischer Vorname <>  <> 50
-ist <> cigdem <> ein name <>  <> 50
-ist <> cigdem <> ein tuerkischer Vorname <>  <> 50
-ist <> cihan <> ein name <>  <> 50
-ist <> cihan <> ein tuerkischer Vorname <>  <> 50
-ist <> cueneyd <> ein name <>  <> 50
-ist <> cueneyd <> ein tuerkischer Vorname <>  <> 50
-ist <> damla <> ein name <>  <> 50
-ist <> damla <> ein tuerkischer Vorname <>  <> 50
-ist <> danis <> ein name <>  <> 50
-ist <> danis <> ein tuerkischer Vorname <>  <> 50
-ist <> dawoud <> ein name <>  <> 50
-ist <> dawoud <> ein tuerkischer Vorname <>  <> 50
-ist <> defne <> ein name <>  <> 50
-ist <> defne <> ein tuerkischer Vorname <>  <> 50
-ist <> demir <> ein name <>  <> 50
-ist <> demir <> ein tuerkischer Vorname <>  <> 50
-ist <> deniz  <> ein name <>  <> 50
-ist <> deniz  <> ein tuerkischer Vorname <>  <> 50
-ist <> derya <> ein name <>  <> 50
-ist <> derya <> ein tuerkischer Vorname <>  <> 50
-ist <> devran <> ein name <>  <> 50
-ist <> devran <> ein tuerkischer Vorname <>  <> 50
-ist <> dilara <> ein name <>  <> 50
-ist <> dilara <> ein tuerkischer Vorname <>  <> 50
-ist <> dilay <> ein name <>  <> 50
-ist <> dilay <> ein tuerkischer Vorname <>  <> 50
-ist <> dilek <> ein name <>  <> 50
-ist <> dilek <> ein tuerkischer Vorname <>  <> 50
-ist <> duenya <> ein name <>  <> 50
-ist <> duenya <> ein tuerkischer Vorname <>  <> 50
-ist <> duygu <> ein name <>  <> 50
-ist <> duygu <> ein tuerkischer Vorname <>  <> 50
-ist <> ebru <> ein name <>  <> 50
-ist <> ebru <> ein tuerkischer Vorname <>  <> 50
-ist <> ecrin <> ein name <>  <> 50
-ist <> ecrin <> ein tuerkischer Vorname <>  <> 50
-ist <> efe <> ein name <>  <> 50
-ist <> efe <> ein tuerkischer Vorname <>  <> 50
-ist <> ege <> ein name <>  <> 50
-ist <> ege <> ein tuerkischer Vorname <>  <> 50
-ist <> ehab <> ein name <>  <> 50
-ist <> ehab <> ein tuerkischer Vorname <>  <> 50
-ist <> ekrem <> ein name <>  <> 50
-ist <> ekrem <> ein tuerkischer Vorname <>  <> 50
-ist <> elanur <> ein name <>  <> 50
-ist <> elanur <> ein tuerkischer Vorname <>  <> 50
-ist <> elif <> ein name <>  <> 50
-ist <> elif <> ein tuerkischer Vorname <>  <> 50
-ist <> elife <> ein name <>  <> 50
-ist <> elife <> ein tuerkischer Vorname <>  <> 50
-ist <> eljesa <> ein name <>  <> 50
-ist <> eljesa <> ein tuerkischer Vorname <>  <> 50
-ist <> elma <> ein name <>  <> 50
-ist <> elma <> ein tuerkischer Vorname <>  <> 50
-ist <> elvan <> ein name <>  <> 50
-ist <> elvan <> ein tuerkischer Vorname <>  <> 50
-ist <> emel <> ein name <>  <> 50
-ist <> emel <> ein tuerkischer Vorname <>  <> 50
-ist <> emin <> ein name <>  <> 50
-ist <> emin <> ein tuerkischer Vorname <>  <> 50
-ist <> emina <> ein name <>  <> 50
-ist <> emina <> ein tuerkischer Vorname <>  <> 50
-ist <> emine <> ein name <>  <> 50
-ist <> emine <> ein tuerkischer Vorname <>  <> 50
-ist <> emir <> ein name <>  <> 50
-ist <> emir <> ein tuerkischer Vorname <>  <> 50
-ist <> emirhan <> ein name <>  <> 50
-ist <> emirhan <> ein tuerkischer Vorname <>  <> 50
-ist <> emrah <> ein name <>  <> 50
-ist <> emrah <> ein tuerkischer Vorname <>  <> 50
-ist <> emre <> ein name <>  <> 50
-ist <> emre <> ein tuerkischer Vorname <>  <> 50
-ist <> ender <> ein name <>  <> 50
-ist <> ender <> ein tuerkischer Vorname <>  <> 50
-ist <> enes <> ein name <>  <> 50
-ist <> enes <> ein tuerkischer Vorname <>  <> 50
-ist <> engin <> ein name <>  <> 50
-ist <> engin <> ein tuerkischer Vorname <>  <> 50
-ist <> enis <> ein name <>  <> 50
-ist <> enis <> ein tuerkischer Vorname <>  <> 50
-ist <> enver <> ein name <>  <> 50
-ist <> enver <> ein tuerkischer Vorname <>  <> 50
-ist <> erdal <> ein name <>  <> 50
-ist <> erdal <> ein tuerkischer Vorname <>  <> 50
-ist <> erdem <> ein name <>  <> 50
-ist <> erdem <> ein tuerkischer Vorname <>  <> 50
-ist <> eren <> ein name <>  <> 50
-ist <> eren <> ein tuerkischer Vorname <>  <> 50
-ist <> erguen <> ein name <>  <> 50
-ist <> erguen <> ein tuerkischer Vorname <>  <> 50
-ist <> erhan <> ein name <>  <> 50
-ist <> erhan <> ein tuerkischer Vorname <>  <> 50
-ist <> erkan <> ein name <>  <> 50
-ist <> erkan <> ein tuerkischer Vorname <>  <> 50
-ist <> erol <> ein name <>  <> 50
-ist <> erol <> ein tuerkischer Vorname <>  <> 50
-ist <> eron <> ein name <>  <> 50
-ist <> eron <> ein tuerkischer Vorname <>  <> 50
-ist <> ersan <> ein name <>  <> 50
-ist <> ersan <> ein tuerkischer Vorname <>  <> 50
-ist <> ersen <> ein name <>  <> 50
-ist <> ersen <> ein tuerkischer Vorname <>  <> 50
-ist <> ersin <> ein name <>  <> 50
-ist <> ersin <> ein tuerkischer Vorname <>  <> 50
-ist <> ertan <> ein name <>  <> 50
-ist <> ertan <> ein tuerkischer Vorname <>  <> 50
-ist <> esen <> ein name <>  <> 50
-ist <> esen <> ein tuerkischer Vorname <>  <> 50
-ist <> esma <> ein name <>  <> 50
-ist <> esma <> ein tuerkischer Vorname <>  <> 50
-ist <> esra <> ein name <>  <> 50
-ist <> esra <> ein tuerkischer Vorname <>  <> 50
-ist <> faruk <> ein name <>  <> 50
-ist <> faruk <> ein tuerkischer Vorname <>  <> 50
-ist <> fathin <> ein name <>  <> 50
-ist <> fathin <> ein tuerkischer Vorname <>  <> 50
-ist <> fehim <> ein name <>  <> 50
-ist <> fehim <> ein tuerkischer Vorname <>  <> 50
-ist <> fehime <> ein name <>  <> 50
-ist <> fehime <> ein tuerkischer Vorname <>  <> 50
-ist <> fehmi <> ein name <>  <> 50
-ist <> fehmi <> ein tuerkischer Vorname <>  <> 50
-ist <> ferhat <> ein name <>  <> 50
-ist <> ferhat <> ein tuerkischer Vorname <>  <> 50
-ist <> feridi <> ein name <>  <> 50
-ist <> feridi <> ein tuerkischer Vorname <>  <> 50
-ist <> fethullah <> ein name <>  <> 50
-ist <> fethullah <> ein tuerkischer Vorname <>  <> 50
-ist <> feyza <> ein name <>  <> 50
-ist <> feyza <> ein tuerkischer Vorname <>  <> 50
-ist <> fidan <> ein name <>  <> 50
-ist <> fidan <> ein tuerkischer Vorname <>  <> 50
-ist <> fikret <> ein name <>  <> 50
-ist <> fikret <> ein tuerkischer Vorname <>  <> 50
-ist <> filiz <> ein name <>  <> 50
-ist <> filiz <> ein tuerkischer Vorname <>  <> 50
-ist <> firat <> ein name <>  <> 50
-ist <> firat <> ein tuerkischer Vorname <>  <> 50
-ist <> firdevs <> ein name <>  <> 50
-ist <> firdevs <> ein tuerkischer Vorname <>  <> 50
-ist <> fuat <> ein name <>  <> 50
-ist <> fuat <> ein tuerkischer Vorname <>  <> 50
-ist <> funda <> ein name <>  <> 50
-ist <> funda <> ein tuerkischer Vorname <>  <> 50
-ist <> furkan <> ein name <>  <> 50
-ist <> furkan <> ein tuerkischer Vorname <>  <> 50
-ist <> gamze <> ein name <>  <> 50
-ist <> gamze <> ein tuerkischer Vorname <>  <> 50
-ist <> gizem <> ein name <>  <> 50
-ist <> gizem <> ein tuerkischer Vorname <>  <> 50
-ist <> goekhan <> ein name <>  <> 50
-ist <> goekhan <> ein tuerkischer Vorname <>  <> 50
-ist <> guel <> ein name <>  <> 50
-ist <> guel <> ein tuerkischer Vorname <>  <> 50
-ist <> guelbin <> ein name <>  <> 50
-ist <> guelbin <> ein tuerkischer Vorname <>  <> 50
-ist <> guelcan <> ein name <>  <> 50
-ist <> guelcan <> ein tuerkischer Vorname <>  <> 50
-ist <> guelhan <> ein name <>  <> 50
-ist <> guelhan <> ein tuerkischer Vorname <>  <> 50
-ist <> guelistan <> ein name <>  <> 50
-ist <> guelistan <> ein tuerkischer Vorname <>  <> 50
-ist <> guelnaz <> ein name <>  <> 50
-ist <> guelnaz <> ein tuerkischer Vorname <>  <> 50
-ist <> guelsah <> ein name <>  <> 50
-ist <> guelsah <> ein tuerkischer Vorname <>  <> 50
-ist <> guelten <> ein name <>  <> 50
-ist <> guelten <> ein tuerkischer Vorname <>  <> 50
-ist <> guenes <> ein name <>  <> 50
-ist <> guenes <> ein tuerkischer Vorname <>  <> 50
-ist <> guerbis <> ein name <>  <> 50
-ist <> guerbis <> ein tuerkischer Vorname <>  <> 50
-ist <> gueven <> ein name <>  <> 50
-ist <> gueven <> ein tuerkischer Vorname <>  <> 50
-ist <> hadice <> ein name <>  <> 50
-ist <> hadice <> ein tuerkischer Vorname <>  <> 50
-ist <> hakan <> ein name <>  <> 50
-ist <> hakan <> ein tuerkischer Vorname <>  <> 50
-ist <> hakime <> ein name <>  <> 50
-ist <> hakime <> ein tuerkischer Vorname <>  <> 50
-ist <> halil <> ein name <>  <> 50
-ist <> halil <> ein tuerkischer Vorname <>  <> 50
-ist <> halime<> ein name <>  <> 50
-ist <> halime<> ein tuerkischer Vorname <>  <> 50
-ist <> halit <> ein name <>  <> 50
-ist <> halit <> ein tuerkischer Vorname <>  <> 50
-ist <> hamdi <> ein name <>  <> 50
-ist <> hamdi <> ein tuerkischer Vorname <>  <> 50
-ist <> hamide <> ein name <>  <> 50
-ist <> hamide <> ein tuerkischer Vorname <>  <> 50
-ist <> handan <> ein name <>  <> 50
-ist <> handan <> ein tuerkischer Vorname <>  <> 50
-ist <> hanife <> ein name <>  <> 50
-ist <> hanife <> ein tuerkischer Vorname <>  <> 50
-ist <> hatce <> ein name <>  <> 50
-ist <> hatce <> ein tuerkischer Vorname <>  <> 50
-ist <> hayat <> ein name <>  <> 50
-ist <> hayat <> ein tuerkischer Vorname <>  <> 50
-ist <> hicran <> ein name <>  <> 50
-ist <> hicran <> ein tuerkischer Vorname <>  <> 50
-ist <> hilal <> ein name <>  <> 50
-ist <> hilal <> ein tuerkischer Vorname <>  <> 50
-ist <> hmanit <> ein name <>  <> 50
-ist <> hmanit <> ein tuerkischer Vorname <>  <> 50
-ist <> huedanur <> ein name <>  <> 50
-ist <> huedanur <> ein tuerkischer Vorname <>  <> 50
-ist <> huelya <> ein name <>  <> 50
-ist <> huelya <> ein tuerkischer Vorname <>  <> 50
-ist <> huerriyet <> ein name <>  <> 50
-ist <> huerriyet <> ein tuerkischer Vorname <>  <> 50
-ist <> hueseyin <> ein name <>  <> 50
-ist <> hueseyin <> ein tuerkischer Vorname <>  <> 50
-ist <> ilayda <> ein name <>  <> 50
-ist <> ilayda <> ein tuerkischer Vorname <>  <> 50
-ist <> ilhan <> ein name <>  <> 50
-ist <> ilhan <> ein tuerkischer Vorname <>  <> 50
-ist <> ilker <> ein name <>  <> 50
-ist <> ilker <> ein tuerkischer Vorname <>  <> 50
-ist <> ipek  <> ein name <>  <> 50
-ist <> ipek  <> ein tuerkischer Vorname <>  <> 50
-ist <> ired <> ein name <>  <> 50
-ist <> ired <> ein tuerkischer Vorname <>  <> 50
-ist <> irem <> ein name <>  <> 50
-ist <> irem <> ein tuerkischer Vorname <>  <> 50
-ist <> ismet <> ein name <>  <> 50
-ist <> ismet <> ein tuerkischer Vorname <>  <> 50
-ist <> iteri  <> ein name <>  <> 50
-ist <> iteri  <> ein tuerkischer Vorname <>  <> 50
-ist <> izel <> ein name <>  <> 50
-ist <> izel <> ein tuerkischer Vorname <>  <> 50
-ist <> izzetin <> ein name <>  <> 50
-ist <> izzetin <> ein tuerkischer Vorname <>  <> 50
-ist <> jale <> ein name <>  <> 50
-ist <> jale <> ein tuerkischer Vorname <>  <> 50
-ist <> kaan <> ein name <>  <> 50
-ist <> kaan <> ein tuerkischer Vorname <>  <> 50
-ist <> kadir <> ein name <>  <> 50
-ist <> kadir <> ein tuerkischer Vorname <>  <> 50
-ist <> karanfil <> ein name <>  <> 50
-ist <> karanfil <> ein tuerkischer Vorname <>  <> 50
-ist <> kaya <> ein name <>  <> 50
-ist <> kaya <> ein tuerkischer Vorname <>  <> 50
-ist <> kayra <> ein name <>  <> 50
-ist <> kayra <> ein tuerkischer Vorname <>  <> 50
-ist <> kemal <> ein name <>  <> 50
-ist <> kemal <> ein tuerkischer Vorname <>  <> 50
-ist <> kerem <> ein name <>  <> 50
-ist <> kerem <> ein tuerkischer Vorname <>  <> 50
-ist <> kerim <> ein name <>  <> 50
-ist <> kerim <> ein tuerkischer Vorname <>  <> 50
-ist <> kiymet <> ein name <>  <> 50
-ist <> kiymet <> ein tuerkischer Vorname <>  <> 50
-ist <> koray <> ein name <>  <> 50
-ist <> koray <> ein tuerkischer Vorname <>  <> 50
-ist <> korut <> ein name <>  <> 50
-ist <> korut <> ein tuerkischer Vorname <>  <> 50
-ist <> kuebra <> ein name <>  <> 50
-ist <> kuebra <> ein tuerkischer Vorname <>  <> 50
-ist <> lale <> ein name <>  <> 50
-ist <> lale <> ein tuerkischer Vorname <>  <> 50
-ist <> lamya <> ein name <>  <> 50
-ist <> lamya <> ein tuerkischer Vorname <>  <> 50
-ist <> levent <> ein name <>  <> 50
-ist <> levent <> ein tuerkischer Vorname <>  <> 50
-ist <> leyla <> ein name <>  <> 50
-ist <> leyla <> ein tuerkischer Vorname <>  <> 50
-ist <> lokman <> ein name <>  <> 50
-ist <> lokman <> ein tuerkischer Vorname <>  <> 50
-ist <> maali <> ein name <>  <> 50
-ist <> maali <> ein tuerkischer Vorname <>  <> 50
-ist <> mahir <> ein name <>  <> 50
-ist <> mahir <> ein tuerkischer Vorname <>  <> 50
-ist <> mahmud <> ein name <>  <> 50
-ist <> mahmud <> ein tuerkischer Vorname <>  <> 50
-ist <> mahoud <> ein name <>  <> 50
-ist <> mahoud <> ein tuerkischer Vorname <>  <> 50
-ist <> maide <> ein name <>  <> 50
-ist <> maide <> ein tuerkischer Vorname <>  <> 50
-ist <> makbule <> ein name <>  <> 50
-ist <> makbule <> ein tuerkischer Vorname <>  <> 50
-ist <> medine <> ein name <>  <> 50
-ist <> medine <> ein tuerkischer Vorname <>  <> 50
-ist <> mehmed <> ein name <>  <> 50
-ist <> mehmed <> ein tuerkischer Vorname <>  <> 50
-ist <> mehmet <> ein name <>  <> 50
-ist <> mehmet <> ein tuerkischer Vorname <>  <> 50
-ist <> mehtap <> ein name <>  <> 50
-ist <> mehtap <> ein tuerkischer Vorname <>  <> 50
-ist <> melda <> ein name <>  <> 50
-ist <> melda <> ein tuerkischer Vorname <>  <> 50
-ist <> melek <> ein name <>  <> 50
-ist <> melek <> ein tuerkischer Vorname <>  <> 50
-ist <> melih <> ein name <>  <> 50
-ist <> melih <> ein tuerkischer Vorname <>  <> 50
-ist <> meliha <> ein name <>  <> 50
-ist <> meliha <> ein tuerkischer Vorname <>  <> 50
-ist <> melika <> ein name <>  <> 50
-ist <> melika <> ein tuerkischer Vorname <>  <> 50
-ist <> melike <> ein name <>  <> 50
-ist <> melike <> ein tuerkischer Vorname <>  <> 50
-ist <> meltem <> ein name <>  <> 50
-ist <> meltem <> ein tuerkischer Vorname <>  <> 50
-ist <> meral <> ein name <>  <> 50
-ist <> meral <> ein tuerkischer Vorname <>  <> 50
-ist <> merdin <> ein name <>  <> 50
-ist <> merdin <> ein tuerkischer Vorname <>  <> 50
-ist <> mert <> ein name <>  <> 50
-ist <> mert <> ein tuerkischer Vorname <>  <> 50
-ist <> merve <> ein name <>  <> 50
-ist <> merve <> ein tuerkischer Vorname <>  <> 50
-ist <> meryem <> ein name <>  <> 50
-ist <> meryem <> ein tuerkischer Vorname <>  <> 50
-ist <> mesut <> ein name <>  <> 50
-ist <> mesut <> ein tuerkischer Vorname <>  <> 50
-ist <> metin <> ein name <>  <> 50
-ist <> metin <> ein tuerkischer Vorname <>  <> 50
-ist <> meyra <> ein name <>  <> 50
-ist <> meyra <> ein tuerkischer Vorname <>  <> 50
-ist <> milana <> ein name <>  <> 50
-ist <> milana <> ein tuerkischer Vorname <>  <> 50
-ist <> mirac <> ein name <>  <> 50
-ist <> mirac <> ein tuerkischer Vorname <>  <> 50
-ist <> miray <> ein name <>  <> 50
-ist <> miray <> ein tuerkischer Vorname <>  <> 50
-ist <> mirza <> ein name <>  <> 50
-ist <> mirza <> ein tuerkischer Vorname <>  <> 50
-ist <> muege <> ein name <>  <> 50
-ist <> muege <> ein tuerkischer Vorname <>  <> 50
-ist <> muejgan <> ein name <>  <> 50
-ist <> muejgan <> ein tuerkischer Vorname <>  <> 50
-ist <> murat <> ein name <>  <> 50
-ist <> murat <> ein tuerkischer Vorname <>  <> 50
-ist <> musa <> ein name <>  <> 50
-ist <> musa <> ein tuerkischer Vorname <>  <> 50
-ist <> mustafa <> ein name <>  <> 50
-ist <> mustafa <> ein tuerkischer Vorname <>  <> 50
-ist <> muzafer <> ein name <>  <> 50
-ist <> muzafer <> ein tuerkischer Vorname <>  <> 50
-ist <> muzaffer <> ein name <>  <> 50
-ist <> muzaffer <> ein tuerkischer Vorname <>  <> 50
-ist <> nadir <> ein name <>  <> 50
-ist <> nadir <> ein tuerkischer Vorname <>  <> 50
-ist <> nadira <> ein name <>  <> 50
-ist <> nadira <> ein tuerkischer Vorname <>  <> 50
-ist <> nasir <> ein name <>  <> 50
-ist <> nasir <> ein tuerkischer Vorname <>  <> 50
-ist <> necati <> ein name <>  <> 50
-ist <> necati <> ein tuerkischer Vorname <>  <> 50
-ist <> necela <> ein name <>  <> 50
-ist <> necela <> ein tuerkischer Vorname <>  <> 50
-ist <> nergis <> ein name <>  <> 50
-ist <> nergis <> ein tuerkischer Vorname <>  <> 50
-ist <> nergiz <> ein name <>  <> 50
-ist <> nergiz <> ein tuerkischer Vorname <>  <> 50
-ist <> nermin <> ein name <>  <> 50
-ist <> nermin <> ein tuerkischer Vorname <>  <> 50
-ist <> neslihan <> ein name <>  <> 50
-ist <> neslihan <> ein tuerkischer Vorname <>  <> 50
-ist <> nesrin <> ein name <>  <> 50
-ist <> nesrin <> ein tuerkischer Vorname <>  <> 50
-ist <> neval <> ein name <>  <> 50
-ist <> neval <> ein tuerkischer Vorname <>  <> 50
-ist <> nevin <> ein name <>  <> 50
-ist <> nevin <> ein tuerkischer Vorname <>  <> 50
-ist <> nevzat <> ein name <>  <> 50
-ist <> nevzat <> ein tuerkischer Vorname <>  <> 50
-ist <> nihan <> ein name <>  <> 50
-ist <> nihan <> ein tuerkischer Vorname <>  <> 50
-ist <> nilay <> ein name <>  <> 50
-ist <> nilay <> ein tuerkischer Vorname <>  <> 50
-ist <> niyazi <> ein name <>  <> 50
-ist <> niyazi <> ein tuerkischer Vorname <>  <> 50
-ist <> nura <> ein name <>  <> 50
-ist <> nura <> ein tuerkischer Vorname <>  <> 50
-ist <> nurdan <> ein name <>  <> 50
-ist <> nurdan <> ein tuerkischer Vorname <>  <> 50
-ist <> oemer <> ein name <>  <> 50
-ist <> oemer <> ein tuerkischer Vorname <>  <> 50
-ist <> oemuer <> ein name <>  <> 50
-ist <> oemuer <> ein tuerkischer Vorname <>  <> 50
-ist <> oender <> ein name <>  <> 50
-ist <> oender <> ein tuerkischer Vorname <>  <> 50
-ist <> oezge <> ein name <>  <> 50
-ist <> oezge <> ein tuerkischer Vorname <>  <> 50
-ist <> oezguer <> ein name <>  <> 50
-ist <> oezguer <> ein tuerkischer Vorname <>  <> 50
-ist <> oezkan <> ein name <>  <> 50
-ist <> oezkan <> ein tuerkischer Vorname <>  <> 50
-ist <> oezlem <> ein name <>  <> 50
-ist <> oezlem <> ein tuerkischer Vorname <>  <> 50
-ist <> oezuer <> ein name <>  <> 50
-ist <> oezuer <> ein tuerkischer Vorname <>  <> 50
-ist <> okan <> ein name <>  <> 50
-ist <> okan <> ein tuerkischer Vorname <>  <> 50
-ist <> oktay <> ein name <>  <> 50
-ist <> oktay <> ein tuerkischer Vorname <>  <> 50
-ist <> onur <> ein name <>  <> 50
-ist <> onur <> ein tuerkischer Vorname <>  <> 50
-ist <> orcun <> ein name <>  <> 50
-ist <> orcun <> ein tuerkischer Vorname <>  <> 50
-ist <> orhan <> ein name <>  <> 50
-ist <> orhan <> ein tuerkischer Vorname <>  <> 50
-ist <> osman <> ein name <>  <> 50
-ist <> osman <> ein tuerkischer Vorname <>  <> 50
-ist <> ozan <> ein name <>  <> 50
-ist <> ozan <> ein tuerkischer Vorname <>  <> 50
-ist <> pelin <> ein name <>  <> 50
-ist <> pelin <> ein tuerkischer Vorname <>  <> 50
-ist <> pervin <> ein name <>  <> 50
-ist <> pervin <> ein tuerkischer Vorname <>  <> 50
-ist <> pinar <> ein name <>  <> 50
-ist <> pinar <> ein tuerkischer Vorname <>  <> 50
-ist <> rabia <> ein name <>  <> 50
-ist <> rabia <> ein tuerkischer Vorname <>  <> 50
-ist <> ramadan <> ein name <>  <> 50
-ist <> ramadan <> ein tuerkischer Vorname <>  <> 50
-ist <> ramazan <> ein name <>  <> 50
-ist <> ramazan <> ein tuerkischer Vorname <>  <> 50
-ist <> ramiz <> ein name <>  <> 50
-ist <> ramiz <> ein tuerkischer Vorname <>  <> 50
-ist <> rasim <> ein name <>  <> 50
-ist <> rasim <> ein tuerkischer Vorname <>  <> 50
-ist <> recep <> ein name <>  <> 50
-ist <> recep <> ein tuerkischer Vorname <>  <> 50
-ist <> remzi <> ein name <>  <> 50
-ist <> remzi <> ein tuerkischer Vorname <>  <> 50
-ist <> reyhan <> ein name <>  <> 50
-ist <> reyhan <> ein tuerkischer Vorname <>  <> 50
-ist <> rifat <> ein name <>  <> 50
-ist <> rifat <> ein tuerkischer Vorname <>  <> 50
-ist <> rojin <> ein name <>  <> 50
-ist <> rojin <> ein tuerkischer Vorname <>  <> 50
-ist <> rona <> ein name <>  <> 50
-ist <> rona <> ein tuerkischer Vorname <>  <> 50
-ist <> ruhsar <> ein name <>  <> 50
-ist <> ruhsar <> ein tuerkischer Vorname <>  <> 50
-ist <> rukiye <> ein name <>  <> 50
-ist <> rukiye <> ein tuerkischer Vorname <>  <> 50
-ist <> ruveyda <> ein name <>  <> 50
-ist <> ruveyda <> ein tuerkischer Vorname <>  <> 50
-ist <> sahin <> ein name <>  <> 50
-ist <> sahin <> ein tuerkischer Vorname <>  <> 50
-ist <> salah <> ein name <>  <> 50
-ist <> salah <> ein tuerkischer Vorname <>  <> 50
-ist <> salem <> ein name <>  <> 50
-ist <> salem <> ein tuerkischer Vorname <>  <> 50
-ist <> salih <> ein name <>  <> 50
-ist <> salih <> ein tuerkischer Vorname <>  <> 50
-ist <> samet <> ein name <>  <> 50
-ist <> samet <> ein tuerkischer Vorname <>  <> 50
-ist <> sami <> ein name <>  <> 50
-ist <> sami <> ein tuerkischer Vorname <>  <> 50
-ist <> samya <> ein name <>  <> 50
-ist <> samya <> ein tuerkischer Vorname <>  <> 50
-ist <> satet <> ein name <>  <> 50
-ist <> satet <> ein tuerkischer Vorname <>  <> 50
-ist <> savas <> ein name <>  <> 50
-ist <> savas <> ein tuerkischer Vorname <>  <> 50
-ist <> schahin <> ein name <>  <> 50
-ist <> schahin <> ein tuerkischer Vorname <>  <> 50
-ist <> seckin <> ein name <>  <> 50
-ist <> seckin <> ein tuerkischer Vorname <>  <> 50
-ist <> seda <> ein name <>  <> 50
-ist <> seda <> ein tuerkischer Vorname <>  <> 50
-ist <> sedat <> ein name <>  <> 50
-ist <> sedat <> ein tuerkischer Vorname <>  <> 50
-ist <> sefika <> ein name <>  <> 50
-ist <> sefika <> ein tuerkischer Vorname <>  <> 50
-ist <> selcuk <> ein name <>  <> 50
-ist <> selcuk <> ein tuerkischer Vorname <>  <> 50
-ist <> selda <> ein name <>  <> 50
-ist <> selda <> ein tuerkischer Vorname <>  <> 50
-ist <> selim <> ein name <>  <> 50
-ist <> selim <> ein tuerkischer Vorname <>  <> 50
-ist <> selin <> ein name <>  <> 50
-ist <> selin <> ein tuerkischer Vorname <>  <> 50
-ist <> selma <> ein name <>  <> 50
-ist <> selma <> ein tuerkischer Vorname <>  <> 50
-ist <> selver <> ein name <>  <> 50
-ist <> selver <> ein tuerkischer Vorname <>  <> 50
-ist <> selvi <> ein name <>  <> 50
-ist <> selvi <> ein tuerkischer Vorname <>  <> 50
-ist <> semih <> ein name <>  <> 50
-ist <> semih <> ein tuerkischer Vorname <>  <> 50
-ist <> semiha <> ein name <>  <> 50
-ist <> semiha <> ein tuerkischer Vorname <>  <> 50
-ist <> semra <> ein name <>  <> 50
-ist <> semra <> ein tuerkischer Vorname <>  <> 50
-ist <> sena <> ein name <>  <> 50
-ist <> sena <> ein tuerkischer Vorname <>  <> 50
-ist <> sener <> ein name <>  <> 50
-ist <> sener <> ein tuerkischer Vorname <>  <> 50
-ist <> serap <> ein name <>  <> 50
-ist <> serap <> ein tuerkischer Vorname <>  <> 50
-ist <> serdar <> ein name <>  <> 50
-ist <> serdar <> ein tuerkischer Vorname <>  <> 50
-ist <> serhat <> ein name <>  <> 50
-ist <> serhat <> ein tuerkischer Vorname <>  <> 50
-ist <> serkan <> ein name <>  <> 50
-ist <> serkan <> ein tuerkischer Vorname <>  <> 50
-ist <> serpil <> ein name <>  <> 50
-ist <> serpil <> ein tuerkischer Vorname <>  <> 50
-ist <> sertac <> ein name <>  <> 50
-ist <> sertac <> ein tuerkischer Vorname <>  <> 50
-ist <> seval <> ein name <>  <> 50
-ist <> seval <> ein tuerkischer Vorname <>  <> 50
-ist <> sevda <> ein name <>  <> 50
-ist <> sevda <> ein tuerkischer Vorname <>  <> 50
-ist <> sevgi <> ein name <>  <> 50
-ist <> sevgi <> ein tuerkischer Vorname <>  <> 50
-ist <> sevil <> ein name <>  <> 50
-ist <> sevil <> ein tuerkischer Vorname <>  <> 50
-ist <> sevim <> ein name <>  <> 50
-ist <> sevim <> ein tuerkischer Vorname <>  <> 50
-ist <> sevinc <> ein name <>  <> 50
-ist <> sevinc <> ein tuerkischer Vorname <>  <> 50
-ist <> seyma <> ein name <>  <> 50
-ist <> seyma <> ein tuerkischer Vorname <>  <> 50
-ist <> sezer <> ein name <>  <> 50
-ist <> sezer <> ein tuerkischer Vorname <>  <> 50
-ist <> shermin <> ein name <>  <> 50
-ist <> shermin <> ein tuerkischer Vorname <>  <> 50
-ist <> shirin <> ein name <>  <> 50
-ist <> shirin <> ein tuerkischer Vorname <>  <> 50
-ist <> sibel <> ein name <>  <> 50
-ist <> sibel <> ein tuerkischer Vorname <>  <> 50
-ist <> sinan <> ein name <>  <> 50
-ist <> sinan <> ein tuerkischer Vorname <>  <> 50
-ist <> sinem <> ein name <>  <> 50
-ist <> sinem <> ein tuerkischer Vorname <>  <> 50
-ist <> songuel <> ein name <>  <> 50
-ist <> songuel <> ein tuerkischer Vorname <>  <> 50
-ist <> sudenaz <> ein name <>  <> 50
-ist <> sudenaz <> ein tuerkischer Vorname <>  <> 50
-ist <> sueheyla <> ein name <>  <> 50
-ist <> sueheyla <> ein tuerkischer Vorname <>  <> 50
-ist <> suekrue <> ein name <>  <> 50
-ist <> suekrue <> ein tuerkischer Vorname <>  <> 50
-ist <> sueleyman <> ein name <>  <> 50
-ist <> sueleyman <> ein tuerkischer Vorname <>  <> 50
-ist <> suleiman <> ein name <>  <> 50
-ist <> suleiman <> ein tuerkischer Vorname <>  <> 50
-ist <> sultan <> ein name <>  <> 50
-ist <> sultan <> ein tuerkischer Vorname <>  <> 50
-ist <> taha <> ein name <>  <> 50
-ist <> taha <> ein tuerkischer Vorname <>  <> 50
-ist <> tahira <> ein name <>  <> 50
-ist <> tahira <> ein tuerkischer Vorname <>  <> 50
-ist <> taner <> ein name <>  <> 50
-ist <> taner <> ein tuerkischer Vorname <>  <> 50
-ist <> tansel <> ein name <>  <> 50
-ist <> tansel <> ein tuerkischer Vorname <>  <> 50
-ist <> tarek <> ein name <>  <> 50
-ist <> tarek <> ein tuerkischer Vorname <>  <> 50
-ist <> tarik <> ein name <>  <> 50
-ist <> tarik <> ein tuerkischer Vorname <>  <> 50
-ist <> tarim <> ein name <>  <> 50
-ist <> tarim <> ein tuerkischer Vorname <>  <> 50
-ist <> tariq <> ein name <>  <> 50
-ist <> tariq <> ein tuerkischer Vorname <>  <> 50
-ist <> tarkan <> ein name <>  <> 50
-ist <> tarkan <> ein tuerkischer Vorname <>  <> 50
-ist <> tayfun <> ein name <>  <> 50
-ist <> tayfun <> ein tuerkischer Vorname <>  <> 50
-ist <> taylan <> ein name <>  <> 50
-ist <> taylan <> ein tuerkischer Vorname <>  <> 50
-ist <> tayyip <> ein name <>  <> 50
-ist <> tayyip <> ein tuerkischer Vorname <>  <> 50
-ist <> tekin <> ein name <>  <> 50
-ist <> tekin <> ein tuerkischer Vorname <>  <> 50
-ist <> timucin <> ein name <>  <> 50
-ist <> timucin <> ein tuerkischer Vorname <>  <> 50
-ist <> timur <> ein name <>  <> 50
-ist <> timur <> ein tuerkischer Vorname <>  <> 50
-ist <> tolga <> ein name <>  <> 50
-ist <> tolga <> ein tuerkischer Vorname <>  <> 50
-ist <> tuelay <> ein name <>  <> 50
-ist <> tuelay <> ein tuerkischer Vorname <>  <> 50
-ist <> tufan <> ein name <>  <> 50
-ist <> tufan <> ein tuerkischer Vorname <>  <> 50
-ist <> tugba <> ein name <>  <> 50
-ist <> tugba <> ein tuerkischer Vorname <>  <> 50
-ist <> tuncay <> ein name <>  <> 50
-ist <> tuncay <> ein tuerkischer Vorname <>  <> 50
-ist <> uemit <> ein name <>  <> 50
-ist <> uemit <> ein tuerkischer Vorname <>  <> 50
-ist <> uenal <> ein name <>  <> 50
-ist <> uenal <> ein tuerkischer Vorname <>  <> 50
-ist <> ufuk <> ein name <>  <> 50
-ist <> ufuk <> ein tuerkischer Vorname <>  <> 50
-ist <> ugur <> ein name <>  <> 50
-ist <> ugur <> ein tuerkischer Vorname <>  <> 50
-ist <> umut <> ein name <>  <> 50
-ist <> umut <> ein tuerkischer Vorname <>  <> 50
-ist <> usman <> ein name <>  <> 50
-ist <> usman <> ein tuerkischer Vorname <>  <> 50
-ist <> veysel <> ein name <>  <> 50
-ist <> veysel <> ein tuerkischer Vorname <>  <> 50
-ist <> volkan <> ein name <>  <> 50
-ist <> volkan <> ein tuerkischer Vorname <>  <> 50
-ist <> yagmur <> ein name <>  <> 50
-ist <> yagmur <> ein tuerkischer Vorname <>  <> 50
-ist <> yakup <> ein name <>  <> 50
-ist <> yakup <> ein tuerkischer Vorname <>  <> 50
-ist <> yaren <> ein name <>  <> 50
-ist <> yaren <> ein tuerkischer Vorname <>  <> 50
-ist <> yasar <> ein name <>  <> 50
-ist <> yasar <> ein tuerkischer Vorname <>  <> 50
-ist <> yasemin <> ein name <>  <> 50
-ist <> yasemin <> ein tuerkischer Vorname <>  <> 50
-ist <> yasin <> ein name <>  <> 50
-ist <> yasin <> ein tuerkischer Vorname <>  <> 50
-ist <> yavuz <> ein name <>  <> 50
-ist <> yavuz <> ein tuerkischer Vorname <>  <> 50
-ist <> yeliz <> ein name <>  <> 50
-ist <> yeliz <> ein tuerkischer Vorname <>  <> 50
-ist <> yesim <> ein name <>  <> 50
-ist <> yesim <> ein tuerkischer Vorname <>  <> 50
-ist <> yessin <> ein name <>  <> 50
-ist <> yessin <> ein tuerkischer Vorname <>  <> 50
-ist <> yildiz <> ein name <>  <> 50
-ist <> yildiz <> ein tuerkischer Vorname <>  <> 50
-ist <> yonca <> ein name <>  <> 50
-ist <> yonca <> ein tuerkischer Vorname <>  <> 50
-ist <> yorgi <> ein name <>  <> 50
-ist <> yorgi <> ein tuerkischer Vorname <>  <> 50
-ist <> yudum <> ein name <>  <> 50
-ist <> yudum <> ein tuerkischer Vorname <>  <> 50
-ist <> yunus <> ein name <>  <> 50
-ist <> yunus <> ein tuerkischer Vorname <>  <> 50
-ist <> zafer <> ein name <>  <> 50
-ist <> zafer <> ein tuerkischer Vorname <>  <> 50
-ist <> zafire <> ein name <>  <> 50
-ist <> zafire <> ein tuerkischer Vorname <>  <> 50
-ist <> zahir <> ein name <>  <> 50
-ist <> zahir <> ein tuerkischer Vorname <>  <> 50
-ist <> zaim <> ein name <>  <> 50
-ist <> zaim <> ein tuerkischer Vorname <>  <> 50
-ist <> zaima <> ein name <>  <> 50
-ist <> zaima <> ein tuerkischer Vorname <>  <> 50
-ist <> zaynab <> ein name <>  <> 50
-ist <> zaynab <> ein tuerkischer Vorname <>  <> 50
-ist <> zehra <> ein name <>  <> 50
-ist <> zehra <> ein tuerkischer Vorname <>  <> 50
-ist <> zeliha <> ein name <>  <> 50
-ist <> zeliha <> ein tuerkischer Vorname <>  <> 50
-ist <> zelis <> ein name <>  <> 50
-ist <> zelis <> ein tuerkischer Vorname <>  <> 50
-ist <> zelisa <> ein name <>  <> 50
-ist <> zelisa <> ein tuerkischer Vorname <>  <> 50
-ist <> zeqije <> ein name <>  <> 50
-ist <> zeqije <> ein tuerkischer Vorname <>  <> 50
-ist <> zeynep <> ein name <>  <> 50
-ist <> zeynep <> ein tuerkischer Vorname <>  <> 50
+ist <> abdul <> ein name <>  <> (true)
+ist <> abdul <> ein tuerkischer Vorname <>  <> (true)
+ist <> ada <> ein name <>  <> (true)
+ist <> ada <> ein tuerkischer Vorname <>  <> (true)
+ist <> adem <> ein name <>  <> (true)
+ist <> adem <> ein tuerkischer Vorname <>  <> (true)
+ist <> ahmed <> ein name <>  <> (true)
+ist <> ahmed <> ein tuerkischer Vorname <>  <> (true)
+ist <> ahmet <> ein name <>  <> (true)
+ist <> ahmet <> ein tuerkischer Vorname <>  <> (true)
+ist <> akin <> ein name <>  <> (true)
+ist <> akin <> ein tuerkischer Vorname <>  <> (true)
+ist <> alara <> ein name <>  <> (true)
+ist <> alara <> ein tuerkischer Vorname <>  <> (true)
+ist <> aleyna <> ein name <>  <> (true)
+ist <> aleyna <> ein tuerkischer Vorname <>  <> (true)
+ist <> aliye <> ein name <>  <> (true)
+ist <> aliye <> ein tuerkischer Vorname <>  <> (true)
+ist <> alkim <> ein name <>  <> (true)
+ist <> alkim <> ein tuerkischer Vorname <>  <> (true)
+ist <> alparslan <> ein name <>  <> (true)
+ist <> alparslan <> ein tuerkischer Vorname <>  <> (true)
+ist <> alpay <> ein name <>  <> (true)
+ist <> alpay <> ein tuerkischer Vorname <>  <> (true)
+ist <> altair <> ein name <>  <> (true)
+ist <> altair <> ein tuerkischer Vorname <>  <> (true)
+ist <> anvi <> ein name <>  <> (true)
+ist <> anvi <> ein tuerkischer Vorname <>  <> (true)
+ist <> argun <> ein name <>  <> (true)
+ist <> argun <> ein tuerkischer Vorname <>  <> (true)
+ist <> arife <> ein name <>  <> (true)
+ist <> arife <> ein tuerkischer Vorname <>  <> (true)
+ist <> arslan <> ein name <>  <> (true)
+ist <> arslan <> ein tuerkischer Vorname <>  <> (true)
+ist <> arzu <> ein name <>  <> (true)
+ist <> arzu <> ein tuerkischer Vorname <>  <> (true)
+ist <> asiye <> ein name <>  <> (true)
+ist <> asiye <> ein tuerkischer Vorname <>  <> (true)
+ist <> asuman <> ein name <>  <> (true)
+ist <> asuman <> ein tuerkischer Vorname <>  <> (true)
+ist <> aydin <> ein name <>  <> (true)
+ist <> aydin <> ein tuerkischer Vorname <>  <> (true)
+ist <> ayfer <> ein name <>  <> (true)
+ist <> ayfer <> ein tuerkischer Vorname <>  <> (true)
+ist <> ayhan <> ein name <>  <> (true)
+ist <> ayhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> aykut <> ein name <>  <> (true)
+ist <> aykut <> ein tuerkischer Vorname <>  <> (true)
+ist <> ayla <> ein name <>  <> (true)
+ist <> ayla <> ein tuerkischer Vorname <>  <> (true)
+ist <> aylin <> ein name <>  <> (true)
+ist <> aylin <> ein tuerkischer Vorname <>  <> (true)
+ist <> ayse <> ein name <>  <> (true)
+ist <> ayse <> ein tuerkischer Vorname <>  <> (true)
+ist <> ayseguel <> ein name <>  <> (true)
+ist <> ayseguel <> ein tuerkischer Vorname <>  <> (true)
+ist <> aysun <> ein name <>  <> (true)
+ist <> aysun <> ein tuerkischer Vorname <>  <> (true)
+ist <> aytac <> ein name <>  <> (true)
+ist <> aytac <> ein tuerkischer Vorname <>  <> (true)
+ist <> azdin <> ein name <>  <> (true)
+ist <> azdin <> ein tuerkischer Vorname <>  <> (true)
+ist <> azize <> ein name <>  <> (true)
+ist <> azize <> ein tuerkischer Vorname <>  <> (true)
+ist <> bahar <> ein name <>  <> (true)
+ist <> bahar <> ein tuerkischer Vorname <>  <> (true)
+ist <> bahire <> ein name <>  <> (true)
+ist <> bahire <> ein tuerkischer Vorname <>  <> (true)
+ist <> banu <> ein name <>  <> (true)
+ist <> banu <> ein tuerkischer Vorname <>  <> (true)
+ist <> baran <> ein name <>  <> (true)
+ist <> baran <> ein tuerkischer Vorname <>  <> (true)
+ist <> baris <> ein name <>  <> (true)
+ist <> baris <> ein tuerkischer Vorname <>  <> (true)
+ist <> batu <> ein name <>  <> (true)
+ist <> batu <> ein tuerkischer Vorname <>  <> (true)
+ist <> batuhan <> ein name <>  <> (true)
+ist <> batuhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> bayram <> ein name <>  <> (true)
+ist <> bayram <> ein tuerkischer Vorname <>  <> (true)
+ist <> bebisim <> ein name <>  <> (true)
+ist <> bebisim <> ein tuerkischer Vorname <>  <> (true)
+ist <> beguem <> ein name <>  <> (true)
+ist <> beguem <> ein tuerkischer Vorname <>  <> (true)
+ist <> bekir <> ein name <>  <> (true)
+ist <> bekir <> ein tuerkischer Vorname <>  <> (true)
+ist <> belim <> ein name <>  <> (true)
+ist <> belim <> ein tuerkischer Vorname <>  <> (true)
+ist <> belma <> ein name <>  <> (true)
+ist <> belma <> ein tuerkischer Vorname <>  <> (true)
+ist <> benan <> ein name <>  <> (true)
+ist <> benan <> ein tuerkischer Vorname <>  <> (true)
+ist <> berfin <> ein name <>  <> (true)
+ist <> berfin <> ein tuerkischer Vorname <>  <> (true)
+ist <> berin <> ein name <>  <> (true)
+ist <> berin <> ein tuerkischer Vorname <>  <> (true)
+ist <> berkan <> ein name <>  <> (true)
+ist <> berkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> berkant <> ein name <>  <> (true)
+ist <> berkant <> ein tuerkischer Vorname <>  <> (true)
+ist <> berkay <> ein name <>  <> (true)
+ist <> berkay <> ein tuerkischer Vorname <>  <> (true)
+ist <> bertan <> ein name <>  <> (true)
+ist <> bertan <> ein tuerkischer Vorname <>  <> (true)
+ist <> betuel <> ein name <>  <> (true)
+ist <> betuel <> ein tuerkischer Vorname <>  <> (true)
+ist <> beyza <> ein name <>  <> (true)
+ist <> beyza <> ein tuerkischer Vorname <>  <> (true)
+ist <> billur <> ein name <>  <> (true)
+ist <> billur <> ein tuerkischer Vorname <>  <> (true)
+ist <> buelent <> ein name <>  <> (true)
+ist <> buelent <> ein tuerkischer Vorname <>  <> (true)
+ist <> buenyamin <> ein name <>  <> (true)
+ist <> buenyamin <> ein tuerkischer Vorname <>  <> (true)
+ist <> buersa <> ein name <>  <> (true)
+ist <> buersa <> ein tuerkischer Vorname <>  <> (true)
+ist <> bumin <> ein name <>  <> (true)
+ist <> bumin <> ein tuerkischer Vorname <>  <> (true)
+ist <> burak <> ein name <>  <> (true)
+ist <> burak <> ein tuerkischer Vorname <>  <> (true)
+ist <> burcu <> ein name <>  <> (true)
+ist <> burcu <> ein tuerkischer Vorname <>  <> (true)
+ist <> burhan <> ein name <>  <> (true)
+ist <> burhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> cagdas <> ein name <>  <> (true)
+ist <> cagdas <> ein tuerkischer Vorname <>  <> (true)
+ist <> canan <> ein name <>  <> (true)
+ist <> canan <> ein tuerkischer Vorname <>  <> (true)
+ist <> caner <> ein name <>  <> (true)
+ist <> caner <> ein tuerkischer Vorname <>  <> (true)
+ist <> cansu <> ein name <>  <> (true)
+ist <> cansu <> ein tuerkischer Vorname <>  <> (true)
+ist <> casin <> ein name <>  <> (true)
+ist <> casin <> ein tuerkischer Vorname <>  <> (true)
+ist <> celan <> ein name <>  <> (true)
+ist <> celan <> ein tuerkischer Vorname <>  <> (true)
+ist <> cem <> ein name <>  <> (true)
+ist <> cem <> ein tuerkischer Vorname <>  <> (true)
+ist <> cemil <> ein name <>  <> (true)
+ist <> cemil <> ein tuerkischer Vorname <>  <> (true)
+ist <> cengiz <> ein name <>  <> (true)
+ist <> cengiz <> ein tuerkischer Vorname <>  <> (true)
+ist <> cenk <> ein name <>  <> (true)
+ist <> cenk <> ein tuerkischer Vorname <>  <> (true)
+ist <> ceren <> ein name <>  <> (true)
+ist <> ceren <> ein tuerkischer Vorname <>  <> (true)
+ist <> cevat <> ein name <>  <> (true)
+ist <> cevat <> ein tuerkischer Vorname <>  <> (true)
+ist <> cevet <> ein name <>  <> (true)
+ist <> cevet <> ein tuerkischer Vorname <>  <> (true)
+ist <> ceyda <> ein name <>  <> (true)
+ist <> ceyda <> ein tuerkischer Vorname <>  <> (true)
+ist <> ceylan <> ein name <>  <> (true)
+ist <> ceylan <> ein tuerkischer Vorname <>  <> (true)
+ist <> ceylin <> ein name <>  <> (true)
+ist <> ceylin <> ein tuerkischer Vorname <>  <> (true)
+ist <> cigdem <> ein name <>  <> (true)
+ist <> cigdem <> ein tuerkischer Vorname <>  <> (true)
+ist <> cihan <> ein name <>  <> (true)
+ist <> cihan <> ein tuerkischer Vorname <>  <> (true)
+ist <> cueneyd <> ein name <>  <> (true)
+ist <> cueneyd <> ein tuerkischer Vorname <>  <> (true)
+ist <> damla <> ein name <>  <> (true)
+ist <> damla <> ein tuerkischer Vorname <>  <> (true)
+ist <> danis <> ein name <>  <> (true)
+ist <> danis <> ein tuerkischer Vorname <>  <> (true)
+ist <> dawoud <> ein name <>  <> (true)
+ist <> dawoud <> ein tuerkischer Vorname <>  <> (true)
+ist <> defne <> ein name <>  <> (true)
+ist <> defne <> ein tuerkischer Vorname <>  <> (true)
+ist <> demir <> ein name <>  <> (true)
+ist <> demir <> ein tuerkischer Vorname <>  <> (true)
+ist <> deniz  <> ein name <>  <> (true)
+ist <> deniz  <> ein tuerkischer Vorname <>  <> (true)
+ist <> derya <> ein name <>  <> (true)
+ist <> derya <> ein tuerkischer Vorname <>  <> (true)
+ist <> devran <> ein name <>  <> (true)
+ist <> devran <> ein tuerkischer Vorname <>  <> (true)
+ist <> dilara <> ein name <>  <> (true)
+ist <> dilara <> ein tuerkischer Vorname <>  <> (true)
+ist <> dilay <> ein name <>  <> (true)
+ist <> dilay <> ein tuerkischer Vorname <>  <> (true)
+ist <> dilek <> ein name <>  <> (true)
+ist <> dilek <> ein tuerkischer Vorname <>  <> (true)
+ist <> duenya <> ein name <>  <> (true)
+ist <> duenya <> ein tuerkischer Vorname <>  <> (true)
+ist <> duygu <> ein name <>  <> (true)
+ist <> duygu <> ein tuerkischer Vorname <>  <> (true)
+ist <> ebru <> ein name <>  <> (true)
+ist <> ebru <> ein tuerkischer Vorname <>  <> (true)
+ist <> ecrin <> ein name <>  <> (true)
+ist <> ecrin <> ein tuerkischer Vorname <>  <> (true)
+ist <> efe <> ein name <>  <> (true)
+ist <> efe <> ein tuerkischer Vorname <>  <> (true)
+ist <> ege <> ein name <>  <> (true)
+ist <> ege <> ein tuerkischer Vorname <>  <> (true)
+ist <> ehab <> ein name <>  <> (true)
+ist <> ehab <> ein tuerkischer Vorname <>  <> (true)
+ist <> ekrem <> ein name <>  <> (true)
+ist <> ekrem <> ein tuerkischer Vorname <>  <> (true)
+ist <> elanur <> ein name <>  <> (true)
+ist <> elanur <> ein tuerkischer Vorname <>  <> (true)
+ist <> elif <> ein name <>  <> (true)
+ist <> elif <> ein tuerkischer Vorname <>  <> (true)
+ist <> elife <> ein name <>  <> (true)
+ist <> elife <> ein tuerkischer Vorname <>  <> (true)
+ist <> eljesa <> ein name <>  <> (true)
+ist <> eljesa <> ein tuerkischer Vorname <>  <> (true)
+ist <> elma <> ein name <>  <> (true)
+ist <> elma <> ein tuerkischer Vorname <>  <> (true)
+ist <> elvan <> ein name <>  <> (true)
+ist <> elvan <> ein tuerkischer Vorname <>  <> (true)
+ist <> emel <> ein name <>  <> (true)
+ist <> emel <> ein tuerkischer Vorname <>  <> (true)
+ist <> emin <> ein name <>  <> (true)
+ist <> emin <> ein tuerkischer Vorname <>  <> (true)
+ist <> emina <> ein name <>  <> (true)
+ist <> emina <> ein tuerkischer Vorname <>  <> (true)
+ist <> emine <> ein name <>  <> (true)
+ist <> emine <> ein tuerkischer Vorname <>  <> (true)
+ist <> emir <> ein name <>  <> (true)
+ist <> emir <> ein tuerkischer Vorname <>  <> (true)
+ist <> emirhan <> ein name <>  <> (true)
+ist <> emirhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> emrah <> ein name <>  <> (true)
+ist <> emrah <> ein tuerkischer Vorname <>  <> (true)
+ist <> emre <> ein name <>  <> (true)
+ist <> emre <> ein tuerkischer Vorname <>  <> (true)
+ist <> ender <> ein name <>  <> (true)
+ist <> ender <> ein tuerkischer Vorname <>  <> (true)
+ist <> enes <> ein name <>  <> (true)
+ist <> enes <> ein tuerkischer Vorname <>  <> (true)
+ist <> engin <> ein name <>  <> (true)
+ist <> engin <> ein tuerkischer Vorname <>  <> (true)
+ist <> enis <> ein name <>  <> (true)
+ist <> enis <> ein tuerkischer Vorname <>  <> (true)
+ist <> enver <> ein name <>  <> (true)
+ist <> enver <> ein tuerkischer Vorname <>  <> (true)
+ist <> erdal <> ein name <>  <> (true)
+ist <> erdal <> ein tuerkischer Vorname <>  <> (true)
+ist <> erdem <> ein name <>  <> (true)
+ist <> erdem <> ein tuerkischer Vorname <>  <> (true)
+ist <> eren <> ein name <>  <> (true)
+ist <> eren <> ein tuerkischer Vorname <>  <> (true)
+ist <> erguen <> ein name <>  <> (true)
+ist <> erguen <> ein tuerkischer Vorname <>  <> (true)
+ist <> erhan <> ein name <>  <> (true)
+ist <> erhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> erkan <> ein name <>  <> (true)
+ist <> erkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> erol <> ein name <>  <> (true)
+ist <> erol <> ein tuerkischer Vorname <>  <> (true)
+ist <> eron <> ein name <>  <> (true)
+ist <> eron <> ein tuerkischer Vorname <>  <> (true)
+ist <> ersan <> ein name <>  <> (true)
+ist <> ersan <> ein tuerkischer Vorname <>  <> (true)
+ist <> ersen <> ein name <>  <> (true)
+ist <> ersen <> ein tuerkischer Vorname <>  <> (true)
+ist <> ersin <> ein name <>  <> (true)
+ist <> ersin <> ein tuerkischer Vorname <>  <> (true)
+ist <> ertan <> ein name <>  <> (true)
+ist <> ertan <> ein tuerkischer Vorname <>  <> (true)
+ist <> esen <> ein name <>  <> (true)
+ist <> esen <> ein tuerkischer Vorname <>  <> (true)
+ist <> esma <> ein name <>  <> (true)
+ist <> esma <> ein tuerkischer Vorname <>  <> (true)
+ist <> esra <> ein name <>  <> (true)
+ist <> esra <> ein tuerkischer Vorname <>  <> (true)
+ist <> faruk <> ein name <>  <> (true)
+ist <> faruk <> ein tuerkischer Vorname <>  <> (true)
+ist <> fathin <> ein name <>  <> (true)
+ist <> fathin <> ein tuerkischer Vorname <>  <> (true)
+ist <> fehim <> ein name <>  <> (true)
+ist <> fehim <> ein tuerkischer Vorname <>  <> (true)
+ist <> fehime <> ein name <>  <> (true)
+ist <> fehime <> ein tuerkischer Vorname <>  <> (true)
+ist <> fehmi <> ein name <>  <> (true)
+ist <> fehmi <> ein tuerkischer Vorname <>  <> (true)
+ist <> ferhat <> ein name <>  <> (true)
+ist <> ferhat <> ein tuerkischer Vorname <>  <> (true)
+ist <> feridi <> ein name <>  <> (true)
+ist <> feridi <> ein tuerkischer Vorname <>  <> (true)
+ist <> fethullah <> ein name <>  <> (true)
+ist <> fethullah <> ein tuerkischer Vorname <>  <> (true)
+ist <> feyza <> ein name <>  <> (true)
+ist <> feyza <> ein tuerkischer Vorname <>  <> (true)
+ist <> fidan <> ein name <>  <> (true)
+ist <> fidan <> ein tuerkischer Vorname <>  <> (true)
+ist <> fikret <> ein name <>  <> (true)
+ist <> fikret <> ein tuerkischer Vorname <>  <> (true)
+ist <> filiz <> ein name <>  <> (true)
+ist <> filiz <> ein tuerkischer Vorname <>  <> (true)
+ist <> firat <> ein name <>  <> (true)
+ist <> firat <> ein tuerkischer Vorname <>  <> (true)
+ist <> firdevs <> ein name <>  <> (true)
+ist <> firdevs <> ein tuerkischer Vorname <>  <> (true)
+ist <> fuat <> ein name <>  <> (true)
+ist <> fuat <> ein tuerkischer Vorname <>  <> (true)
+ist <> funda <> ein name <>  <> (true)
+ist <> funda <> ein tuerkischer Vorname <>  <> (true)
+ist <> furkan <> ein name <>  <> (true)
+ist <> furkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> gamze <> ein name <>  <> (true)
+ist <> gamze <> ein tuerkischer Vorname <>  <> (true)
+ist <> gizem <> ein name <>  <> (true)
+ist <> gizem <> ein tuerkischer Vorname <>  <> (true)
+ist <> goekhan <> ein name <>  <> (true)
+ist <> goekhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> guel <> ein name <>  <> (true)
+ist <> guel <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelbin <> ein name <>  <> (true)
+ist <> guelbin <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelcan <> ein name <>  <> (true)
+ist <> guelcan <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelhan <> ein name <>  <> (true)
+ist <> guelhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelistan <> ein name <>  <> (true)
+ist <> guelistan <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelnaz <> ein name <>  <> (true)
+ist <> guelnaz <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelsah <> ein name <>  <> (true)
+ist <> guelsah <> ein tuerkischer Vorname <>  <> (true)
+ist <> guelten <> ein name <>  <> (true)
+ist <> guelten <> ein tuerkischer Vorname <>  <> (true)
+ist <> guenes <> ein name <>  <> (true)
+ist <> guenes <> ein tuerkischer Vorname <>  <> (true)
+ist <> guerbis <> ein name <>  <> (true)
+ist <> guerbis <> ein tuerkischer Vorname <>  <> (true)
+ist <> gueven <> ein name <>  <> (true)
+ist <> gueven <> ein tuerkischer Vorname <>  <> (true)
+ist <> hadice <> ein name <>  <> (true)
+ist <> hadice <> ein tuerkischer Vorname <>  <> (true)
+ist <> hakan <> ein name <>  <> (true)
+ist <> hakan <> ein tuerkischer Vorname <>  <> (true)
+ist <> hakime <> ein name <>  <> (true)
+ist <> hakime <> ein tuerkischer Vorname <>  <> (true)
+ist <> halil <> ein name <>  <> (true)
+ist <> halil <> ein tuerkischer Vorname <>  <> (true)
+ist <> halime<> ein name <>  <> (true)
+ist <> halime<> ein tuerkischer Vorname <>  <> (true)
+ist <> halit <> ein name <>  <> (true)
+ist <> halit <> ein tuerkischer Vorname <>  <> (true)
+ist <> hamdi <> ein name <>  <> (true)
+ist <> hamdi <> ein tuerkischer Vorname <>  <> (true)
+ist <> hamide <> ein name <>  <> (true)
+ist <> hamide <> ein tuerkischer Vorname <>  <> (true)
+ist <> handan <> ein name <>  <> (true)
+ist <> handan <> ein tuerkischer Vorname <>  <> (true)
+ist <> hanife <> ein name <>  <> (true)
+ist <> hanife <> ein tuerkischer Vorname <>  <> (true)
+ist <> hatce <> ein name <>  <> (true)
+ist <> hatce <> ein tuerkischer Vorname <>  <> (true)
+ist <> hayat <> ein name <>  <> (true)
+ist <> hayat <> ein tuerkischer Vorname <>  <> (true)
+ist <> hicran <> ein name <>  <> (true)
+ist <> hicran <> ein tuerkischer Vorname <>  <> (true)
+ist <> hilal <> ein name <>  <> (true)
+ist <> hilal <> ein tuerkischer Vorname <>  <> (true)
+ist <> hmanit <> ein name <>  <> (true)
+ist <> hmanit <> ein tuerkischer Vorname <>  <> (true)
+ist <> huedanur <> ein name <>  <> (true)
+ist <> huedanur <> ein tuerkischer Vorname <>  <> (true)
+ist <> huelya <> ein name <>  <> (true)
+ist <> huelya <> ein tuerkischer Vorname <>  <> (true)
+ist <> huerriyet <> ein name <>  <> (true)
+ist <> huerriyet <> ein tuerkischer Vorname <>  <> (true)
+ist <> hueseyin <> ein name <>  <> (true)
+ist <> hueseyin <> ein tuerkischer Vorname <>  <> (true)
+ist <> ilayda <> ein name <>  <> (true)
+ist <> ilayda <> ein tuerkischer Vorname <>  <> (true)
+ist <> ilhan <> ein name <>  <> (true)
+ist <> ilhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> ilker <> ein name <>  <> (true)
+ist <> ilker <> ein tuerkischer Vorname <>  <> (true)
+ist <> ipek  <> ein name <>  <> (true)
+ist <> ipek  <> ein tuerkischer Vorname <>  <> (true)
+ist <> ired <> ein name <>  <> (true)
+ist <> ired <> ein tuerkischer Vorname <>  <> (true)
+ist <> irem <> ein name <>  <> (true)
+ist <> irem <> ein tuerkischer Vorname <>  <> (true)
+ist <> ismet <> ein name <>  <> (true)
+ist <> ismet <> ein tuerkischer Vorname <>  <> (true)
+ist <> iteri  <> ein name <>  <> (true)
+ist <> iteri  <> ein tuerkischer Vorname <>  <> (true)
+ist <> izel <> ein name <>  <> (true)
+ist <> izel <> ein tuerkischer Vorname <>  <> (true)
+ist <> izzetin <> ein name <>  <> (true)
+ist <> izzetin <> ein tuerkischer Vorname <>  <> (true)
+ist <> jale <> ein name <>  <> (true)
+ist <> jale <> ein tuerkischer Vorname <>  <> (true)
+ist <> kaan <> ein name <>  <> (true)
+ist <> kaan <> ein tuerkischer Vorname <>  <> (true)
+ist <> kadir <> ein name <>  <> (true)
+ist <> kadir <> ein tuerkischer Vorname <>  <> (true)
+ist <> karanfil <> ein name <>  <> (true)
+ist <> karanfil <> ein tuerkischer Vorname <>  <> (true)
+ist <> kaya <> ein name <>  <> (true)
+ist <> kaya <> ein tuerkischer Vorname <>  <> (true)
+ist <> kayra <> ein name <>  <> (true)
+ist <> kayra <> ein tuerkischer Vorname <>  <> (true)
+ist <> kemal <> ein name <>  <> (true)
+ist <> kemal <> ein tuerkischer Vorname <>  <> (true)
+ist <> kerem <> ein name <>  <> (true)
+ist <> kerem <> ein tuerkischer Vorname <>  <> (true)
+ist <> kerim <> ein name <>  <> (true)
+ist <> kerim <> ein tuerkischer Vorname <>  <> (true)
+ist <> kiymet <> ein name <>  <> (true)
+ist <> kiymet <> ein tuerkischer Vorname <>  <> (true)
+ist <> koray <> ein name <>  <> (true)
+ist <> koray <> ein tuerkischer Vorname <>  <> (true)
+ist <> korut <> ein name <>  <> (true)
+ist <> korut <> ein tuerkischer Vorname <>  <> (true)
+ist <> kuebra <> ein name <>  <> (true)
+ist <> kuebra <> ein tuerkischer Vorname <>  <> (true)
+ist <> lale <> ein name <>  <> (true)
+ist <> lale <> ein tuerkischer Vorname <>  <> (true)
+ist <> lamya <> ein name <>  <> (true)
+ist <> lamya <> ein tuerkischer Vorname <>  <> (true)
+ist <> levent <> ein name <>  <> (true)
+ist <> levent <> ein tuerkischer Vorname <>  <> (true)
+ist <> leyla <> ein name <>  <> (true)
+ist <> leyla <> ein tuerkischer Vorname <>  <> (true)
+ist <> lokman <> ein name <>  <> (true)
+ist <> lokman <> ein tuerkischer Vorname <>  <> (true)
+ist <> maali <> ein name <>  <> (true)
+ist <> maali <> ein tuerkischer Vorname <>  <> (true)
+ist <> mahir <> ein name <>  <> (true)
+ist <> mahir <> ein tuerkischer Vorname <>  <> (true)
+ist <> mahmud <> ein name <>  <> (true)
+ist <> mahmud <> ein tuerkischer Vorname <>  <> (true)
+ist <> mahoud <> ein name <>  <> (true)
+ist <> mahoud <> ein tuerkischer Vorname <>  <> (true)
+ist <> maide <> ein name <>  <> (true)
+ist <> maide <> ein tuerkischer Vorname <>  <> (true)
+ist <> makbule <> ein name <>  <> (true)
+ist <> makbule <> ein tuerkischer Vorname <>  <> (true)
+ist <> medine <> ein name <>  <> (true)
+ist <> medine <> ein tuerkischer Vorname <>  <> (true)
+ist <> mehmed <> ein name <>  <> (true)
+ist <> mehmed <> ein tuerkischer Vorname <>  <> (true)
+ist <> mehmet <> ein name <>  <> (true)
+ist <> mehmet <> ein tuerkischer Vorname <>  <> (true)
+ist <> mehtap <> ein name <>  <> (true)
+ist <> mehtap <> ein tuerkischer Vorname <>  <> (true)
+ist <> melda <> ein name <>  <> (true)
+ist <> melda <> ein tuerkischer Vorname <>  <> (true)
+ist <> melek <> ein name <>  <> (true)
+ist <> melek <> ein tuerkischer Vorname <>  <> (true)
+ist <> melih <> ein name <>  <> (true)
+ist <> melih <> ein tuerkischer Vorname <>  <> (true)
+ist <> meliha <> ein name <>  <> (true)
+ist <> meliha <> ein tuerkischer Vorname <>  <> (true)
+ist <> melika <> ein name <>  <> (true)
+ist <> melika <> ein tuerkischer Vorname <>  <> (true)
+ist <> melike <> ein name <>  <> (true)
+ist <> melike <> ein tuerkischer Vorname <>  <> (true)
+ist <> meltem <> ein name <>  <> (true)
+ist <> meltem <> ein tuerkischer Vorname <>  <> (true)
+ist <> meral <> ein name <>  <> (true)
+ist <> meral <> ein tuerkischer Vorname <>  <> (true)
+ist <> merdin <> ein name <>  <> (true)
+ist <> merdin <> ein tuerkischer Vorname <>  <> (true)
+ist <> mert <> ein name <>  <> (true)
+ist <> mert <> ein tuerkischer Vorname <>  <> (true)
+ist <> merve <> ein name <>  <> (true)
+ist <> merve <> ein tuerkischer Vorname <>  <> (true)
+ist <> meryem <> ein name <>  <> (true)
+ist <> meryem <> ein tuerkischer Vorname <>  <> (true)
+ist <> mesut <> ein name <>  <> (true)
+ist <> mesut <> ein tuerkischer Vorname <>  <> (true)
+ist <> metin <> ein name <>  <> (true)
+ist <> metin <> ein tuerkischer Vorname <>  <> (true)
+ist <> meyra <> ein name <>  <> (true)
+ist <> meyra <> ein tuerkischer Vorname <>  <> (true)
+ist <> milana <> ein name <>  <> (true)
+ist <> milana <> ein tuerkischer Vorname <>  <> (true)
+ist <> mirac <> ein name <>  <> (true)
+ist <> mirac <> ein tuerkischer Vorname <>  <> (true)
+ist <> miray <> ein name <>  <> (true)
+ist <> miray <> ein tuerkischer Vorname <>  <> (true)
+ist <> mirza <> ein name <>  <> (true)
+ist <> mirza <> ein tuerkischer Vorname <>  <> (true)
+ist <> muege <> ein name <>  <> (true)
+ist <> muege <> ein tuerkischer Vorname <>  <> (true)
+ist <> muejgan <> ein name <>  <> (true)
+ist <> muejgan <> ein tuerkischer Vorname <>  <> (true)
+ist <> murat <> ein name <>  <> (true)
+ist <> murat <> ein tuerkischer Vorname <>  <> (true)
+ist <> musa <> ein name <>  <> (true)
+ist <> musa <> ein tuerkischer Vorname <>  <> (true)
+ist <> mustafa <> ein name <>  <> (true)
+ist <> mustafa <> ein tuerkischer Vorname <>  <> (true)
+ist <> muzafer <> ein name <>  <> (true)
+ist <> muzafer <> ein tuerkischer Vorname <>  <> (true)
+ist <> muzaffer <> ein name <>  <> (true)
+ist <> muzaffer <> ein tuerkischer Vorname <>  <> (true)
+ist <> nadir <> ein name <>  <> (true)
+ist <> nadir <> ein tuerkischer Vorname <>  <> (true)
+ist <> nadira <> ein name <>  <> (true)
+ist <> nadira <> ein tuerkischer Vorname <>  <> (true)
+ist <> nasir <> ein name <>  <> (true)
+ist <> nasir <> ein tuerkischer Vorname <>  <> (true)
+ist <> necati <> ein name <>  <> (true)
+ist <> necati <> ein tuerkischer Vorname <>  <> (true)
+ist <> necela <> ein name <>  <> (true)
+ist <> necela <> ein tuerkischer Vorname <>  <> (true)
+ist <> nergis <> ein name <>  <> (true)
+ist <> nergis <> ein tuerkischer Vorname <>  <> (true)
+ist <> nergiz <> ein name <>  <> (true)
+ist <> nergiz <> ein tuerkischer Vorname <>  <> (true)
+ist <> nermin <> ein name <>  <> (true)
+ist <> nermin <> ein tuerkischer Vorname <>  <> (true)
+ist <> neslihan <> ein name <>  <> (true)
+ist <> neslihan <> ein tuerkischer Vorname <>  <> (true)
+ist <> nesrin <> ein name <>  <> (true)
+ist <> nesrin <> ein tuerkischer Vorname <>  <> (true)
+ist <> neval <> ein name <>  <> (true)
+ist <> neval <> ein tuerkischer Vorname <>  <> (true)
+ist <> nevin <> ein name <>  <> (true)
+ist <> nevin <> ein tuerkischer Vorname <>  <> (true)
+ist <> nevzat <> ein name <>  <> (true)
+ist <> nevzat <> ein tuerkischer Vorname <>  <> (true)
+ist <> nihan <> ein name <>  <> (true)
+ist <> nihan <> ein tuerkischer Vorname <>  <> (true)
+ist <> nilay <> ein name <>  <> (true)
+ist <> nilay <> ein tuerkischer Vorname <>  <> (true)
+ist <> niyazi <> ein name <>  <> (true)
+ist <> niyazi <> ein tuerkischer Vorname <>  <> (true)
+ist <> nura <> ein name <>  <> (true)
+ist <> nura <> ein tuerkischer Vorname <>  <> (true)
+ist <> nurdan <> ein name <>  <> (true)
+ist <> nurdan <> ein tuerkischer Vorname <>  <> (true)
+ist <> oemer <> ein name <>  <> (true)
+ist <> oemer <> ein tuerkischer Vorname <>  <> (true)
+ist <> oemuer <> ein name <>  <> (true)
+ist <> oemuer <> ein tuerkischer Vorname <>  <> (true)
+ist <> oender <> ein name <>  <> (true)
+ist <> oender <> ein tuerkischer Vorname <>  <> (true)
+ist <> oezge <> ein name <>  <> (true)
+ist <> oezge <> ein tuerkischer Vorname <>  <> (true)
+ist <> oezguer <> ein name <>  <> (true)
+ist <> oezguer <> ein tuerkischer Vorname <>  <> (true)
+ist <> oezkan <> ein name <>  <> (true)
+ist <> oezkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> oezlem <> ein name <>  <> (true)
+ist <> oezlem <> ein tuerkischer Vorname <>  <> (true)
+ist <> oezuer <> ein name <>  <> (true)
+ist <> oezuer <> ein tuerkischer Vorname <>  <> (true)
+ist <> okan <> ein name <>  <> (true)
+ist <> okan <> ein tuerkischer Vorname <>  <> (true)
+ist <> oktay <> ein name <>  <> (true)
+ist <> oktay <> ein tuerkischer Vorname <>  <> (true)
+ist <> onur <> ein name <>  <> (true)
+ist <> onur <> ein tuerkischer Vorname <>  <> (true)
+ist <> orcun <> ein name <>  <> (true)
+ist <> orcun <> ein tuerkischer Vorname <>  <> (true)
+ist <> orhan <> ein name <>  <> (true)
+ist <> orhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> osman <> ein name <>  <> (true)
+ist <> osman <> ein tuerkischer Vorname <>  <> (true)
+ist <> ozan <> ein name <>  <> (true)
+ist <> ozan <> ein tuerkischer Vorname <>  <> (true)
+ist <> pelin <> ein name <>  <> (true)
+ist <> pelin <> ein tuerkischer Vorname <>  <> (true)
+ist <> pervin <> ein name <>  <> (true)
+ist <> pervin <> ein tuerkischer Vorname <>  <> (true)
+ist <> pinar <> ein name <>  <> (true)
+ist <> pinar <> ein tuerkischer Vorname <>  <> (true)
+ist <> rabia <> ein name <>  <> (true)
+ist <> rabia <> ein tuerkischer Vorname <>  <> (true)
+ist <> ramadan <> ein name <>  <> (true)
+ist <> ramadan <> ein tuerkischer Vorname <>  <> (true)
+ist <> ramazan <> ein name <>  <> (true)
+ist <> ramazan <> ein tuerkischer Vorname <>  <> (true)
+ist <> ramiz <> ein name <>  <> (true)
+ist <> ramiz <> ein tuerkischer Vorname <>  <> (true)
+ist <> rasim <> ein name <>  <> (true)
+ist <> rasim <> ein tuerkischer Vorname <>  <> (true)
+ist <> recep <> ein name <>  <> (true)
+ist <> recep <> ein tuerkischer Vorname <>  <> (true)
+ist <> remzi <> ein name <>  <> (true)
+ist <> remzi <> ein tuerkischer Vorname <>  <> (true)
+ist <> reyhan <> ein name <>  <> (true)
+ist <> reyhan <> ein tuerkischer Vorname <>  <> (true)
+ist <> rifat <> ein name <>  <> (true)
+ist <> rifat <> ein tuerkischer Vorname <>  <> (true)
+ist <> rojin <> ein name <>  <> (true)
+ist <> rojin <> ein tuerkischer Vorname <>  <> (true)
+ist <> rona <> ein name <>  <> (true)
+ist <> rona <> ein tuerkischer Vorname <>  <> (true)
+ist <> ruhsar <> ein name <>  <> (true)
+ist <> ruhsar <> ein tuerkischer Vorname <>  <> (true)
+ist <> rukiye <> ein name <>  <> (true)
+ist <> rukiye <> ein tuerkischer Vorname <>  <> (true)
+ist <> ruveyda <> ein name <>  <> (true)
+ist <> ruveyda <> ein tuerkischer Vorname <>  <> (true)
+ist <> sahin <> ein name <>  <> (true)
+ist <> sahin <> ein tuerkischer Vorname <>  <> (true)
+ist <> salah <> ein name <>  <> (true)
+ist <> salah <> ein tuerkischer Vorname <>  <> (true)
+ist <> salem <> ein name <>  <> (true)
+ist <> salem <> ein tuerkischer Vorname <>  <> (true)
+ist <> salih <> ein name <>  <> (true)
+ist <> salih <> ein tuerkischer Vorname <>  <> (true)
+ist <> samet <> ein name <>  <> (true)
+ist <> samet <> ein tuerkischer Vorname <>  <> (true)
+ist <> sami <> ein name <>  <> (true)
+ist <> sami <> ein tuerkischer Vorname <>  <> (true)
+ist <> samya <> ein name <>  <> (true)
+ist <> samya <> ein tuerkischer Vorname <>  <> (true)
+ist <> satet <> ein name <>  <> (true)
+ist <> satet <> ein tuerkischer Vorname <>  <> (true)
+ist <> savas <> ein name <>  <> (true)
+ist <> savas <> ein tuerkischer Vorname <>  <> (true)
+ist <> schahin <> ein name <>  <> (true)
+ist <> schahin <> ein tuerkischer Vorname <>  <> (true)
+ist <> seckin <> ein name <>  <> (true)
+ist <> seckin <> ein tuerkischer Vorname <>  <> (true)
+ist <> seda <> ein name <>  <> (true)
+ist <> seda <> ein tuerkischer Vorname <>  <> (true)
+ist <> sedat <> ein name <>  <> (true)
+ist <> sedat <> ein tuerkischer Vorname <>  <> (true)
+ist <> sefika <> ein name <>  <> (true)
+ist <> sefika <> ein tuerkischer Vorname <>  <> (true)
+ist <> selcuk <> ein name <>  <> (true)
+ist <> selcuk <> ein tuerkischer Vorname <>  <> (true)
+ist <> selda <> ein name <>  <> (true)
+ist <> selda <> ein tuerkischer Vorname <>  <> (true)
+ist <> selim <> ein name <>  <> (true)
+ist <> selim <> ein tuerkischer Vorname <>  <> (true)
+ist <> selin <> ein name <>  <> (true)
+ist <> selin <> ein tuerkischer Vorname <>  <> (true)
+ist <> selma <> ein name <>  <> (true)
+ist <> selma <> ein tuerkischer Vorname <>  <> (true)
+ist <> selver <> ein name <>  <> (true)
+ist <> selver <> ein tuerkischer Vorname <>  <> (true)
+ist <> selvi <> ein name <>  <> (true)
+ist <> selvi <> ein tuerkischer Vorname <>  <> (true)
+ist <> semih <> ein name <>  <> (true)
+ist <> semih <> ein tuerkischer Vorname <>  <> (true)
+ist <> semiha <> ein name <>  <> (true)
+ist <> semiha <> ein tuerkischer Vorname <>  <> (true)
+ist <> semra <> ein name <>  <> (true)
+ist <> semra <> ein tuerkischer Vorname <>  <> (true)
+ist <> sena <> ein name <>  <> (true)
+ist <> sena <> ein tuerkischer Vorname <>  <> (true)
+ist <> sener <> ein name <>  <> (true)
+ist <> sener <> ein tuerkischer Vorname <>  <> (true)
+ist <> serap <> ein name <>  <> (true)
+ist <> serap <> ein tuerkischer Vorname <>  <> (true)
+ist <> serdar <> ein name <>  <> (true)
+ist <> serdar <> ein tuerkischer Vorname <>  <> (true)
+ist <> serhat <> ein name <>  <> (true)
+ist <> serhat <> ein tuerkischer Vorname <>  <> (true)
+ist <> serkan <> ein name <>  <> (true)
+ist <> serkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> serpil <> ein name <>  <> (true)
+ist <> serpil <> ein tuerkischer Vorname <>  <> (true)
+ist <> sertac <> ein name <>  <> (true)
+ist <> sertac <> ein tuerkischer Vorname <>  <> (true)
+ist <> seval <> ein name <>  <> (true)
+ist <> seval <> ein tuerkischer Vorname <>  <> (true)
+ist <> sevda <> ein name <>  <> (true)
+ist <> sevda <> ein tuerkischer Vorname <>  <> (true)
+ist <> sevgi <> ein name <>  <> (true)
+ist <> sevgi <> ein tuerkischer Vorname <>  <> (true)
+ist <> sevil <> ein name <>  <> (true)
+ist <> sevil <> ein tuerkischer Vorname <>  <> (true)
+ist <> sevim <> ein name <>  <> (true)
+ist <> sevim <> ein tuerkischer Vorname <>  <> (true)
+ist <> sevinc <> ein name <>  <> (true)
+ist <> sevinc <> ein tuerkischer Vorname <>  <> (true)
+ist <> seyma <> ein name <>  <> (true)
+ist <> seyma <> ein tuerkischer Vorname <>  <> (true)
+ist <> sezer <> ein name <>  <> (true)
+ist <> sezer <> ein tuerkischer Vorname <>  <> (true)
+ist <> shermin <> ein name <>  <> (true)
+ist <> shermin <> ein tuerkischer Vorname <>  <> (true)
+ist <> shirin <> ein name <>  <> (true)
+ist <> shirin <> ein tuerkischer Vorname <>  <> (true)
+ist <> sibel <> ein name <>  <> (true)
+ist <> sibel <> ein tuerkischer Vorname <>  <> (true)
+ist <> sinan <> ein name <>  <> (true)
+ist <> sinan <> ein tuerkischer Vorname <>  <> (true)
+ist <> sinem <> ein name <>  <> (true)
+ist <> sinem <> ein tuerkischer Vorname <>  <> (true)
+ist <> songuel <> ein name <>  <> (true)
+ist <> songuel <> ein tuerkischer Vorname <>  <> (true)
+ist <> sudenaz <> ein name <>  <> (true)
+ist <> sudenaz <> ein tuerkischer Vorname <>  <> (true)
+ist <> sueheyla <> ein name <>  <> (true)
+ist <> sueheyla <> ein tuerkischer Vorname <>  <> (true)
+ist <> suekrue <> ein name <>  <> (true)
+ist <> suekrue <> ein tuerkischer Vorname <>  <> (true)
+ist <> sueleyman <> ein name <>  <> (true)
+ist <> sueleyman <> ein tuerkischer Vorname <>  <> (true)
+ist <> suleiman <> ein name <>  <> (true)
+ist <> suleiman <> ein tuerkischer Vorname <>  <> (true)
+ist <> sultan <> ein name <>  <> (true)
+ist <> sultan <> ein tuerkischer Vorname <>  <> (true)
+ist <> taha <> ein name <>  <> (true)
+ist <> taha <> ein tuerkischer Vorname <>  <> (true)
+ist <> tahira <> ein name <>  <> (true)
+ist <> tahira <> ein tuerkischer Vorname <>  <> (true)
+ist <> taner <> ein name <>  <> (true)
+ist <> taner <> ein tuerkischer Vorname <>  <> (true)
+ist <> tansel <> ein name <>  <> (true)
+ist <> tansel <> ein tuerkischer Vorname <>  <> (true)
+ist <> tarek <> ein name <>  <> (true)
+ist <> tarek <> ein tuerkischer Vorname <>  <> (true)
+ist <> tarik <> ein name <>  <> (true)
+ist <> tarik <> ein tuerkischer Vorname <>  <> (true)
+ist <> tarim <> ein name <>  <> (true)
+ist <> tarim <> ein tuerkischer Vorname <>  <> (true)
+ist <> tariq <> ein name <>  <> (true)
+ist <> tariq <> ein tuerkischer Vorname <>  <> (true)
+ist <> tarkan <> ein name <>  <> (true)
+ist <> tarkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> tayfun <> ein name <>  <> (true)
+ist <> tayfun <> ein tuerkischer Vorname <>  <> (true)
+ist <> taylan <> ein name <>  <> (true)
+ist <> taylan <> ein tuerkischer Vorname <>  <> (true)
+ist <> tayyip <> ein name <>  <> (true)
+ist <> tayyip <> ein tuerkischer Vorname <>  <> (true)
+ist <> tekin <> ein name <>  <> (true)
+ist <> tekin <> ein tuerkischer Vorname <>  <> (true)
+ist <> timucin <> ein name <>  <> (true)
+ist <> timucin <> ein tuerkischer Vorname <>  <> (true)
+ist <> timur <> ein name <>  <> (true)
+ist <> timur <> ein tuerkischer Vorname <>  <> (true)
+ist <> tolga <> ein name <>  <> (true)
+ist <> tolga <> ein tuerkischer Vorname <>  <> (true)
+ist <> tuelay <> ein name <>  <> (true)
+ist <> tuelay <> ein tuerkischer Vorname <>  <> (true)
+ist <> tufan <> ein name <>  <> (true)
+ist <> tufan <> ein tuerkischer Vorname <>  <> (true)
+ist <> tugba <> ein name <>  <> (true)
+ist <> tugba <> ein tuerkischer Vorname <>  <> (true)
+ist <> tuncay <> ein name <>  <> (true)
+ist <> tuncay <> ein tuerkischer Vorname <>  <> (true)
+ist <> uemit <> ein name <>  <> (true)
+ist <> uemit <> ein tuerkischer Vorname <>  <> (true)
+ist <> uenal <> ein name <>  <> (true)
+ist <> uenal <> ein tuerkischer Vorname <>  <> (true)
+ist <> ufuk <> ein name <>  <> (true)
+ist <> ufuk <> ein tuerkischer Vorname <>  <> (true)
+ist <> ugur <> ein name <>  <> (true)
+ist <> ugur <> ein tuerkischer Vorname <>  <> (true)
+ist <> umut <> ein name <>  <> (true)
+ist <> umut <> ein tuerkischer Vorname <>  <> (true)
+ist <> usman <> ein name <>  <> (true)
+ist <> usman <> ein tuerkischer Vorname <>  <> (true)
+ist <> veysel <> ein name <>  <> (true)
+ist <> veysel <> ein tuerkischer Vorname <>  <> (true)
+ist <> volkan <> ein name <>  <> (true)
+ist <> volkan <> ein tuerkischer Vorname <>  <> (true)
+ist <> yagmur <> ein name <>  <> (true)
+ist <> yagmur <> ein tuerkischer Vorname <>  <> (true)
+ist <> yakup <> ein name <>  <> (true)
+ist <> yakup <> ein tuerkischer Vorname <>  <> (true)
+ist <> yaren <> ein name <>  <> (true)
+ist <> yaren <> ein tuerkischer Vorname <>  <> (true)
+ist <> yasar <> ein name <>  <> (true)
+ist <> yasar <> ein tuerkischer Vorname <>  <> (true)
+ist <> yasemin <> ein name <>  <> (true)
+ist <> yasemin <> ein tuerkischer Vorname <>  <> (true)
+ist <> yasin <> ein name <>  <> (true)
+ist <> yasin <> ein tuerkischer Vorname <>  <> (true)
+ist <> yavuz <> ein name <>  <> (true)
+ist <> yavuz <> ein tuerkischer Vorname <>  <> (true)
+ist <> yeliz <> ein name <>  <> (true)
+ist <> yeliz <> ein tuerkischer Vorname <>  <> (true)
+ist <> yesim <> ein name <>  <> (true)
+ist <> yesim <> ein tuerkischer Vorname <>  <> (true)
+ist <> yessin <> ein name <>  <> (true)
+ist <> yessin <> ein tuerkischer Vorname <>  <> (true)
+ist <> yildiz <> ein name <>  <> (true)
+ist <> yildiz <> ein tuerkischer Vorname <>  <> (true)
+ist <> yonca <> ein name <>  <> (true)
+ist <> yonca <> ein tuerkischer Vorname <>  <> (true)
+ist <> yorgi <> ein name <>  <> (true)
+ist <> yorgi <> ein tuerkischer Vorname <>  <> (true)
+ist <> yudum <> ein name <>  <> (true)
+ist <> yudum <> ein tuerkischer Vorname <>  <> (true)
+ist <> yunus <> ein name <>  <> (true)
+ist <> yunus <> ein tuerkischer Vorname <>  <> (true)
+ist <> zafer <> ein name <>  <> (true)
+ist <> zafer <> ein tuerkischer Vorname <>  <> (true)
+ist <> zafire <> ein name <>  <> (true)
+ist <> zafire <> ein tuerkischer Vorname <>  <> (true)
+ist <> zahir <> ein name <>  <> (true)
+ist <> zahir <> ein tuerkischer Vorname <>  <> (true)
+ist <> zaim <> ein name <>  <> (true)
+ist <> zaim <> ein tuerkischer Vorname <>  <> (true)
+ist <> zaima <> ein name <>  <> (true)
+ist <> zaima <> ein tuerkischer Vorname <>  <> (true)
+ist <> zaynab <> ein name <>  <> (true)
+ist <> zaynab <> ein tuerkischer Vorname <>  <> (true)
+ist <> zehra <> ein name <>  <> (true)
+ist <> zehra <> ein tuerkischer Vorname <>  <> (true)
+ist <> zeliha <> ein name <>  <> (true)
+ist <> zeliha <> ein tuerkischer Vorname <>  <> (true)
+ist <> zelis <> ein name <>  <> (true)
+ist <> zelis <> ein tuerkischer Vorname <>  <> (true)
+ist <> zelisa <> ein name <>  <> (true)
+ist <> zelisa <> ein tuerkischer Vorname <>  <> (true)
+ist <> zeqije <> ein name <>  <> (true)
+ist <> zeqije <> ein tuerkischer Vorname <>  <> (true)
+ist <> zeynep <> ein name <>  <> (true)
+ist <> zeynep <> ein tuerkischer Vorname <>  <> (true)

@@ -1,938 +1,938 @@
 wird angegeben <> die elektrische stromstaerke <>  <> in ampere <> 50
 angibt <> der ph-wert <> den saeuregrad <> von einer loesung <> 50
 angibt <> die kernladungszahl <> die anzahl <> der protonen <>  <>  <>  <>  <>  <>  <> 50
-bedeutet <> _cern_ <> _europaeische_organisation_fuer_kernforschung_ <>  <>  <>  <>  <>  <>  <>  <> 50
-bedeutet <> tft <> thin film transistor <>  <>  <>  <>  <>  <>  <>  <> 50
-befassen <>die mendelschen gesetze <> sich <> mit vererbungsgesetzen <>  <>  <>  <>  <>  <>  <> 50
-beschreiben <> die mendelschen regeln <> die vererbungsregeln <>  <>  <>  <>  <>  <>  <>  <> 50
-beschrieb <> albert_einstein <> die relativitaetstheorie <>  <>  <>  <>  <>  <>  <>  <> 50
-bestehen <> die blaeschen <>  <> in dem mineralwasser aus kohlendioxid <> 50
-besteht <> die atomhuelle <>  <> aus elektronen <>  <>  <>  <>  <>  <>  <> 50
-besteht <> die mine <>  <> aus graphit;von einem bleistift <>  <>  <>  <>  <>  <>  <> 50
-besteht <> die seife <>  <> aus salzen von fettsaeuren <>  <>  <>  <>  <>  <>  <> 50
-besteht <> ein diamant <>  <> aus reinem kohlenstoff <>  <>  <>  <>  <>  <>  <> 50
-besteht <> ein getreidekorn <>  <> aus schale mehlkoerper und keimling <>  <>  <>  <>  <>  <>  <> 50
-besteht <> ein molekuel <>  <> aus mindestens atomen <>  <>  <>  <>  <>  <>  <> 50
-besteht <> erdgas <> hauptsaechlich <> aus methan <>  <>  <>  <>  <>  <>  <> 50
-besteht <> erdoel <> hauptsaechlich <> aus kohlenstoff <>  <>  <>  <>  <>  <>  <> 50
-besteht <> gelantine <> hauptsaechlich <> aus glutin <>  <>  <>  <>  <>  <>  <> 50
-besteht <> marmor <> hauptsaechlich <> aus calciumcarbonat <>  <>  <>  <>  <>  <>  <> 50
-besteht <>  <>  <> ein korund aus eisenoxid <>  <>  <>  <>  <>  <>  <> 50
-besteht <> quarz <>  <> aus siliziumdioxid <>  <>  <>  <>  <>  <>  <> 50
-besteht <> salz <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> 50
-besteht <> schnee <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> 50
-besteht <> wasser <> aus sauerstoff und wasserstoff <>  <>  <>  <>  <>  <>  <>  <> 50
-besteht <> zucker <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> 50
-bildet <> eine fluessigkeit <> eine oberflaeche <>  <>  <>  <>  <>  <>  <>  <> 50
-dienen <> die weissen blutkoerperchen <>  <>  der vernichtung von viren bzw bakterien <>  <>  <>  <>  <>  <>  <> 50
-dienen <>  <>  <> die weissen blutkoerperchen der immunabwehr <>  <>  <>  <>  <>  <>  <> 50
-dient <> benzolsaeure <> als konservierungsmittel <>  <>  <>  <>  <>  <>  <>  <> 50
-dient <> die c-14-methode <>  <> zur altersbestimmung <>  <>  <>  <>  <>  <>  <> 50
-dient <> die schweissabsonderung <>  <> der waermeregulation <>  <>  <>  <>  <>  <>  <> 50
-dient <> eine zentrifuge <>  <> zur mechanischen trennung von gemischen <>  <>  <>  <>  <>  <>  <> 50
-dient <> karbolsaeure <> als desinfektionsmittel <>  <>  <>  <>  <>  <>  <>  <> 50
-dient <> kohlenstoff-14 <>  <> der radiometrischen altersbestimmung <>  <>  <>  <>  <>  <>  <> 50
-dient <> natriumglutamat <> als geschmacksverstaerker <> in lebensmitteln <>  <>  <>  <>  <>  <>  <> 50
-enhaelt <> margarine <> einen butter <> nicht <>  <>  <>  <>  <>  <>  <> 50
-enhaelt <> marzipan <> mandeln <>  <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> irene_curie <> die kuenstliche radioaktivitaet <>  <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> marie_curie <> 1898 das polonium <>  <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> paracelsus <> das zink <>  <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> robert brown <> die molekuelbewegung <>  <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> das chloroform <>  <> 1831 <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> europium <>  <> 1896 <>  <>  <>  <>  <>  <>  <> 50
-entdeckt wurde <> jod <>  <> 1811 <>  <>  <>  <>  <>  <>  <> 50
-enthaelt <> chromargan <> ein kupfer <> nicht <>  <>  <>  <>  <>  <>  <> 50
-enthaelt <> der schweiss <> butansaeure <>  <>  <>  <>  <>  <>  <>  <> 50
-enthaelt <> kaffee <>  <> ueber 200 verschiedene chemische verbindungen <>  <>  <>  <>  <>  <>  <> 50
-enthaelt <> margarine <> kartoffelstaerke <>  <>  <>  <>  <>  <>  <>  <> 50
-enthalten ist <> ethanol <>  <> in bier <>  <>  <>  <>  <>  <>  <> 50
-enthalten ist <> ethanol <>  <> in schnaps <>  <>  <>  <>  <>  <>  <> 50
-enthalten ist <> ethanol <>  <> in wein <>  <>  <>  <>  <>  <>  <> 50
-entspricht <> ein hektar <> 100 quadratmetern <>  <>  <>  <>  <>  <>  <>  <> 50
-entsteht <> bei einer metallbindung <> ein gitter <>  <>  <>  <>  <>  <>  <>  <> 50
-entsteht <> ein salz <>  <> durch ionenbindung <>  <>  <>  <>  <>  <>  <> 50
-entsteht <> gummi <>  <> durch vulkanisation aus rohkautschuk <>  <>  <>  <>  <>  <>  <> 50
-entsteht <> kohlendioxid <>  <> durch durch die verbrennung von fossilen brennstoffen <>  <>  <>  <>  <>  <>  <> 50
-entsteht <> polyvinylchlorid <>  <> durch polymerisation <>  <>  <>  <>  <>  <>  <> 50
-entwickelt hat <> alessandro_graf_volta <> die theorie des elektrischen stroms <>  <>  <>  <>  <>  <>  <>  <> 50
-erhoeht <> glukagon <> den blutzuckerspiegel <>  <>  <>  <>  <>  <>  <>  <> 50
-erkennt <> das alter der baeume<> man <> an den jahresringen <>  <>  <>  <>  <>  <>  <> 50
-erzeugen kann/can <> eine solarzelle <> energie <>  <>  <>  <>  <>  <>  <>  <> 50
-erzeugen kann/can <> man <> elektrische energie <> mit einer solarzelle <>  <>  <>  <>  <>  <>  <> 50
-erzeugter ist <> ein homunkulus <> ein kuenstlich mensch <>  <>  <>  <>  <>  <>  <>  <> 50
-gefriert <> wasser <> bei 32 grad fahrenheit <>  <>  <>  <>  <>  <>  <>  <> 50
-gefuellt wurden <> gasballons <>  <> mit wasserstoff <>  <>  <>  <>  <>  <>  <> 50
-gefuellt wurden <> luftschiffe <>  <> mit wasserstoff <>  <>  <>  <>  <>  <>  <> 50
-gehoeren <> actinoide <>  <> zu den metallen <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> uran <>  <> zu den actinoiden <>  <>  <>  <>  <>  <>  <> 50
-gewinnt <> die verschiedenen bestandteile des erdoels <> man <> durch fraktionierende destillation <>  <>  <>  <>  <>  <>  <> 50
-gewinnt <> penicillin <> man <> aus schimmelpilzen <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> 10 chemische elemente <>  <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> 20 reinelemente <>  <>  <>  <>  <>  <>  <>  <> 50
-gibt <> es <> 93 natuerliche elemente <>  <>  <>  <>  <>  <>  <>  <> 50
-haben <> alzheimer-patienten <> ein durstgefuehl <> nicht <>  <>  <>  <>  <>  <>  <> 50
-haben <> elektronen <> eine negative ladung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> 46 chromosomen <> eine menschliche zelle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> actinium <> das chemische zeichen _ac_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> actinium <> die ordnungszahl <> 89 <>  <>  <>  <>  <>  <>  <> 50
-hat <> actinium <> einen schmelzpunkt  <> von 1047 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> actinium <> einen siedepunkt  <> von 3197 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> aluminium <> das chemische zeichen _al_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> aluminium <> die ordnungszahl <> 13 <>  <>  <>  <>  <>  <>  <> 50
-hat <> aluminium <> einen schmelzpunkt  <> von 660 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> aluminium <> einen siedepunkt  <> von 2467 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> americium <> das chemische zeichen _am_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> americium <> die ordnungszahl <> 95 <>  <>  <>  <>  <>  <>  <> 50
-hat <> americium <> einen schmelzpunkt  <> von 994 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> americium <> einen siedepunkt  <> von 2607 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> antimon <> das chemische zeichen _sb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> antimon <> die ordnungszahl <> 51 <>  <>  <>  <>  <>  <>  <> 50
-hat <> antimon <> einen schmelzpunkt  <> von 630 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> antimon <> einen siedepunkt  <> von 1750 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> argon <> das chemische zeichen _ar_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> argon <> die ordnungszahl <> 18 <>  <>  <>  <>  <>  <>  <> 50
-hat <> argon <> einen schmelzpunkt  <> von minus 190 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> argon <> einen siedepunkt  <> von minus 186 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> das chemische zeichen _as_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> das chemische zeichen _at_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> die ordnungszahl <> 33 <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> die ordnungszahl <> 85 <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> einen schmelzpunkt  <> von 302 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> einen schmelzpunkt  <> von 613 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> arsen <> einen siedepunkt  <> von 337 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> barium <> das chemische zeichen _ba_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> barium <> die ordnungszahl <> 56 <>  <>  <>  <>  <>  <>  <> 50
-hat <> barium <> einen schmelzpunkt  <> von 725 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> barium <> einen siedepunkt  <> von 1640 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> berkelium <> das chemische zeichen _bk_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> berkelium <> die ordnungszahl <> 97 <>  <>  <>  <>  <>  <>  <> 50
-hat <> berkelium <> einen schmelzpunkt  <> von 986 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> beryllium <> das chemische zeichen _be_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> beryllium <> die ordungszahl <> 4 <>  <>  <>  <>  <>  <>  <> 50
-hat <> beryllium <> einen schmelzpunkt  <> von 1278 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> beryllium <> einen siedepunkt  <> von 2970 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> bismut <> das chemische zeichen _bi_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> bismut <> die ordnungszahl <> 83 <>  <>  <>  <>  <>  <>  <> 50
-hat <> bismut <> einen schmelzpunkt  <> von 271 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> bismut <> einen siedepunkt  <> von 1560 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> blausaeure <> das chemische zeichen _hcn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> blei <> das chemische zeichen _pb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> blei <> die ordungszahl <> 82 <>  <>  <>  <>  <>  <>  <> 50
-hat <> blei <> einen schmelzpunkt 327 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> blei <> einen siedepunkt  <> von 1740 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> bohrium <> das chemische zeichen _bh_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> bohrium <> die ordnungszahl <> 107 <>  <>  <>  <>  <>  <>  <> 50
-hat <> bohrium <> die ordnungszahl <> 5 <>  <>  <>  <>  <>  <>  <> 50
-hat <> bohrium <> einen schmelzpunkt  <> von 230 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> bohrium <> einen siedepunkt  <> von 2550 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> bor <> das chemische zeichen _b_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> bor <> die ordnungszahl <> 5 <>  <>  <>  <>  <>  <>  <> 50
-hat <> brom <> das chemische zeichen _br_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> brom <> die ordnungszahl <> 35 <>  <>  <>  <>  <>  <>  <> 50
-hat <> brom <> einen schmelzpunkt  <> von minus 7 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> brom <> einen siedepunkt  <> von 59 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cadmium <> das chemische zeichen _cd_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> cadmium <> die ordnungszahl <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> cadmium <> einen schmelzpunkt <> von 321 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cadmium <> einen siedpunkt  <> von 765 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> caesium <> das chemische zeichen _cs_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> caesium <> die ordnungszahl <> 55 <>  <>  <>  <>  <>  <>  <> 50
-hat <> caesium <> einen schmelzpunkt  <> von 28 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> caesium <> einen siedepunkt  <> von 690 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> caesium <>  <> das groesste natuerliche metall <>  <>  <>  <>  <>  <>  <> 50
-hat <> calcium <> das chemische zeichen _ca_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> calcium <> die ordungszahl <> 20 <>  <>  <>  <>  <>  <>  <> 50
-hat <> calcium <> einen schmelzpunkt <> von 1487 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> calcium <> eine schmelzpunkt <> von 839 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> californium <> das chemische zeichen _cf_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> californium <> die ordungszahl <> 98 <>  <>  <>  <>  <>  <>  <> 50
-hat <> californium <> einen schmelzpunkt <> von 90 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cer <> das chemische zeichen _ce_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> cer <> die ordungszahl <> 58 <>  <>  <>  <>  <>  <>  <> 50
-hat <> cer <> einen schmelzpunkt <> von 798 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cer <> einen siedepunkt <> von 3257 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> chlor <> das chemische zeichen _ci_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> chlor <> die ordungszahl <> 17 <>  <>  <>  <>  <>  <>  <> 50
-hat <> chlor <> einen schmelzpunkt <> von minus 101 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> chlor <> einen siedepunkt <> von minus 34 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> chrom <> das chemische zeichen _cr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> chrom <> die ordnungszahl <> 24 <>  <>  <>  <>  <>  <>  <> 50
-hat <> chrom <> einen schmelzpunkt <> von 1857 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> chrom <> einen siedepunkt <> von 2482 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cobalt <> das chemische zeichen _co_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> cobalt <> die ordnungszahl <> 27 <>  <>  <>  <>  <>  <>  <> 50
-hat <> cobalt <> einen schmelzpunkt <> von 1495 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> cobalt <> einen siedepunkt <> von 2870 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> curium <> das chemische zeichen _cm_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> curium <> die ordnungszahl <> 96 <>  <>  <>  <>  <>  <>  <> 50
-hat <> curium <> einen schmelzpunkt <> von 1340 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> darmstadtium <> das chemische zeichen _ds_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> darmstadtium <> die ordnungszahl <> 110 <>  <>  <>  <>  <>  <>  <> 50
-hat <> das atomium <> 9 kugeln <> <>  <>  <>  <>  <>  <>  <> 50
-hat <> das periodensystem <> 7 perioden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> die menschliche retina <> drei zapfentypen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> dubnium <> das chemische zeichen _db_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> dubnium <> die ordnungszahl <> 105 <>  <>  <>  <>  <>  <>  <> 50
-hat <> dysprosium <> das chemische zeichen _dy_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> dysprosium <> die ordungszahl <> 66 <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine fluessigkeit <> ein bestimmtes volumen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein erwachsener mensch <> 32 zaehne <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein festkoerper <> eine bestimmte gestalt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein kilowatt <>  <> 1,36 ps <>  <>  <>  <>  <>  <>  <> 50
-hat <> einsteinium <> das chemische zeichen _es_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> einsteinium <> die ordnungszahl <> 99 <>  <>  <>  <>  <>  <>  <> 50
-hat <> einsteinium <> einen schmelzpunkt <> von 860 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> eisen <> das chemische zeichen _fe_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eisen <> die ordnungszahl <> 26 <>  <>  <>  <>  <>  <>  <> 50
-hat <> eisen <> einen schmelzpunkt <> von 1535 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> eisen <> einen siedepunkt <> von 2750 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> erbium <> das chemische zeichen _er_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> erbium <> die ordnungszahl <> 68 <>  <>  <>  <>  <>  <>  <> 50
-hat <> erbium <> einen schmelzpunkt <> von 1522 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> europium <> das chemische zeichen _eu_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> europium <> die ordungszahl <> 63 <>  <>  <>  <>  <>  <>  <> 50
-hat <> europium <> einen schmelzpunkt <> von 822 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> europium <> einen siedepunkt <> von 1597 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> gadolinium <> das chemische zeichen _gd_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> gadolinium <> die ordnungszahl <> 64 <>  <>  <>  <>  <>  <>  <> 50
-hat <> gadolinium <> einen siedepunkt  <> von 3233 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> gallium <> das chemische zeichen _ga_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> gallium <> einen schmelzpunkt <> von 30 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> gallium <> einen siedepunkt <> von 2403 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> germanium <> das chemische zeichen _ge_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> germanium <> die ordnungszahl <> 32 <>  <>  <>  <>  <>  <>  <> 50
-hat <> germanium <> einen schmelzpunkt <> von 1064 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> germanium <> einen siedepunkt <> von 2839 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> germanium <> einen siedepunkt <> von 2940 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> gold <> das chemische zeichen _au_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> gold <> die ordnungszahl <> 79 <>  <>  <>  <>  <>  <>  <> 50
-hat <> hafnium <> das chemische symbol _hf_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> hafnium <> die ordungszahl <> 72 <>  <>  <>  <>  <>  <>  <> 50
-hat <> hafnium <> einen schmelzpunkt <> von 2150 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> hafnium <> einen siedepunkt <> von 540 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> hassium <> das chemische zeichen _hs_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> hassium <> die ordnungszahl <> 108 <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> erbium <> einen siedepunkt <> von 2510 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> gallium <> die ordungszahl <> 31 <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> germanium <> einen schmelzpunkt <> von 937 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> helium <> einen schmelzpunkt <> von minus 272 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> iod <> einen schmelzpunkt <> von 113 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat hat <> platin <> einen schmelzpunkt <> von 1772 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> helium <> das chemische zeichen _he_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> helium <> den niedrigsten siedepunkt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> helium <> die ordungszahl <> 2 <>  <>  <>  <>  <>  <>  <> 50
-hat <> helium <> einen siedepunkt <> von minus 268 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> holium <> das chemische zeichen _ho_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> indium <> das chemische zeichen _in_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> indium <> die ordungszahl <> 49 <>  <>  <>  <>  <>  <>  <> 50
-hat <> indium <> einen schmelzpunkt <> von 156 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> indium <> einen siedepunkt <> von 2080 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> iod <> das chemische zeichen _i_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> iod <> die ordnungszahl <> 53 <>  <>  <>  <>  <>  <>  <> 50
-hat <> iod <> einen siedepunkt <> von 184 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> iridium <> das chemische zeichen _ir_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> iridium <> die groesste dichte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> iridium <> die ordnungszahl <> 77 <>  <>  <>  <>  <>  <>  <> 50
-hat <> iridium <> einen schmelzpunkt <> von 2410 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> iridium <> einen siedepunkt <> von 4130 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> isaac_newton <> das gravitationsgesetz <> formuliert <>  <>  <>  <>  <>  <>  <> 50
-hat <> joseph_priestley <> das tafelwasser <> erfunden <>  <>  <>  <>  <>  <>  <> 50
-hat <> kaliumcyanid <> _kcn_ <> das chemische formel <>  <>  <>  <>  <>  <>  <> 50
-hat <> kalium <> das chemische zeichen _k_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> kalium <> die ordnungszahl <> 19 <>  <>  <>  <>  <>  <>  <> 50
-hat <> kalium <> einen schmelzpunkt <> von 64 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> kalium <> einen siedepunkt <> von 774 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> kohlendioxid <> die chemische formel co2 <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> kohlenstoff <> das chemische zeichen _c_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> kohlenstoff <> die ordungszahl <> 6 <>  <>  <>  <>  <>  <>  <> 50
-hat <> kohlenstoff <> einen schmelzpunkt <> von 3550 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> kohlenstoff <> einen siedepunkt <> von 4827 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> krypton <> das chemische zeichen _kr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> krypton <> die ordnungszahl <> 36 <>  <>  <>  <>  <>  <>  <> 50
-hat <> krypton <> einen schmelzpunkt <> von minus 157 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> krypton <> einen siedepunkt <> von minus 152 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> kupfer <> das chemische zeichen _cu_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> kupfer <> die ordnungszahl <> 29 <>  <>  <>  <>  <>  <>  <> 50
-hat <> kupfer <> einen schmelzpunkt <> von 1083 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> kupfer <> einen siedepunkt <> von 2595 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lanthan <> das chemische zeichen _la_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> lanthan <> die ordnungszahl <> 57 <>  <>  <>  <>  <>  <>  <> 50
-hat <> lanthan <> einen schmelzpunkt <> von 920 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lanthan <> einen siedepunkt <> von 3454 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lawrencium <> das chemische zeichen _lr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> lawrencium <> die ordungszahl <> 103 <>  <>  <>  <>  <>  <>  <> 50
-hat <> lithium <> das chemische zeichen _li_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> lithium <> die geringste dichte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> lithium <> die ordnungszahl <> 3 <>  <>  <>  <>  <>  <>  <> 50
-hat <> lithium <> einen schmelzpunkt  <> von 180 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lithium <> einen siedepunkt  <> von 1317 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lutetium <> das chemische zeichen _lu_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> lutetium <> die ordungszahl <> 71 <>  <>  <>  <>  <>  <>  <> 50
-hat <> lutetium <> einen schmelzpunkt <> von 1656 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> lutetium <> einen siedepunkt <> von 3315 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> magnesium <> das chemische zeichen _mg_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> magnesium <> die ordungszahl <> 12 <>  <>  <>  <>  <>  <>  <> 50
-hat <> magnesium <> einen schmelzpunkt <> von 649 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> magnesium <> einen siedepunkt <> von 1107 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> mangan <> das chemische zeichen _mn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> mangan <> einen schmelzpunkt <> von 1244 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> mangan <> einen siedepunkt <> von 2097 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> meitnerium <> das chemische zeichen _mt_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> meitnerium <> die ordnungszahl <> 109 <>  <>  <>  <>  <>  <>  <> 50
-hat <> mendelevium <> das chemische zeichen _md_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> mendelevium <> die ordnungszahl <> 101 <>  <>  <>  <>  <>  <>  <> 50
-hat <> molybdaen <> das chemische zeichen _mo_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> molybdaen <> die ordnungszahl <> 42 <>  <>  <>  <>  <>  <>  <> 50
-hat <> molybdaen <> einen schmelzpunkt <> von 2617 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> molybdaen <> einen siedepunkt <> von 5560 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> natrium <> das chemische zeichen _na_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> natrium <> die ordungszahl <> 11 <>  <>  <>  <>  <>  <>  <> 50
-hat <> natrium <> einen schmelzpunkt <> von 98 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> natrium <> einen siedepunkt <> von 892 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> natronlauge <> die chemische formel _naoh_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> neodym <> das chemische zeichen _nd_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> neodym <> die ordnungszahl <> 60 <>  <>  <>  <>  <>  <>  <> 50
-hat <> neodym <> einen schmelzpunkt <> von 1010 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> neodym <> einen siedepunkt <> von 3127 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> neon <> das chemische zeichen _ne_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> neon <> die ordnungszahl <> 10 <>  <>  <>  <>  <>  <>  <> 50
-hat <> neon <> einen siedepunkt <> von minus 246 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> neon <>  <> meinen schmelzpunkt von minus 249 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> neptunium <> das chemische zeichen _np_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> neptunium <> die ordnungszahl <> 93 <>  <>  <>  <>  <>  <>  <> 50
-hat <> neptunium <> einen schmelzpunkt <> von 640 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> neptunium <> einen siedepunkt <> von 3902 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> nickel <> das chemische zeichen _ni_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> nickel <> die ordnungszahl <> 28 <>  <>  <>  <>  <>  <>  <> 50
-hat <> nickel <> einen schmelzpunkt <> von 1453 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> nickel <> einen siedepunkt <> von 2732 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> niob <> das chemische zeichen _nb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> niob <> die ordnungszahl <> 41 <>  <>  <>  <>  <>  <>  <> 50
-hat <> niob <> einen schmelzpunkt <> von 2458 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> niob <> einen siedepunkt <> von 4927 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> nobelium <> das chemische zeichen _no_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> nobelium <> die ordnungszahl <> 102 <>  <>  <>  <>  <>  <>  <> 50
-hat <> osmium <> das chemische zeichen _os_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> osmium <> die ordnungszahl <> 76 <>  <>  <>  <>  <>  <>  <> 50
-hat <> osmium <> die zweitgroesste dichte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> osmium <> einen schmelzpunkt <> von 2045 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> osmium <> einen siedepunkt <> von 5027 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> palladium <> das chemische zeichen _pd_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> palladium <> die ordnungszahl <> 46 <>  <>  <>  <>  <>  <>  <> 50
-hat <> palladium <> einen schmelzpunkt <> von 1552 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> palladium <> einen siedepunkt <> von 3140 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> phosphor <> das chemische zeichen _p_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> phosphor <> die ordnungszahl <> 15 <>  <>  <>  <>  <>  <>  <> 50
-hat <> phosphor <> einen schmelzpunkt <> von 44 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> phosphor <> einen siedepunkt <> von 280 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> platin <> das chemische zeichen _pt_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> platin <> die ordnungszahl <> 78 <>  <>  <>  <>  <>  <>  <> 50
-hat <> platin <> einen siedepunkt <> von 3827 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> plutonium <> das chemische zeichen _pu_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> plutonium <> die ordungszahl <> 94 <>  <>  <>  <>  <>  <>  <> 50
-hat <> plutonium <> einen schmelzpunkt <> von 641 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> plutonium <> einen siedepunkt <> von 3327 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> polonium <> das chemische zeichen _po_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> polonium <> die ordnungszahl <> 84 <>  <>  <>  <>  <>  <>  <> 50
-hat <> polonium <> einen schmelzpunkt <> von 252 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> polonium <> einen siedepunkt <> von 962 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> praseodym <> das chemische zeichen _pr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> praseodym <> die ordnungszahl <> 59 <>  <>  <>  <>  <>  <>  <> 50
-hat <> praseodym <> einen schmelzpunkt <> von 931 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> praseodym <> einen siedepunkt <> von 3212 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> promethium <> das chemische zeichen _pm_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> promethium <> die ordnungszahl <> 61 <>  <>  <>  <>  <>  <>  <> 50
-hat <> promethium <> einen schmelzpunkt <> von 1080 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> promethium <> einen siedepunkt <> von 2730 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> protactinium <> das chemische zeichen _pa_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> protactinium <> die ordnungszahl <> 91 <>  <>  <>  <>  <>  <>  <> 50
-hat <> protactinium <> einen schmelzpunkt <> von 1554 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> protactinium <> einen siedepunkt <> von 4030 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> quecksilber <> das chemische zeichen _hg_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> quecksilber <> die ordnungszahl <> 80 <>  <>  <>  <>  <>  <>  <> 50
-hat <> quecksilber <> einen schmelzpunkt <> von minus 39 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> quecksilber <> einen siedepunkt <> von 356 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> radium <> das chemische zeichen _ra_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> radium <> die ordnungszahl <> 88 <>  <>  <>  <>  <>  <>  <> 50
-hat <> radium <> einen schmelzpunkt <> von 70 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> radium <> einen siedepunkt <> von 1140 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> radon <> das chemische zeichen _rn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> radon <> die ordungszahl <> 86 <>  <>  <>  <>  <>  <>  <> 50
-hat <> radon <> einen schmelzpunkt <> von minus 71 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> radon <> einen siedepunkt <> von -62 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhenium <> das chemische zeichen _re_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhenium <> den hoechsten siedepunkt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhenium <> die ordnungszahl <> 75 <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhenium <> einen schmelzpunkt <> von 3180 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhenium <> einen siedepunkt <> von 5627 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhodium <> das chemische zeichen _rh_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhodium <> die ornungszahl <> 45 <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhodium <> einen schmelzpunkt <> von 1966 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rhodium <> einen siedepunkt <> von 3737 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> roentgenium <> das chemische zeichen _rg_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> roentgenium <> die ordnungszahl <> 111 <>  <>  <>  <>  <>  <>  <> 50
-hat <> rubidium <> das chemische zeichen _rb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> rubidium <> die ordnungszahl <> 27 <>  <>  <>  <>  <>  <>  <> 50
-hat <> rubidium <> einen schmelzpunkt <> von 39 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rubidium <> einen siedepunkt <> von 688 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> ruthenium <> das chemische zeichen _ru_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ruthenium <> die ordnungszahl <> 44 <>  <>  <>  <>  <>  <>  <> 50
-hat <> ruthenium <> einen schmelzpunkt <> von 2310 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> ruthenium <> einen siedepunkt <> von 390 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> rutherfordium <> das chemische zeichen _rf_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> samarium <> das chemische zeichen _sm_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> samarium <> die ordungszahl <> 62 <>  <>  <>  <>  <>  <>  <> 50
-hat <> samarium <> einen schmelzpunkt <> von 1072 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> samarium <> einen siedepunkt <> von 1778 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> sauerstoff <> das chemische zeichen _o_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> sauerstoff <> die ordnungszahl <> 8 <>  <>  <>  <>  <>  <>  <> 50
-hat <> sauerstoff <> einen schmelzpunkt <> von minus 218 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> sauerstoff <> einen siedepunkt <> von minus 183 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> scandium <> das chemische zeichen _sc_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> scandium <> die ordnungszahl <> 21 <>  <>  <>  <>  <>  <>  <> 50
-hat <> scandium <> einen schmelzpunkt <> von 1539 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> scandium <> einen siedepunkt <> von 2832 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> schwefel <> das chemische zeichen _s_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> schwefel <> die ordungszahl <> 18 <>  <>  <>  <>  <>  <>  <> 50
-hat <> schwefel <> einen schmelzpunkt <> von 113 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> schwefel <> einen siedepunkt <> von 448 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> seaborgium <> das chemische zeichen _sg_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> seaborgium <> die ordnungszahl <> 106 <>  <>  <>  <>  <>  <>  <> 50
-hat <> selen <> das chemische zeichen _se_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> selen <> die ordnungszahl <> 34 <>  <>  <>  <>  <>  <>  <> 50
-hat <> selen <> einen schmelzpunkt <> von 217 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> selen <> einen siedepunkt <> von 685 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> silber <> das chemische zeichen _ag_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> silber <> die ordungszahl <> 47 <>  <>  <>  <>  <>  <>  <> 50
-hat <> silber <> einen schmelzpunkt <> von 962 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> silber <> einen siedepunkt <> von 2212 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> silicium <> das chemische zeichen _si_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> silicium <> die ordnungszahl <> 14 <>  <>  <>  <>  <>  <>  <> 50
-hat <> silicium <> einen schmelzpunkt <> von 1410 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> silicium <> einen siedepunkt <> von 2355 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> stickstoff <> das chemische zeichen _n_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> stickstoff <> die ordnungszahl <> 7 <>  <>  <>  <>  <>  <>  <> 50
-hat <> stickstoff <> die ordungszahl <> 7 <>  <>  <>  <>  <>  <>  <> 50
-hat <> stickstoff <> einen schmelzpunkt <> von -210 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> stickstoff <> einen siedepunkt <> von minus 196 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> strontium <> das chemische zeichen _sr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> strontium <> die ordnungszahl <> 38 <>  <>  <>  <>  <>  <>  <> 50
-hat <> strontium <> einen schmelzpunkt <> von 769 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> strontium <> einen siedepunkt <> von 1384 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> tahllium <> das chemische zeichen _ti_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> tahllium <> die ordnungszahl <> 81 <>  <>  <>  <>  <>  <>  <> 50
-hat <> tahllium <> einen schmelzpunkt <> von 307 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> tahllium <> einen siedepunkt <> von 1457 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> tantalum <> das chemische zeichen _ta_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> tantalum <> die ornungszahl <> 73 <>  <>  <>  <>  <>  <>  <> 50
-hat <> tantalum <> einen schmelzpunkt 2966 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> tantalum <> einen siedepunkt <> von 5425 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> technetium <> das chemische zeichen _tc_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> technetium <> die ordungszahl <> 43 <>  <>  <>  <>  <>  <>  <> 50
-hat <> technetium <> einen schmelzpunkt <> von 2172 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> technetium <> einen siedepunkt <> von 5030 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> tellur <> das chemische zeichen _te_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> tellur <> die ordnungszahl <> 52 <>  <>  <>  <>  <>  <>  <> 50
-hat <> tellur <> einen schmelzpunkt <> von 450 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> tellur <> einen siedepunkt <> von 990 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> terbium <> das chemische zeichen _tb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> terbium <> die ordnungszahl <> 65 <>  <>  <>  <>  <>  <>  <> 50
-hat <> terbium <> einen schmelzpunkt <> von 1360 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> terbium <> einen siedepunkt <> von 3041 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> thorium <> das chemische zeichen _th_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> thorium <> einen schmelzpunkt <> von 1750 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> thorium <> einen siedepunkt <> von 4787 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> thulium <> das chemische zeichen _tm_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> thulium <> die ordnungszahl <> 69 <>  <>  <>  <>  <>  <>  <> 50
-hat <> thulium <> einen schmelzpunkt <> von 1545 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> thulium <> einen siedepunkt <> von 1727 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> titan <> das chemische zeichen _ti_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> titan <> die ordnungszahl <> 22 <>  <>  <>  <>  <>  <>  <> 50
-hat <> titan <> einen schmelzpunkt <> von 1660 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> titan <> einen siedepunkt <> von 3260 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> ununbium <> das chemische zeichen _uub_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ununbium <> die ordnungszahl <> 112 <>  <>  <>  <>  <>  <>  <> 50
-hat <> uran <> das chemische zeichen _u_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> uran <> die ordungszahl <> 92 <>  <>  <>  <>  <>  <>  <> 50
-hat <> uran <> einen schmelzpunkt <> von 1132 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> uran <> einen siedepunkt <> von 3818 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> vanadium <> das chemische zeichen _v_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> vanadium <> die ornungszahl <> 23 <>  <>  <>  <>  <>  <>  <> 50
-hat <> vanadium <> einen schmelzpunkt <> von 1890 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> vanadium <> einen siedepunkt <> von 3380 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasser <> das chemische zeichen _h2o_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasser <> einen siedepunkt <> von 100 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasser <> einen siedepunkt  <> von 212 grad fahrenheit<>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> das chemische zeichen _h_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> das kleinste atom <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> den niedrigsten schmelzpunkt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> die ordnungszahl <> 1 <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> die ordungszahl <> 1 <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> einen schmelzpunkt <> von minus 260 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> wasserstoff <> einen siedepunkt <> von minus 253 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> wolfram <> das chemische zeichen _w_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wolfram <> den hoechsten schmelzpunkt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> wolfram <> die ordnungszahl <> 74 <>  <>  <>  <>  <>  <>  <> 50
-hat <> wolfram <> einen schmelzpunkt <> von 3407 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> wolfram <> einen siedepunkt <> von 5927 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> xenon <> das chemische zeichen _xe_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> xenon <> die ordnungszahl <> 54 <>  <>  <>  <>  <>  <>  <> 50
-hat <> xenon <> einen schmelzpunkt <> von minus 112 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> xenon <> einen siedepunkt <> von minus 107 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> ytterbium <> das chemische zeichen _yb_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ytterbium <> die ordnungszahl <> 70 <>  <>  <>  <>  <>  <>  <> 50
-hat <> ytterbium <> einen schmelzpunkt <> von 824 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> ytterbium <> einen siedepunkt <> von 1193 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> yttrium <> das chemische zeichen _y_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> yttrium <> die ordnungszahl <> 39 <>  <>  <>  <>  <>  <>  <> 50
-hat <> yttrium <> einen schmelzpunkt <> von 1523 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> yttrium <> einen siedepunkt <> von 3337 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zink <> das chemische zeichen _zn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> zink <> die ordnungszahl <> 30 <>  <>  <>  <>  <>  <>  <> 50
-hat <> zink <> einen schmelzpunkt <> von 419 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zink <> einen siedepunkt <> von 907 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zinn <> das chemische zeichen _sn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> zinn <> die ordnungszahl <> 50 <>  <>  <>  <>  <>  <>  <> 50
-hat <> zinn <> einen schmelzpunkt <> von 232 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zinn <> einen siedepunkt <> von 2270 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zirconium <> das chemische zeichen _zr_ <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> zirconium <> die ordnungszahl <> 40 <>  <>  <>  <>  <>  <>  <> 50
-hat <> zirconium <> einen schmelzpunkt <> von 1852 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zirconium <> einen siedepunkt <> von 4377 grad_celsius <>  <>  <>  <>  <>  <>  <> 50
-hat <> zyankali <> die chemische formel _kcn_ <>  <>  <>  <>  <>  <>  <>  <> 50
-heisst <> _pb_ <> blei <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> acetat <> ein salz <> der essigsaeure <>  <>  <>  <>  <>  <>  <> 50
-ist <> actinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> actinoide <> eine gruppenbezeichnung aehnlicher elemente <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> afrika <> die heimat <> der kaffeepflanze <>  <>  <>  <>  <>  <>  <> 50
-ist <> alabaster <> eine abart <> von gips <>  <>  <>  <>  <>  <>  <> 50
-ist <> alfred_nobel <> der erfinder <> von dynamit <>  <>  <>  <>  <>  <>  <> 50
-ist <> aluminium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> aluminium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> aluminium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> aluminium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> americium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> americium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> antimon <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> antimon <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> antimon <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> argon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> argon <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> arsen <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> arsen <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> arsen <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> arsen <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> astat <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> astat <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> astat <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _au_ <> das elementsymbol <> fuer gold <>  <>  <>  <>  <>  <>  <> 50
-ist <> barium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> barium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> berkelium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> berkelium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> berylium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> beryllium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> beryllium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bionik <> ein wissenschaftszweig technik <> aus biologie <>  <>  <>  <>  <>  <>  <> 50
-ist <> bismut <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bismut <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> blausaeure <>  <> farblos <>  <>  <>  <>  <>  <>  <> 50
-ist <> blei <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> blei <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> bohrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bor <> das zweithaerteste element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bor <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bor <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> bor <> ein halbleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bor <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> botox <> ein starkes gift <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> botulinumtoxin <> das staerkste gift <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> brom <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> brom <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> brom <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cadmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> caesium <> das weichste chemische element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> caesium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> caesium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> calcium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> calcium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> californium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> californium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cer <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chlor <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chlor <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> chlor <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chloroform <> trichlormethan <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chrom <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chrom <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cobalt <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cromargan <> einerostende legierung chrom <> aus stahl;nicht;sowie nickel <>  <>  <>  <>  <>  <>  <> 50
-ist <> curium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> curium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cyanwasserstoff <> blausaeure <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> darmstadtium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> das chemische zeichen <> das elementsymbol <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> das chemische zeichen <> ein elementsymbol <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> das edelweiss <>  <> ein korbbluetler <>  <>  <>  <>  <>  <>  <> 50
-ist <> das gyroskop <> ein steuergeraet fuer die automatische lenkung <> von flugkoerpern <>  <>  <>  <>  <>  <>  <> 50
-ist <> das log <> ein messgeraet <> zur bestimmung der schiffsgeschwindigkeit <>  <>  <>  <>  <>  <>  <> 50
-ist <> das magma <> geschmolzenes gestein <> in dem erdinnern <>  <>  <>  <>  <>  <>  <> 50
-ist <> das siemens-martin-verfahren  <> ein verfahren <> zur stahlerzeugung <>  <>  <>  <>  <>  <>  <> 50
-ist <> der diamant <> der haerteste stoff <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der facharzt fuer hauterkrankungen <> ein dermatologe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der liegende achter <> das zeichen <> fuer unendlich <>  <>  <>  <>  <>  <>  <> 50
-ist <> der ph-wert <>  <> 7;von reinem wasser <>  <>  <>  <>  <>  <>  <> 50
-ist <> die _archimedische_schraube_ <> ein wasserhebegeraet <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die chromosphaere <> die obere schicht <> der sonnenatmosphaere <>  <>  <>  <>  <>  <>  <> 50
+bedeutet <> _cern_ <> _europaeische_organisation_fuer_kernforschung_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+bedeutet <> tft <> thin film transistor <>  <>  <>  <>  <>  <>  <>  <> (true)
+befassen <>die mendelschen gesetze <> sich <> mit vererbungsgesetzen <>  <>  <>  <>  <>  <>  <> (true)
+beschreiben <> die mendelschen regeln <> die vererbungsregeln <>  <>  <>  <>  <>  <>  <>  <> (true)
+beschrieb <> albert_einstein <> die relativitaetstheorie <>  <>  <>  <>  <>  <>  <>  <> (true)
+bestehen <> die blaeschen <>  <> in dem mineralwasser aus kohlendioxid <> (true)
+besteht <> die atomhuelle <>  <> aus elektronen <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> die mine <>  <> aus graphit;von einem bleistift <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> die seife <>  <> aus salzen von fettsaeuren <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> ein diamant <>  <> aus reinem kohlenstoff <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> ein getreidekorn <>  <> aus schale mehlkoerper und keimling <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> ein molekuel <>  <> aus mindestens atomen <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> erdgas <> hauptsaechlich <> aus methan <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> erdoel <> hauptsaechlich <> aus kohlenstoff <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> gelantine <> hauptsaechlich <> aus glutin <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> marmor <> hauptsaechlich <> aus calciumcarbonat <>  <>  <>  <>  <>  <>  <> (true)
+besteht <>  <>  <> ein korund aus eisenoxid <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> quarz <>  <> aus siliziumdioxid <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> salz <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> schnee <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> wasser <> aus sauerstoff und wasserstoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+besteht <> zucker <>  <> aus kristallen <>  <>  <>  <>  <>  <>  <> (true)
+bildet <> eine fluessigkeit <> eine oberflaeche <>  <>  <>  <>  <>  <>  <>  <> (true)
+dienen <> die weissen blutkoerperchen <>  <>  der vernichtung von viren bzw bakterien <>  <>  <>  <>  <>  <>  <> (true)
+dienen <>  <>  <> die weissen blutkoerperchen der immunabwehr <>  <>  <>  <>  <>  <>  <> (true)
+dient <> benzolsaeure <> als konservierungsmittel <>  <>  <>  <>  <>  <>  <>  <> (true)
+dient <> die c-14-methode <>  <> zur altersbestimmung <>  <>  <>  <>  <>  <>  <> (true)
+dient <> die schweissabsonderung <>  <> der waermeregulation <>  <>  <>  <>  <>  <>  <> (true)
+dient <> eine zentrifuge <>  <> zur mechanischen trennung von gemischen <>  <>  <>  <>  <>  <>  <> (true)
+dient <> karbolsaeure <> als desinfektionsmittel <>  <>  <>  <>  <>  <>  <>  <> (true)
+dient <> kohlenstoff-14 <>  <> der radiometrischen altersbestimmung <>  <>  <>  <>  <>  <>  <> (true)
+dient <> natriumglutamat <> als geschmacksverstaerker <> in lebensmitteln <>  <>  <>  <>  <>  <>  <> (true)
+enhaelt <> margarine <> einen butter <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+enhaelt <> marzipan <> mandeln <>  <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> irene_curie <> die kuenstliche radioaktivitaet <>  <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> marie_curie <> 1898 das polonium <>  <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> paracelsus <> das zink <>  <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> robert brown <> die molekuelbewegung <>  <>  <>  <>  <>  <>  <>  <> (true)
+entdeckt wurde <> das chloroform <>  <> 1831 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckt wurde <> europium <>  <> 1896 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckt wurde <> jod <>  <> 1811 <>  <>  <>  <>  <>  <>  <> (true)
+enthaelt <> chromargan <> ein kupfer <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+enthaelt <> der schweiss <> butansaeure <>  <>  <>  <>  <>  <>  <>  <> (true)
+enthaelt <> kaffee <>  <> ueber 200 verschiedene chemische verbindungen <>  <>  <>  <>  <>  <>  <> (true)
+enthaelt <> margarine <> kartoffelstaerke <>  <>  <>  <>  <>  <>  <>  <> (true)
+enthalten ist <> ethanol <>  <> in bier <>  <>  <>  <>  <>  <>  <> (true)
+enthalten ist <> ethanol <>  <> in schnaps <>  <>  <>  <>  <>  <>  <> (true)
+enthalten ist <> ethanol <>  <> in wein <>  <>  <>  <>  <>  <>  <> (true)
+entspricht <> ein hektar <> 100 quadratmetern <>  <>  <>  <>  <>  <>  <>  <> (true)
+entsteht <> bei einer metallbindung <> ein gitter <>  <>  <>  <>  <>  <>  <>  <> (true)
+entsteht <> ein salz <>  <> durch ionenbindung <>  <>  <>  <>  <>  <>  <> (true)
+entsteht <> gummi <>  <> durch vulkanisation aus rohkautschuk <>  <>  <>  <>  <>  <>  <> (true)
+entsteht <> kohlendioxid <>  <> durch durch die verbrennung von fossilen brennstoffen <>  <>  <>  <>  <>  <>  <> (true)
+entsteht <> polyvinylchlorid <>  <> durch polymerisation <>  <>  <>  <>  <>  <>  <> (true)
+entwickelt hat <> alessandro_graf_volta <> die theorie des elektrischen stroms <>  <>  <>  <>  <>  <>  <>  <> (true)
+erhoeht <> glukagon <> den blutzuckerspiegel <>  <>  <>  <>  <>  <>  <>  <> (true)
+erkennt <> das alter der baeume<> man <> an den jahresringen <>  <>  <>  <>  <>  <>  <> (true)
+erzeugen kann/can <> eine solarzelle <> energie <>  <>  <>  <>  <>  <>  <>  <> (true)
+erzeugen kann/can <> man <> elektrische energie <> mit einer solarzelle <>  <>  <>  <>  <>  <>  <> (true)
+erzeugter ist <> ein homunkulus <> ein kuenstlich mensch <>  <>  <>  <>  <>  <>  <>  <> (true)
+gefriert <> wasser <> bei 32 grad fahrenheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+gefuellt wurden <> gasballons <>  <> mit wasserstoff <>  <>  <>  <>  <>  <>  <> (true)
+gefuellt wurden <> luftschiffe <>  <> mit wasserstoff <>  <>  <>  <>  <>  <>  <> (true)
+gehoeren <> actinoide <>  <> zu den metallen <>  <>  <>  <>  <>  <>  <> (true)
+gehoert <> uran <>  <> zu den actinoiden <>  <>  <>  <>  <>  <>  <> (true)
+gewinnt <> die verschiedenen bestandteile des erdoels <> man <> durch fraktionierende destillation <>  <>  <>  <>  <>  <>  <> (true)
+gewinnt <> penicillin <> man <> aus schimmelpilzen <>  <>  <>  <>  <>  <>  <> (true)
+gibt <> es <> 10 chemische elemente <>  <>  <>  <>  <>  <>  <>  <> (true)
+gibt <> es <> 20 reinelemente <>  <>  <>  <>  <>  <>  <>  <> (true)
+gibt <> es <> 93 natuerliche elemente <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> alzheimer-patienten <> ein durstgefuehl <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+haben <> elektronen <> eine negative ladung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> 46 chromosomen <> eine menschliche zelle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> actinium <> das chemische zeichen _ac_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> actinium <> die ordnungszahl <> 89 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> actinium <> einen schmelzpunkt  <> von 1047 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> actinium <> einen siedepunkt  <> von 3197 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> aluminium <> das chemische zeichen _al_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> aluminium <> die ordnungszahl <> 13 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> aluminium <> einen schmelzpunkt  <> von 660 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> aluminium <> einen siedepunkt  <> von 2467 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> americium <> das chemische zeichen _am_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> americium <> die ordnungszahl <> 95 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> americium <> einen schmelzpunkt  <> von 994 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> americium <> einen siedepunkt  <> von 2607 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> antimon <> das chemische zeichen _sb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> antimon <> die ordnungszahl <> 51 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> antimon <> einen schmelzpunkt  <> von 630 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> antimon <> einen siedepunkt  <> von 1750 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> argon <> das chemische zeichen _ar_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> argon <> die ordnungszahl <> 18 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> argon <> einen schmelzpunkt  <> von minus 190 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> argon <> einen siedepunkt  <> von minus 186 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> das chemische zeichen _as_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> das chemische zeichen _at_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> die ordnungszahl <> 33 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> die ordnungszahl <> 85 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> einen schmelzpunkt  <> von 302 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> einen schmelzpunkt  <> von 613 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> arsen <> einen siedepunkt  <> von 337 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> barium <> das chemische zeichen _ba_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> barium <> die ordnungszahl <> 56 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> barium <> einen schmelzpunkt  <> von 725 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> barium <> einen siedepunkt  <> von 1640 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> berkelium <> das chemische zeichen _bk_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> berkelium <> die ordnungszahl <> 97 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> berkelium <> einen schmelzpunkt  <> von 986 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> beryllium <> das chemische zeichen _be_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> beryllium <> die ordungszahl <> 4 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> beryllium <> einen schmelzpunkt  <> von 1278 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> beryllium <> einen siedepunkt  <> von 2970 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bismut <> das chemische zeichen _bi_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bismut <> die ordnungszahl <> 83 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bismut <> einen schmelzpunkt  <> von 271 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bismut <> einen siedepunkt  <> von 1560 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> blausaeure <> das chemische zeichen _hcn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> blei <> das chemische zeichen _pb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> blei <> die ordungszahl <> 82 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> blei <> einen schmelzpunkt 327 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> blei <> einen siedepunkt  <> von 1740 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bohrium <> das chemische zeichen _bh_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bohrium <> die ordnungszahl <> 107 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bohrium <> die ordnungszahl <> 5 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bohrium <> einen schmelzpunkt  <> von 230 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bohrium <> einen siedepunkt  <> von 2550 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bor <> das chemische zeichen _b_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> bor <> die ordnungszahl <> 5 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> brom <> das chemische zeichen _br_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> brom <> die ordnungszahl <> 35 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> brom <> einen schmelzpunkt  <> von minus 7 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> brom <> einen siedepunkt  <> von 59 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cadmium <> das chemische zeichen _cd_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cadmium <> die ordnungszahl <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cadmium <> einen schmelzpunkt <> von 321 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cadmium <> einen siedpunkt  <> von 765 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> caesium <> das chemische zeichen _cs_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> caesium <> die ordnungszahl <> 55 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> caesium <> einen schmelzpunkt  <> von 28 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> caesium <> einen siedepunkt  <> von 690 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> caesium <>  <> das groesste natuerliche metall <>  <>  <>  <>  <>  <>  <> (true)
+hat <> calcium <> das chemische zeichen _ca_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> calcium <> die ordungszahl <> 20 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> calcium <> einen schmelzpunkt <> von 1487 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> calcium <> eine schmelzpunkt <> von 839 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> californium <> das chemische zeichen _cf_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> californium <> die ordungszahl <> 98 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> californium <> einen schmelzpunkt <> von 90 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cer <> das chemische zeichen _ce_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cer <> die ordungszahl <> 58 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cer <> einen schmelzpunkt <> von 798 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cer <> einen siedepunkt <> von 3257 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chlor <> das chemische zeichen _ci_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chlor <> die ordungszahl <> 17 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chlor <> einen schmelzpunkt <> von minus 101 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chlor <> einen siedepunkt <> von minus 34 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chrom <> das chemische zeichen _cr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chrom <> die ordnungszahl <> 24 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chrom <> einen schmelzpunkt <> von 1857 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> chrom <> einen siedepunkt <> von 2482 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cobalt <> das chemische zeichen _co_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cobalt <> die ordnungszahl <> 27 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cobalt <> einen schmelzpunkt <> von 1495 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> cobalt <> einen siedepunkt <> von 2870 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> curium <> das chemische zeichen _cm_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> curium <> die ordnungszahl <> 96 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> curium <> einen schmelzpunkt <> von 1340 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> darmstadtium <> das chemische zeichen _ds_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> darmstadtium <> die ordnungszahl <> 110 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> das atomium <> 9 kugeln <> <>  <>  <>  <>  <>  <>  <> (true)
+hat <> das periodensystem <> 7 perioden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> die menschliche retina <> drei zapfentypen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> dubnium <> das chemische zeichen _db_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> dubnium <> die ordnungszahl <> 105 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> dysprosium <> das chemische zeichen _dy_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> dysprosium <> die ordungszahl <> 66 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine fluessigkeit <> ein bestimmtes volumen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein erwachsener mensch <> 32 zaehne <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein festkoerper <> eine bestimmte gestalt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein kilowatt <>  <> 1,36 ps <>  <>  <>  <>  <>  <>  <> (true)
+hat <> einsteinium <> das chemische zeichen _es_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> einsteinium <> die ordnungszahl <> 99 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> einsteinium <> einen schmelzpunkt <> von 860 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eisen <> das chemische zeichen _fe_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eisen <> die ordnungszahl <> 26 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eisen <> einen schmelzpunkt <> von 1535 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eisen <> einen siedepunkt <> von 2750 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> erbium <> das chemische zeichen _er_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> erbium <> die ordnungszahl <> 68 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> erbium <> einen schmelzpunkt <> von 1522 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> europium <> das chemische zeichen _eu_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> europium <> die ordungszahl <> 63 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> europium <> einen schmelzpunkt <> von 822 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> europium <> einen siedepunkt <> von 1597 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gadolinium <> das chemische zeichen _gd_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gadolinium <> die ordnungszahl <> 64 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gadolinium <> einen siedepunkt  <> von 3233 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gallium <> das chemische zeichen _ga_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gallium <> einen schmelzpunkt <> von 30 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gallium <> einen siedepunkt <> von 2403 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> germanium <> das chemische zeichen _ge_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> germanium <> die ordnungszahl <> 32 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> germanium <> einen schmelzpunkt <> von 1064 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> germanium <> einen siedepunkt <> von 2839 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> germanium <> einen siedepunkt <> von 2940 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gold <> das chemische zeichen _au_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> gold <> die ordnungszahl <> 79 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hafnium <> das chemische symbol _hf_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hafnium <> die ordungszahl <> 72 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hafnium <> einen schmelzpunkt <> von 2150 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hafnium <> einen siedepunkt <> von 540 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hassium <> das chemische zeichen _hs_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> hassium <> die ordnungszahl <> 108 <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> erbium <> einen siedepunkt <> von 2510 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> gallium <> die ordungszahl <> 31 <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> germanium <> einen schmelzpunkt <> von 937 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> helium <> einen schmelzpunkt <> von minus 272 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> iod <> einen schmelzpunkt <> von 113 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat hat <> platin <> einen schmelzpunkt <> von 1772 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> helium <> das chemische zeichen _he_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> helium <> den niedrigsten siedepunkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> helium <> die ordungszahl <> 2 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> helium <> einen siedepunkt <> von minus 268 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> holium <> das chemische zeichen _ho_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> indium <> das chemische zeichen _in_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> indium <> die ordungszahl <> 49 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> indium <> einen schmelzpunkt <> von 156 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> indium <> einen siedepunkt <> von 2080 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iod <> das chemische zeichen _i_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iod <> die ordnungszahl <> 53 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iod <> einen siedepunkt <> von 184 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iridium <> das chemische zeichen _ir_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iridium <> die groesste dichte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iridium <> die ordnungszahl <> 77 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iridium <> einen schmelzpunkt <> von 2410 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> iridium <> einen siedepunkt <> von 4130 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> isaac_newton <> das gravitationsgesetz <> formuliert <>  <>  <>  <>  <>  <>  <> (true)
+hat <> joseph_priestley <> das tafelwasser <> erfunden <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kaliumcyanid <> _kcn_ <> das chemische formel <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kalium <> das chemische zeichen _k_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kalium <> die ordnungszahl <> 19 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kalium <> einen schmelzpunkt <> von 64 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kalium <> einen siedepunkt <> von 774 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kohlendioxid <> die chemische formel co2 <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kohlenstoff <> das chemische zeichen _c_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kohlenstoff <> die ordungszahl <> 6 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kohlenstoff <> einen schmelzpunkt <> von 3550 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kohlenstoff <> einen siedepunkt <> von 4827 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> krypton <> das chemische zeichen _kr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> krypton <> die ordnungszahl <> 36 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> krypton <> einen schmelzpunkt <> von minus 157 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> krypton <> einen siedepunkt <> von minus 152 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kupfer <> das chemische zeichen _cu_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kupfer <> die ordnungszahl <> 29 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kupfer <> einen schmelzpunkt <> von 1083 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> kupfer <> einen siedepunkt <> von 2595 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lanthan <> das chemische zeichen _la_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lanthan <> die ordnungszahl <> 57 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lanthan <> einen schmelzpunkt <> von 920 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lanthan <> einen siedepunkt <> von 3454 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lawrencium <> das chemische zeichen _lr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lawrencium <> die ordungszahl <> 103 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lithium <> das chemische zeichen _li_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lithium <> die geringste dichte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lithium <> die ordnungszahl <> 3 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lithium <> einen schmelzpunkt  <> von 180 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lithium <> einen siedepunkt  <> von 1317 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lutetium <> das chemische zeichen _lu_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lutetium <> die ordungszahl <> 71 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lutetium <> einen schmelzpunkt <> von 1656 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> lutetium <> einen siedepunkt <> von 3315 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> magnesium <> das chemische zeichen _mg_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> magnesium <> die ordungszahl <> 12 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> magnesium <> einen schmelzpunkt <> von 649 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> magnesium <> einen siedepunkt <> von 1107 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> mangan <> das chemische zeichen _mn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> mangan <> einen schmelzpunkt <> von 1244 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> mangan <> einen siedepunkt <> von 2097 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> meitnerium <> das chemische zeichen _mt_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> meitnerium <> die ordnungszahl <> 109 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> mendelevium <> das chemische zeichen _md_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> mendelevium <> die ordnungszahl <> 101 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> molybdaen <> das chemische zeichen _mo_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> molybdaen <> die ordnungszahl <> 42 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> molybdaen <> einen schmelzpunkt <> von 2617 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> molybdaen <> einen siedepunkt <> von 5560 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> natrium <> das chemische zeichen _na_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> natrium <> die ordungszahl <> 11 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> natrium <> einen schmelzpunkt <> von 98 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> natrium <> einen siedepunkt <> von 892 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> natronlauge <> die chemische formel _naoh_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neodym <> das chemische zeichen _nd_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neodym <> die ordnungszahl <> 60 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neodym <> einen schmelzpunkt <> von 1010 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neodym <> einen siedepunkt <> von 3127 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neon <> das chemische zeichen _ne_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neon <> die ordnungszahl <> 10 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neon <> einen siedepunkt <> von minus 246 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neon <>  <> meinen schmelzpunkt von minus 249 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neptunium <> das chemische zeichen _np_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neptunium <> die ordnungszahl <> 93 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neptunium <> einen schmelzpunkt <> von 640 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> neptunium <> einen siedepunkt <> von 3902 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nickel <> das chemische zeichen _ni_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nickel <> die ordnungszahl <> 28 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nickel <> einen schmelzpunkt <> von 1453 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nickel <> einen siedepunkt <> von 2732 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> niob <> das chemische zeichen _nb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> niob <> die ordnungszahl <> 41 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> niob <> einen schmelzpunkt <> von 2458 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> niob <> einen siedepunkt <> von 4927 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nobelium <> das chemische zeichen _no_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> nobelium <> die ordnungszahl <> 102 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> osmium <> das chemische zeichen _os_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> osmium <> die ordnungszahl <> 76 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> osmium <> die zweitgroesste dichte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> osmium <> einen schmelzpunkt <> von 2045 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> osmium <> einen siedepunkt <> von 5027 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> palladium <> das chemische zeichen _pd_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> palladium <> die ordnungszahl <> 46 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> palladium <> einen schmelzpunkt <> von 1552 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> palladium <> einen siedepunkt <> von 3140 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> phosphor <> das chemische zeichen _p_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> phosphor <> die ordnungszahl <> 15 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> phosphor <> einen schmelzpunkt <> von 44 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> phosphor <> einen siedepunkt <> von 280 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> platin <> das chemische zeichen _pt_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> platin <> die ordnungszahl <> 78 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> platin <> einen siedepunkt <> von 3827 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> plutonium <> das chemische zeichen _pu_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> plutonium <> die ordungszahl <> 94 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> plutonium <> einen schmelzpunkt <> von 641 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> plutonium <> einen siedepunkt <> von 3327 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> polonium <> das chemische zeichen _po_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> polonium <> die ordnungszahl <> 84 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> polonium <> einen schmelzpunkt <> von 252 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> polonium <> einen siedepunkt <> von 962 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> praseodym <> das chemische zeichen _pr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> praseodym <> die ordnungszahl <> 59 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> praseodym <> einen schmelzpunkt <> von 931 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> praseodym <> einen siedepunkt <> von 3212 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> promethium <> das chemische zeichen _pm_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> promethium <> die ordnungszahl <> 61 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> promethium <> einen schmelzpunkt <> von 1080 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> promethium <> einen siedepunkt <> von 2730 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> protactinium <> das chemische zeichen _pa_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> protactinium <> die ordnungszahl <> 91 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> protactinium <> einen schmelzpunkt <> von 1554 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> protactinium <> einen siedepunkt <> von 4030 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> quecksilber <> das chemische zeichen _hg_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> quecksilber <> die ordnungszahl <> 80 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> quecksilber <> einen schmelzpunkt <> von minus 39 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> quecksilber <> einen siedepunkt <> von 356 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radium <> das chemische zeichen _ra_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radium <> die ordnungszahl <> 88 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radium <> einen schmelzpunkt <> von 70 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radium <> einen siedepunkt <> von 1140 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radon <> das chemische zeichen _rn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radon <> die ordungszahl <> 86 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radon <> einen schmelzpunkt <> von minus 71 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> radon <> einen siedepunkt <> von -62 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhenium <> das chemische zeichen _re_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhenium <> den hoechsten siedepunkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhenium <> die ordnungszahl <> 75 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhenium <> einen schmelzpunkt <> von 3180 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhenium <> einen siedepunkt <> von 5627 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhodium <> das chemische zeichen _rh_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhodium <> die ornungszahl <> 45 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhodium <> einen schmelzpunkt <> von 1966 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rhodium <> einen siedepunkt <> von 3737 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> roentgenium <> das chemische zeichen _rg_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> roentgenium <> die ordnungszahl <> 111 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rubidium <> das chemische zeichen _rb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rubidium <> die ordnungszahl <> 27 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rubidium <> einen schmelzpunkt <> von 39 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rubidium <> einen siedepunkt <> von 688 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ruthenium <> das chemische zeichen _ru_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ruthenium <> die ordnungszahl <> 44 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ruthenium <> einen schmelzpunkt <> von 2310 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ruthenium <> einen siedepunkt <> von 390 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> rutherfordium <> das chemische zeichen _rf_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> samarium <> das chemische zeichen _sm_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> samarium <> die ordungszahl <> 62 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> samarium <> einen schmelzpunkt <> von 1072 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> samarium <> einen siedepunkt <> von 1778 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> sauerstoff <> das chemische zeichen _o_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> sauerstoff <> die ordnungszahl <> 8 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> sauerstoff <> einen schmelzpunkt <> von minus 218 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> sauerstoff <> einen siedepunkt <> von minus 183 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> scandium <> das chemische zeichen _sc_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> scandium <> die ordnungszahl <> 21 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> scandium <> einen schmelzpunkt <> von 1539 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> scandium <> einen siedepunkt <> von 2832 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> schwefel <> das chemische zeichen _s_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> schwefel <> die ordungszahl <> 18 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> schwefel <> einen schmelzpunkt <> von 113 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> schwefel <> einen siedepunkt <> von 448 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> seaborgium <> das chemische zeichen _sg_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> seaborgium <> die ordnungszahl <> 106 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> selen <> das chemische zeichen _se_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> selen <> die ordnungszahl <> 34 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> selen <> einen schmelzpunkt <> von 217 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> selen <> einen siedepunkt <> von 685 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silber <> das chemische zeichen _ag_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silber <> die ordungszahl <> 47 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silber <> einen schmelzpunkt <> von 962 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silber <> einen siedepunkt <> von 2212 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silicium <> das chemische zeichen _si_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silicium <> die ordnungszahl <> 14 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silicium <> einen schmelzpunkt <> von 1410 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> silicium <> einen siedepunkt <> von 2355 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> stickstoff <> das chemische zeichen _n_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> stickstoff <> die ordnungszahl <> 7 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> stickstoff <> die ordungszahl <> 7 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> stickstoff <> einen schmelzpunkt <> von -210 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> stickstoff <> einen siedepunkt <> von minus 196 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> strontium <> das chemische zeichen _sr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> strontium <> die ordnungszahl <> 38 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> strontium <> einen schmelzpunkt <> von 769 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> strontium <> einen siedepunkt <> von 1384 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tahllium <> das chemische zeichen _ti_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tahllium <> die ordnungszahl <> 81 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tahllium <> einen schmelzpunkt <> von 307 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tahllium <> einen siedepunkt <> von 1457 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tantalum <> das chemische zeichen _ta_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tantalum <> die ornungszahl <> 73 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tantalum <> einen schmelzpunkt 2966 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tantalum <> einen siedepunkt <> von 5425 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> technetium <> das chemische zeichen _tc_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> technetium <> die ordungszahl <> 43 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> technetium <> einen schmelzpunkt <> von 2172 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> technetium <> einen siedepunkt <> von 5030 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tellur <> das chemische zeichen _te_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tellur <> die ordnungszahl <> 52 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tellur <> einen schmelzpunkt <> von 450 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> tellur <> einen siedepunkt <> von 990 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> terbium <> das chemische zeichen _tb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> terbium <> die ordnungszahl <> 65 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> terbium <> einen schmelzpunkt <> von 1360 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> terbium <> einen siedepunkt <> von 3041 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thorium <> das chemische zeichen _th_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thorium <> einen schmelzpunkt <> von 1750 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thorium <> einen siedepunkt <> von 4787 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thulium <> das chemische zeichen _tm_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thulium <> die ordnungszahl <> 69 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thulium <> einen schmelzpunkt <> von 1545 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> thulium <> einen siedepunkt <> von 1727 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> titan <> das chemische zeichen _ti_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> titan <> die ordnungszahl <> 22 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> titan <> einen schmelzpunkt <> von 1660 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> titan <> einen siedepunkt <> von 3260 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ununbium <> das chemische zeichen _uub_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ununbium <> die ordnungszahl <> 112 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> uran <> das chemische zeichen _u_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> uran <> die ordungszahl <> 92 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> uran <> einen schmelzpunkt <> von 1132 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> uran <> einen siedepunkt <> von 3818 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> vanadium <> das chemische zeichen _v_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> vanadium <> die ornungszahl <> 23 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> vanadium <> einen schmelzpunkt <> von 1890 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> vanadium <> einen siedepunkt <> von 3380 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasser <> das chemische zeichen _h2o_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasser <> einen siedepunkt <> von 100 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasser <> einen siedepunkt  <> von 212 grad fahrenheit<>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> das chemische zeichen _h_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> das kleinste atom <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> den niedrigsten schmelzpunkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> die ordnungszahl <> 1 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> die ordungszahl <> 1 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> einen schmelzpunkt <> von minus 260 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wasserstoff <> einen siedepunkt <> von minus 253 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wolfram <> das chemische zeichen _w_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wolfram <> den hoechsten schmelzpunkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wolfram <> die ordnungszahl <> 74 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wolfram <> einen schmelzpunkt <> von 3407 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> wolfram <> einen siedepunkt <> von 5927 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> xenon <> das chemische zeichen _xe_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> xenon <> die ordnungszahl <> 54 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> xenon <> einen schmelzpunkt <> von minus 112 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> xenon <> einen siedepunkt <> von minus 107 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ytterbium <> das chemische zeichen _yb_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ytterbium <> die ordnungszahl <> 70 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ytterbium <> einen schmelzpunkt <> von 824 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ytterbium <> einen siedepunkt <> von 1193 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> yttrium <> das chemische zeichen _y_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> yttrium <> die ordnungszahl <> 39 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> yttrium <> einen schmelzpunkt <> von 1523 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> yttrium <> einen siedepunkt <> von 3337 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zink <> das chemische zeichen _zn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zink <> die ordnungszahl <> 30 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zink <> einen schmelzpunkt <> von 419 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zink <> einen siedepunkt <> von 907 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zinn <> das chemische zeichen _sn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zinn <> die ordnungszahl <> (true) <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zinn <> einen schmelzpunkt <> von 232 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zinn <> einen siedepunkt <> von 2270 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zirconium <> das chemische zeichen _zr_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zirconium <> die ordnungszahl <> 40 <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zirconium <> einen schmelzpunkt <> von 1852 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zirconium <> einen siedepunkt <> von 4377 grad_celsius <>  <>  <>  <>  <>  <>  <> (true)
+hat <> zyankali <> die chemische formel _kcn_ <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> _pb_ <> blei <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> acetat <> ein salz <> der essigsaeure <>  <>  <>  <>  <>  <>  <> (true)
+ist <> actinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> actinoide <> eine gruppenbezeichnung aehnlicher elemente <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> afrika <> die heimat <> der kaffeepflanze <>  <>  <>  <>  <>  <>  <> (true)
+ist <> alabaster <> eine abart <> von gips <>  <>  <>  <>  <>  <>  <> (true)
+ist <> alfred_nobel <> der erfinder <> von dynamit <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aluminium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aluminium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aluminium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aluminium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> americium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> americium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> antimon <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> antimon <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> antimon <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> argon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> argon <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> arsen <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> arsen <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> arsen <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> arsen <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> astat <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> astat <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> astat <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> _au_ <> das elementsymbol <> fuer gold <>  <>  <>  <>  <>  <>  <> (true)
+ist <> barium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> barium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> berkelium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> berkelium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> berylium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> beryllium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> beryllium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bionik <> ein wissenschaftszweig technik <> aus biologie <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bismut <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bismut <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> blausaeure <>  <> farblos <>  <>  <>  <>  <>  <>  <> (true)
+ist <> blei <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> blei <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bohrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bor <> das zweithaerteste element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bor <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bor <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bor <> ein halbleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bor <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> botox <> ein starkes gift <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> botulinumtoxin <> das staerkste gift <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> brom <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> brom <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> brom <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cadmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> caesium <> das weichste chemische element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> caesium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> caesium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> calcium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> calcium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> californium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> californium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cer <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chlor <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chlor <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chlor <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chloroform <> trichlormethan <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chrom <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chrom <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cobalt <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cromargan <> einerostende legierung chrom <> aus stahl;nicht;sowie nickel <>  <>  <>  <>  <>  <>  <> (true)
+ist <> curium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> curium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cyanwasserstoff <> blausaeure <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> darmstadtium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das chemische zeichen <> das elementsymbol <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das chemische zeichen <> ein elementsymbol <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das edelweiss <>  <> ein korbbluetler <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das gyroskop <> ein steuergeraet fuer die automatische lenkung <> von flugkoerpern <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das log <> ein messgeraet <> zur bestimmung der schiffsgeschwindigkeit <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das magma <> geschmolzenes gestein <> in dem erdinnern <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das siemens-martin-verfahren  <> ein verfahren <> zur stahlerzeugung <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der diamant <> der haerteste stoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der facharzt fuer hauterkrankungen <> ein dermatologe <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der liegende achter <> das zeichen <> fuer unendlich <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der ph-wert <>  <> 7;von reinem wasser <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die _archimedische_schraube_ <> ein wasserhebegeraet <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die chromosphaere <> die obere schicht <> der sonnenatmosphaere <>  <>  <>  <>  <>  <>  <> (true)
 ist <> die endokrinologie <> die lehre <> von den hormonen <>  <>  <>  <>  <>  <> 
 ist <> die entropie <> eine zentrale zustandsgroesse der thermodynamik <>  <>  <>  <>  <>  <>  <>
-ist <> die galeone <> ein spanisch-portugiesisches segelkriegsschiff <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die galeone <> ein spanisch-portugiesisches segelkriegsschiff <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> die gastroenterologie <> ein teilgebiet der inneren medizin <>  <>  <>  <>  <>  <>  <> 
 ist <> die genetik <> die vererbungslehre <>  <>  <>  <>  <>  <>  <>
-ist <> die gravitation <> die anziehungskraft <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die grundflaeche <>  <> eines kegels;kreisfoermig <>  <>  <>  <>  <>  <>  <> 50
-ist <> die luft <> ein gasgemisch <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die oxalsaeure <> die einfachste dicarbonsaeure <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die schwerkraft <> die anziehungskraft <> der erde <>  <>  <>  <>  <>  <>  <> 50
-ist <> die seismologie <> die erdbebenkunde <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die viskositaet <> das mass eines stoffes <> fuer die innere reibung <>  <>  <>  <>  <>  <>  <> 50
-ist <> die zeit <>  eine konstante <>  <>    <>  <>  <>  <>  <>  <> 50
-ist <> dubnium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> dysprosium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein amethyst <>  <> violett <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein apsis <> ein edelstein <> nicht <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein bergkristall <>  <> farblos <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein diamant <> ein isolator <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein diamant <> ein nichtleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein diamant <> kohlenstoff <> in seiner haertesten form <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine aphasie <> eine sprachstoerung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine fluessigkeit <>  <> ein emulsion <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine legierung <> ein gemenge <>  <> charakter <> metallischem <>  <> aus 2 oder mehr chemischen elementen; <> mit <>  <> 50
-ist <> ein elektron <> ein quantenobjekt <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine pipette <> ein saugheber <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine unvertraeglichkeit <> eine allergie <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein hologramm <> ein dreidimensionales bild <> auf einer ebenen flaeche <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein hypochonder <> ein eingebildeter kranker <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein robin <>  <> rot <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein sandkorn <> maximal 2 mm gross <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein taifun <> ein tropischer wirbelsturm <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine aphasie <> eine sprachstoerung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine fluessigkeit <>  <> ein emulsion <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine legierung <> ein gemenge <>  <> charakter <> metallischem <>  <> aus 2 oder mehr chemischen elementen; <> mit <>  <> 50
-ist <> eine pipette <> ein saugheber <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine unvertraeglichkeit <> eine allergie <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> einsteinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> einsteinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein taifun <> ein tropischer wirbelsturm <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eisen <> ein bestandteil <> von haemoblobin <>  <>  <>  <>  <>  <>  <> 50
-ist <> eisen <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> die gravitation <> die anziehungskraft <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die grundflaeche <>  <> eines kegels;kreisfoermig <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die luft <> ein gasgemisch <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die oxalsaeure <> die einfachste dicarbonsaeure <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die schwerkraft <> die anziehungskraft <> der erde <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die seismologie <> die erdbebenkunde <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die viskositaet <> das mass eines stoffes <> fuer die innere reibung <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die zeit <>  eine konstante <>  <>    <>  <>  <>  <>  <>  <> (true)
+ist <> dubnium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> dysprosium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein amethyst <>  <> violett <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein apsis <> ein edelstein <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein bergkristall <>  <> farblos <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein diamant <> ein isolator <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein diamant <> ein nichtleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein diamant <> kohlenstoff <> in seiner haertesten form <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine aphasie <> eine sprachstoerung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine fluessigkeit <>  <> ein emulsion <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine legierung <> ein gemenge <>  <> charakter <> metallischem <>  <> aus 2 oder mehr chemischen elementen; <> mit <>  <> (true)
+ist <> ein elektron <> ein quantenobjekt <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine pipette <> ein saugheber <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine unvertraeglichkeit <> eine allergie <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein hologramm <> ein dreidimensionales bild <> auf einer ebenen flaeche <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein hypochonder <> ein eingebildeter kranker <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein robin <>  <> rot <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein sandkorn <> maximal 2 mm gross <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein taifun <> ein tropischer wirbelsturm <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine aphasie <> eine sprachstoerung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine fluessigkeit <>  <> ein emulsion <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine legierung <> ein gemenge <>  <> charakter <> metallischem <>  <> aus 2 oder mehr chemischen elementen; <> mit <>  <> (true)
+ist <> eine pipette <> ein saugheber <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine unvertraeglichkeit <> eine allergie <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> einsteinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> einsteinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein taifun <> ein tropischer wirbelsturm <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eisen <> ein bestandteil <> von haemoblobin <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eisen <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> energie <> eine physikalische zustandsgroesse <>  <>  <>  <>  <>  <>  <> 
-ist <> epheliden <> der fachbegriff fuer sommersprossen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> erbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> erdgas <> schwerer als luft <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> europium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _farblos_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> fermium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> fermium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> epheliden <> der fachbegriff fuer sommersprossen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> erbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> erdgas <> schwerer als luft <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> europium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> _farblos_ <> eine farbe <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fermium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fermium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> fermium <> mein transuran <>  <>  <>  <>  <>  <>  <>  <> 100
-ist <> ferrum <> der lateinische name <> fuer eisen <>  <>  <>  <>  <>  <>  <> 50
-ist <> fluor <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> fluor <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> fluor <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> fluor <> ein spurenelement <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> francium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> francium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> gadolinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> gallium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> gallium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> germanium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> germanium <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> gips <> calciumsulfat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> gips <> der umgangssprachliche name <> fuer calciumsulfat <>  <>  <>  <>  <>  <>  <> 50
-ist <> glaubersalz <> natriumsulfat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> glukagon <> ein hormon <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> glukose <> traubenzucker <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> glycerin <> der bedeutenste dreiwertige aklohol <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ferrum <> der lateinische name <> fuer eisen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fluor <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fluor <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fluor <> ein halogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fluor <> ein spurenelement <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> francium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> francium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gadolinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gallium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gallium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> germanium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> germanium <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gips <> calciumsulfat <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gips <> der umgangssprachliche name <> fuer calciumsulfat <>  <>  <>  <>  <>  <>  <> (true)
+ist <> glaubersalz <> natriumsulfat <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> glukagon <> ein hormon <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> glukose <> traubenzucker <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> glycerin <> der bedeutenste dreiwertige aklohol <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> gold <> ein edelmetall <>  <>  <>  <>  <>  <>  <> 
 ist <> gold <> ein chemisches element <>  <>  <>  <>  <>  <>  <> 
-ist <> gold <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> gold <> ein reinelement <> ohne isotope <>  <>  <>  <>  <>  <>  <> 50
-ist <> gold <> schwerer als blei <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hafnium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hassium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> helium <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> helium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> holmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist<> holz <> ein nachwachsender,_umweltfreundlicher rohstoff <>  <>  <>    <>  <>  <>  <>  <> 50
-ist <> indium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> indium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> iod <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> iod <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> iridium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> iridium <> ein platinmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> jod <> ein halbleiter <> nicht <>  <>  <>  <>  <>  <>  <> 50
-ist <> kalium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kalium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kaliumpermanganat <> das staerkste oxidationsmittel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kelvin <> eine masseinheit <> fuer die temperatur <>  <>  <>  <>  <>  <>  <> 50
-ist <> kernfusion <>  <> die verschmelzung von atomkernen <>  <>  <>  <>  <>  <>  <> 50
-ist <> kobalt <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kohlenstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kohlenstoff <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> krypton <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> krypton <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kuhmilch <> eine emulsion <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kuhmilch <> eine fluessigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kupfer <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kupfer <> ein guter elektrizitaetsleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lakritze <> eine schwarze masse <> aus eingedicktem suessholzwurzelsaft <>  <>  <>  <>  <>  <>  <> 50
-ist <> laktose <> milchzucker <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lanthan <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lanthan <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lanthan <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lapislazuli <> ein blauer halbedelstein <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lawrencium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lawrencium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lithium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lithium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lsd <> eine droge <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lsd <> ein halluzinogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> lutetium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> gold <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gold <> ein reinelement <> ohne isotope <>  <>  <>  <>  <>  <>  <> (true)
+ist <> gold <> schwerer als blei <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hafnium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hassium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> helium <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> helium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> holmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist<> holz <> ein nachwachsender,_umweltfreundlicher rohstoff <>  <>  <>    <>  <>  <>  <>  <> (true)
+ist <> indium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> indium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> iod <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> iod <> ein element <> der halogengruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> iridium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> iridium <> ein platinmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> jod <> ein halbleiter <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kalium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kalium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kaliumpermanganat <> das staerkste oxidationsmittel <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kelvin <> eine masseinheit <> fuer die temperatur <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kernfusion <>  <> die verschmelzung von atomkernen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kobalt <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kohlenstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kohlenstoff <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> krypton <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> krypton <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kuhmilch <> eine emulsion <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kuhmilch <> eine fluessigkeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kupfer <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kupfer <> ein guter elektrizitaetsleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lakritze <> eine schwarze masse <> aus eingedicktem suessholzwurzelsaft <>  <>  <>  <>  <>  <>  <> (true)
+ist <> laktose <> milchzucker <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lanthan <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lanthan <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lanthan <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lapislazuli <> ein blauer halbedelstein <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lawrencium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lawrencium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lithium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lithium  <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lsd <> eine droge <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lsd <> ein halluzinogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> lutetium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> magnesium <> ein chemisches element <>  <>  <>  <>  <>  <>  <>
-ist <> magnesium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> magnesium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> magnesium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mangan <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> magnesium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> magnesium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> magnesium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mangan <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> materie <> eine allgemeine bezeichnung <> fuer alles stoffliche <>  <>  <>  <>  <>  <>
-ist <> meitnerium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mendelevium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mendelevium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mennige <>  <> rot <>  <>  <>  <>  <>  <>  <> 50
-ist <> messing <> eine kupfer-zinklegierung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> metall <> der beste waermeleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> methan <> der einfachste gesaettigte kohlenwasserstoff <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> milch <> eine emulsion <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> molybdaen <> ein edelmetall <> nicht <>  <>  <>  <>  <>  <>  <> 50
-ist <> molybdaen <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> molybdaen <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> molybdaen <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> montezumas rache <> eine durchfallserkrankung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> natriumchlorid <> einfaches tafelsalz <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> natriumchlorid <> kochsalz <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> natrium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> natrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> natrium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neon <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neptunium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neptunium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nickel <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nickel <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nickel <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> niob <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nobelium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nobelium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> noedym <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> osmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> osmium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> oxidation <> die chemische reaktion <> von elementen mit sauerstoff <>  <>  <>  <>  <>  <>  <> 50
-ist <> ozon <> eine verbindung <> aus drei sauerstoffatomen <>  <>  <>  <>  <>  <>  <> 50
-ist <> palladium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> patchwork <> ein stoff <> aus bunten flecken <>  <>  <>  <>  <>  <>  <> 50
-ist <> patina <> eine gruene oxidationsschicht <> auf kupfer <>  <>  <>  <>  <>  <>  <> 50
-ist <> phosphor <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> phosphor <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> platin <> ein edelmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> platin <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> plonium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> plumbum <> der latainische name <> fuer blei <>  <>  <>  <>  <>  <>  <> 50
-ist <> plutonium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> plutonium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> polonium <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> polyethylen <> ein kunststoff <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> polytetrafluorethylen <> als teflon <> bekannt <>  <>  <>  <>  <>  <>  <> 50
-ist <> praseodym <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> promethium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> protactinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> protactinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> quecksilber <> ein edelmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> quecksilber <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> quecksilber <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> quecksilber <>  <> unter normalbedingungen fluessig <>  <>  <>  <>  <>  <>  <> 50
-ist <> radium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> radium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> radon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> radon <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist reis <> eine gattung <>  <> der suessgraeser <>  <>  <>  <>  <>  <>  <> 50
-ist <> rhenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> rhodium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> roentgenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> rubidium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ruthenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> rutherfordium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> samarium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sauerstoff <> das haeufigste element <> in der erdrinde <>  <>  <>  <>  <>  <>  <> 50
-ist <> sauerstoff <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sauerstoff <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sauerstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sauerstoff <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> scandium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> schwarzpulver <> ein treibmittel <> fuer gewehrkugeln <>  <>  <>  <>  <>  <>  <> 50
-ist <> schwefel <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> schwefel <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> schwefel <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> schwefel <>  <> gelb <>  <>  <>  <>  <>  <>  <> 50
-ist <> seaborgium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> selen <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> selen <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> silber <> der beste waermeleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silber <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silber <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silber <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silicium <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silicium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silicium <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> silizium <> ein halbleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> silizium <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> soda <> ein wasserloesliches natriumsalz <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> 50
-ist <> sorbit <> ein zuckeraustauschstoff <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> stahl <> eine legierung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> staniol <> eine duenne folie <> aus zinn <>  <>  <>  <>  <>  <>  <> 50
-ist <> stannum <> die lateinische bezeichnung <> fuer zinn <>  <>  <>  <>  <>  <>  <> 50
-ist <> stibium <> der lateinische name <> fuer antimon <>  <>  <>  <>  <>  <>  <> 50
-ist <> stickstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> stickstoff <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> stoechiometrie <> ein teilgebiet <> der chemie <>  <>  <>  <>  <>  <>  <> 50
-ist <> strom <> die bewegung elektrischer ladungen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> strontium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> strontium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sublimation <> der direkte uebergang <> vom festen in den fluessigen aggregatzustand <>  <>  <>  <>  <>  <>  <> 50
-ist <> sulfit <> das salz <> der schwefligen saeure <>  <>  <>  <>  <>  <>  <> 50
-ist <> tahllium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> talk <> der weichste stoff <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tantal <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> technetium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tellur <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tellur <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tellur <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> terbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> thallium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> thorium actinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> thorium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> thulium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> titan <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> titan <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> titan <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> tutia <> ein sublimiertes zinkoxid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> und <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> unserer sonne <>  <> der merkur  an dem naechsten <>  <>  <>  <>  <>  <>  <> 50
-ist <> ununbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist  <> uran <> das schwerste natuerlich vorkommende element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> uran <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> uran <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> vanadium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> vanadium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> _vitamin_a_ <>  <> fettloeslich <>  <>  <>  <>  <>  <>  <> 50
-ist <> vitamin c <> ascorbinsaeure <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasser <> eine chemische verbindung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> ein gas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> ein mischelement <> mit mehreren isotopen <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <> leichter als luft <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wasserstoff <>  <> leicht entzuendlich <>  <>  <>  <>  <>  <>  <> 50
-ist <> watt <> die einheit fuer leistung <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> wolfram <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> xenon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> xenon <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ytterbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> yttrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zeit <> die eine konstante <>  <>    <>  <>  <>  <>  <>  <> 50
-ist <> zibet <> ein stark riechendes druesensekret <> nach moschus <>  <>  <>  <>  <>  <>  <> 50
-ist <> zink <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zinn <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zinn <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> 50
-ist <> zirconium <> ein element <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zoelestin <> ein mineral <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zyankali <> das giftige salz <> der blausaeure <>  <>  <>  <>  <>  <>  <> 50
-kann/can verchromen <> man <> gegenstaende <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> 50
-koennen verbrennen <> diamanten <>  <> ohne weiter rueckstaende zu kohlendioxid <>  <>  <>  <>  <>  <>  <> 50
+ist <> meitnerium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mendelevium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mendelevium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mennige <>  <> rot <>  <>  <>  <>  <>  <>  <> (true)
+ist <> messing <> eine kupfer-zinklegierung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> metall <> der beste waermeleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> methan <> der einfachste gesaettigte kohlenwasserstoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> milch <> eine emulsion <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> molybdaen <> ein edelmetall <> nicht <>  <>  <>  <>  <>  <>  <> (true)
+ist <> molybdaen <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> molybdaen <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> molybdaen <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> montezumas rache <> eine durchfallserkrankung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> natriumchlorid <> einfaches tafelsalz <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> natriumchlorid <> kochsalz <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> natrium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> natrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> natrium <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neon <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neptunium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neptunium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nickel <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nickel <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nickel <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> niob <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nobelium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nobelium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> noedym <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> osmium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> osmium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> oxidation <> die chemische reaktion <> von elementen mit sauerstoff <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ozon <> eine verbindung <> aus drei sauerstoffatomen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> palladium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> patchwork <> ein stoff <> aus bunten flecken <>  <>  <>  <>  <>  <>  <> (true)
+ist <> patina <> eine gruene oxidationsschicht <> auf kupfer <>  <>  <>  <>  <>  <>  <> (true)
+ist <> phosphor <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> phosphor <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> platin <> ein edelmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> platin <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> plonium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> plumbum <> der latainische name <> fuer blei <>  <>  <>  <>  <>  <>  <> (true)
+ist <> plutonium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> plutonium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> polonium <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> polyethylen <> ein kunststoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> polytetrafluorethylen <> als teflon <> bekannt <>  <>  <>  <>  <>  <>  <> (true)
+ist <> praseodym <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> promethium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> protactinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> protactinium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> quecksilber <> ein edelmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> quecksilber <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> quecksilber <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> quecksilber <>  <> unter normalbedingungen fluessig <>  <>  <>  <>  <>  <>  <> (true)
+ist <> radium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> radium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> radon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> radon <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist reis <> eine gattung <>  <> der suessgraeser <>  <>  <>  <>  <>  <>  <> (true)
+ist <> rhenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> rhodium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> roentgenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> rubidium <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ruthenium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> rutherfordium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> samarium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sauerstoff <> das haeufigste element <> in der erdrinde <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sauerstoff <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sauerstoff <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sauerstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sauerstoff <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> scandium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schwarzpulver <> ein treibmittel <> fuer gewehrkugeln <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schwefel <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schwefel <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schwefel <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schwefel <>  <> gelb <>  <>  <>  <>  <>  <>  <> (true)
+ist <> seaborgium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> selen <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> selen <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silber <> der beste waermeleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silber <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silber <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silber <> ein schwermetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silicium <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silicium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silicium <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silizium <> ein halbleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> silizium <> ein halbmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> soda <> ein wasserloesliches natriumsalz <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sorbit <> ein zuckeraustauschstoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stahl <> eine legierung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> staniol <> eine duenne folie <> aus zinn <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stannum <> die lateinische bezeichnung <> fuer zinn <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stibium <> der lateinische name <> fuer antimon <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stickstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stickstoff <> ein element <> der stickstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> stoechiometrie <> ein teilgebiet <> der chemie <>  <>  <>  <>  <>  <>  <> (true)
+ist <> strom <> die bewegung elektrischer ladungen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> strontium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> strontium <> ein erdalkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sublimation <> der direkte uebergang <> vom festen in den fluessigen aggregatzustand <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sulfit <> das salz <> der schwefligen saeure <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tahllium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> talk <> der weichste stoff <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tantal <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> technetium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tellur <> ein chalkogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tellur <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tellur <> ein element <> der sauerstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> terbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> thallium <> ein element <> der borgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> thorium actinium <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> thorium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> thulium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> titan <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> titan <> ein leichtmetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> titan <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> tutia <> ein sublimiertes zinkoxid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> und <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> unserer sonne <>  <> der merkur  an dem naechsten <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ununbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist  <> uran <> das schwerste natuerlich vorkommende element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> uran <> ein actinoid <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> uran <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vanadium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vanadium <> ein metall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> _vitamin_a_ <>  <> fettloeslich <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vitamin c <> ascorbinsaeure <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasser <> eine chemische verbindung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> ein alkalimetall <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> ein chemisches element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> ein gas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> ein mischelement <> mit mehreren isotopen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <> leichter als luft <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wasserstoff <>  <> leicht entzuendlich <>  <>  <>  <>  <>  <>  <> (true)
+ist <> watt <> die einheit fuer leistung <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> wolfram <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> xenon <> ein edelgas <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> xenon <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ytterbium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> yttrium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zeit <> die eine konstante <>  <>    <>  <>  <>  <>  <>  <> (true)
+ist <> zibet <> ein stark riechendes druesensekret <> nach moschus <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zink <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zinn <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zinn <> ein element <> der kohlenstoffgruppe <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zirconium <> ein element <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zoelestin <> ein mineral <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zyankali <> das giftige salz <> der blausaeure <>  <>  <>  <>  <>  <>  <> (true)
+kann/can verchromen <> man <> gegenstaende <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> (true)
+koennen verbrennen <> diamanten <>  <> ohne weiter rueckstaende zu kohlendioxid <>  <>  <>  <>  <>  <>  <> (true)
 laesst <> aerodynamik <> flugzeuge fliegen <>  <>  <>  <>  <>  <>  <>
-laesst schmelzen <> gallium <> sich <> durch handwaerme <>  <>  <>  <>  <>  <>  <> 50
-lautet <> co2 <> die chemische formel fuer kohlendioxid <>  <>  <>  <>  <>  <>  <>  <> 50
-lautet <> die formel <> _masse_durch_volumen_ <> fuer dichte <>  <>  <>  <>  <>  <>  <> 50
-lautet <> die summenformel <> _h2so4_ <> von schwefelsaeure <>  <>  <>  <>  <>  <>  <> 50
-lautet <> die summenformel <> _kmno4_ <> von kaliumpermanganat <>  <>  <>  <>  <>  <>  <> 50
-lautet <> die summenformel <> _o3_ <> von ozon <>  <>  <>  <>  <>  <>  <> 50
-lebt <> ein rotes blutkoerperchen <> hoechstens 4 monate <>  <>  <>  <>  <>  <>  <>  <> 50
-leitet <> silber <> elektrzitaet <> an dem besten <>  <>  <>  <>  <>  <>  <> 50
-leitet <> silber <> waerme <> an dem besten <>  <>  <>  <>  <>  <>  <> 50
-liegt <> bei 0 grad kelvin <> der absolute nullpunkt <>  <>  <>  <>  <>  <>  <>  <> 50
-reguliert <> melatonin <> die innere uhr <>  <>  <>  <>  <>  <>  <>  <> 50
-schmilzt <> wolfram <> bei 3422 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> 50
-sehen <> menschen <>  <> in einem wellenbereich von 400-800 nanometern <>  <>  <>  <>  <>  <>  <> 50
-siedet <> wasser <> bei 100 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> 50
-siedet <> wasser <> bei 212 grad fahrenheit <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> actinoide <>  <> radioaktiv <>  <>  <>  <>  <>  <>  <> 50
-sind <> alle edelmetalle <> schwermetalle <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> alle erdalkalimetalle <> unedle metalle <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> alle salze <> elektrolyte <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> carbonate <> salze <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> 50
-sind <> chalkogene <> elemente des periodensystems <> der 6 hauptgruppe <>  <>  <>  <>  <>  <>  <> 50
-sind <> die hauptbestandteile <> pflanzliche oele und butter<> von margrine <>  <>  <>  <>  <>  <>  <> 50
-sind <> die meisten chemischen elemente <> metalle <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> disulfidbruecken <> chemische bindungsformen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> edelgase <>  <> sehr reaktionstraege <>  <>  <>  <>  <>  <>  <> 50
-sind <> eine flatulenz <> blaehungen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> elektronen <> negativ geladene elementarteilchen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> _erythrocyten_ <> rote blutkoerperchen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> kilowattstunden <> die einheit fuer arbeit <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> mutationen <> aenderungen <> der eigenschaften eines lebewesens <>  <>  <>  <>  <>  <>  <> 50
-sind <> nitride <> verbindungen <> aus stickstoff und einem metall <>  <>  <>  <>  <>  <>  <> 50
-sind <> oliven <> fruechte des oelbaums <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> oxide <> chemische verbindungen <> mit sauerstoff <>  <>  <>  <>  <>  <>  <> 50
-sind <> proteine <> eiweisse <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> protuberanzen <> gaswolken <> auf der sonne <>  <>  <>  <>  <>  <>  <> 50
-sind <> schallwellen <> schwingungen <> der materie <>  <>  <>  <>  <>  <>  <> 50
-speichert <> ein kondensator <> elektrische ladung <>  <>  <>  <>  <>  <>  <>  <> 50
-steht <> cr <> fuer das schwermetall chrom <>  <>  <>  <>  <>  <>  <>  <> 50
-steht <> die abkuerzung dvd <> digital-versatile-disc <> fuer <>  <>  <>  <>  <>  <>  <> 50
-steht <> _rom_ <> read-only-memory <> fuer <>  <>  <>  <>  <>  <>  <> 50
-steuert <> melatonin <> euere innere uhr <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> melatonin <> ein hormon <>  <>  <>  <>  <>  <>  <>  <> 50
-teilen <> keimbahnzellen <> sich <> durch mitose;nicht <>  <>  <>  <>  <>  <>  <> 50
-verchromt werden <> gegenstaende <>  <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> 50
-verhindert <> talkum <> das verklumpen <> von lebensmitteln <>  <>  <>  <>  <>  <>  <> 50
-verschlucken <> schwarze loecher <> licht <>  <>  <>  <>  <>  <>  <>  <> 50
-verschlucken <> schwarze loecher <> materie <>  <>  <>  <>  <>  <>  <>  <> 50
-verschlucken <> schwarze loecher <> materie bzw licht <>  <>  <>  <>  <>  <>  <>  <> 50
-verursacht <> ein ozonloch <> vermehrte ultraviolettstrahlung <>  <>  <>  <>  <>  <>  <>  <> 50
-verwendet <> das symphatische nervensystem <> azetylcholin <> an der ersten synapse <>  <>  <>  <>  <>  <>  <> 50
-verwendet wird <> aluminium <>  <> in dem flugzeugbau <>  <>  <>  <>  <>  <>  <> 50
-verwendet wird <> ameisensaeureethylester <> als aromastoff <> fuer rum <>  <>  <>  <>  <>  <>  <> 50
-verwendet wird <> titan <>  <> in dem flugzeugbau <>  <>  <>  <>  <>  <>  <> 50
-vorkommt <> aluminium <>  <> in der erdkruste an dem haeufigsten <>  <>  <>  <>  <>  <>  <> 50
-vorkommt <> wasserstoff <>  <> in 3 isotopen <>  <>  <>  <>  <>  <>  <> 50
-wird <> adrenalin <>  <> im nebennierenmark  produziert <>  <>  <>  <>  <>  <>  <> 50
-wird <> aluminium <> gewonnen <> aus bauxit <>  <>  <>  <>  <>  <>  <> 50
-wird <> aluminium <> gewonnen <> durch elektrolyse <>  <>  <>  <>  <>  <>  <> 50
-wird <> aluminium <> gewonnen <> mit dem bauxit-verfahren <>  <>  <>  <>  <>  <>  <> 50
-wird <> benzin <> gewonnen <> aus erdoel <>  <>  <>  <>  <>  <>  <> 50
-wird <> der widerstand <>  <> in ohm gemessen <>  <>  <>  <>  <>  <>  <> 50
-wird <> die einheit <>  <> der spannung;in volt gemessen <>  <>  <>  <>  <>  <>  <> 50
-wird <> die schallstaerke <>  <> in dezibel gemessen <>  <>  <>  <>  <>  <>  <> 50
-wird <> die stromstaerke <>  <> in ampere gemessen <>  <>  <>  <>  <>  <>  <> 50
-wird <> gold <>  <> beim schmelzen gruen <>  <>  <>  <>  <>  <>  <> 50
-wird <> lackmus <>  <> in saeuren rot <>  <>  <>  <>  <>  <>  <> 50
-wird <> leder <>  <> aus tierhaut hergestellt <>  <>  <>  <>  <>  <>  <> 50
-wird <> leinen <>  <> aus flachs hergestellt <>  <>  <>  <>  <>  <>  <> 50
-wird <> luft <> bei minus 231 grad_celsius <> fluessig <>  <>  <>  <>  <>  <>  <> 50
-wird <> opium <> gewonnen <> aus schlafmohn <>  <>  <>  <>  <>  <>  <> 50
-wird <> papier <>  <> aus holz hergestellt <>  <>  <>  <>  <>  <>  <> 50
-wird <> quecksilber <>  <> bei zimmertemperatur fluessig <>  <>  <>  <>  <>  <>  <> 50
-wird <> raki <>  <> aus _anis_und_rosinen_ hergestellt <>  <>  <>  <>  <>  <>  <> 50
-wird zerlegt <> wasser <>  <> durch elektrolyse in seine bestandteile <>  <>  <>  <>  <>  <>  <> 50
-zerlegt <> ein prisma <> das licht <> in farben <>  <>  <>  <>  <>  <>  <> 50
-ist <> der tod <> das unausweichliche ende <> von einer biologischen existenz <> 50
+laesst schmelzen <> gallium <> sich <> durch handwaerme <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> co2 <> die chemische formel fuer kohlendioxid <>  <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> die formel <> _masse_durch_volumen_ <> fuer dichte <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> die summenformel <> _h2so4_ <> von schwefelsaeure <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> die summenformel <> _kmno4_ <> von kaliumpermanganat <>  <>  <>  <>  <>  <>  <> (true)
+lautet <> die summenformel <> _o3_ <> von ozon <>  <>  <>  <>  <>  <>  <> (true)
+lebt <> ein rotes blutkoerperchen <> hoechstens 4 monate <>  <>  <>  <>  <>  <>  <>  <> (true)
+leitet <> silber <> elektrzitaet <> an dem besten <>  <>  <>  <>  <>  <>  <> (true)
+leitet <> silber <> waerme <> an dem besten <>  <>  <>  <>  <>  <>  <> (true)
+liegt <> bei 0 grad kelvin <> der absolute nullpunkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+reguliert <> melatonin <> die innere uhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+schmilzt <> wolfram <> bei 3422 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> (true)
+sehen <> menschen <>  <> in einem wellenbereich von 400-800 nanometern <>  <>  <>  <>  <>  <>  <> (true)
+siedet <> wasser <> bei 100 grad_celsius <>  <>  <>  <>  <>  <>  <>  <> (true)
+siedet <> wasser <> bei 212 grad fahrenheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> actinoide <>  <> radioaktiv <>  <>  <>  <>  <>  <>  <> (true)
+sind <> alle edelmetalle <> schwermetalle <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> alle erdalkalimetalle <> unedle metalle <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> alle salze <> elektrolyte <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> carbonate <> salze <> der kohlensaeure <>  <>  <>  <>  <>  <>  <> (true)
+sind <> chalkogene <> elemente des periodensystems <> der 6 hauptgruppe <>  <>  <>  <>  <>  <>  <> (true)
+sind <> die hauptbestandteile <> pflanzliche oele und butter<> von margrine <>  <>  <>  <>  <>  <>  <> (true)
+sind <> die meisten chemischen elemente <> metalle <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> disulfidbruecken <> chemische bindungsformen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> edelgase <>  <> sehr reaktionstraege <>  <>  <>  <>  <>  <>  <> (true)
+sind <> eine flatulenz <> blaehungen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> elektronen <> negativ geladene elementarteilchen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> _erythrocyten_ <> rote blutkoerperchen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> kilowattstunden <> die einheit fuer arbeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> mutationen <> aenderungen <> der eigenschaften eines lebewesens <>  <>  <>  <>  <>  <>  <> (true)
+sind <> nitride <> verbindungen <> aus stickstoff und einem metall <>  <>  <>  <>  <>  <>  <> (true)
+sind <> oliven <> fruechte des oelbaums <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> oxide <> chemische verbindungen <> mit sauerstoff <>  <>  <>  <>  <>  <>  <> (true)
+sind <> proteine <> eiweisse <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> protuberanzen <> gaswolken <> auf der sonne <>  <>  <>  <>  <>  <>  <> (true)
+sind <> schallwellen <> schwingungen <> der materie <>  <>  <>  <>  <>  <>  <> (true)
+speichert <> ein kondensator <> elektrische ladung <>  <>  <>  <>  <>  <>  <>  <> (true)
+steht <> cr <> fuer das schwermetall chrom <>  <>  <>  <>  <>  <>  <>  <> (true)
+steht <> die abkuerzung dvd <> digital-versatile-disc <> fuer <>  <>  <>  <>  <>  <>  <> (true)
+steht <> _rom_ <> read-only-memory <> fuer <>  <>  <>  <>  <>  <>  <> (true)
+steuert <> melatonin <> euere innere uhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> melatonin <> ein hormon <>  <>  <>  <>  <>  <>  <>  <> (true)
+teilen <> keimbahnzellen <> sich <> durch mitose;nicht <>  <>  <>  <>  <>  <>  <> (true)
+verchromt werden <> gegenstaende <>  <> mit galvanisieren <>  <>  <>  <>  <>  <>  <> (true)
+verhindert <> talkum <> das verklumpen <> von lebensmitteln <>  <>  <>  <>  <>  <>  <> (true)
+verschlucken <> schwarze loecher <> licht <>  <>  <>  <>  <>  <>  <>  <> (true)
+verschlucken <> schwarze loecher <> materie <>  <>  <>  <>  <>  <>  <>  <> (true)
+verschlucken <> schwarze loecher <> materie bzw licht <>  <>  <>  <>  <>  <>  <>  <> (true)
+verursacht <> ein ozonloch <> vermehrte ultraviolettstrahlung <>  <>  <>  <>  <>  <>  <>  <> (true)
+verwendet <> das symphatische nervensystem <> azetylcholin <> an der ersten synapse <>  <>  <>  <>  <>  <>  <> (true)
+verwendet wird <> aluminium <>  <> in dem flugzeugbau <>  <>  <>  <>  <>  <>  <> (true)
+verwendet wird <> ameisensaeureethylester <> als aromastoff <> fuer rum <>  <>  <>  <>  <>  <>  <> (true)
+verwendet wird <> titan <>  <> in dem flugzeugbau <>  <>  <>  <>  <>  <>  <> (true)
+vorkommt <> aluminium <>  <> in der erdkruste an dem haeufigsten <>  <>  <>  <>  <>  <>  <> (true)
+vorkommt <> wasserstoff <>  <> in 3 isotopen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> adrenalin <>  <> im nebennierenmark  produziert <>  <>  <>  <>  <>  <>  <> (true)
+wird <> aluminium <> gewonnen <> aus bauxit <>  <>  <>  <>  <>  <>  <> (true)
+wird <> aluminium <> gewonnen <> durch elektrolyse <>  <>  <>  <>  <>  <>  <> (true)
+wird <> aluminium <> gewonnen <> mit dem bauxit-verfahren <>  <>  <>  <>  <>  <>  <> (true)
+wird <> benzin <> gewonnen <> aus erdoel <>  <>  <>  <>  <>  <>  <> (true)
+wird <> der widerstand <>  <> in ohm gemessen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> die einheit <>  <> der spannung;in volt gemessen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> die schallstaerke <>  <> in dezibel gemessen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> die stromstaerke <>  <> in ampere gemessen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> gold <>  <> beim schmelzen gruen <>  <>  <>  <>  <>  <>  <> (true)
+wird <> lackmus <>  <> in saeuren rot <>  <>  <>  <>  <>  <>  <> (true)
+wird <> leder <>  <> aus tierhaut hergestellt <>  <>  <>  <>  <>  <>  <> (true)
+wird <> leinen <>  <> aus flachs hergestellt <>  <>  <>  <>  <>  <>  <> (true)
+wird <> luft <> bei minus 231 grad_celsius <> fluessig <>  <>  <>  <>  <>  <>  <> (true)
+wird <> opium <> gewonnen <> aus schlafmohn <>  <>  <>  <>  <>  <>  <> (true)
+wird <> papier <>  <> aus holz hergestellt <>  <>  <>  <>  <>  <>  <> (true)
+wird <> quecksilber <>  <> bei zimmertemperatur fluessig <>  <>  <>  <>  <>  <>  <> (true)
+wird <> raki <>  <> aus _anis_und_rosinen_ hergestellt <>  <>  <>  <>  <>  <>  <> (true)
+wird zerlegt <> wasser <>  <> durch elektrolyse in seine bestandteile <>  <>  <>  <>  <>  <>  <> (true)
+zerlegt <> ein prisma <> das licht <> in farben <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der tod <> das unausweichliche ende <> von einer biologischen existenz <> (true)

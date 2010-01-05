@@ -1,155 +1,155 @@
-atmen <> wale <> nothing <> mit den lungen <>  <>  <>  <>  <>  <>  <> 50
-bedroht sind <> pandabaeren <> nothing <> vom aussterben <>  <>  <>  <>  <>  <>  <> 50
-ernaehrt <> ein koalabaer <> sich <> von eukalyptus <>  <>  <>  <>  <>  <>  <> 50
-ernaehrt <> nothing <> sich <> der geier  von aas <>  <>  <>  <>  <>  <>  <> 50
+atmen <> wale <> nothing <> mit den lungen <>  <>  <>  <>  <>  <>  <> (true)
+bedroht sind <> pandabaeren <> nothing <> vom aussterben <>  <>  <>  <>  <>  <>  <> (true)
+ernaehrt <> ein koalabaer <> sich <> von eukalyptus <>  <>  <>  <>  <>  <>  <> (true)
+ernaehrt <> nothing <> sich <> der geier  von aas <>  <>  <>  <>  <>  <>  <> (true)
 essen <> voegel <> fische <>  <>  <>  <>  <> nothing <> nothing <>
-fangen <> katzen <> maeuse <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-fliegen kann/can <> ein pinguin <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> 50
+fangen <> katzen <> maeuse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+fliegen kann/can <> ein pinguin <> nothing <> nicht <>  <>  <>  <>  <>  <>  <> (true)
 fliegen kann/can <> ein vogel <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
-fliegen koennen <> schwaene <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-gehen kann/can <> ein pinguin <> nothing <> schlecht <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> das lama <> nothing <> zur familie der kamele <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> die zecke <> nothing <> zu den spinnentieren <>  <>  <>  <>  <>  <>  <> 50
-gehoert <> nothing <> nothing <> die elster zu den rabenvoegeln <>  <>  <>  <>  <>  <>  <> 50
+fliegen koennen <> schwaene <> nothing <>  <>  <>  <>  <>  <>  <>  <> (true)
+gehen kann/can <> ein pinguin <> nothing <> schlecht <>  <>  <>  <>  <>  <>  <> (true)
+gehoert <> das lama <> nothing <> zur familie der kamele <>  <>  <>  <>  <>  <>  <> (true)
+gehoert <> die zecke <> nothing <> zu den spinnentieren <>  <>  <>  <>  <>  <>  <> (true)
+gehoert <> nothing <> nothing <> die elster zu den rabenvoegeln <>  <>  <>  <>  <>  <>  <> (true)
 gibt <> eine kuh <> milch <>  <>  <>  <>  <> nothing <> nothing <> 
-haben  <> voegel <>vier zehen <>  <>  <>  <>  <>  <>  <>  <> 50
-haben <> die spinnen <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> 50
-haben <> spinnen <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> 50
-halten <> fledermaeuse <> einen winterschlaf <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> der seestern <> 5 arme <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> die giraffe <> eine blaue zunge <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein dromedar <> einen hoecker <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein hund <> 42 zaehne <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein oktobus <> 8 tentakel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> ein oktopus <> 3 herzen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine biene <> 4 fluegel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine giraffe <> 7 halswirbel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine krabbe <> 10 beine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat <> eine spinne <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> 50
-heisst <> das maennliche wildschwein <> keiler <>  <>  <>  <>  <>  <>  <>  <> 50
-heisst <> das weibliche pferd <> stute <>  <>  <>  <>  <>  <>  <>  <> 50
-heisst <> ein magenteil <> pansen <> der wiederkaeuer <>  <>  <>  <>  <>  <>  <> 50
-ist  <> der tiger <> eine grosskatze <> in asien <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist  <> eine amphibie <> ein wirbeltier<>  <> 50
-ist <> das alpaka <> eine lama-art <> in suedamerika <>  <>  <>  <>  <>  <>  <> 50
-ist <> das yak <> das asiatische hochgebirgsrind <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der elch <> die groesste hirschart <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der gepard <> das schnellste landsaeugetier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der gepard <> nothing <> das schnellste saeugetier <>  <>  <>  <>  <>  <>  <> 50
-ist <> der hengst <> ein maennliches pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der keiler <> ein maennliches wildschwein <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der kokkon <> die huelle <> der insektenpuppen <>  <>  <>  <>  <>  <>  <> 50
-ist <> der kondor <> der groesste fliegende vogel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der marabu <> ein afrikanischer storch <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der maulwurf <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> der nuestern <> nothing <> die nase von pferden <>  <>  <>  <>  <>  <>  <> 50
-ist <> der piranha <> ein suesswasserfisch <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die fauna <> die tierwelt <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die groesste hunderasse <> nothing <> der irische wolfshund <>  <>  <>  <>  <>  <>  <> 50
-ist <> die hippiatrik <> die pferdeheilkunde <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die kreuzotter <> die in deutschland <> beheimatete giftschlange <>  <>  <>  <>  <>  <>  <> 50
-ist <> die kreuzotter <> eine giftschlange <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die paarungszeit <> nothing <> die brunft  der hirsche <>  <>  <>  <>  <>  <>  <> 50
-ist <> die seeanemone <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> die stute <> ein weibliches pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein albatros <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein albatros <> ein vogel <> aus der familie diomedeidae<>  <>  <>  <>  <>  <>  <> 50
+haben  <> voegel <>vier zehen <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> die spinnen <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben <> spinnen <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> (true)
+halten <> fledermaeuse <> einen winterschlaf <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> der seestern <> 5 arme <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> die giraffe <> eine blaue zunge <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein dromedar <> einen hoecker <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein hund <> 42 zaehne <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein oktobus <> 8 tentakel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> ein oktopus <> 3 herzen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine biene <> 4 fluegel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine giraffe <> 7 halswirbel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine krabbe <> 10 beine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat <> eine spinne <> 8 beine <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> das maennliche wildschwein <> keiler <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> das weibliche pferd <> stute <>  <>  <>  <>  <>  <>  <>  <> (true)
+heisst <> ein magenteil <> pansen <> der wiederkaeuer <>  <>  <>  <>  <>  <>  <> (true)
+ist  <> der tiger <> eine grosskatze <> in asien <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist  <> eine amphibie <> ein wirbeltier<>  <> (true)
+ist <> das alpaka <> eine lama-art <> in suedamerika <>  <>  <>  <>  <>  <>  <> (true)
+ist <> das yak <> das asiatische hochgebirgsrind <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der elch <> die groesste hirschart <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der gepard <> das schnellste landsaeugetier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der gepard <> nothing <> das schnellste saeugetier <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der hengst <> ein maennliches pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der keiler <> ein maennliches wildschwein <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der kokkon <> die huelle <> der insektenpuppen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der kondor <> der groesste fliegende vogel <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der marabu <> ein afrikanischer storch <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der maulwurf <> ein tier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der nuestern <> nothing <> die nase von pferden <>  <>  <>  <>  <>  <>  <> (true)
+ist <> der piranha <> ein suesswasserfisch <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die fauna <> die tierwelt <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die groesste hunderasse <> nothing <> der irische wolfshund <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die hippiatrik <> die pferdeheilkunde <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die kreuzotter <> die in deutschland <> beheimatete giftschlange <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die kreuzotter <> eine giftschlange <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die paarungszeit <> nothing <> die brunft  der hirsche <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die seeanemone <> ein tier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> die stute <> ein weibliches pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein albatros <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein albatros <> ein vogel <> aus der familie diomedeidae<>  <>  <>  <>  <>  <>  <> (true)
 ist <> ein baer <> ein gosses pelziges tier __ <> (zaehnen_und_klauen_);mit vielen muskeln <>  <>  <>  <> nothing <> nothing <> 
-ist <> ein baer <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein delphin <> ein saeugetier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> ein dinosaurier <> eine ausgestorbene riesenechse <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> ein einhorn <> ein fabeltier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein elefant <> ein saeugetier <>  <> 50
-ist <> ein emu <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein baer <> ein tier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein delphin <> ein saeugetier <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> ein dinosaurier <> eine ausgestorbene riesenechse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> ein einhorn <> ein fabeltier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein elefant <> ein saeugetier <>  <> (true)
+ist <> ein emu <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> ein fisch <> ein tier <>  <>  <>  <>  <> das <> nothing <> 
-ist <> ein fisch <> ein wirbeltier <>  <> 50
-ist <> ein fohlen <> ein junges pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein fohlen <> ein pferdebaby <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein frosch <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein frosch <> eine amphibie <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein haflinger <> ein gelaendewagen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein haflinger <> ein pferd <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein fisch <> ein wirbeltier <>  <> (true)
+ist <> ein fohlen <> ein junges pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein fohlen <> ein pferdebaby <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein frosch <> ein tier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein frosch <> eine amphibie <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein haflinger <> ein gelaendewagen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein haflinger <> ein pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> ein hahn <> ein maennliches huhn <>  <>  <>  <>  <> nothing <> nothing <> 
-ist <> ein hengst <> ein maennliches pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein huchen <> ein donaulachs <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein hund <> der beste freund <> von dem menschen <> 50
+ist <> ein hengst <> ein maennliches pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein huchen <> ein donaulachs <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein hund <> der beste freund <> von dem menschen <> (true)
 ist <> ein hund <> ein haustier das <> vom wolf abstammt <>  <>  <>  <> nothing <> nothing <>
-ist <> ein hund <> nothing <> ein saeugetier <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein insektenforscher <> ein entomologe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein kojote <> ein praeriewolf <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein lachs <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> ein loewe <> ein saeugetier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein mondvogel <> ein schmetterling <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein mustang <> ein wild lebendes praeriepferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein nautilus <> ein weichtier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein pinguin <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein pitbull <> ein kampfhund <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein rammler <> ein maennlicher hase <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein rappen <> ein schwarzes pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein reptil <> ein wirbeltier <>  <> 50
-ist <> ein schimmel <> ein weisses pferd <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein schwein <> ein bratenlieferant <>  <> 50
-ist <> ein schwein <> ein nutztier <>  <> 50
-ist <> ein schwein <> ein paarhufer <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein schwein <> ein specklieferant <>  <> 50
-ist <> ein schwein <> en nutztier <>  <> 50
-ist <> ein truthahn <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein hund <> nothing <> ein saeugetier <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein insektenforscher <> ein entomologe <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein kojote <> ein praeriewolf <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein lachs <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> ein loewe <> ein saeugetier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein mondvogel <> ein schmetterling <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein mustang <> ein wild lebendes praeriepferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein nautilus <> ein weichtier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein pinguin <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein pitbull <> ein kampfhund <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein rammler <> ein maennlicher hase <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein rappen <> ein schwarzes pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein reptil <> ein wirbeltier <>  <> (true)
+ist <> ein schimmel <> ein weisses pferd <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein schwein <> ein bratenlieferant <>  <> (true)
+ist <> ein schwein <> ein nutztier <>  <> (true)
+ist <> ein schwein <> ein paarhufer <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein schwein <> ein specklieferant <>  <> (true)
+ist <> ein schwein <> en nutztier <>  <> (true)
+ist <> ein truthahn <> ein vogel <>  <>  <>  <>  <>  <>  <>  <> (true)
 ist <> ein vogel <> ein tier <>  <>  <>  <> fliegen kann/can <> das <> nothing <> 
-ist <> ein vogel <> ein tier <> mit fluegeln <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein vogel <> ein tier <>das fliegt  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein vogel <> ein wirbeltier <>  <> 50
+ist <> ein vogel <> ein tier <> mit fluegeln <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein vogel <> ein tier <>das fliegt  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein vogel <> ein wirbeltier <>  <> (true)
 ist <> ein wal <> nothing <> ein saeugetier <>  <>  <>  <> nothing <> nothing <>
-ist <> ein warzenbeisser <> eine heuschreckenart <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein welpe <> ein junger hund <>  <> 50
-ist <> eine fledermaus <> ein saeugetier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine fledermaus <>fliegendes saeugetier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine forelle <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> eine forelle <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> eine gazelle <> ein tier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine giraffe <> 6 meter <> gross <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine giraffe <> 6 meter <> gross <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine gruene meerkatze <> eine affenart <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine gruene meerkatze <> eine affenart <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine maus <> ein nagetier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-ist <> guano <> vogelkot <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zoologie <> die lehre <> von den tieren <>  <>  <>  <>  <>  <>  <> 50
+ist <> ein warzenbeisser <> eine heuschreckenart <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein welpe <> ein junger hund <>  <> (true)
+ist <> eine fledermaus <> ein saeugetier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine fledermaus <>fliegendes saeugetier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine forelle <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> eine forelle <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> eine gazelle <> ein tier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine giraffe <> 6 meter <> gross <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine giraffe <> 6 meter <> gross <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine gruene meerkatze <> eine affenart <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine gruene meerkatze <> eine affenart <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine maus <> ein nagetier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+ist <> guano <> vogelkot <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zoologie <> die lehre <> von den tieren <>  <>  <>  <>  <>  <>  <> (true)
 kann/can schwimmen <> ein fisch <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
-kann/can springen <> ein floh <> 35 zentimeter <> weit <>  <>  <>  <>  <>  <>  <> 50
-kleine sind <> ponys <> pferde <>  <>  <>  <>  <>  <>  <>  <> 50
+kann/can springen <> ein floh <> 35 zentimeter <> weit <>  <>  <>  <>  <>  <>  <> (true)
+kleine sind <> ponys <> pferde <>  <>  <>  <>  <>  <>  <>  <> (true)
 leben <> fische <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>
-leben <> woelfe <> nothing <> in rudeln <>  <>  <>  <>  <>  <>  <> 50
-lebt <> der maulwurf <> nothing <> unter der erde <>  <>  <>  <>  <>  <>  <> 50
-lebt <> ein delphin <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>  <> 50
-legt <> ein huhn <> 20 eier <> in dem jahr <>  <>  <>  <>  <>  <>  <> 50
+leben <> woelfe <> nothing <> in rudeln <>  <>  <>  <>  <>  <>  <> (true)
+lebt <> der maulwurf <> nothing <> unter der erde <>  <>  <>  <>  <>  <>  <> (true)
+lebt <> ein delphin <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>  <> (true)
+legt <> ein huhn <> 20 eier <> in dem jahr <>  <>  <>  <>  <>  <>  <> (true)
 legt <> ein huhn <> eier <>  <>  <>  <>  <> nothing <> nothing <> 
 melken muss <> man <> die kuh <>  <> wenn <>  <> willst <> man <> milch <>bekommen kann/can <>  
-saeugetier ist <> ein <> ein wirbeltier <>  <> 50
-saeugetiere sind <> wirbeltiere <>  <>  <> 50
+saeugetier ist <> ein <> ein wirbeltier <>  <> (true)
+saeugetiere sind <> wirbeltiere <>  <>  <> (true)
 schwimmt <> ein fisch <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <> 
-sind <>  collie <> nothing <> eine hunderasse <>  <>  <>  <>  <>  <>  <> 50
-sind <> andalusier <> eine pferderasse <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> bernhardiner <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> dachse <> lebende tiere <> im wald <>  <>  <>  <> nothing <> nothing <>  <> 50
-sind <> dalmatiner <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> 50
+sind <>  collie <> nothing <> eine hunderasse <>  <>  <>  <>  <>  <>  <> (true)
+sind <> andalusier <> eine pferderasse <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> bernhardiner <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> dachse <> lebende tiere <> im wald <>  <>  <>  <> nothing <> nothing <>  <> (true)
+sind <> dalmatiner <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> (true)
 sind <> die fliegen <> eine unterordnung der zweifluegler <>  <>  <>  <>  <> nothing <> nothing <>
-sind <> eichhoernchen <> saeugetiere <> aus der ordnung der nagetiere <>  <>  <>  <>  <>  <>  <> 50
-sind <> fische <> wirbeltiere <>  <> 50
-sind <> giraffen <> pflanzenfresser <>  <>  <>  <>  <>  <>  <>  <> 50
+sind <> eichhoernchen <> saeugetiere <> aus der ordnung der nagetiere <>  <>  <>  <>  <>  <>  <> (true)
+sind <> fische <> wirbeltiere <>  <> (true)
+sind <> giraffen <> pflanzenfresser <>  <>  <>  <>  <>  <>  <>  <> (true)
 sind <> hunde <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <>
 sind <> katzen <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
-sind <> meerkatzen <> affen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> reptilien <> wirbeltiere <>  <> 50
-sind <> rottweiler <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> schlangen <> reptilien <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> schnecken <> eine klasse <> der weichtiere <>  <>  <>  <>  <>  <>  <> 50
-sind <> termiten <> insekten <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> voegel <> wirbeltiere <>  <> 50
-sind <> zebras <> die wild lebenden pferde afrikas <>  <>  <>  <>  <>  <>  <>  <> 50
-sind wirbeltiere <> amphibien <>  <>  <> 50
-speichern <> kamele <> fett <> in ihren hoeckern <>  <>  <>  <>  <>  <>  <> 50
-stammt <> der pekinese <> nothing <> aus china <>  <>  <>  <>  <>  <>  <> 50
-verlieren <> hirsche <> jedes jahr hirsche geweih <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> der tyrannosaurus <> ein dinosaurier <>  <>  <>  <>  <> nothing <> nothing <>  <> 50
-wird <> ein maikaefer <> nothing <> aus einem engerling <>  <>  <>  <>  <>  <>  <> 50
+sind <> meerkatzen <> affen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> reptilien <> wirbeltiere <>  <> (true)
+sind <> rottweiler <> eine hunderasse <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> schlangen <> reptilien <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> schnecken <> eine klasse <> der weichtiere <>  <>  <>  <>  <>  <>  <> (true)
+sind <> termiten <> insekten <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> voegel <> wirbeltiere <>  <> (true)
+sind <> zebras <> die wild lebenden pferde afrikas <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind wirbeltiere <> amphibien <>  <>  <> (true)
+speichern <> kamele <> fett <> in ihren hoeckern <>  <>  <>  <>  <>  <>  <> (true)
+stammt <> der pekinese <> nothing <> aus china <>  <>  <>  <>  <>  <>  <> (true)
+verlieren <> hirsche <> jedes jahr hirsche geweih <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> der tyrannosaurus <> ein dinosaurier <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
+wird <> ein maikaefer <> nothing <> aus einem engerling <>  <>  <>  <>  <>  <>  <> (true)

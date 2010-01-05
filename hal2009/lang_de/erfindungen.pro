@@ -1,779 +1,779 @@
 entdeckt hat erfunden <> albert hofmann <> das lsd <>  <>  <>  <>  <>  <>  <>  <> 50
-erfand <> johannes gutenberg <> den druck <> mit beweglichen lettern <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> benjamin_franklin <> den blitzableiter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> benjamin_franklin <> die bifokalbrille <>  <>  <>  <>  <>  <>  <>  <> 50
-gilt <> gambrinus <> als der erfinder des bierbrauens <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> adolf eugen fick <> die kontaktlinse <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> adolphe clement <> das luftschiff <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> aeneas coffey <> den waermetauscher <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> aim argand <> die oellampe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alchwarizmi <> die algebra erfunden<>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alrazi <> die seife erfunden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> albert jones <> die wellpappe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> albert_hofmann <> das lsd <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> albrecht ludwig berblinger <> den haengegleiter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alejandro finisterre <> das tischfussball <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alexander fleming <> das penicillin <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alexander graham bell<> das telefon <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alexander parkes <> das zelluloid <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alfonso bialetti <> die espressokanne <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alfred buechi <> den turbolader <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alfred kaercher <> den heisswasserhochdruckreiniger <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> alfred nobel <> das dynamit erfunden <>  <>  <>  <>  <>  <> nothing <>  <> 50
-hat erfunden erfunden <> alhazen <> die <> lupe <> 50
-hat erfunden <> allan cormack <> die computertomographie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> anders celsius <> das thermometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> anton dreher senior <> das lagerbier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> anton loehner <> die rollschuhe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> archimedes <> das hebelgesetz entdeckt<>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> archimedes <> das spezifische gewicht entdeckt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> archimedes <> sehr <> viel erfunden <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> arnold william_arnold_anthony <> das galvanometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> arthur koepchen <> das pumpspeicherkraftwerk <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> artur fischer <> den duebel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> asa griggs candler <> den warengutschein <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> august loden <> den lodenmantel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> august_fischer <> den uhu <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> augustine sackett <> die gipskartonplatten <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> bartolomeo cristofori <> das klavier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> benjamin biram <> das anemometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> benjamin franklin <> den blitzableiter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> bette nesmith graham <> das tippex <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> bill_gates <> das windowsbetriebssystem <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> blaise pascal <> die rechenmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> cai lun <> das papier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> caleb bradham <> das pepsi cola <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> carl djerassi <> die antibabypille <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> carl friedrich benz <> den motorwagen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> carl gassner <> die trockenzellenbatterie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> carl von linde <> die ammoniakkaeltemaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> carlos glidden <> die schreibmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> celadon daboll <> das nebelhorn <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles best <> das insulin <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles bourseul <> das telefon erfunden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles brace darrow <> das monopolyspiel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles fey <> den einarmigen banditen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles francis brush <> den dynamo <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles ginsburg <> die videokassette <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles goodyear <> die kautschukvulkanisation <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles renard <> das luftschiff <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> charles richard drew <> die blutbank <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> chester carlson <> die xerographie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> christine hardt <> den buestenhalter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> christopher cockerell <> das luftkissenfahrzeug <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> clarence birdseye <> die tiefkuehlkost <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> conrad gesner <> den bleistift <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> constantin fahlberg <> das saccharin <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> cornelis corneliszoon <> die saegemuehle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> cornelis drebbel <> das unterseeboot <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> daniel gabriel fahrenheit <> das quecksilberthermometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> das polyvinylchlorid <>  <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> david brewster <> das kaleidoskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> david bushnell <> die zeitbombe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> den wasserrohrkessel <>  <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> denis papin <> den dampfkochtopf <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dennis gabor <> die holographie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> die rollschuhe <>  <>  <>  <>  <>  <>  <>  <>  <> 50
-haben erfunden <> alberto palacio & ferdinand arnodin <> die schwebefaehre <>  <> 50
-hat erfunden <> diego ribero <> die wasserpumpe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dieter binninger <> die mengenlehreuhr <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dieter_binninger <> die ewigkeitsgluehbirne <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dom perignon <> den champagner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> donald bitzer <> den plasmabildschirm <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dont bnki <> den vergaser <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dorothy gerber <> die vorgefertigte babynahrung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> douard bndictus <> das sicherheitsglas <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> douglas cockcroft <> den teilchenbeschleuniger <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> douglas engelbart <> die computermaus <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> dugald clark <> den zweitaktmotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> earl flosdorf <> das trockengefrierverfahren <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> eben norton horsford <> das backpulver <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edmond halley <> die taucherglocke <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edmund cartwright <> den webstuhl <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edmund davy <> das azetylen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edward calahan <> den boersenfernschreiber <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edward jenner <> die pockenimpfung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edwin binney <> die wachsmalstifte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> edwin laurentine drake <> die oelfoerderung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> elmer gates <> den schaumfeuerloescher <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> enrico fermi <> den kernreaktor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> eric fawcett <> das polyethylen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> erik rotheim <> die spruehdose <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ernst bettag <> das bobbycar <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ernst ruska <> das elektronenmikroskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> eugen baumann <> das polyvinylchlorid <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> eugene clark <> den gabelstapler <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> felix hoffmann <> das aspirin <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> forrest bird <> die atemschutzmaske <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> frank bowden <> den bowdenzug <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> franois nicolas appert <> die konservierung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> frederic stanley kipping <> das silikon <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> friedrich fischer <> das kugellager <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gambrinus <> das bierbrauen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> garnet carter <> das miniaturgolf <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gary fisher <> das mountainbike <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gaston plante <> den bleiakkumulator <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george antheil <> das frequenzsprungverfahren <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george babcock <> den wasserrohrkessel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george crum <> die kartoffelchips <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george grant blaisdell <> das zippofeuerzeug <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george henry felt <> die signalrakete <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> george pullman <> den schlafwagen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> georges claude <> die neonroehre <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> georges leclanch <> die trockenbatterie  <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gerd binnig <> das rastertunnelmikroskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gerhard fischer <> den metalldetektor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gerhard mueller <> den schlepplift <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> giovanni de dondi <> die astronomische uhr <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> glenn curtiss <> das wohnmobil <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> godfrey hounsfield <> die computertomographie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gordon gould <> den laser <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gottlieb christoph bohnenberger <> die influenzmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gottlieb daimler <> das motorrad <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gottlieb_daimler <> den benzinmotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gregory pincus <> die antibabypille <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> guglielmo_marconi <> die drahtlose telegrafie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> gyoergy jendrassik<> den turboprop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hans friedrich geitel <> die fotozelle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hans wilhelm geiger <> den geigerzaehler <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> harold brown <> den elektrischen stuhl <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> harold gatty <> den luftfahrtsextant <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> harold lyons <> die atomuhr <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> heinrich arnold <> die uhrfeder <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> heinrich rohrer <> das rastertunnelmikroskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hellmuth hertz <> den ultraschall <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> henri dufaux <> den fahrradmotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> henri giffard <> das angetriebene luftschiff <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> henri gustave delvigne <> den vorderlader <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> henry ford <> das fliessband <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> henry john heinz <> das tomatenketchup <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> herbert edwin land <> die polaroidkamera <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> herman hollerith <> die lochkarten <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hermann anschuetzkaempfe <> den kreiselkompass <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hermann berthold <> das typometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hermann oberth <> die fluessigkeitsraketen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hermann_oberth <> die feststoffraketen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> herta heuwer <> die currywurst <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> holger crafoord <> die kuenstliche niere <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> horst burbulla <> den kamerakran <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hugo erfurt <> die raufasertapete <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hugo junkers<> das ganzmetallflugzeug <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> hugo koch <> die rotorchiffriermaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> humphry davy <> die grubenlampe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ian donald <> das ultraschallbild <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ira remsen <> das saccharin erfunden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> isaac newton <> das spiegelteleskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jacques brandenberger <> das zellophan <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jacques yves cousteau <> den lungenautomat <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jakob degen <> das fluggeraet <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> james ayscough <> die sonnenbrille <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> james dyson <> den staubsauger <> mit fliehkraftabscheider <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> james fergason <> den fluessigkristallbildschirm <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> james nasmyth <> den dampfhammer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> james stuart blackton <> den animationsfilm <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jaron lanier <> die virtuelle realitaet <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jesse reno <> die rolltreppe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> johann bruecker <> den rasierapparat <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> johann korbuly <> den matadorholzbaukasten <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> johann maria farina <> das koelnisch wasser <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> johannes gutenberg <> den buchdruck <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john barber <> die gasturbine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john bardeen <> den transistor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john blenkinsop <> die dampflokomotive <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john boyd dunlop <> den autoreifen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john deere <> den stahlpflug <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john froehlich <> den traktor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john harington <> das wasserklosett <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john harvey kellogg <> die cornflakes <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john heysham gibbon <> die herzlungenmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john napier <> den logarithmus <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john pemberton <> das cocacola <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john wesley hyatt <> die zelluloseherstellung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> john_warner backus <> fortran <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> josef madersperger <> die naehmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph fraunhofer <> das spektroskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph gayetty <> das toilettenpapier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph glidden <> den stacheldraht <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph hardtmuth <> die bleistiftmine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph henry <> den elektromagnet <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph priestley <> das sodawasser <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph_bramah <> die zapfanlage <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> joseph_gayetty <> das klopapier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> josephine cochrane <> die geschirrspuelmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> juan de la cierva <> den tragschrauber <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> juergen dethloff <> die chipkarte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> jules bied <> den tonerdezemant <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> julius elster <> die fotozelle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> julius fromm <> das latexkondom <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> justus claproth <> das recyclingpapier <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> karl ferdinand braun <> das oszilloskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> karl nessler <> die dauerwelle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> kenneth house <> den rauchdetektor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> king camp gillette <> die rasierklinge <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ktesibios <> das federkatapult <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> lars magnus ericsson <> den telefonhoerer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> leo hendrik baekeland <> das bakelit <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> leonard goodall <> den benzinrasenmaeher <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> levi strauss <> die jeans <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis braille <> die blindenschrift <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis deguerre <> die fotografie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis glass <> die jukebox <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis leitz <> den leitzordner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis pasteur <> die pasteurisierung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis reard <> den bikini <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis renault <> die trommelbremse <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> louis_renault <> den stossdaempfer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> lszl jzsef bir <> den kugelschreiber <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> lucien gaulard <> den transformator <> fuer wechselstrom  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> luigi palmieri <> das seismometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> marion donovan <> die einwegwindel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> marvin camras <> die magnetaufzeichnung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> mats leijon <> den hochspannungsgenerator <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> maurice lvy <> den lippenstift <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> max giese <> die betonpumpe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> max mauermann <> den rostfreien stahl <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> max_knoll <> das elektronenmikroskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> melitta bentz <> die filtertuete <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> michael cullen <> den supermarkt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> michael faraday <> den bunsenbrenner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> nancy johnson <> die handbetriebene eismaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> neil arnott <> das wasserbett <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> nicholas joseph cugnot <> den dampfwagen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> nils bohlin <> den sicherheitsgurt <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> nolan bushnell <> das videospiel <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ole evinrude <> den aussenbordmotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ole kirk christiansen <> das lego <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> oskar czeija <> das tonband <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> otto griessing <> den volksempfaenger <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> otto lilienthal <> den normalsegelapparat <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ottomar anschuetz <> den schlitzverschluss <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> paul carl beiersdorf <> den wundschnellverband <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> paul daimler <> den panzerkraftwagen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> paul langevin <> das sonar <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> peter durand <> die konservendose <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> peter mitterhofer <> die schreibmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> petrache poenaru <> den fuellfederhalter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ralph baer <> die videospielkonsole <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> ray dolby <> die rauschunterdrueckung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> raymond damadian <> die magnetresonanztomographie <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> reinhold burger <> die rontgenroehre <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> reinhold_burger <> die thermosflasche <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> richard bacon <> die schnellpresse <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> richard drew <> das klebeband <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> richard stanton avery <> das selbstklebeetikett <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert adler <> die fernbedienung erfunden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert barron <> das tresorschloss <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert bosch <> die zuendkerze <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert conrad <> das kugellager <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert edwards <> die reagenzglasbefruchtung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert fulton <> den schaufelraddampfer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert oppenheimer <> die atombombe <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> robert wilhelm bunsen <> den bunsenbrenner <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> roy plunkett <> das teflon <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> rudolf diesel <> den dieselmotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> rune elmqvist <> den herzschrittmacher <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> samuel blumer <> das heizkissen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> samuel colt <> den revolver <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> samuel guthrie <> das chloroform <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> samuel hunter christie <> die wheatstonebruecke <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> scott jones <> das voicemail <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> seth boyden <> die nagelmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> sidney darlington <> die darlingtonschaltung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> sigmund bergmann <> die gluehlampe <> mit edison  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> stain atkinson <> die komplettgiessmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> stephanie kwolek <> das kevlar <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> stephen perry <> das gummiband <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> steve jobs <> das macintoshbetriebssystem <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> sumio iijima <> die kohlenstoffnanoroehre <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thaddeus cahill <> das dynamophon <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas alva edison <> das kinetoskop <> <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas alva edison <> das mikrophon <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas alva edison <> den fernschreiber <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas alva edison <> den phonograph <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas alva edison <> den projektor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas cook <> die pauschalreise <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas davenport <> den elektromotor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas edmondson <> die fahrkarte <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas fowler <> die zentralheizung <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> thomas_adams <> den kaugummi erfunden <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> titusz ott_titusz_blthy <> das wattmeter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> titusz ott_titusz_blthy <> den transformator <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> titusz_ott_titusz_blthy <> den turbogenerator <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> tony fadell <> den ipod <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> tracy hall<> den synthetischer diamant <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> udo adelsberger <> die quarzuhr  <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> viktor kaplan <> die kaplanturbine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> walter bitterlich <> das spiegelrealaskop <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> walter brattain <> den transistor <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> wernher von braun <> die gesteuerte rakete <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> wilhelm bartelmann <> den strandkorb <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> wilhelm bruhn <> das taxameter <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> wilhelm emil fein <> die elektrische handbohrmaschine <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> willem einthoven <> das elektrokardiogramm <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william arnold anthony <> die turbinen <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william crookes <> das radiometer <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william cullen <> den kuehlschrank <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william dobelle <> das kuenstliche auge <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william lear <> den learjet <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william oughtred <> den rechenschieber <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william painter <> den kronkorken <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> william robert grove <> die brennstoffzelle <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> willis carrier <> die klimaanlage <>  <>  <>  <>  <>  <>  <>  <> 50
-hat erfunden <> wolfgang hilberg <> die funkuhr <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> alchwarizmi <> erfinder der algebra <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> josef ahlmann <> erfinder des radladers <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> thomas adams <> erfinder des kaugummis <>  <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bauer <> das acrylglas <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> goodhue <> die aerosolspruehdose <> im jahr 1941 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> plant <> den bleiakkumulator <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leonhardi <> die alizarintinte <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leonhardi <> die alizarintinte <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> frau_woehler <> das aluminium <> im jahr 1827 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> priestley <> das ammoniak <> im jahr 1774 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> fritz haber carl bosch <> 1908 die ammoniaksynthese <> im jahr;und <>  <>  <>  <>  <>  <>  <> 50
-erfand <> davy <> die lachgasanaesthesie <> im jahr 1799 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> rudolph <> das <> im jahr 1890   anastigmat <>  <>  <>  <>  <>  <>  <> 50
-erfand <> popow <> die antenne <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> knorr <> das <> im jahr 1884   antipyrin <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> steinheil <> das aplanat <> im jahr 1866 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> dreser <> das aspirin <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> valerius cordus <> den aether <> im jahr 1540 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> papin <> die atmosphaerische dampfmaschine <> im jahr 1690 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> niels bohr <> das atommodell <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> otto hahn <> die atomspaltung <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lyons <> die atomuhr <> im jahr 1946 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> otis <> den aufzug <> im jahr 1852 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1880 den elektrischen aufzug <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> weigel <> den fahrstuhl <> im jahr 1687 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> helmholtz <> den augenspiegel <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-erfand schneiden <> menne <> das autogene <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> siegfried marcus <> automobil <> im jahr 1875  das vergaser <>  <>  <>  <>  <>  <>  <> 50
-erfand <> meisenbach <> die autotypie <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> griess <> die azofarbstoffe <> im jahr 1863 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> leo baekeland <> das bakelit <> im jahr 1907 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> charles <>  <> 1783;im jahr   den ballon mit wasserstoff <>  <>  <>  <>  <>  <>  <> 50
-erfand <> newberry <> die bandsaege <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> torricelli <> das barometer <> im jahr 1643 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> volta <> 180 die batterie <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> semmelweis des wochenbettfibers <> die behandlung <> im jahr 1847 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> benz <> den benzinmotor <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> faraday <> das benzol <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> henry bessemer <> die bessemerbirne <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> henry_bessemer <> den bessemerstahl <> im jahr 1856 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> donald kernt <> das betatron <> im jahr 1939 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> donald glaser <> die blasenkammer <> im jahr 1952 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> paine <> das blechwalzen <> im jahr 1728 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> franklin <> den blitzableiter <> im jahr 1732 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hales <> die blutdruckmessung <> im jahr 1726 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hoskyns <> die bodenfraese <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> davy <> die bogenlampe <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> maritz <> die bohrmaschine <> im jahr 1710 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hunaus <> den bohrturm <> im jahr 1857 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> louis braille <> die brailleschrift <> im jahr 1829 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> die braunsche <> roehre <> braun im jahr 1897 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> amberger <> die elektrische bremse <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> die luftdruckbremse <>  <> andraud im jahr 1854 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> justi <> das brennstoffelement <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> spina <> 130 die brille <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> balard <> das brom <> im jahr 1826 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gutenberg <> den buchdruck <> im jahr 1445 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> friedrich koenig <> die buchdruckschnellpresse <> im jahr 1811 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> davy <> das calcium <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> woehler <> das calciumkarbid <> im jahr 1862 <>  <>  <>  <>  <>  <>  <> 50
-ben erfand obscura <> levi <> gerson die camera <> im jahr 1321 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> philips <> die cdrom <> im jahr 1985 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> chassepot <> das chassepotgewehr <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> pelletier caventon <> das chinin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> scheele <>  <> 1774;im jahr   das chlor <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> liebig <> das chloroform <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> soubeiran <> das chloroform <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> robert koch <>  <> den;im jahr 1883   choleraerreger <>  <>  <>  <>  <>  <>  <> 50
-erfand <> engelbart <>  <> die;im jahr 1969   computermaus <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cook <> die dampfheizung <> im jahr 1745 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> james watt <> den dampfkessel <> im jahr 1781 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> trevithick <> die dampflokomotive <> im jahr 1803 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> james_watt <> die dampfmaschine <> im jahr 1765 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> papin <> die dampfmaschine <> im jahr 1681 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> darnal <> die dampfmuehle <> im jahr 1779 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fulton <> das dampfschiff <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> shawk <> die dampfspritze <> im jahr 1829 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1870 das dampfstrahlgeblaese <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> parsons de laval <> die dampfturbine <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> regiomontanus <> die dezimalrechnung <> im jahr 1460 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> rudolf diesel <> den dieselmotor <> im jahr 1892 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leibniz <> die differentialrechnung <> im jahr 1675 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fleming <> die zweielektrodenroehre <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> loeffler <>  <> den;im jahr 1884   diphtheriebazillus <>  <>  <>  <>  <>  <>  <> 50
-erfand <> collins <> die drahtlose telefonie <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> marconi <> die drahtlose telegraphie <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> druecker <> die drahtseilbahn <> im jahr 1861 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> drais <> die draisine <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> basson <> die drehbank <> im jahr 1578 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pittler <> die revolverdrehbank <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> felix wankel <> den drehkolbenmotor <> im jahr 1957 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> menzies <> die drehmaschine <> im jahr 1732 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> haselwander <> den drehstromgenerator <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> dolivo dobrowolski <> den drehstrommotor <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> ulrich vogel <> den dreifarbendruck <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pi sheng <> das drucken <> im jahr 1040   mit beweglichen lettern <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bauer <> den druckknopf <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cousteauund gagnan <> das <> im jahr 1943   drucklufttauchgeraet <>  <>  <>  <>  <>  <>  <> 50
-erfand <> frank whittle <> den duesenantrieb <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> alfred_nobel <> das dynamit <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pixii <> den dynamo <> im jahr 1832 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1867 die dynamomaschine <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> behm <> das echolot <> im jahr 1912 <>  <>  <>  <>  <>  <>  <> 50
-baute <> stephenson <> die eisenbahn <> im jahr 1830   liverpoolmanchester <>  <>  <>  <>  <>  <>  <> 50
-erfand <> stevens <> die eisenbahnschiene <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> monier <> das eisenbeton <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> darby <> die eisenerzeugung <> im jahr 1735   mit koks <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cort <> das eisenwalzwerk <> im jahr 1754 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> drinker <> die eiserne lunge <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> shaw <> die eiserne lunge <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> den eisschrank <>  <> focardchat erfundeneau im jahr 1801 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1846 den elektrischen zeigertelegraphen <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jenkin <> die elektrische schwebebahn <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> siemens <> die elektrische strassenbahn <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> halske <> die elektrische strassenbahn <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> salva <> den elektrischer telegraf <> im jahr 1804 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> guericke <> die elektrisiermaschine <> im jahr 1663 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lodge <> den elektrodynamischer lautsprecher <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> faraday <> die elektrolyse <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> sturgeon <> den elektromagneten <> im jahr 1823 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jacobi <> den elektromotor <> im jahr 1834 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> brueche knoll ruska <> 1933 das elektronenmikroskop <> (johannsen);im jahr;und <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fleming <> die elektronenroehre <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> kilby <> den elektronischer taschenrechner <> im jahr 1972 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> merryman <> den elektronischer taschenrechner <> im jahr 1972 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> das endoskop <>  <> mikuliczradecki im jahr 1881 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leonardo da vinci <> den fallschirm <> im jahr 1495 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> arnold <> die federuhr <> im jahr 1427 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mueller <> das feldelektronenmikroskop <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> galilei <> das fernrohr <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> karolus <> das fernsehen <> im jahr 1929 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> zworykin <> das ikonoskop <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> paul nipkow <> das <> im jahr 1884   lochscheibenfernsehen <>  <>  <>  <>  <>  <>  <> 50
-erfand <> philip reis <> den fernsprecher <> im jahr 1861 <>  <>  <>  <>  <>  <>  <> 50
-automatischen erfand <> strowger <> den fernsprecher <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lumire <> den film <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-erfand photographischer <> goodwin <> den film schichttraeger <> im jahr 1888  als <>  <>  <>  <>  <>  <>  <> 50
-erfand photographischer <> eastman <> den film schichttraeger <> im jahr 1888  als <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jenkins <> die filmprojektion <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> owens <> die flaschenblasmaschine <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> die gebrueder wright <> 190 das flugzeug <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> otto_lilienthal <> das gleitflugzeug <> im jahr 1891 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> wright <> das motorflugzeug <> im jahr 1903 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hugo junkers <>  <> 1915;im jahr   das ganzmetallflugzeug <>  <>  <>  <>  <>  <>  <> 50
-erfand <> heinkel <> das flugzeug <> im jahr 1939   mit luftstrahltriebwerk <>  <>  <>  <>  <>  <>  <> 50
-erfand <> heilmeier <> das <> im jahr 1964   fluessigkristalldisplay <>  <>  <>  <>  <>  <>  <> 50
-erfand <> niepce <> die fotografie <> im jahr 1816 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> drescher <> den fuellfederhalter <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fessender <> die funkuebertragung menschlicher sprache <> im jahr 1906 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> krische <> das galalith <> im jahr 1897 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> spitteler <> das galalith <> im jahr 1897 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> galvani <> den galvanismus <> im jahr 1780 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> schwaiger <> das galvanometer <> im jahr 1819 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> jacobi <> die galvanoplastik <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> spencer <> die galvanoplastik <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> dundonald <> die gasbeleuchtung <> im jahr 1786 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> pikkel <> die gasbeleuchtung <> im jahr 1786 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> claude <> die gasentladungslampe <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> faber du faure <> den gasgenerator <> im jahr 1832 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lebon <> die gaslampe <> im jahr 1799 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> komma bennet <> 1961 den gaslaser <> im jahr;von java <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> herriot <> 1961 den gaslaser <> im jahr;von java <>  <>  <>  <>  <>  <>  <> 50
-erfand <> holzwarth <> die gasturbine <> im jahr 1905 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> chamberlen <> die geburtszange <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> geiger <> den geigerzaehler <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-baute <> alfred krupp <> das geschuetz <> im jahr 1847   aus gussstahl <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> smith <> das gewehrmagazin <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> wesson <> das gewehrmagazin <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> besson <> die gewindedrehbank <> im jahr 1568 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kapany <> das glasfaserkabel <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> auer <> 1885 das glasgluehlicht <> im jahr;von welsbach <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lilienthal <> den gleitfluegler <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> swan <> die gluehbirne <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> edison <> die gluehbirne <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> goebel <> die gluehlampe <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thoma alfa edison <> die kohlenfadengluehlampe <> im jahr 1879 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> welsbach <> die metalldrahtgluehlampe <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> steele <> das glyzerin <> im jahr 1783 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> berliner <> das grammophon <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> newton <> das gravitationsgesetz <> im jahr 1682 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> davy <> die grubenlampe <> im jahr 1815 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> davy <> die grubenlampe <> im jahr 1815 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> huntsman <> den gussstahl <> im jahr 1742 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> arthur fry <> die haftnotizen <> im jahr 1980 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fred ives <> die halbtondruckplatte <> im jahr 1886 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> christofori <> das hammerklavier <> im jahr 1709 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> schmidt <> 190 die heissdampflokomotive <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> montgolfier <> den heissluftballon <> im jahr 1783 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> paul cornu <> den helikopter <> im jahr 1907 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gauss <> den heliograph <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> ramsay <> das helium <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thomas <>  <> die;im jahr 1951   herzlungenmaschine <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hat erfundenton <> die hobelmaschine <> im jahr 1776 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gabor <> die holographie <> im jahr 1949 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> keller <> den holzschliff <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> die holzwolle <>  <> anthon im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> focke <> den hubschrauber <> im jahr 1936 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bramah <> die hydraulische presse <> im jahr 1795 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leonardo da vinci <>  <> 1490;im jahr   das hygrometer <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jenner <> die impfung <> im jahr 1796   gegen pocken <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> courtois <> das <> im jahr 1901   indanthrenblau <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pravaz <>  <> die;im jahr 1853   injektionsspritze <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1847 das kabel <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> runge <> das koffein <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> brewster <> das kaleidoskop <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> davy <> das kalium <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> frank <> den kalkstickstoff <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> dulong <> das kalorimeter <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> carl <> 1876 die ammoniniakkaeltemaschine <> im jahr;von linde <>  <>  <>  <>  <>  <>  <> 50
-erfand <> priessnitz <> die kaltwasserkur <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> runge <> die karbolsaeure <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> hittorf <> die kathodenstrahlen <> im jahr 1869 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> crookes <> die kathodenstrahlroehre <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> garcia <> den kehlkopfspiegel <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fermi <> den kernreaktor <> im jahr 1942 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> die gebrueder lumiere <> die kinematographie <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thomas_alva_edison <> das kinematoskop <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cristofori <> das klavier <> im jahr 1710 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> carrier <> die klimaanlage <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> priestley <> das knallgas <> im jahr 1775 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bergios <> die kohleverfluessigung hochdruck <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> die kohleverfluessigung <> niederdruck <> fischertropsch im jahr 1925 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> schoenbein <> das kollodium <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> borden <> die kondensierte milch <> im jahr 1853 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> appert <> das konservieren <> im jahr 1810   durch erhitzen <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kopernikus <> das kopernikanisches weltsystem <> im jahr 1543 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> daimler <> das kraftrad <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> benz <> den kraftwagen <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cugnot <> den dampfkraftwagen <> im jahr 1769 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> den kreiselkompass <>  <> anschuetzkaempfe im jahr 1908 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leonardo da vinci <> das kugellager <> im jahr 1496 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kolff <> die kuenstliche niere <> im jahr 1943 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> de chardonnet <> die kuenstliche seide <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hyatt <>  <> den;im jahr 1869   kunststoffzelluloid <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mertens <> 190 den kupfertiefdruck <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> liebreich <> das lanolin <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand lueg <> den laermschutz <>  <> im jahr 1933   durch gegenlaerm <>  <>  <>  <>  <>  <>  <> 50
-erfand <> drais <> das lenkbares laufrad <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> hansen <> das leprabazillus <> im jahr 1880 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> claude <> die leuchtstoffroehre <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pauken <> 190 den lichtbogensender <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> albert <> den lichtdruck <> im jahr 1868 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> walton <> das linoleum <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mergenthaler <> die linotype setzmaschine <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> senefelder <> die lithographie <> im jahr 1798 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hollerith <> die lochkarte <> im jahr 1880 <>  <>  <>  <>  <>  <>  <> 50
-baute <> trevithick <> eine lokomotive <> im jahr 1803 <>  <>  <>  <>  <>  <>  <> 50
-erfand erhitzer <> montgolfier <> den luftballon luft <> im jahr 1782  mit <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thomson <> die luftbereifung <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cokkerell <> das luftkissenboot <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> guericke <> die luftpumpe <> im jahr 1650 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> dunlop <> den luftreifen <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> giffard <> das luftschiff <> im jahr 1852 <>  <>  <>  <>  <>  <>  <> 50
-erfand starre <> ferdinand graf <> 190 das luftschiff <> im jahr;von zeppelin <>  <>  <>  <>  <>  <>  <> 50
-erfand <> das magnetophon <>  <> aeg im jahr 1935 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> otto <> 1662 das manometer <> im jahr;von guericke <>  <>  <>  <>  <>  <>  <> 50
-erfand <> die margarine <>  <> megemouries im jahr 1869 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mercer <> die merzerisation <> im jahr 1844 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> philipp <> das metallgewebe <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> schoop <> das metallspritzverfahren <> im jahr 1906 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> maelzel <> das metronom <> im jahr 1816 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jack kilby <> den microchip <> im jahr 1959 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> spencer <> die microwelle <> im jahr 1947 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> janssen <> das mikoskop <> im jahr 1590 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gascoigne <> das mikrometer <> im jahr 1636 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> luedtge <> das mikrophon <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thomas_alva_edison <> das kohlemikrophon <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> janssen <> das mikroskop <> im jahr 1590 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> prandtl <> die milchzentrifuge <> im jahr 1864 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lanston <> die monotype setzmaschine <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> sertuerner <> das morphin <> im jahr 1805 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> weisskopf <> den motorflug <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> daimler <> das motorrad <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leibnitz <> die multipliziermaschine <> im jahr 1674 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jaquard <> den musterwebstuhl <> im jahr 1805   mit lochkarten <>  <>  <>  <>  <>  <>  <> 50
-erfand <> saint <> die naehmaschine <> im jahr 1790 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> garden <> das naphtalin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> jackson <>  <> den;im jahr 1846   narkoseaether <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> davy <> das natrium <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> wilson <> die nebelkammer <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> claude <>  <> die;im jahr 1911   neonlampe <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> sobrero <> das nitroglyzerin <> im jahr 1846 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> carrothers <> das nylon <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> rubel <> den offsetdruck <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> schoenbein <> das ozon <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bruch <> das <> im jahr 1960   palsystem <>  <>  <>  <>  <>  <>  <> 50
-erfand <> keller <> das papier <> im jahr 1843   aus holzschliff <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> reichenbach <> das paraffin <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> magee <> die parkuhr <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> huygens <> die pendeluhr <> im jahr 1656 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> foucault <> den pendelversuch <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> fleming <> das penicillin <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> chaim <> das penicillin <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> yersin <> das pestbazillus <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> kitasato <> das pestbazillus <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thomas_alva_edison <> den phonograph <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> daguerre <> die photographie <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> niepce <> die photographie <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> ives <> die farbphotographie <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> talbot <> das negativphotoverfahren <> im jahr 1839 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> land <> die polaroidphotographie <> im jahr 1932 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> eastman <> den rollfilm <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> elster <> die photozelle <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> geitel <> die photozelle <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> die zeisswerke <> das planetarium <> im jahr 1924 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> berliner <> den plattenspieler <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-erfunden wurde <> 70 das porzellan <>  <> in china im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> boettger <> das harte porzellan <> im jahr 1709 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> morin <> 1695 das porzellan <> ;im jahr;weiches <>  <>  <>  <>  <>  <>  <> 50
-erfand <> tschirnhaus <> das porzellan <> im jahr 1693   in europa <>  <>  <>  <>  <>  <>  <> 50
-erfand <> den presslufthammer <>  <> ingersoll im jahr 1871 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> marrison <> die quarzuhr <> im jahr 1929 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fahrenheit <> das quecksilberthermometer <> im jahr 1716 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> huelsmeyer <> das radar <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mailand <> die raederuhr <> im jahr 1309 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> marcani <> das radio <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> becquerel <> die radioaktivitaet <> im jahr 1896 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> das ehepaar curie <> das radium <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> 50
-bauten <> die heinkelwerke <> das raketenflugzeug <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> 50
-gebaut wurde <> die raumfaehre <> columbia <> in den usa im jahr 1981 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> leibniz <> die rechenmaschine <> im jahr 1694 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> pascal <> die rechenmaschine <> im jahr 1642 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> burroughs <> die addierrechenmaschine <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> babbage <> die analytische rechenmaschine <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> napier <> 1617 den rechenschieber <> im jahr;of merchiston <>  <>  <>  <>  <>  <>  <> 50
-erfand <> john ritty <> die registrierkasse <> im jahr 1879 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> thompson <> den luftreifen <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> judson <> den reissverschluss <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> 50
-erdachte <> albert_einstein <> die relativitaetstheorie <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> colt <> den revolver <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> meissner <> den roehrensender <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> clark <> die rohrpost <> im jahr 1853 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> eastman <> den rollfilm <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> roentgen <> die roentgenstrahlen <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bullock <> den rotationsdruck <> im jahr 1863 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mertens <> den rotationstiefdruck <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> flettner <> das rotorschiff <> im jahr 1924 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> fahlberg <> das saccharin <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> remsen <> das saccharin <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> kolbe <> die salizylsaeure <> im jahr 1873 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> priestley <> die salzsaeure <> im jahr 1775 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kepler <> die sammellinse <> im jahr 1611 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> tilghman <> das sandstrahlgeblaese <> im jahr 1870 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> priestley <> den sauerstoff <> im jahr 1771 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> honnsfield <> den scanner <> im jahr 1973 <>  <>  <>  <>  <>  <>  <> 50
-erfand magnetische <> paulsen <> die schallaufzeichnung <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> berliner <> die schallplatte <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> schoenbein <> die schiessbaumwolle <> im jahr 1846 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> berthold schwarz <> das schiesspulver <> im jahr 1313 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> schlick <> den schiffskreisel <> im jahr 1903 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> stevens <> die schiffsschraube <> im jahr 1804 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> meikle <> die schlagleisten dreschmaschine <> im jahr 1785 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <> 1880 den elektrischen schmelzofen <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mill <> die schreibmaschine <> im jahr 1714 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lilienthal <> das segelflugzeug <> im jahr 1891 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> mergenthaler <>  <> die;im jahr 1884   linotypesetzmaschine <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hunt <> die sicherheitsnadel <> im jahr 1849 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gustav pasch <> die sicherheitszuendhoelzer <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hoff <>  <> den;im jahr 1969   siliziummikroprozessor <>  <>  <>  <>  <>  <>  <> 50
-entwickelt wurde <> die solarzelle <>  <> in den usa im jahr 1954 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> doehring <> den spannbeton <> im jahr 1888 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> bunsen <> die spektralanalyse <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> kirchhoff <> die spektralanalyse <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> newton <> das spiegelteleskop <> im jahr 1669 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> barbara uttmann <> das spitzenkloeppeln <> im jahr 1561 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> edison <> die sprechmaschine <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> glidden <> den stacheldraht <> im jahr 1874 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> schmidt <> das strahltriebwerk <> im jahr 1930 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> whittle <> das strahltriebwerk <> im jahr 1930 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> chevreul <> das stearin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> 50
-erfunden wurde <> der steigbuegel <>  <> im jahr 850 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> wedgwood <> das steingut <> im jahr 1759 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> ged <> die stereotypie <> im jahr 1725 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> launec <> das stethoskop <> im jahr 1819 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> rutherford <> den stickstoff <> im jahr 1772 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> turner <>  <> die;im jahr 1831   stiftendreschmaschine <>  <>  <>  <>  <>  <>  <> 50
-erfand <> walker <> das streichholz <> im jahr 1827 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> waksman <> das streptomycin <> im jahr 1943 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> eisenstruck <> die strickmaschine <> im jahr 1857 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> pelletier <> das strychnin <> im jahr 1818 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> domagk <> die sulfonamide <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hofmann <> den synthetischen kautschuk <> im jahr 1909 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> henlein <> die taschenuhr <> im jahr 1510 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> bauer <> das tauchboot <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> halley <> die taucherglocke <> im jahr 1717 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> siebe <> den taucherhelm <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> perkin <> den teerfarbstoff <> im jahr 1856 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> guglieminetti <> die teerstrasse <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> 50
-erfand reis <> <>  <> im jahr 1861   das telefon <>  <>  <>  <>  <>  <>  <> 50
-erfand <> breese morse <> den telegraf <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> gauss <> die elektromagnetische telegraphie <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> weber <> die elektromagnetische telegraphie <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> soemmering <>  <> die;im jahr 1809   mehrdrahttelegraphie <>  <>  <>  <>  <>  <>  <> 50
-erfand <> werner <>  <> die;im jahr 1846   zeigertelegraphie;von siemens <>  <>  <>  <>  <>  <>  <> 50
-erfand <> galilei <> das <> im jahr 1597   luftthermometer <>  <>  <>  <>  <>  <>  <> 50
-erfand <> dewar <> die thermosflasche <> im jahr 1873 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> drebbel <> den thermostat <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lushnell <> den torpedo <> im jahr 1776 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> keeley <> den traktor <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> stanley <> den transformator <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> regeney <> das transistorradio <> im jahr 1954 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> portsmouth <> das trockendock <> im jahr 1495 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> robert_koch <> den tuberkelbazillus <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> robert_koch <> das tuberkulin <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kaplan <>  <> die;im jahr 1919   kaplanturbine <>  <>  <>  <>  <>  <>  <> 50
-erfand <> segner <>  <> die;im jahr 1750   ueberdruckturbine <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> donald <> die ultraschalldiagnostik <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> born <> die ultraschalldiagnostik <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fulton <> 180 das unterseeboot <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fermi <> den uranbrenner <> im jahr 1942 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hales <> den ventilator <> im jahr 1740 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> linde <> die verfluessigung <> im jahr 1895   der luft <>  <>  <>  <>  <>  <>  <> 50
-erfand <> alfred benesh <> die verkehrsampel <> im jahr 1914 <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> ginsberg <>  <> die;im jahr 1956   videokassette <>  <>  <>  <>  <>  <>  <> 50
-erfanden <> dolby <>  <> die;im jahr 1956   videokassette <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> funk <> die vitamine <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> reychler <> das waschmittel <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> curtiss <> das wasserflugzeug <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fuchs <> das wasserglas <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cavendish <> den wasserstoff <> im jahr 1766 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> cartwright <> den mechanischen webstuhl <> im jahr 1785 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> jacquard <> den webstuhl <> im jahr 1805   fuer gemusterte stoffe <>  <>  <>  <>  <>  <>  <> 50
-fand <> robert_koch <>  <> den;im jahr 1878   wundinfektionserreger <>  <>  <>  <>  <>  <>  <> 50
-erfand <> carlson <> die xerographie <> im jahr 1948 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> riggenbach <> die zahnradbahn <> im jahr 1862 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> soehne <> die zeitung <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> tilghman <> den zellstoff <> im jahr 1857   auf sulfidbasis <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hyatt <> das zelluloid <> im jahr 1869 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> asydin <>  <> den;im jahr 1824   portlandzement <>  <>  <>  <>  <>  <>  <> 50
-erfand <> penzoldt <> die zentrifuge <> im jahr 1836 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> kammerer <>  <> die;im jahr 1833   zuendhoelzer <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lenoir <>  <> die;im jahr 1860   zuendkerze <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lawrence <> das zyklotron <> im jahr 1934 <>  <>  <>  <>  <>  <>  <> 50
-entdeckte <> berzelius <>  <> 1825;im jahr   das titan <>  <>  <>  <>  <>  <>  <> 50
-elektromagnetische entdeckte <> heinrich hertz <> die wellen <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> ernest_rutherford <> 190 die gammastrahlen <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-entdeckten <> villard <> 190 die gammastrahlen <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fuchs <> den feuerloescher <> im jahr 1734 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> lazlo biro <> den kugelschreiber <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> fresnau <> den regenmantel <> im jahr 1747 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> sylvan goldman <> den einkaufswagen <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> becton dickenson <> die einwegspritze <> im jahr 1954 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> achille gaggia <> die espressomaschine <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> birds eye <> die fischstaebchen <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> earle dickson <> die heftpflaster <> im jahr 1920 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> joseph kreiger <> den teebeutel <> im jahr 1919 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> frank clarke <> die teemaschine <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> ruben rausing <> das tetrapak <> im jahr 1951 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> johann vaalers <> 190 die bueroklammer <> im jahr <>  <>  <>  <>  <>  <>  <> 50
-erfand <> henry seely <> das buegeleisen <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> otto rohwedder <> die brotschneidemaschine <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> james sharp <> den gasherd <> im jahr 1826 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> william kent <> den kinderwagen <> im jahr 1733 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> erik rothheim <> die spraydose <> im jahr 1926 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> edwin budding <> den rasenmaeher <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> king camp gilette <> den rasierapparat <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> 50
-erfand <> hubert_cecil_booth <> den staubsauger <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> 50
+erfand <> johannes gutenberg <> den druck <> mit beweglichen lettern <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> benjamin_franklin <> den blitzableiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> benjamin_franklin <> die bifokalbrille <>  <>  <>  <>  <>  <>  <>  <> (true)
+gilt <> gambrinus <> als der erfinder des bierbrauens <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> adolf eugen fick <> die kontaktlinse <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> adolphe clement <> das luftschiff <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> aeneas coffey <> den waermetauscher <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> aim argand <> die oellampe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alchwarizmi <> die algebra erfunden<>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alrazi <> die seife erfunden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> albert jones <> die wellpappe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> albert_hofmann <> das lsd <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> albrecht ludwig berblinger <> den haengegleiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alejandro finisterre <> das tischfussball <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alexander fleming <> das penicillin <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alexander graham bell<> das telefon <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alexander parkes <> das zelluloid <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alfonso bialetti <> die espressokanne <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alfred buechi <> den turbolader <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alfred kaercher <> den heisswasserhochdruckreiniger <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> alfred nobel <> das dynamit erfunden <>  <>  <>  <>  <>  <> nothing <>  <> (true)
+hat erfunden erfunden <> alhazen <> die <> lupe <> (true)
+hat erfunden <> allan cormack <> die computertomographie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> anders celsius <> das thermometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> anton dreher senior <> das lagerbier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> anton loehner <> die rollschuhe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> archimedes <> das hebelgesetz entdeckt<>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> archimedes <> das spezifische gewicht entdeckt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> archimedes <> sehr <> viel erfunden <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> arnold william_arnold_anthony <> das galvanometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> arthur koepchen <> das pumpspeicherkraftwerk <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> artur fischer <> den duebel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> asa griggs candler <> den warengutschein <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> august loden <> den lodenmantel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> august_fischer <> den uhu <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> augustine sackett <> die gipskartonplatten <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> bartolomeo cristofori <> das klavier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> benjamin biram <> das anemometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> benjamin franklin <> den blitzableiter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> bette nesmith graham <> das tippex <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> bill_gates <> das windowsbetriebssystem <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> blaise pascal <> die rechenmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> cai lun <> das papier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> caleb bradham <> das pepsi cola <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> carl djerassi <> die antibabypille <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> carl friedrich benz <> den motorwagen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> carl gassner <> die trockenzellenbatterie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> carl von linde <> die ammoniakkaeltemaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> carlos glidden <> die schreibmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> celadon daboll <> das nebelhorn <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles best <> das insulin <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles bourseul <> das telefon erfunden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles brace darrow <> das monopolyspiel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles fey <> den einarmigen banditen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles francis brush <> den dynamo <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles ginsburg <> die videokassette <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles goodyear <> die kautschukvulkanisation <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles renard <> das luftschiff <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> charles richard drew <> die blutbank <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> chester carlson <> die xerographie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> christine hardt <> den buestenhalter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> christopher cockerell <> das luftkissenfahrzeug <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> clarence birdseye <> die tiefkuehlkost <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> conrad gesner <> den bleistift <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> constantin fahlberg <> das saccharin <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> cornelis corneliszoon <> die saegemuehle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> cornelis drebbel <> das unterseeboot <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> daniel gabriel fahrenheit <> das quecksilberthermometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> das polyvinylchlorid <>  <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> david brewster <> das kaleidoskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> david bushnell <> die zeitbombe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> den wasserrohrkessel <>  <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> denis papin <> den dampfkochtopf <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dennis gabor <> die holographie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> die rollschuhe <>  <>  <>  <>  <>  <>  <>  <>  <> (true)
+haben erfunden <> alberto palacio & ferdinand arnodin <> die schwebefaehre <>  <> (true)
+hat erfunden <> diego ribero <> die wasserpumpe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dieter binninger <> die mengenlehreuhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dieter_binninger <> die ewigkeitsgluehbirne <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dom perignon <> den champagner <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> donald bitzer <> den plasmabildschirm <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dont bnki <> den vergaser <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dorothy gerber <> die vorgefertigte babynahrung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> douard bndictus <> das sicherheitsglas <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> douglas cockcroft <> den teilchenbeschleuniger <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> douglas engelbart <> die computermaus <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> dugald clark <> den zweitaktmotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> earl flosdorf <> das trockengefrierverfahren <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> eben norton horsford <> das backpulver <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edmond halley <> die taucherglocke <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edmund cartwright <> den webstuhl <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edmund davy <> das azetylen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edward calahan <> den boersenfernschreiber <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edward jenner <> die pockenimpfung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edwin binney <> die wachsmalstifte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> edwin laurentine drake <> die oelfoerderung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> elmer gates <> den schaumfeuerloescher <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> enrico fermi <> den kernreaktor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> eric fawcett <> das polyethylen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> erik rotheim <> die spruehdose <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ernst bettag <> das bobbycar <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ernst ruska <> das elektronenmikroskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> eugen baumann <> das polyvinylchlorid <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> eugene clark <> den gabelstapler <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> felix hoffmann <> das aspirin <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> forrest bird <> die atemschutzmaske <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> frank bowden <> den bowdenzug <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> franois nicolas appert <> die konservierung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> frederic stanley kipping <> das silikon <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> friedrich fischer <> das kugellager <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gambrinus <> das bierbrauen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> garnet carter <> das miniaturgolf <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gary fisher <> das mountainbike <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gaston plante <> den bleiakkumulator <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george antheil <> das frequenzsprungverfahren <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george babcock <> den wasserrohrkessel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george crum <> die kartoffelchips <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george grant blaisdell <> das zippofeuerzeug <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george henry felt <> die signalrakete <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> george pullman <> den schlafwagen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> georges claude <> die neonroehre <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> georges leclanch <> die trockenbatterie  <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gerd binnig <> das rastertunnelmikroskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gerhard fischer <> den metalldetektor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gerhard mueller <> den schlepplift <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> giovanni de dondi <> die astronomische uhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> glenn curtiss <> das wohnmobil <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> godfrey hounsfield <> die computertomographie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gordon gould <> den laser <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gottlieb christoph bohnenberger <> die influenzmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gottlieb daimler <> das motorrad <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gottlieb_daimler <> den benzinmotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gregory pincus <> die antibabypille <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> guglielmo_marconi <> die drahtlose telegrafie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> gyoergy jendrassik<> den turboprop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hans friedrich geitel <> die fotozelle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hans wilhelm geiger <> den geigerzaehler <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> harold brown <> den elektrischen stuhl <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> harold gatty <> den luftfahrtsextant <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> harold lyons <> die atomuhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> heinrich arnold <> die uhrfeder <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> heinrich rohrer <> das rastertunnelmikroskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hellmuth hertz <> den ultraschall <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> henri dufaux <> den fahrradmotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> henri giffard <> das angetriebene luftschiff <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> henri gustave delvigne <> den vorderlader <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> henry ford <> das fliessband <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> henry john heinz <> das tomatenketchup <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> herbert edwin land <> die polaroidkamera <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> herman hollerith <> die lochkarten <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hermann anschuetzkaempfe <> den kreiselkompass <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hermann berthold <> das typometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hermann oberth <> die fluessigkeitsraketen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hermann_oberth <> die feststoffraketen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> herta heuwer <> die currywurst <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> holger crafoord <> die kuenstliche niere <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> horst burbulla <> den kamerakran <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hugo erfurt <> die raufasertapete <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hugo junkers<> das ganzmetallflugzeug <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> hugo koch <> die rotorchiffriermaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> humphry davy <> die grubenlampe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ian donald <> das ultraschallbild <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ira remsen <> das saccharin erfunden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> isaac newton <> das spiegelteleskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jacques brandenberger <> das zellophan <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jacques yves cousteau <> den lungenautomat <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jakob degen <> das fluggeraet <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> james ayscough <> die sonnenbrille <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> james dyson <> den staubsauger <> mit fliehkraftabscheider <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> james fergason <> den fluessigkristallbildschirm <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> james nasmyth <> den dampfhammer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> james stuart blackton <> den animationsfilm <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jaron lanier <> die virtuelle realitaet <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jesse reno <> die rolltreppe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> johann bruecker <> den rasierapparat <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> johann korbuly <> den matadorholzbaukasten <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> johann maria farina <> das koelnisch wasser <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> johannes gutenberg <> den buchdruck <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john barber <> die gasturbine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john bardeen <> den transistor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john blenkinsop <> die dampflokomotive <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john boyd dunlop <> den autoreifen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john deere <> den stahlpflug <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john froehlich <> den traktor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john harington <> das wasserklosett <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john harvey kellogg <> die cornflakes <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john heysham gibbon <> die herzlungenmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john napier <> den logarithmus <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john pemberton <> das cocacola <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john wesley hyatt <> die zelluloseherstellung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> john_warner backus <> fortran <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> josef madersperger <> die naehmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph fraunhofer <> das spektroskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph gayetty <> das toilettenpapier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph glidden <> den stacheldraht <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph hardtmuth <> die bleistiftmine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph henry <> den elektromagnet <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph priestley <> das sodawasser <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph_bramah <> die zapfanlage <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> joseph_gayetty <> das klopapier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> josephine cochrane <> die geschirrspuelmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> juan de la cierva <> den tragschrauber <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> juergen dethloff <> die chipkarte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> jules bied <> den tonerdezemant <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> julius elster <> die fotozelle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> julius fromm <> das latexkondom <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> justus claproth <> das recyclingpapier <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> karl ferdinand braun <> das oszilloskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> karl nessler <> die dauerwelle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> kenneth house <> den rauchdetektor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> king camp gillette <> die rasierklinge <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ktesibios <> das federkatapult <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> lars magnus ericsson <> den telefonhoerer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> leo hendrik baekeland <> das bakelit <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> leonard goodall <> den benzinrasenmaeher <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> levi strauss <> die jeans <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis braille <> die blindenschrift <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis deguerre <> die fotografie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis glass <> die jukebox <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis leitz <> den leitzordner <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis pasteur <> die pasteurisierung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis reard <> den bikini <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis renault <> die trommelbremse <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> louis_renault <> den stossdaempfer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> lszl jzsef bir <> den kugelschreiber <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> lucien gaulard <> den transformator <> fuer wechselstrom  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> luigi palmieri <> das seismometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> marion donovan <> die einwegwindel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> marvin camras <> die magnetaufzeichnung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> mats leijon <> den hochspannungsgenerator <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> maurice lvy <> den lippenstift <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> max giese <> die betonpumpe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> max mauermann <> den rostfreien stahl <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> max_knoll <> das elektronenmikroskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> melitta bentz <> die filtertuete <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> michael cullen <> den supermarkt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> michael faraday <> den bunsenbrenner <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> nancy johnson <> die handbetriebene eismaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> neil arnott <> das wasserbett <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> nicholas joseph cugnot <> den dampfwagen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> nils bohlin <> den sicherheitsgurt <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> nolan bushnell <> das videospiel <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ole evinrude <> den aussenbordmotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ole kirk christiansen <> das lego <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> oskar czeija <> das tonband <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> otto griessing <> den volksempfaenger <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> otto lilienthal <> den normalsegelapparat <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ottomar anschuetz <> den schlitzverschluss <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> paul carl beiersdorf <> den wundschnellverband <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> paul daimler <> den panzerkraftwagen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> paul langevin <> das sonar <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> peter durand <> die konservendose <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> peter mitterhofer <> die schreibmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> petrache poenaru <> den fuellfederhalter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ralph baer <> die videospielkonsole <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> ray dolby <> die rauschunterdrueckung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> raymond damadian <> die magnetresonanztomographie <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> reinhold burger <> die rontgenroehre <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> reinhold_burger <> die thermosflasche <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> richard bacon <> die schnellpresse <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> richard drew <> das klebeband <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> richard stanton avery <> das selbstklebeetikett <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert adler <> die fernbedienung erfunden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert barron <> das tresorschloss <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert bosch <> die zuendkerze <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert conrad <> das kugellager <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert edwards <> die reagenzglasbefruchtung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert fulton <> den schaufelraddampfer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert oppenheimer <> die atombombe <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> robert wilhelm bunsen <> den bunsenbrenner <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> roy plunkett <> das teflon <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> rudolf diesel <> den dieselmotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> rune elmqvist <> den herzschrittmacher <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> samuel blumer <> das heizkissen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> samuel colt <> den revolver <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> samuel guthrie <> das chloroform <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> samuel hunter christie <> die wheatstonebruecke <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> scott jones <> das voicemail <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> seth boyden <> die nagelmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> sidney darlington <> die darlingtonschaltung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> sigmund bergmann <> die gluehlampe <> mit edison  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> stain atkinson <> die komplettgiessmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> stephanie kwolek <> das kevlar <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> stephen perry <> das gummiband <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> steve jobs <> das macintoshbetriebssystem <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> sumio iijima <> die kohlenstoffnanoroehre <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thaddeus cahill <> das dynamophon <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas alva edison <> das kinetoskop <> <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas alva edison <> das mikrophon <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas alva edison <> den fernschreiber <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas alva edison <> den phonograph <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas alva edison <> den projektor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas cook <> die pauschalreise <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas davenport <> den elektromotor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas edmondson <> die fahrkarte <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas fowler <> die zentralheizung <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> thomas_adams <> den kaugummi erfunden <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> titusz ott_titusz_blthy <> das wattmeter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> titusz ott_titusz_blthy <> den transformator <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> titusz_ott_titusz_blthy <> den turbogenerator <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> tony fadell <> den ipod <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> tracy hall<> den synthetischer diamant <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> udo adelsberger <> die quarzuhr  <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> viktor kaplan <> die kaplanturbine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> walter bitterlich <> das spiegelrealaskop <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> walter brattain <> den transistor <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> wernher von braun <> die gesteuerte rakete <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> wilhelm bartelmann <> den strandkorb <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> wilhelm bruhn <> das taxameter <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> wilhelm emil fein <> die elektrische handbohrmaschine <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> willem einthoven <> das elektrokardiogramm <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william arnold anthony <> die turbinen <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william crookes <> das radiometer <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william cullen <> den kuehlschrank <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william dobelle <> das kuenstliche auge <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william lear <> den learjet <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william oughtred <> den rechenschieber <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william painter <> den kronkorken <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> william robert grove <> die brennstoffzelle <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> willis carrier <> die klimaanlage <>  <>  <>  <>  <>  <>  <>  <> (true)
+hat erfunden <> wolfgang hilberg <> die funkuhr <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> alchwarizmi <> erfinder der algebra <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> josef ahlmann <> erfinder des radladers <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> thomas adams <> erfinder des kaugummis <>  <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bauer <> das acrylglas <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> goodhue <> die aerosolspruehdose <> im jahr 1941 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> plant <> den bleiakkumulator <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leonhardi <> die alizarintinte <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leonhardi <> die alizarintinte <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> frau_woehler <> das aluminium <> im jahr 1827 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> priestley <> das ammoniak <> im jahr 1774 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> fritz haber carl bosch <> 1908 die ammoniaksynthese <> im jahr;und <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> davy <> die lachgasanaesthesie <> im jahr 1799 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> rudolph <> das <> im jahr 1890   anastigmat <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> popow <> die antenne <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> knorr <> das <> im jahr 1884   antipyrin <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> steinheil <> das aplanat <> im jahr 1866 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> dreser <> das aspirin <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> valerius cordus <> den aether <> im jahr 1540 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> papin <> die atmosphaerische dampfmaschine <> im jahr 1690 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> niels bohr <> das atommodell <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> otto hahn <> die atomspaltung <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lyons <> die atomuhr <> im jahr 1946 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> otis <> den aufzug <> im jahr 1852 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1880 den elektrischen aufzug <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> weigel <> den fahrstuhl <> im jahr 1687 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> helmholtz <> den augenspiegel <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand schneiden <> menne <> das autogene <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> siegfried marcus <> automobil <> im jahr 1875  das vergaser <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> meisenbach <> die autotypie <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> griess <> die azofarbstoffe <> im jahr 1863 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> leo baekeland <> das bakelit <> im jahr 1907 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> charles <>  <> 1783;im jahr   den ballon mit wasserstoff <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> newberry <> die bandsaege <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> torricelli <> das barometer <> im jahr 1643 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> volta <> 180 die batterie <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> semmelweis des wochenbettfibers <> die behandlung <> im jahr 1847 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> benz <> den benzinmotor <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> faraday <> das benzol <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> henry bessemer <> die bessemerbirne <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> henry_bessemer <> den bessemerstahl <> im jahr 1856 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> donald kernt <> das betatron <> im jahr 1939 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> donald glaser <> die blasenkammer <> im jahr 1952 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> paine <> das blechwalzen <> im jahr 1728 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> franklin <> den blitzableiter <> im jahr 1732 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hales <> die blutdruckmessung <> im jahr 1726 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hoskyns <> die bodenfraese <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> davy <> die bogenlampe <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> maritz <> die bohrmaschine <> im jahr 1710 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hunaus <> den bohrturm <> im jahr 1857 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> louis braille <> die brailleschrift <> im jahr 1829 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> die braunsche <> roehre <> braun im jahr 1897 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> amberger <> die elektrische bremse <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> die luftdruckbremse <>  <> andraud im jahr 1854 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> justi <> das brennstoffelement <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> spina <> 130 die brille <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> balard <> das brom <> im jahr 1826 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gutenberg <> den buchdruck <> im jahr 1445 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> friedrich koenig <> die buchdruckschnellpresse <> im jahr 1811 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> davy <> das calcium <> im jahr 1808 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> woehler <> das calciumkarbid <> im jahr 1862 <>  <>  <>  <>  <>  <>  <> (true)
+ben erfand obscura <> levi <> gerson die camera <> im jahr 1321 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> philips <> die cdrom <> im jahr 1985 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> chassepot <> das chassepotgewehr <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> pelletier caventon <> das chinin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> scheele <>  <> 1774;im jahr   das chlor <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> liebig <> das chloroform <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> soubeiran <> das chloroform <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> robert koch <>  <> den;im jahr 1883   choleraerreger <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> engelbart <>  <> die;im jahr 1969   computermaus <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cook <> die dampfheizung <> im jahr 1745 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> james watt <> den dampfkessel <> im jahr 1781 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> trevithick <> die dampflokomotive <> im jahr 1803 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> james_watt <> die dampfmaschine <> im jahr 1765 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> papin <> die dampfmaschine <> im jahr 1681 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> darnal <> die dampfmuehle <> im jahr 1779 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fulton <> das dampfschiff <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> shawk <> die dampfspritze <> im jahr 1829 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1870 das dampfstrahlgeblaese <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> parsons de laval <> die dampfturbine <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> regiomontanus <> die dezimalrechnung <> im jahr 1460 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> rudolf diesel <> den dieselmotor <> im jahr 1892 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leibniz <> die differentialrechnung <> im jahr 1675 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fleming <> die zweielektrodenroehre <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> loeffler <>  <> den;im jahr 1884   diphtheriebazillus <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> collins <> die drahtlose telefonie <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> marconi <> die drahtlose telegraphie <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> druecker <> die drahtseilbahn <> im jahr 1861 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> drais <> die draisine <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> basson <> die drehbank <> im jahr 1578 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pittler <> die revolverdrehbank <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> felix wankel <> den drehkolbenmotor <> im jahr 1957 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> menzies <> die drehmaschine <> im jahr 1732 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> haselwander <> den drehstromgenerator <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> dolivo dobrowolski <> den drehstrommotor <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> ulrich vogel <> den dreifarbendruck <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pi sheng <> das drucken <> im jahr 1040   mit beweglichen lettern <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bauer <> den druckknopf <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cousteauund gagnan <> das <> im jahr 1943   drucklufttauchgeraet <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> frank whittle <> den duesenantrieb <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> alfred_nobel <> das dynamit <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pixii <> den dynamo <> im jahr 1832 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1867 die dynamomaschine <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> behm <> das echolot <> im jahr 1912 <>  <>  <>  <>  <>  <>  <> (true)
+baute <> stephenson <> die eisenbahn <> im jahr 1830   liverpoolmanchester <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> stevens <> die eisenbahnschiene <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> monier <> das eisenbeton <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> darby <> die eisenerzeugung <> im jahr 1735   mit koks <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cort <> das eisenwalzwerk <> im jahr 1754 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> drinker <> die eiserne lunge <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> shaw <> die eiserne lunge <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> den eisschrank <>  <> focardchat erfundeneau im jahr 1801 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1846 den elektrischen zeigertelegraphen <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jenkin <> die elektrische schwebebahn <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> siemens <> die elektrische strassenbahn <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> halske <> die elektrische strassenbahn <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> salva <> den elektrischer telegraf <> im jahr 1804 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> guericke <> die elektrisiermaschine <> im jahr 1663 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lodge <> den elektrodynamischer lautsprecher <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> faraday <> die elektrolyse <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> sturgeon <> den elektromagneten <> im jahr 1823 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jacobi <> den elektromotor <> im jahr 1834 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> brueche knoll ruska <> 1933 das elektronenmikroskop <> (johannsen);im jahr;und <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fleming <> die elektronenroehre <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> kilby <> den elektronischer taschenrechner <> im jahr 1972 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> merryman <> den elektronischer taschenrechner <> im jahr 1972 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> das endoskop <>  <> mikuliczradecki im jahr 1881 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leonardo da vinci <> den fallschirm <> im jahr 1495 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> arnold <> die federuhr <> im jahr 1427 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mueller <> das feldelektronenmikroskop <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> galilei <> das fernrohr <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> karolus <> das fernsehen <> im jahr 1929 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> zworykin <> das ikonoskop <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> paul nipkow <> das <> im jahr 1884   lochscheibenfernsehen <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> philip reis <> den fernsprecher <> im jahr 1861 <>  <>  <>  <>  <>  <>  <> (true)
+automatischen erfand <> strowger <> den fernsprecher <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lumire <> den film <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+erfand photographischer <> goodwin <> den film schichttraeger <> im jahr 1888  als <>  <>  <>  <>  <>  <>  <> (true)
+erfand photographischer <> eastman <> den film schichttraeger <> im jahr 1888  als <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jenkins <> die filmprojektion <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> owens <> die flaschenblasmaschine <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> die gebrueder wright <> 190 das flugzeug <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> otto_lilienthal <> das gleitflugzeug <> im jahr 1891 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> wright <> das motorflugzeug <> im jahr 1903 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hugo junkers <>  <> 1915;im jahr   das ganzmetallflugzeug <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> heinkel <> das flugzeug <> im jahr 1939   mit luftstrahltriebwerk <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> heilmeier <> das <> im jahr 1964   fluessigkristalldisplay <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> niepce <> die fotografie <> im jahr 1816 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> drescher <> den fuellfederhalter <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fessender <> die funkuebertragung menschlicher sprache <> im jahr 1906 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> krische <> das galalith <> im jahr 1897 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> spitteler <> das galalith <> im jahr 1897 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> galvani <> den galvanismus <> im jahr 1780 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> schwaiger <> das galvanometer <> im jahr 1819 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> jacobi <> die galvanoplastik <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> spencer <> die galvanoplastik <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> dundonald <> die gasbeleuchtung <> im jahr 1786 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> pikkel <> die gasbeleuchtung <> im jahr 1786 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> claude <> die gasentladungslampe <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> faber du faure <> den gasgenerator <> im jahr 1832 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lebon <> die gaslampe <> im jahr 1799 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> komma bennet <> 1961 den gaslaser <> im jahr;von java <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> herriot <> 1961 den gaslaser <> im jahr;von java <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> holzwarth <> die gasturbine <> im jahr 1905 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> chamberlen <> die geburtszange <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> geiger <> den geigerzaehler <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+baute <> alfred krupp <> das geschuetz <> im jahr 1847   aus gussstahl <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> smith <> das gewehrmagazin <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> wesson <> das gewehrmagazin <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> besson <> die gewindedrehbank <> im jahr 1568 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kapany <> das glasfaserkabel <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> auer <> 1885 das glasgluehlicht <> im jahr;von welsbach <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lilienthal <> den gleitfluegler <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> swan <> die gluehbirne <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> edison <> die gluehbirne <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> goebel <> die gluehlampe <> im jahr 1854 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thoma alfa edison <> die kohlenfadengluehlampe <> im jahr 1879 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> welsbach <> die metalldrahtgluehlampe <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> steele <> das glyzerin <> im jahr 1783 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> berliner <> das grammophon <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> newton <> das gravitationsgesetz <> im jahr 1682 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> davy <> die grubenlampe <> im jahr 1815 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> davy <> die grubenlampe <> im jahr 1815 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> huntsman <> den gussstahl <> im jahr 1742 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> arthur fry <> die haftnotizen <> im jahr 1980 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fred ives <> die halbtondruckplatte <> im jahr 1886 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> christofori <> das hammerklavier <> im jahr 1709 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> schmidt <> 190 die heissdampflokomotive <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> montgolfier <> den heissluftballon <> im jahr 1783 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> paul cornu <> den helikopter <> im jahr 1907 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gauss <> den heliograph <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> ramsay <> das helium <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thomas <>  <> die;im jahr 1951   herzlungenmaschine <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hat erfundenton <> die hobelmaschine <> im jahr 1776 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gabor <> die holographie <> im jahr 1949 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> keller <> den holzschliff <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> die holzwolle <>  <> anthon im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> focke <> den hubschrauber <> im jahr 1936 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bramah <> die hydraulische presse <> im jahr 1795 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leonardo da vinci <>  <> 1490;im jahr   das hygrometer <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jenner <> die impfung <> im jahr 1796   gegen pocken <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> courtois <> das <> im jahr 1901   indanthrenblau <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pravaz <>  <> die;im jahr 1853   injektionsspritze <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1847 das kabel <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> runge <> das koffein <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> brewster <> das kaleidoskop <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> davy <> das kalium <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> frank <> den kalkstickstoff <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> dulong <> das kalorimeter <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> carl <> 1876 die ammoniniakkaeltemaschine <> im jahr;von linde <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> priessnitz <> die kaltwasserkur <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> runge <> die karbolsaeure <> im jahr 1867 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> hittorf <> die kathodenstrahlen <> im jahr 1869 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> crookes <> die kathodenstrahlroehre <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> garcia <> den kehlkopfspiegel <> im jahr 1855 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fermi <> den kernreaktor <> im jahr 1942 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> die gebrueder lumiere <> die kinematographie <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thomas_alva_edison <> das kinematoskop <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cristofori <> das klavier <> im jahr 1710 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> carrier <> die klimaanlage <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> priestley <> das knallgas <> im jahr 1775 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bergios <> die kohleverfluessigung hochdruck <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> die kohleverfluessigung <> niederdruck <> fischertropsch im jahr 1925 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> schoenbein <> das kollodium <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> borden <> die kondensierte milch <> im jahr 1853 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> appert <> das konservieren <> im jahr 1810   durch erhitzen <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kopernikus <> das kopernikanisches weltsystem <> im jahr 1543 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> daimler <> das kraftrad <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> benz <> den kraftwagen <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cugnot <> den dampfkraftwagen <> im jahr 1769 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> den kreiselkompass <>  <> anschuetzkaempfe im jahr 1908 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leonardo da vinci <> das kugellager <> im jahr 1496 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kolff <> die kuenstliche niere <> im jahr 1943 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> de chardonnet <> die kuenstliche seide <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hyatt <>  <> den;im jahr 1869   kunststoffzelluloid <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mertens <> 190 den kupfertiefdruck <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> liebreich <> das lanolin <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand lueg <> den laermschutz <>  <> im jahr 1933   durch gegenlaerm <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> drais <> das lenkbares laufrad <> im jahr 1817 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> hansen <> das leprabazillus <> im jahr 1880 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> claude <> die leuchtstoffroehre <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pauken <> 190 den lichtbogensender <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> albert <> den lichtdruck <> im jahr 1868 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> walton <> das linoleum <> im jahr 1860 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mergenthaler <> die linotype setzmaschine <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> senefelder <> die lithographie <> im jahr 1798 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hollerith <> die lochkarte <> im jahr 1880 <>  <>  <>  <>  <>  <>  <> (true)
+baute <> trevithick <> eine lokomotive <> im jahr 1803 <>  <>  <>  <>  <>  <>  <> (true)
+erfand erhitzer <> montgolfier <> den luftballon luft <> im jahr 1782  mit <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thomson <> die luftbereifung <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cokkerell <> das luftkissenboot <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> guericke <> die luftpumpe <> im jahr 1650 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> dunlop <> den luftreifen <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> giffard <> das luftschiff <> im jahr 1852 <>  <>  <>  <>  <>  <>  <> (true)
+erfand starre <> ferdinand graf <> 190 das luftschiff <> im jahr;von zeppelin <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> das magnetophon <>  <> aeg im jahr 1935 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> otto <> 1662 das manometer <> im jahr;von guericke <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> die margarine <>  <> megemouries im jahr 1869 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mercer <> die merzerisation <> im jahr 1844 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> philipp <> das metallgewebe <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> schoop <> das metallspritzverfahren <> im jahr 1906 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> maelzel <> das metronom <> im jahr 1816 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jack kilby <> den microchip <> im jahr 1959 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> spencer <> die microwelle <> im jahr 1947 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> janssen <> das mikoskop <> im jahr 1590 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gascoigne <> das mikrometer <> im jahr 1636 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> luedtge <> das mikrophon <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thomas_alva_edison <> das kohlemikrophon <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> janssen <> das mikroskop <> im jahr 1590 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> prandtl <> die milchzentrifuge <> im jahr 1864 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lanston <> die monotype setzmaschine <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> sertuerner <> das morphin <> im jahr 1805 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> weisskopf <> den motorflug <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> daimler <> das motorrad <> im jahr 1883 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leibnitz <> die multipliziermaschine <> im jahr 1674 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jaquard <> den musterwebstuhl <> im jahr 1805   mit lochkarten <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> saint <> die naehmaschine <> im jahr 1790 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> garden <> das naphtalin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> jackson <>  <> den;im jahr 1846   narkoseaether <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> davy <> das natrium <> im jahr 1807 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> wilson <> die nebelkammer <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> claude <>  <> die;im jahr 1911   neonlampe <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> sobrero <> das nitroglyzerin <> im jahr 1846 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> carrothers <> das nylon <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> rubel <> den offsetdruck <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> schoenbein <> das ozon <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bruch <> das <> im jahr 1960   palsystem <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> keller <> das papier <> im jahr 1843   aus holzschliff <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> reichenbach <> das paraffin <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> magee <> die parkuhr <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> huygens <> die pendeluhr <> im jahr 1656 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> foucault <> den pendelversuch <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> fleming <> das penicillin <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> chaim <> das penicillin <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> yersin <> das pestbazillus <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> kitasato <> das pestbazillus <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thomas_alva_edison <> den phonograph <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> daguerre <> die photographie <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> niepce <> die photographie <> im jahr 1838 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> ives <> die farbphotographie <> im jahr 1881 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> talbot <> das negativphotoverfahren <> im jahr 1839 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> land <> die polaroidphotographie <> im jahr 1932 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> eastman <> den rollfilm <> im jahr 1884 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> elster <> die photozelle <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> geitel <> die photozelle <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> die zeisswerke <> das planetarium <> im jahr 1924 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> berliner <> den plattenspieler <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+erfunden wurde <> 70 das porzellan <>  <> in china im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> boettger <> das harte porzellan <> im jahr 1709 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> morin <> 1695 das porzellan <> ;im jahr;weiches <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> tschirnhaus <> das porzellan <> im jahr 1693   in europa <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> den presslufthammer <>  <> ingersoll im jahr 1871 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> marrison <> die quarzuhr <> im jahr 1929 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fahrenheit <> das quecksilberthermometer <> im jahr 1716 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> huelsmeyer <> das radar <> im jahr 1904 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mailand <> die raederuhr <> im jahr 1309 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> marcani <> das radio <> im jahr 1894 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> becquerel <> die radioaktivitaet <> im jahr 1896 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> das ehepaar curie <> das radium <> im jahr 1898 <>  <>  <>  <>  <>  <>  <> (true)
+bauten <> die heinkelwerke <> das raketenflugzeug <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> (true)
+gebaut wurde <> die raumfaehre <> columbia <> in den usa im jahr 1981 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> leibniz <> die rechenmaschine <> im jahr 1694 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> pascal <> die rechenmaschine <> im jahr 1642 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> burroughs <> die addierrechenmaschine <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> babbage <> die analytische rechenmaschine <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> napier <> 1617 den rechenschieber <> im jahr;of merchiston <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> john ritty <> die registrierkasse <> im jahr 1879 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> thompson <> den luftreifen <> im jahr 1843 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> judson <> den reissverschluss <> im jahr 1893 <>  <>  <>  <>  <>  <>  <> (true)
+erdachte <> albert_einstein <> die relativitaetstheorie <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> colt <> den revolver <> im jahr 1831 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> meissner <> den roehrensender <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> clark <> die rohrpost <> im jahr 1853 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> eastman <> den rollfilm <> im jahr 1889 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> roentgen <> die roentgenstrahlen <> im jahr 1895 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bullock <> den rotationsdruck <> im jahr 1863 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mertens <> den rotationstiefdruck <> im jahr 1910 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> flettner <> das rotorschiff <> im jahr 1924 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> fahlberg <> das saccharin <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> remsen <> das saccharin <> im jahr 1878 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> kolbe <> die salizylsaeure <> im jahr 1873 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> priestley <> die salzsaeure <> im jahr 1775 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kepler <> die sammellinse <> im jahr 1611 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> tilghman <> das sandstrahlgeblaese <> im jahr 1870 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> priestley <> den sauerstoff <> im jahr 1771 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> honnsfield <> den scanner <> im jahr 1973 <>  <>  <>  <>  <>  <>  <> (true)
+erfand magnetische <> paulsen <> die schallaufzeichnung <> im jahr 1899 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> berliner <> die schallplatte <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> schoenbein <> die schiessbaumwolle <> im jahr 1846 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> berthold schwarz <> das schiesspulver <> im jahr 1313 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> schlick <> den schiffskreisel <> im jahr 1903 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> stevens <> die schiffsschraube <> im jahr 1804 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> meikle <> die schlagleisten dreschmaschine <> im jahr 1785 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <> 1880 den elektrischen schmelzofen <> im jahr;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mill <> die schreibmaschine <> im jahr 1714 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lilienthal <> das segelflugzeug <> im jahr 1891 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> mergenthaler <>  <> die;im jahr 1884   linotypesetzmaschine <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hunt <> die sicherheitsnadel <> im jahr 1849 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gustav pasch <> die sicherheitszuendhoelzer <> im jahr 1845 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hoff <>  <> den;im jahr 1969   siliziummikroprozessor <>  <>  <>  <>  <>  <>  <> (true)
+entwickelt wurde <> die solarzelle <>  <> in den usa im jahr 1954 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> doehring <> den spannbeton <> im jahr 1888 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> bunsen <> die spektralanalyse <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> kirchhoff <> die spektralanalyse <> im jahr 1859 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> newton <> das spiegelteleskop <> im jahr 1669 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> barbara uttmann <> das spitzenkloeppeln <> im jahr 1561 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> edison <> die sprechmaschine <> im jahr 1877 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> glidden <> den stacheldraht <> im jahr 1874 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> schmidt <> das strahltriebwerk <> im jahr 1930 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> whittle <> das strahltriebwerk <> im jahr 1930 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> chevreul <> das stearin <> im jahr 1820 <>  <>  <>  <>  <>  <>  <> (true)
+erfunden wurde <> der steigbuegel <>  <> im jahr 850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> wedgwood <> das steingut <> im jahr 1759 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> ged <> die stereotypie <> im jahr 1725 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> launec <> das stethoskop <> im jahr 1819 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> rutherford <> den stickstoff <> im jahr 1772 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> turner <>  <> die;im jahr 1831   stiftendreschmaschine <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> walker <> das streichholz <> im jahr 1827 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> waksman <> das streptomycin <> im jahr 1943 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> eisenstruck <> die strickmaschine <> im jahr 1857 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> pelletier <> das strychnin <> im jahr 1818 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> domagk <> die sulfonamide <> im jahr 1935 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hofmann <> den synthetischen kautschuk <> im jahr 1909 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> henlein <> die taschenuhr <> im jahr 1510 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> bauer <> das tauchboot <> im jahr 1850 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> halley <> die taucherglocke <> im jahr 1717 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> siebe <> den taucherhelm <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> perkin <> den teerfarbstoff <> im jahr 1856 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> guglieminetti <> die teerstrasse <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> (true)
+erfand reis <> <>  <> im jahr 1861   das telefon <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> breese morse <> den telegraf <> im jahr 1837 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> gauss <> die elektromagnetische telegraphie <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> weber <> die elektromagnetische telegraphie <> im jahr 1833 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> soemmering <>  <> die;im jahr 1809   mehrdrahttelegraphie <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> werner <>  <> die;im jahr 1846   zeigertelegraphie;von siemens <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> galilei <> das <> im jahr 1597   luftthermometer <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> dewar <> die thermosflasche <> im jahr 1873 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> drebbel <> den thermostat <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lushnell <> den torpedo <> im jahr 1776 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> keeley <> den traktor <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> stanley <> den transformator <> im jahr 1885 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> regeney <> das transistorradio <> im jahr 1954 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> portsmouth <> das trockendock <> im jahr 1495 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> robert_koch <> den tuberkelbazillus <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> robert_koch <> das tuberkulin <> im jahr 1890 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kaplan <>  <> die;im jahr 1919   kaplanturbine <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> segner <>  <> die;im jahr 1750   ueberdruckturbine <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> donald <> die ultraschalldiagnostik <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> born <> die ultraschalldiagnostik <> im jahr 1950 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fulton <> 180 das unterseeboot <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fermi <> den uranbrenner <> im jahr 1942 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hales <> den ventilator <> im jahr 1740 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> linde <> die verfluessigung <> im jahr 1895   der luft <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> alfred benesh <> die verkehrsampel <> im jahr 1914 <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> ginsberg <>  <> die;im jahr 1956   videokassette <>  <>  <>  <>  <>  <>  <> (true)
+erfanden <> dolby <>  <> die;im jahr 1956   videokassette <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> funk <> die vitamine <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> reychler <> das waschmittel <> im jahr 1913 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> curtiss <> das wasserflugzeug <> im jahr 1911 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fuchs <> das wasserglas <> im jahr 1825 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cavendish <> den wasserstoff <> im jahr 1766 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> cartwright <> den mechanischen webstuhl <> im jahr 1785 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> jacquard <> den webstuhl <> im jahr 1805   fuer gemusterte stoffe <>  <>  <>  <>  <>  <>  <> (true)
+fand <> robert_koch <>  <> den;im jahr 1878   wundinfektionserreger <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> carlson <> die xerographie <> im jahr 1948 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> riggenbach <> die zahnradbahn <> im jahr 1862 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> soehne <> die zeitung <> im jahr 1609 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> tilghman <> den zellstoff <> im jahr 1857   auf sulfidbasis <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hyatt <> das zelluloid <> im jahr 1869 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> asydin <>  <> den;im jahr 1824   portlandzement <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> penzoldt <> die zentrifuge <> im jahr 1836 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> kammerer <>  <> die;im jahr 1833   zuendhoelzer <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lenoir <>  <> die;im jahr 1860   zuendkerze <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lawrence <> das zyklotron <> im jahr 1934 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckte <> berzelius <>  <> 1825;im jahr   das titan <>  <>  <>  <>  <>  <>  <> (true)
+elektromagnetische entdeckte <> heinrich hertz <> die wellen <> im jahr 1887 <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> ernest_rutherford <> 190 die gammastrahlen <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+entdeckten <> villard <> 190 die gammastrahlen <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fuchs <> den feuerloescher <> im jahr 1734 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> lazlo biro <> den kugelschreiber <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> fresnau <> den regenmantel <> im jahr 1747 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> sylvan goldman <> den einkaufswagen <> im jahr 1937 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> becton dickenson <> die einwegspritze <> im jahr 1954 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> achille gaggia <> die espressomaschine <> im jahr 1938 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> birds eye <> die fischstaebchen <> im jahr 1955 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> earle dickson <> die heftpflaster <> im jahr 1920 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> joseph kreiger <> den teebeutel <> im jahr 1919 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> frank clarke <> die teemaschine <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> ruben rausing <> das tetrapak <> im jahr 1951 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> johann vaalers <> 190 die bueroklammer <> im jahr <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> henry seely <> das buegeleisen <> im jahr 1882 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> otto rohwedder <> die brotschneidemaschine <> im jahr 1928 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> james sharp <> den gasherd <> im jahr 1826 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> william kent <> den kinderwagen <> im jahr 1733 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> erik rothheim <> die spraydose <> im jahr 1926 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> edwin budding <> den rasenmaeher <> im jahr 1830 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> king camp gilette <> den rasierapparat <> im jahr 1901 <>  <>  <>  <>  <>  <>  <> (true)
+erfand <> hubert_cecil_booth <> den staubsauger <> im jahr 1902 <>  <>  <>  <>  <>  <>  <> (true)

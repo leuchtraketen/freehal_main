@@ -1,276 +1,276 @@
-entspricht <> diana <> nothing <> der griechischen goettin artemis<>  <>  <>  <>  <>  <>  <> 50
-heisst <> merkur <> der roemische gott des handels <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> aah <> eine der schoepfergoetter <> im alten aegypten <>  <>  <>  <>  <>  <>  <> 50
-ist <> acayoch <> der kriegsgott <> der inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> aeolus <> der roemische gott <> der winde <>  <>  <>  <>  <>  <>  <> 50
-ist <> aesculapius <> der roemische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> 50
-ist <> aker <> ein erdgott der unterwelt <> im alten aegypten <>  <>  <>  <>  <>  <>  <> 50
-ist <> amaa <> ein unterweltgott <> im aegyptischen totenbuch <>  <>  <>  <>  <>  <>  <> 50
-ist <> amarr <> der gott des regenbogens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> amaunet <> eine schlangenartige goettin der spaetzeit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> amentet <> die altaegyptische goettin des westens <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ammit <> die fresserin der verurteilten toten <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> amor <> der roemische liebesgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> amset <> der schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> amun <> eine der urgoetter der achtheit <> von hemopolis <>  <>  <>  <>  <>  <>  <> 50
-ist <> anat <> die schutzgoettin der wilden tiere <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> anedjti <> der ortsgott <> von anedjti <>  <>  <>  <>  <>  <>  <> 50
-ist <> anhor <> der schutzgott der soldaten <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> anhuret <> die lokalgottheit <> von leontopolis <>  <>  <>  <>  <>  <>  <> 50
-ist <> anubis <> der aegyptische gott der totenriten <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> anuket <> eine nubische goettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> apis <> der heilige stier <> von memphis <>  <>  <>  <>  <>  <>  <> 50
-ist <> apo <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> apophis <> ein schlangendaemon <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> apotequil <> gott <> der blitze bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> apu <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> asch <> ein falkenkoepfiger gott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> asklepios <> der griechische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> 50
-ist <> aton <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> atum <> ein schoepfergott aus heliopolis <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> aucha <> der gott <> der gerechtigkeit bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> aucha <> der gott der vergeltung <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> aurora <> die roemische goettin <> der morgenroete <>  <>  <>  <>  <>  <>  <> 50
-ist <> babi <> ein daemonischer gott <> im alten aegypten <>  <>  <>  <>  <>  <>  <> 50
-ist <> bacchus <> der roemische gott des weines <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bacchus <> ein sohn <> von zeus und semele <>  <>  <>  <>  <>  <>  <> 50
-ist <> balder <> der nordische gott des lichtes <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> balder <> der sohn <> von odin <>  <>  <>  <>  <>  <>  <> 50
-ist <> ba pef <> ein eine boshafte gottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bastet <> eine fruchtbarkeitsgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> basti <> einer der 42 totenrichter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bata <> eine stiergottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bat  <>die lokalgoettin ein gaus <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bes <> ein zwergengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> bona dea <> die roemische goettin <> der fruchtbarkeit <>  <>  <>  <>  <>  <>  <> 50
-ist <> buchis <> ein heiliger orakelstier <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> catequil <> gott des donners <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> chascacollyo <> die goettin <> der daemmerung bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> chemy <> ein totenrichter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chentechtai <> ein lokalgott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chepre <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cheribakef <> ein memphitischer baumgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cherti <> ein gott der unterwelt <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chnum <> ein widderkoepfiger schoepfergott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> chons <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> cocomama <> die goettin <> der gesundheit bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> coniraya <> eine gottheit des mondes <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> copacati <> eine seegoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> cuatahulya <> der goetterbote <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> dedwen <> ein nubischer gott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> diana <> die roemische jagdgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> dionysos <> der griechische gott_es weines <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> duamutef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> dunanui <> ein falkengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ein gansgott <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ekkeko <> ein gott der feuerstelle <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> ekkeko <> ein gott des reichtums <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> eros <> der griechische liebesgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> faunus <> der gott <> der waelder und weiden <>  <>  <>  <>  <>  <>  <> 50
-ist <> fortuna <> die roemische gluecksgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> freia <> die nordische liebesgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> geb  <> ein erdgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hah <> der gott der endlosigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hapi <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> harachte <> der gott der morgensonne <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> harendotes <> ein schutzgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> harpokrates <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hathor <> die goettin der liebe <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> heket <> die goettin der geburt <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> helios <> der roemische sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hera <> die gemahlin <> von zeus <>  <>  <>  <>  <>  <>  <> 50
-ist <> herischef <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hesat <> eine kuhgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> hetepbakef <> eine memphitische baumgottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> horus <> der beschuetzer der kinder <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> huitzilopochtli <> der sonnengott <> der azteken <>  <>  <>  <>  <>  <>  <> 50
-ist <> igai <> der herr der oasen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ihi <> der gott der musik <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> inti <> der sonnengott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> isfet <> die gegenspielerin der goettin maat <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> isis <> die schutzherrin der kinder <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> jah <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> jason <> der gemahl <> von medea <>  <>  <>  <>  <>  <>  <> 50
-ist <> jupiter <> der oberste roemische gott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> mama cocha <> die goettin des meeres <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> mama killa <> eine mondgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> mandulis <> eine sonnengottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mars <> der roemische kriegsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> mehen <> ein schlangengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> menhit <> die goettin des kampfes <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> min <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> minerva <> die roemische goettin <> der weisheit <>  <>  <>  <>  <>  <>  <> 50
-ist <> mnevis <> der stier <> von heliopolis <>  <>  <>  <>  <>  <>  <> 50
-ist <> morpheus <> der griechische traumgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nechbet <> die schutzgoettin der pharaonen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nefertem <> der gott der lotusblume <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nehebkau <> der waechter des jenseits<>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neper <> eine korngottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> neptun <> der roemische meeresgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nike <> die griechische siegesgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> nofrete <> die frau <> von echnaton <>  <>  <>  <>  <>  <>  <> 50
-ist <> nut <> eine himmelsgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> odin <> das oberhaupt <> der asen <>  <>  <>  <>  <>  <>  <> 50
-ist <> osiris <> der gott des jenseits <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> pax <> die roemische goettin des friedens <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> persephone <> die griechische goettin <> der unterwelt <>  <>  <>  <>  <>  <>  <> 50
-ist <> poseidon <> der griechische meeresgott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> ra <> der aegyptische sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> re <> der vater aller goetter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> schai <> die goettin des schicksals <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> seth <> gott der wueste <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> sokar <> eine der totengoetter <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> taweret <> schutzgoettin der schwangeren frauen <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> thor <> der nordische gott des donners <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> vesta <> die roemische goettin des herdfeuers <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> vesta <> ein kind <> von uranos und terra <>  <>  <>  <>  <>  <>  <> 50
-ist <> viracocha <> ein schoepfergott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> vulcanus <> der roemische gott <> der vulkane <>  <>  <>  <>  <>  <>  <> 50
-ist <> zaramama <> goettin des getreides <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-ist <> zeus <> der griechische goettervater <>  <>  <>  <>  <>  <>  <>  <> 50
-ist <> zeus <> der oberste griechische gott <>  <>  <>  <>  <>  <>  <>  <> 50
-personifiziert <> die_goettin_iris <> den regenbogen <>  <>  <>  <>  <>  <>  <>  <> 50
-sind <> die asen <> eine goettersippe <>  <>  <>  <>  <>  <>  <>  <> 50
-steht <> odin <> nothing <> an der spitze der nordischen goetterwelt <>  <>  <>  <>  <>  <>  <> 50
-toetete <> theseus <> den minotauros <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> acayoch <> der kriegsgott <> der inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> aeolus <> der roemische gott <> der winde <>  <>  <>  <>  <>  <>  <> 50
-war <> aesculapius <> der roemische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> 50
-war <> aker <> ein erdgott der unterwelt <> im alten aegypten <>  <>  <>  <>  <>  <>  <> 50
-war <> amaa <> ein unterweltgott <> im aegyptischen totenbuch <>  <>  <>  <>  <>  <>  <> 50
-war <> amarr <> der gott des regenbogens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> amaunet <> eine schlangenartige goettin der spaetzeit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> amentet <> die altaegyptische goettin des westens <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> ammit <> die fresserin der verurteilten toten <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> amor <> der roemische liebesgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> amset <> der schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> amun <> eine der urgoetter der achtheit <> von hemopolis <>  <>  <>  <>  <>  <>  <> 50
-war <> anat <> die schutzgoettin der wilden tiere <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> anedjti <> der ortsgott <> von anedjti <>  <>  <>  <>  <>  <>  <> 50
-war <> anhor <> der schutzgott der soldaten <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> anhuret <> die lokalgottheit <> von leontopolis <>  <>  <>  <>  <>  <>  <> 50
-war <> anubis <> der aegyptische gott der totenriten <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> anuket <> eine nubische goettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> apis <> der heilige stier <> von memphis <>  <>  <>  <>  <>  <>  <> 50
-war <> apo <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> apophis <> ein schlangendaemon <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> apotequil <> gott <> der blitze bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> apu <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> asch <> ein falkenkoepfiger gott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> asklepios <> der griechische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> 50
-war <> asklepios <> ein griechischer gott <> der medizin <>  <>  <>  <>  <>  <>  <> 50
-war <> aton <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> atum <> ein schoepfergott aus heliopolis <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> aucha <> der gott <> der gerechtigkeit bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> aucha <> der gott der vergeltung <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> aurora <> die roemische goettin <> der morgenroete <>  <>  <>  <>  <>  <>  <> 50
-war <> babi <> ein daemonischer gott <> im alten aegypten <>  <>  <>  <>  <>  <>  <> 50
-war <> bacchus <> der roemische gott des weines <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> balder <> der nordische gott des lichtes <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> balder <> der sohn <> von odin <>  <>  <>  <>  <>  <>  <> 50
-war <> ba pef <> ein eine boshafte gottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> bastet <> eine fruchtbarkeitsgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> basti <> einer der 42 totenrichter <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> bata <> eine stiergottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> bat  <>die lokalgoettin ein gaus <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> bes <> ein zwergengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> bona dea <> die roemische goettin <> der fruchtbarkeit <>  <>  <>  <>  <>  <>  <> 50
-war <> buchis <> ein heiliger orakelstier <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> catequil <> gott des donners <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> chascacollyo <> die goettin <> der daemmerung bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> chemy <> ein totenrichter <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> chentechtai <> ein lokalgott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> chepre <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> cheribakef <> ein memphitischer baumgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> cherti <> ein gott der unterwelt <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> chnum <> ein widderkoepfiger schoepfergott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> chons <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> cocomama <> die goettin <> der gesundheit bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> coniraya <> eine gottheit des mondes <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> copacati <> eine seegoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> cuatahulya <> der goetterbote <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> dedwen <> ein nubischer gott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> diana <> die roemische jagdgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> dionysos <> der griechische gott_es weines <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> duamutef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> dunanui <> ein falkengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> ein gansgott <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> ekkeko <> ein gott der feuerstelle <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> ekkeko <> ein gott des reichtums <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> eros <> der griechische liebesgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> faunus <> der gott <> der waelder und weiden <>  <>  <>  <>  <>  <>  <> 50
-war <> fortuna <> die roemische gluecksgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> freia <> die nordische liebesgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> geb  <> ein erdgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hah <> der gott der endlosigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hapi <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> harachte <> der gott der morgensonne <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> harendotes <> ein schutzgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> harpokrates <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hathor <> die goettin der liebe <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> heket <> die goettin der geburt <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> helios <> der roemische sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hera <> die gemahlin <> von zeus <>  <>  <>  <>  <>  <>  <> 50
-war <> herischef <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hesat <> eine kuhgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> hetepbakef <> eine memphitische baumgottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> horus <> der beschuetzer der kinder <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> huitzilopochtli <> der sonnengott <> der azteken <>  <>  <>  <>  <>  <>  <> 50
-war <> igai <> der herr der oasen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> ihi <> der gott der musik <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> inti <> der sonnengott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> isfet <> die gegenspielerin der goettin maat <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> isis <> die schutzherrin der kinder <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> jah <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> jason <> der gemahl <> von medea <>  <>  <>  <>  <>  <>  <> 50
-war <> jupiter <> der oberste roemische gott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> mama cocha <> die goettin des meeres <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> mama killa <> eine mondgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> mandulis <> eine sonnengottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> mars <> der roemische kriegsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> mehen <> ein schlangengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> menhit <> die goettin des kampfes <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> min <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> minerva <> die roemische goettin <> der weisheit <>  <>  <>  <>  <>  <>  <> 50
-war <> mnevis <> der stier <> von heliopolis <>  <>  <>  <>  <>  <>  <> 50
-war <> morpheus <> der griechische traumgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> nechbet <> die schutzgoettin der pharaonen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> nefertem <> der gott der lotusblume <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> nehebkau <> der waechter des jenseits<>  <>  <>  <>  <>  <>  <>  <> 50
-war <> neper <> eine korngottheit <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> neptun <> der roemische meeresgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> nike <> die griechische siegesgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> nofrete <> die frau <> von echnaton <>  <>  <>  <>  <>  <>  <> 50
-war <> nut <> eine himmelsgoettin <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> osiris <> der gott des jenseits <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> pax <> die roemische goettin des friedens <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> poseidon <> der griechische meeresgott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> ra <> der aegyptische sonnengott <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> re <> der vater aller goetter <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> schai <> die goettin des schicksals <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> seth <> gott der wueste <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> seth <> nothing <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> sokar <> eine der totengoetter <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> taweret <> schutzgoettin der schwangeren frauen <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> thor <> der nordische gott des donners <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> vesta <> die roemische goettin des herdfeuers <>  <>  <>  <>  <>  <>  <>  <> 50
-war <> viracocha <> ein schoepfergott <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> vulcanus <> der roemische gott <> der vulkane <>  <>  <>  <>  <>  <>  <> 50
-war <> zaramama <> goettin des getreides <> bei den inkas <>  <>  <>  <>  <>  <>  <> 50
-war <> zeus <> der oberste griechische gott <>  <>  <>  <>  <>  <>  <>  <> 50
+entspricht <> diana <> nothing <> der griechischen goettin artemis<>  <>  <>  <>  <>  <>  <> (true)
+heisst <> merkur <> der roemische gott des handels <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aah <> eine der schoepfergoetter <> im alten aegypten <>  <>  <>  <>  <>  <>  <> (true)
+ist <> acayoch <> der kriegsgott <> der inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aeolus <> der roemische gott <> der winde <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aesculapius <> der roemische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aker <> ein erdgott der unterwelt <> im alten aegypten <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amaa <> ein unterweltgott <> im aegyptischen totenbuch <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amarr <> der gott des regenbogens <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amaunet <> eine schlangenartige goettin der spaetzeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amentet <> die altaegyptische goettin des westens <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ammit <> die fresserin der verurteilten toten <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amor <> der roemische liebesgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amset <> der schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> amun <> eine der urgoetter der achtheit <> von hemopolis <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anat <> die schutzgoettin der wilden tiere <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anedjti <> der ortsgott <> von anedjti <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anhor <> der schutzgott der soldaten <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anhuret <> die lokalgottheit <> von leontopolis <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anubis <> der aegyptische gott der totenriten <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> anuket <> eine nubische goettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> apis <> der heilige stier <> von memphis <>  <>  <>  <>  <>  <>  <> (true)
+ist <> apo <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> apophis <> ein schlangendaemon <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> apotequil <> gott <> der blitze bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> apu <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> asch <> ein falkenkoepfiger gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> asklepios <> der griechische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aton <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> atum <> ein schoepfergott aus heliopolis <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aucha <> der gott <> der gerechtigkeit bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aucha <> der gott der vergeltung <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> aurora <> die roemische goettin <> der morgenroete <>  <>  <>  <>  <>  <>  <> (true)
+ist <> babi <> ein daemonischer gott <> im alten aegypten <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bacchus <> der roemische gott des weines <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bacchus <> ein sohn <> von zeus und semele <>  <>  <>  <>  <>  <>  <> (true)
+ist <> balder <> der nordische gott des lichtes <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> balder <> der sohn <> von odin <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ba pef <> ein eine boshafte gottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bastet <> eine fruchtbarkeitsgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> basti <> einer der 42 totenrichter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bata <> eine stiergottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bat  <>die lokalgoettin ein gaus <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bes <> ein zwergengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> bona dea <> die roemische goettin <> der fruchtbarkeit <>  <>  <>  <>  <>  <>  <> (true)
+ist <> buchis <> ein heiliger orakelstier <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> catequil <> gott des donners <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chascacollyo <> die goettin <> der daemmerung bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chemy <> ein totenrichter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chentechtai <> ein lokalgott aus athribis <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chepre <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cheribakef <> ein memphitischer baumgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cherti <> ein gott der unterwelt <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chnum <> ein widderkoepfiger schoepfergott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> chons <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cocomama <> die goettin <> der gesundheit bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> coniraya <> eine gottheit des mondes <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> copacati <> eine seegoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> cuatahulya <> der goetterbote <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> dedwen <> ein nubischer gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> diana <> die roemische jagdgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> dionysos <> der griechische gott_es weines <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> duamutef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> dunanui <> ein falkengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ein gansgott <> nothing <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ekkeko <> ein gott der feuerstelle <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ekkeko <> ein gott des reichtums <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> eros <> der griechische liebesgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> faunus <> der gott <> der waelder und weiden <>  <>  <>  <>  <>  <>  <> (true)
+ist <> fortuna <> die roemische gluecksgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> freia <> die nordische liebesgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> geb  <> ein erdgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hah <> der gott der endlosigkeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hapi <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> harachte <> der gott der morgensonne <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> harendotes <> ein schutzgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> harpokrates <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hathor <> die goettin der liebe <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> heket <> die goettin der geburt <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> helios <> der roemische sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hera <> die gemahlin <> von zeus <>  <>  <>  <>  <>  <>  <> (true)
+ist <> herischef <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hesat <> eine kuhgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> hetepbakef <> eine memphitische baumgottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> horus <> der beschuetzer der kinder <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> huitzilopochtli <> der sonnengott <> der azteken <>  <>  <>  <>  <>  <>  <> (true)
+ist <> igai <> der herr der oasen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ihi <> der gott der musik <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> inti <> der sonnengott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> isfet <> die gegenspielerin der goettin maat <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> isis <> die schutzherrin der kinder <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> jah <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> jason <> der gemahl <> von medea <>  <>  <>  <>  <>  <>  <> (true)
+ist <> jupiter <> der oberste roemische gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mama cocha <> die goettin des meeres <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mama killa <> eine mondgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mandulis <> eine sonnengottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mars <> der roemische kriegsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mehen <> ein schlangengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> menhit <> die goettin des kampfes <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> min <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> minerva <> die roemische goettin <> der weisheit <>  <>  <>  <>  <>  <>  <> (true)
+ist <> mnevis <> der stier <> von heliopolis <>  <>  <>  <>  <>  <>  <> (true)
+ist <> morpheus <> der griechische traumgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nechbet <> die schutzgoettin der pharaonen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nefertem <> der gott der lotusblume <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nehebkau <> der waechter des jenseits<>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neper <> eine korngottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> neptun <> der roemische meeresgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nike <> die griechische siegesgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nofrete <> die frau <> von echnaton <>  <>  <>  <>  <>  <>  <> (true)
+ist <> nut <> eine himmelsgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> odin <> das oberhaupt <> der asen <>  <>  <>  <>  <>  <>  <> (true)
+ist <> osiris <> der gott des jenseits <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> pax <> die roemische goettin des friedens <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> persephone <> die griechische goettin <> der unterwelt <>  <>  <>  <>  <>  <>  <> (true)
+ist <> poseidon <> der griechische meeresgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> ra <> der aegyptische sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> re <> der vater aller goetter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> schai <> die goettin des schicksals <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> seth <> gott der wueste <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> sokar <> eine der totengoetter <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> taweret <> schutzgoettin der schwangeren frauen <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> thor <> der nordische gott des donners <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vesta <> die roemische goettin des herdfeuers <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vesta <> ein kind <> von uranos und terra <>  <>  <>  <>  <>  <>  <> (true)
+ist <> viracocha <> ein schoepfergott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> vulcanus <> der roemische gott <> der vulkane <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zaramama <> goettin des getreides <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zeus <> der griechische goettervater <>  <>  <>  <>  <>  <>  <>  <> (true)
+ist <> zeus <> der oberste griechische gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+personifiziert <> die_goettin_iris <> den regenbogen <>  <>  <>  <>  <>  <>  <>  <> (true)
+sind <> die asen <> eine goettersippe <>  <>  <>  <>  <>  <>  <>  <> (true)
+steht <> odin <> nothing <> an der spitze der nordischen goetterwelt <>  <>  <>  <>  <>  <>  <> (true)
+toetete <> theseus <> den minotauros <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> acayoch <> der kriegsgott <> der inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> aeolus <> der roemische gott <> der winde <>  <>  <>  <>  <>  <>  <> (true)
+war <> aesculapius <> der roemische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> (true)
+war <> aker <> ein erdgott der unterwelt <> im alten aegypten <>  <>  <>  <>  <>  <>  <> (true)
+war <> amaa <> ein unterweltgott <> im aegyptischen totenbuch <>  <>  <>  <>  <>  <>  <> (true)
+war <> amarr <> der gott des regenbogens <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> amaunet <> eine schlangenartige goettin der spaetzeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> amentet <> die altaegyptische goettin des westens <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> ammit <> die fresserin der verurteilten toten <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> amor <> der roemische liebesgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> amset <> der schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> amun <> eine der urgoetter der achtheit <> von hemopolis <>  <>  <>  <>  <>  <>  <> (true)
+war <> anat <> die schutzgoettin der wilden tiere <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> anedjti <> der ortsgott <> von anedjti <>  <>  <>  <>  <>  <>  <> (true)
+war <> anhor <> der schutzgott der soldaten <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> anhuret <> die lokalgottheit <> von leontopolis <>  <>  <>  <>  <>  <>  <> (true)
+war <> anubis <> der aegyptische gott der totenriten <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> anuket <> eine nubische goettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> apis <> der heilige stier <> von memphis <>  <>  <>  <>  <>  <>  <> (true)
+war <> apo <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> apophis <> ein schlangendaemon <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> apotequil <> gott <> der blitze bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> apu <> ein berggott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> asch <> ein falkenkoepfiger gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> asklepios <> der griechische gott <> der heilkunst <>  <>  <>  <>  <>  <>  <> (true)
+war <> asklepios <> ein griechischer gott <> der medizin <>  <>  <>  <>  <>  <>  <> (true)
+war <> aton <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> atum <> ein schoepfergott aus heliopolis <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> aucha <> der gott <> der gerechtigkeit bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> aucha <> der gott der vergeltung <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> aurora <> die roemische goettin <> der morgenroete <>  <>  <>  <>  <>  <>  <> (true)
+war <> babi <> ein daemonischer gott <> im alten aegypten <>  <>  <>  <>  <>  <>  <> (true)
+war <> bacchus <> der roemische gott des weines <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> balder <> der nordische gott des lichtes <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> balder <> der sohn <> von odin <>  <>  <>  <>  <>  <>  <> (true)
+war <> ba pef <> ein eine boshafte gottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> bastet <> eine fruchtbarkeitsgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> basti <> einer der 42 totenrichter <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> bata <> eine stiergottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> bat  <>die lokalgoettin ein gaus <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> bes <> ein zwergengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> bona dea <> die roemische goettin <> der fruchtbarkeit <>  <>  <>  <>  <>  <>  <> (true)
+war <> buchis <> ein heiliger orakelstier <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> catequil <> gott des donners <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> chascacollyo <> die goettin <> der daemmerung bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> chemy <> ein totenrichter <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> chentechtai <> ein lokalgott aus athribis <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> chepre <> ein sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> cheribakef <> ein memphitischer baumgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> cherti <> ein gott der unterwelt <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> chnum <> ein widderkoepfiger schoepfergott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> chons <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> cocomama <> die goettin <> der gesundheit bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> coniraya <> eine gottheit des mondes <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> copacati <> eine seegoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> cuatahulya <> der goetterbote <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> dedwen <> ein nubischer gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> diana <> die roemische jagdgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> dionysos <> der griechische gott_es weines <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> duamutef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> dunanui <> ein falkengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> ein gansgott <> nothing <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> ekkeko <> ein gott der feuerstelle <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> ekkeko <> ein gott des reichtums <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> eros <> der griechische liebesgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> faunus <> der gott <> der waelder und weiden <>  <>  <>  <>  <>  <>  <> (true)
+war <> fortuna <> die roemische gluecksgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> freia <> die nordische liebesgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> geb  <> ein erdgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hah <> der gott der endlosigkeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hapi <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> harachte <> der gott der morgensonne <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> harendotes <> ein schutzgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> harpokrates <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hathor <> die goettin der liebe <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> heket <> die goettin der geburt <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> helios <> der roemische sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hera <> die gemahlin <> von zeus <>  <>  <>  <>  <>  <>  <> (true)
+war <> herischef <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hesat <> eine kuhgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> hetepbakef <> eine memphitische baumgottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> horus <> der beschuetzer der kinder <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> huitzilopochtli <> der sonnengott <> der azteken <>  <>  <>  <>  <>  <>  <> (true)
+war <> igai <> der herr der oasen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> ihi <> der gott der musik <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> inti <> der sonnengott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> isfet <> die gegenspielerin der goettin maat <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> isis <> die schutzherrin der kinder <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> jah <> ein mondgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> jason <> der gemahl <> von medea <>  <>  <>  <>  <>  <>  <> (true)
+war <> jupiter <> der oberste roemische gott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> juventas <> die roemische goettin der jugend <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> kebechsenuef <> ein schutzgott der kanopen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> kemuer <> ein stiergott aus athribis <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> kon <> gott des regens <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> kuk <> ein urgott der finsternis <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> maat <> ein gott der gerechtigkeit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> mafdet <> eine katzengoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> mama allpa <> eine fruchtbarkeitsgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> mama cocha <> die goettin des meeres <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> mama killa <> eine mondgoettin <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> mandulis <> eine sonnengottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> mars <> der roemische kriegsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> mehen <> ein schlangengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> menhit <> die goettin des kampfes <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> min <> ein fruchtbarkeitsgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> minerva <> die roemische goettin <> der weisheit <>  <>  <>  <>  <>  <>  <> (true)
+war <> mnevis <> der stier <> von heliopolis <>  <>  <>  <>  <>  <>  <> (true)
+war <> morpheus <> der griechische traumgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> nechbet <> die schutzgoettin der pharaonen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> nefertem <> der gott der lotusblume <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> nehebkau <> der waechter des jenseits<>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> neper <> eine korngottheit <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> neptun <> der roemische meeresgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> nike <> die griechische siegesgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> nofrete <> die frau <> von echnaton <>  <>  <>  <>  <>  <>  <> (true)
+war <> nut <> eine himmelsgoettin <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> osiris <> der gott des jenseits <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> pax <> die roemische goettin des friedens <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> poseidon <> der griechische meeresgott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> ra <> der aegyptische sonnengott <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> re <> der vater aller goetter <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> schai <> die goettin des schicksals <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> seth <> gott der wueste <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> seth <> nothing <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> sokar <> eine der totengoetter <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> taweret <> schutzgoettin der schwangeren frauen <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> thor <> der nordische gott des donners <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> vesta <> die roemische goettin des herdfeuers <>  <>  <>  <>  <>  <>  <>  <> (true)
+war <> viracocha <> ein schoepfergott <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> vulcanus <> der roemische gott <> der vulkane <>  <>  <>  <>  <>  <>  <> (true)
+war <> zaramama <> goettin des getreides <> bei den inkas <>  <>  <>  <>  <>  <>  <> (true)
+war <> zeus <> der oberste griechische gott <>  <>  <>  <>  <>  <>  <>  <> (true)
