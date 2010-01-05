@@ -1,3 +1,11 @@
+809:
+
+- Changelog aktualisiert
+
+808:
+
+- Bug 478 korrigiert
+
 807:
 
 - Bugfix zu der Loesung fuer Reminder 318
