@@ -1,3 +1,7 @@
+814:
+
+- weiterer Bugfix fuer den Punktbug
+
 813:
 
 - Implementierung von (true) und (false)
