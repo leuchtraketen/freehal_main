@@ -624,7 +624,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         hal2009_clean();
     }
     if (0 == strlen(answer_from_c)) {
-        answer_from_c = "<i>FreeHAL halsleeps... Unable to get an answer. Try again later.</i>";
+        answer_from_c = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
     }
     else {
         last_input_time = 0;
@@ -969,7 +969,15 @@ char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
         }
     }
     cout << "End of waiting for stream." << endl;
-    char* value = strdup(result->at(1).c_str());
+    int i;
+    char* value = (char*)calloc(1000, 1);
+    strcpy(value, "");
+    for (i = 1; i < result->size(); ++i) {
+        strncat(value, result->at(i).c_str(), 999);
+        if (i+1 < result->size()) {
+            strncat(value, ":", 999);
+        }
+    }
     return value;
 }
 

@@ -380,7 +380,7 @@ define action get_tag_part_of_speech with var word, var lang do
                 do wait 1 seconds
                 do unlink with '_input__pos'
                 
-                set new array return_array to split with /<[,]>/, var response
+                set new array return_array to split with /<[,:]>/, var response
                 do return with array return_array
             done
         done
@@ -4781,10 +4781,12 @@ define action shell with var current_language, var path do
             done
             
             if not var do_talk do
-                set new var output_file_name to '_output'
-                set new var output_handle to handle for file name var output_file_name, write
-                print into var output_handle data var saved_data
-                do close with var output_handle
+                if var saved_data and length(var saved_data) > 5 do
+                    set new var output_file_name to '_output'
+                    set new var output_handle to handle for file name var output_file_name, write
+                    print into var output_handle data var saved_data
+                    do close with var output_handle
+                done
             done
             
             print "Do learn: " concat var do_learn concat new line
