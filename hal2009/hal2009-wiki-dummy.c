@@ -29,3 +29,11 @@ int wiki_begin() {
 struct fact** search_facts_wiki(const char* entity, short dummy) {
     return 0;
 }
+
+int _wiki_begin() {
+    return wiki_begin();
+}
+
+struct fact** _search_facts_wiki(const char* entity, short dummy) {
+    return search_facts_wiki(entity, dummy);
+}

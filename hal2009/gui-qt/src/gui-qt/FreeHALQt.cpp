@@ -899,8 +899,26 @@ void MoreInfo::on_w_v_clicked() {
     this->close();
 }
 void MoreInfo::on_w_n_clicked() {
-    freehal::comm_send("HERE_IS_WORD_TYPE:2");
-    cout << "HERE_IS_WORD_TYPE:2" << endl;
+    this->user_interface_dialog->box_genus->show();
+}
+void MoreInfo::on_g_male_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:2:m");
+    cout << "HERE_IS_WORD_TYPE:2,m" << endl;
+    this->close();
+}
+void MoreInfo::on_g_female_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:2:f");
+    cout << "HERE_IS_WORD_TYPE:2,f" << endl;
+    this->close();
+}
+void MoreInfo::on_g_neuter_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:2:s");
+    cout << "HERE_IS_WORD_TYPE:2,s" << endl;
+    this->close();
+}
+void MoreInfo::on_g_unknown_clicked() {
+    freehal::comm_send("HERE_IS_WORD_TYPE:2:q");
+    cout << "HERE_IS_WORD_TYPE:2,q" << endl;
     this->close();
 }
 void MoreInfo::on_w_a_clicked() {
@@ -1419,6 +1437,7 @@ void Helper::slotMoreInfo(QStringList list) {
     dialog_moreinfo->user_interface_dialog->i_word->setText(word);
     dialog_moreinfo->user_interface_dialog->i_source->setText(source);
     dialog_moreinfo->user_interface_dialog->i_sentence->setText(sentence);
+    dialog_moreinfo->user_interface_dialog->box_genus->hide();
     dialog_moreinfo->show();
 }
 

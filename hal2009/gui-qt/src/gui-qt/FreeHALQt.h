@@ -345,6 +345,11 @@ public slots:
     void on_w_c_clicked();
     void on_w_p_clicked();
 
+    void on_g_male_clicked();
+    void on_g_female_clicked();
+    void on_g_neuter_clicked();
+    void on_g_unknown_clicked();
+
 private slots:
     void on_buttonBox_clicked(QAbstractButton* button);
 };

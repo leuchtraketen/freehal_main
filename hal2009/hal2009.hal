@@ -355,7 +355,10 @@ done
 
 define action get_tag_part_of_speech with var word, var lang do
     if (not var word) or (var word matches /^\s*?$/) or exists: "_no_user_ask", end test do
-        do return with "q"
+        set new array return_array to an empty array
+        push into array return_array, "q"
+        push into array return_array, "q"
+        do return with array return_array
     done
     
     set new var output_file_name to '_output__pos'
@@ -376,47 +379,19 @@ define action get_tag_part_of_speech with var word, var lang do
                 do close with var input_handle
                 do wait 1 seconds
                 do unlink with '_input__pos'
-                do return using var response
+                
+                set new array return_array to split with /<[,]>/, var response
+                do return with array return_array
             done
         done
         do wait 1 seconds
         set var timeout to var timeout - 1
     done
     
-    do return with "q"
-done
-
-define action get_tag_genus with var word, var lang do
-    if (not var word) or (var word matches /^\s*?$/) or exists: "_no_user_ask", end test do
-        do return with "q"
-    done
-    
-    set new var output_file_name to '_output__genus'
-    set new var output_handle to handle for file name var output_file_name, write
-    print into var output_handle data var word
-    do close with var output_handle
-
-    set new var timeout to 120
-    while var timeout > 0 do
-        set new var input_file_name to '_input__genus'
-        set new var input_handle to handle for file name var input_file_name, read
-
-        if var input_handle do
-            set new var response to the next line from var input_handle
-            if var response do
-                print "Got input: '" concat var response concat "'"
-                print new line
-                do close with var input_handle
-                do wait 1 seconds
-                do unlink with '_input__genus'
-                do return using var response
-            done
-        done
-        do wait 1 seconds
-        set var timeout to var timeout - 1
-    done
-    
-    do return with "q"
+    set new array return_array to an empty array
+    push into array return_array, "q"
+    push into array return_array, "q"
+    do return with array return_array
 done
 
 set new hash content_of_memory_file to an empty hash
@@ -1395,10 +1370,7 @@ define action compute_tags with var word, var lang, var path do
         if exists: var path concat "/no-tagger.txt", end test or not var is_tagger_on do
             if not var word matches /\s/ do
                 set array tags to an empty array
-                set from array tags first item to get_tag_part_of_speech using var word, var lang
-                if from array tags first item matches /n/ do
-                    set from array tags second item to get_tag_genus using var word, var lang
-                done
+                set from array tags to get_tag_part_of_speech using var word, var lang
                 do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
             done
         done
@@ -1431,11 +1403,7 @@ define action compute_tags with var word, var lang, var path do
     # CODE
     if is an empty array tags do
         set array tags to an empty array
-        set from array tags first item to get_tag_part_of_speech using var word, var lang
-        if from array tags first item matches /n/ do
-            set from array tags second item to get_tag_genus using var word, var lang
-        done
-        # set from array tags first item to 'n'
+        set from array tags to get_tag_part_of_speech using var word, var lang
         do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
     done
     
@@ -2681,8 +2649,13 @@ define action logic with var input, var lang, var path, hash parsed do
     print "File exists now: _input__get_csv"
     print new line
     
-    set new array results to an empty array
-    set new array results_other_modal_verb to an empty array
+    set new array results_true to an empty array
+    set new array results_other_modal_verb_true to an empty array
+    set new array results_false to an empty array
+    set new array results_other_modal_verb_false to an empty array
+    set new array results_maybe to an empty array
+    set new array results_other_modal_verb_maybe to an empty array
+    
     set new var input_file_name to '_input__get_csv'
     set new var input_handle to handle for file name var input_file_name, read
 
@@ -2723,6 +2696,7 @@ define action logic with var input, var lang, var path, hash parsed do
         # Truth goes from 1.0 to 0.0.
         # CODE
         
+        set new var truth to from array rawresult item [ var i ]
         do adjust_truth with array result, from array rawresult item [ var i ], var number_of_clause, 0
         set var i to var i + 1
         
@@ -2762,18 +2736,98 @@ define action logic with var input, var lang, var path, hash parsed do
         if (not from array rawresult item [ 0 ] matches /var modal_verb_template/) and from array rawresult item [ 0 ] matches /([01])([01])([01])([01])([01])/ do
             print "Not matching to: " concat var modal_verb_template
             print new line
-            push into array results_other_modal_verb, array result
+            
+            if var truth > 0.75 do
+                push into array results_other_modal_verb_true, array result
+            done
+            else if var truth < 0.25 do
+                push into array results_other_modal_verb_false, array result
+            done
+            else do
+                push into array results_other_modal_verb_maybe, array result
+            done
+        done
+        else do
+            if var truth > 0.75 do
+                push into array results_true, array result
+            done
+            else if var truth < 0.25 do
+                push into array results_false, array result
+            done
+            else do
+                push into array results_maybe, array result
+            done
+        done
+    done
+    
+    if is an empty array results_true do
+        set array results_true to array results_other_modal_verb_true
+    done
+    if is an empty array results_false do
+        set array results_false to array results_other_modal_verb_false
+    done
+    if is an empty array results_maybe do
+        set array results_maybe to array results_other_modal_verb_maybe
+    done
+    
+    print "Found " concat items of array results_true concat " true sentences" concat new line
+    print "Found " concat items of array results_false concat " false sentences" concat new line
+    print "Found " concat items of array results_maybe concat " maybe sentences" concat new line
+    
+    set new hash in_true to an empty hash
+    set new hash in_false to an empty hash
+    for each new array result in array results_true do
+        set new var expr to from array result second item item [ 0 ] concat ' ' concat from array result second item item [ 1 ]
+        if not from hash in_true item { var expr } do
+            set from hash in_true item { var expr } to an empty array
+        done
+        do push using items of that array: from hash in_true item { var expr } end items of, array result
+        
+        print "A true expression:  " concat var expr concat new line
+    done
+    for each new array result in array results_false do
+        set new var expr to from array result second item item [ 0 ] concat ' ' concat from array result second item item [ 1 ]
+        if not from hash in_false item { var expr } do
+            set from hash in_false item { var expr } to an empty array
+        done
+        do push using items of that array: from hash in_false item { var expr } end items of, array result
+        
+        print "A false expression: " concat var expr concat new line
+    done
+    
+    set new array results to an empty array
+    
+    for each new array result in array results_maybe do
+        set new var expr to from array result second item item [ 0 ] concat ' ' concat from array result second item item [ 1 ]
+        
+        print "A maybe expression: " concat var expr concat new line
+        
+        if from hash in_true item { var expr } do
+            push into array results, items of that array: from hash in_true item { var expr } end items of
+            set from hash in_true item { var expr } to an empty array
+        done
+        else if from hash in_false item { var expr } do
+            push into array results, items of that array: from hash in_false item { var expr } end items of
+            set from hash in_false item { var expr } to an empty array
         done
         else do
             push into array results, array result
         done
     done
     
-    if is an empty array results do
-        set array results to array results_other_modal_verb
+    set new array true_arrays to an empty array
+    set items of array true_arrays to values of hash in_true
+    for each new array result_array in array true_arrays do
+        push into array results, items of array result_array
     done
-
-    print "Found " concat items of array results concat " sentences"
+    set new array false_arrays to an empty array
+    set items of array true_arrays to values of hash in_false
+    for each new array result_array in array false_arrays do
+        push into array results, items of array result_array
+    done
+    
+    
+    print "After t/m/f correction: found " concat items of array results concat " sentences"
     print new line
 
     # TEXT

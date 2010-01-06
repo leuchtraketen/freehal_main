@@ -1,3 +1,8 @@
+813:
+
+- Implementierung von (true) und (false)
+- Gleichzeitiges Abfragen des Genus bei Wortartabfrage
+
 812:
 
 - Bug behoben: Haengenbleiben bei "[Satz] . (true/maybe/false)" statt ""[Satz] (true/maybe/false) ."
