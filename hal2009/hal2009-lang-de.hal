@@ -4274,11 +4274,13 @@ define action check_invoke with var statement do
 done
 
 define action check_sentence_for_weather with var input do
-    if lc(var input) matches /wetter in ([^\s]+(?:\sin\s[^\s]+)?)/ do
+    if lc(var input) matches /wetter in ([^\s]+(?:\san de.\s[^\s]+)?(?:\sin\s[^\s]+)?)/ do
         if $0 do
-            print "I have to check the weather for " concat $0
+            set new var city to $0
+            do regex using var city: /an dem/, "am", :global
+            print "I have to check the weather for " concat var city
             print new line
-            do return with $0
+            do return with var city
         done
         else do
             print "I have to check the weather, but there is a bad syntax: " concat var input
@@ -4320,13 +4322,17 @@ define action check_for_weather with var place, var lang, var path do
             set new var city to handle for file name "weather-city.txt", read
             for each new var line from var city do
                 if var line matches /google_kw / do
+                    print var line concat new line
                     do regex using var line: /google_kw/, "", :global
                     do regex using var line: /[<][^>]*?[>]/, "", :global
                     do regex using var line: /[&].*/, "", :global
-                    do regex using var line: /[^a-zA-Z0-9, ]/, "", :global:i
+                    do regex using var line: /<[^a-zA-Z0-9,\s]>/, "", :global:i
+                    do regex using var line: /^\s+/, "", :global:i
+                    do regex using var line: /\s+$/, "", :global:i
                     do regex using var line: /,/, " in ", :global
                     set new var unwanted_chars to '="'
                     do regex using var line: /<[var unwanted_chars]>/, "", :global
+                    print var line concat new line
                     if var line do
                         set var name to var line
                     done
@@ -4363,15 +4369,15 @@ define action check_for_weather with var place, var lang, var path do
             do close with var city
             
             set new var weather_pro_file to handle for file name var pro_file_name, append
-            print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> 50"
+            print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
-            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad celsius <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad celsius <> in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
-            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
-            print into var weather_pro_file data "ist <> die temperatur <> " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data "ist <> die temperatur <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
-            print into var weather_pro_file data "ist <> das wetter <> " concat var weather concat " bei " concat var temperature concat " grad <> in " concat var name concat " <> 50"
+            print into var weather_pro_file data "ist <> das wetter <> " concat var weather concat " bei " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
             print into var weather_pro_file data new line
             do close with var weather_pro_file
