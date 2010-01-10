@@ -3813,7 +3813,11 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             set from array verbs to an empty array
             set from array verbs first item to "="
             set from hash parsed item { 'verbs' } to array verbs
-            set from hash parsed item { 'adverbs' } to an empty array
+            
+            set new var adverbs to join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
+            if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
+                set from hash parsed item { 'adverbs' } to an empty array
+            done
         done
 
         set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of

@@ -1,3 +1,7 @@
+817:
+
+- bei "="-Fakten werden auch kurze in/von-Adverbien mit abgespeichert
+
 816:
 
 - Bug 481 korrigiert
