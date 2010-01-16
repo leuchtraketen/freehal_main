@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Tue Jan 5 13:50:17 2010
+** Created: Sat Jan 16 21:20:57 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -27,9 +27,11 @@
 #include <QtGui/QPushButton>
 #include <QtGui/QScrollArea>
 #include <QtGui/QScrollBar>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QSpinBox>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
+#include <QtGui/QTableView>
 #include <QtGui/QTextEdit>
 #include <QtGui/QWidget>
 
@@ -116,6 +118,26 @@ public:
     QPushButton *minus;
     QPushButton *flowchart_fact_edit;
     QPushButton *flowchart_fact_delete;
+    QWidget *Database;
+    QGridLayout *gridLayout_7;
+    QLabel *label_14;
+    QLineEdit *subject;
+    QLabel *label_12;
+    QLineEdit *adverbs;
+    QLabel *label_15;
+    QLineEdit *verb;
+    QLabel *label_11;
+    QLineEdit *questionword;
+    QLabel *label_13;
+    QLineEdit *object;
+    QLabel *label_16;
+    QLineEdit *extra;
+    QFrame *frame;
+    QGridLayout *gridLayout_5;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *matchingfacts;
+    QPushButton *allfacts;
+    QTableView *tableView;
     QMenuBar *menubar;
     QMenu *menuDatei;
     QMenu *menuNeu;
@@ -507,6 +529,107 @@ public:
         gridLayout_6->addWidget(scrollArea, 0, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
+        Database = new QWidget();
+        Database->setObjectName(QString::fromUtf8("Database"));
+        gridLayout_7 = new QGridLayout(Database);
+        gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
+        label_14 = new QLabel(Database);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+
+        gridLayout_7->addWidget(label_14, 0, 0, 1, 1);
+
+        subject = new QLineEdit(Database);
+        subject->setObjectName(QString::fromUtf8("subject"));
+
+        gridLayout_7->addWidget(subject, 0, 1, 1, 1);
+
+        label_12 = new QLabel(Database);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+
+        gridLayout_7->addWidget(label_12, 0, 2, 1, 1);
+
+        adverbs = new QLineEdit(Database);
+        adverbs->setObjectName(QString::fromUtf8("adverbs"));
+        sizePolicy3.setHeightForWidth(adverbs->sizePolicy().hasHeightForWidth());
+        adverbs->setSizePolicy(sizePolicy3);
+
+        gridLayout_7->addWidget(adverbs, 0, 3, 1, 1);
+
+        label_15 = new QLabel(Database);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+
+        gridLayout_7->addWidget(label_15, 1, 0, 1, 1);
+
+        verb = new QLineEdit(Database);
+        verb->setObjectName(QString::fromUtf8("verb"));
+
+        gridLayout_7->addWidget(verb, 1, 1, 1, 1);
+
+        label_11 = new QLabel(Database);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+
+        gridLayout_7->addWidget(label_11, 1, 2, 1, 1);
+
+        questionword = new QLineEdit(Database);
+        questionword->setObjectName(QString::fromUtf8("questionword"));
+        sizePolicy3.setHeightForWidth(questionword->sizePolicy().hasHeightForWidth());
+        questionword->setSizePolicy(sizePolicy3);
+
+        gridLayout_7->addWidget(questionword, 1, 3, 1, 1);
+
+        label_13 = new QLabel(Database);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+
+        gridLayout_7->addWidget(label_13, 2, 0, 1, 1);
+
+        object = new QLineEdit(Database);
+        object->setObjectName(QString::fromUtf8("object"));
+
+        gridLayout_7->addWidget(object, 2, 1, 1, 1);
+
+        label_16 = new QLabel(Database);
+        label_16->setObjectName(QString::fromUtf8("label_16"));
+
+        gridLayout_7->addWidget(label_16, 2, 2, 1, 1);
+
+        extra = new QLineEdit(Database);
+        extra->setObjectName(QString::fromUtf8("extra"));
+        sizePolicy3.setHeightForWidth(extra->sizePolicy().hasHeightForWidth());
+        extra->setSizePolicy(sizePolicy3);
+
+        gridLayout_7->addWidget(extra, 2, 3, 1, 1);
+
+        frame = new QFrame(Database);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Plain);
+        gridLayout_5 = new QGridLayout(frame);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        horizontalSpacer = new QSpacerItem(166, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer, 0, 0, 1, 1);
+
+        matchingfacts = new QPushButton(frame);
+        matchingfacts->setObjectName(QString::fromUtf8("matchingfacts"));
+
+        gridLayout_5->addWidget(matchingfacts, 0, 1, 1, 1);
+
+        allfacts = new QPushButton(frame);
+        allfacts->setObjectName(QString::fromUtf8("allfacts"));
+        sizePolicy4.setHeightForWidth(allfacts->sizePolicy().hasHeightForWidth());
+        allfacts->setSizePolicy(sizePolicy4);
+
+        gridLayout_5->addWidget(allfacts, 0, 2, 1, 1);
+
+        tableView = new QTableView(frame);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+
+        gridLayout_5->addWidget(tableView, 1, 0, 1, 3);
+
+
+        gridLayout_7->addWidget(frame, 3, 0, 1, 4);
+
+        tabWidget->addTab(Database, QString());
 
         gridLayout_8->addWidget(tabWidget, 0, 0, 2, 1);
 
@@ -619,6 +742,15 @@ public:
         flowchart_fact_edit->setText(QApplication::translate("freehalWindow", "Save fact", 0, QApplication::UnicodeUTF8));
         flowchart_fact_delete->setText(QApplication::translate("freehalWindow", "Delete fact", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("freehalWindow", "Chart", 0, QApplication::UnicodeUTF8));
+        label_14->setText(QApplication::translate("freehalWindow", "Subjekt:", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("freehalWindow", "Adv. B.", 0, QApplication::UnicodeUTF8));
+        label_15->setText(QApplication::translate("freehalWindow", "Verb:", 0, QApplication::UnicodeUTF8));
+        label_11->setText(QApplication::translate("freehalWindow", "Fragewort:", 0, QApplication::UnicodeUTF8));
+        label_13->setText(QApplication::translate("freehalWindow", "Objekt:", 0, QApplication::UnicodeUTF8));
+        label_16->setText(QApplication::translate("freehalWindow", "Zusatz:", 0, QApplication::UnicodeUTF8));
+        matchingfacts->setText(QApplication::translate("freehalWindow", "passende Fakten", 0, QApplication::UnicodeUTF8));
+        allfacts->setText(QApplication::translate("freehalWindow", "alle Fakten", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(Database), QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
         menuDatei->setTitle(QApplication::translate("freehalWindow", "File", 0, QApplication::UnicodeUTF8));
         menuNeu->setTitle(QApplication::translate("freehalWindow", "New", 0, QApplication::UnicodeUTF8));
         menuExtras->setTitle(QApplication::translate("freehalWindow", "Tools", 0, QApplication::UnicodeUTF8));

@@ -816,6 +816,9 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
 
 struct fact** disk_search_clauses(int rel) {
     int limit = 8000;
+    if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
+        limit = 100000;
+    }
     struct fact** clauses = calloc(1, sizeof(struct fact*)*(limit+1));
     int position = 0;
 

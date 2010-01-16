@@ -756,7 +756,7 @@ struct DATASET hal2009_get_csv(char* csv_request) {
     return set;
 }
 
-const char* hal2009_make_csv(struct DATASET* set) {
+char* hal2009_make_csv(struct DATASET* set) {
     if (set->err == TOOMUCH) {
         return strdup("/err:TOOMUCH\n");
     }

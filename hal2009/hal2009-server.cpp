@@ -777,7 +777,35 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         if ( result->at(0) == string("EXIT") ) {
             exit(0);
         }
-        
+
+        if ( result->at(0) == string("CSV") ) {
+            char* request = strdup(result->at(1).c_str());
+            struct DATASET set = hal2009_get_csv(request);
+            char* csv_data = (char*)hal2009_make_csv(&set);
+            (*stream) << "CSV_NEW_RESULT:." << endl;
+            cout << "CSV_NEW_RESULT:." << endl;
+            int pos;
+            int last_pos = 0;
+            for (pos = 0; csv_data[pos]; ++pos) {
+                if (csv_data[pos] == '\n') {
+                    csv_data[pos] = '\0';
+                    
+                    (*stream) << "CSV_RESULT:" << csv_data + last_pos << endl;
+                    cout << "CSV_RESULT:" << csv_data + last_pos << endl;
+                    
+                    if (csv_data[pos+1]) last_pos = pos+1;
+                    else                 last_pos = -1;
+                }
+            }
+            if (last_pos >= 0) {
+                (*stream) << "CSV_RESULT:" << csv_data + last_pos << endl;
+                cout << "CSV_RESULT:" << csv_data + last_pos << endl;
+            }
+            if (request) free(request);
+            (*stream) << "CSV_END_RESULT:." << endl;
+            cout << "CSV_END_RESULT:." << endl;
+        }
+
         if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
@@ -1113,7 +1141,7 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_output__get_csv")) {
         hal2009_set_text_language(signal_handler_tlanguage);
         struct DATASET set = hal2009_get_csv(text);
-        const char* csv_data = hal2009_make_csv(&set);
+        char* csv_data = hal2009_make_csv(&set);
         FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
         halclose(target);

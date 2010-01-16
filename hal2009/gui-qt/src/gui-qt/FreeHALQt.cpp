@@ -648,6 +648,12 @@ QScrollArea* scrollArea = new QScrollArea;
     www_surf_mode =  (0 == strcmp(check_config(freehal::string("use-www"), "1"), "1"));
     dialog_options->user_interface_dialog->mode_offline->setCheckState(offline_mode ? Qt::Checked : Qt::Unchecked);
     dialog_options->user_interface_dialog->mode_www->setCheckState(www_surf_mode ? Qt::Checked : Qt::Unchecked);
+
+    int limit_amount_of_answers = (0 == strcmp(check_config(freehal::string("limit-amount-of-answers"), "1"), "1"));
+    dialog_options->user_interface_dialog->limit_amount_of_answers->setCheckState(limit_amount_of_answers ? Qt::Checked : Qt::Unchecked);
+
+    init_db_tool();
+    main_window->setupMenu();
     
     make_connection();
 
@@ -1368,6 +1374,16 @@ void freehal::comm_new(freehal::string s) {
             //emit helper->signalLogScrollEnd(QString("line") + g);
             ++g;
         }
+        if (s.contains("CSV_NEW_RESULT")) {
+            clear_dataset();
+            factmodel->setData(make_dataset());
+        }
+        if (s.contains("CSV_RESULT")) {
+            add_to_dataset(factmodel->getData(), s.ref().c_str()+11);
+        }
+        if (s.contains("CSV_END_RESULT")) {
+            factmodel->updateData();
+        }
         if (s.contains("HERE_IS_DB_STRING")) {
         }
         if (s.contains("HERE_IS_ONLINE_DB_STRING")) {
@@ -1474,3 +1490,631 @@ void Dialog1::on_ask_frame_toggled(bool checked)
 {
     set_config(freehal::string("more-info"), ((checked) ? "frame" : "dialog"));
 }
+
+void Dialog1::on_limit_amount_of_answers_toggled(bool checked)
+{
+    set_config(freehal::string("limit-amount-of-answers"), ((checked) ? "1" : "0"));
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Database Tab (DB Tool)
+
+FactModel* factmodel;
+
+void init_db_tool()
+{
+    factmodel = new FactModel();
+    main_window->user_interface_main_window->tableView->setModel(factmodel);
+}
+
+int FactModel::count() const
+{
+    return (dataset->size);
+}
+
+int FactModel::rowCount(const QModelIndex &parent) const
+{
+    return count();
+}
+
+int FactModel::columnCount(const QModelIndex &parent) const
+{
+    return 7;
+}
+
+QVariant FactModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid())
+        return QVariant();
+
+    if (index.row() >= count())
+        return QVariant();
+
+    if (role == Qt::DisplayRole)
+        return index.internalPointer()?QString((char*)index.internalPointer()):QString("");
+    else
+        return QVariant();
+}
+
+QStringList stem(QStringList list) {
+    for (int u = 0; u < list.size(); ++u) {
+        QString word(list[u]);
+
+        // Delete articles...
+        {
+            if (word.size() >= 6) {
+                word.replace(QRegExp("^ein", Qt::CaseInsensitive), "*");
+                word.replace(QRegExp("ein",  Qt::CaseInsensitive), "ei*");
+                word.replace(QRegExp("ein$", Qt::CaseInsensitive), "*");
+            }
+            word.replace(QRegExp("^(der|die|das|den|dem|des)$", Qt::CaseInsensitive), "");
+
+            if (word.size() <= 3) {
+                continue;
+            }
+
+            // That's the stemming algorithm
+            if (word.contains(QRegExp("((ein)|(ie.)|(tes))$", Qt::CaseInsensitive))) {
+                continue;
+            }
+
+            if (word.contains(QRegExp("ei.$", Qt::CaseInsensitive))) {
+                continue;
+            }
+
+            word.replace(QRegExp("ern$", Qt::CaseInsensitive), "*");
+            word.replace(QRegExp("e[mnrs]$", Qt::CaseInsensitive), "*");
+            word.replace(QRegExp("e$", Qt::CaseInsensitive), "*");
+            if (word.contains(QRegExp("[bdfghklmnrt]s$", Qt::CaseInsensitive))) {
+                word.replace(QRegExp("s$", Qt::CaseInsensitive), "*");
+            }
+            word.replace(QRegExp("est$", Qt::CaseInsensitive), "*");
+            word.replace(QRegExp("e[nr]$", Qt::CaseInsensitive), "*");
+            if (word.contains(QRegExp("[bdfghklmnt]st$", Qt::CaseInsensitive))) {
+                if (word.size() > 5) {
+                    word.replace(QRegExp("st$", Qt::CaseInsensitive), "*");
+                }
+            }
+            if (word.contains(QRegExp("(end|ung)$", Qt::CaseInsensitive))) {
+                word.replace(QRegExp("(end|ung)$", Qt::CaseInsensitive), "*");
+
+                if (word.contains(QRegExp("ig$", Qt::CaseInsensitive)) && !word.contains(QRegExp("eig$", Qt::CaseInsensitive))) {
+                    word.replace(QRegExp("ig$", Qt::CaseInsensitive), "*");
+                }
+            }
+            if (word.contains(QRegExp("(ig|ik|isch)$", Qt::CaseInsensitive)) && !word.contains(QRegExp("e(ig|ik|isch)$", Qt::CaseInsensitive))) {
+                word.replace(QRegExp("((ig|ik|isch)$", Qt::CaseInsensitive), "*");
+            }
+            word.replace(QRegExp("(lich|heit)$", Qt::CaseInsensitive), "*");
+            word.replace(QRegExp("(lich|ig)?keit$", Qt::CaseInsensitive), "*");
+
+        }
+    }
+    QString str = list.join(" ");
+    str.replace(QRegExp("[*]\\s/", Qt::CaseInsensitive), "*");
+    str.replace(QRegExp("\\s[*]/", Qt::CaseInsensitive), "*");
+    str.replace(QRegExp("^\\s+/", Qt::CaseInsensitive), "");
+    str.replace(QRegExp("\\s+$/", Qt::CaseInsensitive), "");
+    list = str.split(" ");
+    return list;
+}
+
+QModelIndex FactModel::index(int row, int column, const QModelIndex & parent = QModelIndex()) const
+{
+    if (indexcache.contains(row)) {
+        if (indexcache.value(row)->value(column)) {
+            if (indexcache.value(row)->value(column)->size()) {
+                QString* ref = indexcache.value(row)->at(column);
+                QModelIndex index = createIndex(row, column, (void*)(ref->toStdString().c_str()));
+
+                return index;
+            }
+        }
+    }
+    return createIndex(row, column, 0);
+}
+
+void FactModel::computeIndex(int row, int column)
+{
+    int column_true = column;
+    switch (column_true) {
+        case 6:     column_true = 0;     break;
+        case 2:     column_true = 1;     break;
+        case 1:     column_true = 2;     break;
+        case 11:    column_true = 3;     break;
+        case 3:     column_true = 4;     break;
+        case 4:     column_true = 5;     break;
+        case 7:     column_true = 6;     break;
+        case 5:     column_true = -1;    break;
+        case 8:     column_true = -1;    break;
+        case 9:     column_true = -1;    break;
+        case 10:    column_true = -1;    break;
+    }
+
+    if (column_true < 0)
+        return;
+
+    QString ref;
+
+    if (dataset->data) {
+        if (dataset->data[row]) {
+            if (dataset->data[row][column==11?1:column]) {
+                char str[128];
+                strncpy(str, dataset->data[row][column==11?1:column], 127);
+                ref = QString(str);
+                while (ref.size() <= 8) {
+                    ref += " ";
+                }
+            }
+        }
+    }
+
+    if (column == 7) {
+        if (ref.contains("1")) {
+            ref = "true     ";
+        }
+        else if (ref.contains("5")) {
+            ref = "maybe    ";
+        }
+        else {
+            ref = "false    ";
+        }
+    }
+
+    if (column == 1 && ref.size() >= 6) {
+        ref.resize(ref.size()-5);
+        while (ref.size() <= 8) {
+            ref += " ";
+        }
+    }
+
+    if (column == 11 && ref.size() >= 6) {
+        QStringList modal_verbs;
+        if (ref[ref.size()-5+0] == '1') {
+            modal_verbs.push_back("must / muessen");
+        }
+        if (ref[ref.size()-5+1] == '1') {
+            modal_verbs.push_back("want / wollen");
+        }
+        if (ref[ref.size()-5+2] == '1') {
+            modal_verbs.push_back("can / koennen");
+        }
+        if (ref[ref.size()-5+3] == '1') {
+            modal_verbs.push_back("may / duerfen");
+        }
+        if (ref[ref.size()-5+4] == '1') {
+            modal_verbs.push_back("should / soll(t)en");
+        }
+        ref = modal_verbs.join(", ");
+    }
+
+    if (ref.contains("NULL"))
+        ref.clear();
+
+    /*if (!indexcache.contains(row)) {
+        QList<QString*>* l = new QList<QString*>;
+        for (int z = 0; z <= 11; ++z) {
+            l->push_back(0);
+        }
+        indexcache.insert(row, l);
+    }
+    QList<QString*>* l = indexcache.value(row);
+    (*l)[column_true] = new QString(ref);
+    indexcache.insert(row, l);
+    */
+
+    QList<QString*>* l = indexcache.value(row);
+    if (l) {
+        (*l)[column_true]->append(ref);
+        printf("col: %d\tcol_true: %d\tref:%s\n", column, column_true, ref.toStdString().c_str());
+    }
+}
+
+QVariant FactModel::headerData(int section, Qt::Orientation orientation,
+                                      int role) const
+{
+    if (role != Qt::DisplayRole)
+        return QVariant();
+
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+            case 0: return QString("File");
+            case 1: return QString("Subject");
+            case 2: return QString("Verben");
+            case 3: return QString("Modalverben");
+            case 4: return QString("Object");
+            case 5: return QString("Adverbs");
+            case 6: return QString("Truth");
+            default: return QString("");
+        }
+    }
+    else {
+        char* pk = "?";
+        if (dataset->data) {
+            if (dataset->data[section]) { // row
+                pk = (char*)(dataset->data[section][0]); // column
+            }
+        }
+        return QString(pk);
+    }
+}
+
+struct DATASET* FactModel::getData() {
+    return dataset;
+}
+
+bool FactModel::hasData() {
+    return dataset->size ? 1 : 0;
+}
+
+void FactModel::setData(struct DATASET* set) {
+    dataset = set;
+}
+
+void FactModel::updateData() {
+    beginRemoveRows(QModelIndex(), 0, count()-1);
+    endRemoveRows();
+
+    QList<QList<QString*>*> values = indexcache.values();
+    for (int i = 0; i < values.size(); ++i) {
+        if (values.at(i)) {
+            for (int j = 0; j < values.at(i)->size(); ++j) {
+                if (values.at(i)->at(j)) {
+                    delete(values.at(i)->at(j));
+                }
+            }
+
+            delete(values.at(i));
+        }
+    }
+    indexcache.clear();
+
+
+    int row = 0;
+    while (row < dataset->size) {
+        QList<QString*>* l = new QList<QString*>;
+        for (int z = 0; z <= 11; ++z) {
+            l->push_back(new QString());
+        }
+        indexcache.insert(row, l);
+
+        int col = 1;
+        while (col <= 11) {
+            computeIndex(row, col);
+            ++col;
+        }
+        ++row;
+    }
+
+    if (dataset->size) {
+        beginInsertRows(QModelIndex(), 0, count()-1);
+        endInsertRows();
+        printf("Rows: %d\n", count());
+    }
+}
+
+void Fact::delete_fact() {
+    char pkey[LINE_SIZE];
+    strncpy(pkey, pk, LINE_SIZE-1);
+    freehal::comm_send("DELETE:FACT:PK:" + freehal::string(pkey));
+
+    /*
+    int v_value = main_window->user_interface_main_window->tableView->verticalScrollBar()->value();
+    if (window->getLastProcess() == MATCHING_FACTS) {
+        window->on_matchingfacts_clicked();
+    }
+    main_window->user_interface_main_window->tableView->verticalScrollBar()->setValue(v_value);
+    */
+}
+
+enum LAST_PROCESS FreeHALWindow::getLastProcess() {
+    return lastprocess;
+}
+
+void FreeHALWindow::setLastProcess(enum LAST_PROCESS p) {
+    lastprocess = p;
+}
+
+void FreeHALWindow::setupMenu()
+{
+    user_interface_main_window->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
+    this->connect(user_interface_main_window->tableView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(menuClick(QPoint)));
+}
+
+void FreeHALWindow::menuClick(QPoint p) {
+    QModelIndex index = user_interface_main_window->tableView->indexAt(p);
+
+    //if (index.column() == 0) {
+    if (factmodel->hasData()) {
+        Fact fact((char*)(factmodel->getData()->data[index.row()][0]), this);
+        Fact* fact_ref = &fact;
+
+        QAction* deleteAct = new QAction(tr("&Delete"), this);
+        deleteAct->setStatusTip(tr("Delete from database and .pro file"));
+        connect(deleteAct, SIGNAL(triggered()), fact_ref, SLOT(delete_fact()));
+
+        QMenu menu(this);
+        menu.addAction(deleteAct);
+        p.setY(p.y()+40);
+        p.setX(p.x()+50);
+        menu.exec(user_interface_main_window->tableView->mapToGlobal(p));
+
+        printf("pk: %s\n", (char*)(factmodel->getData()->data[index.row()][0]));
+    }
+}
+
+QString FreeHALWindow::make_csv()
+{
+    bool must = false;
+    bool want = false;
+    bool can = false;
+    bool may = false;
+    bool should = false;
+
+    QStringList verbs = user_interface_main_window->verb->text().split(" ");
+    for (int i = 0; i < verbs.size(); ++i) {
+        if (!QString(verbs[i]).contains("|")) {
+            QString verb(verbs[i]);
+
+            if (verb.contains("must") || verb.contains("muss") || verb.contains("muess")) {
+                must = true;
+                verbs.removeAt(i);
+                --i;
+                continue;
+            }
+            if (verb.contains("want") || verb.contains("will") || verb.contains("woll")) {
+                want = true;
+                verbs.removeAt(i);
+                --i;
+                continue;
+            }
+            if (verb.contains("kann") || verb.contains("koenn") || verb.contains("can")) {
+                can = true;
+                verbs.removeAt(i);
+                --i;
+                continue;
+            }
+            if (verb.contains("may") || verb.contains("darf") || verb.contains("duerf")) {
+                may = true;
+                verbs.removeAt(i);
+                --i;
+                continue;
+            }
+            if (verb.contains("should") || verb.contains("soll")) {
+                should = true;
+                verbs.removeAt(i);
+                --i;
+                continue;
+            }
+
+            verb.replace(QRegExp("enen$", Qt::CaseInsensitive), "");
+            verb.replace(QRegExp("en$", Qt::CaseInsensitive), "");
+            verb.replace(QRegExp("st$", Qt::CaseInsensitive), "");
+            verb.replace(QRegExp("t$", Qt::CaseInsensitive), "");
+            verb.replace(QRegExp("n$", Qt::CaseInsensitive), "");
+            verb.replace(QRegExp("e$", Qt::CaseInsensitive), "");
+
+            if (verb == "bi" || verb == "is" || verb == "sind" || verb.contains("heis")) {
+                verb = "bin|bist|ist|sind|seid|sein|heisst|heisse|heissen";
+            }
+            else if (verb == "gib" || verb == "geb") {
+                verb = "gebe|geben|gibst|gib|gibt|gebt";
+            }
+            else {
+                QStringList possibilities;
+                possibilities.push_back(verb + "enen");
+                possibilities.push_back(verb + "en");
+                possibilities.push_back(verb + "st");
+                possibilities.push_back(verb + "t");
+                possibilities.push_back(verb + "n");
+                possibilities.push_back(verb + "e");
+                possibilities.push_back(verb);
+                verb = possibilities.join("|");
+            }
+
+            verbs[i] = verb;
+        }
+    }
+    QString verb = verbs.join(" ").toLower();
+
+    QString subject = stem(user_interface_main_window->subject->text().split(" ")).join(" ").toLower();
+    QString object = stem(user_interface_main_window->object->text().split(" ")).join(" ").toLower();
+    QString adverbs = user_interface_main_window->adverbs->text().toLower();
+    QString questionword = user_interface_main_window->questionword->text().toLower();
+    QString extra = user_interface_main_window->extra->text().toLower();
+    QString context = "default";
+
+    if (subject.size() == 0 && object.size()) {
+        subject = object;
+        object.clear();
+    }
+
+    if (questionword.contains("wie") || questionword.contains("how")) {
+        context = "q_how";
+    }
+    else if (questionword.contains("welch")) {
+        context = "q_what_prep";
+    }
+    else if (questionword.contains("woher")) {
+        context = "q_from_where";
+    }
+    else if (questionword.contains("wo") || questionword.contains("where")) {
+        context = "q_where";
+    }
+    else if (questionword.contains("wer") || questionword.contains("who")) {
+        context = "q_who";
+    }
+    else if (questionword.contains("was") || questionword.contains("what")) {
+        if (user_interface_main_window->verb->text().contains("bist")) { // <-- must be "ui->verb->text()", not "verb" !!!
+            context = "q_what_exactly";
+        }
+        else {
+            context = "q_what_weakly";
+        }
+    }
+    else if (extra.contains("enumall")) {
+        context = "enum_all";
+    }
+
+    QString csv;
+    csv += verb.size() ? verb : "0";
+    csv += "^";
+    csv += subject.size() ? subject : "0";
+    csv += "^";
+    csv += object.size() ? object : "0";
+    csv += "^";
+    csv += adverbs.size() ? adverbs : "0";
+    csv += "^";
+    csv += extra.size() ? extra : "0";
+    csv += "^";
+    csv += context;
+    csv += "^0^"; // <- primary key
+    csv +=   want ? "1" : "0";
+    csv += "^";
+    csv +=   must ? "1" : "0";
+    csv += "^";
+    csv +=    can ? "1" : "0";
+    csv += "^";
+    csv +=    may ? "1" : "0";
+    csv += "^";
+    csv += should ? "1" : "0";
+    return csv;
+}
+
+void* send_csv_request(char* csv_request) {
+    freehal::comm_send("CSV:" + freehal::string(csv_request));
+    cout << endl << csv_request << endl << endl;
+}
+
+void FreeHALWindow::on_matchingfacts_clicked()
+{
+    setLastProcess(MATCHING_FACTS);
+    QString csv = make_csv();
+
+    char* csv_request = strdup(csv.toStdString().c_str());
+    boost::thread t_v(boost::bind(send_csv_request, csv_request));
+}
+
+
+void FreeHALWindow::on_allfacts_clicked()
+{
+    setLastProcess(ALL_FACTS);
+    QString csv = make_csv();
+    csv += "^";
+    csv += "everything";
+
+    char* csv_request = strdup(csv.toStdString().c_str());
+    boost::thread t_v(boost::bind(send_csv_request, csv_request));
+}
+
+void FreeHALWindow::on_subject_returnPressed()
+{
+    on_allfacts_clicked();
+}
+
+void FreeHALWindow::on_verb_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHALWindow::on_object_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHALWindow::on_adverbs_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHALWindow::on_questionword_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void FreeHALWindow::on_extra_returnPressed()
+{
+    on_matchingfacts_clicked();
+}
+
+void clear_dataset() {
+    struct DATASET* set = factmodel->getData();
+    if (set && set->data) {
+        int a;
+        for (a = 0; a < set->size; ++a) {
+            int b;
+            for (b = 0; b < set->column_count; ++b) {
+                free(set->data[a][b]);
+                set->data[a][b] = 0;
+            }
+            free(set->data[a]);
+            set->data[a] = 0;
+        }
+
+        free(set->data);
+        set->data = 0;
+    }
+}
+
+struct DATASET* make_dataset() {
+    struct DATASET* set = (struct DATASET*)malloc(sizeof(struct DATASET));
+    set->size = 0;
+    set->column_count = 8;
+    set->data = (char***)calloc(sizeof(char*), max_amount_of_answers_in_db_tool+1);
+    set->err  = 0;
+
+    int record = 0;
+    int record_item = 0;
+    int record_item_pos = 0;
+    set->data[record] = (char**)calloc(sizeof(char*), 100);
+    set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+
+    return set;
+}
+void add_to_dataset(struct DATASET* set, const char* csv) {
+
+    if (set->size >= max_amount_of_answers_in_db_tool) {
+        return;
+    }
+
+    cout << csv << endl;
+
+    int length;
+    int record = set->size;
+    int record_item = 0;
+    int record_item_pos = 0;
+    set->data[record] = (char**)calloc(sizeof(char*), 100);
+    set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+    for (length = 0; csv[length]; ++length) {
+        if (csv[length] == '|') {
+            ++record;
+            set->data[record] = (char**)calloc(sizeof(char*), 100);
+            record_item = 0;
+            record_item_pos = 0;
+            set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+            continue;
+        }
+        if (csv[length] == '^') {
+            record_item_pos = 0;
+            ++record_item;
+            set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+            continue;
+        }
+
+        if (record_item_pos < 99 && record_item < 8) {
+            set->data[record][record_item][record_item_pos] = csv[length];
+
+            if (set->data[record][record_item][record_item_pos] == ';') {
+                set->data[record][record_item][record_item_pos] = ':';
+            }
+
+            ++record_item_pos;
+        }
+    }
+
+    ++(set->size);
+}
+

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'options.ui'
 **
-** Created: Sun Jan 3 16:37:12 2010
+** Created: Sat Jan 16 19:51:43 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -53,6 +53,10 @@ public:
     QRadioButton *ask_dialog;
     QSpacerItem *verticalSpacer_4;
     QSpacerItem *verticalSpacer;
+    QGroupBox *groupBox_4;
+    QVBoxLayout *verticalLayout_2;
+    QCheckBox *limit_amount_of_answers;
+    QSpacerItem *verticalSpacer_5;
     QWidget *tab;
     QGridLayout *gridLayout4;
     QGroupBox *groupBox_3;
@@ -158,6 +162,23 @@ public:
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         gridLayout1->addItem(verticalSpacer, 2, 0, 1, 1);
+
+        groupBox_4 = new QGroupBox(General);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        verticalLayout_2 = new QVBoxLayout(groupBox_4);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        limit_amount_of_answers = new QCheckBox(groupBox_4);
+        limit_amount_of_answers->setObjectName(QString::fromUtf8("limit_amount_of_answers"));
+        limit_amount_of_answers->setChecked(true);
+
+        verticalLayout_2->addWidget(limit_amount_of_answers);
+
+        verticalSpacer_5 = new QSpacerItem(20, 60, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_5);
+
+
+        gridLayout1->addWidget(groupBox_4, 1, 1, 1, 1);
 
         tabWidget->addTab(General, QString());
         tab = new QWidget();
@@ -274,6 +295,8 @@ public:
         groupBox_2->setTitle(QApplication::translate("Dialog", "When more Information is needed", 0, QApplication::UnicodeUTF8));
         ask_frame->setText(QApplication::translate("Dialog", "Ask in a side frame", 0, QApplication::UnicodeUTF8));
         ask_dialog->setText(QApplication::translate("Dialog", "Ask in a Dialog window", 0, QApplication::UnicodeUTF8));
+        groupBox_4->setTitle(QApplication::translate("Dialog", "Limits", 0, QApplication::UnicodeUTF8));
+        limit_amount_of_answers->setText(QApplication::translate("Dialog", "Limit the amount of answers", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(General), QApplication::translate("Dialog", "General", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("Dialog", "Internet", 0, QApplication::UnicodeUTF8));
         mode_offline->setText(QApplication::translate("Dialog", "Offline Mode", 0, QApplication::UnicodeUTF8));

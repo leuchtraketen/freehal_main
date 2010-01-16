@@ -93,6 +93,11 @@ extern auto_ptr<QString> freehalthread1_talking;
 void make_connection();
 void check_new_version();
 
+// for DB Tool
+class FactModel;
+extern FactModel* factmodel;
+enum LAST_PROCESS { MATCHING_FACTS, ALL_FACTS };
+
 namespace freehal {
 	void display_sentence(freehal::string);
 	void comm_new(freehal::string);
@@ -185,6 +190,34 @@ private slots:
     void on_plus_clicked();
     void on_minus_clicked();
     void on_flowchart_fact_pk_valueChanged(int );
+
+// DB Tool
+
+
+
+public:
+    void setupMenu();
+    Ui::freehalWindow* getDbToolUi();
+    enum LAST_PROCESS getLastProcess();
+    void setLastProcess(enum LAST_PROCESS p);
+    QString make_csv();
+
+private:
+    enum LAST_PROCESS lastprocess;
+
+public slots:
+    void on_matchingfacts_clicked();
+    void menuClick(QPoint);
+
+private slots:
+    void on_extra_returnPressed();
+    void on_questionword_returnPressed();
+    void on_adverbs_returnPressed();
+    void on_object_returnPressed();
+    void on_verb_returnPressed();
+    void on_subject_returnPressed();
+    void on_allfacts_clicked();
+
 };
 
 class Dialog1 : public QDialog {
@@ -198,6 +231,7 @@ public slots:
 //    void on_fullscreen_clicked();
     void on_ask_frame_toggled(bool checked);
     void on_ask_dialog_toggled(bool checked);
+    void on_limit_amount_of_answers_toggled(bool checked);
 
     void on_clear_screen_clicked();
     void on_proxy_ok_clicked();
@@ -206,7 +240,7 @@ public slots:
     void on_speech_stateChanged(int);
     void on_access_online_db_toggled();
 
-friend void freehal::comm_new(freehal::string);
+    friend void freehal::comm_new(freehal::string);
 };
 
 class Dialog3 : public QDialog {
@@ -291,7 +325,7 @@ public slots:
 
 
 signals:
-	void signalNewVersionOnline(QString);
+    void signalNewVersionOnline(QString);
 
     void signalTalkingScrollEndTalk(QString);
     void signalAnswerTalk(QString);
@@ -388,4 +422,109 @@ class FlowChart : public QWidget {
   public slots:
     void setY(int);
 };
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Database Tab (DB Tool)
+
+const int max_amount_of_answers_in_db_tool = 100000;
+
+void init_db_tool();
+
+struct DATASET {
+    char*** data;
+    long int size;
+    long int column_count;
+    long int timeout;
+    int err;
+};
+
+void clear_dataset();
+struct DATASET* make_dataset();
+void add_to_dataset(struct DATASET* set, const char* csv);
+
+#define MAX_CLAUSES 10
+#define LINE_SIZE 4096
+#define FACT struct RECORD
+#define SHORTFACT struct RECORD_short
+#define factsize sizeof(FACT)+32
+struct RECORD;
+struct RECORD {
+    char verb[LINE_SIZE];
+    char subjects[LINE_SIZE];
+    char objects[LINE_SIZE];
+    char adverbs[LINE_SIZE];
+    char from[LINE_SIZE];
+    char extra[LINE_SIZE];
+    char questionword[LINE_SIZE];
+    char context[LINE_SIZE];
+    char pkey[LINE_SIZE];
+    int prio;
+    void* clauses[MAX_CLAUSES];
+    int num_clauses;
+    short type;
+    int hash_clauses;
+    double truth;
+
+    short verb_flag_want;
+    short verb_flag_must;
+    short verb_flag_can;
+    short verb_flag_may;
+    short verb_flag_should;
+
+    short everything_q;
+};
+
+class FactModel;
+class Fact;
+
+class FactModel : public QAbstractTableModel
+{
+    Q_OBJECT
+
+public:
+    FactModel(QObject *parent = 0)
+        : QAbstractTableModel(parent) {
+
+        setData(make_dataset());
+    }
+
+    int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    int count() const;
+    QModelIndex index(int row, int column, const QModelIndex & parent) const;
+    void computeIndex(int row, int column);
+    QVariant data(const QModelIndex &index, int role) const;
+    QVariant headerData(int section, Qt::Orientation orientation,
+                         int role = Qt::DisplayRole) const;
+    void updateData();
+    void setData(struct DATASET* set);
+    struct DATASET* getData();
+    bool hasData();
+
+private:
+    struct DATASET* dataset;
+    QMap<int, QList<QString*>* > indexcache;
+};
+
+class Fact : public QObject
+{
+    Q_OBJECT
+
+public:
+    Fact(char* _pk, FreeHALWindow* _window) : pk(_pk), window(_window) {}
+
+public slots:
+    void delete_fact();
+
+private:
+    char* pk;
+    FreeHALWindow* window;
+};
+
+
+extern "C" void init_sql();
+
 

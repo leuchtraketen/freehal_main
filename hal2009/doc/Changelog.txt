@@ -1,3 +1,8 @@
+818:
+
+- Erweiterung von reasonof begonnen
+- DB-Tool in die GUI integriert
+
 817:
 
 - bei "="-Fakten werden auch kurze in/von-Adverbien mit abgespeichert

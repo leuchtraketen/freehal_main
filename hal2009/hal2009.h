@@ -211,6 +211,7 @@ extern "C" {
     static char* hal2009_text_language;
     int hal2009_set_text_language(const char*);
     const char* hal2009_get_text_language();
+    const char* check_config (const char* name, const char* _default);
 
     pthread_t hal2009_answer(char*, char*, char*, char*, int, short);
     void hal2009_clean();
@@ -224,7 +225,7 @@ extern "C" {
     int hal2009_add_pro_file (char* filename);
     struct DATASET hal2009_get_csv(char* csv_request);
     int hal2009_add_link (char* link, int key_1, int key_2);
-    const char* hal2009_make_csv(struct DATASET* set);
+    char* hal2009_make_csv(struct DATASET* set);
     void* hal2009_answer_thread(void* parameters);
     int hal2009_execute_file(char* file, char* planguage);
     int sql_sqlite_set_filename(const char* filename);

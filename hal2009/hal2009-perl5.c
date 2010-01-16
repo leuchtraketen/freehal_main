@@ -133,6 +133,10 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "items of that hash ", "%{");
     hals = replace(hals, "end-items-of", "}");
     hals = replace(hals, "end items of", "}");
+    hals = replace(hals, "end-of-items", "}");
+    hals = replace(hals, "end of items", "}");
+    hals = replace(hals, "end-items", "}");
+    hals = replace(hals, "end items", "}");
     hals = replace(hals, " of that ", " of ");
     hals = replace(hals, "items of hash: ", "%{");
     hals = replace(hals, "items of array: ", "@{");

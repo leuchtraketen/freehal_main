@@ -1169,6 +1169,10 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 
 struct fact** search_in_net(struct request* fact, struct fact** list) {
     int limit = 8000;
+    if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
+        limit = 1000000;
+    }
+    
     struct fact** facts = 0;
     if (list) {
         facts = list;

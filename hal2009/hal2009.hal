@@ -2426,6 +2426,64 @@ define action compute_context with hash parsed do
     do return with "default"
 done
 
+define action reasonof_construct_hash with array subjects, array verbs, var lang, var path, hash parsed do
+    for each new array verb in array verbs is rw do
+        if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
+            set from array verb first item to "haben"
+        done
+        if from array verb first item matches /^(bin|bist|seid|sind|ist)$/ do
+            set from array verb first item to "sein"
+        done
+    done
+
+    set new hash parsed_1 to fake_hash_parsed without arguments
+    set from hash parsed_1 item { 'verbs' } to an empty array
+    set new array verb to an empty array
+    push into array verb, "reasonof"
+    do push using items of that array: from hash parsed_1 item { 'verbs' } end items of, array verb
+    set from hash parsed_1 item { 'subjects' } to an empty array
+    do push using items of that array: from hash parsed_1 item { 'subjects' } end items of, items of array subjects
+    do push using items of that array: from hash parsed_1 item { 'subjects' } end items of, items of array verbs
+    set from hash parsed_1 item { 'objects' } to an empty array
+    set from hash parsed_1 item { 'clauses' } to an empty array
+    set from hash parsed_1 item { 'adverbs' } to an empty array
+    set from hash parsed_1 item { 'questionword' } to an empty array
+    
+    do return with hash parsed_1
+done
+
+define action reasonof with var input, var lang, var path, hash parsed do
+    set new array hashes to an empty array
+    set new array results to an empty array
+    
+    if not items of array results do
+        set new hash parsed_2 to reasonof_construct_hash with from hash parsed item { 'objects' }  , from hash parsed item { 'verbs' } , var lang, var path, hash parsed
+        set new array results_2 to logic with var input, var lang, var path, hash parsed_2
+        set array results_2 to reasonof_logic_from_object with array results_2, var lang, var path, hash parsed
+        push into array results, items of array results_2
+    done
+    
+    if not items of array results do
+        set new hash parsed_1 to reasonof_construct_hash with from hash parsed item { 'subjects' } , from hash parsed item { 'verbs' } , var lang, var path, hash parsed
+        set new array results_1 to logic with var input, var lang, var path, hash parsed_1
+        set array results_1 to reasonof_logic_from_subject with array results_1, var lang, var path, hash parsed
+        push into array results, items of array results_1
+    done
+    
+    do return with array results
+done
+
+define action reasonof_logic_from_subject with array results, var lang, var path, hash parsed do
+    do return with array results
+done
+
+define action reasonof_logic_from_object with array results, var lang, var path, hash parsed do
+
+    #from hash parsed item { 'subjects' }
+
+    do return with array results
+done
+
 define action logic with var input, var lang, var path, hash parsed do
     set new array request_verb_array to an empty array
     if from hash parsed item { 'verbs' } do
@@ -3582,6 +3640,10 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     done
     if var mode matches "statement" do
         set array results to logic with var input, var lang, var path, hash parsed
+        set new array results_reasonof to reasonof with var input, var lang, var path, hash parsed
+        if items of array results_reasonof do
+            push into array results, items of array results_reasonof
+        done
         if array results matches "TOOMUCH" do
             set new array standard_phrases to phrases_error_toomuch without arguments
             do return with array standard_phrases
