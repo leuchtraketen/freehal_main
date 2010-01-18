@@ -149,6 +149,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
     do regex using var input: /\(false\)/, "_(false)_", :global:i
     
+    do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i
     do regex using var input: /(^|\s)?und sonst(\s|\$)/, " wie geht es dir ", :global:i
     do regex using var input: /(^|\s)?bevor\s/, " , bevor ", :global:i
@@ -399,7 +400,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^you know (wh)/, "$0", :global:i
     
     do regex using var input: /world wide web/, "_world_wide_web_", :global:i
-    do regex using var input: /Hersteller von/, "Hersteller fuer", :global
+    do regex using var input: /Hersteller von/, "Hersteller fuer", :global:i
+
+    do regex using var input: /mein name/, "_mein_name_", :global:i
     
     do regex using var input: /(^|\s)(\d+?)\.\s*?januar(\s|$)/, "$0$1.01.$3", :global:i
     do regex using var input: /(^|\s)(\d+?)\.\s*?jaenner(\s|$)/, "$0$1.01.$3", :global:i
@@ -665,8 +668,8 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /<ws><[,]><ws>(<[a-zA-Z0-9_]>+\s+<[a-zA-Z0-9_]>+)\s+(und|oder|or|and)<ws>/, " $1 $0 $1 ", :global:i
     end for
 
-    do regex using var input: /heisse\sich/, "ist mein Name", :global:i
-    do regex using var input: /ich\sheisse/, "mein Name ist", :global:i
+    do regex using var input: /heisse\sich/, "ist _mein_name_", :global:i
+    do regex using var input: /ich\sheisse/, "_mein_name_ ist", :global:i
 
     do regex using var input: /wie heisst\sdu/, "wer bist du", :global:i
     do regex using var input: /wie heisse\s/, "wer bin ", :global:i
