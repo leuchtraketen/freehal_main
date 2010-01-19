@@ -115,7 +115,11 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         char* offset_of_last_underscore = strstr(cpy_of_exp+strlen(cpy_of_exp)-3, "_");
         if (offset_of_last_underscore) {
             offset_of_last_underscore[0] = '\0';
-            struct word**  words    = divide_words(cpy_of_exp+1);
+            int c;
+	    for (c = 0; cpy_of_exp[c]; ++c) {
+	        cpy_of_exp[c] = (cpy_of_exp[c] == '_') ? ' ' : cpy_of_exp[c];
+	    }
+            struct word**  words    = divide_words(cpy_of_exp);
             synonyms[*position]     = calloc(sizeof(struct word*), strlen(cpy_of_exp)+10);
             int f, g;
             for (f = 0, g = 0; words && words[f]; ++f) {
