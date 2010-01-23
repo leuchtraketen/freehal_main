@@ -1854,7 +1854,8 @@ QString FreeHALWindow::make_csv()
     bool may = false;
     bool should = false;
 
-    QStringList verbs = user_interface_main_window->verb->text().split(" ");
+    QString verbs_string = user_interface_main_window->verb->text();
+    QStringList verbs = verbs_string.split(" ");
     for (int i = 0; i < verbs.size(); ++i) {
         if (!QString(verbs[i]).contains("|")) {
             QString verb(verbs[i]);
@@ -1919,6 +1920,9 @@ QString FreeHALWindow::make_csv()
         }
     }
     QString verb = verbs.join(" ").toLower();
+    if (!verbs_string.size()) {
+        verb = "";
+    }
 
     QString subject = stem(user_interface_main_window->subject->text().split(" ")).join(" ").toLower();
     QString object = stem(user_interface_main_window->object->text().split(" ")).join(" ").toLower();

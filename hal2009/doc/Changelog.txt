@@ -1,5 +1,9 @@
 821:
 
+- Abfrage-Bug im DB-Tool korrigiert
+
+821:
+
 - Abfragetool fuer doppelte Antworten ins DB-Tool integriert
 - Bug 380 behoben
 
