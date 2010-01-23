@@ -1188,6 +1188,22 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     
     int position = 0;
     
+    
+    if (0 == strcmp(fact->context, "double_facts")) {
+        if (is_engine("disk")) {
+            int succ_1 = disk_search_double_facts(fact->subjects, facts, limit, &position);
+            if (succ_1 == TOOMUCH) {
+                printf("Too much double facts.\n");
+                free(facts);
+                return TOOMUCH;
+            }
+            printf("Found double facts.\n");
+        }
+        return facts;
+    }
+    
+    
+    
     int succ_1 = search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
     int succ_2 = search_facts_for_words_in_net(fact->objects,  facts, limit, &position);
     int succ_3 = search_facts_for_words_in_net(fact->adverbs,  facts, limit, &position);
@@ -1370,6 +1386,66 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
             }
             
         }
+
+        if (is_engine("ram")) {
+            free(fact->verbs);
+            free(fact->questionword);
+            free(fact->context);
+            free(fact);
+        }
+        else {
+            free_words_weak(fact->verbs);
+            free(fact->questionword);
+            free(fact->context);
+            free(fact);
+        }
+    }
+    
+    return list;
+}
+
+
+
+struct fact** search_facts_double_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+    struct fact** list = 0;
+    
+    {
+        struct request* fact = calloc(sizeof(struct request), 1);
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->questionword =          strdup(questionword);
+        fact->context      =          strdup(context);
+        fact->truth        = 1;
+        
+        delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+
+        debugf(
+            "Searching double facts for:\n"
+            "    subjects (was: %s):\n", subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+        print_word_list_3rd_order(fact->subjects);
+        debugf(
+            "    objects (was: %s):\n" , objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        print_word_list_3rd_order(fact->objects);
+        debugf(
+            "    verbs:\n - %s\n"
+            "    adverbs:\n",
+            verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : ""
+        );
+        print_word_list_3rd_order(fact->adverbs);
+        debugf(
+            "    extra:\n");
+        print_word_list_3rd_order(fact->extra);
+        debugf(
+            "    questionword:\n - %s\n",
+            questionword);
+
+        list = filter_list_by_rules (
+            search_in_net(fact, list),
+            fact
+        );
 
         if (is_engine("ram")) {
             free(fact->verbs);
@@ -1773,6 +1849,26 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
     
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list = 0;
+    
+    printf("Do we need the 'double facts' search?\n");
+    if (0 == strcmp(context, "double_facts")) {
+        if (!can_be_a_pointer(list) || !count_list(list)) {
+            printf("We do.\n");
+            
+            printf("'double facts' search is allowed.\n");
+                
+            struct fact** _list = search_facts_double_facts(subjects, objects, verbs, adverbs, extra, questionword, context);
+            if (can_be_a_pointer(_list)) {
+                if (can_be_a_pointer(list)) {
+                    free(list);
+                }
+                list = _list;
+            }
+        }
+    }
+    else {
+        printf("No.\n");
+    }
     
     printf("Do we need the 'not meant' search?\n");
     if (0 == strcmp(context, "not_meant")) {

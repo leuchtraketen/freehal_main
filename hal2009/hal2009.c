@@ -1499,7 +1499,9 @@ const char* check_config (const char* name, const char* _default) {
                 char copy[4001];
                 strncpy(copy, haltemp_ref->s, 4000);
                 fclose(i);
-                printf("%s: %s = %s, default %s\n", config_file, name, copy, _default);
+                if (!strstr(name, "limit")) {
+                    printf("%s: %s = %s, default %s\n", config_file, name, copy, _default);
+                }
                 return copy;
             }
         }

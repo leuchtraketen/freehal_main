@@ -2040,15 +2040,27 @@ void FreeHALWindow::on_extra_returnPressed()
     on_matchingfacts_clicked();
 }
 
+void FreeHALWindow::on_double_facts_clicked()
+{
+    setLastProcess(MATCHING_FACTS);
+    QString csv;
+    csv += "0^0^0^0^0^double_facts^0^0^0^0^0^0";
+
+    char* csv_request = strdup(csv.toStdString().c_str());
+    boost::thread t_v(boost::bind(send_csv_request, csv_request));
+}
+
 void clear_dataset() {
     struct DATASET* set = factmodel->getData();
     if (set && set->data) {
         int a;
         for (a = 0; a < set->size; ++a) {
-            int b;
-            for (b = 0; b < set->column_count; ++b) {
-                free(set->data[a][b]);
-                set->data[a][b] = 0;
+            if (set->data[a]) {
+                int b;
+                for (b = 0; b < set->column_count; ++b) {
+                    free(set->data[a][b]);
+                    set->data[a][b] = 0;
+                }
             }
             free(set->data[a]);
             set->data[a] = 0;
@@ -2077,6 +2089,9 @@ struct DATASET* make_dataset() {
 void add_to_dataset(struct DATASET* set, const char* csv) {
 
     if (set->size >= max_amount_of_answers_in_db_tool) {
+        return;
+    }
+    if (strstr(csv, "^^^") && strstr(csv, "^^^") < csv+10) {
         return;
     }
 

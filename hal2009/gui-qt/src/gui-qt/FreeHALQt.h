@@ -218,6 +218,8 @@ private slots:
     void on_subject_returnPressed();
     void on_allfacts_clicked();
 
+    void on_double_facts_clicked();
+
 };
 
 class Dialog1 : public QDialog {

@@ -473,6 +473,17 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     return sql;
 }
 
+char* gen_sql_get_double_facts() {
+
+    char* sql = malloc(102400);
+    *sql = 0;
+    
+    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`");
+    strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb FROM facts GROUP BY mix_1 HAVING count(*) >2) order by mix_1, verb;");
+    
+    return sql;
+}
+
 char* disk_get_source(const char* key) {
     printf("disk_get_source: %s", key);
     if (!key || !key[0])
@@ -802,6 +813,28 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
     
     {
         char* sql = gen_sql_get_facts_for_words(words, facts, limit, position);
+        printf("%s\n", sql);
+        int error = sql_execute(sql, callback_get_facts, &req);
+        free(sql);
+    }
+    
+    if (*req.position > limit - 10) {
+        return TOOMUCH;
+    }
+    
+    return 0;
+}
+
+int disk_search_double_facts(struct word*** words, struct fact** facts, int limit, int* position) {
+    struct request_get_facts_for_words req;
+    req.words    = words;
+    req.facts    = facts;
+    req.limit    = limit;
+    req.position = position;
+    req.rel      = 0;
+    
+    {
+        char* sql = gen_sql_get_double_facts();
         printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading ui file 'help.ui'
 **
-** Created: Mon Jun 1 20:46:06 2009
-**      by: Qt User Interface Compiler version 4.5.0
+** Created: Fri Jan 22 20:48:27 2010
+**      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
@@ -39,7 +39,7 @@ public:
             HelpDialog->setObjectName(QString::fromUtf8("HelpDialog"));
         HelpDialog->resize(351, 368);
         QIcon icon;
-        icon.addPixmap(QPixmap(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(""), QSize(), QIcon::Normal, QIcon::Off);
         HelpDialog->setWindowIcon(icon);
         gridLayout = new QGridLayout(HelpDialog);
 #ifndef Q_OS_MAC

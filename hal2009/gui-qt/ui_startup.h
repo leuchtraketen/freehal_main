@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading ui file 'startup.ui'
 **
-** Created: Sat May 30 08:20:22 2009
-**      by: Qt User Interface Compiler version 4.5.0
+** Created: Fri Jan 22 20:48:27 2010
+**      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
@@ -37,7 +37,7 @@ public:
         Startup->setWindowModality(Qt::ApplicationModal);
         Startup->resize(248, 39);
         QIcon icon;
-        icon.addPixmap(QPixmap(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(""), QSize(), QIcon::Normal, QIcon::Off);
         Startup->setWindowIcon(icon);
         gridLayout = new QGridLayout(Startup);
 #ifndef Q_OS_MAC
