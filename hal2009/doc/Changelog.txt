@@ -1,3 +1,7 @@
+822:
+
+- Abfrage-Bug im DB-Tool korrigiert
+
 821:
 
 - Abfrage-Bug im DB-Tool korrigiert

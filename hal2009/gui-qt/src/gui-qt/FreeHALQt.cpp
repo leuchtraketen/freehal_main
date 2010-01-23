@@ -2108,22 +2108,23 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
     set->data[record] = (char**)calloc(sizeof(char*), 100);
     set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
     for (length = 0; csv[length]; ++length) {
-        if (csv[length] == '|') {
-            ++record;
-            set->data[record] = (char**)calloc(sizeof(char*), 100);
-            record_item = 0;
-            record_item_pos = 0;
-            set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
-            continue;
-        }
-        if (csv[length] == '^') {
-            record_item_pos = 0;
-            ++record_item;
-            set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
-            continue;
-        }
-
         if (record_item_pos < 99 && record_item < 8) {
+            if (csv[length] == '|') {
+                ++record;
+                set->data[record] = (char**)calloc(sizeof(char*), 100);
+                record_item = 0;
+                record_item_pos = 0;
+                set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+                continue;
+            }
+            if (csv[length] == '^') {
+                record_item_pos = 0;
+                ++record_item;
+                set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+                continue;
+            }
+
+
             set->data[record][record_item][record_item_pos] = csv[length];
 
             if (set->data[record][record_item][record_item_pos] == ';') {
@@ -2131,6 +2132,14 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
             }
 
             ++record_item_pos;
+        }
+        else if (csv[length] == '|') {
+            ++record;
+            set->data[record] = (char**)calloc(sizeof(char*), 100);
+            record_item = 0;
+            record_item_pos = 0;
+            set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
+            continue;
         }
     }
 
