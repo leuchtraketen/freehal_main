@@ -39,15 +39,16 @@ int sql_universal_end() {
 }
 
 char* sql_universal_del_record(struct RECORD* r) {
-    if (r->pkey && r->pkey[0] && to_number(r->pkey)) {
-        universal_del_record(r->pkey);
+    if (r->pkey && r->pkey[0]) {
+        return universal_del_record(r->pkey);
     }
+    return strdup("");
 }
 
 char* sql_universal_get_source(struct RECORD* r) {
     printf("sql_universal_get_source: %d, to_number(r->pkey) = %d, r->pkey = %s\n", r, to_number(r->pkey), r->pkey ? r->pkey : "(null)");
-    if (r->pkey && r->pkey[0] && to_number(r->pkey)) {
-        universal_get_source(r->pkey);
+    if (r->pkey && r->pkey[0]) {
+        return universal_get_source(r->pkey);
     }
 }
 

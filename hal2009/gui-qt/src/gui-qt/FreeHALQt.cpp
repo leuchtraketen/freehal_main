@@ -76,6 +76,7 @@ freehal::string ki_name;
 freehal::string version;
 
 bool                        is_perl = 0;
+bool                        waiting_for_csv_answer = 0;
 
 auto_ptr<QString> freehalthread1_talking;
 
@@ -1401,6 +1402,8 @@ void freehal::comm_new(freehal::string s) {
 
 
             factmodel->updateData();
+
+            waiting_for_csv_answer = 0;
         }
         if (s.contains("HERE_IS_DB_STRING")) {
         }
@@ -1991,6 +1994,10 @@ QString FreeHALWindow::make_csv()
 }
 
 void* send_csv_request(char* csv_request) {
+    while (waiting_for_csv_answer) {
+        freehal::msleep(3000);
+    }
+
     freehal::comm_send("CSV:" + freehal::string(csv_request));
     cout << endl << csv_request << endl << endl;
 }

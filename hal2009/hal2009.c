@@ -1506,7 +1506,10 @@ const char* check_config (const char* name, const char* _default) {
                 haltemp_ref = replace(haltemp_ref, name, "");
                 haltemp_ref = replace(haltemp_ref, "=", "");
 
-                char copy[4001];
+                static char* copy = 0;
+                if (!copy) {
+                    copy = (char*)calloc(1, 4001);
+                }
                 strncpy(copy, haltemp_ref->s, 4000);
                 fclose(i);
                 if (!strstr(name, "limit")) {

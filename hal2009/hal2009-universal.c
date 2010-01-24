@@ -1186,6 +1186,7 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 
 struct fact** search_in_net(struct request* fact, struct fact** list) {
     int limit = 8000;
+    printf("a\n");
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
         limit = 1000000;
     }
@@ -1202,7 +1203,9 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     int position = 0;
     
     
+    printf("b\n");
     if (0 == strcmp(fact->context, "double_facts")) {
+        printf("c\n");
         if (is_engine("disk")) {
             int succ_1 = disk_search_double_facts(fact->subjects, facts, limit, &position);
             if (succ_1 == TOOMUCH) {
@@ -1214,6 +1217,8 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         }
         return facts;
     }
+    
+        printf("d\n");
     
     
     
@@ -2276,7 +2281,12 @@ int is_important_word(const char* word) {
 
 const char* small_identifier(const char* word) {
     if (word[0] == '_') {
-        return small_identifier(word+1);
+        if (strlen(word) > 3) {
+            return small_identifier(word+1);
+        }
+        else {
+            return "__";
+        }
     }
     if (word[0] == '=') {
         return "__";

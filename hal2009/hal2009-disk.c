@@ -485,7 +485,7 @@ char* gen_sql_get_double_facts() {
 }
 
 char* disk_get_source(const char* key) {
-    printf("disk_get_source: %s", key);
+    printf("disk_get_source: %s\n", key);
     if (!key || !key[0])
         return 1;
     
@@ -506,7 +506,7 @@ char* disk_get_source(const char* key) {
         int error = sql_execute(sql, select_primary_key, source);
         free(sql);
     }
-    printf("source: %s", source);
+    printf("source: %s\n", source);
     
     return source;
 }
