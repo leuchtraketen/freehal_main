@@ -646,51 +646,6 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
 
     unlink("_output2");
     hal2009_clean();
-
-    if (0) {
-        long int last_line_number_from_log = -1;
-        long int current_line_number_from_log = 0;
-        char* code = (char*)cxxhalmalloc(100001, "hal2009_log_streamer");
-        char* line = (char*)cxxhalmalloc(10000,  "hal2009_log_streamer");
-        halclose(get_output_pipe());
-        set_output_pipe(fopen("hal.log", "r"));
-        if (get_output_pipe()) {
-            set_nonblocking(fileno(get_output_pipe()));
-            if (get_output_pipe()) {
-                strcpy(code, "");
-                strcpy(line, "");
-                size_t nchars = 9999;
-                do {
-                    if (strlen(line) > 1)
-                        strcat(code, line);
-                    strcpy(line, "");
-                    if (current_line_number_from_log >= last_line_number_from_log) {
-                        last_line_number_from_log = current_line_number_from_log;
-                        fgets(line, nchars, get_output_pipe());
-                    }
-                    ++current_line_number_from_log;
-                } while (strlen(line));
-
-                strcat(code, line);
-                if (strlen(code)) {
-                    int lines = 1;
-                    for (int c = 0; c < strlen(code); ++c) {
-                        if (code[c] == '\n')
-                            ++lines;
-                    }
-
-                    hal2009_netcom_lock();
-                    (*stream) << "MULTILINE:BEGIN" << endl;
-                    (*stream) << lines << endl;
-                    (*stream) << "LOG:" << code << "\n" << endl;
-                    (*stream) << "MULTILINE:END" << endl;
-                    hal2009_netcom_unlock();
-                }
-            }
-            halclose(get_output_pipe());
-        }
-    }
-
     cout << "End of statement process." << endl;
 }
 
@@ -782,15 +737,14 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             char* request = strdup(result->at(1).c_str());
             struct DATASET set = hal2009_get_csv(request);
             char* csv_data = (char*)hal2009_make_csv(&set);
-            (*stream) << "CSV_NEW_RESULT:." << endl;
-            cout << "CSV_NEW_RESULT:." << endl;
+            ofstream out_csv_data("_csv-data.txt");
             int pos;
             int last_pos = 0;
             for (pos = 0; csv_data[pos]; ++pos) {
                 if (csv_data[pos] == '\n') {
                     csv_data[pos] = '\0';
                     
-                    (*stream) << "CSV_RESULT:" << csv_data + last_pos << endl;
+                    out_csv_data << csv_data + last_pos << endl;
                     cout << "CSV_RESULT:" << csv_data + last_pos << endl;
                     
                     if (csv_data[pos+1]) last_pos = pos+1;
@@ -798,12 +752,12 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 }
             }
             if (last_pos >= 0) {
-                (*stream) << "CSV_RESULT:" << csv_data + last_pos << endl;
+                out_csv_data << csv_data + last_pos << endl;
                 cout << "CSV_RESULT:" << csv_data + last_pos << endl;
             }
+            out_csv_data.close();
+            (*stream) << "CSV_RESULT:." << endl;
             if (request) free(request);
-            (*stream) << "CSV_END_RESULT:." << endl;
-            cout << "CSV_END_RESULT:." << endl;
         }
 
         if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {

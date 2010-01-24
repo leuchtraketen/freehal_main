@@ -415,6 +415,8 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
+                    sline_ref = replace(sline_ref, "\r", "");
+                    sline_ref = replace(sline_ref, "\n", "");
                     line = sline_ref->s;
                     
                     char* buffer;
@@ -787,10 +789,17 @@ char* hal2009_make_csv(struct DATASET* set) {
         return csv_data;
     }
     fprintf(output(), "Copy data.\n");
+    int records_count = 0;
     for (j = 0; j < set->size; ++j) {
         if (set->data[j] && set->data[j][0] && *(set->data[j][0])) {
             for (m = 0; m < set->column_count; ++m) {
                 if (set->data[j][m]) {
+                    int p;
+                    for (p = 0; p < strlen(set->data[j][m]); ++p) {
+                        if (set->data[j][m] == '\n' || set->data[j][m] == '\r') {
+                            set->data[j][m] = ' ';
+                        }
+                    }
                     strcat(csv_data, set->data[j][m]);
                     free(set->data[j][m]);
                 }
@@ -799,12 +808,13 @@ char* hal2009_make_csv(struct DATASET* set) {
                 }
             }
             strcat(csv_data, "\n");
+            ++records_count;
         }
         if (set->data[j]) {
             free(set->data[j]);
         }
     }
-    fprintf(output(), "Data copied.\n");
+    fprintf(output(), "Data copied (%d records).\n", records_count);
 
     return csv_data;
 }

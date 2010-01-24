@@ -1,3 +1,7 @@
+823:
+
+- Bug im DB-Tool korrigiert (Absturz)
+
 822:
 
 - Abfrage-Bug im DB-Tool korrigiert

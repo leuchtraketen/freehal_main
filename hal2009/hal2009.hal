@@ -2479,9 +2479,35 @@ done
 
 define action reasonof_logic_from_object with array results, var lang, var path, hash parsed do
 
-    #from hash parsed item { 'subjects' }
+    set new array request_subjects_array to from hash parsed item { 'subjects' }
+    set new array request_subjects to an empty array
+    for each new array subjects in array request_subjects_array is rw do
+        push into array request_subjects, from array subjects first item
+    done
+    set new var subject to join using ' ', items of array request_subjects
 
-    do return with array results
+    #from hash parsed item { 'subjects' }
+    set new array constructed_results to an empty array
+    
+    for each new array result in array results do
+        set new array main_clause to an empty array
+        
+        set new var expr to from array result second item third item
+        set new array words to split with " ", var expr
+        set new var verb to pop with items of array words
+        set new var object to join using ' ', items of array words
+        
+        push into array main_clause, var verb concat "00001"
+        push into array main_clause, var subject
+        push into array main_clause, var object
+        
+        set new array constructed_result to an empty array
+        push into array constructed_result, 0
+        push into array constructed_result, array main_clause
+        push into array constructed_results, array constructed_result
+    done
+
+    do return with array constructed_results
 done
 
 define action logic with var input, var lang, var path, hash parsed do
@@ -2956,7 +2982,10 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 
                 if var verb matches /([01])([01])([01])([01])([01])$/ do
-                    set new var person to get_person with hash parsed item { 'subjects' } first item
+                    set new var person to get_person with from array clause item [1]
+                    if var person matches "3s" do
+                        set var person to get_person with hash parsed item { 'subjects' } first item
+                    done
                     
                     set new var is_want to $0
                     set new var is_must to $1

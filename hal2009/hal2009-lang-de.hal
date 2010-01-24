@@ -3145,22 +3145,22 @@ define action get_verb with var verb, var person do
     
     if var verb matches "should" do
         if var person matches "1s" do
-            return "soll"
+            return "sollte"
         done
         if var person matches "2s" do
-            return "sollst"
+            return "solltest"
         done
         if var person matches "3s" do
-            return "soll"
+            return "sollte"
         done
         if var person matches "1p" do
-            return "sollen"
+            return "sollten"
         done
         if var person matches "2p" do
-            return "sollt"
+            return "solltet"
         done
         if var person matches "3p" do
-            return "sollen"
+            return "sollten"
         done
     done
     

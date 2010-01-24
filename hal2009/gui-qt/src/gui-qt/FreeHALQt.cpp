@@ -1374,14 +1374,32 @@ void freehal::comm_new(freehal::string s) {
             //emit helper->signalLogScrollEnd(QString("line") + g);
             ++g;
         }
-        if (s.contains("CSV_NEW_RESULT")) {
+        if (s.contains("CSV_RESULT")) {
             clear_dataset();
             factmodel->setData(make_dataset());
-        }
-        if (s.contains("CSV_RESULT")) {
-            add_to_dataset(factmodel->getData(), s.ref().c_str()+11);
-        }
-        if (s.contains("CSV_END_RESULT")) {
+
+
+            ifstream csv_data;
+            if (!csv_data.is_open()) {
+                csv_data.open("_csv-data.txt", ios::in);
+            }
+            if (!csv_data.is_open()) {
+                csv_data.open("../_csv-data.txt", ios::in);
+            }
+            if (!csv_data.is_open()) {
+                csv_data.open("../../_csv-data.txt", ios::in);
+            }
+            if (csv_data.is_open()) {
+                while (csv_data) {
+                    std::string line;
+                    getline(csv_data, line);
+
+                    add_to_dataset(factmodel->getData(), line.c_str());
+                }
+                csv_data.close();
+            }
+
+
             factmodel->updateData();
         }
         if (s.contains("HERE_IS_DB_STRING")) {
@@ -1522,7 +1540,7 @@ int FactModel::rowCount(const QModelIndex &parent) const
 
 int FactModel::columnCount(const QModelIndex &parent) const
 {
-    return 7;
+    return 6;
 }
 
 QVariant FactModel::data(const QModelIndex &index, int role) const
@@ -1619,40 +1637,33 @@ QModelIndex FactModel::index(int row, int column, const QModelIndex & parent = Q
 
 void FactModel::computeIndex(int row, int column)
 {
-    int column_true = column;
-    switch (column_true) {
-        case 6:     column_true = 0;     break;
-        case 2:     column_true = 1;     break;
-        case 1:     column_true = 2;     break;
-        case 11:    column_true = 3;     break;
-        case 3:     column_true = 4;     break;
-        case 4:     column_true = 5;     break;
-        case 7:     column_true = 6;     break;
-        case 5:     column_true = -1;    break;
-        case 8:     column_true = -1;    break;
-        case 9:     column_true = -1;    break;
-        case 10:    column_true = -1;    break;
+    if (column < 0)
+        return;
+    int raw_column = -1;
+    switch (column) {
+        case 0:     raw_column = 6;     break;
+        case 1:     raw_column = 1;     break;
+        case 2:     raw_column = 2;     break;
+        case 3:     raw_column = 3;     break;
+        case 4:     raw_column = 4;     break;
+        case 5:     raw_column = 7;     break;
     }
-
-    if (column_true < 0)
+    if (raw_column < 0)
         return;
 
     QString ref;
 
     if (dataset->data) {
         if (dataset->data[row]) {
-            if (dataset->data[row][column==11?1:column]) {
+            if (dataset->data[row][raw_column]) {
                 char str[128];
-                strncpy(str, dataset->data[row][column==11?1:column], 127);
+                strncpy(str, dataset->data[row][raw_column], 127);
                 ref = QString(str);
-                while (ref.size() <= 8) {
-                    ref += " ";
-                }
             }
         }
     }
 
-    if (column == 7) {
+    if (column == 5) {
         if (ref.contains("1")) {
             ref = "true     ";
         }
@@ -1664,52 +1675,43 @@ void FactModel::computeIndex(int row, int column)
         }
     }
 
-    if (column == 1 && ref.size() >= 6) {
-        ref.resize(ref.size()-5);
-        while (ref.size() <= 8) {
-            ref += " ";
-        }
-    }
-
-    if (column == 11 && ref.size() >= 6) {
+    if (column == 1) {
         QStringList modal_verbs;
-        if (ref[ref.size()-5+0] == '1') {
-            modal_verbs.push_back("must / muessen");
+        if (ref.size() >= 6) {
+            if (ref[ref.size()-5+0] == '1') {
+                modal_verbs.push_back(" / must");
+            }
+            if (ref[ref.size()-5+1] == '1') {
+                modal_verbs.push_back(" / want");
+            }
+            if (ref[ref.size()-5+2] == '1') {
+                modal_verbs.push_back(" / can");
+            }
+            if (ref[ref.size()-5+3] == '1') {
+                modal_verbs.push_back(" / may");
+            }
+            if (ref[ref.size()-5+4] == '1') {
+                modal_verbs.push_back(" / should");
+            }
         }
-        if (ref[ref.size()-5+1] == '1') {
-            modal_verbs.push_back("want / wollen");
-        }
-        if (ref[ref.size()-5+2] == '1') {
-            modal_verbs.push_back("can / koennen");
-        }
-        if (ref[ref.size()-5+3] == '1') {
-            modal_verbs.push_back("may / duerfen");
-        }
-        if (ref[ref.size()-5+4] == '1') {
-            modal_verbs.push_back("should / soll(t)en");
-        }
-        ref = modal_verbs.join(", ");
+
+
+        ref.replace("0", "");
+        ref.replace("1", "");
+        ref += modal_verbs.join("");
     }
 
     if (ref.contains("NULL"))
         ref.clear();
 
-    /*if (!indexcache.contains(row)) {
-        QList<QString*>* l = new QList<QString*>;
-        for (int z = 0; z <= 11; ++z) {
-            l->push_back(0);
-        }
-        indexcache.insert(row, l);
+    while (ref.size() <= 10) {
+        ref += " ";
     }
-    QList<QString*>* l = indexcache.value(row);
-    (*l)[column_true] = new QString(ref);
-    indexcache.insert(row, l);
-    */
 
     QList<QString*>* l = indexcache.value(row);
     if (l) {
-        (*l)[column_true]->append(ref);
-        printf("col: %d\tcol_true: %d\tref:%s\n", column, column_true, ref.toStdString().c_str());
+        (*l)[column]->append(ref);
+        printf("col: %d\tref:%s\n", column, ref.toStdString().c_str());
     }
 }
 
@@ -1722,12 +1724,11 @@ QVariant FactModel::headerData(int section, Qt::Orientation orientation,
     if (orientation == Qt::Horizontal) {
         switch (section) {
             case 0: return QString("File");
-            case 1: return QString("Subject");
-            case 2: return QString("Verben");
-            case 3: return QString("Modalverben");
-            case 4: return QString("Object");
-            case 5: return QString("Adverbs");
-            case 6: return QString("Truth");
+            case 1: return QString("Verb");
+            case 2: return QString("Subject");
+            case 3: return QString("Object");
+            case 4: return QString("Adverbs");
+            case 5: return QString("Truth");
             default: return QString("");
         }
     }
@@ -1781,8 +1782,8 @@ void FactModel::updateData() {
         }
         indexcache.insert(row, l);
 
-        int col = 1;
-        while (col <= 11) {
+        int col = 0;
+        while (col < 7) {
             computeIndex(row, col);
             ++col;
         }
