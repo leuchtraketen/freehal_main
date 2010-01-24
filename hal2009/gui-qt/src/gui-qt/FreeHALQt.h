@@ -508,7 +508,7 @@ public:
 
 private:
     struct DATASET* dataset;
-    QMap<int, QList<QString*>* > indexcache;
+    QMap<int, QStringList > indexcache;
 };
 
 class Fact : public QObject

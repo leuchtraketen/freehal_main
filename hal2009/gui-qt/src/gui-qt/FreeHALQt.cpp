@@ -142,7 +142,12 @@ const char* check_config (freehal::string name, const char* _default) {
                 util::split(temp, "=", parts);
                 
                 if (parts.size() >= 2) {
-                    return (parts[1].ref().c_str());
+                    static char* copy = 0;
+                    if (!copy) {
+                        copy = (char*)calloc(1, 4001);
+                    }
+                    strncpy(copy, parts[1].ref().c_str(), 4000);
+                    return (copy);
                 }
             }
         }
@@ -1548,16 +1553,30 @@ int FactModel::columnCount(const QModelIndex &parent) const
 
 QVariant FactModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
-    if (index.row() >= count())
+    if (index.row() >= count()) {
         return QVariant();
+    }
 
-    if (role == Qt::DisplayRole)
-        return index.internalPointer()?QString((char*)index.internalPointer()):QString("");
-    else
+    if (role == Qt::DisplayRole) {
+        int row = index.row();
+        int column = index.column();
+        if (indexcache.contains(row)) {
+            if (indexcache.value(row).size() > column) {
+                if (indexcache.value(row).value(column).size()) {
+                    QString ref = indexcache.value(row).value(column);
+                    return ref;
+                }
+            }
+        }
         return QVariant();
+    }
+    else {
+        return QVariant();
+    }
 }
 
 QStringList stem(QStringList list) {
@@ -1625,16 +1644,6 @@ QStringList stem(QStringList list) {
 
 QModelIndex FactModel::index(int row, int column, const QModelIndex & parent = QModelIndex()) const
 {
-    if (indexcache.contains(row)) {
-        if (indexcache.value(row)->value(column)) {
-            if (indexcache.value(row)->value(column)->size()) {
-                QString* ref = indexcache.value(row)->at(column);
-                QModelIndex index = createIndex(row, column, (void*)(ref->toStdString().c_str()));
-
-                return index;
-            }
-        }
-    }
     return createIndex(row, column, 0);
 }
 
@@ -1711,11 +1720,10 @@ void FactModel::computeIndex(int row, int column)
         ref += " ";
     }
 
-    QList<QString*>* l = indexcache.value(row);
-    if (l) {
-        (*l)[column]->append(ref);
-        printf("col: %d\tref:%s\n", column, ref.toStdString().c_str());
-    }
+    QStringList l = indexcache.value(row);
+    l.append(ref);
+    indexcache.insert(row, l);
+    printf("col: %d\tref:%s\n", column, ref.toStdString().c_str());
 }
 
 QVariant FactModel::headerData(int section, Qt::Orientation orientation,
@@ -1763,28 +1771,12 @@ void FactModel::updateData() {
     endRemoveRows();
     this->removeRows(0, this->rowCount(QModelIndex()), QModelIndex());
 
-    QList<QList<QString*>*> values = indexcache.values();
-    for (int i = 0; i < values.size(); ++i) {
-        if (values.at(i)) {
-            for (int j = 0; j < values.at(i)->size(); ++j) {
-                if (values.at(i)->at(j)) {
-                    delete(values.at(i)->at(j));
-                }
-            }
-
-            delete(values.at(i));
-        }
-    }
     indexcache.clear();
 
 
     int row = 0;
     while (row < dataset->size) {
-        QList<QString*>* l = new QList<QString*>;
-        for (int z = 0; z <= 11; ++z) {
-            l->push_back(new QString());
-        }
-        indexcache.insert(row, l);
+        indexcache.insert(row, QStringList());
 
         int col = 0;
         while (col < 7) {
