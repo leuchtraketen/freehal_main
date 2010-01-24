@@ -523,12 +523,12 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, append
     print into var output_handle data var name_of_entry concat ":"
     print into var output_handle data new line
-    print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
         do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
+    print into var output_handle data "  type: " concat from array tags first item concat new line
+    do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     
     if not var file_name matches /brain/ do
         if not from array tags first item matches /q/ do
@@ -545,12 +545,12 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/protocol.memory", append
         print into var output_handle data var name_of_entry concat ":"
         print into var output_handle data new line
-        print into var output_handle data "  type: " concat from array tags first item concat new line
-        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
         if not from array tags second item matches /q/ do
             print into var output_handle data "  genus: " concat from array tags second item concat new line
             do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
         done
+        print into var output_handle data "  type: " concat from array tags first item concat new line
+        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     done
 
     do close with var output_handle

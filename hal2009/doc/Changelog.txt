@@ -1,3 +1,7 @@
+826:
+
+- Sortierungsproblem genus <-> type
+
 825:
 
 - Bug bei der ps-ABC.prot-Verarbeitung korrigiert
