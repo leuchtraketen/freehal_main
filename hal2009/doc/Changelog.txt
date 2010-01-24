@@ -1,4 +1,8 @@
-823:
+825:
+
+- Bug bei der ps-ABC.prot-Verarbeitung korrigiert
+
+824:
 
 - Bug im DB-Tool korrigiert (Absturz)
 
