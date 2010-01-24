@@ -658,30 +658,7 @@ int get_file_size(const char* filename) {
 }
 
 void hal2009_log_streamer(tcp::iostream* stream) {
-/*
-    static char* history;
-    static int history_len;
-    static int history_lines = 1;
-    if (history) {
-        (*stream) << "MULTILINE:BEGIN" << endl;
-        (*stream) << history_lines << endl;
-        (*stream) << "LOG:" << history << "\n" << endl;
-        (*stream) << "MULTILINE:END" << endl;
-    }
-    else {
-        history_len = 0;
-        history = (char*)calloc(100000, 1);
-    }
 
-    long int last_line_number_from_log = -1;
-    char* code = (char*)cxxhalmalloc(100001, "hal2009_log_streamer");
-    char* line = (char*)cxxhalmalloc(10000,  "hal2009_log_streamer");
-    while (stream > 0 && stdout > 0) {
-        long int current_line_number_from_log = 0;
-        halusleep(10000);
-    }
-    cxxhalfree(code);
-*/
 }
 
 void hal2009_server_client_connection(tcp::iostream* stream) {
