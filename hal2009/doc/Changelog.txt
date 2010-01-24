@@ -1,3 +1,7 @@
+828:
+
+- Bei "abc" wird jetzt auch nach "_abc_" gesucht
+
 826:
 
 - Sortierungsproblem genus <-> type

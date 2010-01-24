@@ -1758,6 +1758,7 @@ void FactModel::setData(struct DATASET* set) {
 void FactModel::updateData() {
     beginRemoveRows(QModelIndex(), 0, count()-1);
     endRemoveRows();
+    this->removeRows(0, this->rowCount(QModelIndex()), QModelIndex());
 
     QList<QList<QString*>*> values = indexcache.values();
     for (int i = 0; i < values.size(); ++i) {

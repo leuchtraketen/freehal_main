@@ -84,6 +84,19 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         return synonyms;
     }
     
+    if (strlen(exp) > 1) {
+        synonyms[*position] = calloc(sizeof(struct word*), strlen(exp)+10);
+        
+        char* _exp = calloc(1, strlen(exp)+10);
+        strcpy(_exp, "_");
+        strcat(_exp, exp);
+        strcat(_exp, "_");
+        
+        struct word* _word = set_word(_exp);
+        synonyms[*position][0] = _word;
+        ++(*position);
+    }
+    
     struct word**  words    = divide_words(exp);
     synonyms[*position]     = calloc(sizeof(struct word*), strlen(exp)+10);
     int f, g;
@@ -116,9 +129,9 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         if (offset_of_last_underscore) {
             offset_of_last_underscore[0] = '\0';
             int c;
-	    for (c = 0; cpy_of_exp[c]; ++c) {
-	        cpy_of_exp[c] = (cpy_of_exp[c] == '_') ? ' ' : cpy_of_exp[c];
-	    }
+            for (c = 0; cpy_of_exp[c]; ++c) {
+                cpy_of_exp[c] = (cpy_of_exp[c] == '_') ? ' ' : cpy_of_exp[c];
+            }
             struct word**  words    = divide_words(cpy_of_exp);
             synonyms[*position]     = calloc(sizeof(struct word*), strlen(cpy_of_exp)+10);
             int f, g;
