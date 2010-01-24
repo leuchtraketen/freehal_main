@@ -52,6 +52,10 @@ char* sql_universal_get_source(struct RECORD* r) {
     }
 }
 
+int sql_universal_delete_everything_from(const char* filename) {
+    return universal_delete_everything_from(filename);
+}
+
 int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
     if (relation_to && relation_to[0]) {
         return 0;

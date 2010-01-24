@@ -81,6 +81,10 @@ int sql_add_link (char* link, int key_1, int key_2) {
     }
 }
 
+int sql_delete_everything_from(const char* filename) {
+    return sql_universal_delete_everything_from(filename);
+}
+
 int sql_begin() {
     while (database_used) {
         fprintf(output(), "Wait while database is used.\n");

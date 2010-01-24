@@ -117,6 +117,10 @@ int hal2009_add_link (char* link, int key_1, int key_2) {
     sql_add_link(link, key_1, key_2);
 }
 
+int hal2009_delete_everything_from(const char* filename) {
+    return sql_delete_everything_from(filename);
+}
+
 int fact_replace_in_source (const char* source, const char* _replacement) {
     char* replacement;
     if (_replacement) {
@@ -330,8 +334,10 @@ int remove_negation (char* line, double* truth_ref) {
 }
 
 int hal2009_add_pro_file (char* filename) {
-    fprintf(output(), "Add .pro file %s.\n", filename);
+    fprintf(output(), "Clearing DB: .pro file %s.\n", filename);
     sql_begin();
+    hal2009_delete_everything_from(filename);
+    fprintf(output(), "Add .pro file %s.\n", filename);
     position_in_insertions = 0;
     time_t start = 0;
     time(&start);

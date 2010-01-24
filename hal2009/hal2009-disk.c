@@ -425,7 +425,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                     strcat(sql, ");");
                 }*/
 
-                const char* smid = small_identifier(words[num_of_words]);
+                char* smid = small_identifier(words[num_of_words]);
                 {
                     strcat(sql, "INSERT OR IGNORE INTO rel_word_fact__");
                     strcat(sql, smid);
@@ -439,6 +439,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                     strcat(sql, "\"");
                     strcat(sql, ");");
                 }
+                free(smid);
 
                 free(words[num_of_words]);
                 words[num_of_words] = 0;
@@ -480,6 +481,18 @@ char* gen_sql_get_double_facts() {
     
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`");
     strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb FROM facts GROUP BY mix_1 HAVING count(*) >2) order by mix_1, verb;");
+    
+    return sql;
+}
+
+int gen_sql_delete_everything_from(const char* filename) {
+
+    char* sql = malloc(102400);
+    *sql = 0;
+    
+    strcat(sql, "DELETE FROM facts WHERE `from` GLOB '");
+    strcat(sql, filename);
+    strcat(sql, "*';");
     
     return sql;
 }
@@ -586,29 +599,25 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                 continue;
             }
 
-            //if (n == 0 || n % 30 == 0) {
-            const char* smid = small_identifier(words[n][m]->name);
+            char* smid = small_identifier(words[n][m]->name);
             if ((!last_smid || strcmp(last_smid, smid)) && smid) {
                 if (in_bracket) {
                     strcat(sql, ")");
                     in_bracket = 0;
                 }
-                //strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT fact FROM ");
                 strcat(sql, " ; INSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
-                /*if (0 == strcmp(part_of_database, "freehal")) {
-                    strcat(sql, " rel_word_fact__freehal AS rel_word_fact ");
-                }
-                else {
-                    strcat(sql, " rel_word_fact__general AS rel_word_fact ");
-                }*/
+                
                 strcat(sql, " rel_word_fact__");
                 strcat(sql, smid);
                 strcat(sql, " AS rel_word_fact ");
                 
                 strcat(sql, " WHERE 0 ");
-                //in_bracket = 1;
+            }
+            if (last_smid) {
+                free(last_smid);
             }
             last_smid = strdup(smid);
+            free(smid);
 
             
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
@@ -870,6 +879,17 @@ struct fact** disk_search_clauses(int rel) {
     }
     
     return clauses;
+}
+
+int disk_delete_everything_from(const char* filename) {
+    {
+        char* sql = gen_sql_delete_everything_from(filename);
+        printf("%s\n", sql);
+        int error = sql_execute(sql, NULL, NULL);
+        free(sql);
+        return error;
+    }
+    return -1;
 }
 
 int disk_set_to_invalid_value(void** p) {

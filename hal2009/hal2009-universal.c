@@ -1175,6 +1175,13 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
     return list;
 }
 
+int universal_delete_everything_from(const char* filename) {
+    if (is_engine("disk")) {
+        return disk_delete_everything_from(filename);
+    }
+    return -1;
+}
+
 int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position) {
     if (is_engine("ram")) {
         return ram_search_facts_for_words_in_net(words, facts, limit, position);
@@ -1186,7 +1193,6 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 
 struct fact** search_in_net(struct request* fact, struct fact** list) {
     int limit = 8000;
-    printf("a\n");
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
         limit = 1000000;
     }
@@ -1203,9 +1209,7 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     int position = 0;
     
     
-    printf("b\n");
     if (0 == strcmp(fact->context, "double_facts")) {
-        printf("c\n");
         if (is_engine("disk")) {
             int succ_1 = disk_search_double_facts(fact->subjects, facts, limit, &position);
             if (succ_1 == TOOMUCH) {
@@ -1217,8 +1221,6 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         }
         return facts;
     }
-    
-        printf("d\n");
     
     
     
@@ -2285,17 +2287,17 @@ const char* small_identifier(const char* word) {
             return small_identifier(word+1);
         }
         else {
-            return "__";
+            return strdup("__");
         }
     }
     if (word[0] == '=') {
-        return "__";
+        return strdup("__");
     }
     if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 3) {
-        return "__";
+        return strdup("__");
     }
     
-    char identifier[3];
+    char* identifier = calloc(1, 5);
     identifier[2] = 0;
     
     identifier[0] =  word[0] >= 'a' && word[0] <= 'z'
