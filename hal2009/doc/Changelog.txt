@@ -1,3 +1,7 @@
+836:
+
+- Update des lang_de Ordners
+
 833:
 
 - Kein ueberfluessiges Carriage Return beim Löschen einfuegen
