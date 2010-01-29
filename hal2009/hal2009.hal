@@ -4607,6 +4607,40 @@ define action update_list_of_pro_files with var pattern, var current_language, v
     done
 done
 
+
+define action clear_empty_lines with var file, var current_language, var path do
+    set new var _input to handle for file name var file, read
+    for each new var line from var _input is rw do
+        if length(var line) < 3 do
+            do close with var _input
+            
+            set new var input_1 to handle for file name var file, read
+            set new var output_1 to handle for file name var file concat ".tmp", write
+            for each new var line from var input_1 is rw do
+                if length(var line) >= 3 do
+                    print into var output_1 data var line
+                    print into var output_1 data new line
+                done
+            done
+            do close with var input_1
+            do close with var output_1
+            
+            set new var input_2 to handle for file name var file concat ".tmp", read
+            set new var output_2 to handle for file name var file, write
+            for each new var line from var input_2 is rw do
+                print into var output_2 data var line
+                print into var output_2 data new line
+            done
+            do close with var input_2
+            do close with var output_2
+            
+            do unlink with var file concat ".tmp"
+            
+            do return without arguments
+        done
+    done
+done
+
 define action init_pro_files with var current_language, var path do
     if exists: "SLOW", end test do
         print "Don't read the .pro files in SLOW mode."
@@ -4640,6 +4674,8 @@ define action init_pro_files with var current_language, var path do
 
             do unlink with '_output__add_pro_file'
             do unlink with '_input__add_pro_file'
+            
+            do clear_empty_lines with var file, var current_language, var path
 
             set new var check_input_handle_one to handle for file name var file, read
             set new var check_input_handle_two to handle for file name var save_path concat var file_name, read

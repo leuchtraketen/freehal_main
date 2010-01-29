@@ -4493,6 +4493,10 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     do return with var phrase
 done
 
+define action to_verb_root with var verb, var lang, var path do
+    
+done
+
 define action get_score_answer without arguments do
     return [ 0, "Bewertung erfolgreich." ]
 done
