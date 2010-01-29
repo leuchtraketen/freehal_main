@@ -126,7 +126,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
     if (_replacement) {
         replacement = calloc(strlen(_replacement)+5, 1);
         strcpy(replacement, _replacement);
-        strcat(replacement, "\r\n");
+        strcat(replacement, "\n");
     }
     else {
         replacement = -2;
@@ -189,10 +189,10 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
             if (file) {
                 for (line_number = 1; line_number <= lines; ++line_number) {
                     if (!data[line_number]) {
-                        fprintf(file, "\r\n");
+                        fprintf(file, "\n");
                     }
                     else if (data[line_number] == -2) {
-                        fprintf(file, "\r\n");
+                        fprintf(file, "\n");
                     }
                     else if (data[line_number]) {
                         fprintf(file, "%s", data[line_number]);
