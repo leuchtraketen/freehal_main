@@ -452,7 +452,8 @@ void hal2009_server_start() {
         }
         catch (std::exception& e)
         {
-            std::cerr << e.what() << std::endl;
+            std::cerr << "Not starting server: " << e.what() << std::endl;
+            exit(0);
         }
     }
 }

@@ -398,6 +398,20 @@ int windows_invoke_runner() {
     return 1;
 }
 
+int linux_invoke_runner() {
+    ifstream i_1("hal2009-server");
+    if (i_1) {
+        boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
+        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
+    }
+    else {
+        boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
+        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
+    }
+
+    return 0;
+}
+
 void make_connection() {
     dialog_connection->exec();
     if (dialog_connection->result() == QDialog::Rejected) {
@@ -416,42 +430,18 @@ void make_connection() {
 
     main_window->showWindowNormal();
 
-    QFile booted_file("booted");
-    booted_file.remove();
+    {
+        QFile booted_file("booted");
+        booted_file.remove();
+    }
 
     if (ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()) {
 
 #ifdef linux
-    std::system("rm booted");
-    
-    ifstream i_1("hal2009-server");
-    if (i_1) {
-    	boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
-    }
-    else {
-    	boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
-    }
+    boost::thread t_v(linux_invoke_runner);
 #else
-# if defined(__APPLE__)
-    std::system("rm booted");
-
-    ifstream i_1("hal2009-server");
-    if (i_1) {
-    	boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
-    }
-    else {
-    	boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
-    }
-# else
     std::system("del booted");
-
-	boost::thread t_v(windows_invoke_runner);
-        cout << "runner " << freehal::get_lang_str().ref() << " " << database_engine << endl;
-# endif
+    boost::thread t_v(windows_invoke_runner);
 #endif
 
 		can_do_exit = true;

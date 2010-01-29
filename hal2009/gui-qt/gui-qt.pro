@@ -78,10 +78,8 @@ TRANSLATIONS = freehal_de.ts \
     freehal_en.ts \
     freehal_sp.ts
 FORMS += ui/freehal.ui \
-    ui/view.ui \
     ui/more-info.ui
 FORMS += ui/options.ui
-FORMS += 
 FORMS += ui/help.ui
 FORMS += ui/changelog.ui
 FORMS += ui/startup.ui
