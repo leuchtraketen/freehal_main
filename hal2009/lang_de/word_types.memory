@@ -1,96 +1,749 @@
-Daten:
-  count: 2
-  type: n
-  genus: f
-Eingabe:
-  count: 2
-  type: n
-  genus: f
-Freehal:
+Abend:
   count: 1
   type: n
-Ich:
-  type: n
-  count: 11
-Mir:
-  count: 3
-  type: n
-Tag:
-  type: n
-Tobias:
-  type: n
-Tut:
+Abloesung:
   count: 2
-  type: prep
-angenehmer:
+  type: n
+  genus: f
+Abnormitaet:
+  count: 2
+  type: n
+  genus: f
+Abwandlung:
+  count: 2
+  type: n
+  genus: f
+Abwechslung:
+  count: 2
+  type: n
+  genus: f
+Abweichung:
+  count: 2
+  type: n
+  genus: f
+Aenderung:
+  count: 2
+  type: n
+  genus: f
+Affe:
+  count: 1
   type: n
   genus: m
-anstaendige:
-  type: adj
-aufgrund:
+Ah:
+  type: n
+Ahnung:
+  count: 4
+  type: n
+  genus: f
+Andromeda:
+  type: n
+Antwort:
+  genus: f
+  type: n
+Aufschwung:
   count: 2
   type: n
-beantworten:
+  genus: m
+Aufstieg:
+  count: 2
+  type: n
+  genus: m
+Ausbau:
+  count: 2
+  type: n
+  genus: m
+Austausch:
+  count: 2
+  type: n
+  genus: m
+Babylon:
+  count: 8
+  type: n
+Backen:
+  count: 1
+  type: vi
+Banane:
+  count: 1
+  type: n
+  genus: f
+Bewegung:
+  type: n
+Bewertung:
+  count: 2
+  type: n
+  genus: f
+Bezeichnung:
+  type: n
+  genus: f
+Datum:
+  count: 3
+  type: n
+  genus: s
+Dialogprogramm:
+  count: 1
+  genus: s
+  type: n
+Dietmar:
+  type: n
+Donnerstag:
+  count: 1
+  type: n
+Doppelguguwappler:
+  type: n
+Edelpilz:
+  type: n
+  genus: m
+Eifelturm:
+  count: 2
+  type: n
+  genus: m
+Eiffelturm:
+  count: 2
+  type: n
+Entwicklungssprung:
+  count: 2
+  type: n
+  genus: m
+Erneuerung:
+  count: 2
+  type: n
+  genus: m
+Es:
+  count: 3
+  type: n
+Everest:
+  count: 1
+  type: n
+Existenz:
+  type: n
+  genus: f
+Fabelwesen:
+  count: 1
+  type: n
+  genus: s
+Fernsehserie:
+  count: 3
+  type: n
+Fiction:
+  type: n
+Fladenbrot:
+  count: 1
+  type: n
+  genus: s
+Fortschritt:
+  count: 2
+  type: vi
+  genus: m
+Freehal:
+  count: 2
+  type: n
+Gang:
+  count: 2
+  type: n
+  genus: m
+Geistesgestoerter:
+  count: 1
+  type: n
+Gesellschaft:
+  type: n
+  genus: f
+Grundfragen:
+  count: 6
+  type: n
+  genus: f
+Hauptstadt:
+  count: 4
+  type: n
+Hefeteig:
+  count: 1
+  type: n
+  genus: m
+Hm:
+  count: 1
+  type: inter
+Hmm:
+  type: inter
+Ich:
+  count: 16
+  type: n
+Jahr:
+  type: n
+Joseph:
+  type: n
+Kalbfleisch:
+  type: n
+  genus: s
+Knollenblaetterpilz:
+  type: n
+  genus: m
+Krankheiten:
+  type: n
+  genus: f
+Kueche:
+  count: 1
+  type: n
+  genus: f
+Kultivierung:
+  count: 2
+  type: n
+  genus: f
+Laengenfeld:
+  type: n
+Langeweile:
+  type: n
+  genus: f
+Lauf:
+  count: 2
+  type: n
+  genus: m
+Legende:
+  count: 1
+  type: n
+Madagaskar:
+  count: 2
+  type: n
+Markstein:
+  count: 2
+  type: n
+  genus: m
+Marktwirtschaft:
+  count: 6
+  type: n
+  genus: f
+Meilenstein:
+  count: 2
+  type: n
+  genus: m
+Metamorphose:
+  count: 2
+  type: n
+  genus: f
+Michael:
+  type: n
+Modifikation:
+  count: 2
+  type: n
+Monat:
+  type: n
+  genus: s
+Mount:
+  count: 1
+  type: n
+Mutation:
+  count: 2
+  type: n
+Name:
+  type: n
+Nein:
+  count: 11
+  type: n
+  genus: s
+Neubeginn:
+  count: 2
+  type: n
+  genus: m
+Neubelebung:
+  count: 2
+  type: n
+  genus: f
+Neuerung:
+  count: 1
+  type: n
+  genus: f
+Neuordnung:
+  count: 1
+  type: n
+  genus: f
+Neuorientierung:
+  count: 1
+  type: n
+Neuregelung:
+  count: 1
+  type: n
+  genus: f
+Ort:
+  count: 9
+  type: n
+  genus: m
+Ortsveraenderung:
+  count: 1
+  type: n
+  genus: f
+Pizza:
+  count: 4
+  type: n
+  genus: f
+Raumstation:
+  type: n
+Reform:
+  count: 1
+  type: n
+  genus: f
+Reisgericht:
+  type: n
+  genus: s
+Revolution:
+  count: 1
+  type: n
+Riesenrad:
+  count: 1
+  type: n
+  genus: s
+Risotto:
+  count: 1
+  type: n
+  genus: s
+Roboter:
+  type: n
+  genus: m
+Sackratte:
+  count: 1
+  type: n
+  genus: f
+Schauplatz:
+  type: n
+  genus: m
+Schlauch:
+  type: n
+  genus: m
+Schnitzel:
+  type: n
+  genus: s
+Schulz:
+  count: 1
+  type: n
+  genus: m
+Schwammerlgulasch:
+  type: n
+  genus: s
+Schwankung:
+  count: 1
+  type: n
+  genus: f
+Schwung:
+  count: 1
+  type: n
+Science:
+  type: n
+Soelden:
+  count: 4
+  type: n
+Sonnensegel:
+  type: n
+  genus: s
+Sorry:
+  type: inter
+Staedte:
+  count: 3
+  type: n
+  genus: f
+Steigerung:
+  count: 1
+  type: n
+  genus: f
+Stroemung:
+  count: 1
+  type: n
+  genus: f
+Tag:
+  count: 2
+  type: n
+Thiersee:
+  count: 1
+  type: n
+Tirol:
+  count: 6
+  type: n
+Tobias:
+  count: 3
+  type: n
+Transfer:
+  count: 1
+  type: n
+  genus: m
+Trottel:
+  count: 1
+  type: n
+  genus: m
+Tut:
+  count: 1
+  type: prep
+Uebergang:
+  count: 1
+  type: n
+  genus: m
+Umaenderung:
+  count: 1
+  type: n
+  genus: f
+Umbruch:
+  count: 1
+  type: n
+  genus: m
+Umgestaltung:
+  count: 1
+  type: n
+  genus: f
+Umschlag:
+  count: 1
+  type: n
+  genus: m
+Umschwung:
+  count: 1
+  type: n
+Umwandlung:
+  count: 1
+  type: n
+  genus: f
+Unruhe:
+  count: 1
+  type: n
+  genus: f
+Ursprung:
+  type: n
+Variationen:
+  type: n
+Veraenderung:
+  genus: f
+  type: n
+Verbesserung:
+  count: 1
+  type: n
+  genus: f
+Veredelung:
+  count: 1
+  type: n
+  genus: f
+Verfeinerung:
+  count: 1
+  type: n
+  genus: f
+Verkehr:
+  count: 1
+  type: n
+  genus: m
+Verschoenerung:
+  count: 1
+  type: n
+  genus: f
+Vervollkommnung:
+  count: 1
+  type: n
+  genus: f
+Wandel:
+  count: 1
+  type: n
+  genus: m
+Wandlung:
+  count: 1
+  type: n
+Wechsel:
+  count: 1
+  type: n
+  genus: m
+Weihnachten:
+  type: n
+Wende:
+  count: 1
+  type: m
+  genus: f
+Wetter:
+  type: n
+  genus: s
+Wien:
+  count: 4
+  type: n
+Wiener:
+  type: fw
+Wir:
+  count: 3
+  type: n
+Zeit:
+  count: 1
+  type: n
+Zunahme:
+  count: 1
+  type: n
+  genus: f
+affe:
+  type: n
+  genus: m
+angeht:
+  type: vi
+ausdrueckten:
+  type: EXIT
+banane:
+  type: n
+  genus: f
+bayerisches:
+  count: 1
+  type: adj
+belegt:
+  type: adj
+belegtes:
+  count: 1
+  type: adj
+berg:
+  type: n
+bundesland:
+  type: n
+  genus: s
+chatten:
+  type: n
+  genus: s
+china:
+  type: n
+computer:
+  count: 1
+  type: n
+  genus: m
+datum:
   count: 2
   type: n
   genus: s
 dem:
+  count: 2
   type: art
-dir:
+denke:
+  type: vi
+dessen:
+  type: n
+dezember:
+  type: n
+  genus: m
+dezentral:
+  count: 6
+  type: adj
+dich:
   count: 3
   type: n
-dri:
-  type: EXIT
-du:
+dir:
+  count: 6
   type: n
-  count: 11
-es:
+du:
   count: 4
   type: n
+duennes:
+  type: adj
+eifelturm:
+  count: 1
+  type: n
+  genus: m
+eiffelturm:
+  count: 1
+  type: n
+einfachem:
+  count: 1
+  type: adj
+entschieden:
+  count: 6
+  type: n
+  genus: s
+entstanden:
+  count: 1
+  type: adj
+entwickelt:
+  count: 2
+  type: vi
+entwickler:
+  type: n
+  genus: m
+erde:
+  type: n
+  genus: f
+erfolgreich:
+  count: 2
+  type: adj
+es:
+  type: n
+etwas:
+  type: adv
+everest:
+  type: n
+fantasyfilm:
+  count: 1
+  type: n
+  genus: m
 forschungsprojekt:
   type: n
   genus: s
-frechdachs:
-  type: n
-  genus: m
 freehal:
+  count: 3
   type: n
-freundliche:
-  type: adj
-  count: 1
-gespraechspartner:
+freund:
+  count: 3
   type: n
   genus: m
+galaxie:
+  type: n
+gar:
+  type: adj
+gebackenes:
+  type: adj
+geistesgestoerter:
+  count: 1
+  type: n
+gemeindebezirke:
+  type: n
+genauer:
+  type: adv
+gerade:
+  type: adv
+geschrieben:
+  type: vi
+gleichnamigen:
+  type: adj
+hauptstadt:
+  type: n
 ich:
   count: 2
   type: n
-internet:
+insel:
   type: n
-ki:
-  count: 1
-  type: n
-kleiner:
+  genus: f
+intelligentes:
   type: adj
 komme:
-  count: 1
   type: vi
-kommst:
-  count: 1
+konnte:
   type: vi
+kuenstliches:
+  count: 1
+  type: adv
+legende:
+  type: n
 leid:
-  count: 2
+  count: 1
   type: n
   genus: s
-mir:
+leider:
+  type: adv
+lernendes:
+  count: 1
+  type: adj
+meter:
+  count: 1
+  type: n
+mich:
   count: 2
   type: n
-name:
+mir:
+  count: 6
   type: n
+mount:
+  type: n
+neapel:
+  count: 1
+  type: n
+neapolitanischen:
+  count: 1
+  type: adj
 nirgendwo:
   type: adv
-vermutlich:
-  type: adv
-zuhoerer:
+norditalienisches:
+  type: adj
+obstsorte:
+  type: n
+  genus: f
+oder:
+  type: linking
+oesterreich:
+  count: 1
+  type: n
+ort:
+  count: 7
   type: n
   genus: m
+paniertes:
+  type: adj
+paris:
+  type: n
+pizza:
+  count: 3
+  type: n
+  genus: f
+riesenrad:
+  type: n
+  genus: s
+sackratte:
+  type: n
+  genus: f
+schimpfwort:
   count: 1
+  type: n
+schnitzel:
+  count: 1
+  type: n
+  genus: s
+schulz:
+  count: 3
+  type: n
+  genus: m
+selbststaendig:
+  count: 1
+  type: adv
+sich:
+  type: n
+soelden:
+  count: 3
+  type: n
+stehe:
+  type: vi
+stimmt:
+  type: vi
+tag:
+  type: n
+thiersee:
+  type: n
+tier:
+  type: n
+  genus: s
+tirol:
+  count: 2
+  type: n
+tobias:
+  type: n
+tollen:
+  type: n
+  genus: s
+uhr:
+  type: n
+und:
+  count: 2
+  type: linking
+unklar:
+  type: adj
+unterschiedliche:
+  type: adv
+unterteilt:
+  type: adj
+verstehen:
+  type: vi
+vertreibe:
+  type: vi
+viertgroesste:
+  type: adj
+wahrzeichen:
+  count: 1
+  type: n
+  genus: s
+wesen:
+  type: n
+wichtigsten:
+  count: 3
+  type: adj
+wien:
+  type: n
+wir:
+  count: 4
+  type: n
+wochentag:
+  type: n
+  genus: m
+wuerzig:
+  count: 1
+  type: adv
+wuesste:
+  type: vi
+zubereitet:
+  type: adj

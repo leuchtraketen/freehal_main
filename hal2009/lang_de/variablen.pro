@@ -42,7 +42,6 @@ ist <> a <> nothing <> muede <> f=> gehen schlafen sollte <> a <> nothing <>  <>
 #Direkte Anwort auf die Eingabe "Was soll ich tun"
 sollst tun <> du <> nothing <>  <> f=> geben kann/can <> ich <> dir einen rat <> nicht <>  <>  <> (true)
 #Anwort auf die Frage "Wie spät ist es"
-ist <> es <> $$time$$ uhr <>  <> (true)
 #Direkte Anwort auf die Eingabe "Woher weißt du das"
 weiss <> ich <> das <>  <> f=> lerne <> ich <> nothing <> viel <>  <>  ;; f=> lernt <> das team <> viel <> mit mir <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe "Wieviel wiegst du"
@@ -71,7 +70,6 @@ besitzt <> du <> a <>  <> f=> moechte <> ich <> auch a <>  <>  <>  ;; q=> schenk
 #Direkte Anwort auf die Eingabe "ich gehe jetzt"#
 geht <> a <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  ;; f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
 #Variablendeklaration für Wochentag
-ist <> $$wday$$ <> nothing <> heute <> (true)
 ist <> $$wday$$ <> ein tag <>  <> (true)
 # Bei der Eingabe "Ich heisse oder mein Name ist ..." Wird ein Zufallsnamen aus der Datenbank ausgegeben#
 ist <> dein name <> a <>  <> dachte f=> heisst <> ich du <> $$randomname$$ <>  <>  <>  <> (true)

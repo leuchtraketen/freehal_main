@@ -110,7 +110,6 @@ war <> benjamin_franklin <> ein naturwissenschaftler <>  <> (true)
 war <> bruno kreisky <> ein oesterreichischer staatsmann <>  <> (true)
 war <> christoph columbus <> italiener <>  <> (true)
 war <> daedalus <> der vater <> von ikarus <> (true)
-war <> das eine dumme antwort <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
 war <> das <> nothing <> nicht so gemeint <> (true)
 war <> der falklandkrieg <> nothing <> 1982 <>  <>  <>  <> nothing <> nothing <>  <> (true)
 war <> der _hexenhammer_ <> das inquisationshandbuch fuer hexenprozesse <>  <> (true)

@@ -1,4 +1,3 @@
-ist <> ein name <>  <>  <> (true)
 ist <> gabriel <> ein name <>  <> (true)
 ist <> gabriele <> ein name <>  <> (true)
 ist <> gaby <> ein name <>  <> (true)

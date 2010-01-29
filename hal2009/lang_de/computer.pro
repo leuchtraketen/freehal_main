@@ -42,7 +42,6 @@ heisst <> cd <> compact disc <>  <> (true)
 heisst <> irc <> _internet_relay_chat_ <>  <> (true)
 ist <> altavista <> eine suchmaschine <> in dem web <>  <>  <>  <> nothing <> nothing <>
 ist <> apple <> eine firma <>  <> (true)
-ist <> apple <> ein hersteller <> von computern <> (true)
 ist <> bluetooth <> ein industriestandard <> fuer die drahtlose vernetzung von geraeten ueber kurze distanz <>  <>  <>  <> nothing <> nothing <> 
 ist <> _bmp_ <> ein bildformat <>  <> (true)
 ist <> capi <> eine isdn-programmierschnittstelle <>  <> (true)

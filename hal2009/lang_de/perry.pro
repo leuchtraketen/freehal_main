@@ -87,7 +87,6 @@ humanoiden sind <> die <> schohaaken <> (meter_gross);nur rund <>  <>  <> nothin
 humorvoll <> nothing <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 isdie war <> die beruehmteste kartanin <> ursprungswelt der lemurer die erdet die zellaktivatortraegerin dao-lin-hay <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> alaska_saedelaere <> zwei meter <> gross <>  <>  <> nothing <>  <>  <>  <> (true)
-ist <> andromeda <> eine galaxie <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> archetz <> der fuenfte planet rusuma <> der sonne <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> arkon <> ein planet <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> atlan <> ein freund perry_rhodans <>  <>  <>  <> nothing <>  <>  <>  <> (true)

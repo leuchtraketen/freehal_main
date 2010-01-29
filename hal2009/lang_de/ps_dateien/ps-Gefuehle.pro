@@ -50,7 +50,6 @@
 = <> _einsam_sein_ <> gefuehl <>  <> (true)
 = <> _ekelerregt_sein_ <> gefuehl <>  <> (true)
 = <> _ekelhaft_sein_ <> gefuehl <>  <> (true)
-= <> ekel <> gefuehl <>  <> (true)
 = <> _elend_sein_ <> gefuehl <>  <> (true)
 = <> _empoert_sein_ <> gefuehl <>  <> (true)
 = <> empoerung <> gefuehl <>  <> (true)

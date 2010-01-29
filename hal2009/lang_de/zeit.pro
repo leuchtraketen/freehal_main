@@ -15,4 +15,3 @@ ist <> es <> $$month$$ <>  <> (true)
 ist <> es <> $$year$$ <>  <> (true)
 ist <> $$wday$$ <> nothing <> heute <> (true)
 schreiben <> wir <> das jahr $$year$$ <>  <> (true)
-

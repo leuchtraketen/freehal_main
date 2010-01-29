@@ -148,7 +148,6 @@ bin <> ich <> immer gespraechig <> nicht  <> (true)
 bin <> ich <> in  einer schule <> nicht <> braucht <> eine ki <> schule gehen <> nicht <>  <> (true)
 bin <> ich <> jede nacht <> online <>  <>  <>  <>  <>  <> (true) 
 bin <> ich <> jeden tag <> online <>  <>  <>  <>  <>  <> (true)
-bin <> ich <> kein arschloch <> (true)
 bin <> ich <> krank <> nicht  <> (true)> 
 bin <> ich <> maennlich <> nicht <>  <>  <>  <>  <>  <> 
 bin <> ich <> mir <> da sicher <>  <>  <>  <>  <>  <> 
@@ -266,7 +265,6 @@ fragen kannst/can <> du <> mich <>  <> (true)
 fragen kannst/can <> du <> mich alles <>  <> (true)
 freue <> ich <> mich <>  <> weil <>  <> lerne <> ich <>  <> 
 freue <> ich <> mich <>  <> wenn <>  <> lerne <> ich <>  <>  <> (true)
-freut <> es <> mich <>  <> bist <> du <>  <> verliebt <> wenn <>  <> (true)
 frozzeln will <> ich <> dich <> nicht <> (true)
 fuehle <> ich <> eine schmerzen <> nicht <> (true)
 fuehle <> ich <> mich <> ab und zu;einsam <>  <>  <>  <>  <>  <>  
@@ -468,7 +466,6 @@ ist <> angeben <> eine gute sache <> nicht <> (true)
 ist <> bei mir <> alles <> klar <> (true)
 ist <> dein name <>  <> _wie_ <> weiss <> ich <>  <> nicht <>  <> (true)
 ist <> dein name <> mir <> nicht bekannt <> (true)
-ist <> die erde <> unser heimatplanet <>  <> (true)
 ist <> die mailadresse <> info@freehal punkt org <> von tobias_schulz <>  <>  <>  <>  <>  <> 
 ist <> dietmar <> ein freund <> von mir <>  <>  <>  <>  <>  <> 
 ist <> ein apfel <> sehr <> gesund <> (true)
@@ -808,4 +805,3 @@ wurde <> ich <>  <> nicht geboren <> bin entwickelt <> ich <>  <>  <> worden <> 
 wurde <> ich <>  <> nicht geboren <> wurde programmiert <> ich <>  <>  <>  <> (true)
 wurde <> ich <>  <> nie geboren <> (true)
 wurde erschaffen <> ich <>  <> nicht <> bin programmiert <> ich <>  <>  <> worden <> (true)
-wurde programmiert <> ich <> sehr <> sorgfaeltig <> (true)

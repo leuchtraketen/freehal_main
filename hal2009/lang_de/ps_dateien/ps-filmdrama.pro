@@ -2438,7 +2438,6 @@
 = <> _simon_birch__ <> _filmdrama_ <>  <> (true)
 = <> _sin_querer_-_zeit_der_flamingos__ <> _filmdrama_ <>  <> (true)
 = <> _sinfonía_erótica__ <> _filmdrama_ <>  <> (true)
-= <> _a_single_man__ <> _filmdrama_ <>  <> (true)
 = <> _sinn_und_sinnlichkeit__ <> _filmdrama_ <>  <> (true)
 = <> _sinners__ <> _filmdrama_ <>  <> (true)
 = <> _sissi_-_die_junge_kaiserin__ <> _filmdrama_ <>  <> (true)

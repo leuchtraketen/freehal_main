@@ -143,7 +143,6 @@
 = <> _liebe_lieber_indisch__ <> _musikfilm_ <>  <> (true)
 = <> _liebe_jazz_und_uebermut__ <> _musikfilm_ <>  <> (true)
 = <> _liebe_tanz_und_in_jahre_1000_schlager__ <> _musikfilm_ <>  <> (true)
-= <> _ein_lied_geht_um_die_welt__ <> _musikfilm_ <>  <> (true)
 = <> _liquid_sky__ <> _musikfilm_ <>  <> (true)
 = <> _ludwig_van_b_-_meine_unsterbliche_geliebte__ <> _musikfilm_ <>  <> (true)
 = <> _lustige_burschen__ <> _musikfilm_ <>  <> (true)
