@@ -1471,6 +1471,7 @@ define action builtin_has_time_place_adverbs_suffix with var word do
 done
 
 set multi-line new global hash builtin_verb_prefixes to {
+          'hinter' => 1,
           'auf' => 1,
           'hin' => 1,
           'hinzu' => 1,
@@ -1479,6 +1480,8 @@ set multi-line new global hash builtin_verb_prefixes to {
           'herauf' => 1,
           'hinab' => 1,
           'hinunter' => 1,
+          'hin' => 1,
+          'her' => 1,
           'an' => 1,
           'ab' => 1,
           'zusammen' => 1,
@@ -4493,8 +4496,79 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     do return with var phrase
 done
 
-define action to_verb_root with var verb, var lang, var path do
+define action to_verb_root_left with var verb, var lang, var path do
+    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
     
+    set new var last_verb to ''
+    while not var verb matches var last_verb do
+        set var last_verb to var verb
+        
+        if length(var verb) > 2 and var verb matches /<[aeiou]>/ do
+            for each new var prefix in array verb_prefixes do
+                if var verb matches /^var prefix/ do
+                    do regex using var verb: /^var prefix/, "", :global
+                    go to last
+                done
+            done
+            
+            if var verb matches /^ge/ do
+                do regex using var verb: /^ge/, "", :global
+            done
+            if var verb matches /^be/ do
+                do regex using var verb: /^be/, "", :global
+            done
+            if var verb matches /^zu/ do
+                do regex using var verb: /^zu/, "", :global
+            done
+        done
+    done
+
+    do return with var verb
+done
+
+define action to_verb_root_right with var verb, var lang, var path do
+    
+    if var verb matches /e<[rl]>n$/ do
+        if var verb matches /h/ do
+            do regex using var verb: /<[rl]>n$/, "", :global
+        done
+        else do
+            do regex using var verb: /e<[rl]>n$/, "", :global
+        done
+    done
+    
+    else if var verb matches /eigen$/ do
+        do regex using var verb: /gen$/, "", :global
+    done
+    else if var verb matches /igen$/ do
+        do regex using var verb: /igen$/, "", :global
+    done
+    else if var verb matches /lichen$/ do
+        do regex using var verb: /lichen$/, "", :global
+    done
+    
+    else if var verb matches /eien$/ do
+        do regex using var verb: /en$/, "", :global
+    done
+    else if var verb matches /ien$/ do
+        do regex using var verb: /n$/, "", :global
+    done
+    else if var verb matches /en$/ do
+        do regex using var verb: /en$/, "", :global
+    done
+    else if var verb matches /n$/ do
+        do regex using var verb: /n$/, "", :global
+    done
+    
+    do return with var verb
+done
+
+define action to_verb_root with var verb, var lang, var path do
+
+    set var verb to to_verb_root_right with var verb, var lang, var path
+    set var verb to to_verb_root_left with var verb, var lang, var path
+    
+    do return with var verb
 done
 
 define action get_score_answer without arguments do
