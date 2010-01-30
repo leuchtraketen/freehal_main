@@ -223,7 +223,6 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
 }
 
 int fact_delete_from_source (const char* source) {
-    return 0;
     int r = fact_replace_in_source (source, 0);
     return r;
 }

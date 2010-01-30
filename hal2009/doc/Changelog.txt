@@ -1,4 +1,8 @@
-837:
+839:
+
+- Loeschbug korrigiert
+
+838:
 
 - Speicherleck korrigiert
 

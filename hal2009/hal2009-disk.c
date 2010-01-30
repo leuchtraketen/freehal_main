@@ -480,7 +480,7 @@ char* gen_sql_get_double_facts() {
     *sql = 0;
     
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`");
-    strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb FROM facts GROUP BY mix_1 HAVING count(*) >2) order by mix_1, verb;");
+    strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb FROM facts GROUP BY mix_1 HAVING count(*) >= 2) order by mix_1, verb;");
     
     return sql;
 }
