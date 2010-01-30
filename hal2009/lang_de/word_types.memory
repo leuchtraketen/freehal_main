@@ -148,7 +148,7 @@ Gesellschaft:
   type: n
   genus: f
 Grundfragen:
-  count: 6
+  count: 11
   type: n
   genus: f
 Hauptstadt:
@@ -207,7 +207,7 @@ Markstein:
   type: n
   genus: m
 Marktwirtschaft:
-  count: 6
+  count: 11
   type: n
   genus: f
 Meilenstein:
@@ -512,7 +512,7 @@ dezember:
   type: n
   genus: m
 dezentral:
-  count: 6
+  count: 11
   type: adj
 dich:
   count: 3
@@ -536,7 +536,7 @@ einfachem:
   count: 1
   type: adj
 entschieden:
-  count: 6
+  count: 11
   type: n
   genus: s
 entstanden:
@@ -747,3 +747,301 @@ wuesste:
   type: vi
 zubereitet:
   type: adj
+Acoustic:
+  type: n
+Alternative:
+  count: 1
+  genus: f
+  type: n
+dance:
+  count: 1
+  type: n
+Rock:
+  count: 1
+  genus: m
+  type: n
+AltMetal:
+  count: 1
+  type: n
+Ambient:
+  type: n
+Arabic:
+  type: n
+Australian:
+  type: n
+hip:
+  type: n
+hop:
+  count: 1
+  type: n
+Ballad:
+  genus: f
+  type: n
+Black:
+  type: n
+metal:
+  count: 1
+  type: n
+Bluegrass:
+  type: n
+Blues:
+  count: 1
+  genus: m
+  type: n
+Bossa:
+  type: n
+Nova:
+  type: n
+British:
+  type: n
+Britpop:
+  genus: m
+  type: n
+Celtic:
+  type: n
+Chanson:
+  count: 1
+  genus: s
+  type: n
+Chillout:
+  type: n
+Classic:
+  type: n
+Club:
+  type: n
+Comedy:
+  type: n
+Contemporary:
+  type: n
+Country:
+  count: 1
+  type: n
+Crunk:
+  type: n
+Dance:
+  type: n
+Death:
+  count: 1
+  type: n
+Metal:
+  type: n
+Deathcore:
+  type: n
+Deep:
+  type: n
+House:
+  count: 1
+  type: n
+Disco:
+  type: n
+Doom:
+  type: n
+Downtempo:
+  type: n
+Drum:
+  type: n
+and:
+  type: linking
+Bass:
+  type: n
+Electro:
+  type: n
+Electronic:
+  type: n
+Electronica:
+  type: n
+Electropop:
+  type: n
+Emo:
+  type: n
+Epic:
+  type: n
+Ethnic:
+  type: n
+Experimental:
+  type: n
+Flamenco:
+  type: n
+Folk:
+  count: 1
+  type: n
+Folk-rock:
+  count: 1
+  type: n
+French:
+  count: 1
+  type: n
+HipHop:
+  type: n
+Pop:
+  count: 1
+  genus: m
+  type: n
+Funk:
+  type: vi
+Fusion:
+  genus: f
+  type: n
+Game:
+  type: n
+Soundtrack:
+  count: 1
+  type: n
+Gospel:
+  type: n
+Gothic:
+  type: n
+Groove:
+  type: n
+Grunge:
+  count: 1
+  type: n
+Guitar:
+  type: n
+Hard:
+  type: n
+rock:
+  genus: m
+  type: n
+Hardcore:
+  count: 1
+  type: n
+Punk:
+  count: 1
+  type: n
+Heavy:
+  type: n
+Hip-hop:
+  type: n
+Holiday:
+  type: n
+Indie:
+  count: 1
+  type: n
+Industrial:
+  type: n
+Instrumental:
+  type: adj
+International:
+  type: adj
+Jazz:
+  count: 1
+  genus: m
+  type: n
+Latin:
+  type: n
+Lo:
+  genus: s
+  type: n
+Fi:
+  type: n
+Lounge:
+  genus: f
+  type: n
+Melodic:
+  type: n
+death:
+  type: n
+Metalcore:
+  type: n
+Movie:
+  type: n
+soundtrack:
+  count: 1
+  type: n
+Neoclassic:
+  type: n
+New:
+  count: 1
+  genus: f
+  type: n
+Age:
+  type: n
+Wave:
+  type: n
+Noise:
+  type: n
+Nu:
+  type: n
+NuMetal:
+  type: n
+Opera:
+  genus: f
+  type: n
+Piano:
+  genus: s
+  type: n
+Post:
+  genus: f
+  type: n
+grunge:
+  type: n
+Post-Hardcore:
+  type: n
+Post-Metal:
+  type: n
+Postrock:
+  type: n
+Power:
+  type: n
+Progressive:
+  count: 1
+  type: n
+Psychedelic:
+  count: 1
+  type: n
+Trance:
+  count: 1
+  type: n
+Rap:
+  genus: m
+  type: n
+Rave:
+  type: n
+RB:
+  type: n
+Reggae:
+  type: n
+Relax:
+  type: n
+Religious:
+  type: n
+RnB:
+  type: n
+Roll:
+  genus: f
+  type: n
+Screamo:
+  type: n
+Ska:
+  type: n
+Smooth:
+  type: n
+Soul:
+  genus: m
+  type: n
+Space:
+  count: 1
+  genus: m
+  type: n
+Symphonic:
+  type: n
+Tango:
+  type: n
+Techno:
+  genus: s
+  type: n
+Thrash:
+  type: n
+Top:
+  genus: s
+  type: n
+Trip:
+  type: n
+Hop:
+  type: n
+Uncategorized:
+  type: n
+Vocal:
+  count: 1
+  type: n

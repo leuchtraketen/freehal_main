@@ -17,9 +17,7 @@ geh <> nothing <> nothing <> ins bett <> f=> schlaefe <> ich <> nothing <> nie <
 #Direkte Anwort auf "Wie geht es dir so"
 geht <> es <> mir so <>  <> f=> geht <> es <> mir <> sehr gut <>  <>  <> 100
 # Ausgabe einer Variabeln
-haben <> wir <> $$month$$ <>  <> (true)
 #Ausgabe einer Variablen
-haben <> wir <> $$year$$ <>  <> (true)
 #Direkte Anwort auf die Eingabe "Ich habe Durst"
 hat <> a <> durst <>  <> f=> sollte trinken <> a <> etwas <>  <>  <>  ;; q=> trinkt <> a <> nichts <>  <> warum <>  <> (true)
 #Direkte Anwort auf die Frage "Wer hat dir diesen Namen gegeben"
@@ -43,7 +41,6 @@ ist <> a <> nothing <> muede <> f=> gehen schlafen sollte <> a <> nothing <>  <>
 sollst tun <> du <> nothing <>  <> f=> geben kann/can <> ich <> dir einen rat <> nicht <>  <>  <> (true)
 #Anwort auf die Frage "Wie sp‰t ist es"
 #Direkte Anwort auf die Eingabe "Woher weiﬂt du das"
-weiss <> ich <> das <>  <> f=> lerne <> ich <> nothing <> viel <>  <>  ;; f=> lernt <> das team <> viel <> mit mir <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe "Wieviel wiegst du"
 wiege <> ich <> nothing <>  <> f=> hat <> software <> ein gewicht <> nicht <>  <>  <> (true)
 #Anwort auf eine schlimme Frage

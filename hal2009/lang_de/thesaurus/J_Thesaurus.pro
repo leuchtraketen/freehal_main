@@ -222,7 +222,6 @@
 = <> _jammer_ <> _lamento_ <> (maybe)
 = <> _jammerlappen_ <> _weichling_ <> (maybe)
 = <> _jammern_ <> _heulen_ <> (maybe)
-= <> _jammern_ <> _heulen_ <> (maybe)
 = <> _jammern_ <> _jaulen_ <> (maybe)
 = <> _jammern_ <> _klagen_ <> (maybe)
 = <> _jammern_ <> _meckern_ <> (maybe)

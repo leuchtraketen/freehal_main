@@ -232687,160 +232687,185 @@ Aufsaugen:
 aehnlich:
   type: adj
 verbunden:
-  type: vi
+  type: adj
 marmorieren:
   type: vi
 aufspaltung:
-  type: adj
+  genus  : f
+  type: n
 Brauerin:
+  genus  : f
   type: n
 atheismus:
+  genus  : m
   type: n
 Geistlos:
-  type: n
+  type: adj
 Nierenbaeume:
+  genus  : f
   type: n
 Weiterbildung:
+  genus  : f
   type: n
 Wenzel:
-  type: fw
+  type: n
 Heizkoerper:
   type: n
 Pauschale:
+  genus  : f
   type: n
 einigeln:
   type: vi
 Libellen:
+  genus  : f
   type: n
 Hitzacker:
   type: n
 Gegenkathete:
+  genus  : f
   type: n
 Verpflanzung:
+  genus  : f
   type: n
 Reibungszahl:
+  genus  : f
   type: n
 lieblich:
-  type: adv
+  type: adj
 Piseestampflehm:
   type: n
 Scharfsinnig:
-  type: n
-linken:
-  type: adv
-lieblo:
   type: adj
+linken:
+  type: vi
 ausrenken:
   type: vi
-Fliegerbombenzielgert:
-  type: n
 Abendmesse:
-  type: n
-Auenschicht:
+  genus  : f
   type: n
 Festkommaarithmetik:
+  genus  : f
   type: n
 chefsteward:
-  type: adj
+  genus  : m
+  type: n
 Dienstleistungsvertrag:
+  genus  : m
   type: n
 After:
+  genus  : m
   type: n
 Moebel:
+  genus  : f
   type: n
 Zollbeamter:
   type: n
 ausgrenzung:
-  type: adj
+  genus  : f
+  type: n
 Mixtur:
+  genus  : f
   type: n
 Gasbeleuchtung:
+  genus  : f
   type: n
 Gluecksfall:
+  genus  : m
   type: n
 Erzbischof:
+  genus  : m
   type: n
 oeffentlichkeitsarbeit:
-  type: adj
-Mischbeckenmischwanne:
+  genus  : f
   type: n
 peinigung:
-  type: adj
+  genus  : f
+  type: n
 Bornholm:
   type: n
 kastrat:
-  type: adj
+  genus  : m
+  type: n
 Antithese:
+  genus  : f
   type: n
 geldmengen:
-  type: vi
+  genus  : f
+  type: n
 mobilisieren:
   type: vi
 Ueberholen:
-  type: n
-Trinitaet:
+  genus  : s
   type: n
 ableiten:
   type: vi
 Karamasov:
   type: n
 gspreis:
+  genus  : m
   type: n
 liebten:
   type: vi
 Bodenleitfaehigkeitsmesser:
   type: n
-Brosprechstelle:
-  type: n
 Eisstein:
+  genus  : m
   type: n
 Einkaufstaschen:
+  genus  : f
   type: n
-traktat:
-  type: adj
 erloesung:
-  type: adj
+  genus  : f
+  type: n
 rueckfuehrbar:
   type: adj
 Elfte:
-  type: adv
-Rudimentaer:
-  type: n
-grundstueck:
   type: adj
-Morgenlandorientosten:
+Rudimentaer:
+  type: adj
+grundstueck:
+  genus  : s
   type: n
 Aussteuer:
+  genus  : f
   type: n
 Cembalistin:
+  genus  : f
   type: n
 Beete:
+  genus  : f
   type: n
 vereinigen:
-  type: adv
+  type: vi
 backhuhn:
-  type: adj
+  genus  : s
+  type: n
 Duss:
   type: n
 Drahtlehre:
+  genus  : f
   type: n
 hohenems:
   type: n
 Jungem:
-  type: adv
-schwerin:
   type: adj
+schwerin:
+  type: n
 Demobilisierungen:
+  genus  : f
   type: n
 falsifizieren:
   type: vi
 Forschungsetat:
+  genus  : m
   type: n
 Kontroversiell:
-  type: n
-prinzip:
   type: adj
+prinzip:
+  genus  : s
+  type: n
 Waehlscheibe:
+  genus  : f
   type: n
 Kuenstler:
   type: n
@@ -232849,285 +232874,356 @@ Mrd:
 knacken:
   type: vi
 Postoperativ:
-  type: n
-Beschlussfhigkeit:
-  type: n
-Pessimistische:
-  type: n
-warburg:
   type: adj
+Pessimistische:
+  type: adj
+warburg:
+  type: n
 Ungeschicklichkeit:
+  genus  : f
   type: n
 Vorantreiben:
+  genus  : s
   type: n
 ladentisch:
-  type: adj
+  genus  : m
+  type: n
 Datenbeschreibungssprache:
+  genus  : f
   type: n
 Blockabsaetze:
+  genus  : f
   type: n
 Einrosten:
+  genus  : s
   type: n
 Initiativgrupppe:
+  genus  : f
   type: n
 Fruehbucherrabatt:
+  genus  : m
   type: n
 Dumpfbacke:
+  genus  : f
   type: n
 Betonwerkstein:
+  genus  : m
   type: n
 Abmasse:
+  genus  : f
   type: n
 Klimakterium:
+  genus  : s
   type: n
 Flugzeugentfuehrer:
   type: n
 hintertupfing:
-  type: adj
+  type: n
 Diffusionstransistor:
+  genus  : m
   type: n
 mangelhaftigkeit:
+  genus  : f
   type: n
-verschrfen:
-  type: vi
 selbstaendigkeit:
+  genus  : f
   type: n
 Realisierbar:
-  type: n
+  type: adj
 Boee:
+  genus  : f
   type: n
 steve:
-  type: adj
+  type: n
 nts:
   type: n
 Suesswassersee:
+  genus  : m
   type: n
 Abiotisch:
-  type: n
+  type: adj
 Beigaben:
+  genus  : f
   type: n
 Ausgebufft:
-  type: n
+  type: adj
 Hovercraft:
   type: n
-syllabu:
-  type: adj
 Kontrollzentrum:
+  genus  : s
   type: n
 Beduerftigkeit:
+  genus  : f
   type: n
 Bettelarmut:
+  genus  : f
   type: n
 Betzenstein:
   type: n
 Darmstadtium:
+  genus  : s
   type: n
 Feststofftransport:
+  genus  : m
   type: n
 Einfuehrschraege:
+  genus  : f
   type: n
 Suedossetienne:
   type: n
 Kenntlich:
-  type: adv
+  type: adj
 ungemein:
   type: adj
 Lotse:
+  genus  : m
   type: n
 Mittlere:
-  type: n
+  type: adj
 neuartig:
-  type: adv
+  type: adj
 biologisch:
   type: adj
 spalte:
-  type: vi
+  genus  : f
+  type: n
 maekeln:
   type: vi
 lagerbestandskontrollen:
-  type: vi
+  genus  : f
+  type: n
 Abschiebetest:
+  genus  : m
   type: n
 Hoehenzug:
+  genus  : m
   type: n
 bandbeschichten:
   type: vi
 Wohlgesinnt:
-  type: n
+  type: adj
 Familien:
+  genus  : f
   type: n
 Ostmark:
+  genus  : f
   type: n
 warnzeichen:
-  type: adv
+  genus  : s
+  type: n
 wodka:
-  type: adj
+  genus  : m
+  type: n
 verschaffen:
   type: vi
 nordenham:
-  type: adj
+  type: n
 Verfettung:
+  genus  : f
   type: n
 Blechschmiede:
+  genus  : f
   type: n
 Eintreibungen:
+  genus  : f
   type: n
 bravour:
-  type: adj
+  genus  : f
+  type: n
 Brei:
+  genus  : m
   type: n
 Postbotin:
+  genus  : f
   type: n
 zahlreiche:
-  type: adv
+  type: adj
 wiederaufforstung:
-  type: adj
+  genus  : f
+  type: n
 tubula:
-  type: adj
+  type: n
 Luftsprung:
+  genus  : m
   type: n
 zurueckgewinnen:
   type: vi
 Brutreaktoren:
+  genus  : f
   type: n
 Wirklichkeitsnah:
-  type: n
+  type: adj
 Gespuer:
+  genus  : s
   type: n
 Schuhe:
+  genus  : f
   type: n
 verzichtbar:
   type: adj
 werd:
-  type: adj
+  type: vi
 Sterben:
+  genus  : s
   type: n
 Dschungel:
+  genus  : m
   type: n
 Indexieren:
+  genus  : s
   type: n
 Bewaffnen:
+  genus  : s
   type: n
 kren:
-  type: vi
+  genus  : m
+  type: n
 Frachtvertraege:
+  genus  : f
   type: n
 verzinsliche:
-  type: adv
+  type: adj
 zufallen:
   type: vi
 nebra:
-  type: adj
-Fischstbchen:
   type: n
 Antikommunistinnen:
+  genus  : f
   type: n
 Uebertragener:
-  type: n
-publizist:
-  type: vi
-rayon:
   type: adj
+publizist:
+  genus  : m
+  type: n
+rayon:
+  type: n
 Entwirrer:
+  genus  : m
   type: n
 Fruchtkoerper:
+  genus  : m
   type: n
 Zb:
   type: n
 zurechenbar:
   type: adj
 Brillenketten:
+  genus  : f
   type: n
-eierstocken:
-  type: vi
 schickeria:
-  type: adj
+  genus  : f
+  type: n
 Naturgewalt:
+  genus  : f
   type: n
 billigen:
-  type: adv
-puzzlespiel:
   type: adj
+puzzlespiel:
+  genus  : s
+  type: n
 Fremdkapital:
+  genus  : s
   type: n
 Gebrauch:
+  genus  : m
   type: n
 Glaubensbekenntnis:
+  genus  : s
   type: n
 Wahrnehmbar:
-  type: n
+  type: adj
 Pfingstlied:
+  genus  : s
   type: n
 buschauffeur:
-  type: adj
+  genus  : m
+  type: n
 Duese:
+  genus  : f
   type: n
 Abhitzeverwertung:
+  genus  : f
   type: n
 Einzelbestimmung:
+  genus  : f
   type: n
 Hagebutte:
+  genus  : f
   type: n
 Doppelhelix:
+  genus  : s
   type: n
 verpeilt:
   type: vi
 Gegenangriffe:
+  genus  : f
   type: n
-eingefasen:
-  type: vi
 Bedeckungen:
+  genus  : f
   type: n
-rdsfd:
-  type: adj
 Finanzierungsplaene:
+  genus  : f
   type: n
 Terrine:
+  genus  : f
   type: n
 Kennwerte:
+  genus  : f
   type: n
 planung:
-  type: adj
+  genus  : f
+  type: n
 Aufputzmontage:
+  genus  : f
   type: n
 Agra:
   type: n
 aeussern:
   type: vi
 muendlich:
-  type: adv
+  type: adj
 Einsenkungen:
+  genus  : f
   type: n
 Einkaufspromenaden:
+  genus  : f
   type: n
 Waldbestand:
+  genus  : m
   type: n
 Schweinefleisch:
+  genus  : s
   type: n
 radium:
-  type: adj
+  genus  : s
+  type: n
 Eigenkapitalrentabilitaet:
+  genus  : f
   type: n
 Streitobjekt:
+  genus  : s
   type: n
 Abrissbirne:
+  genus  : f
   type: n
 Bildhauer:
   type: n
-lebenserhalten:
-  type: vi
 Angorawolle:
+  genus  : f
   type: n
 vorschein:
-  type: adj
+  genus  : m
+  type: n
 Aufstiegshilfe:
+  genus  : f
   type: n
 Hocker:
+  genus  : m
   type: n
 unerlaubten:
-  type: vi
+  type: adj
 absehen:
-  type: adv
+  type: vi
 Plansummeplanwertrichtsummesollwertzielgroessezielwert:
   type: n
 Lieben:

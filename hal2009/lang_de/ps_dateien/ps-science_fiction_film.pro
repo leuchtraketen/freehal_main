@@ -244,7 +244,6 @@
 = <> _ghettogangz_2_-_ultimatum__ <> _science_fiction_film_ <>  <> (true)
 = <> _ghettogangz_-_die_hoelle_vor_paris__ <> _science_fiction_film_ <>  <> (true)
 = <> _ghost_in_the_shell__ <> _science_fiction_film_ <>  <> (true)
-= <> _ghost_in_the_shell__ <> _science_fiction_film_ <>  <> (true)
 = <> _ghost_in_the_shell_2_innocence__ <> _science_fiction_film_ <>  <> (true)
 = <> _ghost_in_the_shell_sac_solid_state_society__ <> _science_fiction_film_ <>  <> (true)
 = <> _ghosts_of_mars__ <> _science_fiction_film_ <>  <> (true)

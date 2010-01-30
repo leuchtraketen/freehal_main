@@ -946,7 +946,6 @@
 = <> _spartan__ <> _actionfilm_ <>  <> (true)
 = <> _spawn__ <> _actionfilm_ <>  <> (true)
 = <> _speed__ <> _actionfilm_ <>  <> (true)
-= <> _speed__ <> _actionfilm_ <>  <> (true)
 = <> _speed_2_-_cruise_control__ <> _actionfilm_ <>  <> (true)
 = <> _speed_racer__ <> _actionfilm_ <>  <> (true)
 = <> _the_specialist__ <> _actionfilm_ <>  <> (true)
