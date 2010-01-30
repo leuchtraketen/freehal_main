@@ -165,6 +165,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         char* buffer;
         int lines = 1;
         while (file && (buffer = halgetline(file)) != NULL) {
+            free(buffer);
             ++lines;
         }
         --lines;
@@ -182,6 +183,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
                 else {
                     data[line_number] = replacement;
                 }
+                free(buffer);
                 ++line_number;
             }
             fclose(file);
@@ -208,15 +210,15 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
     else {
         printf("Unable to open file.\n");
         
-        if (_replacement) {
-            return replacement;
+        if (replacement) {
+            free(replacement);
         }
         
         return 1;
     }
     
-    if (_replacement) {
-        return replacement;
+    if (replacement) {
+        free(replacement);
     }
     
     return 0;
@@ -261,6 +263,7 @@ char* fact_read_from_source (const char* source) {
         char* found;
         int lines = 1;
         while (file && (buffer = halgetline(file)) != NULL) {
+            free(buffer);
             ++lines;
         }
         --lines;
@@ -274,6 +277,7 @@ char* fact_read_from_source (const char* source) {
                 if (line_number == line_int) {
                     found = strdup(buffer);
                 }
+                free(buffer);
                 ++line_number;
             }
             fclose(file);
@@ -1525,6 +1529,7 @@ const char* check_config (const char* name, const char* _default) {
                 }
                 return copy;
             }
+            free(temp);
         }
     }
     fclose(i);
