@@ -735,6 +735,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             out_csv_data.close();
             (*stream) << "CSV_RESULT:." << endl;
             if (request) free(request);
+            if (csv_data) free(csv_data);
         }
 
         if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {

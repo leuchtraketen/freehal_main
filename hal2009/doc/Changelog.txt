@@ -1,3 +1,15 @@
+843:
+
+- Versuch Speicherleck Korrektur
+
+842:
+
+- Versuch Speicherleck Korrektur
+
+841:
+
+- Versuch Speicherleck Korrektur
+
 840:
 
 - GUI-Update

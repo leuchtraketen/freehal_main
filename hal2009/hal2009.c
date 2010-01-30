@@ -165,7 +165,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         char* buffer;
         int lines = 1;
         while (file && (buffer = halgetline(file)) != NULL) {
-            free(buffer);
+            if (buffer) free(buffer);
             ++lines;
         }
         --lines;
@@ -181,9 +181,9 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
                     data[line_number] = strdup(buffer);
                 }
                 else {
-                    data[line_number] = replacement;
+                    data[line_number] = strdup(replacement);
                 }
-                free(buffer);
+                if (buffer) free(buffer);
                 ++line_number;
             }
             fclose(file);
@@ -192,9 +192,6 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
             if (file) {
                 for (line_number = 1; line_number <= lines; ++line_number) {
                     if (!data[line_number]) {
-                        fprintf(file, "\n");
-                    }
-                    else if (data[line_number] == -2) {
                         fprintf(file, "\n");
                     }
                     else if (data[line_number]) {
@@ -263,7 +260,7 @@ char* fact_read_from_source (const char* source) {
         char* found;
         int lines = 1;
         while (file && (buffer = halgetline(file)) != NULL) {
-            free(buffer);
+            if (buffer) free(buffer);
             ++lines;
         }
         --lines;
@@ -277,7 +274,7 @@ char* fact_read_from_source (const char* source) {
                 if (line_number == line_int) {
                     found = strdup(buffer);
                 }
-                free(buffer);
+                if (buffer) free(buffer);
                 ++line_number;
             }
             fclose(file);
@@ -1508,7 +1505,7 @@ const char* check_config (const char* name, const char* _default) {
             if (strstr(temp, name)) {
                 halstring haltemp;
                 halstring* haltemp_ref = &haltemp;
-                haltemp_ref->do_free = 0;
+                haltemp_ref->do_free = 1;
                 haltemp_ref->s = temp;
                 
                 haltemp_ref = replace(haltemp_ref, " =", "=");
@@ -1529,7 +1526,6 @@ const char* check_config (const char* name, const char* _default) {
                 }
                 return copy;
             }
-            free(temp);
         }
     }
     fclose(i);
