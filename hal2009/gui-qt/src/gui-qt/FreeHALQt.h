@@ -185,8 +185,11 @@ public slots:
     void iconActivated(QSystemTrayIcon::ActivationReason);
     void show_in_tray_icon(QString);
 
+    void slotEnable();
+
 
 private slots:
+    void on_vacuum_clicked();
     void on_plus_clicked();
     void on_minus_clicked();
     void on_flowchart_fact_pk_valueChanged(int );
@@ -355,6 +358,7 @@ signals:
     void sig_show_in_tray_icon(QString);
     void signalSetTimeToLearn(int);
     void signalSetTimeToLearnElapsed(int);
+    void signalEnable();
 };
 
 

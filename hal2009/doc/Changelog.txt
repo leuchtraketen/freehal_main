@@ -1,3 +1,7 @@
+837:
+
+- Speicherleck korrigiert
+
 836:
 
 - Update des lang_de Ordners

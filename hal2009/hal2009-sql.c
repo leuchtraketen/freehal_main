@@ -85,6 +85,10 @@ int sql_delete_everything_from(const char* filename) {
     return sql_universal_delete_everything_from(filename);
 }
 
+int sql_vacuum() {
+    return sql_universal_vacuum();
+}
+
 int sql_begin() {
     while (database_used) {
         fprintf(output(), "Wait while database is used.\n");

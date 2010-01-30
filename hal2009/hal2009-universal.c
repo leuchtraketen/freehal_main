@@ -2346,3 +2346,14 @@ char* universal_get_source(char* key) {
     return 0;
 }
 
+int universal_vacuum() {
+    printf("...\n");
+    if (is_engine("ram")) {
+        // does not exist
+    }
+    else {
+        return disk_vacuum();
+    }
+    return 0;
+}
+

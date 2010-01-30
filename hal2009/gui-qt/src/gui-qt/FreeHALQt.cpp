@@ -628,7 +628,10 @@ QScrollArea* scrollArea = new QScrollArea;
             main_window->user_interface_main_window->learnbar, SLOT(setMaximum(int)));
     helper->connect(&(*helper), SIGNAL(signalSetTimeToLearnElapsed(int)),
             main_window->user_interface_main_window->learnbar, SLOT(setValue(int)));
-    		
+
+    helper->connect(&(*helper), SIGNAL(signalEnable()),
+            main_window, SLOT(slotEnable()));
+
     app.connect(&app, SIGNAL(aboutToQuit()),
              &(*helper), SLOT(exitNow()));
 
@@ -1437,6 +1440,9 @@ void freehal::comm_new(freehal::string s) {
         if (s.contains("READY")) {
             emit helper->everythingReady();
         }
+        if (s.contains("VACUUM")) {
+            emit helper->signalEnable();
+        }
         if (s.contains("OFFLINE_MODE")) {
             stringstream sst;
             sst << parts[1].ref();
@@ -2135,5 +2141,30 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
     }
 
     ++(set->size);
+}
+
+
+void FreeHALWindow::on_vacuum_clicked()
+{
+    freehal::comm_send("VACUUM:.");
+
+    this->user_interface_main_window->allfacts->setEnabled(false);
+    this->user_interface_main_window->matchingfacts->setEnabled(false);
+    this->user_interface_main_window->vacuum->setEnabled(false);
+    this->user_interface_main_window->double_facts->setEnabled(false);
+    this->user_interface_main_window->tableView->setEnabled(false);
+    this->user_interface_main_window->pushButton->setEnabled(false);
+    this->user_interface_main_window->pushButton_learn->setEnabled(false);
+}
+
+void FreeHALWindow::slotEnable()
+{
+    this->user_interface_main_window->allfacts->setEnabled(true);
+    this->user_interface_main_window->matchingfacts->setEnabled(true);
+    this->user_interface_main_window->vacuum->setEnabled(true);
+    this->user_interface_main_window->double_facts->setEnabled(true);
+    this->user_interface_main_window->tableView->setEnabled(true);
+    this->user_interface_main_window->pushButton->setEnabled(true);
+    this->user_interface_main_window->pushButton_learn->setEnabled(true);
 }
 

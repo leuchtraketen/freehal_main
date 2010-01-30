@@ -452,8 +452,7 @@ void hal2009_server_start() {
         }
         catch (std::exception& e)
         {
-            std::cerr << "Not starting server: " << e.what() << std::endl;
-            exit(0);
+            std::cerr << e.what() << std::endl;
         }
     }
 }
@@ -750,6 +749,16 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             }
             sql_end();
             (*stream) << "DELETED:SUCCESS" << endl;
+        }
+
+        if ( result->at(0) == string("VACUUM") ) {
+            printf("Running SQL vacuum function.\n");
+            printf("Start.\nVacuum...\n");
+            sql_begin();
+            sql_vacuum();
+            sql_end();
+            printf("Stop.\nVacuum finished.\n");
+            (*stream) << "VACUUM:SUCCESS" << endl << "VACUUM:SUCCESS" << endl;
         }
         
         if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {

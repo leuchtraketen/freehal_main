@@ -129,7 +129,8 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         strcat(replacement, "\n");
     }
     else {
-        replacement = -2;
+        replacement = calloc(5, 1);
+        strcpy(replacement, "\n");
     }
     
     char filename[999];
@@ -201,6 +202,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
                 }
                 fclose(file);
             }
+            free(data);
         }
     }
     else {
@@ -221,6 +223,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
 }
 
 int fact_delete_from_source (const char* source) {
+    return 0;
     int r = fact_replace_in_source (source, 0);
     return r;
 }

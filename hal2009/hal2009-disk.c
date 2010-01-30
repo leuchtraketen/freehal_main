@@ -480,8 +480,8 @@ char* gen_sql_get_double_facts() {
     *sql = 0;
     
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`");
-    strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb AS a FROM facts GROUP BY a HAVING count(pk) >= 2) order by mix_1, verb;");
-
+    strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb FROM facts GROUP BY mix_1 HAVING count(*) >2) order by mix_1, verb;");
+    
     return sql;
 }
 
@@ -853,6 +853,15 @@ int disk_search_double_facts(struct word*** words, struct fact** facts, int limi
         return TOOMUCH;
     }
     
+    return 0;
+}
+
+int disk_vacuum() {
+    {
+        int error1 = sql_execute("COMMIT;", NULL, NULL);
+        int error2 = sql_execute("VACUUM;", NULL, NULL);
+        int error3 = sql_execute("BEGIN;", NULL, NULL);
+    }
     return 0;
 }
 
