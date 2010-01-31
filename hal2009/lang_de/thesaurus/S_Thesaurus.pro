@@ -588,7 +588,6 @@
 = <> _salzgurke_ <> _pfeffergurke_ <> (maybe)
 = <> _salzgurke_ <> _saure_gurke_ <> (maybe)
 = <> _salzhaltig_ <> _salinisch_ <> (maybe)
-= <> _salzhaltig_ <> salzig <> (maybe)
 = <> _salzhaltig_ <> _salzig_ <> (maybe)
 = <> _salzig_ <> _salinisch_ <> (maybe)
 = <> _salzig_ <> _salzhaltig_ <> (maybe)

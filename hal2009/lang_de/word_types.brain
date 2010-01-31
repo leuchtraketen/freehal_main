@@ -1,3 +1,2781 @@
+Absetzzange:
+  genus: f
+  type: n
+Aderendhuelsenzange:
+  genus: f
+  type: n
+Anschlageisen:
+  type: n
+Auftreibschere:
+  genus: f
+  type: n
+Ausreiber:
+  type: n
+Ausschlageisen:
+  type: n
+Bandhacke:
+  genus: f
+  type: n
+Bandhaken:
+  type: n
+Bauchzange:
+  genus: f
+  type: n
+Beitel:
+  type: n
+Bergeisen:
+  type: n
+Biegeeisen:
+  type: n
+Bohrsaege:
+  type: n
+Bolzenschneider:
+  type: n
+Buerste:
+  genus: f
+  type: n
+Bundaxt:
+  genus: f
+  type: n
+Bundsaege:
+  genus: f
+  type: n
+Burin:
+  type: n
+Crimp-Zange:
+  genus: f
+  type: n
+Dechsel:
+  genus: f
+  type: n
+Dengelhammer:
+  genus: m
+  type: n
+Diamant-Trennscheibe:
+  genus: f
+  type: n
+Dreget:
+  type: n
+Drehpfahl:
+  genus: m
+  type: n
+Drillbohrer:
+  type: n
+Drucklufthammer:
+  genus: m
+  type: n
+Druckluftnadler:
+  type: n
+Duebeleisen:
+  type: n
+Elektropick:
+  genus: m
+  type: n
+Faellaxt:
+  genus: f
+  type: n
+Fallhammer:
+  genus: m
+  type: n
+Falzhobel:
+  type: n
+Federhaken:
+  type: n
+Federspanner:
+  type: n
+Feile:
+  genus: f
+  type: n
+Feilkloben:
+  type: n
+Feststellzange:
+  genus: f
+  type: n
+Filete:
+  genus: f
+  type: n
+Filzbrett:
+  genus: s
+  type: n
+Fliesenloeser:
+  type: n
+Fliesenschneider:
+  type: n
+Formenholz:
+  genus: s
+  type: n
+Forstnerbohrer:
+  type: n
+Fraesraedchen:
+  type: n
+Friktionshammer:
+  genus: m
+  type: n
+Fuegebock:
+  genus: m
+  type: n
+Fuegelade:
+  genus: f
+  type: n
+Furniersaege:
+  genus: f
+  type: n
+Gasrohrkluppe:
+  genus: f
+  type: n
+Gehrungssaege:
+  genus: f
+  type: n
+Gehrungsschmiege:
+  genus: f
+  type: n
+Geradschere:
+  genus: f
+  type: n
+Gewindefeile:
+  genus: f
+  type: n
+Gewindeschneider:
+  type: n
+Glaettkelle:
+  genus: f
+  type: n
+Glaserzange:
+  genus: f
+  type: n
+Glasmacherpfeife:
+  genus: f
+  type: n
+Glasschneider:
+  type: n
+Grabgabel:
+  genus: f
+  type: n
+Grundsaege:
+  type: n
+Gummihammer:
+  genus: m
+  type: n
+Hacke:
+  genus: f
+  type: n
+Halligan-Tool:
+  genus: s
+  type: n
+Handpumpe:
+  genus: f
+  type: n
+Handramme:
+  genus: f
+  type: n
+Hebeisen:
+  genus: s
+  type: n
+Hebelvornschneider:
+  type: n
+Hobel:
+  type: n
+Hobelbank:
+  genus: f
+  type: n
+Hobelmeissel:
+  type: n
+Hohleisen:
+  type: n
+Innensechskant-Schluessel:
+  type: n
+Justorium:
+  genus: s
+  type: n
+Kanonenbohrer:
+  type: n
+Kantring:
+  genus: m
+  type: n
+Keilhaue:
+  genus: f
+  type: n
+Kittmesser:
+  type: n
+Klopfholz:
+  genus: s
+  type: n
+Kluepfel:
+  type: n
+Knipp:
+  type: n
+Knuepfel:
+  type: n
+Knueppel:
+  type: n
+Koerner:
+  type: n
+Kombizange:
+  genus: f
+  type: n
+Konterpunze:
+  genus: f
+  type: n
+Kornhammer:
+  genus: m
+  type: n
+Kraetzer:
+  type: n
+Kreuzhacke:
+  genus: f
+  type: n
+Kreuzschlitzschraubendreher:
+  type: n
+Kugelhammer:
+  genus: m
+  type: n
+Kurbelhammer:
+  genus: m
+  type: n
+Leatherman:
+  genus: m
+  type: n
+Linksausdreher:
+  type: n
+Lochbeitel:
+  type: n
+Locheissen:
+  type: n
+Lochsaege:
+  genus: f
+  type: n
+Lochzange:
+  genus: f
+  type: n
+Loetkolben:
+  type: n
+Loetlampe:
+  genus: f
+  type: n
+Lohloeffel:
+  type: n
+Maishacke:
+  genus: f
+  type: n
+Maurerkelle:
+  genus: f
+  type: n
+Meissel:
+  type: n
+Meisselbohrer:
+  type: n
+Metallsaege:
+  genus: f
+  type: n
+Mikrolithisches:
+  type: adj
+Monierzange:
+  genus: f
+  type: n
+Multifunktionswerkzeug:
+  genus: s
+  type: n
+Nagelklaue:
+  genus: f
+  type: n
+Nietenzieher:
+  type: n
+Nietwerkzeuge:
+  genus: f
+  type: n
+Nuthobel:
+  type: n
+Pinsel:
+  type: n
+Pinzette:
+  genus: f
+  type: n
+Puksaege:
+  genus: f
+  type: n
+Raeumaxt:
+  genus: f
+  type: n
+Raeumnadel:
+  genus: f
+  type: n
+Reibahle:
+  genus: f
+  type: n
+Reibebrett:
+  genus: s
+  type: n
+Reibschale:
+  genus: f
+  type: n
+Reifkloben:
+  type: n
+Reissnadel:
+  genus: f
+  type: n
+Ringschluessel:
+  type: n
+Rohrausklinker:
+  type: n
+Rohrexpander:
+  type: n
+Rohrzange:
+  genus: f
+  type: n
+Rundglasschneider:
+  type: n
+Rundschere:
+  genus: f
+  type: n
+Sackbohrer:
+  type: n
+Sammethaken:
+  type: n
+Sammetmesser:
+  type: n
+Samthaken:
+  type: n
+Samtmesser:
+  type: n
+Sapie:
+  type: n
+Sappi:
+  type: n
+Schafschere:
+  genus: f
+  type: n
+Schiessnadel:
+  genus: f
+  type: n
+Schlaegel:
+  type: n
+Schlagschere:
+  genus: f
+  type: n
+Schlagstempel:
+  type: n
+Schleifscheibe:
+  genus: f
+  type: n
+Schleifteller:
+  type: n
+Schluesselfeile:
+  genus: f
+  type: n
+Schmirgelkluppe:
+  genus: f
+  type: n
+Schneideisen:
+  type: n
+Schnitzpferd:
+  genus: s
+  type: n
+Schraubenschluessel:
+  type: n
+Schrotaxt:
+  genus: f
+  type: n
+Schwammbrett:
+  genus: s
+  type: n
+Schwenkerschaber:
+  type: n
+Seitenschneider:
+  type: n
+Sichel:
+  genus: f
+  type: n
+Sickenhammer:
+  genus: m
+  type: n
+Skelettpistole:
+  genus: f
+  type: n
+Spaltaxt:
+  genus: f
+  type: n
+Spalter:
+  type: n
+Spalthammer:
+  genus: m
+  type: n
+Spitzhammer:
+  genus: m
+  type: n
+Spitzzange:
+  genus: f
+  type: n
+Splintentreiber:
+  type: n
+Spritzgusswerkzeug:
+  genus: s
+  type: n
+Stangen-Schlangenbohrer:
+  type: n
+Stechbeitel:
+  type: n
+Stemmeisen:
+  type: n
+Stichaxt:
+  genus: f
+  type: n
+Stichling:
+  genus: m
+  type: n
+Stifthammer:
+  genus: m
+  type: n
+Streichmass:
+  genus: s
+  type: n
+Strukturzange:
+  genus: f
+  type: n
+Stupspinsel:
+  type: n
+Tacker:
+  type: n
+Taecks:
+  type: n
+Tafelschere:
+  genus: f
+  type: n
+Tapetenmesser:
+  type: n
+Teppichmesser:
+  type: n
+Thermosaege:
+  genus: f
+  type: n
+Tjanting:
+  type: n
+Transmissionshammer:
+  genus: m
+  type: n
+Traufel:
+  genus: f
+  type: n
+Trennscheibe:
+  genus: f
+  type: n
+Tuschierlineal:
+  genus: s
+  type: n
+Twinsaege:
+  genus: f
+  type: n
+Versenker:
+  type: n
+Vertikalhammer:
+  genus: m
+  type: n
+Vierkantschluessel:
+  type: n
+Waldaxt:
+  genus: f
+  type: n
+Wasserpumpenzange:
+  genus: f
+  type: n
+Windeisen:
+  type: n
+Winkelschere:
+  genus: f
+  type: n
+Woelbungshobel:
+  type: n
+Wulgerholzloeffel:
+  type: n
+Zahnkamm:
+  genus: m
+  type: n
+Zahnkelle:
+  genus: f
+  type: n
+Zange:
+  genus: f
+  type: n
+Zapine:
+  genus: f
+  type: n
+Zentrierbohrer:
+  type: n
+Zieheissen:
+  type: n
+Ziehfeder:
+  genus: f
+  type: n
+Ziehklinge:
+  genus: f
+  type: n
+Zimmeraxt:
+  genus: f
+  type: n
+Zinnmesser:
+  type: n
+Zirkelschneider:
+  type: n
+Zugmesser:
+  type: n
+Zwackeisen:
+  type: n
+Zwinge:
+  genus: f
+  type: n
+Imbusschluessel:
+  genus: m
+  type: n
+Euklidischen:
+  type: adj
+verwendetes:
+  type: adj
+mathematisches:
+  type: adj
+gegebenen:
+  type: adj
+Abwaschtisch:
+  genus: m
+  type: n
+Alkoven:
+  genus: m
+  type: n
+Allibert:
+  genus: m
+  type: n
+Anbauschrank:
+  genus: m
+  type: n
+Aktensaeule:
+  genus: f
+  type: n
+Aktenrondell:
+  genus: s
+  type: n
+Ambient-Moebel:
+  genus: f
+  type: n
+Anglepoise:
+  genus: f
+  type: n
+Ausziehbett:
+  genus: s
+  type: n
+Ausziehtisch:
+  genus: m
+  type: n
+Cabinet:
+  genus: s
+  type: n
+Barcelona-Sessel:
+  type: n
+Barhocker:
+  type: n
+Begehbarer:
+  type: adj
+Besuchersessel:
+  type: n
+Besucherstuhl:
+  genus: m
+  type: n
+Bibliothekstisch:
+  genus: m
+  type: n
+Biergarnitur:
+  genus: f
+  type: n
+Blumenbank:
+  genus: f
+  type: n
+Butsudan:
+  type: n
+CD-Rack:
+  genus: s
+  type: n
+CD-Schrank:
+  genus: m
+  type: n
+Clubsessel:
+  type: n
+Cocktailsessel:
+  type: n
+Computertisch:
+  genus: m
+  type: n
+Doppelcouch:
+  genus: f
+  type: n
+Druckertisch:
+  genus: m
+  type: n
+Elefantenfuss:
+  genus: m
+  type: n
+Englischer:
+  type: adj
+Faltstuhl:
+  genus: m
+  type: n
+Fassadenschrank:
+  genus: m
+  type: n
+Fauteuil:
+  genus: m
+  type: n
+Fernsehschrank:
+  genus: m
+  type: n
+Fernsehsessel:
+  genus: m
+  type: n
+Fluegeltuerenschrank:
+  genus: m
+  type: n
+Freischwinger:
+  genus: m
+  type: n
+Geschirrabtropfschrank:
+  genus: m
+  type: n
+Geweihmoebel:
+  type: n
+Glastisch:
+  genus: m
+  type: n
+Handtuchhalter:
+  type: n
+Hausbarschrank:
+  genus: m
+  type: n
+Herrendiener:
+  type: n
+Hochschrank:
+  genus: m
+  type: n
+Hochstuhl:
+  genus: m
+  type: n
+Hollywoodschaukel:
+  genus: f
+  type: n
+Husse:
+  genus: f
+  type: n
+Japanischer:
+  type: adj
+Jardiniere:
+  genus: f
+  type: n
+Kamidana:
+  type: n
+Kanapee:
+  genus: s
+  type: n
+Katzentisch:
+  genus: m
+  type: n
+Klappbett:
+  genus: s
+  type: n
+Klapphocker:
+  genus: m
+  type: n
+Klappstuhl:
+  genus: m
+  type: n
+Klubsessel:
+  type: n
+Kommode:
+  genus: f
+  type: n
+Konferenzsessel:
+  type: n
+Konferenztisch:
+  genus: m
+  type: n
+Korbsessel:
+  type: n
+Kredenz:
+  genus: f
+  type: n
+Kuechenlampe:
+  genus: f
+  type: n
+Kuechentisch:
+  genus: m
+  type: n
+Kurulischer:
+  type: adj
+Landi-Stuhl:
+  genus: m
+  type: n
+Lehnstuhl:
+  genus: s
+  type: n
+Leuchttisch:
+  genus: m
+  type: n
+Liegestuhl:
+  genus: m
+  type: n
+Liegnitzer:
+  type: n
+Ringtisch:
+  genus: m
+  type: n
+Loveseat:
+  genus: m
+  type: n
+Medizinschrank:
+  genus: m
+  type: n
+Musikschrank:
+  genus: m
+  type: n
+Naehtisch:
+  genus: m
+  type: n
+Nierentisch:
+  genus: m
+  type: n
+Nipptisch:
+  genus: m
+  type: n
+Oberschrank:
+  genus: m
+  type: n
+Ohrensessel:
+  genus: m
+  type: n
+Ostfriesensofa:
+  genus: s
+  type: n
+Papphocker:
+  genus: m
+  type: n
+Paravent:
+  genus: m
+  type: n
+Phonoschrank:
+  genus: m
+  type: n
+Hifi-Rack:
+  genus: s
+  type: n
+Phono-Rack:
+  genus: s
+  type: n
+Plattenschrank:
+  genus: m
+  type: n
+Quilt:
+  genus: m
+  type: n
+Rauchtisch:
+  genus: m
+  type: n
+Recamiere:
+  genus: f
+  type: n
+Rollcontainer:
+  genus: m
+  type: n
+Rollregal:
+  genus: s
+  type: n
+Rolltuerenschrank:
+  genus: m
+  type: n
+Ruhebank:
+  genus: f
+  type: n
+Rundbogenregal:
+  genus: s
+  type: n
+Schachtisch:
+  genus: m
+  type: n
+Schaffreite:
+  genus: f
+  type: n
+Schaukelstuhl:
+  genus: m
+  type: n
+Schiebetuerenschrank:
+  genus: m
+  type: n
+Schirmcontainer:
+  genus: m
+  type: n
+Schirmlampe:
+  genus: f
+  type: n
+Schirmstaender:
+  genus: m
+  type: n
+Schragen:
+  genus: m
+  type: n
+Schrankbett:
+  genus: s
+  type: n
+Schrankwand:
+  genus: f
+  type: n
+Schreibmaschinentisch:
+  genus: m
+  type: n
+Schrein:
+  genus: m
+  type: n
+Schuhschrank:
+  genus: m
+  type: n
+Schuhstaender:
+  type: n
+Schwedenstuhl:
+  genus: m
+  type: n
+Sedile:
+  genus: s
+  type: n
+Sideboard:
+  genus: s
+  type: n
+Sitzbank:
+  genus: f
+  type: n
+Sitzsack:
+  genus: m
+  type: n
+Spiegelschrank:
+  genus: m
+  type: n
+Spueltisch:
+  genus: m
+  type: n
+Stabelle:
+  genus: f
+  type: n
+Standuhr:
+  genus: f
+  type: n
+Stempelfuss:
+  genus: m
+  type: n
+Stockbett:
+  genus: s
+  type: n
+Stollenschrank:
+  genus: m
+  type: n
+Stummer:
+  type: n
+Taefelung:
+  genus: f
+  type: n
+Tamaya:
+  genus: m
+  type: n
+Tatami:
+  genus: m
+  type: n
+Teetisch:
+  genus: m
+  type: n
+Teewagen:
+  genus: m
+  type: n
+Teleskopregal:
+  genus: s
+  type: n
+Triclinium:
+  genus: s
+  type: n
+Tulpenlampe:
+  genus: f
+  type: n
+Tuetenlampe:
+  genus: f
+  type: n
+Unterschrank:
+  genus: m
+  type: n
+Vertiko:
+  genus: s
+  type: n
+Visitenkartentisch:
+  genus: m
+  type: n
+Voyeuse:
+  genus: f
+  type: n
+Waescheschrank:
+  genus: m
+  type: n
+Waeschetruhe:
+  genus: f
+  type: n
+Weissenhof-Stuhl:
+  genus: m
+  type: n
+Werkzeugschrank:
+  genus: m
+  type: n
+Zabuton:
+  genus: s
+  type: n
+Zafu:
+  type: n
+Zeltschrank:
+  genus: m
+  type: n
+Zeitungsstaender:
+  genus: m
+  type: n
+Wandschrank:
+  genus: m
+  type: n
+uebergeordneten:
+  type: adj
+Aufbewahrungsmoeglichkeit:
+  genus: f
+  type: n
+Zeitungen:
+  genus: f
+  type: n
+Bettnische:
+  genus: f
+  type: n
+Plattdeutschen:
+  type: adj
+Bettnischen:
+  genus: f
+  type: n
+Butzen:
+  genus: m
+  type: n
+Zierdach:
+  genus: s
+  type: n
+Throne:
+  genus: f
+  type: n
+Denkmaeler:
+  genus: f
+  type: n
+Sitzmoebel:
+  type: n
+meistens:
+  type: adj
+Lehne:
+  genus: f
+  type: n
+schlanke:
+  type: adj
+Kellners:
+  type: n
+Gastes:
+  type: n
+Moebelstuecke:
+  genus: f
+  type: n
+saemtlicher:
+  type: adj
+saemtlicher:
+  type: adj
+drehbarer:
+  type: adj
+Stuhlrollen:
+  genus: f
+  type: n
+gelagerter:
+  type: adj
+Rueckenlehne:
+  genus: f
+  type: n
+saemtlicher:
+  type: adj
+saemtlicher:
+  type: adj
+typisches:
+  type: adj
+Sitzmoebelstueck:
+  genus: s
+  type: n
+architektonische:
+  type: adj
+Fassadenform:
+  genus: f
+  type: n
+vorgesetzten:
+  type: adj
+Saeulen:
+  genus: f
+  type: n
+Gebaelken:
+  type: n
+Giebelfeldern:
+  type: n
+Fries:
+  genus: s
+  type: n
+Kranzgesims:
+  genus: s
+  type: n
+Hinterbeine:
+  genus: f
+  type: n
+Sitzflaeche:
+  genus: f
+  type: n
+nachgibt:
+  type: vi
+absinkt:
+  type: vi
+erweiterten:
+  type: adj
+Bettplatz:
+  genus: m
+  type: n
+Schlafstaette:
+  genus: f
+  type: n
+Abkuehlgitter:
+  genus: s
+  type: n
+Abtropfsieb:
+  genus: s
+  type: n
+Allesschneider:
+  genus: m
+  type: n
+Ananasausstecher:
+  genus: m
+  type: n
+Apfelentkerner:
+  genus: m
+  type: n
+Apfelsinenschaeler:
+  genus: m
+  type: n
+Apfelteiler:
+  type: n
+Auflaufform:
+  genus: f
+  type: n
+Aufschnittmaschine:
+  genus: f
+  type: n
+Ausbeinmesser:
+  genus: s
+  type: n
+Ausstechfoermchen:
+  genus: s
+  type: n
+Austernmesser:
+  genus: s
+  type: n
+Backkartoffelspiess:
+  genus: m
+  type: n
+Backofenthermometer:
+  type: n
+Backpinsel:
+  type: n
+Backschaufel:
+  genus: f
+  type: n
+Bain-Marie:
+  genus: f
+  type: n
+Barmesser:
+  genus: s
+  type: n
+Belgischer:
+  type: adj
+Bierwaermer:
+  genus: m
+  type: n
+Bohnenschneider:
+  genus: m
+  type: n
+Braeter:
+  genus: m
+  type: n
+Bratenthermometer:
+  type: n
+Bratroeste:
+  genus: f
+  type: n
+Brotschneidemaschine:
+  genus: f
+  type: n
+Buntmesser:
+  genus: s
+  type: n
+Buttermesser:
+  genus: s
+  type: n
+Buttermodel:
+  genus: m
+  type: n
+Champagnersaebel:
+  genus: m
+  type: n
+Crepespfanne:
+  genus: f
+  type: n
+Daempfeinsatz:
+  genus: m
+  type: n
+Dampfgarer:
+  genus: m
+  type: n
+Deba:
+  type: n
+Dosenstecher:
+  genus: m
+  type: n
+Drahtloeffel:
+  genus: m
+  type: n
+Dressiersack:
+  genus: m
+  type: n
+Coddler:
+  genus: m
+  type: n
+Eierschneider:
+  genus: m
+  type: n
+Eierstecher:
+  type: n
+Einkochtopf:
+  genus: m
+  type: n
+Eisportionierer:
+  type: n
+Eiswuerfelform:
+  genus: f
+  type: n
+Elektrogrill:
+  type: n
+Entenpresse:
+  genus: f
+  type: n
+Entsteiner:
+  genus: m
+  type: n
+Espressokanne:
+  genus: f
+  type: n
+Filetiermesser:
+  type: n
+Fischentschupper:
+  type: n
+Fischschere:
+  genus: f
+  type: n
+Fischschupper:
+  type: n
+Fischtopf:
+  genus: m
+  type: n
+Fleischgabel:
+  genus: f
+  type: n
+Fleischhammer:
+  genus: m
+  type: n
+Fleischklopfer:
+  type: n
+Flocker:
+  type: n
+Frischhaltedose:
+  genus: f
+  type: n
+Gaerkorb:
+  genus: m
+  type: n
+Gefluegelschere:
+  genus: f
+  type: n
+Gefrierbeutelverschliesser:
+  type: n
+Gemuesebuerste:
+  genus: f
+  type: n
+Gemuesehobel:
+  type: n
+Gemuesemuehle:
+  genus: f
+  type: n
+Gemueseschaeler:
+  type: n
+Geschirrtuch:
+  genus: s
+  type: n
+Geschirrwaermer:
+  type: n
+Getreidemuehle:
+  genus: f
+  type: n
+Gewuerz-Ei:
+  genus: s
+  type: n
+Gewuerzmuehle:
+  genus: f
+  type: n
+Glaskeramik-Kochfeld:
+  genus: s
+  type: n
+Gourmet-Thermalisierer:
+  type: n
+Graetenzange:
+  genus: f
+  type: n
+Grapefruitmesser:
+  type: n
+Grapen:
+  type: n
+Grillzange:
+  genus: f
+  type: n
+Haarsieb:
+  genus: s
+  type: n
+Hackmesser:
+  type: n
+Halogen-Kochfeld:
+  genus: s
+  type: n
+Handruehrgeraet:
+  genus: s
+  type: n
+Haushaltsschere:
+  genus: f
+  type: n
+Holzspiess:
+  genus: m
+  type: n
+Induktionskochfeld:
+  genus: s
+  type: n
+Ingwerreibe:
+  genus: f
+  type: n
+Wasserstein:
+  genus: m
+  type: n
+Joghurtgeraet:
+  genus: s
+  type: n
+Juliennereisser:
+  type: n
+Kaesehobel:
+  type: n
+Kaesemesser:
+  type: n
+Kaffeefilterhalter:
+  type: n
+Kaffeekanne:
+  genus: f
+  type: n
+Kaffeemaschine:
+  genus: f
+  type: n
+Kaffeemuehle:
+  genus: f
+  type: n
+Kaffeeroester:
+  type: n
+Kanneliermesser:
+  type: n
+Kapselheber:
+  type: n
+Karottenschaeler:
+  type: n
+Kartoffelpresse:
+  genus: f
+  type: n
+Kartoffelreibe:
+  genus: f
+  type: n
+Kartoffelschaeler:
+  type: n
+Kartoffelstampfer:
+  type: n
+Kastenform:
+  genus: f
+  type: n
+Kellnermesser:
+  type: n
+Kelly:
+  type: n
+Kettle:
+  type: n
+Kesselhaken:
+  type: n
+Kirschenentkerner:
+  type: n
+Klosskelle:
+  genus: f
+  type: n
+Klossloeffel:
+  type: n
+Knoblauchpresse:
+  genus: f
+  type: n
+Kochherd:
+  genus: m
+  type: n
+Kochloeffel:
+  type: n
+Kochmesser:
+  type: n
+Kokosnuss-Ausraspler:
+  type: n
+Kokotte:
+  genus: f
+  type: n
+Konditormesser:
+  type: n
+Kraeutermuehle:
+  genus: f
+  type: n
+Kuechenfreund:
+  genus: m
+  type: n
+Kuechenmaschine:
+  genus: f
+  type: n
+Kuechenmesser:
+  type: n
+Kuechenreibe:
+  genus: f
+  type: n
+Kuechenschere:
+  genus: f
+  type: n
+Kuechensieb:
+  genus: s
+  type: n
+Kuechenwaage:
+  genus: f
+  type: n
+Kuechenwecker:
+  type: n
+Kugelausstecher:
+  type: n
+Kurzzeitwecker:
+  type: n
+Madeleines-Backform:
+  genus: f
+  type: n
+Maiskolbenspiess:
+  genus: m
+  type: n
+Mbusi:
+  type: n
+Messbecher:
+  type: n
+Metallspiess:
+  genus: m
+  type: n
+Milchwaechter:
+  genus: m
+  type: n
+Muffins-Backform:
+  genus: f
+  type: n
+Muskatreibe:
+  genus: f
+  type: n
+Napfkuchenform:
+  genus: f
+  type: n
+Nudelholz:
+  genus: s
+  type: n
+Nudelmaschine:
+  genus: f
+  type: n
+Nussknacker:
+  type: n
+Nussmuehle:
+  genus: f
+  type: n
+Officemesser:
+  type: n
+Parmesanmesser:
+  type: n
+Parmesanreibe:
+  genus: f
+  type: n
+Passiertuch:
+  genus: s
+  type: n
+Passierwiege:
+  genus: f
+  type: n
+Pellkartoffelspiess:
+  genus: m
+  type: n
+Pfannenwender:
+  type: n
+Pfeffermuehle:
+  genus: f
+  type: n
+Pizzablech:
+  genus: s
+  type: n
+Pizzaschneider:
+  type: n
+Pommes-Frites-Schneider:
+  type: n
+Presssack:
+  genus: m
+  type: n
+Pressstempelkanne:
+  genus: f
+  type: n
+Puerierstab:
+  genus: m
+  type: n
+Quicheform:
+  genus: f
+  type: n
+Raclettemesser:
+  type: n
+Racletteofen:
+  genus: m
+  type: n
+Raeucherlachsmesser:
+  type: n
+Rechaud:
+  genus: s
+  type: n
+Reiskocher:
+  type: n
+Roemertopf:
+  genus: m
+  type: n
+Rollenschneider:
+  type: n
+Rouladenklammern:
+  genus: f
+  type: n
+Rouladennadel:
+  genus: f
+  type: n
+Ruehrschuessel:
+  genus: f
+  type: n
+Salatschleuder:
+  genus: f
+  type: n
+Sandwichtoaster:
+  type: n
+Santoku:
+  genus: m
+  type: n
+Sauteuse:
+  genus: f
+  type: n
+Savarinform:
+  genus: f
+  type: n
+Schaelmesser:
+  type: n
+Schaumkelle:
+  genus: f
+  type: n
+Schaumloeffel:
+  type: n
+Scheuer-Lappen:
+  type: n
+Schinkenmesser:
+  type: n
+Schneidbrett:
+  genus: s
+  type: n
+Schockkuehler:
+  type: n
+Schokoladehobel:
+  type: n
+Sekko:
+  type: n
+Semmelreibe:
+  genus: f
+  type: n
+Shaker:
+  type: n
+Simmertopf:
+  genus: m
+  type: n
+Solarkocher:
+  type: n
+Spaetzlepresse:
+  genus: f
+  type: n
+Spaghettiheber:
+  type: n
+Spaghettizange:
+  genus: f
+  type: n
+Spargelschaeler:
+  type: n
+Spargeltopf:
+  genus: m
+  type: n
+Sparschaeler:
+  type: n
+Springform:
+  genus: f
+  type: n
+Spritzbeutel:
+  type: n
+Spuelbuerste:
+  genus: f
+  type: n
+Stabmixer:
+  type: n
+Standmixer:
+  type: n
+Standruehrgeraet:
+  genus: s
+  type: n
+Stoevchen:
+  type: n
+Streifenschaeler:
+  type: n
+Tako:
+  type: n
+hiki:
+  genus: m
+  type: n
+Tartelettform:
+  genus: f
+  type: n
+Tassenwaermer:
+  type: n
+Tauchsieder:
+  type: n
+Tee-Ei:
+  genus: s
+  type: n
+Teekanne:
+  genus: f
+  type: n
+Teemaschine:
+  genus: f
+  type: n
+Teigrolle:
+  genus: f
+  type: n
+Teigschaber:
+  type: n
+Teppan:
+  type: n
+Tomatenpresse:
+  genus: f
+  type: n
+Topfhandschuh:
+  genus: m
+  type: n
+Topfheber:
+  type: n
+Topfkratzer:
+  type: n
+Topflappen:
+  type: n
+Tortenheber:
+  type: n
+Tourniermesser:
+  type: n
+Tranchierbesteck:
+  genus: s
+  type: n
+Tranchiergabel:
+  genus: f
+  type: n
+Tranchiermesser:
+  type: n
+Trommelreibe:
+  genus: f
+  type: n
+Trueffelreibe:
+  genus: f
+  type: n
+Udon:
+  type: n
+kiri:
+  type: n
+Universaloeffner:
+  type: n
+Untersetzer:
+  type: n
+Waffeleisen:
+  type: n
+Warmhalteplatte:
+  genus: f
+  type: n
+Wasserkessel:
+  type: n
+Weinthermometer:
+  type: n
+Wetzstahl:
+  genus: m
+  type: n
+Wiegemesser:
+  type: n
+Wok:
+  genus: m
+  type: n
+Zestenreisser:
+  type: n
+Zitronenpresse:
+  genus: f
+  type: n
+Zuckerthermometer:
+  type: n
+Zuckerwaage:
+  genus: f
+  type: n
+Zwiebelhacker:
+  type: n
+lernendes:
+  type: adj
+Dialogprogramm:
+  genus: s
+  type: n
+Acoustic:
+  type: n
+AltMetal:
+  type: n
+Ambient:
+  type: n
+Arabic:
+  type: n
+Australian:
+  type: n
+hop:
+  type: n
+metal:
+  type: n
+Bluegrass:
+  type: n
+Bossa:
+  type: n
+Nova:
+  type: n
+Celtic:
+  type: n
+Chillout:
+  type: n
+Classic:
+  type: n
+Comedy:
+  type: n
+Contemporary:
+  type: n
+Country:
+  type: n
+Crunk:
+  type: n
+Metal:
+  type: n
+Deathcore:
+  type: n
+Downtempo:
+  type: n
+Drum:
+  type: n
+Bass:
+  type: n
+Electro:
+  type: n
+Electronic:
+  type: n
+Electronica:
+  type: n
+Electropop:
+  type: n
+Emo:
+  type: n
+Epic:
+  type: n
+Ethnic:
+  type: n
+Experimental:
+  type: n
+Flamenco:
+  genus  : m
+  type: n
+Folk-rock:
+  genus  : m
+  type: n
+French:
+  type: n
+HipHop:
+  type: n
+Gospel:
+  type: n
+Groove:
+  type: n
+Grunge:
+  type: n
+Guitar:
+  type: n
+Hardcore:
+  type: n
+Heavy:
+  type: n
+Hip-hop:
+  type: n
+Holiday:
+  type: n
+Indie:
+  type: n
+Industrial:
+  type: n
+Jazz:
+  genus: m
+  type: n
+Latin:
+  type: n
+Fi:
+  type: n
+Melodic:
+  type: n
+Metalcore:
+  type: n
+Neoclassic:
+  type: n
+Age:
+  type: n
+Nu:
+  type: n
+NuMetal:
+  type: n
+Post-Hardcore:
+  type: n
+Post-Metal:
+  type: n
+Postrock:
+  type: n
+Progressive:
+  type: n
+Psychedelic:
+  type: n
+Trance:
+  type: n
+Rave:
+  type: n
+RB:
+  type: n
+Relax:
+  type: n
+Religious:
+  type: n
+RnB:
+  type: n
+Screamo:
+  type: n
+Ska:
+  type: n
+Smooth:
+  type: n
+Symphonic:
+  type: n
+Tango:
+  type: n
+Thrash:
+  type: n
+Hop:
+  type: n
+Uncategorized:
+  type: n
+Vocal:
+  type: n
+Prismenspektrometer:
+  genus: s
+  type: n
+Gastarbeiter:
+  type: n
+Sprachgebrauch:
+  genus: m
+  type: n
+betrifft:
+  type: vi
+Eislaufs:
+  type: n
+kunstvolle:
+  type: adj
+Spruengen:
+  type: n
+ankommt:
+  type: vi
+Racing:
+  type: n
+Motorsportveranstaltungen:
+  genus: f
+  type: n
+stehendem:
+  type: adj
+Roboterfussball:
+  genus: s
+  type: n
+Sportaerobic:
+  type: n
+Agility:
+  type: n
+Airsoft:
+  type: n
+Sportakrobatik:
+  genus: f
+  type: n
+Alpinklettern:
+  genus: s
+  type: n
+Amateurfunkpeilen:
+  genus: s
+  type: n
+Angelsport:
+  genus: m
+  type: n
+Aquaball:
+  genus: s
+  type: n
+Aquathlon:
+  type: n
+Ausdruckstanz:
+  genus: m
+  type: n
+Autoball:
+  genus: s
+  type: n
+Automobilsport:
+  genus: m
+  type: n
+Axtwerfen:
+  genus: s
+  type: n
+Bahnengolf:
+  genus: s
+  type: n
+Bahnradsport:
+  genus: m
+  type: n
+Ballonspiel:
+  genus: s
+  type: n
+Bandy:
+  type: n
+Barlauf:
+  type: n
+Jumping:
+  type: n
+Baseball:
+  type: n
+Baumstammwerfen:
+  genus: s
+  type: n
+Beachbasketball:
+  genus: s
+  type: n
+Beachhandball:
+  genus: s
+  type: n
+Beachminton:
+  type: n
+Beachrugby:
+  type: n
+Beachsoccer:
+  type: n
+Beachvolleyball:
+  genus: s
+  type: n
+Bergrennen:
+  genus: s
+  type: n
+Biathle:
+  type: n
+Biathlon:
+  type: n
+Bikebiathlon:
+  type: n
+Blindenfussball:
+  genus: m
+  type: n
+Blindschach:
+  genus: s
+  type: n
+Blitzschach:
+  genus: s
+  type: n
+BMX:
+  genus: s
+  type: n
+Bogenschiessen:
+  genus: s
+  type: n
+Boogie-Woogie:
+  genus: m
+  type: n
+Bootschen:
+  type: n
+Bosseln:
+  type: n
+Bouldern:
+  type: n
+Lyonnaise:
+  type: n
+Bowls:
+  type: n
+Brennball:
+  type: n
+Brieftaubensport:
+  genus: m
+  type: n
+Broomball:
+  type: n
+Buggykiting:
+  type: n
+Buildering:
+  type: n
+Bumerangwerfen:
+  genus: s
+  type: n
+Bungee-Jumping:
+  genus: s
+  type: n
+Buzkashi:
+  type: n
+Cageball:
+  type: n
+Callanetics:
+  type: n
+Camogie:
+  type: n
+Canadian:
+  type: n
+Canyoning:
+  type: n
+Carambolage:
+  type: n
+Casting:
+  type: n
+Cheerleading:
+  type: n
+Chinlone:
+  type: n
+Combatschiessen:
+  type: n
+Cricket:
+  type: n
+Cricko:
+  type: n
+Cross:
+  type: n
+Crossgolf:
+  genus: s
+  type: n
+Cubbies:
+  type: n
+Cyclocross:
+  type: n
+DDC-Frisbee:
+  genus: s
+  type: n
+Discdogging:
+  type: n
+Discgolf:
+  type: n
+Diskuswerfen:
+  genus: s
+  type: n
+Distanzreiten:
+  genus: s
+  type: n
+Dodgeball:
+  type: n
+Dogdancing:
+  type: n
+Dogging:
+  type: n
+Downhill:
+  type: n
+Drachenboot:
+  type: n
+Drachensteigen:
+  type: n
+Einradbasketball:
+  type: n
+Einradhockey:
+  genus: s
+  type: n
+Eisschnelllauf:
+  genus: m
+  type: n
+Eisspeedway:
+  genus: s
+  type: n
+Electric:
+  type: n
+Boogie:
+  type: n
+Elefantenpolo:
+  genus: s
+  type: n
+Elefantenrennen:
+  genus: s
+  type: n
+E-Sport:
+  genus: m
+  type: n
+Eurodance:
+  type: n
+Extrembuegeln:
+  genus: s
+  type: n
+Arts:
+  type: n
+Fahrsport:
+  genus: m
+  type: n
+Falknerei:
+  genus: f
+  type: n
+Skydiving:
+  type: n
+Federfussball:
+  genus: s
+  type: n
+Feldhockey:
+  genus: s
+  type: n
+Fingerboarding:
+  type: n
+Fingerhakeln:
+  type: n
+Fives:
+  type: n
+Flossenschwimmen:
+  type: n
+Duathlon:
+  type: n
+Footvolley:
+  genus: m
+  type: n
+Formelsport:
+  genus: m
+  type: n
+Freestyle:
+  type: n
+Freestyle-Skiing:
+  type: n
+Freiklettern:
+  genus: s
+  type: n
+Friskee:
+  type: n
+Fussballtennis:
+  genus: s
+  type: n
+Futsal:
+  type: n
+Gaelic:
+  type: n
+Schautanz:
+  genus: m
+  type: n
+Gateball:
+  type: n
+Gedaechtnissport:
+  genus: m
+  type: n
+Geocaching:
+  genus: s
+  type: n
+Geraetturnen:
+  genus: s
+  type: n
+Gleitschirmakrobatik:
+  genus: f
+  type: n
+Gleitschirmfliegen:
+  genus: s
+  type: n
+Goalball:
+  type: n
+Gorodki:
+  genus: s
+  type: n
+Grasski:
+  type: n
+Gummistiefelweitwurf:
+  genus: m
+  type: n
+Guts:
+  type: n
+Gymnastik:
+  genus: f
+  type: n
+Hahnenkampf:
+  genus: m
+  type: n
+Hallenfussball:
+  genus: s
+  type: n
+Hallenhockey:
+  genus: s
+  type: n
+Hammerwerfen:
+  genus: s
+  type: n
+Handy-Weitwurf:
+  genus: s
+  type: n
+Harrassenklettern:
+  genus: s
+  type: n
+Climb:
+  type: n
+Hindernislauf:
+  genus: m
+  type: n
+Hochsprung:
+  genus: m
+  type: n
+Hornussen:
+  type: n
+Horseball:
+  type: n
+House-Running:
+  type: n
+Huerdenlauf:
+  genus: m
+  type: n
+Hurling:
+  type: n
+Indiaca:
+  type: n
+Indoorcycling:
+  type: n
+Inlinehockey:
+  type: n
+Inline-Skaterhockey:
+  type: n
+Inlineskating:
+  type: n
+Inline-Speedskating:
+  type: n
+Intercrosse:
+  type: n
+Rules:
+  type: n
+Irish:
+  type: n
+Jagdsport:
+  genus: m
+  type: n
+Jahn-Wettkaempfe:
+  genus: f
+  type: n
+Jai:
+  type: n
+Alai:
+  type: n
+Paume:
+  type: n
+Provenal:
+  type: n
+Judo:
+  genus: s
+  type: n
+Jukskei:
+  type: n
+Jugger:
+  type: n
+Kabaddi:
+  type: n
+Kamelrennen:
+  type: n
+Kaninhop:
+  type: n
+Kanupolo:
+  genus: s
+  type: n
+Kanurennsport:
+  genus: m
+  type: n
+Kartsport:
+  genus: m
+  type: n
+Kegelbillard:
+  genus: s
+  type: n
+Kendo:
+  type: n
+Kiiking:
+  type: n
+Kin-Ball:
+  type: n
+Kitesurfen:
+  genus: s
+  type: n
+Kitelandboarding:
+  type: n
+Klippenspringen:
+  genus: s
+  type: n
+Klootschiessen:
+  genus: s
+  type: n
+Kniebeugen:
+  type: n
+Korfball:
+  type: n
+Kraftdreikampf:
+  genus: m
+  type: n
+Kreuzheben:
+  genus: s
+  type: n
+Kugelstossen:
+  genus: s
+  type: n
+Turmspringen:
+  genus: s
+  type: n
+Kunstradfahren:
+  genus: s
+  type: n
+Kuerbisweitwurf:
+  genus: m
+  type: n
+Kutterpullen:
+  genus: s
+  type: n
+Lacrosse:
+  type: n
+Langbold:
+  type: n
+Langstreckenlauf:
+  genus: m
+  type: n
+Lasergame:
+  type: n
+Lateinamerikanische:
+  type: adj
+Leichtathletik:
+  genus: f
+  type: n
+Loheland-Gymnastik:
+  genus: f
+  type: n
+Longameta:
+  type: n
+Luftkissen-Schlitteln:
+  genus: s
+  type: n
+Merkball:
+  type: n
+Mesoamerikanisches:
+  type: adj
+Mittelstreckenlauf:
+  genus: m
+  type: n
+Schwertkunst:
+  genus: f
+  type: n
+Moderner:
+  type: adj
+Fuenfkampf:
+  genus: m
+  type: n
+Monoski:
+  type: n
+Motoball:
+  type: n
+Motorbootsport:
+  genus: m
+  type: n
+Motorradsport:
+  genus: m
+  type: n
+Mountainbike-Orienteering:
+  type: n
+Muay:
+  type: n
+Netball:
+  type: n
+Nippers:
+  type: n
+Nordic:
+  type: n
+Walking:
+  type: n
+Nordische:
+  type: adj
+Oina:
+  type: n
+Oel-Ringkampf:
+  genus: m
+  type: n
+Orientalischer:
+  type: adj
+Orientierungslauf:
+  genus: m
+  type: n
+Orientierungstauchen:
+  genus: s
+  type: n
+Paintball:
+  type: n
+Pall:
+  type: n
+Palla:
+  type: n
+Parkour:
+  type: n
+Pato:
+  type: n
+Pentathlon:
+  type: n
+Pesaepallo:
+  type: n
+Pferderennen:
+  genus: s
+  type: n
+Pilates:
+  type: n
+Platzgen:
+  type: n
+Plinking:
+  type: n
+Polocrosse:
+  type: n
+Pompfball:
+  type: n
+Pontoniersport:
+  genus: m
+  type: n
+Prellball:
+  type: n
+Pultstockspringen:
+  genus: s
+  type: n
+Racketlon:
+  type: n
+Rackets:
+  type: n
+Racquetball:
+  type: n
+Radball:
+  type: n
+Radpolo:
+  genus: s
+  type: n
+Radsport:
+  genus: m
+  type: n
+Rafting:
+  genus: s
+  type: n
+Raketenmodellsport:
+  genus: m
+  type: n
+Rallye:
+  genus: f
+  type: n
+Rasenkraftsport:
+  genus: m
+  type: n
+Rasenmaehertreckerrennen:
+  genus: s
+  type: n
+Rasenradball:
+  genus: s
+  type: n
+Airrace:
+  type: n
+Reifenrodeln:
+  genus: s
+  type: n
+Rennrodeln:
+  genus: s
+  type: n
+Rettungssport:
+  genus: m
+  type: n
+Rhoenradturnen:
+  genus: s
+  type: n
+Rhythmische:
+  type: adj
+Sportgymnastik:
+  genus: f
+  type: n
+Ricochet:
+  type: n
+Ringette:
+  type: n
+Ringreiten:
+  genus: s
+  type: n
+Ringtennis:
+  genus: s
+  type: n
+Rinkball:
+  type: n
+Rodeo:
+  genus: s
+  type: n
+Rollhockey:
+  genus: s
+  type: n
+Rollkunstlauf:
+  genus: m
+  type: n
+Rollstuhlbasketball:
+  genus: s
+  type: n
+Rollstuhlrugby:
+  genus: s
+  type: n
+Rollstuhltanz:
+  genus: m
+  type: n
+Roque:
+  type: n
+Round:
+  type: n
+Rounders:
+  type: n
+Rugby:
+  genus: s
+  type: n
+League:
+  type: n
+Rundbold:
+  type: n
+Savate:
+  type: n
+Sandbahnrennen:
+  genus: s
+  type: n
+Sandboarding:
+  type: n
+Schachboxen:
+  genus: s
+  type: n
+Schlagball:
+  type: n
+Schleuderball:
+  genus: m
+  type: n
+Schnorcheln:
+  genus: s
+  type: n
+Schwierigkeitsklettern:
+  genus: s
+  type: n
+Scoutball:
+  type: n
+Seesport:
+  genus: m
+  type: n
+Segelfliegen:
+  genus: s
+  type: n
+Seilklettern:
+  genus: s
+  type: n
+Seilspringen:
+  genus: s
+  type: n
+Sepak:
+  type: n
+Takraw:
+  type: n
+Kempo:
+  type: n
+Shinty:
+  type: n
+Shogi:
+  type: n
+Shorttrack:
+  type: n
+Sitzball:
+  genus: s
+  type: n
+Sitzfussball:
+  genus: s
+  type: n
+Sitzvolleyball:
+  genus: s
+  type: n
+Skateboarding:
+  genus: s
+  type: n
+Skeleton:
+  type: n
+Alpin:
+  type: adj
+Super-G:
+  genus: m
+  type: n
+Riesenslalom:
+  genus: m
+  type: n
+Skibergsteigen:
+  genus: m
+  type: n
+Skijoering:
+  genus: s
+  type: n
+Skimboarden:
+  type: n
+Skispringen:
+  genus: s
+  type: n
+Skwal:
+  type: n
+Skyrunning:
+  genus: s
+  type: n
+Slackline:
+  type: n
+Slamball:
+  type: n
+Sledge-Eishockey:
+  genus: s
+  type: n
+Smashball:
+  type: n
+Snowboard:
+  type: n
+Snowkiting:
+  genus: s
+  type: n
+Soccergolf:
+  genus: s
+  type: n
+Softball:
+  type: n
+Speckbrett:
+  genus: s
+  type: n
+Flying:
+  type: n
+Speedminton:
+  genus: s
+  type: n
+Speedklettern:
+  genus: s
+  type: n
+Speersport:
+  genus: m
+  type: n
+Speerwerfen:
+  genus: s
+  type: n
+Stacking:
+  type: n
+Sportklettern:
+  genus: s
+  type: n
+Sportwagenrennen:
+  genus: s
+  type: n
+Springreiten:
+  genus: s
+  type: n
+Sprint:
+  type: n
+Square:
+  type: n
+Squash:
+  type: n
+Stabhochsprung:
+  genus: m
+  type: n
+Stadionlauf:
+  genus: m
+  type: n
+Standardtanz:
+  genus: m
+  type: n
+Steinstossen:
+  genus: s
+  type: n
+Steinwerfen:
+  genus: s
+  type: n
+Stierkampf:
+  genus: m
+  type: n
+Stockball:
+  type: n
+Stockschiessen:
+  genus: s
+  type: n
+Stoolball:
+  type: n
+Strandsegeln:
+  genus: s
+  type: n
+Strassenfussball:
+  genus: m
+  type: n
+Strassenrennen:
+  genus: s
+  type: n
+Streetball:
+  type: n
+Streethockey:
+  genus: s
+  type: n
+Surf:
+  type: n
+Synchroneiskunstlauf:
+  genus: m
+  type: n
+Synchronschwimmen:
+  genus: s
+  type: n
+Tae:
+  type: n
+Taekwondo:
+  genus: s
+  type: n
+Taiji:
+  genus: s
+  type: n
+Bailong:
+  type: n
+Tamburello:
+  type: n
+Taubenschiessen:
+  genus: s
+  type: n
+Tauziehen:
+  genus: s
+  type: n
+Tchoukball:
+  type: n
+Tischeishockey:
+  genus: s
+  type: n
+Tischtennis:
+  genus: s
+  type: n
+Toboggan:
+  type: n
+Torball:
+  type: n
+Tractor:
+  type: n
+Pulling:
+  type: n
+Trampolinturnen:
+  genus: m
+  type: n
+Trekking:
+  type: n
+Tretze:
+  type: n
+Trials:
+  type: n
+Triathlon:
+  type: n
+Truck-Grand-Prix:
+  genus: m
+  type: n
+Tumbling:
+  type: n
+Twirling:
+  type: n
+Ulama:
+  type: n
+Ultimate:
+  type: n
+Unihockey:
+  genus: s
+  type: n
+Unterwasserhockey:
+  genus: s
+  type: n
+Unterwasserrugby:
+  genus: s
+  type: n
+Freeride:
+  type: n
+Vielseitigkeitsreiten:
+  genus: s
+  type: n
+Vierkampf:
+  genus: m
+  type: n
+Vigoro:
+  type: n
+Voelkerball:
+  type: n
+Volkstanz:
+  genus: m
+  type: n
+Volleyball:
+  genus: s
+  type: n
+Volleyclub:
+  type: n
+Voltigieren:
+  genus: s
+  type: n
+Waffenlauf:
+  genus: m
+  type: n
+Wagenrennen:
+  genus: s
+  type: n
+Wakeboarding:
+  type: n
+Wanderreiten:
+  genus: s
+  type: n
+Wasserball:
+  type: n
+Wasserfahren:
+  genus: s
+  type: n
+Wasserski:
+  type: n
+Weitsprung:
+  genus: m
+  type: n
+Wellenreiten:
+  genus: s
+  type: n
+Westernreiten:
+  genus: s
+  type: n
+Windsurfen:
+  genus: s
+  type: n
+Wokfahren:
+  genus: s
+  type: n
+Yo-Yo:
+  genus: s
+  type: n
+Siebenkampf:
+  genus: m
+  type: n
+Zwergenwerfen:
+  genus: s
+  type: n
 theoretischer:
   type: adj
 veraenderten:
@@ -233224,42 +236002,38 @@ unerlaubten:
   type: adj
 absehen:
   type: vi
-Plansummeplanwertrichtsummesollwertzielgroessezielwert:
-  type: n
 Lieben:
-  type: n
-Verfehlunne:
+  genus  : s
   type: n
 Aufgeklaertheit:
+  genus  : f
   type: n
 Basiszinssaetze:
+  genus  : f
   type: n
 Dockstation:
+  genus  : f
   type: n
 Schlucker:
-  type: n
-Godemich:
+  genus  : m
   type: n
 Aufhaengen:
-  type: n
-2unterrepraesentiert:
-  type: vi
-Auffllzeichen:
-  type: n
+  genus  : s
+  type: n 
 expandierte:
   type: vi
 querab:
   type: adj
 Dermatophytie:
+  genus  : f
   type: n
 abfuehren:
   type: vi
 Angliederung:
+  genus  : f
   type: n
 Wusst:
-  type: n
-itek:
-  type: adj
+  type: vi
 beschwoeren:
   type: vi
 Marzahn:
@@ -233267,398 +236041,451 @@ Marzahn:
 ausbrechend:
   type: adj
 gebundenes:
-  type: adv
+  type: adj
 Bottichwaschmaschine:
+  genus  : f
   type: n
 ruesseltier:
-  type: adj
+  genus  : s
+  type: n
 Gesetzloser:
   type: n
 Leinwand:
+  genus  : f
   type: n
 Koepfer:
-  type: n
-Psychotherapeutseelenarztseelenklempner:
+  genus  : m
   type: n
 Abendblatt:
+  genus  : s
   type: n
 Zeitarbeiter:
+  genus  : m
   type: n
 schwindelig:
-  type: adv
+  type: adj
 jausen:
   type: vi
 russland:
-  type: adj
+  type: n
 dunkelzahl:
-  type: adj
+  genus  : f
+  type: n
 zauberspruch:
-  type: adj
+  genus  : m
+  type: n
 zusaetzlich:
-  type: adv
+  type: adj
 Bardividende:
+  genus  : f
   type: n
 am:
   type: prep
 Boerdeldichtring:
-  type: n
-Fromat:
+  genus  : m
   type: n
 Nachbelastung:
+  genus  : f
   type: n
-tidemokratischen:
-  type: adv
 technologien:
-  type: adj
+  genus  : f
+  type: n
 Herstellerspezifisch:
-  type: n
-Ausknfte:
-  type: n
-unregelmig:
-  type: adv
+  type: adj
 wuenschenswert:
-  type: vi
+  type: adj
 Versinken:
+  genus  : s
   type: n
 wirkmaechtig:
-  type: adv
-gusto:
   type: adj
+gusto:
+  genus  : m
+  type: n
 weltraumstation:
+  genus  : f
   type: n
 Bahnradler:
   type: n
 Mitstudent:
+  genus  : m
   type: n
 Betrachtungszeitraum:
+  genus  : m
   type: n
 Durchgangsklemmen:
+  genus  : f
   type: n
 redakteur:
-  type: adj
-Haengenden:
+  genus  : m
   type: n
+Haengenden:
+  type: adj
 Eignung:
+  genus  : f
   type: n
 erreichbar:
   type: adj
 Widersetzen:
+  genus  : s
   type: n
-himmelwaert:
-  type: vi
 buckeln:
   type: vi
-aufwaertstren:
-  type: vi
 Ungeregelt:
-  type: n
-Kaufstrae:
-  type: n
-day:
   type: adj
 Allesfresser:
+  genus  : m
   type: n
 Natuerlicherweise:
-  type: n
-Anschweiverschraubung:
-  type: n
+  type: adj
 Hotel:
-  type: n
-Betrbnis:
+  genus  : s
   type: n
 Boehmen:
   type: n
 Epistase:
+  genus  : f
   type: n
 Zaunpfahl:
+  genus  : m
   type: n
 Zitierte:
-  type: n
-2zugreifen:
-  type: vi
-bombenabwurf:
   type: adj
+bombenabwurf:
+  genus  : m
+  type: n
 Bergruecken:
   type: n
 Majestaetisch:
-  type: n
+  type: adj
 Elektrokardiogramme:
+  genus  : f
   type: n
 passiven:
   type: adj
 Propellerfluegel:
   type: n
 Gage:
+  genus  : f
   type: n
 Wirtsassembler:
+  genus  : m
   type: n
 unter:
   type: prep
 Boxhandschuh:
+  genus  : m
   type: n
 Statuen:
+  genus  : f
   type: n
 Fischhandelskette:
+  genus  : f
   type: n
 Besoldungen:
+  genus  : f
   type: n
 Ahlen:
   type: n
 Olympiade:
+  genus  : f
   type: n
 Durchdringbar:
-  type: n
+  type: adj
 Datumsgrenze:
+  genus  : f
   type: n
 Federwirkung:
+  genus  : f
   type: n
-lustlo:
-  type: adj
 Warner:
   type: n
 Scheingrab:
+  genus  : s
   type: n
 reintegrieren:
   type: vi
 Eingriff:
+  genus  : m
   type: n
 Anin:
   type: n
 darangeben:
   type: vi
 passioniert:
-  type: vi
-karton:
   type: adj
+karton:
+  genus  : m
+  type: n
 Abbindezeit:
+  genus  : f
   type: n
 Hubschrauberlandeplatz:
+  genus  : m
   type: n
 knochenentkalkung:
-  type: adj
+  genus  : f
+  type: n
 Dendorologin:
+  genus  : f
   type: n
 Zoelibat:
+  genus  : s
   type: n
 Anlassofen:
+  genus  : m
   type: n
 Kleinkriegen:
+  genus  : s
   type: n
 Eroberungen:
+  genus  : f
   type: n
 Hehl:
   type: n
 Brutei:
+  genus  : s
   type: n
 harnstoff:
-  type: adj
+  genus  : m
+  type: n
 Abwasserproblem:
+  genus  : s
   type: n
 Vorhinein:
-  type: n
+  type: adv
 Salzburg:
   type: n
 Gedaechtnistoerungen:
+  genus  : f
   type: n
 Vokabeltest:
+  genus  : m
   type: n
 zurueckfuehren:
   type: vi
 Auffuehren:
+  genus  : s
   type: n
 Geschwollen:
-  type: n
+  type: adj
 ruder:
-  type: adj
+  type: vi
 nesselausschlag:
-  type: adj
+  genus  : m
+  type: n
 Normanschluss:
+  genus  : m
   type: n
 Pharmazeutikum:
-  type: n
-schrimbilduntersuchung:
-  type: adj
-Wide:
+  genus  : s
   type: n
 Garanten:
+  genus  : f
   type: n
 arbeitsplatz:
-  type: adj
+  genus  : m
+  type: n
 naeher:
   type: adj
 Eingegrenzt:
-  type: n
+  type: adj
 Libreville:
   type: n
 Stundung:
+  genus  : f
   type: n
 ergreifung:
-  type: adj
+  genus  : f
+  type: n
 Speichenspanner:
+  genus  : m
   type: n
 Schleifmaschine:
+  genus  : f
   type: n
 schwund:
-  type: adj
+  genus  : m
+  type: n
 Dyspnoe:
   type: n
 Abfuellbetrieb:
+  genus  : m
   type: n
 Quader:
+  genus  : m
   type: n
 wahlweisen:
-  type: vi
-ballabwehr:
   type: adj
+ballabwehr:
+  genus  : f
+  type: n
 Bereifung:
+  genus  : f
   type: n
 Ballungsraeume:
+  genus  : f
   type: n
 seitensprung:
-  type: adj
+  genus  : m
+  type: n
 Galaxie:
+  genus  : f
   type: n
 guessing:
-  type: adj
+  type: n
 Ankunft:
+  genus  : f
   type: n
 Weissnaeherin:
-  type: n
-nu:
-  type: adj
-Brutigamme:
-  type: n
-Brste:
+  genus  : f
   type: n
 Unflexibel:
-  type: n
+  type: adj
 Finanzpolitik:
+  genus  : f
   type: n
 Bowlingkugel:
+  genus  : f
   type: n
 Filmpreise:
+  genus  : f
   type: n
 Aufdringlich:
-  type: adv
+  type: adj
 Aufgleisgeraet:
+  genus  : s
   type: n
 Schuldner:
+  genus  : m
   type: n
 warte:
   type: vi
 Debattenfuehrer:
   type: n
 saettigung:
-  type: adj
+  genus  : f
+  type: n
 Adlerhorst:
+  genus  : m
   type: n
 Abs:
+  genus  : s
   type: n
 kandidatur:
-  type: adj
+  genus  : f
+  type: n
 zurueckerbitten:
   type: vi
 reservieren:
   type: vi
 Ente:
+  genus  : f
   type: n
 anschriftsfeld:
-  type: adj
-Persistent:
+  genus  : s
   type: n
 leukozytopenien:
-  type: adj
-Omega:
+  genus  : f
   type: n
-alalalalalala:
-  type: adj
+Omega:
+  genus  : s
+  type: n
 leverkusen:
-  type: vi
+  type: n
 Abtropfbretter:
+  genus  : f
   type: n
 Spielens:
   type: n
-Abfllanlage:
-  type: n
 wollmau:
-  type: adj
+  type: n
 Bike:
+  genus  : s
   type: n
 Arbeitsmaterial:
+  genus  : s
   type: n
 gewaltherrscher:
-  type: adv
+  type: n
 Stausee:
+  genus  : m
   type: n
 Ausmerzen:
+  genus  : s
   type: n
 alkoholabhaengigkeit:
+  genus  : f
   type: n
 Darlehensberaterinnen:
+  genus  : f
   type: n
 Abkuerzungen:
+  genus  : f
   type: n
 Unwirtschaftlich:
-  type: adv
-Fliebild:
-  type: n
+  type: adj
 Lungenentzuendung:
-  type: n
-Mehrsprachigkeitmultilingualismus:
+  genus  : f
   type: n
 Berufen:
   type: n
 Dateigeneration:
+  genus  : f
   type: n
-crash:
-  type: adj
 militaerischer:
   type: adj
 gegenstueck:
-  type: adj
+  genus  : s
+  type: n
 plaudernd:
   type: adj
 Ausklinkfraesen:
+  genus  : f
   type: n
 Gebinde:
   type: n
 Aequinoktium:
+  genus  : s
   type: n
 Jenes:
-  type: n
+  type: pron
 durcheinander:
   type: adj
 stiften:
   type: vi
-Zwischenrume:
-  type: n
 Beduinen:
+  genus  : f
   type: n
 bespitzeln:
   type: vi
 Selbstlosigkeit:
+  genus  : f
   type: n
 weiterruecken:
   type: vi
 Handelspartner:
   type: n
 Diplomatische:
-  type: n
+  type: adj
 Briganten:
   type: n
 Ruptur:
   type: n
-rennpappen:
-  type: adj
 Weltmacht:
+  genus  : f
   type: n
 Demodulation:
+  genus  : f
   type: n
 lagerumsatz:
-  type: adj
+  genus  : m
+  type: n
 Dissident:
+  genus  : m
   type: n
 Malformation:
+  genus  : f
   type: n
 Datensicherung:
   type: n

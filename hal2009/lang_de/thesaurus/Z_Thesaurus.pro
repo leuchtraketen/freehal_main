@@ -1932,7 +1932,6 @@
 = <> _zirkel_ <> _gespraechskreis_ <> (maybe)
 = <> _zirkel_ <> _gespraechsrunde_ <> (maybe)
 = <> _zirkel_ <> _gremium_ <> (maybe)
-= <> _zirkel_ <> _junta_ <> (maybe)
 = <> _zirkel_ <> _komitee_ <> (maybe)
 = <> _zirkel_ <> _kommission_ <> (maybe)
 = <> _zirkel_ <> _rat_ <> (maybe)

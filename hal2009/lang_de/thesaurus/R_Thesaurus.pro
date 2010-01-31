@@ -1692,7 +1692,6 @@
 = <> _rechtswidrig_ <> _unberechtigt_ <> (maybe)
 = <> _rechtswidrig_ <> _unerlaubt_ <> (maybe)
 = <> _rechtswidrig_ <> _ungesetzlich_ <> (maybe)
-= <> _rechtswidrig_ <> _ungesetzlich_ <> (maybe)
 = <> _rechtswidrig_ <> _unrechtmaessig_ <> (maybe)
 = <> _rechtswidrig_ <> _untersagt_ <> (maybe)
 = <> _rechtswidrig_ <> _unzulaessig_ <> (maybe)

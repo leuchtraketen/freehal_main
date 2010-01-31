@@ -980,7 +980,6 @@
 = <> _junta_ <> _militaerjunta_ <> (maybe)
 = <> _junta_ <> _militaerregierung_ <> (maybe)
 = <> _junta_ <> _rat_ <> (maybe)
-= <> _junta_ <> _zirkel_ <> (maybe)
 = <> _jura_ <> _juristik_ <> (maybe)
 = <> _jura_ <> _rechtswissenschaft_ <> (maybe)
 = <> _jur _ <> _gerichtlich_ <> (maybe)

@@ -3238,7 +3238,6 @@
 = <> _milde_ <> _wohlwollen_ <> (maybe)
 = <> _mild_ <> _friedlich_ <> (maybe)
 = <> _mild_ <> _glimpflich_ <> (maybe)
-= <> _mild_ <> _glimpflich_ <> (maybe)
 = <> _mild_ <> _harmlos_ <> (maybe)
 = <> _mild_ <> _nachsichtig_ <> (maybe)
 = <> _mild_ <> _sanft_ <> (maybe)

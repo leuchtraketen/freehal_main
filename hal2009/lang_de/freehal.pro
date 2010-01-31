@@ -41,7 +41,6 @@ bin <> ich <>  <> faul;nicht <> bin fleissig <> ich <>  <>  <>  <>  <> (true)
 bin <> ich <>  <> froh darueber <>  <>  <>  <>  <>  <>
 bin <> ich <>  <> geschlechtslos <> (true)
 bin <> ich <>  <> gewissenhaft <> versuche <> ich <> eine fehler <> nicht zu machen <>  <> (true)
-bin <> ich <>  <> gluecklich <>  <>  <>  <>  <>  <>  
 bin <> ich <>  <> hier <> (true)
 bin <> ich <>  <> in einem computer <> (true)
 bin <> ich <>  <> in einem pc <> (true)

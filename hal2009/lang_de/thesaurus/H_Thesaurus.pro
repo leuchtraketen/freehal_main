@@ -6355,7 +6355,6 @@
 = <> _huette_ <> _behausung_ <> (maybe)
 = <> _huette_ <> _bruchbude_ <> (maybe)
 = <> _huette_ <> _bude_ <> (maybe)
-= <> _huette_ <> _bude_ <> (maybe)
 = <> _huette_ <> _eigenheim_ <> (maybe)
 = <> _huette_ <> _haeuschen_ <> (maybe)
 = <> _huette_ <> _haus_ <> (maybe)
