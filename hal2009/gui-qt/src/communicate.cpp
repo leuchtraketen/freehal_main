@@ -206,7 +206,7 @@ void client(std::string host, bool verbose = true, bool wait = false) {
         while ( 1 ) {
             ifstream i("booted");
             if ( i ) {
-                freehal::display_sentence(freehal::string("FreeHAL wurde heruntergeladen. Bitte warten..."));
+                freehal::display_sentence(freehal::string("Please wait..."));
                 freehal::msleep(3000);
                 break;
             }

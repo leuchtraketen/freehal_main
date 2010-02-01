@@ -32,7 +32,7 @@ int sql_sqlite_set_filename(const char*);
 int hal2009_execute_file(char* file, char* planguage);
 int hal2009_add_pro_file (char* filename);
 struct DATASET hal2009_get_csv(char* csv_request);
-const char* hal2009_make_csv(struct DATASET* set);
+char* hal2009_make_csv(struct DATASET* set);
 
 #ifndef UCHAR_MAX
 #   define UCHAR_MAX sizeof(char)
