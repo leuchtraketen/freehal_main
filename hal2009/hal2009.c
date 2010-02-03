@@ -1527,8 +1527,8 @@ const char* check_config (const char* name, const char* _default) {
                 return copy;
             }
         }
+        fclose(i);
     }
-    fclose(i);
     
     FILE* o = fopen(config_file, "a");
     if (o) {
