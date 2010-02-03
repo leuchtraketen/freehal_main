@@ -2431,7 +2431,7 @@ define action reasonof_construct_hash with array subjects, array verbs, var lang
         if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
             set from array verb first item to "haben"
         done
-        if from array verb first item matches /^(bin|bist|seid|sind|ist)$/ do
+        if from array verb first item matches /^(bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
             set from array verb first item to "sein"
         done
     done

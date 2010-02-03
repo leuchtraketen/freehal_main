@@ -61,7 +61,6 @@ set multi-line new global array builtin_male_names to [
           "amadeus",
           "ambros",
           "ambrosius",
-          "andré",
           "andreas",
           "andree",
           "andy",
@@ -2151,6 +2150,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'eher' => "adj",
           'den' => "art",
           'gespielt' => "vi",
+          'geboren' => "vi",
+          'gestorben' => "vi",
           'spielt' => "vi",
           'spielst' => "vi",
           'spielen' => "vi",
@@ -3202,7 +3203,7 @@ define action compute_output with var output do
         set new var username to ''
 
         set new var output_file_name to '_output__get_csv'
-        set new var csv_output to 'bin|bist|ist|sind|seid|heisst|heisse|heissen^du^0^0^0^default^0^0^0^0^0^0'
+        set new var csv_output to 'bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet^du^0^0^0^default^0^0^0^0^0^0'
 
         do unlink with '_input__get_csv'
 

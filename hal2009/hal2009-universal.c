@@ -302,8 +302,8 @@ struct word*** search_synonyms(const char* exp) {
 
         in_search_synonyms = 1;
         
-        synonyms = add_synonyms_by_search(exp, "", "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
-        synonyms = add_synonyms_by_search("", exp, "bi|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search(exp, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
+        synonyms = add_synonyms_by_search("", exp, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
 
         store_synonyms(exp, synonyms);
         in_search_synonyms = 0;
@@ -1543,8 +1543,8 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
 }
 
 char* generalize_verb(char* verb) {
-    char* verb_1_chk =        "|=|bin|bist|ist|sind|seid|heisst|heisse|heissen|is|am|are|";
-    char* verb_1     = strdup( "=|bin|bist|ist|sind|seid|heisst|heisse|heissen|is|am|are");
+    char* verb_1_chk =        "|=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are|";
+    char* verb_1     = strdup( "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are");
     
     char* verb_chk   = calloc(strlen(verb)+3, 1);
     sprintf(verb_chk, "|%s|", verb);
