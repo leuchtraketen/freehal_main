@@ -1062,7 +1062,7 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
             }
         }
         
-        if (v && does_match) {
+        /*if (v && does_match) {
             // don't change
         }
         if (v && !does_match && does_match_here) {
@@ -1070,7 +1070,9 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
         }
         else {
             does_match = does_match_here;
-        }
+        }*/         // uncommented: 04.02.2010
+        
+        does_match = does_match && does_match_here;
         
         for (p = 0; splitted_by_pipe[p]; ++p) {
             free(splitted_by_pipe[p]);
@@ -1547,14 +1549,22 @@ char* generalize_verb(char* verb) {
     char* verb_1     = strdup( "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are");
     
     char* verb_chk   = calloc(strlen(verb)+3, 1);
-    sprintf(verb_chk, "|%s|", verb);
-    
+    sprintf(verb_chk, "|%s", verb);
+    if (strstr(verb_chk, "0")) {
+        strstr(verb_chk, "0")[0] = '\0';
+    }
+    if (strstr(verb_chk, "1")) {
+        strstr(verb_chk, "1")[0] = '\0';
+    }
+    printf("strstr: Is '%s' in '%s'?\n", verb_chk, verb_1_chk);
     if (strstr(verb_1_chk, verb_chk)) {
+        printf("  yes.\n");
         free(verb_chk);
         free(verb);
         return (verb_1);
     }
     else {
+        printf("  no.\n");
         free(verb_chk);
         free(verb_1);
         return (verb);
@@ -1637,6 +1647,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     }
     
     char* req_verbs   = join_words(if_clause->verbs);
+/*
     if (strlen(req_verbs) > 5) {
         req_verbs[strlen(req_verbs)-5] = '\0';
         if (strstr(verbs, req_verbs)) {
@@ -1645,6 +1656,15 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
         }
         req_verbs = generalize_verb(req_verbs);
     }
+*/
+    if (strlen(req_verbs) > 5 && (strstr(req_verbs, "0") || strstr(req_verbs, "1"))) {
+        req_verbs[strlen(req_verbs)-5] = '\0';
+        if (strstr(verbs, req_verbs)) {
+            free(req_verbs);
+            req_verbs = strdup(verbs);
+        }
+    }
+
     char* req_adverbs = join_words(if_clause->adverbs);
     char* req_extra   = join_words(if_clause->extra);
     req->verbs        = divide_words   (req_verbs);
@@ -1653,6 +1673,13 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     req->questionword = strdup         (if_clause->questionword);
     req->context      = strdup         (context);
     req->truth        = 1;
+
+    int j;
+    for (j = 0; req->verbs[j]; ++j) {
+        if (strlen(req->verbs[j]) >= 1) {
+            req->verbs[j] = set_word(generalize_verb(req->verbs[j]->name));
+        }
+    }
     
     free(req_verbs);
     free(req_adverbs);
@@ -1930,6 +1957,26 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("No.\n");
     }
     
+    printf("Do we need the deep search?\n");
+    
+    if (!can_be_a_pointer(list) || !count_list(list)) {
+        printf("We do.\n");
+        
+        struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context);
+        if (_list == TOOMUCH) {
+            return TOOMUCH;
+        }
+        if (can_be_a_pointer(_list)) {
+            if (can_be_a_pointer(list)) {
+                free(list);
+            }
+            list = _list;
+        }
+    }
+    else {
+        printf("No.\n");
+    }
+    
     printf("Do we need the wiki search?\n");
     
     if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
@@ -1963,26 +2010,6 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("We do.\n");
         
         struct fact** _list = search_facts_thesaurus(subjects, objects, verbs, adverbs, extra, questionword, context);
-        if (_list == TOOMUCH) {
-            return TOOMUCH;
-        }
-        if (can_be_a_pointer(_list)) {
-            if (can_be_a_pointer(list)) {
-                free(list);
-            }
-            list = _list;
-        }
-    }
-    else {
-        printf("No.\n");
-    }
-    
-    printf("Do we need the deep search?\n");
-    
-    if (!can_be_a_pointer(list) || !count_list(list)) {
-        printf("We do.\n");
-        
-        struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context);
         if (_list == TOOMUCH) {
             return TOOMUCH;
         }

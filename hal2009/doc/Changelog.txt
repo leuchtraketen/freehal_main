@@ -1,3 +1,7 @@
+850:
+
+- Bugfix im Zeitverstaendnissystem
+
 843:
 
 - Versuch Speicherleck Korrektur

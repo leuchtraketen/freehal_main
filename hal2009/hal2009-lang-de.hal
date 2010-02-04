@@ -3350,10 +3350,13 @@ define action compute_output with var output do
 
     do regex using var output: /_/, " ", :global:i
     # Time From <-> time from
-    do regex using var output: /time from /, "time from ", :global:i
+    do regex using var output: /time(<[\s]>|<[_]>|<[-]>)from(<[\s]>|<[_]>|<[-]>)/, "time from ", :global:i
+    do regex using var output: /time from\s+/, "time from ", :global:i
     # Time To   <-> time to
-    do regex using var output: /time to /, "time to ", :global:i
+    do regex using var output: /time(<[\s]>|<[_]>|<[-]>)to(<[\s]>|<[_]>|<[-]>)/, "time to ", :global:i
+    do regex using var output: /time to\s+/, "time to ", :global:i
 
+    set new var time_now to time without arguments
     set new var time_begin to time without arguments
     set new var time_end to 0
     print var output
@@ -3442,13 +3445,20 @@ define action compute_output with var output do
     
     do regex using var output: /<[~]>time.*/, "", :global:i
     
+    
+    if var time_end + 24*60*60 is var time_begin do
+        set new var temp to var time_end
+        set var time_end to var time_begin
+        set var time_begin to var temp
+    done
+    
     if var time_begin + 24*60*60 is var time_end do
         if var output matches /time from (<[0-9]>+?)(\s|$)/ do
             set new var replacement to ''
-            if var hour matches "00" and var min matches "00" and var sec matches "00" do
+            if not ( var time_now < var time_end and var time_now > var time_begin ) do
                 set var replacement to var replacement concat ' am ' concat var mday concat '.' concat var mon concat '.' concat var year
             done
-            else if var hour or var min or var sec do
+            if var hour or var min or var sec do
                 set var replacement to var replacement concat ' um ' concat var hour concat ':' concat var min
             done
             do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
@@ -3457,8 +3467,9 @@ define action compute_output with var output do
     done
     else do
         if var output matches /time from (<[0-9]>+?)(\s|$)/ do
+            print "From: " concat var mday concat '.' concat var mon concat '.' concat var year concat ' ' concat var hour concat ':' concat var min concat new line
             set new var replacement to ''
-            if var hour matches "00" and var min matches "00" and var sec matches "00" do
+            if not ( var time_now < var time_end and var time_now > var time_begin ) do
                 set var replacement to var replacement concat ' vom ' concat var mday concat '.' concat var mon concat '.' concat var year
             done
             else if var hour or var min or var sec do
@@ -3498,6 +3509,7 @@ define action compute_output with var output do
         done
         
         if var output matches /time to (<[0-9]>+?)(\s|$)/ do
+            print "To:   " concat var mday concat '.' concat var mon concat '.' concat var year concat ' ' concat var hour concat ':' concat var min concat new line
             set new var replacement to ''
             if var hour matches "00" and var min matches "00" and var sec matches "00" do
                 set var replacement to var replacement concat ' bis zum ' concat var mday concat '.' concat var mon concat '.' concat var year
@@ -3996,8 +4008,9 @@ define action multiple_choices_verb with var verb do
         done
     done
     
-    if var verb matches "bi" or var verb matches "i" or var verb matches "is" or var verb matches "sind" or var verb matches /heis/ do
+    if var verb matches "bi" or var verb matches "i" or var verb matches "is" or var verb matches "sind" or var verb matches /heis/ or var verb matches /wurd/ do
         push into array choices, var verb
+        push into array choices, "="
         push into array choices, "bin"
         push into array choices, "bist"
         push into array choices, "ist"
@@ -4007,7 +4020,17 @@ define action multiple_choices_verb with var verb do
         push into array choices, "heisst"
         push into array choices, "heisse"
         push into array choices, "heissen"
-        push into array choices, "="
+        push into array choices, "sei"
+        push into array choices, "war"
+        push into array choices, "wurde"
+        push into array choices, "wurden"
+        push into array choices, "werden"
+        push into array choices, "werde"
+        push into array choices, "wirst"
+        push into array choices, "wurdest"
+        push into array choices, "wurde"
+        push into array choices, "wuerdet"
+        push into array choices, "werdet"
     done
     else if var verb matches "gib" or var verb matches "geb" do
         push into array choices, var verb
