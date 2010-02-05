@@ -1364,7 +1364,7 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
         delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
 
         debugf(
-            "Searching answers for:\n"
+            "Searching simple answers for:\n"
             "    subjects (was: %s):\n", subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
         print_word_list_3rd_order(fact->subjects);
         debugf(
@@ -2309,7 +2309,7 @@ int is_important_word(const char* word) {
 }
 
 const char* small_identifier(const char* word) {
-    if (word[0] == '_') {
+    if (word[0] == '_' || word[0] == '*') {
         if (strlen(word) > 3) {
             return small_identifier(word+1);
         }
@@ -2326,7 +2326,7 @@ const char* small_identifier(const char* word) {
     
     char* identifier = calloc(1, 5);
     identifier[2] = 0;
-    
+
     identifier[0] =  word[0] >= 'a' && word[0] <= 'z'
                   ?  word[0]
                   :  '_'

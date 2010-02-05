@@ -487,7 +487,7 @@ char* gen_sql_get_double_facts() {
 
 int gen_sql_delete_everything_from(const char* filename) {
 
-    char* sql = malloc(102400);
+    char* sql = malloc(1024);
     *sql = 0;
     
     strcat(sql, "DELETE FROM facts WHERE `from` GLOB '");

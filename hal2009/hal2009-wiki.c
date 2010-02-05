@@ -549,6 +549,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             in_header = 0;
             continue;
         }
+        if (strstr(lines[current_line]->s, "zu diesem Stichwort gibt es nicht")) {
+            in_header = 0;
+            in_script = 0;
+            in_table  = 0;
+            in_ul     = 1;
+        }
         if (strstr(lines[current_line]->s, "<ul")) {
             ++in_ul;
         }
