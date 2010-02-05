@@ -1408,6 +1408,10 @@ define action compute_tags with var word, var lang, var path do
     done
     
     do regex using from array tags first item: /,/, "", :global
+    
+    if var word matches /^_(.*?)_$/ do
+        do compute_tags with $0, var lang, var path
+    done
 
     # TEXT
     # Return the result.
@@ -3993,6 +3997,8 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     
     set new var divisor to ' ~ '
     set new var line to join with var divisor, items of array line_array
+    
+    do regex using var line: /<[_]>+/, "_", :global
     
     if var pro_file_name matches "-" do
         print "Do not write any facts."

@@ -893,7 +893,6 @@ struct fact** disk_search_clauses(int rel) {
 int disk_delete_everything_from(const char* filename) {
     {
         char* sql = gen_sql_delete_everything_from(filename);
-        printf("%s\n", sql);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
         return error;
