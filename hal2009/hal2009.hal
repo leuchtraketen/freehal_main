@@ -3890,7 +3890,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
             done
             if from array object first item matches /^.?\(good\).?$/ do
-                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
+                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-good.pro'
             done
             
             set var object to from array object first item

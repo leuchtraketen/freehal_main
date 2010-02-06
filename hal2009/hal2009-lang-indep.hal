@@ -808,6 +808,15 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^wozu\s/, "wie ", :global:i
     do regex using var input: /\swozu\s/, " wie ", :global:i
     do regex using var input: /\soppo\s/, " opposite ", :global:i
+    do regex using var input: /\s.?.?opposite.?.?\s/, " opposite ", :global:i
+    
+    if var input matches / opposite / do
+        do regex using var input: /^\s+/, "", :global
+        do regex using var input: /\s+$/, "", :global
+        do regex using var input: /\s+/, "_", :global
+        set new array opposites to split using /_opposite_/, var input
+        set var input to "_" concat from array opposites first item concat "_ opposite _" concat from array opposites second item concat "_"
+    done
     
     do regex using var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/, " $1 , zu $0 $2", :global:i
 
