@@ -480,6 +480,7 @@ int convert_to_perl5_convert_file(char* filename) {
                 fprintf(output(), "Nothing has changed in %s\n", filename);
                 just_compile = 1;
             }
+            free(code_tmp);
         }
         FILE* target;
         target = fopen(filename_tmp, "w");

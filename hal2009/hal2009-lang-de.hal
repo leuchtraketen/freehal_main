@@ -4191,6 +4191,21 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Wenn ich das wuesste..."
             push into array random, "Ich stehe gerade auf dem Schlauch."
             push into array random, "Ich stehe wohl gerade auf dem Schlauch."
+            push into array random, "Diese Eingabe kann ich nicht verarbeiten."
+            push into array random, "Auf diese Eingabe kann ich nicht antworten."
+            push into array random, "Darauf kann ich noch nicht antworten."
+            push into array random, "Das kann ich leider nicht beantworten."
+            push into array random, "Fuer diese Eingabe fehlt mir das notwendige Wissen."
+            push into array random, "Auf alles habe ich leider keine Antwort..."
+            push into array random, "Die Antwort auf diese Eingabe ist mir unbekannt."
+            push into array random, "Zur Zeit kann ich diese Eingabe nicht beantworten."
+            push into array random, "Momentan ist es mir nicht moeglich diese Eingabe zu beantworten."
+            push into array random, "Mein Wissensspeicher ist begrenzt, diese Eingabe kann ich nicht verarbeiten."
+            push into array random, "Fuer diese Eingabe ist keine Antwort in meinen Daten vorhanden."
+            push into array random, "Tut mir leid, aber auf diese Eingabe habe ich keine korrekte Antwort. "
+            push into array random, "Das kann ich momentan noch nicht beantworten."
+            push into array random, "Fuer diese Eingabe fehlt mir momentan das notwendige Wissen, um diese genau zu beantworten."
+            push into array random, "Bitte nicht boese sein, aber auf diese Eingabe habe ich keine Antwort."
 
             push into array random, items of array random
         done
@@ -4523,6 +4538,8 @@ done
 define action to_verb_root_left with var verb, var lang, var path do
     set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
     
+    set new var allprefix to ''
+    
     set new var last_verb to ''
     while not var verb matches var last_verb do
         set var last_verb to var verb
@@ -4530,24 +4547,28 @@ define action to_verb_root_left with var verb, var lang, var path do
         if length(var verb) > 2 and var verb matches /<[aeiou]>/ do
             for each new var prefix in array verb_prefixes do
                 if var verb matches /^var prefix/ do
-                    do regex using var verb: /^var prefix/, "", :global
+                    do regex using var verb: /^var prefix/, "", :i
+                    set var allprefix to var allprefix concat var prefix
                     go to last
                 done
             done
             
             if var verb matches /^ge/ do
-                do regex using var verb: /^ge/, "", :global
+                do regex using var verb: /^ge/, "", :i
+                set var allprefix to var allprefix concat "ge"
             done
             if var verb matches /^be/ do
-                do regex using var verb: /^be/, "", :global
+                do regex using var verb: /^be/, "", :i
+                set var allprefix to var allprefix concat "be"
             done
             if var verb matches /^zu/ do
-                do regex using var verb: /^zu/, "", :global
+                do regex using var verb: /^zu/, "", :i
+                set var allprefix to var allprefix concat "zu"
             done
         done
     done
 
-    do return with var verb
+    do return with [ var verb, var allprefix ]
 done
 
 define action to_verb_root_right with var verb, var lang, var path do
@@ -4589,10 +4610,160 @@ done
 
 define action to_verb_root with var verb, var lang, var path do
 
+
     set var verb to to_verb_root_right with var verb, var lang, var path
-    set var verb to to_verb_root_left with var verb, var lang, var path
+    
+    set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
+    set var verb to from array verb_and_prefix first item
     
     do return with var verb
+done
+
+define action to_verb_prefix with var verb, var lang, var path do
+
+    
+    set var verb to to_verb_root_right with var verb, var lang, var path
+    
+    set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
+    set new var prefix to from array verb_and_prefix second item
+    
+    do return with var prefix
+done
+
+define action to_verb_nucleus_right with var verb, var lang, var path do
+
+    set new flag has_h to 0
+
+    if var verb matches /h$/ do
+        set flag has_h to 1
+        do regex using var verb: /h$/, "", :i
+    done
+    
+    if var verb matches /(ei|au|eu|aeu|ou|ie|aa|ee|oo|uu|oeu)$/ do
+        do return with $0
+    done
+    if var verb matches /(a|e|i|o|u)(a|e|i|o|u)$/ do
+        do return with $0
+    done
+    if var verb matches /(a|e|i|o|u)$/ do
+        do return with $0
+    done
+    
+    do return with var verb
+done
+
+define action to_verb_nucleus with var verb, var lang, var path do
+    set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
+    do regex using var verb: /var postnucleus$/, "", :i
+    
+    set var verb to to_verb_nucleus_right with var verb, var lang, var path
+    
+    do return with var verb
+done
+
+define action to_verb_prenucleus_right with var verb, var lang, var path do
+
+    set new flag has_h to 0
+
+    if var verb matches /h$/ do
+        set flag has_h to 1
+        do regex using var verb: /h$/, "", :i
+    done
+    
+    set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
+    do regex using var verb: /var postnucleus$/, "", :i
+    set new var nucleus to to_verb_nucleus with var verb, var lang, var path
+    do regex using var verb: /var nucleus$/, "", :i
+    
+    do return with var verb
+done
+
+define action to_verb_prenucleus with var verb, var lang, var path do
+
+    set var verb to to_verb_prenucleus_right with var verb, var lang, var path
+    
+    do return with var verb
+done
+
+define action to_verb_postnucleus_right with var verb, var lang, var path do
+
+    set new var postnucleus to ''
+
+    while var verb matches /(<[bcdfghjklmnpqrstvwxyz]>)$/ do
+        set var postnucleus to $0 concat var postnucleus
+        do regex using var verb: /$0$/, "", :i
+    done
+    
+    do return with var postnucleus
+done
+
+define action to_verb_postnucleus with var verb, var lang, var path do
+
+    set var verb to to_verb_postnucleus_right with var verb, var lang, var path
+    
+    do return with var verb
+done
+
+define action to_verb_strong_conjugation with var verb, var lang, var path do
+
+    set new var verb_nucleus to to_verb_nucleus with var verb, var lang, var path
+    set new var verb_prefix to to_verb_prefix with var verb, var lang, var path
+    set new var verb_prenucleus to to_verb_prenucleus with var verb, var lang, var path
+    set new var verb_postnucleus to to_verb_postnucleus with var verb, var lang, var path
+    
+    set new var verb_past_nucleus to var verb_nucleus
+    set new var verb_past_prefix to var verb_prefix
+    set new var verb_past_prenucleus to var verb_prenucleus
+    set new var verb_past_postnucleus to var verb_postnucleus
+    
+    set new var verb_participle_nucleus to var verb_nucleus
+    set new var verb_participle_prefix to var verb_prefix
+    set new var verb_participle_prenucleus to var verb_prenucleus
+    set new var verb_participle_postnucleus to var verb_postnucleus
+    
+    # 1st
+    
+    if var verb_nucleus matches /ei/ do
+        # bl-ei-b- / ge-d-ei-h- / l-ei-h- / m-ei-d- / pr-ei-s- / r-ei-b- / sch-ei-d- /
+        # schr-ei-b- / schr-ei-h- / schw-ei-g- / sp-ei- / st-ei-g- / tr-ei-b- / w-ei-s- / z-ei-h-
+        #
+        # b-ei-ss- / bl-ei-ch- / gl-ei-ch- / gl-ei-t- / gr-ei-f- / k-ei-f- / kn-ei-f- /
+        # kn-ei-p- / kr-ei-ss- / kr-ei-sch- / l-ei-d- / pf-ei-ff- / r-ei-ss- / r-ei-t- /
+        # sch-ei-ss- / schl-ei-ch- / schl-ei-f- / schl-ei-ss- / schm-ei-ss- / schn-ei-d- /
+        # schr-ei-t- / spl-ei-ss- / str-ei-ch- / str-ei-t- / w-ei-ch- / 
+    
+        if var verb_prenucleus matches /(bl|d|l|m|pr|r|sch|schr|schw|sp|st|tr|w|z)/ or var verb_prenucleus matches /(b|bl|gl|gr|k|kn|kr|kr|l|pf|r|sch|schl|schm|schn|schr|spl|str|w)/ do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(b|s|n|g)$/ or var verb_postnucleus matches "h" do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'ie'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'ie'
+                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+            done
+            else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'i'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'i'
+                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+            done
+            else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'i'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'i'
+                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
+                set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
+            done
+        done
+    done
+    
+    
+    set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
+    set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
+    
+    do return with [ var verb, var verb_past, var verb_participle ]
 done
 
 define action get_score_answer without arguments do

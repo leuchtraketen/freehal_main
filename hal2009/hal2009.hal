@@ -4671,10 +4671,16 @@ define action init_pro_files with var current_language, var path do
         # Read all .pro files by sending a signal to the C thread
         # CODE
         for each new var file_name in array files is rw do
+            print var file_name concat "..."
+            print new line
+            
             do be_slow without arguments
             set new var file to var language_directory concat '/' concat var file_name
 
             if not var file matches /\.pro$/ do
+                go to next
+            done
+            if var file matches /^\./ do
                 go to next
             done
 
