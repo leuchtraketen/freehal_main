@@ -738,6 +738,8 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: /(^|\s)(eigentlich|wirklich|doch|nun|wenigstens|schliesslich|denn)(\s|$)/, "$0$2", :global:i
 
+    do regex using var input: / das verlangen /, " das _verlangen_ ", :global:i
+
     do regex using var input: /wie viel uhr/, "wie uhr", :global:i
     do regex using var input: /wie viel<[a-zA-Z]>*\s/, "wie ", :global:i
     do regex using var input: /wieviel<[a-zA-Z]>*\s/, "wie ", :global:i
@@ -801,6 +803,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /<[,]>\s+<[,]>/, ",", :global:i
     do regex using var input: /^wozu\s/, "wie ", :global:i
     do regex using var input: /\swozu\s/, " wie ", :global:i
+    
+    do regex using var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/, " $1 , zu $0 $2", :global:i
 
     do regex using var input: /^\s+/, "", :global:i
     do regex using var input: /^<[,]>/, "", :global:i
@@ -924,11 +928,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\s(aus|von|in|an)\svon\seine([rs])\s/, " $0 eine$1 ", :global:i
 
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sder\s([A-Z])/, "$0$1 von der $2", :global
-    do regex using var input: /(^|\s)([A-Z][a-z]*?)\sdes\s([A-Z])/, "$0$1 von dem $2", :global
+    do regex using var input: /(^|\s)([A-Z][a-z]*?)\sdes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von dem $2$3", :global
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sdes\s([A-Z])/, "$0$1 von dem $2", :global
 
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/, "$0$1 von jeder $2", :global
-    do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
+    do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von jedem $2$3", :global
     do regex using var input: /(^|\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
 
     #do regex using var input: /was ist /, "ISUNKNOWN ", :global:i

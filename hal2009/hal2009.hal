@@ -3348,7 +3348,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if ( var final_sentence matches / bin|bist|heisse|heisst|kann|darf|muss|kannst|darfst|musst / or var final_sentence matches /iere|ierst / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
+        if ( var final_sentence matches / bin|bist|heisst|kann|darf|muss|kannst|darfst|musst / or var final_sentence matches /iere|ierst / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
             print "Cannot answer with bin/bist when it has been asked for ist:"
             print new line
             print var final_sentence
