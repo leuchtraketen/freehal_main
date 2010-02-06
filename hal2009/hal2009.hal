@@ -3849,6 +3849,10 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         set new array verbs to from hash parsed item { 'verbs' }
         for each new array verb in array verbs do
             set var verb to from array verb first item
+            
+            if var verb matches /opposite/ do
+                set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
+            done
         done
         set new array subjects to from hash parsed item { 'subjects' }
         for each new array subject in array subjects do

@@ -233,7 +233,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Talk">
        <attribute name="title">
@@ -351,8 +351,8 @@ p, li { white-space: pre-wrap; }
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>506</width>
-             <height>449</height>
+             <width>402</width>
+             <height>204</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -679,13 +679,6 @@ p, li { white-space: pre-wrap; }
              </property>
             </spacer>
            </item>
-           <item row="1" column="3">
-            <widget class="QPushButton" name="vacuum">
-             <property name="text">
-              <string>SQL Vacuum</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="4" colspan="2">
             <widget class="QPushButton" name="double_facts">
              <property name="text">
@@ -695,6 +688,19 @@ p, li { white-space: pre-wrap; }
            </item>
            <item row="2" column="0" colspan="6">
             <widget class="QTableView" name="tableView"/>
+           </item>
+           <item row="1" column="3">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
