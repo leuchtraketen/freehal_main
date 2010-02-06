@@ -1,3 +1,8 @@
+856:
+
+- Feature: Deklaration des Verbs opposite
+- Feature: (bad) und (good) ueber ps-bad/good.prot
+
 855:
 
 - Korrektur Parser

@@ -2290,6 +2290,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'arg' => "adj",
           'zwanzig' => "adj",
           '=' => "vt",
+          'opposite' => "vt",
           'barsch' => "adj",
           'schmal' => "adj",
           'pulls' => "vt",

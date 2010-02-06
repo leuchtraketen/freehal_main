@@ -1869,6 +1869,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'sen' => "adj",
           'vierzig' => "adj",
           '=' => "vi",
+          'opposite' => "vt",
           'ihr' => "art",
           'rauh' => "adj",
           'ob' => "questionword",

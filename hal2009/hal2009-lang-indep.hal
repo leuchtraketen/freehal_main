@@ -149,6 +149,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
     do regex using var input: /\(false\)/, "_(false)_", :global:i
     
+    do regex using var input: /\s*?\(bad\)/, " = _(bad)_", :global:i
+    do regex using var input: /\s*?\(good\)/, " = _(good)_", :global:i
+    
     do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i
     do regex using var input: /(^|\s)?und sonst(\s|\$)/, " wie geht es dir ", :global:i
@@ -746,6 +749,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /wie spaet/, "wie uhr", :global:i
     do regex using var input: /wie frueh/, "wie uhr", :global:i
     do regex using var input: /<[=]>/, " = ", :global:i
+    do regex using var input: /opposite/, " opposite ", :global
     do regex using var input: /wofuer steht /, "was ist ", :global:i
     do regex using var input: / schon mal /, " ", :global:i
     do regex using var input: /hast du schon mal von (.*?) gehoert/, "was ist $0", :global:i
@@ -803,6 +807,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /<[,]>\s+<[,]>/, ",", :global:i
     do regex using var input: /^wozu\s/, "wie ", :global:i
     do regex using var input: /\swozu\s/, " wie ", :global:i
+    do regex using var input: /\soppo\s/, " opposite ", :global:i
     
     do regex using var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/, " $1 , zu $0 $2", :global:i
 

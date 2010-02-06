@@ -3348,6 +3348,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
+        if var final_sentence matches / opposite / do
+            # TEXT
+            # A Sentence must not have the verb "="
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
         if ( var final_sentence matches / bin|bist|heisst|kann|darf|muss|kannst|darfst|musst / or var final_sentence matches /iere|ierst / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
             print "Cannot answer with bin/bist when it has been asked for ist:"
             print new line
@@ -3862,6 +3873,13 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
                 set var truth to "(false)"
                 set var object to ''
                 go to next
+            done
+            
+            if from array object first item matches /^.?\(bad\).?$/ do
+                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
+            done
+            if from array object first item matches /^.?\(good\).?$/ do
+                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
             done
             
             set var object to from array object first item
@@ -4436,6 +4454,13 @@ define action transform_psprot_line with var line, var main_word, var current_la
     do regex using var line: /\s+/, " ", :global
     set new array words to an empty array
     set array words to split with /<[",.;!?]>/, var line
+    
+    if var main_word matches /^.?bad.?$/ do
+        set var main_word to "_(bad)_"
+    done
+    if var main_word matches /^.?good.?$/ do
+        set var main_word to "_(good)_"
+    done
     
     set new array lines to an empty array
     if not lc(var main_word) matches var main_word do
