@@ -149,8 +149,20 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
     do regex using var input: /\(false\)/, "_(false)_", :global:i
     
-    do regex using var input: /\s*?\(bad\)/, " = _(bad)_", :global:i
-    do regex using var input: /\s*?\(good\)/, " = _(good)_", :global:i
+    if var input matches /\(bad\)/ do
+        do regex using var input: /\s*?\(bad\)/, "", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /\s+$/, "", :global:i
+        do regex using var input: /\s+ /, "_", :global:i
+        set var input to "_" concat var input concat "_ = _(bad)_"
+    done
+    if var input matches /\(good\)/ do
+        do regex using var input: /\s*?\(good\)/, "", :global:i
+        do regex using var input: /^\s+/, "", :global:i
+        do regex using var input: /\s+$/, "", :global:i
+        do regex using var input: /\s+ /, "_", :global:i
+        set var input to "_" concat var input concat "_ = _(good)_"
+    done
     
     do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i
