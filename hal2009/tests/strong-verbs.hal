@@ -1,0 +1,52 @@
+compile source hal2009-lang-de.hal
+require source hal2009-lang-de.hal
+compile source hal2009.hal
+require source hal2009.hal
+set new var current_language to 'de'
+set new var path to "."
+
+set new var summary to ''
+
+set new var f to handle for file name "tests/strong-verbs.txt", read
+for each new var argv from var f do
+	do regex using var argv: /\s/, "", :global
+
+	set new var prefix to to_verb_prefix with var argv, var current_language, var path
+	print "prefix:       " concat var prefix
+	print new line
+	
+	set new var root to to_verb_root with var argv, var current_language, var path
+	print "root:         " concat var root
+	print new line
+	set new var nucleus to to_verb_nucleus with var root, var current_language, var path
+	print "nucleus:      " concat var nucleus
+	print new line
+	set new var prenucleus to to_verb_prenucleus with var root, var current_language, var path
+	print "pre nucleus:  " concat var prenucleus
+	print new line
+	set new var postnucleus to to_verb_postnucleus with var root, var current_language, var path
+	print "post nucleus: " concat var postnucleus
+	print new line
+	
+	set new array conj to to_verb_strong_conjugation with var root, var current_language, var path
+	print "past:         " concat from array conj second item
+	print new line
+	set new array conj to to_verb_strong_conjugation with var root, var current_language, var path
+	print "participle:   " concat from array conj third item
+	print new line
+
+	set new var pres to from array conj first item concat "en"
+	set new var past to from array conj second item concat "en"
+	set new var pret to from array conj third item concat "en"
+
+	do regex using var pres: /<[-]>/, "", :global
+	do regex using var past: /<[-]>/, "", :global
+	do regex using var pret: /<[-]>/, "", :global
+
+	set var summary to var summary concat var pres concat " " concat var past concat " " concat var pret concat new line
+	print new line
+done
+
+
+print var summary
+print new line

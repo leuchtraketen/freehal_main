@@ -4553,6 +4553,10 @@ define action to_verb_root_left with var verb, var lang, var path do
                 done
             done
             
+            if var verb matches /^ver/ do
+                do regex using var verb: /^ver/, "", :i
+                set var allprefix to var allprefix concat "ver"
+            done
             if var verb matches /^ge/ do
                 do regex using var verb: /^ge/, "", :i
                 set var allprefix to var allprefix concat "ge"
@@ -4753,6 +4757,44 @@ define action to_verb_strong_conjugation with var verb, var lang, var path do
                 # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'i'
                 set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
+                set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
+            done
+        done
+    done
+    
+    # 2nd
+    
+    if var verb_nucleus matches /ie/ do
+        # b-ie-g-
+    
+        if var verb_prenucleus matches /(b|fl|fr|l|sch|st|tr|z)/ or var verb_prenucleus matches /(dr)/ do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b)$/ or var verb_postnucleus matches "h" do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'o'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'o'
+                if not var verb_participle_prefix matches /ver|ge/ do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+            done
+            else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'o'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'o'
+                if not var verb_participle_prefix matches /ver|ge/ do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+            done
+            else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
+                # bl-ie-b-
+                set var verb_past_nucleus to 'o'
+                # ge-bl-ie-b-
+                set var verb_participle_nucleus to 'o'
+                if not var verb_participle_prefix matches /ver|ge/ do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
                 set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
                 set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
             done

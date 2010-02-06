@@ -903,60 +903,58 @@ halstring* replace(halstring *src, const char *from, const char *to) {
         return src;
     }
     
-    char* full_string_pointer = src->s;
-    src->s = halmalloc(line_size + 100, "replace");
-    strcpy(src->s, full_string_pointer);
-    char* string_to_free = src->s;
+    char* full_string_pointer = halmalloc(line_size + 100, "replace");
+    char* to_free__full_string_pointer = full_string_pointer;
+    strcpy(full_string_pointer, src->s);
     
     size_t size = strlen(src->s) + 1;
     size_t fromlen = strlen(from);
     size_t tolen = strlen(to);
 
-    char *value = halmalloc(size, "replace");
+    char *value = halmalloc(line_size > size ? line_size : size, "replace");
 
     char *dst = value;
 
     if ( value != NULL ) {
         for ( ;; ) {
-            const char *match = strstr(src->s, from);
+            const char *match = strstr(full_string_pointer, from);
             if ( match != NULL ) {
-                size_t count = match - src->s;
+                size_t count = match - full_string_pointer;
                 char *temp;
                 size += tolen - fromlen;
-                temp = realloc(value, size);
+                if (line_size < size) {
+                    temp = realloc(value, size);
+                }
+                else {
+                    temp = value;
+                }
                 if ( temp == NULL ) {
                     halfree(value);
                     return NULL;
                 }
                 dst = temp + (dst - value);
                 value = temp;
-                memmove(dst, src->s, count);
-                src->s += count;
+                memmove(dst, full_string_pointer, count);
+                full_string_pointer += count;
                 dst += count;
                 memmove(dst, to, tolen);
-                src->s += fromlen;
+                full_string_pointer += fromlen;
                 dst += tolen;
             }
             else /* No match found. */
             {
-                strcpy(dst, src->s);
+                strcpy(dst, full_string_pointer);
                 break;
             }
         }
     }
     
-    /*
     if ( src->do_free ) {
-        halfree(full_string_pointer);
+        halfreef(src->s, "replace");
     }
-
-    src->s = value;
-    */
     
-    strcpy(full_string_pointer, value);
-    src->s = full_string_pointer;
-    halfreef(value, "replace");
-    halfreef(string_to_free, "replace");
+    src->s = value;
+    halfreef(to_free__full_string_pointer, "replace");
     
     return src;
 }
@@ -1524,7 +1522,15 @@ const char* check_config (const char* name, const char* _default) {
                 if (!strstr(name, "limit")) {
                     printf("%s: %s = %s, default %s\n", config_file, name, copy, _default);
                 }
+                
+                if (haltemp_ref->do_free && haltemp_ref->s) {
+                    free(haltemp_ref->s);
+                }
+                
                 return copy;
+            }
+            else {
+                free(temp);
             }
         }
         fclose(i);

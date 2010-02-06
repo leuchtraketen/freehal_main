@@ -396,30 +396,32 @@ char* convert_to_perl5 (char* hals, int just_compile) {
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
         if (0 == lines[current_line])
             break;
-        if (0 == lines[current_line]->s)
-            break;
+        if (0 == lines[current_line]->s) {
+            halfree(lines[current_line]);
+            continue;
+        }
         if (strlen(lines[current_line]->s) <= 1) {
             halfree(lines[current_line]->s);
             halfree(lines[current_line]);
             continue;
         }
         
-        char* newline;
-        newline = halmalloc(LINE_SIZE + 100, "convert_to_perl5/9"); // be sure we have enough space
+        char* newline = halmalloc(LINE_SIZE + 100, "convert_to_perl5/9"); // be sure we have enough space
         zero_p(newline, LINE_SIZE + 100);
         strcpy(newline, lines[current_line]->s);
-        halstring s;
-        s.s = newline;
-        s.do_free = 1;
+        halstring* s = calloc(sizeof(halstring), 1);
+        s->s = newline;
+        s->do_free = 1;
         
-        convert_to_perl5_structure(&s, just_compile);
-        strcat(newcode, s.s);
+        convert_to_perl5_structure(s, just_compile);
+        strcat(newcode, s->s);
         strcat(newcode, "\n");
         if ( lines[current_line]->do_free )
             halfreef(lines[current_line]->s, "convert_to_perl5/1");
         halfreef(lines[current_line], "convert_to_perl5/2");
-        if ( s.do_free )
-            halfreef(s.s, "convert_to_perl5/3");
+        if ( s->do_free )
+            halfreef(s->s, "convert_to_perl5/3");
+        halfreef(s, "convert_to_perl5/4");
         
         if (current_line % 20 == 0)
             fprintf(output(), "%s", ".");

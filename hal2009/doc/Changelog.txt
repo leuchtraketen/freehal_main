@@ -1,3 +1,11 @@
+854:
+
+- Versuch Korrektur Speicherleck
+
+853:
+
+- Versuch Korrektur Speicherleck
+
 852:
 
 - Bug 487 korrigiert
