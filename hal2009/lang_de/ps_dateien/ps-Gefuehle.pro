@@ -42,7 +42,6 @@
 = <> _durcheinander_sein_ <> gefuehl <>  <> (true)
 = <> _durchwuehlt_sein_ <> gefuehl <>  <> (true)
 = <> _durstig_sein_ <> gefuehl <>  <> (true)
-= <> durst <> gefuehl <>  <> (true)
 = <> _duester_sein_ <> gefuehl <>  <> (true)
 = <> _eifersuechtig_sein_ <> gefuehl <>  <> (true)
 = <> eifersucht <> gefuehl <>  <> (true)

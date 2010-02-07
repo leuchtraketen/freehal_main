@@ -1,0 +1,7 @@
+= <> humor <> _(good)_ <>  <> (maybe)
+= <> _gott_ <> _(good)_ <>  <> (maybe)
+= <> _engel_ <> _(good)_ <>  <> (maybe)
+= <> _frieden_ <> _(good)_ <>  <> (maybe)
+= <> _geborgenheit_ <> _(good)_ <>  <> (maybe)
+= <> _liebe_ <> _(good)_ <>  <> (maybe)
+= <> _fuersorge_ <> _(good)_ <>  <> (maybe)

@@ -44,7 +44,6 @@
 = <> verbesserung <> _veraenderung_ <>  <> (maybe)
 = <> veredelung <> _veraenderung_ <>  <> (maybe)
 = <> verfeinerung <> _veraenderung_ <>  <> (maybe)
-= <> verkehr <> _veraenderung_ <>  <> (maybe)
 = <> verschoenerung <> _veraenderung_ <>  <> (maybe)
 = <> vervollkommnung <> _veraenderung_ <>  <> (maybe)
 = <> wandel <> _veraenderung_ <>  <> (maybe)
