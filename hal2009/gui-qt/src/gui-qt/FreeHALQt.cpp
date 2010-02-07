@@ -294,10 +294,12 @@ void FreeHALWindow::button_talk(QString command, QLineEdit* lineedit) {
 }
 
 void FreeHALWindow::on_pushButton_clicked() {
+    main_window->user_interface_main_window->pushButton->setFocus(Qt::OtherFocusReason);
     button_talk("TALK:", user_interface_main_window->lineedit_talk);
 }
 
 void FreeHALWindow::on_pushButton_learn_clicked() {
+    main_window->user_interface_main_window->pushButton->setFocus(Qt::OtherFocusReason);
     button_talk("LEARN:", user_interface_main_window->lineedit_learn);
 
     boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
@@ -2150,7 +2152,7 @@ void FreeHALWindow::on_vacuum_clicked()
 
     this->user_interface_main_window->allfacts->setEnabled(false);
     this->user_interface_main_window->matchingfacts->setEnabled(false);
-    this->user_interface_main_window->vacuum->setEnabled(false);
+//    this->user_interface_main_window->vacuum->setEnabled(false);
     this->user_interface_main_window->double_facts->setEnabled(false);
     this->user_interface_main_window->tableView->setEnabled(false);
     this->user_interface_main_window->pushButton->setEnabled(false);
@@ -2161,7 +2163,7 @@ void FreeHALWindow::slotEnable()
 {
     this->user_interface_main_window->allfacts->setEnabled(true);
     this->user_interface_main_window->matchingfacts->setEnabled(true);
-    this->user_interface_main_window->vacuum->setEnabled(true);
+//    this->user_interface_main_window->vacuum->setEnabled(true);
     this->user_interface_main_window->double_facts->setEnabled(true);
     this->user_interface_main_window->tableView->setEnabled(true);
     this->user_interface_main_window->pushButton->setEnabled(true);

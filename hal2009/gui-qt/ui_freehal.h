@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Fri Feb 5 15:41:39 2010
+** Created: Sun Feb 7 18:34:08 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -140,9 +140,9 @@ public:
     QPushButton *allfacts;
     QLabel *label_5;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *vacuum;
     QPushButton *double_facts;
     QTableView *tableView;
+    QSpacerItem *horizontalSpacer_3;
     QMenuBar *menubar;
     QMenu *menuDatei;
     QMenu *menuNeu;
@@ -405,7 +405,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 506, 449));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 402, 204));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -640,11 +640,6 @@ public:
 
         gridLayout_5->addItem(horizontalSpacer_2, 1, 2, 1, 1);
 
-        vacuum = new QPushButton(frame);
-        vacuum->setObjectName(QString::fromUtf8("vacuum"));
-
-        gridLayout_5->addWidget(vacuum, 1, 3, 1, 1);
-
         double_facts = new QPushButton(frame);
         double_facts->setObjectName(QString::fromUtf8("double_facts"));
 
@@ -654,6 +649,10 @@ public:
         tableView->setObjectName(QString::fromUtf8("tableView"));
 
         gridLayout_5->addWidget(tableView, 2, 0, 1, 6);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer_3, 1, 3, 1, 1);
 
 
         gridLayout_7->addWidget(frame, 3, 0, 1, 4);
@@ -781,7 +780,6 @@ public:
         matchingfacts->setText(QApplication::translate("freehalWindow", "matching facts", 0, QApplication::UnicodeUTF8));
         allfacts->setText(QApplication::translate("freehalWindow", "all facts", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("freehalWindow", "General database queries:", 0, QApplication::UnicodeUTF8));
-        vacuum->setText(QApplication::translate("freehalWindow", "SQL Vacuum", 0, QApplication::UnicodeUTF8));
         double_facts->setText(QApplication::translate("freehalWindow", "double facts", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Database), QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
         menuDatei->setTitle(QApplication::translate("freehalWindow", "File", 0, QApplication::UnicodeUTF8));

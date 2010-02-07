@@ -1,3 +1,7 @@
+858:
+
+- reasonof-Feature erweitert
+
 856:
 
 - Feature: Deklaration des Verbs opposite

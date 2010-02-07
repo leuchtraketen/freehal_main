@@ -2493,6 +2493,7 @@ define action reasonof_logic_from_object with array results, var lang, var path,
     #from hash parsed item { 'subjects' }
     set new array constructed_results to an empty array
     
+    # A should do B
     for each new array result in array results do
         set new array main_clause to an empty array
         
@@ -2504,6 +2505,35 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array main_clause, var verb concat "00001"
         push into array main_clause, var subject
         push into array main_clause, var object
+        push into array main_clause, ""
+        
+        set new array constructed_result to an empty array
+        push into array constructed_result, 0
+        push into array constructed_result, array main_clause
+        push into array constructed_results, array constructed_result
+    done
+    
+    # Has A already done B?
+    for each new array result in array results do
+        set new array main_clause to an empty array
+        
+        set new var expr to from array result second item third item
+        set new array words to split with " ", var expr
+        set new var verb to pop with items of array words
+        set new var object to join using ' ', items of array words
+        
+        set new var prefix to to_verb_prefix with var verb, var lang, var path
+        set new var root to to_verb_root with var verb, var lang, var path
+        set new array conj to to_verb_conjugation with var root, var prefix, var lang, var path
+        set new var participle to make_participle with from array conj third item, var lang, var path
+        
+        set new var person to get_person with var subject
+        set new var verb_have to get_verb with "have", var person
+        
+        push into array main_clause, var verb_have concat " " concat var participle concat "00000"
+        push into array main_clause, var subject
+        push into array main_clause, var object
+        push into array main_clause, "schon _?_"
         
         set new array constructed_result to an empty array
         push into array constructed_result, 0
@@ -3175,48 +3205,104 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 
-                if from array clause item [2] matches "NULL" or not from array clause item [2] do
-                    if items of array proper_verbs do
-                        push into array sentence, from array clause item [1]
-                        push into array sentence, items of array auxiliary_verbs
-                        push into array sentence, from array clause item [3]
-                        push into array sentence, items of array proper_verbs
-                    done
-                    else do
-                        if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s/ do
-                            push into array sentence, from array clause item [3]
+                if from array clause item [3] matches /_<[?]>_/ do
+                    if from array clause item [2] matches "NULL" or not from array clause item [2] do
+                        if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [1]
+                            push into array sentence, from array clause item [3]
+                            push into array sentence, items of array proper_verbs
                         done
                         else do
-                            push into array sentence, from array clause item [1]
+                            if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s/ do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [1]
+                            done
+                            else do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [3]
+                            done
+                        done
+                    done
+                    else if from array clause item [3] matches /von/ do
+                        if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, from array clause item [2]
+                            push into array sentence, from array clause item [3]
+                            push into array sentence, items of array proper_verbs
+                        done
+                        else do
+                            push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, from array clause item [2]
                             push into array sentence, from array clause item [3]
                         done
                     done
-                done
-                else if from array clause item [3] matches /von/ do
-                    if items of array proper_verbs do
-                        push into array sentence, from array clause item [1]
-                        push into array sentence, items of array auxiliary_verbs
-                        push into array sentence, from array clause item [2]
-                        push into array sentence, from array clause item [3]
-                        push into array sentence, items of array proper_verbs
-                    done
                     else do
-                        push into array sentence, from array clause item [1]
-                        push into array sentence, items of array auxiliary_verbs
-                        push into array sentence, from array clause item [2]
-                        push into array sentence, from array clause item [3]
+                        if items of array proper_verbs do
+                            if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, items of array proper_verbs
+                            done
+                            else do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array proper_verbs
+                            done
+                        done
+                        else do
+                            if from array clause item [3] matches /zu / do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, items of array proper_verbs
+                            done
+                            else do
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array proper_verbs
+                            done
+                        done
                     done
                 done
                 else do
-                    if items of array proper_verbs do
-                        if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                    if from array clause item [2] matches "NULL" or not from array clause item [2] do
+                        if items of array proper_verbs do
                             push into array sentence, from array clause item [1]
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [3]
+                            push into array sentence, items of array proper_verbs
+                        done
+                        else do
+                            if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s/ do
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [1]
+                            done
+                            else do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [3]
+                            done
+                        done
+                    done
+                    else if from array clause item [3] matches /von/ do
+                        if items of array proper_verbs do
+                            push into array sentence, from array clause item [1]
+                            push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [2]
+                            push into array sentence, from array clause item [3]
                             push into array sentence, items of array proper_verbs
                         done
                         else do
@@ -3224,23 +3310,40 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [2]
                             push into array sentence, from array clause item [3]
-                            push into array sentence, items of array proper_verbs
                         done
                     done
                     else do
-                        if from array clause item [3] matches /zu / do
-                            push into array sentence, from array clause item [1]
-                            push into array sentence, items of array auxiliary_verbs
-                            push into array sentence, from array clause item [3]
-                            push into array sentence, from array clause item [2]
-                            push into array sentence, items of array proper_verbs
+                        if items of array proper_verbs do
+                            if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, items of array proper_verbs
+                            done
+                            else do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array proper_verbs
+                            done
                         done
                         else do
-                            push into array sentence, from array clause item [1]
-                            push into array sentence, items of array auxiliary_verbs
-                            push into array sentence, from array clause item [2]
-                            push into array sentence, from array clause item [3]
-                            push into array sentence, items of array proper_verbs
+                            if from array clause item [3] matches /zu / do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, items of array proper_verbs
+                            done
+                            else do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array proper_verbs
+                            done
                         done
                     done
                 done
@@ -3377,6 +3480,11 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             
             go to next
+        done
+        
+        if var final_sentence matches /_<[?]>_/ do
+            do regex using var final_sentence: /_<[?]>_/, "", :global
+            set var final_sentence to var final_sentence concat " ?"
         done
         
         set var final_sentence to compute_output with var final_sentence

@@ -4545,7 +4545,7 @@ define action to_verb_root_left with var verb, var lang, var path do
     while not var verb matches var last_verb do
         set var last_verb to var verb
         
-        if length(var verb) > 2 and var verb matches /<[aeiou]>/ do
+        if length(var verb) > 4 and var verb matches /<[aeiou]>/ do
             for each new var prefix in array verb_prefixes do
                 if var verb matches /^var prefix/ do
                     do regex using var verb: /^var prefix/, "", :i
@@ -4554,15 +4554,15 @@ define action to_verb_root_left with var verb, var lang, var path do
                 done
             done
             
-            if var verb matches /^ver/ do
+            if var verb matches /^ver/ and not var verb matches /^verge/ do
                 do regex using var verb: /^ver/, "", :i
                 set var allprefix to var allprefix concat "ver"
             done
-            if var verb matches /^ge/ do
+            if var verb matches /^ge/ and length(var verb) > 5 and not var verb matches /^gelt/ do
                 do regex using var verb: /^ge/, "", :i
                 set var allprefix to var allprefix concat "ge"
             done
-            if var verb matches /^be/ do
+            if var verb matches /^be/ and length(var verb) > 6 and not var verb matches /^bei|ber/ do
                 do regex using var verb: /^be/, "", :i
                 set var allprefix to var allprefix concat "be"
             done
@@ -4588,7 +4588,7 @@ define action to_verb_root_right with var verb, var lang, var path do
     done
     
     else if var verb matches /eigen$/ do
-        do regex using var verb: /gen$/, "", :global
+        do regex using var verb: /en$/, "", :global
     done
     else if var verb matches /igen$/ do
         do regex using var verb: /igen$/, "", :global
@@ -4615,11 +4615,11 @@ done
 
 define action to_verb_root with var verb, var lang, var path do
 
-
-    set var verb to to_verb_root_right with var verb, var lang, var path
     
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
     set var verb to from array verb_and_prefix first item
+
+    set var verb to to_verb_root_right with var verb, var lang, var path
     
     do return with var verb
 done
@@ -4627,10 +4627,10 @@ done
 define action to_verb_prefix with var verb, var lang, var path do
 
     
-    set var verb to to_verb_root_right with var verb, var lang, var path
-    
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
     set new var prefix to from array verb_and_prefix second item
+    
+    set var verb to to_verb_root_right with var verb, var lang, var path
     
     do return with var prefix
 done
@@ -4644,7 +4644,7 @@ define action to_verb_nucleus_right with var verb, var lang, var path do
         do regex using var verb: /h$/, "", :i
     done
     
-    if var verb matches /(ei|au|eu|aeu|ou|ie|aa|ee|oo|uu|oeu)$/ do
+    if var verb matches /(ei|au|eu|aeu|ou|ie|aa|ee|oo|uu|oeu|oe|ue|ae)$/ do
         do return with $0
     done
     if var verb matches /(a|e|i|o|u)(a|e|i|o|u)$/ do
@@ -4709,10 +4709,13 @@ define action to_verb_postnucleus with var verb, var lang, var path do
     do return with var verb
 done
 
-define action to_verb_strong_conjugation with var verb, var lang, var path do
+define action to_verb_conjugation with var verb, var pre, var lang, var path do
 
     set new var verb_nucleus to to_verb_nucleus with var verb, var lang, var path
     set new var verb_prefix to to_verb_prefix with var verb, var lang, var path
+    if not var verb_prefix do
+        set var verb_prefix to var pre
+    done
     set new var verb_prenucleus to to_verb_prenucleus with var verb, var lang, var path
     set new var verb_postnucleus to to_verb_postnucleus with var verb, var lang, var path
     
@@ -4726,9 +4729,302 @@ define action to_verb_strong_conjugation with var verb, var lang, var path do
     set new var verb_participle_prenucleus to var verb_prenucleus
     set new var verb_participle_postnucleus to var verb_postnucleus
     
+    set new flag is_strong_verb to 0
+    
+    # irregular
+    
+    # g-e-h-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(g)/ and var verb_postnucleus matches /^(h)$/ do
+        set var verb_past_nucleus to 'i'
+        set var verb_participle_nucleus to 'a'
+        set var verb_past_postnucleus to 'ng'
+        set var verb_participle_postnucleus to 'ng'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # w-i-ss-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(ss)$/ do
+        set var verb_past_nucleus to 'u'
+        set var verb_participle_nucleus to 'u'
+        set var verb_past_postnucleus to 'sste'
+        set var verb_participle_postnucleus to 'sst'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    
+    # 4th
+    
+    # ge-b-ae-r-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(ae)$/ and var verb_prenucleus matches /(b)/ and var verb_postnucleus matches /^(r)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # be-f-e-hl- / empf-e-hl-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(f|empf|bef)/ and var verb_postnucleus matches /^(hl)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # k-o-mm-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(o)$/ and var verb_prenucleus matches /(k|gek)/ and var verb_postnucleus matches /^(mm)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        set var verb_past_postnucleus to 'm'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # n-e-hm-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(n)/ and var verb_postnucleus matches /^(hm|m)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        set var verb_past_postnucleus to 'hm'
+        set var verb_participle_postnucleus to 'mm'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # er-schr-e-ck-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(schr|erschr)/ and var verb_postnucleus matches /^(ck|k)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        set var verb_past_postnucleus to 'k'
+        set var verb_participle_postnucleus to 'ck'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # spr-e-ch- / st-e-ch- / st-e-hl- / br-e-ch-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e|i)$/ and var verb_prenucleus matches /(spr|st|erst|st|br)/ and var verb_postnucleus matches /^(ch|hl)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # tr-e-ff-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(tr)/ and var verb_postnucleus matches /^(ff|f)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'o'
+        set var verb_past_postnucleus to 'f'
+        set var verb_participle_postnucleus to 'ff'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # ver-g-ae-r-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(ae)$/ and var verb_prenucleus matches /(g)/ and var verb_postnucleus matches /^(r)$/ do
+        set var verb_past_nucleus to 'o'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # sch-e-r- / schw-oe-r- / er-w-ae-g-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e|oe|ae)$/ and var verb_prenucleus matches /(sch|schw|w|erw)/ and var verb_postnucleus matches /^(r|g)$/ do
+        set var verb_past_nucleus to 'o'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # w-e-b-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(b)$/ do
+        set var verb_past_nucleus to 'o'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    
+    # 5th
+    
+    # e-ss- / fr-e-ss- / m-e-ss- / ver-g-e-ss- 
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(|fr|m|verg|g|)/ and var verb_postnucleus matches /^(ss)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'e'
+        if var verb_participle_prenucleus matches "" do
+            set var verb_participle_prenucleus to "g"
+        done
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # s-i-tz-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^(tz)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'e'
+        set var verb_past_postnucleus to 'ss'
+        set var verb_participle_postnucleus to 'ss'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # b-i-tt-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(b)/ and var verb_postnucleus matches /^(tt|t)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'e'
+        set var verb_past_postnucleus to 't'
+        set var verb_participle_postnucleus to 't'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # g-e-b- / tr-e-t-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(g|erg|verg|tr)/ and var verb_postnucleus matches /^(b|t)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'e'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # l-e-s- / l-ie-g- / l-e-g- / ge-n-e-s- / ge-sch-e-h-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e|ie)$/ and var verb_prenucleus matches /^(l|n|gen|sch|gesch)$/ and var verb_postnucleus matches /^(g|s|h)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'e'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    
+    # 6th
+    
+    # f-a-hr- / gr-a-b- / l-a-d- / sch-a-ff- / schl-a-g- / tr-a-g-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(f|gr|l|sch|schl|tr)/ and var verb_postnucleus matches /^(hr|r|b|d|ff|g)$/ do
+        set var verb_past_nucleus to 'u'
+        set var verb_participle_nucleus to 'a'
+        if var verb_postnucleus matches /^(ff)$/ do
+            set var verb_past_postnucleus to "f"
+        done
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # h-e-b-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(h)/ and var verb_postnucleus matches /^(b)$/ do
+        set var verb_past_nucleus to 'o'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # schw-oe-r-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(oe)$/ and var verb_prenucleus matches /(schw)/ and var verb_postnucleus matches /^(r)$/ do
+        set var verb_past_nucleus to 'o'
+        set var verb_participle_nucleus to 'o'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # w-a-chs- / w-a-sch-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(chs|sch)$/ do
+        set var verb_past_nucleus to 'u'
+        set var verb_participle_nucleus to 'a'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    
+    # 6th
+    
+    # l-au-f- / st-o-ss- / f-a-ll / h-a-lt- / l-a-ss- / r-u-f- / bl-a-s- / br-a-t-
+    # r-a-t- / schl-a-f-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(au|o|a|u)$/ and var verb_prenucleus matches /(l|st|f|gef|h|r|bl|br|schl)/ and var verb_postnucleus matches /^(f|ss|ll|lt|s|t)$/ do
+        set var verb_past_nucleus to 'ie'
+        if var verb_past_postnucleus matches /^(ll)$/ do
+            set var verb_past_postnucleus to "l"
+        done
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # s-e-h-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^(h)$/ do
+        set var verb_past_nucleus to 'ie'
+        set var verb_past_postnucleus to "ht"
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # f-a-ng- / h-ae-ng-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(a|ae)$/ and var verb_prenucleus matches /(f|h)/ and var verb_postnucleus matches /^(ng)$/ do
+        set var verb_past_nucleus to 'i'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # t-u-n
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(u)$/ and var verb_prenucleus matches /(t)/ and var verb_postnucleus matches /^(|n|en|)$/ do
+        set var verb_past_nucleus to 'a'
+        set var verb_participle_nucleus to 'a'
+        set var verb_past_postnucleus to "t"
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
+
+    
+    
     # 1st
     
-    if var verb_nucleus matches /ei/ do
+    if (not flag is_strong_verb) and var verb_nucleus matches /ei/ do
         # bl-ei-b- / ge-d-ei-h- / l-ei-h- / m-ei-d- / pr-ei-s- / r-ei-b- / sch-ei-d- /
         # schr-ei-b- / schr-ei-h- / schw-ei-g- / sp-ei- / st-ei-g- / tr-ei-b- / w-ei-s- / z-ei-h-
         #
@@ -4738,75 +5034,186 @@ define action to_verb_strong_conjugation with var verb, var lang, var path do
         # schr-ei-t- / spl-ei-ss- / str-ei-ch- / str-ei-t- / w-ei-ch- / 
     
         if var verb_prenucleus matches /(bl|d|l|m|pr|r|sch|schr|schw|sp|st|tr|w|z)/ or var verb_prenucleus matches /(b|bl|gl|gr|k|kn|kr|kr|l|pf|r|sch|schl|schm|schn|schr|spl|str|w)/ do
-            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(b|s|n|g)$/ or var verb_postnucleus matches "h" do
-                # bl-ie-b-
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(b|s|n|g|d)$/ or var verb_postnucleus matches "h" do
                 set var verb_past_nucleus to 'ie'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'ie'
-                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+                if var verb_past_postnucleus matches "d" and var verb_prenucleus matches /^(schn|l)$/ do
+                    set var verb_past_nucleus to 'i'
+                    set var verb_participle_nucleus to 'i'
+                    set var verb_past_postnucleus to "tt"
+                    set var verb_participle_postnucleus to "tt"
+                done
+                
+                set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
-                # bl-ie-b-
                 set var verb_past_nucleus to 'i'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'i'
-                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+                
+                set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
-                # bl-ie-b-
                 set var verb_past_nucleus to 'i'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'i'
-                set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
                 set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
                 set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
+                
+                set flag is_strong_verb to 1
             done
         done
     done
     
     # 2nd
     
-    if var verb_nucleus matches /ie/ do
-        # b-ie-g-
+    if (not flag is_strong_verb) and ( var verb_nucleus matches /ie/ or ( var verb_nucleus matches /ue/ and var verb_prenucleus matches /(l|tr)/ ) or ( var verb_nucleus matches /au/ and var verb_prenucleus matches /(s)/ ) ) do
+        # b-ie-g- / b-ie-t- / fl-ie-g- / fl-ie-g- / fl-ie-h- / fr-ie-r- / ver-l-ie-r- /
+        # l-ue-g- / sch-ie-b- / tr-ue-g- / z-ie-h-
+        #
+        # ver-dr-ie-ss- / fl-ie-ss- / g-ie-ss- / kr-ie-ch- / ge-n-ie-ss- / r-ie-ch- /
+        # s-au-f- / s-au-g- / sch-ie-ss- / schl-ie-ss- / spr-ie-ss- 
     
-        if var verb_prenucleus matches /(b|fl|fr|l|sch|st|tr|z)/ or var verb_prenucleus matches /(dr)/ do
-            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b)$/ or var verb_postnucleus matches "h" do
-                # bl-ie-b-
+        if var verb_prenucleus matches /(b|fl|fr|sch|st|tr|z|verl|l)/ or var verb_prenucleus matches /(dr|fl|g|kr|n|r|s|schl|spr)/ or ( var verb_nucleus matches /ue/ and var verb_prenucleus matches /(l|tr)/ ) do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b|s|d)$/ or var verb_postnucleus matches "h" do
                 set var verb_past_nucleus to 'o'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'o'
-                if not var verb_participle_prefix matches /ver|ge/ do
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
+                if var verb_postnucleus matches "h" and var verb_prenucleus matches /(z)/ do
+                    set var verb_past_postnucleus to "g"
+                    set var verb_participle_postnucleus to "g"
+                done
+                
+                if var verb_past_postnucleus matches "d" do
+                    set var verb_past_postnucleus to "tt"
+                    set var verb_participle_postnucleus to "tt"
+                done
+                
+                set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
-                # bl-ie-b-
                 set var verb_past_nucleus to 'o'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'o'
-                if not var verb_participle_prefix matches /ver|ge/ do
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
+                
+                set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
-                # bl-ie-b-
                 set var verb_past_nucleus to 'o'
-                # ge-bl-ie-b-
                 set var verb_participle_nucleus to 'o'
-                if not var verb_participle_prefix matches /ver|ge/ do
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
                 set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
                 set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
+                
+                set flag is_strong_verb to 1
+            done
+        done
+    done
+    
+    # 3rd
+    
+    if (not flag is_strong_verb) and var verb_nucleus matches /^i$/ do
+        # b-i-nd / dr-i-ng- / f-in-d- / kl-i-ng- / ge-l-i-ng- / r-in-g- / schl-i-ng- /
+        # schw-i-nd- / schw-i-ng- / s-i-ng- / s-i-nk- / spr-i-ng- / st-i-nk- / tr-i-nk- /
+        # w-in-d- / wr-i-ng- / zw-i-ng-
+
+    
+        if var verb_prenucleus matches /(b|d|dr|f|fl|l|r|sch|schl|schw|s|spr|st|tr|w|wr|zw)/ do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b|k|d|nd|ng|nk)$/ do
+                set var verb_past_nucleus to 'a'
+                set var verb_participle_nucleus to 'u'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+                
+                set flag is_strong_verb to 1
+            done
+        done
+    done
+    
+    if (not flag is_strong_verb) and ( var verb_nucleus matches /^(e)$/ ) do
+        # b-e-rg- / b-e-rst- / ver-d-e-rb- / dr-e-sch- / f-e-cht- / fl-e-cht- / g-e-lt- /
+        # be-g-i-nn- / gl-i-mm- / h-e-lf- / kl-i-mm- / l-oe-sch- / m-e-lk- / r-i-nn- /
+        # zer-sch-e-ll- / sch-e-lt- / schm-e-lz- / schw-e-ll- / schw-i-mm- / s-i-nn- /
+        # sp-i-nn- / st-e-rb- / w-e-rb / w-e-rd- / w-e-rf- / ge-w-i-nn- /
+
+        if var verb_prenucleus matches /(f|fl|dr)/ do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(sch|cht)$/ do
+                set var verb_past_nucleus to 'o'
+                set var verb_participle_nucleus to 'o'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+                
+                set flag is_strong_verb to 1
+            done
+        done
+    done
+    
+    if (not flag is_strong_verb) and ( var verb_nucleus matches /^(i|e)$/ ) do
+        # b-e-rg- / b-e-rst- / ver-d-e-rb- / dr-e-sch- / f-e-cht- / fl-e-cht- / g-e-lt- /
+        # be-g-i-nn- / gl-i-mm- / h-e-lf- / kl-i-mm- / l-oe-sch- / m-e-lk- / r-i-nn- /
+        # zer-sch-e-ll- / sch-e-lt- / schm-e-lz- / schw-e-ll- / schw-i-mm- / s-i-nn- /
+        # sp-i-nn- / st-e-rb- / w-e-rb / w-e-rd- / w-e-rf- / ge-w-i-nn- /
+
+        if var verb_prenucleus matches /(b|d|dr|f|fl|g|gl|h|kl|l|m|r|sch|schm|schw|s|sp|st|w)/ do
+            if var verb_postnucleus matches "" or var verb_postnucleus matches /^(rg|rst|rb|sch|cht|lt|nn|mm|lf|lk|ll|lt|lz|rb|rd|rf)$/ do
+                set var verb_past_nucleus to 'a'
+                set var verb_participle_nucleus to 'o'
+                if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+                    set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+                done
+                
+                set flag is_strong_verb to 1
             done
         done
     done
     
     
-    set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
-    set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
     
-    do return with [ var verb, var verb_past, var verb_participle ]
+    if flag is_strong_verb do
+        set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
+        set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
+        
+        do return with [ var pre concat var verb, var verb_past, var verb_participle ]
+    done
+    else do
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        
+        if not var verb_past_postnucleus matches /t/ do
+            set var verb_past_postnucleus to var verb_past_postnucleus concat "t"
+        done
+        
+        if not var verb_participle_postnucleus matches /s|z|t|l|f/ do
+            set var verb_participle_postnucleus to var verb_participle_postnucleus concat "t"
+        done
+        
+        set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
+        set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
+        
+        do return with [ var pre concat var verb, var verb_past, var verb_participle ]
+    done
+done
+
+define action make_participle with var participle, var lang, var path do
+    do regex using var participle: /<[-]>/, "", :global
+    set var participle to var participle concat "en"
+    do return with var participle
 done
 
 define action get_score_answer without arguments do

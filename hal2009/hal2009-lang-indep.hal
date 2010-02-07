@@ -24,8 +24,34 @@ set new array replace_array to an empty array
 define action divide_input with var input is rw, var lang, var path do
     set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
     
+    do regex using var input: /[=][=][=][>]/, " reasonof ", :global:i
+    do regex using var input: /[-][-][-][>]/, " reasonof ", :global:i
     do regex using var input: /[=][=][>]/, " reasonof ", :global:i
     do regex using var input: /[-][-][>]/, " reasonof ", :global:i
+    do regex using var input: /[=][>]/, " reasonof ", :global:i
+    do regex using var input: /[-][>]/, " reasonof ", :global:i
+    do regex using var input: /\(reasonof\)/, " reasonof ", :global:i
+    do regex using var input: /\(reason\)/, " reasonof ", :global:i
+    do regex using var input: /\(r\)/, " reasonof ", :global:i
+    if var input matches /reasonof/ do
+        do regex using var input: /\s+?reasonof\s+?/, "reasonof", :global:i
+        do regex using var input: /reasonof/, "@", :global:i
+        set new array words to split with /[@]/, var input
+        set var input to ""
+        for each new var word_1 in array words do
+            for each new var word_2 in array words do
+                if not var word_2 matches var word_1 do
+                    do regex using var word_1: /^\s+/, "", :global
+                    do regex using var word_2: /^\s+/, "", :global
+                    do regex using var word_1: /\s+$/, "", :global
+                    do regex using var word_2: /\s+$/, "", :global
+                    do regex using var word_1: /\s+/, "_", :global
+                    do regex using var word_2: /\s+/, "_", :global
+                    set var input to var input concat "_" concat var word_2 concat "_ reasonof _" concat var word_1 concat "_ STOP "
+                done
+            done
+        done
+    done
     
     if lc(var input) matches /[=].*?[=]/ do
         do regex using var input: /\s+?[=]\s+?/, "=", :global:i

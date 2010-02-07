@@ -28,22 +28,29 @@ for each new var argv from var f do
 	print "post nucleus: " concat var postnucleus
 	print new line
 	
-	set new array conj to to_verb_strong_conjugation with var root, var current_language, var path
+	set new array conj to to_verb_conjugation with var root, var prefix, var current_language, var path
 	print "past:         " concat from array conj second item
 	print new line
-	set new array conj to to_verb_strong_conjugation with var root, var current_language, var path
+	set new array conj to to_verb_conjugation with var root, var prefix, var current_language, var path
 	print "participle:   " concat from array conj third item
 	print new line
 
 	set new var pres to from array conj first item concat "en"
-	set new var past to from array conj second item concat "en"
+	set new var past to from array conj second item concat ""
 	set new var pret to from array conj third item concat "en"
 
 	do regex using var pres: /<[-]>/, "", :global
 	do regex using var past: /<[-]>/, "", :global
 	do regex using var pret: /<[-]>/, "", :global
 
-	set var summary to var summary concat var pres concat " " concat var past concat " " concat var pret concat new line
+	while length(var pres) < 10 do
+		set var pres to var pres concat " "
+	done
+	while length(var past) < 10 do
+		set var past to var past concat " "
+	done
+
+	set var summary to var summary concat var pres concat " (er/sie) " concat var past concat " " concat var pret concat new line
 	print new line
 done
 
