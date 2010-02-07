@@ -2441,8 +2441,19 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
         if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
             set from array verb first item to "haben"
         done
-        if from array verb first item matches /^(bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
+        else if from array verb first item matches /^(bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
             set from array verb first item to "sein"
+        done
+        else do
+            if from array verb first item matches /st$/ do
+                do regex using from array verb first item: /st$/, "en", :i
+            done
+            else if from array verb first item matches /st$/ do
+                do regex using from array verb first item: /e$/, "en", :i
+            done
+            else do
+                set from array verb first item to ""
+            done
         done
     done
 
@@ -2501,7 +2512,8 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         if from hash parsed item { 'adverbs' } do
             set new array must_haves to from hash parsed item { 'adverbs' } first item
             for each new var must_have in array must_haves do
-                if not from array result second item second item matches /var must_have/ do
+                set var must_have to lc with var must_have
+                if not lc( from array result second item second item ) matches /var must_have/ do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     set flag go_next to 1
@@ -2516,7 +2528,8 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         if from hash parsed item { 'objects' } do
             set new array must_haves to from hash parsed item { 'objects' } first item
             for each new var must_have in array must_haves do
-                if not from array result second item second item matches /var must_have/ do
+                set var must_have to lc with var must_have
+                if not lc( from array result second item second item ) matches /var must_have/ do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     set flag go_next to 1

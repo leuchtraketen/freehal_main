@@ -5212,7 +5212,9 @@ done
 
 define action make_participle with var participle, var lang, var path do
     do regex using var participle: /<[-]>/, "", :global
-    set var participle to var participle concat "en"
+    if not var participle matches /(t)$/ do
+        set var participle to var participle concat "en"
+    done
     do return with var participle
 done
 
