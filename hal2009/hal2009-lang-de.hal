@@ -1505,6 +1505,7 @@ set multi-line new global hash builtin_verb_prefixes_no_split to {
           'auf' => 1,
           'hin' => 1,
           'aus' => 1,
+          'unter' => 1,
 };
 
 set multi-line new global hash builtin_verb_prefixes_with_auxiliary_verbs to {
@@ -1555,11 +1556,6 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'muessen' => 1,
           'muesst' => 1,
           
-          'lasse' => 1,
-          'laesst' => 1,
-          'laesst' => 1,
-          'lassen' => 1,
-          
           'bin/be' => 1,
           'bist/be' => 1,
           'ist/be' => 1,
@@ -1602,11 +1598,6 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'muss/must' => 1,
           'muessen/must' => 1,
           'muesst/must' => 1,
-          
-          'lasse' => 1,
-          'laesst' => 1,
-          'laesst' => 1,
-          'lassen' => 1,
 };
 
 set multi-line new global hash builtin_part_of_speech to {
@@ -4976,7 +4967,16 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     
     # 6th
     
-    # l-au-f- / st-o-ss- / f-a-ll / h-a-lt- / l-a-ss- / r-u-f- / bl-a-s- / br-a-t-
+    # l-a-ss-
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(l)/ and var verb_postnucleus matches /^(ss)$/ do
+        set var verb_past_nucleus to 'ie'
+        if var verb_past_postnucleus matches /^(ll)$/ do
+            set var verb_past_postnucleus to "l"
+        done
+        set flag is_strong_verb to 1
+    done
+    
+    # l-au-f- / st-o-ss- / f-a-ll / h-a-lt- / r-u-f- / bl-a-s- / br-a-t-
     # r-a-t- / schl-a-f-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(au|o|a|u)$/ and var verb_prenucleus matches /(l|st|f|gef|h|r|bl|br|schl)/ and var verb_postnucleus matches /^(f|ss|ll|lt|s|t)$/ do
         set var verb_past_nucleus to 'ie'
