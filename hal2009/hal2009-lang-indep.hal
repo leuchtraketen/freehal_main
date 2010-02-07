@@ -38,18 +38,25 @@ define action divide_input with var input is rw, var lang, var path do
         do regex using var input: /reasonof/, "@", :global:i
         set new array words to split with /[@]/, var input
         set var input to ""
+        
+        set new var i to 0
         for each new var word_1 in array words do
+            set new var j to 0
             for each new var word_2 in array words do
-                if not var word_2 matches var word_1 do
+                if var i is var j - 1 do
+                    do regex using var word_1: /STOP/, "", :global
+                    do regex using var word_2: /STOP/, "", :global
                     do regex using var word_1: /^\s+/, "", :global
                     do regex using var word_2: /^\s+/, "", :global
                     do regex using var word_1: /\s+$/, "", :global
                     do regex using var word_2: /\s+$/, "", :global
                     do regex using var word_1: /\s+/, "_", :global
                     do regex using var word_2: /\s+/, "_", :global
-                    set var input to var input concat "_" concat var word_2 concat "_ reasonof _" concat var word_1 concat "_ STOP "
+                    set var input to var input concat "_" concat var word_1 concat "_ reasonof _" concat var word_2 concat "_ STOP "
                 done
+                set var j to var j + 1
             done
+            set var i to var i + 1
         done
     done
     

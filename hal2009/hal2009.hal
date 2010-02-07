@@ -2417,6 +2417,12 @@ define action compute_context with hash parsed do
         do return with "enum_all"
     done
     
+    for each new var verb in array verb_array do
+        if var verb first item matches /reasonof/ do
+            do return with "reasonof"
+        done
+    done
+    
     # TEXT
     # Look for something like "Das habe ich nicht gemeint"
     # CODE
@@ -2497,6 +2503,20 @@ define action reasonof_logic_from_object with array results, var lang, var path,
     for each new array result in array results do
         set new array main_clause to an empty array
         
+        if from hash parsed item { 'adverbs' } do
+            set new flag go_next to 0
+            set new array must_haves to from hash parsed item { 'adverbs' } first item
+            for each new var must_have in array must_haves do
+                if not from array result second item second item matches /var must_have/ do
+                    print "Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    set flag go_next to 1
+                done
+            done
+            if flag go_next do
+                go to next
+            done
+        done
+        
         set new var expr to from array result second item third item
         set new array words to split with " ", var expr
         set new var verb to pop with items of array words
@@ -2513,9 +2533,26 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array constructed_results, array constructed_result
     done
     
+    set new array adverbial to an empty array
+    push into array adverbial, ""
+    
     # Has A already done B?
     for each new array result in array results do
         set new array main_clause to an empty array
+        
+        if from hash parsed item { 'adverbs' } do
+            set new flag go_next to 0
+            set new array must_haves to from hash parsed item { 'adverbs' } first item
+            for each new var must_have in array must_haves do
+                if not from array result second item second item matches /var must_have/ do
+                    print "Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    set flag go_next to 1
+                done
+            done
+            if flag go_next do
+                go to next
+            done
+        done
         
         set new var expr to from array result second item third item
         set new array words to split with " ", var expr
@@ -3418,6 +3455,17 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
+        if var final_sentence matches /reasonof/ do
+            # TEXT
+            # A Sentence must not end with e.g. dachte
+            # CODE
+            set var final_sentence to compute_output with var final_sentence
+            print "Invalid sentence: "
+            print var final_sentence
+            print new line
+            go to next
+        done
+        
         if var final_sentence matches /[>][>][>]/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -3960,6 +4008,10 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             
             if var verb matches /opposite/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
+            done
+            
+            if var verb matches /reasonof/ do
+                set var pro_file_name to var path concat '/lang_' concat var lang concat '/beziehungen.pro'
             done
         done
         set new array subjects to from hash parsed item { 'subjects' }

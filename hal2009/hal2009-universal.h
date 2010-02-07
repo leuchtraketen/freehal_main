@@ -111,10 +111,10 @@ struct DATASET search_facts_as_dataset(const char* subjects, const char* objects
 struct DATASET search_clauses_as_dataset(int rel);
 int fact_matches_truth(struct fact* fact, struct request* request);
 int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags);
-int fact_matches_subject_by_subject(struct fact* fact, struct request* request);
-int fact_matches_object_by_subject(struct fact* fact, struct request* request);
-int fact_matches_subject_by_object(struct fact* fact, struct request* request);
-int fact_matches_object_by_object(struct fact* fact, struct request* request);
+int fact_matches_subject_by_subject(struct fact* fact, struct request* request, int weak);
+int fact_matches_object_by_subject(struct fact* fact, struct request* request, int weak);
+int fact_matches_subject_by_object(struct fact* fact, struct request* request, int weak);
+int fact_matches_object_by_object(struct fact* fact, struct request* request, int weak);
 int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request);
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request);
 int fact_matches_verb(struct fact* fact, struct request* request);

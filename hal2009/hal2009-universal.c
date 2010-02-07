@@ -748,7 +748,13 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             // debugf("  does match this synonym: %i\n", does_match_this_synonym >= should_match_this_synonym);
             
             does_match = does_match || does_match_this_synonym >= should_match_this_synonym;
-            does_match = does_match && (given_words_all_also_trivial < 2 || (_diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2 && _diff(given_words_all_only_important, request_words_all_only_important) <= 0));
+            if (flags == WEAK) {
+                does_match = does_match || does_match_this_synonym;
+            }
+            if (flags != WEAK) {
+                
+                does_match = does_match && (given_words_all_also_trivial < 2 || (_diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2 && _diff(given_words_all_only_important, request_words_all_only_important) <= 0));
+            }
             if (does_match) {
                 break;
             }
@@ -767,22 +773,22 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     return does_match;
 }
 
-int fact_matches_subject_by_subject(struct fact* fact, struct request* request) {
-    int does_match = fact_matches_entity_by_entity(fact->subjects, request->subjects, EXACT);
+int fact_matches_subject_by_subject(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->subjects, request->subjects, weak?WEAK:EXACT);
     debugf("subject by subject: %d\n", does_match);
     if (does_match == -1)
         does_match = 1;
     return does_match;
 }
-int fact_matches_object_by_subject(struct fact* fact, struct request* request) {
-    int does_match = fact_matches_entity_by_entity(fact->objects, request->subjects, EXACT);
+int fact_matches_object_by_subject(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->objects, request->subjects, weak?WEAK:EXACT);
     debugf("object by subject:  %d\n", does_match);
     if (does_match == -1)
         does_match = 0;
     return does_match;
 }
-int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
-    int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, EXACT);
+int fact_matches_subject_by_object(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, weak?WEAK:EXACT);
     debugf("subject by object:  %d\n", does_match);
     if (does_match == -1) {
         if (0 == strcmp(request->context, "q_what_weakly")) {
@@ -794,8 +800,8 @@ int fact_matches_subject_by_object(struct fact* fact, struct request* request) {
     }
     return does_match;
 }
-int fact_matches_object_by_object(struct fact* fact, struct request* request) {
-    int does_match = fact_matches_entity_by_entity(fact->objects, request->objects, EXACT);
+int fact_matches_object_by_object(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->objects, request->objects, weak?WEAK:EXACT);
     debugf("object by object:   %d\n", does_match);
     if (does_match == -1)
         does_match = 1;
@@ -1092,13 +1098,13 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
             fact_matches_verb                 (fact, request)
          && (
                 (
-                    fact_matches_subject_by_subject (fact, request)
-                 && fact_matches_object_by_object   (fact, request)
+                    fact_matches_subject_by_subject (fact, request, (0 == strcmp(request->context, "reasonof")))
+                 && fact_matches_object_by_object   (fact, request, (0 == strcmp(request->context, "reasonof")))
                 )
             ||  (
                     strcmp(request->context, "q_what_extra")
-                 && fact_matches_object_by_subject (fact, request)
-                 && fact_matches_subject_by_object (fact, request)
+                 && fact_matches_object_by_subject (fact, request, (0 == strcmp(request->context, "reasonof")))
+                 && fact_matches_subject_by_object (fact, request, (0 == strcmp(request->context, "reasonof")))
                 )
             ||  (
                     request->context
