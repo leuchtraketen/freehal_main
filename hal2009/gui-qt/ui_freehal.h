@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Sun Feb 7 18:34:08 2010
+** Created: Mon Feb 8 13:41:43 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -57,6 +57,7 @@ public:
     QAction *actionSemantisches_Netz;
     QAction *actionNeue_Verbindung_herstellen;
     QAction *action_scan_a_text;
+    QAction *actionReconnect;
     QWidget *centralwidget;
     QGridLayout *gridLayout_8;
     QGroupBox *msg_box_2;
@@ -200,6 +201,8 @@ public:
         actionNeue_Verbindung_herstellen->setObjectName(QString::fromUtf8("actionNeue_Verbindung_herstellen"));
         action_scan_a_text = new QAction(freehalWindow);
         action_scan_a_text->setObjectName(QString::fromUtf8("action_scan_a_text"));
+        actionReconnect = new QAction(freehalWindow);
+        actionReconnect->setObjectName(QString::fromUtf8("actionReconnect"));
         centralwidget = new QWidget(freehalWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout_8 = new QGridLayout(centralwidget);
@@ -405,7 +408,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 402, 204));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 480, 429));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -693,6 +696,7 @@ public:
         menuExtras->addSeparator();
         menuExtras->addAction(fullscreen);
         menuHilfe->addAction(actionInfo);
+        menuVerbindung->addAction(actionReconnect);
         menuVerbindung->addAction(actionNeue_Verbindung_herstellen);
 
         retranslateUi(freehalWindow);
@@ -722,8 +726,9 @@ public:
         actionEinstellungen->setText(QApplication::translate("freehalWindow", "Preferences", 0, QApplication::UnicodeUTF8));
         fullscreen->setText(QApplication::translate("freehalWindow", "Presentation mode", 0, QApplication::UnicodeUTF8));
         actionSemantisches_Netz->setText(QApplication::translate("freehalWindow", "Semantisches Netz", 0, QApplication::UnicodeUTF8));
-        actionNeue_Verbindung_herstellen->setText(QApplication::translate("freehalWindow", "Connect to an AI", 0, QApplication::UnicodeUTF8));
+        actionNeue_Verbindung_herstellen->setText(QApplication::translate("freehalWindow", "New Connection", 0, QApplication::UnicodeUTF8));
         action_scan_a_text->setText(QApplication::translate("freehalWindow", "einen Text scannen", 0, QApplication::UnicodeUTF8));
+        actionReconnect->setText(QApplication::translate("freehalWindow", "Reconnect", 0, QApplication::UnicodeUTF8));
         msg_box_2->setTitle(QApplication::translate("freehalWindow", "FreeHAL needs some information", 0, QApplication::UnicodeUTF8));
         male->setText(QApplication::translate("freehalWindow", "male", 0, QApplication::UnicodeUTF8));
         female->setText(QApplication::translate("freehalWindow", "female", 0, QApplication::UnicodeUTF8));
@@ -746,8 +751,8 @@ public:
         textedit_talk->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         normalscreen->setText(QApplication::translate("freehalWindow", " Exit ", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Talk), QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
@@ -755,8 +760,8 @@ public:
         textedit_learn->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Learn), QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("freehalWindow", "Input text:", 0, QApplication::UnicodeUTF8));
         compute_output->setText(QApplication::translate("freehalWindow", "Answer again!", 0, QApplication::UnicodeUTF8));

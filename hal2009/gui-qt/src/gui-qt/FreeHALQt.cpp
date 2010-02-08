@@ -294,12 +294,12 @@ void FreeHALWindow::button_talk(QString command, QLineEdit* lineedit) {
 }
 
 void FreeHALWindow::on_pushButton_clicked() {
-    main_window->user_interface_main_window->pushButton->setFocus(Qt::OtherFocusReason);
+    main_window->user_interface_main_window->lineedit_talk->setFocus(Qt::OtherFocusReason);
     button_talk("TALK:", user_interface_main_window->lineedit_talk);
 }
 
 void FreeHALWindow::on_pushButton_learn_clicked() {
-    main_window->user_interface_main_window->pushButton->setFocus(Qt::OtherFocusReason);
+    main_window->user_interface_main_window->lineedit_learn->setFocus(Qt::OtherFocusReason);
     button_talk("LEARN:", user_interface_main_window->lineedit_learn);
 
     boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
@@ -414,10 +414,13 @@ int linux_invoke_runner() {
     return 0;
 }
 
-void make_connection() {
-    dialog_connection->exec();
-    if (dialog_connection->result() == QDialog::Rejected) {
-        std::exit(0);
+void make_connection(int _new) {
+    if (_new) {
+        dialog_connection->exec();
+        if (dialog_connection->result() == QDialog::Rejected) {
+            return;
+            std::exit(0);
+        }
     }
 
     database_engine = dialog_connection->from->database_engine->currentText().toStdString();
@@ -656,7 +659,7 @@ QScrollArea* scrollArea = new QScrollArea;
     init_db_tool();
     main_window->setupMenu();
     
-    make_connection();
+    make_connection(1);
 
     return app.exec();
 }
@@ -743,15 +746,19 @@ void FreeHALWindow::createTrayIcon() {
 
 void Helper::close_view() {
 	dialog_view->hide();
-	make_connection();
+        make_connection(1);
 }
 
 void Helper::reconnect() {
-	make_connection();
+    make_connection(1);
 }
 
 void FreeHALWindow::on_actionNeue_Verbindung_herstellen_triggered() {
-    make_connection();
+    make_connection(1);
+}
+
+void FreeHALWindow::on_actionReconnect_triggered() {
+    make_connection(0);
 }
 
 void FreeHALWindow::showWindowNormal() {

@@ -90,7 +90,7 @@ using namespace std;
 
 extern auto_ptr<QString> freehalthread1_talking;
 
-void make_connection();
+void make_connection(int);
 void check_new_version();
 
 // for DB Tool
@@ -104,7 +104,7 @@ namespace freehal {
         void log(std::string);
 }
 
-void make_connection();
+void make_connection(int);
 
 
 class FreeHALWindow : public QMainWindow {
@@ -161,6 +161,7 @@ public slots:
     void on_actionEinstellungen_triggered();
     void on_actionInfo_triggered();
     void on_actionNeue_Verbindung_herstellen_triggered();
+    void on_actionReconnect_triggered();
 
     void on_w_verb_clicked();
     void on_w_nomen_clicked();
@@ -309,7 +310,7 @@ class Helper : public QObject {
     friend void freehal::display_sentence(freehal::string);
     friend void freehal::comm_new(freehal::string);
     friend void freehal::log(std::string);
-    friend void make_connection();
+    friend void make_connection(int);
     friend void check_new_version();
     friend void FreeHALWindow::on_actionNeue_Verbindung_herstellen_triggered();
     friend void client(std::string, bool, bool);
