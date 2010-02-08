@@ -4724,6 +4724,20 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     
     # irregular
     
+    # s-ei-n
+    if (not flag is_strong_verb) and var verb_nucleus matches /^(ei)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^$/ do
+        set var verb_past_nucleus to 'i'
+        set var verb_participle_nucleus to 'e'
+        set var verb_past_prenucleus to ''
+        set var verb_past_postnucleus to 'st'
+        set var verb_participle_prenucleus to 'w'
+        set var verb_participle_postnucleus to 's'
+        if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
+            set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
+        done
+        set flag is_strong_verb to 1
+    done
+    
     # g-e-h-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(g)/ and var verb_postnucleus matches /^(h)$/ do
         set var verb_past_nucleus to 'i'

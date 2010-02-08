@@ -309,6 +309,7 @@ define action get_score with array words, var sentence, var lang, var path do
     set new var num_words to items of array words
     set new var index_of_this_word to -1
     for each new var word in array words do
+
         set var index_of_this_word to var index_of_this_word + 1
 
         if from hash content_of_score_file item { "\[var word\]:" } do
@@ -341,6 +342,26 @@ define action get_score with array words, var sentence, var lang, var path do
         set var num_words to 1
     done
 
+
+    if var sentence matches /\(<[+]><[+]><[+]>\)/ do
+        set var sum to var sum + 400
+    done
+    if var sentence matches /\(<[+]><[+]>\)/ do
+        set var sum to var sum + 300
+    done
+    if var sentence matches /\(<[+]>\)/ do
+        set var sum to var sum + 100
+    done
+    if var sentence matches /\(<[-]><[-]><[-]>\)/ do
+        set var sum to var sum - 100
+    done
+    if var sentence matches /\(<[-]><[-]>\)/ do
+        set var sum to var sum - 200
+    done
+    if var sentence matches /\(<[-]>\)/ do
+        set var sum to var sum - 400
+    done
+    
     set var sum to (var sum + 1) / var num_words 
     if var sum < 1 do
         set var sum to 1
@@ -2558,7 +2579,7 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array main_clause, var verb concat "00001"
         push into array main_clause, var subject
         push into array main_clause, var object
-        push into array main_clause, ""
+        push into array main_clause, " (+++)"
         
         set new array constructed_result to an empty array
         push into array constructed_result, 0
@@ -2600,7 +2621,7 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array main_clause, var verb_have concat " " concat var verb_second concat " " concat var participle concat "00000"
         push into array main_clause, var subject
         push into array main_clause, var object
-        push into array main_clause, "schon _?_"
+        push into array main_clause, "schon _?_ (+++)"
         
         set new array constructed_result to an empty array
         push into array constructed_result, 0
@@ -5122,6 +5143,10 @@ define action shell with var current_language, var path do
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
                 
                 set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
+                do regex using var final_output: /\((<[+]>+?)\)\s/, "", :global
+                do regex using var final_output: /\((<[-]>+?)\)\s/, "", :global
+                do regex using var final_output: /\((<[+]>+?)\)/, "", :global
+                do regex using var final_output: /\((<[-]>+?)\)/, "", :global
         
                 set new var time_second to time without arguments
                 set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
