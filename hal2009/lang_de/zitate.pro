@@ -32,7 +32,6 @@ ist <> esprit <> intelligenz <> in;dem;frack <>  <>  <> nothing <>  <>  <>  <> (
 ist <> korruption <> die taegliche gesetzesaenderung <>  <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> eitelkeit <> die seele der diskussion <>  <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> entruestung <> nur eine maske <> des;neiders;oft <>  <>  <> nothing <>  <>  <>  <> (maybe)
-ist <> dummheit <> eine natuerliche begabung <> auch <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist lebenslangen <> eigenliebe <> der beginn einer romanze <>  <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> ironie <> die letzte phase <> der;enttaeuschung <>  <>  <> nothing <>  <>  <>  <> (maybe)
 wird <> man <> fertig <> mit;einer;enttaeuschung;als;mit;einer;zerstoerten;illusion;eher <>  <>  <> nothing <>  <>  <>  <> (maybe)

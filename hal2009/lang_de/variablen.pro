@@ -87,3 +87,5 @@ hat <> a <> heute geburtstag <>  <> f=> <> nothing <> nothing <> alle gute <>  <
 ist <> a <> nothing <> blond <> macht q=> <> blond wirklich <> bloed <>  <>  <>  <> (true)
 #Direkte Antwort auf die Eingabe "Ich habe Hunger"#
 hat <> a <> hunger <>  <> essen f=> solltest <> a <> etwas <>  <>  <>  ;; f=> pluendern sollte <> a <> den kuehlschrank <>  <>  <>  <> (true)
+# Für Fragen nach "Wie alt"
+sein <> a <>  <> alt <> gestorben ist <> a <>  <>  <> wenn <> (maybe)  
