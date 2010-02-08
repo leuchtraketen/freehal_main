@@ -1,7 +1,16 @@
-870:
+873:
+
+- Changelog aktualisiert
+
+872:
 
 - reasonof-Feature erweitert
 - Bug 505 korrigiert
+- GUI etwas verfeinert
+
+871:
+
+- reasonof-Feature erweitert
 
 858:
 
