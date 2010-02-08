@@ -36,7 +36,7 @@ require source hal2009-lang-indep.hal
 set new hash sym_noun to { "2" => 1, "n" => 1, "n," => 1, "f,m" => 1, "f,n" => 1, "f,n,m" => 1, "f,m,n" => 1, "m,f" => 1, "m,n" => 1, "m,f,n" => 1, "m,n,f" => 1, "m" => 1, "f" => 1, "n,pl" => 1, "ppron" => 1, }
 set new hash sym_prep to { "6" => 1, "prep" => 1, }
 set new hash sym_questionword to { "5" => 1, "fw" => 1, "questionword" => 1, }
-set new hash sym_verb to { "1" => 1, "verb" => 1, "vt" => 1, "vi" => 1 }
+set new hash sym_verb to { "1" => 1, "verb" => 1, "vt" => 1, "vi" => 1, "v" => 1 }
 set new hash sym_inter to { "7" => 1, "inter", }
 set new hash sym_adj to { "3" => 1, "adj" => 1, "adv" => 1, }
 set new hash sym_pp to { "pron" => 1, }
@@ -517,7 +517,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
 
     if from array tags first item is 1 do
-        set from array tags first item to 'vi'
+        set from array tags first item to 'v'
     done
     if from array tags first item is 2 do
         set from array tags first item to 'n'
@@ -2587,46 +2587,57 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array constructed_results, array constructed_result
     done
     
-    set new array adverbial to an empty array
-    push into array adverbial, ""
+    set new array adverbials to an empty array
+    push into array adverbials, "schon _?_ "
+    push into array adverbials, "noch _?_ "
+    push into array adverbials, ""
     
-    # Has A already done B?
-    for each new array result in array results do
-        set new array main_clause to an empty array
-        
-        set new var expr to from array result second item third item
-        set new array words to split with " ", var expr
-        set new var verb to pop with items of array words
-        set new var verb_second to pop with items of array words
-        while from array words item [ items of array words - 1 ] matches /en$/ do
-            set new var _verb to pop with items of array words
+    for each new var adverbial in array adverbials do
+        # Has A already done B?
+        for each new array result in array results do
+            set new array main_clause to an empty array
             
-            if var verb_second do
-                set var verb_second to var _verb concat " " concat var verb_second
+            set new var expr to from array result second item third item
+            set new array words to split with " ", var expr
+            set new var verb to pop with items of array words
+            set new var verb_second to ""
+            while from array words item [ items of array words - 1 ] matches /en$/ do
+                set new var _verb to pop with items of array words
+                
+                if var verb_second do
+                    set var verb_second to var _verb concat " " concat var verb_second
+                done
+                else do
+                    set var verb_second to var _verb
+                done
             done
-            else do
-                set var verb_second to var _verb
+            set new var object to join using ' ', items of array words
+            
+            set new var prefix to to_verb_prefix with var verb, var lang, var path
+            set new var root to to_verb_root with var verb, var lang, var path
+            set new array conj to to_verb_conjugation with var root, var prefix, var lang, var path
+            set new var participle to make_participle with from array conj third item, var lang, var path
+            
+            set new var person to get_person with var subject
+            set new var verb_have to get_verb with "have", var person
+            
+            push into array main_clause, var verb_have concat " " concat var verb_second concat " " concat var participle concat "00000"
+            push into array main_clause, var subject
+            push into array main_clause, var object
+            push into array main_clause, var adverbial concat " (+++)"
+            
+            if var object matches /nothing/ and var adverbial matches /schon/ do
+                go to next
             done
+            if ( not var object matches /nothing/ ) and var adverbial matches /noch/ do
+                go to next
+            done
+            
+            set new array constructed_result to an empty array
+            push into array constructed_result, 0
+            push into array constructed_result, array main_clause
+            push into array constructed_results, array constructed_result
         done
-        set new var object to join using ' ', items of array words
-        
-        set new var prefix to to_verb_prefix with var verb, var lang, var path
-        set new var root to to_verb_root with var verb, var lang, var path
-        set new array conj to to_verb_conjugation with var root, var prefix, var lang, var path
-        set new var participle to make_participle with from array conj third item, var lang, var path
-        
-        set new var person to get_person with var subject
-        set new var verb_have to get_verb with "have", var person
-        
-        push into array main_clause, var verb_have concat " " concat var verb_second concat " " concat var participle concat "00000"
-        push into array main_clause, var subject
-        push into array main_clause, var object
-        push into array main_clause, "schon _?_ (+++)"
-        
-        set new array constructed_result to an empty array
-        push into array constructed_result, 0
-        push into array constructed_result, array main_clause
-        push into array constructed_results, array constructed_result
     done
 
     do return with array constructed_results
@@ -3165,6 +3176,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             set items of array auxiliary_verbs to keys with items of hash auxiliary_verbs_hash
             set new array proper_verbs to an empty array
             set items of array proper_verbs to keys with items of hash proper_verbs_hash
+            set items of array proper_verbs to sort with items of array proper_verbs
             
             if from array clause item [3] matches /(^|\s)zu(\s|$)/ and length( from array clause item [3] ) < 5 do
                 do unshift with items of array proper_verbs, "zu"

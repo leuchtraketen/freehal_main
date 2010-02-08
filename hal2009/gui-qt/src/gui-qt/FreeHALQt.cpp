@@ -433,28 +433,28 @@ void make_connection(int _new) {
 
     string ip = freehal::string(dialog_connection->from->ip->displayText().toStdString()).get_strip().ref();
 
-    main_window->showWindowNormal();
+    if (_new) {
+        main_window->showWindowNormal();
 
-    {
-        QFile booted_file("booted");
-        booted_file.remove();
-    }
+        {
+            QFile booted_file("booted");
+            booted_file.remove();
+        }
 
-    if (ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()) {
+        if (ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()) {
 
 #ifdef linux
-    boost::thread t_v(linux_invoke_runner);
+            boost::thread t_v(linux_invoke_runner);
 #else
-    std::system("del booted");
-    boost::thread t_v(windows_invoke_runner);
+            boost::thread t_v(windows_invoke_runner);
 #endif
+            can_do_exit = true;
+        } else {
+            emit helper->everythingReady();
+        }
 
-		can_do_exit = true;
-    } else {
-        emit helper->everythingReady();
+        boost::thread t_v(check_new_version);
     }
-
-	boost::thread t_v(check_new_version);
     boost::thread t_w(boost::bind(freehal::comm_init_client, ip, true, ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()));
 
     freehal::comm_send("HELLO:.");
