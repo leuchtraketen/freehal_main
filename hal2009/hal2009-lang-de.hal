@@ -3018,152 +3018,152 @@ define action get_verb with var verb, var person do
 
     if var verb matches "be" do
         if var person matches "1s" do
-            return "bin"
+            do return with "bin"
         done
         if var person matches "2s" do
-            return "bist"
+            do return with "bist"
         done
         if var person matches "3s" do
-            return "ist"
+            do return with "ist"
         done
         if var person matches "1p" do
-            return "sind"
+            do return with "sind"
         done
         if var person matches "2p" do
-            return "seid"
+            do return with "seid"
         done
         if var person matches "3p" do
-            return "sind"
+            do return with "sind"
         done
     done
     
     if var verb matches "have" do
         if var person matches "1s" do
-            return "habe"
+            do return with "habe"
         done
         if var person matches "2s" do
-            return "hast"
+            do return with "hast"
         done
         if var person matches "3s" do
-            return "hat"
+            do return with "hat"
         done
         if var person matches "1p" do
-            return "haben"
+            do return with "haben"
         done
         if var person matches "2p" do
-            return "habt"
+            do return with "habt"
         done
         if var person matches "3p" do
-            return "haben"
+            do return with "haben"
         done
     done
     
     if var verb matches "want" do
         if var person matches "1s" do
-            return "will"
+            do return with "will"
         done
         if var person matches "2s" do
-            return "willst"
+            do return with "willst"
         done
         if var person matches "3s" do
-            return "will"
+            do return with "will"
         done
         if var person matches "1p" do
-            return "wollen"
+            do return with "wollen"
         done
         if var person matches "2p" do
-            return "wollt"
+            do return with "wollt"
         done
         if var person matches "3p" do
-            return "wollen"
+            do return with "wollen"
         done
     done
     
     if var verb matches "must" do
         if var person matches "1s" do
-            return "muss"
+            do return with "muss"
         done
         if var person matches "2s" do
-            return "musst"
+            do return with "musst"
         done
         if var person matches "3s" do
-            return "muss"
+            do return with "muss"
         done
         if var person matches "1p" do
-            return "muessen"
+            do return with "muessen"
         done
         if var person matches "2p" do
-            return "muesst"
+            do return with "muesst"
         done
         if var person matches "3p" do
-            return "muessen"
+            do return with "muessen"
         done
     done
     
     if var verb matches "can" do
         if var person matches "1s" do
-            return "kann"
+            do return with "kann"
         done
         if var person matches "2s" do
-            return "kannst"
+            do return with "kannst"
         done
         if var person matches "3s" do
-            return "kann"
+            do return with "kann"
         done
         if var person matches "1p" do
-            return "koennen"
+            do return with "koennen"
         done
         if var person matches "2p" do
-            return "koennt"
+            do return with "koennt"
         done
         if var person matches "3p" do
-            return "koennen"
+            do return with "koennen"
         done
     done
     
     if var verb matches "may" do
         if var person matches "1s" do
-            return "darf"
+            do return with "darf"
         done
         if var person matches "2s" do
-            return "darfst"
+            do return with "darfst"
         done
         if var person matches "3s" do
-            return "darf"
+            do return with "darf"
         done
         if var person matches "1p" do
-            return "duerfen"
+            do return with "duerfen"
         done
         if var person matches "2p" do
-            return "duerft"
+            do return with "duerft"
         done
         if var person matches "3p" do
-            return "duerfen"
+            do return with "duerfen"
         done
     done
     
     if var verb matches "should" do
         if var person matches "1s" do
-            return "sollte"
+            do return with "sollte"
         done
         if var person matches "2s" do
-            return "solltest"
+            do return with "solltest"
         done
         if var person matches "3s" do
-            return "sollte"
+            do return with "sollte"
         done
         if var person matches "1p" do
-            return "sollten"
+            do return with "sollten"
         done
         if var person matches "2p" do
-            return "solltet"
+            do return with "solltet"
         done
         if var person matches "3p" do
-            return "sollten"
+            do return with "sollten"
         done
     done
     
-    return ""
+    do return with ""
 done
 
 define action compute_output with var output do
@@ -3182,10 +3182,6 @@ define action compute_output with var output do
     do regex using var output: /!=>/, "", :global:i
     if var output matches /q=>/ do
         do regex using var output: /q=>/, "", :global:i
-        set var output to var output concat "?"
-    done
-    if var output matches /_q_/ do
-        do regex using var output: /_q_/, "", :global:i
         set var output to var output concat "?"
     done
     do regex using var output: /=>/, "", :global:i
@@ -3354,15 +3350,6 @@ define action compute_output with var output do
     set new var time_now to time without arguments
     set new var time_begin to time without arguments
     set new var time_end to 0
-    print var output
-    print new line
-    print new line
-    print new line
-    print new line
-    print new line
-    print new line
-    print new line
-    print new line
     if var output matches /time_from-(<[0-9]>+?)(\s|$)/ do
         set var time_begin to $0
     done
@@ -3527,6 +3514,10 @@ define action compute_output with var output do
     do regex using var output: /^\s/, "", :global:i
     do regex using var output: /\s$/, "", :global:i
     set var output to ucfirst with var output
+
+    if not var output matches /<[?!]>/ do
+        set var output to var output concat "."
+    done
     
     do return with var output
 done
@@ -3833,7 +3824,7 @@ define action stem_nouns with array phrases do
         do regex using var phrase: /\s+$/, "", :global
     done
     
-    return array phrases
+    do return with array phrases
 done
 
 define action check_for_math with var input do
@@ -3887,13 +3878,13 @@ define action check_for_math with var input do
         do regex using var math: /(sin|cos|tan|cot)(<[\d]>+)/, "$1($2)", :global:i
         do eval with 'var value = ' concat var math concat ';'
         if defined(var value) do
-            return [ 0, "Das Ergebnis ist " concat var value concat "."  ]
+            do return with [ 0, "Das Ergebnis ist " concat var value concat "."  ]
         done
         else do
-            return 0
+            do return with 0
         done
     done
-    return 0
+    do return with 0
 done
 
 define action check_for_thanks with var input do
@@ -3902,11 +3893,11 @@ define action check_for_thanks with var input do
 
     for each new var thank in array thanks_from_user do
         if lc(var input) matches /((\s)|<[,.\-!?]>|^)var thank((\s)|<[,.\-!?]>|$)/ do
-            return 1
+            do return with 1
         done
     done
     
-    return 0
+    do return with 0
 done
 
 define action say_answer_thanks with var user do
@@ -3928,11 +3919,11 @@ define action check_for_greeting with var input do
 
     for each new var greeting in array greetings_from_user do
         if lc(var input) matches /((\s)|<[,.\-!?]>|^)var greeting((\s)|<[,.\-!?]>|$)/ do
-            return 1
+            do return with 1
         done
     done
     
-    return 0
+    do return with 0
 done
 
 define action greet with var user do
@@ -4307,7 +4298,7 @@ define action check_invoke with var statement do
         set var appname to $0
     done
     
-    return var appname
+    do return with var appname
 done
 
 define action check_sentence_for_weather with var input do
@@ -4458,6 +4449,14 @@ done
 
 define action noun_for_anonymous without arguments do
     do return with "man"
+done
+
+define action adj_for_already without arguments do
+    do return with "schon"
+done
+
+define action adj_for_still without arguments do
+    do return with "noch"
 done
 
 define action upper_case_correction with var phrase, hash tags, var lang, var path do
@@ -5243,5 +5242,5 @@ define action get_modal_verb_for_verb with var verb, var lang, var path do
 done
 
 define action get_score_answer without arguments do
-    return [ 0, "Bewertung erfolgreich." ]
+    do return with [ 0, "Bewertung erfolgreich." ]
 done

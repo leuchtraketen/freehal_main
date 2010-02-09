@@ -653,6 +653,10 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 
 int word_matches_word_array(struct word* word, struct word** words, int flags) {
     // debugf("    does this word match?: %i - %s\n", word, word->name);
+
+    if (word->name == strstr(word->name, "%")) {
+        return 1;
+    }
     
     int m;
     for (m = 0; words[m] && words[m]->name; ++m) {
@@ -2315,7 +2319,7 @@ int is_important_word(const char* word) {
 }
 
 const char* small_identifier(const char* word) {
-    if (word[0] == '_' || word[0] == '*') {
+    if (word[0] == '_' || word[0] == '*' || word[0] == '%') {
         if (strlen(word) > 3) {
             return small_identifier(word+1);
         }

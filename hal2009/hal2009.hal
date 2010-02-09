@@ -344,22 +344,22 @@ define action get_score with array words, var sentence, var lang, var path do
 
 
     if var sentence matches /\(<[+]><[+]><[+]>\)/ do
-        set var sum to var sum + 400
+        set var sum to var sum + 100 * var num_words
     done
     if var sentence matches /\(<[+]><[+]>\)/ do
-        set var sum to var sum + 300
+        set var sum to var sum + 70 * var num_words
     done
     if var sentence matches /\(<[+]>\)/ do
-        set var sum to var sum + 100
+        set var sum to var sum + 40 * var num_words
     done
     if var sentence matches /\(<[-]><[-]><[-]>\)/ do
-        set var sum to var sum - 100
+        set var sum to var sum - 100 * var num_words
     done
     if var sentence matches /\(<[-]><[-]>\)/ do
-        set var sum to var sum - 200
+        set var sum to var sum - 70 * var num_words
     done
     if var sentence matches /\(<[-]>\)/ do
-        set var sum to var sum - 400
+        set var sum to var sum - 40 * var num_words
     done
     
     set var sum to (var sum + 1) / var num_words 
@@ -2473,7 +2473,7 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
                 do regex using from array verb first item: /e$/, "en", :i
             done
             else do
-                set from array verb first item to ""
+                do regex using from array verb first item: /...$/, "*", :i
             done
         done
     done
@@ -2497,20 +2497,28 @@ done
 define action reasonof with var input, var lang, var path, hash parsed do
     set new array hashes to an empty array
     set new array results to an empty array
+
+    set new array verbs to an empty array
+    set new array _verbs to from hash parsed item { 'verbs' }
+    for each new array _verb in array _verbs do
+        set new array verb to an empty array
+        set items of array verb to items of array _verb
+        push into array verbs, array verb
+    done
     
-    set new hash parsed_2 to reasonof_construct_hash with from hash parsed item { 'verbs' } , var lang, var path, hash parsed
+    set new hash parsed_2 to reasonof_construct_hash with array verbs, var lang, var path, hash parsed
     set new array results_2 to logic with var input, var lang, var path, hash parsed_2
-    set array results_2 to reasonof_logic_from_object with array results_2, var lang, var path, hash parsed
+    set array results_2 to reasonof_logic_from_object with array results_2, array verbs, var lang, var path, hash parsed
     push into array results, items of array results_2
     
     do return with array results
 done
 
-define action reasonof_logic_from_subject with array results, var lang, var path, hash parsed do
+define action reasonof_logic_from_subject with array results, array verbs, var lang, var path, hash parsed do
     do return with array results
 done
 
-define action reasonof_logic_from_object with array results, var lang, var path, hash parsed do
+define action reasonof_logic_from_object with array results, array verbs, var lang, var path, hash parsed do
 
     set new array request_subjects_array to from hash parsed item { 'subjects' }
     set new array request_subjects to an empty array
@@ -2534,6 +2542,34 @@ define action reasonof_logic_from_object with array results, var lang, var path,
             set new array must_haves to from hash parsed item { 'adverbs' } first item
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
+
+                set new array tags to an empty array
+                if var must_have matches /\s/ do
+                    set new var _must_have to var must_have
+                    do regex using var _must_have: /\s.*/, "", :global
+                    set array tags to compute_tags with var _must_have, var lang, var path
+                done
+                else do
+                    set array tags to compute_tags with var must_have, var lang, var path
+                done
+                set new flag is_builtin to builtin_has_time_place_adverbs_suffix with var must_have
+
+                if lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
+                    print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print new line
+                done
+                else do
+                    print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print new line
+                    set flag go_next to 1
+                done
+            done
+        done
+        
+        if from hash parsed item { 'objects' } do
+            set new array must_haves to from hash parsed item { 'objects' } first item
+            for each new var must_have in array must_haves do
+                set var must_have to lc with var must_have
                 if not lc( from array result second item second item ) matches /var must_have/ do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
@@ -2546,10 +2582,11 @@ define action reasonof_logic_from_object with array results, var lang, var path,
             done
         done
         
-        if from hash parsed item { 'objects' } do
-            set new array must_haves to from hash parsed item { 'objects' } first item
+        if items of array verbs is 1 and from array verbs first item matches /<[|]>/ do
+            set new array must_haves to from hash parsed item { 'verbs' } first item
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
+                do regex using var must_have: /...$/, "", :i
                 if not lc( from array result second item second item ) matches /var must_have/ do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
@@ -2586,10 +2623,13 @@ define action reasonof_logic_from_object with array results, var lang, var path,
         push into array constructed_result, array main_clause
         push into array constructed_results, array constructed_result
     done
+
+    set new var already to adj_for_already without arguments
+    set new var still to adj_for_still without arguments
     
     set new array adverbials to an empty array
-    push into array adverbials, "schon _?_ "
-    push into array adverbials, "noch _?_ "
+    push into array adverbials, var already concat " ? "
+    push into array adverbials, var still concat " ? "
     push into array adverbials, ""
     
     for each new var adverbial in array adverbials do
@@ -3306,7 +3346,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 
-                if from array clause item [3] matches /_<[?]>_/ do
+                if from array clause item [3] matches /<[?]>/ do
                     if from array clause item [2] matches "NULL" or not from array clause item [2] do
                         if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
@@ -3594,12 +3634,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if var final_sentence matches /_<[?]>_/ do
-            do regex using var final_sentence: /_<[?]>_/, "", :global
-            set var final_sentence to var final_sentence concat " ?"
-        done
-        
         set var final_sentence to compute_output with var final_sentence
+        
+        if var final_sentence matches /<[?]>/ do
+            do regex using var final_sentence: /<[?]>/, "", :global
+            set var final_sentence to var final_sentence concat "?"
+        done
         
         do regex using var final_sentence: /<[,]>\s*?$/, "", :global
         do regex using var final_sentence: /<[,]>$/, "", :global
@@ -4172,7 +4212,8 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             done
         done
 
-        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
+#        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
+        set var line to var line concat join using ' ', items of array verbs
         set var line to var line concat ' <> '
         set var line to var line concat join using ' ', items of that array: from hash parsed item { 'subjects' } end-items-of
         set var line to var line concat ' <> '
