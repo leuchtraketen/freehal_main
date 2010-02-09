@@ -2619,9 +2619,10 @@ define action reasonof_logic_from_object with array results, var lang, var path,
             set new var participle to make_participle with from array conj third item, var lang, var path
             
             set new var person to get_person with var subject
-            set new var verb_have to get_verb with "have", var person
+            set new var verb_modal to get_modal_verb_for_verb with var verb_second concat " " concat var participle, var lang, var path
+            set var verb_modal to get_verb with var verb_modal, var person
             
-            push into array main_clause, var verb_have concat " " concat var verb_second concat " " concat var participle concat "00000"
+            push into array main_clause, var verb_modal concat " " concat var verb_second concat " " concat var participle concat "00000"
             push into array main_clause, var subject
             push into array main_clause, var object
             push into array main_clause, var adverbial concat " (+++)"

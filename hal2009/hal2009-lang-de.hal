@@ -5235,6 +5235,13 @@ define action make_participle with var participle, var lang, var path do
     do return with var participle
 done
 
+define action get_modal_verb_for_verb with var verb, var lang, var path do
+    if var verb matches /stolp|lauf|geh|gewes|sei|bist|ist|bin/ do
+        do return with "be"
+    done
+    do return with "have"
+done
+
 define action get_score_answer without arguments do
     return [ 0, "Bewertung erfolgreich." ]
 done
