@@ -4574,10 +4574,10 @@ define action to_verb_root_right with var verb, var lang, var path do
     
     if var verb matches /e<[rl]>n$/ do
         if var verb matches /h/ do
-            do regex using var verb: /<[rl]>n$/, "", :global
+            do regex using var verb: /(<[rl]>)n$/, "$0", :global
         done
         else do
-            do regex using var verb: /e<[rl]>n$/, "", :global
+            do regex using var verb: /(e<[rl]>)n$/, "$0", :global
         done
     done
     
