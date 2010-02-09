@@ -27,3 +27,5 @@
 = <> _schoenheit_ <> _(good)_ <>  <> (maybe)
 = <> _sonnenschein_ <> _(good)_ <>  <> (maybe)
 = <> humor <> _(good)_ <>  <> (maybe)
+= <> _herzlichkeit_ <> _(good)_ <>  <> (maybe)
+= <> _froehlichkeit_ <> _(good)_ <>  <> (maybe)

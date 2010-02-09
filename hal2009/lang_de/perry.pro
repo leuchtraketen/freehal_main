@@ -184,7 +184,6 @@ ist <> siga <> 10251 lichtjahre <> von sol entfernt <>  <>  <> nothing <>  <>  <
 ist solaren <> terra des <> teil imperiums <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> solonium <> ein material <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> swoofon <> nur 992 lichtjahre <> vom solsystem entfernt <>  <>  <> nothing <>  <>  <>  <> (true)
-ist <> tarkan <> ein universum <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> terra <> ein planet <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> terrania <> die hauptstadt <> von terra <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> thoregon <> eine superintelligenz <>  <>  <>  <> nothing <>  <>  <>  <> (true)

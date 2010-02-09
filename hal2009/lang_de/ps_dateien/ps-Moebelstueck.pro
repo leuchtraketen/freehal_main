@@ -93,7 +93,6 @@
 = <> kuehlschrank <> moebelstueck <>  <> (maybe)
 = <> kurulischer stuhl <> moebelstueck <>  <> (maybe)
 = <> landi-stuhl <> moebelstueck <>  <> (maybe)
-= <> moebelstueck <>  <>  <> (maybe)
 = <> lehnstuhl <> moebelstueck <>  <> (maybe)
 = <> leuchte <> moebelstueck <>  <> (maybe)
 = <> leuchttisch <> moebelstueck <>  <> (maybe)
