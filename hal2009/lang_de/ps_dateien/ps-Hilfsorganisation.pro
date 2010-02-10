@@ -35,7 +35,7 @@
 = <> komitee cap anamur <> hilfsorganisation <>  <> (maybe)
 = <> malteser hilfsdienst <> hilfsorganisation <>  <> (maybe)
 = <> schueler helfen leben <> hilfsorganisation <>  <> (maybe)
-= <> weiﬂer ring <> hilfsorganisation <>  <> (maybe)
+= <> weisser ring <> hilfsorganisation <>  <> (maybe)
 = <> welthungerhilfe <> hilfsorganisation <>  <> (maybe)
 = <> licht ins dunkel <> hilfsorganisation <>  <> (maybe)
 = <> licht fuer die welt <> hilfsorganisation <>  <> (maybe)

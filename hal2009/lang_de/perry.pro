@@ -127,7 +127,7 @@ ist <> ein metagrav <> ein raumschiffsantrieb <>  <>  <>  <> nothing <>  <>  <> 
 ist <> ein paratron <> ein schutzschirm <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> ein permit <> eine art <> zugangsberechtigung <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> ein pikosyn <> ein kleinrechner <>  <>  <>  <> nothing <>  <>  <>  <> (true)
-ist <> ein raumschiff <> nothing <> die sol <>  <>  <> nothing <>  <>  <>  <> (true)
+ist <>die sol <> nothing <>  ein raumschiff <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> ein rechner <> ein computer <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> ein schwarzes loch <> ein himmelsobjekt <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> ein serun <> ein raumanzug <>  <>  <>  <> nothing <>  <>  <>  <> (true)

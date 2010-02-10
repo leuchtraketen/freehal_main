@@ -57,3 +57,4 @@
 = <> musicalfilm <> ein eigenname  <> <> (true)
 = <> horrorfilm <> ein eigenname  <> <> (true)
 = <> filmkomoedie <> ein eigenname  <> <> (true)
+= <> gehe <> gehen <> <> (true)
