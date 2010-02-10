@@ -752,14 +752,14 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             (*stream) << "DELETED:SUCCESS" << endl;
         }
 
-        if ( result->at(0) == string("VACUUM") ) {
-            printf("Running SQL vacuum function.\n");
-            printf("Start.\nVacuum...\n");
+        if ( result->at(0) == string("REINDEX") ) {
+            printf("Running re-index function.\n");
+            printf("Start.\n");
             sql_begin();
-            sql_vacuum();
+            sql_re_index();
             sql_end();
-            printf("Stop.\nVacuum finished.\n");
-            (*stream) << "VACUUM:SUCCESS" << endl << "VACUUM:SUCCESS" << endl;
+            printf("Stop.\nNew Index.\n");
+            (*stream) << "REINDEX:SUCCESS" << endl << "REINDEX:SUCCESS" << endl;
         }
         
         if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {

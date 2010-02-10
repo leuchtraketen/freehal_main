@@ -85,8 +85,8 @@ int sql_delete_everything_from(const char* filename) {
     return sql_universal_delete_everything_from(filename);
 }
 
-int sql_vacuum() {
-    return sql_universal_vacuum();
+int sql_re_index() {
+    return sql_universal_re_index();
 }
 
 int sql_begin() {

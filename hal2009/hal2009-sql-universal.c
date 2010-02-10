@@ -56,8 +56,8 @@ int sql_universal_delete_everything_from(const char* filename) {
     return universal_delete_everything_from(filename);
 }
 
-int sql_universal_vacuum() {
-    return universal_vacuum();
+int sql_universal_re_index() {
+    return universal_re_index();
 }
 
 int sql_universal_add_record(struct RECORD* r, const char* relation_to) {

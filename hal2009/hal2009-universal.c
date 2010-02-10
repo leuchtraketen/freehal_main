@@ -366,6 +366,50 @@ struct word** divide_words(const char* str) {
     return list;
 }
 
+char** divide_string(const char* str) {
+    char** list = calloc(sizeof(char*), 1);
+    int count = 0;
+    
+    int a = 0;
+    int e = 0;
+    int p;
+    int length = strlen(str);
+    for (p = 0; p < length; ++p) {
+        if ((str[p] == ' ' || str[p] == '-') && (str[p+1] == ' ' || str[p+1] == '-')) {
+            ++p;
+        }
+        if (str[p] == ' ' || str[p] == '-') {
+            e = p;
+            if (e - a > 0) {
+                char* name = calloc(e-a+2, 1);
+                strncpy(name, str+a, e-a);
+                
+                ++count;
+                list = realloc(list, sizeof(char*)*(count+1));
+                list[count] = 0;
+                list[count-1] = name;
+                a = e+1;
+            }
+        }
+    }
+    
+    e = p;
+    if (e - a > 0) {
+        char* name = calloc(e-a+2, 1);
+        strncpy(name, str+a, e-a);
+        if (is_good(name)) {
+            
+            ++count;
+            list = realloc(list, sizeof(char*)*(count+1));
+            list[count] = 0;
+            list[count-1] = name;
+            a = e;
+        }
+    }
+    
+    return list;
+}
+
 char** divide_by(const char by, const char* str) {
     char** list = calloc(sizeof(struct word*), 1);
     int count = 0;
@@ -2383,13 +2427,13 @@ char* universal_get_source(char* key) {
     return 0;
 }
 
-int universal_vacuum() {
+int universal_re_index() {
     printf("...\n");
     if (is_engine("ram")) {
         // does not exist
     }
     else {
-        return disk_vacuum();
+        return disk_re_index();
     }
     return 0;
 }
