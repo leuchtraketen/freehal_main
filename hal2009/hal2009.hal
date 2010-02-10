@@ -2939,6 +2939,10 @@ define action logic with var input, var lang, var path, hash parsed do
         # CODE
         set new var primary_key to shift with items of array rawresult
         
+        if from array rawresult item [ 5 ] matches /film.pro/ do
+            set from array rawresult item [ 3 ] to from array rawresult item [ 3 ] concat " (--)"
+        done
+        
         # TEXT
         # Divide main clause and sub clauses
         # CODE
@@ -3614,7 +3618,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if var final_sentence matches / \((good|bad)\) / do
+        if var final_sentence matches /\(good|bad\)/ do
             # TEXT
             # A Sentence must not have the verb "="
             # CODE
