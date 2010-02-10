@@ -69,6 +69,7 @@ string                      must_be_logged;
 QProcess*                   kernel_process;
 bool                        can_do_exit = false;
 std::string                 database_engine = "sqlite";
+std::string                 server_language = "de";
 
 bool offline_mode = false;
 bool www_surf_mode = true;
@@ -416,12 +417,25 @@ int linux_invoke_runner() {
 
 void make_connection(int _new) {
     if (_new) {
+        dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
+        dialog_connection->from->buttonBox->buttons().at(0)->setFocus(Qt::OtherFocusReason);
         dialog_connection->exec();
         if (dialog_connection->result() == QDialog::Rejected) {
+            static int first_connect = 1;
+            if (first_connect) {
+                std::exit(0);
+            }
+            else {
+                first_connect = 0;
+            }
             return;
-            std::exit(0);
         }
     }
+
+    server_language = dialog_connection->from->lang->currentText().toStdString();
+    ofstream o("language.tmp");
+    o << server_language;
+    o.close();
 
     database_engine = dialog_connection->from->database_engine->currentText().toStdString();
     if (database_engine == "disk (traditional)")

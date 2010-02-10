@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Mon Feb 8 18:47:41 2010
+** Created: Tue Feb 9 08:29:53 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -146,7 +146,6 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QMenuBar *menubar;
     QMenu *menuDatei;
-    QMenu *menuNeu;
     QMenu *menuExtras;
     QMenu *menuHilfe;
     QMenu *menuVerbindung;
@@ -670,8 +669,6 @@ public:
         menubar->setGeometry(QRect(0, 0, 986, 22));
         menuDatei = new QMenu(menubar);
         menuDatei->setObjectName(QString::fromUtf8("menuDatei"));
-        menuNeu = new QMenu(menuDatei);
-        menuNeu->setObjectName(QString::fromUtf8("menuNeu"));
         menuExtras = new QMenu(menubar);
         menuExtras->setObjectName(QString::fromUtf8("menuExtras"));
         menuHilfe = new QMenu(menubar);
@@ -688,16 +685,16 @@ public:
         menubar->addAction(menuVerbindung->menuAction());
         menubar->addAction(menuExtras->menuAction());
         menubar->addAction(menuHilfe->menuAction());
-        menuDatei->addAction(menuNeu->menuAction());
+        menuDatei->addAction(actionGespr_ch);
         menuDatei->addSeparator();
         menuDatei->addAction(actionBeenden);
-        menuNeu->addAction(actionGespr_ch);
         menuExtras->addAction(actionEinstellungen);
         menuExtras->addSeparator();
         menuExtras->addAction(fullscreen);
         menuHilfe->addAction(actionInfo);
         menuVerbindung->addAction(actionReconnect);
         menuVerbindung->addAction(actionNeue_Verbindung_herstellen);
+        menuVerbindung->addAction(actionReconnect);
 
         retranslateUi(freehalWindow);
         QObject::connect(actionBeenden, SIGNAL(triggered()), freehalWindow, SLOT(close()));
@@ -711,7 +708,7 @@ public:
     void retranslateUi(QMainWindow *freehalWindow)
     {
         freehalWindow->setWindowTitle(QApplication::translate("freehalWindow", "Connect to artificial intelligence server", 0, QApplication::UnicodeUTF8));
-        actionGespr_ch->setText(QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
+        actionGespr_ch->setText(QApplication::translate("freehalWindow", "New Talk", 0, QApplication::UnicodeUTF8));
         actionDatenbank->setText(QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
         actionBeenden->setText(QApplication::translate("freehalWindow", "Exit", 0, QApplication::UnicodeUTF8));
         actionVorf_hrmodus->setText(QApplication::translate("freehalWindow", "Vorf\303\274hrmodus", 0, QApplication::UnicodeUTF8));
@@ -788,7 +785,6 @@ public:
         double_facts->setText(QApplication::translate("freehalWindow", "double facts", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Database), QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
         menuDatei->setTitle(QApplication::translate("freehalWindow", "File", 0, QApplication::UnicodeUTF8));
-        menuNeu->setTitle(QApplication::translate("freehalWindow", "New", 0, QApplication::UnicodeUTF8));
         menuExtras->setTitle(QApplication::translate("freehalWindow", "Tools", 0, QApplication::UnicodeUTF8));
         menuHilfe->setTitle(QApplication::translate("freehalWindow", "Help", 0, QApplication::UnicodeUTF8));
         menuVerbindung->setTitle(QApplication::translate("freehalWindow", "Connection", 0, QApplication::UnicodeUTF8));

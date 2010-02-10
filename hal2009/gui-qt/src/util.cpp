@@ -113,10 +113,10 @@ int min (int a, int b) {
 }
 
 freehal::Lang freehal::get_lang() {
-	ifstream i("temp/language.tmp");
+        ifstream i("language.tmp");
 	if (!i) {
-		ofstream o("temp/language.tmp");
-		o << "de";
+                ofstream o("language.tmp");
+                o << "de";
 		o.close();
 		return freehal::GERMAN;
 	}
@@ -130,9 +130,9 @@ freehal::Lang freehal::get_lang() {
 }
 
 freehal::string freehal::get_lang_str() {
-	ifstream i("temp/language.tmp");
+        ifstream i("language.tmp");
 	if (!i) {
-		ofstream o("temp/language.tmp");
+                ofstream o("language.tmp");
 		o << "de";
 		o.close();
 		return s("de");
