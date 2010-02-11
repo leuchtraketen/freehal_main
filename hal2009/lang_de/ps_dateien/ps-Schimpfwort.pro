@@ -489,7 +489,6 @@
 = <> frotteesockentraeger <> schimpfwort <>  <> (true)
 = <> fruehspritzer <> schimpfwort <>  <> (true)
 = <> fugenprinz <> schimpfwort <>  <> (true)
-= <> furunkel <> schimpfwort <>  <> (true)
 = <> furzanalytiker <> schimpfwort <>  <> (true)
 = <> furzdruese <> schimpfwort <>  <> (true)
 = <> furzhaubitze <> schimpfwort <>  <> (true)

@@ -353,7 +353,6 @@ habe <> ich <> eine fuesse <> nicht <>  <>  <>  <>  <>  <>
 habe <> ich <> eine gedichte <> in meinem speicher;nicht <> (true)
 habe <> ich <> eine gefuehle <> nicht <> (true)
 habe <> ich <> eine geschwister <> nicht <> (true)
-habe <> ich <> eine geschwister <> nicht <> (true)
 habe <> ich <> eine grosse datenbank <>  <> (true)
 habe <> ich <> eine haare <> nicht <> (true)
 habe <> ich <> eine haarfarbe <> nicht <> (true)
