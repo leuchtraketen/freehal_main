@@ -435,7 +435,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                     strcat(sql, "\", \n");
                     strcat(sql, key);
                     strcat(sql, ", \n\"");
-                    strcat(sql, rel ? "clauses" : "facts");
+                    strcat(sql, rel ? "c" : "f");
                     strcat(sql, "\"");
                     strcat(sql, ");");
                 }
@@ -485,7 +485,7 @@ char* gen_sql_get_double_facts() {
     return sql;
 }
 
-int gen_sql_delete_everything_from(const char* filename) {
+char* gen_sql_delete_everything_from(const char* filename) {
 
     char* sql = malloc(1024*30);
     *sql = 0;
@@ -948,7 +948,7 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
                 strcat(sql, "\", \n");
                 strcat(sql, argv[0]);
                 strcat(sql, ", \n\"");
-                strcat(sql, re_index_in_facts ? "facts" : "clauses");
+                strcat(sql, re_index_in_facts ? "f" : "c");
                 strcat(sql, "\"");
                 strcat(sql, ");");
                 

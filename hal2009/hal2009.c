@@ -958,6 +958,7 @@ halstring* replace(halstring *src, const char *from, const char *to) {
     }
     
     src->s = value;
+    src->do_free = 1;
     halfreef(to_free__full_string_pointer, "replace");
     
     return src;
