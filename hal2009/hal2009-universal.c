@@ -2364,7 +2364,7 @@ int is_important_word(const char* word) {
 
 const char* small_identifier(const char* word) {
     if (word[0] == '_' || word[0] == '*' || word[0] == '%') {
-        if (strlen(word) > 3) {
+        if (strlen(word) >= 3) {
             return small_identifier(word+1);
         }
         else {
@@ -2374,7 +2374,7 @@ const char* small_identifier(const char* word) {
     if (word[0] == '=') {
         return strdup("__");
     }
-    if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 3) {
+    if ((word[0] == '_' && strlen(word) > 2) || strlen(word) < 2) {
         return strdup("__");
     }
     

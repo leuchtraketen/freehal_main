@@ -487,12 +487,51 @@ char* gen_sql_get_double_facts() {
 
 int gen_sql_delete_everything_from(const char* filename) {
 
-    char* sql = malloc(1024);
+    char* sql = malloc(1024*30);
     *sql = 0;
+
+    printf("Clean index...\n", sql);
+
+    strcat(sql, "delete from cache_facts ; INSERT OR IGNORE INTO cache_facts SELECT * FROM facts WHERE `from` GLOB '");
+    strcat(sql, filename);
+    strcat(sql, "*';\n");
+
+    int error = sql_execute(sql, NULL, NULL);
+
+    int i;
+    for (i = 'a'; i <= 'z'; ++i) {
+        printf("\r%fl\t\t\t", (100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
+        fflush(stdout);
+        *sql = 0;
+
+        int k;
+        for (k = 'a'; k <= 'z'; ++k) {
+            strcat(sql, "DELETE FROM rel_word_fact__");
+            char z[3];
+            z[0] = i;
+            z[1] = k;
+            z[2] = 0;
+            strcat(sql, z);
+            strcat(sql, " WHERE fact IN ( SELECT pk FROM cache_facts );\n");
+        }
+
+        int error = sql_execute(sql, NULL, NULL);
+    }
     
+    *sql = 0;
     strcat(sql, "DELETE FROM facts WHERE `from` GLOB '");
     strcat(sql, filename);
     strcat(sql, "*';");
+   
+
+            printf("\r%s\n", sql);
+    /*
+    static int first_run = 1;
+    if (first_run) {
+        first_run = 0;
+        strcat(sql, "COMMIT; VACUUM; BEGIN;");
+    }
+    */
     
     return sql;
 }
@@ -543,6 +582,25 @@ char* disk_del_record(const char* key) {
     printf("pkey (in hal2009-disk.c): %s, SQL: %s\n", key, sql);
     
     int error = sql_execute(sql, NULL, NULL);
+
+    int i;
+    for (i = 'a'; i <= 'z'; ++i) {
+        int k;
+        for (k = 'a'; k <= 'z'; ++k) {
+            *sql = 0;
+            strcat(sql, "DELETE FROM rel_word_fact__");
+            char z[3];
+            z[0] = i;
+            z[1] = k;
+            z[2] = 0;
+            strcat(sql, z);
+            strcat(sql, " WHERE fact = ");
+            strcat(sql, key);
+            strcat(sql, ";");
+            int error = sql_execute(sql, NULL, NULL);
+        }
+    }
+
     free(sql);
     
     return source;

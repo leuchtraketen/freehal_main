@@ -972,8 +972,33 @@ int set_nonblocking(int fd)
 } 
 
 void* hal2009_init_thread (void*) {
+    time_t start = 0;
+    time(&start);
+
     hal2009_init(strdup(copy_for_init_planguage), strdup(copy_for_init_signal_handler_tlanguage), strdup(copy_for_init_base_dir));
     init_thread_ended = 1;
+
+    time_t end = 0;
+    time(&end);
+
+    int sec = end - start;
+    struct tm* ts_start = localtime(&start);
+    struct tm* ts_end   = localtime(&end);
+    char*      ch_start = strdup(asctime(ts_start));
+    char*      ch_end   = strdup(asctime(ts_end));
+    if (strstr(ch_start, "\n")) {
+        strstr(ch_start, "\n")[0] = '\0';
+    }
+    if (strstr(ch_end, "\n")) {
+        strstr(ch_end, "\n")[0] = '\0';
+    }
+
+    ofstream protocol("database.log", ios::out | ios::app);
+    protocol << "Rev. " << FULL_VERSION << ", " << ch_start << ":\t" << sec << " s \t= " << (sec/60) << " min" << endl;
+    protocol.close();
+
+    free(ch_start);
+    free(ch_end);
 }
 
 int main(int argc, char** argv) {
