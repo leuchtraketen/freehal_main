@@ -490,7 +490,7 @@ int gen_sql_delete_everything_from(const char* filename) {
     char* sql = malloc(1024*30);
     *sql = 0;
 
-    printf("Clean index...\n", sql);
+    printf("Clean index...\n");
 
     strcat(sql, "delete from cache_facts ; INSERT OR IGNORE INTO cache_facts SELECT * FROM facts WHERE `from` GLOB '");
     strcat(sql, filename);
