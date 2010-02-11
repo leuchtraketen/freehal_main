@@ -21,7 +21,6 @@
 = <> _lachen_ <> _(good)_ <>  <> (maybe)
 = <> _liebe_ <> _(good)_ <>  <> (maybe)
 = <> _reichtum_ <> _(good)_ <>  <> (maybe)
-= <> _reichtum_ <> _(good)_ <>  <> (maybe)
 = <> _satt_ <> _(good)_ <>  <> (maybe)
 = <> _schoen_ <> _(good)_ <>  <> (maybe)
 = <> _schoenheit_ <> _(good)_ <>  <> (maybe)

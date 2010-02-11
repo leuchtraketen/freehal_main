@@ -67,7 +67,6 @@
 = <> kajak <> verkehrsmittel <>  <> (maybe)
 = <> kanu <> verkehrsmittel <>  <> (maybe)
 = <> karre <> verkehrsmittel <>  <> (maybe)
-= <> karre <> verkehrsmittel <>  <> (maybe)
 = <> kettcar <> verkehrsmittel <>  <> (maybe)
 = <> kettenfahrzeug <> verkehrsmittel <>  <> (maybe)
 = <> kitebuggy <> verkehrsmittel <>  <> (maybe)

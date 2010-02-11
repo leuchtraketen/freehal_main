@@ -1080,7 +1080,6 @@
 >>> <> _nazionalsozialist_ <> _nationalsozialist_ <>  <> (true)
 >>> <> _nazionalsozialistisch_ <> _nationalsozialistisch_ <>  <> (true)
 >>> <> _nciht_ <> _nicht_ <>  <> (true)
->>> <> _nciht_ <> _nicht_ <>  <> (true)
 >>> <> _nehms_ <> _nehme_es_ <>  <> (true)
 >>> <> _neien_ <> _nein_ <>  <> (true)
 >>> <> _nen_ <> _einen_ <>  <> (true)

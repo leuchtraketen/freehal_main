@@ -98,6 +98,8 @@ Antwort:
   count: 3
   genus: f
   type: n
+Anubis:
+  type: n
 Apfel:
   count: 3
   type: n
@@ -222,6 +224,8 @@ Beguenstigung:
 Beischlaf:
   genus: m
   type: n
+Bekannte:
+  type: n
 Beleidigung:
   genus: f
   type: n
@@ -272,7 +276,7 @@ Bett:
   count: 4
   type: n
 Bewertung:
-  count: 113
+  count: 122
   genus: f
   type: n
 Bewunderung:
@@ -459,7 +463,7 @@ Dimension:
   genus: f
   type: n
 Dir:
-  count: 2
+  count: 3
   type: n
 Disco:
   count: 1
@@ -480,7 +484,7 @@ Drogensucht:
   genus: f
   type: n
 Du:
-  count: 56
+  count: 62
   type: n
 Duesenflugzeug:
   genus: f
@@ -541,7 +545,7 @@ Einfaches:
   count: 4
   type: adj
 Eingabe:
-  count: 13
+  count: 14
   genus: f
   type: n
 Einheit:
@@ -587,6 +591,7 @@ Energie:
   genus: f
   type: n
 Engel:
+  count: 1
   genus: m
   type: n
 England:
@@ -616,7 +621,7 @@ Erektion:
   count: 1
   type: n
 Erfolg:
-  count: 3
+  count: 4
   genus: m
   type: n
 Erpresser:
@@ -685,6 +690,8 @@ Familie:
   genus: f
   type: n
 Farbe:
+  type: n
+Faunus:
   type: n
 Feige:
   count: 4
@@ -773,7 +780,7 @@ Freehal:
 Freiburg:
   type: n
 Freiheit:
-  count: 1
+  count: 2
   genus: f
   type: n
 Freiheitsberaubung:
@@ -781,17 +788,20 @@ Freiheitsberaubung:
   genus: f
   type: n
 Freude:
-  count: 2
+  count: 3
+  type: n
+Freunde:
   type: n
 Freundschaft:
-  count: 2
+  count: 3
   genus: f
   type: n
 Frieden:
-  count: 2
+  count: 3
   genus: m
   type: n
 Froehlichkeit:
+  count: 1
   genus: f
   type: n
 Funkfeuer:
@@ -827,13 +837,14 @@ Gebilde:
   genus: s
   type: n
 Geborgenheit:
+  count: 1
   type: n
 Gefangenschaft:
   count: 1
   genus: f
   type: n
 Gefuehle:
-  count: 2
+  count: 5
   genus: f
   type: n
 Gegenteil:
@@ -906,6 +917,7 @@ Glauben:
   count: 1
   type: vi
 Gott:
+  count: 2
   genus: m
   type: n
 Grand:
@@ -959,6 +971,8 @@ Hagebutte:
   type: n
 Hallo:
   genus: s
+  type: n
+Hama:
   type: n
 Hamburger:
   count: 1
@@ -1028,6 +1042,7 @@ Herstellung:
   genus: f
   type: n
 Herzlichkeit:
+  count: 1
   genus: f
   type: n
 Hibiskus:
@@ -1097,7 +1112,7 @@ Hunde:
   genus: f
   type: n
 Ich:
-  count: 112
+  count: 117
   type: n
 Indischer:
   count: 1
@@ -1242,7 +1257,7 @@ Kosmos:
   genus: m
   type: n
 Kraft:
-  count: 1
+  count: 2
   genus: f
   type: n
 Kran:
@@ -1323,7 +1338,7 @@ Lichtjahr:
   genus: s
   type: n
 Liebe:
-  count: 2
+  count: 3
   type: n
 Likoer:
   genus: m
@@ -1354,7 +1369,7 @@ Luftkissenfahrzeug:
   genus: s
   type: n
 Luftschiff:
-  count: 5
+  count: 13
   genus: s
   type: n
 Luftverunreinigung:
@@ -1485,7 +1500,7 @@ Neigung:
   count: 1
   type: n
 Nein:
-  count: 295
+  count: 298
   genus: s
   type: n
 Neumarkt:
@@ -1495,7 +1510,7 @@ Neusiedlersee:
   genus: m
   type: n
 Nichts:
-  count: 51
+  count: 56
   type: pron
 Niederlage:
   genus: f
@@ -1667,6 +1682,8 @@ Quitte:
   count: 3
   genus: f
   type: n
+Ra:
+  type: n
 Raeuber:
   count: 1
   genus: m
@@ -1708,7 +1725,7 @@ Regel:
 Regen:
   type: vi
 Reichtum:
-  count: 1
+  count: 2
   genus: m
   type: n
 Relativitaetstheorie:
@@ -1839,6 +1856,7 @@ Schnitzel:
   genus: s
   type: n
 Schoenheit:
+  count: 1
   genus: f
   type: n
 Schriftsteller:
@@ -1876,7 +1894,7 @@ Science:
   count: 5
   type: n
 Scooter:
-  count: 1
+  count: 2
   type: n
 See:
   genus: f
@@ -1942,7 +1960,7 @@ Sonne:
   genus: f
   type: n
 Sonnenschein:
-  count: 1
+  count: 2
   genus: m
   type: n
 Sonnenuntergang:
@@ -2211,7 +2229,7 @@ Verkehrsflugzeug:
   genus: s
   type: n
 Verkehrsmittel:
-  count: 6
+  count: 15
   genus: s
   type: n
 Verkuerzung:
@@ -2402,6 +2420,10 @@ Zeit:
   count: 1
   genus: f
   type: n
+Zeppelin:
+  count: 8
+  genus: m
+  type: n
 Zerstoerung:
   count: 1
   type: n
@@ -2429,7 +2451,7 @@ Zwerg:
 Zylinder:
   type: n
 abenteuerfilm:
-  count: 2
+  count: 10
   genus: m
   type: n
 abgeneigt:
@@ -2447,6 +2469,9 @@ actionfilm:
   count: 17
   genus: f
   type: n
+aegyptische:
+  count: 1
+  type: adv
 aehnelt:
   type: vi
 aengstlich:
@@ -2520,7 +2545,7 @@ angeht:
   count: 7
   type: vi
 angenehm:
-  count: 6
+  count: 7
   type: adj
 angespannt:
   type: adj
@@ -2633,7 +2658,7 @@ beginn:
   genus: m
   type: n
 begrenzt:
-  count: 1
+  count: 2
   type: adj
 begruessung:
   genus: f
@@ -2791,6 +2816,9 @@ cocktailsessel:
   type: n
 columbia:
   type: n
+computer:
+  genus: m
+  type: n
 computertisch:
   genus: m
   type: n
@@ -2850,7 +2878,7 @@ ding:
   genus: s
   type: n
 dir:
-  count: 3
+  count: 4
   type: n
 direkt:
   count: 13
@@ -2880,7 +2908,7 @@ druckertisch:
   genus: m
   type: n
 du:
-  count: 60
+  count: 66
   type: n
 dummes:
   type: adj
@@ -2891,7 +2919,7 @@ egoistisch:
   count: 1
   type: adj
 ehrlich:
-  count: 2
+  count: 3
   type: adv
 eifrig:
   count: 2
@@ -2934,6 +2962,9 @@ elementarteilchen:
 endlichkeit:
   genus: f
   type: n
+engel:
+  genus: m
+  type: n
 entdeckt:
   type: vi
 entschieden:
@@ -2960,8 +2991,11 @@ erde:
   type: n
 erebus:
   type: n
+erfolg:
+  genus: m
+  type: n
 erfolgreich:
-  count: 113
+  count: 122
   type: adj
 erfreut:
   type: adj
@@ -3019,34 +3053,4 @@ fauteuil:
   type: n
 fehler:
   count: 1
-  type: n
-fehlt:
-  count: 2
-  type: adj
-feige:
-  count: 5
-  genus: f
-  type: n
-feinen:
-  type: adj
-feiner:
-  type: adj
-fernsehschrank:
-  genus: m
-  type: n
-fernsehsessel:
-  genus: m
-  type: n
-festen:
-  type: n
-fiction:
-  count: 4
-  type: n
-figuralen:
-  type: adj
-film:
-  type: n
-filmdrama:
-  count: 22
-  genus: s
   type: n
