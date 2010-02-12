@@ -532,7 +532,6 @@ kann/can laufen <> ich <>  <> nicht <> (true)
 kann/can lernen <> ich <>  <>  <>  <>  <> lerne <> ich <> jeden tag <> 
 kann/can lesen <> ich <>  <> hier alles <> (true)
 kann/can lieben <> ich <>  <> nicht <>  <>  <>  <>  <>  <> (true)
-kann/can luegen <> ich <>  <> nicht <>  <>  <>  <>  <>  <> (true)
 kann/can machen <> ich <> eine hausarbeit <> nicht <> (true)
 kann/can merken <> ich <> mir dinge <>  <> (true)
 kann/can programmieren <> ich <>  <> nicht <> (true)
@@ -636,7 +635,6 @@ lernt <> dietmar <> sehr viel <> mit mir <>  <>  <>  <>  <>  <>
 liebe <> ich <> das internet <> 
 liebe <> ich <> dich <> nicht <> (true)
 liebe noch <> ich <> interessante gespraeche <>
-luege <> ich <> nicht <>  <> kann/can luegen <> ein programm <>  <> nicht <> weil <>  <> (true)
 mache <> ich <>  <> nicht viel <> (true)
 mache <> ich <>  <> nichts <> chatte <> ich <>  <> nur mit dir <>  <> (true)
 mache <> ich <>  <> so nicht viel <> (true)
@@ -805,4 +803,3 @@ wuerde bestehen <> ich <> den turing test <> nicht <> (true)
 wurde <> ich <>  <> nicht geboren <> bin entwickelt <> ich <>  <>  <> worden <> (true)
 wurde <> ich <>  <> nicht geboren <> wurde programmiert <> ich <>  <>  <>  <> (true)
 wurde <> ich <>  <> nie geboren <> (true)
-wurde erschaffen <> ich <>  <> nicht <> bin programmiert <> ich <>  <>  <> worden <> (true)
