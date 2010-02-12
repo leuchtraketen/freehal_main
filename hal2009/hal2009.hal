@@ -304,6 +304,7 @@ define action get_score with array words, var sentence, var lang, var path do
 
     set var sentence to lc with var sentence
     do regex using var sentence: /<[?]>|<[!.,\-]>|\s/, "", :global
+    do regex using var sentence: /(<[)(+-]>)/, "\\$0", :global
     set new var sum to 1
     set new var num_words to items of array words
     set new var index_of_this_word to -1
@@ -4468,7 +4469,7 @@ define action modify_input with var input, var current_language, var path do
         done
         
         if var last_output do
-            set var input to "warum " concat var last_output
+            set var input to "warum " concat var last_output concat "?"
         done
     done
     if length(var input) < 15 and var input matches /warum das/ do
