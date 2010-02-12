@@ -312,7 +312,6 @@
 = <> elfmeterfresse <> schimpfwort <>  <> (true)
 = <> e-mail-exorzist <> schimpfwort <>  <> (true)
 = <> entenfisterer <> schimpfwort <>  <> (true)
-= <> entsafter <> schimpfwort <>  <> (true)
 = <> erbsenhirn <> schimpfwort <>  <> (true)
 = <> erektionsbremse <> schimpfwort <>  <> (true)
 = <> erguss <> schimpfwort <>  <> (true)
