@@ -1201,6 +1201,27 @@ define action compute_tags with var word, var lang, var path do
         # Is it built in into FreeHAL?
         # CODE
         if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, var word, var lang, var path
+            set from array tags first item to from global hash builtin_part_of_speech item { var word }
+            
+            if not from array tags first item do
+                set array tags to an empty array
+                print "NOT built in: " concat var word
+                print new line
+            done
+            else do
+                print "built in: " concat from array tags first item
+                print new line
+                
+                # TEXT
+                # If no noun, we need no genus, so skip the rest
+                # CODE
+                if not from array tags first item matches /n/ do
+                    go to last
+                done
+            done
+        done
+        if is an empty array tags do
             set array tags to memory_get_by_name using var main_file, ucfirst(var word), var lang, var path
             set from array tags first item to from global hash builtin_part_of_speech item { ucfirst(var word) }
             
@@ -3433,7 +3454,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                             push into array sentence, items of array proper_verbs
                         done
                         else do
-                            if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s/ do
+                            if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s|(nicht)/ do
                                 push into array sentence, from array clause item [3]
                                 push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [1]
@@ -4116,6 +4137,11 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         set new array verbs to from hash parsed item { 'verbs' }
         for each new array verb in array verbs do
             set var verb to from array verb first item
+            
+            set new var verb_category to verb_category with var verb
+            if var verb_category do
+                set var verb to var verb concat "/" concat var verb_category
+            done
             
             if var verb matches /opposite/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'

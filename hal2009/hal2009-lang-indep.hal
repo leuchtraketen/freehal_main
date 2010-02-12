@@ -197,6 +197,9 @@ define action compute_input with var input is rw, var lang, var path do
         set var input to "_" concat var input concat "_ = _(good)_"
     done
     
+    do regex using var input: /(^|\s)genauso (.*?) wie /, "$0genauso $1 wie{{{adj}}} ", :global:i
+    do regex using var input: /(^|\s)so (.*?) wie /, "$0so $1 wie{{{adj}}} ", :global:i
+    
     do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i
     do regex using var input: /(^|\s)?und sonst(\s|\$)/, " wie geht es dir ", :global:i
