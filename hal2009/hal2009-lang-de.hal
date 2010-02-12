@@ -1376,6 +1376,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'bestimmter' => 1,
           'bestimmten' => 1,
           'bestimmtem' => 1,
+          'sicher' => 1,
           'denn' => 1,
           'dann' => 1,
           'gerne' => 1,
@@ -2405,6 +2406,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'schwach' => "adj",
           'anfangs' => "adj",
           'weich' => "adj",
+          'alles' => "n",
           'haette' => "v",
           'universitaet' => "n",
           'druesenendstueck' => "n",
@@ -2668,6 +2670,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'muede' => "adj",
           'tausend' => "adj",
           'wacker' => "adj",
+          'bewusst' => "adj",
+          'gewesen' => "v",
+          'eingestellt' => "adj",
           'gleich' => "adj",
           'lust' => "n",
           'lauter' => "adj",
@@ -2676,6 +2681,11 @@ set multi-line new global hash builtin_part_of_speech to {
           'muerbe' => "adj",
           'papst' => "n",
           'Papst' => "n",
+          'lebewesen' => "n",
+          'kompliziert' => "adj",
+          'verwirrt' => "adj",
+          'zufrieden' => "adj",
+          'schmerzen' => "n",
           'not' => "adj",
           'vierzehn' => "adj",
           'fuer' => "prep",
@@ -2683,6 +2693,10 @@ set multi-line new global hash builtin_part_of_speech to {
           'einen' => "art",
           'who' => "questionword",
           'jede' => "adj",
+          'Aussehen' => "n",
+          'aussehen' => "v",
+          'Fragen' => "n",
+          'fragen' => "v",
           'wert' => "adj",
           'kess' => "adj",
           'wie' => "questionword",
@@ -3624,6 +3638,12 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /kann$/ do
             do regex using var verb: /kann$/, "kannst", :global:i
         done
+        else if var verb matches /kennst$/ do
+            do regex using var verb: /kennst$/, "kenne", :global:i
+        done
+        else if var verb matches /kenne$/ do
+            do regex using var verb: /kenne$/, "kennst", :global:i
+        done
         else if var verb matches /sprichst$/ do
             do regex using var verb: /sprichst$/, "spreche", :global:i
         done
@@ -3642,8 +3662,14 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /te$/ do
             do regex using var verb: /te$/, "test", :global:i
         done
-        else if var verb matches /(e)?st$/ do
-            do regex using var verb: /(e)?st$/, "e", :global:i
+        else if var verb matches /sst$/ do
+            do regex using var verb: /sst$/, "sse", :global:i
+        done
+        else if var verb matches /est$/ do
+            do regex using var verb: /est$/, "e", :global:i
+        done
+        else if var verb matches /st$/ do
+            do regex using var verb: /st$/, "e", :global:i
         done
         else if var verb matches /e$/ do
             do regex using var verb: /e$/, "st", :global:i

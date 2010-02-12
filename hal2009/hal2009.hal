@@ -1175,6 +1175,7 @@ done
 # CODE
 define action compute_tags with var word, var lang, var path do
     do regex using var word: /<[\x80-\xFF]>/, "", :global
+    do regex using var word: /<[)(]>/, "", :global
     
     set new var is_tagger_on to check_config with "tagger", 1, var lang, var path
 
@@ -4735,7 +4736,10 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         # CODE
         if flag number_of_clause is 0 do
             set hash parsed to parse with var lang, array words, hash tags
-            set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }
+            set new array entities to an empty array
+            push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
+            push into array entities, items of that array: from hash parsed item { 'objects' } end items of
+            set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }, array entities
             set from hash parsed item { 'subjects' } to toggle_entities using from hash parsed item { 'subjects' }
             set from hash parsed item { 'objects' } to toggle_entities using from hash parsed item { 'objects' }
             set from hash parsed item { 'adverbs' } to toggle_entities using from hash parsed item { 'adverbs' }
@@ -4745,7 +4749,10 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         done
         else do
             set new hash parsed_clause to parse with var lang, array words, hash tags
-            set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }
+            set new array entities to an empty array
+            push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
+            push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
+            set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }, array entities
             set from hash parsed_clause item { 'subjects' } to toggle_entities using from hash parsed_clause item { 'subjects' }
             set from hash parsed_clause item { 'objects' } to toggle_entities using from hash parsed_clause item { 'objects' }
             set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }

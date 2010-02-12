@@ -155,6 +155,7 @@ define action compute_input with var input is rw, var lang, var path do
     if var lang matches "en" do
         do regex using var input: /(^|\s)?an\s/, "$0a ", :global:i
     done
+    do regex using var input: /<[,]>/, ", ", :global:i
     do regex using var input: /<ws><[,]><ws>(und|oder|or|and)/, " $0", :global:i
     do regex using var input: /^na<ws><[,]><ws>/, "", :global:i
     do regex using var input: /^naja<ws><[,]><ws>/, "", :global:i
@@ -197,6 +198,8 @@ define action compute_input with var input is rw, var lang, var path do
         set var input to "_" concat var input concat "_ = _(good)_"
     done
     
+    do regex using var input: /(^)(<[A-Z]><[a-z]>+?en) (ist) /, "$0_$1_ $2 ", :global:i
+    
     do regex using var input: /(^|\s)genauso (.*?) wie /, "$0genauso $1 wie{{{adj}}} ", :global:i
     do regex using var input: /(^|\s)so (.*?) wie /, "$0so $1 wie{{{adj}}} ", :global:i
     
@@ -207,7 +210,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /(^|\s)?kurz \, bevor\s/, " , kurz bevor ", :global:i
     do regex using var input: /^ \,/, " ", :global:i
     do regex using var input: /^\,/, " ", :global:i
-    do regex using var input: / mehr als /, " mehrals ", :global:i
+    do regex using var input: / mehr als /, " mehr als{{{adj}}} ", :global:i
     do regex using var input: / lust zu /, " lust , zu ", :global:i
     do regex using var input: / weisst du was (.*) ist /, " was ist $0 ", :global:i
     if length(var input) < 14 do
@@ -496,6 +499,8 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: / wirst du genannt/, " heisst du ", :global:i
     do regex using var input: / wird (.*?) genannt/, " $0 ist ", :global:i
+    
+    do regex using var input: /^das\s(<[a-z]>+?)\s(ich|du)/, "$1 $0 das ", :global:i
     
     do regex using var input: / ein jeder /, " _jeder_ ", :global:i
     
