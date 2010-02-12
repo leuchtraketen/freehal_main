@@ -1283,6 +1283,7 @@ void* hal2009_signal_handler(void* parameters) {
                 char* parameters[3] = {files_to_check[i], code, start_type};
                 /// pthread_create (&thread_no_1, NULL, hal2009_handle_signal, (void*)parameters);
                 hal2009_handle_signal((void*)parameters);
+                halfree(code);
 
                 if (0 == strcmp(files_to_check[i], "_printf")) {
                     unlink("_exit_hal2009_signal_handler");

@@ -317,6 +317,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sdes weiteren(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdeswegen(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdochnoch(<[\s!.,?]>+)/, "$0", :global:i
+    do regex using var input: /\sgar(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sdurchwegs(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sebenfalls(<[\s!.,?]>+)/, "$0", :global:i
     do regex using var input: /\sehemals(<[\s!.,?]>+)/, "$0", :global:i
@@ -840,6 +841,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sim\s/, " in dem ", :global:i
     do regex using var input: /\sbeim\s/, " bei dem ", :global:i
     if var lang matches "de" do
+        do regex using var input: /\sam\s(<[a-zA-Z]>*?)ten($|\s|<[,]>)/, " am_$0ten{{{adj}}} $1 ", :global:i
         do regex using var input: /\sam\s/, " an dem ", :global:i
         do regex using var input: /\sins\s/, " in das ", :global:i
         do regex using var input: /^im\s/, " in dem ", :global:i

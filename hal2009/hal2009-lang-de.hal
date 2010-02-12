@@ -3644,6 +3644,12 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /kenne$/ do
             do regex using var verb: /kenne$/, "kennst", :global:i
         done
+        else if var verb matches /mag$/ do
+            do regex using var verb: /mag$/, "magst", :global:i
+        done
+        else if var verb matches /magst$/ do
+            do regex using var verb: /magst$/, "mag", :global:i
+        done
         else if var verb matches /sprichst$/ do
             do regex using var verb: /sprichst$/, "spreche", :global:i
         done
@@ -4471,6 +4477,9 @@ define action verb_category with var verb do
         do return with "want"
     done
     if var verb matches /(kann)|(kannst)|(konnte)|(konntest)|(konnten)|(konntet)/ do
+        do return with "can"
+    done
+    if var verb matches /(koenne|koennen|koennte|koenntest|koennten|koenntet|koennt)/ do
         do return with "can"
     done
     if var verb matches /(darf)|(darfst)|(dueftest)|(duerften)|(duerftet)|(duerfte)/ do

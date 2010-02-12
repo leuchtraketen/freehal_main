@@ -307,6 +307,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
 
     --(*num_of_words);
     
+    free(verbs);
     free(subj);
     free(obj);
     free(advs);
