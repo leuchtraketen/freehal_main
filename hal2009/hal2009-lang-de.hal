@@ -2566,6 +2566,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'gutes' => "adj",
           'anbrennen' => "v",
           'lassen' => "v",
+          'trinken' => "v",
           'cdu' => "n",
           'cooles' => "adj",
           'arena' => "n",

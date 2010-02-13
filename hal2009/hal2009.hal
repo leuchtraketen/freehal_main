@@ -3108,7 +3108,7 @@ define action logic with var input, var lang, var path, hash parsed do
         push into array results, items of array result_array
     done
     set new array false_arrays to an empty array
-    set items of array true_arrays to values of hash in_false
+    set items of array false_arrays to values of hash in_false
     for each new array result_array in array false_arrays do
         push into array results, items of array result_array
     done

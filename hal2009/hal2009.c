@@ -307,6 +307,10 @@ int remove_negation (char* line, double* truth_ref) {
         sline_ref = replace(sline_ref, "nicht ", " ");
         (*truth_ref) = 0.0;
     }
+    if (strstr(line, "nicht") == line) {
+        sline_ref = replace(sline_ref, "nicht", " ");
+        (*truth_ref) = 0.0;
+    }
     if (strstr(line, " not ")) {
         sline_ref = replace(sline_ref, " not ", "");
         (*truth_ref) = 0.0;
