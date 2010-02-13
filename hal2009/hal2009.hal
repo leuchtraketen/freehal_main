@@ -4125,6 +4125,11 @@ define action sort_out with array results, var mode, hash parsed do
 done
 
 define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, var lang, var path do
+    set new var no_reread to 0
+    if var pro_file_name and not var pro_file_name matches /facts/ do
+        set var no_reread to 1
+    done
+
     if not var pro_file_name do
         set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
     done
