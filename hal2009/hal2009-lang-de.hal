@@ -2016,6 +2016,16 @@ set multi-line new global hash builtin_part_of_speech to {
           'welchem' => "questionword",
           'schlecht' => "adj",
           'beruehmtest' => "adj",
+          'ausdruecke' => "n",
+          'erklaeren' => "v",
+          'erzaehlen' => "v",
+          'unterhalten' => "v",
+          'denken' => "v",
+          'fliegen' => "v",
+          'fluchen' => "v",
+          'hoeren' => "v",
+          'schreiben' => "v",
+          'merken' => "v",
           'linken' => "adj",
           'zusammen' => "adj",
           'wohnt' => "v",
@@ -2366,6 +2376,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'denselben' => "adj",
           'out' => "prep",
           'ist' => "v",
+          'dinge' => "n",
+          'dingen' => "n",
           'kuehl' => "adj",
           'vorhin' => "adj",
           'meisten' => "adj",
@@ -2923,7 +2935,10 @@ define action guess_part_of_speech with var word do
         set var guessed to 'adj'
     done
     if var word matches /ier[te][n]?$/ do
-        set var guessed to 'vi'
+        set var guessed to 'v'
+    done
+    if lc(var word) matches var word and var word matches /en$/ do
+        set var guessed to 'v'
     done
     if var word matches /...ist((en)|(in))$/ do
         set var guessed to 'n'
