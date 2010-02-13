@@ -4124,14 +4124,7 @@ define action sort_out with array results, var mode, hash parsed do
     done
 done
 
-define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, var lang, var path do
-    set new flag no_reread to 0
-    if var pro_file_name do
-        set flag no_reread to 1
-    done
-    if not var pro_file_name matches /facts/ do
-        set flag no_reread to 1
-    done
+define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, flag no_reread, var lang, var path do
 
     if not var pro_file_name do
         set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
@@ -4775,7 +4768,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         done
     done
     if not is an empty hash parsed do
-        do save_facts with [ hash parsed ], hash tags, var file_name, var classification, var lang, var path
+        do save_facts with [ hash parsed ], hash tags, var file_name, var classification, 1, var lang, var path
     done
 done
 
@@ -4916,6 +4909,8 @@ define action init_prot_files with var current_language, var path do
                     done
                 done
                 do close using var translation_input_handle
+                
+                do reread_pro_file with var pro_file, var current_language
 
                 do be_slow without arguments
                 set new var copy_input_handle to handle for file name var file, read
@@ -5274,11 +5269,11 @@ define action shell with var current_language, var path do
             
             set new var saved_data to ''
             if var do_learn do
-                set var saved_data to save_facts with array facts_to_save, hash tags, '',  '', var current_language, var path
+                set var saved_data to save_facts with array facts_to_save, hash tags, '',  '', 0, var current_language, var path
                 set var saved_data to escape_html using var saved_data
             done
             else do
-                set var saved_data to save_facts with array facts_to_save, hash tags, '-', '', var current_language, var path
+                set var saved_data to save_facts with array facts_to_save, hash tags, '-', '', 0, var current_language, var path
                 set var saved_data to escape_html using var saved_data
             done
             

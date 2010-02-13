@@ -1139,8 +1139,6 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
 
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     
-    printf("Filtering next fact...\n");
-    
     if (!(
     
             fact_matches_verb                 (fact, request)
@@ -1188,6 +1186,9 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
     
     int b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
     for (b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
+    
+        printf("Filtering fact %i.\n", b);
+        
         if (list[b] != -1) {
             list[b] = filter_fact_by_rules(list[b], request);
         }

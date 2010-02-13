@@ -2229,6 +2229,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'stolz' => "adj",
           'heisse' => "v",
           'my' => "art",
+          'herz' => "n",
           '_to_' => "questionword",
           'erstes' => "adj",
           'weder' => "prep",
@@ -3679,6 +3680,12 @@ define action toggle_verbs with array verbs, array entities do
         done
         else if var verb matches /werde$/ do
             do regex using var verb: /werde$/, "wirst", :global:i
+        done
+        else if var verb matches /schlaefst$/ do
+            do regex using var verb: /schlaefst$/, "schlafe", :global:i
+        done
+        else if var verb matches /schlafe$/ do
+            do regex using var verb: /schlafe$/, "schlaefst", :global:i
         done
         else if var verb matches /isst$/ do
             do regex using var verb: /isst$/, "esse", :global:i
