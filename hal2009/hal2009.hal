@@ -4126,7 +4126,10 @@ done
 
 define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, var lang, var path do
     set new var no_reread to 0
-    if var pro_file_name and not var pro_file_name matches /facts/ do
+    if var pro_file_name do
+        set var no_reread to 1
+    done
+    if not var pro_file_name matches /facts/ do
         set var no_reread to 1
     done
 
@@ -4353,7 +4356,10 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         done
         
         do close with var pro_file
-        do reread_pro_file with var pro_file_name, var lang
+        
+        if not no_reread do
+            do reread_pro_file with var pro_file_name, var lang
+        done
     done
     
     do return with var line
