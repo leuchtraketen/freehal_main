@@ -2378,6 +2378,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'ist' => "v",
           'dinge' => "n",
           'dingen' => "n",
+          'regen' => "n",
           'kuehl' => "adj",
           'vorhin' => "adj",
           'meisten' => "adj",
