@@ -182,6 +182,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\(true\)/, "_(true)_", :global:i
     do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
     do regex using var input: /\(false\)/, "_(false)_", :global:i
+
+    do regex using var input: /Sie(<[^a-zA-Z]>)/, "du$0", :global
+    do regex using var input: /Ihnen(<[^a-zA-Z]>)/, "dir$0", :global
+    do regex using var input: /ihnen(<[^a-zA-Z]>)/, "dir$0", :global
+
     
     if var input matches /\(bad\)/ do
         do regex using var input: /\s*?\(bad\)/, "", :global:i
@@ -726,11 +731,6 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /(<[a-zA-Z0-9_]>+)<ws><[,]><ws>(<[a-zA-Z0-9_]>+)\s+(und|oder|or|and)<ws>/, "$0 $2 $1 $2 ", :global:i
         do regex using var input: /<ws><[,]><ws>(<[a-zA-Z0-9_]>+\s+<[a-zA-Z0-9_]>+)\s+(und|oder|or|and)<ws>/, " $1 $0 $1 ", :global:i
     end for
-
-    do regex using var input: /Sie(<[^a-zA-Z]>)/, "du$0", :global
-    do regex using var input: /Ihnen(<[^a-zA-Z]>)/, "dir$0", :global
-    do regex using var input: /ihnen(<[^a-zA-Z]>)/, "dir$0", :global
-
     do regex using var input: /heisse\sich/, "ist _mein_name_", :global:i
     do regex using var input: /ich\sheisse/, "_mein_name_ ist", :global:i
 
