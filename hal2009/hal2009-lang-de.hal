@@ -3361,6 +3361,8 @@ define action compute_output with var output do
     
     do regex using var output: / nicht noch /, " noch nicht ", :global:i
 
+    do regex using var output: /<[{]><[{]><[{]>.*?<[}]><[}]><[}]>/, "", :global:i
+
     do regex using var output: / in jahre_/, " im Jahre ", :global:i
     do regex using var output: / in_jahre_/, " im Jahre ", :global:i
 
