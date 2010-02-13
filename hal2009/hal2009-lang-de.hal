@@ -2520,6 +2520,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'ste' => "adj",
           'dritter' => "adj",
           'mitunter' => "adj",
+          'tun' => "v",
           'linke' => "adj",
           'deinen' => "art",
           'meiner' => "art",

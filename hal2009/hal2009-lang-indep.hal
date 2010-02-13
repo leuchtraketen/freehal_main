@@ -187,6 +187,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /Ihnen(<[^a-zA-Z]>)/, "dir$0", :global
     do regex using var input: /ihnen(<[^a-zA-Z]>)/, "dir$0", :global
 
+    do regex using var input: /^(.*?)du mir deinen Namen.*?$/, "Wie ist dein Name? ", :global:i
+    do regex using var input: /^(.*?)du mir.*?deinen Namen.*?$/, "Wie ist dein Name? ", :global:i
     
     if var input matches /\(bad\)/ do
         do regex using var input: /\s*?\(bad\)/, "", :global:i

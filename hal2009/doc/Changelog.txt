@@ -1,3 +1,7 @@
+916:
+
+- Bug 526 korrigiert
+
 873:
 
 - Changelog aktualisiert
