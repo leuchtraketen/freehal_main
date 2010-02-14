@@ -1,5 +1,5 @@
 &:
-  count: 2
+  count: 7
   type: linking
 (aber:
   type: prep
@@ -13,6 +13,7 @@
 (resonaof):
   type: EXIT
 (so:
+  count: 1
   type: prep
 (true):
   type: EXIT
@@ -22,7 +23,7 @@ Abbau:
   genus: m
   type: n
 Abend:
-  count: 3
+  count: 8
   genus: m
   type: n
 Abendlandes:
@@ -31,6 +32,7 @@ Abendlandes:
 Abfangen:
   type: vi
 Abitur:
+  count: 5
   genus: s
   type: n
 Abkuerzung:
@@ -45,18 +47,21 @@ Absinth:
 Aerger:
   count: 1
   type: n
+Aergern:
+  count: 2
+  type: vi
 Aerzte:
   count: 1
   genus: f
   type: n
 Ah:
-  count: 9
+  count: 12
   type: n
 Aha:
   count: 18
   type: inter
 Ahnung:
-  count: 1
+  count: 9
   genus: f
   type: n
 Airbus:
@@ -83,15 +88,15 @@ Alki:
   genus: m
   type: n
 Alkohol:
-  count: 3
+  count: 26
   genus: m
   type: n
 Alleinunterhalter:
-  count: 4
+  count: 9
   genus: m
   type: n
 Alles:
-  count: 5
+  count: 10
   type: pron
 Alpenveilchen:
   count: 3
@@ -99,10 +104,13 @@ Alpenveilchen:
   type: n
 Alter:
   type: adv
+Altertums:
+  type: n
 Alzheimer:
-  count: 1
+  count: 6
   type: n
 Amaretto:
+  count: 1
   genus: m
   type: n
 Amnesty:
@@ -111,17 +119,24 @@ Amnesty:
 Amphibienflugzeug:
   genus: s
   type: n
+Ananas:
+  count: 1
+  genus: f
+  type: n
 Android:
   count: 1
   type: n
+Anfangen:
+  count: 1
+  type: vi
 Angeben:
-  count: 6
+  count: 11
   type: vi
 Angelika:
   count: 3
   type: n
 Angst:
-  count: 6
+  count: 11
   type: n
 Anis:
   count: 3
@@ -134,13 +149,20 @@ Antrieb:
   genus: m
   type: n
 Antwort:
-  count: 5
+  count: 10
   genus: f
   type: n
+Antworten:
+  count: 2
+  type: vi
 Anubis:
   type: n
 Apfel:
-  count: 4
+  count: 6
+  type: n
+Apfelkuchen:
+  count: 1
+  genus: m
   type: n
 Apfelwein:
   genus: m
@@ -152,18 +174,22 @@ Apotheker:
   count: 1
   type: n
 Arbeitsspeicher:
-  count: 2
+  count: 7
   genus: m
   type: n
 Arme:
-  count: 3
+  count: 8
   genus: f
   type: n
 Arrak:
   count: 1
   type: n
+Arsch:
+  count: 1
+  genus: s
+  type: n
 Arschloch:
-  count: 4
+  count: 10
   genus: s
   type: n
 Art:
@@ -188,8 +214,11 @@ Aufbau:
   type: n
 Aufbauorganisation:
   type: n
+Aufbinden:
+  count: 1
+  type: vi
 Aufgabe:
-  count: 5
+  count: 10
   genus: f
   type: n
 Aufgussgetraenk:
@@ -198,23 +227,25 @@ Aufgussgetraenk:
 Auftrag:
   type: n
 Augen:
+  count: 5
   genus: f
   type: n
 Ausdruecke:
+  count: 5
   type: vi
 Ausfuehrung:
   type: n
 Ausgabegeraet:
   type: n
 Auskunftsbuero:
-  count: 3
+  count: 8
   genus: s
   type: n
 Ausschweifungen:
   genus: f
   type: n
 Aussehen:
-  count: 3
+  count: 8
   type: vi
 Aussetzung:
   genus: f
@@ -237,9 +268,11 @@ Ausuebung:
   genus: f
   type: n
 Auto:
+  count: 7
   genus: s
   type: n
 Autofahren:
+  count: 6
   type: vi
 Autokran:
   genus: f
@@ -248,12 +281,27 @@ Autor:
   count: 4
   genus: m
   type: n
+Autos:
+  count: 1
+  genus: f
+  type: n
 Azteken:
   count: 1
   genus: f
   type: n
+Babylon:
+  count: 2
+  type: n
+Babyloniens:
+  type: n
 Bach:
   genus: m
+  type: n
+Bad:
+  count: 1
+  type: n
+Baeren:
+  count: 1
   type: n
 Baerlauch:
   count: 3
@@ -274,8 +322,14 @@ Ballon:
   genus: m
   type: n
 Banane:
-  count: 2
+  count: 4
   genus: f
+  type: n
+Bananen:
+  count: 5
+  genus: f
+  type: n
+Bandleader:
   type: n
 Basilikum:
   count: 3
@@ -301,10 +355,14 @@ Begriff:
   count: 1
   genus: m
   type: n
+Begruendung:
+  count: 2
+  type: n
 Beguenstigung:
   genus: f
   type: n
 Beine:
+  count: 5
   type: n
 Beischlaf:
   genus: m
@@ -341,10 +399,14 @@ Berliner:
   genus: m
   type: n
 Beruf:
-  count: 3
+  count: 8
+  type: n
+Bescheid:
+  count: 1
+  genus: m
   type: n
 Bescheuert:
-  count: 14
+  count: 26
   type: adj
 Besetzung:
   genus: f
@@ -362,7 +424,7 @@ Bestechung:
 Bestehlen:
   type: vi
 Besucher:
-  count: 1
+  count: 6
   genus: m
   type: n
 Betruegen:
@@ -375,20 +437,20 @@ Betrug:
   genus: m
   type: n
 Bett:
-  count: 6
+  count: 11
   type: n
 Bevoelkerung:
   genus: f
   type: n
 Bewertung:
-  count: 138
+  count: 157
   genus: f
   type: n
 Bewunderung:
   genus: f
   type: n
 Bewusstsein:
-  count: 3
+  count: 8
   genus: s
   type: n
 Bezeichnung:
@@ -396,11 +458,11 @@ Bezeichnung:
   genus: f
   type: n
 Bier:
-  count: 5
+  count: 14
   genus: s
   type: n
 Bild:
-  count: 1
+  count: 6
   genus: s
   type: n
 Bilder:
@@ -410,11 +472,16 @@ Bildung:
   count: 1
   genus: f
   type: n
+Biologie:
+  count: 1
+  genus: f
+  type: n
 Birne:
   count: 3
   genus: f
   type: n
 Bitte:
+  count: 1
   genus: f
   type: n
 Blauer:
@@ -423,8 +490,11 @@ Blauer:
 Blauwal:
   genus: m
   type: n
+Blecheimer:
+  count: 1
+  type: n
 Blondine:
-  count: 3
+  count: 8
   genus: f
   type: n
 Bob:
@@ -453,6 +523,7 @@ Bomben:
 Bombenanschlag:
   type: n
 Bond:
+  count: 5
   type: n
 Boot:
   genus: s
@@ -460,11 +531,15 @@ Boot:
 Bordell:
   genus: s
   type: n
+Bordsteinschwalbe:
+  count: 1
+  genus: f
+  type: n
 Borretsch:
   count: 3
   type: n
 Bot:
-  count: 3
+  count: 8
   genus: f
   type: n
 Brandstiftung:
@@ -487,9 +562,10 @@ Brot:
   genus: s
   type: n
 Bruder:
+  count: 5
   type: n
 Buch:
-  count: 3
+  count: 8
   genus: s
   type: n
 Buergermeister:
@@ -508,13 +584,18 @@ Burg:
   type: n
 Burgenland:
   type: n
+Burger:
+  count: 1
+  genus: m
+  type: n
 Burton:
   type: n
 CPU:
-  count: 2
+  count: 7
   genus: f
   type: n
 Calvados:
+  count: 1
   type: n
 Canadian:
   type: n
@@ -537,9 +618,10 @@ Champagner:
   genus: m
   type: n
 Chatbot:
-  count: 6
+  count: 11
   type: n
 Chatten:
+  count: 3
   type: vt
 Chepre:
   type: n
@@ -559,20 +641,26 @@ Cocastrauch:
   count: 3
   type: n
 Computer:
-  count: 5
+  count: 13
   genus: m
   type: n
 Computern:
+  count: 5
   type: n
 Computerprogramm:
-  count: 3
+  count: 8
   genus: f
   type: n
 Computers:
   type: n
 Core:
+  count: 5
+  type: n
+Cs:
+  count: 1
   type: n
 Cybersex:
+  count: 5
   type: n
 Dakara:
   count: 1
@@ -588,15 +676,15 @@ Darstellung:
   genus: f
   type: n
 Daten:
-  count: 11
+  count: 16
   genus: f
   type: n
 Datenbank:
-  count: 4
+  count: 9
   genus: f
   type: n
 Dateneingabe:
-  count: 3
+  count: 8
   genus: f
   type: n
 Davon:
@@ -606,13 +694,13 @@ Definiere:
   count: 1
   type: vi
 Denken:
-  count: 1
+  count: 6
   type: vi
 Denkmuster:
   genus: s
   type: n
 Depp:
-  count: 3
+  count: 8
   genus: m
   type: n
 Deutschen:
@@ -621,7 +709,7 @@ Deutsches:
   count: 1
   type: adj
 Deutschland:
-  count: 3
+  count: 6
   type: n
 Dialogprogramm:
   count: 1
@@ -631,14 +719,14 @@ Dich:
   count: 1
   type: n
 Dieb:
-  count: 11
+  count: 12
   genus: m
   type: n
 Diebstahl:
   genus: m
   type: n
 Dietmar:
-  count: 5
+  count: 11
   type: n
 Dill:
   count: 3
@@ -648,13 +736,18 @@ Dimension:
   genus: f
   type: n
 Dinge:
-  count: 4
+  count: 9
   genus: f
   type: n
 Dingen:
+  count: 5
   type: vi
+Dinkel:
+  count: 1
+  genus: m
+  type: n
 Dir:
-  count: 13
+  count: 18
   type: n
 Disco:
   count: 1
@@ -665,11 +758,20 @@ Doppeldeckerbus:
 Doppelehe:
   genus: f
   type: n
+Dorfmatratze:
+  genus: f
+  type: n
 Dost:
   count: 3
   type: vi
 Draisine:
   genus: f
+  type: n
+Drecksack:
+  genus: m
+  type: n
+Dreckskerl:
+  genus: m
   type: n
 Drink:
   count: 2
@@ -678,7 +780,7 @@ Drogensucht:
   genus: f
   type: n
 Du:
-  count: 125
+  count: 153
   type: n
 Duesenflugzeug:
   genus: f
@@ -688,14 +790,14 @@ Dummheit:
   genus: f
   type: n
 Dumpfbacke:
-  count: 3
+  count: 10
   genus: f
   type: n
 Dunkelheit:
   genus: f
   type: n
 Durst:
-  count: 2
+  count: 9
   genus: m
   type: n
 EADS:
@@ -728,12 +830,13 @@ Ehrenpreis:
   genus: m
   type: n
 Ehrlich:
-  count: 1
+  count: 6
   type: adv
 Eibisch:
   count: 3
   type: n
 Eier:
+  count: 5
   genus: f
   type: n
 Eierlikoer:
@@ -743,6 +846,7 @@ Eigenschaft:
   genus: f
   type: n
 Eigenschaften:
+  count: 5
   genus: f
   type: n
 Einbaum:
@@ -762,6 +866,10 @@ Einheit:
   count: 2
   genus: f
   type: n
+Einkorn:
+  count: 1
+  genus: s
+  type: n
 Einrichtungsgegenstaende:
   count: 1
   genus: f
@@ -779,7 +887,7 @@ Einschienenbahn:
 Einwohnern:
   type: n
 Eis:
-  count: 1
+  count: 4
   genus: s
   type: n
 Eisenbahn:
@@ -799,23 +907,28 @@ Elektronen:
   genus: f
   type: n
 Eltern:
+  count: 5
   type: n
 Email:
+  count: 5
   genus: s
   type: n
 Emailadresse:
+  count: 5
   genus: f
   type: n
 Empfangen:
+  count: 5
   type: vi
 Empfindungen:
+  count: 5
   type: n
 Ende:
   count: 1
   genus: s
   type: n
 Energie:
-  count: 2
+  count: 7
   genus: f
   type: n
 Engel:
@@ -825,7 +938,7 @@ Engel:
 England:
   type: n
 Englisch:
-  count: 2
+  count: 7
   genus: s
   type: n
 Entfuehrer:
@@ -839,7 +952,7 @@ Entsafter:
   genus: m
   type: n
 Entwickler:
-  count: 4
+  count: 9
   genus: m
   type: n
 Entzuendung:
@@ -854,21 +967,26 @@ Er:
   count: 4
   type: n
 Erdbeere:
-  count: 3
+  count: 4
   genus: f
   type: n
 Erektion:
   count: 1
   type: n
 Erfahrung:
+  count: 5
   genus: f
   type: n
 Erfolg:
   count: 4
   genus: m
   type: n
-Erklaeren:
+Ergebnis:
   count: 1
+  genus: s
+  type: n
+Erklaeren:
+  count: 6
   type: vi
 Erpresser:
   count: 1
@@ -882,11 +1000,14 @@ Erregung:
   count: 1
   genus: f
   type: n
-Erzaehlen:
+Erwischen:
   count: 1
   type: vi
+Erzaehlen:
+  count: 6
+  type: vi
 Es:
-  count: 8
+  count: 13
   type: n
 Eskimo:
   count: 1
@@ -899,7 +1020,7 @@ Eukalyptus:
   count: 3
   type: n
 Existenz:
-  count: 5
+  count: 7
   genus: f
   type: n
 Explosion:
@@ -921,13 +1042,14 @@ Faelschung:
   genus: f
   type: n
 Fahrrad:
-  count: 2
+  count: 7
   genus: s
   type: n
 Fahrtreppe:
   genus: f
   type: n
 Fakten:
+  count: 5
   type: vi
 Fallschirm:
   genus: f
@@ -947,20 +1069,23 @@ Familie:
   count: 2
   genus: f
   type: n
+Familienname:
+  genus: m
+  type: n
 Fan:
-  count: 3
+  count: 8
   genus: m
   type: n
 Farbe:
-  count: 2
+  count: 7
   type: n
 Faunus:
   type: n
 Feehal:
-  count: 3
+  count: 8
   type: n
 Fehler:
-  count: 3
+  count: 8
   type: n
 Feige:
   count: 4
@@ -981,12 +1106,16 @@ Fenchel:
   genus: m
   type: n
 Ferien:
+  count: 5
+  type: n
+Ferkel:
+  genus: s
   type: n
 Fernsehen:
-  count: 1
+  count: 6
   type: n
 Fernsehserie:
-  count: 1
+  count: 3
   type: n
 Feuer:
   genus: s
@@ -996,7 +1125,7 @@ Feuerloescher:
   genus: m
   type: n
 Fiction:
-  count: 5
+  count: 6
   type: n
 Figur:
   genus: f
@@ -1013,15 +1142,17 @@ Fingerhut:
   genus: m
   type: n
 Firefox:
+  count: 5
   type: n
 Flachs:
   count: 10
   genus: m
   type: n
 Fliegen:
-  count: 1
+  count: 6
   type: vi
 Floehe:
+  count: 5
   genus: f
   type: n
 Floss:
@@ -1048,26 +1179,30 @@ Form:
   count: 2
   genus: f
   type: n
+Forschungsprojekt:
+  count: 9
+  genus: s
+  type: n
 Foto:
-  count: 1
+  count: 6
   genus: f
   type: n
 Frachtschiff:
   genus: f
   type: n
 Frage:
-  count: 3
+  count: 9
   genus: f
   type: n
 Fragen:
-  count: 1
+  count: 6
   type: vi
 Frau:
-  count: 5
+  count: 10
   genus: f
   type: n
 Frechdachs:
-  count: 3
+  count: 8
   genus: m
   type: n
 Free:
@@ -1077,7 +1212,7 @@ FreeHAL:
   count: 2
   type: n
 Freehal:
-  count: 6
+  count: 11
   type: n
 Freiburg:
   type: n
@@ -1090,20 +1225,21 @@ Freiheitsberaubung:
   genus: f
   type: n
 Freizeit:
-  count: 3
+  count: 8
   genus: f
   type: n
 Fremdsprachen:
+  count: 5
   genus: f
   type: n
 Freude:
   count: 3
   type: n
 Freunde:
-  count: 4
+  count: 9
   type: n
 Freundin:
-  count: 4
+  count: 9
   genus: f
   type: n
 Freundschaft:
@@ -1119,7 +1255,7 @@ Froehlichkeit:
   genus: f
   type: n
 Fuesse:
-  count: 1
+  count: 6
   genus: f
   type: n
 Funkfeuer:
@@ -1137,8 +1273,12 @@ Furunkel:
   genus: s
   type: n
 Fussball:
-  count: 1
+  count: 6
   genus: m
+  type: n
+Fussballspiele:
+  count: 1
+  genus: f
   type: n
 Gaensebluemchen:
   count: 4
@@ -1162,12 +1302,15 @@ Geborgenheit:
   count: 1
   type: n
 Geburtstag:
+  count: 5
   genus: m
   type: n
 Gedaechtnis:
+  count: 5
   genus: s
   type: n
 Gedichte:
+  count: 5
   genus: f
   type: n
 Gefangenschaft:
@@ -1175,7 +1318,7 @@ Gefangenschaft:
   genus: f
   type: n
 Gefuehle:
-  count: 8
+  count: 14
   genus: f
   type: n
 Gegenteil:
@@ -1185,6 +1328,7 @@ Gegenteil:
 Gehaeuse:
   type: n
 Gehirn:
+  count: 5
   type: n
 Geiselnahme:
   genus: f
@@ -1193,6 +1337,7 @@ Gelber:
   count: 4
   type: adj
 Geld:
+  count: 5
   genus: s
   type: n
 Geldfaelscher:
@@ -1203,6 +1348,7 @@ Geldfaelschung:
   genus: f
   type: n
 Gelogen:
+  count: 5
   type: vi
 Gemeinde:
   genus: f
@@ -1219,7 +1365,7 @@ Gemuese:
 Generationen:
   type: n
 Geografie:
-  count: 4
+  count: 9
   type: n
 Georgischen:
   type: adj
@@ -1229,28 +1375,43 @@ Geraet:
 Germer:
   count: 3
   type: n
+Gerste:
+  count: 1
+  genus: f
+  type: n
 Geschichte:
   genus: f
   type: n
 Geschichten:
+  count: 5
   genus: f
   type: n
 Geschlecht:
+  count: 5
   genus: s
   type: n
+Geschlechtsorgane:
+  count: 1
+  genus: f
+  type: n
 Geschwister:
+  count: 5
   genus: f
   type: n
 Gesellschaft:
   count: 1
   genus: f
   type: n
+Gesicht:
+  count: 1
+  genus: s
+  type: n
 Gespraeche:
-  count: 3
+  count: 9
   genus: f
   type: n
 Gespraechspartner:
-  count: 3
+  count: 8
   genus: m
   type: n
 Gesundheit:
@@ -1258,7 +1419,7 @@ Gesundheit:
   genus: f
   type: n
 Getraenk:
-  count: 2
+  count: 7
   genus: s
   type: n
 Getreidebrand:
@@ -1289,18 +1450,21 @@ Glauben:
 Gluecksspiel:
   genus: s
   type: n
+Golden:
+  count: 1
+  type: adj
 Gott:
-  count: 4
+  count: 9
   genus: m
   type: n
 Gottes:
   type: n
 Gramatik:
-  count: 3
+  count: 8
   genus: f
   type: n
 Grammatik:
-  count: 3
+  count: 8
   genus: f
   type: n
 Grand:
@@ -1320,6 +1484,7 @@ Groesse:
   genus: f
   type: n
 Grosse:
+  count: 5
   genus: f
   type: n
 Grosser:
@@ -1333,11 +1498,11 @@ Gruenes:
   count: 1
   type: adj
 Grund:
-  count: 1
+  count: 6
   genus: m
   type: n
 Grundfragen:
-  count: 4
+  count: 6
   genus: f
   type: n
 Gruppe:
@@ -1350,13 +1515,15 @@ Gruppen:
 Gucky:
   type: n
 Haare:
-  count: 3
+  count: 8
   genus: f
   type: n
 Haarfarbe:
+  count: 5
   genus: f
   type: n
 Haende:
+  count: 5
   genus: f
   type: n
 Haengebahn:
@@ -1390,7 +1557,12 @@ Handlungen:
   count: 1
   genus: f
   type: n
+Handy-Nummer:
+  count: 6
+  genus: f
+  type: n
 Handy:
+  count: 6
   genus: s
   type: n
 Hanf:
@@ -1398,7 +1570,7 @@ Hanf:
   genus: m
   type: n
 Hardware:
-  count: 3
+  count: 8
   genus: f
   type: n
 Hartkaese:
@@ -1408,7 +1580,7 @@ Haschisch:
   genus: s
   type: n
 Hase:
-  count: 3
+  count: 8
   type: n
 Haselnuss:
   count: 3
@@ -1419,18 +1591,20 @@ Hass:
   genus: m
   type: n
 Hauptstadt:
-  count: 1
+  count: 2
   type: n
 Hauptzeichnerin:
   genus: f
   type: n
 Hausarbeit:
+  count: 5
   genus: f
   type: n
 Hausfriedensbruch:
   genus: m
   type: n
 Haustiere:
+  count: 5
   genus: f
   type: n
 Havana:
@@ -1443,13 +1617,13 @@ Heidelbeere:
   genus: f
   type: n
 Heidi:
-  count: 5
+  count: 10
   type: n
 Heinrich:
   count: 1
   type: n
 Helfen:
-  count: 3
+  count: 9
   type: vt
 Helles:
   type: adj
@@ -1464,15 +1638,20 @@ Herkunft:
   genus: f
   type: n
 Herold:
-  count: 3
+  count: 8
   genus: m
   type: n
 Herstellung:
   genus: f
   type: n
-Herz:
-  genus: s
+Herunterladen:
+  count: 1
+  type: vi
   type: adv
+Herz:
+  count: 5
+  genus: s
+  type: n
 Herzlichkeit:
   count: 1
   genus: f
@@ -1482,7 +1661,7 @@ Hibiskus:
   genus: m
   type: n
 Highlander:
-  count: 5
+  count: 10
   genus: m
   type: n
 Hilfe:
@@ -1503,24 +1682,42 @@ Himbeere:
   count: 3
   genus: f
   type: n
+Himbeergeist:
+  count: 4
+  genus: m
+  type: n
 Himmel:
   genus: m
+  type: n
+Hirse:
+  count: 1
+  genus: f
   type: n
 Hitze:
   genus: f
   type: n
 Hm:
-  count: 6
+  count: 8
   type: inter
 Hmm:
-  count: 32
+  count: 39
   type: inter
+Hmmm:
+  count: 1
+  type: n
 Hobby:
-  count: 3
+  count: 8
   genus: s
   type: n
 Hobbys:
+  count: 6
+  type: n
+Hobel:
   count: 1
+  type: n
+Hobelbank:
+  count: 1
+  genus: f
   type: n
 Hochgeschwindigkeitszug:
   type: n
@@ -1530,6 +1727,9 @@ Hochstapelei:
 Holunder:
   count: 3
   genus: m
+  type: n
+Homburg:
+  count: 1
   type: n
 Hopfen:
   count: 3
@@ -1549,23 +1749,29 @@ Humor:
   genus: m
   type: n
 Hunde:
-  count: 5
+  count: 10
   genus: f
   type: n
 Hunger:
-  count: 1
+  count: 6
   genus: m
   type: n
+Hure:
+  count: 2
+  type: n
 Ich:
-  count: 148
+  count: 230
   type: n
 Indischer:
   count: 1
   type: adj
 Infektion:
   type: n
+Info@freehal:
+  count: 2
+  type: n
 Informationen:
-  count: 4
+  count: 9
   type: n
 Informationstechnik:
   genus: f
@@ -1581,9 +1787,10 @@ Inkas:
   count: 1
   type: n
 Intelligenz:
-  count: 4
+  count: 10
   type: n
 Interessen:
+  count: 5
   genus: f
   type: n
 International:
@@ -1593,13 +1800,13 @@ Internationale:
   count: 1
   type: adj
 Internet:
-  count: 4
+  count: 9
   type: n
 Inverkehrbringen:
   genus: s
   type: n
 Ip:
-  count: 1
+  count: 6
   genus: f
   type: n
 Irish:
@@ -1607,22 +1814,23 @@ Irish:
 Italien:
   type: n
 Ja:
-  count: 2
+  count: 3
   type: adv
 Jahr:
   count: 2
   type: n
 Jahre:
-  count: 4
+  count: 9
   type: n
 Jahren:
-  count: 3
+  count: 8
   type: n
 Jahrgang:
   type: n
 Jahrhunderts:
   type: n
 James:
+  count: 5
   type: n
 Japanischer:
   type: adj
@@ -1633,19 +1841,21 @@ Johannisbeere:
   count: 3
   genus: f
   type: n
+Joseph:
+  type: n
 Joshua:
-  count: 3
+  count: 8
   type: n
 Juan:
   type: n
 Jugend:
   type: n
 Jukebox:
-  count: 3
+  count: 5
   genus: f
   type: n
 KI:
-  count: 3
+  count: 8
   genus: f
   type: n
 Kabriolett:
@@ -1656,7 +1866,7 @@ Kaelte:
   genus: f
   type: n
 Kaffee:
-  count: 1
+  count: 8
   genus: m
   type: n
 Kahlenberg:
@@ -1686,6 +1896,9 @@ Kapstachelbeere:
   count: 3
   genus: f
   type: n
+Karotte:
+  genus: f
+  type: n
 Karre:
   count: 1
   genus: f
@@ -1693,9 +1906,15 @@ Karre:
 Kaspische:
   type: adj
 Katze:
+  count: 5
   genus: f
   type: n
 Katzen:
+  count: 5
+  genus: f
+  type: n
+Keks:
+  count: 2
   genus: f
   type: n
 Kernreaktionen:
@@ -1704,10 +1923,10 @@ Kettenfahrzeug:
   genus: s
   type: n
 Ki:
-  count: 10
+  count: 22
   type: n
 Killer:
-  count: 41
+  count: 45
   genus: m
   type: n
 Kilogramm:
@@ -1715,7 +1934,7 @@ Kilogramm:
   genus: s
   type: n
 Kinder:
-  count: 3
+  count: 9
   type: n
 Kinderhilfswerk:
   count: 1
@@ -1724,14 +1943,22 @@ Kinderhilfswerk:
 Kindern:
   count: 3
   type: n
+Kitt:
+  type: n
 Klappe:
+  count: 5
   genus: f
   type: n
 Kleider:
+  count: 5
+  genus: f
+  type: n
+Kleidung:
+  count: 2
   genus: f
   type: n
 Kleiner:
-  count: 13
+  count: 18
   type: adj
 Klette:
   count: 3
@@ -1745,7 +1972,7 @@ Knoblauch:
   genus: m
   type: n
 Koerper:
-  count: 5
+  count: 11
   genus: m
   type: n
 Koerperverletzung:
@@ -1762,12 +1989,15 @@ Komitee:
   count: 1
   genus: s
   type: n
+Konversation:
+  count: 1
+  type: n
 Kosmos:
   count: 5
   genus: m
   type: n
 Kotzbrocken:
-  count: 3
+  count: 8
   genus: m
   type: n
 Kraft:
@@ -1807,6 +2037,7 @@ Kutsche:
   genus: f
   type: n
 Laender:
+  count: 5
   genus: f
   type: n
 Laendern:
@@ -1818,14 +2049,14 @@ Lager:
   genus: s
   type: n
 Land:
-  count: 1
+  count: 3
   genus: s
   type: n
 Landkreis:
   genus: m
   type: n
 Langeweile:
-  count: 2
+  count: 3
   genus: f
   type: n
 Lastenaufzug:
@@ -1838,6 +2069,7 @@ Laufraeder:
   genus: f
   type: n
 Laune:
+  count: 5
   genus: f
   type: n
 Lavendel:
@@ -1848,23 +2080,27 @@ Lazarus:
   count: 1
   type: n
 Leben:
-  count: 13
+  count: 14
   type: n
 Lebensform:
-  count: 4
+  count: 9
   genus: f
   type: n
 Lebewesen:
-  count: 5
+  count: 10
   type: vi
+Lehrer:
+  count: 1
+  type: n
 Leute:
-  count: 4
+  count: 8
   genus: f
   type: n
 Leuten:
-  count: 1
+  count: 6
   type: n
 Lexikon:
+  count: 5
   genus: s
   type: n
 Lichtjahr:
@@ -1872,30 +2108,46 @@ Lichtjahr:
   genus: s
   type: n
 Liebe:
-  count: 7
+  count: 12
   type: n
 Lieblingsessen:
-  count: 1
+  count: 6
+  type: n
+Lieblingsfarbe:
+  count: 7
+  genus: f
   type: n
 Lieblingsfilm:
-  count: 4
+  count: 9
   genus: m
   type: n
-Lieblingshobby:
+Lieblingsgericht:
   count: 3
+  genus: s
+  type: n
+Lieblingshobby:
+  count: 8
   genus: s
   type: n
 Lieblingsspiel:
-  count: 3
+  count: 10
+  genus: s
+  type: n
+Lieblingsthema:
+  count: 1
   genus: s
   type: n
 Lieblingszahl:
-  count: 3
+  count: 8
   genus: f
   type: n
 Lied:
-  count: 3
+  count: 8
   genus: s
+  type: n
+Lieder:
+  count: 1
+  genus: f
   type: n
 Likoer:
   genus: m
@@ -1905,33 +2157,34 @@ Linde:
   genus: f
   type: n
 Linux:
-  count: 1
+  count: 6
   type: n
 Loesungen:
   genus: f
   type: n
 Logik:
-  count: 3
+  count: 8
   genus: f
   type: n
 Lorbeer:
   count: 3
   type: n
 Lotto:
+  count: 5
   type: n
 Lottozahlen:
-  count: 2
+  count: 7
   genus: f
   type: n
 Luege:
-  count: 4
+  count: 9
   genus: f
   type: n
 Luegen:
   count: 10
   type: n
 Luegner:
-  count: 1
+  count: 2
   genus: m
   type: n
 Luftkissenboot:
@@ -1941,20 +2194,21 @@ Luftkissenfahrzeug:
   genus: s
   type: n
 Luftschiff:
-  count: 13
+  count: 14
   genus: s
   type: n
 Luftverunreinigung:
   genus: f
   type: n
 Lust:
+  count: 5
   type: n
 Lustspiel:
   count: 1
   genus: s
   type: n
 Macht:
-  count: 3
+  count: 8
   type: n
 Madeira:
   type: n
@@ -1966,14 +2220,14 @@ Magnetfeld:
   count: 3
   type: n
 Mailadresse:
-  count: 4
+  count: 9
   genus: f
   type: n
 Malve:
   count: 3
   type: n
 Man:
-  count: 2
+  count: 4
   type: n
 Manga:
   genus: f
@@ -1982,20 +2236,21 @@ Mangas:
   genus: f
   type: n
 Mann:
-  count: 3
+  count: 8
   type: n
 Marille:
+  count: 5
   genus: f
   type: n
 Markt:
   genus: m
   type: n
 Marktwirtschaft:
-  count: 11
+  count: 13
   genus: f
   type: n
 Maschine:
-  count: 3
+  count: 8
   genus: f
   type: n
 Massnahmen:
@@ -2004,8 +2259,10 @@ Materie:
   genus: f
   type: n
 Mathe:
+  count: 5
   type: n
 Maul:
+  count: 5
   genus: s
   type: n
 Meerrettich:
@@ -2013,12 +2270,13 @@ Meerrettich:
   genus: m
   type: n
 Megabytes:
+  count: 5
   type: n
 Meineid:
   genus: m
   type: n
 Meinung:
-  count: 3
+  count: 8
   type: n
 Melasse:
   genus: f
@@ -2028,14 +2286,14 @@ Melisse:
   genus: f
   type: n
 Menge:
-  count: 1
+  count: 8
   genus: f
   type: n
 Mensch:
-  count: 23
+  count: 36
   type: n
 Menschen:
-  count: 26
+  count: 36
   genus: f
   type: n
 Menschenhandel:
@@ -2056,6 +2314,8 @@ Mexiko:
   type: n
 Mich:
   count: 5
+  type: n
+Michael:
   type: n
 Mir:
   count: 10
@@ -2080,7 +2340,7 @@ Moenchsordens:
   count: 1
   type: n
 Moerder:
-  count: 40
+  count: 45
   genus: m
   type: n
 Moltebeere:
@@ -2088,6 +2348,7 @@ Moltebeere:
   genus: f
   type: n
 Moment:
+  count: 5
   genus: m
   type: n
 Momentan:
@@ -2107,12 +2368,17 @@ Motorrad:
   genus: s
   type: n
 Mund:
+  count: 5
   type: n
 Musik:
-  count: 2
+  count: 7
   type: n
 Mutter:
-  count: 3
+  count: 8
+  genus: f
+  type: n
+Muttersprache:
+  count: 1
   genus: f
   type: n
 Nachbar:
@@ -2120,6 +2386,7 @@ Nachbar:
   genus: m
   type: n
 Nachnamen:
+  count: 5
   type: n
 Nachrede:
   count: 1
@@ -2128,23 +2395,23 @@ Nachrede:
 Nachstellen:
   type: vi
 Nacht:
-  count: 5
+  count: 10
   genus: f
   type: n
 Nahrung:
-  count: 3
+  count: 8
   genus: f
   type: n
 Nahuatl:
   type: n
 Name:
-  count: 6
+  count: 14
   type: n
 Namen:
-  count: 3
+  count: 11
   type: n
 Nase:
-  count: 1
+  count: 6
   genus: f
   type: n
 Navigator:
@@ -2155,21 +2422,23 @@ Neigung:
   count: 1
   type: n
 Nein:
-  count: 332
+  count: 400
   genus: s
   type: n
 Nekoi:
   type: n
 Netz:
-  count: 3
+  count: 8
   genus: s
   type: n
 Neuigkeiten:
+  count: 5
   genus: f
   type: n
 Neumarkt:
   type: n
 Neuronen:
+  count: 5
   genus: f
   type: n
 Neusiedlersee:
@@ -2177,7 +2446,7 @@ Neusiedlersee:
   genus: m
   type: n
 Nichts:
-  count: 88
+  count: 96
   type: pron
 Niederlage:
   genus: f
@@ -2185,7 +2454,7 @@ Niederlage:
 Niederschlags:
   type: n
 Niemand:
-  count: 1
+  count: 3
   type: n
 Nieswurz:
   count: 3
@@ -2199,10 +2468,14 @@ Nordamerika:
   type: n
 Nordostsibiriens:
   type: n
+Nordwesten:
+  genus: m
+  type: n
 Nummer:
+  count: 5
   type: n
 Nutte:
-  count: 1
+  count: 4
   type: n
 Oberhaupt:
   type: n
@@ -2219,39 +2492,44 @@ Obstbrand:
   genus: m
   type: n
 Oesterreichs:
-  count: 6
+  count: 12
   type: n
 Oh:
+  count: 2
   type: inter
 Ohren:
-  count: 1
+  count: 6
   genus: f
   type: n
 Ok:
-  count: 5
+  count: 10
   type: n
 Olymp:
   count: 1
   type: n
 Optik:
+  count: 5
   genus: f
   type: n
 Optimist:
   genus: m
   type: n
 Orakel:
-  count: 3
+  count: 8
   genus: s
   type: n
 Ordnung:
+  count: 5
   genus: f
   type: n
 Oregano:
   count: 3
   genus: m
   type: n
+Oregon:
+  type: n
 Org:
-  count: 4
+  count: 9
   type: n
 Organigramm:
   count: 1
@@ -2266,11 +2544,11 @@ Panzer:
   genus: m
   type: n
 Papa:
-  count: 3
+  count: 8
   genus: m
   type: n
 Partner:
-  count: 1
+  count: 6
   type: n
 Passage:
   genus: f
@@ -2284,21 +2562,22 @@ Paternosteraufzug:
 Pazifischer:
   type: adj
 Pc:
-  count: 3
+  count: 8
   genus: m
   type: n
 Pearl:
-  count: 3
+  count: 8
   type: n
 Penis:
   count: 1
   genus: m
   type: n
 Pentium:
+  count: 5
   genus: m
   type: n
 Perl:
-  count: 3
+  count: 8
   type: n
 Person:
   count: 3
@@ -2334,7 +2613,7 @@ Phaenomen:
   genus: s
   type: n
 Php:
-  count: 3
+  count: 8
   type: n
 Pils:
   genus: s
@@ -2342,6 +2621,9 @@ Pils:
 Pimmel:
   genus: m
   type: n
+Pimpern:
+  count: 1
+  type: vi
 Pinseln:
   type: vi
 Pirat:
@@ -2354,18 +2636,20 @@ Piraterie:
 Pistenfahrzeug:
   type: n
 Plaudern:
-  count: 2
+  count: 7
   type: vi
 Po:
+  count: 5
   type: n
 Polargebiet:
   genus: s
   type: n
 Politik:
-  count: 5
+  count: 11
   genus: f
   type: n
 Politiker:
+  count: 2
   genus: f
   type: n
 Ponton:
@@ -2383,7 +2667,7 @@ Pro:
   count: 2
   type: prep
 Probleme:
-  count: 1
+  count: 6
   genus: f
   type: n
 Produziert:
@@ -2393,11 +2677,14 @@ Professor:
   genus: m
   type: n
 Programme:
-  count: 5
+  count: 11
   genus: f
   type: n
+Programmieren:
+  count: 1
+  type: vi
 Programmierer:
-  count: 4
+  count: 9
   genus: m
   type: n
 Projekt:
@@ -2405,7 +2692,17 @@ Projekt:
 Projektor:
   genus: m
   type: n
+Prolet:
+  genus: m
+  type: n
 Prostitution:
+  count: 1
+  type: n
+Prozessor:
+  count: 2
+  genus: m
+  type: n
+Psychiater:
   count: 1
   type: n
 Psychologe:
@@ -2421,11 +2718,11 @@ Puff:
   genus: s
   type: n
 Punkt:
-  count: 4
+  count: 9
   genus: m
   type: n
 Pursuit:
-  count: 3
+  count: 10
   type: n
 Qualle:
   count: 1
@@ -2471,24 +2768,34 @@ Raumschiff:
   count: 1
   genus: s
   type: n
+Raumstation:
+  type: n
 Raumtransporter:
   genus: m
+  type: n
+Rechenleistung:
+  count: 1
+  genus: f
   type: n
 Rede:
   count: 5
   type: vt
 Reden:
-  count: 3
+  count: 9
   type: vi
 Regel:
   count: 2
   type: n
 Regen:
-  count: 1
+  count: 3
   type: vi
 Reichtum:
   count: 2
   genus: m
+  type: n
+Reis:
+  count: 1
+  genus: f
   type: n
 Relativitaetstheorie:
   genus: f
@@ -2508,10 +2815,11 @@ Robbe:
   genus: f
   type: n
 Roboter:
-  count: 3
+  count: 8
   genus: m
   type: n
 Rollenspiele:
+  count: 5
   genus: f
   type: n
 Roller:
@@ -2560,14 +2868,15 @@ Sachbeschaedigung:
   genus: f
   type: n
 Sache:
-  count: 5
+  count: 10
   genus: f
   type: n
 Saenger:
-  count: 1
+  count: 2
   genus: m
   type: n
 Saetze:
+  count: 5
   genus: f
   type: n
 Saeufer:
@@ -2606,17 +2915,18 @@ Satellit:
   genus: m
   type: n
 Satzbau:
-  count: 3
+  count: 8
   genus: m
   type: n
 Sau:
-  count: 3
+  count: 10
   genus: f
   type: n
 Save:
   count: 1
   type: n
 Schach:
+  count: 5
   genus: s
   type: n
 Schafgarbe:
@@ -2625,8 +2935,11 @@ Schafgarbe:
   type: n
 Schaumwein:
   type: n
+Schauplatz:
+  genus: m
+  type: n
 Scherzkeks:
-  count: 3
+  count: 8
   genus: s
   type: n
 Schiff:
@@ -2635,12 +2948,17 @@ Schiff:
 Schiffe:
   genus: m
   type: n
+Schimpfwort:
+  type: n
 Schlaf:
-  count: 1
+  count: 6
   genus: m
   type: n
-Schlampe:
+Schlafen:
   count: 3
+  type: vi
+Schlampe:
+  count: 8
   type: n
 Schlauch:
   genus: m
@@ -2660,7 +2978,12 @@ Schluckspecht:
   genus: m
   type: n
 Schmerzen:
+  count: 5
   type: vi
+Schnaps:
+  count: 3
+  genus: m
+  type: n
 Schnee:
   count: 1
   genus: m
@@ -2671,6 +2994,7 @@ Schnellbahn:
   genus: f
   type: n
 Schnellen:
+  count: 5
   type: n
 Schnitzel:
   genus: s
@@ -2679,8 +3003,19 @@ Schoenheit:
   count: 1
   genus: f
   type: n
+Schoepfer:
+  count: 1
+  genus: m
+  type: n
+Schokolade:
+  count: 1
+  genus: f
+  type: n
+Schokoladenkekse:
+  count: 1
+  type: n
 Schriftsteller:
-  count: 2
+  count: 5
   genus: m
   type: n
 Schueler:
@@ -2691,11 +3026,11 @@ Schuhstaender:
   count: 1
   type: n
 Schule:
-  count: 6
+  count: 11
   genus: f
   type: n
 Schulz:
-  count: 4
+  count: 10
   genus: m
   type: n
 Schwaeche:
@@ -2707,6 +3042,9 @@ Schwarzer:
   type: n
 Schwebebahn:
   type: n
+Schwein:
+  genus: s
+  type: n
 Schweiz:
   genus: f
   type: n
@@ -2715,13 +3053,14 @@ Schwertwal:
   genus: m
   type: n
 Schwester:
+  count: 5
   genus: f
   type: n
 Science:
-  count: 5
+  count: 6
   type: n
 Scooter:
-  count: 2
+  count: 3
   type: n
 See:
   genus: f
@@ -2733,6 +3072,7 @@ Seebeben:
 Seehund:
   type: n
 Seele:
+  count: 6
   genus: f
   type: n
 Segelboot:
@@ -2769,10 +3109,11 @@ Servus:
 Sesselbahn:
   type: n
 Sex:
-  count: 1
+  count: 8
   genus: m
   type: n
 Sexspielzeug:
+  count: 5
   genus: s
   type: n
 Sexualitaet:
@@ -2789,16 +3130,20 @@ Shaolin:
 Sherry:
   genus: m
   type: n
+Siedlung:
+  genus: f
+  type: n
 Siedlungsgebiet:
   genus: s
   type: n
 Single:
+  count: 5
   genus: m
   type: n
 Snowboard:
   type: n
 So:
-  count: 2
+  count: 7
   type: prep
 Sodom:
   type: n
@@ -2806,7 +3151,7 @@ Sofa:
   genus: s
   type: n
 Software:
-  count: 3
+  count: 9
   genus: f
   type: n
 Sojabohne:
@@ -2815,6 +3160,8 @@ Sojabohne:
   type: n
 Sokrates:
   type: n
+Solche:
+  type: adj
 Sonne:
   count: 1
   genus: f
@@ -2834,19 +3181,23 @@ Sorge:
   genus: f
   type: n
 Source:
-  count: 3
+  count: 8
+  type: n
+Spagetti:
+  count: 1
+  genus: f
   type: n
 Spanien:
   type: n
 Spass:
-  count: 7
+  count: 12
   genus: m
   type: n
 Speicher:
-  count: 1
+  count: 6
   type: n
 Spezialgebiet:
-  count: 3
+  count: 8
   type: n
 Spieler:
   type: n
@@ -2855,9 +3206,11 @@ Spitzwegerich:
   genus: m
   type: n
 Sprache:
+  count: 5
   genus: f
   type: n
 Sprachen:
+  count: 5
   genus: f
   type: n
 Sprachraum:
@@ -2867,9 +3220,11 @@ Sprengladung:
   genus: f
   type: n
 Sprueche:
+  count: 5
   genus: f
   type: n
 Sprung:
+  count: 5
   genus: m
   type: n
 Spurbus:
@@ -2885,6 +3240,9 @@ Stadt:
   type: n
 Stadtbahn:
   type: n
+Staedte:
+  genus: f
+  type: n
 Stalking:
   count: 1
   genus: s
@@ -2896,7 +3254,7 @@ Stargate:
   count: 1
   type: n
 Status:
-  count: 3
+  count: 8
   genus: m
   type: n
 Stehlampe:
@@ -2916,254 +3274,5 @@ Steppenwolf:
   count: 1
   type: n
 Sternschnuppe:
-  genus: f
-  type: n
-Stiftung:
-  count: 1
-  genus: f
-  type: n
-Stimulans:
-  genus: f
-  type: n
-Stoerung:
-  count: 1
-  genus: f
-  type: n
-Straftat:
-  count: 12
-  genus: f
-  type: n
-Strahl:
-  genus: m
-  type: n
-Strahlung:
-  count: 3
-  genus: f
-  type: n
-Strassenbahn:
-  genus: f
-  type: n
-Stress:
-  count: 1
-  genus: m
-  type: n
-Strom:
-  count: 1
-  genus: m
-  type: n
-Sturm:
-  genus: m
-  type: n
-Stute:
-  count: 1
-  genus: f
-  type: n
-Suchen:
-  type: vi
-Suedamerika:
-  type: n
-Suesswaren:
-  type: vi
-Swing:
-  type: n
-Synonym:
-  genus: s
-  type: n
-System:
-  genus: s
-  type: n
-Tabak:
-  count: 3
-  genus: m
-  type: n
-Taetigkeit:
-  genus: f
-  type: n
-Tag:
-  count: 6
-  type: n
-Tarkan:
-  type: n
-Taxi:
-  type: n
-Team:
-  count: 4
-  genus: s
-  type: n
-Television:
-  genus: f
-  type: n
-Tequila:
-  genus: m
-  type: n
-Terror:
-  genus: m
-  type: n
-Terroranschlag:
-  genus: m
-  type: n
-Terrorist:
-  count: 6
-  genus: m
-  type: n
-Teufel:
-  genus: m
-  type: n
-Texas:
-  count: 1
-  type: n
-Text:
-  count: 1
-  type: n
-Therapeut:
-  count: 3
-  type: n
-Thymian:
-  count: 3
-  genus: m
-  type: n
-Tiere:
-  count: 4
-  type: n
-Tieren:
-  type: n
-Tiflis:
-  type: n
-Tim:
-  type: n
-Tintenfisch:
-  count: 1
-  type: n
-Tirol:
-  count: 3
-  type: n
-Tobais:
-  count: 3
-  type: n
-Tobias:
-  count: 7
-  type: n
-Tochtergesellschaft:
-  type: n
-Tod:
-  count: 2
-  type: n
-Toetung:
-  count: 1
-  genus: f
-  type: n
-Tollen:
-  count: 3
-  type: vi
-Tomate:
-  count: 3
-  genus: f
-  type: n
-Ton:
-  genus: m
-  type: n
-Torpedo:
-  count: 1
-  genus: s
-  type: n
-Tragflaechenboot:
-  genus: s
-  type: n
-Tragschrauber:
-  genus: m
-  type: n
-Traktor:
-  type: n
-Trauer:
-  genus: f
-  type: n
-Traurigkeit:
-  count: 1
-  genus: f
-  type: n
-Tresterbrand:
-  count: 1
-  genus: m
-  type: n
-Tresterschnaps:
-  type: n
-Tretroller:
-  genus: m
-  type: n
-Trunkenheit:
-  genus: f
-  type: n
-Tsubaki:
-  type: n
-Tunnel:
-  count: 1
-  genus: m
-  type: n
-Tussi:
-  count: 3
-  type: n
-U-Boot:
-  genus: s
-  type: n
-US:
-  type: n
-Ueberfall:
-  count: 1
-  genus: m
-  type: n
-Ufos:
-  genus: f
-  type: n
-Umlaufbahn:
-  count: 1
-  genus: f
-  type: n
-Umlaute:
-  type: n
-Unendlichkeit:
-  count: 1
-  genus: f
-  type: n
-Ungarn:
-  type: n
-Ungnade:
-  genus: f
-  type: n
-Universitaet:
-  type: n
-Universum:
-  count: 13
-  type: n
-Unterhalten:
-  type: vi
-Unterschlagung:
-  type: n
-Unterseeboot:
-  genus: s
-  type: n
-Unterwasserwaffe:
-  genus: f
-  type: n
-Untreue:
-  genus: f
-  type: n
-Urheber:
-  count: 3
-  type: n
-Urknall:
-  count: 1
-  genus: m
-  type: n
-Urkundenfaelschung:
-  genus: f
-  type: n
-Urlaub:
-  genus: m
-  type: n
-Vandalismus:
-  count: 1
-  genus: m
-  type: n
-Varianten:
   genus: f
   type: n

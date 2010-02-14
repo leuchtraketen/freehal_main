@@ -58,3 +58,7 @@
 = <> horrorfilm <> ein eigenname  <> <> (true)
 = <> filmkomoedie <> ein eigenname  <> <> (true)
 = <> gehe <> gehen <> <> (true)
+= <> _bier_ <> _alkohol_ <>  <> (maybe)
+= <> _wein_ <> _alkohol_ <>  <> (maybe)
+= <> _schnaps_ <> _alkohol_ <>  <> (maybe)
+= <> _alkoholisches_getraenk_ <> _alkohol_ <>  <> (maybe)
