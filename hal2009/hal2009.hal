@@ -3259,9 +3259,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             if from array proper_verbs first item and from array proper_verbs first item matches /^equal/ do
                 set new var _no_user_ask to handle for file name "_no_user_ask", write
                 do close with var _no_user_ask
-
-                set new array subject_props to compute_tags with from array clause item [1], var lang, var path
-                set new array object_props to compute_tags with from array clause item [2], var lang, var path
+                
+                set new array subject_words to split with " ", from array clause item [1]
+                set new array object_words to split with " ", from array clause item [2]
+                set new var subject_last_word to from array subject_words item [ size of array subject_words - 1 ]
+                set new var object_last_word to from array object_words item [ size of array object_words - 1 ]
+                
+                set new array subject_props to compute_tags with var subject_last_word, var lang, var path
+                set new array object_props to compute_tags with var object_last_word, var lang, var path
                 set new var subject_genus to from array subject_props second item
                 set new var object_genus to from array  object_props second item
                 set new var subject_article to get_article with var subject_genus, "subject", "indefinite"
@@ -3272,12 +3277,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 set new var verb to get_verb with "be", var subject_person
                 
-                if (from array proper_verbs first item matches /^equal_sg/) and (not from array clause item [1] matches /\s|<[_]>/) and (from array clause item [2] matches /ein/ or not from array clause item [2] matches /\s|<[_]>/) do
+                if (not from array proper_verbs first item matches /^equal_pl/) and (not from array clause item [1] matches /\s|<[_]>/) and (not from array clause item [2] matches /ein/) do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
                 push into array sentence, var verb
-                if not from array clause item [2] matches /\s|<[_]>/ do
+                if not from array clause item [2] matches /ein/ do
                     push into array sentence, var object_article
                 done
                 push into array sentence, from array clause item [2]

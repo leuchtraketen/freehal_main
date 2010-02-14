@@ -102,6 +102,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "$0", "$1");
     hals = replace(hals, "<[", "[");
     hals = replace(hals, "]>", "]");
+    hals = replace(hals, "size of", "items of");
     hals = replace(hals, " is not ", " not is ");
     hals = replace(hals, "global hash ", "hash ::");
     hals = replace(hals, "global array ", "array ::");
@@ -126,7 +127,6 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "items of hash ", "%$");
     hals = replace(hals, "of array ", "@$");
     hals = replace(hals, "of hash ", "%$");
-    hals = replace(hals, "size of", "items of");
     hals = replace(hals, "items of that array: ", "@{");
     hals = replace(hals, "items of that hash: ", "%{");
     hals = replace(hals, "items of that array ", "@{");

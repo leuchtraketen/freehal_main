@@ -80,6 +80,7 @@ struct word {
     int length;
     struct list* related_facts;
     struct word*** synonyms;
+    int synonyms_level;
 };
 
 struct list {
@@ -96,7 +97,7 @@ int universal_begin();
 int universal_end();
 struct word* get_word(const char* name);
 long can_be_a_pointer(void* p);
-struct word*** search_synonyms(const char* exp);
+struct word*** search_synonyms(const char* exp, int level);
 struct word** divide_words(const char* str);
 char** divide_by(const char by, const char* str);
 struct list* look_at_list(struct list* l);
@@ -124,7 +125,7 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 struct fact** search_in_net(struct request* fact, struct fact** list);
 void print_word_list_3rd_order(struct word*** list);
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
-struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
+struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level);
 struct fact** search_facts_synonyms(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_facts_deep(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_facts_thesaurus(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);

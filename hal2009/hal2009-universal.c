@@ -152,25 +152,24 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
     return synonyms;
 }
 
-int store_synonyms(const char* exp, struct word*** synonyms) {
+int store_synonyms(const char* exp, struct word*** synonyms, int level) {
     struct word* word = set_word(exp);
     word->synonyms = synonyms;
+    word->synonyms_level = level;
     debugf("Synonyms of phrase %s are now at %p.\n", exp, word->synonyms);
 }
 
-struct word*** get_stored_synonyms(const char* exp) {
+struct word*** get_stored_synonyms(const char* exp, int level) {
     struct word* word = set_word(exp);
     debugf("Synonyms of phrase %s are at %p.\n", word ? exp : "(the word is illegal)", word ? word->synonyms : 0);
-    if (word->synonyms && can_be_a_pointer(word->synonyms) && word->synonyms[0] && can_be_a_pointer(word->synonyms[0])) {
+    if (word->synonyms_level == level && word->synonyms && can_be_a_pointer(word->synonyms) && word->synonyms[0] && can_be_a_pointer(word->synonyms[0])) {
         debugf("Searching synonyms of phrase %s found (in cache): %p.\n", exp, word->synonyms);
         return word->synonyms;
     }
     return 0;
 }
 
-struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, int* position, int* allocated_until) {
-    struct fact** facts = search_facts_synonyms(subj, obj, verb, adverbs, "", "", "default");
-    
+struct word*** add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, struct fact** facts, int* position, int* allocated_until) {
     if (facts == TOOMUCH) {
         return synonyms;
     }
@@ -185,7 +184,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
             ++size;
         }
     }
-
+    
     for (f = 0; facts[f]; ++f) {
         if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name)) {
             set_to_invalid_value(&(facts[f]));
@@ -200,9 +199,6 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
     
     synonyms = realloc(synonyms, sizeof(struct word**)*(*allocated_until+1));
     
-    //for (f = *allocated_until - size; f <= *allocated_until; ++f) {
-        //synonyms[f] = 0;
-    //}
     
     // add to synonyms matrix
     if (use_what == USE_SUBJECTS) {
@@ -215,12 +211,14 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                        can_be_a_pointer(facts[f]->subjects[0])
                     && can_be_a_pointer(facts[f]->subjects[0]->name)
                     && can_be_a_synonym(facts[f]->subjects[0]->name)
+                    && !strstr(facts[f]->subjects[0]->name, obj)
                 )
                 || (
                        can_be_a_pointer(facts[f]->subjects[0])
                     && can_be_a_pointer(facts[f]->subjects[1])
                     && can_be_a_pointer(facts[f]->subjects[1]->name)
                     && can_be_a_synonym(facts[f]->subjects[1]->name)
+                    && !strstr(facts[f]->subjects[1]->name, obj)
                 )
                 || (
                        can_be_a_pointer(facts[f]->subjects[0])
@@ -228,6 +226,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                     && can_be_a_pointer(facts[f]->subjects[2])
                     && can_be_a_pointer(facts[f]->subjects[2]->name)
                     && can_be_a_synonym(facts[f]->subjects[2]->name)
+                    && !strstr(facts[f]->subjects[2]->name, obj)
                 )
                 )
 
@@ -257,6 +256,7 @@ printf(";");
                 && can_be_a_pointer(facts[f]->objects[0])
                 && can_be_a_pointer(facts[f]->objects[0]->name)
                 && can_be_a_synonym(facts[f]->objects[0]->name)
+                && !strstr(facts[f]->objects[0]->name, subj)
             ) {
                 int c;
                 for (c = 0; can_be_a_pointer(facts[f]->objects[c]); ++c) { }
@@ -276,18 +276,11 @@ printf(";");
         }
     }
     
-    if (is_engine("ram")) {
-        free(facts);
-    }
-    else {
-        free_facts_deep(facts);
-    }
-    
     return synonyms;
 }
 
 static int in_search_synonyms = 0;
-struct word*** search_synonyms(const char* exp) {
+struct word*** search_synonyms(const char* exp, int level) {
     debugf("Searching synonyms of phrase %s. | in_search_synonyms = %p\n", exp && exp[0] ? exp : "(useless)", in_search_synonyms);
 
     int allocated_until     = 3;
@@ -296,16 +289,49 @@ struct word*** search_synonyms(const char* exp) {
     synonyms = add_synonyms_by_string(exp, synonyms, &position);
     
     if (is_good(exp) && can_be_a_synonym(exp) && !in_search_synonyms && !strstr(exp, "|")) {
-        struct word*** stored_synonyms = get_stored_synonyms(exp);
+        struct word*** stored_synonyms = get_stored_synonyms(exp, level);
         if (stored_synonyms)
             return stored_synonyms;
 
         in_search_synonyms = 1;
         
-        synonyms = add_synonyms_by_search(exp, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, &position, &allocated_until);
-        synonyms = add_synonyms_by_search("", exp, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS, synonyms, &position, &allocated_until);
+        int _min = position;
+        
+        struct fact** facts_synonyms = search_facts_synonyms(exp, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", "", "", "default");
+        synonyms = add_synonyms_by_search(exp, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
+        
+        int l;
+        for (l = 0; l < level; ++l) {
+            int u;
+            int _max = position;
+            for (u = _min; u < _max; ++u) {
+                if (synonyms[u] && synonyms[u] != -1) {
+                    char* req_synonym = join_words(synonyms[u]);
+                    printf("Search for sub synonyms of: %s\n", req_synonym);
+                    
+                    struct fact** facts_synonyms =  search_facts_synonyms(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", "", "", "default");
+                    synonyms = add_synonyms_by_search(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
+                    synonyms = add_synonyms_by_search("", req_synonym, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
+                    if (is_engine("ram")) {
+                        free(facts_synonyms);
+                    }
+                    else {
+                        free_facts_deep(facts_synonyms);
+                    }
+                }
+            }
+        }
 
-        store_synonyms(exp, synonyms);
+        synonyms = add_synonyms_by_search("", exp, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS, synonyms, facts_synonyms, &position, &allocated_until);
+
+        if (is_engine("ram")) {
+            free(facts_synonyms);
+        }
+        else {
+            free_facts_deep(facts_synonyms);
+        }
+        
+        store_synonyms(exp, synonyms, level);
         in_search_synonyms = 0;
     }
     
@@ -777,8 +803,8 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             count_requests += (request_words_all_also_trivial) ? 1 : 0;
             
             // debugf("  next synonym.\n");
-            int   does_match_this_synonym = 1;
-            int should_match_this_synonym = 1;
+            int   does_match_this_synonym = 0;
+            int should_match_this_synonym = 0;
     
             for (c = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
                 if (can_be_a_pointer(request_words[u][c])) {
@@ -1402,16 +1428,16 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
     return 0;
 }
 
-struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level) {
     struct fact** list = 0;
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
-        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", level);
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", level);
         fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
-        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
-        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "", 0);
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "", level);
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
@@ -1488,11 +1514,11 @@ struct fact** search_facts_double_facts(const char* subjects, const char* object
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
-        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", 0);
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", 0);
         fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
-        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
-        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "", 0);
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "", 0);
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
@@ -1546,17 +1572,17 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
-        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", 0);
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", 0);
         fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
-        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
-        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "", 0);
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "", 0);
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
         
         delete_in_first_if_second(fact->objects, subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-
+        
         debugf(
             "Searching synonym-answers for:\n"
             "    subjects (was: %s):\n", subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
@@ -1674,7 +1700,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     req->objects      = 0;
 
     if (then_clause_has_variable_subjects) {
-        struct word*** thing_to_insert = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
+        struct word*** thing_to_insert = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", 0);
         
         if (if_clause_has_variable_subjects && 0 == req->subjects) {
             req->subjects = thing_to_insert;
@@ -1684,7 +1710,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
         }
     }
     if (then_clause_has_variable_objects) {
-        struct word*** thing_to_insert = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        struct word*** thing_to_insert = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", 0);
         
         if (if_clause_has_variable_subjects && 0 == req->subjects) {
             req->subjects = thing_to_insert;
@@ -1695,10 +1721,10 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     }
     
     if (req->subjects == 0) {
-        req->subjects =  search_synonyms("");
+        req->subjects =  search_synonyms("", 0);
     }
     if (req->objects  == 0) {
-        req->objects  =  search_synonyms("");
+        req->objects  =  search_synonyms("", 0);
     }
     
     char* req_verbs   = join_words(if_clause->verbs);
@@ -1723,8 +1749,8 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     char* req_adverbs = join_words(if_clause->adverbs);
     char* req_extra   = join_words(if_clause->extra);
     req->verbs        = divide_words   (req_verbs);
-    req->adverbs      = search_synonyms(req_adverbs);
-    req->extra        = search_synonyms(req_extra);
+    req->adverbs      = search_synonyms(req_adverbs, 0);
+    req->extra        = search_synonyms(req_extra, 0);
     req->questionword = strdup         (if_clause->questionword);
     req->context      = strdup         (context);
     req->truth        = 1;
@@ -1749,11 +1775,11 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
-        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", 0);
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", 0);
         fact->verbs        =    divide_words(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "");
-        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
-        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "", 0);
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "", 0);
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup("search_reasons");
         fact->truth        = 1;
@@ -1882,11 +1908,11 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
-        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "");
-        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "");
+        fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", 0);
+        fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", 0);
         fact->verbs        =    divide_words("=");
-        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "");
-        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "");
+        fact->adverbs      = search_synonyms(adverbs  &&  adverbs[0] &&  adverbs[0] != '0' &&  adverbs[0] != ' ' ?  adverbs : "", 0);
+        fact->extra        = search_synonyms(extra    &&    extra[0] &&    extra[0] != '0' &&    extra[0] != ' ' ?    extra : "", 0);
         fact->questionword =          strdup(questionword);
         fact->context      =          strdup(context);
         fact->truth        = 1;
@@ -1996,16 +2022,27 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     if (!can_be_a_pointer(list) || !count_list(list)) {
         printf("We do.\n");
         
-        struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context);
-        if (_list == TOOMUCH) {
-            return TOOMUCH;
+        int level = 1;
+        
+        if (verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ') {
+            level = 0;
         }
         
-        if (can_be_a_pointer(_list)) {
-            if (can_be_a_pointer(list)) {
-                free(list);
+        while (level < 2 && ( !can_be_a_pointer(list) || !count_list(list) )) {
+            
+            struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context, level);
+            if (_list == TOOMUCH) {
+                return TOOMUCH;
             }
-            list = _list;
+            
+            if (can_be_a_pointer(_list)) {
+                if (can_be_a_pointer(list)) {
+                    free(list);
+                }
+                list = _list;
+            }
+            
+            ++level;
         }
     }
     else {
