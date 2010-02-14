@@ -1760,16 +1760,6 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     }
     
     char* req_verbs   = join_words(if_clause->verbs);
-/*
-    if (strlen(req_verbs) > 5) {
-        req_verbs[strlen(req_verbs)-5] = '\0';
-        if (strstr(verbs, req_verbs)) {
-            free(req_verbs);
-            req_verbs = strdup(verbs);
-        }
-        req_verbs = generalize_verb(req_verbs);
-    }
-*/
     if (strlen(req_verbs) > 5 && (strstr(req_verbs, "0") || strstr(req_verbs, "1"))) {
         req_verbs[strlen(req_verbs)-5] = '\0';
         if (strstr(verbs, req_verbs)) {
