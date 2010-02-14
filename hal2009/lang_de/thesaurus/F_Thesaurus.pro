@@ -6073,7 +6073,6 @@
 = <> _freundin_ <> _gespielin_ <> (maybe)
 = <> _freundin_ <> _herzdame_ <> (maybe)
 = <> _freundin_ <> _hetaere_ <> (maybe)
-= <> _freundin_ <> _kurtisane_ <> (maybe)
 = <> _freundin_ <> _maetresse_ <> (maybe)
 = <> _freund_ <> _intimus_ <> (maybe)
 = <> _freund_ <> _kamerad_ <> (maybe)
