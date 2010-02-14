@@ -288,7 +288,7 @@ struct word*** search_synonyms(const char* exp, int level) {
     int position            = 0;
     synonyms = add_synonyms_by_string(exp, synonyms, &position);
     
-    if (is_good(exp) && can_be_a_synonym(exp) && !in_search_synonyms && !strstr(exp, "|")) {
+    if (is_good(exp) && can_be_a_synonym(exp) && !in_search_synonyms && !strstr(exp, "|") && level >= 0) {
         struct word*** stored_synonyms = get_stored_synonyms(exp, level);
         if (stored_synonyms)
             return stored_synonyms;
@@ -2032,6 +2032,9 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         
         if (verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ') {
             level = 0;
+        }
+        if (0 == strcmp(context, "nosynonyms")) {
+            level = -1;
         }
         
         while (level < 2 && ( !can_be_a_pointer(list) || !count_list(list) )) {

@@ -1945,7 +1945,7 @@ QString FreeHALWindow::make_csv()
     QString adverbs = user_interface_main_window->adverbs->text().toLower();
     QString questionword = user_interface_main_window->questionword->text().toLower();
     QString extra = user_interface_main_window->extra->text().toLower();
-    QString context = "default";
+    QString context = "nosynonyms";
 
     if (subject.size() == 0 && object.size()) {
         subject = object;
@@ -2027,8 +2027,7 @@ void FreeHALWindow::on_allfacts_clicked()
 {
     setLastProcess(ALL_FACTS);
     QString csv = make_csv();
-    csv += "^";
-    csv += "everything";
+    csv = csv.replace("nosynonyms", "everything");
 
     char* csv_request = strdup(csv.toStdString().c_str());
     boost::thread t_v(boost::bind(send_csv_request, csv_request));
