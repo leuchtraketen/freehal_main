@@ -691,8 +691,13 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     strcpy(language,             signal_handler_tlanguage);
     
     while (init_thread_ended <= 0) {
+        
+        (*stream) << "DISPLAY:" << "FreeHAL reads the database. This can take some seconds to several minutes." << endl;
+        
         halusleep(1000);
     }
+        
+    (*stream) << "DISPLAY:" << "<i> </i>" << endl;
 
     string line;
     while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {

@@ -310,6 +310,12 @@ struct word*** search_synonyms(const char* exp, int level) {
                     printf("Search for sub synonyms of: %s\n", req_synonym);
                     
                     struct fact** facts_synonyms =  search_facts_synonyms(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", "", "", "default");
+                    int f;
+                    for (f = 0; facts_synonyms[f]; ++f) {
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
+                            set_to_invalid_value(&(facts_synonyms[f]));
+                        }
+                    }
                     synonyms = add_synonyms_by_search(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
                     synonyms = add_synonyms_by_search("", req_synonym, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
                     if (is_engine("ram")) {
