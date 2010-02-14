@@ -1281,7 +1281,7 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
 }
 
 struct fact** search_in_net(struct request* fact, struct fact** list) {
-    int limit = 8000;
+    int limit = 10000;
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
         limit = 1000000;
     }
@@ -2387,6 +2387,11 @@ int can_be_a_synonym(const char* word) {
          && strcmp(word, "von")
          && strcmp(word, "vom")
          && strcmp(word, "auf")
+         && strcmp(word, "ich")
+         && strcmp(word, "du")
+         && strcmp(word, "_ich_")
+         && strcmp(word, "_du_")
+         && ( (strlen(word) > 3 && !strstr(word, "_")) || strlen(word) > 6 )
          
          ?  1
          :  0
