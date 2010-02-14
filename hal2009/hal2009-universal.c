@@ -79,6 +79,23 @@ int set_to_invalid_value(void** p) {
     return 0;
 }
 
+int set_to_invalid_fact(struct fact** p) {
+    if (is_engine("ram")) {
+        return ram_set_to_invalid_value(p);
+    }
+    else {
+        free_words_weak((*p)->verbs);
+        free_words_weak((*p)->subjects);
+        free_words_weak((*p)->objects);
+        free_words_weak((*p)->adverbs);
+        free_words_weak((*p)->extra);
+        free((*p)->from);
+        
+        return disk_set_to_invalid_value(p);
+    }
+    return 0;
+}
+        
 struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, int* position) {
     if (is_bad(exp)) {
         return synonyms;
@@ -187,10 +204,10 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
     
     for (f = 0; facts[f]; ++f) {
         if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name)) {
-            set_to_invalid_value(&(facts[f]));
+            set_to_invalid_fact(&(facts[f]));
         }
         if (can_be_a_pointer(facts[f]) && facts[f]->truth < 0.5) {
-            set_to_invalid_value(&(facts[f]));
+            set_to_invalid_fact(&(facts[f]));
         }
     }
     
@@ -324,7 +341,7 @@ struct word*** search_synonyms(const char* exp, int level) {
                     int f;
                     for (f = 0; facts_synonyms[f]; ++f) {
                         if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
-                            set_to_invalid_value(&(facts_synonyms[f]));
+                            set_to_invalid_fact(&(facts_synonyms[f]));
                         }
                     }
                     synonyms = add_synonyms_by_search(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
@@ -1209,7 +1226,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     
          )) {
         
-        set_to_invalid_value(&fact);
+        set_to_invalid_fact(&fact);
     }
 
 
@@ -1252,7 +1269,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
         for (b = 0; list[b]; ++b) {
             if (list[b] != -1) {
                 if (!fact_matches_truth(list[b], request)) {
-                    set_to_invalid_value(&(list[b]));
+                    set_to_invalid_fact(&(list[b]));
                 }
             }
         }
@@ -1262,7 +1279,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
         for (b = 0; list[b]; ++b) {
             if (list[b] != -1) {
                 if (!fact_matches_questionword_rules(list[b], request)) {
-                    set_to_invalid_value(&(list[b]));
+                    set_to_invalid_fact(&(list[b]));
                 }
             }
         }
@@ -1492,7 +1509,7 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
                     if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                         if (strstr(list[l]->verbs[0]->name, "=") && strlen(verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ' ?    verbs : "")) {
                             if (strstr(list[l]->from, "thes")) {
-                                set_to_invalid_value(&(list[l]));
+                                set_to_invalid_fact(&(list[l]));
                             }
                             else {
                                 free(list[l]->verbs);
@@ -2197,6 +2214,7 @@ int free_facts_deep(struct fact** facts) {
         free_words_weak(facts[c]->objects);
         free_words_weak(facts[c]->adverbs);
         free_words_weak(facts[c]->extra);
+        free(facts[c]->from);
         
         free(facts[c]);
         facts[c] = 0;
@@ -2405,7 +2423,7 @@ int can_be_a_synonym(const char* word) {
          && strcmp(word, "du")
          && strcmp(word, "_ich_")
          && strcmp(word, "_du_")
-         && ( (strlen(word) > 3 && !strstr(word, "_")) || strlen(word) > 6 )
+         // && ( (strlen(word) > 3 && !strstr(word, "_")) || strlen(word) > 6 )
          
          ?  1
          :  0
