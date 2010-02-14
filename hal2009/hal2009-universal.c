@@ -751,11 +751,11 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
             if (!is_a_trivial_word(words[m]->name)) {
                 
                 if (matches(word->name, words[m]->name)) {
-                    debugf("      %s matches with     %s\n", word->name, words[m]->name);
+                    // debugf("      %s matches with     %s\n", word->name, words[m]->name);
                     return 1;
                 }
                 else {
-                    debugf("      %s not matches with %s\n", word->name, words[m]->name);
+                    // debugf("      %s not matches with %s\n", word->name, words[m]->name);
                 }
             }
         }
@@ -2396,6 +2396,11 @@ int can_be_a_synonym(const char* word) {
          && strcmp(word, "von")
          && strcmp(word, "vom")
          && strcmp(word, "auf")
+         && strcmp(word, "so")
+         && strcmp(word, "genau")
+         && strcmp(word, "genauso")
+         && !strstr(word, "wie")
+    
          && strcmp(word, "ich")
          && strcmp(word, "du")
          && strcmp(word, "_ich_")
@@ -2410,7 +2415,6 @@ int can_be_a_synonym(const char* word) {
 int is_important_word(const char* word) {
     return (
             !is_a_trivial_word(word)
-    
          && strcmp(word, "es")
          && strcmp(word, "*")
          && strcmp(word, "in")
@@ -2420,6 +2424,10 @@ int is_important_word(const char* word) {
          && strcmp(word, "von")
          && strcmp(word, "vom")
          && strcmp(word, "auf")
+         && strcmp(word, "so")
+         && strcmp(word, "genau")
+         && strcmp(word, "genauso")
+         && strcmp(word, "wie")
     
          && !strstr(word, "$")
          && !strstr(word, "ein")
