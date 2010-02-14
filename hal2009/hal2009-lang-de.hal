@@ -3912,6 +3912,7 @@ define action check_for_math with var input do
     do regex using var math: /wie/, "", :global:i
     do regex using var math: /viel/, "", :global:i
     do regex using var math: /was/, "", :global:i
+    do regex using var math: /jahre/, "", :global:i
     do regex using var math: /ISUNKNOWN/, "", :global:i
     do regex using var math: /ergebnis/, "", :global:i
     do regex using var math: /von/, "", :global:i
@@ -3949,15 +3950,17 @@ define action check_for_math with var input do
     print new line
 
     if var math matches /^(<[0-9\d+\-*.\/\s)(]>|(sqrt)|(sin)|(cos)|(tan)|(cot))+$/ do
-	    print "Ok."
-	    print new line
-        do regex using var math: /(sin|cos|tan|cot)(<[\d]>+)/, "$1($2)", :global:i
-        do eval with 'var value = ' concat var math concat ';'
-        if defined(var value) do
-            do return with [ 0, "Das Ergebnis ist " concat var value concat "."  ]
-        done
-        else do
-            do return with 0
+        if var math matches /(<[+\-*.\/]>|(sqrt)|(sin)|(cos)|(tan)|(cot))/ do
+            print "Ok."
+            print new line
+            do regex using var math: /(sin|cos|tan|cot)(<[\d]>+)/, "$1($2)", :global:i
+            do eval with 'var value = ' concat var math concat ';'
+            if defined(var value) do
+                do return with [ 0, "Das Ergebnis ist " concat var value concat "."  ]
+            done
+            else do
+                do return with 0
+            done
         done
     done
     do return with 0

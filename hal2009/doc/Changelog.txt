@@ -1,3 +1,7 @@
+924:
+
+- Bug 527 korrigiert
+
 917:
 
 - Bug 528 korrigiert

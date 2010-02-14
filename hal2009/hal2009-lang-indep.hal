@@ -947,11 +947,20 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: / .... unknownproperty .... /, " \$\$unknownproperty\$\$ ", :global:i
     do regex using var input: / ..... unknownproperty ..... /, " \$\$unknownproperty\$\$ ", :global:i
 
+    if lc(var input) matches /ist\s(\d+?)/ do
+        do regex using var input: /(^|\s)(\d+?) /, "$0_$1_ ", :global:i
+    done
+
     if var lang matches "de" do
         do regex using var input: /(^|\s)im jahre (\d\d\d\d) /, "$0$1 ", :global:i
         do regex using var input: /(^|\s)im jahr (\d\d\d\d) /, "$0$1 ", :global:i
-        if not var input matches /\svon\s(\d\d\d\d)\s/ do
-            do regex using var input: /(^|\s)(\d\d\d\d) /, "$0in_jahre_$1 ", :global:i
+        if var input matches /\d\d\d\d/ do
+            if var input not matches /\svon\s(\d\d\d\d)\s/ and lc(var input) not matches /ist\s(\d\d\d\d)/ do
+                do regex using var input: /(^|\s)(\d\d\d\d) /, "$0in_jahre_$1 ", :global:i
+            done
+            if var input not matches /(\d\d\d\d)....../ do
+                do regex using var input: /(^|\s)(\d\d\d\d) /, "$0_$1_ ", :global:i
+            done
         done
     done
 

@@ -123,9 +123,9 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         free(words);
     }
     
-    if (exp[0] == '_' && strlen(exp) > 3) {
+    if (exp[0] == '_' && strlen(exp) >= 3) {
         char* cpy_of_exp = strdup(exp+1);
-        char* offset_of_last_underscore = strstr(cpy_of_exp+strlen(cpy_of_exp)-3, "_");
+        char* offset_of_last_underscore = strstr(cpy_of_exp+strlen(cpy_of_exp)-2, "_");
         if (offset_of_last_underscore) {
             offset_of_last_underscore[0] = '\0';
             int c;
@@ -147,7 +147,7 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         free(cpy_of_exp);
     }
     
-    debugf("Added synonym %s by string, position is now %p.\n", exp, *position);
+    debugf("-> Synonym '%s' by string, position is now %p.\n", exp, *position);
     
     return synonyms;
 }
@@ -231,7 +231,6 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 )
 
             ) {
-printf(";");
                 int c;
                 for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) { }
                 struct word** temp = calloc(sizeof(facts[f]->subjects), (c+2));
@@ -240,11 +239,17 @@ printf(";");
                     temp[c] = facts[f]->subjects[c];
                 }
                 temp[c] = 0;
-                synonyms[*position] = temp;
-                ++(*position);
+                if (*position == 0 || strcmp(synonyms[*position - 1], temp)) {
+                    synonyms[*position] = temp;
+                    ++(*position);
+                }
+                else {
+                    free(temp);
+                    continue;
+                }
                 if (c && temp && temp[0]) {
-                    debugf("Added synonym %s by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
-                    debugf("         (... %s)\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
+                    debugf("-> Synonym '%s' by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                    debugf("        ... %s\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
                 }
             }
         }
@@ -266,11 +271,17 @@ printf(";");
                     temp[c] = facts[f]->objects[c];
                 }
                 temp[c] = 0;
-                synonyms[*position] = temp;
-                ++(*position);
+                if (*position == 0 || strcmp(synonyms[*position - 1], temp)) {
+                    synonyms[*position] = temp;
+                    ++(*position);
+                }
+                else {
+                    free(temp);
+                    continue;
+                }
                 if (c && temp && temp[0]) {
-                    debugf("Added synonym %s by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
-                    debugf("         (... %s)\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
+                    debugf("-> Synonym '%s' by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                    debugf("        ... %s\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
                 }
             }
         }
@@ -736,15 +747,15 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
     
     int m;
     for (m = 0; words[m] && words[m]->name; ++m) {
-        if (is_good(words[m]->name) && strlen(words[m]->name) > 1) {
+        if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
             if (!is_a_trivial_word(words[m]->name)) {
                 
                 if (matches(word->name, words[m]->name)) {
-                    // debugf("      matches with     %i - %s\n", words[m], words[m]->name);
+                    debugf("      %s matches with     %s\n", word->name, words[m]->name);
                     return 1;
                 }
                 else {
-                    // debugf("      not matches with %i - %s\n", words[m], words[m]->name);
+                    debugf("      %s not matches with %s\n", word->name, words[m]->name);
                 }
             }
         }
@@ -764,7 +775,6 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         return -1;
     }
     
-
     int given_words_all                = 0;
     int given_words_all_only_important = 0;
     int given_words_all_also_trivial   = 0;
@@ -780,7 +790,6 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             ++given_words_all_also_trivial;
         }
     }
-    
     
     int count_requests = 0;
     
@@ -2398,11 +2407,20 @@ int can_be_a_synonym(const char* word) {
     );
 }
 
-
 int is_important_word(const char* word) {
     return (
             !is_a_trivial_word(word)
-         && can_be_a_synonym(word)
+    
+         && strcmp(word, "es")
+         && strcmp(word, "*")
+         && strcmp(word, "in")
+         && strcmp(word, "im")
+         && strcmp(word, "an")
+         && strcmp(word, "am")
+         && strcmp(word, "von")
+         && strcmp(word, "vom")
+         && strcmp(word, "auf")
+    
          && !strstr(word, "$")
          && !strstr(word, "ein")
          && strcmp(word, "der")

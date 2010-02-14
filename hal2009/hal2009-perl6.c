@@ -169,6 +169,9 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     if (strstr(hals->s, "end if" )) {
         hals = replace(hals, "end if", "}");
     }
+    hals = replace(hals, " not matches ", " !~ ");
+    hals = replace(hals, " not match ", " !~ ");
+    hals = replace(hals, " not is ", " == ");
     hals = replace(hals, " matches ", " ~~ ");
     hals = replace(hals, " match ", " ~~ ");
     hals = replace(hals, " is ", " == ");

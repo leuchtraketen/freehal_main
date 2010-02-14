@@ -3277,7 +3277,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 set new var verb to get_verb with "be", var subject_person
                 
-                if (not from array proper_verbs first item matches /^equal_pl/) and (not from array clause item [1] matches /\s|<[_]>/) and (not from array clause item [2] matches /ein/) do
+                if (not from array proper_verbs first item matches /^equal_pl/) and (not from array clause item [1] matches /\s|<[_]>|<[0-9]>/) and (not from array clause item [2] matches /ein/) do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]

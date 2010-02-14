@@ -214,6 +214,15 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     if (strstr(hals->s, "end if" )) {
         hals = replace(hals, "end if", "}");
     }
+    hals = replace(hals, " not matches $", " ne $");
+    hals = replace(hals, " not match $", " ne $");
+    hals = replace(hals, " not matches '", " ne '");
+    hals = replace(hals, " not match '", " ne '");
+    hals = replace(hals, " not matches \"", " ne \"");
+    hals = replace(hals, " not match \"", " ne \"");
+    hals = replace(hals, " not matches ", " !~ ");
+    hals = replace(hals, " not match ", " !~ ");
+    hals = replace(hals, " not is ", " != ");
     hals = replace(hals, " matches $", " eq $");
     hals = replace(hals, " match $", " eq $");
     hals = replace(hals, " matches '", " eq '");
