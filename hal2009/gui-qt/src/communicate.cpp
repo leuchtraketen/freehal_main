@@ -274,6 +274,7 @@ void client(std::string host, bool verbose = true, bool wait = false) {
             catch (std::exception& e) {
                 std::cerr << 4 << "Exception in thread: " << e.what() << "\n";
                 freehal::msleep(3000);
+                exit(0);
             }
         freehal::msleep(300);
         } while (error);

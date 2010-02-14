@@ -2214,7 +2214,6 @@ int free_facts_deep(struct fact** facts) {
         free_words_weak(facts[c]->objects);
         free_words_weak(facts[c]->adverbs);
         free_words_weak(facts[c]->extra);
-        free(facts[c]->from);
         
         free(facts[c]);
         facts[c] = 0;
