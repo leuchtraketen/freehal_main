@@ -1557,7 +1557,7 @@ void init_db_tool()
 
 int FactModel::count() const
 {
-    return (dataset->size);
+    return (dataset ? dataset->size : 0);
 }
 
 int FactModel::rowCount(const QModelIndex &parent) const
@@ -1786,12 +1786,13 @@ void FactModel::setData(struct DATASET* set) {
 }
 
 void FactModel::updateData() {
-    beginRemoveRows(QModelIndex(), 0, count()-1);
-    endRemoveRows();
-    this->removeRows(0, this->rowCount(QModelIndex()), QModelIndex());
+    int c = count()-1;
+    if (c > 0) {
+        beginRemoveRows(QModelIndex(), 0, c);
+        endRemoveRows();
+    }
 
     indexcache.clear();
-
 
     int row = 0;
     while (row < dataset->size) {
@@ -2119,7 +2120,6 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
     }
 
     cout << csv << endl;
-
     int length;
     int record = set->size;
     int record_item = 0;
@@ -2142,7 +2142,6 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
                 set->data[record][record_item] = (char*)calloc(sizeof(char), 100);
                 continue;
             }
-
 
             set->data[record][record_item][record_item_pos] = csv[length];
 

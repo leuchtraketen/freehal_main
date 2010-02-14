@@ -89,6 +89,8 @@ void session_stream_read(boost::shared_ptr<tcp::iostream> stream) {
                         line[line.size()-1] = '\0';
                 }
                 boost::thread t(boost::bind(freehal::comm_new, line));
+                asio::deadline_timer timer(io_service, boost::posix_time::milliseconds(100));
+                timer.wait();
 
                 getline(*stream, line.ref());
             }
