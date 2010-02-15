@@ -3691,6 +3691,12 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /schlafe$/ do
             do regex using var verb: /schlafe$/, "schlaefst", :global:i
         done
+        else if var verb matches /(<[gdm]>)elst$/ do
+            do regex using var verb: /(<[gdm]>)elst$/, "$0le", :global:i
+        done
+        else if var verb matches /(<[gdm]>)le$/ do
+            do regex using var verb: /(<[gdm]>)le$/, "$0elst", :global:i
+        done
         else if var verb matches /isst$/ do
             do regex using var verb: /isst$/, "esse", :global:i
         done
@@ -4106,6 +4112,17 @@ define action multiple_choices_verb with var verb do
         push into array choices, "gibst"
         push into array choices, "gibt"
         push into array choices, "gebt"
+    done
+    else if var verb matches /(<[gdm]>)l$/ do
+        push into array choices, var verb
+        for each new var ending in array endings do
+            push into array choices, var verb concat var ending
+        done
+        do regex using var verb: /(<[gdm]>)l$/, "$0el"
+        push into array choices, var verb
+        for each new var ending in array endings do
+            push into array choices, var verb concat var ending
+        done
     done
     else do
         push into array choices, var verb

@@ -1,3 +1,7 @@
+932:
+
+- Unterstuetzung fuer Verben auf -eln
+
 931:
 
 - Update SQLite: 2010-Jan-06 - Version 3.6.22
