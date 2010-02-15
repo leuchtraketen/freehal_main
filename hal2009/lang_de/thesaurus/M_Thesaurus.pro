@@ -158,7 +158,6 @@
 = <> _maedchenbeschneidung_ <> _frauenbeschneidung_ <> (maybe)
 = <> _maedchenbeschneidung_ <> _genitale_verstuemmelung_ <> (maybe)
 = <> _maedchenbeschneidung_ <> _genitalverstuemmelung_ <> (maybe)
-= <> _maedchen_ <> _dirne_ <> (maybe)
 = <> _maedchenfussball_ <> _damenfussball_ <> (maybe)
 = <> _maedchenfussball_ <> _frauenfussball_ <> (maybe)
 = <> _maedchen_ <> _girl_ <> (maybe)

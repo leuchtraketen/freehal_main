@@ -1,3 +1,196 @@
+Startrek:
+  type: n
+Eureka:
+  type: n
+geheimen:
+  type: adj
+pazifischen:
+  type: adj
+Mitgliedern:
+  type: n
+Moehren:
+  genus  : f
+  type: n
+Freehal-Seite:
+  genus  : f
+  type: n
+Megaherz:
+  type: n
+schreibe:
+  type: vi
+geklont:
+  type: adj
+Schnackseln:
+  genus  : s
+  type: n
+Engergie:
+  genus  : f
+  type: n
+Energiesalat:
+  genus  : m
+  type: n
+Atomkugeln:
+  genus  : f
+  type: n
+Atomkernkugeln:
+  genus  : f
+  type: n
+Schimpfwoerter:
+  genus  : f
+  type: n
+zeige:
+  type: vi
+Proletentum:
+  genus  : s
+  type: n
+Getreidesorte:
+  genus  : f
+  type: n
+Emmer:
+  type: n
+Fingerhirse:
+  genus  : f
+  type: n
+Flug-Hafer:
+  genus  : m
+  type: n
+Foniohirse:
+  genus  : f
+  type: n
+Hartweizen:
+  genus  : m
+  type: n
+Iburu:
+  type: n
+Japanhirse:
+  genus  : f
+  type: n
+Kamut:
+  genus  : m
+  type: n
+Kolbenhirse:
+  genus  : f
+  type: n
+Kutkihirse:
+  genus  : f
+  type: n
+Mais:
+  genus  : m
+  type: n
+Bantam:
+  type: n
+Mohrenhirse:
+  genus  : f
+  type: n
+Nackt-Hafer:
+  genus  : m
+  type: n
+Perlhirse:
+  genus  : f
+  type: n
+Rispenhirse:
+  genus  : f
+  type: n
+Roggen:
+  genus  : m
+  type: n
+Saat-Hafer:
+  genus  : m
+  type: n
+Secalotricum:
+  type: n
+Sorghumhirsen:
+  genus  : f
+  type: n
+Teff:
+  type: n
+Triticale:
+  type: n
+Weichweizen:
+  genus  : m
+  type: n
+Ziermais:
+  genus  : m
+  type: n
+Zuckermais:
+  genus  : m
+  type: n
+KITT:
+  type: n
+Primzahl:
+  genus  : f
+  type: n
+Lieblingsbuch:
+  genus  : s
+  type: n
+Lieblingsschauspieler:
+  genus  : m
+  type: n
+Lieblingsfernsehserie:
+  genus  : f
+  type: n
+Lieblingsschauspielerin:
+  genus  : f
+  type: n
+ordinaerer:
+  type: adj
+Elektronensalat:
+  genus  : m
+  type: n
+pure:
+  type: adj
+Heilpflanzen:
+  genus  : f
+  type: n
+indogermanische:
+  type: adj
+Bewohnern:
+  type: n
+Latium:
+  genus  : s
+indogermanische:
+  type: adj
+semitischsprachige:
+  type: adj
+Kelten:
+  genus  : f
+  type: n
+Sprechergemeinschaft:
+  genus  : f
+  type: n
+keltischen:
+  type: adj
+Astes:
+  type: n
+Mittelmeerraumes:
+  type: n
+Schamane:
+  genus  : m
+  type: n
+Schamanismus:
+  genus  : m
+  type: n
+fruehestens:
+  type: adj
+Spielsoftware:
+  genus  : f
+  type: n
+Sprachausgabemodul:
+  genus  : s
+  type: n
+Stimmbaender:
+  genus  : f
+  type: n
+anzuluegen:
+  type: vi
+visuelle:
+  type: adj
+speichere:
+  type: vi
+Suedasien:
+  type: n
+Subkontinents:
+  type: n
 gemaess:
   type: adj
 DIN:
@@ -43075,7 +43268,7 @@ Leckermaeulchen:
   genus: s
   type: n
 schreiben:
-  type: adv
+  type: vi
 Einsatzmoeglichkeit:
   genus: f
   type: n
@@ -248383,43 +248576,49 @@ unerschwinglich:
 ausstrahlen:
   type: vi
 Ueberreichen:
+  genus  : s
   type: n
 bruehen:
-  type: adv
-praematur:
-  type: adj
-dreas:
-  type: n
+  type: vi
 Organzerreissung:
+  genus  : f
   type: n
 Paraphraseumformulierungumschreibung:
+  genus  : f
   type: n
 Minna:
+  genus  : f
   type: n
-2vollstaendig:
-  type: adv
 ganoven:
-  type: adj
+  genus  : f
+  type: n
 tragisch:
   type: adj
 Betriebsfestigkeitssoftware:
+  genus  : f
   type: n
 Programmablaufplan:
+  genus  : m
   type: n
 Ersatzspur:
+  genus  : f
   type: n
 Durchschnittsgeschwindigkeit:
+  genus  : f
   type: n
 Alltagstrott:
+  genus  : m
   type: n
 Brezel:
+  genus  : s
   type: n
 abspringen:
   type: vi
 Septuaginta:
   type: n
 sexspielzeug:
-  type: adj
+  genus  : s
+  type: n
 Sklera:
   type: n
 Foxtrott:

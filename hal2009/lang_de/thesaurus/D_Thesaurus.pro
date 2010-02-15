@@ -4376,7 +4376,6 @@
 = <> _dirne_ <> _junge_frau_ <> (maybe)
 = <> _dirne_ <> _kurtisane_ <> (maybe)
 = <> _dirne_ <> _leichtes_maedchen_ <> (maybe)
-= <> _dirne_ <> _maedchen_ <> (maybe)
 = <> _dirne_ <> _maedel_ <> (maybe)
 = <> _dirne_ <> _maid_ <> (maybe)
 = <> _dirne_ <> _nutte_ <> (maybe)
