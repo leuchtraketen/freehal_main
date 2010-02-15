@@ -2223,6 +2223,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'aber' => "adj",
           'beleidigt' => "adj",
           'interessieren' => "v",
+          'reden' => "v",
           'sicher' => "adj",
           'zuweilen' => "adj",
           'gute' => "adj",
