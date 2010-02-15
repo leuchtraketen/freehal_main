@@ -2188,6 +2188,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'per' => "prep",
           'kannst' => "v",
           'kann' => "v",
+          'lieben' => "v",
           'eng' => "adj",
           'bereit' => "adj",
           'sproede' => "adj",
@@ -3852,7 +3853,7 @@ define action stem_nouns with array phrases do
             if var noun matches /ppe$/ do
                 go to next
             done
-            if var noun matches /ern$/ do
+            if var noun matches /ern$/ and var noun not matches /tern$/ do
                 do regex using var noun: /ern$/, "er*", :global:i
             done
             if var noun matches /[c][hkg]e$/ do

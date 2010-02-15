@@ -597,7 +597,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /frag mich was/, "was ist", :global:i
     do regex using var input: /frag mich etwas/, "was ist", :global:i
     do regex using var input: /frag mich<ws>?<[,]>/, "", :global:i
-    do regex using var input: /was ist (<[dsmk]>?ein)(<[a-zA-Z]>+?)\s/, "was ist $0 ", :global:i
+    do regex using var input: /was ist (<[dsmk]>?ein)(<[a-zA-Z]>+?)\s/, "was ist $0$1 ", :global:i
     do regex using var input: /was denkst du ueber /, "was ist ", :global:i
     do regex using var input: /wie denkst du ueber /, "was ist ", :global:i
     do regex using var input: /was haeltst du von /, "was ist ", :global:i
