@@ -1,3 +1,15 @@
+935:
+
+- Bug 514 korrigiert
+- Bug 516 korrigiert
+- Bug 517 korrigiert
+- Bug 132 korrigiert
+- Bug 518 korrigiert
+- Bug 519 korrigiert
+- Bug 522 korrigiert
+- Bug 200 korrigiert
+- Bug 531 korrigiert
+
 932:
 
 - Unterstuetzung fuer Verben auf -eln
