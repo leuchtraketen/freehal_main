@@ -3853,7 +3853,7 @@ define action stem_nouns with array phrases do
             if var noun matches /ppe$/ do
                 go to next
             done
-            if var noun matches /ern$/ and var noun not matches /tern$/ do
+            if var noun matches /ern$/ and var noun not matches /<[yt]>ern$/ do
                 do regex using var noun: /ern$/, "er*", :global:i
             done
             if var noun matches /[c][hkg]e$/ do
