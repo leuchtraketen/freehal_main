@@ -2607,19 +2607,22 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             done
         done
         
-        if items of array verbs is 1 and from array verbs first item matches /<[|]>/ do
-            set new array must_haves to from hash parsed item { 'verbs' } first item
-            for each new var must_have in array must_haves do
-                set var must_have to lc with var must_have
-                do regex using var must_have: /...$/, "", :i
-                if not lc( from array result second item second item ) matches /var must_have/ do
-                    print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
-                    print new line
-                    set flag go_next to 1
-                done
-                else do
-                    print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
-                    print new line
+        if 1 do
+#  from array verbs first item matches /<[|]>/ do # items of array verbs is 1
+            set new array _must_haves to from hash parsed item { 'verbs' }
+            for each new array must_haves in array _must_haves do
+                for each new var must_have in array must_haves do
+                    set var must_have to lc with var must_have
+                    do regex using var must_have: /...$/, "", :i
+                    if not lc( from array result second item second item ) matches /var must_have/ do
+                        print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                        print new line
+                        set flag go_next to 1
+                    done
+                    else do
+                        print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                        print new line
+                    done
                 done
             done
         done
