@@ -90,7 +90,6 @@
 = <> kronleuchter <> moebelstueck <>  <> (maybe)
 = <> kuechenlampe <> moebelstueck <>  <> (maybe)
 = <> kuechentisch <> moebelstueck <>  <> (maybe)
-= <> kuehlschrank <> moebelstueck <>  <> (maybe)
 = <> kurulischer stuhl <> moebelstueck <>  <> (maybe)
 = <> landi-stuhl <> moebelstueck <>  <> (maybe)
 = <> lehnstuhl <> moebelstueck <>  <> (maybe)

@@ -4430,7 +4430,6 @@
 = <> _unfug_ <> _firlefanz_ <> (maybe)
 = <> _unfug_ <> _gewaesch_ <> (maybe)
 = <> _unfug_ <> _humbug_ <> (maybe)
-= <> _unfug_ <> _kaese_ <> (maybe)
 = <> _unfug_ <> _kappes_ <> (maybe)
 = <> _unfug_ <> _kokolores_ <> (maybe)
 = <> _unfug_ <> _mumpitz_ <> (maybe)

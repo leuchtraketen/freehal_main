@@ -3380,7 +3380,6 @@
 = <> _firlefanz_ <> _dummes_zeug_ <> (maybe)
 = <> _firlefanz_ <> _gewaesch_ <> (maybe)
 = <> _firlefanz_ <> _humbug_ <> (maybe)
-= <> _firlefanz_ <> _kaese_ <> (maybe)
 = <> _firlefanz_ <> _kappes_ <> (maybe)
 = <> _firlefanz_ <> _kokolores_ <> (maybe)
 = <> _firlefanz_ <> _mumpitz_ <> (maybe)

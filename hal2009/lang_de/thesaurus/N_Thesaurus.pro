@@ -3575,7 +3575,6 @@
 = <> _nonsens_ <> _firlefanz_ <> (maybe)
 = <> _nonsens_ <> _gewaesch_ <> (maybe)
 = <> _nonsens_ <> _humbug_ <> (maybe)
-= <> _nonsens_ <> _kaese_ <> (maybe)
 = <> _nonsens_ <> _kappes_ <> (maybe)
 = <> _nonsens_ <> _kokolores_ <> (maybe)
 = <> _nonsens_ <> _mumpitz_ <> (maybe)

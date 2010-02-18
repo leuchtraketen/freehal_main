@@ -6393,7 +6393,6 @@
 = <> _humbug_ <> _dummes_zeug_ <> (maybe)
 = <> _humbug_ <> _firlefanz_ <> (maybe)
 = <> _humbug_ <> _gewaesch_ <> (maybe)
-= <> _humbug_ <> _kaese_ <> (maybe)
 = <> _humbug_ <> _kappes_ <> (maybe)
 = <> _humbug_ <> _kokolores_ <> (maybe)
 = <> _humbug_ <> _mumpitz_ <> (maybe)

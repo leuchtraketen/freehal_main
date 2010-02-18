@@ -6130,7 +6130,6 @@
 = <> _dummes_zeug_ <> _firlefanz_ <> (maybe)
 = <> _dummes_zeug_ <> _gewaesch_ <> (maybe)
 = <> _dummes_zeug_ <> _humbug_ <> (maybe)
-= <> _dummes_zeug_ <> _kaese_ <> (maybe)
 = <> _dummes_zeug_ <> _kappes_ <> (maybe)
 = <> _dummes_zeug_ <> _kokolores_ <> (maybe)
 = <> _dummes_zeug_ <> _mumpitz_ <> (maybe)
