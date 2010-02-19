@@ -82,10 +82,13 @@ void for__input__add_pro_file(void* arg) {
     hal2009_add_pro_file(text);
     FILE* target = fopen("_input__add_pro_file", "w+b");
     halclose(target);
+    
+    if (text) free(text);
 }
 
 void for__input__get_csv(void* text) {
     struct DATASET set = hal2009_get_csv(text);
+    if (text) free(text);
     const char* csv_data = hal2009_make_csv(&set);
     FILE* target = fopen("_input__get_csv", "w+b");
     halwrite(csv_data, 1, strlen(csv_data), target);
@@ -116,11 +119,11 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_output__add_pro_file")) {
         pthread_t thread;
-        pthread_create (&thread, NULL, for__input__add_pro_file, (void*)text);
+        pthread_create (&thread, NULL, for__input__add_pro_file, (void*)strdup(text));
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
         pthread_t thread;
-        pthread_create (&thread, NULL, for__input__get_csv, (void*)text);
+        pthread_create (&thread, NULL, for__input__get_csv, (void*)strdup(text));
     }
     else if (0 == strcmp(type, "_output")) {
         fprintf(output(), "\nFreeHAL: %s\n", text);

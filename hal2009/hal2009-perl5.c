@@ -387,7 +387,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     return;
 }
 
-char* convert_to_perl5 (char* hals, int just_compile) {
+char* convert_to_perl5(char* hals, int just_compile) {
     int number_of_lines;
     halstring string;
     string.s = hals;
@@ -401,7 +401,6 @@ char* convert_to_perl5 (char* hals, int just_compile) {
     
     strcat(newcode, "use strict;\n\n");
     int current_line;
-    fprintf(output(), "(%i new lines)", number_of_lines);
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
         if (0 == lines[current_line])
             break;
@@ -431,12 +430,9 @@ char* convert_to_perl5 (char* hals, int just_compile) {
         if ( s->do_free )
             halfreef(s->s, "convert_to_perl5/3");
         halfreef(s, "convert_to_perl5/4");
-        
-        if (current_line % 20 == 0)
-            fprintf(output(), "%s", ".");
     }
     strcat(newcode, "\n1\n");
-    fprintf(output(), "%s", "\n");
+    fprintf(output(), "%s", "Done.\n");
     halfree(lines);
     halfree(hals);
     
@@ -454,12 +450,12 @@ int convert_to_perl5_convert_file(char* filename) {
         fprintf(output(), "Compiler: Abort, unnecessary!\n");
         return 0;
     }
-    fprintf(output(), "Last file to compile: %s, new: %s\n", last_filename, filename);
+    fprintf(output(), "Compiler: Last file to compile: %s, new: %s\n", last_filename, filename);
 
-    fprintf(output(), "Opening source file: %s\n", filename);
+    fprintf(output(), "Compiler: Source file: %s\n", filename);
     FILE* source = fopen(filename, "r");
     if ( !source ) {
-        fprintf(output(), "\nPerl5 source file not found(1): %s\n", filename);
+        fprintf(output(), "\nCompiler: Perl5 source file not found(1): %s\n", filename);
         return 1;
     }
 
@@ -478,7 +474,7 @@ int convert_to_perl5_convert_file(char* filename) {
         strcat(filename_tmp, ".tmp");
         FILE* source_tmp = fopen(filename_tmp, "r");
         if ( !source_tmp ) {
-            fprintf(output(), "\nPerl5 source file not found(1): %s\n", filename_tmp);
+            fprintf(output(), "\nCompiler: Perl5 source file not found(1): %s\n", filename_tmp);
         }
         else {
             stat(filename_tmp, &stbuf);
@@ -488,7 +484,7 @@ int convert_to_perl5_convert_file(char* filename) {
             halclose(source_tmp);
 
             if (0 == strcmp(code, code_tmp) && !strstr(filename, "temp")) {
-                fprintf(output(), "Nothing has changed in %s\n", filename);
+                fprintf(output(), "Compiler: No change in %s\n", filename);
                 just_compile = 1;
             }
             free(code_tmp);
@@ -500,7 +496,7 @@ int convert_to_perl5_convert_file(char* filename) {
         halfree(filename_tmp);
     }
     
-    fprintf(output(), "Compile %s (filesize is %i)...", filename, file_size);
+    fprintf(output(), "Compiler: Compile %s (%i bytes). ", filename, file_size);
     char* targetcode = convert_to_perl5(code, just_compile);
     if (!just_compile) {
         FILE* target;
@@ -512,7 +508,7 @@ int convert_to_perl5_convert_file(char* filename) {
             target = fopen(targetname, "w");
         }
         if ( !target ) {
-            fprintf(output(), "\nPerl5 source file: unable to create: %s\n", filename);
+            fprintf(output(), "\nCompiler: Perl5 source file: unable to create: %s\n", filename);
             return 1;
         }
         halwrite(targetcode, 1, strlen(targetcode), target);

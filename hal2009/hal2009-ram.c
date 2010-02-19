@@ -130,7 +130,7 @@ struct word* ram_get_word(const char* name) {
     struct word** list = (struct word**)(ram_net[i][k]->list);
     
     if (0 == list) {
-        debugf("illegal list while searching %s.\n", name);
+        // debugf("illegal list while searching %s.\n", name);
         return 0;
     }
     
