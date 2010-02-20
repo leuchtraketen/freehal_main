@@ -1,3 +1,12 @@
+943:
+
+- Changelog aktualisiert
+
+942:
+
+- erste Implementierung von "(logic)"
+- Funktion check_for_math: Quadratwurzel=Wurzel=sqrt
+
 935:
 
 - Bug 514 korrigiert
