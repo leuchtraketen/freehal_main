@@ -184,6 +184,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\(true\)/, "_(true)_", :global:i
     do regex using var input: /\(maybe\)/, "_(maybe)_", :global:i
     do regex using var input: /\(false\)/, "_(false)_", :global:i
+    do regex using var input: /\(logic\)/, "_(logic)_", :global:i
 
     do regex using var input: /Sie(<[^a-zA-Z]>)/, "du$0", :global
     do regex using var input: /Ihnen(<[^a-zA-Z]>)/, "dir$0", :global

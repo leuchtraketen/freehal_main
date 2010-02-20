@@ -216,7 +216,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     return fact;
 }
 
-struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
     if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
@@ -230,6 +230,7 @@ struct fact* ram_add_fact(const char* subjects, const char* objects, const char*
     fact->questionword = strdup(questionword);
     fact->from         = strdup(from);
     fact->truth        = truth;
+    fact->only_logic   = only_logic;
     
     insert_fact_by_list_into_ram_net(fact->subjects, fact);
     insert_fact_by_list_into_ram_net(fact->objects, fact);

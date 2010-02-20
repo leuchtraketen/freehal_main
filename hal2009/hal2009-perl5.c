@@ -300,6 +300,9 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
         }
         strcat(new_hals, "open(");
         strcat(new_hals, spaces_before_begin_of_line + hals->s);
+        if (hals->do_free) {
+            halfree(hals->s);
+        }
         hals->s = new_hals;
     }
     else if ( (strstr(hals->s, "do " ) || strstr(hals->s, " to " )) && (strstr(hals->s, " with" ) || strstr(hals->s, " using" )) ) {

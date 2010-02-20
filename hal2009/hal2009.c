@@ -287,7 +287,7 @@ char* fact_read_from_source (const char* source) {
     return strdup("");
 }
 
-int remove_negation (char* line, double* truth_ref) {
+int remove_negation (char* line, double* truth_ref, int* only_logic) {
     halstring sline;
     sline.do_free = 0;
     halstring* sline_ref = &sline;
@@ -334,6 +334,14 @@ int remove_negation (char* line, double* truth_ref) {
         sline_ref = replace(sline_ref, " (false)", "");
         sline_ref = replace(sline_ref, "(false)", "");
         (*truth_ref) = 0.0;
+    }
+    
+    (*only_logic) = 0;
+    
+    if (strstr(line, "(logic)")) {
+        sline_ref = replace(sline_ref, " (logic)", "");
+        sline_ref = replace(sline_ref, "(logic)", "");
+        (*only_logic) = 1;
     }
     
     strncpy(line, sline_ref->s, 4196);
@@ -441,13 +449,13 @@ int hal2009_add_pro_file (char* filename) {
                     strcpy(r.questionword, "");
                     
                     buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                    remove_negation(r.verb, &(r.truth));
+                    remove_negation(r.verb, &(r.truth), &(r.only_logic));
                     buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                    remove_negation(r.subjects, &(r.truth));
+                    remove_negation(r.subjects, &(r.truth), &(r.only_logic));
                     buffer = strtok(NULL, "^"); strcpy(r.objects,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                    remove_negation(r.objects, &(r.truth));
+                    remove_negation(r.objects, &(r.truth), &(r.only_logic));
                     buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                    remove_negation(r.adverbs, &(r.truth));
+                    remove_negation(r.adverbs, &(r.truth), &(r.only_logic));
                     buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     strcat(r.from, ":");
                     sprintf(r.from+strlen(r.from), "%d", line_number);
@@ -509,13 +517,13 @@ int hal2009_add_pro_file (char* filename) {
                         sub_clause->truth = 0.5;
 
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        remove_negation(sub_clause->verb, &(sub_clause->truth));
+                        remove_negation(sub_clause->verb, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        remove_negation(sub_clause->subjects, &(sub_clause->truth));
+                        remove_negation(sub_clause->subjects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        remove_negation(sub_clause->objects, &(sub_clause->truth));
+                        remove_negation(sub_clause->objects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        remove_negation(sub_clause->adverbs, &(sub_clause->truth));
+                        remove_negation(sub_clause->adverbs, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         strcat(sub_clause->from, ":");

@@ -60,6 +60,8 @@ struct fact {
     float truth;
     int pk;
     int rel;
+    
+    int only_logic;
 };
 
 struct request {
@@ -73,6 +75,8 @@ struct request {
     struct list* clauses;
     char* from;
     float truth;
+    
+    int only_logic;
 };
 
 struct word {
@@ -106,7 +110,7 @@ const char* from_number(int i);
 int is_bad(const char* s);
 int is_good(const char* s);
 struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
-struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
+struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic);
 struct word* set_word(const char* name);
 struct DATASET search_facts_as_dataset(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct DATASET search_clauses_as_dataset(int rel);

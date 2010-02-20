@@ -1354,6 +1354,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           '_(true)_' => 1,
           '_(maybe)_' => 1,
           '_(false)_' => 1,
+          '_(logic)_' => 1,
           '_q_' => 1,
           'kenne' => 1,
           'vorhin' => 1,
@@ -1868,6 +1869,12 @@ set multi-line new global hash builtin_part_of_speech to {
           '_(true)_' => "adj",
           '_(maybe)_' => "adj",
           '_(false)_' => "adj",
+          '_(logic)_' => "adj",
+          '_true_' => "adj",
+          '_maybe_' => "adj",
+          '_false_' => "adj",
+          '_logic_' => "adj",
+          'logic' => "adj",
           'kunst' => "n",
           'wach' => "adj",
           'neues' => "adj",
@@ -3950,6 +3957,7 @@ define action check_for_math with var input do
     do regex using var math: / mal /, "*", :global:i
     do regex using var math: /x/, "*", :global:i
     do regex using var math: /\s+/, "", :global:i
+    do regex using var math: /quadratwurzel/, "sqrt ", :global:i
     do regex using var math: /wurzel/, "sqrt ", :global:i
     do regex using var math: /<[,]>/, ".", :global:i
     set new var value to undef

@@ -393,6 +393,7 @@ struct word** divide_words(const char* str) {
                 char* name = calloc(e-a+2, 1);
                 strncpy(name, str+a, e-a);
                 struct word* word = set_word(name);
+                if (name) free(name);
                 
                 ++count;
                 list = realloc(list, sizeof(struct word*)*(count+1));
@@ -419,6 +420,7 @@ struct word** divide_words(const char* str) {
             //debugf("divided(2): %s\n", name);
             a = e;
         }
+        if (name) free(name);
     }
     
     //debugf("name: %s (a = %p, e = %p), count = %p, list = %p\n", str && str[0] ? str : "(useless)", a, e, count, list);
@@ -464,6 +466,9 @@ char** divide_string(const char* str) {
             list[count] = 0;
             list[count-1] = name;
             a = e;
+        }
+        else {
+            free(name);
         }
     }
     
@@ -554,12 +559,12 @@ struct fact* add_clause(int rel, const char* subjects, const char* objects, cons
     }
 }
 
-struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
     if (is_engine("ram")) {
-        return ram_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        return ram_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
     }
     else {
-        return disk_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        return disk_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
     }
 }
 

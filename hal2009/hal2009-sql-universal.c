@@ -65,7 +65,7 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
         return 0;
     }
     else {
-        struct fact* fact = add_fact(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->from, r->truth, r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should);
+        struct fact* fact = add_fact(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->from, r->truth, r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should, r->only_logic);
         
         if (fact && fact->pk) {
             FILE* input_key = fopen("_input_key", "w+b");

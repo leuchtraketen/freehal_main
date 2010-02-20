@@ -2484,7 +2484,7 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
         if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
             set from array verb first item to "haben"
         done
-        else if from array verb first item matches /^(bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
+        else if from array verb first item matches /^(bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
             set from array verb first item to "sein"
         done
         else do
@@ -4245,6 +4245,11 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             if from array adverb first item matches /^.?\(false\).?$/ do
                 set var truth to "(false)"
                 set var adverb to ''
+                go to next
+            done
+            
+            if from array adverb first item matches /^.?\(logic\).?$/ do
+                set var adverb to '(logic)'
                 go to next
             done
             

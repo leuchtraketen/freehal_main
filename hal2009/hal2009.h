@@ -159,6 +159,7 @@ struct RECORD {
     int num_clauses;
     short type;
     int hash_clauses;
+    int only_logic;
     double truth;
     
     short verb_flag_want;
@@ -183,6 +184,7 @@ struct RECORD_short {
     void* clauses[MAX_CLAUSES];
     short type;
     int hash_clauses;
+    int only_logic;
     double truth;
     
     short verb_flag_want;
