@@ -3050,6 +3050,10 @@ define action logic with var input, var lang, var path, hash parsed do
         done
     done
     
+    if is an empty array results_true and is an empty array results_maybe and not is an empty array results_false do
+        set array results_other_modal_verb_maybe to an empty array
+    done
+    
     if is an empty array results_true do
         set array results_true to array results_other_modal_verb_true
     done

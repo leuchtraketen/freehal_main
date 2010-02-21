@@ -746,6 +746,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         else {
             --num_facts_added_during_this_run;
             ++num_facts_not_added_during_this_run_because_other_error;
+            printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
             break;
         }
     }
