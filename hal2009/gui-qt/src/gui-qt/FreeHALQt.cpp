@@ -1795,7 +1795,7 @@ void FactModel::updateData() {
     indexcache.clear();
 
     int row = 0;
-    while (row < dataset->size) {
+    while (row < dataset->size - 1) {
         indexcache.insert(row, QStringList());
 
         int col = 0;
@@ -1807,9 +1807,9 @@ void FactModel::updateData() {
     }
 
     if (dataset->size) {
-        beginInsertRows(QModelIndex(), 0, count()-1);
+        beginInsertRows(QModelIndex(), 0, count()-2);
         endInsertRows();
-        printf("Rows: %d\n", count());
+        printf("Rows: %d\n", count() - 1);
     }
 }
 

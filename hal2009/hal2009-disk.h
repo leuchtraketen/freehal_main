@@ -29,7 +29,7 @@ int disk_end();
 struct word* disk_get_word(const char* name);
 int insert_fact_by_list_into_net(struct word** list, struct fact* fact);
 struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
-struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_learn);
+struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic);
 struct word* disk_set_word(const char* name);
 int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
 struct fact** disk_search_clauses(int rel);
@@ -84,7 +84,7 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_cache_facts_only_logic` ON `cache_facts` (`only_logic`); "
 
 "CREATE TABLE `clauses` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
-"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50) );"
+"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), `only_logic` integer(50) );"
 "CREATE INDEX `idx_clauses_rel` ON `clauses` (`rel`);"
 "CREATE INDEX `idx_clauses_truth` ON `clauses` (`truth`);"
 "CREATE INDEX `idx_clauses_verb` ON `clauses` (`verb`); "

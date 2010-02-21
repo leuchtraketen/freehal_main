@@ -1,3 +1,11 @@
+945:
+
+- Korrektur Datenbankaufbauproblem ("clauses" leer)
+
+944:
+
+- Versuch Korrektur Speicherleck GUI bei DB-Tool
+
 943:
 
 - Changelog aktualisiert

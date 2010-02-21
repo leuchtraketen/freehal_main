@@ -791,6 +791,7 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     }
     
     if (error) {
+        printf("Error in disk_add_fact.\n");
         return 0;
     }
 
