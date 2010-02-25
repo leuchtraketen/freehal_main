@@ -1,3 +1,7 @@
+947:
+
+- doc/Lernen mit Freehal.pdf 
+
 945:
 
 - Changelog aktualisiert
