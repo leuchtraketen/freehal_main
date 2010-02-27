@@ -242,64 +242,64 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
     }
     
-    buffer = strtok(verbs, " ;.)(-,");
+    buffer = strtok(verbs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
-            buffer = strtok(NULL, " ;.)(-,");
+            buffer = strtok(NULL, " ;.)(-,_");
             continue;
         }
         words[*num_of_words] = strdup(buffer);
-        buffer = strtok(NULL, " ;.)(-,");
+        buffer = strtok(NULL, " ;.)(-,_");
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
     
     
-    buffer = strtok(subj, " ;.)(-,");
+    buffer = strtok(subj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
-            buffer = strtok(NULL, " ;.)(-,");
+            buffer = strtok(NULL, " ;.)(-,_");
             continue;
         }
         words[*num_of_words] = strdup(buffer);
-        buffer = strtok(NULL, " ;.)(-,");
+        buffer = strtok(NULL, " ;.)(-,_");
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
     
-    buffer = strtok( obj, " ;.)(-,");
+    buffer = strtok( obj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
-            buffer = strtok(NULL, " ;.)(-,");
+            buffer = strtok(NULL, " ;.)(-,_");
             continue;
         }
         words[*num_of_words] = strdup(buffer);
-        buffer = strtok(NULL, " ;.)(-,");
+        buffer = strtok(NULL, " ;.)(-,_");
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
     
-    buffer = strtok(advs, " ;.)(-,");
+    buffer = strtok(advs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
-            buffer = strtok(NULL, " ;.)(-,");
+            buffer = strtok(NULL, " ;.)(-,_");
             continue;
         }
         words[*num_of_words] = strdup(buffer);
-        buffer = strtok(NULL, " ;.)(-,");
+        buffer = strtok(NULL, " ;.)(-,_");
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
     
     if (extra) {
-        buffer = strtok(extra, " ;.)(-,");
+        buffer = strtok(extra, " ;.)(-,_");
         while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
             if (is_a_trivial_word(buffer)) {
-                buffer = strtok(NULL, " ;.)(-,");
+                buffer = strtok(NULL, " ;.)(-,_");
                 continue;
             }
             words[*num_of_words] = strdup(buffer);
-            buffer = strtok(NULL, " ;.)(-,");
+            buffer = strtok(NULL, " ;.)(-,_");
             ++(*num_of_words);
             if (*num_of_words >= 500) break;
         }
