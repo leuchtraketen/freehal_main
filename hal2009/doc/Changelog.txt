@@ -1,3 +1,7 @@
+948:
+
+- Bug 543 korrigiert
+
 947:
 
 - doc/Lernen mit Freehal.pdf 

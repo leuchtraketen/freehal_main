@@ -918,8 +918,8 @@ int fact_matches_object_by_object(struct fact* fact, struct request* request, in
         does_match = 1;
     return does_match;
 }
-int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request) {
-    int does_match = fact_matches_entity_by_entity(fact->adverbs, request->adverbs, WEAK);
+int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->adverbs, request->adverbs, weak?WEAK:EXACT);
     if (does_match == -1)
         does_match = 1;
     debugf("adverb by adverb:   %d\n", does_match);
@@ -1225,7 +1225,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
                     (0 == strcmp(request->context, "just_verb"))
                 )
             )
-         && fact_matches_adverb_by_adverb     (fact, request)
+         && fact_matches_adverb_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
          && fact_matches_anything_by_extra    (fact, request)
          //&& fact_matches_questionword_rules   (fact, request)
     

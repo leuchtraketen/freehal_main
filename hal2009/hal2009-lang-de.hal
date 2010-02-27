@@ -2349,6 +2349,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'arbeiten' => "v",
           'arbeite' => "v",
           '>>>' => "v",
+          'verliebt' => "adj",
           'wurdest' => "v",
           'takt' => "adj",
           'gottesdienst' => "n",

@@ -120,7 +120,7 @@ int fact_matches_subject_by_subject(struct fact* fact, struct request* request, 
 int fact_matches_object_by_subject(struct fact* fact, struct request* request, int weak);
 int fact_matches_subject_by_object(struct fact* fact, struct request* request, int weak);
 int fact_matches_object_by_object(struct fact* fact, struct request* request, int weak);
-int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request);
+int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, int weak);
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request);
 int fact_matches_verb(struct fact* fact, struct request* request);
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request);
