@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'changelog.ui'
 **
-** Created: Wed Feb 24 10:40:32 2010
+** Created: Sun Feb 28 14:41:53 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

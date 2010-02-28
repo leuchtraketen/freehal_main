@@ -788,7 +788,7 @@ define action memory_limit with var file_name, var lang, var path do
     set items of array entries_over_avg to sort with items of array entries_over_avg
     set items of array entries_under_avg to sort with items of array entries_under_avg
     set items of array entries_over_avg to reverse with items of array entries_over_avg
-    set items of array entries_under_avg to reverse with items of array entries_under_avg
+    #set items of array entries_under_avg to reverse with items of array entries_under_avg
     
     if var count_over_avg > var limit do
         set new var count_to_remove to var count_over_avg - var limit

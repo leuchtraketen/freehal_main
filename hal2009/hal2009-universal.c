@@ -1516,6 +1516,9 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
                             if (strstr(list[l]->from, "thes")) {
                                 set_to_invalid_fact(&(list[l]));
                             }
+                            else if (strstr(list[l]->from, "ps-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT)) {
+                                set_to_invalid_fact(&(list[l]));
+                            }
                             else {
                                 free(list[l]->verbs);
                                 list[l]->verbs = divide_words("equal");

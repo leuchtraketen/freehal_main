@@ -151,6 +151,9 @@ const char* define_general_verb(char* sentence, const char* entity) {
     else if (strstr(sentence, " nennt man ")) {
         return "equal_pl";
     }
+    else if (strstr(sentence, "bezeichnen")) {
+        return "equal_pl";
+    }
     return "equal_sg";
 }
 
@@ -185,6 +188,9 @@ char* transform_sentence(char* sentence, const char* entity) {
         verb_str += 11;
     }
     else if (verb_str = strstr(sentence, " bezeichnet ")) {
+        verb_str += 12;
+    }
+    else if (verb_str = strstr(sentence, " bezeichnen ")) {
         verb_str += 12;
     }
     else if (verb_str = strstr(sentence, _verb_1)) {
@@ -625,6 +631,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 continue;
             }
             if (strstr(lines[current_line]->s, "Siehe auch:")) {
+                continue;
+            }
+            if (strstr(lines[current_line]->s, "In diesem Artikel")) {
                 continue;
             }
             if (strstr(lines[current_line]->s, "iehe:")) {
