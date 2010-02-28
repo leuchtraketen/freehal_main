@@ -1370,7 +1370,8 @@ void freehal::comm_new(freehal::string s) {
             emit helper->signalSetTimeToLearnElapsed(0);
         }
         if (s.contains("DELETED")) {
-            emit fc->ask_again();
+            /// We don't want Freehal to ask again any more
+            /// emit fc->ask_again();
         }
         if (s.contains("PROFACT")) {
             emit fc->setFactText(QString::fromStdString(parts[1].ref()));
@@ -1842,16 +1843,28 @@ void FreeHALWindow::setupMenu()
 }
 
 void FreeHALWindow::menuClick(QPoint p) {
-    QModelIndex index = user_interface_main_window->tableView->indexAt(p);
+    QList<QModelIndex> indexList = user_interface_main_window->tableView->selectionModel()->selectedIndexes();
+    QModelIndex _index = user_interface_main_window->tableView->indexAt(p);
+    if (!indexList.contains(_index))
+        indexList.append(_index);
 
-    //if (index.column() == 0) {
-    if (factmodel->hasData()) {
-        Fact fact((char*)(factmodel->getData()->data[index.row()][0]), this);
-        Fact* fact_ref = &fact;
-
+    if (indexList.size()) {
         QAction* deleteAct = new QAction(tr("&Delete"), this);
         deleteAct->setStatusTip(tr("Delete from database and .pro file"));
-        connect(deleteAct, SIGNAL(triggered()), fact_ref, SLOT(delete_fact()));
+
+        QList<Fact*> factList;
+        int j;
+        for (j = 0; j < indexList.size(); ++j) {
+            QModelIndex index = indexList[j];
+            if (factmodel->hasData()) {
+                Fact* fact = new Fact((char*)(factmodel->getData()->data[index.row()][0]), this);
+
+                connect(deleteAct, SIGNAL(triggered()), fact, SLOT(delete_fact()));
+                factList.append(fact);
+
+                printf("pk: %s\n", (char*)(factmodel->getData()->data[index.row()][0]));
+            }
+        }
 
         QMenu menu(this);
         menu.addAction(deleteAct);
@@ -1859,7 +1872,9 @@ void FreeHALWindow::menuClick(QPoint p) {
         p.setX(p.x()+50);
         menu.exec(user_interface_main_window->tableView->mapToGlobal(p));
 
-        printf("pk: %s\n", (char*)(factmodel->getData()->data[index.row()][0]));
+        for (j = 0; j < factList.size(); ++j) {
+            delete(factList[j]);
+        }
     }
 }
 
