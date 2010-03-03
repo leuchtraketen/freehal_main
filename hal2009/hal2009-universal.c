@@ -812,6 +812,16 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             ++given_words_all_also_trivial;
         }
     }
+
+    for (m = 0; words[m] && words[m]->name; ++m) {
+        if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
+            if (!is_a_trivial_word(words[m]->name)) {
+                if (strstr(words[m]->name, "genauso") || strstr(words[m]->name, "wie{{{adj}}}")) {
+                    flags = WEAK;
+                }
+            }
+        }
+    }
     
     int count_requests = 0;
     
@@ -923,6 +933,20 @@ int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, in
     if (does_match == -1)
         does_match = 1;
     debugf("adverb by adverb:   %d\n", does_match);
+    return does_match;
+}
+int fact_matches_adverb_by_object(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->adverbs, request->objects, weak?WEAK:EXACT);
+    if (does_match == -1)
+        does_match = 0;
+    debugf("adverb by object:   %d\n", does_match);
+    return does_match;
+}
+int fact_matches_object_by_adverb(struct fact* fact, struct request* request, int weak) {
+    int does_match = fact_matches_entity_by_entity(fact->objects, request->adverbs, weak?WEAK:EXACT);
+    if (does_match == -1)
+        does_match = 0;
+    debugf("object by adverb:   %d\n", does_match);
     return does_match;
 }
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
@@ -1208,7 +1232,10 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
          && (
                 (
                     fact_matches_subject_by_subject (fact, request, (0 == strcmp(request->context, "reasonof")))
-                 && fact_matches_object_by_object   (fact, request, (0 == strcmp(request->context, "reasonof")))
+                 && (
+                        fact_matches_object_by_object   (fact, request, (0 == strcmp(request->context, "reasonof")))
+                     || fact_matches_object_by_adverb   (fact, request, (0 == strcmp(request->context, "reasonof")))
+                    )
                 )
             ||  (
                     strcmp(request->context, "q_what_extra")
@@ -1225,7 +1252,11 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
                     (0 == strcmp(request->context, "just_verb"))
                 )
             )
-         && fact_matches_adverb_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
+         && (
+                fact_matches_adverb_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
+             || fact_matches_adverb_by_object     (fact, request, (0 == strcmp(request->context, "reasonof")))
+             || fact_matches_object_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
+            )
          && fact_matches_anything_by_extra    (fact, request)
          //&& fact_matches_questionword_rules   (fact, request)
     

@@ -2480,27 +2480,31 @@ define action compute_context with hash parsed do
 done
 
 define action reasonof_construct_hash with array verbs, var lang, var path, hash parsed do
-    for each new array verb in array verbs is rw do
-        if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
-            set from array verb first item to "haben"
+    for each new var verb in array verbs is rw do
+        if var verb matches /^(habe|hast|hab|haben|habt)$/ do
+            set var verb to "haben"
         done
-        else if from array verb first item matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
-            set from array verb first item to "sein"
+        else if var verb matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
+            set var verb to "sein"
         done
         else do
-            if from array verb first item matches /st$/ do
-                do regex using from array verb first item: /st$/, "en", :i
+            if var verb matches /st$/ do
+                do regex using var verb: /st$/, "en", :i
             done
-            else if from array verb first item matches /st$/ do
-                do regex using from array verb first item: /e$/, "en", :i
+            else if var verb matches /st$/ do
+                do regex using var verb: /e$/, "en", :i
             done
             else if items of array verbs is 1 do
-                do regex using from array verb first item: /...$/, "*", :i
+                do regex using var verb: /...$/, "*", :i
             done
             else do
                 ##
             done
         done
+
+        set new array _verb to an empty array
+        push into array _verb, var verb
+        set var verb to array _verb
     done
 
     set new hash parsed_1 to fake_hash_parsed without arguments
@@ -2526,9 +2530,8 @@ define action reasonof with var input, var lang, var path, hash parsed do
     set new array verbs to an empty array
     set new array _verbs to from hash parsed item { 'verbs' }
     for each new array _verb in array _verbs do
-        set new array verb to an empty array
-        set items of array verb to items of array _verb
-        push into array verbs, array verb
+        set new var verb to from array _verb first item
+        push into array verbs, var verb
     done
     
     set new hash parsed_2 to reasonof_construct_hash with array verbs, var lang, var path, hash parsed
@@ -2614,8 +2617,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
 #  from array verbs first item matches /<[|]>/ do # items of array verbs is 1
             set new array _must_haves to from hash parsed item { 'verbs' }
             for each new array must_haves in array _must_haves do
-                for each new var must_have in array must_haves do
-                    set var must_have to lc with var must_have
+                for each new var _must_have in array must_haves do
+                    set new var must_have to lc with var _must_have
                     do regex using var must_have: /...$/, "", :i
                     if not lc( from array result second item second item ) matches /var must_have/ do
                         print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
