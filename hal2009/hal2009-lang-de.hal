@@ -4124,6 +4124,14 @@ define action multiple_choices_verb with var verb do
         push into array choices, "gibt"
         push into array choices, "gebt"
     done
+    else if var verb matches "seh" or var verb matches "sieh" do
+        push into array choices, var verb
+        push into array choices, "sehe"
+        push into array choices, "sehen"
+        push into array choices, "siehst"
+        push into array choices, "sieht"
+        push into array choices, "seht"
+    done
     else if var verb matches /(<[gdm]>)l$/ do
         push into array choices, var verb
         for each new var ending in array endings do
