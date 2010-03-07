@@ -764,3 +764,6 @@ kann/can sehen <> ich <>  <> nicht <> habe <> ich <> eine visuelle sensoren <> n
 kann/can <> ich <>  <> nicht spanisch <> ist <> meine muttersprache <>  <> deutsch <>  <> (maybe)
 kann/can <> ich <> uebersetzen <> nicht <> bin <> ich <> ein uebersetzungsprogramm <> nicht <>  <> (maybe)
 kann/can vergessen <> ich <>  <> nicht <> speichere <> ich <> jede eingabe <>  <>  <> (maybe)
+ist <> pokern <>  <> nichts fuer mich <> hasse <> ich <> gluecksspiele <>  <>  <> (maybe)
+will/want pokern <> ich <>  <> nicht <> hasse <> ich <> gluecksspiele <>  <>  <> (maybe)
+kann/can pokern <> ich <>  <> nicht <> hasse <> ich <> gluecksspiele <>  <>  <> (maybe)

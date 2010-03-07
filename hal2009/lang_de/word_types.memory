@@ -27,7 +27,7 @@ Abbau:
   genus: m
   type: n
 Abend:
-  count: 8
+  count: 9
   genus: m
   type: n
 Abendlandes:
@@ -65,7 +65,7 @@ Aerzte:
   genus: f
   type: n
 Ah:
-  count: 20
+  count: 22
   type: n
 Aha:
   count: 18
@@ -92,6 +92,7 @@ Alaska:
   count: 2
   type: n
 Albert:
+  count: 1
   type: n
 Ale:
   genus: f
@@ -101,7 +102,7 @@ Alki:
   genus: m
   type: n
 Alkohol:
-  count: 37
+  count: 39
   genus: m
   type: n
 Alleinunterhalter:
@@ -183,7 +184,7 @@ Antworten:
 Anubis:
   type: n
 Apfel:
-  count: 6
+  count: 8
   type: n
 Apfelkuchen:
   count: 1
@@ -320,7 +321,7 @@ Auto:
   genus: s
   type: n
 Autofahren:
-  count: 7
+  count: 8
   type: vi
 Autokran:
   genus: f
@@ -467,6 +468,9 @@ Bescheid:
 Bescheuert:
   count: 26
   type: adj
+Besen:
+  genus: m
+  type: n
 Besetzung:
   genus: f
   type: n
@@ -524,7 +528,7 @@ Bezeichnung:
   genus: f
   type: n
 Bier:
-  count: 16
+  count: 17
   genus: s
   type: n
 Bild:
@@ -640,6 +644,9 @@ Buch:
   count: 8
   genus: s
   type: n
+Buegeleisen:
+  genus: s
+  type: n
 Buergermeister:
   count: 1
   genus: m
@@ -723,7 +730,7 @@ Commander:
   genus: m
   type: n
 Computer:
-  count: 16
+  count: 20
   genus: m
   type: n
 Computern:
@@ -795,7 +802,7 @@ Deutschland:
   count: 6
   type: n
 Dialogprogramm:
-  count: 1
+  count: 2
   genus: s
   type: n
 Dich:
@@ -874,7 +881,7 @@ Drogensucht:
   genus: f
   type: n
 Du:
-  count: 174
+  count: 175
   type: n
 Duesenflugzeug:
   genus: f
@@ -977,6 +984,8 @@ Einsatz:
   type: n
 Einschienenbahn:
   genus: f
+  type: n
+Einstein:
   type: n
 Einwohnern:
   type: n
@@ -1117,7 +1126,7 @@ Erzaehlen:
   count: 6
   type: vi
 Es:
-  count: 16
+  count: 17
   type: n
 Eskimo:
   count: 1
@@ -1238,6 +1247,9 @@ Festkoerper:
 Festplatte:
   count: 1
   genus: f
+  type: n
+Feudel:
+  genus: m
   type: n
 Feuer:
   genus: s
@@ -1576,6 +1588,9 @@ Gewissen:
 Gewoehnlicher:
   count: 1
   type: adj
+Giesskanne:
+  genus: f
+  type: n
 Gin:
   count: 4
   genus: m
@@ -1642,7 +1657,7 @@ Grund:
   genus: m
   type: n
 Grundfragen:
-  count: 9
+  count: 12
   genus: f
   type: n
 Gruppe:
@@ -1661,6 +1676,8 @@ Haare:
 Haarfarbe:
   count: 5
   genus: f
+  type: n
+Haartrockner:
   type: n
 Haende:
   count: 5
@@ -1685,6 +1702,9 @@ Hama:
   type: n
 Hamburger:
   count: 1
+  genus: m
+  type: n
+Hammer:
   genus: m
   type: n
 Hand:
@@ -1751,6 +1771,9 @@ Haushaltsgeraet:
   count: 1
   genus: s
   type: n
+Haushaltsschere:
+  genus: f
+  type: n
 Haustiere:
   count: 5
   genus: f
@@ -1767,8 +1790,14 @@ Heidelbeere:
 Heidi:
   count: 11
   type: n
+Heimtrainer:
+  genus: m
+  type: n
 Heinrich:
   count: 1
+  type: n
+Heizkissen:
+  genus: s
   type: n
 Helfen:
   count: 12
@@ -1851,7 +1880,7 @@ Hm:
   count: 11
   type: inter
 Hmm:
-  count: 53
+  count: 55
   type: inter
 Hmmm:
   count: 1
@@ -1919,7 +1948,7 @@ Hure:
   count: 11
   type: n
 Ich:
-  count: 288
+  count: 305
   type: n
 Idiot:
   genus: m
@@ -2121,7 +2150,7 @@ Kettenfahrzeug:
   genus: s
   type: n
 Ki:
-  count: 22
+  count: 24
   type: n
 Killer:
   count: 45
@@ -2153,6 +2182,9 @@ Klappe:
 Kleider:
   count: 5
   genus: f
+  type: n
+Kleiderbuegel:
+  genus: m
   type: n
 Kleidung:
   count: 2
@@ -2403,6 +2435,9 @@ Loch:
   count: 1
   genus: s
   type: n
+Lochzange:
+  genus: f
+  type: n
 Loesungen:
   genus: f
   type: n
@@ -2496,7 +2531,7 @@ Markt:
   genus: m
   type: n
 Marktwirtschaft:
-  count: 16
+  count: 19
   genus: f
   type: n
 Mars:
@@ -2508,6 +2543,8 @@ Maschine:
 Maske:
   count: 1
   genus: f
+  type: n
+Massband:
   type: n
 Massnahmen:
   type: n
@@ -2532,6 +2569,9 @@ Meerrettich:
 Megabytes:
   count: 5
   type: n
+Mehrfachsteckdose:
+  genus: f
+  type: n
 Meineid:
   genus: m
   type: n
@@ -2553,7 +2593,7 @@ Mensch:
   count: 38
   type: n
 Menschen:
-  count: 37
+  count: 38
   genus: f
   type: n
 Menschenhandel:
@@ -2673,6 +2713,9 @@ Nacht:
   count: 10
   genus: f
   type: n
+Naehmaschine:
+  genus: f
+  type: n
 Nahen:
   type: adj
 Nahrung:
@@ -2699,7 +2742,7 @@ Neigung:
   count: 1
   type: n
 Nein:
-  count: 452
+  count: 467
   genus: s
   type: n
 Nekoi:
@@ -2727,7 +2770,7 @@ Neusiedlersee:
   genus: m
   type: n
 Nichts:
-  count: 97
+  count: 98
   type: pron
 Niederlage:
   genus: f
@@ -2954,6 +2997,7 @@ Po:
   count: 5
   type: n
 Pokern:
+  count: 3
   type: n
 Polargebiet:
   genus: s
@@ -2970,7 +3014,7 @@ Ponton:
   genus: m
   type: n
 Pool:
-  count: 1
+  count: 3
   genus: m
   type: n
 Port:
@@ -3117,7 +3161,7 @@ Rechenleistung:
   genus: f
   type: n
 Rede:
-  count: 6
+  count: 8
   type: vt
 Reden:
   count: 12
@@ -3189,7 +3233,7 @@ Rom:
   count: 1
   type: n
 Rose:
-  count: 3
+  count: 4
   genus: f
   type: n
 Rosmarin:
@@ -3242,129 +3286,4 @@ Saetze:
   type: n
 Saeufer:
   count: 3
-  type: n
-Safran:
-  count: 3
-  genus: m
-  type: n
-Saft:
-  genus: m
-  type: n
-Saint:
-  count: 1
-  type: n
-Sakara:
-  count: 1
-  type: n
-Sake:
-  type: n
-Salbei:
-  count: 3
-  genus: m
-  type: n
-Sammelbezeichnung:
-  genus: f
-  type: n
-Samurai:
-  count: 5
-  genus: m
-  type: n
-Sanddorn:
-  count: 3
-  genus: m
-  type: n
-Satan:
-  genus: m
-  type: n
-Satellit:
-  genus: m
-  type: n
-Satzbau:
-  count: 8
-  genus: m
-  type: n
-Sau:
-  count: 10
-  genus: f
-  type: n
-Save:
-  count: 1
-  type: n
-Schach:
-  count: 5
-  genus: s
-  type: n
-dezentral:
-  type: adj
-entschieden:
-  genus: s
-  type: n
-Besen:
-  genus: m
-  type: n
-Buegeleisen:
-  genus: s
-  type: n
-Feudel:
-  genus: m
-  type: n
-Giesskanne:
-  genus: f
-  type: n
-Haartrockner:
-  type: n
-Hammer:
-  genus: m
-  type: n
-Haushaltsschere:
-  genus: f
-  type: n
-Heimtrainer:
-  genus: m
-  type: n
-Heizkissen:
-  genus: s
-  type: n
-Kleiderbuegel:
-  genus: m
-  type: n
-Lochzange:
-  genus: f
-  type: n
-Massband:
-  type: n
-Mehrfachsteckdose:
-  genus: f
-  type: n
-Naehmaschine:
-  genus: f
-  type: n
-oder:
-  type: linking
-Staubsauger:
-  genus: m
-  type: n
-Staubwedel:
-  genus: m
-  type: n
-Tablett:
-  genus: f
-  type: n
-Taschenlampe:
-  genus: f
-  type: n
-Ventilator:
-  genus: m
-  type: n
-Waescheklammer:
-  genus: f
-  type: n
-Waeschetrockner:
-  genus: m
-  type: n
-Waschmaschine:
-  genus: f
-  type: n
-Wecker:
-  genus: m
   type: n
