@@ -4132,6 +4132,18 @@ define action multiple_choices_verb with var verb do
         push into array choices, "sieht"
         push into array choices, "seht"
     done
+    else if var verb matches "tu" or var verb matches "mach" do
+        push into array choices, var verb
+        for each new var ending in array endings do
+            push into array choices, var verb concat var ending
+        done
+        for each new var ending in array endings do
+            push into array choices, "tu" concat var ending
+        done
+        for each new var ending in array endings do
+            push into array choices, "mach" concat var ending
+        done
+    done
     else if var verb matches /(<[gdm]>)l$/ do
         push into array choices, var verb
         for each new var ending in array endings do
@@ -4588,7 +4600,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             do regex using var word_to_check: /<[^a-zA-Z0-9-]>/, "", :global:i
             set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
-        if from hash tags item { var word } first item matches /n/ and not from hash tags item { var word } first item matches /linking/ do
+        if from hash tags item { var word } first item matches /n/ and not from hash tags item { var word } first item matches /linking|question/ do
             set new array parts_of_word to split with /<[-]>/, var word
             for each new var part in array parts_of_word do
                 set var part to ucfirst with var part

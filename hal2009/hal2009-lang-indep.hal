@@ -636,7 +636,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /(weiss ich)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
     do regex using var input: /(weisst du)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
     
-    do regex using var input: /(was machst du).+?$/, "$0 ?", :global:i
+    do regex using var input: /(was (?:machst|tust) du).+?$/, "$0 ?", :global:i
     do regex using var input: /(das weiss ich,)$/, "$0 ?", :global:i
     do regex using var input: /(das weiss ich)$/, "$0 ?", :global:i
     do regex using var input: /sag mir /, "", :global:i

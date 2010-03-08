@@ -19,123 +19,130 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#include "hal2009-disk.h"
+#include "hal2009-mysql.h"
 
+int mysql_construct() {
+    // initialize mysql
+    if (0 == mysql_connection) {
+        printf("%s%s\n", "Open MySQL connection to: ", mysql_filename);
+        mysql_connection = calloc(sizeof(MYSQL), 0);
+        mysql_init(mysql_connection);
 
-int disk_begin() {
-    // initialize semantic ram_net
-    disk_net = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-    int i;
-    for (i = n('a'); i <= n('z'); ++i) {
-        disk_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-        
-        int k;
-        for (k = n('a'); k <= n('z'); ++k) {
-            disk_net[i][k] = calloc(sizeof(struct list), 1);
-            disk_net[i][k]->size = 0;
-            disk_net[i][k]->list = 0;
-        }
-        
-        k = WRONG;
-        disk_net[i][k] = calloc(sizeof(struct list), 1);
-        disk_net[i][k]->size = 0;
-        disk_net[i][k]->list = 0;
-    }
-    i = WRONG;
-    disk_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-    int k;
-    for (k = n('a'); k <= n('z'); ++k) {
-        disk_net[i][k] = calloc(sizeof(struct list), 1);
-        disk_net[i][k]->size = 0;
-        disk_net[i][k]->list = 0;
-    }
-    k = WRONG;
-    disk_net[i][k] = calloc(sizeof(struct list), 1);
-    disk_net[i][k]->size = 0;
-    disk_net[i][k]->list = 0;
-    
-    // initialize sqlite
-    if (0 == sqlite_connection) {
-        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
-        if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
+        char* file = strdup(mysql_filename);
+        char* user = strtok(line, ":@/");
+        char* pass = strtok(NULL, ":@/");
+        char* host = strtok(NULL, ":@/");
+        char* db   = strtok(NULL, ":@/");
+
+        if (!mysql_real_connect(mysql_connection, host, ‪user, pass, db, 0, NULL, 0)) {
+            printf("%s%s\n", "Could not open MySQL connection to: ", sqlite_filename);
             sqlite_connection = 0;
             return NO_CONNECTION;
         }
+        free(file);
     }
-
-    char* err;
-    sqlite3_exec(sqlite_connection, "BEGIN;", NULL, NULL, &err);
-    sqlite3_free(err);
     return 0;
 }
 
-int disk_free_wordlist(int i, int k) {
+int mysql_begin() {
+    // initialize semantic ram_net
+    mysql_net = calloc(sizeof(void*)*(4+'z'-'a'), 1);
+    int i;
+    for (i = n('a'); i <= n('z'); ++i) {
+        mysql_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
+        
+        int k;
+        for (k = n('a'); k <= n('z'); ++k) {
+            mysql_net[i][k] = calloc(sizeof(struct list), 1);
+            mysql_net[i][k]->size = 0;
+            mysql_net[i][k]->list = 0;
+        }
+        
+        k = WRONG;
+        mysql_net[i][k] = calloc(sizeof(struct list), 1);
+        mysql_net[i][k]->size = 0;
+        mysql_net[i][k]->list = 0;
+    }
+    i = WRONG;
+    mysql_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
+    int k;
+    for (k = n('a'); k <= n('z'); ++k) {
+        mysql_net[i][k] = calloc(sizeof(struct list), 1);
+        mysql_net[i][k]->size = 0;
+        mysql_net[i][k]->list = 0;
+    }
+    k = WRONG;
+    mysql_net[i][k] = calloc(sizeof(struct list), 1);
+    mysql_net[i][k]->size = 0;
+    mysql_net[i][k]->list = 0;
+
+    mysql_construct();
+
+    char sql[99];
+    strcpy(sql, "BEGIN;");
+    mysql_real_query(mysql_connection, sql, (unsigned int)strlen(sql));
+    return 0;
+}
+
+int mysql_free_wordlist(int i, int k) {
     int g;
-    for (g = 0; g < disk_net[i][k]->size; ++g) {
-        free(disk_net[i][k]->list[g]);
-        disk_net[i][k]->list[g] = 0;
+    for (g = 0; g < mysql_net[i][k]->size; ++g) {
+        free(mysql_net[i][k]->list[g]);
+        mysql_net[i][k]->list[g] = 0;
     }
 }
 
-int disk_end() {
-    if (0 == sqlite_connection) {
-        printf("%s%s\n", "Open SQLite connection to file: ", sqlite_filename);
-        if (sqlite3_open(sqlite_filename, &sqlite_connection)) {
-            printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
-            sqlite_connection = 0;
-            return NO_CONNECTION;
-        }
-    }
+int mysql_end() {
+    mysql_construct();
     
-    char* err;
-    sqlite3_exec(sqlite_connection, "COMMIT;", NULL, NULL, &err);
-    sqlite3_free(err);
-    sqlite3_close(sqlite_connection);
-    sqlite_connection = 0;
+    char sql[99];
+    strcpy(sql, "COMMIT;");
+    mysql_real_query(mysql_connection, sql, (unsigned int)strlen(sql));
+    mysql_close(mysql_connection);
+    mysql_connection = 0;
     
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
-            disk_free_wordlist(i, k);
-            free(disk_net[i][k]);
-            disk_net[i][k] = 0;
+            mysql_free_wordlist(i, k);
+            free(mysql_net[i][k]);
+            mysql_net[i][k] = 0;
         }
         
         k = WRONG;
-        disk_free_wordlist(i, k);
-        free(disk_net[i][k]);
-        disk_net[i][k] = 0;
+        mysql_free_wordlist(i, k);
+        free(mysql_net[i][k]);
+        mysql_net[i][k] = 0;
         
-        free(disk_net[i]);
-        disk_net[i] = 0;
+        free(mysql_net[i]);
+        mysql_net[i] = 0;
     }
     i = WRONG;
     int k;
     for (k = n('a'); k <= n('z'); ++k) {
-        disk_free_wordlist(i, k);
-        free(disk_net[i][k]);
-        disk_net[i][k] = 0;
+        mysql_free_wordlist(i, k);
+        free(mysql_net[i][k]);
+        mysql_net[i][k] = 0;
     }
     k = WRONG;
-    disk_free_wordlist(i, k);
-    free(disk_net[i][k]);
-    disk_net[i][k] = 0;
-    free(disk_net[i]);
-    disk_net[i] = 0;
-    free(disk_net);
-    disk_net = 0;
+    mysql_free_wordlist(i, k);
+    free(mysql_net[i][k]);
+    mysql_net[i][k] = 0;
+    free(mysql_net[i]);
+    mysql_net[i] = 0;
+    free(mysql_net);
+    mysql_net = 0;
 }
 
-int sql_sqlite_set_filename(const char* filename) {
-    if (sqlite_filename)
-        free(sqlite_filename);
-    sqlite_filename = 0;
-    sqlite_filename = filename;
+int sql_mysql_set_filename(const char* filename) {
+    if (mysql_filename)
+        free(mysql_filename);
+    mysql_filename = 0;
+    mysql_filename = filename;
 }
 
-struct word* disk_get_word(const char* name) {
+struct word* mysql_get_word(const char* name) {
     if (0 == strlen(name)) {
         return 0;
     }
@@ -150,7 +157,7 @@ struct word* disk_get_word(const char* name) {
     
     int length = strlen(name);
     
-    struct word** list = (struct word**)(disk_net[i][k]->list);
+    struct word** list = (struct word**)(mysql_net[i][k]->list);
     
     if (0 == list) {
         //debugf("illegal list while searching %s.\n", name);
@@ -158,7 +165,7 @@ struct word* disk_get_word(const char* name) {
     }
     
     int g;
-    for (g = 0; g < disk_net[i][k]->size; ++g) {
+    for (g = 0; g < mysql_net[i][k]->size; ++g) {
         if (length == list[g]->length && 0 == strcmp(list[g]->name, name)) {
             //debugf("found: %s = %p.\n", name, list[g]);
             return list[g];
@@ -539,8 +546,8 @@ char* gen_sql_delete_everything_from(const char* filename) {
     return sql;
 }
 
-char* disk_get_source(const char* key) {
-    printf("disk_get_source: %s\n", key);
+char* mysql_get_source(const char* key) {
+    printf("mysql_get_source: %s\n", key);
     if (!key || !key[0])
         return 1;
     
@@ -566,11 +573,11 @@ char* disk_get_source(const char* key) {
     return source;
 }
 
-char* disk_del_record(const char* key) {
+char* mysql_del_record(const char* key) {
     if (!key || !key[0])
         return 1;
     
-    char* source = disk_get_source(key);
+    char* source = mysql_get_source(key);
     
     char* sql = malloc(1024);
     *sql = 0;
@@ -723,7 +730,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
 int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) {
     char* err;
     int error_to_return = 0;
-    while (sqlite3_exec(sqlite_connection, sql, callback, arg, &err)) {
+    while (TODO3_exec(TODO_connection, sql, callback, arg, &err)) {
         if (strstr(err, " not unique") && !strstr(err, "PRIMARY KEY must be unique")) {
             error_to_return = NOT_UNIQUE;
             break;
@@ -734,9 +741,9 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         }
         printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
         if (strstr(err, "no such table")) {
-            sqlite3_free(err);
+            TODO3_free(err);
             
-            if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+            if (TODO3_exec(TODO_connection, TODO_sql_create_table, NULL, NULL, &err)) {
                 printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
                 error_to_return = TABLE_ERROR;
                 break;
@@ -750,12 +757,12 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
             break;
         }
     }
-    sqlite3_free(err);
+    TODO3_free(err);
     
     return error_to_return;
 }
 
-struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* mysql_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
@@ -774,7 +781,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
     return 0;
 }
 
-struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
+struct fact* mysql_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
     if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
@@ -792,7 +799,7 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     }
     
     if (error) {
-        printf("Error in disk_add_fact.\n");
+        printf("Error in mysql_add_fact.\n");
         return 0;
     }
 
@@ -802,7 +809,7 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     return fact;
 }
 
-struct word* disk_set_word(const char* name) {
+struct word* mysql_set_word(const char* name) {
     if (!name || 0 == strlen(name)) {
         return 0;
     }
@@ -819,31 +826,31 @@ struct word* disk_set_word(const char* name) {
         k = n(name[1]);
     }
     
-    if (0 == disk_net[i][k]->list) {
+    if (0 == mysql_net[i][k]->list) {
         // debugf("empty list wile inserting %s.\n", name);
     }
     else {
-        0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, disk_net[i][k]->list, disk_net[i][k]->size, ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size-1]->name);
+        0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, mysql_net[i][k]->list, mysql_net[i][k]->size, ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size-1]->name);
     }
     
-    if (disk_net[i][k]->size == 0) {
-        disk_net[i][k]->list = calloc(sizeof(struct word*), 11);
-        disk_net[i][k]->allocated_until = 10;
+    if (mysql_net[i][k]->size == 0) {
+        mysql_net[i][k]->list = calloc(sizeof(struct word*), 11);
+        mysql_net[i][k]->allocated_until = 10;
     }
-    else if (disk_net[i][k]->size >= disk_net[i][k]->allocated_until) {
-        disk_net[i][k]->allocated_until += 10;
-        disk_net[i][k]->list = realloc(disk_net[i][k]->list, sizeof(struct word*)*(disk_net[i][k]->allocated_until+1));
+    else if (mysql_net[i][k]->size >= mysql_net[i][k]->allocated_until) {
+        mysql_net[i][k]->allocated_until += 10;
+        mysql_net[i][k]->list = realloc(mysql_net[i][k]->list, sizeof(struct word*)*(mysql_net[i][k]->allocated_until+1));
     }
     
-    disk_net[i][k]->list[disk_net[i][k]->size] = calloc(1, sizeof(struct word));
-    ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name   = strdup(name);
-    ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->length = strlen(name);
+    mysql_net[i][k]->list[mysql_net[i][k]->size] = calloc(1, sizeof(struct word));
+    ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->name   = strdup(name);
+    ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->length = strlen(name);
     0 && debugf("inserted: %s = %p, %p.\n", 
-            ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name,
-            disk_net[i][k]->list[disk_net[i][k]->size],
-            disk_net[i][k]->size);
-    ++(disk_net[i][k]->size);
-    return disk_net[i][k]->list[disk_net[i][k]->size - 1];
+            ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->name,
+            mysql_net[i][k]->list[mysql_net[i][k]->size],
+            mysql_net[i][k]->size);
+    ++(mysql_net[i][k]->size);
+    return mysql_net[i][k]->list[mysql_net[i][k]->size - 1];
 }
 
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {
@@ -876,7 +883,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     return 0;
 }
 
-int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position) {
+int mysql_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position) {
     struct request_get_facts_for_words req;
     req.words    = words;
     req.facts    = facts;
@@ -898,7 +905,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
     return 0;
 }
 
-int disk_search_double_facts(struct word*** words, struct fact** facts, int limit, int* position) {
+int mysql_search_double_facts(struct word*** words, struct fact** facts, int limit, int* position) {
     struct request_get_facts_for_words req;
     req.words    = words;
     req.facts    = facts;
@@ -977,7 +984,7 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
     return 0;
 }
 
-int disk_re_index() {
+int mysql_re_index() {
     {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
         printf("Delete old index...\n");
@@ -1027,7 +1034,7 @@ int disk_re_index() {
     return 0;
 }
 
-struct fact** disk_search_clauses(int rel) {
+struct fact** mysql_search_clauses(int rel) {
     int limit = 8000;
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
         limit = 100000;
@@ -1052,7 +1059,7 @@ struct fact** disk_search_clauses(int rel) {
     return clauses;
 }
 
-int disk_delete_everything_from(const char* filename) {
+int mysql_delete_everything_from(const char* filename) {
     {
         char* sql = gen_sql_delete_everything_from(filename);
         int error = sql_execute(sql, NULL, NULL);
@@ -1062,14 +1069,14 @@ int disk_delete_everything_from(const char* filename) {
     return -1;
 }
 
-int disk_set_to_invalid_value(void** p) {
+int mysql_set_to_invalid_value(void** p) {
     if (!p) return 1;
     if (*p && can_be_a_pointer(*p)) free(*p);
     *p = -1;
     return 0;
 }
 
-int disk_add_link (const char* link, int key_1, int key_2) {
+int mysql_add_link (const char* link, int key_1, int key_2) {
     if (!link) {
         return INVALID;
     }
