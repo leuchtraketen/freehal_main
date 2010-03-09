@@ -415,7 +415,7 @@ define action get_tag_part_of_speech with var word, var lang do
     do return with array return_array
 done
 
-set new hash content_of_memory_file to an empty hash
+set new global hash content_of_memory_file to an empty hash
 
 # TEXT
 # Save the word "name_of_entry" in the memory file.
@@ -546,10 +546,10 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     print into var output_handle data new line
     if not from array tags second item matches /q/ do
         print into var output_handle data "  genus: " concat from array tags second item concat new line
-        do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+        do push into that array: from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
     done
     print into var output_handle data "  type: " concat from array tags first item concat new line
-    do push into that array: from hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+    do push into that array: from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     
     if not var file_name matches /brain/ do
         if not from array tags first item matches /q/ do
@@ -568,30 +568,17 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         print into var output_handle data new line
         if not from array tags second item matches /q/ do
             print into var output_handle data "  genus: " concat from array tags second item concat new line
-            do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
+            do push into that array: from global hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags second item
         done
         print into var output_handle data "  type: " concat from array tags first item concat new line
-        do push into that array: from hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
+        do push into that array: from global hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags first item
     done
 
     do close with var output_handle
 done
 
-# TEXT
-# Search in the memory file for the word "name_of_entry".
-# The memory file contains the parts of speech.
-# CODE
-define action memory_get_by_name with var file_name, var name_of_entry, var lang, var path do
-    if exists: "SLOW", end test do
-        print "Running in SLOW mode... "
-        print new line
-    done
-    
-    if not var name_of_entry or var name_of_entry matches /^\s*?$/ do
-        do return using an empty array
-    done
-    
-    if not from hash content_of_memory_file item { var file_name } do
+define action memory_build_cache with var file_name, var lang, var path do
+    if not from global hash content_of_memory_file item { var file_name } do
         
         # read file into cache if there is no cache yet
         set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
@@ -608,13 +595,30 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
             do regex using var line: /<[\r\n]>/, "", :global
             
             if var line matches /^ / do
-                do push into that array: from hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
+                do push into that array: from global hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
             done
             else do
                 set var entry to var line
             done
         done
     done
+done
+
+# TEXT
+# Search in the memory file for the word "name_of_entry".
+# The memory file contains the parts of speech.
+# CODE
+define action memory_get_by_name with var file_name, var name_of_entry, var lang, var path do
+    if exists: "SLOW", end test do
+        print "Running in SLOW mode... "
+        print new line
+    done
+    
+    if not var name_of_entry or var name_of_entry matches /^\s*?$/ do
+        do return using an empty array
+    done
+    
+    do memory_build_cache with var file_name, var lang, var path
     
     do be_slow without arguments
     print "Searching   " concat var name_of_entry concat "    \tin file " concat var file_name
@@ -627,17 +631,17 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     set new var matched_id to ""
     
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
+        set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
         set var matched_id to var name_of_entry concat var end_of_entry_line
     done
     do regex using var name_of_entry: /[\(\)]/, "", :global:i
     if (not array contents) or is an empty array contents do
-        set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
+        set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
         set var matched_id to var name_of_entry concat var end_of_entry_line
     done
     for each new var suffix in array standard_suffixes do
         if (not array contents) or is an empty array contents do
-            set array contents to from hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix concat var end_of_entry_line }
+            set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix concat var end_of_entry_line }
             set var matched_id to var name_of_entry concat var suffix concat var end_of_entry_line
         done
     done
@@ -1185,7 +1189,7 @@ define action compute_tags with var word, var lang, var path do
     push into array main_files, "word_types.memory"
     push into array main_files, "word_types.self-taggered"
     push into array main_files, "word_types.brain"
-    
+
     for each new var main_file in array main_files do
     
         if is an empty array tags do
@@ -1430,7 +1434,7 @@ define action compute_tags with var word, var lang, var path do
         print new line
         if ( not exists: var path concat "/no-tagger.txt", end test ) or ( var is_tagger_on ) do
             set array tags to an empty array
-            set from array tags first item to guess_part_of_speech using var word
+            set from array tags first item to guess_part_of_speech using var word, var lang, var path
             
             if not from array tags first item do
                 set array tags to an empty array
@@ -1461,6 +1465,237 @@ define action compute_tags with var word, var lang, var path do
     # CODE
     do return using array tags
 done
+
+define action guess_part_of_speech with var word, var lang, var path do
+    print "Tagger..." concat new line
+    print "word: " concat var word concat new line
+    print "" concat new line
+    
+    if from global hash builtin_part_of_speech item { var word } do
+        do return with from global hash builtin_part_of_speech item { var word }
+    done
+    
+    do memory_build_cache with "word_types.brain", var lang, var path
+    set new hash cache to from global hash content_of_memory_file item { "word_types.brain" }
+    set new array cache_keys to an empty array
+    set items of array cache_keys to keys with items of hash cache
+    
+    set new var end_of_entry_line to ':'
+    set new hash pos_to_rating to an empty hash
+    set new hash pos_to_count_words to an empty hash
+    
+    set new var word_e_1 to var word
+    do regex using var word_e_1: /^.*?(.)$/, "$0", :i
+    set new var word_e_2 to var word
+    do regex using var word_e_2: /^.*?(..)$/, "$0", :i
+    set new var word_e_3 to var word
+    do regex using var word_e_3: /^.*?(...)$/, "$0", :i
+    set new var word_e_4 to var word
+    do regex using var word_e_4: /^.*?(....)$/, "$0", :i
+    set new var word_e_5 to var word
+    do regex using var word_e_5: /^.*?(.....)$/, "$0", :i
+    set new var word_e_6 to var word
+    do regex using var word_e_6: /^.*?(......)$/, "$0", :i
+    set new var word_b_1 to var word
+    do regex using var word_b_1: /^(.).*?$/, "$0", :i
+    set new var word_b_2 to var word
+    do regex using var word_b_2: /^(..).*?$/, "$0", :i
+    set new var word_b_3 to var word
+    do regex using var word_b_3: /^(...).*?$/, "$0", :i
+    
+    for each new var _key in array cache_keys do
+        set new var factor to 1
+        if var _key matches /<[A-Z]>/ do
+            set var factor to 0.7
+        done
+        
+        set new var key to var _key
+        do regex using var key: /var end_of_entry_line$/, "", :i
+        
+        if var _key matches /<[A-Z]>/ and lc(var key) matches /^var word$/ and length(var word) > 6 do
+            #do return with "n"
+        done
+        
+        if var key matches /var word_e_6$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 50 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_5$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 40 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_4$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 30 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_3$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 20 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_2$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 10 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_1$/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 1 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /^var word_b_3/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 25 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /^var word_b_2/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 15 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /^var word_b_1/ do
+            set new var _pos to 'q'
+            set new array _lines to from hash cache item { var key concat ":" }
+            for each new var _line in array _lines do
+                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                    set var _pos to $1
+                    go to last
+                done
+            done
+            set var _pos to lc with var _pos
+            set from hash pos_to_rating item { var _pos } to 1 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+    done
+    
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "vt" }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "vi" }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "v," }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "ci" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "asj" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "afj" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "adv" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n," }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,m,f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,f,m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "pron" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "vt" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "vi" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "v," }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "ci" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "asj" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "afj" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "adv" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n," }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,m,f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,f,m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "pron" }
+    
+    set new var best_pos to 'q'
+    set new var best_score to 0
+    
+    set new array pos_to_rating_keys to an empty array
+    set items of array pos_to_rating_keys to keys with items of hash pos_to_rating
+    for each new var pos_key in array pos_to_rating_keys do
+        if not var pos_key matches /^(n|v|adj)$/ do
+            go to next
+        done
+        set new var score to from hash pos_to_rating item { var pos_key }
+        if var score is 0 do
+            go to next
+        done
+        set new var cnt to from hash pos_to_count_words item { var pos_key }
+        set var score to 2 * var score / var cnt
+        set var score to int with var score * 100
+        
+        if var score > var best_score do
+            set var best_score to var score
+            set var best_pos to var pos_key
+        done
+        print "- score of '" concat var pos_key concat "': " concat var score concat new line
+    done
+    print "" concat new line
+    print "'" concat var word concat "' => '" concat var best_pos concat "'" concat new line
+    
+    
+    do return with var best_pos
+done
+
 
 # TEXT
 # ~~~~~ PARSER CODE ~~~~~
@@ -2480,31 +2715,27 @@ define action compute_context with hash parsed do
 done
 
 define action reasonof_construct_hash with array verbs, var lang, var path, hash parsed do
-    for each new var verb in array verbs is rw do
-        if var verb matches /^(habe|hast|hab|haben|habt)$/ do
-            set var verb to "haben"
+    for each new array verb in array verbs is rw do
+        if from array verb first item matches /^(habe|hast|hab|haben|habt)$/ do
+            set from array verb first item to "haben"
         done
-        else if var verb matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
-            set var verb to "sein"
+        else if from array verb first item matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
+            set from array verb first item to "sein"
         done
         else do
-            if var verb matches /st$/ do
-                do regex using var verb: /st$/, "en", :i
+            if from array verb first item matches /st$/ do
+                do regex using from array verb first item: /st$/, "en", :i
             done
-            else if var verb matches /st$/ do
-                do regex using var verb: /e$/, "en", :i
+            else if from array verb first item matches /st$/ do
+                do regex using from array verb first item: /e$/, "en", :i
             done
             else if items of array verbs is 1 do
-                do regex using var verb: /...$/, "*", :i
+                do regex using from array verb first item: /...$/, "*", :i
             done
             else do
                 ##
             done
         done
-
-        set new array _verb to an empty array
-        push into array _verb, var verb
-        set var verb to array _verb
     done
 
     set new hash parsed_1 to fake_hash_parsed without arguments
@@ -2530,8 +2761,9 @@ define action reasonof with var input, var lang, var path, hash parsed do
     set new array verbs to an empty array
     set new array _verbs to from hash parsed item { 'verbs' }
     for each new array _verb in array _verbs do
-        set new var verb to from array _verb first item
-        push into array verbs, var verb
+        set new array verb to an empty array
+        set items of array verb to items of array _verb
+        push into array verbs, array verb
     done
     
     set new hash parsed_2 to reasonof_construct_hash with array verbs, var lang, var path, hash parsed
@@ -2617,8 +2849,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
 #  from array verbs first item matches /<[|]>/ do # items of array verbs is 1
             set new array _must_haves to from hash parsed item { 'verbs' }
             for each new array must_haves in array _must_haves do
-                for each new var _must_have in array must_haves do
-                    set new var must_have to lc with var _must_have
+                for each new var must_have in array must_haves do
+                    set var must_have to lc with var must_have
                     do regex using var must_have: /...$/, "", :i
                     if not lc( from array result second item second item ) matches /var must_have/ do
                         print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"

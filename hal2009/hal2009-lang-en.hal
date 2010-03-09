@@ -2572,14 +2572,14 @@ define action phrases_error_toomuch without arguments do
 done
 
         
-define action guess_part_of_speech with var word do
-    set new var guessed to 'n'
-    if var word matches /ste$/ do
-        set var guessed to 'adj'
-    done
-    
-    do return using var guessed
-done
+#define action guess_part_of_speech with var word do
+#    set new var guessed to 'n'
+#    if var word matches /ste$/ do
+#        set var guessed to 'adj'
+#    done
+#    
+#    do return using var guessed
+#done
 
 define action get_article with var genus, var part_of_sentence, var def do
     if var def matches /indef/ do

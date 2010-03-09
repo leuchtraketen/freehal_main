@@ -1716,6 +1716,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'when' => "questionword",
           'wort' => "n",
           'tlerweile' => "adj",
+          'gelten' => "v",
+          'gilt' => "v",
           'weshalb' => "questionword",
           'deutsche' => "adj",
           'das' => "art",
@@ -2936,41 +2938,41 @@ define action phrases_error_toomuch without arguments do
     do return with array phrases
 done
 
-define action guess_part_of_speech with var word do
-    set new var guessed to ''
-    if lc(var word) matches var word and var word matches /iv$/ do
-        set var guessed to 'adj'
-    done
-    #if var word matches lc(var word) and var word matches /an$/ do
-    #    set var guessed to 'adj'
-    #done
-    if lc(var word) matches var word and var word matches /em$/ do
-        set var guessed to 'adj'
-    done
-    if var word matches /ste$/ do
-        set var guessed to 'adj'
-    done
-    if var word matches /ier[te][n]?$/ do
-        set var guessed to 'v'
-    done
-    if lc(var word) matches var word and var word matches /en$/ do
-        set var guessed to 'v'
-    done
-    if var word matches /...ist((en)|(in))$/ do
-        set var guessed to 'n'
-    done
-    if var word matches /est$/ do
-        set var guessed to 'n'
-    done
-    if var word matches /ierte..?.?$/ do
-        set var guessed to 'adj'
-    done
-    if var word matches /<[A-Z]>/ do
-        set var guessed to 'n'
-    done
-    
-    do return using var guessed
-done
+#define action guess_part_of_speech with var word do
+#    set new var guessed to ''
+#    if lc(var word) matches var word and var word matches /iv$/ do
+#        set var guessed to 'adj'
+#    done
+#    #if var word matches lc(var word) and var word matches /an$/ do
+#    #    set var guessed to 'adj'
+#    #done
+#    if lc(var word) matches var word and var word matches /em$/ do
+#        set var guessed to 'adj'
+#    done
+#    if var word matches /ste$/ do
+#        set var guessed to 'adj'
+#    done
+#    if var word matches /ier[te][n]?$/ do
+#        set var guessed to 'v'
+#    done
+#    if lc(var word) matches var word and var word matches /en$/ do
+#        set var guessed to 'v'
+#    done
+#    if var word matches /...ist((en)|(in))$/ do
+#        set var guessed to 'n'
+#    done
+#    if var word matches /est$/ do
+#        set var guessed to 'n'
+#    done
+#    if var word matches /ierte..?.?$/ do
+#        set var guessed to 'adj'
+#    done
+#    if var word matches /<[A-Z]>/ do
+#        set var guessed to 'n'
+#    done
+#    
+#    do return using var guessed
+#done
 
 define action get_article with var genus, var part_of_sentence, var def do
     if var def matches /indef/ do
@@ -4123,14 +4125,6 @@ define action multiple_choices_verb with var verb do
         push into array choices, "gibst"
         push into array choices, "gibt"
         push into array choices, "gebt"
-    done
-    else if var verb matches "seh" or var verb matches "sieh" do
-        push into array choices, var verb
-        push into array choices, "sehe"
-        push into array choices, "sehen"
-        push into array choices, "siehst"
-        push into array choices, "sieht"
-        push into array choices, "seht"
     done
     else if var verb matches "tu" or var verb matches "mach" do
         push into array choices, var verb

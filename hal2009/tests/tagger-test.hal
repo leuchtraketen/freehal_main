@@ -1,0 +1,105 @@
+compile source hal2009-lang-de.hal
+require source hal2009-lang-de.hal
+compile source hal2009.hal
+require source hal2009.hal
+set new var current_language to 'de'
+set new var path to "."
+set new var lang to var current_language
+do require with "tests/shuffler.pl"
+
+
+do memory_build_cache with "word_types.brain", var lang, var path
+set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat "word_types.brain", read
+set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat "temp.brain", write
+set new var cnt to 0
+for each new var line from var input_handle do
+    if var line matches /^\s/ do
+        set var cnt to var cnt + 1
+    done
+done
+set var cnt to var cnt - 50000
+print var cnt
+do close with var input_handle
+set var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat "word_types.brain", read
+for each new var line from var input_handle do
+    print into var output_handle data var line
+    print into var output_handle data new line
+    if var line matches /^\s/ do
+        set var cnt to var cnt - 1
+        if var cnt < 0 do
+            go to last
+        done
+    done
+done
+do close with var input_handle
+do close with var output_handle
+do memory_build_cache with "temp.brain", var lang, var path
+
+set new array cache_keys to an empty array
+set items of array cache_keys to keys with items of that hash: from global hash content_of_memory_file item { "word_types.brain" } end of items
+
+set new array all_available_test_items to an empty array
+set items of array all_available_test_items to keys with items of that hash: from global hash content_of_memory_file item { "temp.brain" } end of items
+do fisher_yates_shuffle with array all_available_test_items
+set new var count_test_items to 5000
+set new array test_items to an empty array
+while var count_test_items > 0 do
+    set new var k to pop with items of array all_available_test_items
+    if var k matches lc(var k) do
+        push into array test_items, var k
+    done
+    set var count_test_items to var count_test_items - 1
+done
+
+set new var end_of_entry_line to ':'
+
+set new var cnt to 0
+set new var pct to 0
+for each new var _test_item in array test_items do
+    set new var _pos to 'q'
+    set new array _lines to from global hash content_of_memory_file item { "word_types.brain" } item { var _test_item }
+    for each new var _line in array _lines do
+        if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+            set var _pos to $1
+            go to last
+        done
+    done
+    set var _pos to lc with var _pos
+    if not var _pos matches /(v|ad)/ do
+        go to next
+    done
+    
+    set new var test_item to var _test_item
+    do regex using var test_item: /var end_of_entry_line$/, "", :i
+    set new var res to guess_part_of_speech with var test_item, var lang, var path
+    print var res
+    print new line
+    
+    set new var r to var res
+    do regex using var r: /^(.).*/, "$0", :i
+    
+    if var res matches var _pos or var res matches /var _pos/ or var _pos matches /var res/ or var _pos matches /^var r/ do
+        set var pct to var pct + 1
+        set var cnt to var cnt + 1
+        print "Ok."
+        print new line
+    done
+    else do
+        
+        set var pct to var pct + 0
+        set var cnt to var cnt + 1
+        print "-----------------------------------" concat new line
+        print "Tagger bug:" concat new line
+        print "- word:  " concat var test_item concat new line
+        print "- wrong: " concat var res concat new line
+        print "- right: " concat var _pos concat new line
+        print "-----------------------------------" concat new line
+        print new line
+    done
+    
+    print new line
+    print 100 * (var pct / var cnt) concat "%" concat " (" concat (var pct) concat " success / " concat (var cnt - var pct) concat " errors / " concat (var cnt) concat " total)" concat new line
+    print new line
+done
+
+
