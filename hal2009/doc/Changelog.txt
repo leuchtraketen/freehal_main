@@ -1,3 +1,7 @@
+962:
+
+- Fehler bei Umwandlung "A ist ein B" -> "A = B"
+
 961:
 
 - reasonof-System verfeinert

@@ -329,7 +329,7 @@ define action get_score with array words, var sentence, var lang, var path do
                     set new array parts to split with ":", var line_2
                     set new var score_here to from array parts second item
                     do regex using var score_here: /\s/, "", :global
-                    print "score: " concat var score_here concat new line
+#                    print "score: " concat var score_here concat new line
 
                     if (0+var score_here) > -1 do
                         set var sum to var sum + (100/(var index_of_this_word+1))*var score_here*(10/var sum) + 1
@@ -1307,6 +1307,9 @@ define action compute_tags with var word, var lang, var path do
             if lc(var word) matches var word and var lang matches "de" do
                 if var word matches /ist$/ do
                     set from array tags first item to "n"
+                done
+                if var word matches /(los|voll|frei)(e|es|er|en|em)?$/ do
+                    set from array tags first item to "adj"
                 done
                 if var word matches /st$/ do
                     set from array tags first item to "vi"
