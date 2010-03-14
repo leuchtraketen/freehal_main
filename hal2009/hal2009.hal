@@ -291,7 +291,7 @@ define action get_score with array words, var sentence, var lang, var path do
         set new var last_word to ""
         for each new var line from var input_handle do
             set var line to lc with var line
-            do regex using var line: /<[?]>|<[!.,\-]>|<[\s\r\n]>+?/, "", :global
+            do regex using var line: /<[?]>|<[!.,+]>|<[\s\r\n]>+?/, "", :global
             if var line matches /[\[]/ do
                 set var last_word to var line
             done
@@ -329,6 +329,7 @@ define action get_score with array words, var sentence, var lang, var path do
                     set new array parts to split with ":", var line_2
                     set new var score_here to from array parts second item
                     do regex using var score_here: /\s/, "", :global
+                    print "score: " concat var score_here concat new line
 
                     if (0+var score_here) > -1 do
                         set var sum to var sum + (100/(var index_of_this_word+1))*var score_here*(10/var sum) + 1
@@ -2817,7 +2818,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 done
                 set new flag is_builtin to builtin_has_time_place_adverbs_suffix with var must_have
 
-                if lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
+                if var must_have and lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
                     print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                 done
@@ -2833,7 +2834,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             set new array must_haves to from hash parsed item { 'objects' } first item
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
-                if not lc( from array result second item second item ) matches /var must_have/ do
+                if ( not var must_have ) or not lc( from array result second item second item ) matches /var must_have/ do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     set flag go_next to 1
@@ -2852,7 +2853,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 for each new var must_have in array must_haves do
                     set var must_have to lc with var must_have
                     do regex using var must_have: /...$/, "", :i
-                    if not lc( from array result second item second item ) matches /var must_have/ do
+                    if length(var must_have) > 1 and not lc( from array result second item second item ) matches /var must_have/ do
                         print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                         print new line
                         set flag go_next to 1
@@ -4922,12 +4923,19 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
     print into var flowchart_log data new line
     print into var flowchart_log data "textcontent 000000 Answers:"
     print into var flowchart_log data new line
+    set new hash primary_keys to an empty hash
     for each new array sentence in array sentences do
         if from array sentence second item do
-            print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence first item concat ": " concat from array sentence second item
-            print into var flowchart_log data new line
-            print into var flowchart_log data "property    pk     " concat from array sentence first item
-            print into var flowchart_log data new line
+            if ( not from array sentence first item ) or ( not from hash primary_keys item { from array sentence first item } ) do
+            
+                print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence first item concat ": " concat from array sentence second item
+                print into var flowchart_log data new line
+                print into var flowchart_log data "property    pk     " concat from array sentence first item
+                print into var flowchart_log data new line
+                
+                set from hash primary_keys item { from array sentence first item } to 1
+                
+            done
         done
         else do
             print into var flowchart_log data "textcontent 000000 \t - (invalid)"

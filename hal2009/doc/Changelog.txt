@@ -1,3 +1,8 @@
+961:
+
+- reasonof-System verfeinert
+- Bug im Bewertungssystem
+
 948:
 
 - Bug 543 korrigiert
