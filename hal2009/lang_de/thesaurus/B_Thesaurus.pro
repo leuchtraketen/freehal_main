@@ -10457,8 +10457,6 @@
 = <> _box_ <> _kasten_ <> (maybe)
 = <> _box_ <> _kiste_ <> (maybe)
 = <> _box_ <> _klanggeber_ <> (maybe)
-= <> _box_ <> _lautsprecherbox_ <> (maybe)
-= <> _box_ <> _lautsprecher_ <> (maybe)
 = <> _box_ <> _packung_ <> (maybe)
 = <> _box_ <> _paeckchen_ <> (maybe)
 = <> _box_ <> _schachtel_ <> (maybe)
