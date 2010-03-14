@@ -815,7 +815,7 @@ define action memory_limit with var file_name, var lang, var path do
     done
     
     set items of array entries_over_avg to reverse with items of array entries_over_avg
-    set items of array entries_under_avg to reverse with items of array entries_under_avg
+    #set items of array entries_under_avg to reverse with items of array entries_under_avg
     
     # TEXT
     # save everything
