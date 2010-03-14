@@ -1326,6 +1326,7 @@ define action compute_tags with var word, var lang, var path do
                 if var word matches /ierst$/ do
                     set from array tags first item to "vi"
                 done
+                do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
             done
             else if ucfirst(var word) matches var word and var lang matches "de" do
                 if var word matches /est$/ do
