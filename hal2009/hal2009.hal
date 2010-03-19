@@ -3551,7 +3551,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 push into array sentence, from array clause item [1]
                 push into array sentence, var verb
-                if not from array clause item [2] matches /ein/ do
+                if not from array clause item [2] matches /ein|der|die|das|the|(a )/ do
                     push into array sentence, var object_article
                 done
                 push into array sentence, from array clause item [2]
