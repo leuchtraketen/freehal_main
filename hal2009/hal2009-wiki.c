@@ -166,8 +166,11 @@ char* transform_sentence(char* sentence, const char* entity) {
     snprintf(_verb_1, 99, " ist %s ", entity);
     
     char* verb_str = 0;
-    if (verb_str = strstr(sentence, "hrt zu ")) {
-        verb_str += 7;
+    if (verb_str = strstr(sentence, "rt zu den ")) {
+        verb_str += 9;
+    }
+    else if (verb_str = strstr(sentence, "rt zu ")) {
+        verb_str += 6;
     }
     else if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
@@ -518,6 +521,32 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
             if (facts) {
                 search_results_line = current_line;
                 break;
+            }
+        }
+        
+        if (strstr(lines[current_line]->s, "searchdidyoumean") && strlen(lines[current_line]->s) > 55) {
+            char* start = strstr(lines[current_line]->s + 50, "search=");
+            if (strlen(start) > 20) {
+                start += 6;
+                
+                if (!start) continue;
+                ++start;
+                
+                char* stop = strstr(start, "&");
+                if (!stop) continue;
+                stop[0] = '\0';
+                
+                printf("page: \"%s\"\n", start);
+                
+                char* path = calloc(strlen(start) + 20, 1);
+                sprintf(path, "/wiki/%s", start);
+                
+                facts = search_facts_wiki_page(path, search_results_entity);
+                free(path);
+                if (facts) {
+                    search_results_line = current_line;
+                    break;
+                }
             }
         }
     }

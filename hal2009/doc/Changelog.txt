@@ -1,3 +1,7 @@
+969:
+
+- Wikisuche erkennt auch aehnliche Woerter
+
 962:
 
 - Fehler bei Umwandlung "A ist ein B" -> "A = B"

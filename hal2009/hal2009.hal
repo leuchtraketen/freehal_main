@@ -2805,6 +2805,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
     for each new array result in array _results do
     
         set new flag go_next to 0
+        set new var num_must_haves to 0
         
         if from hash parsed item { 'adverbs' } do
             set new array must_haves to from hash parsed item { 'adverbs' } first item
@@ -2825,6 +2826,9 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 if var must_have and lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
                     print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
+                    if var must_have do
+                        set var num_must_haves to var num_must_haves + 1
+                    done
                 done
                 else do
                     print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
@@ -2846,6 +2850,9 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 else do
                     print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
+                    if var must_have do
+                        set var num_must_haves to var num_must_haves + 1
+                    done
                 done
             done
         done
@@ -2865,12 +2872,15 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     else do
                         print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                         print new line
+                        if var must_have do
+                            set var num_must_haves to var num_must_haves + 1
+                        done
                     done
                 done
             done
         done
         
-        if not flag go_next do
+        if var num_must_haves and not flag go_next do
             push into array results, array result
         done
     done
@@ -3928,7 +3938,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if ( var final_sentence matches / bin|bist|heisst|kann|darf|muss|kannst|darfst|musst / or var final_sentence matches /iere|ierst / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
+        if ( var final_sentence matches /\s(bin|bist|heisst|kann|darf|muss|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
             print "Cannot answer with bin/bist when it has been asked for ist:"
             print new line
             print var final_sentence
