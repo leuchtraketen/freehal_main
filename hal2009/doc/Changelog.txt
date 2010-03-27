@@ -1,3 +1,12 @@
+972:
+
+- Bug 551 korrigiert
+- Bug 503 korrigiert
+- Bug 502 korrigiert
+- Bug 492 korrigiert
+- Bug 467 korrigiert
+- Bug 443 korrigiert
+
 969:
 
 - Wikisuche erkennt auch aehnliche Woerter

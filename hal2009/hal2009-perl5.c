@@ -450,15 +450,13 @@ int convert_to_perl5_convert_file(char* filename) {
     static char* last_filename;
     last_filename = strdup("");
     if (0 == strcmp(last_filename, filename)) {
-        fprintf(output(), "Compiler: Abort, unnecessary!\n");
+        fprintf(output(), "compiler: abort, unnecessary!\n");
         return 0;
     }
-    fprintf(output(), "Compiler: Last file to compile: %s, new: %s\n", last_filename, filename);
-
-    fprintf(output(), "Compiler: Source file: %s\n", filename);
+    fprintf(output(), "compiler: file: %s\n", filename);
     FILE* source = fopen(filename, "r");
     if ( !source ) {
-        fprintf(output(), "\nCompiler: Perl5 source file not found(1): %s\n", filename);
+        fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", filename);
         return 1;
     }
 
@@ -477,7 +475,8 @@ int convert_to_perl5_convert_file(char* filename) {
         strcat(filename_tmp, ".tmp");
         FILE* source_tmp = fopen(filename_tmp, "r");
         if ( !source_tmp ) {
-            fprintf(output(), "\nCompiler: Perl5 source file not found(1): %s\n", filename_tmp);
+            // just a cache
+            // fprintf(output(), "\ncompiler: file not found (at: P2, lang: perl5): %s\n", filename_tmp);
         }
         else {
             stat(filename_tmp, &stbuf);
@@ -487,7 +486,7 @@ int convert_to_perl5_convert_file(char* filename) {
             halclose(source_tmp);
 
             if (0 == strcmp(code, code_tmp) && !strstr(filename, "temp")) {
-                fprintf(output(), "Compiler: No change in %s\n", filename);
+                fprintf(output(), "compiler: no change: %s\n", filename);
                 just_compile = 1;
             }
             free(code_tmp);
@@ -499,7 +498,7 @@ int convert_to_perl5_convert_file(char* filename) {
         halfree(filename_tmp);
     }
     
-    fprintf(output(), "Compiler: Compile %s (%i bytes). ", filename, file_size);
+    fprintf(output(), "compiler: compile %s (size: %i bytes, lang: perl5)\n", filename, file_size);
     char* targetcode = convert_to_perl5(code, just_compile);
     if (!just_compile) {
         FILE* target;
@@ -511,7 +510,7 @@ int convert_to_perl5_convert_file(char* filename) {
             target = fopen(targetname, "w");
         }
         if ( !target ) {
-            fprintf(output(), "\nCompiler: Perl5 source file: unable to create: %s\n", filename);
+            fprintf(output(), "\ncompiler: cannot create file: %s (at: P3, lang: perl5)\n", filename);
             return 1;
         }
         halwrite(targetcode, 1, strlen(targetcode), target);
@@ -530,15 +529,17 @@ void execute_perl5(char* filename) {
     static PerlInterpreter* my_perl = NULL;
 
     // COMPILE
+    fprintf(output(), "%s\n", "");
     fprintf(output(), "%s\n", "Compile FreeHAL...");
+    fprintf(output(), "%s\n", "");
     convert_to_perl5_convert_file(filename);
     
     // INIT
-    fprintf(output(), "%s\n", "Running Perl5 -> C-Init...");
+    fprintf(output(), "%s\n", "compiler: module init (lang: perl5)");
     PERL_SYS_INIT3(NULL, NULL, NULL);
     
     // CONSTRUCT
-    fprintf(output(), "%s\n", "Running Perl5 -> C-Constructor...");
+    fprintf(output(), "%s\n", "compiler: module constructor (lang: perl5)");
     if ((my_perl = perl_alloc()) == NULL) {
         fprintf(stderr, "no memory!");
         exit(1);
@@ -556,7 +557,8 @@ void execute_perl5(char* filename) {
     perl_run(my_perl);
 
     // DECONSTRUCT
-    fprintf(output(), "%s\n", "Running Perl5 -> C-Destructor...");
+    fprintf(output(), "%s\n", "compiler: module destructor (lang: perl5)");
+    fprintf(output(), "%s\n", "");
     if ( my_perl ) {
         perl_destruct(my_perl);
         perl_free(my_perl);

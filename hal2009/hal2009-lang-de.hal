@@ -3467,12 +3467,52 @@ define action compute_output with var output do
         set var mday to "0" concat var mday
     done
     
+    set new var monthname to 'Monat'
+    if var mon is 1 do
+        set var monthname to "Januar"
+    done
+    if var mon is 2 do
+        set var monthname to "Februar"
+    done
+    if var mon is 3 do
+        set var monthname to "Maerz"
+    done
+    if var mon is 4 do
+        set var monthname to "April"
+    done
+    if var mon is 5 do
+        set var monthname to "Mai"
+    done
+    if var mon is 6 do
+        set var monthname to "Juni"
+    done
+    if var mon is 7 do
+        set var monthname to "Juli"
+    done
+    if var mon is 8 do
+        set var monthname to "August"
+    done
+    if var mon is 9 do
+        set var monthname to "September"
+    done
+    if var mon is 10 do
+        set var monthname to "Oktober"
+    done
+    if var mon is 11 do
+        set var monthname to "November"
+    done
+    if var mon is 12 do
+        set var monthname to "Dezember"
+    done
+    
+    
     do regex using var output: /\$\$time\$\$/, "var hour:var min:var sec", :global:i
     do regex using var output: /\$\$wday\$\$/, "var weekday", :global:i
     do regex using var output: /\$\$mday\$\$/, "var mday", :global:i
-    do regex using var output: /\$\$month\$\$/, "var mon", :global:i
+    do regex using var output: /\$\$month\$\$/, "var monthname", :global:i
     do regex using var output: /\$\$year\$\$/, "var year", :global:i
-    do regex using var output: /\$\$date\$\$/, "var mday.var mon.var year", :global:i
+    do regex using var output: / das datum (\$\$date\$\$)/, " $0", :global:i
+    do regex using var output: /\$\$date\$\$/, "var weekday, den var mday.var mon.var year", :global:i
 
     do regex using var output: /array\(.*?\)/, "", :global:i
     
@@ -3926,6 +3966,29 @@ done
 define action check_for_math with var input do
     set new var math to var input
     
+    do regex using var math: /dreizehn/, "13", :global:i
+    do regex using var math: /vierzehn/, "14", :global:i
+    do regex using var math: /fuenfzehn/, "15", :global:i
+    do regex using var math: /sechzehn/, "16", :global:i
+    do regex using var math: /siebzehn/, "17", :global:i
+    do regex using var math: /achtzehn/, "18", :global:i
+    do regex using var math: /neunzehn/, "19", :global:i
+    do regex using var math: /zwanzig/, "20", :global:i
+    do regex using var math: /hundert/, "100", :global:i
+    do regex using var math: /tausend/, "1000", :global:i
+    do regex using var math: /eins/, "1", :global:i
+    do regex using var math: /zwei/, "2", :global:i
+    do regex using var math: /drei/, "3", :global:i
+    do regex using var math: /vier/, "4", :global:i
+    do regex using var math: /fuenf/, "5", :global:i
+    do regex using var math: /sechs/, "6", :global:i
+    do regex using var math: /sieben/, "7", :global:i
+    do regex using var math: /acht/, "8", :global:i
+    do regex using var math: /neun/, "9", :global:i
+    do regex using var math: /zehn/, "10", :global:i
+    do regex using var math: /elf/, "11", :global:i
+    do regex using var math: /zwoelf/, "12", :global:i
+    
     do regex using var math: /<[=?!._]>/, "", :global:i
     do regex using var math: /hoch/, "**", :global:i
     do regex using var math: /\^/, "**", :global:i
@@ -3940,7 +4003,6 @@ define action check_for_math with var input do
     do regex using var math: /sind/, "", :global:i
     do regex using var math: /what/, "", :global:i
     do regex using var math: /is/, "", :global:i
-    do regex using var math: /in/, "", :global:i
     do regex using var math: /does/, "", :global:i
     do regex using var math: /makes/, "", :global:i
     do regex using var math: /ergibt/, "", :global:i
@@ -3953,11 +4015,13 @@ define action check_for_math with var input do
     do regex using var math: / und /, "+", :global:i
     do regex using var math: / half of (\d+)/, "( $1 \/ 2 )", :global:i
     do regex using var math: / minus /, "-", :global:i
+    do regex using var math: / weniger /, "-", :global:i
     set new var slash to "/"
     do regex using var math: / geteilt durch /, "var slash", :global:i
     do regex using var math: / dividiert durch /, "var slash", :global:i
     do regex using var math: / durch /, "var slash", :global:i
     do regex using var math: / mal /, "*", :global:i
+    do regex using var math: /in/, "", :global:i
     do regex using var math: /x/, "*", :global:i
     do regex using var math: /\s+/, "", :global:i
     do regex using var math: /quadratwurzel/, "sqrt ", :global:i

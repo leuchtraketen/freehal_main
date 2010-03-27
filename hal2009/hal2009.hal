@@ -507,7 +507,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
 
     do be_slow without arguments
-    print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name
+    print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name concat "\t to " concat from array tags first item
     print new line
     
     if not from array tags first item do
@@ -1326,7 +1326,11 @@ define action compute_tags with var word, var lang, var path do
                 if var word matches /ierst$/ do
                     set from array tags first item to "vi"
                 done
-                do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+                
+                # write it
+                if from array tags first item do
+                    do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+                done
             done
             else if ucfirst(var word) matches var word and var lang matches "de" do
                 if var word matches /est$/ do
@@ -1507,11 +1511,16 @@ define action guess_part_of_speech with var word, var lang, var path do
     do regex using var word_b_2: /^(..).*?$/, "$0", :i
     set new var word_b_3 to var word
     do regex using var word_b_3: /^(...).*?$/, "$0", :i
+    set new var word_b_4 to var word
+    do regex using var word_b_4: /^(....).*?$/, "$0", :i
     
     for each new var _key in array cache_keys do
         set new var factor to 1
-        if var _key matches /<[A-Z]>/ do
-            set var factor to 0.7
+        if var _key matches /<[A-Z]>/ and not var word matches /<[A-Z]>/ do
+            set var factor to 0
+        done
+        if var word matches /<[A-Z]>/ and not var _key matches /<[A-Z]>/ do
+            set var factor to 0
         done
         
         set new var key to var _key
@@ -1521,120 +1530,60 @@ define action guess_part_of_speech with var word, var lang, var path do
             #do return with "n"
         done
         
+        
+        # get part of speech from hash
+        set new var _pos to 'q'
+        set new array _lines to from hash cache item { var key concat ":" }
+        for each new var _line in array _lines do
+            if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                set var _pos to $1
+                go to last
+            done
+        done
+        set var _pos to lc with var _pos
+        
+        if var _key not matches /<[A-Z]>/ and var word not matches /<[A-Z]>/ and var _pos matches /n/ do
+            set var factor to 0.05
+        done
+        
+        # set points
         if var key matches /var word_e_6$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 50 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_rating item { var _pos } to 12 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
-        else if var key matches /var word_e_5$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 40 * var factor + from hash pos_to_rating item { var _pos }
-            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
-        done
-        else if var key matches /var word_e_4$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 30 * var factor + from hash pos_to_rating item { var _pos }
-            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
-        done
-        else if var key matches /var word_e_3$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 20 * var factor + from hash pos_to_rating item { var _pos }
-            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
-        done
-        else if var key matches /var word_e_2$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
+        if var key matches /var word_e_5$/ do
             set from hash pos_to_rating item { var _pos } to 10 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
+        if var key matches /var word_e_4$/ do
+            set from hash pos_to_rating item { var _pos } to 8 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /var word_e_3$/ do
+            set from hash pos_to_rating item { var _pos } to 12 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_2$/ do
+            set from hash pos_to_rating item { var _pos } to 6 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
         else if var key matches /var word_e_1$/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 1 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_rating item { var _pos } to 2 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /^var word_b_4/ do
+            set from hash pos_to_rating item { var _pos } to 4 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
         if var key matches /^var word_b_3/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 25 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_rating item { var _pos } to 3 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
-        else if var key matches /^var word_b_2/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
-            set from hash pos_to_rating item { var _pos } to 15 * var factor + from hash pos_to_rating item { var _pos }
+        if var key matches /^var word_b_2/ do
+            set from hash pos_to_rating item { var _pos } to 3 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
         else if var key matches /^var word_b_1/ do
-            set new var _pos to 'q'
-            set new array _lines to from hash cache item { var key concat ":" }
-            for each new var _line in array _lines do
-                if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
-                    set var _pos to $1
-                    go to last
-                done
-            done
-            set var _pos to lc with var _pos
             set from hash pos_to_rating item { var _pos } to 1 * var factor + from hash pos_to_rating item { var _pos }
             set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
         done
@@ -1685,7 +1634,7 @@ define action guess_part_of_speech with var word, var lang, var path do
             go to next
         done
         set new var cnt to from hash pos_to_count_words item { var pos_key }
-        set var score to 2 * var score / var cnt
+        set var score to var score * var score / var cnt
         set var score to int with var score * 100
         
         if var score > var best_score do
@@ -2817,6 +2766,13 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     set new var _must_have to var must_have
                     do regex using var _must_have: /\s.*/, "", :global
                     set array tags to compute_tags with var _must_have, var lang, var path
+                    
+                    if from hash sym_prep item { from array tags first item } do
+                        set var _must_have to var must_have
+                        do regex using var _must_have: /^.*?\s/, "", :i
+                        do regex using var _must_have: /\s.*/, "", :global
+                        set array tags to compute_tags with var _must_have, var lang, var path
+                    done
                 done
                 else do
                     set array tags to compute_tags with var must_have, var lang, var path
@@ -2824,14 +2780,14 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 set new flag is_builtin to builtin_has_time_place_adverbs_suffix with var must_have
 
                 if var must_have and lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
-                    print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     if var must_have do
                         set var num_must_haves to var num_must_haves + 1
                     done
                 done
                 else do
-                    print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print "[-] Does not have must-have (no 1) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     set flag go_next to 1
                 done
@@ -2843,12 +2799,12 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
                 if ( not var must_have ) or not lc( from array result second item second item ) matches /var must_have/ do
-                    print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print "[-] Does not have must-have (no 2) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     set flag go_next to 1
                 done
                 else do
-                    print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                    print "[+] Has must-have (no 2) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     if var must_have do
                         set var num_must_haves to var num_must_haves + 1
@@ -2864,16 +2820,18 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 for each new var must_have in array must_haves do
                     set var must_have to lc with var must_have
                     do regex using var must_have: /...$/, "", :i
-                    if length(var must_have) > 1 and not lc( from array result second item second item ) matches /var must_have/ do
-                        print "[-] Does not have must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
-                        print new line
-                        set flag go_next to 1
-                    done
-                    else do
-                        print "[+] Has must-have '" concat var must_have concat "': '" concat from array result second item second item concat "'"
-                        print new line
-                        if var must_have do
-                            set var num_must_haves to var num_must_haves + 1
+                    if length(var must_have) > 2 do
+                        if not lc( from array result second item second item ) matches /var must_have/ do
+                            print "[-] Does not have must-have (no 3) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                            print new line
+                            set flag go_next to 1
+                        done
+                        else do
+                            print "[+] Has must-have (no 3) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
+                            print new line
+                            if var must_have do
+                                set var num_must_haves to var num_must_haves + 1
+                            done
                         done
                     done
                 done
@@ -3591,7 +3549,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 # TEXT
                 # When there is a time period mentioned in the question, but not in the answer
                 # CODE
-                if not from array clause item [3] matches /time.(from|to)/ do
+                if from array clause item [3] not matches /time.(from|to)/ and from array clause item [2] not matches /time.(from|to)/ do
                     set new array input_adverbs to from hash parsed item { 'adverbs' }
                     for each new var _adverb in array input_adverbs do
                         set new var adverb to var _adverb

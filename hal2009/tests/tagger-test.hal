@@ -68,6 +68,13 @@ for each new var _test_item in array test_items do
     if not var _pos matches /(v|ad)/ do
         go to next
     done
+
+
+    if from global hash content_of_memory_file item { "word_types.brain" } item { ucfirst( var _test_item ) } do
+        go to next
+    done
+
+
     
     set new var test_item to var _test_item
     do regex using var test_item: /var end_of_entry_line$/, "", :i

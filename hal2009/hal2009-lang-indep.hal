@@ -236,13 +236,16 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^kein(.*)/, "ein$0 nicht", :global:i
     do regex using var input: /wozu braucht man /, "was ist ", :global:i
     do regex using var input: /(brauch)(st|e|en)(.*?)zu\s(haben)/, "$0$1$2 $3/, "
+    
+    do regex using var input: /(tag|datum|monat|woche|jahr) war\s/, "$0 ist ", :global:i
     do regex using var input: /welche uhrzeit\s/, "wie uhr ", :global:i
     do regex using var input: /\suhr\shaben\swir\s/, " uhr ist es ", :global:i
     do regex using var input: /\suhr\shaben\swir<[?]>/, " uhr ist es?", :global:i
     do regex using var input: /aneinander /, "aneinander", :global:i
     do regex using var input: /\shaben\swir\sheute/, " haben wir ", :global:i
-    do regex using var input: /welchen\stag\shaben\swir\s/, "wie ist Tag heute ", :global:i
-    do regex using var input: /welchen\stag\shaben\swir<[?]>/, "wie ist Tag heute?", :global:i
+    do regex using var input: /\sist\sheute/, " ist ", :global:i
+    do regex using var input: /welchen\stag\shaben\swir\s/, "welch Datum haben wir ", :global:i
+    do regex using var input: /welcher\stag\sist\s/, "welch Datum haben wir ", :global:i
     do regex using var input: / hab /, " habe ", :global:i
 
     set var input to ' ' concat var input concat ' '
