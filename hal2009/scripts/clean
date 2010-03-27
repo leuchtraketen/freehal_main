@@ -1,0 +1,2 @@
+rm -f *.out *.o *.gz *.zip grammar* lex* *.txt *.log temp* *.dat *.idx weather* win-* -rf stderr* *.xcu *.xml genhaldebug
+mkdir temp
