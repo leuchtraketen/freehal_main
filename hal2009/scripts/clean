@@ -1,2 +1,3 @@
-rm -f *.out *.o *.gz *.zip grammar* lex* *.txt *.log temp* *.dat *.idx weather* win-* -rf stderr* *.xcu *.xml genhaldebug
+rm -rf *.out *.o *.gz *.zip grammar* lex* *.txt *.log temp* *.dat *.idx weather* win-* stderr* *.xcu *.xml genhaldebug *.cmake CMakeFiles
 mkdir temp
+svn up 
