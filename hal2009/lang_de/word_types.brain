@@ -263411,148 +263411,180 @@ Restriktiv:
 Kugelsichere:
   type: n
 Bandabgleich:
-  type: n
+  type: adj
 Antillen:
+genus  : f
   type: n
 fuegsam:
   type: adj
 Aussenseite:
+genus  : f
   type: n
 Schiffseigner:
   type: n
 freiwillig:
-  type: adv
-Ausprgung:
-  type: n
+  type: adj
 janus:
+genus  : m
   type: n
 Leierkastenmaenner:
+genus  : f
   type: n
 Galle:
+genus  : f
   type: n
 Promovieren:
+genus  : s
   type: n
 flammenbildung:
-  type: adj
+genus  : f
+  type: n
 aufhaengen:
   type: vi
-Machbarkeitproof:
-  type: n
 reputierlich:
-  type: adv
-sbb:
   type: adj
 Dehnhuelse:
+genus  : f
   type: n
 Rankenfusskrebs:
+genus  : m
   type: n
 Auswechseln:
+genus  : s
   type: n
 Garantiegeber:
   type: n
 Apfelmus:
+genus  : s
   type: n
 zerfleischen:
-  type: adv
+  type: vi
 namur:
-  type: adj
+  type: n
 Nordatlantikpakt:
+genus  : m
   type: n
 Impetus:
+genus  : m
   type: n
 Vertebral:
-  type: n
+  type: adj
 Radioaktivitaet:
+genus  : f
   type: n
 Dollbord:
+genus  : s
   type: n
 rindfleisch:
-  type: adj
+genus  : s
+  type: n
 Stiefelnagel:
+genus  : m
   type: n
 Hemmnis:
+genus  : s
   type: n
 Loeser:
+genus  : m
   type: n
 Autobiograph:
+genus  : m
   type: n
 deklinieren:
   type: vi
 Fahrdraht:
+genus  : m
   type: n
 Tageloehner:
+genus  : m
   type: n
 Champion:
+genus  : m
   type: n
 Konsumrausch:
+genus  : m
   type: n
 demograf:
-  type: adj
+genus  : m
+  type: n
 Bestrafer:
   type: n
 Zeitvergeuder:
+genus  : m
   type: n
 Anagenese:
+genus  : f
   type: n
 Beleibt:
-  type: n
+  type: adj
 Hinaufsteigen:
+genus  : s
   type: n
 Kreisky:
   type: n
 Henri:
   type: n
 Eintragungen:
+genus  : f
   type: n
-neckargemuen:
-  type: adj
 Fachveranstaltungen:
+genus  : f
   type: n
 nyon:
-  type: adj
+  type: n
 Akzeptlinie:
+genus  : f
   type: n
 suppen:
-  type: adj
-Krampfartig:
+genus  : f
   type: n
+Krampfartig:
+  type: adj
 Magdala:
   type: n
 Endpunkte:
+genus  : f
   type: n
 geilenkirchen:
-  type: adv
-Kratzbuerstig:
   type: n
+Kratzbuerstig:
+  type: adj
 ausspaehen:
   type: vi
 Farnkrautwedel:
   type: n
-Blumenstreumdchen:
+Blumenstreumaedchen:
   type: n
 konnatal:
   type: adj
 integrierten:
-  type: vi
+  type: adj
 lieferwagen:
-  type: vi
+genus  : m
+  type: n
 Bauchhoehle:
+genus  : f
   type: n
 Drehorgelspielerinnen:
+genus  : f
   type: n
 Marktsteft:
   type: n
 hell:
   type: adj
 Anomal:
-  type: n
+  type: adj
 Beimischen:
+genus  : s
   type: n
 Betriebsablaeufe:
+genus  : f
   type: n
 Verdeutlichung:
+genus  : f
   type: n
 Fernsehgeraet:
+genus  : s
   type: n
 Eisenhaendler:
   type: n
@@ -263561,238 +263593,279 @@ ankuenden:
 einschweben:
   type: vi
 beanspruchen:
-  type: adv
-muehlhausen:
   type: vi
+muehlhausen:
+  type: n
 Leinenschuh:
+genus  : m
   type: n
 stahl:
-  type: adj
+genus  : m
+  type: n
 Atomkern:
+genus  : m
   type: n
 Betriebszugehoerigkeit:
+genus  : f
   type: n
 Enns:
+genus  : f
   type: n
 Leder:
+genus  : s
   type: n
 Appetithaeppchen:
   type: n
 aktien:
-  type: adj
+genus  : f
+  type: n
 schnapper:
-  type: adj
+  type: n
 Wupper:
   type: n
 Daumenschraube:
+genus  : f
   type: n
 Wartburg:
   type: n
-turkey:
-  type: adj
 struktur:
-  type: adj
+genus  : f
+  type: n
 Lawrencium:
+genus  : s
   type: n
 Auges:
   type: n
 Vorgetriebener:
-  type: n
+  type: adj
 Formel:
+genus  : f
   type: n
 Zurueckzahlen:
+genus  : s
   type: n
 Seehund:
+genus  : m
   type: n
 nymphomanin:
-  type: adj
-nachdenklich:
-  type: adv
-Speichersee:
+genus  : f
   type: n
-Feuervorhnge:
+nachdenklich:
+  type: adj
+Speichersee:
+genus  : m
   type: n
 Bindehaut:
+genus  : f
   type: n
 extinktion:
+genus  : f
   type: n
 tastsinn:
-  type: adj
+genus  : m
+  type: n
 Endring:
+genus  : m
   type: n
 eingravieren:
   type: vi
 Marine:
+genus  : f
   type: n
 herunterbringen:
   type: vi
 Pedikuere:
+genus  : f
   type: n
 Abschmirgeln:
+genus  : s
   type: n
 korfu:
-  type: adj
+  type: n
 Demokratisch:
-  type: n
+  type: adj
 Ausbildungsrichtlinien:
+genus  : f
   type: n
-literaturverzeichni:
-  type: adj
 Transportierbar:
-  type: n
+  type: adj
 detail:
-  type: adj
+genus  : s
+  type: n
 Klitschnass:
-  type: n
-Aquaedukt:
-  type: n
-hautevoleen:
   type: adj
+Aquaedukt:
+genus  : s
+  type: n
 Fahrstunde:
+genus  : f
   type: n
 Komposterde:
+genus  : f
   type: n
 Weiterverarbeitung:
+genus  : f
   type: n
 Besatzungsmacht:
+genus  : f
   type: n
-stdtebauliche:
-  type: adv
 Unterleibsentzuendung:
+genus  : f
   type: n
 Diplomat:
+genus  : m
   type: n
 Gastprofessor:
-  type: n
-Abdrckdeckel:
+genus  : m
   type: n
 Schnuller:
   type: n
-Hlfte:
-  type: n
 saust:
-  type: adj
+  type: vi
 Badematte:
+genus  : f
   type: n
 Uebergangsloesung:
+genus  : f
   type: n
 kneifzangen:
-  type: vi
-leukoplastbomber:
-  type: adj
-bindehaut:
-  type: adj
-Accessoires:
+genus  : f
   type: n
-verbnden:
-  type: vi
+leukoplastbomber:
+  type: n
+bindehaut:
+genus  : f
+  type: n
 Laufkraftwerk:
+genus  : s
   type: n
 Assistentsarzt:
+genus  : m
   type: n
 stolzieren:
   type: vi
 diagnosesystem:
-  type: adj
+genus  : s
+  type: n
 Brustplatte:
+genus  : f
   type: n
 gewerben:
-  type: vi
-Abfasen:
   type: n
-Exportbeschrnkungen:
+Abfasen:
+genus  : s
   type: n
 Waldkirchen:
   type: n
 einkreisen:
   type: vi
 Sinnesreize:
+genus  : f
   type: n
 fickst:
   type: vi
 Angelfall:
   type: n
 Abschreibungsmode:
+genus  : f
   type: n
 geschmeidig:
-  type: adv
+  type: adj
 Schwetzingen:
   type: n
 fortschrittlich:
-  type: adv
+  type: adj
 Planetuch:
+genus  : s
   type: n
 Fotoabzug:
+genus  : m
   type: n
 Guben:
   type: n
 Fortpflanzungen:
+genus  : f
   type: n
 Halbtagsarbeit:
+genus  : f
   type: n
 markerschuetternd:
   type: adj
 auseinandersetzen:
   type: vi
 kavallerie:
-  type: adj
-Einwandlos:
+genus  : f
   type: n
+Einwandlos:
+  type: adj
 blumenmaedchen:
-  type: adv
+  type: n
 straelen:
   type: vi
-Abkmmlinge:
-  type: n
 uvstrahlen:
-  type: vi
-Automatisches:
+genus  : f
   type: n
+Automatisches:
+  type: adj
 Schlittschuh:
+genus  : m
   type: n
 Kollege:
+genus  : m
   type: n
 Baesse:
+genus  : f
   type: n
 schuldlos:
-  type: adv
+  type: adj
 Volksverhetzung:
+genus  : f
   type: n
 Vitalitaet:
+genus  : f
   type: n
 augenheilkunden:
-  type: vi
+genus  : f
+  type: n
 festwachsen:
   type: vi
 Retina:
+genus  : f
   type: n
 Biowaffe:
+genus  : f
   type: n
 Klagen:
   type: n
 Kaution:
-  type: n
-Abhrplatz:
+genus  : f
   type: n
 unversehen:
-  type: adv
+  type: adj
 Flaechenwiderstand:
+genus  : m
   type: n
 Prellbock:
+genus  : m
   type: n
 konnotation:
+genus  : f
   type: n
 Theodor:
   type: n
 bedienpult:
-  type: vi
+genus  : s
+  type: n
 Umsaeumen:
+genus  : s
   type: n
 Bahnbrecher:
   type: n
 Eckzaehne:
+genus  : f
   type: n
 Galgenstrick:
+genus  : m
   type: n
 Usbekistan:
   type: n
@@ -263801,42 +263874,47 @@ Reisezugwagen:
 Versager:
   type: n
 Krankheitsmildernd:
-  type: n
+  type: adj
 zwanzig:
-  type: adv
+  type: adj
 kurzum:
   type: adj
 Grundgesetz:
+genus  : s
   type: n
 Datenbankorganisator:
+genus  : m
   type: n
 Arbeitsassistent:
-  type: n
-Berhrungsdruck:
+genus  : m
   type: n
 ruetteln:
   type: vi
 Kreativitaet:
+genus  : f
   type: n
 Dietrich:
+genus  : m
   type: n
 bewaehrungsproben:
-  type: vi
-Achillessehnen:
+genus  : f
   type: n
-atum:
-  type: adj
+Achillessehnen:
+genus  : f
+  type: n
 zurueckzahlen:
   type: vi
 Bruttopreis:
+genus  : m
   type: n
 nachbessern:
   type: vi
 herbestellen:
   type: vi
 nackert:
-  type: vi
+  type: adj
 Spottbild:
+genus  : s
   type: n
 Deinen:
   type: art
@@ -263845,257 +263923,287 @@ schritten:
 koordinieren:
   type: vi
 Durchschlagsfestigkeit:
+genus  : f
   type: n
 geraeumt:
-  type: vi
-werbetafel:
   type: adj
+werbetafel:
+genus  : f
+  type: n
 Uranier:
   type: n
 Gattungsbegriff:
+genus  : m
   type: n
 falschspieler:
-  type: adj
+  type: n
 Versammlung:
+genus  : f
   type: n
-tbar:
-  type: adj
 Rendite:
-  type: n
-Trojan:
+genus  : f
   type: n
 Verliebt:
-  type: n
+  type: adj
 Rollbahn:
-  type: n
-Qualitaetsmanagementquality:
+genus  : f
   type: n
 wendbar:
   type: adj
-Wirkstoffeplaceboscheinarzneischeinmedikament:
-  type: n
 Vielseitigkeit:
+genus  : f
   type: n
 Sprachmittler:
   type: n
 senat:
-  type: adj
+genus  : m
+  type: n
 Kardangelenk:
+genus  : s
   type: n
 Geschwindigkeitsmesser:
   type: n
 Litfasssaeule:
+genus  : f
   type: n
-grundtief:
-  type: adj
-famo:
-  type: adj
 Hauptform:
+genus  : f
   type: n
 aperitif:
-  type: adj
+genus  : m
+  type: n
 Vorhersagen:
+genus  : s
   type: n
 Interimistisch:
-  type: n
+  type: adj
 Anschlagtafel:
+genus  : f
   type: n
 Mildern:
-  type: n
-Parallaxensekundeparsec:
+genus  : s
   type: n
 Neuntoeter:
   type: n
 Hochgefuehl:
+genus  : s
   type: n
 Ehegattin:
+genus  : f
   type: n
-cannabi:
-  type: adj
 Wuergeeisen:
   type: n
 Alkoholismus:
+genus  : m
   type: n
 tagblatt:
-  type: vi
+genus  : s
+  type: n
 verzaerteln:
   type: vi
 Schnitzerei:
+genus  : f
   type: n
 Wolgograd:
   type: n
 Korrekturfahne:
+genus  : f
   type: n
 ominabel:
   type: adj
 Oberirdisch:
-  type: n
+  type: adj
 Andamanisches:
-  type: n
+  type: adj
 paeckchen:
-  type: adv
+genus  : s
+  type: n
 stoisch:
   type: adj
 Mickerig:
-  type: n
+  type: adj
 Ausfuehrung:
+genus  : f
   type: n
 Serie:
+genus  : f
   type: n
 nuklearforschung:
-  type: adj
+genus  : f
+  type: n
 triaden:
-  type: vi
+genus  : f
+  type: n
 weinerlichkeit:
+genus  : f
   type: n
 bankkonto:
-  type: adj
+genus  : s
+  type: n
 Seitenast:
+genus  : m
   type: n
 Gelaende:
-  type: n
-Eeg:
+genus  : s
   type: n
 ideenlos:
-  type: adv
+  type: adj
 Abdomen:
+genus  : s
   type: n
 Schrift:
+genus  : f
   type: n
 Weihnachtsgratifikation:
+genus  : f
   type: n
 bringst:
   type: vi
 Aurikulaer:
-  type: n
-Marmorbruchmarmorsteinbruch:
-  type: n
+  type: adj
 Singer:
   type: n
 schenken:
   type: vi
 Bruecke:
+genus  : f
   type: n
 Definition:
+genus  : f
   type: n
 geschiedene:
-  type: adv
+  type: adj
 Anschuldigen:
+genus  : s
   type: n
 Zugspitze:
+genus  : f
   type: n
 fetzen:
   type: vi
 Frankfurter:
   type: n
 Ruhig:
-  type: n
-geschraegt:
-  type: vi
-Against:
-  type: prep
+  type: adj
 Mitteln:
   type: n
 geschwindigkeitszunahme:
-  type: adv
+genus  : f
+  type: n
 Stockbus:
+genus  : m
   type: n
 Gefuehlseindruck:
-  type: n
-Vierundzwanzigstel:
+genus  : m
   type: n
 Einzahlen:
+genus  : s
   type: n
 wechselhaft:
-  type: adv
-vorsprung:
   type: adj
+vorsprung:
+genus  : m
+  type: n
 Niederschlag:
+genus  : m
   type: n
 nahe:
-  type: adv
+  type: adj
 Zusammenschau:
+genus  : f
   type: n
 Stundenkilometer:
+genus  : f
   type: n
 befischung:
-  type: adj
+genus  : f
+  type: n
 schmoekern:
   type: vi
 Schulanfaenger:
   type: n
-Hoerbarsichtbar:
-  type: n
 realismus:
+genus  : m
   type: n
 Fruehstuecksflocken:
+genus  : f
   type: n
-mahlzeien:
-  type: adj
 fiesling:
-  type: adj
+genus  : m
+  type: n
 Leerlauf:
+genus  : m
   type: n
 unwillig:
-  type: adv
+  type: adj
 Abstrahieren:
+genus  : s
   type: n
 Justieren:
+genus  : s
   type: n
 Abkanten:
+genus  : s
   type: n
 geraden:
-  type: vi
+  type: adj
 Diskussionsschrift:
+genus  : f
   type: n
 kampfhandlungen:
-  type: vi
+genus  : f
+  type: n
 Mehrfachdosis:
+genus  : f
   type: n
 Multiples:
-  type: n
+  type: adj
 Fussabdruck:
+genus  : m
   type: n
 blutdruck:
-  type: adj
+genus  : m
+  type: n
 definition:
+genus  : f
   type: n
 Unaufhoerlich:
-  type: adv
-genuege:
-  type: adv
-Ketchup:
-  type: n
-kuguar:
   type: adj
+Ketchup:
+genus  : s
+  type: n
 Maennchen:
   type: n
 wacker:
   type: adj
 realisierbarkeit:
+genus  : f
   type: n
 Windmesser:
   type: n
 Lagebeschreibung:
+genus  : f
   type: n
 Starrsinn:
+genus  : m
   type: n
-willenlo:
-  type: adj
 bevoelkerung:
-  type: adj
+genus  : f
+  type: n
 nebenbahn:
-  type: adj
+genus  : f
+  type: n
 Ueberzug:
+genus  : m
   type: n
 Panter:
   type: n
 qualitativ:
   type: adj
 Unverbluemt:
-  type: n
+  type: adj
 Erzogen:
-  type: n
+  type: adj
 saeubern:
   type: vi
 hintertreiben:
@@ -264103,1175 +264211,1351 @@ hintertreiben:
 promiskuitiv:
   type: adj
 halbgott:
-  type: vi
+genus  : m
+  type: n
 Irin:
   type: n
 Lasso:
+genus  : s
   type: n
 Fruchtbarkeit:
+genus  : f
   type: n
 Behalten:
+genus  : s
   type: n
 Improvisierend:
-  type: n
+  type: adj
 Vorgericht:
+genus  : s
   type: n
 peinigend:
   type: adj
 strassenueberfuehrung:
-  type: adj
+genus  : f
+  type: n
 Pruefliste:
+genus  : f
   type: n
 Figurativ:
-  type: n
-Oerkenmorp:
-  type: n
-Pfoertnerportier:
-  type: n
+  type: adj
 Adhaesion:
+genus  : f
   type: n
 versichern:
   type: vi
 Eingefuehrte:
-  type: n
-macken:
-  type: vi
-gagel:
   type: adj
+macken:
+genus  : f
+  type: n
 unbefriedigend:
   type: adj
 Direkte:
-  type: n
+  type: adj
 Chic:
-  type: n
-Kohrensahlis:
+genus  : m
   type: n
 befangenheit:
+genus  : f
   type: n
-elvi:
-  type: adj
 Rhenium:
+genus  : s
   type: n
 Menstruation:
+genus  : f
   type: n
 Fremdlaendisch:
-  type: n
+  type: adj
 magnetisch:
   type: adj
 rustikal:
   type: adj
 neu:
-  type: prep
+  type: adj
 Gluecksbringer:
   type: n
 Alternierend:
-  type: n
+  type: adj
 verbluefft:
-  type: vi
+  type: adj
 sueperb:
   type: adj
 sorbieren:
   type: vi
 schuechtern:
-  type: vi
+  type: adj
 Ehestmoeglich:
-  type: adv
+  type: adj
 Filigran:
-  type: n
+  type: adj
 Strafgericht:
+genus  : s
   type: n
 Ausgewogen:
-  type: n
+  type: adj
 vernuenftige:
-  type: adv
+  type: adj
 schnuppern:
   type: vi
 Darya:
   type: n
 Monteur:
+genus  : m
   type: n
 soweit:
-  type: adj
+  type: adv
 senken:
   type: vi
 patentloesung:
-  type: adj
-Abhotten:
+genus  : f
   type: n
 Unverantwortlichkeit:
+genus  : f
   type: n
 renovation:
+genus  : f
   type: n
 Amtsleiter:
   type: n
 Glaubenssatz:
+genus  : m
   type: n
 schwachsinn:
-  type: adj
+genus  : m
+  type: n
 Blickfeld:
+genus  : s
   type: n
 benutzer:
-  type: adj
+  type: n
 Sonnblick:
+genus  : m
   type: n
 kompatibel:
   type: adj
 Sparta:
   type: n
 Karambolage:
+genus  : f
   type: n
 Aufzeichnungen:
+genus  : f
   type: n
 Kalibrierung:
+genus  : f
   type: n
 Stromunfall:
+genus  : m
   type: n
 photophil:
   type: adj
 Sicherstellung:
+genus  : f
   type: n
 maeusisch:
   type: adj
 Heiserkeit:
+genus  : f
   type: n
 Barracuda:
+genus  : m
   type: n
-terimistisch:
-  type: adj
 bewegungsgefuehl:
-  type: adj
+genus  : s
+  type: n
 komprimierten:
-  type: vi
+  type: adj
 Ruhigstellung:
+genus  : f
   type: n
 Chauffeur:
+genus  : m
   type: n
 Gebundene:
-  type: n
-anspielung:
   type: adj
+anspielung:
+genus  : f
+  type: n
 Drohnen:
+genus  : f
   type: n
 Freimut:
+genus  : m
   type: n
 Erdaepfel:
   type: n
 pieseln:
   type: vi
 Einberaumen:
+genus  : s
   type: n
 Transzendent:
-  type: n
+  type: adj
 Hochchinesisch:
-  type: n
-unreifenen:
-  type: vi
+  type: adj
 Verkuerzung:
+genus  : f
   type: n
 Abschlusspruefung:
+genus  : f
   type: n
 widerborstig:
-  type: adv
+  type: adj
 sofa:
-  type: adj
-Presseschaupressespiegel:
+genus  : s
   type: n
-uebungsleien:
-  type: adj
 Befehlsuebernahme:
   genus: f
   type: n
 Schmissig:
-  type: n
-frau:
   type: adj
+frau:
+genus  : f
+  type: n
 Waggon:
+genus  : m
   type: n
 nachtbar:
-  type: adj
+genus  : m
+  type: n
 aromatisierten:
-  type: vi
+  type: adj
 regeln:
   type: vi
 Spirituelle:
-  type: n
+  type: adj
 Massieren:
+genus  : s
   type: n
 ueberlappend:
   type: adj
 Festzug:
+genus  : m
   type: n
-Now:
-  type: adv
 selbstabdichten:
   type: vi
 Angelegt:
-  type: n
-begleitschaden:
-  type: vi
-gegebenenfall:
   type: adj
+begleitschaden:
+genus  : m
+  type: n
 Zerlegung:
+genus  : f
   type: n
 drama:
-  type: adj
+genus  : s
+  type: n
 schluesselung:
-  type: adj
+genus  : f
+  type: n
 Naehgarn:
+genus  : s
   type: n
 Schraubenzieher:
   type: n
-normalzeien:
-  type: adj
 worterklaerung:
-  type: adj
-schlauch:
-  type: adj
-betriebspruefung:
-  type: adj
-herzschlag:
-  type: adj
-Tiefsinn:
+genus  : f
   type: n
-eszett:
-  type: vi
+schlauch:
+genus  : m
+  type: n
+betriebspruefung:
+genus  : f
+  type: n
+herzschlag:
+genus  : m
+  type: n
+Tiefsinn:
+genus  : m
+  type: n
 Schraubenmutter:
+genus  : f
   type: n
 Vwl:
   type: n
 Viskositaet:
+genus  : f
   type: n
 Systemzusammenbruch:
+genus  : m
   type: n
 fortpflanzung:
-  type: adj
-Nachstehend:
+genus  : f
   type: n
+Nachstehend:
+  type: adj
 Schutzschicht:
+genus  : f
   type: n
 brustraum:
-  type: adj
-Stoned:
+genus  : m
   type: n
 Gamer:
   type: n
-puffrohr:
-  type: adj
 Codieren:
+genus  : s
   type: n
 Vokabular:
+genus  : s
   type: n
 voraus:
-  type: n
+  type: adj
 Dressieren:
+genus  : s
   type: n
 Strengglaeubig:
-  type: n
+  type: adj
 verblasen:
   type: vi
 Paeckchen:
   type: n
-milchzuck:
-  type: adj
 arbeitsbeanspruchung:
-  type: adj
+genus  : f
+  type: n
 erwiesen:
-  type: vi
+  type: adj
 festrammen:
   type: vi
 schiebelok:
-  type: adj
-observation:
+genus  : f
   type: n
-Vr:
+observation:
+genus  : f
   type: n
 Zungen:
+genus  : f
   type: n
 bildwirksam:
   type: adj
 Unproportional:
-  type: n
-universitaen:
   type: adj
 annalen:
-  type: vi
-Sinnig:
+genus  : f
   type: n
+Sinnig:
+  type: adj
 Existenzfaehigkeit:
+genus  : f
   type: n
 Hochziehen:
+genus  : s
   type: n
 profibasketballer:
-  type: adj
-Eigenhaendig:
   type: n
+Eigenhaendig:
+  type: adj
 buchstaeblich:
-  type: adv
+  type: adj
 hitzkoepfig:
-  type: adv
+  type: adj
 Sanitaercontainer:
   type: n
 Stueckakkord:
+genus  : m
   type: n
 Bundesanstalt:
-  type: n
-Satellitensignalensatellitenantennesatellitenschuessel:
+genus  : f
   type: n
 Kriegstreiber:
   type: n
 applaus:
+genus  : m
   type: n
 Tauschbar:
-  type: n
+  type: adj
 Ungut:
-  type: n
+  type: adj
 Vaeter:
+genus  : f
   type: n
 Fortpflanzungsgemeinschaft:
+genus  : f
   type: n
 Mischer:
   type: n
 Schwingsieb:
+genus  : s
   type: n
 regulieren:
   type: vi
 Koalition:
+genus  : f
   type: n
 kiepe:
-  type: adj
+genus  : f
+  type: n
 Mengenlehreuhr:
+genus  : f
   type: n
 krankenversicherung:
-  type: adj
+genus  : f
+  type: n
 Regung:
+genus  : f
   type: n
 Geschlechterforschung:
-  type: n
-regl:
-  type: adj
-Groen:
+genus  : f
   type: n
 Schenkte:
   type: vi
 steinalt:
-  type: vi
+  type: adj
 Fliessband:
+genus  : s
   type: n
 Druesenfieber:
+genus  : s
   type: n
 veranstaltungsort:
-  type: vi
+genus  : m
+  type: n
 Drillich:
-  type: adv
+genus  : m
+  type: n
 Motorbremse:
+genus  : f
   type: n
 Fingerspitzengefuehl:
+genus  : s
   type: n
 hauptberuflich:
-  type: adv
+  type: adj
 Ummanteln:
+genus  : s
   type: n
 geschlechtsmerkmal:
-  type: adj
+genus  : s
+  type: n
 Dumas:
   type: n
 Freiheitsentzug:
+genus  : m
   type: n
 Erziehung:
+genus  : f
   type: n
 Wuerdelosigkeit:
+genus  : f
   type: n
 Kommandeur:
+genus  : m
   type: n
 Gespritzter:
-  type: n
+  type: adj
 Unterdrueckung:
+genus  : f
   type: n
 Lokomotorisch:
-  type: n
+  type: adj
 b6:
   type: n
 Ekelhaft:
-  type: n
+  type: adj
 Reduktionsziel:
+genus  : s
   type: n
 Elongation:
+genus  : f
   type: n
 Unwahrheit:
+genus  : f
   type: n
 regierungssitz:
-  type: adj
-Cayennepfeff:
+genus  : m
   type: n
 Tischfuss:
   genus: m
   type: n
 beinen:
-  type: vi
-selbstbewusen:
-  type: vi
+  type: n
 unscharfen:
-  type: vi
+  type: adj
 neunte:
-  type: adv
+  type: adj
 Widerlich:
-  type: adv
+  type: adj
 mindern:
   type: vi
 Roentgenstrahlen:
+genus  : f
   type: n
 Illusionaer:
+genus  : m
   type: n
 Harte:
-  type: n
+  type: adj
 Speichel:
+genus  : m
   type: n
 Erstmalig:
-  type: n
+  type: adj
 drastisch:
-  type: adv
+  type: adj
 Hintertupfing:
   type: n
 selbsttaetig:
-  type: adv
-extravaganz:
   type: adj
+extravaganz:
+genus  : f
+  type: n
 besser:
   type: adj
 Konfliktherd:
+genus  : m
   type: n
 fortgehen:
-  type: adv
+  type: vi
 Xerophthalmie:
+genus  : f
   type: n
 Oberhaupt:
+genus  : s
   type: n
 Blutbad:
+genus  : s
   type: n
 Ungewoehnlichem:
-  type: adv
+  type: adj
 rabenschwarz:
   type: adj
 Extravagant:
-  type: n
+  type: adj
 befehlsuebersicht:
-  type: adv
-amten:
-  type: vi
+genus  : f
+  type: n
 Spitzeldienst:
+genus  : m
   type: n
 Erzaehle:
-  type: n
+  type: vi
 lauffaehig:
-  type: adv
+  type: adj
 Wirtschaftslage:
+genus  : f
   type: n
 Mietbetrag:
-  type: n
-Postangestellterpostbeamterpostbediensteterpostler:
+genus  : m
   type: n
 graduiert:
-  type: vi
+  type: adj
 Zweideutig:
-  type: n
-Erstmal:
-  type: n
+  type: adj
 einklagbar:
   type: adj
-wez:
-  type: adj
 Ignoranz:
+genus  : f
   type: n
 Revanchepartie:
-  type: n
-Previewvoransichtvorschau:
+genus  : f
   type: n
 Charakterzug:
+genus  : m
   type: n
 betteln:
   type: vi
 Muenzgeld:
+genus  : s
   type: n
 steril:
   type: adj
 gebraeuchlich:
-  type: adv
+  type: adj
 regieren:
-  type: adv
+  type: vi
 gigantisch:
   type: adj
 Konnotativ:
-  type: n
+  type: adj
 hautblasen:
-  type: vi
+genus  : f
+  type: n
 sojawurst:
+genus  : f
   type: n
 Arbeitsgruppe:
+genus  : f
   type: n
 messung:
-  type: adj
-Omi:
+genus  : f
   type: n
-to:
-  type: prep
+Omi:
+genus  : f
+  type: n
 Luderfuehrer:
+genus  : m
   type: n
 Arbeitnehmerorganisation:
+genus  : f
   type: n
 Originell:
-  type: n
-Dasselbe:
-  type: n
+  type: adj
 Verbessern:
+genus  : s
   type: n
 Beschlagnahme:
+genus  : f
   type: n
 Wankelmut:
+genus  : m
   type: n
-cia:
-  type: adj
 Paarungszeit:
+genus  : f
   type: n
 weichen:
-  type: adv
+  type: vi
 Passabel:
-  type: n
+  type: adj
 Nudelauflauf:
+genus  : m
   type: n
 handelsgut:
-  type: adj
-Entspannt:
+genus  : s
   type: n
+Entspannt:
+  type: adj
 Schneemobil:
+genus  : s
   type: n
 Haftschale:
+genus  : f
   type: n
 markierungsfeld:
-  type: adj
+genus  : s
+  type: n
 zufrieden:
-  type: vi
+  type: adj
 adaptiv:
   type: adj
 kontinuierlich:
-  type: adv
+  type: adj
 Wohnungsmakler:
   type: n
 Meuchelmoerder:
   type: n
 beseitigen:
-  type: adv
+  type: vi
 Facharzt:
+genus  : m
   type: n
 beschichten:
   type: vi
 Feldberg:
   type: n
 Symbiose:
+genus  : f
   type: n
 Pasteurisierung:
+genus  : f
   type: n
 Elaboriert:
-  type: n
+  type: adj
 Streuner:
   type: n
 konservenbuechsen:
-  type: vi
+genus  : f
+  type: n
 Wandbehang:
+genus  : m
   type: n
 Eisenbahnlinie:
+genus  : f
   type: n
 Mars:
+genus  : m
   type: n
 aehnliche:
-  type: adv
+  type: adj
 Schutzkleidung:
+genus  : f
   type: n
 Fortschritt:
-  type: n
-nystagmus:
+genus  : m
   type: n
 Galgant:
   type: n
 Blockstrecke:
+genus  : f
   type: n
 Gesundheitspflege:
+genus  : f
   type: n
 Strapazieren:
+genus  : s
   type: n
 interessieren:
   type: vi
 jungenhaft:
-  type: adv
-umruehren:
-  genus: s
-  type: n
+  type: adj
+umruehren:  
+  type: adj
 Hbombe:
+genus  : f
   type: n
 Raubgut:
+genus  : s
   type: n
 Uvstrahlen:
+genus  : f
   type: n
 Risikomanagement:
+genus  : s
   type: n
 Schlampe:
+genus  : f
   type: n
 Tachograf:
+genus  : m
   type: n
 verklopfen:
   type: vi
 Verstaerker:
   type: n
 Stickstoffgas:
+genus  : s
   type: n
 Performance:
+genus  : f
   type: n
 demographien:
-  type: adj
+genus  : f
+  type: n
 Perseiden:
+genus  : f
   type: n
 jemals:
-  type: n
+  type: adv
 parietal:
   type: adj
 Radioaktiver:
-  type: n
+  type: adj
 Wohlgefallen:
+genus  : m
   type: n
 Maennertoilette:
+genus  : f
   type: n
 Schutzregion:
+genus  : f
   type: n
 Schutzweg:
+genus  : m
   type: n
 Vorsorglich:
-  type: adv
+  type: adj
 Translator:
-  type: n
-Lek:
-  type: n
+genus  : m
+  type: n 
 Mohnsamen:
   type: n
 Ausstellungsstueck:
+genus  : s
   type: n
 reglementieren:
   type: vi
 kredit:
-  type: adj
+genus  : m
+  type: n
 beschliessen:
-  type: vi
+  type: adj
 Kriminalitaetsrate:
+genus  : f
   type: n
 rotwein:
-  type: adj
+genus  : m
+  type: n
 Uebertraegerstoff:
+genus  : m
   type: n
 Wissenschafter:
+genus  : m
   type: n
 sambesi:
-  type: adj
+genus  : m
+  type: n
 pazifistisch:
   type: adj
 Klemmschelle:
+genus  : f
   type: n
 hierbei:
-  type: adj
+  type: adv
 Ehe:
+genus  : f
   type: n
 kehrwert:
-  type: vi
+genus  : m
+  type: n
 zielgruppen:
-  type: adj
-Sturmunddrang:
+genus  : f
   type: n
 caesar:
-  type: adj
+genus  : m
+  type: n
 Kreuzotter:
+genus  : f
   type: n
 Verlorenheit:
+genus  : f
   type: n
 ausserstanden:
-  type: vi
+  type: adj
 Doppel:
+genus  : s
   type: n
 durchscheinen:
   type: vi
 Metern:
   type: n
 schulterzucken:
-  type: vi
-Provokationreizung:
+genus  : s
   type: n
 Zustehendes:
-  type: n
+  type: adj
 brechbarkeit:
+genus  : f
   type: n
 Freundliche:
-  type: adv
+  type: adj
 Juengsten:
-  type: n
+  type: adj
 Immunisierung:
+genus  : f
   type: n
 Exil:
+genus  : s
   type: n
 Werkstoff:
+genus  : m
   type: n
 sexsuechtige:
-  type: adv
-tranquilizer:
   type: adj
+tranquilizer:
+genus  : s
+  type: n
 Ankuendigen:
+genus  : s
   type: n
 schmerz:
-  type: adj
+genus  : m
+  type: n
 tbc:
-  type: adj
+  type: n
 weiterfuehren:
   type: vi
 mieten:
   type: vi
 Angeordnet:
-  type: n
+  type: adj
 Saeuglingstod:
+genus  : m
   type: n
 partei:
-  type: adj
+genus  : f
+  type: n
 Erleuchtung:
+genus  : f
   type: n
 Hermaphrodismus:
+genus  : m
   type: n
 Chauvinist:
+genus  : m
   type: n
 Metallueberzug:
+genus  : m
   type: n
 hermaphroditisch:
   type: adj
 gleichgeschlechtliche:
-  type: adv
+  type: adj
 Netting:
   type: n
 Bremsen:
+genus  : s
   type: n
 Zerstreutheit:
+genus  : f
   type: n
 Expedition:
+genus  : f
   type: n
 Groben:
-  type: n
+  type: adj
 nigelnagelneu:
   type: adj
 Waessern:
-  type: n
-Osmanetuerke:
+genus  : s
   type: n
 Drogenabhaengiger:
-  type: n
+  type: adj
 Jungfrau:
+genus  : f
   type: n
 Trennschleuder:
+genus  : f
   type: n
 aelterste:
-  type: vi
+  type: adj
 Weisswuerste:
+genus  : f
   type: n
 Schlauchschelle:
+genus  : f
   type: n
 gebieten:
   type: vi
 Prall:
-  type: n
+  type: adj
 Datenverarbeitung:
+genus  : f
   type: n
 raumstation:
+genus  : f
   type: n
 Hebeln:
+genus  : s
   type: n
 Aggregation:
+genus  : f
   type: n
 nagelplatte:
-  type: vi
+genus  : f
+  type: n
 andamanische:
-  type: adv
-blockverschluesselung:
   type: adj
+blockverschluesselung:
+genus  : f
+  type: n
 unpersoenlich:
-  type: adv
+  type: adj
 Metamodell:
+genus  : s
   type: n
 blaesslich:
-  type: adv
+  type: adj
 Frites:
   type: n
-iturzeugnis:
-  type: n
 Separieren:
+genus  : s
   type: n
 umweltschutz:
-  type: adj
-Rasa:
+genus  : m
   type: n
 Rachefeldzug:
+genus  : m
   type: n
 Dateneinheit:
+genus  : f
   type: n
 Nachbarland:
+genus  : s
   type: n
 Kandelaber:
   type: n
 Verantwortungslos:
-  type: n
-strakt:
-  type: vi
-mix:
   type: adj
+mix:
+  type: vi
 widersetzen:
   type: vi
 abtrocknen:
   type: vi
 Altertum:
+genus  : s
   type: n
 Profession:
+genus  : f
   type: n
 bewaldet:
-  type: adv
-geschockt:
-  type: vi
-warmherzig:
-  type: adv
-nationalpark:
   type: adj
+geschockt:
+  type: adj
+warmherzig:
+  type: adj
+nationalpark:
+genus  : m
+  type: n
 Training:
+genus  : s
   type: n
 Verniedlichen:
-  type: adv
-Vitiosus:
+genus  : s
   type: n
 Uebernaechtigt:
-  type: n
-akathisie:
   type: adj
-ueberraschenderweisen:
-  type: vi
 paralysieren:
   type: vi
 weissen:
-  type: adv
+  type: adj
 Computerisieren:
+genus  : s
   type: n
 Klunker:
   type: n
 Verwursten:
+genus  : s
   type: n
 gentest:
-  type: vi
+genus  : m
+  type: n
 schreien:
-  type: adj
+  type: vi
 Flachland:
+genus  : s
   type: n
 Zuletzt:
-  type: adv
+  type: adj
 Abdikation:
+genus  : f
   type: n
 Verkuendigung:
+genus  : f
   type: n
 Sympathisch:
-  type: n
+  type: adj
 Apperzeption:
+genus  : f
   type: n
 Neptun:
+genus  : m
   type: n
 Lehrbefugnis:
+genus  : f
   type: n
 Kumulativ:
-  type: n
+  type: adj
 Gehemmtheit:
+genus  : f
   type: n
 Tobia:
   type: n
-buhei:
-  type: adj
 Oktober:
+genus  : m
   type: n
 Maerchen:
+genus  : s
   type: n
 Kaninchenhoehle:
+genus  : f
   type: n
 konstrukteur:
-  type: adj
+genus  : m
+  type: n
 Zwischenblaettern:
   type: n
 Brennerwaermeleistung:
   genus: f
   type: n
-Palmenwedelpalmenzweig:
-  type: n
-dringlich:
-  type: adv
 janeiro:
-  type: adj
-wilna:
-  type: adj
+  type: n
 Spitzel:
   type: n
 Verordnung:
+genus  : f
   type: n
 wohnen:
   type: vi
 Begeisterung:
+genus  : f
   type: n
 Einwiegen:
+genus  : s
   type: n
 Zahllos:
-  type: n
-Rind:
-  type: n
-vitrioloel:
   type: adj
+Rind:
+genus  : s
+  type: n
 Forstwesen:
+genus  : s
   type: n
 benutzung:
-  type: adj
+genus  : f
+  type: n
 reithosen:
-  type: vi
+genus  : f
+  type: n
 Wunderheilung:
+genus  : f
   type: n
 einfallen:
   type: vi
 datensammlung:
-  type: adj
-skonto:
-  type: adj
-Orientierung:
+genus  : f
   type: n
-Wipper:
+skonto:
+genus  : m
+  type: n
+Orientierung:
+genus  : f
   type: n
 spotten:
   type: vi
 erachten:
   type: vi
 saebelrasseln:
-  type: vi
-Paedosexueller:
+genus  : s
   type: n
-kampfgeien:
+Paedosexueller:
   type: adj
 Rechtsberater:
   type: n
 Schleuse:
+genus  : f
   type: n
 Marinayachthafen:
   type: n
 trockenen:
-  type: vi
+  type: adj
 Schildkroeten:
+genus  : f
   type: n
 reifen:
-  type: vi
+  type: adj
 Nonne:
+genus  : f
   type: n
 Skopje:
   type: n
 Apostasie:
+genus  : f
   type: n
 tierpark:
-  type: adj
+genus  : m
+  type: n
 senner:
-  type: adj
+  type: n
 Befallen:
+genus  : s
   type: n
 broeckelig:
-  type: adv
+  type: adj
 Antriebsmangel:
+genus  : m
   type: n
 Rentier:
+genus  : s
   type: n
 Webspaceprovider:
   type: n
 Grundbedingung:
+genus  : f
   type: n
 schulbeginn:
-  type: adj
+genus  : m
+  type: n
 Unbekannter:
-  type: n
-nuetzlichen:
-  type: adv
-humbug:
   type: adj
-Schnellzug:
+nuetzlichen:
+  type: adj
+humbug:
+genus  : m
   type: n
-Vergangenheitvorvergangenheit:
+Schnellzug:
+genus  : m
   type: n
 lichtreflex:
-  type: adj
-ritu:
-  type: adj
+genus  : m
+  type: n
 unklar:
   type: adj
 Gottesstaat:
+genus  : m
   type: n
 Fusionsbombe:
+genus  : f
   type: n
 rechnung:
-  type: adj
+genus  : f
+  type: n
 brammen:
   type: vi
 Schonungslos:
-  type: n
+  type: adj
 Warme:
-  type: n
+  type: adj
 gebundene:
-  type: adv
+  type: adj
 mochtest:
   type: vi
 fassbinder:
-  type: adj
+  type: n
 Koerperliche:
-  type: adv
-verwehrung:
   type: adj
-Dreamt:
+verwehrung:
+genus  : f
   type: n
 Katalog:
+genus  : m
   type: n
 Vordatieren:
+genus  : s
   type: n
 sicht:
-  type: adv
+genus  : f
+  type: n
 vorvergangenheit:
+genus  : f
   type: n
 Orgelspieler:
   type: n
 bewerbungsbogen:
-  type: vi
+genus  : m
+  type: n
 suggestiv:
   type: adj
 dann:
   type: adv
 erkundung:
-  type: adj
+genus  : f
+  type: n
 Alkoholisches:
   type: adj
 Unstimmigkeit:
+genus  : f
   type: n
 proportion:
+genus  : f
   type: n
-gangslagen:
-  type: vi
 Gelehrt:
-  type: n
+  type: adj
 ueberholen:
   type: vi
 Seil:
+genus  : s
   type: n
 Tapete:
+genus  : f
   type: n
 komprimierte:
-  type: vi
+  type: adj
 unueberbrueckbar:
   type: adj
 europaeischen:
-  type: adv
+  type: adj
 Problembehaftet:
-  type: n
+  type: adj
 nationalmannschaft:
-  type: adv
+genus  : f
+  type: n
 thrombolytikum:
-  type: adj
-wechslung:
-  type: adj
+genus  : s
+  type: n
 denkst:
   type: vi
 deutsche:
-  type: adv
+  type: adj
 Kananda:
   type: n
 tadel:
-  type: adj
+genus  : m
+  type: 
 bodymassindex:
-  type: adj
+genus  : m
+  type: n
 mochten:
   type: vi
 Hausschwamm:
+genus  : m
   type: n
 abwehr:
-  type: adj
+genus  : f
+  type: n
 praxisnah:
   type: adj
 gebot:
-  type: vi
+genus  : s
+  type: n
 Schussenried:
   type: n
 erniedrigend:
   type: adj
 Heruntersehen:
+genus  : s
   type: n
 Dafuerhalten:
+genus  : s
   type: n
 Sackpfeifer:
   type: n
 ankleidezimmer:
-  type: adj
+genus  : s
+  type: n
 verfassen:
   type: vi
 Feierlich:
-  type: adv
+  type: adj
 Empirisch:
-  type: n
+  type: adj
 Moertelkelle:
+genus  : f
   type: n
 King:
+genus  : m
   type: n
 auskippen:
-  type: adj
+  type: vi
 Hineinblicken:
+genus  : s
   type: n
 auslosung:
-  type: adj
-verdacht:
-  type: adv
-radspeiche:
-  type: adv
-Schuhzwecke:
+genus  : f
   type: n
-ccitt:
-  type: vi
+verdacht:
+genus  : m
+  type: n
+radspeiche:
+genus  : f
+  type: n
+Schuhzwecke:
+genus  : f
+  type: n
 Anpacken:
+genus  : s
   type: n
 Irrenanstalt:
+genus  : f
   type: n
 bringen:
   type: vi
 Bankbeamter:
+genus  : m
   type: n
 atmosphaerenphysik:
-  type: adj
+genus  : f
+  type: n
 opfer:
-  type: adj
-Relations:
   type: n
 erloschen:
-  type: adv
-pillendreher:
   type: adj
+pillendreher:
+  type: n
 Sonnenschutzcreme:
+genus  : f
   type: n
 Bruessel:
   type: n
 Android:
+genus  : m
   type: n
 Zitronengras:
+genus  : s
   type: n
 Planetarium:
+genus  : s
   type: n
 Landeshoheit:
+genus  : f
   type: n
 nugat:
-  type: adj
+genus  : s
+  type: n
 Zusammengefasst:
-  type: n
-Nibelungen:
-  type: n
-ternettagebuch:
   type: adj
+Nibelungen:
+genus  : f
+  type: n
 gepraege:
   type: adv
 aufenthaltstitel:
