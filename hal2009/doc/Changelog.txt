@@ -1,3 +1,11 @@
+977:
+
+- Doppelte Eintraege aus Memory entfernt
+
+975:
+
+- Die Memory ist fertig korrigiert!
+
 972:
 
 - Bug 551 korrigiert

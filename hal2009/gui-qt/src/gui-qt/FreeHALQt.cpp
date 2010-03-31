@@ -79,6 +79,11 @@ freehal::string version;
 bool                        is_perl = 0;
 bool                        waiting_for_csv_answer = 0;
 
+#define FLOWCHART 78
+#define DB_SEARCH 79
+short place_edit_profact = FLOWCHART;
+int   key_edit_profact = 0;
+
 auto_ptr<QString> freehalthread1_talking;
 
 FreeHALWindow::FreeHALWindow(QWidget *parent)
@@ -640,8 +645,11 @@ QScrollArea* scrollArea = new QScrollArea;
 
     helper->connect(main_window->user_interface_main_window->verticalScrollBar, SIGNAL(valueChanged(int)),
                     fc, SLOT(setY(int)));
-    helper->connect(fc, SIGNAL(setFactText(QString)),
+    helper->connect(fc, SIGNAL(setFactText_Chart(QString)),
                     main_window->user_interface_main_window->flowchart_edit, SLOT(setText(QString)));
+    helper->connect(fc, SIGNAL(setFactText_DB(QString)),
+                    main_window->user_interface_main_window->db_search_edit, SLOT(setText(QString)));
+
 
     helper->connect(&(*helper), SIGNAL(signalSetTimeToLearn(int)),
             main_window->user_interface_main_window->learnbar, SLOT(setMaximum(int)));
@@ -659,6 +667,8 @@ QScrollArea* scrollArea = new QScrollArea;
     main_window->user_interface_main_window->pushButton->setEnabled(false);
     main_window->user_interface_main_window->textedit_talk->setHtml(QString("Please wait..."));
     main_window->user_interface_main_window->learnbar->hide();
+
+    main_window->user_interface_main_window->db_search_edit_frame->hide();
 
     main_window->user_interface_main_window->lineedit_talk->setFocus();
     
@@ -1374,7 +1384,12 @@ void freehal::comm_new(freehal::string s) {
             /// emit fc->ask_again();
         }
         if (s.contains("PROFACT")) {
-            emit fc->setFactText(QString::fromStdString(parts[1].ref()));
+            if (place_edit_profact == FLOWCHART) {
+                emit fc->setFactText_Chart(QString::fromStdString(parts[1].ref()));
+            }
+            else {
+                emit fc->setFactText_DB(QString::fromStdString(parts[1].ref()));
+            }
         }
         if (s.contains("SPEAK")) {
             speak(parts[1].ref());
@@ -1506,6 +1521,7 @@ void Helper::slotMoreInfo(QStringList list) {
 void FreeHALWindow::on_flowchart_fact_pk_valueChanged(int i)
 {
     if (i) {
+        place_edit_profact = FLOWCHART;
         QString qs;
         qs.setNum(i);
         main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
@@ -1818,14 +1834,16 @@ void Fact::delete_fact() {
     char pkey[LINE_SIZE];
     strncpy(pkey, pk, LINE_SIZE-1);
     freehal::comm_send("DELETE:FACT:PK:" + freehal::string(pkey));
+}
 
-    /*
-    int v_value = main_window->user_interface_main_window->tableView->verticalScrollBar()->value();
-    if (window->getLastProcess() == MATCHING_FACTS) {
-        window->on_matchingfacts_clicked();
-    }
-    main_window->user_interface_main_window->tableView->verticalScrollBar()->setValue(v_value);
-    */
+void Fact::edit_fact() {
+    main_window->user_interface_main_window->db_search_edit_frame->show();
+    place_edit_profact = DB_SEARCH;
+    QString qs(pk);
+    bool ok;
+    key_edit_profact = qs.toInt(&ok);
+    main_window->user_interface_main_window->db_search_edit->setText("Please wait...");
+    freehal::comm_send("GET:PROFACT:PK:" + qs.toStdString());
 }
 
 enum LAST_PROCESS FreeHALWindow::getLastProcess() {
@@ -1866,7 +1884,17 @@ void FreeHALWindow::menuClick(QPoint p) {
             }
         }
 
+        QAction* editAct = new QAction(tr("&Edit"), this);
+        editAct->setStatusTip(tr("Edit line in .pro file"));
+
+        for (j = 0; j < factList.size(); ++j) {
+            Fact* fact = factList[j];
+
+            connect(editAct, SIGNAL(triggered()), fact, SLOT(edit_fact()));
+        }
+
         QMenu menu(this);
+        menu.addAction(editAct);
         menu.addAction(deleteAct);
         p.setY(p.y()+40);
         p.setX(p.x()+50);
@@ -2204,3 +2232,14 @@ void FreeHALWindow::slotEnable()
     this->user_interface_main_window->pushButton_learn->setEnabled(true);
 }
 
+
+void FreeHALWindow::on_db_search_save_clicked()
+{
+    main_window->user_interface_main_window->db_search_edit_frame->hide();
+    place_edit_profact = DB_SEARCH;
+    QString qs;
+    qs.setNum(key_edit_profact);
+    QString replacement = main_window->user_interface_main_window->db_search_edit->text();
+
+    freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
+}

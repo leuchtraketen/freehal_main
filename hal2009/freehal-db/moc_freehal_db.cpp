@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'freehal_db.h'
 **
-** Created: Sun Nov 22 16:22:49 2009
+** Created: Wed Jan 6 15:42:57 2010
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!

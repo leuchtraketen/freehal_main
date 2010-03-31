@@ -190,6 +190,7 @@ public slots:
 
 
 private slots:
+    void on_db_search_save_clicked();
     void on_vacuum_clicked();
     void on_plus_clicked();
     void on_minus_clicked();
@@ -422,7 +423,8 @@ class FlowChart : public QWidget {
 
   signals:
     void ask_again();
-    void setFactText(QString);
+    void setFactText_Chart(QString);
+    void setFactText_DB(QString);
 
   protected:
     void paintEvent(QPaintEvent *event);
@@ -524,6 +526,7 @@ public:
     Fact(char* _pk, FreeHALWindow* _window) : pk(_pk), window(_window) {}
 
 public slots:
+    void edit_fact();
     void delete_fact();
 
 private:

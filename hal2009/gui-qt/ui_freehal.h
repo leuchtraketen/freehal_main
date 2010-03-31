@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'freehal.ui'
 **
-** Created: Sun Feb 28 14:41:52 2010
+** Created: Mon Mar 29 12:47:35 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -141,9 +141,14 @@ public:
     QPushButton *allfacts;
     QLabel *label_5;
     QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer_3;
     QPushButton *double_facts;
     QTableView *tableView;
-    QSpacerItem *horizontalSpacer_3;
+    QFrame *db_search_edit_frame;
+    QGridLayout *gridLayout_9;
+    QLabel *label_7;
+    QLineEdit *db_search_edit;
+    QPushButton *db_search_save;
     QMenuBar *menubar;
     QMenu *menuDatei;
     QMenu *menuExtras;
@@ -407,7 +412,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 480, 429));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 515, 449));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -624,14 +629,14 @@ public:
         matchingfacts = new QPushButton(frame);
         matchingfacts->setObjectName(QString::fromUtf8("matchingfacts"));
 
-        gridLayout_5->addWidget(matchingfacts, 0, 3, 1, 2);
+        gridLayout_5->addWidget(matchingfacts, 0, 3, 1, 1);
 
         allfacts = new QPushButton(frame);
         allfacts->setObjectName(QString::fromUtf8("allfacts"));
         sizePolicy4.setHeightForWidth(allfacts->sizePolicy().hasHeightForWidth());
         allfacts->setSizePolicy(sizePolicy4);
 
-        gridLayout_5->addWidget(allfacts, 0, 5, 1, 1);
+        gridLayout_5->addWidget(allfacts, 0, 4, 1, 1);
 
         label_5 = new QLabel(frame);
         label_5->setObjectName(QString::fromUtf8("label_5"));
@@ -642,19 +647,45 @@ public:
 
         gridLayout_5->addItem(horizontalSpacer_2, 1, 2, 1, 1);
 
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer_3, 1, 3, 1, 1);
+
         double_facts = new QPushButton(frame);
         double_facts->setObjectName(QString::fromUtf8("double_facts"));
 
-        gridLayout_5->addWidget(double_facts, 1, 4, 1, 2);
+        gridLayout_5->addWidget(double_facts, 1, 4, 1, 1);
 
         tableView = new QTableView(frame);
         tableView->setObjectName(QString::fromUtf8("tableView"));
 
-        gridLayout_5->addWidget(tableView, 2, 0, 1, 6);
+        gridLayout_5->addWidget(tableView, 2, 0, 1, 5);
 
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        db_search_edit_frame = new QFrame(frame);
+        db_search_edit_frame->setObjectName(QString::fromUtf8("db_search_edit_frame"));
+        db_search_edit_frame->setFrameShape(QFrame::StyledPanel);
+        db_search_edit_frame->setFrameShadow(QFrame::Raised);
+        gridLayout_9 = new QGridLayout(db_search_edit_frame);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        label_7 = new QLabel(db_search_edit_frame);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
 
-        gridLayout_5->addItem(horizontalSpacer_3, 1, 3, 1, 1);
+        gridLayout_9->addWidget(label_7, 0, 0, 1, 1);
+
+        db_search_edit = new QLineEdit(db_search_edit_frame);
+        db_search_edit->setObjectName(QString::fromUtf8("db_search_edit"));
+
+        gridLayout_9->addWidget(db_search_edit, 0, 1, 1, 1);
+
+        db_search_save = new QPushButton(db_search_edit_frame);
+        db_search_save->setObjectName(QString::fromUtf8("db_search_save"));
+        sizePolicy3.setHeightForWidth(db_search_save->sizePolicy().hasHeightForWidth());
+        db_search_save->setSizePolicy(sizePolicy3);
+
+        gridLayout_9->addWidget(db_search_save, 0, 2, 1, 1);
+
+
+        gridLayout_5->addWidget(db_search_edit_frame, 3, 0, 1, 5);
 
 
         gridLayout_7->addWidget(frame, 3, 0, 1, 4);
@@ -692,14 +723,13 @@ public:
         menuExtras->addSeparator();
         menuExtras->addAction(fullscreen);
         menuHilfe->addAction(actionInfo);
-        menuVerbindung->addAction(actionReconnect);
         menuVerbindung->addAction(actionNeue_Verbindung_herstellen);
         menuVerbindung->addAction(actionReconnect);
 
         retranslateUi(freehalWindow);
         QObject::connect(actionBeenden, SIGNAL(triggered()), freehalWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(freehalWindow);
@@ -748,8 +778,8 @@ public:
         textedit_talk->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         normalscreen->setText(QApplication::translate("freehalWindow", " Exit ", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Talk), QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
@@ -757,8 +787,8 @@ public:
         textedit_learn->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Learn), QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("freehalWindow", "Input text:", 0, QApplication::UnicodeUTF8));
         compute_output->setText(QApplication::translate("freehalWindow", "Answer again!", 0, QApplication::UnicodeUTF8));
@@ -783,6 +813,8 @@ public:
         allfacts->setText(QApplication::translate("freehalWindow", "all facts", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("freehalWindow", "General database queries:", 0, QApplication::UnicodeUTF8));
         double_facts->setText(QApplication::translate("freehalWindow", "double facts", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("freehalWindow", "Edit fact:", 0, QApplication::UnicodeUTF8));
+        db_search_save->setText(QApplication::translate("freehalWindow", "Save fact", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Database), QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
         menuDatei->setTitle(QApplication::translate("freehalWindow", "File", 0, QApplication::UnicodeUTF8));
         menuExtras->setTitle(QApplication::translate("freehalWindow", "Tools", 0, QApplication::UnicodeUTF8));

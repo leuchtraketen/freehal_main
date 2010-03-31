@@ -1,5 +1,5 @@
 /*
- * This file is part of FreeHAL 2009, but I was not developed by FreeHAL.
+ * This file is part of FreeHAL 2010, but I was not developed by FreeHAL.
  *
  * This file was originally licensed under the zlib license, which is compatible to the GPL, so:
  *

@@ -42,6 +42,7 @@ export II=" -I../../JEliza/boost_1_37_0/ -I../perl5 -I../perl5/win32 -I../perl -
 && i586-mingw32msvc-gcc $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -I$QTPATH/include -I$QTPATH/include/QtGui -I$QTPATH/include/QtCore -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -Iinclude/python-win/Include/ -Iqt4-win/mkspecs/win32-g++/ -I. -Isrc -I. -I. -o hal2009-perl6-dummy.c.o ../hal2009-perl6-dummy.c		\
 && i586-mingw32msvc-gcc $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -I$QTPATH/include -I$QTPATH/include/QtGui -I$QTPATH/include/QtCore -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -Iinclude/python-win/Include/ -Iqt4-win/mkspecs/win32-g++/ -I. -Isrc -I. -I. -o sqlite3.c.o ../sqlite3.c		\
 && i586-mingw32msvc-gcc $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -I$QTPATH/include -I$QTPATH/include/QtGui -I$QTPATH/include/QtCore -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -Iinclude/python-win/Include/ -Iqt4-win/mkspecs/win32-g++/ -I. -Isrc -I. -I. -o freehal-db.c.o freehal-db.c	\
+&& i586-mingw32msvc-gcc $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -I$QTPATH/include -I$QTPATH/include/QtGui -I$QTPATH/include/QtCore -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -Iinclude/python-win/Include/ -Iqt4-win/mkspecs/win32-g++/ -I. -Isrc -I. -I. -o hal2009-wiki-dummy.c.o ../hal2009-wiki-dummy.c	\
 && true
 
 
