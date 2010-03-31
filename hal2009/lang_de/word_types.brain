@@ -11542,7 +11542,7 @@ Variationen:
   genus  : f
   type: n
 >>>:
-  type: vt
+  type: vi
 abhaengikeit:
   genus  : f
   type: n
@@ -13060,7 +13060,7 @@ freihaendig:
 verwendbares:
   type: adj
 duerfte:
-  type: vt
+  type: vi
 sonnennahen:
   type: adj
 Ausgasen:
@@ -14223,7 +14223,7 @@ Variationen:
   genus  : f
   type: n 
 >>>:
-  type: vt
+  type: vi
 abhaengikeit:
   genus  : f
   type: n
@@ -24265,7 +24265,7 @@ Legebrettspiel:
   type: n
 Blood:
   type: n
-Fantasy-Fußballspiel:
+Fantasy-Fussballspiel:
   genus  : s
   type: n
 Moon:
@@ -24870,7 +24870,7 @@ Gedaechtniskartenspiel:
 Menschenkicker:
   genus  : f
   type: n
-Fußballspiel:
+Fussballspiel:
   genus  : s
   type: n
 Metro:
@@ -24977,7 +24977,7 @@ Petanque:
   type: n
 Pfitschigogerl:
   type: n
-Tischfußballspiel:
+Tischfussballspiel:
   genus  : s
   type: n
 Pharo:
@@ -25187,7 +25187,7 @@ Stitch:
   type: n
 Stoppessen:
   type: n
-Stoß:
+Stoss:
   type: n
 Stratego:
   type: n
@@ -25197,7 +25197,7 @@ Sturmbringer:
   type: n
 Subbuteo:
   type: n
-Tisch-Fußballspiel:
+Tisch-Fussballspiel:
   genus  : s
   type: n
 Sudoku:
@@ -25249,7 +25249,7 @@ Tikal:
   type: n
 Tipp-Kick:
   type: n
-Tischfußball:
+Tischfussball:
   genus  : s
   type: n
 Tischkegelspiel:
@@ -29488,7 +29488,7 @@ besucher:
 alzheimer:
   type: n
 halte:
-  type: vt
+  type: vi
 drogen:
   genus  : f
   type: n
@@ -29585,7 +29585,7 @@ schokolade:
 merke:
   type: vi
 nehme:
-  type: vt
+  type: vi
 plaudere:
   type: vi
 fussballspiele:
@@ -34619,7 +34619,7 @@ Pomanesco:
 Brokkoli:
   genus  : m
   type: n
-Weißkohl:
+Weisskohl:
   genus  : m
   type: n
 Rotkohl:
@@ -34871,7 +34871,7 @@ Mineralsalze:
 aetherische:
   type: adj
 =:
-  type: vt
+  type: vi
 Thymian:
   genus  : m
   type: n
@@ -37606,8 +37606,7 @@ Steuerberaterin:
 Wirtschaftstreuhaender:
   genus  : m
   type: n
-Aaron:
-  type: n
+
 Abbigail:
   type: n
 Abby:
@@ -43255,7 +43254,7 @@ Zoelestine:
 zoelestinus:
   type: n
 wohne:
-  type: vt
+  type: vi
 geistiger:
   type: adj
 geistiger:
@@ -43364,15 +43363,15 @@ anscheinend:
 Anwort:
   genus  : f
   type: n
-würdest:
+wuerdest:
   type: vi
-wären:
+waeren:
   type: vi
 zumindest:
   type: vi
-lügst:
+luegst:
   type: vi
-träumst:
+traeumst:
   type: vi
 versuchst:
   type: vi
@@ -118096,7 +118095,7 @@ Scharen:
   genus  : f
   type: n
 abgetaut:
-  type: vt
+  type: vi
 Sommerspiele:
   genus  : f
   type: n
@@ -267308,64 +267307,73 @@ Versuch:
 genus  : m
   type: n
 willen:
-  type: vi
+genus  : m
+  type: n
 agio:
-  type: adj
+genus  : s
+  type: n
 unterhosen:
-  type: vi
+genus  : f
+  type: n
 satellitensignalen:
-  type: vi
-About:
-  type: prep
+  type: n
 Sinneseindruck:
+genus  : m
   type: n
 Briefkuvert:
+genus  : s
   type: n
 Schwebebahn:
+genus  : f
   type: n
 Casinos:
   type: n
 mark:
-  type: adj
+genus  : s
+  type: n
 Maloche:
+genus  : f
   type: n
 hexen:
-  type: adj
-zimmerdecken:
   type: vi
+zimmerdecken:
+genus  : f
+  type: n
 po:
-  type: adj
+genus  : m
+  type: n
 Anleihen:
+genus  : f
   type: n
 Mehrsprachigkeit:
+genus  : f
   type: n
 ausfugen:
   type: vi
 Pruefer:
   type: n
 einbeziehen:
-  type: adv
+  type: vi
 weggelassen:
-  type: adv
+  type: adj
 division:
+genus  : f
   type: n
 Gutachter:
-  genus: m
   type: n
 zogenbusch:
-  type: adj
+  type: n
 leistungsfaehigkeit:
   genus: f
   type: n
 liquiditaetskonto:
-  type: adj
+genus  : s
+  type: n
 mithoeren:
   type: vi
 Dienstprogramm:
   genus: s
   type: n
-geschwulen:
-  type: vi
 Holzgeruest:
   genus: s
   type: n
@@ -267375,14 +267383,13 @@ Rechteck:
 Schmaehschrift:
   genus: f
   type: n
-ehrlo:
-  type: adj
 Nag:
-  type: n
+  type: vi
 uebertritt:
   genus: m
   type: n
 Aktenvernichter:
+genus  : m
   type: n
 ammoniakloesung:
   genus: f
@@ -267393,7 +267400,7 @@ arsenal:
   genus: s
   type: n
 Biologische:
-  type: n
+  type: adj
 noten:
   genus: f
   type: n
@@ -267401,7 +267408,8 @@ Gesellschaftslehre:
   genus: f
   type: n
 sorgfalt:
-  type: vi
+genus  : f
+  type: n
 befruchten:
   type: vi
 Publikumserfolg:
@@ -267410,26 +267418,25 @@ Publikumserfolg:
 Anstecken:
   genus: s
   type: n
-teressieren:
-  type: vi
 Defizitaer:
   type: adj
 buerger:
-  type: adj
+  type: n
 senf:
-  type: adj
+genus  : m
+  type: n
 Prestige:
+genus  : s
   type: n
 Acht:
-  type: adv
+  type: adj
 Herauswollen:
+genus  : s
   type: n
 pyridoxal:
   type: adj
 nutzbringen:
   type: vi
-proptosis:
-  type: n
 juristenlatein:
   genus: s
   type: n
@@ -267437,9 +267444,9 @@ Geschwindigkeit:
   genus: f
   type: n
 Etliche:
-  type: adv
+  type: adj
 fluessig:
-  type: adv
+  type: adj
 selbstjustiz:
   genus: f
   type: n
@@ -267448,8 +267455,6 @@ Graubrot:
   type: n
 abgegriffen:
   type: adj
-first:
-  type: vi
 Lieferwagen:
   genus: m
   type: n
@@ -267460,10 +267465,6 @@ amerikaner:
   genus: m
   type: n
 Erfand:
-  type: n
-Kommotio:
-  type: n
-mdb:
   type: adj
 bandit:
   genus: m
@@ -267478,7 +267479,7 @@ Geschwisterkinder:
 Geschieht:
   type: vi
 waescht:
-  type: adv
+  type: vi
 Geschmierte:
   type: adj
 Schuster:
@@ -267486,8 +267487,6 @@ Schuster:
   type: n
 umgehst:
   type: vi
-et:
-  type: n
 gepflastert:
   type: adj
 Nacken:
@@ -267515,8 +267514,6 @@ Ratsherr:
   type: n
 Fremdes:
   type: adj
-gereut:
-  type: vi
 mischt:
   type: vi
 ertrunken:
@@ -267524,8 +267521,6 @@ ertrunken:
 Gewissen:
   genus: f
   type: n
-stieben:
-  type: vi
 drueckt:
   type: vi
 Flitterwochen:
@@ -267538,7 +267533,7 @@ sterbt:
 jagt:
   type: vi
 schlafender:
-  type: adv
+  type: adj
 Raubvoegel:
   genus: m
   type: n
@@ -267551,18 +267546,12 @@ Schaeume:
 Deckelchen:
   genus: s
   type: n
-Haenschen:
-  type: n
 pfluegt:
   type: vi
 verschiebe:
   type: vi
-ihm:
-  genus: m
-  type: prep
 Schlafende:
-  genus: m
-  type: n
+  type: adj
 Brand:
   genus: m
   type: n
@@ -267583,11 +267572,11 @@ Binkerl:
   genus: s
   type: n
 ungleiche:
-  type: adv
+  type: adj
 Falles:
   type: n
 Rostige:
-  type: adv
+  type: adj
 scheisst:
   type: vi
 Kuenste:
@@ -267609,13 +267598,13 @@ Ruhekissen:
 haett:
   type: vi
 Sitzt:
-  type: n
+  type: vi
 holpert:
   type: vi
 gabs:
   type: vi
 erspart:
-  type: adj
+  type: vi
 hackt:
   type: vi
 glaubst:
@@ -267665,15 +267654,14 @@ Zier:
   genus: f
   type: n
 Hilf:
-  genus: f
-  type: n
+  type: vi
 Klappern:
   genus: s
   type: n
 verschlingt:
   type: vi
 Betrunkene:
-  type: n
+  type: adj
 aussieht:
   type: vi
 kraeht:
@@ -267702,36 +267690,34 @@ Herrgotts:
 bettet:
   type: vi
 duemmer:
-  type: adv
+  type: adj
 entzogen:
-  type: adv
+  type: adj
 duemmsten:
-  type: adv
+  type: adj
 aufs:
   type: prep
 einaeugig:
-  type: adv
+  type: adj
 groesseren:
-  type: adv
+  type: adj
 Lebendige:
-  type: adv
+  type: adj
 Haett:
   type: vi
 heulen:
   type: vi
-erd:
-  type: n
 Ponyhof:
   genus: m
   type: n
 Dummer:
-  type: n
+  type: adj
 gepeinigt:
   type: vi
 tratscht:
   type: vi
 nichts:
-  type: adv
+  type: adj
 geballten:
   type: adj
 Rosen:
@@ -267745,15 +267731,15 @@ Beinahe:
 Floehen:
   type: n
 schoene:
-  type: adv
+  type: adj
 Getroffene:
   type: adj
 Bergab:
-  type: adv
+  type: adj
 gefreut:
   type: vi
 Schlechten:
-  type: adv
+  type: adj
 Pfennig:
   genus: m
   type: n
@@ -267769,7 +267755,7 @@ blaest:
 duengen:
   type: vi
 erheiratet:
-  type: adv
+  type: adj
 Eifer:
   genus: m
   type: n
@@ -267777,16 +267763,16 @@ Selbst:
   genus: s
   type: n
 froehliches:
-  type: adv
+  type: adj
 Geiz:
   genus: m
   type: n
 hoffaertig:
-  type: adv
+  type: adj
 passt:
   type: vi
 duemmste:
-  type: adv
+  type: adj
 hinkt:
   type: vi
 verbrannt:
@@ -267815,7 +267801,7 @@ Preussen:
   genus: f
   type: n
 kassiert:
-  type: adv
+  type: vi
 Triebfeder:
   genus: f
   type: n
@@ -267864,9 +267850,7 @@ Igelhaut:
 gewagt:
   type: adj
 Steter:
-  type: adv
-imma:
-  type: adv
+  type: adj
 Muessigkeit:
   genus: f
   type: n
@@ -267889,7 +267873,7 @@ stolpert:
 schreit:
   type: vi
 wehe:
-  type: adv
+  type: adj
 angibt:
   type: vi
 adelt:
@@ -267902,7 +267886,7 @@ Dritttag:
 Tuechtige:
   type: n
 dicksten:
-  type: adv
+  type: adj
 Graue:
   type: adj
 Pessimisten:
@@ -267911,14 +267895,14 @@ Pessimisten:
 hui:
   type: inter
 hintenrum:
-  type: adv
+  type: adj
 Luchs:
   genus: m
   type: n
 feuchte:
-  type: adv
+  type: adj
 Langes:
-  type: adv
+  type: adj
 klappern:
   type: vi
 geschmiert:
@@ -267926,7 +267910,7 @@ geschmiert:
 umbringt:
   type: vi
 liebstes:
-  type: adv
+  type: adj
 passen:
   type: vi
 Geflickte:
@@ -267953,20 +267937,20 @@ Kleinvieh:
   genus: s
   type: n
 labend:
-  type: adv
+  type: adj
 baue:
   type: vi
 Vergesslichkeit:
   genus: f
   type: n
 schoener:
-  type: adv
+  type: adj
 Fuerst:
   type: n
 schlechtes:
   type: adv
 alleine:
-  type: adv
+  type: adj
 Hoelle:
   genus: f
   type: n
@@ -267977,7 +267961,7 @@ ehrt:
 quietscht:
   type: vi
 rote:
-  type: adv
+  type: adj
 graebt:
   type: vi
 Wagenrad:
@@ -267996,7 +267980,7 @@ Wunschkonzert:
   genus: s
   type: n
 fremder:
-  type: adv
+  type: adj
 Kindermund:
   genus: m
   type: n
@@ -268026,13 +268010,13 @@ Baeren:
   genus: f
   type: n
 ungeschoren:
-  type: adv
+  type: adj
 verlangt:
   type: vi
 dicker:
   type: adv
 rollender:
-  type: adv
+  type: adj
 waehrt:
   type: vi
 schlechter:
@@ -268074,7 +268058,7 @@ zaehlt:
   type: vi
 Himmelreich:
   genus: s
-  type: adv
+  type: n
 Schweine:
   genus: f
   type: n
@@ -268099,7 +268083,7 @@ Malz:
   genus: s
   type: n
 angesehener:
-  type: adv
+  type: adj
 Daenemark:
   type: n
 Amtleute:
@@ -268117,7 +268101,7 @@ Lehrjahre:
   genus: f
   type: n
 herein:
-  type: adv
+  type: adj
 beraubt:
   type: adj
 Faulenzen:
@@ -268154,10 +268138,9 @@ beisst:
 Mitgefangen:
   type: adj
 Kluegere:
-  genus: m
-  type: n
+  type: adj
 passiert:
-  type: adv
+  type: vi
 Menschenfleisch:
   genus: s
   type: n
@@ -268173,13 +268156,13 @@ Faedchen:
   genus: f
   type: n
 fruehe:
-  type: adv
+  type: adj
 besorgen:
   type: vi
 schnacken:
   type: vi
 lautesten:
-  type: adv
+  type: adj
 dereinst:
   type: adv
 Brusttuch:
@@ -268214,7 +268197,7 @@ Nadel:
 dreht:
   type: vi
 grosse:
-  type: adv
+  type: adj
 Zucht:
   genus: f
   type: n
@@ -268246,13 +268229,10 @@ siegt:
   type: vi
 Lande:
   type: n
-Traeckern:
-  genus: s
-  type: n
 befohlen:
-  type: adv
+  type: adj
 vergossene:
-  type: adv
+  type: adj
 dahinter:
   type: adj
 Offiziere:
@@ -268276,7 +268256,7 @@ Mittelweg:
   genus: m
   type: n
 kuerzeste:
-  type: adv
+  type: adj
 Gibst:
   type: vi
 irrt:
@@ -268295,14 +268275,14 @@ steigt:
 wisse:
   type: vi
 Bergauf:
-  type: adv
+  type: adj
 krumme:
   type: adj
 Arzneien:
   genus: f
   type: n
 ungelegten:
-  type: adv
+  type: adj
 kratzen:
   type: vi
 Blinder:
@@ -268311,7 +268291,7 @@ Eiche:
   genus: f
   type: n
 kleine:
-  type: adv
+  type: adj
 nimmermehr:
   type: adj
 Handwerk:
@@ -268339,7 +268319,7 @@ Kirschenessen:
   genus: s
   type: n
 erlogen:
-  type: adv
+  type: adj
 Diener:
   genus: m
   type: n
@@ -268349,9 +268329,9 @@ zuhause:
   genus: s
   type: n
 weniger:
-  type: adv
+  type: adj
 etwas:
-  type: adv
+  type: adj
 Lass:
   type: vi
 Muehsam:
@@ -268369,11 +268349,11 @@ Reisende:
 nennt:
   type: vi
 verschuettete:
-  type: adv
+  type: adj
 Passt:
   type: vi
 ehrlichste:
-  type: adv
+  type: adj
 hoehlt:
   type: vi
 saeuft:
@@ -268385,17 +268365,16 @@ Traeume:
   genus: f
   type: n
 leerer:
-  type: adv
+  type: adj
 Kueken:
   genus: s
   type: n
 gekaut:
-  type: vi
+  type: adj
 Totgesagte:
-  genus: m
-  type: n
+  type: adj
 geschenkten:
-  type: vi
+  type: adj
 iss:
   type: vi
 bestimmt:
@@ -268415,11 +268394,11 @@ geschissen:
 rostet:
   type: adv
 unerforscht:
-  type: adv
+  type: adj
 denkt:
   type: vi
 frohem:
-  type: adv
+  type: adj
 eingebrockt:
   type: adj
 wachsam:
@@ -268429,7 +268408,6 @@ ernten:
 Kammern:
   type: n
 Tierchen:
-  genus: f
   type: n
 Johanniswuermchen:
   genus: s
@@ -268438,15 +268416,12 @@ Dienst:
   genus: m
   type: n
 Buchen:
-  genus: f
   type: n
 Narren:
   genus: f
   type: n
 Optimisten:
   genus: f
-  type: n
-Gebluete:
   type: n
 Bellende:
   type: adj
@@ -268459,7 +268434,7 @@ lohnt:
 achtet:
   type: vi
 seliger:
-  type: adv
+  type: adj
 Gerste:
   genus: f
   type: n
@@ -268478,7 +268453,7 @@ Flecken:
 Haeusle:
   type: n
 gackert:
-  type: adj
+  type: vi
 schwimmt:
   type: vi
 Wahre:
@@ -268488,13 +268463,12 @@ Juristen:
   genus: f
   type: n
 geduengt:
-  type: vi
+  type: adj
 Tropf:
   genus: m
   type: n
 Gesalbte:
-  genus: m
-  type: n
+  type: adj
 Turnierpferd:
   genus: s
   type: n
@@ -268552,16 +268526,13 @@ Scherzhafte:
   type: adv
 wackelt:
   type: vi
-ihn:
-  genus: m
-  type: prep
 Meise:
   genus: f
   type: n
 Trautes:
   type: adj
 Gluecklichen:
-  type: adv
+  type: adj
 Schmied:
   genus: m
   type: n
@@ -268593,18 +268564,15 @@ eigene:
 Morgenstund:
   genus: f
   type: n
-kund:
-  type: adj
 Spaten:
   genus: m
   type: n
 lobt:
-  type: 
-  vi
+  type: vi
 solange:
   type: adj
 sichersten:
-  type: adv
+  type: adj
 fuettert:
   type: 
   vi
@@ -268617,10 +268585,9 @@ Wiege:
   genus: f
   type: n
 Einaeugige:
-  genus: m
-  type: n
+  type: adj
 Kranken:
-  genus: f
+  genus: s
   type: n
 Kirchhoefe:
   genus: f
@@ -268630,7 +268597,7 @@ fuellt:
 derer:
   type: pron
 zweitens:
-  type: adv
+  type: adj
 leiht:
   type: vi
 Lehrers:
@@ -268691,7 +268658,7 @@ Strafe:
   genus: f
   type: n
 vergebens:
-  type: adv
+  type: adj
 Muehlen:
   genus: f
   type: n
@@ -268702,7 +268669,7 @@ droht:
 fuerchtet:
   type: vi
 Ehrlich:
-  type: adv
+  type: adj
 kasteien:
   type: 
   vi
@@ -268723,7 +268690,7 @@ Leidenschaft:
   genus: f
   type: n
 daneben:
-  type: adv
+  type: adj
 Lieblingsfilme:
   genus: f
   type: n
@@ -268732,70 +268699,66 @@ lustwandeln:
 solltest:
   type: vi  
 kaufe:
-  type: vt
+  type: vi
 neckt:
-  type: vt
+  type: vi
 nuetz:
-  type: vt
+  type: vi
 weiter:
   type: adj
 schaffe:
-  type: vt
+  type: vi
 luegt:
-  type: vt
+  type: vi
 protzt:
-  type: vt
+  type: vi
 passend:
   type: adj
 juckt:
-  type: vt
+  type: vi
 schiefer:
   type: adj
 zahlt:
-  type: vt
+  type: vi
 kehrt:
-  type: vt
+  type: vi
 schallt:
-  type: vt
+  type: vi
 sitze:
-  type: vt
+  type: vi
 schuert:
-  type: vt
+  type: vi
 fragt:
-  type: vt
+  type: vi
 kurzer:
   type: adj
 glaenzt:
   type: adj
-iesen:
-  type: inter
 blindes:
   type: adj
 pfeift:
-  type: vt
+  type: vi
 zustande:
   type: adj
 faules:
   type: adj
 rede:
-  type: vt
+  type: vi
 trage:
-  type: vt
+  type: vi
 reibt:
-  type: vt
-wig:
-  type: prep
+  type: vi
 Zugemuese:
   genus: s
   type: n
 schaue:
-  type: adj
+  type: vi
 borgt:
-  type: vt
+  type: vi
 aelter:
   type: adj
 erlegt:
-  type: vt
+  type: vi
 edler:
   type: adj
 kurze:
@@ -268803,99 +268766,85 @@ kurze:
 schlauer:
   type: adj
 lehrt:
-  type: vt
+  type: vi
 ganze:
   type: adj
 dorna:
   type: vi
 schafft:
-  type: vt
+  type: vi
 erquickend:
   type: adj
-Worscht:
-  type: n
 sage:
-  type: vt
-Tue:
-  type: prep
+  type: vi
 ganzer:
   type: adj
-Perd:
-  type: prep
 hiess:
-  type: vt
+  type: vi
 kruemmt:
-  type: vt
+  type: vi
 greife:
-  type: vt
+  type: vi
 lenkt:
-  type: vt
+  type: vi
 kennt:
-  type: vt
+  type: vi
 jot:
   type: n
 niemals:
   type: adv
 duldet:
-  type: vt
+  type: vi
 lieber:
   type: adj
 spinnt:
-  type: vt
-dran:
-  type: adv
+  type: vi
 lernt:
-  type: vt
+  type: vi
 goennt:
-  type: vt
+  type: vi
 lauter:
   type: adj
 faule:
   type: adj
 setzt:
-  type: vt
+  type: vi
 heiss:
   type: adj
 kehre:
-  type: vt
+  type: vi
 mahlt:
-  type: vt
+  type: vi
 hofft:
-  type: vt
+  type: vi
 ladet:
-  type: vt
+  type: vi
 schaendet:
-  type: vt
+  type: vi
 halbes:
   type: adj
 steckt:
-  type: vt
+  type: vi
 regnet:
-  type: vt
+  type: vi
 steifer:
   type: adj
 schickt:
-  type: vt
+  type: vi
 schuetzt:
-  type: vt
+  type: vi
 laenger:
   type: adj
 braves:
   type: adj
 welket:
-  type: vt
+  type: vi
 schiefe:
   type: adj
 heilt:
-  type: vt
-Da:
-  type: n
-loeppen:
-  type: inter
+  type: vi
 reines:
   type: adj
-ie:
-  type: prep
 blonde:
   type: adj
 halbe:
@@ -268903,7 +268852,7 @@ halbe:
 dat:
   type: n
 brennt:
-  type: vt
+  type: vi
 Beiss:
   type: prep
 Orinoco:
@@ -268945,7 +268894,7 @@ Beweis:
 verklaert:
   type: adj
 gefrorene:
-  type: adv
+  type: adj
 Familienbande:
   genus: f
   type: n
@@ -268962,8 +268911,7 @@ Jaeten:
   genus: s
   type: n
 Schoenste:
-  genus: s
-  type: n
+  type: adj
 Natuerliche:
   genus: s
   type: n
@@ -268971,10 +268919,9 @@ Brecheisen:
   genus: s
   type: n
 Vorurteilen:
-  genus: s
   type: n
 kurzfristige:
-  type: adv
+  type: adj
 Arztrechnungen:
   genus: f
   type: n
@@ -268986,11 +268933,11 @@ Intimfeinden:
 grosser:
   type: adv
 unertraeglichste:
-  type: adv
+  type: adj
 hoehere:
-  type: adv
+  type: adj
 allerbesten:
-  type: adv
+  type: adj
 seltener:
   type: adv
 Brueckenbauer:
@@ -269002,9 +268949,9 @@ Begehren:
 Neides:
   type: n
 ideale:
-  type: adv
+  type: adj
 leider:
-  type: adv
+  type: adj
 Entruestung:
   genus: f
   type: n
@@ -269065,7 +269012,26 @@ Originale:
   type: n
 Sonntagsanzug:
   genus: m
-  type: n
+  type: n 
+Jaeten:
+ genus: s 
+  type: n 
+ Schoenste: 
+  type: adj 
+Natuerliche: 
+  type: adj 
+Brecheisen:
+  genus: s
+  type: n 
+Vorurteilen:
+  type: n 
+kurzfristige:
+  type: adv 
+Arztrechnungen:
+  genus: f
+  type: n 
+Moderne: 
+  type: adj
 Mutmassungen:
   genus: f
   type: n
@@ -269075,9 +269041,9 @@ Parteilosen:
 Theaters:
   type: n
 schmollen:
-  type: vt
+  type: vi
 helfen:
-  type: vt
+  type: vi
 Denkens:
   type: n
 Lebenskunst:
@@ -269087,7 +269053,7 @@ Unbewohnbarkeit:
   genus: f
   type: n
 unnoetiger:
-  type: adv
+  type: adj
 Gitterstaeben:
   type: n
 Erbunglueck:
@@ -269108,7 +269074,7 @@ Parkplatz:
   genus: m
   type: n
 naturhaftes:
-  type: adv
+  type: adj
 Gespraech:
   genus: s
   type: n
@@ -269119,14 +269085,14 @@ Hausbesitzer:
   genus: m
   type: n
 gehuellte:
-  type: adv
+  type: adj
 Kampfgemeinschaft:
   genus: f
   type: adv
 unablaessige:
-  type: adv
+  type: adj
 intellektuelle:
-  type: adv
+  type: adj
 Lebenskuenstler:
   genus: m
   type: n
@@ -269138,9 +269104,9 @@ Mehrkampfdisziplin:
   genus: f
   type: n
 erzwungene:
-  type: adv
+  type: adj
 absoluten:
-  type: adv
+  type: adj
 Koenigsweg:
   genus: m
   type: n
@@ -269150,7 +269116,7 @@ Mundzumundbeatmung:
 beseitigenden:
   type: vi
 geheuchelte:
-  type: adv
+  type: adj
 Schiffbruch:
   genus: m
   type: n
@@ -269169,7 +269135,7 @@ Misserfolgen:
 erloschene:
   type: adv
 staendiger:
-  type: adv
+  type: adj
 krankhafte:
   type: adv
 verzichtet:
@@ -269204,7 +269170,7 @@ Kopien:
   genus: f
   type: n
 gerechte:
-  type: adv
+  type: adj
 vorsichtig:
   type: adv
 Schwiegermutter:
@@ -269217,7 +269183,7 @@ Frieden:
   genus: m
   type: n
 mathematischen:
-  type: adv
+  type: adj
 Vermittlerin:
   genus: f
   type: n
@@ -269237,7 +269203,7 @@ gelobt:
 Falschen:
   type: adv
 erfolgreicher:
-  type: adv
+  type: adj
 Groschen:
   genus: m
   type: n
@@ -269257,14 +269223,14 @@ kritisiert:
 mutigsten:
   type: adv
 Unaussprechlichen:
-  type: adv
+  type: adj
 Erfolgsleiter:
   genus: f
   type: n
 Widerspruchs:
   type: n
 problematischen:
-  type: adv
+  type: adj
 Pfuetze:
   genus: f
   type: n
@@ -269279,7 +269245,7 @@ Selbstgenuegsamkeit:
 spiegelt:
   type: vi
 sauberer:
-  type: adv
+  type: adj
 habgieriger:
   type: adv
 Slang:
@@ -269288,9 +269254,9 @@ Slang:
 Weglassens:
   type: n
 aufrichtigste:
-  type: adv
+  type: adj
 krankarbeiten:
-  type: vt
+  type: vi
 Kurzzitate:
   genus: f
   type: n
@@ -269322,7 +269288,7 @@ Sprosse:
   genus: f
   type: n
 gluecklicher:
-  type: adv
+  type: adj
 lebenslangen:
   type: adj
 Neiders:
@@ -269343,7 +269309,7 @@ mildeste:
 Sichereres:
   type: n
 langer:
-  type: adv
+  type: adj
 langsame:
   type: adj
 Vorzuege:
@@ -269363,7 +269329,7 @@ Vergib:
 miserabler:
   type: adj
 schlechten:
-  type: adv
+  type: adj
 Zivilisation:
   genus: f
   type: n
@@ -269388,7 +269354,7 @@ Tierzaehmung:
   genus: f
   type: n
 ewiges:
-  type: adv
+  type: adj
 Wirkungsfeldes:
   type: n
 Korruption:
@@ -269415,11 +269381,11 @@ alter:
   genus: s
   type: n
 kleinsten:
-  type: adv
+  type: adj
 einziger:
-  type: adv
+  type: adj
 schmerzliche:
-  type: adv
+  type: adj
 Erwiderung:
   genus: f
   type: n
@@ -269492,7 +269458,7 @@ Lokomotiven:
   genus: f
   type: n
 gewordene:
-  type: adv
+  type: adj
 Kriege:
   genus: f
   type: n
@@ -269506,7 +269472,8 @@ Wetters:
 Eselstritte:
   genus: f
   type: n
-Rolltreppen:  genus: f
+Rolltreppen:
+  genus: f
   type: n
 Schana:
   type: n
@@ -269543,7 +269510,7 @@ University:
   genus: f
   type: n
 getestete:
-  type: adv
+  type: adj
 zuruecklegt:
   type: vi
 intravenoes:
@@ -269606,7 +269573,7 @@ Quarantaene:
   genus: f
   type: n
 physikalischen:
-  type: adv
+  type: adj
 Lincoln:
   type: n
 Granatapfel:
@@ -269621,14 +269588,11 @@ Monopolygeld:
   genus: f
   type: n
 aufgehobenes:
-  type: adv
-schilfaehnliche:
-  type: adv
-Oologie:
-  genus: f
-  type: n
-vollfuehrt:
   type: adj
+schilfaehnliche:
+  type: adj
+vollfuehrt:
+  type: vi
 liessen:
   type: vi
 Geschwindigkeitsrekord:
@@ -269643,7 +269607,7 @@ Lkwfuehrerschein:
   genus: m
   type: n
 versuchter:
-  type: adv
+  type: adj
 Kennedy:
   type: n
 homosexuelle:
@@ -269659,26 +269623,22 @@ Hitchcock:
 Spruenge:
   genus: f
   type: n
-Fuenfsternegenerals:
-  genus: m
+Fuenfsternegenerals:  
   type: n
 Metonymie:
   genus: f
   type: n
 glaubte:
   type: vi
-vehicle:
-  genus: s
-  type: n
 H0:
   type: n
 Kater:
   genus: m
   type: n
 offenem:
-  type: adv
+  type: adj
 namensgebenden:
-  type: adv
+  type: adj
 Autoherstellers:
   type: n
 verbreiteten:
@@ -269696,7 +269656,7 @@ V8:
 Mb:
   type: n
 Kgb:
-  type: prep
+  type: n
 Fidschigott:
   genus: m
   type: n
@@ -269715,7 +269675,7 @@ Colonel:
   genus: m
   type: n
 faerbten:
-  type: vt
+  type: vi
 Zahnbuerste:
   genus: f
   type: n
@@ -269840,7 +269800,7 @@ Besteckteile:
   genus: f
   type: n
 voraussichtlich:
-  type: adv
+  type: adj
 Johannisbrotbaum:
   genus: m
   type: n
@@ -269878,7 +269838,7 @@ Meerwasser:
   genus: s
   type: n
 kannten:
-  type: vt
+  type: vi
 Heuschrecken:
   genus: f
   type: n
@@ -269886,14 +269846,12 @@ Jumbo:
   genus: m
   type: n
 litten:
-  type: vt
+  type: vi
 Methusalem:
   genus: m
   type: n
 Pruegelstrafe:
   genus: f
-  type: n
-squarerods:
   type: n
 Pfennigmuenze:
   genus: f
@@ -269909,8 +269867,6 @@ Nashorns:
 Sonnenumlaufdauer:
   genus: f
   type: n
-Purpos:
-  type: n
 Handstand:
   genus: m
   type: n
@@ -269918,7 +269874,7 @@ Iren:
   genus: f
   type: n
 poliertem:
-  type: adv
+  type: adj
 Enterprise:
   type: n
 Suesskartoffeln:
@@ -269931,7 +269887,7 @@ Logo:
   genus: s
   type: n
 verdiente:
-  type: vt
+  type: vi
 zagt:
   type: vi
 geraucht:
@@ -269956,7 +269912,7 @@ Kotbeseitigung:
   genus: f
   type: n
 englisch:
-  type: adv
+  type: adj
 Edison:
   type: n
 Computerviren:
@@ -269978,10 +269934,6 @@ Saratoga:
 Dodgemotoren:
   genus: f
   type: n
-Vchr:
-  type: n
-1400seelenort:
-  type: n
 Schneeflocke:
   genus: f
   type: n
@@ -269997,11 +269949,11 @@ Tagesrhythmus:
   genus: m
   type: n
 auszubezahlen:
-  type: adv
+  type: adj
 Masters:
   type: n
 hawaiianische:
-  type: adv
+  type: adj
 Sammelalbum:
   genus: s
   type: n
@@ -270028,8 +269980,6 @@ Kubikkilometer:
   type: n
 Kalenders:
   type: n
-Building:
-  type: n
 Notaufnahmen:
   genus: f
   type: n
@@ -270048,7 +269998,7 @@ Blattlaeuse:
 resistent:
   type: adj
 explodiert:
-  type: adv
+  type: vi
 Durchschnittsnase:
   genus: f
   type: n
@@ -270056,15 +270006,12 @@ Kardinaele:
   genus: f
   type: n
 Erfrierende:
-  genus: m
-  type: n
+  type: adj
 vollstaendige:
-  type: adv
+  type: adj
 administrativ:
-  type: adv
+  type: adj
 Lucilia:
-  type: n
-Play:
   type: n
 Muschelsuppen:
   genus: f
@@ -270074,8 +270021,6 @@ Kanalisationszugaenge:
   type: n
 zusammenreiben:
   type: vi
-English:
-  type: n
 stattfinden:
   type: vi
 Bettes:
@@ -270096,8 +270041,6 @@ Friseur:
   type: n
 Thonet:
   type: n
-Faerberweid:
-  type: n
 Gemessen:
   type: vi
 Graham:
@@ -270105,7 +270048,7 @@ Graham:
 Stanley:
   type: n
 guillotiniert:
-  type: adv
+  type: adj
 Kebabs:
   genus: f
   type: n
@@ -270122,7 +270065,7 @@ Radius:
 Harvey:
   type: n
 nemaeischen:
-  type: adv
+  type: adj
 Newport:
   type: n
 herumzulaufen:
@@ -270139,19 +270082,18 @@ Lotterien:
 getippt:
   type: vi
 funktionierender:
-  type: adv
+  type: adj
 Gaense:
   genus: f
   type: n
 rasierten:
   type: adv
 chatten:
-  type: vt
+  type: vi
 Krieger:
-  genus: m
   type: n
 Lunar:
-  type: n
+  type: adj
 Mission:
   genus: f
   type: n
@@ -270197,7 +270139,7 @@ Kameras:
   genus: f
   type: n
 prozentual:
-  type: adv
+  type: adj
 durfte:
   type: vi
 stecknadelkopfgrosses:
@@ -270208,10 +270150,8 @@ Stegreif:
 Filterkaffee:
   genus: m
   type: n
-auszudruecken:
-  type: vi
 dienten:
-  type: vt
+  type: vi
 spendete:
   type: vi
 Kuemmerer:
@@ -270222,7 +270162,7 @@ Platzes:
 Venedig:
   type: n
 gruene:
-  type: adv
+  type: adj
 Nudistenorganisation:
   genus: f
   type: n
@@ -270259,7 +270199,7 @@ College:
   genus: s
   type: n
 einmilliardste:
-  type: adv
+  type: adj
 Langlaufski:
   genus: m
   type: n
@@ -270274,21 +270214,18 @@ Schiffe:
   type: n
 Alkoholrausches:
   type: n
-Psoriasisschuppen:
-  genus: m
-  type: n
 reimten:
-  type: vt
+  type: vi
 Fu:
   type: n
 Tennisplatzes:
   type: n
 regnete:
-  type: n
-erlaubte:
   type: vi
+erlaubte:
+  type: adj
 aufzusetzenden:
-  type: adv
+  type: adj
 Parkuhren:
   genus: f
   type: n
@@ -270309,7 +270246,7 @@ Schaerpe:
   genus: f
   type: n
 wuesteste:
-  type: adv
+  type: adj
 Fallhoehe:
   genus: f
   type: n
@@ -270366,7 +270303,7 @@ Tapeten:
   genus: f
   type: n
 neunten:
-  type: adv
+  type: adj
 Maclaine:
   type: n
 befanden:
@@ -270378,33 +270315,32 @@ Handgelenk:
   genus: s
   type: n
 internationalen:
-  type: adv
+  type: adj
 Urbana:
   type: n
 uneigennuetzigen:
-  type: adv
+  type: adj
 Saerge:
   genus: f
   type: n
 botanischen:
-  type: adv
+  type: adj
 Telefonzelle:
   genus: f
   type: n
 Schwaene:
   genus: f
-  type: adv
+  type: n
 Blitze:
   genus: f
   type: n
 Obenohnebedienung:
   genus: f
   type: n
-Eulaendern:
-  type: n
 Isuzu:
   type: n
 Hafensperre:
+genus  : f
   type: n
 Bankautomaten:
   genus: f
@@ -270521,13 +270457,11 @@ Sonnenbrand:
 Corolla:
   genus: m
   type: n
-Voice:
-  type: n
 Doener:
   genus: m
   type: n
 grillten:
-  type: vt
+  type: vi
 meistverkauften:
   type: adv
 stellte:
@@ -270558,8 +270492,6 @@ Untergrund:
   type: n
 kleineren:
   type: adv
-beziehungsweise:
-  type: linking
 Metaphern:
   genus: f
   type: n
@@ -270588,7 +270520,7 @@ Schnittblumen:
   genus: f
   type: n
 sparen:
-  type: vt
+  type: vi
 Shirley:
   type: n
 Billard:
@@ -270684,7 +270616,7 @@ Dogmas:
   genus: f
   type: n
 spielten:
-  type: vt
+  type: vi
 Jagende:
   type: adj
 linke:
@@ -270773,7 +270705,7 @@ Indianersprache:
 voelliger:
   type: adv
 benoetigten:
-  type: vt
+  type: vi
 Zahnpasten:
   genus: f
   type: n
@@ -270859,7 +270791,7 @@ Planeten:
   genus: f
   type: n
 chattet:
-  type: vt
+  type: vi
  Salzach:
   genus: f
   type: n
@@ -270867,10 +270799,7 @@ Nordsee:
   genus: f
   type: n
 wunderbares:
-  type: adj            Ah:
-  type: n
-Aaron:
-  type: n
+  type: adj          
 Abbigail:
   type: n
 Abby:
@@ -272743,7 +272672,7 @@ Frodo:
   type: n
 Frowin:
   type: n
-Fränzi:
+Fraenzi:
   type: n
 Fulvio:
   type: n
@@ -273045,9 +272974,9 @@ Gwendoline:
   type: n
 Gyde:
   type: n
-Günter:
+Guenter:
   type: n
-Günther:
+Guenther:
   type: n
 Hadassa:
   type: n
@@ -273103,9 +273032,9 @@ Hansine:
   type: n
 Hansjoachim:
   type: n
-Hansjürgen:
+Hansjuergen:
   type: n
-Hansjörg:
+Hansjoerg:
   type: n
 Hanspeter:
   type: n
@@ -273517,7 +273446,7 @@ Inske:
   type: n
 Iphigenie:
   type: n
-Irenäus:
+Irenaeus:
   type: n
 Irma:
   type: n
@@ -273635,4470 +273564,1129 @@ Nadeschda:
   type: n
 Nadia:
   type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
-Aaron:
-  type: n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Fabian:
   type: n
 Fabiana:
@@ -278349,7 +274937,7 @@ Frodo:
   type: n
 Frowin:
   type: n
-Fränzi:
+Fraenzi:
   type: n
 Fulvio:
   type: n
@@ -278679,11 +275267,11 @@ Gwendoline:
   type: n
 Gyde:
   type: n
-Günter:
+Guenter:
   type: n
-Günther:
+Guenther:
   type: n
-Götz:
+Goetz:
   type: n
 Hadebrand:
   type: n
@@ -278743,9 +275331,9 @@ Hansine:
   type: n
 Hansjoachim:
   type: n
-Hansjürgen:
+Hansjuergen:
   type: n
-Hansjörg:
+Hansjoerg:
   type: n
 Hanspeter:
   type: n
@@ -279203,7 +275791,7 @@ Iphigenie:
   type: n
 Irene:
   type: n
-Irenäus:
+Irenaeus:
   type: n
 Iris:
   type: n
@@ -279555,21 +276143,21 @@ Jutte:
   type: n
 Juven:
   type: n
-Jürg:
+Juerg:
   type: n
-Jürgen:
+Juergen:
   type: n
-Jördis:
+Joerdis:
   type: n
-Jörg:
+Joerg:
   type: n
-Jörgen:
+Joergen:
   type: n
-Jörn:
+Joern:
   type: n
-Jörna:
+Joerna:
   type: n
-Jörne:
+Joerne:
   type: n
 Kaija:
   type: n
@@ -279615,7 +276203,7 @@ Karine:
   type: n
 Karl:
   type: n
-"Karl-Heinz":
+Karl-Heinz:
   type: n
 Karla:
   type: n
@@ -279825,11 +276413,11 @@ Kyrill:
   type: n
 Kyrillus:
   type: n
-Käte:
+Kaete:
   type: n
-Käthe:
+Kaethe:
   type: n
-Köbi:
+Koebi:
   type: n
 Ladislaus:
   type: n
@@ -280035,9 +276623,9 @@ Lioba:
   type: n
 Lisa:
   type: n
-"Lisa-Maria":
+Lisa-Maria:
   type: n
-"Lisa-Marie":
+Lisa-Marie:
   type: n
 Lisamaria:
   type: n
@@ -280179,9 +276767,9 @@ Lysann:
   type: n
 Lyssia:
   type: n
-Lätitia:
+Laetitia:
   type: n
-Lätizia:
+Laetizia:
   type: n
 Madelaine:
   type: n
@@ -280433,7 +277021,7 @@ Mathilde:
   type: n
 Mathis:
   type: n
-Mathäus:
+Mathaeus:
   type: n
 Matias:
   type: n
@@ -280445,11 +277033,11 @@ Mattheus:
   type: n
 Matthias:
   type: n
-Matthäus:
+Matthaeus:
   type: n
 Mattias:
   type: n
-Mattäus:
+Mattaeus:
   type: n
 Maura:
   type: n
@@ -280689,14 +277277,6 @@ Myrtha:
   type: n
 Myrthe:
   type: n
-ist:
-  type: n
-ist:
-  type: n
-ist:
-  type: n
-ist:
-  type: n
 Nabor:
   type: n
 Nada:
@@ -280723,7 +277303,7 @@ Naphtali:
   type: n
 Narziss:
   type: n
-Narziß:
+Narziss:
   type: n
 Nastasja:
   type: n
@@ -281079,9 +277659,9 @@ Phoebe:
   type: n
 Phyllis:
   type: n
-Phöbe:
+Phoebe:
   type: n
-Phöbus:
+Phoebus:
   type: n
 Pia:
   type: n
@@ -281467,7 +278047,7 @@ Ruven:
   type: n
 Ruwen:
   type: n
-Rüdiger:
+Ruediger:
   type: n
 Sabine:
   type: n
@@ -281827,9 +278407,9 @@ Sylvia:
   type: n
 Syria:
   type: n
-Sönke:
+Soenke:
   type: n
-Sören:
+Soeren:
   type: n
 Tabita:
   type: n
@@ -281885,11 +278465,9 @@ Teresia:
   type: n
 Terrence:
   type: n
-Thaddäus:
+Thaddaeus:
   type: n
 Thade:
-  type: n
-Thadäa:
   type: n
 Thalea:
   type: n
@@ -281979,7 +278557,7 @@ Thusnelde:
   type: n
 Thyra:
   type: n
-Thöger:
+Thoeger:
   type: n
 Tiana:
   type: n
@@ -282093,7 +278671,7 @@ Tusnelda:
   type: n
 Tussinhilda:
   type: n
-Tönjes:
+Toenjes:
   type: n
 Ueli:
   type: n
@@ -282517,7 +279095,7 @@ Zafrina:
   type: n
 Zarah:
   type: n
-Zebedäus:
+Zebedaeus:
   type: n
 Zefania:
   type: n
@@ -282555,14 +279133,11 @@ Zyriak:
   type: n
 Zyriakus:
   type: n
-Zölestin:
+Zoelestin:
   type: n
-Zölestine:
+Zoelestine:
   type: n
-Zölestinus:
-  type: n
-
-:
+Zoelestinus:
   type: n
 Ladina:
   type: n
@@ -282578,151 +279153,209 @@ Sabeth:
   type: n
 Maarten:
   type: n
-"Account:
-  type: n
-Beruf":
-  type: n
-EIn:
-  type: art
 Liebe:
+genus  : f
   type: n
 lieblingszahl:
+genus  : f
   type: n
 69:
   type: adj
 wunderbares:
   type: adj
 Fehler:
+genus  : m
   type: n
 Bergtymian:
+genus  : m
   type: n
 Tymian:
+genus  : m
   type: n
 tymian:
-  type: adj
+genus  : m
+  type: n
 wesen:
+genus  : s
   type: n
 fehler:
-  type: n
-STOP:
+genus  : m
   type: n
 Obstsorte:
+genus  : f
   type: n
 Aepfel:
+genus  : f
   type: n
 Apfelbeere:
+genus  : f
   type: n
 Birne:
+genus  : f
   type: n
 Vogelbeeren:
+genus  : f
   type: n
 Elsbeere:
+genus  : f
   type: n
 Elsbeeren:
+genus  : f
   type: n
 Hagebutten:
+ genus  : f
   type: n
 Mispel:
+genus  : f
   type: n
 Quitte:
+genus  : f
   type: n
 Quitten:
+genus  : f
   type: n
 Scheinquitte:
+genus  : f
   type: n
 Scheinquitten:
+genus  : f
   type: n
 Marillen:
+genus  : f
   type: n
 Kirsche:
+genus  : f
   type: n
 Kirschen:
+genus  : f
   type: n
 Mirabellen:
+genus  : f
   type: n
 Ringlotten:
+genus  : f
   type: n
 Zwetschgen:
+genus  : f
   type: n
 Pfirsich:
+genus  : m
   type: n
 Nektarine:
+genus  : f
   type: n
 Nektarinen:
+genus  : f
   type: n
 Schlehbeere:
+genus  : f
   type: n
 Schlehbeeren:
+genus  : f
   type: n
 Kirschpflaume:
+genus  : f
   type: n
 Kirschpflaumen:
+genus  : f
   type: n
 Kornelkirsche:
+genus  : f
   type: n
 Kornelkirschen:
+genus  : f
   type: n
 Allackerbeere:
+genus  : f
   type: n
 Allackerbeeren:
+genus  : f
   type: n
 Andenbrombeere:
+genus  : f
   type: n
 Andenbrombeeren:
+genus  : f
   type: n
 Brombeere:
+genus  : f
   type: n
 Himbeere:
+genus  : f
   type: n
 Himbeeren:
+genus  : f
   type: n
 Kratzbeere:
+genus  : f
   type: n
 Kratzbeeren:
+genus  : f
   type: n
 Moltebeere:
+genus  : f
   type: n
 Moltebeeren:
+genus  : f
   type: n
 Boysenbeere:
+genus  : f
   type: n
 Boysenbeeren:
+genus  : f
   type: n
 Loganbeere:
+genus  : f
   type: n
 Loganbeeren:
+genus  : f
   type: n
 Marionbeere:
+genus  : f
   type: n
 Marionbeeren:
+genus  : f
   type: n
 Taybeere:
+genus  : f
   type: n
 Tayanbeeren:
+genus  : f
   type: n
 Erdbeeren:
+genus  : f
   type: n
 Sanddorn:
+genus  : m
   type: n
 Johannisbeere:
+genus  : f
   type: n
 Stachelbeere:
+genus  : f
   type: n
 Stachelbeeren:
+genus  : f
   type: n
 gewissenhaft:
   type: adj
 Nachnamen:
+genus  : m
   type: n
 nachnamen:
+genus  : m
   type: n
 hund:
+genus  : m
   type: n
 Geld:
+genus  : s
   type: n
 Nutte:
+genus  : f
   type: n
 Duplex-Einheit:
+genus  : f
   type: n
 doppelseitig:
   type: adj
