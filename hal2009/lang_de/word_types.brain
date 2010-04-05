@@ -1,4 +1,3 @@
-
 100jahrjubilaeum:
   genus: s
   type: n
@@ -12,24 +11,6 @@
   type: n
 22mal:
   type: adj
-2
-  type: n
-2unausgegoren:
-  type: vi
-2verbesserten:
-  type: vi
-2verknoechern:
-  type: vi
-2vermaschen:
-  type: adv
-2vermummen:
-  type: vi
-2vorangegangen:
-  type: vi
-2zu:
-  type: n
-2zweckmaessig:
-  type: adv
 3mal:
   type: adj
 3personenhaushalt:
@@ -169,7 +150,7 @@ Abartigkeit:
 Abartig:
   type: adj
 abartig:
-  type: adv
+  type: adj
 Abbado:
   type: n
 Abballern:
@@ -219,6 +200,8 @@ Abbaurate:
 Abbaus:
   type: n
 abbaustoffwechsel:
+  genus  : m
+  type: n
 Abbaustoffwechsel:
   genus: m
   type: n
@@ -959,9 +942,14 @@ Abendgarderobe:
   genus: f
   type: n
 Abendgebet:
+  genus  : s
+  type: n
 Abendgesellschaft:
+  genus  : f
+  type: n
 abendgesellschaft:
-  type: adv
+  genus  : f
+  type: n
 Abendglocke:
   genus: f
   type: n
@@ -34262,6 +34250,7 @@ Ballast:
 Ballaststoffen:
   type: n
 Ballaststoffe:
+genus  : f
   type: n
 Ballastwiderstand:
   genus: m
@@ -72179,7 +72168,7 @@ dorf:
   type: n
 Dorf:
   genus: s
-  type: vi
+  type: n
 Dorfnutte:
   genus: f
   type: n
@@ -141318,10 +141307,12 @@ Karl:
 Karlotta:
   type: n
 Karlsbruecke:
+genus  : f
   type: n
 Karlshafen:
   type: n
 Karlsplatz:
+genus  : m
   type: n
 karlsruhen:
   type: n
@@ -163906,9 +163897,6 @@ Meisterpolier:
   type: n
 Meisterschaft:
   genus: f
-  type: n
-Meisterschaftspielturnierwettkampf:
-  genus: m
   type: n
 Meistersingerstadt:
   genus: f
@@ -262566,3 +262554,631 @@ zyxel:
   type: n
 Zyxel:
   type: n
+Argonaut:
+genus  : m
+  type: n
+Argonautensage:
+genus  : f
+  type: n
+Kaukasus:
+genus  : m
+  type: n
+Goldenen:
+  type: adj
+Aquanaut:
+genus  : m
+  type: n
+absichtliche:
+  type: adj
+Erbfall:
+genus  : m
+  type: n
+Todes:
+  type: n
+Lautsprecher:
+  type: n
+niederfrequente:
+  type: adj
+Signale:
+genus  : f
+  type: n
+Funkfernsteuerung:
+genus  : f
+  type: n 
+unternommen:
+  type: vi
+Geophysik:
+genus  : f
+  type: adj
+seismischer:
+  type: adj
+Bestimmung:
+genus  : f
+  type: n
+QS:
+  type: n
+weitere:
+  type: adj
+Einleitung:
+genus  : f
+  type: n
+bessere:
+  type: adj
+Bacardi:
+genus  : m
+  type: n
+Facundo:
+  type: n 
+emigrierte:
+  type: adj
+Bruedern:
+  type: n
+Daniels:
+  type: n
+Schottlands:
+  type: n
+Madlock:
+  type: n
+Auswahlteams:
+  type: n
+Patscherkofel:
+genus  : m
+  type: n
+Nordkette:
+genus  : f
+  type: n
+Ostalpen:
+  type: n
+Gebirgsgruppe:
+genus  : f
+  type: n
+Noerdlichen:
+  type: adj
+Taiga:
+genus  : f
+  type: n
+taiga:
+genus  : f
+  type: n
+Sehhilfe:
+genus  : f
+  type: n
+Seelenverkaeufer:
+  type: n
+Herzog:
+genus  : m
+  type: n
+Teebeutel:
+  type: n
+Saeckchen:
+  type: n
+Spezial:
+  type: adj
+Filterpapier:
+genus  : s
+  type: adj
+Arestoteles:
+  type: n
+Trek:
+genus  : m
+  type: n
+Zylon:
+genus  : m
+  type: n
+synthetische:
+  type: adj
+Herstellers:
+  type: n
+Toyobo:
+  type: n
+Osaka:
+  type: n
+Neuronales:
+  type: adj
+Netzes:
+  type: n
+Engelhierarchie:
+genus  : f
+  type: n
+herausragende:
+  type: adj
+Hybrid:
+genus  : m
+  type: n
+Transmitter:
+genus  : m
+  type: n
+sesselbahn:
+genus  : f
+  type: n
+Dokumentenverwaltung:
+genus  : f
+  type: n
+Elektronisches:
+  type: adj
+Dokumentenmanagement:
+genus  : s
+  type: n
+Aufnahmemedium:
+genus  : s
+  type: n
+Films:
+  type: n
+Bildwandler:
+  type: n
+digitales:
+  type: adj
+Nacktscanner:
+genus  : m
+  type: n
+Flugueberwachung:
+  type: n
+Hauptaufgabe:
+genus  : f
+  type: n
+Flugsicherungsunternehmens:
+  type: n
+Fluglotsen:
+genus  : f
+  type: n
+Sachertorte:
+genus  : f
+  type: n
+Autobus:
+genus  : m
+  type: n
+Tirolerknoedel:
+  type: n
+chemischer:
+  type: adj
+sichtbare:
+  type: adj
+Schee: 
+genus  : m
+  type: n
+kristalliner:
+  type: adj
+Schwarzschild:
+genus  : s
+  type: n
+Loches:
+  type: n
+USB:
+  type: n
+serielles:
+  type: adj
+externen:
+  type: adj
+Firewire:
+  type: n
+unerklaerbares:
+  type: adj
+Wikingerzeit:
+genus  : f
+  type: n
+Personengruppen:
+genus  : f
+  type: n  
+Ostseeraumes:
+  type: n
+genannten:
+  type: adj
+Gote:
+genus  : m
+  type: n
+uebernatuerliches:
+  type: adj
+Schwertfische:
+genus  : f
+  type: n
+vielgestaltige:
+  type: adj
+Einzellern:
+  type: n
+laufend:
+  type: adj
+Amniosaeure:
+genus  : f
+  type: n  
+Relief:
+genus  : s
+  type: n
+flacheren:
+  type: adj
+Gebirgsfuss:
+genus  : m
+  type: n
+Fliessgewaessers:
+  type: n 
+Betriebswasser:
+genus  : s
+  type: n
+Speichermoeglichkeit:
+genus  : f
+  type: n
+angelegter:
+  type: adj
+Absperrbauwerk:
+genus  : s
+  type: n
+Staumauer:
+genus  : f
+  type: n
+Krautrolade:
+genus  : f
+  type: n
+Westasien:
+  type: n
+verbreitetes:
+  type: adj
+gefuellten:
+  type: adj
+Kohlblaettern:
+  type: n
+geduenstet:
+  type: adj
+geschmort:
+  type: adj
+Fleischstrudel:
+  type: n
+Sachbuchautor:
+genus  : m
+  type: n  
+flache:
+  type: adj  
+Kaesekrainer:
+genus  : f
+  type: n
+slowenisches:
+  type: adj 
+Krain:
+genus  : f
+  type: n
+frittierte:
+  type: adj
+Sauce:
+genus  : f
+  type: n 
+Bosna:
+genus  : f
+  type: n
+Landesteil:
+genus  : m
+  type: n
+Bruehwurstsorte:
+genus  : f
+  type: n
+deutschsprachigen:
+  type: adj
+zerkleinertem:
+  type: adj
+Sorten:
+genus  : f
+  type: n
+Pilze:
+genus  : f
+  type: n   
+Leistlinge:
+genus  : f
+  type: n
+Wasserlosen:
+  type: adj
+Herrenpilz:
+genus  : m
+  type: n 
+kulinarischer:
+  type: adj
+laenglichen:
+  type: adj
+nierenfoermigen:
+  type: adj
+Bohnenpflanzen:
+genus  : f
+  type: n
+umgebende:
+  type: adj
+mitsamt:
+  type: adj
+eingeschlossenen:
+  type: adj
+Sektkorken:
+  type: n
+Masseinheiten:
+genus  : f
+  type: n
+Einheitenvorsaetze:
+genus  : f
+  type: n
+Einheitenpraefixe:
+genus  : f
+  type: n
+Praefixe:
+genus  : f
+  type: n
+kohaerente:
+  type: adj
+SI:
+  type: n
+Kupferkessel:
+  type: n
+erschien:
+  type: vi 
+Tunnels:
+  type: n
+Autobahntunnel:
+genus  : m
+  type: n
+Nagelfeile:
+genus  : f
+  type: n
+metallenes:
+  type: adj
+Kochgeraet:
+genus  : s
+  type: n 
+Gottesanbeterin:
+genus  : f
+  type: n
+Fluginsekten:
+genus  : f
+  type: n
+artenreichste:
+  type: adj
+Gliederfuesser:
+genus  : f
+  type: n
+Tierreichs:
+  type: n
+NSDAP:
+genus  : f
+  type: n
+Ekliptik:
+genus  : f
+  type: n
+Indianern:
+  type: n
+nordoestlichen:
+  type: adj
+Waldgebieten:
+  type: n
+Nordamerikas:
+  type: n    
+Landwirtschaft:
+genus  : f
+  type: n
+Weizenfeld:
+genus  : s
+  type: n
+Praefekturhauptstadt:
+genus  : f
+  type: n
+Apache:
+genus  : m
+  type: n
+Mexikos:
+  type: n
+Athapasken:
+genus  : f
+  type: n
+Irokese:
+genus  : m
+  type: n
+Voelkerbund:
+genus  : m
+  type: n  
+sprachverwandten:
+  type: adj
+nordamerikanischer:
+  type: adj
+Hurone:
+genus  : m
+  type: n
+gebrauchten:
+  type: adj
+irokesische:
+  type: adj
+Galaktica:
+genus  : f
+  type: n
+preisgekroente:
+  type: adj 
+kugelfoermiges:
+  type: adj
+elastisches:
+  type: adj
+praechtige:
+  type: adj
+Binnensee:
+genus  : m
+  type: n
+Meeresoberflaeche:
+genus  : f
+  type: n
+Hoehenniveau:
+genus  : s
+  type: n
+Neutraler:
+  type: adj 
+gestaltend:
+  type: adj
+hervorbringt:
+  type: vi
+ihm:
+  type: art
+geschaffenen:
+  type: adj
+Vorlone:
+genus  : m
+  type: n
+Formatvorlage:
+genus  : f
+  type: n
+einheitlichen:
+  type: adj
+uebersichtlichen:
+  type: adj
+strukturierten:
+  type: adj
+definiertes:
+  type: adj
+ausgedehntes:
+  type: adj
+spezielle:
+  type: adj
+schaedlichen:
+  type: adj
+Eingriffen:
+  type: n
+Umweltverschmutzung:
+genus  : f
+  type: n
+Giften:
+  type: n 
+Stringtanga:
+genus  : m
+  type: n
+Kimbundu:
+  type: n
+ntanga:
+  type: n
+Tupi:
+  type: n
+tanga:
+genus  : m
+  type: n 
+diejenigen:
+  type: pron
+Gebietskoerperschaften:
+genus  : f
+  type: n
+verwaltungsmaessigen:
+  type: adj
+administrative:
+  type: adj
+Rituals:
+  type: n
+Mediums:
+  type: n
+gewonnene:
+  type: vi
+transzendente:
+  type: adj
+Entscheidungsfragen:
+genus  : f
+  type: n
+Verborgenem:
+  type: adj
+ws:
+  type: n
+Kurzbraten:
+genus  : s
+  type: n
+geeignete:
+  type: adj
+Grillabend:
+genus  : m
+  type: n
+Garprozess:
+genus  : m
+  type: n
+Waermeleitung:
+genus  : f
+  type: n
+Griller:
+  type: n
+Garmethode:
+genus  : f
+  type: n
+Fleischstuecke:
+genus  : f
+  type: n
+Barbecue:
+genus  : s
+  type: n
+maessiger:
+  type: adj
+heissgeraeuchert:
+  type: adj
+Gasfeuerzeuge:
+genus  : f
+  type: n
+Zuendstein:
+genus  : m
+  type: n
+Zippo:
+genus  : s
+  type: n
+benzinbetriebene:
+  type: adj
+Sturmfeuerzeuge:
+genus  : f
+  type: n
+unveraenderter:
+  type: adj
+Manufacturing:
+genus  : s
+  type: n
+geformte:
+  type: adj 
+Avalon:
+  type: n
+mystischer:
+  type: adj
+Artussage:
+genus  : f
+  type: n
+Nexus:
+genus  : m
+  type: n
+notiert:
+  type: vi
+CDAX:
+  type: n
+Schamhaar:
+genus  : s
+  type: n
+anliegend:
+  type: adj
+gelockt:
+  type: adj
+gekraeuselt:
+  type: adj
+Afrikanern:
+  type: n
+Asiaten:
+genus  : f
+  type: n
+Ureinwohnern:
+  type: n   
+Saeugerarten:
+genus  : f
+  type: n
+loser:
+  type: adj 
+Alphabets:
+  type: n
+Betaversion:
+genus  : f
+  type: n    
+durchlaeuft:
+  type: vi
+erstellende:
+  type: adj
+Entwicklungsstadien:
+genus  : f
+  type: n
+Meilensteine:
+genus  : f
+  type: n
+LAN:
+genus  : s
+  type: n
+local:
+  type: adj
+Gebirgszuges:
+  type: n
+Berspitze:
+genus  : f
+  type: n
+weisst:
+  type: vi  

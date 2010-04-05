@@ -62,3 +62,4 @@
 = <> _alkohol_ <> _alkoholisches_getraenk_ <> <> (maybe) 
 = <> _schimpfwort_ <> _schimpfwoerter_ <>  <> (maybe)
 = <> _schimpfwoerter_ <> _schimpfwort_ <>  <> (maybe)
+= <> _arestoteles_ <> _aristoteles_ <>  <> (maybe)

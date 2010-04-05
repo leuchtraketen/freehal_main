@@ -429,7 +429,6 @@
 = <> _uebergabe_ <> _einlieferung_ <> (maybe)
 = <> _uebergabe_ <> _ueberreichung_ <> (maybe)
 = <> _uebergang_ <> _austausch_ <> (maybe)
-= <> _uebergang_ <> _bruecke_ <> (maybe)
 = <> _uebergangsloesung_ <> _notloesung_ <> (maybe)
 = <> _uebergangsloesung_ <> _provisorische_loesung_ <> (maybe)
 = <> _uebergangslos_ <> _nahtlos_ <> (maybe)

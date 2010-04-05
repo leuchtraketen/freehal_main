@@ -11182,7 +11182,6 @@
 = <> _bruecke_ <> () <> (maybe)
 = <> _brueckenpfeiler_ <> _pfeiler_einer_bruecke_ <> (maybe)
 = <> _bruecke_ <> _ueberfuehrung_ <> (maybe)
-= <> _bruecke_ <> _uebergang_ <> (maybe)
 = <> _brueder_ <> _gebrueder_ <> (maybe)
 = <> _bruehe_ <> _dampf_ <> (maybe)
 = <> _bruehe_ <> _dunst_ <> (maybe)

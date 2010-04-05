@@ -797,7 +797,6 @@
 = <> _coke_ <> _kokain_ <> (maybe)
 = <> _coke_ <> _koks_ <> (maybe)
 = <> _coke_ <> _nose_candy_ <> (maybe)
-= <> _coke_ <> _schnee_ <> (maybe)
 = <> _coke_ <> _snow_ <> (maybe)
 = <> _co_ <> _kohlenmonoxid_ <> (maybe)
 = <> _co_ <> _kohlenstoffmonooxid_ <> (maybe)

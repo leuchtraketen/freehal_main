@@ -3698,7 +3698,6 @@
 = <> _normung_ <> _normierung_ <> (maybe)
 = <> _normung_ <> _standardisierung_ <> (maybe)
 = <> _nose_candy_ <> _c17h21no4_ <> (maybe)
-= <> _nose_candy_ <> _coke_ <> (maybe)
 = <> _nose_candy_ <> _kokain_ <> (maybe)
 = <> _nose_candy_ <> _koks_ <> (maybe)
 = <> _nose_candy_ <> _schnee_ <> (maybe)

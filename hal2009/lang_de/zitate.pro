@@ -23,7 +23,6 @@ ist <> bescheidenheit <> die letzte raffinesse <> der;eitelkeit <>  <>  <> nothi
 helfen selbst <> die besten gesetze <> nichts <> bei;schlechten;beamten <>  <>  <> nothing <>  <>  <>  <> (maybe)
 gehoert <> charakter <> nothing <> zur;resignation <>  <>  <> nothing <>  <>  <>  <> (maybe)
 bildet <> ein charakter <> sich <> ohne;leiden;nicht <>  <>  <> nothing <>  <>  <>  <> (maybe)
-faulenzen wuerde <> ein mensch <> nothing <> nicht;ohne;charakter;kann;mit <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> der beweis <> das erb-unglueck <> des;denkens <>  <>  <> nothing <>  <>  <>  <> (maybe)
 bin <> ich denke ich <> nothing <> also <>  <>  <> nothing <>  <>  <>  <> 100
 sind <> die gedankenvoll <> deutschen tatenarm und <>  <>  <>  <> nothing <>  <>  <>  <> (maybe)
