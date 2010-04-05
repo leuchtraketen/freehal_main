@@ -1305,10 +1305,16 @@ define action compute_tags with var word, var lang, var path do
                 set from array tags first item to "n"
             done
             if lc(var word) matches var word and var lang matches "de" do
+                if lc(var word) matches /ste<[nmrs]>?$/ do
+                set from array tags first item to "adj"
+                done
                 if var word matches /ist$/ do
                     set from array tags first item to "n"
                 done
                 if var word matches /(los|voll|frei)(e|es|er|en|em)?$/ do
+                    set from array tags first item to "adj"
+                done
+                if var word matches /ere(n|r|m|s)$/ do
                     set from array tags first item to "adj"
                 done
                 if var word matches /st$/ do
@@ -5368,6 +5374,42 @@ define action decide with array output, var input, flag all_output_phrases, var 
         return var output_str
     done
     else do
+        
+        if 2 <= size of array output do
+            set new var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/output.history', read
+            set new var last_output to ''
+            for each new var line from var input_handle do
+                set var last_output to var line
+            done
+            
+            print "previous output: " concat var last_output concat new line
+            
+            for each new var _output in array output do
+                set new var output to from array _output second item
+                
+                do regex using var output: /\(.*/, "", :global
+                do regex using var output: /\((<[+]>+?)\)\s/, "", :global
+                do regex using var output: /\((<[-]>+?)\)\s/, "", :global
+                do regex using var output: /\((<[+]>+?)\)/, "", :global
+                do regex using var output: /\((<[-]>+?)\)/, "", :global
+                
+                print "maybe current output: " concat var output concat new line
+                
+                if lc(var last_output) matches lc(var output) do
+                    set from array _output second item to ''
+                    go to last
+                done
+            done
+            
+            set new array replacement_for_output to an empty array
+            for each new var _output in array output do
+                if from array _output second item do
+                    push into array replacement_for_output, var _output
+                done
+            done
+            set array output to array replacement_for_output
+        done
+        
         set new array words to split with " ", lc(var input)
         set new array rel_output to an empty array
         for each new array _item in array output do
