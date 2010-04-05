@@ -1311,7 +1311,7 @@ define action compute_tags with var word, var lang, var path do
                 if var word matches /ist$/ do
                     set from array tags first item to "n"
                 done
-                if var word matches /(los|voll|frei)(e|es|er|en|em)?$/ do
+                if var word matches /(los|voll|frei|ig)(e|es|er|en|em)?$/ do
                     set from array tags first item to "adj"
                 done
                 if var word matches /ere(n|r|m|s)$/ do
