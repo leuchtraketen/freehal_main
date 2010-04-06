@@ -203,11 +203,13 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
     }
     
     for (f = 0; facts[f]; ++f) {
-        if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name)) {
+        if (can_be_a_pointer(facts[f]) && can_be_a_pointer(facts[f]->adverbs) && can_be_a_pointer(facts[f]->adverbs[0]) && can_be_a_pointer(facts[f]->adverbs[0]->name) && can_be_a_synonym(facts[f]->adverbs[0]->name)) {
             set_to_invalid_fact(&(facts[f]));
+            debugf("-> invalid: has adverbs, cannot be a synonym: no %i.\n", f);
         }
         if (can_be_a_pointer(facts[f]) && facts[f]->truth < 0.5) {
             set_to_invalid_fact(&(facts[f]));
+            debugf("-> invalid: not true, cannot be a synonym: no %i.\n", f);
         }
     }
     
@@ -248,6 +250,8 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 )
 
             ) {
+                debugf("-> DEBUG point I: %i.\n", f);
+                
                 int c;
                 for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) { }
                 struct word** temp = calloc(sizeof(facts[f]->subjects), (c+2));
@@ -256,18 +260,24 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                     temp[c] = facts[f]->subjects[c];
                 }
                 temp[c] = 0;
-                if (*position == 0 || strcmp(synonyms[*position - 1], temp)) {
+                
+                // TODO: no duplicates
+                //if (*position == 0 || strcmp(synonyms[*position - 1], temp)) {
                     synonyms[*position] = temp;
                     ++(*position);
-                }
-                else {
-                    free(temp);
-                    continue;
-                }
+                //}
+                //else {
+                //    free(temp);
+                //    continue;
+                //}
+                debugf("-> DEBUG point II: %i.\n", f);
                 if (c && temp && temp[0]) {
-                    debugf("-> Synonym '%s' by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                    debugf("-> Synonym '%s' by search, position is now %i.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
                     debugf("        ... %s\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
                 }
+            }
+            else {
+                debugf("-> DEBUG point III: %i.\n", f);
             }
         }
     }
@@ -297,7 +307,7 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                     continue;
                 }
                 if (c && temp && temp[0]) {
-                    debugf("-> Synonym '%s' by search, position is now %p.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
+                    debugf("-> Synonym '%s' by search, position is now %i.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
                     debugf("        ... %s\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
                 }
             }
@@ -2396,7 +2406,7 @@ int is_important_word(const char* word) {
     );
 }
 
-const char* small_identifier(const char* word) {
+char* small_identifier(const char* word) {
     if (word[0] == '_' || word[0] == '*' || word[0] == '%') {
         if (strlen(word) >= 3) {
             return small_identifier(word+1);

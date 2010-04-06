@@ -2785,12 +2785,16 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 done
                 set new flag is_builtin to builtin_has_time_place_adverbs_suffix with var must_have
 
-                if var must_have and lc( from array result second item second item ) matches /var must_have/ or flag is_builtin or from hash sym_prep item { from array tags first item } do
+                if var must_have and lc( from array result second item second item ) matches /var must_have/ or flag is_builtin do
                     print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
                     print new line
                     if var must_have do
                         set var num_must_haves to var num_must_haves + 1
                     done
+                done
+                else if from hash sym_prep item { from array tags first item } do
+                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result second item second item concat "' (but does not need to have it: prep)"
+                    print new line
                 done
                 else do
                     print "[-] Does not have must-have (no 1) '" concat var must_have concat "': '" concat from array result second item second item concat "'"
@@ -4501,7 +4505,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             set from hash parsed item { 'verbs' } to array verbs
             
             set new var adverbs to join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
-            if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
+            if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
                 set from hash parsed item { 'adverbs' } to an empty array
             done
         done
