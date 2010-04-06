@@ -1,3 +1,11 @@
+982:
+
+- Changelog aktualisiert
+
+981:
+
+- Bug 557 korrigiert
+
 977:
 
 - Doppelte Eintraege aus Memory entfernt
