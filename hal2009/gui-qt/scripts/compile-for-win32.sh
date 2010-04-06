@@ -62,8 +62,10 @@ clear; echo ../gui-qt/src/speech/speak_win.cpp
 
 clear
 echo Compiling FreeHALQt
-(i586-mingw32msvc-g++ $II -L../../windows/lib/ ../../windows/lib/boost_system.lib -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-QT.exe FreeHALQt.o speak_win.o sentence.o socketload.o util.o moc_FreeHALQt.o moc_communicate.o communicate.o -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++  || exit 0) 2>&1 | grep -v Warnung
+i586-mingw32msvc-g++ $II -L../../windows/lib/ ../../windows/lib/boost_system.lib ../../windows/lib/boost_thread_win32.lib -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-QT.exe FreeHALQt.o speak_win.o sentence.o socketload.o util.o moc_FreeHALQt.o moc_communicate.o communicate.o -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ -lboost_system -lboost_thread_win32
+i586-mingw32msvc-strip FreeHAL-QT.exe
 echo Ok
+
 
 mv FreeHAL-QT.exe ../FreeHAL-QT.exe
 cd ..

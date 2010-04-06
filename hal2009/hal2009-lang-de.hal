@@ -1791,6 +1791,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'kurfuerst' => "n",
           'schroff' => "adj",
           'west' => "adj",
+          'licht' => "n",
           'sind' => "v",
           'wuerden' => "v",
           'wo' => "questionword",
