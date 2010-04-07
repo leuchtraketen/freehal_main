@@ -369,6 +369,11 @@ int hal2009_add_pro_file (char* filename) {
         int line_number = 0;
         while ((wholeline = halgetline(input)) != NULL) {
             ++line_number;
+            
+            if (strstr(wholeline, "#")) {
+                free(wholeline);
+                continue;
+            }
 
             if (wholeline[0]) {
                 char* a = ascii(wholeline);
