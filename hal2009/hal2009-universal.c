@@ -695,11 +695,11 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
             if (!is_a_trivial_word(words[m]->name)) {
                 
                 if (matches(word->name, words[m]->name)) {
-                    //debugf("      %s matches with     %s\n", word->name, words[m]->name);
+//                    debugf("      %s matches with     %s\n", word->name, words[m]->name);
                     return 1;
                 }
                 else {
-                    //debugf("      %s not matches with %s\n", word->name, words[m]->name);
+//                    debugf("      %s not matches with %s\n", word->name, words[m]->name);
                 }
             }
         }
@@ -788,14 +788,33 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                     }
                 }
             }
-            // debugf("  does match this synonym: %i\n", does_match_this_synonym >= should_match_this_synonym);
+            
+/**
+                        debugf("nontrivial: %s\n", request_words[u][c]->name);
+
+                    else {
+                        debugf("trivial:    %s\n", request_words[u][c]->name);
+                    }
+
+            debugf("  does   match this synonym: %i\n", does_match_this_synonym);
+            debugf("  should match this synonym: %i\n", should_match_this_synonym);
+            debugf("    does_match: %i\n", does_match);
+            debugf("    given_words_all_also_trivial:     %i\n", given_words_all_also_trivial);
+            debugf("    request_words_all_also_trivial:   %i\n", request_words_all_also_trivial);
+            debugf("    given_words_all_only_important:   %i\n", given_words_all_only_important);
+            debugf("    request_words_all_only_important: %i\n", request_words_all_only_important);
+            debugf("  given_words_all_also_trivial < 2: %i\n", given_words_all_also_trivial < 2);
+            debugf("  _diff(given_words_all_also_trivial, request_words_all_also_trivial): %i\n", _diff(given_words_all_also_trivial, request_words_all_also_trivial));
+            debugf("  _diff(given_words_all_only_important, request_words_all_only_important): %i\n", _diff(given_words_all_only_important, request_words_all_only_important));
+            debugf("  _diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2: %i\n", _diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2);
+            debugf("  _diff(given_words_all_only_important, request_words_all_only_important) <= 0: %i\n", _diff(given_words_all_only_important, request_words_all_only_important) <= 0);
+**/
             
             does_match = does_match || does_match_this_synonym >= should_match_this_synonym;
             if (flags == WEAK) {
                 does_match = does_match || does_match_this_synonym;
             }
             if (flags != WEAK) {
-                
                 does_match = does_match && (given_words_all_also_trivial < 2 || (_diff(given_words_all_also_trivial, request_words_all_also_trivial) < 2 && _diff(given_words_all_only_important, request_words_all_only_important) <= 0));
             }
             if (does_match) {
@@ -808,7 +827,6 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         debugf("  => %i\n\n", -1);
         return -1;
     }
-    
     
     if (does_match)  {
         debugf("  => %i\n\n", does_match);
@@ -1146,23 +1164,26 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
     return does_match;
 }
 
-struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
+struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, int weak) {
+    
+    if (weak == EXACT) {
+        weak = (0 == strcmp(request->context, "reasonof"));
+    }
     
     if (!(
-    
             fact_matches_verb                 (fact, request)
          && (
                 (
-                    fact_matches_subject_by_subject (fact, request, (0 == strcmp(request->context, "reasonof")))
+                    fact_matches_subject_by_subject (fact, request, weak)
                  && (
-                        fact_matches_object_by_object   (fact, request, (0 == strcmp(request->context, "reasonof")))
-                     || fact_matches_object_by_adverb   (fact, request, (0 == strcmp(request->context, "reasonof")))
+                        fact_matches_object_by_object   (fact, request, weak)
+                     || fact_matches_object_by_adverb   (fact, request, weak)
                     )
                 )
             ||  (
                     strcmp(request->context, "q_what_extra")
-                 && fact_matches_object_by_subject (fact, request, (0 == strcmp(request->context, "reasonof")))
-                 && fact_matches_subject_by_object (fact, request, (0 == strcmp(request->context, "reasonof")))
+                 && fact_matches_object_by_subject (fact, request, weak)
+                 && fact_matches_subject_by_object (fact, request, weak)
                 )
             ||  (
                     request->context
@@ -1175,9 +1196,9 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
                 )
             )
          && (
-                fact_matches_adverb_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
-             || fact_matches_adverb_by_object     (fact, request, (0 == strcmp(request->context, "reasonof")))
-             || fact_matches_object_by_adverb     (fact, request, (0 == strcmp(request->context, "reasonof")))
+                fact_matches_adverb_by_adverb     (fact, request, weak)
+             || fact_matches_adverb_by_object     (fact, request, weak)
+             || fact_matches_object_by_adverb     (fact, request, weak)
             )
          && fact_matches_anything_by_extra    (fact, request)
          //&& fact_matches_questionword_rules   (fact, request)
@@ -1191,7 +1212,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request) {
     return fact;
 }
 
-struct fact** filter_list_by_rules(struct fact** list, struct request* request) {
+struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak) {
     printf("Starting fact filter!\n");
     
     if (list == TOOMUCH) {
@@ -1206,7 +1227,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request) 
         printf("Filtering fact %i.\n", b);
         
         if (list[b] != -1) {
-            list[b] = filter_fact_by_rules(list[b], request);
+            list[b] = filter_fact_by_rules(list[b], request, weak);
         }
         if (list[b] != -1) {
             ++count_of_facts;
@@ -1418,7 +1439,7 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
     return 0;
 }
 
-struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level) {
+struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level, int weak) {
     struct fact** list = 0;
     
     {
@@ -1456,7 +1477,8 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
 
         list = filter_list_by_rules (
             search_in_net(fact, list),
-            fact
+            fact,
+            weak
         );
         
         if (list != TOOMUCH) {
@@ -1505,7 +1527,7 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
 
 
 
-struct fact** search_facts_double_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+struct fact** search_facts_double_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** list = 0;
     
     {
@@ -1543,7 +1565,8 @@ struct fact** search_facts_double_facts(const char* subjects, const char* object
 
         list = filter_list_by_rules (
             search_in_net(fact, list),
-            fact
+            fact,
+            weak
         );
 
         if (is_engine("ram")) {
@@ -1601,7 +1624,8 @@ struct fact** search_facts_synonyms(const char* subjects, const char* objects, c
 
         list = filter_list_by_rules (
             search_in_net(fact, list),
-            fact
+            fact,
+            EXACT
         );
         
         if (is_engine("ram")) {
@@ -1755,7 +1779,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     return req;
 }
     
-struct fact** search_facts_deep(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+struct fact** search_facts_deep(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** linking_list = 0;
     struct fact**         list = 0;
     
@@ -1794,7 +1818,8 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
 
         linking_list = filter_list_by_rules (
             search_in_net(fact, linking_list),
-            fact
+            fact,
+            weak
         );
         
         if (list == TOOMUCH) {
@@ -1846,7 +1871,8 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
 
                             list = filter_list_by_rules (
                                 search_in_net(req, list),
-                                req
+                                req,
+                                weak
                             );
                             
                             if (is_engine("ram")) {
@@ -1889,7 +1915,7 @@ struct fact** search_facts_deep(const char* subjects, const char* objects, const
     return list;
 }
     
-struct fact** search_facts_thesaurus(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+struct fact** search_facts_thesaurus(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** list = 0;
     
     {
@@ -1927,7 +1953,8 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
 
         list = filter_list_by_rules (
             search_in_net(fact, list),
-            fact
+            fact,
+            weak
         );
         
         if (list == TOOMUCH) {
@@ -1960,8 +1987,22 @@ struct fact** search_facts_thesaurus(const char* subjects, const char* objects, 
     
     return list;
 }
-    
+
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
+    struct fact** list = 0;
+    
+    if (!can_be_a_pointer(list) || !count_list(list)) {
+        list = search_facts_by_weakness(subjects, objects, verbs, adverbs, extra, questionword, context, EXACT);
+    }
+    
+    if (!can_be_a_pointer(list) || !count_list(list)) {
+        list = search_facts_by_weakness(subjects, objects, verbs, adverbs, extra, questionword, context, WEAK);
+    }
+    
+    return list;
+}
+
+struct fact** search_facts_by_weakness(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** list = 0;
     
     printf("Do we need the 'double facts' search?\n");
@@ -1971,7 +2012,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
             
             printf("'double facts' search is allowed.\n");
                 
-            struct fact** _list = search_facts_double_facts(subjects, objects, verbs, adverbs, extra, questionword, context);
+            struct fact** _list = search_facts_double_facts(subjects, objects, verbs, adverbs, extra, questionword, context, weak);
             if (can_be_a_pointer(_list)) {
                 if (can_be_a_pointer(list)) {
                     free(list);
@@ -2019,7 +2060,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         
         while (level < 2 && ( !can_be_a_pointer(list) || !count_list(list) )) {
             
-            struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context, level);
+            struct fact** _list = search_facts_simple(subjects, objects, verbs, adverbs, extra, questionword, context, level, weak);
             if (_list == TOOMUCH) {
                 return TOOMUCH;
             }
@@ -2038,12 +2079,46 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         printf("No.\n");
     }
     
+    printf("Do we need the do_general simple search?\n");
+    if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "|do_general"))) {
+        printf("We do (we have a do_general verb).\n");
+        
+        int level = 1;
+        
+        if (verbs    &&    verbs[0] &&    verbs[0] != '0' &&    verbs[0] != ' ') {
+            level = 0;
+        }
+        if (0 == strcmp(context, "nosynonyms")) {
+            level = -1;
+        }
+        
+        while (level < 2 && ( !can_be_a_pointer(list) || !count_list(list) )) {
+            
+            struct fact** _list = search_facts_simple(subjects, objects, "", adverbs, extra, questionword, context, level, weak);
+            if (_list == TOOMUCH) {
+                return TOOMUCH;
+            }
+            
+            if (can_be_a_pointer(_list)) {
+                if (can_be_a_pointer(list)) {
+                    free(list);
+                }
+                list = _list;
+            }
+            
+            ++level;
+        }
+    }
+    else {
+        printf("No (there's no do_general verb).\n");
+    }
+    
     printf("Do we need the deep search?\n");
     
     if (!can_be_a_pointer(list) || !count_list(list)) {
         printf("We do.\n");
         
-        struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context);
+        struct fact** _list = search_facts_deep(subjects, objects, verbs, adverbs, extra, questionword, context, weak);
         if (_list == TOOMUCH) {
             return TOOMUCH;
         }
@@ -2061,6 +2136,9 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     printf("Do we need the wiki search?\n");
     
     if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
+        printf("No, no what-context.\n");
+    }
+    else if ((strstr(context, "what") || strstr(context, "who")) && !(verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("No, no what-context.\n");
     }
     else if (!can_be_a_pointer(list) || !count_list(list)) {
@@ -2090,7 +2168,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("We do.\n");
         
-        struct fact** _list = search_facts_thesaurus(subjects, objects, verbs, adverbs, extra, questionword, context);
+        struct fact** _list = search_facts_thesaurus(subjects, objects, verbs, adverbs, extra, questionword, context, weak);
         if (_list == TOOMUCH) {
             return TOOMUCH;
         }

@@ -144,7 +144,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     set var input to make_ascii with var input
 
-    print "Computed input (no. 1) ... "
+    print "Computed input (no. 2) ... "
     print var input
     print new line
 
@@ -574,6 +574,10 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^was\sgeht$/, "wie geht es dir?", :global:i
     do regex using var input: /^was\sgeht\sab<ws><[?]>/, "wie geht es dir?", :global:i
     do regex using var input: /^was\sgeht\sab$/, "wie geht es dir?", :global:i
+    
+    do regex using var input: /^wie\slang\s/, "wie ", :global:i
+    do regex using var input: /^wie\slange\s/, "wie ", :global:i
+    
     do regex using var input: /Ihnen/, "dir", :global:i
     do regex using var input: /\sdenn<ws>?<[?]>/, " ?", :global:i
     do regex using var input: /\sdenn<[?]>/, " ?", :global:i
@@ -642,7 +646,11 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /(weiss ich)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
     do regex using var input: /(weisst du)\s+?(wie|wer|was|wo|wann|warum|wieso|weshalb)/, "$0 , $1", :global:i
     
-    do regex using var input: /(was (?:machst|tust) du).+?$/, "$0 ?", :global:i
+    do regex using var input: /(was (?:machst|tust) du).*?(heute|jetzt|momentan|gerade|grade).*?$/, "$0 ?", :global:i
+    if lc(var input) matches /^\s*?(wie|wer|was|wo|wann|warum|wieso|weshalb)\s/ do
+        do regex using var input: /<[?]>/, "", :global:i
+        set var input to var input concat " ?"
+    done
     do regex using var input: /(das weiss ich,)$/, "$0 ?", :global:i
     do regex using var input: /(das weiss ich)$/, "$0 ?", :global:i
     do regex using var input: /sag mir /, "", :global:i

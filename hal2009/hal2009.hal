@@ -1272,7 +1272,10 @@ define action compute_tags with var word, var lang, var path do
         
         if is an empty array tags do
             if lc(var word) matches /<[{]><[{]><[{]>(.*?)<[}]><[}]><[}]>/ do
+                print "predefined: " concat $0
+                print new line
                 set from array tags first item to $0
+                go to last
             done
             if lc(var word) matches /no-question/ do
                 set from array tags first item to "qq"
@@ -1306,7 +1309,7 @@ define action compute_tags with var word, var lang, var path do
             done
             if lc(var word) matches var word and var lang matches "de" do
                 if lc(var word) matches /ste<[nmrs]>?$/ do
-                set from array tags first item to "adj"
+                    set from array tags first item to "adj"
                 done
                 if var word matches /ist$/ do
                     set from array tags first item to "n"
@@ -1337,6 +1340,9 @@ define action compute_tags with var word, var lang, var path do
                 if from array tags first item do
                     do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
                 done
+            done
+            if var word matches /system$/ do
+                set from array tags first item to "n"
             done
             else if ucfirst(var word) matches var word and var lang matches "de" do
                 if var word matches /est$/ do

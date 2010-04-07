@@ -1467,6 +1467,9 @@ define action builtin_has_time_place_adverbs_suffix with var word do
     if var word matches /time_/ do
         do return with 1
     done
+    if var word matches /^am_/ do
+        do return with 1
+    done
     do return with 0
 done
 
@@ -2794,7 +2797,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'eueren' => "art",
           'done' => "adj",
           'mein' => "art",
-          'wissen' => "n",
+          'Wissen' => "n",
+          'wissen' => "v",
           'rechnen' => "v",
           'kenn' => "v",
           'kenne' => "v",
@@ -4211,6 +4215,7 @@ define action multiple_choices_verb with var verb do
         for each new var ending in array endings do
             push into array choices, "mach" concat var ending
         done
+        push into array choices, "do_general"
     done
     else if var verb matches /(<[gdm]>)l$/ do
         push into array choices, var verb
