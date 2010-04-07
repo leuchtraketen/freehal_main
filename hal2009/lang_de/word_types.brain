@@ -280244,3 +280244,483 @@ byzantinisch:
   type: adj  
 Portuguiesischem:
   type: adj
+betriebssystem:
+genus  : s
+  type: n  
+Betriebssystem:
+genus  : s
+  type: n 
+Teiler:
+  type: n
+sinnfreien:
+  type: adj
+Bemerkungen:
+genus  : f
+  type: n
+Quadratwurzel:
+genus  : f
+  type: n
+altaegyptischen:
+  type: adj
+Nachtstunden:
+genus  : f
+  type: n
+Steinhuegelgrab:
+genus  : s
+  type: n
+vorhanden:
+  type: adj
+WIKIPEDIA:
+genus  : f
+  type: n
+WINE:
+  type: n
+Wine:
+  type: n
+Tangens:
+genus  : m
+  type: n
+Kotangens:
+genus  : m
+  type: n
+Sekans:
+genus  : m
+  type: n
+Kosekans:
+genus  : m
+  type: n
+Disziplinen:
+genus  : f
+  type: n
+ELIZA:
+  type: n
+ClamAV:
+  type: n
+Clamav:
+  type: n
+GNU:
+  type: n
+Public:
+  type: adj
+License:
+  type: n
+Virenscanner:
+  type: n
+Systemen:
+  type: n
+Ausfilterung:
+genus  : f
+  type: n
+Mailwuermern:
+  type: n
+Mails:
+genus  : f
+  type: n
+Laufzeitumgebung:
+genus  : f
+  type: n
+POSIX:
+  type: n
+Kplayer:
+genus  : m
+  type: n
+MPlayer:
+genus  : m
+  type: n
+Mplayer:
+genus  : m
+  type: n
+Mediaplayer:
+genus  : m
+  type: n
+KPlayer:
+genus  : m
+  type: n 
+Aufhellung:
+genus  : f
+  type: n
+Nachthimmel:
+genus  : m
+  type: n
+Symmetrieebene:
+genus  : f
+  type: n
+Milchstrassensystems:
+  type: n
+Grosskreises:
+  type: n
+Himmelskugel:
+genus  : f
+  type: n
+Lenzburg:
+  type: n
+Lebensformen:
+genus  : f
+  type: n
+Kulturkreis:
+genus  : m
+  type: n
+Familienserie:
+genus  : f
+  type: n
+Bartsch:
+  type: n
+Regisseuren:
+  type: n
+Masten:
+genus  : f
+  type: n
+Loebner:
+  type: n
+Hercher:
+  type: n
+Braenden:
+  type: n
+Unfaellen:
+  type: n
+Ueberschwemmungen:
+genus  : f
+  type: n
+Ereignissen:
+  type: n 
+Personenverkehrs:
+  type: n 
+Hits:
+genus  : f
+  type: n
+Type:
+genus  : f
+  type: n
+Giana:
+  type: n 
+Schiffsgeschuetz:
+genus  : s
+  type: n
+Kaliberlaenge:
+genus  : f
+  type: n
+Maschinenbaukonzern:
+genus  : m
+  type: n
+Dialogen:
+  type: n
+Projektes:
+  type: n
+ausgefuchst:
+  type: adj
+charakterfest:
+  type: vadj
+degeneriert:
+  type: vi
+desorganisiert:
+  type: vi
+desorientiert:
+  type: adj 
+diszipliniert:
+  type: vi
+echauffiert:
+  type: vi
+emanzipiert:
+  type: vi
+erfolgsorientiert:
+  type: vi 
+exaltiert:
+  type: vi 
+extroveriert:
+  type: vi  
+hemmungslos:
+  type: adj 
+kontrolliert:
+  type: vi
+kunstinteressiert:
+  type: adj
+modebewusst:
+  type: adj
+motiviert:
+  type: vi
+organisiert:
+  type: vi
+pervertiert:
+  type: vi
+pflichtbewusst:
+  type: adj 
+problembewusst:
+  type: adj 
+rastlos:
+  type: adj 
+reflektiert:
+  type: vi
+routineorientiert:
+  type: adj 
+stilbewusst:
+  type: vi 
+unreflektiert:
+  type: adj
+verantwortungsbewusst:
+  type: adj
+versiert:
+  type: vi 
+zerzaust:
+  type: adj 
+bisst:
+  type: vi
+Eisenkugel:
+genus  : f
+  type: n
+Nebensatz:
+genus  : m
+  type: n
+Furry:
+  type: n
+Furries:
+  type: n
+CERN:
+  type: n
+Grossforschungseinrichtung:
+genus  : f
+  type: n
+Meyrin:
+  type: n 
+Bahngeschwindigkeit:
+genus  : f
+  type: n
+Phasenverschiebung:
+genus  : f
+  type: n
+Mandela:
+  type: n
+Rechnernetzwerken:
+  type: n
+Nick:
+  type: n 
+Quantumcomputer:
+  type: n
+altaegyptischen:
+  type: adj
+Nachtstunden:
+genus  : f
+  type: n
+wunderschoene:
+  type: adj
+ausfuehrt:
+  type: vi
+beziehungsweise:
+  type: adj
+Systemverwalter:
+  type: n
+systemnahe:
+  type: adj
+zugspitze:
+genus  : f
+  type: n
+Levy:
+  type: n
+Regisseurs:
+  type: n
+Systemen:
+  type: n
+plattformunabhaengig:
+  type: adj 
+aktuelles:
+  type: adj 
+dreihunderttausend:
+  type: adj
+nordrhein:
+  type: n
+westfalen:
+  type: n 
+windig:
+  type: adj
+Schneefall:
+genus  : m 
+  type: n
+gewittrig:
+  type: adj
+vertikaler:
+  type: adj
+Hoehenerstreckung:
+genus  : f
+  type: n
+Grenzschicht:
+genus  : f
+  type: n
+ausuebt:
+  type: vi
+Randschicht:
+genus  : f
+  type: n
+Hohlraum:
+genus  : m
+  type: n  
+wahrheitsliebende:
+  type: adj
+VW:
+  type: n
+beschriebener:
+  type: adj
+zerlegbarer:
+  type: adj
+eiger:
+genus  : m
+  type: n 
+Agrarmeteorologie:
+genus  : f
+  type: n
+Altweibersommer:
+genus  : m
+  type: n
+Azorenhoch:
+genus  : s
+  type: n
+Barometer:
+genus  : s
+  type: n
+Cirrocumulus:
+  type: n
+Cirrostratus:
+  type: n
+Cirrus:
+  type: n
+Dauerniederschlag:
+genus  : m
+  type: n 
+Eisbruch:
+genus  : m
+  type: n
+Eisglaette:
+genus  : f
+  type: n
+Eiskoerner:
+genus  : f
+  type: n
+Eistage:
+genus  : f
+  type: n
+Foehn:
+genus  : m
+  type: n
+Frostgraupel:
+genus  : f
+  type: n
+Grosswetterlage:
+genus  : f
+  type: n
+Hundstage:
+genus  : f
+  type: n
+Inversionswolken:
+genus  : f
+  type: n
+Islandtief:
+genus  : s
+  type: n
+Kaltfront:
+genus  : f
+  type: n
+Kaltluftstau:
+genus  : m
+  type: n
+Klimafaktoren:
+genus  : f
+  type: n
+Klimascheide:
+genus  : f
+  type: n
+Kondensstreifen:
+  type: n
+Lokalklima:
+genus  : s
+  type: n
+Luftdruck:
+genus  : m
+  type: n
+Lufttemperatur:
+genus  : f
+  type: n
+METEOSAT:
+genus  : m
+  type: n
+Monsunregen:
+genus  : m
+  type: n
+Nachtfrost:
+genus  : m
+  type: n
+Nebeltag:
+genus  : m
+  type: n
+Nebeltreiben:
+genus  : s
+  type: n
+Niederschlagshoehe:
+genus  : f
+  type: n
+Niederschlagstag:
+genus  : m
+  type: n
+Nordfoehn:
+genus  : m
+  type: n
+Packeis:
+genus  : s
+  type: n
+Pappschnee:
+genus  : m
+  type: n
+Polarlichter:
+genus  : f
+  type: n
+Polarluft:
+genus  : f
+  type: n
+Pulverschnee:
+genus  : m
+  type: n
+Regentag:
+genus  : m
+  type: n
+Sandsturm:
+genus  : m
+  type: n
+Schafskaelte:
+genus  : f
+  type: n
+Schneetag:
+genus  : m
+  type: n
+Starkregen:
+genus  : m
+  type: n
+Sturmtief:
+genus  : s
+  type: n
+Tauwetter:
+genus  : s
+  type: n
+Unwetter:
+genus  : s
+  type: n
+Waermegewitter:
+genus  : s
+  type: n
+Warmfront:
+genus  : f
+  type: n
+Wetterlage:
+genus  : f
+  type: n
+Wetterradar:
+genus  : s
+  type: n
+Wetterwarnung:
+genus  : f
+  type: n
+Windstille:
+genus  : f
+  type: n
+Zwischenhoch:
+genus  : s
+  type: n
+Genuatief:
+genus  : s
+  type: n   
