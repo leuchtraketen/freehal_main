@@ -10290,7 +10290,6 @@
 = <> _bordbuch_ <> _tagebuch_ <> (maybe)
 = <> _bordeauxrot_ <> _weinrot_ <> (maybe)
 = <> _bordell_ <> _freudenhaus_ <> (maybe)
-= <> _bordell_ <> _puff_ <> (maybe)
 = <> _bordell_ <> _stundenhotel_ <> (maybe)
 = <> _bordrestaurant_ <> _speisewagen_ <> (maybe)
 = <> _bordrestaurant_ <> _zugrestaurant_ <> (maybe)

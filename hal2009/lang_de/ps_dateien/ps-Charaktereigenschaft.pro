@@ -808,7 +808,6 @@
 = <> _reflektiert_ <> charaktereigenschaft <>  <> (maybe)
 = <> _rege_ <> charaktereigenschaft <>  <> (maybe)
 = <> _reich_ <> charaktereigenschaft <>  <> (maybe)
-= <> _reif_ <> charaktereigenschaft <>  <> (maybe)
 = <> _reiselustig_ <> charaktereigenschaft <>  <> (maybe)
 = <> _reizbar_ <> charaktereigenschaft <>  <> (maybe)
 = <> _reizend_ <> charaktereigenschaft <>  <> (maybe)

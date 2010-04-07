@@ -6023,7 +6023,6 @@
 = <> _freude_machen_ <> _erfreuen_ <> (maybe)
 = <> _freude_machen_ <> _gefaellig_sein_ <> (maybe)
 = <> _freudenhaus_ <> _bordell_ <> (maybe)
-= <> _freudenhaus_ <> _puff_ <> (maybe)
 = <> _freudenhaus_ <> _stundenhotel_ <> (maybe)
 = <> _freudenmaedchen_ <> _bordsteinschwalbe_ <> (maybe)
 = <> _freudenmaedchen_ <> _dirne_ <> (maybe)
