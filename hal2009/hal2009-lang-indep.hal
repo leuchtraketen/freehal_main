@@ -52,6 +52,8 @@ define action divide_input with var input is rw, var lang, var path do
                     do regex using var word_2: /\s+$/, "", :global
                     do regex using var word_1: /\s+/, "_", :global
                     do regex using var word_2: /\s+/, "_", :global
+                    do regex using var word_1: /<["]>/, "", :global
+                    do regex using var word_2: /<["]>/, "", :global
                     set var input to var input concat "_" concat var word_1 concat "_ reasonof _" concat var word_2 concat "_ STOP "
                 done
                 set var j to var j + 1
@@ -1006,6 +1008,9 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: /^(.*?) muss man /, "Man muss $0 ", :global:i
 
+    print "Computed input (no. 6) ... ", var input
+    print new line
+
     do regex using var input: /^weisst du denn noch /, "weisst du ", :global:i
     do regex using var input: /^weisst du denn /, "weisst du ", :global:i
     do regex using var input: /^weisst du noch /, "weisst du ", :global:i
@@ -1035,6 +1040,9 @@ define action compute_input with var input is rw, var lang, var path do
     #do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /what is /, "ISUNKNOWN ", :global:i
+
+    print "Computed input (no. 7) ... ", var input
+    print new line
     
     set var input to to_unixtime with var input, var lang, var path
     
@@ -1049,6 +1057,9 @@ define action compute_input with var input is rw, var lang, var path do
         set var e to var e - 1
     done
     do regex using var input: /var {mark}/, "_", :global:i
+
+    print "Computed input (no. 8) ... ", var input
+    print new line
 
     do regex using var input: /^\s+/, "", :global:i
     do regex using var input: /\s+$/, "", :global:i
@@ -1072,7 +1083,7 @@ define action compute_input with var input is rw, var lang, var path do
         set var input to lcfirst with var input
     done
 
-    print "Computed input (no. 6) ... ", var input
+    print "Computed input (no. 9) ... ", var input
     print new line
     
     set new var male_file to handle for file name var path concat '/lang_' concat var lang concat '/male.history', read

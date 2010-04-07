@@ -2026,7 +2026,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 # TEXT
                 # Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie
                 # CODE
-                if from hash sym_verb item { from hash tags item { from array words first item } first item } do
+                if from hash sym_verb item { from hash tags item { from array words first item } first item } and from array words first item not matches "=" and not from hash sym_art item { from hash tags item { from array words second item } first item } do
                     print "Verb-inside feature activated."
                     print new line
                     print "Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie."
