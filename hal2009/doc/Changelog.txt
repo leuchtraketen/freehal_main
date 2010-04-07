@@ -1,3 +1,13 @@
+988:
+
+- Neuer Ordner eingefuehrt: lang_XY/fakten
+- Theoretische Ueberlegungen: Es gibt nun verschiedene Arten von Saetzen/Fakten:
+    thesaurus:    Synonyme
+    ps-dateien:   Ueberbegriffe (pro Ueberbegriff eine Datei)
+    fakten:       Ueberbegriffe (mehrere Ueberbegriffe zusammengefasst)
+    namen/berufe: Ueberbegriffe (eigener Ordner für sowohl Namen als auch Berufe, weil sehr umfangreich)
+    Rest:         ausformulierte Saetze und Definitionen, die keine Beziehungen haben wie Synonym, Ueber-/Unterbegriff
+
 983:
 
 - Bug 564 korrigiert

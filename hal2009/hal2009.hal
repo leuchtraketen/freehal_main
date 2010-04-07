@@ -5094,6 +5094,7 @@ define action init_prot_files with var current_language, var path do
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
+    push into array sub_directories, '/fakten'
     
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
@@ -5210,6 +5211,7 @@ define action update_list_of_pro_files with var pattern, var current_language, v
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
+    push into array sub_directories, '/fakten'
     
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
@@ -5282,6 +5284,7 @@ define action init_pro_files with var current_language, var path do
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
+    push into array sub_directories, '/fakten'
     
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir

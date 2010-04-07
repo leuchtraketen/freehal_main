@@ -353,6 +353,9 @@ struct word*** search_synonyms(const char* exp, int level) {
                         if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
                             set_to_invalid_fact(&(facts_synonyms[f]));
                         }
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
+                            set_to_invalid_fact(&(facts_synonyms[f]));
+                        }
                     }
                     synonyms = add_synonyms_by_search(req_synonym, "", "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_OBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
                     synonyms = add_synonyms_by_search("", req_synonym, "bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|=", "", USE_SUBJECTS,  synonyms, facts_synonyms, &position, &allocated_until);
@@ -1467,6 +1470,9 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
                                 set_to_invalid_fact(&(list[l]));
                             }
                             else if (strstr(list[l]->from, "ps-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT)) {
+                                set_to_invalid_fact(&(list[l]));
+                            }
+                            else if (strstr(list[l]->from, "fa-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT)) {
                                 set_to_invalid_fact(&(list[l]));
                             }
                             else {
