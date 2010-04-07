@@ -1,66 +1,3 @@
-Reis:
-  count: 1
-  genus: f
-  type: n
-Relativitaetstheorie:
-  genus: f
-  type: n
-Rennen:
-  count: 1
-  type: vi
-Repraesentant:
-  count: 1
-  genus: m
-  type: n
-Richard:
-  type: n
-Riechorgan:
-  count: 1
-  genus: s
-  type: n
-Riese:
-  count: 1
-  genus: m
-  type: n
-Rind:
-  count: 1
-  genus: f
-  type: n
-Ring:
-  count: 1
-  genus: m
-  type: n
-Ritter:
-  count: 4
-  genus: m
-  type: n
-Robbe:
-  count: 1
-  genus: f
-  type: n
-Roboter:
-  count: 11
-  genus: m
-  type: n
-Rohr:
-  genus: s
-  type: n
-Rolle:
-  count: 2
-  genus: f
-  type: n
-Rollenspiele:
-  count: 8
-  genus: f
-  type: n
-Roller:
-  genus: m
-  type: n
-Rollschuhe:
-  type: n
-Rollstuhl:
-  genus: m
-  type: n
 Rom:
   count: 1
   type: n
@@ -294,7 +231,7 @@ Singularitaet:
   genus: f
   type: n
 Sinne:
-  count: 4
+  count: 7
   genus: f
   type: n
 Sitz:
@@ -311,6 +248,10 @@ Solide:
 Sonne:
   count: 4
   genus: f
+  type: n
+Sonnenschein:
+  count: 1
+  genus: m
   type: n
 Sonnenwind:
   count: 1
@@ -387,7 +328,7 @@ Staaten:
   genus: f
   type: n
 Stadt:
-  count: 5
+  count: 6
   genus: f
   type: n
 Staedte:
@@ -459,6 +400,10 @@ Struktur:
 Stunden:
   count: 2
   genus: f
+  type: n
+Sturm:
+  count: 1
+  genus: m
   type: n
 Subkontinents:
   count: 1
@@ -803,7 +748,7 @@ Westen:
   genus: m
   type: n
 Wetter:
-  count: 2
+  count: 17
   genus: s
   type: n
 Wetterfrosch:
@@ -864,6 +809,9 @@ Wohlstand:
   type: n
 Wolga:
   count: 1
+  type: n
+Wolkenbruch:
+  genus: m
   type: n
 Wort:
   count: 2
@@ -982,6 +930,8 @@ anderer:
 androiden:
   count: 2
   type: adj
+angeht:
+  type: vi
 angelogen:
   count: 2
   type: vi
@@ -1037,7 +987,7 @@ aufgeteilt:
   count: 1
   type: adj
 aufgrund:
-  count: 3
+  count: 24
   type: prep
 aufregend:
   count: 3
@@ -1237,6 +1187,9 @@ charaktereigenschaft:
 chatte:
   count: 2
   type: vi
+chatten:
+  genus: s
+  type: n
 chattest:
   count: 3
   type: vi
@@ -1254,7 +1207,7 @@ darstellen:
   genus: s
   type: n
 darueber:
-  count: 4
+  count: 5
   type: adv
 datenbank:
   count: 3
@@ -1270,8 +1223,10 @@ definition:
   count: 1
   type: n
 dem:
-  count: 24
+  count: 27
   type: art
+denke:
+  type: vi
 denkendes:
   count: 2
   type: adj
@@ -1315,7 +1270,7 @@ dir:
   count: 19
   type: n
 direkte:
-  count: 1
+  count: 2
   type: adj
 domestizierte:
   type: adj
@@ -1357,6 +1312,9 @@ ehrlich:
 eiffelturm:
   count: 1
   type: n
+eigentlich:
+  count: 1
+  type: adv
 einfachsten:
   count: 1
   type: sdj
@@ -1478,7 +1436,7 @@ et:
 ethnisch:
   type: adj
 etwas:
-  count: 15
+  count: 16
   type: adv
 europa:
   type: n
@@ -1599,14 +1557,14 @@ galaxie:
   genus: f
   type: n
 ganze:
-  count: 9
+  count: 12
   genus: s
   type: n
 ganzen:
   count: 3
   type: adv
 gar:
-  count: 2
+  count: 4
   type: adj
 gardasee:
   count: 1
@@ -1770,6 +1728,9 @@ gewissen:
 gewissenhaft:
   count: 2
   type: adj
+gewittrig:
+  count: 1
+  type: adj
 gewuerz:
   count: 3
   genus: s
@@ -1920,6 +1881,9 @@ hoher:
 homosexuell:
   count: 2
   type: adj
+hund:
+  genus: m
+  type: n
 ich:
   type: n
 ihn:
@@ -1938,7 +1902,7 @@ inn:
 innerhalb:
   type: prep
 ins:
-  count: 37
+  count: 38
   type: n
 insel:
   count: 1
@@ -1954,6 +1918,8 @@ intressiert:
   type: vi
 italien:
   count: 2
+  type: n
+jahre:
   type: n
 kaese:
   genus: m
@@ -2270,7 +2236,7 @@ milchstrasse:
 mindestens:
   type: adv
 mir:
-  count: 26
+  count: 27
   type: n
 miteinander:
   genus: s
@@ -2359,10 +2325,10 @@ neutronenstern:
   genus: m
   type: n
 nichts:
-  count: 64
+  count: 70
   type: adv
 nie:
-  count: 4
+  count: 6
   type: prep
 niemand:
   count: 3
@@ -2495,6 +2461,9 @@ redest:
 redet:
   count: 2
   type: vi
+regnerisch:
+  count: 1
+  type: adj
 reif:
   count: 1
   genus: m
@@ -2626,6 +2595,9 @@ sonne:
   count: 3
   genus: f
   type: n
+sonnig:
+  count: 1
+  type: adj
 source:
   count: 2
   type: n
@@ -2697,6 +2669,8 @@ stroemung:
   count: 1
   genus: f
   type: n
+stuermisch:
+  type: adj
 suchtgift:
   genus: s
   type: n
@@ -2775,11 +2749,14 @@ trivial:
 trotzdem:
   type: adv
 true:
+  count: 8
   type: n
 truhe:
   count: 1
   genus: f
   type: n
+tu:
+  type: vi
 tunichtgut:
   genus: m
   type: n
@@ -2927,6 +2904,8 @@ verspuerst:
 verstanden:
   count: 3
   type: vi
+verstehen:
+  type: vi
 verstehst:
   count: 2
   type: vi
@@ -2936,6 +2915,8 @@ versuchen:
 versucht:
   count: 1
   type: adj
+vertreibe:
+  type: vi
 verwandt:
   type: adj
 verwendest:
@@ -2977,6 +2958,12 @@ weiterbilden:
 weiterentwickelt:
   count: 1
   type: vi
+wetter:
+  count: 13
+  genus: s
+  type: n
+windig:
+  type: adj
 wir:
   count: 2
   type: n
