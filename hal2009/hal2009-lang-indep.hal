@@ -52,8 +52,9 @@ define action divide_input with var input is rw, var lang, var path do
                     do regex using var word_2: /\s+$/, "", :global
                     do regex using var word_1: /\s+/, "_", :global
                     do regex using var word_2: /\s+/, "_", :global
-                    do regex using var word_1: /<["]>/, "", :global
-                    do regex using var word_2: /<["]>/, "", :global
+                    set new var temp to '"'
+                    do regex using var word_1: /<[var temp]>/, "", :global
+                    do regex using var word_2: /<[var temp]>/, "", :global
                     set var input to var input concat "_" concat var word_1 concat "_ reasonof _" concat var word_2 concat "_ STOP "
                 done
                 set var j to var j + 1
