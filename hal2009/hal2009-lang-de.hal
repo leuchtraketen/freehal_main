@@ -4196,6 +4196,19 @@ define action multiple_choices_verb with var verb do
         push into array choices, "wuerdet"
         push into array choices, "werdet"
     done
+    else if var verb matches "ha" or var verb matches "hab" do
+        push into array choices, var verb
+        push into array choices, "hab"
+        push into array choices, "habe"
+        push into array choices, "hat"
+        push into array choices, "hast"
+        push into array choices, "habt"
+        push into array choices, "haben"
+        push into array choices, "hatte"
+        push into array choices, "hattest"
+        push into array choices, "hatten"
+        push into array choices, "hattet"
+    done
     else if var verb matches "gib" or var verb matches "geb" do
         push into array choices, var verb
         push into array choices, "gebe"

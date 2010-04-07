@@ -21,6 +21,8 @@
 
 #include "hal2009-disk.h"
 
+int disk_cache_clauses = -1;
+int disk_cache_facts = -1;
 
 int disk_begin() {
     // initialize semantic ram_net
@@ -63,6 +65,9 @@ int disk_begin() {
             return NO_CONNECTION;
         }
     }
+    
+    disk_cache_clauses = -1;
+    disk_cache_facts   = -1;
 
     char* err;
     sqlite3_exec(sqlite_connection, "BEGIN;", NULL, NULL, &err);
@@ -175,18 +180,16 @@ static int select_primary_key(void* key, int argc, char **argv, char **azColName
 
 int get_last_pk(int rel) {
     // cache
-    static int cache_clauses = -1;
-    static int cache_facts = -1;
     if (rel) {
-        if (cache_clauses > -1) {
-            ++cache_clauses;
-            return cache_clauses;
+        if (disk_cache_clauses > -1) {
+            ++disk_cache_clauses;
+            return disk_cache_clauses;
         }
     }
     else {
-        if (cache_facts > -1) {
-            ++cache_facts;
-            return cache_facts;
+        if (disk_cache_facts > -1) {
+            ++disk_cache_facts;
+            return disk_cache_facts;
         }
     }
     
@@ -201,14 +204,14 @@ int get_last_pk(int rel) {
     int error = sql_execute(sql, select_primary_key, key);
     
     if (rel) {
-        cache_clauses = to_number(key);
+        disk_cache_clauses = to_number(key);
     }
     else {
-        cache_facts = to_number(key);
-        printf("cache_facts: %d\n", cache_facts);
+        disk_cache_facts = to_number(key);
+        printf("cache_facts: %d\n", disk_cache_facts);
     }
     
-    return (rel?cache_clauses:cache_facts);
+    return (rel ? disk_cache_clauses : disk_cache_facts);
 }
 
 int detect_words(int* num_of_words, char** words, const char* r_verbs, const char* r_subjects, const char* r_objects, const char* r_adverbs, const char* r_extra) {
@@ -753,6 +756,11 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
     }
     sqlite3_free(err);
     
+    if (error_to_return) {
+        disk_cache_clauses = -1;
+        disk_cache_facts   = -1;
+    }
+    
     return error_to_return;
 }
 
@@ -767,8 +775,12 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
         char* sql = 0;
         sql = gen_sql_add_entry(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
         sql = gen_sql_add_verb_flags(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
-        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
         int error = sql_execute(sql, NULL, NULL);
+        free(sql);
+        
+        sql = 0;
+        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
+        error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
 
@@ -786,8 +798,11 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
         char* sql = 0;
         sql = gen_sql_add_entry(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
         sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
+        error = sql_execute(sql, NULL, NULL);
+        free(sql);
+        
+        sql = 0;
         sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
-        //printf("%s\n", sql);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }

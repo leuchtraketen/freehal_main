@@ -334,16 +334,16 @@ char* delete_articles(const char* s) {
     }
     
     if (size > 4) {
-             if (offset+s == strstr(offset+s, "der"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "die"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "das"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "den"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "dem"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "ein"))      offset += 4;
-        else if (offset+s == strstr(offset+s, "eine"))     offset += 5;
-        else if (offset+s == strstr(offset+s, "einer"))    offset += 6;
-        else if (offset+s == strstr(offset+s, "einem"))    offset += 6;
-        else if (offset+s == strstr(offset+s, "einen"))    offset += 6;
+             if (offset+s == strstr(offset+s, "der "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "die "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "das "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "den "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "dem "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "ein "))      offset += 4;
+        else if (offset+s == strstr(offset+s, "eine "))     offset += 5;
+        else if (offset+s == strstr(offset+s, "einer "))    offset += 6;
+        else if (offset+s == strstr(offset+s, "einem "))    offset += 6;
+        else if (offset+s == strstr(offset+s, "einen "))    offset += 6;
     }
     
     strcpy(n, s+offset);
