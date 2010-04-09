@@ -280723,4 +280723,254 @@ genus  : s
   type: n
 Genuatief:
 genus  : s
+  type: n 
+Heulsuse:
+genus  : f
+  type: n
+lateinamerikanischen:
+  type: adj
+Abnormalitaet:
+genus  : f
+  type: n
+Kaserne:
+genus  : f
+  type: n
+Gebaeudeanlage:
+genus  : f
+  type: n 
+Polizei:
+genus  : f
+  type: n
+Teleskop:
+genus  : s
+  type: n
+einfallende:
+  type: adj
+bestehendes:
+  type: adj
+Japanern:
+  type: n
+Japans:
+  type: n
+Nachfahren:
+genus  : f
+  type: n
+Opel:
+  type: n
+Automobilhersteller:
+  type: n
+Automobilkonzern:
+genus  : m
+  type: n
+Gesteinsmassen:
+genus  : f
+  type: n
+groesserer:
+  type: adj
+Eisenbahnschiene:
+genus  : f
+  type: n
+Gleiskoerpers:
+  type: n
+Walzstahlerzeugnisse:
+genus  : f
+  type: n
+manuelle:
+  type: adj
+Windrose:
+genus  : f
+  type: n  
+gedachten:
+  type: vi
+Suedrichtung:
+genus  : f
+  type: n
+Rotationspole:
+genus  : f
+  type: n
+Eisblume:
+genus  : f
+  type: n
+zugesprochen:
+  type: adj
+Extremereignisses:
+genus  : f
+  type: n
+Hoechsttemperaturen:
+genus  : f
+  type: n
+Vegetationsfleck:
+genus  : m
   type: n   
+Opa:
+genus  : m
+  type: n
+Generationenfolge:
+genus  : f
+  type: n
+Kindes:
+  type: n
+Verwandtschaftsbeziehung:
+genus  : f
+  type: n 
+Schwaegerschaft:
+genus  : f
+  type: n
+abwertende:
+  type: adj
+uneheliches:
+  type: adj
+aufgegeben:
+  type: vi
+Geburstag:
+genus  : m
+  type: n  
+gedenkt:
+  type: vi 
+PI:
+  type: n
+julianischen:
+  type: adj
+Vakuum:
+genus  : s
+  type: n
+neuneinhalb:
+  type: adj
+geloest:
+  type: vi   
+gestartet:
+  type: vi 
+vierten:
+  type: adj
+Geodaetische:
+  type: adj
+Logarithmische:
+  type: adj   
+Platonische:
+  type: adj
+Dodekaeder:
+genus  : s
+  type: n
+Drachenkurve:
+genus  : f
+  type: n
+Drachenviereck:
+genus  : s
+  type: n
+Gosper-Kurve:
+genus  : f
+  type: n
+Helix:
+genus  : f
+  type: n  
+Hyperboloid:
+genus  : m
+  type: n
+Hyperebene:
+genus  : f
+  type: n
+Ikosaeder:
+genus  : s
+  type: n
+Kegelschnitt:
+genus  : m
+  type: n
+Kegelstumpf:
+genus  : m
+  type: n
+Kleinsche:
+  type: adj
+Koch-Kurve:
+genus  : f
+  type: n
+Kuboktaeder:
+genus  : s
+  type: n
+Kugeldreieck:
+genus  : s
+  type: n
+Kugelzweieck:
+genus  : s
+  type: n
+Mandelbrot-Menge:
+genus  : f
+  type: n
+Menger-Schwamm:
+genus  : m
+  type: n
+Moebiusband:
+genus  : s
+  type: n
+Neuneck:
+genus  : s
+  type: n
+Oloid:
+genus  : m
+  type: n
+Paraboloid:
+genus  : m
+  type: n
+Parallelogramm:
+genus  : s
+  type: n
+Penrose-Dreieck:
+genus  : s
+  type: n
+Pentagramm:
+genus  : s
+  type: n
+Polyeder:
+genus  : s
+  type: n
+Prismen:
+genus  : f
+  type: n
+Pyramidenstumpf:
+genus  : m
+  type: n
+Rotationsellipsoid:
+genus  : m
+  type: n
+Rotationsparaboloid:
+genus  : m
+  type: n
+Sechseck:
+genus  : s
+  type: n
+Sehnenfuenfeck:
+genus  : s
+  type: n
+Sehnenviereck:
+genus  : s
+  type: n
+Siebeneck:
+genus  : s
+  type: n
+Sierpinski-Dreieck:
+genus  : s
+  type: n
+Superellipse:
+genus  : f
+  type: n
+Tangentenviereck:
+genus  : s
+  type: n
+Torus:
+genus  : m
+  type: n
+Trapez:
+genus  : s
+  type: n
+Zehneck:
+genus  : s
+  type: n  
+sechseckiger:
+  type: adj
+verwobenen:
+  type: adj   
+Dreiecken:
+  type: n
+Mandelbrot:
+genus  : s
+  type: n
+    

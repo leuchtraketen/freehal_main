@@ -15,8 +15,7 @@ gegessen hat <> a <> b <>  <> => geschmeckt hat <> b <> a <>  <> wie <>  <> (tru
 #Direkte Anwort auf "Geh ins Bett"
 geh <> nothing <> nothing <> ins bett <> f=> schlaefe <> ich <> nothing <> nie <>  <>  <> (true)
 #Direkte Anwort auf "Wie geht es dir so"
-geht <> es <> mir so <>  <> f=> geht <> es <> mir <> sehr gut <>  <>  <> 100
-# Ausgabe einer Variabeln
+geht <> es <> mir so <>  <> f=> geht <> es <> mir <> sehr gut <>  <>  <> 100  
 #Ausgabe einer Variablen
 #Direkte Anwort auf die Eingabe "Ich habe Durst"
 hat <> a <> durst <>  <> f=> sollte trinken <> a <> etwas <>  <>  <>  ;; q=> trinkt <> a <> nichts <>  <> warum <>  <> (true)
@@ -88,4 +87,4 @@ ist <> a <> nothing <> blond <> macht q=> <> blond wirklich <> bloed <>  <>  <> 
 #Direkte Antwort auf die Eingabe "Ich habe Hunger"#
 hat <> a <> hunger <>  <> essen f=> solltest <> a <> etwas <>  <>  <>  ;; f=> pluendern sollte <> a <> den kuehlschrank <>  <>  <>  <> (true)
 # Für Fragen nach "Wie alt"
-sein <> a <>  <> alt <> gestorben ist <> a <>  <>  <> wenn <> (maybe)  
+sein <> a <>  <> alt <> gestorben ist <> a <>  <>  <> wenn <> (maybe) 

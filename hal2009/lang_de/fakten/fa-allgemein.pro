@@ -48,3 +48,4 @@
 = <> schwammerlgulasch <> kulinarischer genuss <>  <> (maybe)
 = <> wunder <> unerklaerbares ereignis <>  <> (true) 
 = <> feuer <> chemischer prozess <>  <> (true)
+= <> _form_ <> _geometrische_figur_ <>  <> (maybe)

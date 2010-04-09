@@ -1685,3 +1685,5 @@
 >>> <> _zusehen_ <> _zu_sehen_ <>  <> (true)
 >>> <> _zusehens_ <> _zusehends_ <>  <> (true)
 >>> <> _zustaetzlich_ <> _zusaetzlich_ <>  <> (true)
+>>> <> _ druchmesser_ <> _ durchmesser_ <>  <> (true)
+>>> <> _arestoteles_ <> _aristoteles_ <>  <> (true)
