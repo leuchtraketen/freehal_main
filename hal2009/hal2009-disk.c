@@ -456,7 +456,6 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     free(words);
 
     strcat(sql, ";\n");
-    printf(sql);
     
     return sql;
 }
