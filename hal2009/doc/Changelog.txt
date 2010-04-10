@@ -1,3 +1,7 @@
+1002:
+
+- automatisches Korrigieren von Tippfehlern beim Editieren einer .pro
+
 996:
 
 - Bug 576 wurde korrigiert

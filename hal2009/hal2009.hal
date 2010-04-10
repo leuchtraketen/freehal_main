@@ -5242,6 +5242,51 @@ define action update_list_of_pro_files with var pattern, var current_language, v
     done
 done
 
+define action correct_human_edit_typos with var file, var current_language, var path do
+    set new var input_1 to handle for file name var file, read
+    set new var output_1 to handle for file name var file concat ".tmp", write
+    for each new var line from var input_1 is rw do
+        set new var _copy to var line
+        
+        set new array parts to split using /<[<]><[>]>/, var line
+        for each new var part in array parts do
+            if var part matches /_/ do
+                set var part to " " concat var part concat " "
+                if not var part matches /\s<[a-z0-9]>\s/ do
+                    do regex using var part: /\s/, "_", :global
+                    do regex using var part: /<[_]>+/, "_", :global
+                    set var part to " " concat var part concat " "
+                done
+                do regex using var part: /^\s+/, " ", :global
+                do regex using var part: /\s+$/, " ", :global
+            done
+        done
+        set var line to join using "<>", items of array parts
+        
+        if var _copy not matches var line do
+            print "Corrected typo:    " concat var _copy concat new line
+            print "                => " concat var line concat new line
+        done
+    
+        print into var output_1 data var line
+        print into var output_1 data new line
+    done
+    do close with var input_1
+    do close with var output_1
+    
+    set new var input_2 to handle for file name var file concat ".tmp", read
+    set new var output_2 to handle for file name var file, write
+    for each new var line from var input_2 is rw do
+        print into var output_2 data var line
+        print into var output_2 data new line
+    done
+    do close with var input_2
+    do close with var output_2
+    
+    do unlink with var file concat ".tmp"
+    
+    do return without arguments
+done
 
 define action clear_empty_lines with var file, var current_language, var path do
     set new var _input to handle for file name var file, read
@@ -5328,6 +5373,8 @@ define action init_pro_files with var current_language, var path do
             done
             
             if not var i is var j do
+            
+                do correct_human_edit_typos with var file, var current_language, var path
 
                 print "Read file "
                 print var file

@@ -1058,6 +1058,8 @@ define action compute_input with var input is rw, var lang, var path do
     
     set new var mark to "\""
 
+    do regex using var input: /\svar {mark}\s?(<[A-Za-z0-9_var {mark}]>+?)\s?var {mark}/, " var {mark}$0var {mark}", :global:i
+    
     do regex using var input: /in dem jahr (<[\d]>+)/, "in dem var {mark}jahre $0var {mark}", :global:i
     do regex using var input: /in dem jahre (<[\d]>+)/, "in dem var {mark}jahre $0var {mark}", :global:i
 
