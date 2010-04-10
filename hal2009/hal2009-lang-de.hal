@@ -3397,12 +3397,15 @@ define action compute_output with var output do
     do regex using var output: / in jahre_/, " im Jahre ", :global:i
     do regex using var output: / in_jahre_/, " im Jahre ", :global:i
 
-    if var output matches /\sein/ and lc(var output) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
-        do regex using var output: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
-        do regex using var output: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
-        do regex using var output: /\sein(.?.?.?)$/, " kein$0", :global:i
+    set new array _clauses to split using /\s/, var output
+    for each new var _clause in array _clauses is rw do
+        if var _clause matches /\sein/ and lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
+            do regex using var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
+            do regex using var _clause: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
+            do regex using var _clause: /\sein(.?.?.?)$/, " kein$0", :global:i
+        done
     done
-    
+    set var output to join using " ", items of array _clauses
 
     do regex using var output: /_/, " ", :global:i
     # Time From <-> time from
