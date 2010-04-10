@@ -1,313 +1,3 @@
-Wellen:
-  genus: f
-  type: n
-Welt:
-  type: n
-Weltall:
-  count: 5
-  genus: s
-  type: n
-Weltbild:
-  type: n
-Weltkrieg:
-  count: 4
-  genus: m
-  type: n
-Werkzeug:
-  genus: s
-  type: n
-Wesen:
-  count: 9
-  type: n
-Westen:
-  count: 1
-  genus: m
-  type: n
-Wetter:
-  count: 32
-  genus: s
-  type: n
-Wetterfrosch:
-  count: 5
-  genus: m
-  type: n
-Wettersatellit:
-  count: 1
-  genus: m
-  type: n
-Wetterstation:
-  type: n
-Whiskey:
-  count: 1
-  genus: m
-  type: n
-Wien:
-  type: n
-Wiese:
-  count: 1
-  genus: f
-  type: n
-Wigwam:
-  count: 1
-  genus: s
-  type: n
-Wikinger:
-  count: 1
-  genus: m
-  type: n
-Wikipedia:
-  count: 6
-  genus: f
-  type: n
-Wilde:
-  genus: m
-  type: n
-Windows:
-  count: 5
-  type: n
-Windstaerke:
-  genus: f
-  type: n
-Wir:
-  type: n
-Wirbeltiere:
-  genus: f
-  type: n
-Wissen:
-  count: 13
-  type: n
-Witze:
-  count: 6
-  genus: f
-  type: n
-Woerter:
-  count: 6
-  genus: f
-  type: n
-Wohlstand:
-  count: 1
-  genus: m
-  type: n
-Wolga:
-  count: 1
-  type: n
-Wolke:
-  genus: f
-  type: n
-Wolkenbruch:
-  count: 2
-  genus: m
-  type: n
-Wort:
-  count: 5
-  type: n
-Worte:
-  count: 6
-  genus: f
-  type: n
-Wuerfel:
-  genus: m
-  type: n
-Wuerstchen:
-  count: 5
-  genus: s
-  type: n
-Wueste:
-  count: 13
-  genus: f
-  type: n
-Wulpedinger:
-  count: 1
-  genus: m
-  type: n
-Wunder:
-  count: 3
-  genus: s
-  type: n
-Wurst:
-  count: 1
-  genus: f
-  type: n
-Zaehne:
-  count: 5
-  genus: f
-  type: n
-Zahl:
-  count: 3
-  genus: f
-  type: n
-Zahlen:
-  count: 1
-  type: vi
-Zahnradbahn:
-  genus: f
-  type: n
-Zeit:
-  count: 2
-  genus: f
-  type: n
-Zeitpunkt:
-  count: 1
-  genus: m
-  type: n
-Zentimeter:
-  count: 1
-  type: n
-Zeus:
-  type: n
-Zubereitung:
-  genus: f
-  type: n
-Zusammenhang:
-  genus: m
-  type: n
-Zustand:
-  count: 4
-  genus: m
-  type: n
-Zykloide:
-  genus: f
-  type: n
-Zylinder:
-  type: n
-abfangjaeger:
-  genus: m
-  type: n
-abgegrenzte:
-  count: 2
-  type: adj
-abgelegt:
-  count: 6
-  type: adj
-abgeleitet:
-  type: adj
-abgerufen:
-  type: adj
-abhaengig:
-  count: 5
-  type: adv
-abnormitaet:
-  count: 1
-  genus: f
-  type: n
-absichtliche:
-  type: adj
-abweichung:
-  count: 1
-  genus: f
-  type: n
-achensee:
-  genus: m
-  type: n
-aendern:
-  type: vi
-aergert:
-  count: 5
-  type: vi
-aeusseren:
-  count: 1
-  type: adj
-aggressiv:
-  count: 5
-  type: adj
-ahnung:
-  count: 8
-  genus: f
-  type: n
-aktuelle:
-  count: 5
-  type: adj
-aktueller:
-  count: 5
-  type: adj
-alkohol:
-  count: 7
-  genus: m
-  type: n
-alkoholisches:
-  count: 1
-  type: adj
-allem:
-  type: adj
-aller:
-  count: 1
-  genus: f
-  type: n
-alles:
-  count: 11
-  type: n
-allmaechtiges:
-  count: 2
-  type: adj
-almsee:
-  genus: m
-  type: n
-also:
-  count: 1
-  type: prep
-amerika:
-  count: 5
-  type: n
-amerikanischen:
-  count: 1
-  type: adv
-amerikanischer:
-  type: n
-anbieten:
-  count: 1
-  type: vi
-anderer:
-  count: 2
-  type: adj
-androiden:
-  count: 5
-  type: adj
-angegeben:
-  count: 4
-  type: vi
-angeht:
-  type: vi
-angelogen:
-  count: 5
-  type: vi
-angezogen:
-  count: 5
-  type: adv
-anhabe:
-  count: 1
-  type: vi
-annaehernd:
-  count: 1
-  type: adj
-anschluss:
-  genus: m
-  type: n
-anstaendige:
-  count: 5
-  type: adj
-anstrengend:
-  count: 5
-  type: adj
-antichrist:
-  type: vi
-antworten:
-  count: 5
-  type: vi
-anus:
-  genus: m
-  type: n
-arabische:
-  count: 5
-  type: adv
-arabischen:
-  type: adv
-arbeitest:
-  count: 5
-  type: vi
-arbeitsspeicher:
-  count: 3
-  genus: m
-  type: n
 area:
   genus: s
   type: n
@@ -319,6 +9,7 @@ arrogant:
 artenreichste:
   type: adj
 astronomisches:
+  count: 1
   type: adv
 atheisst:
   count: 4
@@ -352,7 +43,9 @@ aufgrund:
 aufhoeren:
   type: adj
 aufregend:
-  count: 6
+  count: 7
+  type: adj
+aufrichtigste:
   type: adj
 aufweist:
   type: vi
@@ -375,22 +68,29 @@ ausscheidung:
   genus: f
   type: n
 bad:
-  count: 14
+  count: 15
   type: n
 baukloetze:
+  count: 3
   genus: f
   type: n
 bauwerk:
+  count: 1
   genus: f
   type: n
 bayerisches:
   count: 1
   type: adj
 bayern:
+  count: 1
   type: n
 beantworten:
-  count: 18
+  count: 20
   genus: s
+  type: n
+bedeutung:
+  count: 6
+  genus: f
   type: n
 bedingt:
   type: adj
@@ -399,6 +99,9 @@ befasst:
   type: vi
 begeistert:
   type: adj
+begleiter:
+  genus: m
+  type: n
 beheimatet:
   type: adj
 beides:
@@ -412,6 +115,10 @@ bekannteste:
 bekomme:
   count: 4
   type: vi
+bekommen:
+  count: 1
+  genus: s
+  type: n
 bekommest:
   count: 4
   type: vi
@@ -427,6 +134,8 @@ benehmen:
 benoetigst:
   count: 5
   type: vi
+benzin:
+  type: n
 berg:
   type: n
 berges:
@@ -444,7 +153,7 @@ beschaeftigst:
   count: 4
   type: vi
 bescheuert:
-  count: 5
+  count: 6
   type: adj
 beschraenkt:
   type: vi
@@ -501,6 +210,7 @@ beweisen:
   count: 5
   type: vi
 bezeichnung:
+  count: 1
   genus: f
   type: n
 beziehe:
@@ -513,6 +223,9 @@ bh:
   type: n
 bier:
   count: 6
+  genus: s
+  type: n
+bieten:
   genus: s
   type: n
 bildung:
@@ -529,6 +242,9 @@ bissig:
 blaehungen:
   genus: f
   type: n
+bleiben:
+  genus: s
+  type: n
 blond:
   count: 6
   type: adj
@@ -540,8 +256,11 @@ bodensee:
   genus: m
   type: n
 boese:
-  count: 5
+  count: 8
   type: adj
+boesen:
+  count: 1
+  type: n
 bohre:
   type: vi
 bohrst:
@@ -576,7 +295,7 @@ bzw:
   count: 6
   type: n
 charaktereigenschaft:
-  count: 10
+  count: 1
   genus: f
   type: n
 chatbot:
@@ -587,7 +306,7 @@ chatte:
   count: 5
   type: vi
 chatten:
-  count: 2
+  count: 3
   genus: s
   type: n
 chattest:
@@ -603,7 +322,7 @@ comma:
   genus: s
   type: n
 computer:
-  count: 6
+  count: 7
   genus: m
   type: n
 computerprogramm:
@@ -639,9 +358,10 @@ definition:
   count: 1
   type: n
 dem:
-  count: 39
+  count: 63
   type: art
 denke:
+  count: 1
   type: vi
 denkendes:
   count: 2
@@ -658,7 +378,7 @@ deutscher:
   count: 5
   type: adj
 deutschland:
-  count: 4
+  count: 5
   type: n
 dezentral:
   count: 5
@@ -684,6 +404,8 @@ diesig:
 dietmar:
   count: 6
   type: n
+dinge:
+  type: n
 dir:
   count: 25
   type: n
@@ -693,13 +415,14 @@ direkte:
 domestizierte:
   type: adj
 donau:
+  count: 1
   genus: f
   type: n
 dorfmatratze:
   genus: f
   type: n
 downloaden:
-  count: 5
+  count: 8
   genus: s
   type: n
 drauf:
@@ -720,7 +443,7 @@ drueckender:
 drueckt:
   type: vi
 du:
-  count: 132
+  count: 153
   type: n
 dual:
   count: 5
@@ -730,12 +453,16 @@ duenne:
 dummes:
   count: 6
   type: adj
+dummheit:
+  count: 2
+  genus: f
+  type: n
 dumpfbacke:
   count: 2
   genus: f
   type: n
 durchmesser:
-  count: 11
+  count: 13
   genus: m
   type: n
 durstig:
@@ -746,14 +473,20 @@ ebenen:
   type: n
 ecken:
   type: vi
+egoist:
+  count: 1
+  type: vi
 ehrlich:
   count: 5
   type: adv
 eiffelturm:
   count: 1
   type: n
+eigenschaft:
+  genus: f
+  type: n
 eigentlich:
-  count: 3
+  count: 5
   type: adv
 eiger:
   type: adj
@@ -772,14 +505,16 @@ einheit:
 einigen:
   type: vi
 einiges:
-  count: 7
+  count: 8
   type: adj
 einsam:
-  count: 5
+  count: 6
   type: adj
 einschliessen:
   count: 1
   type: vi
+einsehbar:
+  type: adj
 einsetzenden:
   type: adj
 einstein:
@@ -789,6 +524,10 @@ eintaenzer:
   count: 1
   genus: m
   type: n
+einzelnen:
+  type: adj
+einzigartige:
+  type: adj
 einzige:
   count: 2
   type: adv
@@ -823,12 +562,14 @@ engel:
 entdeckte:
   count: 6
   type: vi
+enterprise:
+  type: n
 entfernung:
   count: 1
   genus: f
   type: n
 enthaelt:
-  count: 2
+  count: 3
   type: vi
 enthalten:
   type: adv
@@ -844,13 +585,15 @@ entsprach:
   type: vi
 entspricht:
   type: vi
+entstand:
+  type: vi
 entweder:
   type: adj
 entwickelt:
-  count: 7
+  count: 8
   type: vi
 entwickler:
-  count: 13
+  count: 15
   genus: m
   type: n
 er:
@@ -871,7 +614,7 @@ erfahrung:
   genus: f
   type: n
 erfolgreich:
-  count: 24
+  count: 31
   type: adj
 erfreut:
   count: 5
@@ -889,18 +632,26 @@ eriquillo:
   type: n
 erklaert:
   type: vi
+errichtet:
+  type: vi
 erschaffen:
   count: 7
   type: vi
 erscheinende:
   type: adj
+erschien:
+  count: 1
+  type: vi
+ertragen:
+  count: 1
+  type: vi
 erwachsenen:
   type: n
 erwartest:
   count: 4
   type: vi
 erweitern:
-  count: 1
+  count: 3
   genus: s
   type: n
 erzaehlt:
@@ -915,7 +666,7 @@ et:
 ethnisch:
   type: adj
 etwas:
-  count: 23
+  count: 24
   type: adv
 europa:
   type: n
@@ -938,6 +689,9 @@ fahrenden:
 falschspieler:
   genus: m
   type: n
+fangen:
+  genus: s
+  type: n
 farblos:
   count: 5
   type: adv
@@ -947,6 +701,8 @@ faulenzen:
   count: 1
   genus: s
   type: n
+fehlt:
+  type: vi
 feinen:
   count: 3
   type: adj
@@ -959,13 +715,16 @@ festen:
   count: 3
   type: n
 feuer:
-  count: 4
+  count: 5
   genus: s
   type: n
 figur:
   count: 8
   genus: f
   type: n
+finde:
+  count: 1
+  type: vi
 fixstern:
   genus: m
   type: n
@@ -1000,7 +759,7 @@ foppen:
   genus: s
   type: n
 form:
-  count: 21
+  count: 23
   genus: f
   type: n
 forschungsprojekt:
@@ -1020,7 +779,7 @@ freche:
   count: 5
   type: adj
 freehal:
-  count: 8
+  count: 9
   type: n
 freie:
   type: adj
@@ -1075,14 +834,14 @@ galaxie:
   genus: f
   type: n
 ganze:
-  count: 17
+  count: 27
   genus: s
   type: n
 ganzen:
-  count: 6
+  count: 7
   type: adv
 gar:
-  count: 5
+  count: 8
   type: adj
 gardasee:
   count: 1
@@ -1146,10 +905,14 @@ gegart:
 gegeben:
   count: 3
   type: vi
+gegebenen:
+  count: 1
+  type: adj
 gegenspieler:
   genus: f
   type: n
 gegenteil:
+  count: 4
   genus: s
   type: n
 gegessen:
@@ -1157,10 +920,16 @@ gegessen:
   type: vi
 gegruendeten:
   type: adv
+geheimnis:
+  count: 4
+  genus: s
+  type: n
+gehoerende:
+  type: adj
 geistigen:
   type: adj
 geistiger:
-  count: 6
+  count: 7
   type: adj
 gekennzeichnet:
   count: 1
@@ -1175,7 +944,7 @@ gelaunt:
 gelegen:
   type: adj
 gelernt:
-  count: 2
+  count: 3
   type: vi
 geloest:
   count: 1
@@ -1199,7 +968,7 @@ generellen:
   count: 5
   type: adj
 genug:
-  count: 5
+  count: 6
   type: adj
 genuss:
   count: 1
@@ -1282,7 +1051,7 @@ getraenk:
 getroffen:
   type: vi
 gewissen:
-  count: 5
+  count: 6
   genus: f
   type: n
 gewissenhaft:
@@ -1302,14 +1071,14 @@ gibst:
   count: 4
   type: vi
 gibt:
-  count: 6
+  count: 8
   type: vi
 gigolo:
   count: 1
   genus: m
   type: n
 glauben:
-  count: 6
+  count: 8
   genus: m
   type: n
 glaubst:
@@ -1322,6 +1091,9 @@ gleichnamigen:
   type: adj
 gleichseitigen:
   type: adj
+glueck:
+  genus: s
+  type: n
 gluecklich:
   count: 8
   type: adv
@@ -1355,20 +1127,22 @@ groessere:
 groesserer:
   type: adj
 groesste:
-  count: 2
+  count: 5
   type: adj
 groessten:
   count: 1
   type: adv
 grosse:
-  count: 23
+  count: 24
   genus: f
   type: n
 grossen:
-  count: 8
+  count: 9
   type: n
 grosser:
   type: adv
+grosskalibrige:
+  type: adj
 gruender:
   genus: m
   type: n
@@ -1387,8 +1161,10 @@ hackbeil:
 haelst:
   count: 4
   type: vi
+haerteren:
+  type: adj
 haesslich:
-  count: 5
+  count: 7
   type: adv
 haeufig:
   count: 2
@@ -1396,12 +1172,20 @@ haeufig:
 haeufigste:
   count: 3
   type: adv
+halbe:
+  type: adj
 halunke:
   genus: m
   type: n
+handelte:
+  type: vi
 hardware:
   count: 2
   genus: f
+  type: n
+hass:
+  count: 2
+  genus: m
   type: n
 hatten:
   count: 1
@@ -1417,6 +1201,8 @@ haus:
   count: 1
   genus: s
   type: n
+heiligt:
+  type: vi
 heilpflanze:
   genus: f
   type: n
@@ -1478,6 +1264,8 @@ hoffnung:
   type: n
 hoher:
   type: adj
+homburg:
+  type: n
 homosexuell:
   count: 5
   type: adj
@@ -1488,7 +1276,7 @@ hund:
 ich:
   type: n
 ihn:
-  count: 5
+  count: 6
   genus: m
   type: prep
 illusion:
@@ -1499,16 +1287,20 @@ indigenes:
 indischen:
   count: 1
   type: adv
+individuell:
+  count: 1
+  type: adj
 ineinander:
   type: adj
 inn:
-  count: 2
+  count: 3
   genus: m
   type: n
 innerhalb:
+  count: 1
   type: prep
 ins:
-  count: 64
+  count: 74
   type: n
 insbesondere:
   count: 1
@@ -1520,24 +1312,42 @@ insel:
 insgesamt:
   type: adj
 intelligenz:
-  count: 7
+  count: 8
   type: n
 interessant:
   count: 5
   type: adj
+internationalen:
+  count: 1
+  type: adj
 intressiert:
   count: 4
   type: vi
+irgendwie:
+  count: 1
+  type: adj
+irgendwo:
+  type: adj
 italien:
   count: 3
   type: n
 jahre:
-  count: 9
+  count: 15
+  type: n
+jahres:
+  count: 1
   type: n
 japanischen:
   type: adv
+je:
+  count: 1
+  type: n
 jene:
   type: pron
+job:
+  count: 4
+  genus: f
+  type: n
 kaese:
   genus: m
   type: n
@@ -1548,6 +1358,9 @@ kaffee:
 kannstst:
   count: 4
   type: vi
+kanone:
+  genus: f
+  type: n
 kapiert:
   count: 4
   type: vi
@@ -1574,6 +1387,7 @@ kilometer:
   genus: m
   type: n
 kind:
+  count: 1
   genus: s
   type: n
 kitt:
@@ -1613,8 +1427,10 @@ kochgeraet:
   count: 2
   type: n
 koennen:
-  count: 4
+  count: 6
   type: n
+koennte:
+  type: vi
 koenntest:
   count: 5
   type: vi
@@ -1643,6 +1459,9 @@ kommen:
 kommst:
   count: 1
   type: vi
+kommt:
+  count: 1
+  type: vi
 konstante:
   count: 1
   genus: f
@@ -1658,6 +1477,8 @@ kopf:
 korrekte:
   count: 1
   type: adj
+kostbar:
+  type: adj
 kostenlose:
   type: adj
 kostest:
@@ -1666,14 +1487,17 @@ kostest:
 kreises:
   count: 1
   type: n
+krieg:
+  genus: m
+  type: n
 kriegerischen:
   type: adj
 kuechengeraet:
-  count: 4
+  count: 5
   genus: s
   type: n
 kuenstliche:
-  count: 13
+  count: 14
   type: adv
 kuenstliches:
   count: 7
@@ -1688,12 +1512,14 @@ kugelschreiber:
   genus: m
   type: n
 kunst:
-  count: 2
+  count: 3
   type: n
 kurzzeitig:
   type: adv
+la:
+  type: n
 lachen:
-  count: 2
+  count: 3
   genus: s
   type: n
 ladungen:
@@ -1704,7 +1530,7 @@ laenge:
 laengste:
   type: adj
 laesst:
-  count: 4
+  count: 5
   type: vi
 laeufst:
   count: 12
@@ -1727,7 +1553,7 @@ langweilig:
   count: 6
   type: adj
 laster:
-  count: 1
+  count: 3
   type: adj
 lauf:
   count: 1
@@ -1743,18 +1569,18 @@ lautet:
   count: 8
   type: vi
 lebens:
-  count: 3
+  count: 17
   type: n
 lebensnotwendig:
   type: adv
 lebewesen:
-  count: 3
+  count: 6
   type: n
 lebst:
   count: 5
   type: vi
 lebt:
-  count: 5
+  count: 6
   type: vi
 leckere:
   count: 3
@@ -1763,7 +1589,7 @@ lehrer:
   count: 4
   type: n
 leid:
-  count: 18
+  count: 19
   genus: s
   type: n
 leider:
@@ -1807,6 +1633,9 @@ lombardei:
   type: n
 loser:
   type: adj
+lotto:
+  count: 1
+  type: n
 luegner:
   count: 2
   genus: m
@@ -1828,6 +1657,10 @@ lump:
 lusche:
   genus: f
   type: n
+lust:
+  type: n
+lustig:
+  type: adj
 machest:
   count: 5
   type: vi
@@ -1835,6 +1668,9 @@ machst:
   count: 8
   type: vi
 mackenzie:
+  type: n
+maennern:
+  count: 1
   type: n
 maennlich:
   count: 5
@@ -1854,7 +1690,7 @@ mammut:
   genus: s
   type: n
 man:
-  count: 11
+  count: 17
   type: n
 maori:
   genus: m
@@ -1864,7 +1700,12 @@ massentransport:
   type: n
 massgeblich:
   type: adj
+materie:
+  count: 2
+  genus: f
+  type: n
 mathematische:
+  count: 1
   type: adv
 maus:
   count: 1
@@ -1892,7 +1733,7 @@ meinst:
   count: 5
   type: vi
 meist:
-  count: 3
+  count: 5
   type: vi
 meistens:
   count: 6
@@ -1902,10 +1743,13 @@ menge:
   genus: f
   type: n
 mensch:
-  count: 13
+  count: 21
   type: n
 menschen:
-  count: 12
+  count: 21
+  genus: f
+  type: n
+menschheit:
   genus: f
   type: n
 menschlich:
@@ -1935,8 +1779,18 @@ militaerische:
   type: adv
 mindestens:
   type: adv
+minute:
+  count: 12
+  genus: f
+  type: n
+minuten:
+  genus: f
+  type: n
 mir:
-  count: 50
+  count: 54
+  type: n
+missverstaendnisse:
+  count: 2
   type: n
 miteinander:
   genus: s
@@ -1944,16 +1798,31 @@ miteinander:
 mittelalterliches:
   count: 5
   type: adj
+mittleren:
+  type: adj
+modellieren:
+  type: vi
 moebelstueck:
   count: 3
   type: n
 moeglich:
   count: 7
   type: adj
+moeglichst:
+  type: vi
 moerder:
   genus: m
   type: n
 mohrruebe:
+  genus: f
+  type: n
+momentan:
+  type: adj
+monat:
+  count: 6
+  genus: s
+  type: n
+monate:
   genus: f
   type: n
 mond:
@@ -1965,6 +1834,8 @@ muehelosigkeit:
   count: 2
   genus: f
   type: n
+muendet:
+  type: vi
 musikalisch:
   count: 5
   type: adj
@@ -1980,7 +1851,7 @@ mutter:
   genus: f
   type: n
 mysterium:
-  count: 1
+  count: 11
   genus: s
   type: n
 nachspeise:
@@ -1992,6 +1863,7 @@ naechsten:
   genus: f
   type: n
 naeher:
+  count: 2
   type: adj
 nagel:
   genus: m
@@ -2005,9 +1877,15 @@ namen:
 nasa:
   genus: f
   type: n
+nationalfeiertag:
+  count: 6
+  genus: m
+  type: n
 natuerliche:
   genus: s
   type: n
+natuerlichen:
+  type: adv
 ne:
   genus: s
   type: n
@@ -2046,10 +1924,10 @@ neutronenstern:
   genus: m
   type: n
 nichts:
-  count: 119
+  count: 148
   type: adv
 nie:
-  count: 14
+  count: 16
   type: prep
 niederschlag:
   type: n
@@ -2062,7 +1940,7 @@ nimmst:
   count: 5
   type: vi
 nirgendwo:
-  count: 7
+  count: 10
   type: adv
 noerdlichen:
   type: adv
@@ -2073,6 +1951,8 @@ normaler:
 notiert:
   count: 1
   type: vi
+notwendige:
+  type: adj
 nudeln:
   count: 3
   genus: f
@@ -2089,7 +1969,7 @@ objekt:
 objektorientierte:
   type: adj
 oder:
-  count: 24
+  count: 25
   type: linking
 oed:
   count: 5
@@ -2110,10 +1990,15 @@ ok:
   count: 6
   type: n
 oktober:
+  count: 1
   type: n
 open:
   count: 7
   type: adj
+operator:
+  count: 1
+  genus: m
+  type: n
 osten:
   count: 1
   type: adj
@@ -2166,6 +2051,8 @@ planeten:
   type: n
 planmaessig:
   type: adj
+planmaessigen:
+  type: adj
 plattformunabhaengig:
   type: adj
 plauderst:
@@ -2196,6 +2083,7 @@ programmierer:
   count: 3
   type: adj
 programmiersprache:
+  count: 1
   genus: f
   type: n
 programmierte:
@@ -2217,6 +2105,14 @@ pulsar:
   type: n
 punkt:
   genus: m
+  type: n
+quaelen:
+  count: 3
+  genus: s
+  type: n
+quelle:
+  count: 1
+  genus: f
   type: n
 radioaktive:
   count: 5
@@ -2247,6 +2143,10 @@ rausreden:
 rechenmaschine:
   genus: f
   type: n
+rechenzeichen:
+  count: 1
+  genus: s
+  type: n
 rechner:
   count: 3
   genus: m
@@ -2255,7 +2155,7 @@ redest:
   count: 7
   type: vi
 redet:
-  count: 5
+  count: 8
   type: vi
 regnerisch:
   count: 1
@@ -2289,6 +2189,10 @@ runden:
 saechlich:
   count: 5
   type: adj
+sammeln:
+  count: 3
+  genus: s
+  type: n
 satan:
   genus: m
   type: n
@@ -2302,9 +2206,16 @@ saturn:
 saufen:
   genus: s
   type: n
+schach:
+  count: 1
+  genus: s
+  type: n
 schadenfroh:
   count: 5
   type: adj
+schaft:
+  genus: m
+  type: n
 scheinst:
   type: vi
 scheint:
@@ -2324,7 +2235,7 @@ schlaefst:
   count: 5
   type: vi
 schlafe:
-  count: 5
+  count: 6
   type: vi
 schlafen:
   genus: s
@@ -2343,7 +2254,10 @@ schnittpunkten:
 schoenen:
   count: 5
   type: adj
+schoenste:
+  type: adj
 schoepfung:
+  count: 1
   genus: f
   type: n
 schottland:
@@ -2357,15 +2271,23 @@ schreibst:
 schreibt:
   type: vi
 schulz:
-  count: 1
+  count: 4
   genus: m
   type: n
+schwarzenegger:
+  count: 1
+  type: n
 schwarzes:
+  type: adj
+schwerste:
   type: adj
 schwertwal:
   count: 1
   genus: m
   type: n
+schwierigkeiten:
+  genus: f
+  type: vi
 schwimmen:
   count: 1
   type: vi
@@ -2377,6 +2299,9 @@ sechseck:
   type: n
 sechseckiger:
   type: adj
+sechzigste:
+  count: 1
+  type: adj
 see:
   genus: f
   type: n
@@ -2384,11 +2309,15 @@ seiten:
   count: 1
   genus: f
   type: n
+sekunden:
+  count: 10
+  genus: f
+  type: n
 selber:
   count: 5
   type: pron
 selbst:
-  count: 2
+  count: 7
   type: vi
 semantischen:
   count: 6
@@ -2411,12 +2340,12 @@ sexy:
   count: 5
   type: adj
 sich:
-  count: 10
+  count: 13
   type: n
 sichtbare:
   type: adj
 sie:
-  count: 9
+  count: 10
   type: n
 siedlung:
   count: 2
@@ -2425,13 +2354,13 @@ siedlung:
 siehe:
   type: vi
 sieht:
-  count: 1
+  count: 2
   type: vi
 singen:
   genus: s
   type: n
 sinn:
-  count: 1
+  count: 20
   genus: f
   type: n
 so:
@@ -2444,9 +2373,10 @@ sogar:
   count: 5
   type: adv
 solange:
-  count: 5
+  count: 7
   type: adj
 solche:
+  count: 1
   type: adv
 solchen:
   type: adj
@@ -2479,6 +2409,9 @@ speziellen:
 spontan:
   count: 5
   type: adj
+sprache:
+  genus: f
+  type: n
 sprachlos:
   count: 5
   type: adv
@@ -2516,8 +2449,10 @@ startete:
   type: vi
 statistisch:
   type: adv
+staune:
+  type: n
 staunen:
-  count: 1
+  count: 6
   genus: s
   type: n
 stellst:
@@ -2532,6 +2467,8 @@ stinke:
 stinkst:
   count: 5
   type: vi
+stoffliche:
+  type: adv
 straftat:
   genus: f
   type: n
@@ -2558,6 +2495,14 @@ stuhl:
   count: 1
   genus: m
   type: n
+stunde:
+  count: 9
+  genus: f
+  type: n
+stunden:
+  count: 1
+  genus: f
+  type: n
 sturm:
   count: 2
   genus: m
@@ -2570,20 +2515,41 @@ suedafrika:
   type: n
 suedliche:
   type: adj
+superuser:
+  count: 1
+  genus: m
+  type: n
 suppe:
   genus: f
   type: n
+sysop:
+  count: 1
+  genus: m
+  type: n
 system:
   type: adj
+systemadministrator:
+  count: 1
+  genus: m
+  type: n
 systematische:
   type: adv
+systembetreuer:
+  count: 1
+  genus: m
+  type: n
+systemoperator:
+  count: 1
+  genus: m
+  type: n
 tag:
-  count: 2
+  count: 5
   type: n
 tages:
+  count: 2
   type: n
 tanzen:
-  count: 6
+  count: 7
   genus: s
   type: n
 technisch:
@@ -2602,6 +2568,8 @@ teufel:
   count: 5
   genus: m
   type: n
+thematisiert:
+  type: vi
 theoretischer:
   type: adj
 tier:
@@ -2645,6 +2613,10 @@ treibst:
   type: vi
 trek:
   type: n
+trichter:
+  count: 1
+  genus: m
+  type: n
 trinke:
   count: 7
   type: vi
@@ -2666,6 +2638,8 @@ truhe:
 tu:
   count: 3
   type: vi
+tuechtigen:
+  type: adj
 tunichtgut:
   genus: m
   type: n
@@ -2710,18 +2684,30 @@ umschlag:
 umwandelt:
   count: 3
   type: vi
+unablaessig:
+  type: adj
+unbelebter:
+  count: 2
+  type: adj
+unbewusste:
+  type: adj
 und:
   count: 23
   type: linking
 unendlich:
   count: 1
   type: adv
+unfreiwilliges:
+  type: adj
 universum:
   count: 7
   type: n
 unklar:
   count: 1
   type: adj
+unrecht:
+  genus: s
+  type: n
 unser:
   count: 6
   type: pron
@@ -2740,8 +2726,15 @@ unterrichtsgegenstand:
   genus: m
   type: n
 unterscheidet:
-  count: 1
+  count: 4
   type: vi
+unterschied:
+  genus: m
+  type: n
+untersuchung:
+  count: 4
+  genus: f
+  type: n
 unterwaesche:
   count: 5
   genus: f
@@ -2750,6 +2743,8 @@ ureinwohner:
   count: 1
   genus: f
   type: n
+urspruenglich:
+  type: adj
 us:
   type: n
 usa:
@@ -2795,6 +2790,10 @@ verdrehst:
 vereinfachen:
   genus: s
   type: n
+verfuegen:
+  count: 1
+  genus: s
+  type: n
 verheiratet:
   count: 5
   type: adj
@@ -2813,6 +2812,9 @@ verlegen:
   count: 5
   genus: s
   type: n
+verlieren:
+  count: 1
+  type: vi
 verloren:
   type: adv
 vermeiden:
@@ -2837,6 +2839,7 @@ verstanden:
   count: 7
   type: vi
 verstehen:
+  count: 1
   type: vi
 verstehst:
   count: 5
@@ -2851,7 +2854,7 @@ verteidigungsministeriums:
   count: 2
   type: n
 vertreibe:
-  count: 2
+  count: 3
   type: vi
 verwandt:
   type: adj
@@ -2867,14 +2870,18 @@ viereck:
   count: 1
   genus: s
   type: n,
+vierundzwanzigste:
+  count: 1
+  type: adj
 voegeln:
   type: n
 vom:
-  count: 3
+  count: 4
   type: prep
 vorgehende:
   type: adj
 vorhanden:
+  count: 1
   type: adj
 vorstellen:
   count: 5
@@ -2886,8 +2893,11 @@ vw:
 wa:
   count: 2
   type: fw
-waehlst:
-  count: 4
+wachsen:
+  count: 1
+  genus: s
+  type: n
+waechst:
   type: vi
 wahnsinniger:
   count: 4
@@ -2900,38 +2910,14 @@ wahrzeichen:
 warst:
   count: 4
   type: vi
-washington:
-  type: n
-weiblich:
-  count: 1
-  type: adv
 weisst:
-  count: 2
   type: vi
-weiterbilden:
-  count: 1
-  type: vi
-weiterentwickelt:
-  count: 1
-  type: vi
-wir:
-  count: 1
+wenigsten:
+  type: adj
+wesen:
   type: n
-worden:
-  count: 1
-  type: vi
-wuetend:
-  count: 1
+wirksamste:
   type: adj
-wunderbar:
-  count: 1
-  type: adj
-zickig:
-  count: 1
-  type: adj
-zumindest:
-  count: 1
-  type: vi
-zynisch:
-  count: 1
-  type: adj
+wissenschaftliche:
+  count: 4
+  type: adv

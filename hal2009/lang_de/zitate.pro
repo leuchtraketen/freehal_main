@@ -129,7 +129,6 @@ sind <> natuerliche dinge <> unanstaendig <> nicht <>  <>  <> nothing <>  <>  <>
 beste ist <> die <> waerterin ruhe <> der;natur <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> der neid <> die aufrichtigste <> form;der;anerkennung <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> die verleumdung <> nothing <> die;tochter;des;neides <>  <>  <> nothing <>  <>  <>  <> (maybe)
-ist <> ein tag <> sagt der optimist <> morgen;auch <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist selbst <> jede partei <> nothing <> fuer;das;volk;da;und;nicht;fuer;sich <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> die partei <> nothing <> die;kampfgemeinschaft;von;intimfeinden <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> phantasie <> unser guter genius <>  <>  <>  <> nothing <>  <>  <>  <> (maybe)

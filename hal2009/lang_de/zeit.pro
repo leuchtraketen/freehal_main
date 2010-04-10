@@ -2,7 +2,6 @@
 = <> $$month$$ <> ein monat <>  <> (true)
 = <> $$year$$ <> ein jahr <>  <> (true)
 = <> $$time$$ <> uhr <>  <> (true)
-= <> $$wday$$ <> ein tag <>  <> (true)
 haben <> wir <> $$date$$ <>  <> (true)
 haben <> wir <> das datum $$date$$ <>  <> (true)
 haben <> wir <> $$month$$ <>  <> (true)

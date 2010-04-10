@@ -280973,4 +280973,251 @@ Dreiecken:
 Mandelbrot:
 genus  : s
   type: n
-    
+  Kollektive:
+ genus  : f
+  type: n
+allmaechtiges:
+  type: adj
+uebelriechende:
+  type: adj
+Magnetismus:
+genus  : m
+  type: n 
+Hexagon:
+genus  : s
+  type: n
+Rhomboid:
+genus  : m
+  type: n
+konvexes:
+  type: adj
+ebenes:
+  type: adj
+gegenueberliegende:
+  type: adj
+platonischen:
+  type: adj
+fraktal:
+  type: adj
+Chaostheorie:
+genus  : f
+  type: n
+komplexen:
+  type: adj
+bedeutende:
+  type: adj
+geometrischer:
+  type: adj
+Maschinenbauer:
+  type: n
+Planimetrie:
+genus  : f
+  type: n 
+glaube:
+  type: vi
+Atheist:
+genus  : m
+  type: n
+atheist:
+genus  : m
+  type: n
+hochentwickeltes:
+  type: adj
+schreibst:
+  type: vi
+Schaltjahr:
+genus  : s
+  type: n
+auszugleichen:
+  type: vi
+Normaljahr:
+genus  : s
+  type: n
+Schaltmonat:
+genus  : s
+  type: n
+planmaessigen:
+  type: adj
+Kalenderjahr:
+genus  : s
+  type: n
+Sonnenjahr:
+genus  : s
+  type: n
+jahres:
+  type: n
+abgeschlossener:
+  type: adj
+vierundzwanzigste:
+  type: adj
+babylonischen:
+  type: adj
+sechzigste:
+  type: adj
+weiviele:
+  type: fw
+Basiseinheit:
+genus  : f
+  type: n
+wuesste:
+  type: vi
+weiveile:
+  type: fw
+Langstreckendisziplin:
+genus  : f
+  type: n
+Stadionrunden:
+genus  : f
+  type: n
+zurueckzulegen:
+  type: adj
+Weiviele:
+  type: fw
+Wieviele:
+  type:fw
+Weiveile:
+  type: fw
+hass:
+  type: vi
+Spielkonsole:
+genus  : m
+  type: n
+ueberfordere:
+  type: vi
+Kilometern:
+  type: n
+Mitgruender:
+  type: n
+CEO:
+genus  : m
+  type: n
+Mantelgeschloss:
+genus  : s
+  type: n
+haerteren:
+  type: adj
+Winchester:
+genus  : f
+  type: n
+Krater:
+  type: n
+raumschiffe:
+genus  : f
+  type: n
+Mittagsschlaefchen:
+  type: n
+Breslau:
+  type: n
+bezeichnete:
+  type: vi
+Biotope:
+genus  : f
+  type: n
+Muendungen:
+genus  : f
+  type: n
+belassen:
+  type: vi
+einzigartige:
+  type: adj
+Administrator:
+genus  : m
+  type: n
+sysadmin:
+genus  : m
+  type: n
+Netzwerke:
+genus  : f
+  type: n
+Systeme:
+genus  : f
+  type: n
+zugrundeliegende:
+  type: adj
+Mechanismen:
+genus  : f
+  type: n
+sensible:
+  type: adj
+Personengruppe:
+genus  : f
+  type: n
+Lebenszeit:
+genus  : f
+  type: n
+Phantasievollen:
+  type: adj
+zuhoert:
+  type: vi
+unfreiwilliges:
+  type: adj
+Staune:
+  type: vi
+lese:
+  type: vi
+Brecheissen:
+  type: n
+Resultat:
+genus  : s
+  type: n
+Stolzes:
+  type: n
+Schmeichelei:
+genus  : f
+  type: n
+gescheiterte:
+  type: adj
+Schoepfung:
+genus  : f
+  type: n
+Unverwundbarkeit:
+genus  : f
+  type: n
+Verallgemeinerungen:
+genus  : f
+  type: n
+unbewusste:
+  type: adj
+tuechtigen:
+  type: adj
+genossener:
+  type: adj
+Haenden:
+  type: n
+Gesichter:
+genus  : f
+  type: n
+Lesebuecher:
+genus  : f
+  type: n
+Gleichmuetigkeit:
+genus  : f
+  type: n
+Hoffnungen:
+genus  : f
+  type: n
+Schlagworte:
+genus  : f
+  type: n
+Kommandos:
+genus  : f
+  type: n
+Kunstnatur:
+genus  : f
+  type: n
+Vorurteile:
+genus  : f
+  type: n
+unsichtbare:
+  type: adj
+Strohkoepfe:
+genus  : f
+  type: n
+unablaessig:
+  type: adj
+morden:
+  type: vi
+stiftet: 
+  type: vi
+ Herzen:
+  type: n         

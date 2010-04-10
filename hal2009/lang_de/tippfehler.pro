@@ -1687,3 +1687,5 @@
 >>> <> _zustaetzlich_ <> _zusaetzlich_ <>  <> (true)
 >>> <> _ druchmesser_ <> _ durchmesser_ <>  <> (true)
 >>> <> _arestoteles_ <> _aristoteles_ <>  <> (true)
+>>> <> _weiviele_ <> _wieviele_ <>  <> (true)
+>>> <> _weiveile_ <> _wieviele_ <>  <> (true)

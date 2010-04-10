@@ -124,7 +124,6 @@ macht <> nothing <> nothing <> der;teufel;nur;dorthin <> geduengt ist <> nothing
 macht <> der <> musik <> ton <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> nothing <> nothing <> der;weg;zur;hoelle;mit;guten;vorsaetzen;gepflastert <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> der wunsch <> vater <> des;gedanken <>  <>  <> nothing <>  <>  <>  <> (maybe)
-heiligt <> der zweck <> nothing <> mittel;die <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> nothing <> nothing <> des;einen;leid;des;anderen;freud' <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> die bank <> nothing <> des;teufels;liebstes;moebelstueck;lange <>  <>  <> nothing <>  <>  <>  <> (maybe)
 ist <> dicht <> daneben <> auch;vorbei <>  <>  <> nothing <>  <>  <>  <> (maybe)
