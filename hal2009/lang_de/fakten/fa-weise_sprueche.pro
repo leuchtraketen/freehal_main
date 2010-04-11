@@ -64,4 +64,3 @@
 = <> _zeit_haben_ <> _nicht_eine_zeitfrage_ <>  <> (maybe)
 = <> _zweifel_<_>_anfang_von_dem_glauben_ <>  <> (maybe)
 = <> _charakter_ <> _mut_zur_monotonie_ <>  <> (maybe)
-= <> _sprache_ <> _quelle_aller_missverstaendnisse_ <>  <> (maybe)

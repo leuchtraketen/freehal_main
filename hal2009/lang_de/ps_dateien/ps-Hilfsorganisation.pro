@@ -26,7 +26,7 @@
 = <> bundesverband rettungshunde <> hilfsorganisation <>  <> (maybe)
 = <> ccf kinderhilfswerk <> hilfsorganisation <>  <> (maybe)
 = <> corps saint lazare deutschland <> hilfsorganisation <>  <> (maybe)
-= <> deutsche gesellschaft zur_rettung_schiffbruechiger <> hilfsorganisation <>  <> (maybe)
+= <> _deutsche_gesellschaft_zur_rettung_schiffbruechiger_ <> hilfsorganisation <>  <> (maybe)
 = <> deutsche humanitaere stiftung <> hilfsorganisation <>  <> (maybe)
 = <> deutsche lebens-rettungs-gesellschaft <> hilfsorganisation <>  <> (maybe)
 = <> deutsches rotes kreuz <> hilfsorganisation <>  <> (maybe)
@@ -53,4 +53,3 @@
 = <> ecap <> hilfsorganisation <>  <> (maybe)
 = <> helvetas <> hilfsorganisation <>  <> (maybe)
 = <> pro infirmis <> hilfsorganisation <>  <> (maybe)
-= <> pro juventute <> hilfsorganisation <>  <> (maybe)

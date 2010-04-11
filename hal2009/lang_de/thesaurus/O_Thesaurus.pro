@@ -98,11 +98,11 @@
 = <> _oberirdisch_ <> _ueber_der_erdoberflaeche_ <> (maybe)
 = <> _ober_ <> _kellner_ <> (maybe)
 = <> _oberklasse_ <> _creme_de_la_creme_ <> (maybe)
-= <> _oberklasse_ <> _crème de la crème_ <> (maybe)
+= <> _oberklasse_ <> _crème_de_la_crème_ <> (maybe)
 = <> _oberklasse_ <> _establishment_ <> (maybe)
 = <> _oberklasse_ <> _hautevolee_ <> (maybe)
-= <> _oberklasse_ <> _high-society <> _ <> (maybe)
-= <> _oberklasse_ <> _jet-set <> _ <> (maybe)
+= <> _oberklasse_ <> _high-society_ <> _ <> (maybe)
+= <> _oberklasse_ <> _jet-set_ <> _ <> (maybe)
 = <> _oberklasse_ <> _oberschicht_ <> (maybe)
 = <> _oberkommandierender_ <> _feldherr_ <> (maybe)
 = <> _oberkommandierender_ <> _oberbefehlshaber_ <> (maybe)
@@ -132,11 +132,11 @@
 = <> _oberschicht_ <> _adel_ <> (maybe)
 = <> _oberschicht_ <> _aristokratie_ <> (maybe)
 = <> _oberschicht_ <> _creme_de_la_creme_ <> (maybe)
-= <> _oberschicht_ <> _crème de la crème_ <> (maybe)
+= <> _oberschicht_ <> _crème_de_la_crème_ <> (maybe)
 = <> _oberschicht_ <> _establishment_ <> (maybe)
 = <> _oberschicht_ <> _hautevolee_ <> (maybe)
-= <> _oberschicht_ <> _high-society <> _ <> (maybe)
-= <> _oberschicht_ <> _jet-set <> _ <> (maybe)
+= <> _oberschicht_ <> _high-society_ <> _ <> (maybe)
+= <> _oberschicht_ <> _jet-set_ <> _ <> (maybe)
 = <> _oberschicht_ <> _oberklasse_ <> (maybe)
 = <> _oberschlau_ <> _altklug_ <> (maybe)
 = <> _oberschlau_ <> _neunmalklug_ <> (maybe)
@@ -474,9 +474,9 @@
 = <> _oeffentliche_hand_ <> _staatssaeckel_ <> (maybe)
 = <> _oeffentliche_hand_ <> _verwaltung_ <> (maybe)
 = <> _oeffentliche_maennertoilette_ <> _pissoir_ <> (maybe)
-= <> _oeffentliche_meinung_ <> _das_oeffentliche_klima_ maybe
-= <> _oeffentliche_meinung_ <> _stimmung_in_der_oeffentlichkeit_ maybe
-= <> _oeffentliche_meinung_ <> _veroeffentlichte_meinung_ maybe
+= <> _oeffentliche_meinung_ <> _das_oeffentliche_klima_maybe_ 
+= <> _oeffentliche_meinung_ <> _stimmung_in_der_oeffentlichkeit_maybe_ 
+= <> _oeffentliche_meinung_ <> _veroeffentlichte_meinung_maybe_ 
 = <> _oeffentlicher_belang_ <> _oeffentliches_interesse_ <> (maybe)
 = <> _oeffentlicher_personennahverkehr_ <> _nahverkehr_ <> (maybe)
 = <> _oeffentlicher_personennahverkehr_ <> _oeffentliche_verkehrsmittel_ <> (maybe)
@@ -484,8 +484,8 @@
 = <> _oeffentliche_verkehrsmittel_ <> _nahverkehr_ <> (maybe)
 = <> _oeffentliche_verkehrsmittel_ <> _oeffentlicher_personennahverkehr_ <> (maybe)
 = <> _oeffentliche_verkehrsmittel_ <> _oepnv_ <> (maybe)
-= <> _oeffentlichkeit_ <> _allgemeinheit_ maybe
-= <> _oeffentlichkeit_ <> _gemeinwesen_ maybe
+= <> _oeffentlichkeit_ <> _allgemeinheit_maybe_ 
+= <> _oeffentlichkeit_ <> _gemeinwesen_maybe_ 
 = <> _oeffentlichkeitsarbeit_ <> _pr-arbeit_ <> (maybe)
 = <> _oeffentlichkeitsarbeit_ <> _pressearbeit_ <> (maybe)
 = <> _oeffentlichkeitsarbeit_ <> _pr_ <> (maybe)
@@ -612,7 +612,7 @@
 = <> _oese_ <> _streifen_ <> (maybe)
 = <> _oesophagitis_ <> _entzuendung_der_speiseroehre_ <> (maybe)
 = <> _oesterreicher_ <> _homo_austriacus_ <> (maybe)
-= <> _oesterreichisch-ungarische monarchie_ <> _donaumonarchie_ <> (maybe)
+= <> _oesterreichisch-ungarische_monarchie_ <> _donaumonarchie_ <> (maybe)
 = <> _ofen_ <> _backofen_ <> (maybe)
 = <> _ofen_ <> _roehre_ <> (maybe)
 = <> _ofenrohr_ <> _bazooka_ <> (maybe)
@@ -1306,7 +1306,7 @@
 = <> _opec_ <> _organization_of_the_petroleum_exporting_countries_ <> (maybe)
 = <> _opec_ <> _organisation_erdoel_exportierender_laender_ <> (maybe)
 = <> _op_ <> _eingriff_ <> (maybe)
-= <> _openoffice_ <> _openoffice <> org_ <> (maybe)
+= <> _openoffice_ <> _openoffice_ <> _org_ <> (maybe)
 = <> _open_source_ <> _offener_quelltext_ <> (maybe)
 = <> _open_source_ <> _quelloffenheit_ <> (maybe)
 = <> _operation_ <> _aktion_ <> (maybe)
@@ -1886,7 +1886,7 @@
 = <> _ort_ <> _fleck_ <> (maybe)
 = <> _ort_ <> _gegend_ <> (maybe)
 = <> _ort_ <> _gemarkung_ <> (maybe)
-= <> _ort_ <> _gemeinde_ maybe
+= <> _ort_ <> _gemeinde_maybe_ 
 = <> _orthodoxie_ <> _rechtglaeubigkeit_ <> (maybe)
 = <> _orthodox_ <> _pur_ <> (maybe)
 = <> _orthodox_ <> _rechtglaeubig_ <> (maybe)
@@ -1930,7 +1930,7 @@
 = <> _ortschaft_ <> _dorf_ <> (maybe)
 = <> _ortschaft_ <> _flecken_ <> (maybe)
 = <> _ortschaft_ <> _gemarkung_ <> (maybe)
-= <> _ortschaft_ <> _gemeinde_ maybe
+= <> _ortschaft_ <> _gemeinde_maybe_ 
 = <> _ortschaft_ <> _marktflecken_ <> (maybe)
 = <> _ortschaft_ <> _markt_ <> (maybe)
 = <> _ortschaft_ <> _ort_ <> (maybe)
@@ -1953,7 +1953,7 @@
 = <> _ort_ <> _stelle_ <> (maybe)
 = <> _ortsvorsteher_ <> _buergermeister_ <> (maybe)
 = <> _ortsvorsteher_ <> _dorfschulze_ <> (maybe)
-= <> _ortsvorsteher_ <> _gemeindevorsteher_ maybe
+= <> _ortsvorsteher_ <> _gemeindevorsteher_maybe_ 
 = <> _ortsvorsteher_ <> _rathauschef_ <> (maybe)
 = <> _ortsvorsteher_ <> _stadtammann_ <> (maybe)
 = <> _ortsvorsteher_ <> _stadtdirektor_ <> (maybe)
@@ -2014,7 +2014,7 @@
 = <> _oszillieren_ <> _schaukeln_ <> (maybe)
 = <> _oszillieren_ <> _schwingen_ <> (maybe)
 = <> _oszillieren_ <> _pendeln_ <> (maybe)
-= <> _oszilloskop_ <> _braun'sche roehre_ <> (maybe)
+= <> _oszilloskop_ <> _braun'sche_roehre_ <> (maybe)
 = <> _oszilloskop_ <> _braunsche_roehre_ <> (maybe)
 = <> _o-ton_ <> _original-ton_ <> (maybe)
 = <> _otto-kraftstoff_ <> _benzin_ <> (maybe)

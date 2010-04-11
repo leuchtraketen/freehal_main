@@ -2,7 +2,7 @@ atmen <> wale <> nothing <> mit den lungen <> (true)
 bedroht sind <> pandabaeren <> nothing <> vom aussterben <> (true)
 ernaehrt <> ein koalabaer <> sich <> von eukalyptus <> (true)
 ernaehrt <> nothing <> sich <> der geier  von aas <> (true)
-essen <> voegel <> fische <>  <>  <>  <>  <> nothing <> nothing <>
+essen <> voegel <> fische <>  <>  <>  <>  <> nothing <> nothing 
 fangen <> katzen <> maeuse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
 fliegen kann/can <> ein pinguin <> nothing <> nicht <> (true)
 fliegen kann/can <> ein vogel <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
@@ -53,7 +53,7 @@ ist <> die seeanemone <> ein tier <>  <> (true)
 ist <> die stute <> ein weibliches pferd <>  <> (true)
 ist <> ein albatros <> ein vogel <>  <> (true)
 ist <> ein albatros <> ein vogel <> aus der familie diomedeidae<> (true)
-ist <> ein baer <> ein gosses pelziges tier __ <> (zaehnen_und_klauen_);mit vielen muskeln <>  <>  <>  <> nothing <> nothing <> 
+ist <> ein baer <> _ein_gosses_pelziges_tier_ <> _(zaehnen_und_klauen_);mit_vielen_muskeln_ <>  <>  <>  <> nothing <> nothing <> 
 ist <> ein baer <> ein tier <>  <> (true)
 ist <> ein delphin <> ein saeugetier <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
 ist <> ein dinosaurier <> eine ausgestorbene riesenechse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
@@ -72,7 +72,7 @@ ist <> ein hahn <> ein maennliches huhn <>  <>  <>  <>  <> nothing <> nothing <>
 ist <> ein hengst <> ein maennliches pferd <>  <> (true)
 ist <> ein huchen <> ein donaulachs <>  <> (true)
 ist <> ein hund <> der beste freund <> von dem menschen <> (true)
-ist <> ein hund <> ein haustier das <> vom wolf abstammt <>  <>  <>  <> nothing <> nothing <>
+ist <> ein hund <> ein haustier das <> vom wolf abstammt <>  <>  <>  <> nothing <> nothing 
 ist <> ein hund <> nothing <> ein saeugetier <> (true)
 ist <> ein insektenforscher <> ein entomologe <>  <> (true)
 ist <> ein kojote <> ein praeriewolf <>  <> (true)
@@ -97,7 +97,7 @@ ist <> ein vogel <> ein tier <>  <>  <>  <> fliegen kann/can <> das <> nothing <
 ist <> ein vogel <> ein tier <> mit fluegeln <> (true)
 ist <> ein vogel <> ein tier <>das fliegt  <> (true)
 ist <> ein vogel <> ein wirbeltier <>  <> (true)
-ist <> ein wal <> nothing <> ein saeugetier <>  <>  <>  <> nothing <> nothing <>
+ist <> ein wal <> nothing <> ein saeugetier <>  <>  <>  <> nothing <> nothing 
 ist <> ein warzenbeisser <> eine heuschreckenart <>  <> (true)
 ist <> ein welpe <> ein junger hund <>  <> (true)
 ist <> eine fledermaus <> ein saeugetier <>  <> (true)
@@ -113,7 +113,7 @@ ist <> zoologie <> die lehre <> von den tieren <> (true)
 kann/can schwimmen <> ein fisch <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
 kann/can springen <> ein floh <> 35 zentimeter <> weit <> (true)
 kleine sind <> ponys <> pferde <>  <> (true)
-leben <> fische <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>
+leben <> fische <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing 
 leben <> woelfe <> nothing <> in rudeln <> (true)
 lebt <> der maulwurf <> nothing <> unter der erde <> (true)
 lebt <> ein delphin <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing <>  <> (true)
@@ -128,11 +128,11 @@ sind <> andalusier <> eine pferderasse <>  <> (true)
 sind <> bernhardiner <> eine hunderasse <>  <> (true)
 sind <> dachse <> lebende tiere <> im wald <>  <>  <>  <> nothing <> nothing <>  <> (true)
 sind <> dalmatiner <> eine hunderasse <>  <> (true)
-sind <> die fliegen <> eine unterordnung der zweifluegler <>  <>  <>  <>  <> nothing <> nothing <>
+sind <> die fliegen <> eine unterordnung der zweifluegler <>  <>  <>  <>  <> nothing <> nothing 
 sind <> eichhoernchen <> saeugetiere <> aus der ordnung der nagetiere <> (true)
 sind <> fische <> wirbeltiere <>  <> (true)
 sind <> giraffen <> pflanzenfresser <>  <> (true)
-sind <> hunde <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <>
+sind <> hunde <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing 
 sind <> katzen <> haustiere <> nothing <> nothing <> nothing <> nothing <> nothing <> nothing <> 
 sind <> meerkatzen <> affen <>  <> (true)
 sind <> reptilien <> wirbeltiere <>  <> (true)

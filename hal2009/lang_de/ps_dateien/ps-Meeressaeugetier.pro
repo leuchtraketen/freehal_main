@@ -17,7 +17,7 @@
 = <> buckelwal <> meeressaeugetier <>  <> (maybe)
 = <> burmeister-schweinswal <> meeressaeugetier <>  <> (maybe)
 = <> camperdown-wal <> meeressaeugetier <>  <> (maybe)
-= <> chinesischer _weisser_delphin_ <> meeressaeugetier <>  <> (maybe)
+= <> _chinesischer_weisser_delphin_ <> meeressaeugetier <>  <> (maybe)
 = <> clymene-delphin <> meeressaeugetier <>  <> (maybe)
 = <> commerson-delphin <> meeressaeugetier <>  <> (maybe)
 = <> cuvier-schnabelwal <> meeressaeugetier <>  <> (maybe)

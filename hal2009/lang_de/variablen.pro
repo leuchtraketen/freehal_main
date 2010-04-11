@@ -9,7 +9,7 @@ bin <> ich <> online <> lange <> bin f=> <> ich <> immer online <>  <>  <>  <> 1
 #Direkte Anwort mit mehreren Möglichkeiten
 frage <> ich <> nothing <>  <> bin f=> <> ich <> nothing <> neugierig <>  <>  ;; f=> will wissen <> ich es <> nothing <>  <>  <>  ;; bin f=> wissbegierig <> ich <> nothing <>  <>  <>  <> 100
 #Direkte Anwort auf gegessen
-gegessen hat <> a <> b <>  <> => geschmeckt hat <> b <> a <>  <>  <>  ;; => geschmeckt hat <> b <> a <>
+gegessen hat <> a <> b <>  <> => geschmeckt hat <> b <> a <>  <>  <>  ;; => geschmeckt hat <> b <> a 
 #Direkte Anwort auf gegessen
 gegessen hat <> a <> b <>  <> => geschmeckt hat <> b <> a <>  <> wie <>  <> (true)
 #Direkte Anwort auf "Geh ins Bett"
@@ -47,16 +47,16 @@ will <> a <> ficken <>  <> f=> dann <>geh doch <> nothing <> in ein bordell <>  
 #Direkte Anwort auf die Frage "Wo kommst du her"
 herkomme <> ich <> nothing <>  <> f=> kommst <> du <> nothing <> aus dem internet <>  <>  ;; f=> <> nothing <> nothing <> aus dem kopf von einem programmierer <>  <>  <> (true)
 #Variablendeklaration für das Datum
-ist <> _$$mday$$_$$month$$_$$year$$_  <>ein datum <>  <> (true)
+ist <> _$$mday$$_$$month$$_$$year$$_ <>ein datum <>  <> (true)
 #Ausgabe bei der Frage nach dem Datum
-haben <> wir <> heute den _$$mday$$_$$month$$_$$year$$_ <>  <> (true)
+haben <> wir <> _heute_den_$$mday$$_$$month$$_$$year$$_ <>  <> (true)
 haben <> wir <> _$$mday$$_$$month$$_$$year$$_ <>  <> (true)
 #Anwort auf die Eingabe aussieht mit Aussehen
 aussieht <> a <> nothing <>  <> hat <> a <> ein aussehen <>  <> wenn <>  <> (true)
 #Antwort auf die Eingabe aussehen mit aussieht
 hat <> a <> ein aussehen <>  <> aussieht <> a <> nothing <>  <> wenn <>  <> (true)
 #Variablendeklaration damit Freehal auf die Frage"Was hast du an?" antworten kann
-anhat <> a_b <> nothing <>  <> anhaben kann/can <> a_b <> nothing <>  <> wenn <>  <> (true)
+anhat <> _a_b_ <> nothing <>  <> anhaben kann/can <> _a_b_ <> nothing <>  <> wenn <>  <> (true)
 anhat <> a <> nothing <>  <> anhaben kann/can <> a <> nothing <>  <> wenn <>  <> (true)
 #Direkte Antwort auf die Frage "Warum heißt du nicht mehr Jeliza"#
 heisst <> a <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing <> immer mit eliza <>  <>  <> (true)
@@ -78,7 +78,7 @@ wohnt <> a <> nothing <> in b <> q=> wohnt <> a <> nothing <> in b;schon lange <
 #Wenn erfand in der Datenbank steht, wird auf eine Frage mit erfunden geantwortet#
 erfunden hat <> a <> b <>  <> erfand <> a <> b <>  <> wenn <>  <> (true)
 #Direkte Antwort auf die Frage "Was ist mit XY?" #
-ist <> nothing <> nothing <> mit a <> q=> sein soll <> nothing <>
+ist <> nothing <> nothing <> mit a <> q=> sein soll <> nothing 
 nothing <> mit a <> was <>  <> (true)
 #Geburtstagswunsch#
 hat <> a <> heute geburtstag <>  <> f=> <> nothing <> nothing <> alle gute <>  <>  <> (true)

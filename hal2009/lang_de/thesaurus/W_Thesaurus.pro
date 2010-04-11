@@ -1203,7 +1203,7 @@
 = <> _website_ <> _webseite_ <> (maybe)
 = <> _website_ <> _www-seite_ <> (maybe)
 = <> _web_ <> _www_ <> (maybe)
-= <> _wechsel_ <> abgang_ <> (maybe)
+= <> _wechsel_ <> _abgang_ <> (maybe)
 = <> _wechsel_ <> _austausch_ <> (maybe)
 = <> _wechselbestand_ <> _wechselportefeuille_ <> (maybe)
 = <> _wechselbeziehung_ <> _interaktion_ <> (maybe)
@@ -1282,7 +1282,7 @@
 = <> _wechselwirkung_ <> _ueberlagerung_ <> (maybe)
 = <> _wechselwirkung_ <> _ueberschneidung_ <> (maybe)
 = <> _wechselwirkung_ <> _wechselbeziehung_ <> (maybe)
-= <> _wechsel_ <> _zu- <> (maybe)
+= <> _wechsel_ <> _zu-_ <> (maybe)
 = <> _weckamin_ <> _anregendes_heilmittel_ <> (maybe)
 = <> _weckamin_ <> _anregungsmittel_ <> (maybe)
 = <> _weckamin_ <> _aufputschmittel_ <> (maybe)
@@ -1332,7 +1332,7 @@
 = <> _wegen_ <> _auf_grund_ <> (maybe)
 = <> _wegen_ <> _dank_ <> (maybe)
 = <> _wegen_ <> _in_sachen_ <> (maybe)
-= <> _wegen_mir_ <> _meinerseits_ maybe
+= <> _wegen_mir_ <> _meinerseits_maybe_ 
 = <> _wegen_mir_ <> _meinethalben_ <> (maybe)
 = <> _wegen_mir_ <> _meinetwegen_ <> (maybe)
 = <> _wegen_mir_ <> _meinetwillen_ <> (maybe)
@@ -1342,7 +1342,7 @@
 = <> _wegen_ <> _auf_basis_von_ <> (maybe)
 = <> _wegen_ <> _aufgrund_ <> (maybe)
 = <> _wegen_ <> _bezueglich_ <> (maybe)
-= <> _wegen_ <> _;_bzgl <> (maybe)
+= <> _wegen_ <> _;_bzgl_ <> (maybe)
 = <> _wegen_ <> _da_ja_ <> (maybe)
 = <> _wegen_ <> _da_ <> (maybe)
 = <> _wegen_ <> _da_obendrein_ <> (maybe)
@@ -2140,7 +2140,7 @@
 = <> _weite_verbreitung_ <> _praevalenz_ <> (maybe)
 = <> _weite_verbreitung_ <> _ueberhandnehmen_ <> (maybe)
 = <> _weitgehend_ <> _grossteils_ <> (maybe)
-= <> _weitgehend_ <> _im_allgemeinen_ maybe
+= <> _weitgehend_ <> _im_allgemeinen_maybe_ 
 = <> _weitgehend_ <> _im_grossen_und_ganzen_ <> (maybe)
 = <> _weitgehend_ <> _in_der_gesamtheit_ <> (maybe)
 = <> _weitgehend_ <> _in_der_regel_ <> (maybe)
@@ -2522,7 +2522,7 @@
 = <> _wenig_ <> _mickrig_ <> (maybe)
 = <> _wenig_ <> _winzig_ <> (maybe)
 = <> _wenig_ <> _schwach_ <> (maybe)
-= <> _wenigstens_ <> _min <> _ <> (maybe)
+= <> _wenigstens_ <> _min_ <> _ <> (maybe)
 = <> _wenigstens_ <> _immerhin_ <> (maybe)
 = <> _wenigstens_ <> _jedenfalls_ <> (maybe)
 = <> _wenigstens_ <> _mindestens_ <> (maybe)
@@ -2543,7 +2543,7 @@
 = <> _wenn_es_nach_mir_geht_ <> _meiner_meinung_nach_ <> (maybe)
 = <> _wenn_es_nach_mir_geht_ <> _von_mir_aus_ <> (maybe)
 = <> _wenn_es_nach_mir_geht_ <> _wie_ich_denke_ <> (maybe)
-= <> _wenn_ <> _fuer_den_fall <> (_dass_) <> (maybe)
+= <> _wenn_ <> _fuer_den_fall_ <> _(_dass_)_ <> (maybe)
 = <> _wenngleich_ <> _dennoch_ <> (maybe)
 = <> _wenngleich_ <> _dessen_ungeachtet_ <> (maybe)
 = <> _wenngleich_ <> _nichtsdestotrotz_ <> (maybe)
@@ -3030,7 +3030,7 @@
 = <> _wetzen_ <> _rasen_ <> (maybe)
 = <> _wetzen_ <> _schnell_laufen_ <> (maybe)
 = <> _wg_ <> _kommune_ <> (maybe)
-= <> _wg_ <> _wohngemeinschaft_ maybe
+= <> _wg_ <> _wohngemeinschaft_maybe_ 
 = <> _wg_ <> _wohngruppe_ <> (maybe)
 = <> _whirlpool_ <> _jacuzzi_ <> (maybe)
 = <> _whirlpool_ <> _sprudelbad_ <> (maybe)
@@ -3227,7 +3227,7 @@
 = <> _wider_ <> _entgegen_ <> (maybe)
 = <> _wider_ <> _gegen_ <> (maybe)
 = <> _wider_ <> _versus_ <> (maybe)
-= <> _wider_ <> _;_vs <> (maybe)
+= <> _wider_ <> _;_vs_ <> (maybe)
 = <> _widerpart_ <> _antagonist_ <> (maybe)
 = <> _widerpart_ <> _feind_ <> (maybe)
 = <> _widerpart_ <> _gegenspieler_ <> (maybe)
@@ -3993,7 +3993,7 @@
 = <> _wilddieb_ <> _wilderer_ <> (maybe)
 = <> _wilde_jahre_ <> _jugend_ <> (maybe)
 = <> _wilde_jahre_ <> _junge_jahre_ <> (maybe)
-= <> _wilde_jahre_ <> _sturm-und-drang zeit_ <> (maybe)
+= <> _wilde_jahre_ <> _sturm-und-drang_zeit_ <> (maybe)
 = <> _wilder_knoblauch_ <> _baerlauch_ <> (maybe)
 = <> _wilder_knoblauch_ <> _hexenzwiebel_ <> (maybe)
 = <> _wilder_knoblauch_ <> _waldknoblauch_ <> (maybe)
@@ -4444,7 +4444,7 @@
 = <> _wir_sehen_uns_ <> _bis_dann_ <> (maybe)
 = <> _wir_sehen_uns_ <> _bye_ <> (maybe)
 = <> _wir_sehen_uns_ <> _ciao_ <> (maybe)
-= <> _wir_sehen_uns_ <> _mach's gut_ <> (maybe)
+= <> _wir_sehen_uns_ <> _mach's_gut_ <> (maybe)
 = <> _wir_sehen_uns_ <> _tschoe_ <> (maybe)
 = <> _wir_sehen_uns_ <> _tschuess_ <> (maybe)
 = <> _wir_sehen_uns_ <> _salue_ <> (maybe)
@@ -4795,10 +4795,10 @@
 = <> _wohlbekannt_ <> _nachschlagbar_ <> (maybe)
 = <> _wohlbekannt_ <> _offiziell_ <> (maybe)
 = <> _wohlbekannt_ <> _wohldefiniert_ <> (maybe)
-= <> _wohl bekomm's_ <> _zum_wohl_ <> (maybe)
-= <> _wohl bekomm's_ <> _proesterchen_ <> (maybe)
-= <> _wohl bekomm's_ <> _prosit_ <> (maybe)
-= <> _wohl bekomm's_ <> _prost_ <> (maybe)
+= <> _wohl_bekomm's_ <> _zum_wohl_ <> (maybe)
+= <> _wohl_bekomm's_ <> _proesterchen_ <> (maybe)
+= <> _wohl_bekomm's_ <> _prosit_ <> (maybe)
+= <> _wohl_bekomm's_ <> _prost_ <> (maybe)
 = <> _wohlbeleibt_ <> _fett_ <> (maybe)
 = <> _wohlbeleibt_ <> _beleibt_ <> (maybe)
 = <> _wohlbeleibt_ <> _dick_ <> (maybe)
@@ -4927,7 +4927,7 @@
 = <> _wohlproportioniert_ <> _wohlgeformt_ <> (maybe)
 = <> _wohlriechend_ <> _duftend_ <> (maybe)
 = <> _wohlriechend_ <> _wohlduftend_ <> (maybe)
-= <> _wohlschmeckend_ <> hoch-genuss_ <> _kulinarischer <> (maybe)
+= <> _wohlschmeckend_ <> _hoch-genuss_ <> _kulinarischer_ <> (maybe)
 = <> _wohlschmeckend_ <> _appetitlich_ <> (maybe)
 = <> _wohlschmeckend_ <> _delikat_ <> (maybe)
 = <> _wohlschmeckend_ <> _delizioes_ <> (maybe)
@@ -5021,12 +5021,12 @@
 = <> _wohngegend_ <> _wohnbezirk_ <> (maybe)
 = <> _wohngegend_ <> _wohngebiet_ <> (maybe)
 = <> _wohngegend_ <> _wohnviertel_ <> (maybe)
-= <> _wohngemeinschaft_ <> _kommune_ maybe
-= <> _wohngemeinschaft_ <> _wg_ maybe
-= <> _wohngemeinschaft_ <> _wohngruppe_ maybe
+= <> _wohngemeinschaft_ <> _kommune_maybe_ 
+= <> _wohngemeinschaft_ <> _wg_maybe_ 
+= <> _wohngemeinschaft_ <> _wohngruppe_maybe_ 
 = <> _wohngruppe_ <> _kommune_ <> (maybe)
 = <> _wohngruppe_ <> _wg_ <> (maybe)
-= <> _wohngruppe_ <> _wohngemeinschaft_ maybe
+= <> _wohngruppe_ <> _wohngemeinschaft_maybe_ 
 = <> _wohnhaft_ <> _ansaessig_ <> (maybe)
 = <> _wohnhaft_ <> _beheimatet_ <> (maybe)
 = <> _wohnhaft_ <> _ortsansaessig_ <> (maybe)
@@ -5231,7 +5231,7 @@
 = <> _wort_fuer_wort_ <> _wortwoertlich_ <> (maybe)
 = <> _wortgefecht_ <> _auseinandersetzung_ <> (maybe)
 = <> _wortgefecht_ <> _disput_ <> (maybe)
-= <> _wortgefecht_ <> _meinungsverschiedenheit_ maybe
+= <> _wortgefecht_ <> _meinungsverschiedenheit_maybe_ 
 = <> _wortgefecht_ <> _streitigkeit_ <> (maybe)
 = <> _wortgefecht_ <> _streit_ <> (maybe)
 = <> _wortgefecht_ <> _zank_ <> (maybe)

@@ -12,7 +12,7 @@
 = <> sexuelle noetigung <> straftat <>  <> (maybe)
 = <> ueble nachrede <> straftat <>  <> (maybe)
 = <> unterlassene hilfeleistung <> straftat <>  <> (maybe)
-= <> verleitung zur_falschaussage <> straftat <>  <> (maybe)
+= <> _verleitung_zur_falschaussage_ <> straftat <>  <> (maybe)
 = <> vortaeuschen von einer straftat <>  straftat <> <> (maybe)
 = <> abgeordnetenbestechung <> straftat <>  <> (maybe)
 = <> amtsanmassung <> straftat <>  <> (maybe)

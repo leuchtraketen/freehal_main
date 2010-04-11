@@ -290,7 +290,7 @@ deutschland:
   count: 5
   type: n
 dezentral:
-  count: 5
+  count: 6
   type: adj
 dich:
   count: 1
@@ -487,7 +487,7 @@ entscheidest:
   count: 4
   type: vi
 entschieden:
-  count: 5
+  count: 6
   genus: s
   type: n
 entsprach:
@@ -1248,7 +1248,7 @@ innerhalb:
   count: 1
   type: prep
 ins:
-  count: 79
+  count: 80
   type: n
 insbesondere:
   count: 1
@@ -3028,4 +3028,10 @@ besiegen:
 anstacheln:
   count: 4
   genus: s
+  type: n
+Marktwirtschaft:
+  genus: f
+  type: n
+Grundfragen:
+  genus: f
   type: n
