@@ -134,7 +134,7 @@
 = <> _bestechlich_ <> charaktereigenschaft <>  <> (maybe)
 = <> _bestialisch_ <> charaktereigenschaft <>  <> (maybe)
 = <> _bestimmend_ <> charaktereigenschaft <>  <> (maybe)
-= <> _bestimmt_ <> charaktereigenschaft <>  <> (maybe)
+= <> _bestimmt_sein_ <> charaktereigenschaft <>  <> (maybe)
 = <> _betoerend_ <> charaktereigenschaft <>  <> (maybe)
 = <> _betruegerisch_ <> charaktereigenschaft <>  <> (maybe)
 = <> _bewusst_ <> charaktereigenschaft <>  <> (maybe)

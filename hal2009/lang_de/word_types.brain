@@ -281220,4 +281220,109 @@ morden:
 stiftet: 
   type: vi
  Herzen:
-  type: n         
+  type: n
+Unmenschen:
+genus  : f
+  type: n
+Untiere:
+genus  : f
+  type: n
+wirksamste:
+  type: adj
+stiftet:
+  type: vi
+Weissheit:
+genus  : f
+  type: n
+thematisiert:
+  type: vi
+Wissenssoziologie:
+genus  : f
+  type: n
+Persoenlichkeitspsychologie:
+genus  : f
+  type: n
+Mythenforschung:
+genus  : f
+  type: n
+kuenstlerischen:
+  type: adj
+Gestaltungen:
+genus  : f
+  type: n
+Gefaengnissen:
+  type: n
+unglueckliche:
+  type: adj
+Studioalbum:
+genus  : s
+  type: n
+belgischen:
+  type: adj
+Missverstaendnisse:
+genus  : f
+  type: n
+Schwerste:
+  type: adj
+Abwesende:
+genus  : m
+  type: n
+gerolltes:
+  type: adj
+Tonerzeuger:
+  type: n
+Resonanzraumes:
+  type: n
+penisfoermiges:
+  type: adj
+geschlossenes:
+  type: adj
+beheiztes:
+  type: adj
+Wasserdampf:
+genus  : m
+  type: n
+hoeherem:
+  type: adj
+atmosphaerischem:
+  type: adj
+Heisswasser:
+genus  : s
+  type: n
+Betriebszwecke:
+genus  : f
+  type: n
+Atomreaktor:
+genus  : m
+  type: n
+makroskopischen:
+  type: adj
+Fusionsreaktor:
+genus  : m
+  type: n
+Druecke:
+  type: vi
+aufwaendiger:
+  type: adj
+Techniken:
+genus  : f
+  type: n
+abkopfen:
+  type: vi
+abseitsstehen:
+  type: vi
+verarmen:
+  type: vi
+Schwaenzen:
+  type: n
+unleserlich:
+  type: adj
+betrinken:
+  type: vi
+lynchen:
+  type: vi
+Tatarennachricht:
+genus  : f
+  type: n
+hinausschmeissen:
+  type: vi           
