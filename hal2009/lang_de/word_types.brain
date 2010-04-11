@@ -281325,4 +281325,57 @@ Tatarennachricht:
 genus  : f
   type: n
 hinausschmeissen:
-  type: vi           
+  type: vi
+Biomuell:
+genus  : m
+  type: n
+Blumenpflege:
+genus  : f
+  type: n
+schrubben:
+  type: vi
+sortieren:
+  type: vi
+Getraenke:
+genus  : f
+  type: n
+Gluehbirnen:
+genus  : f
+  type: n
+Hausapotheke:
+genus  : f
+  type: n
+zurechtlegen:
+  type: vi
+Muell:
+genus  : m
+  type: n
+hinausbringen:
+  type: vi
+Socken:
+genus  : f
+  type: n
+Staub:
+genus  : m
+  type: n
+Tischwaesche:
+genus  : f
+  type: n
+Ungeziefer:
+genus  : s
+  type: n
+bekaempfen:
+  type: vi
+Vorratshaltung:
+genus  : f
+  type: n
+verraeumen:
+  type: vi
+Waschmachine:
+genus  : f
+  type: n
+befuellen:
+  type: vi
+WC:
+genus  : s
+  type: n             

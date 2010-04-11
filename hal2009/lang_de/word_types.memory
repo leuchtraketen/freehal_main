@@ -118,7 +118,7 @@ bezeichnung:
 beziehe:
   type: vi
 beziehen:
-  count: 1
+  count: 3
   genus: s
   type: n
 beziehst:
@@ -743,7 +743,7 @@ fuehlendes:
   count: 1
   type: adj
 fuehren:
-  count: 6
+  count: 8
   genus: s
   type: n
 fuehrt:
@@ -1344,7 +1344,7 @@ kind:
 kitt:
   type: n
 kleider:
-  count: 5
+  count: 7
   genus: f
   type: n
 kleiner:
@@ -1372,6 +1372,7 @@ knollengemuese:
   genus: s
   type: n
 kochen:
+  count: 2
   genus: s
   type: n
 kochgeraet:
@@ -1958,6 +1959,7 @@ operator:
   genus: m
   type: n
 ordnung:
+  count: 2
   genus: f
   type: n
 osten:
@@ -2978,7 +2980,7 @@ aufgeben:
   genus: s
   type: n
 entwischen:
-  count: 6
+  count: 1
   genus: s
   type: n
 Lektion:
@@ -3035,3 +3037,334 @@ Marktwirtschaft:
 Grundfragen:
   genus: f
   type: n
+Abfall:
+  count: 2
+  genus: m
+  type: n
+entsorgen:
+  count: 2
+  genus: s
+  type: n
+Hausarbeit:
+  count: 2
+  genus: f
+  type: n
+trennen:
+  count: 1
+  genus: s
+  type: n
+wegbringen:
+  count: 1
+  genus: s
+  type: n
+Altglas:
+  count: 1
+  genus: m
+  type: n
+Backofen:
+  count: 2
+  genus: m
+  type: n
+putzen:
+  count: 2
+  genus: s
+  type: n
+reinigen:
+  count: 2
+  type: adj
+Bad:
+  count: 2
+  type: n
+Badewanne:
+  count: 2
+  genus: f
+  type: n
+Besteck:
+  count: 1
+  genus: s
+  type: n
+wischen:
+  genus: s
+  type: n
+Betten:
+  count: 2
+  type: vi
+ueberziehen:
+  count: 1
+  genus: s
+  type: n
+Bettwaesche:
+  count: 2
+  genus: f
+  type: n
+buegeln:
+  count: 2
+  genus: s
+  type: n
+Blumen:
+  count: 1
+  genus: f
+  type: n
+giessen:
+  count: 2
+  type: n
+Boden:
+  count: 2
+  genus: m
+  type: n
+fegen:
+  count: 2
+  type: vi
+saugen:
+  count: 2
+  genus: s
+  type: n
+Dusche:
+  count: 1
+  genus: f
+  type: n
+zubereiten:
+  count: 1
+  genus: s
+  type: n
+Fenster:
+  count: 1
+  genus: s
+  type: n
+Gardinen:
+  count: 1
+  genus: f
+  type: n
+Gegenstaende:
+  count: 2
+  genus: f
+  type: n
+aussortieren:
+  count: 1
+  type: vi
+sortieren:
+  type: vi
+Geschirr:
+  count: 2
+  genus: s
+  type: n
+spuelen:
+  count: 1
+  genus: s
+  type: n
+wegraeumen:
+  count: 1
+  genus: s
+  type: n
+Geschirrspueler:
+  count: 2
+  genus: m
+  type: n
+ausraeumen:
+  count: 2
+  genus: s
+  type: n
+einraeumen:
+  count: 2
+  genus: s
+  type: n
+Geschirrspuelmaschine:
+  count: 1
+  type: n
+bedienen:
+  count: 2
+  genus: s
+  type: n
+auftischen:
+  count: 2
+  genus: s
+  type: n
+auswechseln:
+  count: 1
+  type: vi
+Herd:
+  count: 2
+  genus: m
+  type: n
+Kaffeemaschine:
+  count: 1
+  genus: f
+  type: n
+entkalken:
+  count: 2
+  type: vi
+Kleider:
+  count: 2
+  genus: f
+  type: n
+Kleidung:
+  count: 2
+  genus: f
+  type: n
+flicken:
+  count: 2
+  type: vi
+zusammenlegen:
+  count: 2
+  type: vi
+Kueche:
+  count: 2
+  genus: f
+  type: n
+Kuchen:
+  count: 1
+  genus: m
+  type: n
+backen:
+  count: 2
+  genus: f
+  type: n
+Kuechengeraete:
+  count: 1
+  genus: f
+  type: n
+Kuehlschrank:
+  count: 1
+  genus: m
+  type: n
+Lebensmittel:
+  count: 2
+  type: n
+einlagern:
+  count: 1
+  genus: s
+  type: n
+Mikrowelle:
+  count: 2
+  genus: f
+  type: n
+Moebel:
+  count: 2
+  genus: f
+  type: n
+abstauben:
+  count: 2
+  type: vi
+pflegen:
+  count: 2
+  genus: s
+  type: n
+Moebelstuecke:
+  count: 1
+  genus: f
+  type: n
+Muelleimer:
+  count: 1
+  genus: m
+  type: n
+Ordnung:
+  count: 1
+  genus: f
+  type: n
+Pflanzen:
+  count: 2
+  type: vi
+duengen:
+  count: 1
+  genus: s
+  type: n
+Raeume:
+  count: 2
+  genus: f
+  type: n
+aufraeumen:
+  count: 2
+  genus: s
+  type: n
+entruempeln:
+  count: 1
+  genus: s
+  type: n
+Schuhe:
+  count: 2
+  genus: f
+  type: n
+stopfen:
+  count: 2
+  genus: s
+  type: n
+Speisen:
+  count: 1
+  type: vi
+Spiegel:
+  count: 1
+  genus: m
+  type: n
+abwischen:
+  count: 2
+  type: vi
+Tafel:
+  count: 1
+  genus: f
+  type: n
+herrichten:
+  count: 1
+  type: vi
+Toilette:
+  count: 2
+  genus: f
+  type: n
+Waschbecken:
+  count: 1
+  genus: s
+  type: n
+Waesche:
+  count: 2
+  genus: f
+  type: n
+abnehmen:
+  count: 1
+  genus: s
+  type: n
+aufhaengen:
+  count: 1
+  genus: s
+  type: n
+einordnen:
+  count: 1
+  type: n
+Waeschetrockner:
+  count: 2
+  genus: m
+  type: n
+Waschmaschine:
+  count: 1
+  genus: f
+  type: n
+Zimmer:
+  count: 2
+  genus: f
+  type: n
+doerren:
+  count: 1
+  type: vi
+duensten:
+  count: 1
+  type: adj
+einkellern:
+  count: 1
+  type: vi
+einkochen:
+  count: 1
+  genus: s
+  type: n
+einwecken:
+  count: 1
+  genus: s
+  type: n
+grillen:
+  count: 1
+  genus: s
+  type: n
+kehren:
+  count: 1
+  genus: s
+  type: n
+polieren:
+  count: 1
+  type: vi
