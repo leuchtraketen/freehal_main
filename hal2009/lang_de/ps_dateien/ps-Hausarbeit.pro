@@ -119,4 +119,3 @@
 = <> _schrubben_ <> hausarbeit <>  <> (maybe)
 = <> _stopfen_ <> hausarbeit <>  <> (maybe)
 = <> _waschen_ <> hausarbeit <>  <> (maybe)
-= <> _wischen_ <> hausarbeit <>  <> (maybe)

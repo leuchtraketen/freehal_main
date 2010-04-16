@@ -224,9 +224,9 @@ himmelsobjekt:
   genus: s
   type: n
 abgesucht:
-  type: adj
+  type: vi
 abgekupfert:
-  type: adj
+  type: vi
 Dampfbuegeleisen:
   genus  : s
   type: n
@@ -281378,4 +281378,227 @@ befuellen:
   type: vi
 WC:
 genus  : s
-  type: n             
+  type: n 
+Yin:
+genus  : s
+  type: n
+Yang:
+genus  : s
+  type: n
+Polaritaet:
+genus  : f
+  type: n
+Disziplin:
+genus  : f
+  type: n  
+Selbstzerstoerung:
+genus  : f
+  type: n
+Rachsucht:
+genus  : f
+  type: n
+Vergebung:
+genus  : f
+  type: n 
+Raucher:
+  type: n
+Nichtraucher:
+  type: n     
+unineressant:
+  type: adj 
+erschienene:
+  type: adj
+Szenen:
+genus  : f
+  type: n
+Vierlinger:
+  type: n
+Nationalsozialismus:
+genus  : m
+  type: n
+zeitliches:
+  type: adj 
+anhalt:
+  type: n
+Ritterburg:
+genus  : f
+  type: n
+epochenuebergreifenden:
+  type: adj
+geschlossenen:
+  type: adj
+bewohnbaren:
+  type: adj
+Wehrbau:
+genus  : m
+  type: n
+abaenderbar:
+  type: adj
+unabaenderbar:
+  type: adj
+abblenden:
+  type: vi
+aufsperren:
+  type: vi
+absperren:
+  type: vi
+wiederaufnehmen:
+  type: vi
+abdecken:
+  type: vi
+Morgenandacht:
+genus  : f
+  type: n
+Abendausgabe:
+genus  : f
+  type: n
+Morgenausgabe:
+genus  : f
+  type: n
+Abenddaemmerung:
+genus  : f
+  type: n
+Abendhimmel:
+genus  : m
+  type: n
+Morgenhimmel:
+genus  : m
+  type: n
+abendlich:
+  type: adj
+morgendlich:
+  type: adj
+Abendschoppen:
+genus  : m
+  type: n
+Abendstern:
+genus  : m
+  type: n
+Abendsonne:
+genus  : f
+  type: n
+Abendstunde:
+genus  : f
+  type: n
+Morgenstunde:
+genus  : f
+  type: n
+zuerkennen:
+  type: vi
+Abfahrt:
+genus  : f
+  type: n
+Abflug:
+genus  : m
+  type: n  
+abfallend:
+  type: adj
+ansteigend:
+  type: adj
+zufliessen:
+  type: vi
+Zufluss:
+genus  : m
+  type: n
+abgabenfrei:
+  type: adj
+abgabenpflichtig:
+  type: adj 
+abschwellen:
+  type: vi 
+angewoehnen:
+  type: vi
+abheuern:
+  type: vi
+aufklappen:
+  type: vi
+zuklappen:
+  type: vi
+abketten:
+  type: vi
+ankuppeln:
+  type: vi
+ablehen:
+  type: vi  
+Annahme:
+genus  : f
+  type: n
+Zuluft:
+genus  : f
+  type: n 
+aufschliessen:
+  type: vi
+wegsehen:
+  type: vi
+heteosexuell:
+  type: adj  
+ungeprueft:
+  type: adj
+Stromfluss:
+genus  : m
+  type: n
+Kurzschluss:
+genus  : m
+  type: n
+Sommerzeit:
+genus  : f
+  type: n   
+entspannt:
+  type: adj
+unbelastet:
+  type: adj
+beruhhigt:
+  type: adj
+unberuhigt:
+  type: adj 
+Desinteresse:
+genus  : s
+  type: n 
+wertlos:
+  type: adj
+unwichtig:
+  type: adj 
+uebererregt:
+  type: adj   
+demuetigt:
+  type: vi   
+redsam:
+  type: adj
+unsymphatisch:
+  type: adj 
+ungeeignet:
+  type: adj
+Macrokosmos:
+genus  : m
+  type: n
+Microkosmos:
+genus  : m
+  type: n  
+geraeumig:
+  type: adj  
+truebe:
+  type: adj  
+spannend:
+  type: adj
+einfarbig:
+  type: adj 
+rueckbilden:
+  type: vi
+bemannt:
+  type: adj
+unbemannt:
+  type: adj 
+befreundet:
+  type: adj
+unvorbereitet:
+  type: adj  
+inkompetent:
+  type: adj
+ueberzeugt:
+  type: vi 
+undiplomatisch:
+  type: adj
+indiskret:
+  type: adj
+wirksam:
+  type: adj                

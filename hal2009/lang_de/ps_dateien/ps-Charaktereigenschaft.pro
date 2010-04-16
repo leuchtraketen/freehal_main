@@ -241,7 +241,6 @@
 = <> _eifersuechtig_ <> charaktereigenschaft <>  <> (maybe)
 = <> _eifrig_ <> charaktereigenschaft <>  <> (maybe)
 = <> _eigen_ <> charaktereigenschaft <>  <> (maybe)
-= <> _eigenartig_ <> charaktereigenschaft <>  <> (maybe)
 = <> _eigenbroedlerisch_ <> charaktereigenschaft <>  <> (maybe)
 = <> _eigennuetzig_ <> charaktereigenschaft <>  <> (maybe)
 = <> _eigensinnig_ <> charaktereigenschaft <>  <> (maybe)
