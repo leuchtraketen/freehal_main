@@ -66,7 +66,6 @@ interessiert uninteressiert <>  <>  <> (oppoiste) <> (maybe)
 = <> _bach_ <> _fliessendes_gewaesser_ <>  <> (maybe)
 = <> _fluss_ <> _fliessendes_gewaesser_ <>  <> (maybe)
 = <> _tuempel_ <> _stehendes_gewaesser_ <>  <> (maybe)
-
 = <> _teich_ <> _stehendes_gewaesser_ <>  <> (maybe)
 = <> _weiher_ <> _stehendes_gewaesser_ <>  <> (maybe)
 = <> _see_ <> _stehendes_gewaesser_ <>  <> (maybe)

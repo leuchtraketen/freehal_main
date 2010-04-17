@@ -281601,4 +281601,481 @@ undiplomatisch:
 indiskret:
   type: adj
 wirksam:
-  type: adj                
+  type: adj
+leidenschaftslos:
+  type: adj
+unloyal:
+  type: adj 
+irrational:
+  type: adj 
+grobschlaechtig:
+  type: adj 
+unverlaesslich:
+  type: adj
+unvernuenftig:
+  type: adj 
+Borsody:
+  type: n
+Shiva:
+  type: n
+Agata:
+  type: n
+Buzek:
+  type: n
+Szyszkowitz:
+  type: n
+Kamp:
+  type: n
+Neldel:
+  type: n
+Dwyer:
+  type: n
+Sawatzki:
+  type: n
+Willson:
+  type: n
+Knauer:
+  type: n
+Engelke:
+  type: n
+Sevenich:
+  type: n
+Brueggemann:
+  type: n
+Loos:
+  type: n
+Blendl:
+  type: n
+Ann-Kathrin:
+  type: n
+Kramer:
+  type: n
+Araba:
+  type: n
+Bernadette:
+  type: n
+Heerwagen:
+  type: n
+Zimmermanne:
+  type: n
+Minichmayr:
+  type: n
+Camilla:
+  type: n
+Renschke:
+  type: n
+Caroline:
+  type: n
+Chiara:
+  type: n
+Schora:
+  type: n
+Christiani:
+  type: n
+Oesterlein:
+  type: n
+Urspruch:
+  type: n
+Schmutzler:
+  type: n
+Harfouch:
+  type: n
+Amft:
+  type: n
+Schretzmayer:
+  type: n
+Hartinger:
+  type: n
+Erdogan:
+  type: n
+Atalay:
+  type: n
+Zimmering:
+  type: n
+Habermann:
+  type: n
+Hassmann:
+  type: n
+Felicitas:
+  type: n
+Lahme:
+  type: n
+Danie:
+  type: n
+Potente:
+  type: n
+Matthus:
+  type: n
+Kempter:
+  type: n
+Weinspach:
+  type: n
+Geno:
+  type: n
+Lechner:
+  type: n
+Zach:
+  type: n
+Gruschenka:
+  type: n
+Stevens:
+  type: n
+Hannah:
+  type: n
+Herzsprung:
+  type: n
+Wolharn:
+  type: n
+Makatsch:
+  type: n
+Hendrikje:
+  type: n
+Fitz:
+  type: n
+Idil:
+  type: n
+Uener:
+  type: n
+Imogen:
+  type: n
+Kogge:
+  type: n
+Westphal:
+  type: n
+Schoenherr:
+  type: n
+Pallaske:
+  type: n
+Schwiers:
+  type: n
+Tabatabai:
+  type: n
+Elvers-Elbertzhagen:
+  type: n
+Juergens:
+  type: n
+Ginkel:
+  type: n
+Gastdorf:
+  type: n
+Wokalek:
+  type: n
+Preuss:
+  type: n
+Ronstedt:
+  type: n
+Brendler:
+  type: n
+Hummer:
+  type: n
+Jentsch:
+  type: n
+Stinshoff:
+  type: n
+Koehler:
+  type: n
+Eichhorn:
+  type: n
+Herfurth:
+  type: n
+Boehm:
+  type: n
+Schuettler:
+  type: n
+Wackernagel:
+  type: n
+Bruegger:
+  type: n
+Katy:
+  type: n
+Karrenbauer:
+  type: n
+Moeller:
+  type: n
+Block:
+  type: n
+Kristina:
+  type: n
+Osswald:
+  type: n
+Tonke:
+  type: n
+Beyerling:
+  type: n
+Forestieri:
+  type: n
+Martinek:
+  type: n
+Lucie:
+  type: n
+Hollmann:
+  type: n
+Manon:
+  type: n
+Strache:
+  type: n
+Lindenmeyer:
+  type: n
+Maren:
+  type: n
+Eggert:
+  type: n
+Baeumer:
+  type: n
+Zielcke:
+  type: n
+Maruschka:
+  type: n
+Detmers:
+  type: n
+Mavie:
+  type: n
+Hoerbiger:
+  type: n
+Schlueter:
+  type: n
+Foroutan:
+  type: n
+Meriam:
+  type: n
+Abbas:
+  type: n
+Schaffrath:
+  type: n
+Leonhardt:
+  type: n
+Uhl:
+  type: n
+Natalia:
+  type: n
+Avelon:
+  type: n
+Woerner:
+  type: n
+Hockwin:
+  type: n
+Beutler:
+  type: n
+Nicolette:
+  type: n
+Krebitz:
+  type: n
+Hoss:
+  type: n
+Kronjaeger:
+  type: n
+Kunzendorf:
+  type: n
+Tschirner:
+  type: n
+Nursel:
+  type: n
+Koese:
+  type: n
+Riemann:
+  type: n
+Kleinert:
+  type: n
+Grauwiller:
+  type: n
+Schmid:
+  type: n
+Postel:
+  type: n
+Timoteo:
+  type: n
+Safia:
+  type: n
+Monney:
+  type: n
+Hueller:
+  type: n
+Vester:
+  type: n
+Kekilli:
+  type: n
+Kirchberger:
+  type: n
+Rogall:
+  type: n
+Rois:
+  type: n
+Schuett:
+  type: n
+Gossger:
+  type: n
+Susan:
+  type: n
+Hoecke:
+  type: n
+Bormann:
+  type: n
+Suzan:
+  type: n
+Anbeh:
+  type: n
+Svea:
+  type: n
+Wedhorn:
+  type: n
+Teresa:
+  type: n
+Weissbach:
+  type: n
+Huebchen:
+  type: n
+Scholze:
+  type: n
+Ruland:
+  type: n
+Tschulpan:
+  type: n
+Chamatowa:
+  type: n
+Folkerts:
+  type: n
+Prelle:
+  type: n
+Feldbusch:
+  type: n
+Hegenbarth:
+  type: n
+Berner:
+  type: n
+Jens-Uwe:
+  type: n
+Bogadtke:
+  type: n
+Freihof:
+  type: n
+Fritzsche:
+  type: n
+Gorr:
+  type: n
+Sylvester:
+  type: n
+Groth:
+  type: n
+Mirko:
+  type: n
+Haninger:
+  type: n
+Hennicke:
+  type: n
+Hoppe:
+  type: n
+Jellinek:
+  type: n
+Kaminski:
+  type: n
+Knochee:
+  type: n
+Kotterba:
+  type: n
+Lade:
+  type: n
+Laetsch:
+  type: n
+Liefers:
+  type: n
+Lienert:
+  type: n
+Wolf-Dieter:
+  type: n
+Lingk:
+  type: n
+Lubosch:
+  type: n
+Manchen:
+  type: n
+Martens:
+  type: n
+Minetti:
+  type: n
+Ranisch:
+  type: adj
+Ruehmann:
+  type: n
+Schmidt-Schaller:
+  type: n
+Schuettauf:
+  type: n
+Waeger:
+  type: n
+Baehr:
+  type: n
+Brueckner:
+  type: n
+Diekamp:
+  type: n
+Dinda:
+  type: n
+Dornauer:
+  type: n
+Pete:
+  type: n
+Dwojak:
+  type: n
+Stipe:
+  type: n
+Erceg:
+  type: n
+Feldkamp:
+  type: n
+Gaessler:
+  type: n
+Goeske:
+  type: n
+Hinrichs:
+  type: n
+Klimsa:
+  type: n
+Koeberlin:
+  type: n
+Koffler:
+  type: n
+Kristl:
+  type: n
+Krojer:
+  type: n
+Kross:
+  type: n
+Frederick:
+  type: n
+Ljubek:
+  type: n
+Marti:
+  type: n
+Tino:
+  type: n
+Mewes:
+  type: n
+Jeremy:
+  type: n
+Mockridge:
+  type: n
+Antoine:
+  type: n
+Monot:
+  type: n
+Pocher:
+  type: n
+Vincent:
+  type: n
+Redetzki:
+  type: n
+Riemelt:
+  type: n
+Schoenemann:
+  type: n
+Schwarzmaier:
+  type: n
+Sosniok:
+  type: n
+Stetter:
+  type: n
+Tramitz:
+  type: n
+Wiegratz:
+  type: n
+                  

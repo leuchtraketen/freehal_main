@@ -1,106 +1,3 @@
-erheblicher:
-  type: adj
-erhebt:
-  type: vi
-erhitzen:
-  type: n
-erigierten:
-  type: adj
-erinnern:
-  genus: s
-  type: n
-eriquillo:
-  type: n
-erkennen:
-  genus: s
-  type: n
-erklaert:
-  type: vi
-errichtet:
-  type: vi
-erschaffen:
-  count: 7
-  type: vi
-erscheinende:
-  type: adj
-erschien:
-  count: 1
-  type: vi
-erschoepft:
-  type: adj
-ertragen:
-  count: 1
-  type: vi
-erwachsenen:
-  type: n
-erwartest:
-  count: 4
-  type: vi
-erweitern:
-  count: 3
-  genus: s
-  type: n
-erwuenscht:
-  type: adv
-erzaehlt:
-  type: vi
-erzeugen:
-  count: 1
-  type: vi
-es:
-  type: n
-esse:
-  count: 5
-  type: vi
-et:
-  type: n
-ethnisch:
-  type: adj
-etwas:
-  count: 39
-  type: adv
-europa:
-  type: n
-europaeische:
-  type: adj
-ewige:
-  count: 5
-  type: adv
-existierst:
-  count: 5
-  type: vi
-extrem:
-  count: 1
-  type: adj
-extrovertiert:
-  type: vi
-faehig:
-  count: 1
-  type: adj
-faehigkeit:
-  genus: f
-  type: n
-faellt:
-  count: 5
-  type: n
-fahrenden:
-  type: adj
-falschspieler:
-  genus: m
-  type: n
-fangen:
-  count: 1
-  genus: s
-  type: n
-farblos:
-  count: 5
-  type: adv
-fata:
-  type: n
-faulenzen:
-  count: 9
-  genus: s
-  type: n
 fegen:
   count: 2
   type: vi
@@ -108,6 +5,7 @@ fehlt:
   count: 1
   type: vi
 feindlich:
+  count: 1
   type: adv
 feinen:
   count: 3
@@ -264,14 +162,14 @@ galaxie:
   genus: f
   type: n
 ganze:
-  count: 58
+  count: 62
   genus: s
   type: n
 ganzen:
   count: 7
   type: adv
 gar:
-  count: 19
+  count: 20
   type: adj
 gardasee:
   count: 1
@@ -352,7 +250,7 @@ gegenspieler:
   genus: f
   type: n
 gegenteil:
-  count: 11
+  count: 12
   genus: s
   type: n
 gegessen:
@@ -434,6 +332,8 @@ geometrische:
 geometrischen:
   type: adj
 gepanzerte:
+  type: adj
+geplant:
   type: adj
 geplaudert:
   count: 6
@@ -604,6 +504,8 @@ grillen:
   count: 1
   genus: s
   type: n
+grobschlaechtig:
+  type: adj
 groessere:
   count: 2
   type: adj
@@ -697,6 +599,8 @@ heiligt:
 heilpflanze:
   genus: f
   type: n
+heimtueckisch:
+  type: adj
 heiraten:
   count: 6
   genus: s
@@ -846,6 +750,8 @@ interessiert:
 internationalen:
   count: 1
   type: adj
+intolerant:
+  type: n
 intressiert:
   count: 4
   type: vi
@@ -928,7 +834,7 @@ kilometer:
   genus: m
   type: n
 kind:
-  count: 1
+  count: 2
   genus: s
   type: n
 kitt:
@@ -1004,6 +910,9 @@ kommst:
 kommt:
   count: 1
   type: vi
+kompetent:
+  count: 1
+  type: adj
 konstante:
   count: 1
   genus: f
@@ -1031,6 +940,8 @@ kostenlose:
 kostest:
   count: 4
   type: vi
+kreativ:
+  type: adj
 kreises:
   count: 1
   type: n
@@ -1061,6 +972,8 @@ kugelschreiber:
 kunst:
   count: 4
   type: n
+kurzsichtig:
+  type: adj
 kurzzeitig:
   type: adv
 la:
@@ -1143,6 +1056,10 @@ leid:
   count: 20
   genus: s
   type: n
+leidenschaftlich:
+  type: adv
+leidenschaftslos:
+  type: adj
 leider:
   type: adj
 lernfaehige:
@@ -1189,6 +1106,9 @@ loser:
 lotto:
   count: 1
   type: n
+loyal:
+  count: 1
+  type: adj
 luegner:
   count: 2
   genus: m
@@ -1324,6 +1244,9 @@ meteorologischer:
   type: adj
 meter:
   type: n
+methodisch:
+  count: 1
+  type: adj
 mich:
   count: 9
   type: n
@@ -1352,7 +1275,7 @@ minuten:
   genus: f
   type: n
 mir:
-  count: 69
+  count: 70
   type: n
 missverstaendnisse:
   count: 2
@@ -1414,6 +1337,8 @@ mut:
   count: 2
   genus: m
   type: n
+mutig:
+  type: adj
 mutter:
   count: 14
   genus: f
@@ -1501,10 +1426,10 @@ neutronenstern:
   genus: m
   type: n
 nichts:
-  count: 208
+  count: 210
   type: adv
 nie:
-  count: 27
+  count: 29
   type: prep
 niederschlag:
   type: n
@@ -1550,6 +1475,9 @@ oben:
 oberhalb:
   type: adv
 objekt:
+  genus: s
+  type: n
+objektiv:
   genus: s
   type: n
 objektorientierte:
@@ -1608,6 +1536,8 @@ parallel:
   type: n
 paris:
   type: n
+parteiisch:
+  type: adj
 pascal:
   type: n
 pedantisch:
@@ -1659,6 +1589,8 @@ planeten:
   count: 4
   genus: f
   type: n
+planlos:
+  type: adj
 planmaessig:
   type: adj
 planmaessigen:
@@ -1714,6 +1646,8 @@ prozess:
 pruede:
   count: 5
   type: n
+puenktlich:
+  type: adv
 puff:
   count: 2
   genus: s
@@ -1750,6 +1684,9 @@ rakete:
 rand:
   genus: m
   type: n
+rational:
+  count: 1
+  type: adj
 rauchen:
   count: 1
   genus: s
@@ -1763,6 +1700,7 @@ rausreden:
   count: 5
   type: vi
 realistisch:
+  count: 1
   type: adj
 rechenmaschine:
   genus: f
@@ -1993,6 +1931,8 @@ selber:
 selbst:
   count: 7
   type: vi
+selbstbewusst:
+  type: vi
 seltsam:
   type: adj
 semantischen:
@@ -2006,6 +1946,9 @@ senken:
   genus: s
   type: n
 senkrechte:
+  type: adj
+sensibel:
+  count: 1
   type: adj
 serviert:
   type: vi
@@ -2055,7 +1998,7 @@ sitzen:
   genus: s
   type: n
 so:
-  count: 10
+  count: 12
   type: prep
 software:
   count: 7
@@ -2104,6 +2047,7 @@ spannenden:
   count: 5
   type: adj
 sparsam:
+  count: 1
   type: adj
 speise:
   genus: f
@@ -2111,7 +2055,7 @@ speise:
 speziellen:
   type: adj
 spontan:
-  count: 12
+  count: 13
   type: adj
 sprache:
   genus: f
@@ -2244,6 +2188,8 @@ superuser:
 suppe:
   genus: f
   type: n
+sympathisch:
+  type: adj
 symphatisch:
   type: adv
 sysop:
@@ -2275,6 +2221,10 @@ tag:
 tages:
   count: 3
   type: n
+taktlos:
+  type: adj
+taktvoll:
+  type: adj
 tanzen:
   count: 7
   genus: s
@@ -2317,6 +2267,8 @@ tod:
 toetet:
   count: 6
   type: vi
+tolerant:
+  type: adj
 tomate:
   count: 1
   genus: f
@@ -2375,7 +2327,7 @@ truhe:
   genus: f
   type: n
 tu:
-  count: 12
+  count: 13
   type: vi
 tuechtigen:
   type: adj
@@ -2473,6 +2425,7 @@ unerfahren:
 unerwuenscht:
   type: adv
 unfaehig:
+  count: 1
   type: adj
 unflexibel:
   type: adj
@@ -2493,6 +2446,20 @@ universum:
 unklar:
   count: 1
   type: adj
+unkompliziert:
+  type: vi
+unkreativ:
+  type: adj
+unlogisch:
+  type: adj
+unmethodisch:
+  type: adj
+unparteiisch:
+  type: adj
+unpuenktlich:
+  type: adv
+unrealistisch:
+  type: adj
 unrecht:
   genus: s
   type: n
@@ -2500,6 +2467,8 @@ unruhig:
   type: adj
 unschuldig:
   count: 1
+  type: adj
+unsensibel:
   type: adj
 unser:
   count: 6
@@ -2512,6 +2481,8 @@ unsittlich:
 unsterblich:
   count: 5
   type: adv
+unsympathisch:
+  type: adj
 untaetig:
   type: adj
 unten:
@@ -2545,14 +2516,22 @@ unterwaesche:
   genus: f
   type: n
 untreu:
+  count: 1
+  type: adj
+unverantwortlich:
+  type: adv
+unvernuenftig:
   type: adj
 unvorsichtig:
+  count: 1
   type: adj
 unwichtig:
   type: adj
 unwirksam:
   type: adj
 unwohl:
+  type: adj
+unzufrieden:
   type: adj
 uralt:
   count: 1
@@ -2635,6 +2614,8 @@ verkommen:
   count: 6
   genus: s
   type: n
+verlaesslich:
+  type: adj
 verlaufen:
   count: 1
   genus: s
@@ -2658,6 +2639,7 @@ vermutest:
   count: 4
   type: vi
 vernuenftig:
+  count: 1
   type: adj
 verrueckt:
   type: adj
@@ -2671,6 +2653,8 @@ verschiedener:
 verschlossen:
   type: adj
 verschroben:
+  type: adj
+verschwenderisch:
   type: adj
 versorgt:
   count: 4
@@ -2701,7 +2685,7 @@ verteidigungsministeriums:
   count: 2
   type: n
 vertreibe:
-  count: 16
+  count: 17
   type: vi
 verwandt:
   type: adj
@@ -2725,6 +2709,8 @@ voegeln:
 vom:
   count: 4
   type: prep
+voreingenommen:
+  type: adj
 vorgehende:
   type: adj
 vorhanden:
@@ -2780,6 +2766,8 @@ weinen:
   type: n
 weisst:
   type: vi
+weitsichtig:
+  type: adj
 weniger:
   type: adj
 wenigsten:
@@ -2844,9 +2832,475 @@ zurechtweisen:
 zusperren:
   genus: s
   type: n
+zuverlaessig:
+  type: adj
 zuversichtlich:
   type: adv
 zweifelhaft:
   type: adv
 zynisch:
   type: adj
+Alexandra:
+  count: 1
+  type: n
+Maria:
+  count: 2
+  type: n
+Lara:
+  type: n
+Schauspielerin:
+  count: 2
+  genus: f
+  type: n
+Cosima:
+  type: n
+Cosma:
+  type: n
+Hagen:
+  type: n
+Sophie:
+  count: 1
+  type: n
+Kessel:
+  genus: m
+  type: n
+Aglaia:
+  type: n
+Alice:
+  type: n
+Andrea:
+  count: 1
+  type: n
+Anja:
+  count: 1
+  type: n
+Kling:
+  genus: f
+  type: n
+Anke:
+  count: 1
+  type: n
+Anna:
+  count: 1
+  type: n
+Fechter:
+  genus: m
+  type: n
+Anne:
+  type: n
+Menden:
+  type: n
+Annika:
+  count: 1
+  type: n
+Kuhl:
+  genus: f
+  type: n
+Walton:
+  type: n
+Barbara:
+  type: n
+Philipp:
+  type: n
+Bettina:
+  type: n
+Bianca:
+  type: n
+Hein:
+  type: n
+Birgit:
+  type: n
+Beil:
+  genus: s
+  type: n
+Charlotte:
+  type: n
+Schwab:
+  genus: m
+  type: n
+Christiane:
+  count: 2
+  type: n
+Paul:
+  type: n
+Christine:
+  count: 1
+  type: n
+Claudia:
+  type: n
+Corinna:
+  type: n
+Diana:
+  type: n
+Doris:
+  type: n
+Dorothee:
+  type: n
+Esther:
+  count: 1
+  type: n
+Schweins:
+  type: n
+Eva:
+  count: 1
+  type: n
+Woll:
+  genus: f
+  type: n
+Florentine:
+  type: n
+Floriane:
+  count: 1
+  type: n
+Franka:
+  type: n
+Franziska:
+  count: 1
+  type: n
+Friederike:
+  type: n
+Gabriele:
+  type: n
+Gisa:
+  type: n
+Hanne:
+  type: n
+Heike:
+  type: n
+Inga:
+  type: n
+Busch:
+  genus: m
+  type: n
+Ingeborg:
+  type: n
+Inka:
+  type: n
+Friedrich:
+  type: n
+Ivonne:
+  type: n
+Jana:
+  type: n
+Janette:
+  type: n
+Rauch:
+  genus: m
+  type: n
+Janina:
+  type: n
+Flieger:
+  genus: m
+  type: n
+Jasmin:
+  count: 1
+  type: n
+Jenny:
+  count: 1
+  type: n
+Jessica:
+  count: 1
+  type: n
+Johanna:
+  count: 1
+  genus: f
+  type: n
+Josefine:
+  type: n
+Jule:
+  type: n
+Julia:
+  count: 1
+  type: n
+Juliane:
+  type: n
+Karoline:
+  count: 1
+  type: n
+Katharina:
+  count: 1
+  type: n
+Katja:
+  type: n
+Kaya:
+  type: n
+Kirsten:
+  type: n
+Doerfer:
+  genus: f
+  type: n
+Laura:
+  count: 1
+  type: n
+Lavinia:
+  type: n
+Wilson:
+  type: n
+Lena:
+  type: n
+Liane:
+  type: n
+Lisa:
+  type: n
+Mareike:
+  type: n
+Simon:
+  count: 1
+  type: n
+Marie:
+  count: 1
+  type: n
+Meike:
+  type: n
+Melika:
+  type: n
+Meret:
+  type: n
+Becker:
+  type: n
+Michaela:
+  type: n
+Miranda:
+  type: n
+Muriel:
+  type: n
+Baumeister:
+  count: 1
+  genus: m
+  type: n
+Nadja:
+  type: n
+Natascha:
+  type: n
+Nicole:
+  type: n
+Nina:
+  count: 1
+  type: n
+Petri:
+  type: n
+Nora:
+  count: 1
+  type: n
+Binder:
+  type: n
+Paula:
+  count: 1
+  type: n
+Schramm:
+  genus: f
+  type: n
+Petra:
+  type: n
+Regula:
+  type: n
+Rike:
+  type: n
+Sabine:
+  count: 1
+  type: n
+Salome:
+  type: n
+Kammer:
+  genus: f
+  type: n
+Sandra:
+  count: 1
+  type: n
+Speichert:
+  type: vi
+Saskia:
+  type: n
+Sibel:
+  type: n
+Sonja:
+  type: n
+Stephanie:
+  type: n
+Susanna:
+  type: n
+Susanne:
+  count: 1
+  type: n
+Gaertner:
+  genus: m
+  type: n
+Lothar:
+  type: n
+Bein:
+  genus: s
+  type: n
+Tanja:
+  count: 1
+  type: n
+Wenzel:
+  type: n
+Tatjana:
+  type: n
+Trieb:
+  genus: m
+  type: n
+Theresa:
+  count: 1
+  type: n
+Tina:
+  type: n
+Ulrike:
+  type: n
+Uta:
+  type: n
+Verona:
+  type: n
+Wolke:
+  genus: f
+  type: n
+Peter:
+  count: 1
+  type: n
+Aust:
+  type: n
+deutscher:
+  count: 1
+  type: adj
+Erwin:
+  type: n
+Hilmar:
+  type: n
+Matthias:
+  count: 1
+  type: n
+Justus:
+  type: n
+Manfred:
+  type: n
+Reiner:
+  type: n
+Andre:
+  type: n
+Rolf:
+  type: n
+Uwe:
+  type: n
+Roman:
+  count: 1
+  genus: m
+  type: n
+Michael:
+  count: 1
+  type: n
+Kind:
+  genus: s
+  type: n
+Joerg:
+  count: 1
+  type: n
+Horst:
+  genus: m
+  type: n
+Bernd:
+  type: n
+Joachim:
+  type: n
+Ralf:
+  type: n
+Lehm:
+  genus: m
+  type: n
+Jan:
+  count: 1
+  type: n
+Josef:
+  type: n
+Frank:
+  type: n
+Marc:
+  type: n
+Klaus:
+  type: n
+Sven:
+  type: n
+Daniel:
+  type: n
+Ulrich:
+  type: n
+Muehe:
+  genus: f
+  type: n
+Pan:
+  type: n
+Volker:
+  type: n
+Thomas:
+  count: 1
+  type: n
+Andreas:
+  count: 1
+  type: n
+Goetz:
+  type: n
+Schubert:
+  type: n
+Dirk:
+  type: n
+Markus:
+  count: 1
+  type: n
+Patrick:
+  type: n
+Maximilian:
+  type: n
+Hauke:
+  type: n
+Franz:
+  type: n
+Ludwig:
+  type: n
+Tim:
+  type: n
+Fischer:
+  genus: m
+  type: n
+David:
+  count: 1
+  type: n
+Oliver:
+  count: 1
+  type: n
+Fleischer:
+  genus: m
+  type: n
+Franois:
+  type: n
+Holger:
+  type: n
+Hauer:
+  genus: m
+  type: n
+Christoph:
+  type: n
+Herbst:
+  genus: m
+  type: n
+Fabian:
+  type: n
+Hanno:
+  type: n
+Mario:
+  type: n
+Carlo:
+  type: n
+Beat:
+  type: n
+Max:
+  type: n
+Roth:
+  type: n
+Schneider:
+  genus: m
+  type: n
+Hinnerk:
+  type: n
+Tobias:
+  type: n
+Philip:
+  type: n
