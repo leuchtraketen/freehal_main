@@ -3225,6 +3225,28 @@ define action get_verb with var verb, var person do
             do return with "sollten"
         done
     done
+
+    if var verb matches "is-same-as" do
+        if var person matches "1s" do
+            do return with "entspricht"
+        done
+        if var person matches "2s" do
+            do return with "entsprichst"
+        done
+        if var person matches "3s" do
+            do return with "entspricht"
+        done
+        if var person matches "1p" do
+            do return with "entsprechen"
+        done
+        if var person matches "2p" do
+            do return with "entsprecht"
+        done
+        if var person matches "3p" do
+            do return with "entsprechen"
+        done
+    done
+
     
     do return with ""
 done

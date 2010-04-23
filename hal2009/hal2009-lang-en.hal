@@ -2684,6 +2684,15 @@ define action get_verb with var verb, var person do
     if var verb matches "should" do
         do return with var verb
     done
+
+    if var verb matches "is-same-as" do
+        if var person matches "1s" do
+            do return with "means"
+        done
+        else do
+            do return with "mean"
+        done
+    done
     
     return ""
 done
