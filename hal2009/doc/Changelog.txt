@@ -1,3 +1,11 @@
+1011:
+
+- Changelog aktualisiert
+
+1010:
+
+- Bug 599 korrigiert
+
 1002:
 
 - automatisches Korrigieren von Tippfehlern beim Editieren einer .pro
