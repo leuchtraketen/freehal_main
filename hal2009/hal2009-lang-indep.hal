@@ -810,7 +810,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /ENUMALL mir (.*?) auf.*/, "ENUMALL $0", :global:i
     do regex using var input: /ENUMALL mir (.*)/, "ENUMALL $0", :global:i
 
-    do regex using var input: /Welche\s+Farbe\s+hat\s+/, "welche Farbe ist ", :global:i
+    do regex using var input: /(wie|wer|was|wo|wann|warum|wieso|weshalb|welch)(.*?)(Farbe|Sekunde|Minute|Stunde|Tag|Woche|Monat|Jahr)(.?.?.?\s)+hat\s+/, "$0$1$2$3 ist ", :global:i
 
     #    do regex using var input: /http<[ do_]>\/, "\/, "/, "http___", :global:i
     do regex using var input: /http[<[ do]>]+/, "http_", :global:i

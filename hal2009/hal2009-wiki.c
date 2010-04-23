@@ -145,6 +145,12 @@ const char* define_general_verb(char* sentence, const char* entity) {
     else if (strstr(sentence, " heissen ")) {
         return "equal_pl";
     }
+    else if (strstr(sentence, " entspri")) {
+        return "equal_sg";
+    }
+    else if (strstr(sentence, " entspr")) {
+        return "equal_pl";
+    }
     else if (strstr(sentence, " waren ")) {
         return "equal_pl";
     }
@@ -153,6 +159,12 @@ const char* define_general_verb(char* sentence, const char* entity) {
     }
     else if (strstr(sentence, "bezeichnen")) {
         return "equal_pl";
+    }
+    else if (strstr(sentence, "beschreibt")) {
+        return "equal_in";
+    }
+    else if (strstr(sentence, "beschreiben")) {
+        return "equal_in";
     }
     return "equal_sg";
 }
@@ -189,6 +201,21 @@ char* transform_sentence(char* sentence, const char* entity) {
     }
     else if (verb_str = strstr(sentence, " nennt man ")) {
         verb_str += 11;
+    }
+    else if (verb_str = strstr(sentence, " entspricht ")) {
+        verb_str += 12;
+    }
+    else if (verb_str = strstr(sentence, " entsprechen ")) {
+        verb_str += 13;
+    }
+    else if (verb_str = strstr(sentence, " entsprach ")) {
+        verb_str += 11;
+    }
+    else if (verb_str = strstr(sentence, " beschreibt ")) {
+        verb_str += 12;
+    }
+    else if (verb_str = strstr(sentence, " beschreiben ")) {
+        verb_str += 13;
     }
     else if (verb_str = strstr(sentence, " bezeichnet ")) {
         verb_str += 12;

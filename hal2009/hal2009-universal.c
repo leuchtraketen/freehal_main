@@ -1723,7 +1723,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     int i;
     if (can_be_a_pointer(then_clause->subjects)) {
         for (i = 0; can_be_a_pointer(then_clause->subjects[i]) && can_be_a_pointer(then_clause->subjects[i]->name); ++i) {
-            if (strlen(then_clause->subjects[i]->name) < 2 && then_clause->subjects[i]->name[0] >= 'a' && then_clause->subjects[i]->name[0] <= 'g') {
+            if (can_be_a_pointer(then_clause->subjects[i]) && strlen(then_clause->subjects[i]->name) < 2 && then_clause->subjects[i]->name[0] >= 'a' && then_clause->subjects[i]->name[0] <= 'g') {
                 then_clause_has_variable_subjects = then_clause->subjects[i]->name[0];
             }
         }
@@ -1731,7 +1731,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     
     if (can_be_a_pointer(then_clause->objects)) {
         for (i = 0; can_be_a_pointer(then_clause->objects[i]) && can_be_a_pointer(then_clause->objects[i]->name); ++i) {
-            if (strlen(then_clause->objects[i]->name) < 2 && then_clause->objects[i]->name[0] >= 'a' && then_clause->objects[i]->name[0] <= 'g') {
+            if (can_be_a_pointer(then_clause->objects[i]) && strlen(then_clause->objects[i]->name) < 2 && then_clause->objects[i]->name[0] >= 'a' && then_clause->objects[i]->name[0] <= 'g') {
                 then_clause_has_variable_objects  = then_clause->objects[i]->name[0];
             }
         }
@@ -1739,7 +1739,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     
     if (can_be_a_pointer(if_clause->subjects)) {
         for (i = 0; can_be_a_pointer(if_clause->subjects[i]) && can_be_a_pointer(if_clause->subjects[i]->name); ++i) {
-            if (strlen(then_clause->subjects[i]->name) < 2 && if_clause->subjects[i]->name[0] >= 'a' && if_clause->subjects[i]->name[0] <= 'g') {
+            if (can_be_a_pointer(if_clause->subjects[i]) && strlen(if_clause->subjects[i]->name) < 2 && if_clause->subjects[i]->name[0] >= 'a' && if_clause->subjects[i]->name[0] <= 'g') {
                 if_clause_has_variable_subjects   = if_clause->subjects[i]->name[0];
             }
         }
@@ -1747,7 +1747,7 @@ struct request* negotiate_deep_search(const char* subjects, const char* objects,
     
     if (can_be_a_pointer(if_clause->objects)) {
         for (i = 0; can_be_a_pointer(if_clause->objects[i]) && can_be_a_pointer(if_clause->objects[i]->name); ++i) {
-            if (strlen(then_clause->objects[i]->name) < 2 && if_clause->objects[i]->name[0] >= 'a' && if_clause->objects[i]->name[0] <= 'g') {
+            if (can_be_a_pointer(if_clause->objects[i]) && strlen(if_clause->objects[i]->name) < 2 && if_clause->objects[i]->name[0] >= 'a' && if_clause->objects[i]->name[0] <= 'g') {
                 if_clause_has_variable_objects    = if_clause->objects[i]->name[0];
             }
         }
