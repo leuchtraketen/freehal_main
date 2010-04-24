@@ -3781,6 +3781,13 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                                 push into array sentence, from array clause item [2]
                                 push into array sentence, items of array proper_verbs
                             done
+                            else if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, items of array proper_verbs
+                            done
                             else do
                                 push into array sentence, from array clause item [1]
                                 push into array sentence, items of array auxiliary_verbs
@@ -3928,8 +3935,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             go to next
         done
         
-        if ( var final_sentence matches /\s(bin|bist|heisst|kann|darf|muss|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
-            print "Cannot answer with bin/bist when it has been asked for ist:"
+        if ( var final_sentence matches /\s(bin|bist|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed item { 'verbs' } first item matches "ist" or from hash parsed item { 'verbs' } first item first item matches "ist" ) do
+            print "Cannot answer bin/bist when it has been asked for ist:"
             print new line
             print var final_sentence
             print new line

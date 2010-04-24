@@ -1,3 +1,12 @@
+1014:
+
+- Bug 598 korrigiert
+- Bug 597 korrigiert
+- Bug 596 korrigiert
+- Bug 594 korrigiert
+
+- Bug 595 halb korrigiert
+
 1013:
 
 - Bug 604 korrigiert
