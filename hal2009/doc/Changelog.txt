@@ -1,4 +1,8 @@
-1014:
+1016:
+
+- Changelog aktualisiert
+
+1015:
 
 - Bug 598 korrigiert
 - Bug 597 korrigiert
