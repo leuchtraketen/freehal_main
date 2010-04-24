@@ -210,6 +210,12 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /\s+ /, "_", :global:i
         set var input to "_" concat var input concat "_ = _(good)_"
     done
+
+    do regex using var input: /sowohl\s(.+?)als auch(<[a-z0-9\s]>*?<[A-Z]><[a-z]+?)(\s|$)/, "$0 \$\$aswellas\$\$ $1$2", :global:i
+    do regex using var input: /sowohl\s(.+?)als auch(.*)/, "$0 \$\$aswellas\$\$ $1", :global:i
+    do regex using var input: /weder\s(.+?)noch(<[a-z0-9\s]>*?<[A-Z]><[a-z]+?)(\s|$)/, "nicht $0 \$\$aswellas\$\$ $1$2", :global:i
+    do regex using var input: /weder\s(.+?)noch(.*)/, "nicht $0 \$\$aswellas\$\$ $1", :global:i
+
     
     do regex using var input: /(^)(<[A-Z]><[a-z]>+?en) (ist) /, "$0_$1_ $2 ", :global:i
     

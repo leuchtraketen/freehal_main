@@ -738,7 +738,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     for (m = 0; words[m] && words[m]->name; ++m) {
         if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
             if (!is_a_trivial_word(words[m]->name)) {
-                if (strstr(words[m]->name, "genauso") || strstr(words[m]->name, "wie{{{adj}}}")) {
+                if (strstr(words[m]->name, "genauso") || strstr(words[m]->name, "wie{{{adj}}}") || strstr(words[m]->name, "$$aswellas$$") || strstr(words[m]->name, "$$notaswellas$$")) {
                     flags = WEAK;
                 }
             }
@@ -2622,6 +2622,8 @@ int can_be_a_synonym(const char* word) {
          && strcmp(word, "so")
          && strcmp(word, "genau")
          && strcmp(word, "genauso")
+         && strcmp(word, "$$aswellas$$")
+         && strcmp(word, "$$notaswellas$$")
          && !strstr(word, "wie")
     
          && strcmp(word, "ich")
@@ -2650,6 +2652,8 @@ int is_important_word(const char* word) {
          && strcmp(word, "so")
          && strcmp(word, "genau")
          && strcmp(word, "genauso")
+         && strcmp(word, "$$aswellas$$")
+         && strcmp(word, "$$notaswellas$$")
          && strcmp(word, "wie")
          && !strstr(word, "viel")
     

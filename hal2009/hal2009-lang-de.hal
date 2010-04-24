@@ -2321,8 +2321,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'barsch' => "adj",
           'schmal' => "adj",
           'pulls' => "v",
-          'user' => "art",
           '$$anyone$$' => "n",
+          '$$aswellas$$' => "adj",
+          '$$notaswellas$$' => "adj",
           'tag' => "n",
           'allgemeines' => "adj",
           'erst' => "adj",
@@ -2757,6 +2758,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'sprechen' => "v",
           'spreche' => "v",
           'inkas' => "n",
+          'Nein' => "n",
+          'nein' => "n",
           'kein' => "adj",
           'guter' => "adj",
           'siebzehnte' => "adj",
@@ -3652,6 +3655,20 @@ define action compute_output with var output do
     do return with var output
 done
 
+define action check_for_as_well_as with var text, var lang, var path do
+    if var text matches /\$\$aswellas\$\$/ do
+        set var text to "sowohl " concat var text
+        do regex using var text: /\$\$aswellas\$\$/, " als auch ", :i
+        do regex using var text: /\s+/, " ", :i
+    done
+    if var text matches /\$\$(notaswellas)\$\$/ do
+        set var text to "weder " concat var text
+        do regex using var text: /\$\$(notaswellas)\$\$/, " noch ", :i
+        do regex using var text: /\s+/, " ", :i
+    done
+    do return with var text
+done
+
 define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
@@ -3862,7 +3879,13 @@ done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
     if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] ) do
-        if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
+        if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+        done
+        else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+        done
+        else if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
@@ -3994,6 +4017,7 @@ define action stem_nouns with array phrases do
         
         do regex using var phrase: /<[*]>\s/, "*", :global
         do regex using var phrase: /\s<[*]>/, "*", :global
+        do regex using var phrase: /\$<[*]>/, "\$ *", :global
         do regex using var phrase: /^\s+/, "", :global
         do regex using var phrase: /\s+<[|]>/, "|", :global
         do regex using var phrase: /\s+$/, "", :global

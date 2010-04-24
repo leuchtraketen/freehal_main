@@ -1,3 +1,13 @@
+1013:
+
+- Bug 604 korrigiert
+- $$aswellas$$ implementiert:
+    sowohl ... als auch ... => ... $$aswellas$$ ...
+    weder  ... noch ...     => ... $$aswellas$$ ... (false)
+    ... as well as ...      => ... $$aswellas$$ ...
+    neither ... nor ...     => ... $$aswellas$$ ... (false)
+- die Funktion adjust_truth (nicht ein -> kein, sonst: nicht ...) wandelt nun auch "nicht $$aswellas$$" in $$notaswellas$$ um (immer erst nach DB-Abfrage)
+
 1012:
 
 - Bug 599 korrigiert

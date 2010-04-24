@@ -332,6 +332,10 @@ define action get_score with array words, var sentence, var lang, var path do
 #                    print "score: " concat var score_here concat new line
 
                     if (0+var score_here) > -1 do
+                        if var score_here > 5000 do
+                            go to last
+                        done
+
                         set var sum to var sum + (100/(var index_of_this_word+1))*var score_here*(10/var sum) + 1
                     done
                 done
@@ -3486,6 +3490,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 do unshift with items of array proper_verbs, "zu"
                 do regex using from array clause item [3]: /(^|\s)zu(\s|$)/, "$0", :global
             done
+
+            set from array clause item [1] to check_for_as_well_as with from array clause item [1], var lang, var path
+            set from array clause item [2] to check_for_as_well_as with from array clause item [2], var lang, var path
             
             # TEXT
             # Build the final sentence.

@@ -2069,7 +2069,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'barsch' => "adj",
           'schmal' => "adj",
           'pulls' => "v",
-          'user' => "art",
+          '$$anyone$$' => "n",
+          '$$aswellas$$' => "n",
+          '$$notaswellas$$' => "adj",
           'tag' => "n",
           'allgemeines' => "adj",
           'erst' => "adj",
@@ -2953,6 +2955,19 @@ define action compute_output with var output do
     done
 
     do return with var output
+done
+
+define action check_for_as_well_as with var text, var lang, var path do
+    if var text matches /\$\$aswellas\$\$/ do
+        do regex using var text: /\$\$aswellas\$\$/, " as well as ", :i
+        do regex using var text: /\s+/, " ", :i
+    done
+    if var text matches /\$\$notaswellas\$\$/ do
+        set var text to "neither " concat var text
+        do regex using var text: /\$\$aswellas\$\$/, " nor ", :i
+        do regex using var text: /\s+/, " ", :i
+    done
+    do return with var text
 done
 
 define action toggle_verbs with array verbs, array entities do
