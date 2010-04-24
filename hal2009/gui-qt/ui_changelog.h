@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'changelog.ui'
+** Form generated from reading UI file 'changelog.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_CHANGELOG_H
@@ -57,7 +57,6 @@ public:
     {
         ChangelogDialog->setWindowTitle(QApplication::translate("ChangelogDialog", "License", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("ChangelogDialog", "Lizenz", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(ChangelogDialog);
     } // retranslateUi
 
 };

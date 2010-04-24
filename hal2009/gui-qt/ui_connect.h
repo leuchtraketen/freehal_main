@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'connect.ui'
+** Form generated from reading UI file 'connect.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_CONNECT_H
@@ -197,7 +197,6 @@ public:
         ip->setText(QApplication::translate("ConnectDialog", "127.0.0.1", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ConnectDialog", "Remote Connection", 0, QApplication::UnicodeUTF8));
         buttonBox->setStyleSheet(QString());
-        Q_UNUSED(ConnectDialog);
     } // retranslateUi
 
 };

@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'view.ui'
+** Form generated from reading UI file 'view.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_VIEW_H
@@ -39,7 +39,7 @@ public:
         ViewDialog->resize(700, 403);
         gridLayout = new QGridLayout(ViewDialog);
         gridLayout->setSpacing(0);
-        gridLayout->setMargin(0);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label = new QLabel(ViewDialog);
         label->setObjectName(QString::fromUtf8("label"));
@@ -75,7 +75,6 @@ public:
         label->setStyleSheet(QString());
         label->setText(QString());
         weiter->setText(QApplication::translate("ViewDialog", "Next", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(ViewDialog);
     } // retranslateUi
 
 };

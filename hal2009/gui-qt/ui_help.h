@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'help.ui'
+** Form generated from reading UI file 'help.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_HELP_H
@@ -46,7 +46,7 @@ public:
         gridLayout->setSpacing(6);
 #endif
 #ifndef Q_OS_MAC
-        gridLayout->setMargin(9);
+        gridLayout->setContentsMargins(9, 9, 9, 9);
 #endif
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         changelog = new QPushButton(HelpDialog);
@@ -99,7 +99,6 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:600;\">Version:</span><span style=\" font-family:'Sans Serif'; font-size:9pt;\"><br />ABC<br /><br /></span><span style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:600;\">License:</span><span style=\" font-family:'Sans Serif'; font-size:9pt;\"><br />GNU General Public Licence<br /><br /></span><span style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:600;\">Developers:</span><span style=\" font-family:'Sans Serif'; font-size:9pt;\"><br />Tobias Schulz (Administr"
                         "ator)<br /></span><span style=\" font-family:'Sans Serif'; font-size:9pt; font-style:italic;\">weitere Entwickler finden Sie auf der Website...</span><span style=\" font-family:'Sans Serif'; font-size:9pt;\"><br /><br /></span><span style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:600;\">Website:</span><span style=\" font-family:'Sans Serif'; font-size:9pt;\"><br />http://www.freehal.org/</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("HelpDialog", "<font size=\"30\">ABC</font>", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(HelpDialog);
     } // retranslateUi
 
 };

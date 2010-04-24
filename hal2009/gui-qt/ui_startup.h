@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'startup.ui'
+** Form generated from reading UI file 'startup.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_STARTUP_H
@@ -44,7 +44,7 @@ public:
         gridLayout->setSpacing(6);
 #endif
 #ifndef Q_OS_MAC
-        gridLayout->setMargin(9);
+        gridLayout->setContentsMargins(9, 9, 9, 9);
 #endif
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         spacerItem = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -72,7 +72,6 @@ public:
         Startup->setWindowTitle(QApplication::translate("Startup", "FreeHAL is loading...", 0, QApplication::UnicodeUTF8));
         procent->setText(QApplication::translate("Startup", "0%", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Startup", "FreeHAL is loading...", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(Startup);
     } // retranslateUi
 
 };

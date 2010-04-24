@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'ee.ui'
+** Form generated from reading UI file 'ee.ui'
 **
-** Created: Sun Feb 28 14:41:53 2010
-**      by: Qt User Interface Compiler version 4.5.2
+** Created: Fri Apr 23 17:05:22 2010
+**      by: Qt User Interface Compiler version 4.6.2
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_EE_H
@@ -84,7 +84,6 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'mono"
                         "space'; font-size:9pt; color:#fff8dc;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace'; font-size:9pt; color:#fff8dc;\">*** STOP: 0x00567386 (0x39608576,0x8937578,0x78432777,0x00000000)</p></body></html>", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(EasterEgg);
     } // retranslateUi
 
 };
