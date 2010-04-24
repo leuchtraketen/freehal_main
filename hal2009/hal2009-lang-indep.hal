@@ -645,10 +645,13 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /Erzaehlst du .*/, "was ist?", :global:i
     do regex using var input: /was ist\s+?ueber /, "was ist ", :global:i
     
-    if lc(var input) matches /(was heisst) ([a-z])/ do
+    if lc(var input) matches /(was heisst) (<[a-z]>)/ do
         set new var temp to ucfirst with $1
-        do regex using var input: /(was heisst) ([a-z])/, "$0 var temp", :global:i
+        do regex using var input: /(was heisst) (<[a-z]>)/, "$0 var temp", :global:i
     done
+
+    do regex using var input: /(was\sheisst\s)/, "was heisst ", :global:i
+    do regex using var input: /(was\sheisst\s)(<[A-Z]><[a-z]>+?\s<[a-z]>+?)((?:\s.?.?.?.?.?)|$)/, "$0 _$1_$2", :global
 
     do regex using var input: /(ich weiss nicht)\s+?(?:(wie|wer|was|wo|wann|warum|wieso|weshalb) (.*?))($|[.,])/, "_$1_ _no-question_ $2 , weiss ich nicht$3", :global:i
     do regex using var input: /(du weisst nicht)\s+?(?:(wie|wer|was|wo|wann|warum|wieso|weshalb) (.*?))($|[.,])/, "_$1_ _no-question_ $2 , weisst du nicht$3", :global:i

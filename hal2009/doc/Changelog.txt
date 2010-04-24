@@ -1,3 +1,8 @@
+1017:
+
+- Bug 593 korrigiert
+- Bug 589 korrigiert
+
 1016:
 
 - Changelog aktualisiert
