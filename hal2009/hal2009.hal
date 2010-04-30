@@ -2896,7 +2896,11 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         for each new array result in array results do
             set new array main_clause to an empty array
             
-            set new var expr to from array result second item third item
+            set new var expr to from array result second item 3rd item
+            if not var expr do
+                set var expr to from array result second item 4th item
+            done
+            print "expr: " concat var expr concat new line
             set new array words to split with " ", var expr
             set new var verb to pop with items of array words
             set new var verb_second to ""
@@ -2912,8 +2916,10 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             done
             set new var object to join using ' ', items of array words
             
+            print "verb: " concat var verb concat new line
             set new var prefix to to_verb_prefix with var verb, var lang, var path
             set new var root to to_verb_root with var verb, var lang, var path
+            print "root: " concat var root concat new line
             set new array conj to to_verb_conjugation with var root, var prefix, var lang, var path
             set new var participle to make_participle with from array conj third item, var lang, var path
             

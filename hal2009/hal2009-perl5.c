@@ -110,6 +110,43 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "first item", "item [ 0 ]");
     hals = replace(hals, "second item", "item [ 1 ]");
     hals = replace(hals, "third item", "item [ 2 ]");
+    {
+        char search_for[99];
+        sprintf(search_for+4, " item");
+        char replace_with[99];
+        sprintf(replace_with, " item [    - 1 ]");
+
+        char no_1, no_2;
+        for (no_1 = '0'; no_1 <= '9'; ++no_1) {
+            if (no_1 == '0') {
+                no_1 =  ' ';
+            }
+            for (no_2 = '0'; no_2 <= '9'; ++no_2) {
+                replace_with[8] = no_1;
+                replace_with[9] = no_2;
+
+                search_for[0] = no_1;
+                search_for[1] = no_2;
+
+                search_for[2] = 't';
+                search_for[3] = 'h';
+                hals = replace(hals, search_for, replace_with);
+                printf("%s -> %s\n", search_for, replace_with);
+
+                search_for[2] = 's';
+                search_for[3] = 't';
+                hals = replace(hals, search_for, replace_with);
+
+                search_for[2] = 'n';
+                search_for[3] = 'd';
+                hals = replace(hals, search_for, replace_with);
+
+                search_for[2] = 'r';
+                search_for[3] = 'd';
+                hals = replace(hals, search_for, replace_with);
+            }
+        }
+    }
     hals = replace(hals, "is an empty array ", "0 == @$");
     hals = replace(hals, "is an empty hash ", "0 == %$");
     hals = replace(hals, "that array is empty: ", "0 == @{ ");

@@ -1994,6 +1994,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'werden' => "v",
           'rot' => "adj",
           'schwer' => "adj",
+          'nudeln' => "n",
           'von' => "prep",
           'doof' => "adj",
           'harsch' => "adj",
@@ -4999,6 +5000,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     set new var verb_participle_prefix to var verb_prefix
     set new var verb_participle_prenucleus to var verb_prenucleus
     set new var verb_participle_postnucleus to var verb_postnucleus
+
+    print "verb:             " concat var verb concat new line
+    print "verb_nucleus:     " concat var verb_nucleus concat new line
+    print "verb_prefix:      " concat var verb_prefix concat new line
+    print "verb_prenucleus:  " concat var verb_prenucleus concat new line
+    print "verb_postnucleus: " concat var verb_postnucleus concat new line
     
     set new flag is_strong_verb to 0
     
@@ -5424,7 +5431,6 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         # schw-i-nd- / schw-i-ng- / s-i-ng- / s-i-nk- / spr-i-ng- / st-i-nk- / tr-i-nk- /
         # w-in-d- / wr-i-ng- / zw-i-ng-
 
-    
         if var verb_prenucleus matches /(b|d|dr|f|fl|l|r|sch|schl|schw|s|spr|st|tr|w|wr|zw)/ do
             if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b|k|d|nd|ng|nk)$/ do
                 set var verb_past_nucleus to 'a'
@@ -5481,6 +5487,10 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     if flag is_strong_verb do
         set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
         set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
+
+print var verb concat new line
+print var verb_past concat new line
+print var verb_participle concat new line
         
         do return with [ var pre concat var verb, var verb_past, var verb_participle ]
     done
