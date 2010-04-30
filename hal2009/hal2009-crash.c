@@ -51,7 +51,7 @@ else    fprintf(stderr, "%s\n",string);
 void *array[63];
 int i,num;
 
-num=CaptureStackBackTrace(0,63,array,0);
+num=RtlCaptureStackBackTrace(0,63,array,0);
 
 for (i = 0; i < num; i++)
 	if (ef) fprintf(ef, "%s\n",(char *)array[i]);
