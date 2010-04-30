@@ -2,6 +2,7 @@
 
 #if defined(MINGW) || defined(WIN32)
 //for CaptureStackBacktrace
+#include <windows.h>
 #include <winbase.h>
 #endif
 
