@@ -282078,4 +282078,341 @@ Tramitz:
   type: n
 Wiegratz:
   type: n
+Muliar:
+  type: n
+Zev:
+  type: n
+Bellringer:
+  type: n
+Lexx:
+  type: n
+Haider:
+  type: n
+Kabarettist:
+genus  : m
+  type: n
+fleischfressendes:
+  type: adj
+geschluckt:
+  type: vi
+Gartenarbeit:
+  type: n
+Odol:
+  type: n
+GlaxoSmithKline:
+  type: n
+Consumer:
+  type: n
+Healthcare:
+  type: n
+Pflegeserie:
+genus  : f
+  type: n
+Gesunderhaltung:
+genus  : f
+  type: n
+Zahnfleisch:
+genus  : s
+  type: n
+Zaehnen:
+  type: n
+Meridol:
+  type: n
+Colgate:
+  type: n
+NY:
+  type: n
+skaten:
+  type: vi
+schlaengeln:
+  type: vi
+durchschlaengeln:
+  type: vi
+kriechen:
+  type: vi
+uebergreifende:
+  type: adj
+Fernsehserien:
+genus  : f
+  type: n
+Kinofilme:
+genus  : f
+  type: n
+Romane:
+genus  : f
+  type: n
+Inhalte:
+genus  : f
+  type: n
+Roddenberry:
+  type: n
+Rov:
+  type: n
+Schlagersaenger:
+  type: n
+Musikfilmen:
+  type: n
+Seven:
+  type: n
+FCI:
+  type: n
+anerkannte:
+  type: adj
+Haesslichkeit:
+genus  : f
+  type: n
+laengere:
+  type: adj
+Vulkans:
+  type: n
+entleert:
+  type: vi
+zerstoererische:
+  type: adj
+Magmakammer:
+genus  : f
+  type: n
+Steckrueben:
+genus  : f
+  type: n
+Getreideprodukte:
+genus  : f
+  type: n
+Graupen:
+genus  : f
+  type: n
+Klobrille:
+genus  : f
+  type: n
+hochklappbare:
+  type: adj
+Ringes:
+  type: n
+Modellen:
+  type: n
+durchbrochen:
+  type: vi
+Fernsteuerung:
+genus  : f
+  type: n
+Zughebel:
+  type: n
+Fahrradbremse:
+genus  : f
+  type: n
+Fernsehers:
+  type: n
+Servers:
+  type: n
+heimischen:
+  type: adj
+PC:
+genus  : m
+  type: n
+Sadist:
+genus  : m
+  type: n
+Masochist:
+genus  : m
+  type: n
+zugefuegt:
+  type: vi
+Melone:
+genus  : f
+  type: n
+gekochtem:
+  type: adj
+eingemachtem:
+  type: adj
+Aspartam:
+genus  : s
+  type: n
+Bernsteinsaeure:
+genus  : f
+  type: n
+Calciumchlorid:
+genus  : s
+  type: n
+Calciumdiglutamat:
+genus  : s
+  type: n
+Calciumguanylat:
+genus  : s
+  type: n
+Calciumlactat:
+genus  : s
+  type: n
+Chloride:
+genus  : f
+  type: n
+Dicalciuminosinat:
+genus  : s
+  type: n
+Dikaliumguanylat:
+
+genus  : f
+  type: n
+Dikaliuminosinat:
+genus  : s
+  type: n
+Dinatriumguanylat:
+genus  : s
+  type: n
+Dinatriuminosinat:
+genus  : s
+  type: n
+Ethylmaltol:
+genus  : s
+  type: n
+Glycin:
+genus  : s
+  type: n
+Guanylsaeure:
+genus  : f
+  type: n
+Inosinsaeure:
+genus  : f
+  type: n
+Kaliumadipat:
+genus  : s
+  type: n
+Kaliumchlorid:
+genus  : s
+  type: n
+Kaliumlactat:
+genus  : s
+  type: n
+Lactate:
+genus  : f
+  type: n
+Magnesiumchlorid:
+genus  : s
+  type: n
+Magnesiumdiglutamat:
+genus  : s
+  type: n
+Maltol:
+  type: n
+Monoammoniumglutamat:
+genus  : s
+  type: n
+Monokaliumglutamat:
+genus  : s
+  type: n
+Mononatriumglutamat:
+genus  : s
+  type: n
+Natriumadipat:
+genus  : s
+  type: n
+Natriumlactat:
+genus  : s
+  type: n
+Neotam:
+genus  : s
+  type: n
+Ribonucleotide:
+genus  : f
+  type: n
+Zucker:
+genus  : m
+  type: n
+hergestellter:
+  type: adj
+Lebensmittelzusatzstoffe:
+genus  : f
+  type: n
+Dimethylbutyraldehyd:
+genus  : s
+  type: n
+koerperlos:
+  type: adj
+abgegrenztes:
+  type: adj
+minder:
+  type: adj
+intensiver:
+  type: adj
+Gartengeraeten:
+  type: n
+Babynahrung:
+genus  : f
+  type: n
+Saeuglingen:
+  type: n
+Trennkost:
+genus  : f
+  type: n
+Hay:
+  type: n
+Ernaehrungsform:
+genus  : f
+  type: n
+eiweisshaltige:
+  type: adj
+kohlenhydrathaltige:
+  type: adj
+Rohkost:
+genus  : f
+  type: n
+vorherige:
+  type: adj
+Hitzebehandlung:
+genus  : f
+  type: n
+verzehrt:
+  type: vi
+voellig:
+  type: adj
+unverarbeitet:
+  type: adj
+Naturzustand:
+genus  : m
+  type: n
+Steckerlfisch:
+genus  : m
+  type: n
+gegrillter:
+  type: adj
+Biergaerten:
+genus  : f
+  type: n
+faustgrosses:
+  type: adj
+schwimmend:
+  type: adj
+ausgebacken:
+  type: adj
+suessem:
+  type: adj
+eingekochten:
+  type: adj
+Cellulosenitrat:
+genus  : s
+  type: n
+faserige:
+  type: adj
+geschmackslose:
+  type: adj
+Nitrocellulose:
+genus  : f
+  type: n
+Duroplast:
+genus  : s
+  type: n
+Kunststoffe:
+genus  : f
+  type: n
+gestolpert:
+  type: vi
+wetterlage:
+genus  : f
+  type: n
+hoerapparat:
+genus  : m
+  type: n
+beruhigen:
+  type: vi
+blamiert:
+  type: vi
                   

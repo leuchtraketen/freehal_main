@@ -165,7 +165,6 @@ ist <> zitronenschale <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <
 ist <> zitronenstrauch <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> (true)
 ist <> zitronenthymian <> ein gewuerz <>  <> (true)
 ist <> zitwerwurzel <> ein gewuerz <> nothing <>  <>  <>  <> nothing <>  <>  <>  <> (true)
-ist <> zucker <> ein geschmacksverstaerker <>  <> (true)
 ist <> zucker <> ein gewuerz <>  <> (true)
 ist <> zucker <> ein universalwuerzmittel <>  <> (true)
 ist <> zwiebel <> ein gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> (true)

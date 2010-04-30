@@ -8681,7 +8681,6 @@
 = <> _anlage_ <> _errichtung_ <> (maybe)
 = <> _anlage_ <> _gabe_ <> (maybe)
 = <> _anlage_ <> _gartenanlage_ <> (maybe)
-= <> _anlage_ <> _garten_ <> (maybe)
 = <> _anlage_ <> _gebilde_ <> (maybe)
 = <> _anlage_ <> _gegebenheit_ <> (maybe)
 = <> _anlagegegenstand_ <> _aktivposten_ <> (maybe)
