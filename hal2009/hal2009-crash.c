@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <signal.h>
 
 #if defined(MINGW) || defined(WIN32)
