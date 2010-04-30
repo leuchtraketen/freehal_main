@@ -1,11 +1,8 @@
-
 #include <signal.h>
 
-#if 0
 #if defined(MINGW) || defined(WIN32)
 //for CaptureStackBacktrace
 #include <winbase.h>
-#endif
 #endif
 
 void sighandler(int sig);
