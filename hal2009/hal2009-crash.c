@@ -3,9 +3,15 @@
 #include <signal.h>
 
 #if defined(MINGW) || defined(WIN32)
+
 //for CaptureStackBacktrace
 #include <windows.h>
 #include <winbase.h>
+
+#else
+
+#include <execinfo.h>
+
 #endif
 
 void sighandler(int sig);
@@ -40,7 +46,6 @@ ef=fopen("errors.txt","a");
 if (ef) fprintf(ef, "%s\n",string);
 else    fprintf(stderr, "%s\n",string);
 
-#if 0
 #if defined(MINGW) || defined(WIN32)
 {
 void *array[63];
@@ -52,9 +57,7 @@ for (i = 0; i < num; i++)
 	if (ef) fprintf(ef, "%s\n",(char *)array[i]);
 	else    fprintf(stderr, "%s\n",(char *)array[i]);
 }
-#endif
-#endif
-#if defined(LINUX) || defined(MACINTOSH)
+#else
 {
 void *array[256];
 size_t size;
@@ -76,5 +79,6 @@ free (strings);
 printf("%s",string);
 exit(1);
 }
+
 
 
