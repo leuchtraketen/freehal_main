@@ -8,6 +8,7 @@
 #endif
 
 void sighandler(int sig);
+void fatalerror(const char *string);
 
 static void __attribute__((constructor)) setup_sigsegv() {
 	signal(SIGILL, sighandler);   // install our handler
