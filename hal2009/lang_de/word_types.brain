@@ -282415,4 +282415,358 @@ beruhigen:
   type: vi
 blamiert:
   type: vi
-                  
+onaniert:
+  type: vi
+Eismassen:
+genus  : f
+  type: n
+Songwriter:
+  type: n
+zivile:
+  type: adj
+Bundesbehoerde:
+genus  : f
+  type: n
+FBI:
+genus  : s
+  type: n
+Fbi:
+genus  : s
+  type: n
+bundespolizeiliche:
+  type: adj
+Ermittlungsbehoerde:
+genus  : f
+  type: n
+Justizministeriums:
+  type: n
+CIA:
+genus  : f
+  type: n
+Auslandsnachrichtendienst:
+genus  : m
+  type: n
+BND:
+genus  : m
+  type: n
+uebermittelt:
+  type: vi
+professionelle:
+  type: adj
+Rettungsdienste:
+genus  : f
+  type: n
+Feuerwehren:
+genus  : f
+  type: n
+Polizeien:
+genus  : f
+  type: n
+Spirituskocher:
+  type: n
+Campingkocher:
+  type: n
+lichtquelle:
+genus  : f
+  type: n
+transportable:
+  type: adj
+Leuchtmittel:
+  type: n
+erzeugte:
+  type: vi
+Buendelung:
+genus  : f
+  type: n
+Fadenpilze:
+genus  : f
+  type: n
+Zehenzwischenraeume:
+genus  : f
+  type: n
+Fusssohlen:
+genus  : f
+  type: n
+Kolben:
+genus  : f
+  type: n
+Waermekraftmaschine:
+genus  : f
+  type: n
+enthaltene:
+  type: adj
+Waermeenergie:
+genus  : f
+  type: n
+Kolbens:
+  type: n
+Stilmittel:
+genus  : f
+  type: n
+abweicht:
+  type: adj
+sprachliches:
+  type: adj
+Gestaltphaenomen:
+genus  : s
+  type: n
+Tiefenstruktur:
+genus  : f
+  type: n
+eigentlichen:
+  type: adj
+Kuckucksuhr:
+genus  : f
+  type: n
+Wanduhr:
+genus  : f
+  type: n
+erlangt:
+  type: vi
+zugehoerigen:
+  type: adj
+lateinischen:
+  type: adj
+Martinus:
+  type: n
+nachgedenkt:
+  type: vi
+Milchprodukte:
+genus  : f
+  type: n
+Torten:
+genus  : f
+  type: n
+Fertiggerichte:
+genus  : f
+  type: n
+Backerbsen:
+genus  : f
+  type: n
+Gnocchi:
+genus  : f
+  type: n
+Kartoffelpueree:
+genus  : s
+  type: n
+Molkereiprodukte:
+genus  : f
+  type: n
+Marmeladen:
+genus  : f
+  type: n
+Konfitueren:
+genus  : f
+  type: n
+Konserven:
+genus  : f
+  type: n
+Zerialien:
+genus  : f
+  type: n
+Wurstwaren:
+genus  : f
+  type: n
+Erdaefpel:
+genus  : f
+  type: n
+Sauerkraut:
+genus  : s
+  type: n
+Mayonnaise:
+genus  : f
+  type: n
+Tafeloel:
+genus  : s
+  type: n
+Tafelessig:
+genus  : m
+  type: n
+Semmelbroesel:
+genus  : f
+  type: n
+Knaeckebrot:
+genus  : s
+  type: n
+Baguettestange:
+genus  : f
+  type: n
+Bauernbrot:
+genus  : s
+  type: n
+Landbrot:
+genus  : s
+  type: n
+Komissbrot:
+genus  : s
+  type: n
+Heidebrot:
+genus  : s
+  type: n
+Frankenlaib:
+genus  : m
+  type: n
+Mangbrot:
+genus  : s
+  type: n
+Kornspitz:
+genus  : m
+  type: n
+Salzstangerl:
+genus  : s
+  type: n
+Brezen:
+genus  : f
+  type: n
+Steaks:
+genus  : f
+  type: n
+Sauce:
+Selchroller:
+  type: n
+Wurstaufschnitt:
+genus  : m
+  type: n
+Danish:
+  type: adj
+Kaesesorte:
+genus  : f
+  type: n
+Aiblinger:
+genus  : m
+  type: n
+Alpkaese:
+genus  : m
+  type: n
+Altenburger:
+genus  : m
+  type: n
+Bergkaese:
+genus  : m
+  type: n
+Bierkaese:
+genus  : m
+  type: n
+Boerdespeck:
+genus  : m
+  type: n
+Bojar:
+genus  : m
+  type: n
+Brimsen:
+genus  : m
+  type: n
+Cesto:
+genus  : m
+  type: n
+Cottage:
+genus  : m
+  type: n
+Feta:
+genus  : m
+  type: n
+Fornet:
+genus  : m
+  type: n
+Gaperon:
+genus  : m
+  type: n
+Geissrolle:
+genus  : f
+  type: n
+Girenbaderli:
+genus  : m
+  type: n
+Gorgonzola:
+genus  : m
+  type: n
+Graukaese:
+genus  : m
+  type: n
+Graukas:
+genus  : m
+  type: n
+Greyerzer:
+genus  : m
+  type: n
+Grigiotto:
+genus  : m
+  type: n
+Grosaetti:
+genus  : m
+  type: n
+Grottenkaese:
+genus  : m
+  type: n
+Gruenlaender:
+genus  : m
+  type: n
+Gruentenkaese:
+genus  : m
+  type: n
+Halloumi:
+genus  : m
+  type: n
+Handkaese:
+genus  : m
+  type: n
+Heuberger:
+genus  : m
+  type: n
+Kluetzer:
+genus  : m
+  type: n
+Kochkaese:
+genus  : m
+  type: n
+Limburger:
+genus  : m
+  type: n
+Limnos:
+genus  : m
+  type: n
+Mascarpone:
+genus  : m
+  type: n
+Milbenkaese:
+genus  : m
+  type: n
+Mondseer:
+genus  : m
+  type: n
+Morbier:
+genus  : m
+  type: n
+Nieheimer:
+genus  : m
+  type: n
+Odenwaelder:
+genus  : m
+  type: n
+Quartirolo:
+genus  : m
+  type: n
+Raclette:
+genus  : m
+  type: n
+Ricotta:
+genus  : m
+  type: n
+Robiola:
+genus  : m
+  type: n
+Rocchetta:
+genus  : m
+  type: n
+Roccolo:
+genus  : m
+  type: n
+Roquefort:
+genus  : m
+  type: n
+Spundekaese:
+genus  : m
+  type: n
+Steinbuscher:
+genus  : m
+  type: n                  
