@@ -223,6 +223,9 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /(^|\s)genauso (.*?) wie /, "$0genauso $1 wie{{{adj}}} ", :global:i
     do regex using var input: /(^|\s)so (.*?) wie /, "$0so $1 wie{{{adj}}} ", :global:i
+
+
+    do regex using var input: /was ist (<[A-Z]><[a-z]+?)($|(?:\s.?.?.?.?.?))/, "was ist _$0_$1", :global:i
     
     do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i

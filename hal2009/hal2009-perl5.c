@@ -111,14 +111,16 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "second item", "item [ 1 ]");
     hals = replace(hals, "third item", "item [ 2 ]");
     {
-        char search_for[99];
+        char _search_for[99];
+        char* search_for = _search_for;
         sprintf(search_for+4, " item");
         char replace_with[99];
         sprintf(replace_with, " item [    - 1 ]");
 
-        char no_1, no_2;
-        for (no_1 = '0'; no_1 <= '9'; ++no_1) {
-            if (no_1 == '0') {
+        char _no_1, no_1, no_2;
+        for (_no_1 = '0'; _no_1 <= '9'; ++_no_1) {
+            no_1 = _no_1;
+            if (_no_1 == '0') {
                 no_1 =  ' ';
             }
             for (no_2 = '0'; no_2 <= '9'; ++no_2) {
@@ -130,20 +132,29 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
 
                 search_for[2] = 't';
                 search_for[3] = 'h';
-                hals = replace(hals, search_for, replace_with);
-                printf("%s -> %s\n", search_for, replace_with);
+                if (no_2 == '1' && no_1 != '1') {
+                    search_for[2] = 's';
+                    search_for[3] = 't';
+                }
+                if (no_2 == '2' && no_1 != '1') {
+                    search_for[2] = 'n';
+                    search_for[3] = 'd';
+                }
+                if (no_2 == '3' && no_1 != '1') {
+                    search_for[2] = 'r';
+                    search_for[3] = 'd';
+                }
 
-                search_for[2] = 's';
-                search_for[3] = 't';
-                hals = replace(hals, search_for, replace_with);
+                if (no_1 == ' ') {
+                    ++search_for;
+                }
 
-                search_for[2] = 'n';
-                search_for[3] = 'd';
                 hals = replace(hals, search_for, replace_with);
+///                printf("%s -> %s\n", search_for, replace_with);
 
-                search_for[2] = 'r';
-                search_for[3] = 'd';
-                hals = replace(hals, search_for, replace_with);
+                if (no_1 == ' ') {
+                    --search_for;
+                }
             }
         }
     }

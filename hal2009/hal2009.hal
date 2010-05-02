@@ -3548,7 +3548,11 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 push into array sentence, from array clause item [1]
                 if not from array clause item [2] matches /ein|der|die|das|the|(a )/ do
-                    if from array clause item [2] matches /<[0-9]>/ do
+                    if from array subject_props first item matches /^v/ do
+                        set var verb to get_verb with "is-same-as", var subject_person
+                        push into array sentence, var verb
+                    done
+                    else if from array clause item [2] matches /<[0-9]>/ do
                         set var verb to get_verb with "is-same-as", var subject_person
                         push into array sentence, var verb
                     done
