@@ -7,6 +7,7 @@ fangen <> katzen <> maeuse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
 fliegen kann/can <> ein pinguin <> nothing <> nicht <> (true)
 fliegen kann/can <> ein vogel <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
 fliegen koennen <> schwaene <> nothing <>  <> (true)
+geben <> kuehe <> milch <>  <> (maybe)
 gehen kann/can <> ein pinguin <> nothing <> schlecht <> (true)
 gehoert <> das lama <> nothing <> zur familie der kamele <> (true)
 gehoert <> die zecke <> nothing <> zu den spinnentieren <> (true)

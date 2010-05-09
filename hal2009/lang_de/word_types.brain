@@ -282769,4 +282769,72 @@ genus  : m
   type: n
 Steinbuscher:
 genus  : m
-  type: n                  
+  type: n 
+Gouda:
+genus  : m
+  type: n
+startendes:
+  type: adj
+landendes:
+  type: adj
+Motorkraft:
+genus  : f
+  type: n
+Rotoren:
+genus  : f
+  type: n
+Vortrieb:
+genus  : m
+  type: n
+steigender:
+  type: adj
+Tragfluegel:
+  type: n
+angehoben:
+  type: vi
+Gewichtsverlagerung:
+genus  : f
+  type: n
+gesteuertes:
+  type: adj
+Kreuzfahrtschiff:
+genus  : s
+  type: n
+Befoerderungsleistung:
+genus  : f
+  type: n
+Verkehrswirtschaft:
+genus  : f
+  type: n
+Stirn:
+genus  : f
+  type: n
+pferdeaehnliches:
+  type: adj
+Detuschland:
+  type: n
+Nordrhein-Westfalen:
+  type: n
+Sachsen-Anhalt:
+  type: n
+Schleswig-Holstein:
+  type: n
+Mecklenburg-Vorpommern:
+  type: n
+untem:
+  type: adj
+Motoren:
+genus  : f
+  type: n
+betriebene:
+  type: adj
+Schlaegertyp:
+genus  : f
+  type: n
+Randstufe:
+genus  : f
+  type: n
+soziale:
+  type: adj
+
+                   
