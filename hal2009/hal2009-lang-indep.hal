@@ -260,7 +260,12 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\sist\sheute/, " ist ", :global:i
     do regex using var input: /welchen\stag\shaben\swir\s/, "welch Datum haben wir ", :global:i
     do regex using var input: /welcher\stag\sist\s/, "welch Datum haben wir ", :global:i
+
     do regex using var input: / hab /, " habe ", :global:i
+
+    if var input not matches /(heiss|name)/ do
+        do regex using var input: / FreeHAL(.?.?.?.?)$/, " $0", :global:i
+    done
 
     set var input to ' ' concat var input concat ' '
     do regex using var input: /\snoch\s(nie|nicht)(<[\s!.,?]>+)/, " noch-$0$1", :global:i
