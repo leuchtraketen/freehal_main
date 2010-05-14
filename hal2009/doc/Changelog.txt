@@ -1,3 +1,12 @@
+1036:
+
+- Bug 620 korrigiert
+- Bug 618 korrigiert
+
+1034:
+
+- das Wort "FreeHAL" am Ende/vor einem Fragezeichen wird gefiltert, z.b. "wie geht es dir FreeHAL?"
+
 1017:
 
 - Bug 593 korrigiert
