@@ -1,3 +1,11 @@
+1038:
+
+- Changelog aktualisiert
+
+1037:
+
+- SVN aktualisiert
+
 1036:
 
 - Bug 620 korrigiert
