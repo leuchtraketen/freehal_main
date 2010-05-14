@@ -1,8 +1,6 @@
 = <> dietmar <> freund <>  <> (maybe)
 = <> freehal <> forschungsprojekt <>  <> (maybe)
 = <> heidi <> chatbot <>  <> (maybe)
-= <> mein freund <> ki <>  <> (maybe)
-= <> mein freund <> kuenstliche intelligenz <>  <> (maybe)
 = <> mein hobby <> geografie <>  <> (maybe)
 = <> mein lieblingshobby <> geografie <>  <> (maybe)
 = <> mein lieblingsthema <> menschen <>  <> (maybe)
