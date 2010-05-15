@@ -1,3 +1,7 @@
+1043:
+
+- Bug in correct_human_edit_typos korrigiert
+
 1040:
 
 - Bug 609 korrigiert

@@ -5322,6 +5322,12 @@ define action correct_human_edit_typos with var file, var current_language, var 
                     do regex using var part: /<[_]>+/, "_", :global
                     set var part to " " concat var part concat " "
                 done
+                do regex using var part: /_time_from/, " time_from", :global
+                do regex using var part: /_time_to/, " time_to", :global
+                if var part matches / time_(to|from)/ do
+                    do regex using var part: /(<[a-z0-9]>)_/, "$0 ", :global
+                done
+
                 do regex using var part: /^\s+/, " ", :global
                 do regex using var part: /\s+$/, " ", :global
             done
