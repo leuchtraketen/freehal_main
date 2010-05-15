@@ -225,7 +225,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /(^|\s)so (.*?) wie /, "$0so $1 wie{{{adj}}} ", :global:i
 
 
-    do regex using var input: /was ist (<[A-Z]><[a-z]+?)($|(?:\s.?.?.?.?.?))/, "was ist _$0_$1", :global
+    do regex using var input: /was ist /, "was ist ", :global:i
+    do regex using var input: /was ist (<[A-Z]><[a-z]+?)(<[\.?!+,;-\s]>*?)$/, "was ist _$0_$1", :global
     
     do regex using var input: /wie war /, "wie ist ", :global:i
     do regex using var input: /\s+kein/, " nicht ein", :global:i
@@ -490,6 +491,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /Hersteller von/, "Hersteller fuer", :global:i
 
     do regex using var input: /mein name/, "_mein_name_", :global:i
+    do regex using var input: /dein name/, "_dein_name_", :global:i
     
     do regex using var input: /(^|\s)(\d+?)\.\s*?januar(\s|$)/, "$0$1.01.$3", :global:i
     do regex using var input: /(^|\s)(\d+?)\.\s*?jaenner(\s|$)/, "$0$1.01.$3", :global:i
@@ -772,9 +774,11 @@ define action compute_input with var input is rw, var lang, var path do
     end for
     do regex using var input: /heisse\sich/, "ist _mein_name_", :global:i
     do regex using var input: /ich\sheisse/, "_mein_name_ ist", :global:i
-
     do regex using var input: /wie heisst\sdu/, "wer bist du", :global:i
     do regex using var input: /wie heisse\s/, "wer bin ", :global:i
+    do regex using var input: /heisst\sdu/, "ist _dein_name_", :global:i
+    do regex using var input: /du\sheisst/, "_dein_name_ ist", :global:i
+
     
     do regex using var input: /, die du kennst\s/, " ", :global:i
     do regex using var input: /die du kennst\s/, " ", :global:i

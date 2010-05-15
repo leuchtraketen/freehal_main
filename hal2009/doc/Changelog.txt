@@ -1,3 +1,11 @@
+1040:
+
+- Bug 609 korrigiert
+
+1039:
+
+- Bug 613 korrigiert
+
 1038:
 
 - Changelog aktualisiert

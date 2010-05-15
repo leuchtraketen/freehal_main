@@ -83,6 +83,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "# CODE", "#---------------------------------------");
     hals = replace(hals, "(end array)", "}");
     hals = replace(hals, "(end hash)", "}");
+    hals = replace(hals, "(end)", "}");
     hals = replace(hals, "variable ", "var ");
     hals = replace(hals, "$15", "$16");
     hals = replace(hals, "$14", "$15");
@@ -103,13 +104,28 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "<[", "[");
     hals = replace(hals, "]>", "]");
     hals = replace(hals, "size of", "items of");
+    hals = replace(hals, " is true ", " ");
+    hals = replace(hals, " is wrong ", " == 0");
+    hals = replace(hals, " is false ", " == 0");
+    hals = replace(hals, " the hash ", " from hash ");
+    hals = replace(hals, " has item ", " item ");
+    hals = replace(hals, " contains item ", " item ");
+    hals = replace(hals, " has the item ", " item ");
+    hals = replace(hals, " contains the item ", " item ");
     hals = replace(hals, " is not ", " not is ");
+    hals = replace(hals, "that array is empty: ", "0 == items of that array: ");
+    hals = replace(hals, "that array is empty ", "0 == items of that array: ");
+    hals = replace(hals, "that array not is empty: ", "items of that array: ");
+    hals = replace(hals, "that array not is empty ", "items of that array: ");
+    hals = replace(hals, "that array has items: ", "items of that array: ");
+    hals = replace(hals, "that array has items ", "items of that array: ");
     hals = replace(hals, "global hash ", "hash ::");
     hals = replace(hals, "global array ", "array ::");
     hals = replace(hals, "global var ", "var ::");
     hals = replace(hals, "first item", "item [ 0 ]");
     hals = replace(hals, "second item", "item [ 1 ]");
     hals = replace(hals, "third item", "item [ 2 ]");
+    hals = replace(hals, "last item", "item [ -1 ]");
     {
         char _search_for[99];
         char* search_for = _search_for;

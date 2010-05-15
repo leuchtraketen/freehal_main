@@ -1666,6 +1666,16 @@ define action guess_part_of_speech with var word, var lang, var path do
     do return with var best_pos
 done
 
+define action join_items with array list do
+    set new var txt to ''
+    for each new var listitem in array list do
+        set var txt to var txt concat " ("
+        set var txt to var txt concat var listitem
+        set var txt to var txt concat "), "
+    done
+    do return with var txt
+done
+
 
 # TEXT
 # ~~~~~ PARSER CODE ~~~~~
@@ -1718,25 +1728,14 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     # If there isn't the same part of speech twice, add the current word to 
     # "hash full_entity" and leave the following word as it is
     # CODE
-    if not from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } do
+    if hash sym_noun item { from array current_tag first item } is false and from hash sym_noun item { from array next_tag first item } is true do
         set from hash full_entity item { var entity_key_name } to [ [ var current_word ] ]
         shift from array words
-    done
-    # TEXT
-    # It is known that the next word WILL be a verb.
-    # So add it to "hash full_entity"
-    # <br /><br />
-    # If there isn't the same part of speech twice, add the current word to 
-    # "hash full_entity" and leave the following word as it is
-    # CODE
-    if from hash sym_noun item { from array current_tag first item } and from hash sym_verb item { from array next_tag first item } do
-        #set from hash full_entity item { var entity_key_name } to [ [ var current_word ] ]
-        #shift from array words
-        
-        #set var current_word to var next_word
-        #set array current_tag to array next_tag
-        #set var next_word to from array words first item
-        #set array next_tag to from hash tags item { var next_word }
+
+        set var current_word to from array words first item
+        set array current_tag to from hash tags item { var current_word }
+        set var next_word to from array words second item
+        set array next_tag to from hash tags item { var next_word }
     done
     # TEXT
     # <br /><br />
@@ -1754,17 +1753,36 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             go to last
         done
 
-        print "now:  " concat from array current_tag first item concat " - " concat var current_word
+        print "now:   " concat from array current_tag first item concat " - " concat var current_word
         print new line
-        print "next: " concat from array next_tag first item concat " - " concat var next_word
+        print "next:  " concat from array next_tag first item concat " - " concat var next_word
         print new line
+        set new var _words to join_items with array words
+        print "array: " concat var _words
+        print new line
+
         
-        if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
-            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+        if that array is empty: from hash full_entity item { var entity_key_name } (end) or from hash full_entity item { var entity_key_name } last item first item not matches var current_word do
+            push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
             shift from array words
         done
         
         if from global hash builtin_entity_ends item { lc(var current_word) } do
+            set flag found_subject to 1
+            set var entity_key_name to "subjects"
+            if flag found_subject do
+                set var entity_key_name to "objects"
+            done
+        done
+        
+        set new var current_is_male_name to 0
+        set new array male_names to global array builtin_male_names
+        for each new var name in array male_names do
+            if lc(var name) matches lc(var current_word) do
+                set var current_is_male_name to 1
+            done
+        done
+        if from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } and ( var current_is_male_name is false or var current_word matches /_/ ) do
             set flag found_subject to 1
             set var entity_key_name to "subjects"
             if flag found_subject do
@@ -1786,36 +1804,47 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             done
         done
         
+
+        set var current_word to from array words first item
+        set array current_tag to from hash tags item { var current_word }
+        set var next_word to from array words second item
+        set array next_tag to from hash tags item { var next_word }
         
         if from array words first item matches var next_word do
-            print "next word " concat var next_word concat " is current word, maybe a parser bug, exiting loop"
+            print "next word '" concat var next_word concat "' same as current word '" concat var current_word concat "' , maybe a parser bug, exiting loop"
             print new line
             if from hash sym_noun item { var next_word } do
-                do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
                 shift from array words
             done
             while from hash sym_linking item { var next_word } do
-                do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
                 shift from array words
                 
                 if from hash sym_noun item { var next_word } do
-                    do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
+                    push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
                     shift from array words
                 done
             done
+
+
+            set var current_word to from array words first item
+            set array current_tag to from hash tags item { var current_word }
+            set var next_word to from array words second item
+            set array next_tag to from hash tags item { var next_word }
+
             go to last
         done
-        set var current_word to var next_word
-        set array current_tag to array next_tag
-        set var next_word to from array words first item
-        set array next_tag to from hash tags item { var next_word }
     done
 
     print "end of loop."
     print new line
-    print "now:  " concat from array current_tag first item concat " - " concat var current_word
+    print "now:   " concat from array current_tag first item concat " - " concat var current_word
     print new line
-    print "next: " concat from array next_tag first item concat " - " concat var next_word
+    print "next:  " concat from array next_tag first item concat " - " concat var next_word
+    print new line
+    set new var _words to join_items with array words
+    print "array: " concat var _words
     print new line
 
     if from global hash builtin_entity_ends item { lc(var current_word) } do
@@ -1846,7 +1875,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     if from hash sym_noun item { from array current_tag item [ const TYPE ] } do
     #    if from hash sym_verb item { from array next_tag item [ const TYPE ] } do
     #        if (not items of that array: from hash full_entity item { var entity_key_name } end-items-of) or (not from hash full_entity item { var entity_key_name } item [ items of that array: from hash full_entity item { var entity_key_name } end-items-of - 1 ] first item matches var current_word) do
-    #            do push using items of that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+    #            push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
     #            shift from array words
     #        done
     #    done
@@ -2147,7 +2176,7 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
 
         # Fetch all words.
     while var current_word do
-        do push using items of that array: from hash full_entity item { "extra" } end-items-of, [ var current_word ]
+        push into that array: from hash full_entity item { "extra" } end-items-of, [ var current_word ]
         shift from array words
         set var current_word to from array words first item
         set array current_tag to from hash tags item { var current_word }
@@ -2383,7 +2412,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             if not from hash parsed item { "verbs" } do
                 set from hash parsed item { "verbs" } to an empty array
             done
-            do push using items of that array: from hash parsed item { "verbs" } end-items-of, items of array add_parsed
+            push into that array: from hash parsed item { "verbs" } end-items-of, items of array add_parsed
         done
         else do
             print var ident
@@ -2696,8 +2725,11 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
             if from array verb first item matches /st$/ do
                 do regex using from array verb first item: /st$/, "en", :i
             done
-            else if from array verb first item matches /st$/ do
+            else if from array verb first item matches /e$/ do
                 do regex using from array verb first item: /e$/, "en", :i
+            done
+            else if from array verb first item matches /ben$/ do
+                # do nothing
             done
             else if items of array verbs is 1 do
                 do regex using from array verb first item: /...$/, "*", :i
@@ -2712,10 +2744,10 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
     set from hash parsed_1 item { 'verbs' } to an empty array
     set new array verb to an empty array
     push into array verb, "reasonof"
-    do push using items of that array: from hash parsed_1 item { 'verbs' } end items of, array verb
+    push into that array: from hash parsed_1 item { 'verbs' } end items of, array verb
     set from hash parsed_1 item { 'subjects' } to an empty array
-    # do push using items of that array: from hash parsed_1 item { 'subjects' } end items of, items of array subjects
-    do push using items of that array: from hash parsed_1 item { 'subjects' } end items of, items of array verbs
+    # push into that array: from hash parsed_1 item { 'subjects' } end items of, items of array subjects
+    push into that array: from hash parsed_1 item { 'subjects' } end items of, items of array verbs
     set from hash parsed_1 item { 'objects' } to an empty array
     set from hash parsed_1 item { 'clauses' } to an empty array
     set from hash parsed_1 item { 'adverbs' } to an empty array
@@ -3215,7 +3247,7 @@ define action logic with var input, var lang, var path, hash parsed do
         set new var number_of_clause to 0
         set new var i to 0
         while var i < 6 do
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ var i ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ var i ]
             set var i to var i + 1
         done
         
@@ -3236,13 +3268,13 @@ define action logic with var input, var lang, var path, hash parsed do
         set var number_of_clause to var number_of_clause + 1
         set var i to 0
         while var i < 10 do
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 0 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 1 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 2 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 3 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 4 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 5 ]
-            do push using items of that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 6 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 0 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 1 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 2 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 3 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 4 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 5 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 6 ]
             do adjust_truth with array result, from array rawresult item [ var offs - 1 + 6 ], var number_of_clause, var i
             set var i to var i + 1
             push into array result, an empty array
@@ -3312,7 +3344,7 @@ define action logic with var input, var lang, var path, hash parsed do
         if not from hash in_true item { var expr } do
             set from hash in_true item { var expr } to an empty array
         done
-        do push using items of that array: from hash in_true item { var expr } end items of, array result
+        push into that array: from hash in_true item { var expr } end items of, array result
         
         print "A true expression:  " concat var expr concat new line
     done
@@ -3321,7 +3353,7 @@ define action logic with var input, var lang, var path, hash parsed do
         if not from hash in_false item { var expr } do
             set from hash in_false item { var expr } to an empty array
         done
-        do push using items of that array: from hash in_false item { var expr } end items of, array result
+        push into that array: from hash in_false item { var expr } end items of, array result
         
         print "A false expression: " concat var expr concat new line
     done
@@ -4174,7 +4206,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
                 set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }
                 set from hash parsed_clause item { 'extra' } to toggle_entities using from hash parsed_clause item { 'extra' }
                 set from hash parsed_clause item { 'clauses' } to an empty array
-                do push using items of that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
+                push into that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
             done
         done
     done
@@ -5073,7 +5105,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
             if not from hash parsed_clause item { 'questionword' } do
                 set from hash parsed_clause item { 'questionword' } to an empty array
             done
-            do push using items of that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
+            push into that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
         done
     done
     if not is an empty hash parsed do
