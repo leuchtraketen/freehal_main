@@ -746,4 +746,5 @@ wuer[td]est turing-te bestehen <> du <> den <> nicht <> (maybe)
 wur[td]est geboren <> du <>  <> nicht <> wur[td]est entwickelt <> du <>  <>  <>  <> (maybe)
 wur[td]est geboren <> du <>  <> nicht <> wur[td]est programmiert <> du <>  <>  <>  <> (maybe)
 wur[td]est geboren <> du <>  <> nie <> (maybe)
-wurde erschaffen <> ich <>  <> vor 4 jahren <> (maybe)
+<<<<<<< .mine=======wurde erschaffen <> ich <>  <> vor 4 jahren <> (maybe)
+>>>>>>> .theirs
