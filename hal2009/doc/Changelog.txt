@@ -1,3 +1,7 @@
+1052:
+
+- Bug im Parser korrigiert
+
 1051:
 
 - Bug korrigiert: Aufteilung der Datenbank I

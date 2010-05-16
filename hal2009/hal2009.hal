@@ -1696,17 +1696,24 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
 done
 
 define action entity_chose_end_of_entity with var lang, array words, hash tags, var current_tag, var next_tag, var current_word, var next_word, flag found_subject do
+    if flag found_subject do
+        do return with 0
+    done
+
     set new flag end_of_entity to 0
 
-    if flag found_subject do
+
+    if ( from hash sym_art item { var current_tag } or from hash sym_adj item { var current_tag } ) and from hash sym_noun item { var next_tag } do
+        set flag end_of_entity to 0
+
         do return with flag end_of_entity
     done
 
-    if from global hash builtin_entity_ends item { lc(var current_word) } do
-        set flag found_subject to 1
+
+    if from hash sym_noun item { var current_tag } do
         set flag end_of_entity to 1
     done
-    
+
     set new var current_is_male_name to 0
     set new array male_names to global array builtin_male_names
     for each new var name in array male_names do
@@ -1714,8 +1721,11 @@ define action entity_chose_end_of_entity with var lang, array words, hash tags, 
             set var current_is_male_name to 1
         done
     done
-    if from hash sym_noun item { var current_tag } and from hash sym_noun item { var next_tag } and ( var current_is_male_name is false or var current_word matches /_/ ) do
-        set flag found_subject to 1
+    if from hash sym_noun item { var current_tag } and from hash sym_noun item { var next_tag } and ( var current_is_male_name is true and var current_word not matches /_/ ) do
+        set flag end_of_entity to 0
+    done
+    
+    if from global hash builtin_entity_ends item { lc(var current_word) } do
         set flag end_of_entity to 1
     done
     
@@ -1724,12 +1734,10 @@ define action entity_chose_end_of_entity with var lang, array words, hash tags, 
         
         if lc(var current_word) matches from array pair first item or not from array pair first item do
             if lc(var next_word) matches from array pair second item or not from array pair second item do
-                set flag found_subject to 1
                 set flag end_of_entity to 1
             done
         done
     done
-
 
     do return with flag end_of_entity
 done
@@ -1813,6 +1821,20 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             done
         done
 
+        set new flag end_of_entity to 0
+        if flag found_subject is 0 do
+            set flag end_of_entity to entity_chose_end_of_entity with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item, var current_word, var next_word, flag found_subject
+        done
+
+        if flag end_of_entity do
+            set flag found_subject to 1
+        done
+
+        set var entity_key_name to "subjects"
+        if flag found_subject do
+            set var entity_key_name to "objects"
+        done
+
         set var current_word to from array words first item
         set array current_tag to from hash tags item { var current_word }
         set var next_word to from array words second item
@@ -1820,17 +1842,9 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
 
         set flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item
 
-        if flag found_subject is 0 do
-            set flag found_subject to entity_chose_end_of_entity with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item, var current_word, var next_word, flag found_subject
-
-            set var entity_key_name to "subjects"
-            if flag found_subject do
-                set var entity_key_name to "objects"
-            done
-
-            if flag found_subject do
-                set flag add_current_word to 0
-            done
+        if flag end_of_entity do
+            print "End of Entity." concat new line
+            set flag add_current_word to 0
         done
     done
 
