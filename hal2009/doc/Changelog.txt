@@ -1,3 +1,7 @@
+1047:
+
+- Tippfehler
+
 1046:
 
 - Bug in correct_human_edit_typos korrigiert

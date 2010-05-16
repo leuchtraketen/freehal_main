@@ -1711,7 +1711,7 @@ define action entity_chose_end_of_entity with var lang, array words, hash tags, 
             set var current_is_male_name to 1
         done
     done
-    if from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } and ( var current_is_male_name is false or var current_word matches /_/ ) do
+    if from hash sym_noun item { var current_tag } and from hash sym_noun item { var next_tag } and ( var current_is_male_name is false or var current_word matches /_/ ) do
         set flag found_subject to 1
         set flag end_of_entity to 1
     done
