@@ -671,7 +671,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         return sql;
     }
 
-    strcat(sql, "delete from cache_facts `; delete from `cache_indices ");
+    strcat(sql, "delete from cache_facts ; delete from cache_indices ");
 
     int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);

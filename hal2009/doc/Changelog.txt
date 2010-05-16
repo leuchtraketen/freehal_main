@@ -1,3 +1,7 @@
+1051:
+
+- Bug korrigiert: Aufteilung der Datenbank I
+
 1050:
 
 - Aufteilung der Datenbank I: .main und .index
