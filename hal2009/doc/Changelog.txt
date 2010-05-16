@@ -1,3 +1,7 @@
+1048:
+
+- Bug im Parser korrigiert
+
 1047:
 
 - Tippfehler

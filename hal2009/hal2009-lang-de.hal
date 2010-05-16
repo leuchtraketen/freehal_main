@@ -2810,6 +2810,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'Wissen' => "n",
           'wissen' => "v",
           'rechnen' => "v",
+          'erweitern' => "v",
           'kenn' => "v",
           'kenne' => "v",
           'kennst' => "v",

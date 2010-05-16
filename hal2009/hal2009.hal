@@ -1679,10 +1679,13 @@ done
 define action entity_chose_add_current_word with var lang, array words, hash tags, var current_tag, var next_tag do
     set new flag add_current_word to 0
 
-    if from hash sym_noun item { var current_tag } or from hash sym_noun item { var next_tag } do
+    if from hash sym_entity item { var current_tag } or from hash sym_noun item { var next_tag } do
         set flag add_current_word to 1
     done
     if from hash sym_entity item { var current_tag } and from hash sym_entity item { var next_tag } do
+        set flag add_current_word to 1
+    done
+    if from hash sym_linking item { var current_tag } and from hash sym_entity item { var next_tag } do
         set flag add_current_word to 1
     done
     if from hash sym_verb item { var current_tag } do

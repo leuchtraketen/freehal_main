@@ -924,6 +924,12 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/, " $1 , zu $0 $2", :global:i
 
+    do regex using var input: /\szu\s(<[a-z]>+?en)\s/, " , zu $0 ", :global:i
+
+    if var input matches /ist es.*?\szu\s/ do
+        do regex using var input: / ist es /, " ist ", :global:i
+    done
+
     do regex using var input: /^\s+/, "", :global:i
     do regex using var input: /^<[,]>/, "", :global:i
     do regex using var input: /^\s+/, "", :global:i
