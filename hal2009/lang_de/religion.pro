@@ -40,7 +40,7 @@ ist <> die septuaginta <> die aelteste griechische uebersetzung des alten testam
 ist <> die thora <> das mosaische gesetz <>  <> (true)
 ist <> eine sure <> ein kapitel <> in dem koran <> (true)
 ist <> ein mudschahedin <> ein islamischer kaempfer  <> fuer die sache gottes<> (true)
-ist <> eschatologie <> die lehre <> _();von_den_letzten_dingen_ <> (true)
+ist <> eschatologie <> die lehre <> _() von_den_letzten_dingen_ <> (true)
 ist <> gregor <> ein papstname <>  <> (true)
 ist <> griechenland <> ein christliches land <>  <> (true)
 ist <> jerusalem <> fuer drei religionen <> bedeutsam <> (true)

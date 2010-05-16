@@ -302,7 +302,7 @@
 = <> _kalt_ <> _boese_ <> (maybe)
 = <> _kalter_himmelskoerper_ <> _planet_ <> (maybe)
 = <> _kalter_himmelskoerper_ <> _wanderstern_ <> (maybe)
-= <> _kalter_kaffee_ <> _alte_ <> _(_langweilige_geschichte_)_ <> (maybe)
+= <> _kalter_kaffee_ <> _alte_ <> _(langweilige_geschichte)_ <> (maybe)
 = <> _kalter_kaffee_ <> _schnee_von_gestern_ <> (maybe)
 = <> _kaltes_licht_ <> _neonbeleuchtung_ <> (maybe)
 = <> _kaltes_licht_ <> _neonlicht_ <> (maybe)

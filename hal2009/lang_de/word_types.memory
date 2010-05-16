@@ -1,4 +1,8 @@
+&:
+  count: 2
+  type: linking
 Ahnung:
+  count: 1
   genus: f
   type: n
 Alkoholisches:
@@ -63,7 +67,7 @@ Deutschland:
 Donaustadt:
   type: n
 Du:
-  count: 8
+  count: 13
   type: n
 Durchmesser:
   count: 2
@@ -71,6 +75,10 @@ Durchmesser:
   type: n
 Eingabe:
   count: 4
+  genus: f
+  type: n
+Eingaben:
+  count: 1
   genus: f
   type: n
 Englisch:
@@ -97,6 +105,9 @@ Farbe:
 Fernsehen:
   type: n
 Fernsehsendung:
+  type: n
+Fragen:
+  count: 3
   type: n
 Freimaurer:
   count: 1
@@ -129,6 +140,7 @@ Gral:
   genus: m
   type: n
 Grundfragen:
+  count: 1
   genus: f
   type: n
 Hagel:
@@ -146,17 +158,17 @@ Hitze:
   genus: f
   type: n
 Hm:
-  count: 2
+  count: 5
   type: inter
 Hmm:
-  count: 3
+  count: 5
   type: inter
 Hungerburg:
   count: 1
   genus: f
   type: n
 Ich:
-  count: 13
+  count: 16
   type: n
 Innsbruck:
   count: 1
@@ -194,6 +206,7 @@ Landeshauptstadt:
 Leuchten:
   type: vi
 Marktwirtschaft:
+  count: 1
   genus: f
   type: n
 Menschen:
@@ -216,7 +229,7 @@ NDR:
   genus: m
   type: n
 Nein:
-  count: 13
+  count: 14
   type: n
 Norddeutschen:
   genus: f
@@ -272,6 +285,9 @@ Stadtteil:
 Sueden:
   genus: f
   type: n
+Taetigkeit:
+  genus: f
+  type: n
 Teilnehmer:
   genus: f
   type: n
@@ -308,6 +324,8 @@ Uranus:
   type: n
 Verhalten:
   type: vi
+Verhaltens:
+  type: n
 Welt:
   count: 4
   type: n
@@ -326,6 +344,9 @@ Wiener:
 Wind:
   genus: f
   type: n
+Wissen:
+  count: 1
+  type: n
 Wissensspeicher:
   type: n
 Zeit:
@@ -333,6 +354,10 @@ Zeit:
   type: n
 Zustand:
   count: 1
+  genus: m
+  type: n
+Zweck:
+  count: 5
   genus: m
   type: n
 abendrot:
@@ -430,9 +455,10 @@ denke:
 deshalb:
   type: adv
 dezentral:
+  count: 1
   type: adj
 dich:
-  count: 4
+  count: 7
   type: n
 diesig:
   type: adj
@@ -443,7 +469,7 @@ donner:
   genus: m
   type: n
 du:
-  count: 25
+  count: 34
   type: n
 duenne:
   type: adj
@@ -453,6 +479,9 @@ duerre:
 durchmesser:
   count: 1
   genus: m
+  type: n
+eingaben:
+  genus: f
   type: n
 englisch:
   count: 3
@@ -464,10 +493,11 @@ entdeckt:
   count: 1
   type: vi
 entschieden:
+  count: 1
   genus: s
   type: n
 entwickelst:
-  count: 2
+  count: 4
   type: vi
 entwickler:
   genus: m
@@ -484,6 +514,10 @@ erfolgreichste:
 erfolgreichsten:
   count: 3
   type: adj
+erweitern:
+  count: 1
+  genus: s
+  type: n
 es:
   type: n
 etwas:
@@ -521,6 +555,8 @@ gemeinsam:
   type: adj
 genannt:
   type: vi
+geschaffen:
+  type: adj
 gestellt:
   type: adj
 getraenk:
@@ -606,8 +642,13 @@ leid:
   count: 3
   genus: s
   type: n
+lerne:
+  type: vi
 lernfaehige:
   type: adj
+lernst:
+  count: 3
+  type: vi
 machst:
   type: vi
 man:
@@ -627,6 +668,7 @@ meteorologie:
 mexiko:
   type: n
 mich:
+  count: 1
   type: n
 mir:
   count: 4
@@ -661,7 +703,7 @@ nieselregen:
   genus: m
   type: n
 oder:
-  count: 2
+  count: 3
   type: linking
 oeffentlich:
   type: adv
@@ -736,7 +778,7 @@ stadt:
   genus: f
   type: n
 staendige:
-  count: 2
+  count: 6
   type: adj
 stellt:
   type: vi
@@ -783,6 +825,12 @@ und:
   type: linking
 verarbeiten:
   type: vi
+verbessert:
+  count: 2
+  type: vi
+verstanden:
+  count: 1
+  type: vi
 verstehen:
   type: vi
 versteht:
@@ -790,7 +838,7 @@ versteht:
 wei:
   type: vi
 weiter:
-  count: 2
+  count: 4
   type: adj
 weltsprache:
   count: 1
@@ -819,5 +867,8 @@ wolkenbruch:
   genus: m
   type: n
 zustand:
+  genus: m
+  type: n
+zweck:
   genus: m
   type: n

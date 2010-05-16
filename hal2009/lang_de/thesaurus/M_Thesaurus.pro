@@ -2281,7 +2281,7 @@
 = <> _meist_ <> _vornehmlich_ <> (maybe)
 = <> _meist_ <> _vorwiegend_ <> (maybe)
 = <> _meist_ <> _zumeist_ <> (maybe)
-= <> _melaena_ <> _dunkler_ <> _(_blutiger_stuhlgang_)_ <> (maybe)
+= <> _melaena_ <> _dunkler_ <> _(blutiger_stuhlgang)_ <> (maybe)
 = <> _melaena_ <> _teerstuhl_ <> (maybe)
 = <> _melancholie_ <> _depression_ <> (maybe)
 = <> _melancholie_ <> _miesepetrigkeit_ <> (maybe)
@@ -6482,7 +6482,7 @@ mit= umgehen <> _schlecht_behandeln_ <> schlecht <> (maybe)
 = <> _mutti_ <> _muddern_ <> (maybe)
 = <> _mutti_ <> _mutter_ <> (maybe)
 = <> _mut_ <> _traute_ <> (maybe)
-= <> _mutualismus_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(_zum_gegenseitigen_)_maybe_ 
+= <> _mutualismus_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(zum_gegenseitigen)_maybe_ 
 = <> _mutualismus_ <> _symbiose_ <> (maybe)
 = <> _mutualismus_ <> _zweckbeziehung_ <> (maybe)
 = <> _mut_ <> _verwegenheit_ <> (maybe)

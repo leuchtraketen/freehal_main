@@ -54,7 +54,7 @@ ist <> die seeanemone <> ein tier <>  <> (true)
 ist <> die stute <> ein weibliches pferd <>  <> (true)
 ist <> ein albatros <> ein vogel <>  <> (true)
 ist <> ein albatros <> ein vogel <> aus der familie diomedeidae<> (true)
-ist <> ein baer <> _ein_gosses_pelziges_tier_ <> _(zaehnen_und_klauen_);mit_vielen_muskeln_ <>  <>  <>  <> nothing <> nothing <> 
+ist <> ein baer <> ein grosses pelziges tier <> mit vielen muskeln und zaehnen und klauen <> (maybe) 
 ist <> ein baer <> ein tier <>  <> (true)
 ist <> ein delphin <> ein saeugetier <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
 ist <> ein dinosaurier <> eine ausgestorbene riesenechse <>  <>  <>  <>  <> nothing <> nothing <>  <> (true)
@@ -112,7 +112,7 @@ ist <> eine sardine <> ein fisch <>  <>  <>  <>  <> nothing <> nothing <>  <> (t
 ist <> guano <> vogelkot <>  <> (true)
 ist <> zoologie <> die lehre <> von den tieren <> (true)
 kann/can schwimmen <> ein fisch <> nothing <>  <>  <>  <>  <> nothing <> nothing <> 
-kann/can springen <> ein floh <> 35 zentimeter <> weit <> (true)
+kann/can springen <> ein floh <> _35_zentimeter_ <> weit <> (true)
 kleine sind <> ponys <> pferde <>  <> (true)
 leben <> fische <> nothing <> im wasser <>  <>  <>  <> nothing <> nothing 
 leben <> woelfe <> nothing <> in rudeln <> (true)

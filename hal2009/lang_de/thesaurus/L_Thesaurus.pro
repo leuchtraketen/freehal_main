@@ -1446,9 +1446,9 @@
 = <> _lebensgefuehl_ <> _denkweise_ <> (maybe)
 = <> _lebensgefuehl_ <> _lebensart_ <> (maybe)
 = <> _lebensgefuehl_ <> _zeitgeist_ <> (maybe)
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _mutualismus_ <> _(_zum_gegenseitigen_)_maybe_ 
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _symbiose_ <> _(_zum_gegenseitigen_)_maybe_ 
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _zweckbeziehung_ <> _(_zum_gegenseitigen_)_maybe_ 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _mutualismus_ <> _(zum_gegenseitigen)_maybe_ 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _symbiose_ <> _(zum_gegenseitigen)_maybe_ 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _zweckbeziehung_ <> _(zum_gegenseitigen)_maybe_ 
 = <> _lebensgeschichte_ <> _biografie_ <> (maybe)
 = <> _lebensgeschichte_ <> _biographie_ <> (maybe)
 = <> _lebensgeschichte_ <> _lebensablauf_ <> (maybe)
@@ -1635,9 +1635,9 @@
 = <> _leckerei_ <> _zuckerwaren_ <> (maybe)
 = <> _lecker_ <> _hoch-genuss_ <> _kulinarischer_ <> (maybe)
 = <> _leckermaeulchen_ <> _leckermaul_ <> (maybe)
-= <> _leckermaeulchen_ <> _(_der_gerne_suessigkeiten_isst_);_jemand_ <> (maybe)
+= <> _leckermaeulchen_ <> _(der_gerne_suessigkeiten_isst);_jemand_ <> (maybe)
 = <> _leckermaul_ <> _leckermaeulchen_ <> (maybe)
-= <> _leckermaul_ <> _(_der_gerne_suessigkeiten_isst_);_jemand_ <> (maybe)
+= <> _leckermaul_ <> _(der_gerne_suessigkeiten_isst);_jemand_ <> (maybe)
 = <> _lecker_ <> _appetitlich_ <> (maybe)
 = <> _lecker_ <> _delikat_ <> (maybe)
 = <> _lecker_ <> _delizioes_ <> (maybe)
@@ -4554,7 +4554,7 @@
 = <> _luftpresser_ <> _luftkompressor_ <> (maybe)
 = <> _luftpresser_ <> _presslufterzeuger_ <> (maybe)
 = <> _luft_ <> _puffer_ <> (maybe)
-= <> _luft_ <> _raum_ <> _(_zum_atmen_);_ <> (maybe)
+= <> _luft_ <> _raum_ <> _(zum_atmen);_ <> (maybe)
 = <> _luftreibung_ <> _luftwiderstand_ <> (maybe)
 = <> _luftreifen_ <> _pneu_ <> (maybe)
 = <> _luftreifen_ <> _rad_ <> (maybe)

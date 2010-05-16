@@ -3003,7 +3003,7 @@
 = <> _zug_um_zug_ <> _einer_nach_dem_anderen_ <> (maybe)
 = <> _zug_um_zug_ <> _einzeln_ <> (maybe)
 = <> _zug_um_zug_ <> _getrennt_ <> (maybe)
-= <> _zug_um_zug_ <> à <> _peu;peu_ <> (maybe)
+= <> _zug_um_zug_ <> à <> _peu peu_ <> (maybe)
 = <> _zug_um_zug_ <> _stueck_fuer_stueck_ <> (maybe)
 = <> _zugunsten_ <> _anstatt_ <> (maybe)
 = <> _zugunsten_ <> _an_stelle_von_ <> (maybe)
@@ -3238,8 +3238,8 @@
 = <> _zu_meinem_bedauern_ <> _leider_maybe_ 
 = <> _zu_meinem_bedauern_ <> _schlechterdings_maybe_ 
 = <> _zu_meinem_bedauern_ <> _ungluecklicherweise_maybe_ 
-= <> _zum_einen_and_eren_ <> _beides_ <> _(_zum_and_)_ <> (maybe)
-= <> _zum_einen_and_eren_ <> _(_zum_and_);_sowohl_als_auch_ <> (maybe)
+= <> _zum_einen_and_eren_ <> _beides_ <> _(zum_and)_ <> (maybe)
+= <> _zum_einen_and_eren_ <> _(zum_and);_sowohl_als_auch_ <> (maybe)
 = <> _zum_einen_ <> _auf_der_einen_seite_ <> (maybe)
 = <> _zum_einen_ <> _einerseits_ <> (maybe)
 = <> _zumeist_ <> _im_regelfall_ <> (maybe)
@@ -5367,7 +5367,7 @@
 = <> _zweckbetont_ <> _praktikabel_ <> (maybe)
 = <> _zweckbetont_ <> _praktisch_ <> (maybe)
 = <> _zweckbetont_ <> _zweckmaessig_ <> (maybe)
-= <> _zweckbeziehung_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(_zum_gegenseitigen_)_maybe_ 
+= <> _zweckbeziehung_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(zum_gegenseitigen)_maybe_ 
 = <> _zweckbeziehung_ <> _mutualismus_ <> (maybe)
 = <> _zweckbeziehung_ <> _symbiose_ <> (maybe)
 = <> _zweckdienlich_ <> _angebracht_ <> (maybe)

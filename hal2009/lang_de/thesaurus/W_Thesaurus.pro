@@ -2543,7 +2543,7 @@
 = <> _wenn_es_nach_mir_geht_ <> _meiner_meinung_nach_ <> (maybe)
 = <> _wenn_es_nach_mir_geht_ <> _von_mir_aus_ <> (maybe)
 = <> _wenn_es_nach_mir_geht_ <> _wie_ich_denke_ <> (maybe)
-= <> _wenn_ <> _fuer_den_fall_ <> _(_dass_)_ <> (maybe)
+= <> _wenn_ <> _fuer_den_fall_ <> _(dass)_ <> (maybe)
 = <> _wenngleich_ <> _dennoch_ <> (maybe)
 = <> _wenngleich_ <> _dessen_ungeachtet_ <> (maybe)
 = <> _wenngleich_ <> _nichtsdestotrotz_ <> (maybe)
