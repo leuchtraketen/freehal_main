@@ -1676,6 +1676,62 @@ define action join_items with array list do
     do return with var txt
 done
 
+define action entity_chose_add_current_word with var lang, array words, hash tags, var current_tag, var next_tag do
+    set new flag add_current_word to 0
+
+    if from hash sym_noun item { var current_tag } or from hash sym_noun item { var next_tag } do
+        set flag add_current_word to 1
+    done
+    if from hash sym_entity item { var current_tag } and from hash sym_entity item { var next_tag } do
+        set flag add_current_word to 1
+    done
+    if from hash sym_verb item { var current_tag } do
+        set flag add_current_word to 0
+    done
+
+    do return with flag add_current_word
+done
+
+define action entity_chose_end_of_entity with var lang, array words, hash tags, var current_tag, var next_tag, var current_word, var next_word, flag found_subject do
+    set new flag end_of_entity to 0
+
+    if flag found_subject do
+        do return with flag end_of_entity
+    done
+
+    if from global hash builtin_entity_ends item { lc(var current_word) } do
+        set flag found_subject to 1
+        set flag end_of_entity to 1
+    done
+    
+    set new var current_is_male_name to 0
+    set new array male_names to global array builtin_male_names
+    for each new var name in array male_names do
+        if lc(var name) matches lc(var current_word) do
+            set var current_is_male_name to 1
+        done
+    done
+    if from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } and ( var current_is_male_name is false or var current_word matches /_/ ) do
+        set flag found_subject to 1
+        set flag end_of_entity to 1
+    done
+    
+    set new array pairs to global array builtin_entity_ends_pair
+    for each new array pair in array pairs do
+        
+        if lc(var current_word) matches from array pair first item or not from array pair first item do
+            if lc(var next_word) matches from array pair second item or not from array pair second item do
+                set flag found_subject to 1
+                set flag end_of_entity to 1
+            done
+        done
+    done
+
+
+    do return with flag end_of_entity
+done
+
+##((from hash sym_linking item { from array current_tag first item } or from hash sym_entity item { from array next_tag first item }) or ((from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item )))
 
 # TEXT
 # ~~~~~ PARSER CODE ~~~~~
@@ -1721,32 +1777,11 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     print new line
 
 
-    # TEXT
-    # It is known that the next word WILL be either a noun, an adjective or an article.
-    # So add it to "hash full_entity"
-    # <br /><br />
-    # If there isn't the same part of speech twice, add the current word to 
-    # "hash full_entity" and leave the following word as it is
-    # CODE
-    if hash sym_noun item { from array current_tag first item } is false and from hash sym_noun item { from array next_tag first item } is true do
-        set from hash full_entity item { var entity_key_name } to [ [ var current_word ] ]
-        shift from array words
+    set new flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item
 
-        set var current_word to from array words first item
-        set array current_tag to from hash tags item { var current_word }
-        set var next_word to from array words second item
-        set array next_tag to from hash tags item { var next_word }
-    done
-    # TEXT
-    # <br /><br />
-    # If there's the same part of speech twice or more times, 
-    # and the first one is not declared as an entity end,
-    # add them all to the hash
-    # CODE
-    
+
     set new flag count to 20
-    
-    while (not from hash sym_verb item { from array next_tag first item }) and ((from hash sym_linking item { from array current_tag first item } or from hash sym_entity item { from array next_tag first item }) or ((from hash sym_noun item { from array current_tag first item } or from hash sym_linking item { from array current_tag first item }) and (from hash sym_noun item { from array next_tag first item } or from hash sym_linking item { from array next_tag first item } or not from array next_tag first item ))) do
+    while flag add_current_word do
     
         set flag count to flag count - 1
         if flag count <= 0 do
@@ -1761,12 +1796,12 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         print "array: " concat var _words
         print new line
 
-        
-        if that array is empty: from hash full_entity item { var entity_key_name } (end) or from hash full_entity item { var entity_key_name } last item first item not matches var current_word do
-            push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
-            shift from array words
+        if from hash full_entity item { var entity_key_name } is false do
+            set from hash full_entity item { var entity_key_name } to an empty array
         done
-        
+        push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var current_word ]
+        shift from array words
+
         if from global hash builtin_entity_ends item { lc(var current_word) } do
             set flag found_subject to 1
             set var entity_key_name to "subjects"
@@ -1774,66 +1809,25 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
                 set var entity_key_name to "objects"
             done
         done
-        
-        set new var current_is_male_name to 0
-        set new array male_names to global array builtin_male_names
-        for each new var name in array male_names do
-            if lc(var name) matches lc(var current_word) do
-                set var current_is_male_name to 1
-            done
-        done
-        if from hash sym_noun item { from array current_tag first item } and from hash sym_noun item { from array next_tag first item } and ( var current_is_male_name is false or var current_word matches /_/ ) do
-            set flag found_subject to 1
-            set var entity_key_name to "subjects"
-            if flag found_subject do
-                set var entity_key_name to "objects"
-            done
-        done
-        
-        set new array pairs to global array builtin_entity_ends_pair
-        for each new array pair in array pairs do
-            
-            if lc(var current_word) matches from array pair first item or not from array pair first item do
-                if lc(var next_word) matches from array pair second item or not from array pair second item do
-                    set flag found_subject to 1
-                    set var entity_key_name to "subjects"
-                    if flag found_subject do
-                        set var entity_key_name to "objects"
-                    done
-                done
-            done
-        done
-        
 
         set var current_word to from array words first item
         set array current_tag to from hash tags item { var current_word }
         set var next_word to from array words second item
         set array next_tag to from hash tags item { var next_word }
-        
-        if from array words first item matches var next_word do
-            print "next word '" concat var next_word concat "' same as current word '" concat var current_word concat "' , maybe a parser bug, exiting loop"
-            print new line
-            if from hash sym_noun item { var next_word } do
-                push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
-                shift from array words
-            done
-            while from hash sym_linking item { var next_word } do
-                push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
-                shift from array words
-                
-                if from hash sym_noun item { var next_word } do
-                    push into that array: ( from hash full_entity item { var entity_key_name } ) end-items-of, [ var next_word ]
-                    shift from array words
-                done
+
+        set flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item
+
+        if flag found_subject is 0 do
+            set flag found_subject to entity_chose_end_of_entity with var lang, array words, hash tags, from array current_tag first item, from array next_tag first item, var current_word, var next_word, flag found_subject
+
+            set var entity_key_name to "subjects"
+            if flag found_subject do
+                set var entity_key_name to "objects"
             done
 
-
-            set var current_word to from array words first item
-            set array current_tag to from hash tags item { var current_word }
-            set var next_word to from array words second item
-            set array next_tag to from hash tags item { var next_word }
-
-            go to last
+            if flag found_subject do
+                set flag add_current_word to 0
+            done
         done
     done
 
@@ -5314,10 +5308,11 @@ define action correct_human_edit_typos with var file, var current_language, var 
         set new var _copy to var line
         
         set new array parts to split using /<[<]><[>]>/, var line
+        set new var j to 1
         for each new var part in array parts do
-            if var part matches /_/ do
+            if var part matches /_/ or var part matches /time/ do
                 set var part to " " concat var part concat " "
-                if not var part matches /\s<[a-z0-9]>\s/ do
+                if var part not matches /\s<[a-z0-9]>\s/ and var j is not 4 and (var j - 4) % 4 is not 0 do
                     do regex using var part: /\s/, "_", :global
                     do regex using var part: /<[_]>+/, "_", :global
                     set var part to " " concat var part concat " "
@@ -5326,11 +5321,18 @@ define action correct_human_edit_typos with var file, var current_language, var 
                 do regex using var part: /_time_to/, " time_to", :global
                 if var part matches / time_(to|from)/ do
                     do regex using var part: /(<[a-z0-9]>)_/, "$0 ", :global
+                    do regex using var part: /_/, " ", :global
                 done
+                do regex using var part: / time from/, " time_from", :global
+                do regex using var part: / time to/, " time_to", :global
+                do regex using var part: /(<[a-z)(]>)<[;]>(<[a-z)(]>)/, "$0 $1", :global
 
+                do regex using var part: /(<[(\[]>)_/, "$0", :global
+                do regex using var part: /_(<[)\]]>)/, "$0", :global
                 do regex using var part: /^\s+/, " ", :global
                 do regex using var part: /\s+$/, " ", :global
             done
+            set var j to var j + 1
         done
         set var line to join using "<>", items of array parts
         

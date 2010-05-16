@@ -105,8 +105,8 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "]>", "]");
     hals = replace(hals, "size of", "items of");
     hals = replace(hals, " is true ", " ");
-    hals = replace(hals, " is wrong ", " == 0");
-    hals = replace(hals, " is false ", " == 0");
+    hals = replace(hals, " is wrong ", " == 0 ");
+    hals = replace(hals, " is false ", " == 0 ");
     hals = replace(hals, " the hash ", " from hash ");
     hals = replace(hals, " has item ", " item ");
     hals = replace(hals, " contains item ", " item ");

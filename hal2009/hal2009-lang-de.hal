@@ -1383,6 +1383,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'dann' => 1,
           'gerne' => 1,
           'spaet' => 1,
+          'staendig' => 1,
           'frueh' => 1,
           'frueher' => 1,
           'spaeter' => 1,
