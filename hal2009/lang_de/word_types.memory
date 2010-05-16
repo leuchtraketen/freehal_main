@@ -1,0 +1,823 @@
+Ahnung:
+  genus: f
+  type: n
+Alkoholisches:
+  count: 1
+  type: adj
+Antwort:
+  genus: f
+  type: n
+Arbeit:
+  genus: f
+  type: n
+Aspekt:
+  genus: m
+  type: n
+Atlantis:
+  count: 5
+  type: n
+Atmosphaere:
+  count: 2
+  genus: f
+  type: n
+Bernhard:
+  type: n
+Bestandteil:
+  genus: m
+  type: n
+Bewertung:
+  count: 4
+  genus: f
+  type: n
+Bewoelkung:
+  genus: f
+  type: n
+Bier:
+  count: 2
+  genus: s
+  type: n
+Bon:
+  genus: m
+  type: n
+Bund:
+  count: 2
+  genus: m
+  type: n
+Bundeslandes:
+  type: n
+Computer:
+  count: 9
+  genus: m
+  type: n
+Damen:
+  count: 3
+  genus: f
+  type: n
+Daten:
+  count: 2
+  genus: f
+  type: n
+Deutschland:
+  count: 4
+  type: n
+Donaustadt:
+  type: n
+Du:
+  count: 8
+  type: n
+Durchmesser:
+  count: 2
+  genus: m
+  type: n
+Eingabe:
+  count: 4
+  genus: f
+  type: n
+Englisch:
+  count: 2
+  genus: s
+  type: n
+Erde:
+  count: 1
+  genus: f
+  type: n
+Erdoberflaeche:
+  genus: f
+  type: n
+Erscheinung:
+  genus: f
+  type: n
+Es:
+  type: n
+Fakten:
+  type: vi
+Farbe:
+  count: 1
+  type: n
+Fernsehen:
+  type: n
+Fernsehsendung:
+  type: n
+Freimaurer:
+  count: 1
+  type: n
+Freundin:
+  count: 1
+  genus: f
+  type: n
+Fuss:
+  genus: m
+  type: n
+Gebirgskette:
+  genus: f
+  type: n
+Gemeindebezirk:
+  genus: m
+  type: n
+Generation:
+  type: n
+George:
+  type: n
+Gestalt:
+  genus: f
+  type: n
+Gott:
+  genus: m
+  type: n
+Gral:
+  count: 1
+  genus: m
+  type: n
+Grundfragen:
+  genus: f
+  type: n
+Hagel:
+  genus: m
+  type: n
+Heidi:
+  type: n
+Himmel:
+  genus: m
+  type: n
+Hinduismus:
+  genus: m
+  type: n
+Hitze:
+  genus: f
+  type: n
+Hm:
+  count: 2
+  type: inter
+Hmm:
+  count: 3
+  type: inter
+Hungerburg:
+  count: 1
+  genus: f
+  type: n
+Ich:
+  count: 13
+  type: n
+Innsbruck:
+  count: 1
+  type: n
+Internet:
+  type: n
+Io:
+  count: 3
+  type: n
+Japan:
+  type: n
+KI:
+  count: 2
+  genus: f
+  type: n
+Kaelte:
+  genus: f
+  type: n
+Ki:
+  count: 6
+  type: n
+Killer:
+  count: 1
+  genus: m
+  type: n
+Korona:
+  count: 1
+  genus: f
+  type: n
+Kunst:
+  type: n
+Landeshauptstadt:
+  genus: f
+  type: n
+Leuchten:
+  type: vi
+Marktwirtschaft:
+  genus: f
+  type: n
+Menschen:
+  count: 4
+  genus: f
+  type: n
+Messenger:
+  count: 1
+  type: n
+Mexiko:
+  count: 1
+  type: n
+Microsoft:
+  count: 2
+  type: n
+Mythologie:
+  genus: f
+  type: n
+NDR:
+  genus: m
+  type: n
+Nein:
+  count: 13
+  type: n
+Norddeutschen:
+  genus: f
+  type: adj
+O:
+  type: n
+Oesterreich:
+  count: 2
+  type: n
+Ort:
+  genus: m
+  type: n
+Pizza:
+  count: 2
+  genus: f
+  type: n
+Programmierer:
+  count: 1
+  genus: m
+  type: n
+Quadratkilometer:
+  count: 2
+  genus: m
+  type: n
+Regen:
+  type: n
+Schnee:
+  count: 2
+  genus: m
+  type: n
+Shaw:
+  count: 1
+  type: n
+Sonne:
+  count: 1
+  genus: f
+  type: n
+Sonnenfinsternis:
+  genus: f
+  type: n
+Sonnenschein:
+  count: 1
+  genus: m
+  type: n
+Stadt:
+  count: 2
+  genus: f
+  type: n
+Stadtteil:
+  count: 2
+  genus: m
+  type: n
+Sueden:
+  genus: f
+  type: n
+Teilnehmer:
+  genus: f
+  type: n
+Theaterstueck:
+  genus: s
+  type: n
+Tirol:
+  type: n
+Titan:
+  count: 1
+  genus: m
+  type: n
+Tobias:
+  count: 1
+  type: n
+Tut:
+  count: 5
+  type: prep
+Ueberzeugung:
+  genus: f
+  type: n
+Universum:
+  count: 3
+  type: n
+Unterbringung:
+  genus: f
+  type: n
+Uranos:
+  genus: m
+  type: n
+Uranus:
+  count: 1
+  genus: m
+  type: n
+Verhalten:
+  type: vi
+Welt:
+  count: 4
+  type: n
+Weltsprache:
+  count: 1
+  genus: f
+  type: n
+Wesen:
+  type: n
+Wetter:
+  count: 2
+  genus: s
+  type: n
+Wiener:
+  type: n
+Wind:
+  genus: f
+  type: n
+Wissensspeicher:
+  type: n
+Zeit:
+  genus: f
+  type: n
+Zustand:
+  count: 1
+  genus: m
+  type: n
+abendrot:
+  genus: s
+  type: n
+abkuehlung:
+  genus: f
+  type: n
+abrufen:
+  genus: s
+  type: n
+alkohol:
+  count: 3
+  genus: m
+  type: n
+alkoholisches:
+  count: 1
+  type: adj
+alpengluehen:
+  genus: s
+  type: n
+anderem:
+  type: adj
+angeht:
+  type: vi
+antworten:
+  type: vi
+atlantis:
+  count: 1
+  type: n
+atmosphaere:
+  count: 2
+  genus: f
+  type: n
+aufgrund:
+  count: 2
+  type: prep
+barometer:
+  genus: s
+  type: n
+beantworten:
+  count: 2
+  genus: s
+  type: n
+bedeckungsgrad:
+  genus: m
+  type: n
+begrenzt:
+  type: adj
+benannte:
+  type: adj
+bestimmten:
+  type: adj
+bewegt:
+  type: vi
+bewoelkt:
+  type: adj
+blitz:
+  genus: m
+  type: n
+boe:
+  genus: f
+  type: n
+brettspiel:
+  count: 1
+  genus: f
+  type: n
+bzw:
+  count: 3
+  type: n
+cirrocumulus:
+  type: n
+cirrostratus:
+  type: n
+cirrus:
+  type: n
+computer:
+  count: 7
+  genus: m
+  type: n
+computerprogramm:
+  genus: f
+  type: n
+dar:
+  type: n
+dauerfrost:
+  type: vi
+dauerregen:
+  genus: m
+  type: n
+dem:
+  type: art
+denke:
+  type: vi
+deshalb:
+  type: adv
+dezentral:
+  type: adj
+dich:
+  count: 4
+  type: n
+diesig:
+  type: adj
+dir:
+  count: 1
+  type: n
+donner:
+  genus: m
+  type: n
+du:
+  count: 25
+  type: n
+duenne:
+  type: adj
+duerre:
+  genus: f
+  type: n
+durchmesser:
+  count: 1
+  genus: m
+  type: n
+englisch:
+  count: 3
+  genus: s
+  type: n
+englischen:
+  type: adv
+entdeckt:
+  count: 1
+  type: vi
+entschieden:
+  genus: s
+  type: n
+entwickelst:
+  count: 2
+  type: vi
+entwickler:
+  genus: m
+  type: n
+erde:
+  genus: f
+  type: n
+erfolgreich:
+  count: 4
+  type: adj
+erfolgreichste:
+  count: 4
+  type: adj
+erfolgreichsten:
+  count: 3
+  type: adj
+es:
+  type: n
+etwas:
+  count: 1
+  type: adj
+existiere:
+  type: vi
+existierst:
+  count: 2
+  type: vi
+finde:
+  type: vi
+firma:
+  count: 1
+  genus: f
+  type: n
+foehn:
+  genus: m
+  type: n
+freiaeugig:
+  type: adj
+freier:
+  type: adj
+frost:
+  type: n
+fuehrt:
+  count: 1
+  type: vi
+gar:
+  count: 1
+  type: adj
+gefuehrt:
+  type: vi
+gemeinsam:
+  type: adj
+genannt:
+  type: vi
+gestellt:
+  type: adj
+getraenk:
+  count: 3
+  genus: s
+  type: n
+gewitter:
+  count: 1
+  genus: s
+  type: n
+gewittrig:
+  type: adj
+gibst:
+  type: vi
+glatteis:
+  type: n
+griechischen:
+  type: adj
+hauptstadt:
+  type: n
+haus:
+  genus: s
+  type: n
+herrscht:
+  type: vi
+hochdruckgebiet:
+  genus: s
+  type: n
+hochentwickeltes:
+  type: adj
+ich:
+  count: 1
+  type: n
+intelligenz:
+  count: 1
+  genus: f
+  type: n
+jahrhundertsommer:
+  count: 1
+  type: n
+jupitermond:
+  genus: m
+  type: n
+ki:
+  count: 1
+  type: n
+killer:
+  count: 2
+  genus: m
+  type: n
+kilometer:
+  genus: m
+  type: n
+klima:
+  genus: s
+  type: n
+km:
+  type: n
+komisch:
+  type: adv
+kondensstreifen:
+  type: n
+korrekte:
+  type: adj
+kuenstliche:
+  count: 1
+  type: adv
+kuenstliches:
+  count: 1
+  type: adv
+kurzfristigen:
+  type: adj
+landregen:
+  genus: m
+  type: n
+lebendig:
+  count: 3
+  type: adj
+lebst:
+  count: 5
+  type: vi
+leid:
+  count: 3
+  genus: s
+  type: n
+lernfaehige:
+  type: adj
+machst:
+  type: vi
+man:
+  type: n
+mensch:
+  type: n
+menschen:
+  count: 3
+  genus: f
+  type: n
+menschlicheren:
+  type: adj
+meteorologie:
+  count: 1
+  genus: f
+  type: n
+mexiko:
+  type: n
+mich:
+  type: n
+mir:
+  count: 4
+  type: n
+moerder:
+  genus: m
+  type: n
+morgenrot:
+  genus: s
+  type: n
+musikalisch:
+  type: adj
+mutige:
+  count: 1
+  type: adj
+muttersprache:
+  genus: f
+  type: n
+mystische:
+  type: adj
+nachtfrost:
+  type: vi
+nebel:
+  genus: m
+  type: n
+nie:
+  count: 2
+  type: prep
+niederschlag:
+  type: n
+nieselregen:
+  genus: m
+  type: n
+oder:
+  count: 2
+  type: linking
+oeffentlich:
+  type: adv
+orkan:
+  genus: m
+  type: n
+pizza:
+  genus: f
+  type: n
+programmierer:
+  type: adj
+quadratkilometer:
+  genus: m
+  type: n
+rechenzentrum:
+  type: n
+regen:
+  count: 1
+  type: n
+regenbogen:
+  genus: m
+  type: n
+regnerisch:
+  type: adj
+reif:
+  genus: m
+  type: n
+schauer:
+  genus: m
+  type: n
+schnee:
+  count: 3
+  genus: m
+  type: n
+schneesturm:
+  genus: m
+  type: n
+schulz:
+  genus: m
+  type: n
+schwimmen:
+  type: vi
+selbst:
+  type: vi
+selbstlose:
+  count: 1
+  type: adj
+seltsam:
+  count: 1
+  type: adj
+sich:
+  count: 4
+  type: n
+sieht:
+  count: 1
+  type: vi
+singen:
+  genus: s
+  type: n
+sogar:
+  count: 3
+  type: adv
+sonnenschein:
+  genus: m
+  type: n
+sonnig:
+  type: adj
+spuerbaren:
+  type: adv
+stadt:
+  count: 1
+  genus: f
+  type: n
+staendige:
+  count: 2
+  type: adj
+stellt:
+  type: vi
+stuermisch:
+  type: adj
+sturm:
+  count: 1
+  genus: m
+  type: n
+suedlichste:
+  type: adj
+tag:
+  type: n
+taifun:
+  genus: m
+  type: n
+tatsaechlich:
+  type: adv
+temperatur:
+  genus: f
+  type: n
+temperaturbestaendig:
+  count: 1
+  type: adj
+tiefdruckgebiet:
+  genus: s
+  type: n
+tobias:
+  type: n
+toetet:
+  type: vi
+tornado:
+  genus: f
+  type: n
+tritt:
+  count: 1
+  genus: m
+  type: n
+tut:
+  count: 3
+  type: n
+und:
+  count: 1
+  type: linking
+verarbeiten:
+  type: vi
+verstehen:
+  type: vi
+versteht:
+  type: vi
+wei:
+  type: vi
+weiter:
+  count: 2
+  type: adj
+weltsprache:
+  count: 1
+  genus: f
+  type: n
+wesen:
+  count: 2
+  type: n
+wetter:
+  count: 1
+  genus: s
+  type: n
+wetterstation:
+  count: 1
+  type: n
+windig:
+  type: adj
+windstaerke:
+  genus: f
+  type: n
+wolke:
+  genus: f
+  type: n
+wolkenbruch:
+  count: 1
+  genus: m
+  type: n
+zustand:
+  genus: m
+  type: n
