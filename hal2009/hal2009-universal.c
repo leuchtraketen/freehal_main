@@ -21,6 +21,40 @@
 
 #include "hal2009-universal.h"
 
+// printf catcher
+static char catched[20480];
+static int size_catched = 20479;
+static int len_catched = 0;
+static int do_catchf = 0;
+int catchf(const char* fmt, void* arg1) {
+    char tmp[256];
+    if (strstr(fmt, "%")) {
+        snprintf(tmp, 255, fmt, arg1);
+    }
+    else {
+        snprintf(tmp, 255, fmt);
+    }
+    if (len_catched + 256 < size_catched) {
+        strcat(catched, tmp);
+        len_catched += 256;
+    }
+    return 0;
+}
+
+const char* get_catchf() {
+    return catched;
+}
+int begin_catchf() {
+    do_catchf = 1;
+}
+int clear_catchf() {
+    strcpy(catched, "");
+    len_catched = 0;
+}
+int end_catchf() {
+    do_catchf = 0;
+}
+
 
 int universal_begin() {
     int r = 0;
@@ -250,7 +284,6 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 )
 
             ) {
-                debugf("-> DEBUG point I: %i.\n", f);
                 
                 int c;
                 for (c = 0; can_be_a_pointer(facts[f]->subjects[c]); ++c) { }
@@ -270,14 +303,10 @@ struct word*** add_synonyms_by_search(const char* subj, const char* obj, const c
                 //    free(temp);
                 //    continue;
                 //}
-                debugf("-> DEBUG point II: %i.\n", f);
                 if (c && temp && temp[0]) {
                     debugf("-> Synonym '%s' by search, position is now %i.\n", temp[0]->name ? temp[0]->name : "(useless)", *position);
                     debugf("        ... %s\n", temp[0]->name && can_be_a_pointer(temp[1]) && can_be_a_pointer(temp[1]->name) ? temp[1]->name : "(useless)");
                 }
-            }
-            else {
-                debugf("-> DEBUG point III: %i.\n", f);
             }
         }
     }
@@ -622,20 +651,21 @@ int matches(const char* a, const char* b) {
             for (i = 0; i < size || i == size; ++i) {
                 if (c[i] == '*' || i == size) {
                     c[i] = '\0';
-                    printf("Is '%s' in '%s'? ", a, c);
+                    catchf("Is '%s' in", a);
+                    catchf(" '%s'? ", c);
                     q = q || strstr(a, c);
                     if (q) {
-                        printf("yes.\n");
+                        catchf("yes.\n", 0);
                     }
                     else {
-                        printf("no.\n");
+                        catchf("no.\n", 0);
                     }
                     if (i >= size-2) {
-                        printf("break;\n", a, c);
+                        catchf("break;\n", 0);
                         break;
                     }
                     else {
-                        printf("going on...\n", a, c);
+                        catchf("going on...\n", 0);
                         c += i+1;
                         size -= i;
                         i = -1;
@@ -824,33 +854,33 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     }
     
     if (count_requests == 0) {
-        debugf("  => %i\n\n", -1);
+        catchf("  (the following match is '-1' because: count_requests = 0)\n", -1);
         return -1;
     }
     
     if (does_match)  {
-        debugf("  => %i\n\n", does_match);
+//        catchf("  (the following match has been successful)\n", -1);
     }
     return does_match;
 }
 
 int fact_matches_subject_by_subject(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->subjects, weak?WEAK:EXACT);
-    debugf("subject by subject: %d\n", does_match);
+    catchf("- subject by subject: %s\n", does_match?"OK":"FAIL");
     if (does_match == -1)
         does_match = 1;
     return does_match;
 }
 int fact_matches_object_by_subject(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->subjects, weak?WEAK:EXACT);
-    debugf("object by subject:  %d\n", does_match);
+    catchf("-  object by subject:  %s\n", does_match?"OK":"FAIL");
     if (does_match == -1)
         does_match = 0;
     return does_match;
 }
 int fact_matches_subject_by_object(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->subjects, request->objects, weak?WEAK:EXACT);
-    debugf("subject by object:  %d\n", does_match);
+    catchf("- subject by  object:  %s\n", does_match?"OK":"FAIL");
     if (does_match == -1) {
         if (0 == strcmp(request->context, "q_what_weakly")) {
             does_match = 0;
@@ -863,7 +893,7 @@ int fact_matches_subject_by_object(struct fact* fact, struct request* request, i
 }
 int fact_matches_object_by_object(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->objects, weak?WEAK:EXACT);
-    debugf("object by object:   %d\n", does_match);
+    catchf("-  object by  object:   %s\n", does_match?"OK":"FAIL");
     if (does_match == -1)
         does_match = 1;
     return does_match;
@@ -872,21 +902,21 @@ int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, in
     int does_match = fact_matches_entity_by_entity(fact->adverbs, request->adverbs, weak?WEAK:EXACT);
     if (does_match == -1)
         does_match = 1;
-    debugf("adverb by adverb:   %d\n", does_match);
+    catchf("-  adverb by  adverb:   %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 int fact_matches_adverb_by_object(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->adverbs, request->objects, weak?WEAK:EXACT);
     if (does_match == -1)
         does_match = 0;
-    debugf("adverb by object:   %d\n", does_match);
+    catchf("-  adverb by  object:   %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 int fact_matches_object_by_adverb(struct fact* fact, struct request* request, int weak) {
     int does_match = fact_matches_entity_by_entity(fact->objects, request->adverbs, weak?WEAK:EXACT);
     if (does_match == -1)
         does_match = 0;
-    debugf("object by adverb:   %d\n", does_match);
+    catchf("-  object by  adverb:   %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
@@ -902,14 +932,14 @@ int fact_matches_anything_by_extra(struct fact* fact, struct request* request) {
         || fact_matches_entity_by_entity(fact->extra,    request->extra, WEAK) > 0
     ;
     // TODO: -1, see above
-    debugf("anything by extra:  %d\n", does_match);
+    catchf("- anything by extra:  %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
 int fact_matches_questionword_rules_of_q_what_weakly(struct fact* fact, struct request* request) {
     int does_match = 1;
     
-    debugf("q_what_weakly: %d\n", does_match);
+    catchf("-g q_what_weakly: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -932,7 +962,7 @@ int fact_matches_questionword_rules_of_q_what_extra(struct fact* fact, struct re
         }
     }
     
-    debugf("q_what_extra: %d\n", does_match);
+    catchf("- q_what_extra: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -955,7 +985,7 @@ int fact_matches_questionword_rules_of_q_what_exactly(struct fact* fact, struct 
         }
     }
     
-    debugf("q_what_exactly: %d\n", does_match);
+    catchf("- q_what_exactly: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -972,14 +1002,14 @@ int fact_matches_questionword_rules_of_q_who(struct fact* fact, struct request* 
     }
     if (can_be_a_pointer(fact->objects)) {
         for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
-            debugf("q_who: %s\n", fact->objects[i]->name);
+            catchf("  - q_who: %s\n", fact->objects[i]->name);
             if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
                 does_match = 0;
             }
         }
     }
     
-    debugf("q_who: %d\n", does_match);
+    catchf("- q_who: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -996,7 +1026,7 @@ int fact_matches_questionword_rules_of_q_where(struct fact* fact, struct request
     int i;
     if (can_be_a_pointer(fact->adverbs)) {
         for (i = 0; can_be_a_pointer(fact->adverbs[i]) && can_be_a_pointer(fact->adverbs[i]->name); ++i) {
-            printf("adverb: %s\n", fact->adverbs[i]->name);
+            catchf("  - adverb: %s\n", fact->adverbs[i]->name);
             if (    0 == strcmp(fact->adverbs[i]->name, "in")
                  || 0 == strcmp(fact->adverbs[i]->name, "an")
                  || 0 == strcmp(fact->adverbs[i]->name, "from")
@@ -1010,7 +1040,7 @@ int fact_matches_questionword_rules_of_q_where(struct fact* fact, struct request
         }
     }
     
-    debugf("q_where: %d\n", does_match);
+    catchf("- q_where: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -1045,7 +1075,7 @@ int fact_matches_questionword_rules_of_q_how(struct fact* fact, struct request* 
         }
     }
     
-    debugf("q_how: %d\n", does_match);
+    catchf("- q_how: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -1067,7 +1097,7 @@ int fact_matches_questionword_rules_of_q_from_where(struct fact* fact, struct re
         }
     }
     
-    debugf("q_from_where: %d\n", does_match);
+    catchf("- q_from_where: %s\n", does_match?"OK":"FAIL");
     return does_match;
 }
 
@@ -1090,7 +1120,6 @@ int fact_matches_questionword_rules_of_search_reasons(struct fact* fact, struct 
         }
     }
     
-    debugf("search_reasons: %d\n", does_match);
     return does_match;
 }
 
@@ -1220,12 +1249,15 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
         printf("Not filtered.\n");
         return TOOMUCH;
     }
+
+    begin_catchf();
+    clear_catchf();
+    const char* catched = 0;
+    static char last_catched[20480];
+    strcpy(last_catched, "");
+    int lc, b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
+    for (lc = 0, b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
     
-    int b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
-    for (b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
-    
-        printf("Filtering fact %i.\n", b);
-        
         if (list[b] != -1) {
             list[b] = filter_fact_by_rules(list[b], request, weak);
         }
@@ -1242,7 +1274,55 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
                 ++count_of_context_matching_facts;
             }
         }
+
+        catched = get_catchf();
+        if (catched && strlen(catched) && strcmp(catched, last_catched) && !strstr(catched, "OK") && !strstr(last_catched, "OK")) {
+            if (strlen(catched) > strlen(last_catched)) {
+                strcpy(last_catched, catched);
+            }
+#define ALSO_FAILED "... and all others also failed ...\n"
+            if (!strstr(last_catched, ALSO_FAILED)) {
+                strcat(last_catched, ALSO_FAILED);
+            }
+        }
+        else if (catched && strlen(catched) && strcmp(catched, last_catched) && !strstr(catched, "FAIL") && !strstr(last_catched, "FAIL")) {
+            if (strlen(catched) > strlen(last_catched)) {
+                strcpy(last_catched, catched);
+            }
+#define ALSO_OK "... and all others also passed ...\n"
+            if (!strstr(last_catched, ALSO_OK)) {
+                strcat(last_catched, ALSO_OK);
+            }
+        }
+        else if (catched && strlen(catched) && strcmp(catched, last_catched)) {
+            if (lc+1 < b) {
+                printf("Filtering fact %i to %i.\n\n", lc, b);
+            }
+            else {
+                printf("Filtering fact %i.\n\n", b);
+            }
+
+            if (!last_catched[0]) {
+                strcpy(last_catched, "... no output ...");
+            }
+            printf("%s\n", last_catched);
+            strcpy(last_catched, catched);
+            clear_catchf();
+            lc = b;
+        }
     }
+    {
+        if (lc+1 < b) {
+            --lc;
+            --b;
+            printf("Filtering fact %i to %i.\n\n", lc, b);
+        }
+
+        printf("%s\n", catched);
+        clear_catchf();
+        lc = b;
+    }
+    end_catchf();
     
     if (count_of_true_facts >= 1 && (count_of_facts - count_of_true_facts) > (count_of_true_facts/2) ) {
         for (b = 0; list[b]; ++b) {
@@ -1460,6 +1540,10 @@ struct fact** search_facts_simple(const char* subjects, const char* objects, con
     struct fact** list = 0;
     
     {
+        if (0 == strcmp(context, "reasonof")) {
+            level = -1;
+        }
+
         struct request* fact = calloc(sizeof(struct request), 1);
         fact->subjects     = search_synonyms(subjects && subjects[0] && subjects[0] != '0' && subjects[0] != ' ' ? subjects : "", level);
         fact->objects      = search_synonyms(objects  &&  objects[0] &&  objects[0] != '0' &&  objects[0] != ' ' ?  objects : "", level);
