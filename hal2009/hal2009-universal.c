@@ -1324,7 +1324,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
     }
     end_catchf();
     
-    if (count_of_true_facts >= 1 && (count_of_facts - count_of_true_facts) > (count_of_true_facts/2) ) {
+    if (count_of_true_facts >= 1 && count_of_facts >= 10 && (count_of_facts - count_of_true_facts) > (count_of_true_facts/2) ) {
         for (b = 0; list[b]; ++b) {
             if (list[b] != -1) {
                 if (!fact_matches_truth(list[b], request)) {
