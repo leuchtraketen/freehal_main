@@ -3004,7 +3004,7 @@
 = <> _detailliert_ <> _im_detail_ <> (maybe)
 = <> _detailliert_ <> _ausfuehrlich_ <> (maybe)
 = <> _detailliert_ <> _eingehend_ <> (maybe)
-= <> _detailliert_ <> _en détail_ <> (maybe)
+= <> _detailliert_ <> _en_détail_ <> (maybe)
 = <> _detailliert_ <> _episch_ <> (maybe)
 = <> _detailliert_ <> _exakt_ <> (maybe)
 = <> _detailliert_ <> _ganzheitlich_ <> (maybe)

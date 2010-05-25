@@ -1857,7 +1857,7 @@
 = <> _umfassend_ <> _detailliert_ <> (maybe)
 = <> _umfassend_ <> _diffizil_ <> (maybe)
 = <> _umfassend_ <> _eingehend_ <> (maybe)
-= <> _umfassend_ <> _en détail_ <> (maybe)
+= <> _umfassend_ <> _en_détail_ <> (maybe)
 = <> _umfassend_ <> _episch_ <> (maybe)
 = <> _umfassend_ <> _exakt_ <> (maybe)
 = <> _umfassend_ <> _extensiv_ <> (maybe)

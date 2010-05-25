@@ -25,7 +25,7 @@
 = <> _haarklein_ <> _ausfuehrlich_ <> (maybe)
 = <> _haarklein_ <> _detailliert_ <> (maybe)
 = <> _haarklein_ <> _eingehend_ <> (maybe)
-= <> _haarklein_ <> _en détail_ <> (maybe)
+= <> _haarklein_ <> _en_détail_ <> (maybe)
 = <> _haarklein_ <> _episch_ <> (maybe)
 = <> _haarklein_ <> _exakt_ <> (maybe)
 = <> _haarklein_ <> _ganzheitlich_ <> (maybe)

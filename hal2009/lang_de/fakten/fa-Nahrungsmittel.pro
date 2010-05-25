@@ -1,7 +1,4 @@
  = <> _obst_ <> _nahrungsmittel_ <>  <> (maybe)
-= <> _nahrungsmittel_ <> _ <>  <> (maybe)
-= <> _ <> _nahrungsmittel_ <>  <> (maybe)
-= <> _ <> _kloesse_ <>  <> (maybe)
 = <> _backerbsen_ <> _nahrungsmittel_ <>  <> (maybe)
 = <> _baguett_ <> _nahrungsmittel_ <>  <> (maybe)
 = <> _baguette_ <> _nahrungsmittel_ <>  <> (maybe)
