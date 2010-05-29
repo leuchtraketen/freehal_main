@@ -1508,7 +1508,7 @@ set multi-line new global hash builtin_verb_prefixes to {
 };
 
 set multi-line new global hash builtin_verb_prefixes_no_split to {
-          'auf' => 1,
+#          'auf' => 1,
           'hin' => 1,
           'aus' => 1,
           'an' => 1,
@@ -4795,17 +4795,14 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
                 print new line
                 go to next
             done
-            
-            #if var phrase matches /(^|\s)(<[a-zA-Z0-9]>+?)\s($prefix)(<[a-zA-Z0-9]>+?)(\s|$)/ do
-            #    if (not from hash tags item { lc( $0 ) } first item matches /v/) or from hash tags item { lc( $0 ) } first item matches /ad./ do
-            #        print "no verb to replace... (2)"
-            #        print new line
-            #        go to next
-            #    done
-            #done
-            
+
             do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)<[,]>/, " $1$2 $0,", :global
             do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)$/, " $1$2 $0", :global
+            
+            if var phrase not matches /<[?]>/ do
+                do regex using var phrase: /<[.]>/, "", :global
+                set var phrase to var phrase concat "."
+            done
         done
     done
     

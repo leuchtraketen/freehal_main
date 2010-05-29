@@ -3572,17 +3572,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var is_male_name_subject to 0
                 set new array male_names to global array builtin_male_names
                 for each new var name in array male_names do
-                    if lc(var name) matches lc(var subject_last_word) do
+                    if lc(var name) matches lc(var subject_last_word) and lc(var subject_last_word) matches lc(var name) do
                         set var is_male_name_subject to 1
+
+                        print "is_male_name_subject: " concat var name
+                        print new line
                     done
                 done
 
-                #if var verb matches /bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet/ do
-                #done
-                #else do
-                #    set var subject_article to get_article with var subject_genus, "subject", "indefinite"
-                #    set var object_article to get_article with var object_genus, "object", "indefinite"
-                #done
 
                 set var subject_article to get_article with var subject_genus, "subject", "indefinite"
                 set var object_article to get_article with var object_genus, "subject", "indefinite"
@@ -3592,11 +3589,11 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 set new var verb to get_verb with "be", var subject_person
                 
-                if (not from array proper_verbs first item matches /^equal_pl/) and (not from array clause item [1] matches /\s|<[_]>|<[0-9]>/) and (not from array clause item [2] matches /ein/) and (not var is_male_name_subject) do
+                if from array proper_verbs first item not matches /^equal_pl/ and from array clause item [1] not matches /(\s.*?\s)|<[_]>|<[0-9]>/ and from array clause item [2] not matches /ein/ and var is_male_name_subject is false do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
-                if not from array clause item [2] matches /ein|der|die|das|the|(a )/ do
+                if from array clause item [2] not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
                     if from array subject_props first item matches /^v/ do
                         set var verb to get_verb with "is-same-as", var subject_person
                         push into array sentence, var verb

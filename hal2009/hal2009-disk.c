@@ -708,6 +708,9 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             if (is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
+            if (!can_be_a_synonym(words[n][m]->name)) {
+                continue;
+            }
             if (is_bad(words[n][m]->name)) {
                 continue;
             }
@@ -718,7 +721,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                     strcat(sql, ")");
                     in_bracket = 0;
                 }
-                strcat(sql, " ; INSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
+                strcat(sql, " ; \nINSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
                 
                 strcat(sql, " `db_index`.`rel_word_fact__");
                 strcat(sql, smid);

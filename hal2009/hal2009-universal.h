@@ -30,6 +30,7 @@
 
 #define TOOMUCH      -7
 
+#define VERY_EXACT   4
 #define EXACT        2
 #define WEAK         3
 #define USE_SUBJECTS 11

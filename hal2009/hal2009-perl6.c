@@ -54,9 +54,9 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     }
     hals = replace(hals, "(end array)", ")");
     hals = replace(hals, "(end hash)", ")");
-    hals = replace(hals, " is true ", " ");
-    hals = replace(hals, " is wrong ", " == 0 ");
-    hals = replace(hals, " is false ", " == 0 ");
+    hals = replace(hals, " is true", " ");
+    hals = replace(hals, " is wrong", " == 0 ");
+    hals = replace(hals, " is false", " == 0 ");
     hals = replace(hals, " the hash ", " from hash ");
     hals = replace(hals, " has item ", " item ");
     hals = replace(hals, " contains item ", " item ");

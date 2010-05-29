@@ -1,3 +1,10 @@
+1058:
+
+- Bug 584 korrigiert
+- Bug 577 korrigiert
+- Bug 573 korrigiert
+- Bug 570 korrigiert
+
 1055:
 
 - Bug 621 korrigiert
