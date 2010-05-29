@@ -282836,5 +282836,280 @@ genus  : f
   type: n
 soziale:
   type: adj
+Goettergestalt:
+genus  : f
+  type: n
+temperaturbestaendig:
+  type: adj
+Uebergangsmetallen:
+  type: n
+metallisch:
+  type: adj
+glaenzend:
+  type: adj
+dehnbar:
+  type: adj
+Koenigliche:
+  type: adj
+ethischer:
+  type: adj
+freier:
+  type: adj
+menschlicheren:
+  type: adj
+Mentalitaetsgeschichte:
+genus  : f
+  type: n
+versunkene:
+  type: adj
+Karwendel:
+genus  : s
+  type: n
+Wilten:
+  type: n
+Bergisels:
+  type: n
+Hoetting:
+  type: n
+Internetprojekten:
+  type: n
+Kaisermuehlen:
+  type: n
+Katastralgemeinden:
+genus  : f
+  type: n
+Wiens:
+  type: n
+Katastralgemeinde:
+genus  : f
+  type: n
+Franziszeischen:
+  type: adj
+Kataster:
+genus  : s
+  type: n
+Einheiten:
+genus  : f
+  type: n
+Rechenzentrum:
+genus  : s
+  type: n
+faeroeischen:
+  type: adj
+Fussballclubs:
+genus  : f
+  type: n
+Kommunikationsprogramm:
+genus  : s
+  type: n
+Kommunikationsmethode:
+genus  : f
+  type: n
+Textnachrichten:
+genus  : f
+  type: n
+Rundfunks:
+  type: n
+Vorabendprogramm:
+genus  : s
+  type: n
+ausgestrahlt:
+  type: v
+schneefall:
+genus  : m
+  type: n
+agrarmeteorologie:
+genus  : f
+  type: n
+altweibersommer:
+genus  : m
+  type: n
+azorenhoch:
+genus  : s
+  type: n
+dauerfrost:
+genus  : m
+  type: n
+dauerniederschlag:
+genus  : m
+  type: n
+eisbruch:
+genus  : m
+  type: n
+eisglaette:
+genus  : f
+  type: n
+eiskoerner:
+genus  : f
+  type: n
+eistage:
+genus  : f
+  type: n
+frostgraupel:
+genus  : f
+  type: n
+genuatief:
+genus  : s
+  type: n
+grosswetterlage:
+genus  : f
+  type: n
+hundstage:
+genus  : f
+  type: n
+inversionswolken:
+genus  : f
+  type: n
+islandtief:
+genus  : s
+  type: n
+jahrhundertsommer:
+  type: n
+kaltfront:
+genus  : f
+  type: n
+kaltluftstau:
+genus  : m
+  type: n
+klimafaktoren:
+genus  : f
+  type: n
+klimascheide:
+genus  : f
+  type: n
+lokalklima:
+genus  : s
+  type: n
+luftdruck:
+genus  : m
+  type: n
+lufttemperatur:
+genus  : f
+  type: n
+meteosat:
+  type: n
+monsunregen:
+genus  : m
+  type: n
+nachtfrost:
+genus  : m
+  type: n
+nebeltag:
+genus  : m
+  type: n
+nebeltreiben:
+genus  : s
+  type: n
+niederschlagshoehe:
+genus  : f
+  type: n
+niederschlagstag:
+genus  : m
+  type: n
+nordfoehn:
+genus  : m
+  type: n
+packeis:
+genus  : s
+  type: n
+pappschnee:
+genus  : m
+  type: n
+polarlichter:
+genus  : f
+  type: n
+polarluft:
+genus  : f
+  type: n
+pulverschnee:
+genus  : m
+  type: n
+regentag:
+genus  : m
+  type: n
+sandsturm:
+genus  : m
+  type: n
+schafskaelte:
+genus  : f
+  type: n
+schneetag:
+genus  : m
+  type: n
+starkregen:
+genus  : m
+  type: n
+sturmtief:
+genus  : s
+  type: n
+tauwetter:
+genus  : s
+  type: n
+unwetter:
+  type: n
+waermegewitter:
+genus  : s
+  type: n
+warmfront:
+genus  : f
+  type: n
+wetterradar:
+genus  : s
+  type: n
+wetterstation:
+genus  : f
+  type: n
+wetterwarnung:
+genus  : f
+  type: n
+windstille:
+genus  : f
+  type: n
+zwischenhoch:
+genus  : s
+  type: n
+Ferienkalenders:
+  type: n
+Neujahr:
+  type: n
+Deuschland:
+  type: n
+Helden:
+genus  : f
+  type: n
+irisch:
+  type: adj
+Dramatikers:
+  type: n
+selbstlose:
+  type: adj
+mutige:
+  type: adj
+Lichtkranz:
+genus  : m
+  type: n
+schwaches:
+  type: adj
+freiaeugig:
+  type: adj
+totalen:
+  type: adj
+Avatar:
+genus  : m
+  type: n
+annimmt:
+  type: vi
+goettlichen:
+  type: adj
+Tieres:
+  type: n
+entwickelst:
+  type: vi
+Beweggrund:
+genus  : m
+  type: n
+zielgerichteten:
+  type: adj
+
 
                    
