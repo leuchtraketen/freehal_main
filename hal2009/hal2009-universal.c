@@ -1469,7 +1469,7 @@ int count_of_synonym(struct word*** words) {
     return count;
 }
 
-int max(int a, int b) {
+int higher(int a, int b) {
     return (a > b ? a : b);
 }
 
@@ -1513,15 +1513,15 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     int flowchart_lines = 1;
 
     int succ_1 = search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
-    flowchart_lines += max(count_of_synonym(fact->subjects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+    flowchart_lines += higher(count_of_synonym(fact->subjects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_2 = search_facts_for_words_in_net(fact->objects,  facts, limit, &position);
-    flowchart_lines += max(count_of_synonym(fact->objects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+    flowchart_lines += higher(count_of_synonym(fact->objects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_3 = search_facts_for_words_in_net(fact->adverbs,  facts, limit, &position);
-    flowchart_lines += max(count_of_synonym(fact->adverbs), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+    flowchart_lines += higher(count_of_synonym(fact->adverbs), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_4 = 0;
     if (0 == strcmp(fact->context, "search_reasons") || !(fact->subjects[0] && fact->subjects[1] && fact->subjects[2])) {
         succ_4 = search_facts_for_words_in_net(fact->extra,    facts, limit, &position);
-        flowchart_lines += max(count_of_synonym(fact->extra), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+        flowchart_lines += higher(count_of_synonym(fact->extra), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     }
     int succ_5 = 0;
 
