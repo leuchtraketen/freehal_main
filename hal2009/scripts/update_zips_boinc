@@ -1,0 +1,6 @@
+scripts/update_zips
+
+ssh tobias@freehal.net "rm /disk/web1/var/www/data/wu-files/fh-*.zip"
+scp -C fh-*.zip tobias@freehal.net:/disk/web1/var/www/data/wu-files/
+
+true
