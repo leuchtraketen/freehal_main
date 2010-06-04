@@ -1,3 +1,9 @@
+1062:
+
+- Viele Parserkorrekturen
+- Neue .hal-Datei: Parser -> .pro -> phrase()
+- Neue BOINC Application, die darauf aufbaut
+
 1061:
 
 - Bug 575 korrigiert

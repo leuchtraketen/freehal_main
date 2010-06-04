@@ -2973,7 +2973,7 @@ done
 define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array first item
+        set new var entity to from array entity_array 1st item
         
         if lc(var entity) matches /(^|\s)(i|you|me|myself|yourself)(\s|$)/ do
             set flag continue to 1
@@ -2985,7 +2985,7 @@ define action toggle_verbs with array verbs, array entities do
     done
     
     for each new array verb_array in array verbs is rw do
-        set new var verb to from array verb_array first item
+        set new var verb to from array verb_array 1st item
         if var verb matches "is" do
             go to next
         done
@@ -2995,14 +2995,14 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /^are$/ do
             do regex using var verb: /^are$/, "am", :global:i
         done
-        set from array verb_array first item to var verb
+        set from array verb_array 1st item to var verb
     done
     do return with array verbs
 done
 
 define action toggle_entities with array entities do
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array first item
+        set new var entity to from array entity_array 1st item
         if lc(var entity) matches /(^|\s)you($|\s)/ do
             do regex using var entity: /(^|\s)you($|\s)/, "${1}i$2", :global:i
         done
@@ -3021,7 +3021,7 @@ define action toggle_entities with array entities do
         else if lc(var entity) matches /(^|\s)yours($|\s)/ do
             do regex using var entity: /(^|\s)yours($|\s)/, "${1}mine$2", :global:i
         done
-        set from array entity_array first item to var entity
+        set from array entity_array 1st item to var entity
     done
     do return with array entities
 done

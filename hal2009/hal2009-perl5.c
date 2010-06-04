@@ -103,6 +103,10 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "$0", "$1");
     hals = replace(hals, "<[", "[");
     hals = replace(hals, "]>", "]");
+    if (strstr(hals->s, "set global ")) {
+        hals = replace(hals, "set global ", "use vars '");
+        strcat(hals->s, "';");
+    }
     hals = replace(hals, "size of", "items of");
     hals = replace(hals, " is true", " ");
     hals = replace(hals, " is wrong", " == 0 ");
@@ -214,11 +218,13 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "const ", "$");
     hals = replace(hals, " flag ", " $");
     hals = replace(hals, "from array ", "$");
+    hals = replace(hals, "'array ", "'$");
     hals = replace(hals, " array ", " $");
     hals = replace(hals, "an empty hash", "{}");
     hals = replace(hals, "an empty array", "[]");
     hals = replace(hals, "from hash ", "$");
     hals = replace(hals, " hash ", " $");
+    hals = replace(hals, "'hash ", "'$");
     hals = replace(hals, " item ", "->");
     if (strstr(hals->s, "exists:" )) {
         hals = replace(hals, " exists: ", " -e ");
@@ -499,7 +505,7 @@ char* convert_to_perl5(char* hals, int just_compile) {
         halfreef(s, "convert_to_perl5/4");
     }
     strcat(newcode, "\n1\n");
-    fprintf(output(), "%s", "Done.\n");
+    fprintf(output(), "%s", "done.\n");
     halfree(lines);
     halfree(hals);
     
@@ -594,7 +600,7 @@ void execute_perl5(char* filename) {
 
     // COMPILE
     fprintf(output(), "%s\n", "");
-    fprintf(output(), "%s\n", "Compile FreeHAL...");
+    fprintf(output(), "%s\n", "compile FreeHAL...");
     fprintf(output(), "%s\n", "");
     convert_to_perl5_convert_file(filename);
     

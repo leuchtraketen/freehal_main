@@ -19,10 +19,49 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-compile source hal2009.hal
-require source hal2009.hal
-compile source hal2009-lang-de.hal
-require source hal2009-lang-de.hal
+compile source hal2009-summarize.hal
+require source hal2009-summarize.hal
+
+
 set new var current_language to 'de'
 set new var path to "."
-do init with var current_language, var path
+
+set new var file_output_nl to "output.txt"
+set new var file_output_pro to "output.pro"
+set new var file_output_report to "report.txt"
+
+set new var filename to var path concat "/" concat var file_output_report
+set new var report to handle for file name var filename, write
+print into var report data "Report:" concat new line
+print into var report data new line
+
+set new var text to read_from_input_file with var current_language, var path
+
+print into var report data "input:" concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data var text concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data new line
+
+set new var summ to summarize with var text, var file_output_nl, var file_output_pro, var current_language, var path
+
+print into var report data "output:" concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data var summ concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data new line
+
+set new var filename to var path concat "/" concat var file_output_pro
+set new var handle to handle for file name var filename, read
+set new array lines to an empty array
+set items of array lines to all lines from var handle
+set new var pro_text to join with "", items of array lines
+
+print into var report data ".pro file:" concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data var pro_text concat new line
+print into var report data "-------------------------------------------------------" concat new line
+print into var report data new line
+
+
+

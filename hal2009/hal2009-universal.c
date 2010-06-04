@@ -142,6 +142,12 @@ struct word*** add_synonyms_by_string(const char* exp, struct word*** synonyms, 
         strcpy(_exp, "_");
         strcat(_exp, exp);
         strcat(_exp, "_");
+        int q;
+        for (q = 0; q < strlen(_exp); ++q) {
+            if (_exp[q] == ' ') {
+                _exp[q] = '_';
+            }
+        }
         
         struct word* _word = set_word(_exp);
         synonyms[*position][0] = _word;
@@ -1357,6 +1363,122 @@ int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int
     }
 }
 
+const int COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART = 9;
+
+void flowchart_write_list_of_synonym(struct word*** words) {
+    FILE* logfile = fopen("flowchart.log", "a");
+    if (!logfile) {
+        return;
+    }
+
+    fprintf(logfile, "textcontent 000000 ");
+
+    int count = 0;
+    short first = 1;
+    int n;
+    for (n = 0; words[n]; ++n) {
+        if (!can_be_a_pointer(words[n])) {
+            continue;
+        }
+        
+        int is_new = 1;
+        if (can_be_a_pointer(words[n][0])) {
+            int q;
+            for (q = 0; words[q] && q+1 < n; ++q) {
+                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0])
+                    is_new = 0;
+            }
+        }
+        if (!is_new) {
+            continue;
+        }
+        
+        int m;
+        for (m = 0; words[n][m]; ++m) {
+            if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
+                continue;
+            }
+            if (is_a_trivial_word(words[n][m]->name)) {
+                continue;
+            }
+            if (!can_be_a_synonym(words[n][m]->name)) {
+                continue;
+            }
+            if (is_bad(words[n][m]->name)) {
+                continue;
+            }
+
+            if (!first && !(count % COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART == 0)) {
+                fprintf(logfile, ", ");
+            }
+            fprintf(logfile, "\"%s\"", words[n][m]->name);
+            
+            ++count;
+            first = 0;
+
+            if (count % COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART == 0) {
+                fprintf(logfile, "\n");
+            }
+        }
+    }
+    fprintf(logfile, "\n");
+    fclose(logfile);
+}
+
+int count_of_synonym(struct word*** words) {
+    int count = 0;
+    short first = 1;
+    int n;
+    for (n = 0; words[n]; ++n) {
+        if (!can_be_a_pointer(words[n])) {
+            continue;
+        }
+        
+        int is_new = 1;
+        if (can_be_a_pointer(words[n][0])) {
+            int q;
+            for (q = 0; words[q] && q+1 < n; ++q) {
+                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0])
+                    is_new = 0;
+            }
+        }
+        if (!is_new) {
+            continue;
+        }
+        
+        int m;
+        for (m = 0; words[n][m]; ++m) {
+            if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
+                continue;
+            }
+            if (is_a_trivial_word(words[n][m]->name)) {
+                continue;
+            }
+            if (!can_be_a_synonym(words[n][m]->name)) {
+                continue;
+            }
+            if (is_bad(words[n][m]->name)) {
+                continue;
+            }
+
+            ++count;
+            first = 0;
+        }
+    }
+
+    return count;
+}
+
+int max(int a, int b) {
+    return (a > b ? a : b);
+}
+
+int divide_and_round_up(int a, int b) {
+    double c = a;
+    c /= b;
+    return ((int)ceil(c));
+}
+
 struct fact** search_in_net(struct request* fact, struct fact** list) {
     int limit = 10000;
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
@@ -1388,14 +1510,18 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         return facts;
     }
     
-    
-    
+    int flowchart_lines = 1;
+
     int succ_1 = search_facts_for_words_in_net(fact->subjects, facts, limit, &position);
+    flowchart_lines += max(count_of_synonym(fact->subjects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_2 = search_facts_for_words_in_net(fact->objects,  facts, limit, &position);
+    flowchart_lines += max(count_of_synonym(fact->objects), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_3 = search_facts_for_words_in_net(fact->adverbs,  facts, limit, &position);
+    flowchart_lines += max(count_of_synonym(fact->adverbs), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_4 = 0;
     if (0 == strcmp(fact->context, "search_reasons") || !(fact->subjects[0] && fact->subjects[1] && fact->subjects[2])) {
         succ_4 = search_facts_for_words_in_net(fact->extra,    facts, limit, &position);
+        flowchart_lines += max(count_of_synonym(fact->extra), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     }
     int succ_5 = 0;
 
@@ -1409,6 +1535,35 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
         free(verbs);
     }
     
+    flowchart_lines = divide_and_round_up(flowchart_lines, COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+    if (!fact->verbs || !fact->verbs[0] || fact->verbs[0]->name || strcmp(fact->verbs[0]->name, ">>>")) {
+        {
+            FILE* logfile = fopen("flowchart.log", "a");
+            if (logfile) {
+                fprintf(logfile, "begin box\n");
+                fprintf(logfile, "bckgrndcolr D0FFFF\n");
+                fprintf(logfile, "bordercolor D0FFFF\n");
+                fprintf(logfile, "linesoftext %d\n", flowchart_lines);
+                fprintf(logfile, "draw\n");
+                fprintf(logfile, "textcontent 000000 Search:\n");
+                fclose(logfile);
+            }
+        }
+        flowchart_write_list_of_synonym(fact->subjects);
+        flowchart_write_list_of_synonym(fact->objects);
+        flowchart_write_list_of_synonym(fact->adverbs);
+        if (0 == strcmp(fact->context, "search_reasons") || !(fact->subjects[0] && fact->subjects[1] && fact->subjects[2])) {
+            flowchart_write_list_of_synonym(fact->extra);
+        }
+        {
+            FILE* logfile = fopen("flowchart.log", "a");
+            if (logfile) {
+                fprintf(logfile, "end box\n");
+                fclose(logfile);
+            }
+        }
+    }
+
     if (succ_1 == TOOMUCH || succ_2 == TOOMUCH || succ_3 == TOOMUCH || succ_4 == TOOMUCH || succ_5 == TOOMUCH) {
         printf("(%i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH) = 1\n", succ_1, succ_2, succ_3, succ_4, succ_5);
         free(facts);

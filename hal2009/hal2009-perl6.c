@@ -54,6 +54,10 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     }
     hals = replace(hals, "(end array)", ")");
     hals = replace(hals, "(end hash)", ")");
+    if (strstr(hals->s, "set global ")) {
+        hals = replace(hals, "set global ", "use vars '");
+        strcat(hals->s, "';");
+    }
     hals = replace(hals, " is true", " ");
     hals = replace(hals, " is wrong", " == 0 ");
     hals = replace(hals, " is false", " == 0 ");
@@ -118,12 +122,14 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     hals = replace(hals, " flag ", " $");
     hals = replace(hals, " from array ", " @");
     hals = replace(hals, " array ", " @");
+    hals = replace(hals, "'array ", "'@");
     hals = replace(hals, "variable ", "$");
     hals = replace(hals, "length(", "chars(");
     hals = replace(hals, "an empty hash", "()");
     hals = replace(hals, "an empty array", "()");
     hals = replace(hals, " from hash ", " %");
     hals = replace(hals, " hash ", " %");
+    hals = replace(hals, "'hash ", "'%");
     hals = replace(hals, " item ", "");
     if (strstr(hals->s, "exists:" )) {
         hals = replace(hals, " exists: ", " ");
@@ -418,7 +424,7 @@ void execute_perl6(char* filename) {
     fprintf(output(), "%s\n", "Set name...");
     Parrot_set_executable_name(interp, string_from_cstring(interp, "FreeHAL", 0));
 
-    fprintf(output(), "%s\n", "Compile FreeHAL...");
+    fprintf(output(), "%s\n", "compile FreeHAL...");
     convert_to_perl6_convert_file(filename);
     
     {
