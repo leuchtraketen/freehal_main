@@ -55,6 +55,7 @@ target_link_libraries (hal2009-boinc m pthread pthreadGC2 /compiler/lib/libperl5
 else(MINGW)
 
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include) 
+include_directories (/add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
 
 add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c) 
 target_link_libraries (hal2009 m crypt pthread perl dl z) 
