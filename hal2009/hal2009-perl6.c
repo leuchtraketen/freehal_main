@@ -112,6 +112,9 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     hals = replace(hals, "end-hash", ")");
     hals = replace(hals, "end array", ")");
     hals = replace(hals, "end hash", ")");
+    hals = replace(hals, "end of array", ")");
+    hals = replace(hals, "end of hash", ")");
+    hals = replace(hals, "if not then", "||");
     hals = replace(hals, "shift ", "do shift with ");
     hals = replace(hals, "from array ", "@");
     hals = replace(hals, "from hash ", "%");
