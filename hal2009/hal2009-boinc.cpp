@@ -121,7 +121,7 @@ void* cpu_thread (void* p) {
             boinc_finish(0);
         }
 
-        boinc_sleep_if_slow(1000);
+        halusleep(1000);
     }
     boinc_finish(0);
 }
