@@ -2212,6 +2212,17 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
     print 'Begin do parse_what: flag found_subject is ' concat flag found_subject concat ', var what is ' concat var what
     print new line
 
+    if length(var ident) > 200 do
+        print STDERR "Something is going wrong here (ident > 200)!" concat new line
+        print STDERR "words:" concat new line
+        for each new var word in array words do
+            print STDERR "- " concat var word concat " (" concat from hash tags item { var word } concat ")" concat new line
+        done
+        print STDERR "f-s: " concat flag found_subject concat new line
+        set new array na to an empty array
+        set items of array words to items of array na
+        do return with 0
+    done
 
     set new hash parsed to an empty hash
     set from hash parsed item { "subjects" } to an empty array
