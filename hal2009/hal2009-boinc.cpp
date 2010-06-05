@@ -59,6 +59,25 @@ char* hal2009_make_csv(struct DATASET* set);
 #   define UCHAR_MAX sizeof(char)
 #endif
 
+int is_slow() {
+    struct stat stFileInfo;
+    int intStat;
+    // Attempt to get the file attributes
+    intStat = stat("SLOW", &stFileInfo);
+    if (intStat == 0) {
+        return 1;
+    }
+    return 0;
+}
+
+int boinc_sleep_if_slow(long t) {
+    if (is_slow()) {
+        halusleep(t);
+        return 0;
+    }
+    return 1;
+}
+
 unsigned time_seed() {
     time_t now = time (0);
     unsigned char *p = (unsigned char *)&now;
@@ -97,12 +116,12 @@ void* cpu_thread (void* p) {
             srand (time_seed());
             int N = 30;
             int M = 600;
-            halusleep(1000*(M + uniform_deviate (rand()) * (N - M)));
+            boinc_sleep_if_slow(1000*(M + uniform_deviate (rand()) * (N - M)));
     
             boinc_finish(0);
         }
 
-        halusleep(1000);
+        boinc_sleep_if_slow(1000);
     }
     boinc_finish(0);
 }
@@ -115,10 +134,12 @@ void* app_thread (void* p) {
     }
 
     hal2009_clean();
-    
+
     pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
     hal2009_execute_file("hal2009-boinc.hal", "perl5");
-    pthread_join((pthread_t)(signal_thread), NULL);
+    if (is_slow()) {
+        pthread_join((pthread_t)(signal_thread), NULL);
+    }
 }
 
 #ifndef SIGTRAP
@@ -152,42 +173,45 @@ int main (int argc, char** argv) {
             w.close();
         }
     }
-    
 
-    
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
-    
+
     srand (time_seed()+(long)((void*)(sql_engine))%17);
     int N = 30;
     int M = 600;
-    halusleep(1000*(N + rand() % (M - N)));
+    boinc_sleep_if_slow(1000*(N + rand() % (M - N)));
     void* rand_1 = malloc(17);
-    halusleep(1000*((long)((void*)(rand_1))%257));
-    
+    boinc_sleep_if_slow(1000*((long)((void*)(rand_1))%257));
+
     extract();
-    
+
     void* rand_2 = malloc(7);
-    halusleep(1000*((long)((void*)(rand_2))%257));
-    
+    boinc_sleep_if_slow(1000*((long)((void*)(rand_2))%257));
+
     // pthread_t thread_cpu;
     // int nul = NULL;
     // pthread_create (&thread_cpu, NULL, cpu_thread, &nul);
     // pthread_join((pthread_t)(thread_cpu), NULL);
-    
-    pthread_t thread_app;
-    int nul = NULL;
-    pthread_create (&thread_app, NULL, app_thread, &nul);
-    
-    cpu_thread(&nul);
-    
+
+    if (is_slow()) {
+        pthread_t thread_app;
+        int nul = NULL;
+        pthread_create (&thread_app, NULL, app_thread, &nul);
+        cpu_thread(&nul);
+    }
+    else {
+        int nul = NULL;
+        app_thread(&nul);
+    }
+
     return 0;
 }
 
 void hal2009_handle_signal(void* arg) {
     char* type = (char*)((void**)arg)[0];
     char* text = (char*)((void**)arg)[1];
-    
+
     if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
         strcpy(text, "n");
