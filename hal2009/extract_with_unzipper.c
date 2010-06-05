@@ -29,12 +29,19 @@ void extract() {
     FILE* do_not_extract = fopen(".do-not-extract", "r");
     if ( !do_not_extract ) {
         int i;
-        for (i = 0; i < 500; ++i ) {
+        for (i = 0; i < 10000; ++i ) {
             char* filename = malloc(5002);
             snprintf(filename, 5000, "fh-%d.zip", i);
             unzipper(filename);
             snprintf(filename, 5000, "../../projects/freehal.net_freehal_at_home/fh-%d.zip", i);
             unzipper(filename);
+
+            int j;
+            for (j = 0; j < 50; ++j ) {
+                snprintf(filename, 5000, "../../projects/freehal.net_freehal_at_home/fh-%d-%d.zip", j, i);
+                unzipper(filename);
+            }
+
             free(filename);
         }
     }
