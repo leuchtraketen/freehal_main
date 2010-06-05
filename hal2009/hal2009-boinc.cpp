@@ -93,7 +93,7 @@ double uniform_deviate ( int seed ) {
 }
 
 void* cpu_thread (void* p) {
-    long max_seconds = 60 * 90;
+    long max_seconds = 60 * (is_slow() ? 90 : 10 );
     long checkpoint_sec = 60;
     long checkpoint_cpu = 0;
 
@@ -111,7 +111,7 @@ void* cpu_thread (void* p) {
         }
         boinc_report_app_status(now - start, checkpoint_cpu, frac);
         
-        if ( ((now - start) / (max_seconds)) >= 1 ) {
+        if ( is_slow() && ((now - start) / (max_seconds)) >= 1 ) {
             
             srand (time_seed());
             int N = 30;
@@ -201,10 +201,14 @@ int main (int argc, char** argv) {
         cpu_thread(&nul);
     }
     else {
+        pthread_t thread_app;
         int nul = NULL;
+        pthread_create (&thread_app, NULL, app_thread, &nul);
+        pthread_create (&thread_app, NULL, cpu_thread, &nul);
         app_thread(&nul);
     }
 
+    boinc_finish(0);
     return 0;
 }
 
