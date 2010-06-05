@@ -33,7 +33,7 @@ void extract() {
             char* filename = malloc(5002);
             snprintf(filename, 5000, "fh-%d.zip", i);
             unzipper(filename);
-            snprintf(filename, 5000, "../../projects/boinc.freehal.org_projects_freehal_at_home/fh-%d.zip", i);
+            snprintf(filename, 5000, "../../projects/freehal.net_freehal_at_home/fh-%d.zip", i);
             unzipper(filename);
             free(filename);
         }
