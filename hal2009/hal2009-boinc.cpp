@@ -203,7 +203,6 @@ int main (int argc, char** argv) {
     else {
         pthread_t thread_app;
         int nul = NULL;
-        pthread_create (&thread_app, NULL, app_thread, &nul);
         pthread_create (&thread_app, NULL, cpu_thread, &nul);
         app_thread(&nul);
     }

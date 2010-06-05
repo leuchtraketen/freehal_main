@@ -1,5 +1,8 @@
 rm fh-*.zip
 
+cmake .
+make hal2009
+
 zip -r fh-102.zip lang_de/*.pro
 zip -r fh-102.zip lang_de/{berufe,fakten,namen,ps_dateien}/*.pro
 zip -r fh-102.zip lang_de/word*.{brain,memory,self-taggered}
@@ -9,6 +12,14 @@ zip -r fh-102.zip lang_en/*/*.pro
 zip -r fh-102.zip lang_en/word_*
 zip -d fh-102.zip lang_en/facts.pro
 zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm *.php
+
+rm *.hal.{pl,tmp}
+for x in hal*.hal tests/*.hal
+do
+    ./hal2009 -c $x
+    zip -r fh-101.zip $x
+    zip -r fh-101.zip $x.pl
+done
 
 rm saved/*
 cp lang_de/*.pro lang_de/*/*.pro saved/
