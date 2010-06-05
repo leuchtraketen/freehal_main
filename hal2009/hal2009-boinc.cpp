@@ -103,27 +103,27 @@ void* cpu_thread (void* p) {
         double cpu_time;
         time_t now;
         time(&now);
-        
+
         double frac = 1.0 / (max_seconds) * (now - start);
         boinc_fraction_done(frac);
         if ((now - start) % checkpoint_sec == 0 ) {
             checkpoint_cpu = now - start;
         }
         boinc_report_app_status(now - start, checkpoint_cpu, frac);
-        
+
         if ( is_slow() && ((now - start) / (max_seconds)) >= 1 ) {
-            
             srand (time_seed());
             int N = 30;
             int M = 600;
             boinc_sleep_if_slow(1000*(M + uniform_deviate (rand()) * (N - M)));
-    
             boinc_finish(0);
         }
 
         halusleep(1000);
     }
-    boinc_finish(0);
+    if (is_slow()) {
+        boinc_finish(0);
+    }
 }
 
 void* app_thread (void* p) {
@@ -139,6 +139,11 @@ void* app_thread (void* p) {
     hal2009_execute_file("hal2009-boinc.hal", "perl5");
     if (is_slow()) {
         pthread_join((pthread_t)(signal_thread), NULL);
+    }
+    else {
+        fprintf(stdout, "hal2009_execute_file done.\n");
+        fprintf(stderr, "hal2009_execute_file done.\n");
+        boinc_finish(0);
     }
 }
 
@@ -203,8 +208,8 @@ int main (int argc, char** argv) {
     else {
         pthread_t thread_app;
         int nul = NULL;
-        pthread_create (&thread_app, NULL, cpu_thread, &nul);
-        app_thread(&nul);
+        pthread_create (&thread_app, NULL, app_thread, &nul);
+        cpu_thread(&nul);
     }
 
     boinc_finish(0);
