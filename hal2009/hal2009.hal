@@ -1910,7 +1910,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         # Otherwise it will be empty
         # CODE
         set new hash parsed to parse_what with var lang, array words, hash tags, var what, flag found_subject
-        if defined hash parsed and is an empty hash parsed do
+        if hash parsed is false or is an empty hash parsed do
             # TEXT
             # It's empty. The "1", which is returned as the second array element,
             # means that there's another following part of speech, probably a verb
@@ -1923,7 +1923,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             set var ident to var ident concat "\b\b"
             do return using [ hash full_entity, 1 ]
         done
-        else if defined hash parsed do
+        else if hash parsed do
             # TEXT
             # It's not empty. The "0" means that we are at the end of the sentence.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
@@ -2221,6 +2221,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
         print STDERR "f-s: " concat flag found_subject concat new line
         set new array na to an empty array
         set items of array words to items of array na
+        set var ident to ""
         do return with 0
     done
 
@@ -2629,7 +2630,10 @@ done
 
 define action parse with var lang, array words, hash tags do
     set new hash parsed to an empty hash
-    
+
+    set var ident to ""
+
+
     # TEXT
     # In German, there are many verbs which are sometimes written as
     # "$prefix$verb", but also as "$verb $prefix" (as two words).
