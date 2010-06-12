@@ -2688,6 +2688,9 @@ define action parse with var lang, array words, hash tags do
     
     set hash parsed to parse_what using var lang, array words_correct, hash tags, "full", 0
     DEBUG VAR: hash parsed STOP DEBUG
+    if hash parsed is false do
+        set hash parsed to fake_hash_parsed without arguments
+    done
     do return using hash parsed
 done
 
