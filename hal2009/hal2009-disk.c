@@ -939,7 +939,9 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->only_logic   = argv[8] && argv[8][0] && argv[8][0] == '1' ? 1 : 0;
     
     req->facts[*req->position] = fact;
-    debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
+    if (!argv[1] || !strstr(argv[1], ">>>")) {
+        debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
+    }
     ++(*req->position);
     
     return 0;

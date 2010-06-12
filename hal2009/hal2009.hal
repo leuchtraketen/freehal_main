@@ -1659,7 +1659,7 @@ define action join_items with array list do
     do return with var txt
 done
 
-define action entity_chose_add_current_word with var lang, array words, hash tags, var current_tag, var next_tag do
+define action entity_chose_add_current_word with var lang, array words, hash tags, var current_tag, var next_tag, var current_word, var next_word do
     set new flag add_current_word to 0
 
     if from hash sym_entity item { var current_tag } or from hash sym_noun item { var next_tag } do
@@ -1672,6 +1672,10 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
         set flag add_current_word to 1
     done
     if from hash sym_verb item { var current_tag } do
+        set flag add_current_word to 0
+    done
+
+    if from hash sym_adj item { var current_tag } and var next_word is false do
         set flag add_current_word to 0
     done
 
@@ -1828,7 +1832,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         set var next_word to from array words 2nd item
         set array next_tag to from hash tags item { var next_word }
 
-        set flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag 1st item, from array next_tag 1st item
+        set flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag 1st item, from array next_tag 1st item, var current_word, var next_word
 
         if flag end_of_entity do
             print "End of Entity." concat new line
@@ -2273,7 +2277,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 do unshift using items of that array: from hash parsed item { "extra" } end-items-of, [ var current_word ]
             done
         done
-        else if from global hash builtin_time_place_adverbs item { var current_word } or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word)) or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
+        else if from global hash builtin_time_place_adverbs item { var current_word } or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word)) or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and var next_word is false) or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
             if var what matches "entity" do
                 print var ident
                 print "#    "

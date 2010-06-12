@@ -1,3 +1,7 @@
+1084:
+
+- Bug 629 korrigiert
+
 1064:
 
 - Dateien zu 1062
