@@ -2008,7 +2008,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
         # The word is a preposition. Search an entitiy after this word.
         set new hash parsed to parse_what with var lang, array words, hash tags, "entity", flag found_subject
         
-        if defined hash parsed and that hash is not empty: hash parsed end check do
+        if hash parsed and that hash is not empty: hash parsed end check do
             # TEXT
             # It's not empty.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
