@@ -815,6 +815,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /du\sheisst/, "_dein_name_ ist", :global:i
 
     
+    do regex using var input: /(ist) (<[a-zA-Z]+?) (ein)/, "$0 _$1_ $2", :global:i
+    
     do regex using var input: /, die du kennst\s/, " ", :global:i
     do regex using var input: /die du kennst\s/, " ", :global:i
     
