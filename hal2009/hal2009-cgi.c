@@ -33,6 +33,32 @@ char* programming_language;
 char* language;
 char current_user[900];
 
+void set_user() {
+    FILE* file = fopen("_cgi_user", "r");
+    printf("user 0\n");
+    if (file) {
+        char buffer[999];
+        strcpy(buffer, "");
+    printf("user 1\n");
+        for ( ; ; ) {
+    printf("user 2\n");
+            char buf[5];
+            size_t n = fread ( buf, 1, 4, file );
+            buf[n] = '\0';
+            strcat(buffer, buf);
+            if ( n < 4 )
+            break;
+        }
+    printf("user 3\n");
+        if (strlen(buffer)) {
+    printf("user 4: %s\n", buffer);
+            strcpy(current_user, buffer);
+        }
+        fclose(file);
+    }
+    printf("user: %s\n", current_user);
+}
+
 int main (int argc, char** argv) {
     char* method = calloc(OPTION_SIZE + 1, 1);
     char* compile_file = calloc(OPTION_SIZE + 1, 1);
@@ -56,23 +82,6 @@ int main (int argc, char** argv) {
     }
 
     strcpy(current_user, "anonymous");
-    FILE* file = fopen("_cgi_user", "r");
-    printf("user 0\n");
-    if (file) {
-        char* buffer;
-    printf("user 1\n");
-        while (file && (buffer = halgetline(file)) != NULL) {
-    printf("user 2\n");
-            if (buffer) {
-    printf("user 3: %s\n", buffer);
-                strcpy(current_user, buffer);
-                free(buffer);
-		break;
-            }
-        }
-        fclose(file);
-    }
-    printf("user: %s\n", current_user);
 
     {
         char* sqlite_filename = calloc(OPTION_SIZE + 1, 1);
@@ -159,6 +168,9 @@ void hal2009_handle_signal(void* arg) {
     }
     else if (0 == strcmp(type, "_cgi_request")) {
         unlink("_cgi_answer");
+
+	set_user();
+
         char* input = calloc(OPTION_SIZE + 1, 1);
         snprintf(input, OPTION_SIZE, "no_learn_do_talk: %s", text);
 
