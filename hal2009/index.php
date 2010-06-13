@@ -45,8 +45,7 @@
 	.comment .content, .node .content, .pre {
 		border: none;
 		margin-left: 0px;
-		background: white url(http://freehal.org/start-commentbg.png) no-repeat;
-		padding: 20px;
+		background: white;
 		padding-top: 5px;
 		margin-top: 10px;
 	}
@@ -100,6 +99,12 @@ a:active {
 a:hover {
         color: #3f7dd2;
 }
+
+iframe {
+	width: 80%;
+	height: 500px;
+}
+
     </style>
 </head>
 <body style="background: url(http://freehal.org/start-bg.png) #042042 no-repeat;">
@@ -124,7 +129,7 @@ a:hover {
 	</p>
 
 </p>
-
+<center style="color: #1c3368;"><b>Currently the only language understood by FreeHAL's online demo is German, we are working on an english version.</b></center>
 <ul>
 <li>- Freehal ist ein Forschungsprojekt und kein Chatbot. Freehal arbeitet nach
 den Grundlagen der deutschen Sprache. </li>
@@ -141,9 +146,8 @@ entwickeln und so zur positiven Entwicklung des Projektes beizutragen. </li>
 
 <li><br /><div
  style="text-align: center;"><span
- style="font-weight: bold;">Diese Onlineversion von Freehal
-ben&ouml;etigt zwischen 15 und 30 Sekunden f&uuml;er eine Antwort. Bitte nicht
-ungeduldig werden.</span></div></li>
+ style="font-weight: bold;">Eine Onlineversion von Freehal auf einem Linuxserver
+.</span></div></li>
 
 </ul><br />
 
@@ -164,53 +168,72 @@ if (!$_IP) $_IP = $_SERVER[X_HTTP_FORWARD_FOR];
 if (!$_IP) { $_IP = $_SERVER[REMOTE_ADDR]; }
 if ($_POST[q]) {
 
-	$_POST[q] = str_replace("Ã¤", "ae", $_POST[q]);
-	$_POST[q] = str_replace("Ã¶", "oe", $_POST[q]);
-	$_POST[q] = str_replace("Ã¼", "ue", $_POST[q]);
-	$_POST[q] = str_replace("ÃŸ", "ss", $_POST[q]);
-	$_POST[q] = str_replace("Ã„", "Ae", $_POST[q]);
-	$_POST[q] = str_replace("Ã–", "Oe", $_POST[q]);
-	$_POST[q] = str_replace("Ãœ", "Ue", $_POST[q]);
+	$_POST[q] = str_replace("ä", "ae", $_POST[q]);
+	$_POST[q] = str_replace("ö", "oe", $_POST[q]);
+	$_POST[q] = str_replace("ü", "ue", $_POST[q]);
+	$_POST[q] = str_replace("ß", "ss", $_POST[q]);
+	$_POST[q] = str_replace("Ä", "Ae", $_POST[q]);
+	$_POST[q] = str_replace("Ö", "Oe", $_POST[q]);
+	$_POST[q] = str_replace("Ü", "Ue", $_POST[q]);
 
 	$time = time();
-?> <pre style="display: none; height: 300px; overflow: auto; float: right; max-width: 800px;" id="sc"><?php
+
 $q = str_replace("\"", "", $_POST[q]);
 
-$input_file = fopen("_cgi_request", "w");
-fwrite($input_file, $q);
-fclose($input_file);
-unlink("_done");
-sleep(2);
+$cgi_r = fopen("_cgi_request", "w"); // for hal
+fwrite($cgi_r, $q);
+fwrite($cgi_r, "\n");
+fclose($cgi_r);
+$cgi_r = fopen("log/i-".$_IP, "w"); // for php
+fwrite($cgi_r, $q);
+fwrite($cgi_r, "\n");
+fclose($cgi_r);
+$cgi_u = fopen("_cgi_user", "w");
+fwrite($cgi_u, $_IP);
+fwrite($cgi_u, "\n");
+fclose($cgi_u);
+@system("chmod 0777 _cgi_request");
+@system("chmod 0777 _cgi_user");
 unlink("_done");
 
-while (!@file_get_contents("_done")) {
-	sleep(1);
+$cgi_u = fopen("log/h-o", "w");
+fwrite($cgi_u, file_get_contents("log/o-".$_IP));
+fclose($cgi_u);
 }
-unlink("_done");
-?> </pre>
-<script type="text/javascript">
-document.getElementById("sc").style.height = 500;
-document.getElementById("sc").style.width = 200;
-document.getElementById("sc").style.float = "right";
-</script>
 
-<?php
+$h_1 = file_get_contents("log/o-".$_IP);
+$h_2 = file_get_contents("log/h-o");
+if (!$h_2 && $h_1) {
+	echo "<div class='pre'>";
+	echo "<iframe style='border: none;' src='iframe-dialog.php?t=60&ip=".$_IP."></iframe>";
+	echo "</div>";
+}
+else if ($h_1 != $h_2) {
+	$cgi_u = fopen("log/h-o", "w");
+	fclose($cgi_u);
+
 	$time = time() - $time;
 @mkdir("log");
 	$content_of_log = @file_get_contents("log/$_IP");
 	$logf = fopen("log/$_IP", "w");
-	fwrite($logf, "<span style=\"color: silver !important;\">$_IP:</span> <b>$_POST[q]</b>\n");
+	fwrite($logf, "<span style=\"color: silver !important;\">$_IP:</span> <b>".file_get_contents("log/i-".$_IP)."</b>\n");
 	fwrite($logf, "<span style=\"color: silver !important; width: 150px !important; display: inline-block;\">FreeHAL:</span>");
-	$datei = file("lang_de/output.history");
+	$datei = file("log/o-".$_IP);
 	$letzte_zeile = array_pop($datei);
 	fwrite($logf, trim($letzte_zeile));
-  fwrite($logf, "\n");  
+	fwrite($logf, " ($needed_time sec)\n");  
 	fwrite($logf, $content_of_log);
 	fclose($logf);
+
+	echo "<div class='pre'>";
+	echo "<iframe style='border: none;' src='iframe-dialog.php?t=60&ip=".$_IP."></iframe>";
+	echo "</div>";
 }
-echo "<div class='pre'>";
-echo str_replace("\n", "<br>", @file_get_contents("log/$_IP"));
-echo "</div>";
+else {
+	echo "<div class='pre'>";
+	echo "<iframe style='border: none;' src='iframe-dialog.php?t=3&ip=".$_IP."></iframe>";
+	echo "</div>";
+}
 ?>
 
 </div>
