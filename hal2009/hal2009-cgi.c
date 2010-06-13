@@ -31,6 +31,7 @@
 char* base_dir;
 char* programming_language;
 char* language;
+char current_user[900];
 
 int main (int argc, char** argv) {
     char* method = calloc(OPTION_SIZE + 1, 1);
@@ -43,15 +44,29 @@ int main (int argc, char** argv) {
     sql_engine = calloc(OPTION_SIZE + 1, 1);
     char* exe_name = argv[0];
     int c;
-    
+
     fprintf(output(), "%s", "Content-type: text/html\n\n");
-    
+
     strcpy(programming_language, "perl5");
     strcpy(language, "de");
     strcpy(base_dir, ".");
     strcpy(sql_engine, "disk");
     if (argc >= 2) {
         strcpy(sql_engine, argv[1]);
+    }
+
+    strcpy(current_user, "anonymous");
+    FILE* file = fopen("_cgi_user", "r");
+    if (file) {
+        char* buffer;
+        while (file && (buffer = halgetline(file)) != NULL) {
+            if (buffer) {
+                strcpy(current_user, buffer);
+                free(buffer);
+		break;
+            }
+        }
+        fclose(file);
     }
 
     {
@@ -126,6 +141,14 @@ void hal2009_handle_signal(void* arg) {
         pthread_create (&thread, NULL, for__input__get_csv, (void*)strdup(text));
     }
     else if (0 == strcmp(type, "_output")) {
+	char _temp[1000];
+	snprintf(_temp, 999, "log/o-%s", current_user);
+
+        FILE* target = fopen(_temp, "w+b");
+        if (target) {
+            halwrite(text, 1, strlen(text), target);
+        }
+        halclose(target);
         fprintf(output(), "\nFreeHAL: %s\n", text);
     }
     else if (0 == strcmp(type, "_cgi_request")) {
