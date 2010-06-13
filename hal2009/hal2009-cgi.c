@@ -68,6 +68,7 @@ int main (int argc, char** argv) {
         }
         fclose(file);
     }
+    printf("user: %s\n", current_user);
 
     {
         char* sqlite_filename = calloc(OPTION_SIZE + 1, 1);
