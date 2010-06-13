@@ -57,6 +57,7 @@ int main (int argc, char** argv) {
 
     strcpy(current_user, "anonymous");
     FILE* file = fopen("_cgi_user", "r");
+    printf("user 0\n");
     if (file) {
         char* buffer;
     printf("user 1\n");
