@@ -223757,8 +223757,6 @@ Aufteilen:
 Bewertungssystem:
   genus  : s
   type: n
-Kfer:
-  type: n
 Gefangenschaft:
   genus  : f
   type: n
@@ -283110,6 +283108,208 @@ genus  : m
   type: n
 zielgerichteten:
   type: adj
+kreiszahl:
+genus  : f
+  type: n
+synagoge:
+genus  : f
+  type: n
+Synagoge:
+genus  : f
+  type: n
+Unterweisung:
+genus  : f
+  type: n
+juedisches:
+  type: adj
+Schriftstudium:
+genus  : s
+  type: n
+beckenbauer:
+  type: n
+saechliche:
+  type: adj
+beschreibe:
+  type: v
+Alicudi:
+  type: n
+Amorgos:
+  type: n
+Andros:
+  type: n
+Astypalia:
+  type: n
+Bisevo:
+  type: n
+Brac:
+  type: n
+Cabrera:
+  type: n
+Mittelmeerinsel:
+genus  : f
+  type: n
+Rhodos:
+  type: n
+Capraia:
+  type: n
+Chalki:
+  type: n
+Chios:
+  type: n
+Ciovo:
+  type: n
+Comino:
+  type: n
+Cres:
+  type: n
+Delos:
+  type: n
+Djerba:
+  type: n
+Dugi:
+  type: n
+Otok:
+  type: n
+Filicudi:
+  type: n
+Folegandros:
+  type: n
+Giglio:
+  type: n
+Gozo:
+  type: n
+Hvar:
+  type: n
+Ikaria:
+  type: n
+Ilovik:
+  type: n
+Ios:
+  type: n
+Ithaka:
+  type: n
+Kalymnos:
+  type: n
+Karpathos:
+  type: n
+Kassos:
+  type: n
+Kastellorizo:
+  type: n
+Kea:
+  type: n
+Kimolos:
+  type: n
+Korcula:
+  type: n
+Kornat:
+  type: n
+Kos:
+  type: n
+Kythera:
+  type: n
+Kythnos:
+  type: n
+Lastovo:
+  type: n
+Lefkas:
+  type: n
+Leros:
+  type: n
+Linosa:
+  type: n
+Lipari:
+  type: n
+Losinj:
+  type: n
+Melos:
+  type: n
+Mljet:
+  type: n
+Molat:
+  type: n
+Montecristo:
+  type: n
+Murter:
+  type: n
+Mykonos:
+  type: n
+Naxos:
+  type: n
+Nisyros:
+  type: n
+Olib:
+  type: n
+Palmarola:
+  type: n
+Pantelleria:
+  type: n
+Paros:
+  type: n
+Pasman:
+  type: n
+Patmos:
+  type: n
+Pianosa:
+  type: n
+Ponza:
+  type: n
+Premuda:
+  type: n
+Sakinthos:
+  type: n
+Salina:
+  type: n
+Samos:
+  type: n
+Samothraki:
+  type: n
+Stefano:
+  type: n
+Serifos:
+  type: n
+Sikinos:
+  type: n
+Silba:
+  type: n
+Skarda:
+  type: n
+Solta:
+  type: n
+Stromboli:
+  type: n
+Susac:
+  type: n
+Symi:
+  type: n
+Syros:
+  type: n
+Thassos:
+  type: n
+Tilos:
+  type: n
+Tinos:
+  type: n
+Ugljan:
+  type: n
+Unije:
+  type: n
+Ustica:
+  type: n
+Ventotene:
+  type: n
+Vis:
+  type: n
+Vulcano:
+  type: n
+Zannone:
+  type: n
+Zirje:
+  type: n
+Maloca:
+  type: n
+Malorca:
+  type: n
 
 
                    

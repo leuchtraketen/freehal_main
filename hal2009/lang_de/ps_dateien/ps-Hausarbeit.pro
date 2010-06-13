@@ -51,7 +51,6 @@
 = <> kuechengeraete <> hausarbeit <>  <> (maybe)
 = <> kuechengeraete bedienen <> hausarbeit <>  <> (maybe)
 = <> kuehlschrank <> hausarbeit <>  <> (maybe)
-= <> lebensmittel einkaufen <> hausarbeit <>  <> (maybe)
 = <> lebensmittel einlagern <> hausarbeit <>  <> (maybe)
 = <> mikrowelle putzen <> hausarbeit <>  <> (maybe)
 = <> mikrowelle <> hausarbeit <>  <> (maybe)
