@@ -131,7 +131,7 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_cgi_request")) {
         unlink("_cgi_answer");
         char* input = calloc(OPTION_SIZE + 1, 1);
-        strcpy(input, text);
+        snprintf(input, OPTION_SIZE, "no_learn_do_talk: %s", text);
 
         pthread_t answer_thread = hal2009_answer(strdup(input), strdup(programming_language), strdup(language), strdup(base_dir), NOT_JOIN, MULTI);
     }
