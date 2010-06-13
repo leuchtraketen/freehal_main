@@ -151,6 +151,7 @@ void hal2009_handle_signal(void* arg) {
         }
         halclose(target);
         fprintf(output(), "\nFreeHAL: %s\n", text);
+        fprintf(output(), "\nFreeHAL -> log: log/o-%s\n", current_user);
     }
     else if (0 == strcmp(type, "_cgi_request")) {
         unlink("_cgi_answer");
