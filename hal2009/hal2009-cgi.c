@@ -59,8 +59,11 @@ int main (int argc, char** argv) {
     FILE* file = fopen("_cgi_user", "r");
     if (file) {
         char* buffer;
+    printf("user 1\n");
         while (file && (buffer = halgetline(file)) != NULL) {
+    printf("user 2\n");
             if (buffer) {
+    printf("user 3: %s\n", buffer);
                 strcpy(current_user, buffer);
                 free(buffer);
 		break;
