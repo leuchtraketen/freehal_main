@@ -361,7 +361,7 @@ struct word*** search_synonyms(const char* exp, int level) {
     int position            = 0;
     synonyms = add_synonyms_by_string(exp, synonyms, &position);
     
-    if (is_good(exp) && can_be_a_synonym(exp) && !in_search_synonyms && !strstr(exp, "|") && level >= 0) {
+    if (is_good(exp) && can_be_a_main_synonym(exp) && !in_search_synonyms && !strstr(exp, "|") && level >= 0) {
         struct word*** stored_synonyms = get_stored_synonyms(exp, level);
         if (stored_synonyms)
             return stored_synonyms;
@@ -2908,6 +2908,18 @@ int is_conditional_questionword(const char* word) {
     );
 }
 
+int can_be_a_main_synonym(const char* word) {
+    return (
+            can_be_a_synonym(word)
+         && strcmp(word, "ich")
+         && strcmp(word, "du")
+         && strcmp(word, "_ich_")
+         && strcmp(word, "_du_")
+         
+         ?  1
+         :  0
+    );
+}
 int can_be_a_synonym(const char* word) {
     return (
             !is_a_trivial_word(word)
@@ -2928,10 +2940,10 @@ int can_be_a_synonym(const char* word) {
          && strcmp(word, "$$notaswellas$$")
          && !strstr(word, "wie")
     
-         && strcmp(word, "ich")
-         && strcmp(word, "du")
-         && strcmp(word, "_ich_")
-         && strcmp(word, "_du_")
+//         && strcmp(word, "ich")
+//         && strcmp(word, "du")
+//         && strcmp(word, "_ich_")
+//         && strcmp(word, "_du_")
          // && ( (strlen(word) > 3 && !strstr(word, "_")) || strlen(word) > 6 )
          
          ?  1
@@ -2940,8 +2952,8 @@ int can_be_a_synonym(const char* word) {
 }
 
 int is_important_word(const char* word) {
-    return (
-            !is_a_trivial_word(word)
+    return ((
+      (     !is_a_trivial_word(word)
          && strcmp(word, "es")
          && strcmp(word, "*")
          && strcmp(word, "in")
@@ -2964,6 +2976,13 @@ int is_important_word(const char* word) {
          && strcmp(word, "der")
          && strcmp(word, "die")
          && strcmp(word, "das")
+      )
+      || (
+            strcmp(word, "ich") == 0
+         || strcmp(word, "du") == 0
+         || strcmp(word, "_ich_") == 0
+         || strcmp(word, "_du_") == 0
+      ))
          
          ?  1
          :  0

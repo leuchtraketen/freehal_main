@@ -705,7 +705,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
                 continue;
             }
-            if (is_a_trivial_word(words[n][m]->name)) {
+            if (!is_important_word(words[n][m]->name) && is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
             if (!can_be_a_synonym(words[n][m]->name)) {
