@@ -1,3 +1,11 @@
+1097:
+
+- Changelog aktualisiert
+
+1096:
+
+- Bug 633 korrigiert
+
 1085:
 
 - Bug 629 korrigiert
