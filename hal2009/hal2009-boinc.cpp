@@ -96,7 +96,7 @@ void* cpu_thread (void* p) {
 
 //  long max_seconds = 60 * (is_slow() ? 90 : 10 );
 
-    long max_seconds = 60 * (is_slow() ? 240 : 10 );
+    long max_seconds = 60 * (is_slow() ? 240 : 60 );
     long checkpoint_sec = 60;
     long checkpoint_cpu = 0;
 
