@@ -389,7 +389,7 @@ int windows_invoke_runner() {
 }
 
 int linux_invoke_runner() {
-    std::system("make hal2009-runner");
+    std::system("make hal2009-server");
 
     ifstream i_1("hal2009-server");
     if (i_1) {

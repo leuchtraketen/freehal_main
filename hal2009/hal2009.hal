@@ -3748,12 +3748,19 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 if from array clause item [1] matches "_" do
                     set from array clause item [1] to noun_for_anonymous without arguments
                 done
-                
+ 
+# Unsicher: wozu? ^da ? dass?               
+#                if var final_sentence do
+#                    if from array clause item [4] do
+#                        if not from array clause item [4] matches /^dass/ do
+#                            push into array sentence, from array clause item [4]
+#                        done
+#                    done
+#                done
+
                 if var final_sentence do
                     if from array clause item [4] do
-                        if not from array clause item [4] matches /^da/ do
-                            push into array sentence, from array clause item [4]
-                        done
+                        push into array sentence, from array clause item [4]
                     done
                 done
                 
@@ -3837,7 +3844,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                             push into array sentence, items of array proper_verbs
                         done
                         else do
-                            if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s|(nicht)/ do
+                            if from array clause item [4] matches /(der|die|das)$/ do
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, from array clause item [3]
+                                push into array sentence, items of array auxiliary_verbs
+                            done
+                            else if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s|(nicht)/ do
                                 push into array sentence, from array clause item [3]
                                 push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [1]
@@ -3882,14 +3894,13 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                             done
                         done
                         else do
-                            if from array clause item [3] matches /zu / do
+                            if from array clause item [4] matches /(der|die|das)$/ do
                                 push into array sentence, from array clause item [1]
-                                push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [3]
                                 push into array sentence, from array clause item [2]
-                                push into array sentence, items of array proper_verbs
+                                push into array sentence, items of array auxiliary_verbs
                             done
-                            else if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+                            else if from global hash builtin_time_place_adverbs item { from array clause item [3] } or from array clause item [3] not matches /\s/ or from array clause item [3] matches /zu / do
                                 push into array sentence, from array clause item [1]
                                 push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [3]
@@ -3911,13 +3922,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     go to next
                 done
                 
-                if var final_sentence do
-                    if from array clause item [4] do
-                        if from array clause item [4] matches /^da/ do
-                            push into array sentence, from array clause item [4]
-                        done
-                    done
-                done
+# Unsicher: wozu? ^da ? dass?               
+#                if var final_sentence do
+#                    if from array clause item [4] do
+#                        if from array clause item [4] matches /^da/ do
+#                            push into array sentence, from array clause item [4]
+#                        done
+#                    done
+#                done
                 
                 if var final_sentence do
                     set var final_sentence to var final_sentence concat ', '
@@ -4793,6 +4805,8 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     set new var divisor to ' ~ '
     set new var line to join with var divisor, items of array line_array
     
+    do regex using var line: /\{\{\{questionword\}\}\}/, "", :global
+
     do regex using var line: /<[_]>+/, "_", :global
     
     if var pro_file_name matches "-" do
@@ -5805,9 +5819,9 @@ define action shell with var current_language, var path do
                     go to next
                 done
                 
-                do unlink with '_output'
+#                do unlink with '_output'
                 set new array output to give_output with var line, (not var do_talk), array facts_to_save, hash tags, var current_language, var path
-                do unlink with '_output'
+#                do unlink with '_output'
 
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
                 
@@ -5820,7 +5834,7 @@ define action shell with var current_language, var path do
                 set new var time_second to time without arguments
                 set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
 
-                do unlink with '_output'
+#                do unlink with '_output'
                 do save_output with var final_output, var current_language, var path
                 if var do_talk do
                     set new var output_file_name to '_output'

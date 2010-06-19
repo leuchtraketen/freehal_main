@@ -1,3 +1,7 @@
+1099:
+
+- Bug 634 korrigiert
+
 1097:
 
 - Changelog aktualisiert

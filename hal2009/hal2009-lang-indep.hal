@@ -1166,6 +1166,37 @@ define action compute_input with var input is rw, var lang, var path do
     #do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /what is /, "ISUNKNOWN ", :global:i
 
+
+    set new array clauses to split using /(<[,]>|KOMMA)/, var input
+    set new var clause_no to 0
+    for each new var clause in array clauses do
+        set var clause_no to var clause_no + 1
+
+        if var clause_no is not 1 and var clause matches /^\s*?(der|die|das|den|dem|dessen)\s(<[a-z]>+?)\s/ do
+            print "maybe found a relative clause."
+            set new var rel_verb to $1
+            set new array words to split using /\s+/, var clause
+
+            set new flag next_is_a_verb to 0
+            set new array tag to compute_tags with var rel_verb, var lang, var path
+            if from hash sym_verb item { from array tag 1st item } or size of array words < 3 or ( size of array words < 4 and from hash sym_verb item { from array tag 1st item } ) do
+                set flag next_is_a_verb to 1
+                print "not found an relative clause verb: " concat var rel_verb concat new line
+            done
+            else do
+                print "found an relative clause verb: " concat var rel_verb concat new line
+            done
+
+            if not flag next_is_a_verb do
+                do regex using var input: /\s*?(der|die|das|den|dem|dessen)\s(var rel_verb)\s/, " $0\{\{\{questionword\}\}\} $1 ", :global
+            done
+            else do
+                do regex using var input: /\s*?(der|die|das|den|dem|dessen)\s(var rel_verb)\s/, " _$0_ $1 ", :global
+            done
+        done
+    done
+
+
     print "Computed input (no. 7) ... ", var input
     print new line
     
