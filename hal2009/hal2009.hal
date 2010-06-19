@@ -1678,6 +1678,10 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
         print "not add current word: current is verb" concat new line
         set flag add_current_word to 0
     done
+    if from hash sym_prep item { var current_tag } do
+        print "not add current word: current is preposition" concat new line
+        set flag add_current_word to 0
+    done
 
     if from hash sym_adj item { var current_tag } and var next_word matches "" do
         print "not add current word: current is adj and next is false" concat new line

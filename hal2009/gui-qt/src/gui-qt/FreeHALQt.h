@@ -150,13 +150,11 @@ public slots:
     void on_fullscreen_triggered();
     void on_pushButton_clicked();
     void on_pushButton_learn_clicked();
-    void button_talk(QString command, QLineEdit* lineedit);
+    void button_talk(QString command, QComboBox* lineedit);
     void on_refresh_chart_clicked();
     void on_compute_output_clicked();
     void on_flowchart_fact_delete_clicked();
     void on_flowchart_fact_edit_clicked();
-    void on_lineedit_talk_returnPressed();
-    void on_lineedit_learn_returnPressed();
     void on_actionGespr_ch_triggered();
     void on_actionEinstellungen_triggered();
     void on_actionInfo_triggered();
@@ -188,10 +186,7 @@ public slots:
 
     void slotEnable();
 
-
-private slots:
     void on_db_search_save_clicked();
-    void on_vacuum_clicked();
     void on_plus_clicked();
     void on_minus_clicked();
     void on_flowchart_fact_pk_valueChanged(int );

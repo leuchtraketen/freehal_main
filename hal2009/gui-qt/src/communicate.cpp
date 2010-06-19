@@ -264,9 +264,9 @@ void client(std::string host, bool verbose = true, bool wait = false) {
                     }
                 }
                 else {
-                    static int d = 0;
+                    static int d = 500;
                     ++d;
-                    if (d > 50) {
+                    if (d >= 500) {
                         d = 0;
                         cout << "trying to connect..." << endl;
                         cout << "failed." << endl;

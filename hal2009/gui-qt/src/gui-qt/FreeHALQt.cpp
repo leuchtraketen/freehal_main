@@ -277,21 +277,12 @@ int time_needed_to_learn = 1;
 int time_to_learn_begin  = 0;
 int time_to_learn_end    = 0;
 
-void thread_learn_progress_bar(int max) {
-    for (int i = 0; i < max*20; ++i) {
-        emit helper->signalSetTimeToLearnElapsed(i);
-        freehal::msleep(50);
-    }
-    freehal::msleep(1000);
-    emit helper->signalSetTimeToLearnElapsed(0);
-    freehal::msleep(10000);
-    emit helper->signalSetTimeToLearnElapsed(0);
-}
-
-void FreeHALWindow::button_talk(QString command, QLineEdit* lineedit) {
-    QString qs = lineedit->displayText();
+void FreeHALWindow::button_talk(QString command, QComboBox* lineedit) {
+    QString qs = lineedit->currentText();
     freehal::string ques = ascii(qs);
-    lineedit->setText(QString());
+    lineedit->insertItem(1, qs);
+    lineedit->setCurrentIndex(0);
+    lineedit->setItemText(0, "");
     if (ques.get_lower().contains("windows") && ques.get_lower().contains("gut")) {
         main_window->showWindowEE();
     }
@@ -307,8 +298,6 @@ void FreeHALWindow::on_pushButton_clicked() {
 void FreeHALWindow::on_pushButton_learn_clicked() {
     main_window->user_interface_main_window->lineedit_learn->setFocus(Qt::OtherFocusReason);
     button_talk("LEARN:", user_interface_main_window->lineedit_learn);
-
-    boost::thread progress(boost::bind(thread_learn_progress_bar, main_window->user_interface_main_window->learnbar->maximum()));
 }
 
 void FreeHALWindow::on_compute_output_clicked() {
@@ -334,13 +323,6 @@ void FreeHALWindow::on_flowchart_fact_edit_clicked() {
     freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
 }
 
-void FreeHALWindow::on_lineedit_talk_returnPressed() {
-    on_pushButton_clicked();
-}
-
-void FreeHALWindow::on_lineedit_learn_returnPressed() {
-    on_pushButton_learn_clicked();
-}
 
 void Helper::exitNow() {
         int ret = QMessageBox::warning(main_window, tr("FreeHAL"),
@@ -407,6 +389,8 @@ int windows_invoke_runner() {
 }
 
 int linux_invoke_runner() {
+    std::system("make hal2009-runner");
+
     ifstream i_1("hal2009-server");
     if (i_1) {
         boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
@@ -421,6 +405,10 @@ int linux_invoke_runner() {
 }
 
 void make_connection(int _new) {
+    chdir("hal2009");
+    chdir("gui-qt");
+    chdir("..");
+
     if (_new) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
         dialog_connection->from->buttonBox->buttons().at(0)->setFocus(Qt::OtherFocusReason);
@@ -438,7 +426,7 @@ void make_connection(int _new) {
     }
 
     server_language = dialog_connection->from->lang->currentText().toStdString();
-    ofstream o("language.tmp");
+    ofstream o("_language.tmp");
     o << server_language;
     o.close();
 
@@ -651,11 +639,6 @@ QScrollArea* scrollArea = new QScrollArea;
                     main_window->user_interface_main_window->db_search_edit, SLOT(setText(QString)));
 
 
-    helper->connect(&(*helper), SIGNAL(signalSetTimeToLearn(int)),
-            main_window->user_interface_main_window->learnbar, SLOT(setMaximum(int)));
-    helper->connect(&(*helper), SIGNAL(signalSetTimeToLearnElapsed(int)),
-            main_window->user_interface_main_window->learnbar, SLOT(setValue(int)));
-
     helper->connect(&(*helper), SIGNAL(signalEnable()),
             main_window, SLOT(slotEnable()));
 
@@ -666,11 +649,17 @@ QScrollArea* scrollArea = new QScrollArea;
     main_window->user_interface_main_window->textedit_talk->setEnabled(false);
     main_window->user_interface_main_window->pushButton->setEnabled(false);
     main_window->user_interface_main_window->textedit_talk->setHtml(QString("Please wait..."));
-    main_window->user_interface_main_window->learnbar->hide();
 
     main_window->user_interface_main_window->db_search_edit_frame->hide();
 
     main_window->user_interface_main_window->lineedit_talk->setFocus();
+
+    QLineEdit* internal_lineedit_talk  = new QLineEdit;
+    QLineEdit* internal_lineedit_learn = new QLineEdit;
+    main_window->user_interface_main_window->lineedit_talk->setLineEdit(internal_lineedit_talk);
+    main_window->user_interface_main_window->lineedit_learn->setLineEdit(internal_lineedit_learn);
+    app.connect(internal_lineedit_talk, SIGNAL(returnPressed()), main_window, SLOT(on_pushButton_clicked()));
+    app.connect(internal_lineedit_learn, SIGNAL(returnPressed()), main_window, SLOT(on_pushButton_learn_clicked()));
     
     offline_mode  = !(0 == strcmp(check_config(freehal::string("online"), "1"), "1"));
     www_surf_mode =  (0 == strcmp(check_config(freehal::string("use-www"), "1"), "1"));
@@ -1368,7 +1357,6 @@ void freehal::comm_new(freehal::string s) {
                 time_to_learn_end = (int)time(NULL);
                 time_needed_to_learn = (time_needed_to_learn + (time_to_learn_end - time_to_learn_begin))/2;
                 cout << "Time needed to learn: " << time_needed_to_learn << " sec" << endl;
-                emit helper->signalSetTimeToLearn(time_needed_to_learn*20);
             }
 
             QString qs(s.ref().c_str()+10);
@@ -1377,7 +1365,6 @@ void freehal::comm_new(freehal::string s) {
             qs = qs.replace("gt,", "gt;");
             emit helper->signalAnswerLearn(QString((qs.toStdString() + "<br><a name=\"anch\" id=\"anch\">&nbsp;</a>").c_str()));
             emit helper->signalTalkingScrollEndLearn(QString("anch"));
-            emit helper->signalSetTimeToLearnElapsed(0);
         }
         if (s.contains("DELETED")) {
             /// We don't want Freehal to ask again any more
@@ -2207,19 +2194,6 @@ void add_to_dataset(struct DATASET* set, const char* csv) {
     ++(set->size);
 }
 
-
-void FreeHALWindow::on_vacuum_clicked()
-{
-    freehal::comm_send("VACUUM:.");
-
-    this->user_interface_main_window->allfacts->setEnabled(false);
-    this->user_interface_main_window->matchingfacts->setEnabled(false);
-//    this->user_interface_main_window->vacuum->setEnabled(false);
-    this->user_interface_main_window->double_facts->setEnabled(false);
-    this->user_interface_main_window->tableView->setEnabled(false);
-    this->user_interface_main_window->pushButton->setEnabled(false);
-    this->user_interface_main_window->pushButton_learn->setEnabled(false);
-}
 
 void FreeHALWindow::slotEnable()
 {
