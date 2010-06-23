@@ -4,9 +4,9 @@ Alexandra Schmidt
 Andrew Brady
 Anthony Bohn
 Arne Sielemann
-Arne Sielemann (Dingdong)
+Arne Sielemann Dingdong)
 Bernard Pierre
-Bohnen , Dirk / Bitstream
+Bohnen , Dirk Bitstream
 Brandon Kuschel
 Bruce Southey
 Carles Garcia Arbusa
@@ -19,26 +19,26 @@ David Anderson
 David Kleuker
 David Lawson
 David Tomecko
-Dirk Gudensch ­ Wager / Stargaze ­ Rgermany
+Dirk Gudensch ­ Wager Stargaze ­ Rgermany
 Erik Tol
 Fabrice Viatge
 Free Enterprise Productions
 Gianfranco Pellacani
 Handel & Dienstleistungen Arne Birkl
-Hans Toffelei ­T / Theage
+Hans Toffelei ­T Theage
 Hiroki Kobayashi
 Holly Marie Schoene
-Hubert Ruh / Mac Ruh
+Hubert Ruh Mac Ruh
 Ian Cunning
 Ingo Hantke
 Jerome Cadet
 Joerg Steinmetz
-Joerg Steinmetz / marodeur
+Joerg Steinmetz marodeur
 Jon Antonides
 Joseph Behmke
 Julia Tarpley
 Kristian Scholz
-Langer Lars / Katarn
+Langer Lars Katarn
 Law Offices of Anthony Boskovich
 Manfred Landlsperger
 Marc Lewis
@@ -47,19 +47,19 @@ Markus Seitz
 Marvin Stenhammar
 Matthias vom Brocke
 Michael Hank
-Michael Hank / Arctic Light
+Michael Hank Arctic Light
 Michael Hartung
 Michael Rottluff
 Michael Schuermann
 Michal Kysel
 Mirko Wunder
-Mokross Andreas / Ger - Moki
+Mokross Andreas Ger - Moki
 Monika Morlock
 Oliver Timm
 Oscar Martignani
 Pal Terje Lohre
 Paul Williams
-Peter -­ Christia ­N Artzen / H
+Peter -­ Christia ­N Artzen H
 Ralf Over
 Rene Marx
 Robert Maier
@@ -68,7 +68,7 @@ Roland Haeder
 r vd veen
 Sebastia ­N Alfred De Cillia
 Sebastian Bauer
-Sieleman ­N, Arne / Dingdong
+Sieleman ­N, Arne Dingdong
 Simon Baute
 Simon Mertens
 Steikert Maurice
@@ -76,12 +76,12 @@ Stephanie Boisvert
 Sven Burkhart
 Teemu Mannermaa
 theage
-Thomas Lott / Ltom
+Thomas Lott Ltom
 Timo Zenker
 Torsten Kiebs
 Uli Waibel
 Ulrich Fries
-Ulrich Fries / Sysadm@ Nbg
+Ulrich Fries Sysadm@ Nbg
 Vaughan Davies
 Viktor Kosan
 Vincent F Splain
