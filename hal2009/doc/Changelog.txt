@@ -1,3 +1,7 @@
+1102:
+
+- Checkpoints hinzugefuegt
+
 1101:
 
 - Spender werden in doc/Contributors.txt gelistet (dafuer auch Script in scripts/)

@@ -102,6 +102,23 @@ void* cpu_thread (void* p) {
 
     time_t start;
     time(&start);
+
+    long time_to_checkpoint = start - 1;
+
+    short from_checkpoint = 0;
+    {
+        ifstream cpf_i("_status");
+        if (cpf_i) {
+            long diff = 0;
+            cpf_i >> diff;
+            cpf_i.close();
+            start -= diff;
+            cerr << "checkpoint revert: " << diff << "s..." << endl;
+            from_checkpoint = 1;
+        }
+    }
+
+
     while (1) {
         double cpu_time;
         time_t now;
@@ -114,13 +131,25 @@ void* cpu_thread (void* p) {
         }
         boinc_report_app_status(now - start, checkpoint_cpu, frac);
 
-        if ( is_slow() && ((now - start) / (max_seconds)) >= 1 ) {
+        if ( (from_checkpoint || is_slow()) && ((now - start) / (max_seconds)) >= 1 ) {
             srand (time_seed());
             int N = 30;
             int M = 600;
             boinc_sleep_if_slow(1000*(M + uniform_deviate (rand()) * (N - M)));
             boinc_finish(0);
         }
+
+        if ( time_to_checkpoint - now < 0 ) {
+            if ( boinc_time_to_checkpoint() ) {
+                time_to_checkpoint = now + 60*5;
+                long diff = (now - start);
+                ofstream cpf_o("_status");
+                cpf_o << diff;
+                cpf_o.close();
+                cerr << "checkpoint: " << diff << "s..." << endl;
+            }
+        }
+
 
         halusleep(1000);
     }
