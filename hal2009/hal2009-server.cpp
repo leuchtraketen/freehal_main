@@ -1157,5 +1157,8 @@ void hal2009_handle_signal(void* arg) {
         out.close();
         unlink("_output");
     }
+    else if (0 == strcmp(type, "_exit_by_user")) {
+        exit(0);
+    }
 }
 

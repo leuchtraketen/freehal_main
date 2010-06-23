@@ -1,3 +1,7 @@
+1101:
+
+- Spender werden in doc/Contributors.txt gelistet (dafuer auch Script in scripts/)
+
 1099:
 
 - Bug 634 korrigiert

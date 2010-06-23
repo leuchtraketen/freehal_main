@@ -1205,8 +1205,8 @@ int hal2009_execute_code(char* code, char* planguage) {
 }
 
 void hal2009_clean() {
-    int number_of_files_to_delete = 11;
-    char files_to_delete[13][100] = { "_output", "_output__pos", "_input__pos", "_output__add_pro_file", "_input__add_pro_file", "_output__get_csv", "_input__get_csv", "_exit", "_exit_hal2009_signal_handler", "_do_not_need_a_signal_handler", "_input_server", "_change_text_language" };
+    int number_of_files_to_delete = 13;
+    char files_to_delete[14][100] = { "_output", "_output__pos", "_input__pos", "_output__add_pro_file", "_input__add_pro_file", "_output__get_csv", "_input__get_csv", "_exit", "_exit_by_user", "_exit_hal2009_signal_handler", "_do_not_need_a_signal_handler", "_input_server", "_change_text_language" };
     
     int i;
     for (i = 0; i < number_of_files_to_delete; ++i) {
@@ -1239,8 +1239,8 @@ void* hal2009_signal_handler(void* parameters) {
     halclose(signal_handler_lock);
     
     
-    int number_of_files_to_check = 7;
-    char files_to_check[8][100] = { "_output", "_output__link", "_output__pos", "_output__add_pro_file", "_output__get_csv", "_exit", "_cgi_request" };
+    int number_of_files_to_check = 8;
+    char files_to_check[9][100] = { "_output", "_output__link", "_output__pos", "_output__add_pro_file", "_output__get_csv", "_exit", "_cgi_request", "_exit_by_user", };
     int i;
     
     while ( 1 ) {

@@ -35,10 +35,14 @@ void extract() {
             unzipper(filename);
             snprintf(filename, 5000, "../../projects/freehal.net_freehal_at_home/fh-%d.zip", i);
             unzipper(filename);
+            snprintf(filename, 5000, "../../projects/www.freehal.net_freehal_at_home/fh-%d.zip", i);
+            unzipper(filename);
 
             int j;
             for (j = 0; j < 50; ++j ) {
                 snprintf(filename, 5000, "../../projects/freehal.net_freehal_at_home/fh-%d-%d.zip", j, i);
+                unzipper(filename);
+                snprintf(filename, 5000, "../../projects/www.freehal.net_freehal_at_home/fh-%d-%d.zip", j, i);
                 unzipper(filename);
             }
 
