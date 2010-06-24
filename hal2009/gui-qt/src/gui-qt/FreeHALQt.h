@@ -92,6 +92,19 @@ extern auto_ptr<QString> freehalthread1_talking;
 
 void make_connection(int);
 void check_new_version();
+int windows_invoke_runner();
+int windows_update_svn();
+int windows_compile_runner();
+int windows_stop_runner();
+int linux_update_svn();
+int linux_compile_runner();
+int linux_stop_runner();
+int linux_invoke_runner();
+int invoke_runner();
+int compile_runner();
+int stop_runner();
+int update_svn();
+
 
 // for DB Tool
 class FactModel;
@@ -158,8 +171,12 @@ public slots:
     void on_actionGespr_ch_triggered();
     void on_actionEinstellungen_triggered();
     void on_actionInfo_triggered();
-    void on_actionNeue_Verbindung_herstellen_triggered();
+    void on_actionConnect_triggered();
     void on_actionReconnect_triggered();
+    void on_actionStop_Server_triggered();
+    void on_actionStart_Server_triggered();
+    void on_actionCompile_Server_triggered();
+    void on_actionUpdate_SVN_triggered();
 
     void on_w_verb_clicked();
     void on_w_nomen_clicked();
@@ -308,7 +325,7 @@ class Helper : public QObject {
     friend void freehal::log(std::string);
     friend void make_connection(int);
     friend void check_new_version();
-    friend void FreeHALWindow::on_actionNeue_Verbindung_herstellen_triggered();
+    friend void FreeHALWindow::on_actionConnect_triggered();
     friend void client(std::string, bool, bool);
     friend void thread_learn_progress_bar(int max);
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Tue May 25 13:44:54 2010
+** Created: Thu Jun 24 10:35:24 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,7 @@
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableView>
 #include <QtGui/QTextEdit>
+#include <QtGui/QToolBar>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -42,24 +43,17 @@ QT_BEGIN_NAMESPACE
 class Ui_freehalWindow
 {
 public:
-    QAction *actionGespr_ch;
-    QAction *actionDatenbank;
+    QAction *actionNewTalk;
     QAction *actionBeenden;
-    QAction *actionVorf_hrmodus;
-    QAction *actionBildschirm_l_schen;
-    QAction *actionDatenbank_editieren;
-    QAction *actionOnlinedatenbank_laden;
-    QAction *actionIm_WWW_Surfen;
-    QAction *actionOfflinemodus;
-    QAction *actionWikipedia_Artikel_Informationen_laden;
-    QAction *actionWikipedia_Artikel_Informationen_speichern;
     QAction *actionInfo;
     QAction *actionEinstellungen;
-    QAction *fullscreen;
-    QAction *actionSemantisches_Netz;
-    QAction *actionNeue_Verbindung_herstellen;
-    QAction *action_scan_a_text;
+    QAction *actionFullscreen;
+    QAction *actionConnect;
     QAction *actionReconnect;
+    QAction *actionStop_Server;
+    QAction *actionStart_Server;
+    QAction *actionCompile_Server;
+    QAction *actionUpdate_SVN;
     QWidget *centralwidget;
     QGridLayout *gridLayout_8;
     QGroupBox *msg_box_2;
@@ -160,6 +154,7 @@ public:
     QMenu *menuHilfe;
     QMenu *menuVerbindung;
     QStatusBar *statusbar;
+    QToolBar *toolBar;
 
     void setupUi(QMainWindow *freehalWindow)
     {
@@ -173,45 +168,44 @@ public:
         freehalWindow->setAnimated(false);
         freehalWindow->setDockNestingEnabled(true);
         freehalWindow->setUnifiedTitleAndToolBarOnMac(false);
-        actionGespr_ch = new QAction(freehalWindow);
-        actionGespr_ch->setObjectName(QString::fromUtf8("actionGespr_ch"));
-        actionDatenbank = new QAction(freehalWindow);
-        actionDatenbank->setObjectName(QString::fromUtf8("actionDatenbank"));
+        actionNewTalk = new QAction(freehalWindow);
+        actionNewTalk->setObjectName(QString::fromUtf8("actionNewTalk"));
         actionBeenden = new QAction(freehalWindow);
         actionBeenden->setObjectName(QString::fromUtf8("actionBeenden"));
-        actionVorf_hrmodus = new QAction(freehalWindow);
-        actionVorf_hrmodus->setObjectName(QString::fromUtf8("actionVorf_hrmodus"));
-        actionBildschirm_l_schen = new QAction(freehalWindow);
-        actionBildschirm_l_schen->setObjectName(QString::fromUtf8("actionBildschirm_l_schen"));
-        actionDatenbank_editieren = new QAction(freehalWindow);
-        actionDatenbank_editieren->setObjectName(QString::fromUtf8("actionDatenbank_editieren"));
-        actionOnlinedatenbank_laden = new QAction(freehalWindow);
-        actionOnlinedatenbank_laden->setObjectName(QString::fromUtf8("actionOnlinedatenbank_laden"));
-        actionIm_WWW_Surfen = new QAction(freehalWindow);
-        actionIm_WWW_Surfen->setObjectName(QString::fromUtf8("actionIm_WWW_Surfen"));
-        actionIm_WWW_Surfen->setCheckable(true);
-        actionIm_WWW_Surfen->setChecked(true);
-        actionOfflinemodus = new QAction(freehalWindow);
-        actionOfflinemodus->setObjectName(QString::fromUtf8("actionOfflinemodus"));
-        actionOfflinemodus->setCheckable(true);
-        actionWikipedia_Artikel_Informationen_laden = new QAction(freehalWindow);
-        actionWikipedia_Artikel_Informationen_laden->setObjectName(QString::fromUtf8("actionWikipedia_Artikel_Informationen_laden"));
-        actionWikipedia_Artikel_Informationen_speichern = new QAction(freehalWindow);
-        actionWikipedia_Artikel_Informationen_speichern->setObjectName(QString::fromUtf8("actionWikipedia_Artikel_Informationen_speichern"));
         actionInfo = new QAction(freehalWindow);
         actionInfo->setObjectName(QString::fromUtf8("actionInfo"));
         actionEinstellungen = new QAction(freehalWindow);
         actionEinstellungen->setObjectName(QString::fromUtf8("actionEinstellungen"));
-        fullscreen = new QAction(freehalWindow);
-        fullscreen->setObjectName(QString::fromUtf8("fullscreen"));
-        actionSemantisches_Netz = new QAction(freehalWindow);
-        actionSemantisches_Netz->setObjectName(QString::fromUtf8("actionSemantisches_Netz"));
-        actionNeue_Verbindung_herstellen = new QAction(freehalWindow);
-        actionNeue_Verbindung_herstellen->setObjectName(QString::fromUtf8("actionNeue_Verbindung_herstellen"));
-        action_scan_a_text = new QAction(freehalWindow);
-        action_scan_a_text->setObjectName(QString::fromUtf8("action_scan_a_text"));
+        actionFullscreen = new QAction(freehalWindow);
+        actionFullscreen->setObjectName(QString::fromUtf8("actionFullscreen"));
+        actionConnect = new QAction(freehalWindow);
+        actionConnect->setObjectName(QString::fromUtf8("actionConnect"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/ui/ui/connect_creating.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionConnect->setIcon(icon1);
         actionReconnect = new QAction(freehalWindow);
         actionReconnect->setObjectName(QString::fromUtf8("actionReconnect"));
+        actionReconnect->setIcon(icon1);
+        actionStop_Server = new QAction(freehalWindow);
+        actionStop_Server->setObjectName(QString::fromUtf8("actionStop_Server"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/ui/ui/media-playback-stop.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionStop_Server->setIcon(icon2);
+        actionStart_Server = new QAction(freehalWindow);
+        actionStart_Server->setObjectName(QString::fromUtf8("actionStart_Server"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/ui/ui/media-playback-start.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionStart_Server->setIcon(icon3);
+        actionCompile_Server = new QAction(freehalWindow);
+        actionCompile_Server->setObjectName(QString::fromUtf8("actionCompile_Server"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/ui/ui/document-properties.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCompile_Server->setIcon(icon4);
+        actionUpdate_SVN = new QAction(freehalWindow);
+        actionUpdate_SVN->setObjectName(QString::fromUtf8("actionUpdate_SVN"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/ui/ui/view-refresh.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionUpdate_SVN->setIcon(icon5);
         centralwidget = new QWidget(freehalWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout_8 = new QGridLayout(centralwidget);
@@ -454,7 +448,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 513, 423));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 461, 399));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
@@ -733,7 +727,7 @@ public:
         freehalWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(freehalWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 986, 25));
+        menubar->setGeometry(QRect(0, 0, 986, 21));
         menuDatei = new QMenu(menubar);
         menuDatei->setObjectName(QString::fromUtf8("menuDatei"));
         menuExtras = new QMenu(menubar);
@@ -746,23 +740,36 @@ public:
         statusbar = new QStatusBar(freehalWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         freehalWindow->setStatusBar(statusbar);
+        toolBar = new QToolBar(freehalWindow);
+        toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        toolBar->setIconSize(QSize(16, 16));
+        freehalWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menubar->addAction(menuDatei->menuAction());
         menubar->addAction(menuVerbindung->menuAction());
         menubar->addAction(menuExtras->menuAction());
         menubar->addAction(menuHilfe->menuAction());
-        menuDatei->addAction(actionGespr_ch);
+        menuDatei->addAction(actionNewTalk);
         menuDatei->addSeparator();
         menuDatei->addAction(actionBeenden);
         menuExtras->addAction(actionEinstellungen);
         menuExtras->addSeparator();
-        menuExtras->addAction(fullscreen);
+        menuExtras->addAction(actionFullscreen);
         menuHilfe->addAction(actionInfo);
-        menuVerbindung->addAction(actionNeue_Verbindung_herstellen);
+        menuVerbindung->addAction(actionConnect);
         menuVerbindung->addAction(actionReconnect);
+        menuVerbindung->addAction(actionStop_Server);
+        menuVerbindung->addAction(actionStart_Server);
+        menuVerbindung->addAction(actionCompile_Server);
+        menuVerbindung->addAction(actionUpdate_SVN);
+        toolBar->addAction(actionReconnect);
+        toolBar->addAction(actionStart_Server);
+        toolBar->addAction(actionStop_Server);
+        toolBar->addSeparator();
+        toolBar->addAction(actionUpdate_SVN);
+        toolBar->addAction(actionCompile_Server);
 
         retranslateUi(freehalWindow);
-        QObject::connect(actionBeenden, SIGNAL(triggered()), freehalWindow, SLOT(close()));
 
         tabWidget->setCurrentIndex(0);
 
@@ -773,24 +780,23 @@ public:
     void retranslateUi(QMainWindow *freehalWindow)
     {
         freehalWindow->setWindowTitle(QApplication::translate("freehalWindow", "Connect to artificial intelligence server", 0, QApplication::UnicodeUTF8));
-        actionGespr_ch->setText(QApplication::translate("freehalWindow", "New Talk", 0, QApplication::UnicodeUTF8));
-        actionDatenbank->setText(QApplication::translate("freehalWindow", "Database", 0, QApplication::UnicodeUTF8));
+        actionNewTalk->setText(QApplication::translate("freehalWindow", "New Talk", 0, QApplication::UnicodeUTF8));
         actionBeenden->setText(QApplication::translate("freehalWindow", "Exit", 0, QApplication::UnicodeUTF8));
-        actionVorf_hrmodus->setText(QApplication::translate("freehalWindow", "Vorf\303\274hrmodus", 0, QApplication::UnicodeUTF8));
-        actionBildschirm_l_schen->setText(QApplication::translate("freehalWindow", "Bildschirm l\303\266schen", 0, QApplication::UnicodeUTF8));
-        actionDatenbank_editieren->setText(QApplication::translate("freehalWindow", "Datenbank editieren", 0, QApplication::UnicodeUTF8));
-        actionOnlinedatenbank_laden->setText(QApplication::translate("freehalWindow", "Onlinedatenbank laden", 0, QApplication::UnicodeUTF8));
-        actionIm_WWW_Surfen->setText(QApplication::translate("freehalWindow", "Im WWW surfen", 0, QApplication::UnicodeUTF8));
-        actionOfflinemodus->setText(QApplication::translate("freehalWindow", "Offlinemodus", 0, QApplication::UnicodeUTF8));
-        actionWikipedia_Artikel_Informationen_laden->setText(QApplication::translate("freehalWindow", "Wikipedia-Artikel-Informationen laden", 0, QApplication::UnicodeUTF8));
-        actionWikipedia_Artikel_Informationen_speichern->setText(QApplication::translate("freehalWindow", "Wikipedia-Artikel-Informationen speichern", 0, QApplication::UnicodeUTF8));
         actionInfo->setText(QApplication::translate("freehalWindow", "Info", 0, QApplication::UnicodeUTF8));
         actionEinstellungen->setText(QApplication::translate("freehalWindow", "Preferences", 0, QApplication::UnicodeUTF8));
-        fullscreen->setText(QApplication::translate("freehalWindow", "Presentation mode", 0, QApplication::UnicodeUTF8));
-        actionSemantisches_Netz->setText(QApplication::translate("freehalWindow", "Semantisches Netz", 0, QApplication::UnicodeUTF8));
-        actionNeue_Verbindung_herstellen->setText(QApplication::translate("freehalWindow", "New Connection", 0, QApplication::UnicodeUTF8));
-        action_scan_a_text->setText(QApplication::translate("freehalWindow", "einen Text scannen", 0, QApplication::UnicodeUTF8));
+        actionFullscreen->setText(QApplication::translate("freehalWindow", "Presentation mode", 0, QApplication::UnicodeUTF8));
+        actionConnect->setText(QApplication::translate("freehalWindow", "Connect", 0, QApplication::UnicodeUTF8));
+        actionConnect->setShortcut(QApplication::translate("freehalWindow", "F6", 0, QApplication::UnicodeUTF8));
         actionReconnect->setText(QApplication::translate("freehalWindow", "Reconnect", 0, QApplication::UnicodeUTF8));
+        actionReconnect->setShortcut(QApplication::translate("freehalWindow", "F5", 0, QApplication::UnicodeUTF8));
+        actionStop_Server->setText(QApplication::translate("freehalWindow", "Stop Server", 0, QApplication::UnicodeUTF8));
+        actionStop_Server->setShortcut(QApplication::translate("freehalWindow", "Ctrl+D", 0, QApplication::UnicodeUTF8));
+        actionStart_Server->setText(QApplication::translate("freehalWindow", "Start Server", 0, QApplication::UnicodeUTF8));
+        actionStart_Server->setShortcut(QApplication::translate("freehalWindow", "Ctrl+S", 0, QApplication::UnicodeUTF8));
+        actionCompile_Server->setText(QApplication::translate("freehalWindow", "Compile Server", 0, QApplication::UnicodeUTF8));
+        actionCompile_Server->setShortcut(QApplication::translate("freehalWindow", "Ctrl+G", 0, QApplication::UnicodeUTF8));
+        actionUpdate_SVN->setText(QApplication::translate("freehalWindow", "Update SVN", 0, QApplication::UnicodeUTF8));
+        actionUpdate_SVN->setShortcut(QApplication::translate("freehalWindow", "Ctrl+U", 0, QApplication::UnicodeUTF8));
         msg_box_2->setTitle(QApplication::translate("freehalWindow", "FreeHAL needs some information", 0, QApplication::UnicodeUTF8));
         male->setText(QApplication::translate("freehalWindow", "male", 0, QApplication::UnicodeUTF8));
         female->setText(QApplication::translate("freehalWindow", "female", 0, QApplication::UnicodeUTF8));
@@ -813,8 +819,8 @@ public:
         textedit_talk->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans';\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         lineedit_talk->clear();
         lineedit_talk->insertItems(0, QStringList()
          << QString()
@@ -825,8 +831,8 @@ public:
         textedit_learn->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans';\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         lineedit_learn->clear();
         lineedit_learn->insertItems(0, QStringList()
          << QString()
@@ -862,7 +868,8 @@ public:
         menuDatei->setTitle(QApplication::translate("freehalWindow", "File", 0, QApplication::UnicodeUTF8));
         menuExtras->setTitle(QApplication::translate("freehalWindow", "Tools", 0, QApplication::UnicodeUTF8));
         menuHilfe->setTitle(QApplication::translate("freehalWindow", "Help", 0, QApplication::UnicodeUTF8));
-        menuVerbindung->setTitle(QApplication::translate("freehalWindow", "Connection", 0, QApplication::UnicodeUTF8));
+        menuVerbindung->setTitle(QApplication::translate("freehalWindow", "Server", 0, QApplication::UnicodeUTF8));
+        toolBar->setWindowTitle(QApplication::translate("freehalWindow", "toolBar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -325,14 +325,17 @@ void FreeHALWindow::on_flowchart_fact_edit_clicked() {
 
 
 void Helper::exitNow() {
-        int ret = QMessageBox::warning(main_window, tr("FreeHAL"),
+        /*int ret = QMessageBox::warning(main_window, tr("FreeHAL"),
             tr("Should FreeHAL continue in the background?"),
             QMessageBox::Yes | QMessageBox::No,
             QMessageBox::No);
 
         if (ret == QMessageBox::No) {
+        */
     	freehal::comm_send("EXIT:EXIT");
-	}
+        stop_runner();
+
+        //}
     delete dialog_options;
     delete dialog_help;
     delete dialog_changelog;
@@ -375,6 +378,8 @@ void Helper::slotNewVersionOnline(QString new_online) {
 }
 
 int windows_invoke_runner() {
+    cout << "start server..." << endl;
+
     for (int i = 0; i < 10; ++i) {
         if (!std::system(("runner " + freehal::get_lang_str().ref() + " " + database_engine).c_str()))
             return 0;
@@ -385,11 +390,55 @@ int windows_invoke_runner() {
         freehal::msleep(1000);
     }
 
+    cout << "done: start server..." << endl;
     return 1;
 }
 
-int linux_invoke_runner() {
+int windows_update_svn() {
+    QMessageBox::warning(main_window, ("Update SVN"),
+            "This function is not implemented on Microsoft Windows.",
+            QMessageBox::Yes,
+            QMessageBox::Yes);
+    return 0;
+}
+
+int windows_compile_runner() {
+    QMessageBox::warning(main_window, ("Update SVN"),
+            "This function is not implemented on Microsoft Windows.",
+            QMessageBox::Yes,
+            QMessageBox::Yes);
+    return 0;
+}
+
+int windows_stop_runner() {
+    ofstream _exit_by_user("_exit_by_user");
+    _exit_by_user.close();
+
+    std::system("killall hal2009-server");
+}
+
+
+int linux_update_svn() {
+    std::system("svn update");
+    std::system("svn update lang_de");
+    return 0;
+}
+
+int linux_compile_runner() {
+    linux_update_svn();
     std::system("make hal2009-server");
+    return 0;
+}
+
+int linux_stop_runner() {
+    ofstream _exit_by_user("_exit_by_user");
+    _exit_by_user.close();
+
+    std::system("killall hal2009-server");
+}
+
+int linux_invoke_runner() {
+    cout << "start server..." << endl;
 
     ifstream i_1("hal2009-server");
     if (i_1) {
@@ -401,15 +450,61 @@ int linux_invoke_runner() {
         cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
 
+    cout << "done: start server." << endl;
     return 0;
 }
 
-void make_connection(int _new) {
+int invoke_runner() {
+#ifdef linux
+    linux_invoke_runner();
+#else
+    windows_invoke_runner();
+#endif
+}
+
+int compile_runner() {
+    cout << "compile server..." << endl;
+#ifdef linux
+    boost::thread t_v(linux_compile_runner);
+#else
+    windows_compile_runner();
+#endif
+    cout << "done: compile server." << endl;
+}
+
+int stop_runner() {
+    cout << "stop server..." << endl;
+#ifdef linux
+    linux_stop_runner();
+#else
+    windows_stop_runner();
+#endif
+    cout << "done: stop server." << endl;
+}
+
+int update_svn() {
+    cout << "update svn..." << endl;
+#ifdef linux
+    boost::thread t_v(linux_update_svn);
+#else
+    windows_update_svn();
+#endif
+    cout << "done: update svn." << endl;
+}
+
+
+void set_start_kernel(bool do_it) {
+    dialog_connection->from->start_kernel->setChecked(do_it);
+}
+
+void make_connection(int show_connection_window) {
+    cout << (show_connection_window ? "connect" : "reconnect") << "..." << endl;
+
     chdir("hal2009");
     chdir("gui-qt");
     chdir("..");
 
-    if (_new) {
+    if (show_connection_window) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
         dialog_connection->from->buttonBox->buttons().at(0)->setFocus(Qt::OtherFocusReason);
         dialog_connection->exec();
@@ -440,31 +535,34 @@ void make_connection(int _new) {
 
     string ip = freehal::string(dialog_connection->from->ip->displayText().toStdString()).get_strip().ref();
 
-    if (_new) {
+    if (show_connection_window) {
         main_window->showWindowNormal();
 
-        {
-            QFile booted_file("booted");
-            booted_file.remove();
+    }
+    {
+        QFile booted_file("booted");
+        booted_file.remove();
+    }
+
+    if (ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()) {
+
+        if (show_connection_window) {
+            boost::thread t_v(invoke_runner);
         }
 
-        if (ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()) {
+        can_do_exit = true;
+    } else {
+        emit helper->everythingReady();
+    }
 
-#ifdef linux
-            boost::thread t_v(linux_invoke_runner);
-#else
-            boost::thread t_v(windows_invoke_runner);
-#endif
-            can_do_exit = true;
-        } else {
-            emit helper->everythingReady();
-        }
-
+    if (show_connection_window) {
         boost::thread t_v(check_new_version);
     }
     boost::thread t_w(boost::bind(freehal::comm_init_client, ip, true, ip == "127.0.0.1" && dialog_connection->from->start_kernel->isChecked()));
 
     freehal::comm_send("HELLO:.");
+
+    cout << "done: " << (show_connection_window ? "connect" : "reconnect") << "..." << endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -766,12 +864,29 @@ void Helper::reconnect() {
     make_connection(1);
 }
 
-void FreeHALWindow::on_actionNeue_Verbindung_herstellen_triggered() {
+void FreeHALWindow::on_actionConnect_triggered() {
     make_connection(1);
 }
 
 void FreeHALWindow::on_actionReconnect_triggered() {
     make_connection(0);
+}
+
+void FreeHALWindow::on_actionStop_Server_triggered() {
+    stop_runner();
+}
+
+void FreeHALWindow::on_actionStart_Server_triggered() {
+    set_start_kernel(1);
+    make_connection(0);
+}
+
+void FreeHALWindow::on_actionCompile_Server_triggered() {
+    compile_runner();
+}
+
+void FreeHALWindow::on_actionUpdate_SVN_triggered() {
+    update_svn();
 }
 
 void FreeHALWindow::showWindowNormal() {
