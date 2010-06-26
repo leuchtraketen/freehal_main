@@ -58,7 +58,7 @@ set items of array all_lines to all lines from var handle
 set new array lines to an empty array
 for each new var line in array all_lines do
     set new var random_number to rand with 100
-    if var random_number > 85 do
+    if var random_number > 95 do
         push into array lines, var line
     done
 done
