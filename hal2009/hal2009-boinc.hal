@@ -35,7 +35,18 @@ set new var report to handle for file name var filename, write
 print into var report data "Report:" concat new line
 print into var report data new line
 
-set new var text to read_from_input_file with var current_language, var path
+# set new var text to read_from_input_file with var current_language, var path
+
+set new array all_input_lines to read_from_input_file_array with var current_language, var path
+set new array input_lines to an empty array
+for each new var line in array all_input_lines do
+    set new var random_number to rand with 100
+    if var random_number > 95 do
+        push into array input_lines, var line
+    done
+done
+
+set new var text to join with "", items of array input_lines
 
 print into var report data "input:" concat new line
 print into var report data "-------------------------------------------------------" concat new line
@@ -55,14 +66,7 @@ set new var filename to var path concat "/" concat var file_output_pro
 set new var handle to handle for file name var filename, read
 set new array all_lines to an empty array
 set items of array all_lines to all lines from var handle
-set new array lines to an empty array
-for each new var line in array all_lines do
-    set new var random_number to rand with 100
-    if var random_number > 95 do
-        push into array lines, var line
-    done
-done
-set new var pro_text to join with "", items of array lines
+set new var pro_text to join with "", items of array all_lines
 
 print into var report data ".pro file:" concat new line
 print into var report data "-------------------------------------------------------" concat new line
@@ -70,5 +74,9 @@ print into var report data var pro_text concat new line
 print into var report data "-------------------------------------------------------" concat new line
 print into var report data new line
 
+#########
+
+set new var text to join with "", items of array all_input_lines
+set new var summ to summarize with var text, var file_output_nl, var file_output_pro, var current_language, var path
 
 

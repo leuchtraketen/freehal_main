@@ -60,6 +60,16 @@ define action read_from_input_file with var lang, var path do
 	do return with var text
 done
 
+define action read_from_input_file_array with var lang, var path do
+	print new line
+	set new var filename to var path concat "/input.txt"
+	set new var handle to handle for file name var filename, read
+	set new array lines to an empty array
+	set items of array lines to all lines from var handle
+
+	do return with array lines
+done
+
 define action summarize_line with var input, hash tags, var lang, var path do
     do regex using var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) /, "$0 _$1_ _no-question_ ", :global:i
     do regex using var input: /<[?]>/, "", :global:i
