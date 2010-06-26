@@ -377,6 +377,10 @@ void Helper::slotNewVersionOnline(QString new_online) {
                 QMessageBox::Yes);
 }
 
+int gui_system(QString) {
+
+}
+
 int windows_invoke_runner() {
     cout << "start server..." << endl;
 
@@ -877,6 +881,7 @@ void FreeHALWindow::on_actionStop_Server_triggered() {
 }
 
 void FreeHALWindow::on_actionStart_Server_triggered() {
+    boost::thread t_v(invoke_runner);
     set_start_kernel(1);
     make_connection(0);
 }

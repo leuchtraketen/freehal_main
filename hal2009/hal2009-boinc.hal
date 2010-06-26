@@ -53,8 +53,15 @@ print into var report data new line
 
 set new var filename to var path concat "/" concat var file_output_pro
 set new var handle to handle for file name var filename, read
+set new array all_lines to an empty array
+set items of array all_lines to all lines from var handle
 set new array lines to an empty array
-set items of array lines to all lines from var handle
+for each new var line in array all_lines do
+    set new var random_number to rand with 100
+    if var random_number > 85 do
+        push into array lines, var line
+    done
+done
 set new var pro_text to join with "", items of array lines
 
 print into var report data ".pro file:" concat new line
