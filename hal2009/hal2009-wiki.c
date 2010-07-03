@@ -684,6 +684,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             if (strstr(lines[current_line]->s, "bezeichnet:")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "aus Wikipedia")) {
+                continue;
+            }
             if (strstr(lines[current_line]->s, "bezeichnet") && !strstr(lines[current_line]->s, ". ")) {
                 continue;
             }

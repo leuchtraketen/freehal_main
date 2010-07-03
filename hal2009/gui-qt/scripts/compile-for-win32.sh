@@ -73,7 +73,7 @@ rm -rf ./win-compile
 mkdir ./win-compile
 mv FreeHAL-QT.exe ./win-compile/FreeHAL-QT.exe
 
-
+cd gui-qt/
 echo Upload...
 scp -C ../win-compile/FreeHAL-QT.exe tobias@freehal.net:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
 echo Upload done.

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Thu Jun 24 10:35:24 2010
+** Created: Fri Jul 2 06:22:43 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
