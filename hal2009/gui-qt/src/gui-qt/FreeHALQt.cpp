@@ -505,8 +505,9 @@ void make_connection(int show_connection_window) {
     cout << (show_connection_window ? "connect" : "reconnect") << "..." << endl;
 
     chdir("hal2009");
-    chdir("gui-qt");
-    chdir("..");
+    if (!chdir("gui-qt")) {
+        chdir("..");
+    }
 
     if (show_connection_window) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
