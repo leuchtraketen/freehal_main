@@ -2,6 +2,7 @@ Alain Constant
 Alan Hutchings
 Alexandra Schmidt
 Andrew Brady
+Andy Garcia
 Anthony Bohn
 Arne Sielemann
 Bernard Pierre
@@ -73,6 +74,7 @@ Stephanie Boisvert
 Sven Burkhart
 Teemu Mannermaa
 theage
+Thierry Drumel
 Thomas Lott
 Timo Zenker
 Torsten Kiebs
