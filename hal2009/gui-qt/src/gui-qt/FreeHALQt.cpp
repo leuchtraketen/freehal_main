@@ -496,7 +496,6 @@ int update_svn() {
     cout << "done: update svn." << endl;
 }
 
-
 void set_start_kernel(bool do_it) {
     dialog_connection->from->start_kernel->setChecked(do_it);
 }
