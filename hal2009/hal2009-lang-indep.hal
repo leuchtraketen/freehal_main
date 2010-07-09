@@ -1196,6 +1196,7 @@ define action compute_input with var input is rw, var lang, var path do
         done
     done
 
+    do put_underscore_names_into_builtin_names with var input, var lang, var path
 
     print "Computed input (no. 7) ... ", var input
     print new line
@@ -1277,3 +1278,18 @@ define action compute_input with var input is rw, var lang, var path do
 
     do return with ( var input, var no_change_pronouns )
 done
+
+define action put_underscore_names_into_builtin_names with var input, var lang, var path do
+
+    set new array male_names to global array builtin_male_names
+
+    set new array words to split using /(\s|<[,]>|KOMMA)/, var input
+    for each new var word in array words do
+        if var word matches /^<[_]>(.+?)<[_]>$/ do
+            push into array male_names, $0
+        done
+    done
+    
+done
+
+

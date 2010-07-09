@@ -3618,6 +3618,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_genus to from array subject_props 2nd item
                 set new var object_genus to from array  object_props 2nd item
                 set new var subject_person to get_person with from array clause item [1]
+                if from array proper_verbs 1st item matches /^equal_pl/ do
+                    set var subject_person to "3p"
+                done
                 
                 set new var subject_article to ""
                 set new var object_article to ""
@@ -3636,30 +3639,27 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set var subject_article to get_article with var subject_genus, "subject", "indefinite"
                 set var object_article to get_article with var object_genus, "subject", "indefinite"
 
-                if from array proper_verbs 1st item matches /^equal_pl/ do
-                    set var subject_person to "3p"
-                done
-                set new var verb to get_verb with "be", var subject_person
-                
                 if from array proper_verbs 1st item not matches /^equal_pl/ and from array clause item [1] not matches /(\s.*?\s)|<[_]>|<[0-9]>/ and from array clause item [2] not matches /ein/ and var is_male_name_subject is false do
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
                 if from array clause item [2] not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
                     if from array subject_props 1st item matches /^v/ do
-                        set var verb to get_verb with "is-same-as", var subject_person
+                        set new var verb to get_verb with "is-same-as", var subject_person
                         push into array sentence, var verb
                     done
                     else if from array clause item [2] matches /<[0-9]>/ do
-                        set var verb to get_verb with "is-same-as", var subject_person
+                        set new var verb to get_verb with "is-same-as", var subject_person
                         push into array sentence, var verb
                     done
                     else do
+                        set new var verb to get_verb with "be", var subject_person
                         push into array sentence, var verb
                         push into array sentence, var object_article
                     done
                 done
                 else do
+                    set new var verb to get_verb with "be", var subject_person
                     push into array sentence, var verb
                 done
                 push into array sentence, from array clause item [2]
