@@ -1,3 +1,7 @@
+1116:
+
+- Bug 632 korrigiert
+
 1111:
 
 - Bug 638 korrigiert
