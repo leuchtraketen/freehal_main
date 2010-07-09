@@ -299,8 +299,12 @@ int remove_negation (char* line, double* truth_ref, int* only_logic) {
         sline_ref = replace(sline_ref, "kein", "ein");
         (*truth_ref) = 0.0;
     }
-    if (strstr(line, " nicht")) {
-        sline_ref = replace(sline_ref, " nicht", " ");
+    if (strstr(line, " nicht ")) {
+        sline_ref = replace(sline_ref, " nicht ", " ");
+        (*truth_ref) = 0.0;
+    }
+    if (strstr(line, " nicht<")) {
+        sline_ref = replace(sline_ref, " nicht<", " ");
         (*truth_ref) = 0.0;
     }
     if (strstr(line, "nicht ")) {

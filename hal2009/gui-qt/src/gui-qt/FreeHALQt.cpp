@@ -403,14 +403,16 @@ int windows_update_svn() {
             "This function is not implemented on Microsoft Windows.",
             QMessageBox::Yes,
             QMessageBox::Yes);
+    cout << "done: update svn." << endl;
     return 0;
 }
 
 int windows_compile_runner() {
-    QMessageBox::warning(main_window, ("Update SVN"),
+    QMessageBox::warning(main_window, ("Compile runner.exe"),
             "This function is not implemented on Microsoft Windows.",
             QMessageBox::Yes,
             QMessageBox::Yes);
+    cout << "done: compile server." << endl;
     return 0;
 }
 
@@ -425,12 +427,14 @@ int windows_stop_runner() {
 int linux_update_svn() {
     std::system("svn update");
     std::system("svn update lang_de");
+    cout << "done: update svn." << endl;
     return 0;
 }
 
 int linux_compile_runner() {
     linux_update_svn();
     std::system("make hal2009-server");
+    cout << "done: compile server." << endl;
     return 0;
 }
 
@@ -460,6 +464,7 @@ int linux_invoke_runner() {
 
 int invoke_runner() {
 #ifdef linux
+    std::system("pwd");
     linux_invoke_runner();
 #else
     windows_invoke_runner();
@@ -469,16 +474,17 @@ int invoke_runner() {
 int compile_runner() {
     cout << "compile server..." << endl;
 #ifdef linux
+    std::system("pwd");
     boost::thread t_v(linux_compile_runner);
 #else
     windows_compile_runner();
 #endif
-    cout << "done: compile server." << endl;
 }
 
 int stop_runner() {
     cout << "stop server..." << endl;
 #ifdef linux
+    std::system("pwd");
     linux_stop_runner();
 #else
     windows_stop_runner();
@@ -489,11 +495,11 @@ int stop_runner() {
 int update_svn() {
     cout << "update svn..." << endl;
 #ifdef linux
+    std::system("pwd");
     boost::thread t_v(linux_update_svn);
 #else
     windows_update_svn();
 #endif
-    cout << "done: update svn." << endl;
 }
 
 void set_start_kernel(bool do_it) {
