@@ -117,6 +117,10 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, " has the item ", " item ");
     hals = replace(hals, " contains the item ", " item ");
     hals = replace(hals, " is not ", " not is ");
+    hals = replace(hals, " an empty string", " empty string");
+    hals = replace(hals, " a empty string", " empty string");
+    hals = replace(hals, " is empty string", " matches empty string");
+    hals = replace(hals, " empty string", " '' ");
     hals = replace(hals, "that array is empty: ", "0 == items of that array: ");
     hals = replace(hals, "that array is empty ", "0 == items of that array: ");
     hals = replace(hals, "that array not is empty: ", "items of that array: ");

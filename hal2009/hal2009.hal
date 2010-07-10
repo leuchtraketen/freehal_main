@@ -1683,8 +1683,8 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
         set flag add_current_word to 0
     done
 
-    if from hash sym_adj item { var current_tag } and var next_word matches "" do
-        print "not add current word: current is adj and next is false" concat new line
+    if from hash sym_adj item { var current_tag } and var next_word is an empty string do
+        print "not add current word: current is adj and next is an empty string" concat new line
         set flag add_current_word to 0
     done
 
@@ -1789,7 +1789,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     print new line
 
 
-    set new flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag 1st item, from array next_tag 1st item
+    set new flag add_current_word to entity_chose_add_current_word with var lang, array words, hash tags, from array current_tag 1st item, from array next_tag 1st item, var current_word, var next_word, flag found_subject
 
 
     set new flag count to 20
@@ -2286,11 +2286,25 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 do unshift using items of that array: from hash parsed item { "extra" } end-items-of, [ var current_word ]
             done
         done
-        else if from global hash builtin_time_place_adverbs item { var current_word } or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word)) or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and var next_word is false) or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
+        else if from global hash builtin_time_place_adverbs item { var current_word } or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word)) or (from hash sym_adj item { from array current_tag item [ const TYPE ] } and var next_word is an empty string) or var current_word matches /^in_/ or ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } ) do
+
+            print "----" concat new line
+            print from global hash builtin_time_place_adverbs item { var current_word }
+            print new line
+            print (from hash sym_adj item { from array current_tag item [ const TYPE ] } and builtin_has_time_place_adverbs_suffix(var current_word))
+            print new line
+            print (from hash sym_adj item { from array current_tag item [ const TYPE ] } and var next_word is an empty string)
+            print new line
+            print var current_word matches /^in_/
+            print new line
+            print ( from hash sym_adj item { from array current_tag item [ const TYPE ] } and not from hash sym_entity item { from array next_tag item [ const TYPE ] } )
+            print new line
+            print "----" concat new line
+        
             if var what matches "entity" do
                 print var ident
                 print "#    "
-                print "End do parse_what(->2)."
+                print "End do parse_what(->2-1)."
                 print new line
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed
@@ -2427,7 +2441,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             if var what matches "nothing" do
                 print var ident
                 print "#    "
-                print "End do parse_what(->2)."
+                print "End do parse_what(->2-2)."
                 print new line
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed
@@ -2435,7 +2449,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             if var what matches "entity" do
                 print var ident
                 print "#    "
-                print "End do parse_what(->2)."
+                print "End do parse_what(->2-3)."
                 print new line
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed

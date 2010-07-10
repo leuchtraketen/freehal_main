@@ -67,6 +67,10 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     hals = replace(hals, " has the item ", " item ");
     hals = replace(hals, " contains the item ", " item ");
     hals = replace(hals, " is not ", " not is ");
+    hals = replace(hals, " an empty string", " empty string");
+    hals = replace(hals, " a empty string", " empty string");
+    hals = replace(hals, " is empty string", " matches empty string");
+    hals = replace(hals, " empty string", " '' ");
     hals = replace(hals, "that array is empty: ", "0 == items of that array: ");
     hals = replace(hals, "that array is empty ", "0 == items of that array: ");
     hals = replace(hals, "that array not is empty: ", "items of that array: ");
@@ -197,7 +201,7 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     }
     hals = replace(hals, " not matches ", " !~ ");
     hals = replace(hals, " not match ", " !~ ");
-    hals = replace(hals, " not is ", " == ");
+    hals = replace(hals, " not is ", " != ");
     hals = replace(hals, " matches ", " ~~ ");
     hals = replace(hals, " match ", " ~~ ");
     hals = replace(hals, " is ", " == ");

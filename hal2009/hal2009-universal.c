@@ -1577,19 +1577,20 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
 void print_word_list_3rd_order(struct word*** list) {
     int i;
     for (i = 0; can_be_a_pointer(list[i]); ++i) {
-        debugf("(\n");
+        debugf(" - '");
         int j;
         for (j = 0; can_be_a_pointer(list[i][j]); ++j) {
-            debugf(" 1: %p\n", list[i][j]);
             if (can_be_a_pointer(list[i][j]->name)) {
-                debugf(" 2: %p\n", list[i][j]->name);
-                debugf(" - %s\n", list[i][j]->name);
+                if (j) {
+                    debugf("', '", list[i][j]->name);
+                }
+                debugf("%s", list[i][j]->name);
             }
         }
         //if (j == 0) {
             //debugf("   array at %p: first = %p, second = %p\n", list[i], list[i][0], can_be_a_pointer(list[i][0])&&can_be_a_pointer(list[i][1])?list[i][1]:0);
         //}
-        debugf(")\n");
+        debugf("'\n");
     }
     debugf("\n");
 }
