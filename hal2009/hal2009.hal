@@ -3640,6 +3640,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set var object_article to get_article with var object_genus, "subject", "indefinite"
 
                 if from array proper_verbs 1st item not matches /^equal_pl/ and from array clause item [1] not matches /(\s.*?\s)|<[_]>|<[0-9]>/ and from array clause item [2] not matches /ein/ and var is_male_name_subject is false do
+                    if from array clause item [2] matches /(^|\s)(der|die|das|the|(?:a ))/ do
+                        set var subject_article to get_article with var subject_genus, "subject", "definite"
+                    done
                     push into array sentence, var subject_article
                 done
                 push into array sentence, from array clause item [1]
@@ -3650,6 +3653,10 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                     else if from array clause item [2] matches /<[0-9]>/ do
                         set new var verb to get_verb with "is-same-as", var subject_person
+                        push into array sentence, var verb
+                    done
+                    else if from array proper_verbs 1st item matches /^equal_pl/ do
+                        set new var verb to get_verb with "be", var subject_person
                         push into array sentence, var verb
                     done
                     else do

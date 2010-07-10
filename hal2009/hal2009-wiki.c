@@ -166,6 +166,9 @@ const char* define_general_verb(char* sentence, const char* entity) {
     else if (strstr(sentence, "beschreiben")) {
         return "equal_in";
     }
+    else if (strstr(sentence, " und ")) {
+        return "equal_pl";
+    }
     return "equal_sg";
 }
 

@@ -457,6 +457,7 @@ int linux_invoke_runner() {
         boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
         cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
     }
+    freehal::msleep(1000);
 
     cout << "done: start server." << endl;
     return 0;
