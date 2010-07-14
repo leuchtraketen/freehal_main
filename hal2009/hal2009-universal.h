@@ -30,6 +30,9 @@
 
 #define TOOMUCH      -7
 
+#define REVERSE 1
+#define FORWARD 0
+
 #define VERY_EXACT   4
 #define EXACT        2
 #define WEAK         3
@@ -102,7 +105,7 @@ int universal_begin();
 int universal_end();
 struct word* get_word(const char* name);
 long can_be_a_pointer(void* p);
-struct word*** search_synonyms(const char* exp, int level);
+struct word*** search_synonyms(const char* exp, int level, int);
 struct word** divide_words(const char* str);
 char** divide_by(const char by, const char* str);
 struct list* look_at_list(struct list* l);

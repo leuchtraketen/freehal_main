@@ -1,3 +1,7 @@
+1122:
+
+- Alle .hal-Dateien sind nun in ASCII
+
 1120:
 
 - Bug 639 korrigiert
