@@ -144,13 +144,9 @@ werdet ihr keine vern&uuml;nftige Antwort erhalten. </li>
 <li>- Mit vern&uuml;nftigen Dialogen helft ihr auch dem Team Freehal weiter zu
 entwickeln und so zur positiven Entwicklung des Projektes beizutragen. </li>
 
-<li><br /><div
- style="text-align: center;"><span
- style="font-weight: bold;">Eine Onlineversion von Freehal auf einem Linuxserver
-.</span></div></li>
-
 </ul><br />
-
+<?php include("version-info.inc"); ?>
+<br />
 
 <form method="post">
 <input type="text" name="q" />
@@ -190,48 +186,22 @@ fwrite($cgi_r, "\n");
 fclose($cgi_r);
 $cgi_u = fopen("_cgi_user", "w");
 fwrite($cgi_u, $_IP);
-fwrite($cgi_u, "\n");
 fclose($cgi_u);
 @system("chmod 0777 _cgi_request");
 @system("chmod 0777 _cgi_user");
 unlink("_done");
 
-$cgi_u = fopen("log/h-o", "w");
-fwrite($cgi_u, file_get_contents("log/o-".$_IP));
-fclose($cgi_u);
+unlink("log/o-".$_IP);
 }
 
-$h_1 = file_get_contents("log/o-".$_IP);
-$h_2 = file_get_contents("log/h-o");
-if (!$h_2 && $h_1) {
+if ($_POST[q]) {
 	echo "<div class='pre'>";
-	echo "<iframe style='border: none;' src='iframe-dialog.php?t=60&ip=".$_IP."></iframe>";
-	echo "</div>";
-}
-else if ($h_1 != $h_2) {
-	$cgi_u = fopen("log/h-o", "w");
-	fclose($cgi_u);
-
-	$time = time() - $time;
-@mkdir("log");
-	$content_of_log = @file_get_contents("log/$_IP");
-	$logf = fopen("log/$_IP", "w");
-	fwrite($logf, "<span style=\"color: silver !important;\">$_IP:</span> <b>".file_get_contents("log/i-".$_IP)."</b>\n");
-	fwrite($logf, "<span style=\"color: silver !important; width: 150px !important; display: inline-block;\">FreeHAL:</span>");
-	$datei = file("log/o-".$_IP);
-	$letzte_zeile = array_pop($datei);
-	fwrite($logf, trim($letzte_zeile));
-	fwrite($logf, " ($needed_time sec)\n");  
-	fwrite($logf, $content_of_log);
-	fclose($logf);
-
-	echo "<div class='pre'>";
-	echo "<iframe style='border: none;' src='iframe-dialog.php?t=60&ip=".$_IP."></iframe>";
+	echo "<iframe style='border: none;' src='iframe-dialog.php?t=3&ip=".$_IP."></iframe>";
 	echo "</div>";
 }
 else {
 	echo "<div class='pre'>";
-	echo "<iframe style='border: none;' src='iframe-dialog.php?t=3&ip=".$_IP."></iframe>";
+	echo "<iframe style='border: none;' src='iframe-dialog.php?t=60&ip=".$_IP."></iframe>";
 	echo "</div>";
 }
 ?>

@@ -618,6 +618,37 @@ char* disk_get_source(const char* key) {
     return source;
 }
 
+char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level) {
+    printf("disk_get_source: %s\n", key);
+    if (!key || !key[0])
+        return 1;
+    
+    struct request_string_pair req;
+    req.facts    = facts;
+    req.limit    = limit;
+    req.position = position;
+    req.rel      = 0;
+    
+    {
+        char* sql = malloc(1024);
+        *sql = 0;
+        if (level == 1) {
+            strcat(sql, "select e.subjects, e.objects from facts as e where e.verb = \"=\" and e.objects = \"");
+            strcat(sql, key);
+            strcat(sql, "\" and `from` not like \"%fa-%\";");
+        }
+        else {
+            strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`; insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
+            strcat(sql, key);
+            strcat(sql, "\" and u.`from` not like  \"%fa-%\"; select e.subjects, e.objects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.objects glob `word`);");
+            
+        }
+        
+        int error = sql_execute(sql, callback_string_pair, &req);
+        free(sql);
+    }
+}
+
 char* disk_del_record(const char* key) {
     if (!key || !key[0])
         return 1;
@@ -913,6 +944,30 @@ struct word* disk_set_word(const char* name) {
             disk_net[i][k]->size);
     ++(disk_net[i][k]->size);
     return disk_net[i][k]->list[disk_net[i][k]->size - 1];
+}
+
+static int callback_string_pair(void* arg, int argc, char **argv, char **azColName) {
+    struct request_string_pair* req = arg;
+    
+    if (*req->position >= req->limit) {
+        return 1;
+    }
+    
+    if (argc < 2) {
+        return 0;
+    }
+    
+    struct string_pair* fact  = calloc(sizeof(struct fact), 1);
+    fact->subjects     = strdup(argv[0] ? argv[0] : "");
+    fact->objects      = strdup(argv[1] ? argv[1] : "");
+    
+    req->facts[*req->position] = fact;
+    if (!argv[1] || !strstr(argv[1], ">>>")) {
+        debugf("Added string pair no %d at %p (%s, %s).\n", *req->position, req->facts[*req->position], argv[0], argv[1]);
+    }
+    ++(*req->position);
+    
+    return 0;
 }
 
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {

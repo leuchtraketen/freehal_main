@@ -105,6 +105,7 @@ int universal_begin();
 int universal_end();
 struct word* get_word(const char* name);
 long can_be_a_pointer(void* p);
+struct word*** search_synonyms_add(const char* exp, int level, int reverse_search, struct word*** synonyms, int* position, int* allocated_until);
 struct word*** search_synonyms(const char* exp, int level, int);
 struct word** divide_words(const char* str);
 char** divide_by(const char by, const char* str);
@@ -135,7 +136,7 @@ void print_word_list_3rd_order(struct word*** list);
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_facts_by_weakness(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak);
 struct fact** search_facts_simple(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level, int weak);
-struct fact** search_facts_synonyms(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
+struct fact** search_facts_synonyms(const char* subjects, const char** subjects_array, const char* objects, const char** objects_array, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_facts_deep(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak);
 struct fact** search_facts_thesaurus(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak);
 struct fact** search_clauses(int rel);
@@ -147,7 +148,7 @@ char* join_words_by(const char* by, struct word** words);
 int append_on_dataset_record(int offset, int limit, char** record, struct fact** list);
 struct DATASET as_dataset(struct fact** list);
 int can_be_a_synonym(const char*);
-
+char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level);
 
 
 
