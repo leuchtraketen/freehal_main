@@ -1017,20 +1017,36 @@ define action compute_input with var input is rw, var lang, var path do
     # CODE
 
     if is an empty global array replace_array do
-        set new var output_file_name to '_output__get_csv'
-        set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
-        do unlink with '_input__get_csv'
-        set new var output_handle to handle for file name var output_file_name, write
-        print into var output_handle data var csv_output
-        do close with var output_handle
-        while not exists: '_input__get_csv', end test do
-            do wait 0.5 seconds
+        set new var cache_file_name to '_cache_replace'
+
+        if exists: var cache_file_name, end test do
+            set new var cache_input to handle for file name var cache_file_name, read
+            for each new var line from var cache_input is rw do
+                push into global array replace_array, var line
+            done
         done
-        set new var input_file_name to '_input__get_csv'
-        set new var input_handle to handle for file name var input_file_name, read
-        for each new var line from var input_handle is rw do
-            push into global array replace_array, var line
+        else do
+
+            set new var output_file_name to '_output__get_csv'
+            set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
+            do unlink with '_input__get_csv'
+            set new var output_handle to handle for file name var output_file_name, write
+            print into var output_handle data var csv_output
+            do close with var output_handle
+            while not exists: '_input__get_csv', end test do
+                do wait 0.5 seconds
+            done
+            set new var input_file_name to '_input__get_csv'
+            set new var input_handle to handle for file name var input_file_name, read
+
+            set new var cache_output to handle for file name var cache_file_name, write
+            for each new var line from var input_handle is rw do
+                push into global array replace_array, var line
+                print into var cache_output data var line concat new line
+            done
+            do close with var cache_output
         done
+        
         push into global array replace_array, ""
     done
     set new array _replace_array to global array replace_array

@@ -618,8 +618,8 @@ char* disk_get_source(const char* key) {
     return source;
 }
 
-char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level) {
-    printf("disk_get_source: %s\n", key);
+char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
+    printf("disk_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
         return 1;
     
@@ -632,17 +632,53 @@ char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limi
     {
         char* sql = malloc(1024);
         *sql = 0;
-        if (level == 1) {
-            strcat(sql, "select e.subjects, e.objects from facts as e where e.verb = \"=\" and e.objects = \"");
-            strcat(sql, key);
-            strcat(sql, "\" and `from` not like \"%fa-%\";");
+        if (reverse) {
+            if (level == 1) {
+                strcat(sql, "select e.subjects, e.objects from facts as e where e.verb = \"=\" and e.objects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and `from` not like \"%fa-%\";");
+            }
+            else if (level == 2) {
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
+                strcat(sql, "select e.subjects, e.objects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.objects glob `word`);");
+            }
+            else {
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); delete from `_tmp_thesaurus_synonyms_2`;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) select distinct \"* \" || e.subjects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.objects glob `word`);");
+                strcat(sql, "select e.subjects, e.objects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.objects glob `word`);");
+            }
         }
         else {
-            strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`; insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
-            strcat(sql, key);
-            strcat(sql, "\" and u.`from` not like  \"%fa-%\"; select e.subjects, e.objects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.objects glob `word`);");
-            
+            if (level == 1) {
+                strcat(sql, "select e.objects, e.subjects from facts as e where e.verb = \"=\" and e.subjects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and `from` not like \"%fa-%\";");
+            }
+            else if (level == 2) {
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
+                strcat(sql, "select e.objects, e.subjects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.subjects glob `word`);");                
+            }
+            else {
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); delete from `_tmp_thesaurus_synonyms_2`;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct \"* \" || u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
+                strcat(sql, key);
+                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) select distinct \"* \" || e.objects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.objects glob `word`);");
+                strcat(sql, "select e.objects, e.subjects from facts as e where e.verb IN (\"=\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.subjects glob `word`);");
+            }
         }
+        printf("%s\n", sql);
         
         int error = sql_execute(sql, callback_string_pair, &req);
         free(sql);
@@ -963,7 +999,7 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
     
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
-        debugf("Added string pair no %d at %p (%s, %s).\n", *req->position, req->facts[*req->position], argv[0], argv[1]);
+        debugf("Added string pair no %d at %p (%s, %s).\n", *req->position, req->facts[*req->position], fact->subjects, fact->objects);
     }
     ++(*req->position);
     

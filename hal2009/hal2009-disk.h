@@ -35,7 +35,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
 struct fact** disk_search_clauses(int rel);
 char* disk_get_source(const char* key);
 char* disk_del_record(const char* key);
-char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level);
+char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse);
 static int callback_string_pair(void* arg, int argc, char **argv, char **azColName);
 
 
@@ -56,11 +56,6 @@ struct request_get_facts_for_words {
     int limit;
     int* position;
     int rel;
-};
-
-struct string_pair {
-    char* subjects;
-    char*  objects;
 };
 
 struct request_string_pair {

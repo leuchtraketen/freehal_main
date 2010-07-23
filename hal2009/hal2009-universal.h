@@ -73,6 +73,7 @@ struct request {
     struct word*** objects;
     struct word** verbs;
     struct word*** adverbs;
+    short adverbs_any;
     struct word*** extra;
     char* questionword;
     char* context;
@@ -95,6 +96,11 @@ struct list {
     long size;
     void** list;
     long allocated_until;
+};
+
+struct string_pair {
+    char* subjects;
+    char*  objects;
 };
 
 
@@ -148,7 +154,7 @@ char* join_words_by(const char* by, struct word** words);
 int append_on_dataset_record(int offset, int limit, char** record, struct fact** list);
 struct DATASET as_dataset(struct fact** list);
 int can_be_a_synonym(const char*);
-char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level);
+char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse);
 
 
 

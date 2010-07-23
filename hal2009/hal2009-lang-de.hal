@@ -4462,7 +4462,7 @@ define action use_random with var input, var current_language, var path, var mod
         print "Input is: "
         print var input
         print new line
-        if lc(" " concat var input concat " ") matches /(\sja\s)|(\snein\s)|(\swas\s)|(\swer\s)|isunknown|(\swie\s)|(\swo\s)|(\swann\s)|(\swen\s)|(\swem\s)/ do
+        if lc(" " concat var input concat " ") matches /(\sja\s)|(\snein\s)|(\swas\s)|(\swer\s)|isunknown|(\swie\s)|(\swo\s)|(\swann\s)|(\swen\s)|(\swem\s)|(\swelch)/ do
             push into array random, "Da kann ich dir leider keine Antwort geben."
             push into array random, "Keine Ahnung."
             push into array random, "Keine Ahnung, das kann ich dir nicht sagen."

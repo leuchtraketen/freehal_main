@@ -524,8 +524,10 @@ char* convert_to_perl5(char* hals, int just_compile) {
 }
 
 int convert_to_perl5_convert_file(char* filename) {
-    static char* last_filename;
-    last_filename = strdup("");
+    static char* last_filename = -1;
+    if (last_filename == -1) {
+        last_filename = strdup("");
+    }
     if (0 == strcmp(last_filename, filename)) {
         fprintf(output(), "compiler: abort, unnecessary!\n");
         return 0;
@@ -605,11 +607,21 @@ int convert_to_perl5_convert_file(char* filename) {
 void execute_perl5(char* filename) {
     static PerlInterpreter* my_perl = NULL;
 
+    static char* last_filename = -1;
+    if (last_filename == -1) {
+        last_filename = strdup("");
+    }
+
     // COMPILE
-    fprintf(output(), "%s\n", "");
-    fprintf(output(), "%s\n", "compile FreeHAL...");
-    fprintf(output(), "%s\n", "");
-    convert_to_perl5_convert_file(filename);
+    if (0 == strcmp(last_filename, filename)) {
+        fprintf(output(), "compiler: do not compile, unnecessary!\n");
+    }
+    else {
+        fprintf(output(), "%s\n", "");
+        fprintf(output(), "%s\n", "compile: compile");
+        fprintf(output(), "%s\n", "");
+        convert_to_perl5_convert_file(filename);
+    }
     
     // INIT
     fprintf(output(), "%s\n", "compiler: module init (lang: perl5)");
@@ -640,4 +652,8 @@ void execute_perl5(char* filename) {
         perl_destruct(my_perl);
         perl_free(my_perl);
     }
+
+    if (last_filename)
+        free(last_filename);
+    last_filename = strdup(filename);
 }
