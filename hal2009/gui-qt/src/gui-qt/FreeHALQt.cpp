@@ -95,7 +95,8 @@ FreeHALWindow::FreeHALWindow(QWidget *parent)
 	    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             	this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 	             
-	    QIcon icon("img/icon.png");
+	    QIcon icon;
+            icon.addFile(QString::fromUtf8(":/ui/ui/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
 	    trayIcon->setIcon(icon);
      	
     	trayIcon->show();

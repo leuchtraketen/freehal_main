@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/ui">
         <file>ui/bs.gif</file>
-        <file>icon.png</file>
         <file>logo.png</file>
         <file>view.png</file>
         <file>ui/connect_creating.svg</file>
@@ -9,5 +8,6 @@
         <file>ui/media-playback-stop.svg</file>
         <file>ui/document-properties.svg</file>
         <file>ui/view-refresh.svg</file>
+        <file>ui/icon.png</file>
     </qresource>
 </RCC>

@@ -20,8 +20,8 @@
    <string>Connect to artificial intelligence server</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../../../../../../../../home/tobias/.designer/backup/freehal16.xpm</normaloff>../../../../../../../../home/tobias/.designer/backup/freehal16.xpm</iconset>
+   <iconset resource="../freehalqt.qrc">
+    <normaloff>:/ui/ui/icon.png</normaloff>:/ui/ui/icon.png</iconset>
   </property>
   <property name="animated">
    <bool>false</bool>

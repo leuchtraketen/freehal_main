@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Fri Jul 2 06:22:43 2010
+** Created: Sat Jul 24 11:36:21 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -163,7 +163,7 @@ public:
         freehalWindow->resize(986, 539);
         freehalWindow->setMaximumSize(QSize(16777215, 16000000));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("../../../../../../../../home/tobias/.designer/backup/freehal16.xpm"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/ui/ui/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         freehalWindow->setWindowIcon(icon);
         freehalWindow->setAnimated(false);
         freehalWindow->setDockNestingEnabled(true);
