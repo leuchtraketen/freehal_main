@@ -1,3 +1,7 @@
+1126:
+
+- Bug 627 korrigiert
+
 1125:
 
 - Bug 625 korrigiert

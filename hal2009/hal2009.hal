@@ -3612,8 +3612,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 do regex using from array clause item [4]: /(^|\s)_to_(\s|$)/, "$0", :global
             done
 
-            set from array clause item [1] to check_for_as_well_as with from array clause item [1], var lang, var path
-            set from array clause item [2] to check_for_as_well_as with from array clause item [2], var lang, var path
+            set from array clause item [1] to check_for_as_well_as with from array clause item [1], from array clause item [3], var lang, var path
+            set from array clause item [2] to check_for_as_well_as with from array clause item [2], from array clause item [3], var lang, var path
+            set from array clause item [3] to check_for_as_well_as with from array clause item [3], from array clause item [3], var lang, var path
             
             # TEXT
             # Build the final sentence.

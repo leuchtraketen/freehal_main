@@ -3452,7 +3452,7 @@ define action compute_output with var output do
     do regex using var output: / in jahre_/, " im Jahre ", :global:i
     do regex using var output: / in_jahre_/, " im Jahre ", :global:i
 
-    set new array _clauses to split using /\s/, var output
+    set new array _clauses to split using /<[,]>/, var output
     for each new var _clause in array _clauses is rw do
         if var _clause matches /\sein/ and lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
             do regex using var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
@@ -3460,7 +3460,7 @@ define action compute_output with var output do
             do regex using var _clause: /\sein(.?.?.?)$/, " kein$0", :global:i
         done
     done
-    set var output to join using " ", items of array _clauses
+    set var output to join using ", ", items of array _clauses
 
     do regex using var output: /_/, " ", :global:i
     # Time From <-> time from
@@ -3685,15 +3685,27 @@ define action compute_output with var output do
     do return with var output
 done
 
-define action check_for_as_well_as with var text, var lang, var path do
-    if var text matches /\$\$aswellas\$\$/ do
+define action check_for_as_well_as with var text, var adverbs, var lang, var path do
+    if var text not matches /\$\$(notaswellas)\$\$/ and var text not matches /\$\$(aswellas)\$\$/ do
+        do return with var text
+    done
+
+    set new flag negative to 0
+    if var adverbs matches /nicht/ do
+        set flag negative to 1
+        do regex using var text: /(^|\s)nicht(\s|$)/, " ", :i
+        do regex using var text: /\s+/, " ", :i
+    done
+
+    if var text matches /\$\$aswellas\$\$/ and flag negative is false do
         set var text to "sowohl " concat var text
         do regex using var text: /\$\$aswellas\$\$/, " als auch ", :i
         do regex using var text: /\s+/, " ", :i
     done
-    if var text matches /\$\$(notaswellas)\$\$/ do
+    if var text matches /\$\$(notaswellas)\$\$/ or ( var text matches /\$\$aswellas\$\$/ and flag negative is true ) do
         set var text to "weder " concat var text
         do regex using var text: /\$\$(notaswellas)\$\$/, " noch ", :i
+        do regex using var text: /\$\$(aswellas)\$\$/, " noch ", :i
         do regex using var text: /\s+/, " ", :i
     done
     do return with var text
