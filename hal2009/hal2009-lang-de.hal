@@ -3284,6 +3284,36 @@ define action get_verb with var verb, var person do
     do return with ""
 done
 
+define action replace_general_reflexive_pronoun with var text, var person do
+    set new var general_pronoun to "sich"
+    set new var better_pronoun to "sich"
+    
+    if var person matches "1s" do
+        set var better_pronoun to "mich"
+    done
+    if var person matches "2s" do
+        set var better_pronoun to "dich"
+    done
+    if var person matches "3s" do
+        set var better_pronoun to "sich"
+    done
+    if var person matches "1p" do
+        set var better_pronoun to "uns"
+    done
+    if var person matches "2p" do
+        set var better_pronoun to "euch"
+    done
+    if var person matches "3p" do
+        set var better_pronoun to "sich"
+    done
+
+    do regex using var text: /\svar general_pronoun$/, " var better_pronoun", :global:i
+    do regex using var text: /^var general_pronoun\s/, "var better_pronoun ", :global:i
+    do regex using var text: /^var general_pronoun$/, "var better_pronoun", :global:i
+
+    do return with var text
+done
+
 define action compute_output with var output do
     if not var output do
         do return with var output
@@ -4999,6 +5029,11 @@ define action to_verb_postnucleus_right with var verb, var lang, var path do
 
     set new var postnucleus to ''
 
+    if var verb matches /(d)er$/ do
+        set var postnucleus to "er" concat var postnucleus
+        do regex using var verb: /(d)er$/, "$0", :i
+    done
+    
     while var verb matches /(<[bcdfghjklmnpqrstvwxyz]>)$/ do
         set var postnucleus to $0 concat var postnucleus
         do regex using var verb: /$0$/, "", :i

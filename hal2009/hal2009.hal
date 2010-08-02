@@ -2891,6 +2891,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         push into array request_subjects, from array subjects 1st item
     done
     set new var subject to join using ' ', items of array request_subjects
+    set new var subject_person to get_person with var subject
 
     #from hash parsed item { 'subjects' }
     set new array constructed_results to an empty array
@@ -3004,6 +3005,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         set new var verb to pop with items of array words
         set new var object to join using ' ', items of array words
         
+        set var object to replace_general_reflexive_pronoun with var object, var subject_person
+        
         push into array main_clause, var verb concat "00001"
         push into array main_clause, var subject
         push into array main_clause, var object
@@ -3047,8 +3050,12 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 done
             done
             set new var object to join using ' ', items of array words
+
+            set var object to replace_general_reflexive_pronoun with var object, var subject_person
             
-            print "verb: " concat var verb concat new line
+            print "verb:        " concat var verb concat new line
+            print "verb_second: " concat var verb_second concat new line
+            print "object:      " concat var object concat new line
             set new var prefix to to_verb_prefix with var verb, var lang, var path
             set new var root to to_verb_root with var verb, var lang, var path
             print "root: " concat var root concat new line
@@ -3059,7 +3066,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             set new var verb_modal to get_modal_verb_for_verb with var verb_second concat " " concat var participle, var lang, var path
             set var verb_modal to get_verb with var verb_modal, var person
             
-            push into array main_clause, var verb_modal concat " " concat var verb_second concat " " concat var participle concat "00000"
+            push into array main_clause, var verb_second concat " " concat var verb_modal concat " " concat var participle concat "00000"
             push into array main_clause, var subject
             push into array main_clause, var object
             push into array main_clause, var adverbial concat " (+++)"
@@ -3547,7 +3554,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             # Tag and sort all verbs.
             # CODE
             set new array raw_verbs to [ split ' ', from array clause item [0] ]
-            set new hash proper_verbs_hash to an empty hash
+            set new array proper_verbs to an empty array
             set new hash auxiliary_verbs_hash to an empty hash
             
             for each new var verb in array raw_verbs do
@@ -3614,15 +3621,15 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     set from hash auxiliary_verbs_hash item { var verb } to 1
                 done
                 else do
-                    set from hash proper_verbs_hash item { var verb } to 1
+                    push into array proper_verbs, var verb
                 done
             done
             
             set new array auxiliary_verbs to an empty array
             set items of array auxiliary_verbs to keys with items of hash auxiliary_verbs_hash
-            set new array proper_verbs to an empty array
-            set items of array proper_verbs to keys with items of hash proper_verbs_hash
-            set items of array proper_verbs to sort with items of array proper_verbs
+####            set new array proper_verbs to an empty array
+####            set items of array proper_verbs to keys with items of hash proper_verbs_hash
+####             set items of array proper_verbs to sort with items of array proper_verbs
             
             if from array clause item [3] matches /(^|\s)zu(\s|$)/ and length( from array clause item [3] ) < 5 do
                 do unshift with items of array proper_verbs, "zu"
@@ -3811,8 +3818,18 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 
+                
                 if from array clause item [3] matches /<[?]>/ do
+
+                print "a" concat new line
+
                     if from array clause item [2] matches "NULL" or not from array clause item [2] do
+
+                print "aa" concat new line
+                print "1:" concat from array clause item [1] concat new line
+                print "2:" concat from array clause item [2] concat new line
+                print "3:" concat from array clause item [3] concat new line
+
                         if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [1]
@@ -3833,6 +3850,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                     else if from array clause item [3] matches /von/ do
+
+                print "ab" concat new line
+
                         if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [1]
@@ -3848,6 +3868,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                     else do
+
+                print "ac" concat new line
+
                         if items of array proper_verbs do
                             if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
                                 push into array sentence, items of array auxiliary_verbs
@@ -3883,6 +3906,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 else do
+
+                print "b" concat new line
+
                     if from array clause item [2] matches "NULL" or not from array clause item [2] do
                         if items of array proper_verbs do
                             push into array sentence, from array clause item [1]
