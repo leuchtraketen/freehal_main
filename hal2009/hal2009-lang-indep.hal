@@ -204,6 +204,12 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /eine Menge/, "viele", :global
     do regex using var input: /(\d)\.(\d)/, "$0$1", :global
 
+    if lc(var input) matches /^(ist|war|sind|waren)\s/ do
+        set new var verb to lc with $0
+        do regex using var input: /^(ist|war|sind|waren)\s/, "var verb ", :global:i
+    done
+    do regex using var input: /^(ist|war|sind|waren)\s(<[a-z]>+?)\s(ein.?.?)\s(<[A-Z]><[a-z]>+?)(\s?<[?]>?)$/, "$0 _$1_ $2 $3 $4", :global
+
     do regex using var input: /^(.*?)du mir deinen Namen.*?$/, "Wie ist dein Name? ", :global:i
     do regex using var input: /^(.*?)du mir.*?deinen Namen.*?$/, "Wie ist dein Name? ", :global:i
     

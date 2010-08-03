@@ -1,3 +1,10 @@
+1129:
+
+- Bug 578 korrigiert
+- Bug 567 korrigiert
+- Bug 566 korrigiert
+- Bug 565 korrigiert
+
 1128:
 
 - Bug 608 korrigiert

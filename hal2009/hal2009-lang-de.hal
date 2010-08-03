@@ -5591,7 +5591,7 @@ define action make_participle with var participle, var lang, var path do
 done
 
 define action get_modal_verb_for_verb with var verb, var lang, var path do
-    if var verb matches /stolp|lauf|geh|g(i|a)ng|gewes|sei|bist|ist|bin/ do
+    if var verb matches /stolp|lauf|gehe|g(i|a)ng|gewes|sei|bist|ist|bin/ do
         do return with "be"
     done
     do return with "have"

@@ -295,7 +295,7 @@ int remove_negation (char* line, double* truth_ref, int* only_logic) {
     sline.s = l;
     strncpy(l, line, 4196);
     
-    printf("\nline (1): %s\n", line);
+//    printf("\nline (1): %s\n", line);
     if (strstr(line, "kein")) {
         sline_ref = replace(sline_ref, "kein", "ein");
         (*truth_ref) = 0.0;
@@ -312,7 +312,7 @@ int remove_negation (char* line, double* truth_ref, int* only_logic) {
         sline_ref = replace(sline_ref, "nicht ", " ");
         (*truth_ref) = 0.0;
     }
-    printf("\nline (2): %s\n", line);
+//    printf("\nline (2): %s\n", line);
     /*if (strstr(line, "nicht") == line) {
         sline_ref = replace(sline_ref, "nicht", " ");
         (*truth_ref) = 0.0;
