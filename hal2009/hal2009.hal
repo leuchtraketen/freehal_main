@@ -2879,10 +2879,6 @@ define action reasonof with var input, var lang, var path, hash parsed do
     do return with array results
 done
 
-define action reasonof_logic_from_subject with array results, array verbs, var lang, var path, hash parsed do
-    do return with array results
-done
-
 define action reasonof_logic_from_object with array results, array verbs, var lang, var path, hash parsed do
 
     set new array request_subjects_array to from hash parsed item { 'subjects' }
@@ -2893,7 +2889,6 @@ define action reasonof_logic_from_object with array results, array verbs, var la
     set new var subject to join using ' ', items of array request_subjects
     set new var subject_person to get_person with var subject
 
-    #from hash parsed item { 'subjects' }
     set new array constructed_results to an empty array
     
     set new array _results to an empty array
@@ -2904,6 +2899,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
     
         set new flag go_next to 0
         set new var num_must_haves to 0
+        
+        # adverbs
         
         if from hash parsed item { 'adverbs' } do
             set new array must_haves to from hash parsed item { 'adverbs' } 1st item
@@ -2947,6 +2944,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             done
         done
         
+        # objects
+        
         if from hash parsed item { 'objects' } do
             set new array must_haves to from hash parsed item { 'objects' } 1st item
             for each new var must_have in array must_haves do
@@ -2966,8 +2965,9 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             done
         done
         
-        if 1 do
-#  from array verbs 1st item matches /<[|]>/ do # items of array verbs is 1
+        # verbs
+        
+        if from hash parsed item { 'verbs' } do
             set new array _must_haves to from hash parsed item { 'verbs' }
             for each new array must_haves in array _must_haves do
                 for each new var must_have in array must_haves do
@@ -4431,11 +4431,17 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     set new var genus_subject to 'q'
     set new var subject to ''
     set new var male_names to global array builtin_male_names
+    set new var subject_person to "3s"
     for each new array arr in array copy_subjects do
         if var subject do
             set var subject to var subject concat ' '
         done
         set var subject to var subject concat join " ", items of array arr
+        
+        set new var _subject_person to get_person with var subject
+        if var _subject_person is not "3s" do
+            set var subject_person to var _subject_person
+        done
         
         if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
             set var genus_subject to from hash genus_of item { lc(join " ", items of array arr) }
@@ -4518,9 +4524,11 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             set array results to use_bug_feature with array results, hash parsed
         done
         if not items of array results do
-            set new array results_reasonof to reasonof with var input, var lang, var path, hash parsed
-            if items of array results_reasonof do
-                push into array results, items of array results_reasonof
+            if var subject_person is not "3s" do
+                set new array results_reasonof to reasonof with var input, var lang, var path, hash parsed
+                if items of array results_reasonof do
+                    push into array results, items of array results_reasonof
+                done
             done
         done
     done

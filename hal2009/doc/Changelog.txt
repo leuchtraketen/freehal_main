@@ -1,3 +1,9 @@
+1130:
+
+- Query Cache eingefuehrt
+- verschiedene Geschwindigkeitsverbesserungen
+- "reasonof" nur noch bei Fragen, wenn dort das Subjekt in der ersten oder zweiten Person ist 
+
 1129:
 
 - Bug 578 korrigiert

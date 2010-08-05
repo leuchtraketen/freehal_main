@@ -251,6 +251,8 @@ extern "C" {
 
 /************* INTERNAL STUFF *************/
 
+#include "hal2009-as.h"
+
 #define JOIN        1
 #define NOT_JOIN    0
 

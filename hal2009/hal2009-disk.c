@@ -728,7 +728,7 @@ char* disk_del_record(const char* key) {
     return source;
 }
 
-char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int limit, int* position) {
+char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int limit, int* position, int* hash_n_1, int* hash_n_2, int* hash_n_3) {
 
     char* sql = malloc(512000);
     *sql = 0;
@@ -780,6 +780,14 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             }
             if (is_bad(words[n][m]->name)) {
                 continue;
+            }
+
+            {
+                *hash_n_1 += words[n][m]->name[0];
+                *hash_n_2 += strlen(words[n][m]->name);
+                if (strlen(words[n][m]->name) >= 3) {
+                    *hash_n_3 += words[n][m]->name[2]*3 + words[n][m]->name[2]*2 - words[n][m]->name[0];
+                }
             }
 
             char* smid = small_identifier(words[n][m]->name);
@@ -1006,6 +1014,59 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
     return 0;
 }
 
+int find_query_cache_entry (struct request_get_facts_for_words* req, short if_needed_create_entry) {
+        if (!query_cache_list) {
+            query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
+        }
+        short need_to_create = 1;
+        int i_right = -1;
+        int i = 0;
+        // check whether there is a matching entry
+//        printf("search in query_cache: %d - %d - %d\n", req->hash_n_1, req->hash_n_2, req->hash_n_3);
+        while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
+            struct query_cache_entry* entry = query_cache_list[i];
+            if (entry->hash_n_1 == req->hash_n_1 && entry->hash_n_2 == req->hash_n_2 && entry->hash_n_2 == req->hash_n_2) {
+                need_to_create = 0;
+                i_right = i;
+            }
+//            printf("found in query_cache:  %d - %d - %d\n", entry->hash_n_1, entry->hash_n_2, entry->hash_n_3);
+            ++i;
+        }
+        if (i >= QUERY_CACHE_SIZE) {
+            // free the whole list
+            i = 0;
+            while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
+                int b;
+                for (b = 0; b < query_cache_list[i]->position; ++b) {
+                    free(query_cache_list[i]->rawfacts[b]);
+                }
+                free(query_cache_list[i]->rawfacts);
+                free(query_cache_list[i]);
+                ++i;
+            }
+
+            need_to_create = 1;
+            i = 0;
+        }
+
+    if (if_needed_create_entry) {
+        if (need_to_create) {
+            // add new entry
+            query_cache_list[i] = calloc(sizeof(struct query_cache_entry), 1);
+            query_cache_list[i]->hash_n_1 = req->hash_n_1;
+            query_cache_list[i]->hash_n_2 = req->hash_n_2;
+            query_cache_list[i]->hash_n_3 = req->hash_n_3;
+            query_cache_list[i]->rawfacts = calloc(sizeof(char**), req->limit);
+            query_cache_list[i]->position = 0;
+            i_right = i;
+        }
+        return i_right;
+    }
+    else {
+        return i_right;
+    }
+}
+
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {
     struct request_get_facts_for_words* req = arg;
     
@@ -1017,6 +1078,25 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
         return 0;
     }
     
+
+    if (req->make_rawfacts && (req->hash_n_1 || req->hash_n_2 || req->hash_n_3)) {
+//        int i_right = find_query_cache_entry(req, 1);
+        int i_right = req->i_right;
+
+        if (query_cache_list[i_right]->position < req->limit) {
+            char** rawfact = calloc(sizeof(char*), 10);
+            int k;
+            for (k = 0; k <= 8; ++k) {
+                rawfact[k] = argv[k] ? strdup(argv[k]) : 0;
+            }
+            rawfact[9] = 0;
+
+            // add new fact into entry
+            query_cache_list[i_right]->rawfacts[query_cache_list[i_right]->position] = rawfact;
+            ++(query_cache_list[i_right]->position);
+        }
+    }
+
     struct fact* fact  = calloc(sizeof(struct fact), 1);
     fact->pk           = to_number(argv[0] ? argv[0] : "0");
     fact->verbs        = divide_words(argv[1] ? argv[1] : "");
@@ -1031,7 +1111,9 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
-        debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
+        if (DEBUG__LONG_LISTINGS) {
+            debugf("added fact no %d at %p:  %s, %s, %s, %s\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
+        }
     }
     ++(*req->position);
     
@@ -1040,15 +1122,50 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
 
 int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position) {
     struct request_get_facts_for_words req;
-    req.words    = words;
-    req.facts    = facts;
-    req.limit    = limit;
-    req.position = position;
-    req.rel      = 0;
-    
+    req.words         = words;
+    req.facts         = facts;
+    req.limit         = limit;
+    req.position      = position;
+    req.rel           = 0;
+    req.make_rawfacts = 1;
+    req.debug_facts   = 1;
+
     {
-        char* sql = gen_sql_get_facts_for_words(words, facts, limit, position);
+        req.hash_n_1 = 0;
+        req.hash_n_2 = 0;
+        req.hash_n_3 = 0;
+        char* sql = gen_sql_get_facts_for_words(words, facts, limit, position, &req.hash_n_1, &req.hash_n_2, &req.hash_n_3);
+
         printf("%s\n", sql);
+        printf("%s\n", "\n");
+        printf("hash_n_1: %d\n", req.hash_n_1);
+        printf("hash_n_2: %d\n", req.hash_n_2);
+        printf("hash_n_3: %d\n", req.hash_n_3);
+
+        // check if in cache
+        int i_right = find_query_cache_entry(&req, 0);
+        printf("i_right:  %d\n", i_right);
+        printf("%s\n", "\n");
+        if (i_right >= 0) {
+            req.make_rawfacts = 0;
+            req.debug_facts = 0;
+            req.hash_n_1 = 0;
+            req.hash_n_2 = 0;
+            req.hash_n_3 = 0;
+
+            int k;
+            for (k = 0; k < query_cache_list[i_right]->position; ++k) {
+                char** argv = query_cache_list[i_right]->rawfacts[k];
+                callback_get_facts(&req, 9, argv, 0);
+            }
+        }
+        else {
+            req.i_right = find_query_cache_entry(&req, 1);
+
+            int error = sql_execute(sql, callback_get_facts, &req);
+        }
+
+
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
@@ -1067,8 +1184,14 @@ int disk_search_double_facts(struct word*** words, struct fact** facts, int limi
     req.limit    = limit;
     req.position = position;
     req.rel      = 0;
+    req.make_rawfacts = 0;
+    req.debug_facts = 0;
     
     {
+        req.hash_n_1 = 0;
+        req.hash_n_2 = 0;
+        req.hash_n_3 = 0;
+
         char* sql = gen_sql_get_double_facts();
         printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
@@ -1203,8 +1326,14 @@ struct fact** disk_search_clauses(int rel) {
     req.limit    = limit;
     req.position = &position;
     req.rel      = rel;
+    req.make_rawfacts = 0;
+    req.debug_facts = 0;
     
     {
+        req.hash_n_1 = 0;
+        req.hash_n_2 = 0;
+        req.hash_n_3 = 0;
+
         char* sql = gen_sql_get_clauses_for_rel(rel, clauses, limit, &position);
         //printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);

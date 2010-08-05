@@ -41,6 +41,17 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
 
 static struct list*** disk_net = 0;
 
+// #define QUERY_CACHE_SIZE 99
+#define QUERY_CACHE_SIZE 9
+struct query_cache_entry {
+    char*** rawfacts;
+    int position;
+    int hash_n_1;
+    int hash_n_2;
+    int hash_n_3;
+};
+struct query_cache_entry** query_cache_list;
+
 static sqlite3* sqlite_connection = 0;
 static const char* sqlite_filename = 0;
 static char*** sqlite_results;
@@ -56,6 +67,13 @@ struct request_get_facts_for_words {
     int limit;
     int* position;
     int rel;
+
+    int hash_n_1;
+    int hash_n_2;
+    int hash_n_3;
+    short make_rawfacts;
+    short debug_facts;
+    int i_right;
 };
 
 struct request_string_pair {
