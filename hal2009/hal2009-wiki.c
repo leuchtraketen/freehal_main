@@ -383,7 +383,7 @@ char* delete_articles(const char* s) {
 halstring** search_results        = 0;
 int         search_results_lines  = 0;
 halstring*  search_results_line   = 0;
-halstring*  search_results_entity = 0;
+char*       search_results_entity = 0;
 
 int is_no_wiki_word(const char* word) {
     return (

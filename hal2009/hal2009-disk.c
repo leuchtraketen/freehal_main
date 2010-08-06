@@ -1015,39 +1015,41 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
 }
 
 int find_query_cache_entry (struct request_get_facts_for_words* req, short if_needed_create_entry) {
-        if (!query_cache_list) {
-            query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
-        }
-        short need_to_create = 1;
-        int i_right = -1;
-        int i = 0;
-        // check whether there is a matching entry
+    if (!query_cache_list) {
+        query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
+    }
+    short need_to_create = 1;
+    int i_right = -1;
+    int i = 0;
+    // check whether there is a matching entry
 //        printf("search in query_cache: %d - %d - %d\n", req->hash_n_1, req->hash_n_2, req->hash_n_3);
-        while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
-            struct query_cache_entry* entry = query_cache_list[i];
-            if (entry->hash_n_1 == req->hash_n_1 && entry->hash_n_2 == req->hash_n_2 && entry->hash_n_2 == req->hash_n_2) {
-                need_to_create = 0;
-                i_right = i;
-            }
+    while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
+        struct query_cache_entry* entry = query_cache_list[i];
+        if (entry->hash_n_1 == req->hash_n_1 && entry->hash_n_2 == req->hash_n_2 && entry->hash_n_2 == req->hash_n_2) {
+            need_to_create = 0;
+            i_right = i;
+        }
 //            printf("found in query_cache:  %d - %d - %d\n", entry->hash_n_1, entry->hash_n_2, entry->hash_n_3);
+        ++i;
+    }
+    if (i >= QUERY_CACHE_SIZE) {
+        // free the whole list
+        i = 0;
+        while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
+            int b;
+            for (b = 0; b < query_cache_list[i]->position; ++b) {
+                free(query_cache_list[i]->rawfacts[b]);
+                query_cache_list[i]->rawfacts[b] = 0;
+            }
+            free(query_cache_list[i]->rawfacts);
+            free(query_cache_list[i]);
+            query_cache_list[i] = 0;
             ++i;
         }
-        if (i >= QUERY_CACHE_SIZE) {
-            // free the whole list
-            i = 0;
-            while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
-                int b;
-                for (b = 0; b < query_cache_list[i]->position; ++b) {
-                    free(query_cache_list[i]->rawfacts[b]);
-                }
-                free(query_cache_list[i]->rawfacts);
-                free(query_cache_list[i]);
-                ++i;
-            }
 
-            need_to_create = 1;
-            i = 0;
-        }
+        need_to_create = 1;
+        i = 0;
+    }
 
     if (if_needed_create_entry) {
         if (need_to_create) {
@@ -1136,16 +1138,19 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
         req.hash_n_3 = 0;
         char* sql = gen_sql_get_facts_for_words(words, facts, limit, position, &req.hash_n_1, &req.hash_n_2, &req.hash_n_3);
 
+        // check whether in cache
+        int i_right = find_query_cache_entry(&req, 0);
+
+        /*
         printf("%s\n", sql);
         printf("%s\n", "\n");
         printf("hash_n_1: %d\n", req.hash_n_1);
         printf("hash_n_2: %d\n", req.hash_n_2);
         printf("hash_n_3: %d\n", req.hash_n_3);
-
-        // check if in cache
-        int i_right = find_query_cache_entry(&req, 0);
         printf("i_right:  %d\n", i_right);
         printf("%s\n", "\n");
+        */
+
         if (i_right >= 0) {
             req.make_rawfacts = 0;
             req.debug_facts = 0;
@@ -1154,9 +1159,13 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
             req.hash_n_3 = 0;
 
             int k;
-            for (k = 0; k < query_cache_list[i_right]->position; ++k) {
-                char** argv = query_cache_list[i_right]->rawfacts[k];
-                callback_get_facts(&req, 9, argv, 0);
+            if (query_cache_list[i_right]->rawfacts) {
+                for (k = 0; k < query_cache_list[i_right]->position; ++k) {
+                    char** argv = query_cache_list[i_right]->rawfacts[k];
+                    if (argv) {
+                        callback_get_facts(&req, 9, argv, 0);
+                    }
+                }
             }
         }
         else {

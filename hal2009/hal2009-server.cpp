@@ -582,7 +582,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         }
     }
 
-    const char* answer_from_c = "";
+    char* answer_from_c = (char*)calloc(1, 1);
     int timeout = 3;
     static string last_input = string();
     static long last_input_time = 0;
@@ -639,12 +639,14 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
             getline(output_stream, output);
         }
         unlink("_output2");
-        answer_from_c = output.c_str();
+        if (answer_from_c) free(answer_from_c);
+        answer_from_c = strdup(output.c_str());
         
         --timeout;
         hal2009_clean();
     }
     if (0 == strlen(answer_from_c)) {
+        if (answer_from_c) free(answer_from_c);
         answer_from_c = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
     }
     else {
@@ -664,6 +666,8 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         (*stream) << "DISPLAY:" << (*to_display) << endl;
         hal2009_netcom_unlock();
     }
+
+    if (answer_from_c) free(answer_from_c);
 
     unlink("_output2");
     hal2009_clean();

@@ -4557,17 +4557,18 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, items of array random
         done
         else do
-            push into array random, "Ah?"
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
-            push into array random, "Aha?"
-            push into array random, "Hmm?"
-            push into array random, "Hmm."
-            push into array random, "Hm."
+            push into array random, "Nein."
+            push into array random, "Nein."
+            push into array random, "Nein."
+            push into array random, "Nein."
+            push into array random, "Nein."
+            push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."
             push into array random, "Nein."

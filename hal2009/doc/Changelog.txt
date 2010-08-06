@@ -1,3 +1,7 @@
+1131:
+
+- Runderneuerung des Synonym-Systems
+
 1130:
 
 - Query Cache eingefuehrt
