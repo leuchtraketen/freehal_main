@@ -2558,7 +2558,7 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
         fact->adverbs_any = 1;
 
         fact->subjects     = fake_synonyms(subjects, subjects_array);
-        fact->objects      = fake_synonyms(objects, subjects_array);
+        fact->objects      = fake_synonyms(objects, objects_array);
         fact->verbs        =    divide_words(verbs);
         fact->adverbs      = fake_synonyms(adverbs, 0);
         fact->extra        = fake_synonyms(extra, 0);

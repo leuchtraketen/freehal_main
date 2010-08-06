@@ -1049,6 +1049,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
 
         need_to_create = 1;
         i = 0;
+        i_right = -1;
     }
 
     if (if_needed_create_entry) {
@@ -1151,7 +1152,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
         printf("%s\n", "\n");
         */
 
-        if (i_right >= 0) {
+        if (i_right >= 0 && query_cache_list && query_cache_list[i_right] && query_cache_list[i_right]->rawfacts) {
             req.make_rawfacts = 0;
             req.debug_facts = 0;
             req.hash_n_1 = 0;
@@ -1159,12 +1160,10 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
             req.hash_n_3 = 0;
 
             int k;
-            if (query_cache_list[i_right]->rawfacts) {
-                for (k = 0; k < query_cache_list[i_right]->position; ++k) {
-                    char** argv = query_cache_list[i_right]->rawfacts[k];
-                    if (argv) {
-                        callback_get_facts(&req, 9, argv, 0);
-                    }
+            for (k = 0; k < query_cache_list[i_right]->position; ++k) {
+                char** argv = query_cache_list[i_right]->rawfacts[k];
+                if (argv) {
+                    callback_get_facts(&req, 9, argv, 0);
                 }
             }
         }
