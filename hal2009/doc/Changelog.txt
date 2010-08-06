@@ -1,6 +1,6 @@
 1131:
 
-- Runderneuerung des Synonym-Systems
+- Neues Synonym-System
 
 1130:
 
