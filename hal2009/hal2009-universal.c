@@ -1219,7 +1219,7 @@ int is_good(const char* s) {
     return (!is_bad(s));
 }
 
-char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
+char* get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse) {
     if (is_engine("ram")) {
         return ram_get_thesaurus_synonyms(key, facts, limit, position, level, reverse);
     }

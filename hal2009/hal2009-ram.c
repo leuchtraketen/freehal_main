@@ -149,7 +149,7 @@ int insert_fact_by_list_into_ram_net(struct word** list, struct fact* fact) {
     int n;
     for (n = 0; n < 100 && list[n]; ++n) {
         list[n]->related_facts = look_at_list(list[n]->related_facts);
-
+        
         if (list[n]->related_facts->size == 0) {
             list[n]->related_facts->list = calloc(sizeof(struct fact*), 11);
             list[n]->related_facts->allocated_until = 10;
@@ -336,10 +336,100 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
     return 0;
 }
 
-char* ram_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
+struct fact** related_facts_of_word(struct word* key, struct fact** facts, int limit, int* position) {
+    if (!facts) {
+        facts = calloc(1, sizeof(struct fact*)*(limit+1));
+    }
+    
+    int size = key->related_facts->size;
+    debugf("word: %s, size of related facts array: %d.\n", key->name, size);
+    int z;
+    for (z = 0; *position < limit && z < size; ++z) {
+        int add_the_fact = 1;
+        int e;
+        for (e = 0; e < *position; ++e) {
+            if (facts[e] == key->related_facts->list[z]) {
+                add_the_fact = 0;
+            }
+        }
+        if (add_the_fact) {
+            facts[*position] = key->related_facts->list[z];
+            ++(*position);
+        }
+    }
+
+    return facts;
+}
+
+struct fact** related_facts_of_str(const char* key, struct fact** facts, int limit, int* position) {
+    return related_facts_of_word(set_word(key), facts, limit, position);
+}
+
+char* ram_get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse) {
     printf("ram_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
         return 1;
+    
+    int i;
+    
+    // first level
+    int position_before_level_1 = *position;
+    if (level >= 1) {
+        int _position = 0;
+        struct fact** unfiltered = related_facts_of_str(key, 0, limit, &_position);
+        for (i = 0; unfiltered[i]; ++i) {
+            if (can_be_a_pointer(unfiltered[i])) {
+                char* joined_subjects = join_words(unfiltered[i]->subjects);
+                char* joined_objects = join_words(unfiltered[i]->objects);
+                char* joined_verbs = join_words(unfiltered[i]->verbs);
+                if (strstr(joined_verbs, "=") && 0 == strcmp(joined_objects, key) && !strstr(unfiltered[i]->from, "fa-")) {
+                    struct string_pair* pair  = calloc(sizeof(struct string_pair), 1);
+                    pair->subjects     = strdup(joined_subjects);
+                    pair->objects      = strdup(joined_objects);
+                    facts[*position] = pair;
+                    ++(*position);
+                }
+                free(joined_subjects);
+                free(joined_objects);
+                free(joined_verbs);
+            }
+        }
+        free(unfiltered);
+    }
+    
+    // second level
+    int position_before_level_2 = *position;
+    if (level >= 2) {
+        int _position = 0;
+        struct fact** unfiltered = calloc(1, sizeof(struct fact*)*(limit+1));
+        int k;
+        for (k = position_before_level_1; k < position_before_level_2; ++k) {
+            int _position_last = _position;
+            unfiltered = related_facts_of_str(facts[k]->subjects, unfiltered, limit, &_position);
+            char* level_1_joined_subjects = facts[k]->subjects;
+            printf("thesaurus-synonyms (ram): %s\n", level_1_joined_subjects);
+
+            for (i = _position_last; unfiltered[i]; ++i) {
+                if (can_be_a_pointer(unfiltered[i])) {
+                    char* joined_subjects = join_words(unfiltered[i]->subjects);
+                    char* joined_objects = join_words(unfiltered[i]->objects);
+                    char* joined_verbs = join_words(unfiltered[i]->verbs);
+
+                    if ((strstr(joined_verbs, "=") || strstr(joined_verbs, "ist")) && strstr(joined_objects, level_1_joined_subjects) && !strstr(unfiltered[i]->from, "fa-")) {
+                        struct string_pair* pair  = calloc(sizeof(struct string_pair), 1);
+                        pair->subjects     = strdup(joined_subjects);
+                        pair->objects      = strdup(joined_objects);
+                        facts[*position] = pair;
+                        ++(*position);
+                    }
+                    free(joined_subjects);
+                    free(joined_objects);
+                    free(joined_verbs);
+                }
+            }
+        }
+        free(unfiltered);
+    }
 }
 
 struct fact** ram_search_clauses(int rel) {

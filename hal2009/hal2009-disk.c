@@ -257,7 +257,6 @@ int get_last_pk(int rel) {
     }
     else {
         disk_cache_facts = to_number(key);
-        printf("cache_facts: %d\n", disk_cache_facts);
     }
     
     return (rel ? disk_cache_clauses : disk_cache_facts);
@@ -618,7 +617,7 @@ char* disk_get_source(const char* key) {
     return source;
 }
 
-char* disk_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
+char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse) {
     printf("disk_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
         return 1;
@@ -1001,7 +1000,7 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
         return 0;
     }
     
-    struct string_pair* fact  = calloc(sizeof(struct fact), 1);
+    struct string_pair* fact  = calloc(sizeof(struct string_pair), 1);
     fact->subjects     = strdup(argv[0] ? argv[0] : "");
     fact->objects      = strdup(argv[1] ? argv[1] : "");
     

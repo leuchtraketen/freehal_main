@@ -129,7 +129,7 @@ char** divide_by(const char by, const char* str);
 char** divide_string(const char* str);
 char*** filter_synonyms(struct synonym** synonyms, int level, short direction);
 char* generalize_verb(char* verb);
-char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse);
+char* get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse);
 char* join_words_by(const char* by, struct word** words);
 char* join_words(struct word** words);
 char* small_identifier(const char* word);
