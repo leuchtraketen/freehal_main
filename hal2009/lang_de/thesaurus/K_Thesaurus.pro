@@ -2223,7 +2223,6 @@
 = <> _kiste_ <> _luftfahrzeug_ <> (maybe)
 = <> _kiste_ <> _maschine_ <> (maybe)
 = <> _kiste_ <> _flieger_ <> (maybe)
-= <> _kiste_ <> _pc_ <> (maybe)
 = <> _kiste_ <> _personal_computer_ <> (maybe)
 = <> _kiste_ <> _personalcomputer_ <> (maybe)
 = <> _kiste_ <> _personenkraftwagen_ <> (maybe)

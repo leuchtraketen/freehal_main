@@ -258046,6 +258046,7 @@ genus  : s
 weinen:
   type: vi
 jaeger:
+genus  : m
   type: n
 kueren:
   type: vi

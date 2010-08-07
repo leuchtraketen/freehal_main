@@ -1,3 +1,4 @@
+= <> hauptstadt <> stadt <>  <> (maybe)
 = <> _angst_haben_ <> _sich_fuerchten_ <> <> 50
 = <> _antialkoholisch_ <> _alkoholfrei_ <> <> (true)
 = <> _beibringen_ <> _lernen_ <> <> (true)
@@ -60,7 +61,6 @@
 = <> gehe <> gehen <> <> (true)
 = <> _alkoholisches_getraenk_ <> _alkohol_ <>  <> (maybe)
 = <> _alkohol_ <> _alkoholisches_getraenk_ <> <> (maybe) 
-= <> _schimpfwort_ <> _schimpfwoerter_ <>  <> (maybe)
 = <> _schimpfwoerter_ <> _schimpfwort_ <>  <> (maybe)
 = <> _wetter_ <> _sonnig_ <>  <> (maybe)
 = <> _wetter_ <> _regnerisch_ <>  <> (maybe)
