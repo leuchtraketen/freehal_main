@@ -5564,7 +5564,7 @@ define action correct_human_edit_typos with var file, var current_language, var 
             set var j to var j + 1
         done
         set var line to join using "<>", items of array parts
-        do regex using var line: /(<[a-zA-Z]>)_maybe_/, "$0 <> (maybe)"
+        do regex using var line: /(<[a-zA-Z]>)_maybe_/, "$0_ <> (maybe)"
         
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
