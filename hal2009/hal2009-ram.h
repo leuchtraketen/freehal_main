@@ -40,6 +40,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
 struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_learn);
 struct word* ram_set_word(const char* name);
 int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
+char* ram_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse);
 struct fact** ram_search_clauses(int rel);
 
 

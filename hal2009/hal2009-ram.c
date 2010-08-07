@@ -336,6 +336,12 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
     return 0;
 }
 
+char* ram_get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
+    printf("ram_get_thesaurus_synonyms: %s\n", key);
+    if (!key || !key[0])
+        return 1;
+}
+
 struct fact** ram_search_clauses(int rel) {
     if (rel <= ram_fact_by_key->size) {
         printf("Valid fact no: %d.\n", rel);

@@ -540,6 +540,7 @@ struct synonym** put_synonym(struct synonym* syn, struct synonym** synonyms, int
         return synonyms;
     }
     
+    
     synonyms[*position] = syn;
     ++(*position);
 
@@ -744,6 +745,10 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
     for (e = 0; exps[e]; ++e) {
         const char* exp = exps[e];
         
+        if (!can_be_a_main_synonym(exp)) {
+            continue;
+        }
+        printf("can_be_a_main_synonym: exp='%s'\n", exp);
         
         // level 1
         int begin_level_1 = *position;
@@ -1216,6 +1221,7 @@ int is_good(const char* s) {
 
 char* get_thesaurus_synonyms(const char* key, struct fact** facts, int limit, int* position, int level, short reverse) {
     if (is_engine("ram")) {
+        return ram_get_thesaurus_synonyms(key, facts, limit, position, level, reverse);
     }
     else {
         return disk_get_thesaurus_synonyms(key, facts, limit, position, level, reverse);
