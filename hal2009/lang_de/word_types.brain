@@ -283307,10 +283307,367 @@ Zannone:
   type: n
 Zirje:
   type: n
-Maloca:
-  type: n
 Malorca:
   type: n
-
+Kupferstatue:
+genus  : f
+  type: n
+wissensrepraesentation:
+genus  : f
+  type: n
+Verkehrsbauwerk:
+genus  : s
+  type: n
+radgebundene:
+  type: adj
+Erdbewegungsmaschine:
+genus  : f
+  type: n
+Traenendruesen:
+genus  : f
+  type: n  
+BOINC:
+  type: n
+Boinc:
+  type: n
+Berkeley:
+  type: n
+laufe:
+  type: vi
+Oesterrreich:
+  type: n 
+Berry:
+  type: n  
+gliederfuesser:
+  type: n
+Stewart:
+genus  : m
+  type: n
+Treck:
+genus  : m
+  type: n
+artenreiche:
+  type: adj
+Vogelfamilie:
+genus  : f
+  type: n
+Sperlingsvoegeln:
+  type: n 
+hergestellte:
+  type: adj
+Naturdarm:
+genus  : m
+  type: n
+Leberknoedel:
+  type: n 
+Hawai:
+  type: n
+Inselkette:
+genus  : f
+  type: n
+Weltmeer:
+genus  : s
+  type: n 
+Klingone:
+genus  : m
+  type: n
+Gruppierungen:
+genus  : f
+  type: n 
+Romulaner:
+  type: n 
+Grundwasser:
+genus  : s
+  type: n  
+Burenwurst:
+genus  : f
+  type: n
+grobe:
+  type: adj
+Bruehwurst:
+genus  : f
+  type: n
+Standardangebot:
+genus  : s
+  type: n
+Wuerstelstaende:
+genus  : f
+  type: n
+Imbissstands:
+  type: n  
+Ochsenschwanzsuppe:
+genus  : f
+  type: n
+klare:
+  type: adj
+Hauptzutaten:
+genus  : f
+  type: n
+Ochsenschwanz:
+genus  : m
+  type: n
+Rindssuppe:
+genus  : f
+  type: n
+Mineralstoffen:
+  type: n
+angereichert:
+  type: adj
+Patros:
+  type: n
+darunter:
+  type: adv
+emotionale:
+  type: adj
+theatralische:
+  type: adj
+tendenziell:
+  type: adj
+uebertriebene:
+  type: adj
+Monolitos:
+  type: n
+Atavyros:
+  type: n
+Faliraki:
+  type: n
+Urlaubsort:
+genus  : m
+  type: n  
+Sonde:
+genus  : f
+  type: n
+entfernte:
+  type: adj
+zugaengliche:
+  type: adj
+kindgerechte:
+  type: adj
+Gyros:
+  type: n
+stehendes:
+  type: adj 
+Meere:
+genus  : f
+  type: n
+Mousaka:
+genus  : s
+  type: n
+Auflaufgericht:
+genus  : s
+  type: n
+rumaenischen:
+  type: adj
+bulgarischen:
+  type: adj
+herkoemmlichen:
+  type: adj
+Hausgesindes:
+  type: n 
+Arbeitender:
+  type: adj
+Dienstherrn:
+  type: n
+haeusliche:
+  type: adj
+Pflichten:
+genus  : f
+  type: n
+Hammel:
+  type: n
+Mufflons:
+genus  : f
+  type: n
+praegte:
+  type: vi
+Mahayana:
+  type: n
+Hochlands:
+  type: n
+Ordensburg:
+  type: n
+Powiat:
+  type: n
+Malborski:
+  type: n
+Wojewodschaft:
+  type: n
+Pommern:
+  type: n
+Polens:
+  type: n
+Ottoburg:
+  type: n
+Schlossberg:
+genus  : m
+  type: n
+Abteikirche:
+genus  : f
+  type: n
+Halumi:
+genus  : m
+  type: n
+gemischt:
+  type: adj
+halbfester:
+  type: adj
+Kuehen:
+  type: n
+Schafen:
+  type: n
+Ziegen:
+genus  : f
+  type: n
+Implantat:
+genus  : s
+  type: n
+eingepflanztes:
+  type: adj
+permanent:
+  type: adj
+laengeren:
+  type: adj
+Effloreszenz:
+genus  : f
+  type: n
+Dermis:
+  type: n
+Basalmembran:
+genus  : f
+  type: n
+markiert:
+  type: vi
+Souma:
+genus  : m
+  type: n
+Gesamtzahl:
+genus  : f
+  type: n
+kochenden:
+  type: adj
+Sud:
+genus  : m
+  type: n
+uebergossen:
+  type: vi
+pasteurisiert:
+  type: adj
+schraeger:
+  type: adj
+Kieferngewaechse:
+genus  : f
+  type: n
+Olivenbaum:
+genus  : m
+  type: n
+mittelgrosser:
+  type: adj
+knorriger:
+  type: adj
+Oelbaeume:
+genus  : f
+  type: n
+Oelbaumgewaechse:
+genus  : f
+  type: n
+Latsche:
+genus  : f
+  type: n
+Naeheres:
+  type: adj
+audiovisuelle:
+  type: adj
+Pornografie:
+genus  : f
+  type: n
+Heimatfilm:
+genus  : m
+  type: n
+Pyramiede:
+genus  : f
+  type: n
+Mioner:
+genus  : f
+  type: n
+Aspekten:
+  type: n 
+Kinos:
+  type: n
+Filmwirtschaft:
+genus  : f
+  type: n
+Filmfoerderung:
+genus  : f
+  type: n
+fuerchte:
+  type: vi
+christ:
+genus  : m
+  type: n 
+strahlgetriebenes:
+  type: adj
+mehrspuriges:
+  type: adj
+Frachtguetern:
+  type: n
+Wasserspiegel:
+genus  : m
+  type: n
+hinausragende:
+  type: adj
+Landmasse:
+genus  : f
+  type: n   
+umspannt:
+  type: vi
+bandfoermige:
+  type: adj  
+hervortretende:
+  type: adj 
+kalesche:
+genus  : f
+  type: n
+Filmgattung:
+genus  : f
+  type: n
+tatsaechlichem:
+  type: adj
+Screwball:
+  type: n
+Semmelknoedel:
+genus  : m
+  type: n
+Karfiol:
+genus  : m
+  type: n
+Zuchtsorte:
+genus  : f
+  type: n
+Gemuesekohls:
+  type: n
+fleischigen:
+  type: adj
+zusammenstehenden:
+  type: adj
+Bluetensprossen:
+genus  : f
+  type: n
+Kartoffelsalat:
+genus  : m
+  type: n
+gekochten:
+  type: adj
+textbasierte:
+  type: adj
+Dialogsysteme:
+genus  : f
+  type: n
+natuerlicher:
+  type: adj
+dahinterstehenden:
+  type: adj 
+ABC:
+genus  : s
+  type: n
 
                    
