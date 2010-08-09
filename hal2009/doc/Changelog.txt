@@ -1,3 +1,8 @@
+1141:
+
+- Bug 649 korrigiert
+- Bug 648 korrigiert
+
 1131:
 
 - Neues Synonym-System

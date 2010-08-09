@@ -760,8 +760,10 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         {
             char** exps = synonyms_to_expressions(synonyms, 0, begin_level_1);
             struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
-            synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 1, FORWARD);
-            free_facts_synonyms(facts_synonyms);
+            if (facts_synonyms != TOOMUCH) {
+                synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 1, FORWARD);
+                free_facts_synonyms(facts_synonyms);
+            }
             free_expressions(exps);
         }
 
@@ -770,17 +772,19 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         {
             char** exps = synonyms_to_expressions(synonyms, begin_level_1, begin_level_2);
             struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
-            int f;
-            for (f = 0; facts_synonyms[f]; ++f) {
-                if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
-                    set_to_invalid_fact(&(facts_synonyms[f]));
+            if (facts_synonyms != TOOMUCH) {
+                int f;
+                for (f = 0; facts_synonyms[f]; ++f) {
+                    if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
+                        set_to_invalid_fact(&(facts_synonyms[f]));
+                    }
+                    if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
+                        set_to_invalid_fact(&(facts_synonyms[f]));
+                    }
                 }
-                if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
-                    set_to_invalid_fact(&(facts_synonyms[f]));
-                }
+                synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 2, FORWARD);
+                free_facts_synonyms(facts_synonyms);
             }
-            synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 2, FORWARD);
-            free_facts_synonyms(facts_synonyms);
             free_expressions(exps);
         }
 
@@ -789,17 +793,19 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         {
             char** exps = synonyms_to_expressions(synonyms, begin_level_2, begin_level_3);
             struct fact** facts_synonyms = search_facts_synonyms("", (const char*)exps, "", 0, synonym_verbs, "", "", "", "default");
-            int f;
-            for (f = 0; facts_synonyms[f]; ++f) {
-                if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
-                    set_to_invalid_fact(&(facts_synonyms[f]));
+            if (facts_synonyms != TOOMUCH) {
+                int f;
+                for (f = 0; facts_synonyms[f]; ++f) {
+                    if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
+                        set_to_invalid_fact(&(facts_synonyms[f]));
+                    }
+                    if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
+                        set_to_invalid_fact(&(facts_synonyms[f]));
+                    }
                 }
-                if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
-                    set_to_invalid_fact(&(facts_synonyms[f]));
-                }
+                synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 3, FORWARD);
+                free_facts_synonyms(facts_synonyms);
             }
-            synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 3, FORWARD);
-            free_facts_synonyms(facts_synonyms);
             free_expressions(exps);
         }
 

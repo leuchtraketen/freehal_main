@@ -2816,7 +2816,10 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
             set from array verb 1st item to "sein"
         done
         else do
-            if from array verb 1st item matches /st$/ do
+            if from array verb 1st item matches /est$/ do
+                do regex using from array verb 1st item: /est$/, "en", :i
+            done
+            else if from array verb 1st item matches /st$/ do
                 do regex using from array verb 1st item: /st$/, "en", :i
             done
             else if from array verb 1st item matches /e$/ do
