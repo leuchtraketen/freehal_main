@@ -182,16 +182,16 @@ static int select_primary_key(void* key, int argc, char **argv, char **azColName
 
 int get_last_pk(int rel) {
     // cache
-    static int cache_clauses = -1;
-    static int cache_facts = -1;
+    static int cache_clauses = INVALID_POINTER;
+    static int cache_facts = INVALID_POINTER;
     if (rel) {
-        if (cache_clauses > -1) {
+        if (cache_clauses > INVALID_POINTER) {
             ++cache_clauses;
             return cache_clauses;
         }
     }
     else {
-        if (cache_facts > -1) {
+        if (cache_facts > INVALID_POINTER) {
             ++cache_facts;
             return cache_facts;
         }
@@ -1066,13 +1066,13 @@ int mysql_delete_everything_from(const char* filename) {
         free(sql);
         return error;
     }
-    return -1;
+    return INVALID_POINTER;
 }
 
 int mysql_set_to_invalid_value(void** p) {
     if (!p) return 1;
     if (*p && can_be_a_pointer(*p)) free(*p);
-    *p = -1;
+    *p = INVALID_POINTER;
     return 0;
 }
 

@@ -93,6 +93,8 @@ int halusleep(double);
 #ifndef HAL2009
 #define HAL2009 1
 
+#define INVALID_POINTER (void*)(-1)
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -343,8 +345,6 @@ FILE* unset_output_pipe() {
 # define IS_INVALID_FD(f) ( (f) < 0)
 # define INVALID_FD -1
 #endif
-
-
 
 #define PerlIO_stdout stdout
 #define Perl_PerlIO_stdout stdout

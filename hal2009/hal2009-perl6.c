@@ -83,7 +83,7 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     hals = replace(hals, "first item", "item [ 0 ]");
     hals = replace(hals, "second item", "item [ 1 ]");
     hals = replace(hals, "third item", "item [ 2 ]");
-    hals = replace(hals, "last item", "item [ -1 ]");
+    hals = replace(hals, "last item", "item [ INVALID_POINTER ]");
     hals = replace(hals, "is an empty array ", "() ~~ @");
     hals = replace(hals, "is an empty hash ", "() ~~ %");
     hals = replace(hals, "that array is empty: ", "() ~~ (");

@@ -4453,7 +4453,13 @@ define action use_bug_feature with array results, hash parsed do
         set new array clause to an empty array
         
         push into array clause, ''
-        push into array clause, 'aber'
+        if from array result item [ 1 ] item [ 3 ] matches /nicht/ do
+            push into array clause, 'und auch'
+        done
+        else do
+            push into array clause, 'aber'
+        done
+        
         set new var objects to ''
         set new array objects_separated to from hash parsed item { 'objects' }
         for each new array obj in array objects_separated do
@@ -4461,6 +4467,7 @@ define action use_bug_feature with array results, hash parsed do
             set var objects to var objects concat from array obj 1st item
         done
         do regex using var objects: /^\s/, "", :global
+        
         if var objects matches /^\sein/ do
             push into array clause, 'k' concat var objects
         done

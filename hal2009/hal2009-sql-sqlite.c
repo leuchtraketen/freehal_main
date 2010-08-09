@@ -1672,7 +1672,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             int num_of_words = 0;
             char** words = calloc(501*sizeof(char*), 1);
             traditional_detect_words(&num_of_words, words, r);
-            strcat(sql, "SELECT facts.rel FROM rel_word_fact JOIN facts ON facts.pk = rel_word_fact.fact WHERE facts.rel <> -1 AND (");
+            strcat(sql, "SELECT facts.rel FROM rel_word_fact JOIN facts ON facts.pk = rel_word_fact.fact WHERE facts.rel <> INVALID_POINTER AND (");
             int n = 0;
             while (subject_synonyms[n] && n < 20000) {
                 char* subject_synonym_buf = subject_synonyms[n];
@@ -1738,7 +1738,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             int num_of_words = 0;
             char** words = calloc(501*sizeof(char*), 1);
             traditional_detect_words(&num_of_words, words, r);
-            strcat(sql, "SELECT facts.pk FROM rel_word_fact JOIN facts ON facts.rel = rel_word_fact.fact WHERE facts.rel <> -1 AND (");
+            strcat(sql, "SELECT facts.pk FROM rel_word_fact JOIN facts ON facts.rel = rel_word_fact.fact WHERE facts.rel <> INVALID_POINTER AND (");
             int n = 0;
             while (subject_synonyms[n] && n < 20000) {
                 char* subject_synonym_buf = subject_synonyms[n];
@@ -1869,7 +1869,7 @@ struct DATASET sql_sqlite_get_records(struct RECORD* r) {
             strcat(sql, important_records[w]);
             strcat(sql, " ) AND ");
         }
-        strcat(sql, " nmain.rel = -1 AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\")) OR NOT (nmain.verbgroup = \"be\"))");
+        strcat(sql, " nmain.rel = INVALID_POINTER AND (((nmain.objects <> \"\" OR nmain.adverbs <> \"\")) OR NOT (nmain.verbgroup = \"be\"))");
         need_and = 1;
         
         /// Match the primary key

@@ -524,8 +524,8 @@ char* convert_to_perl5(char* hals, int just_compile) {
 }
 
 int convert_to_perl5_convert_file(char* filename) {
-    static char* last_filename = -1;
-    if (last_filename == -1) {
+    static char* last_filename = INVALID_POINTER;
+    if (last_filename == INVALID_POINTER) {
         last_filename = strdup("");
     }
     if (0 == strcmp(last_filename, filename)) {
@@ -607,8 +607,8 @@ int convert_to_perl5_convert_file(char* filename) {
 void execute_perl5(char* filename) {
     static PerlInterpreter* my_perl = NULL;
 
-    static char* last_filename = -1;
-    if (last_filename == -1) {
+    static char* last_filename = INVALID_POINTER;
+    if (last_filename == INVALID_POINTER) {
         last_filename = strdup("");
     }
 

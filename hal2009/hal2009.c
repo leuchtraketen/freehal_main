@@ -106,7 +106,7 @@ char* halgetline(FILE *handle) {
         line[index] = zeichen;
         ++index;
     }
-    while(1 && index < LINE_SIZE -1);
+    while(1 && index < LINE_SIZE - 1);
     
     line[index] = 0;
       
@@ -396,7 +396,7 @@ int hal2009_add_pro_file (char* filename) {
                 line[f] = wholeline[d];
                 if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
                     line[f] = 0;
-                    f = -1;
+                    f = INVALID_POINTER;
                     d += 2;
 
                     int last_pk = 0;

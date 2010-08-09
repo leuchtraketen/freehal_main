@@ -211,7 +211,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     insert_ram_fact_by_key(fact);
     insert_fact_at_key(rel, fact);
     
-    printf("Inserted a fact at rel=%d.\n", rel);
+//    printf("Inserted a fact at rel=%d.\n", rel);
     
     return fact;
 }
@@ -467,7 +467,7 @@ struct fact** ram_search_clauses(int rel) {
 
 int ram_set_to_invalid_value(void** p) {
     if (!p) return 1;
-    *p = -1;
+    *p = INVALID_POINTER;
     return 0;
 }
 

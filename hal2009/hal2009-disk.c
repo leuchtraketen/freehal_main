@@ -593,7 +593,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
 char* disk_get_source(const char* key) {
     printf("disk_get_source: %s\n", key);
     if (!key || !key[0])
-        return 1;
+        return (char*)1;
     
     char* source = calloc(512, 1);
     {
@@ -620,7 +620,7 @@ char* disk_get_source(const char* key) {
 char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse) {
     printf("disk_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
-        return 1;
+        return (char*)1;
     
     struct request_string_pair req;
     req.facts    = facts;
@@ -686,7 +686,7 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
 
 char* disk_del_record(const char* key) {
     if (!key || !key[0])
-        return 1;
+        return (char*)1;
     
     char* source = disk_get_source(key);
     
@@ -1018,7 +1018,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
         query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
     }
     short need_to_create = 1;
-    int i_right = -1;
+    int i_right = INVALID_POINTER;
     int i = 0;
     // check whether there is a matching entry
 //        printf("search in query_cache: %d - %d - %d\n", req->hash_n_1, req->hash_n_2, req->hash_n_3);
@@ -1048,7 +1048,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
 
         need_to_create = 1;
         i = 0;
-        i_right = -1;
+        i_right = INVALID_POINTER;
     }
 
     if (if_needed_create_entry) {
@@ -1357,13 +1357,13 @@ int disk_delete_everything_from(const char* filename) {
         free(sql);
         return error;
     }
-    return -1;
+    return INVALID_POINTER;
 }
 
 int disk_set_to_invalid_value(void** p) {
     if (!p) return 1;
     if (*p && can_be_a_pointer(*p)) free(*p);
-    *p = -1;
+    *p = INVALID_POINTER;
     return 0;
 }
 

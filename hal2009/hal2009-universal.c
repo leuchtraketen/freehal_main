@@ -97,7 +97,7 @@ long can_be_a_pointer(void* _p) {
     if (p > 10000) {
         return 1;
     }
-    if (p == -1) {
+    if (p == (long)INVALID_POINTER) {
         return 0;
     }
     return 0;
@@ -130,6 +130,7 @@ int set_to_invalid_fact(struct fact** p) {
     return 0;
 }
         
+/*
 struct word*** __add_synonyms_by_string(const char* exp, struct word*** synonyms, int* position, int* allocated_until) {
     if (is_bad(exp)) {
         return synonyms;
@@ -214,7 +215,8 @@ struct word*** __add_synonyms_by_string(const char* exp, struct word*** synonyms
     
     return synonyms;
 }
-
+*/
+/*
 int store_synonyms(const char* exp, struct word*** synonyms, int level) {
     struct word* word = set_word(exp);
     word->synonyms = synonyms;
@@ -231,7 +233,9 @@ struct word*** get_stored_synonyms(const char* exp, int level) {
     }
     return 0;
 }
+*/
 
+/*
 struct word*** __add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, struct fact** facts, int* position, int* allocated_until) {
     if (facts == TOOMUCH) {
         return synonyms;
@@ -357,6 +361,7 @@ struct word*** __add_synonyms_by_search(const char* subj, const char* obj, const
     
     return synonyms;
 }
+*/
 
 static int max_synonym_count = 9999;
 static int max_entity_words_count = 9;
@@ -614,7 +619,7 @@ struct synonym** add_synonyms_by_string(const char** exps, struct synonym** syno
 }
 
 struct synonym** put_search_synonyms(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct fact** facts, struct synonym** synonyms, int* position, int level, short direction) {
-    if (facts == TOOMUCH) {
+    if (facts == TOOMUCH_P) {
         return synonyms;
     }
     
@@ -705,7 +710,7 @@ char** synonyms_to_expressions(struct synonym** synonyms, int a, int b) {
 
     int u;
     for (u = a; u < b; ++u) {
-        if (synonyms[u] && synonyms[u] != -1) {
+        if (synonyms[u] && synonyms[u] != INVALID_POINTER) {
             char* req_synonym = join_words(synonyms[u]->words);
             
             entities[i] = req_synonym;
@@ -754,7 +759,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         int begin_level_1 = *position;
         {
             char** exps = synonyms_to_expressions(synonyms, 0, begin_level_1);
-            struct fact** facts_synonyms = search_facts_synonyms("", exps, "", 0, synonym_verbs, "", "", "", "default");
+            struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
             synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 1, FORWARD);
             free_facts_synonyms(facts_synonyms);
             free_expressions(exps);
@@ -764,7 +769,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         int begin_level_2 = *position;
         {
             char** exps = synonyms_to_expressions(synonyms, begin_level_1, begin_level_2);
-            struct fact** facts_synonyms = search_facts_synonyms("", exps, "", 0, synonym_verbs, "", "", "", "default");
+            struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
             int f;
             for (f = 0; facts_synonyms[f]; ++f) {
                 if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
@@ -783,7 +788,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         int begin_level_3 = *position;
         {
             char** exps = synonyms_to_expressions(synonyms, begin_level_2, begin_level_3);
-            struct fact** facts_synonyms = search_facts_synonyms("", exps, "", 0, synonym_verbs, "", "", "", "default");
+            struct fact** facts_synonyms = search_facts_synonyms("", (const char*)exps, "", 0, synonym_verbs, "", "", "", "default");
             int f;
             for (f = 0; facts_synonyms[f]; ++f) {
                 if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
@@ -829,7 +834,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
     return synonyms;
 }
 
-char*** filter_synonyms(struct synonym** synonyms, int level, short direction) {
+struct word*** filter_synonyms(struct synonym** synonyms, int level, short direction) {
     char*** filtered = calloc(sizeof(char*), max_synonym_count+1);
 
     int i;
@@ -837,7 +842,7 @@ char*** filter_synonyms(struct synonym** synonyms, int level, short direction) {
     for (i = 0; i < max_synonym_count; ++i) {
         struct synonym* syn = synonyms[i];
         
-        if (syn && syn != -1) {
+        if (syn && syn != INVALID_POINTER) {
             if (level >= syn->level && (direction == syn->direction || direction == REVERSE)) {
                 filtered[k] = syn->words;
                 ++k;
@@ -870,10 +875,10 @@ struct synonym** add_synonyms(const char* exp, const char** _exps, struct synony
     }
     
     // by string
-    synonyms = add_synonyms_by_string(exps, synonyms, position, category);
+    synonyms = add_synonyms_by_string((const char **)exps, synonyms, position, category);
     
     // by search
-    synonyms = add_synonyms_by_search(exps, synonyms, position, category);
+    synonyms = add_synonyms_by_search((const char **)exps, synonyms, position, category);
     
     if (free_exps) {
         free(exps);
@@ -935,7 +940,7 @@ struct word*** search_synonyms_add(const char* exp, int level, int reverse_searc
             int u;
             int _max = *position;
             for (u = _min; u < _max; ++u) {
-                if (synonyms[u] && synonyms[u] != -1) {
+                if (synonyms[u] && synonyms[u] != INVALID_POINTER) {
                     char* req_synonym = join_words(synonyms[u]);
                     
                     printf("search for sub synonyms of '%s'\n", req_synonym);
@@ -1213,7 +1218,7 @@ const char* from_number(int i) {
 }
 
 int is_bad(const char* s) {
-    return (!can_be_a_pointer(s) || !s || !s[0] || ((s[0] == ' ' || s[0] == '0' || s[0] == ')' || ((s[0] < 'a' || s[0] > 'Z') && s[0] != '_')) && strlen(s) < 1));
+    return (!can_be_a_pointer((void*)s) || !s || !s[0] || ((s[0] == ' ' || s[0] == '0' || s[0] == ')' || ((s[0] < 'a' || s[0] > 'Z') && s[0] != '_')) && strlen(s) < 1));
 }
 int is_good(const char* s) {
     return (!is_bad(s));
@@ -1313,14 +1318,14 @@ int matches(const char* a, const char* b) {
 //                        catchf("going on...\n", 0);
                         c += i+1;
                         size -= i;
-                        i = -1;
+                        i = INVALID_POINTER;
                     }
                 }
             }
             return q;
         }
         else {
-            return strstr(a, c);
+            return strstr(a, c) ? 1 : 0;
         }
     }
     if (b[0] == '_' || strstr(b, "_")) {
@@ -1345,12 +1350,12 @@ int matches(const char* a, const char* b) {
             return q;
         }
         else {
-            return strstr(a, c);
+            return strstr(a, c) ? 1 : 0;
         }
     }
 
     if (a[0] == '*' || strstr(a, "*")) {
-        return matches(b, a);
+        return matches(b, a) ? 1 : 0;
     }
     
     return 0;
@@ -1424,7 +1429,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     
     int u;
     int does_match = 0;
-    for (u = 0; request_words[u] && (-1 == request_words[u] || request_words[u][0]); ++u) {
+    for (u = 0; request_words[u] && (INVALID_POINTER == request_words[u] || request_words[u][0]); ++u) {
         if (can_be_a_pointer(request_words[u])) {
             
             int request_words_all_also_trivial   = 0;
@@ -1432,7 +1437,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             int request_words_all = 0;
             
             int c;
-            for (c = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
+            for (c = 0; request_words[u][c] && (INVALID_POINTER == request_words[u][c] || request_words[u][c]->name); ++c) {
                 if (can_be_a_pointer(request_words[u][c])) {
                     if (!is_a_trivial_word(request_words[u][c]->name)) {
                         ++request_words_all;
@@ -1450,9 +1455,10 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
             int   does_match_this_synonym = 0;
             int should_match_this_synonym = 0;
     
-            for (c = 0; request_words[u][c] && (-1 == request_words[u][c] || request_words[u][c]->name); ++c) {
+            for (c = 0; request_words[u][c] && (INVALID_POINTER == request_words[u][c] || request_words[u][c]->name); ++c) {
                 if (can_be_a_pointer(request_words[u][c])) {
-                    if (is_a_variable(request_words[u][c]->name) && (request_words[u][c]->name != 'a' || c >= 0)) {
+                    // if (is_a_variable(request_words[u][c]->name) && (request_words[u][c]->name != 'a' || c >= 0)) {
+                    if (is_a_variable(request_words[u][c]->name) && c >= 0) {
                         flags = WEAK;
                         continue;
                     }
@@ -1487,11 +1493,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     
     if (count_requests == 0) {
         catchf("  (the following match is '-1' because: count_requests = 0)\n", -1);
-        return -1;
+        return INVALID_POINTER;
     }
     
     if (does_match)  {
-//        catchf("  (the following match has been successful)\n", -1);
+//        catchf("  (the following match has been successful)\n", INVALID_POINTER);
     }
     return does_match;
 }
@@ -1880,10 +1886,10 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, in
 struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak) {
     printf("Starting fact filter!\n");
     
-    if (list == TOOMUCH) {
+    if (list == TOOMUCH_P) {
         printf("Do not filter, too much data.\n");
         printf("Not filtered.\n");
-        return TOOMUCH;
+        return TOOMUCH_P;
     }
 
     begin_catchf();
@@ -1895,18 +1901,18 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
     int lc, b, count_of_facts, count_of_true_facts, count_of_context_matching_facts;
     for (lc = 0, b = 0, count_of_facts = 0, count_of_true_facts = 0, count_of_context_matching_facts = 0; list[b]; ++b) {
     
-        if (list[b] != -1) {
+        if (list[b] != INVALID_POINTER) {
             list[b] = filter_fact_by_rules(list[b], request, weak);
         }
-        if (list[b] != -1) {
+        if (list[b] != INVALID_POINTER) {
             ++count_of_facts;
         }
-        if (list[b] != -1) {
+        if (list[b] != INVALID_POINTER) {
             if (fact_matches_truth(list[b], request)) {
                 ++count_of_true_facts;
             }
         }
-        if (list[b] != -1) {
+        if (list[b] != INVALID_POINTER) {
             if (fact_matches_questionword_rules(list[b], request)) {
                 ++count_of_context_matching_facts;
             }
@@ -1977,7 +1983,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
     
     if (count_of_true_facts >= 1 && count_of_facts >= 10 && (count_of_facts - count_of_true_facts) > (count_of_true_facts/2) ) {
         for (b = 0; list[b]; ++b) {
-            if (list[b] != -1) {
+            if (list[b] != INVALID_POINTER) {
                 if (!fact_matches_truth(list[b], request)) {
                     set_to_invalid_fact(&(list[b]));
                 }
@@ -1987,7 +1993,7 @@ struct fact** filter_list_by_rules(struct fact** list, struct request* request, 
     
     if (count_of_context_matching_facts >= 1) {
         for (b = 0; list[b]; ++b) {
-            if (list[b] != -1) {
+            if (list[b] != INVALID_POINTER) {
                 if (!fact_matches_questionword_rules(list[b], request)) {
                     set_to_invalid_fact(&(list[b]));
                 }
@@ -2156,7 +2162,7 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
             if (succ_1 == TOOMUCH) {
                 printf("Too much double facts.\n");
                 free(facts);
-                return TOOMUCH;
+                return TOOMUCH_P;
             }
             printf("Found double facts.\n");
         }
@@ -2220,7 +2226,7 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     if (succ_1 == TOOMUCH || succ_2 == TOOMUCH || succ_3 == TOOMUCH || succ_4 == TOOMUCH || succ_5 == TOOMUCH) {
         printf("(%i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH) = 1\n", succ_1, succ_2, succ_3, succ_4, succ_5);
         free(facts);
-        return TOOMUCH;
+        return (struct fact**)TOOMUCH;
     }
     printf("(%i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH || %i == TOOMUCH) = 0\n", succ_1, succ_2, succ_3, succ_4, succ_5);
     
@@ -2250,8 +2256,8 @@ void print_word_list_3rd_order(struct word*** list) {
 
 int count_list(void** list) {
     int i, size;
-    for (i = 0, size = 0; list[i] || -1 == list[i]; ++i) {
-        if (can_be_a_pointer(list[i]) && list[i] != -1) {
+    for (i = 0, size = 0; list[i] || INVALID_POINTER == list[i]; ++i) {
+        if (can_be_a_pointer(list[i]) && list[i] != INVALID_POINTER) {
             ++size;
         }
     }
@@ -2270,13 +2276,13 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
         found_one = 0;
     
         int i;
-        for (i = 0; !found_one && (-1 == list[i] || can_be_a_pointer(list[i])); ++i) {
+        for (i = 0; !found_one && (INVALID_POINTER == list[i] || can_be_a_pointer(list[i])); ++i) {
             if (found_one) {
                 break;
             }
             
             int j;
-            for (j = 0; !found_one && (-1 == list[i] || can_be_a_pointer(list[i][j])); ++j) {
+            for (j = 0; !found_one && (INVALID_POINTER == list[i] || can_be_a_pointer(list[i][j])); ++j) {
                 if (found_one) {
                     break;
                 }
@@ -2287,7 +2293,7 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
                         int no_more_items = 1;
                         if (j) {
                             int k;
-                            for (k = j+1; -1 == list[i] || can_be_a_pointer(list[i][k]); ++k) {
+                            for (k = j+1; INVALID_POINTER == list[i] || can_be_a_pointer(list[i][k]); ++k) {
                                 list[i][k-1] = list[i][k];
                                 no_more_items = 0;
                             }
@@ -2299,7 +2305,7 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
                         if (!j || no_more_items) {
                             no_more_items = 1;
                             int k;
-                            for (k = i+1; -1 == list[k] || can_be_a_pointer(list[k]); ++k) {
+                            for (k = i+1; INVALID_POINTER == list[k] || can_be_a_pointer(list[k]); ++k) {
                                 list[k-1] = list[k];
                                 no_more_items = 0;
                             }
@@ -2364,7 +2370,7 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
     
     {
         if (0 == strcmp(context, "reasonof")) {
-            level = -1;
+            level = 1;
         }
 
         struct request* fact = calloc(sizeof(struct request), 1);
@@ -2407,12 +2413,12 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
             weak
         );
         
-        if (list != TOOMUCH) {
+        if (list != TOOMUCH_P) {
             
             struct word*** subject_syonyms_level_0 = 0;
 
             int l;
-            for (l = 0; can_be_a_pointer(list[l]) || -1 == list[l]; ++l) {
+            for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
                 if (can_be_a_pointer(list[l])) {
                     if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                         if (strstr(list[l]->verbs[0]->name, "=") && strlen(verbs)) {
@@ -2910,8 +2916,8 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
             weak
         );
         
-        if (list == TOOMUCH) {
-            return TOOMUCH;
+        if (list == TOOMUCH_P) {
+            return TOOMUCH_P;
         }
         
         free(fact->context);
@@ -2919,7 +2925,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
         
         int l;
         int loop_go_on = 1;
-        for (l = 0; loop_go_on && (can_be_a_pointer(linking_list[l]) || -1 == linking_list[l]); ++l) {
+        for (l = 0; loop_go_on && (can_be_a_pointer(linking_list[l]) || INVALID_POINTER == linking_list[l]); ++l) {
             if (can_be_a_pointer(linking_list[l])) {
                 
                 struct fact** clauses = search_clauses(linking_list[l]->pk);
@@ -2966,10 +2972,10 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                 weak
                             );
 
-                            if (list != TOOMUCH) {
+                            if (list != TOOMUCH_P) {
 
                                 int l;
-                                for (l = 0; can_be_a_pointer(list[l]) || -1 == list[l]; ++l) {
+                                for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
                                     if (can_be_a_pointer(list[l])) {
                                         if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                                             if (strstr(list[l]->verbs[0]->name, "=")) {
@@ -3069,12 +3075,12 @@ struct fact** search_facts_thesaurus(struct synonym_set* synonym_set, const char
             weak
         );
         
-        if (list == TOOMUCH) {
-            return TOOMUCH;
+        if (list == TOOMUCH_P) {
+            return TOOMUCH_P;
         }
         
         int l;
-        for (l = 0; can_be_a_pointer(list[l]) || list[l] == -1; ++l) {
+        for (l = 0; can_be_a_pointer(list[l]) || list[l] == INVALID_POINTER; ++l) {
             if (can_be_a_pointer(list[l])) {
                 if (can_be_a_pointer(list[l]->verbs)) {
                     free(list[l]->verbs);
@@ -3121,11 +3127,11 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     synonym_set->   extra           = add_synonyms(   extra, 0, synonym_set->   extra, &synonym_set->   position_extra, "extra");
 
 
-    if (!can_be_a_pointer(list) || !count_list(list)) {
+    if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         list = search_facts_by_weakness(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, EXACT);
     }
     
-    if (!can_be_a_pointer(list) || !count_list(list)) {
+    if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         list = search_facts_by_weakness(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, WEAK);
     }
     
@@ -3140,7 +3146,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the 'double facts' search?\n");
     if (0 == strcmp(context, "double_facts")) {
-        if (!can_be_a_pointer(list) || !count_list(list)) {
+        if (!can_be_a_pointer(list) || !count_list((void**)list)) {
             printf("We do.\n");
             
             printf("'double facts' search is allowed.\n");
@@ -3161,7 +3167,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the 'not meant' search?\n");
     if (0 == strcmp(context, "not_meant")) {
-        if (!can_be_a_pointer(list) || !count_list(list)) {
+        if (!can_be_a_pointer(list) || !count_list((void**)list)) {
             printf("We do.\n");
             
             printf("'not meant' search is allowed.\n");
@@ -3181,7 +3187,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the simple search?\n");
-    if (!can_be_a_pointer(list) || !count_list(list)) {
+    if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         printf("We do.\n");
         
         int level = 2;
@@ -3190,11 +3196,11 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
             level = 1;
         }
         
-        while (level <= 3 && ( !can_be_a_pointer(list) || !count_list(list) )) {
+        while (level <= 3 && ( !can_be_a_pointer(list) || !count_list((void**)list) )) {
             
             struct fact** _list = search_facts_simple(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, level, weak);
-            if (_list == TOOMUCH) {
-                return TOOMUCH;
+            if (_list == TOOMUCH_P) {
+                return TOOMUCH_P;
             }
             
             if (can_be_a_pointer(_list)) {
@@ -3203,11 +3209,11 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
                 }
                 list = _list;
             }
-            printf("Simple Search: %d (%d), level = %d\n", count_list(list), can_be_a_pointer(list), level);
+            printf("Simple Search: %d (%d), level = %d\n", count_list((void**)list), can_be_a_pointer(list), level);
             
             ++level;
         }
-        printf("Simple Search: %d (%d)\n", count_list(list), can_be_a_pointer(list));
+        printf("Simple Search: %d (%d)\n", count_list((void**)list), can_be_a_pointer(list));
     }
     else {
         printf("No.\n");
@@ -3215,7 +3221,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the do_general simple search?\n");
-    if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "|do_general"))) {
+    if ((!can_be_a_pointer(list) || !count_list((void**)list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "|do_general"))) {
         printf("We do (we have a do_general verb).\n");
         
         int level = 2;
@@ -3224,11 +3230,11 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
             level = 1;
         }
         
-        while (level <= 3 && ( !can_be_a_pointer(list) || !count_list(list) )) {
+        while (level <= 3 && ( !can_be_a_pointer(list) || !count_list((void**)list) )) {
             
             struct fact** _list = search_facts_simple(synonym_set, subjects, objects, "", adverbs, extra, questionword, context, level, weak);
-            if (_list == TOOMUCH) {
-                return TOOMUCH;
+            if (_list == TOOMUCH_P) {
+                return TOOMUCH_P;
             }
             
             if (can_be_a_pointer(_list)) {
@@ -3248,12 +3254,12 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the deep search?\n");
     
-    if (!can_be_a_pointer(list) || !count_list(list)) {
+    if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         printf("We do.\n");
         
         struct fact** _list = search_facts_deep(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, weak);
-        if (_list == TOOMUCH) {
-            return TOOMUCH;
+        if (_list == TOOMUCH_P) {
+            return TOOMUCH_P;
         }
         if (can_be_a_pointer(_list)) {
             if (can_be_a_pointer(list)) {
@@ -3275,7 +3281,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     else if ((strstr(context, "what") || strstr(context, "who")) && !(verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("No, no what-context.\n");
     }
-    else if (!can_be_a_pointer(list) || !count_list(list)) {
+    else if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         printf("We do.\n");
         
         if (wiki_begin()) {
@@ -3300,12 +3306,12 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the thesaurus search?\n");
     
-    if ((!can_be_a_pointer(list) || !count_list(list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
+    if ((!can_be_a_pointer(list) || !count_list((void**)list)) && (verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && strstr(verbs, "="))) {
         printf("We do.\n");
         
         struct fact** _list = search_facts_thesaurus(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, weak);
-        if (_list == TOOMUCH) {
-            return TOOMUCH;
+        if (_list == TOOMUCH_P) {
+            return TOOMUCH_P;
         }
         if (can_be_a_pointer(_list)) {
             if (can_be_a_pointer(list)) {
@@ -3421,7 +3427,7 @@ int append_on_dataset_record(int offset, int limit, char** record, struct fact**
     
     int d;
     for (d = 0; list[d]; ++d) {
-        if (list[d] != -1) {
+        if (list[d] != INVALID_POINTER) {
             record[offset+(d*6)+0] = join_words(list[d]->verbs);
             record[offset+(d*6)+1] = join_words(list[d]->subjects);
             record[offset+(d*6)+2] = join_words(list[d]->objects);
@@ -3457,7 +3463,7 @@ struct DATASET as_dataset(struct fact** list) {
     set.data = 0;
     set.err  = 0;
     
-    if (list == TOOMUCH) {
+    if (list == TOOMUCH_P) {
         set.err = TOOMUCH;
         return set;
     }
@@ -3477,7 +3483,7 @@ struct DATASET as_dataset(struct fact** list) {
     
     int d;
     for (d = 0; list[d]; ++d) {
-        if (list[d] != -1) {
+        if (list[d] != INVALID_POINTER) {
             //char** record = calloc(sizeof(char*), sizeof(struct fact)*100);
             char** record = calloc(sizeof(char*), 100);
             record[0] = calloc(sizeof(char), 10);
@@ -3516,7 +3522,7 @@ struct DATASET as_dataset(struct fact** list) {
 
 int is_a_variable(const char* word) {
     return (
-        can_be_a_pointer(word) && (
+        can_be_a_pointer((void*)word) && (
             0 == strcmp(word, "a")
          || 0 == strcmp(word, "b")
          || 0 == strcmp(word, "c")
@@ -3533,7 +3539,7 @@ int is_a_variable(const char* word) {
 
 int is_a_trivial_word(const char* word) {
     return (
-        can_be_a_pointer(word) && (
+        can_be_a_pointer((void*)word) && (
             0 == strcmp(word, "the")
          || 0 == strcmp(word, "a")
          || 0 == strcmp(word, "an")
@@ -3573,7 +3579,7 @@ int is_a_trivial_word(const char* word) {
 
 int is_conditional_questionword(const char* word) {
     return (
-        can_be_a_pointer(word) && (
+        can_be_a_pointer((void*)word) && (
             0 == strcmp(word, "if")
          || 0 == strcmp(word, "when")
     

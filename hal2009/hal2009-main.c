@@ -81,7 +81,7 @@ int main (int argc, char** argv) {
     strcpy(base_dir, ".");
     strcpy(sql_engine, "disk");
 
-    while ((c = getopt (argc, argv, "b:q:i:m:p:l:c:e:d:s")) != -1) {
+    while ((c = getopt (argc, argv, "b:q:i:m:p:l:c:e:d:s")) != INVALID_POINTER) {
         switch (c) {
             case 'b':
                 strncpy(base_dir, optarg, OPTION_SIZE);

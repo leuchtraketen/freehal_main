@@ -29,6 +29,7 @@
 #define WRONG       ('z'-'a'+2)
 
 #define TOOMUCH      -7
+#define TOOMUCH_P    (void*) -7
 
 #define REVERSE 1
 #define FORWARD 0
@@ -127,7 +128,7 @@ struct fact** search_facts_wiki(const char*, short);
 
 char** divide_by(const char by, const char* str);
 char** divide_string(const char* str);
-char*** filter_synonyms(struct synonym** synonyms, int level, short direction);
+struct word*** filter_synonyms(struct synonym** synonyms, int level, short direction);
 char* generalize_verb(char* verb);
 char* get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse);
 char* join_words_by(const char* by, struct word** words);
