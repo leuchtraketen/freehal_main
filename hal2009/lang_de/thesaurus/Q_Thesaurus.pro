@@ -336,7 +336,7 @@
 = <> _quelle_ <> _quell_ <> (maybe)
 = <> _quelle_ <> _ursprung_ <> (maybe)
 = <> _quelle_ <> _vorkommen_ <> (maybe)
-= <> _quelle_ <> _wurzel_ <> (maybe)
+
 = <> _quelloffenheit_ <> _offener_quelltext_ <> (maybe)
 = <> _quelloffenheit_ <> _open_source_ <> (maybe)
 = <> _quell_ <> _quelle_ <> (maybe)
@@ -346,7 +346,7 @@
 = <> _quelltext_ <> _sourcecode_ <> (maybe)
 = <> _quelltext_ <> _source_ <> (maybe)
 = <> _quell_ <> _ursprung_ <> (maybe)
-= <> _quell_ <> _wurzel_ <> (maybe)
+
 = <> _quengelig_ <> _gefrustet_ <> (maybe)
 = <> _quengelig_ <> _genervt_ <> (maybe)
 = <> _quengelig_ <> _maulig_ <> (maybe)

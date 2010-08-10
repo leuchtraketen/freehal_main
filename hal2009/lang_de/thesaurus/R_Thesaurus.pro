@@ -4707,7 +4707,7 @@
 = <> _rueberschieben_ <> _uebergeben_ <> (maybe)
 = <> _rueberschieben_ <> _ueberreichen_ <> (maybe)
 = <> _ruebe_ <> _schaedel_ <> (maybe)
-= <> _ruebe_ <> _steckruebe_ <> (maybe)
+
 = <> _rueckbank_ <> _fond_ <> (maybe)
 = <> _rueckbank_ <> _fondsitz_ <> (maybe)
 = <> _rueckbank_ <> _ruecksitzbank_ <> (maybe)

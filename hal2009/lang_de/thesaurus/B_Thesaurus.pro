@@ -8768,8 +8768,6 @@
 = <> _birne_ <> _leuchte_ <> (maybe)
 = <> _birne_ <> _leuchtkoerper_ <> (maybe)
 = <> _birne_ <> _leuchtmittel_ <> (maybe)
-= <> _birne_ <> _ruebe_ <> (maybe)
-= <> _birne_ <> _schaedel_ <> (maybe)
 = <> _birthler-behoerde_ <> _bstu_ <> (maybe)
 = <> _birthler-behoerde_ <> _gauck-behoerde_ <> _ <> (maybe)
 = <> _birthler-behoerde_ <> _stasi-unterlagen-behoerde_ <> (maybe)

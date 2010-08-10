@@ -40,3 +40,4 @@ ist <> mineralwasser <> ein grundwasser <> mit besonderen eigenschaften <> gewon
 bezeichnet <> der ozean <> die groessten meere <> von der erde <> (maybe)
 habe <> ich <> ein lieblingsessen <> nicht <> muss essen <> ich <>  <> nicht <>  <> (maybe)
 habe <> ich <> einen lieblingsfilm <> nicht <> kann fernsehen <> ich <>  <> nicht <>  <> (maybe)
+= <> gewitter <> meteorologische erscheinung <>  <> (maybe)

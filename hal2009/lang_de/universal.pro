@@ -999,7 +999,7 @@ ist <> kaese <> etwas <> gutes <> <> (true)
 ist <> kaffee <> ein genussmittel <> <> (true)
 ist <> kaffee <> ein schwarzes koffeinhaltiges heissgetraenk <> <> (true)
 ist <> karate <> eine kampfkunst <> <> (true)
-ist <> kein schlechtes wetter <> <> bei mir <> <> (true)
+
 ist <> kein tag <> der <> vorhergehende <> <> (true)
 ist <> kevin costner <> ein schauspieler <> <> (true)
 ist <> kobalt <> ein element <> aus <> <> (true)
