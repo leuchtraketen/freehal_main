@@ -1,0 +1,1 @@
+echo *.c *.h *.cpp *.hal lang_de/*.pro{,t} lang_de/*/*.pro{,t} lang_de/word_types* lang_en/*.pro{,t} lang_en/*/*.pro{,t} > MANIFEST
