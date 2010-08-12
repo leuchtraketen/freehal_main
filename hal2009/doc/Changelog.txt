@@ -1,3 +1,8 @@
+1150:
+
+- Begruessungen funktionieren wieder
+- englische Version verbessert
+
 1143:
 
 - Changelog aktualisiert

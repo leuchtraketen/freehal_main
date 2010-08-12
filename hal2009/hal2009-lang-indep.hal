@@ -156,7 +156,14 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /<[?]>/, " ?", :global:i
     do regex using var input: /^[und]<ws><[,]><ws>/, "", :global:i
     if var lang matches "en" do
-        do regex using var input: /(^|\s)?an\s/, "$0a ", :global:i
+        if length(var input) > 7 do
+            do regex using var input: /(^|\s)no(\s|$)/, "$0not a$1", :global:i
+        done
+        do regex using var input: /(^|\s)an\s(...)/, "$0a $1", :global:i
+        do regex using var input: /(^|\s)(are|is|be|was|were|am)\s(.+?)\sable\sto\s/, "$0can $2 ", :global:i
+        do regex using var input: /(^|\s)(are|is|be|was|were|am)\sable\sto\s/, "$0 can ", :global:i
+        do regex using var input: /(^|\s)(are|is|be|was|were|am)\s(.+?)\sunable\sto\s/, "$0not can $2 ", :global:i
+        do regex using var input: /(^|\s)(are|is|be|was|were|am)\sunable\sto\s/, "$0 not can ", :global:i
     done
     do regex using var input: /<[,]>/, " , ", :global:i
     do regex using var input: /\s+/, " ", :global:i
@@ -297,7 +304,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex using var input: / hab /, " habe ", :global:i
 
-    if var input not matches /(heiss|name)/ do
+    if var input not matches /(heiss|name)/ and var lang matches "de" do
         do regex using var input: / FreeHAL(.?.?.?.?)$/, " $0", :global:i
     done
 
@@ -521,6 +528,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /do you know /, "", :global:i
     do regex using var input: /^\s+/, "", :global
     do regex using var input: /^you know (wh)/, "$0", :global:i
+    
+    do regex using var input: /\sreally/, "", :global:i
     
     do regex using var input: /world wide web/, "_world_wide_web_", :global:i
     do regex using var input: /Hersteller von/, "Hersteller fuer", :global:i
@@ -791,6 +800,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: / has been able to /, " can ", :global:i
     do regex using var input: / have been able to /, " can ", :global:i
     do regex using var input: /don<['`']>t/, "do not", :global:i
+    do regex using var input: /can<['`']>t/, "can not", :global:i
+    do regex using var input: /cannot/, "can not", :global:i
     do regex using var input: /hasn<['`']>t/, "has not", :global:i
     do regex using var input: /havn<['`']>t/, "have not", :global:i
     do regex using var input: /didn<['`']>t/, "did not", :global:i
@@ -1134,13 +1145,16 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /whats<ws>up\s($|<[?]>)/, "how are you?", :global:i
     do regex using var input: /how are you doing/, "how are you", :global:i
 
-    do regex using var input: /what\'s /, "what is ", :global:i
-    do regex using var input: /whats /, "what is ", :global:i
-    do regex using var input: /whos /, "what is ", :global:i
-    do regex using var input: /who\'s /, "what is ", :global:i
-    do regex using var input: /whore /, "what is ", :global:i
-    do regex using var input: /who\'re /, "what is ", :global:i
-    do regex using var input: /what is your name/, "who are you", :global:i
+    set new var i_s to "i" concat "s"
+
+    do regex using var input: /what\'s /, "what var i_s ", :global:i
+    do regex using var input: /whats /, "what var i_s ", :global:i
+    do regex using var input: /whos /, "what var i_s ", :global:i
+    do regex using var input: /who\'s /, "what var i_s ", :global:i
+    do regex using var input: /whore /, "what var i_s ", :global:i
+    do regex using var input: /who\'re /, "what var i_s ", :global:i
+#    do regex using var input: /what is your name/, "who are you", :global:i
+    do regex using var input: /who are you.*/, "what var i_s your name?", :global:i
 
     do regex using var input: /was ist mit (.*?) los/, "was ist $0", :global:i
     do regex using var input: /was ist ueber (.*?)/, "was ist $0", :global:i

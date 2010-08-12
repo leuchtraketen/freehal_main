@@ -1306,28 +1306,64 @@ set multi-line new global array builtin_male_names to [
           "zeno",
 ];
 
+set multi-line new global array builtin_entity_ends_pair to [
+          [ 'das', 'ein' ],
+          [ 'das', 'eine' ],
+          [ 0, 'geburtstag' ],
+          [ 'dies', 0 ],
+];
+
+define action builtin_entity_does_not_end with var word do
+    if var word matches /cial$/ do
+        do return with 1
+    done
+    do return with 0
+done
+
+set multi-line new global hash builtin_entity_does_not_end to {
+          'mac' => 1,
+          
+};
+
 set multi-line new global hash builtin_entity_ends to {
-          'er' => 1,
-          'sie' => 1,
-          'es' => 1,
-          'ihm' => 1,
-          'ihr' => 1,
-          'ihn' => 1,
-          'mir' => 1,
-          'dir' => 1,
-          'mich' => 1,
-          'dich' => 1,
-          'ich' => 1,
-          'du' => 1,
+          'i' => 1,
+          'h' => 1,
+          'g' => 1,
+          'f' => 1,
+          'e' => 1,
+          'd' => 1,
+          'c' => 1,
+          'b' => 1,
+          'a' => 1,
+          'he' => 1,
+          'she' => 1,
+          'it' => 1,
+          'his' => 1,
+          'her' => 1,
+          'him' => 1,
+          'myself' => 1,
+          'yourself' => 1,
+          'mine' => 1,
+          'yours' => 1,
+          'i' => 1,
+          'you' => 1,
 };
 
 set multi-line new global hash builtin_time_place_adverbs to {
+          'what' => 1,
+          'who' => 1,
+          'how' => 1,
+          'where' => 1,
+          'when' => 1,
+          'why' => 1,
+          'whom' => 1,
+          'nicht' => 1,
+          'not' => 1,
           '_(true)_' => 1,
           '_(maybe)_' => 1,
           '_(false)_' => 1,
           '_(logic)_' => 1,
           '_q_' => 1,
-          'nicht' => 1,
           'kenne' => 1,
           'vorhin' => 1,
           'nachher' => 1,
@@ -1420,6 +1456,7 @@ set multi-line new global hash builtin_time_place_adverbs to {
           'tomorrow' => 1,
           'usually' => 1,
           'yesterday' => 1,
+          'just' => 1,
 };
 
 set multi-line new global hash builtin_verb_prefixes to {
@@ -1462,7 +1499,6 @@ set multi-line new global hash builtin_part_of_speech to {
           '_maybe_' => "adj",
           '_false_' => "adj",
           '_logic_' => "adj",
-          'logic' => "adj",
           'einem'  => "art",
           'eines'  => "art",
           'einer'  => "art",
@@ -1570,6 +1606,9 @@ set multi-line new global hash builtin_part_of_speech to {
           'kraus' => "adj",
           'selten' => "adj",
           'kalte' => "adj",
+          'science' => "n",
+          'project' => "n",
+          'freehal' => "n",
           'zur' => "questionword",
           'mochten' => "v",
           'wild' => "adj",
@@ -1600,6 +1639,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'sowie' => "prep",
           'gemein' => "adj",
           'neulich' => "adj",
+          'logic' => "n",
           'unreifer' => "adj",
           'niemand' => "n",
           '!=>' => "v",
@@ -1799,6 +1839,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'fahl' => "adj",
           'sehr' => "adj",
           'wenigerals' => "prep",
+          'just' => "adj",
           'achtzehnte' => "adj",
           'drittem' => "adj",
           'ersten' => "adj",
@@ -1996,6 +2037,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'hase' => "n",
           'woanders' => "adj",
           'link' => "adj",
+          'fine' => "adj",
           'worauf' => "questionword",
           'dass' => "questionword",
           'tapfer' => "adj",
@@ -2699,6 +2741,36 @@ define action get_verb with var verb, var person do
     return ""
 done
 
+define action replace_general_reflexive_pronoun with var text, var person do
+    set new var general_pronoun to "sich"
+    set new var better_pronoun to "sich"
+    
+    if var person matches "1s" do
+        set var better_pronoun to "mich"
+    done
+    if var person matches "2s" do
+        set var better_pronoun to "dich"
+    done
+    if var person matches "3s" do
+        set var better_pronoun to "sich"
+    done
+    if var person matches "1p" do
+        set var better_pronoun to "uns"
+    done
+    if var person matches "2p" do
+        set var better_pronoun to "euch"
+    done
+    if var person matches "3p" do
+        set var better_pronoun to "sich"
+    done
+
+    do regex using var text: /\svar general_pronoun$/, " var better_pronoun", :global:i
+    do regex using var text: /^var general_pronoun\s/, "var better_pronoun ", :global:i
+    do regex using var text: /^var general_pronoun$/, "var better_pronoun", :global:i
+
+    do return with var text
+done
+
 define action compute_output with var output do
     do regex using var output: /f=>/, "", :global:i
     do regex using var output: /!=>/, "", :global:i
@@ -2957,7 +3029,7 @@ define action compute_output with var output do
     do return with var output
 done
 
-define action check_for_as_well_as with var text, var lang, var path do
+define action check_for_as_well_as with var text, var adverbs, var lang, var path do
     if var text matches /\$\$aswellas\$\$/ do
         do regex using var text: /\$\$aswellas\$\$/, " as well as ", :i
         do regex using var text: /\s+/, " ", :i
@@ -3027,9 +3099,7 @@ define action toggle_entities with array entities do
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
-    print "truth = ", var truth
-    if var truth < 0.5 do
-        print " = wrong", new line
+    if var truth not matches "" and var truth < 0.5 do
         if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^a/ do
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^a(.?.?.?)$/, "no$0", :global:i
             do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^a(.?.?.?)\s/, "no$0 ", :global:i
@@ -3041,9 +3111,6 @@ define action adjust_truth with array result, var truth, var number_of_clause, v
         else do
             set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "not " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
         done
-    done
-    else do
-        print " = true", new line
     done
 done
 
@@ -3064,11 +3131,11 @@ define action stem_nouns with array phrases do
             # TEXT
             # Delete articles...
             # CODE
-            if var noun matches /ein.?.?$/ do
-                do regex using var noun: /ein.?.?$/, "*", :global:i
+            if var noun matches /^a$/ do
+                do regex using var noun: /^a$/, "*", :global:i
             done
-            if var noun matches /(der|die|das|den|dem|des)$/ do
-                do regex using var noun: /(der|die|das|den|dem|des)$/, "*", :global:i
+            if var noun matches /(the|that|this)$/ do
+                do regex using var noun: /(the|that|this)$/, "*", :global:i
             done
             
             if length(var noun) <= 3 do
@@ -3078,14 +3145,14 @@ define action stem_nouns with array phrases do
             # TEXT
             # That's the stemming algorithm
             # CODE
-            if var noun matches /ern$/ do
-                do regex using var noun: /ern$/, "*", :global:i
+            if var noun matches /ers$/ do
+                do regex using var noun: /ers$/, "*", :global:i
             done
             if var noun matches /e<[mnrs]>$/ do
                 do regex using var noun: /e<[mnrs]>$/, "*", :global:i
             done
-            if var noun matches /e$/ do
-                do regex using var noun: /e$/, "*", :global:i
+            if var noun matches /s$/ do
+                do regex using var noun: /s$/, "*", :global:i
             done
             if var noun matches /<[bdfghklmnrt]>s$/ do
                 do regex using var noun: /s$/, "*", :global:i
@@ -3454,6 +3521,10 @@ define action replace_she with var text, var replacement do
 done
 
 define action verb_category with var verb do
+    if var verb matches /\// do
+        do return with ""
+    done
+
     if var verb matches /(must)/ do
         do return with "must"
     done
@@ -3469,6 +3540,8 @@ define action verb_category with var verb do
     if var verb matches /(should)/ do
         do return with "should"
     done
+    
+    do return with ""
 done
 
 define action noun_for_anonymous without arguments do

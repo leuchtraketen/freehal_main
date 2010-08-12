@@ -1691,6 +1691,13 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
         print "not add current word: current is adj and next is an 'aswellas' variable, and word is first in loop!!" concat new line
         set flag add_current_word to 0
     done
+    
+    if var lang matches "en" do
+        if flag found_subject is true and from global hash builtin_time_place_adverbs item { var current_word } do
+            print "not add current word: lang is en and we are in the objects (found_subject=1) and current is time_place_adverb" concat new line
+            set flag add_current_word to 0
+        done
+    done
 
     do return with flag add_current_word
 done
@@ -3125,7 +3132,7 @@ define action logic with var input, var lang, var path, hash parsed do
                     # CODE
                     set new var verb_category to verb_category with var verb
                     
-                    if var verb_category do
+                    if var verb_category and var verb not matches /\// do
                         set var verb to var verb concat "/" concat var verb_category
                         set from array verb_array 1st item to var verb
                         push into array override_verb_array, array verb_array
@@ -3824,14 +3831,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 
                 if from array clause item [3] matches /<[?]>/ do
 
-                print "a" concat new line
-
                     if from array clause item [2] matches "NULL" or not from array clause item [2] do
-
-                print "aa" concat new line
-                print "1:" concat from array clause item [1] concat new line
-                print "2:" concat from array clause item [2] concat new line
-                print "3:" concat from array clause item [3] concat new line
 
                         if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
@@ -3854,8 +3854,6 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                     else if from array clause item [3] matches /von/ do
 
-                print "ab" concat new line
-
                         if items of array proper_verbs do
                             push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [1]
@@ -3871,8 +3869,6 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                     else do
-
-                print "ac" concat new line
 
                         if items of array proper_verbs do
                             if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
@@ -3909,86 +3905,120 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     done
                 done
                 else do
-
-                print "b" concat new line
-
-                    if from array clause item [2] matches "NULL" or not from array clause item [2] do
-                        if items of array proper_verbs do
+                    if var lang matches "en" do
+                        if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
                             push into array sentence, from array clause item [1]
-                            push into array sentence, items of array auxiliary_verbs
                             push into array sentence, from array clause item [3]
-                            push into array sentence, items of array proper_verbs
-                        done
-                        else do
-                            if from array clause item [4] matches /(der|die|das)$/ do
-                                push into array sentence, from array clause item [1]
-                                push into array sentence, from array clause item [3]
-                                push into array sentence, items of array auxiliary_verbs
-                            done
-                            else if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s|(nicht)/ do
-                                push into array sentence, from array clause item [3]
-                                push into array sentence, items of array auxiliary_verbs
-                                push into array sentence, from array clause item [1]
-                            done
-                            else do
-                                push into array sentence, from array clause item [1]
-                                push into array sentence, items of array auxiliary_verbs
-                                push into array sentence, from array clause item [3]
-                            done
-                        done
-                    done
-                    else if from array clause item [3] matches /von/ do
-                        if items of array proper_verbs do
-                            push into array sentence, from array clause item [1]
                             push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, items of array proper_verbs
                             push into array sentence, from array clause item [2]
-                            push into array sentence, from array clause item [3]
-                            push into array sentence, items of array proper_verbs
                         done
                         else do
                             push into array sentence, from array clause item [1]
                             push into array sentence, items of array auxiliary_verbs
+                            push into array sentence, items of array proper_verbs
                             push into array sentence, from array clause item [2]
                             push into array sentence, from array clause item [3]
                         done
                     done
-                    else do
-                        if items of array proper_verbs do
-                            if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+    print "19" concat new line
+                    if var lang matches "de" do
+    print "18" concat new line
+                        if from array clause item [2] matches "NULL" or not from array clause item [2] do
+    print "17" concat new line
+                            if items of array proper_verbs do
+    print "16" concat new line
                                 push into array sentence, from array clause item [1]
                                 push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [3]
-                                push into array sentence, from array clause item [2]
                                 push into array sentence, items of array proper_verbs
                             done
                             else do
+    print "15" concat new line
+                                if from array clause item [4] matches /(der|die|das)$/ do
+    print "14" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, items of array auxiliary_verbs
+                                done
+                                else if from array clause item [3] matches /.../ and from global hash builtin_time_place_adverbs item { from array clause item [3] } and not from array clause item [3] matches /\s|(nicht|not)/ do
+    print "13" concat new line
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [1]
+                                done
+                                else do
+    print "12" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [3]
+                                done
+                            done
+                        done
+                        else if from array clause item [3] matches /von/ do
+    print "11" concat new line
+                            if items of array proper_verbs do
+    print "10" concat new line
                                 push into array sentence, from array clause item [1]
                                 push into array sentence, items of array auxiliary_verbs
                                 push into array sentence, from array clause item [2]
                                 push into array sentence, from array clause item [3]
                                 push into array sentence, items of array proper_verbs
+                            done
+                            else do
+    print "9" concat new line
+                                push into array sentence, from array clause item [1]
+                                push into array sentence, items of array auxiliary_verbs
+                                push into array sentence, from array clause item [2]
+                                push into array sentence, from array clause item [3]
                             done
                         done
                         else do
-                            if from array clause item [4] matches /(der|die|das)$/ do
-                                push into array sentence, from array clause item [1]
-                                push into array sentence, from array clause item [3]
-                                push into array sentence, from array clause item [2]
-                                push into array sentence, items of array auxiliary_verbs
-                            done
-                            else if from global hash builtin_time_place_adverbs item { from array clause item [3] } or from array clause item [3] not matches /\s/ or from array clause item [3] matches /zu / do
-                                push into array sentence, from array clause item [1]
-                                push into array sentence, items of array auxiliary_verbs
-                                push into array sentence, from array clause item [3]
-                                push into array sentence, from array clause item [2]
-                                push into array sentence, items of array proper_verbs
+    print "8" concat new line
+                            if items of array proper_verbs do
+    print "7" concat new line
+                                if from global hash builtin_time_place_adverbs item { from array clause item [3] } do
+    print "6" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, from array clause item [2]
+                                    push into array sentence, items of array proper_verbs
+                                done
+                                else do
+    print "5" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [2]
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, items of array proper_verbs
+                                done
                             done
                             else do
-                                push into array sentence, from array clause item [1]
-                                push into array sentence, items of array auxiliary_verbs
-                                push into array sentence, from array clause item [2]
-                                push into array sentence, from array clause item [3]
-                                push into array sentence, items of array proper_verbs
+    print "4" concat new line
+                                if from array clause item [4] matches /(der|die|das)$/ do
+    print "3" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, from array clause item [2]
+                                    push into array sentence, items of array auxiliary_verbs
+                                done
+                                else if from global hash builtin_time_place_adverbs item { from array clause item [3] } or from array clause item [3] not matches /\s/ or from array clause item [3] matches /zu / do
+    print "2" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [2]
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, items of array proper_verbs
+                                done
+                                else do
+    print "1" concat new line
+                                    push into array sentence, from array clause item [1]
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause item [2]
+                                    push into array sentence, from array clause item [3]
+                                    push into array sentence, items of array proper_verbs
+                                done
                             done
                         done
                     done
@@ -4694,7 +4724,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             set var verb to from array verb 1st item
             
             set new var verb_category to verb_category with var verb
-            if var verb_category do
+            if var verb_category and var verb not matches /\// do
                 set var verb to var verb concat "/" concat var verb_category
             done
             
@@ -5385,6 +5415,8 @@ done
 define action init_prot_files with var current_language, var path do
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
+    set var save_path to var save_path concat var current_language concat '/'
+    do mkdir with var save_path
     do mkdir with var path concat '/lang_' concat var current_language concat '/wiki'
     set new array sub_directories to [ '', '/thesaurus', '/..' ]   
     push into array sub_directories, '/namen'
@@ -5502,6 +5534,8 @@ done
 
 define action update_list_of_pro_files with var pattern, var current_language, var path do
     set new var save_path to var path concat '/saved/'
+    do mkdir with var save_path
+    set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
     push into array sub_directories, '/namen'   
@@ -5635,6 +5669,8 @@ define action init_pro_files with var current_language, var path do
     done
 
     set new var save_path to var path concat '/saved/'
+    do mkdir with var save_path
+    set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
     push into array sub_directories, '/namen'   

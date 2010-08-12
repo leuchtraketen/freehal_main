@@ -249,6 +249,7 @@ void* hal2009_netcom_do_accept(void* arg) {
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
+        halusleep(1000);
     }
 
     fprintf(output(), "(hal2009_netcom_do_accept) Closed everything.\n");
@@ -296,6 +297,7 @@ void* hal2009_netcom_do_give(void* arg) {
     }
     catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
+        halusleep(1500);
     }
 
     fprintf(output(), "(hal2009_netcom_do_give)   Closed everything.\n");
@@ -361,6 +363,7 @@ void* hal2009_netcom_run_accept(void*) {
         catch (std::exception& e)
         {
             std::cerr << e.what() << std::endl;
+        halusleep(1500);
         }
     }
 }
@@ -465,15 +468,22 @@ void* hal2009_netcom_run(void* arg) {
 /// Normal FreeHAL communication with GUIs
 
 void hal2009_server_start() {
+    int ntry = 5;
     while (!hal2009_server_acceptor) {
         try {
-            
             tcp::endpoint endpoint(tcp::v4(), server_port);
             hal2009_server_acceptor = new tcp::acceptor(io_service, endpoint);
         }
         catch (std::exception& e)
         {
             std::cerr << e.what() << std::endl;
+            halusleep(1000);
+            if (strstr(e.what(), "already in use")) {
+                --ntry;
+                if (ntry <= 0) {
+                    exit(0);
+                }
+            }
         }
     }
 }

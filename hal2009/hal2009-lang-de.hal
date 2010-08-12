@@ -4221,9 +4221,13 @@ done
 define action check_for_greeting with var input do
     set new array greetings_from_user to an empty array
     push into array greetings_from_user, 'hallo'
+    push into array greetings_from_user, 'hi'
     push into array greetings_from_user, 'guten tag'
     push into array greetings_from_user, 'guten morgen'
-    push into array greetings_from_user, 'hi'
+    push into array greetings_from_user, 'guten abend'
+    push into array greetings_from_user, 'gute nacht'
+    push into array greetings_from_user, 'mahlzeit'
+    push into array greetings_from_user, 'schoenen nachmittag'
 
     for each new var greeting in array greetings_from_user do
         if lc(var input) matches /((\s)|<[,.\-!?]>|^)var greeting((\s)|<[,.\-!?]>|$)/ do
@@ -4783,6 +4787,10 @@ define action replace_she with var text, var replacement do
 done
 
 define action verb_category with var verb do
+    if var verb matches /\// do
+        do return with ""
+    done
+
     if var verb matches /(muss)|(muessen)|(musst)|(muesse)|(muesste)|(musste)|(mussten)/ do
         do return with "must"
     done
@@ -4801,6 +4809,8 @@ define action verb_category with var verb do
     if var verb matches /(soll)|(sollst)|(sollen)|(solltest)|(solltet)|(sollte)/ do
         do return with "should"
     done
+    
+    do return with ""
 done
 
 define action noun_for_anonymous without arguments do
