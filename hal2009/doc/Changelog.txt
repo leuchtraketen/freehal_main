@@ -1,3 +1,7 @@
+1151:
+
+- Bug bei der Synonymsuche behoben
+
 1150:
 
 - Begruessungen funktionieren wieder
