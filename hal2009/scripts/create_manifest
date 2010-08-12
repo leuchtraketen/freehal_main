@@ -1,1 +1,2 @@
-echo *.c *.h *.cpp *.hal lang_de/*.pro{,t} lang_de/*/*.pro{,t} lang_de/word_types* lang_en/*.pro{,t} lang_en/*/*.pro{,t} > MANIFEST
+echo *.pm *.c *.h *.cpp *.hal lang_de/*.pro{,t} lang_de/*/*.pro{,t} lang_de/word_types* lang_en/*.pro{,t} lang_en/*/*.pro{,t} > MANIFEST
+echo CMakeLists.txt configure COPYING MANIFEST README >> MANIFEST
