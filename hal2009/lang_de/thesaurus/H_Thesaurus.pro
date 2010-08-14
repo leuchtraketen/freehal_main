@@ -1731,7 +1731,7 @@
 = <> _hausarbeit_ <> _schulaufgabe_ <> (maybe)
 = <> _hausarbeit_ <> _seminararbeit_ <> (maybe)
 = <> _hausarbeit_ <> _studienarbeit_ <> (maybe)
-= <> _hausarzt_ <> _allgemeinmediziner_maybe_ 
+= <> _hausarzt_ <> _allgemeinmediziner_ <> (maybe) 
 = <> _hausarzt_ <> _praktischer_arzt_ <> (maybe)
 = <> _hausaufgabe_ <> _aufgabe_ <> (maybe)
 = <> _hausaufgabe_ <> _hausarbeit_ <> (maybe)
@@ -4336,7 +4336,7 @@
 = <> _hinblick_ <> _auffassung_ <> (maybe)
 = <> _hinblick_ <> _betrachtung_ <> (maybe)
 = <> _hinblick_ <> _hinsicht_ <> (maybe)
-= <> _hinblick_ <> _meinung_maybe_ 
+= <> _hinblick_ <> _meinung_ <> (maybe) 
 = <> _hinderlich_ <> _behindernd_ <> (maybe)
 = <> _hinderlich_ <> _bremsend_ <> (maybe)
 = <> _hinderlich_ <> _im_weg_sein_ <> (maybe)
@@ -4611,7 +4611,7 @@
 = <> _hinsichtlich_ <> _zwecks_ <> (maybe)
 = <> _hinsichtlich_ <> _vor_dem_hintergrund_ <> (maybe)
 = <> _hinsichtlich_ <> _zum_thema_ <> (maybe)
-= <> _hinsicht_ <> _meinung_maybe_ 
+= <> _hinsicht_ <> _meinung_ <> (maybe) 
 = <> _hinstellen_ <> _ausrichten_ <> (maybe)
 = <> _hinstellen_ <> _einrichten_ <> (maybe)
 = <> _hinstellen_ <> _ordnen_ <> (maybe)
@@ -5902,8 +5902,8 @@
 = <> _hommage_ <> _huldigung_ <> (maybe)
 = <> _homo-ehe_ <> _eingetragene_lebenspartnerschaft_ <> (maybe)
 = <> _homoehe_ <> _eingetragene_lebenspartnerschaft_ <> (maybe)
-= <> _homo-ehe_ <> _gleichgeschlechtliche_lebensgemeinschaft_maybe_ 
-= <> _homoehe_ <> _gleichgeschlechtliche_lebensgemeinschaft_maybe_ 
+= <> _homo-ehe_ <> _gleichgeschlechtliche_lebensgemeinschaft_ <> (maybe) 
+= <> _homoehe_ <> _gleichgeschlechtliche_lebensgemeinschaft_ <> (maybe) 
 = <> _homo-ehe_ <> _homoehe_ <> (maybe)
 = <> _homoehe_ <> _homo-ehe_ <> (maybe)
 = <> _homo-ehe_ <> _schwulenehe_ <> (maybe)
