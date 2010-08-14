@@ -413,7 +413,7 @@
 = <> _paradigma_ <> _beispiel_ <> (maybe)
 = <> _paradigma_ <> _denkmuster_ <> (maybe)
 = <> _paradigma_ <> _denkweise_ <> (maybe)
-= <> _paradigma_ <> _lehrmeinung_maybe_ 
+= <> _paradigma_ <> _lehrmeinung_ <> (maybe) 
 = <> _paradigma_ <> _leitbild_ <> (maybe)
 = <> _paradigma_ <> _muster_ <> (maybe)
 = <> _paradigma_ <> _vorbild_ <> (maybe)
@@ -2043,9 +2043,9 @@
 = <> _pfarrer_ <> _priester_ <> (maybe)
 = <> _pfarrer_ <> _seelsorger_ <> (maybe)
 = <> _pfarrer_ <> _vikar_ <> (maybe)
-= <> _pfarrgemeinde_ <> _gemeinde_maybe_ 
-= <> _pfarrgemeinde_ <> _gemeinschaft_maybe_ 
-= <> _pfarrgemeinde_ <> _kirchgemeinde_maybe_ 
+= <> _pfarrgemeinde_ <> _gemeinde_ <> (maybe) 
+= <> _pfarrgemeinde_ <> _gemeinschaft_ <> (maybe) 
+= <> _pfarrgemeinde_ <> _kirchgemeinde_ <> (maybe) 
 = <> _pfd_ <> _pfund_ <> (maybe)
 = <> _pfeffergurke_ <> _essiggurke_ <> (maybe)
 = <> _pfeffergurke_ <> _gewuerzgurke_ <> (maybe)
@@ -3191,8 +3191,8 @@
 = <> _plateau_ <> _flachland_ <> (maybe)
 = <> _platine_ <> _leiterplatte_ <> (maybe)
 = <> _platine_ <> _pcba_ <> (maybe)
-= <> _platitude_ <> _allgemeinplatz_maybe_ 
-= <> _platitude_ <> _gemeinplatz_maybe_ 
+= <> _platitude_ <> _allgemeinplatz_ <> (maybe) 
+= <> _platitude_ <> _gemeinplatz_ <> (maybe) 
 = <> _platitude_ <> _nichts_sagende_redensart_ <> (maybe)
 = <> _platitude_ <> _nichtssagende_redensart_ <> (maybe)
 = <> _platitude_ <> _plattituede_ <> (maybe)
@@ -3240,8 +3240,8 @@
 = <> _plattheit_ <> _trivialitaet_ <> (maybe)
 = <> _plattheit_ <> _unwichtigkeit_ <> (maybe)
 = <> _plattieren_ <> _plattierung_ <> (maybe)
-= <> _plattituede_ <> _allgemeinplatz_maybe_ 
-= <> _plattituede_ <> _gemeinplatz_maybe_ 
+= <> _plattituede_ <> _allgemeinplatz_ <> (maybe) 
+= <> _plattituede_ <> _gemeinplatz_ <> (maybe) 
 = <> _plattituede_ <> _nichts_sagende_redensart_ <> (maybe)
 = <> _plattituede_ <> _nichtssagende_redensart_ <> (maybe)
 = <> _plattituede_ <> _platitude_ <> (maybe)
@@ -4698,7 +4698,7 @@
 = <> _praktikum_ <> _traineeprogramm_ <> (maybe)
 = <> _praktikum_ <> _volontariat_ <> (maybe)
 = <> _praktische_erfahrung_ <> _praxiserfahrung_ <> (maybe)
-= <> _praktischer_arzt_ <> _allgemeinmediziner_maybe_ 
+= <> _praktischer_arzt_ <> _allgemeinmediziner_ <> (maybe) 
 = <> _praktischer_arzt_ <> _hausarzt_ <> (maybe)
 = <> _praktische_uebung_ <> _hospitanz_ <> (maybe)
 = <> _praktische_uebung_ <> _praktikum_ <> (maybe)
@@ -5574,7 +5574,7 @@
 = <> _pro_jahr_ <> _annual_ <> (maybe)
 = <> _pro_jahr_ <> _jaehrlich_ <> (maybe)
 = <> _projekt_ <> _ansinnen_ <> (maybe)
-= <> _projektgruppe_ <> _arbeitsgemeinschaft_maybe_ 
+= <> _projektgruppe_ <> _arbeitsgemeinschaft_ <> (maybe) 
 = <> _projektgruppe_ <> _arbeitsgruppe_ <> (maybe)
 = <> _projektgruppe_ <> _arbeitskreis_ <> (maybe)
 = <> _projektgruppe_ <> _fachgruppe_ <> (maybe)

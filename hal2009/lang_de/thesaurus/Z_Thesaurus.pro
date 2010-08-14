@@ -84,7 +84,6 @@
 = <> _zaenkisches_weib_ <> _drachen_ <> (maybe)
 = <> _zaenkisches_weib_ <> _furie_ <> (maybe)
 = <> _zaenkisches_weib_ <> _hausdrachen_ <> (maybe)
-= <> _zaenkisches_weib_ <> _hippe_ <> (maybe)
 = <> _zaenkisches_weib_ <> _kratzbuerste_ <> (maybe)
 = <> _zaenkisches_weib_ <> _megaere_ <> (maybe)
 = <> _zaenkisches_weib_ <> _xanthippe_ <> (maybe)
@@ -277,7 +276,6 @@
 = <> _zankeisen_ <> _drachen_ <> (maybe)
 = <> _zankeisen_ <> _furie_ <> (maybe)
 = <> _zankeisen_ <> _hausdrachen_ <> (maybe)
-= <> _zankeisen_ <> _hippe_ <> (maybe)
 = <> _zankeisen_ <> _kratzbuerste_ <> (maybe)
 = <> _zankeisen_ <> _megaere_ <> (maybe)
 = <> _zankeisen_ <> _xanthippe_ <> (maybe)
@@ -296,7 +294,7 @@
 = <> _zank_ <> _konflikt_ <> (maybe)
 = <> _zank_ <> _kontroverse_ <> (maybe)
 = <> _zank_ <> _krach_ <> (maybe)
-= <> _zank_ <> _meinungsverschiedenheit_maybe_ 
+= <> _zank_ <> _meinungsverschiedenheit_ <> (maybe) 
 = <> _zank_ <> _schlagabtausch_ <> (maybe)
 = <> _zank_ <> _streitigkeit_ <> (maybe)
 = <> _zank_ <> _streit_ <> (maybe)
@@ -1595,7 +1593,6 @@
 = <> _ziege_ <> _bock_ <> (maybe)
 = <> _ziege_ <> _geissbock_ <> (maybe)
 = <> _ziege_ <> _geiss_ <> (maybe)
-= <> _ziege_ <> _hippe_ <> (maybe)
 = <> _ziegelei_ <> _ziegelfabrik_ <> (maybe)
 = <> _ziegelei_ <> _ziegelwerk_ <> (maybe)
 = <> _ziegelfabrik_ <> _ziegelei_ <> (maybe)
@@ -1611,7 +1608,6 @@
 = <> _ziegenbock_ <> _bock_ <> (maybe)
 = <> _ziegenbock_ <> _geissbock_ <> (maybe)
 = <> _ziegenbock_ <> _geiss_ <> (maybe)
-= <> _ziegenbock_ <> _hippe_ <> (maybe)
 = <> _ziegenbock_ <> _ziege_ <> (maybe)
 = <> _ziegenfell_ <> _ziegenleder_ <> (maybe)
 = <> _ziegenlamm_ <> _kitz_ <> (maybe)
@@ -3230,14 +3226,14 @@
 = <> _zum_besten_geben_ <> _vortragen_ <> (maybe)
 = <> _zum_besten_von_ <> _fuer_ <> (maybe)
 = <> _zum_besten_von_ <> _zu_gunsten_von_ <> (maybe)
-= <> _zu_meinem_bedauern_ <> _leider_gottes_maybe_ 
-= <> _zu_meinem_bedauern_ <> _bedauerlicherweise_maybe_ 
-= <> _zu_meinem_bedauern_ <> _bloederweise_maybe_ 
-= <> _zu_meinem_bedauern_ <> _dummerweise_maybe_ 
-= <> _zu_meinem_bedauern_ <> _idiotischerweise_maybe_ 
-= <> _zu_meinem_bedauern_ <> _leider_maybe_ 
-= <> _zu_meinem_bedauern_ <> _schlechterdings_maybe_ 
-= <> _zu_meinem_bedauern_ <> _ungluecklicherweise_maybe_ 
+= <> _zu_meinem_bedauern_ <> _leider_gottes_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _bedauerlicherweise_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _bloederweise_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _dummerweise_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _idiotischerweise_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _leider_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _schlechterdings_ <> (maybe) 
+= <> _zu_meinem_bedauern_ <> _ungluecklicherweise_ <> (maybe) 
 = <> _zum_einen_and_eren_ <> _beides_ <> _(zum_and)_ <> (maybe)
 = <> _zum_einen_and_eren_ <> _(zum_and);_sowohl_als_auch_ <> (maybe)
 = <> _zum_einen_ <> _auf_der_einen_seite_ <> (maybe)
@@ -3631,7 +3627,7 @@
 = <> _zurechtstutzen_ <> _ruegen_ <> (maybe)
 = <> _zurechtstutzen_ <> _stutzen_ <> (maybe)
 = <> _zurechtweisen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _zurechtweisen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _zurechtweisen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _zurechtweisen_ <> _admonieren_ <> (maybe)
 = <> _zurechtweisen_ <> _anpfeifen_ <> (maybe)
 = <> _zurechtweisen_ <> _anraunzen_ <> (maybe)
@@ -3736,7 +3732,7 @@
 = <> _zurrgurt_ <> _schlinge_ <> (maybe)
 = <> _zurrgurt_ <> _spanngurt_ <> (maybe)
 = <> _zur_sau_machen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _zur_sau_machen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _zur_sau_machen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _zur_sau_machen_ <> _anpfeifen_ <> (maybe)
 = <> _zur_sau_machen_ <> _anraunzen_ <> (maybe)
 = <> _zur_sau_machen_ <> _ausschelten_ <> (maybe)
@@ -3751,7 +3747,7 @@
 = <> _zur_schau_stellen_ <> _offen_zeigen_ <> (maybe)
 = <> _zur_schau_stellen_ <> _praesentieren_ <> (maybe)
 = <> _zur_schnecke_machen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _zur_schnecke_machen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _zur_schnecke_machen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _zur_schnecke_machen_ <> _anpfeifen_ <> (maybe)
 = <> _zur_schnecke_machen_ <> _anraunzen_ <> (maybe)
 = <> _zur_schnecke_machen_ <> _ausschelten_ <> (maybe)
@@ -4158,7 +4154,7 @@
 = <> _zusammenarbeitend_ <> _zusammenwirkend_ <> (maybe)
 = <> _zusammenarbeiten_ <> _kooperieren_ <> (maybe)
 = <> _zusammenarbeiten_ <> _mitarbeiten_ <> (maybe)
-= <> _zusammenarbeit_ <> _gemeinschaftsarbeit_maybe_ 
+= <> _zusammenarbeit_ <> _gemeinschaftsarbeit_ <> (maybe) 
 = <> _zusammenarbeit_ <> _gruppenarbeit_ <> (maybe)
 = <> _zusammenarbeit_ <> _kooperation_ <> (maybe)
 = <> _zusammenarbeit_ <> _teamarbeit_ <> (maybe)
@@ -4217,7 +4213,7 @@
 = <> _zusammenfallend_ <> _zur_selben_zeit_ <> (maybe)
 = <> _zusammenfall_ <> _koinzidenz_ <> (maybe)
 = <> _zusammenfall_ <> _zusammentreffen_ <> (maybe)
-= <> _zusammenfassend_ <> _im_allgemeinen_maybe_ 
+= <> _zusammenfassend_ <> _im_allgemeinen_ <> (maybe) 
 = <> _zusammenfassend_ <> _im_grossen_und_ganzen_ <> (maybe)
 = <> _zusammenfassend_ <> _in_der_gesamtheit_ <> (maybe)
 = <> _zusammenfassend_ <> _in_der_regel_ <> (maybe)
@@ -4449,7 +4445,7 @@
 = <> _zusammenschau_ <> _vermittlung_ <> (maybe)
 = <> _zusammenschau_ <> _zusammenfuegung_ <> (maybe)
 = <> _zusammenscheissen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _zusammenscheissen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _zusammenscheissen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _zusammenscheissen_ <> _anpfeifen_ <> (maybe)
 = <> _zusammenscheissen_ <> _anraunzen_ <> (maybe)
 = <> _zusammenscheissen_ <> _ausschelten_ <> (maybe)
@@ -5367,7 +5363,7 @@
 = <> _zweckbetont_ <> _praktikabel_ <> (maybe)
 = <> _zweckbetont_ <> _praktisch_ <> (maybe)
 = <> _zweckbetont_ <> _zweckmaessig_ <> (maybe)
-= <> _zweckbeziehung_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(zum_gegenseitigen)_maybe_ 
+= <> _zweckbeziehung_ <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _(zum_gegenseitigen)_ <> (maybe) 
 = <> _zweckbeziehung_ <> _mutualismus_ <> (maybe)
 = <> _zweckbeziehung_ <> _symbiose_ <> (maybe)
 = <> _zweckdienlich_ <> _angebracht_ <> (maybe)

@@ -821,7 +821,7 @@
 = <> _das_ganze_ <> _gesamteindruck_ <> (maybe)
 = <> _das_ganze_jahr_ueber_ <> _ganzjaehrig_ <> (maybe)
 = <> _das_ganze_jahr_ueber_ <> _perennial_ <> (maybe)
-= <> _das_gemeine_volk_ <> _die_allgemeinheit_maybe_ 
+= <> _das_gemeine_volk_ <> _die_allgemeinheit_ <> (maybe) 
 = <> _das_gros_ <> _die_mehrheit_ <> (maybe)
 = <> _das_gros_ <> _ein_grossteil_ <> (maybe)
 = <> _das_gros_ <> _die_meisten_ <> (maybe)
@@ -859,9 +859,9 @@
 = <> _das_nierengefaesssystem_betreffend_ <> _renovaskulaer_ <> (maybe)
 = <> _das_noerdlichste_bundesland_ <> _schleswig-holstein_ <> (maybe)
 = <> _das_ <> _dies_ <> (maybe)
-= <> _das_oeffentliche_klima_ <> _oeffentliche_meinung_maybe_ 
+= <> _das_oeffentliche_klima_ <> _oeffentliche_meinung_ <> (maybe) 
 = <> _das_oeffentliche_klima_ <> _stimmung_in_der_oeffentlichkeit_ <> (maybe)
-= <> _das_oeffentliche_klima_ <> _veroeffentlichte_meinung_maybe_ 
+= <> _das_oeffentliche_klima_ <> _veroeffentlichte_meinung_ <> (maybe) 
 = <> _das_ohr_betreffend_ <> _aural_ <> (maybe)
 = <> _das_ohr_betreffend_ <> _aurikulaer_ <> (maybe)
 = <> _das_ohr_betreffend_ <> _aurikular_ <> (maybe)
@@ -1969,8 +1969,8 @@
 = <> _demontieren_ <> _zerlegen_ <> (maybe)
 = <> _demo_ <> _protestation_ <> (maybe)
 = <> _demo_ <> _protest_ <> (maybe)
-= <> _demoskopie_ <> _meinungsforschung_maybe_ 
-= <> _demoskop_ <> _meinungsforscher_maybe_ 
+= <> _demoskopie_ <> _meinungsforschung_ <> (maybe) 
+= <> _demoskop_ <> _meinungsforscher_ <> (maybe) 
 = <> _demotivierend_ <> _desillusionierend_ <> (maybe)
 = <> _demotivierend_ <> _einschuechternd_ <> (maybe)
 = <> _demotivierend_ <> _entmutigend_ <> (maybe)
@@ -2506,8 +2506,8 @@
 = <> _deputierter_ <> _repraesentant_ <> (maybe)
 = <> _deputierter_ <> _volksvertreter_ <> (maybe)
 = <> _der_aeltere_ <> _senior_ <> (maybe)
-= <> _der_allgemeinheit_dienend_ <> _pro_bono_maybe_ 
-= <> _der_allgemeinheit_dienend_ <> _zum_wohle_der_oeffentlichkeit_maybe_ 
+= <> _der_allgemeinheit_dienend_ <> _pro_bono_ <> (maybe) 
+= <> _der_allgemeinheit_dienend_ <> _zum_wohle_der_oeffentlichkeit_ <> (maybe) 
 = <> _derangieren_ <> _beirren_ <> (maybe)
 = <> _derangieren_ <> _durcheinander_bringen_ <> (maybe)
 = <> _derangieren_ <> _irrefuehren_ <> (maybe)
@@ -3646,7 +3646,7 @@
 = <> _dielektrikum_ <> _isolierstoff_ <> (maybe)
 = <> _dielektrikum_ <> _nichtleiter_ <> (maybe)
 = <> _die_lende_betreffend_ <> _lumbal_ <> (maybe)
-= <> _die_leviten_lesen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _die_leviten_lesen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _die_leviten_lesen_ <> _anpfeifen_ <> (maybe)
 = <> _die_leviten_lesen_ <> _anraunzen_ <> (maybe)
 = <> _die_leviten_lesen_ <> _ausschelten_ <> (maybe)
@@ -3989,7 +3989,7 @@
 = <> _differenzen_ <> _auseinandersetzung_ <> (maybe)
 = <> _differenzen_ <> _brueche_ <> (maybe)
 = <> _differenzen_ <> _dispute_ <> (maybe)
-= <> _differenzen_ <> _meinungsverschiedenheiten_maybe_ 
+= <> _differenzen_ <> _meinungsverschiedenheiten_ <> (maybe) 
 = <> _differenzen_ <> _querelen_ <> (maybe)
 = <> _differenzen_ <> _reibereien_ <> (maybe)
 = <> _differenzen_ <> _streitigkeiten_ <> (maybe)
@@ -4485,7 +4485,7 @@
 = <> _diskursiv_ <> _begruendend_ <> (maybe)
 = <> _diskursiv_ <> _beweisend_ <> (maybe)
 = <> _diskursiv_ <> _logisch_ <> (maybe)
-= <> _diskurs_ <> _meinungsaustausch_maybe_ 
+= <> _diskurs_ <> _meinungsaustausch_ <> (maybe) 
 = <> _diskus_ <> _frisbee_ <> (maybe)
 = <> _diskussion_ <> _auseinandersetzung_ <> (maybe)
 = <> _diskussion_ <> _austausch_ <> (maybe)
@@ -4497,7 +4497,7 @@
 = <> _diskussion_ <> _gedankenaustausch_ <> (maybe)
 = <> _diskussion_ <> _gespraech_ <> (maybe)
 = <> _diskussion_ <> _konversation_ <> (maybe)
-= <> _diskussion_ <> _meinungsaustausch_maybe_ 
+= <> _diskussion_ <> _meinungsaustausch_ <> (maybe) 
 = <> _diskussionsfreudig_ <> _argumentierfreudig_ <> (maybe)
 = <> _diskussionsfreudig_ <> _debattierfreudig_ <> (maybe)
 = <> _diskussionsfreudig_ <> _diskussionswuetig_ <> (maybe)
@@ -4588,7 +4588,7 @@
 = <> _dispute_ <> _reibereien_ <> (maybe)
 = <> _dispute_ <> _streitigkeiten_ <> (maybe)
 = <> _dispute_ <> _zerwuerfnise_ <> (maybe)
-= <> _disput_ <> _meinungsverschiedenheit_maybe_ 
+= <> _disput_ <> _meinungsverschiedenheit_ <> (maybe) 
 = <> _disput_ <> _streitigkeit_ <> (maybe)
 = <> _disput_ <> _streit_ <> (maybe)
 = <> _disput_ <> _wortgefecht_ <> (maybe)
@@ -4841,13 +4841,13 @@
 = <> _doesig_ <> _verschlafen_ <> (maybe)
 = <> _dogma_ <> _glaubenssatz_ <> (maybe)
 = <> _dogma_ <> _lehre_ <> (maybe)
-= <> _dogma_ <> _lehrmeinung_maybe_ 
+= <> _dogma_ <> _lehrmeinung_ <> (maybe) 
 = <> _dogma_ <> _lehrsatz_ <> (maybe)
 = <> _dogmatisch_ <> _apodiktisch_ <> (maybe)
 = <> _dogmatisch_ <> _ideologisch_ <> (maybe)
 = <> _dogmatisch_ <> _rechthaberisch_ <> (maybe)
 = <> _dogmatisch_ <> _starr_ <> (maybe)
-= <> _dogmatismus_ <> _unkritisches_festhalten_an_lehrmeinungen_und_glaubenssaetzen_maybe_ 
+= <> _dogmatismus_ <> _unkritisches_festhalten_an_lehrmeinungen_und_glaubenssaetzen_ <> (maybe) 
 = <> _doha_ <> _hauptstadt_von_katar_ <> (maybe)
 = <> _doktorand_ <> _promovend_ <> (maybe)
 = <> _doktorarbeit_ <> _dissertation_ <> (maybe)
@@ -5121,7 +5121,7 @@
 = <> _doppik_ <> _kaufmaennische_buchfuehrung_ <> (maybe)
 = <> _dorfdepp_ <> _dorftrottel_ <> (maybe)
 = <> _dorf_ <> _flecken_ <> (maybe)
-= <> _dorf_ <> _gemeinde_maybe_ 
+= <> _dorf_ <> _gemeinde_ <> (maybe) 
 = <> _dorf_ <> _kleine_stadt_ <> (maybe)
 = <> _dorf_ <> _marktflecken_ <> (maybe)
 = <> _dorf_ <> _markt_ <> (maybe)
@@ -5138,7 +5138,7 @@
 = <> _dorf_ <> _ortschaft_ <> (maybe)
 = <> _dorfschule_ <> _landschule_ <> (maybe)
 = <> _dorfschulze_ <> _buergermeister_ <> (maybe)
-= <> _dorfschulze_ <> _gemeindevorsteher_maybe_ 
+= <> _dorfschulze_ <> _gemeindevorsteher_ <> (maybe) 
 = <> _dorfschulze_ <> _ortsvorsteher_ <> (maybe)
 = <> _dorfschulze_ <> _rathauschef_ <> (maybe)
 = <> _dorfschulze_ <> _stadtammann_ <> (maybe)
@@ -5148,8 +5148,8 @@
 = <> _dorf_ <> _staedtchen_ <> (maybe)
 = <> _dorf_ <> _weiler_ <> (maybe)
 = <> _dorfwiese_ <> _anger_ <> (maybe)
-= <> _dorfwiese_ <> _gemeindeland_maybe_ 
-= <> _dorfwiese_ <> _gemeindewiese_maybe_ 
+= <> _dorfwiese_ <> _gemeindeland_ <> (maybe) 
+= <> _dorfwiese_ <> _gemeindewiese_ <> (maybe) 
 = <> _dorn_ <> _balken_ <> (maybe)
 = <> _dornbusch_ <> _dornstrauch_ <> (maybe)
 = <> _dorn_ <> _hauptbalken_ <> (maybe)
@@ -5221,7 +5221,6 @@
 = <> _drache_ <> _lindwurm_ <> (maybe)
 = <> _drachen_ <> _furie_ <> (maybe)
 = <> _drachen_ <> _hausdrachen_ <> (maybe)
-= <> _drachen_ <> _hippe_ <> (maybe)
 = <> _drachen_ <> _kratzbuerste_ <> (maybe)
 = <> _drachen_ <> _megaere_ <> (maybe)
 = <> _drachen_ <> _xanthippe_ <> (maybe)
@@ -6124,7 +6123,7 @@
 = <> _dummerweise_ <> _leider_ <> (maybe)
 = <> _dummerweise_ <> _schlechterdings_ <> (maybe)
 = <> _dummerweise_ <> _ungluecklicherweise_ <> (maybe)
-= <> _dummerweise_ <> _zu_meinem_bedauern_maybe_ 
+= <> _dummerweise_ <> _zu_meinem_bedauern_ <> (maybe) 
 = <> _dummes_geschwaetz_ <> _faselei_ <> (maybe)
 = <> _dummes_zeug_ <> _bloedsinn_ <> (maybe)
 = <> _dummes_zeug_ <> _firlefanz_ <> (maybe)

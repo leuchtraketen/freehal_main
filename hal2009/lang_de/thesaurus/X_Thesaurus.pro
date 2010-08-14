@@ -4,7 +4,6 @@
 = <> _xanthippe_ <> _drachen_ <> (maybe)
 = <> _xanthippe_ <> _furie_ <> (maybe)
 = <> _xanthippe_ <> _hausdrachen_ <> (maybe)
-= <> _xanthippe_ <> _hippe_ <> (maybe)
 = <> _xanthippe_ <> _kratzbuerste_ <> (maybe)
 = <> _xanthippe_ <> _megaere_ <> (maybe)
 = <> _xanthippe_ <> _zaenkisches_weib_ <> (maybe)

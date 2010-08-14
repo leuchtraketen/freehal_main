@@ -2170,9 +2170,9 @@
 = <> _kirche_ <> _tempel_ <> (maybe)
 = <> _kirchgaenger_ <> _kirchenbesucher_ <> (maybe)
 = <> _kirchgaenger_ <> _kirchengaenger_ <> (maybe)
-= <> _kirchgemeinde_ <> _gemeinde_maybe_ 
-= <> _kirchgemeinde_ <> _gemeinschaft_maybe_ 
-= <> _kirchgemeinde_ <> _pfarrgemeinde_maybe_ 
+= <> _kirchgemeinde_ <> _gemeinde_ <> (maybe) 
+= <> _kirchgemeinde_ <> _gemeinschaft_ <> (maybe) 
+= <> _kirchgemeinde_ <> _pfarrgemeinde_ <> (maybe) 
 = <> _kirchlich_ <> _geistlich_ <> (maybe)
 = <> _kirchlich_ <> _klerikal_ <> (maybe)
 = <> _kirchner_ <> _kuester_ <> (maybe)
@@ -4624,7 +4624,7 @@
 = <> _kommunal_ <> _gemeindlich_ <> (maybe)
 = <> _kommunal_ <> _staedtisch_ <> (maybe)
 = <> _kommune_ <> _wg_ <> (maybe)
-= <> _kommune_ <> _wohngemeinschaft_maybe_ 
+= <> _kommune_ <> _wohngemeinschaft_ <> (maybe) 
 = <> _kommune_ <> _wohngruppe_ <> (maybe)
 = <> _kommunikation_ <> _austausch_ <> (maybe)
 = <> _kommunikation_ <> _informationsaustausch_ <> (maybe)
@@ -4879,7 +4879,7 @@
 = <> _komprimierung_ <> _pressung_ <> (maybe)
 = <> _komprimierung_ <> _verdichtung_ <> (maybe)
 = <> _kompromiss_ <> _guetlicher_vergleich_ <> (maybe)
-= <> _kompromisslosigkeit_ <> _allgemeingueltigkeit_maybe_ 
+= <> _kompromisslosigkeit_ <> _allgemeingueltigkeit_ <> (maybe) 
 = <> _kompromisslosigkeit_ <> _extremismus_ <> (maybe)
 = <> _kompromisslosigkeit_ <> _radikalismus_ <> (maybe)
 = <> _kompromisslosigkeit_ <> _radikalitaet_ <> (maybe)
@@ -6822,7 +6822,6 @@
 = <> _kratzbuerste_ <> _drachen_ <> (maybe)
 = <> _kratzbuerste_ <> _furie_ <> (maybe)
 = <> _kratzbuerste_ <> _hausdrachen_ <> (maybe)
-= <> _kratzbuerste_ <> _hippe_ <> (maybe)
 = <> _kratzbuerste_ <> _megaere_ <> (maybe)
 = <> _kratzbuerste_ <> _xanthippe_ <> (maybe)
 = <> _kratzbuerste_ <> _zaenkisches_weib_ <> (maybe)

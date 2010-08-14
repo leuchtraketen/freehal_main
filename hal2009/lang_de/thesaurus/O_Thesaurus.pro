@@ -474,9 +474,9 @@
 = <> _oeffentliche_hand_ <> _staatssaeckel_ <> (maybe)
 = <> _oeffentliche_hand_ <> _verwaltung_ <> (maybe)
 = <> _oeffentliche_maennertoilette_ <> _pissoir_ <> (maybe)
-= <> _oeffentliche_meinung_ <> _das_oeffentliche_klima_maybe_ 
-= <> _oeffentliche_meinung_ <> _stimmung_in_der_oeffentlichkeit_maybe_ 
-= <> _oeffentliche_meinung_ <> _veroeffentlichte_meinung_maybe_ 
+= <> _oeffentliche_meinung_ <> _das_oeffentliche_klima_ <> (maybe) 
+= <> _oeffentliche_meinung_ <> _stimmung_in_der_oeffentlichkeit_ <> (maybe) 
+= <> _oeffentliche_meinung_ <> _veroeffentlichte_meinung_ <> (maybe) 
 = <> _oeffentlicher_belang_ <> _oeffentliches_interesse_ <> (maybe)
 = <> _oeffentlicher_personennahverkehr_ <> _nahverkehr_ <> (maybe)
 = <> _oeffentlicher_personennahverkehr_ <> _oeffentliche_verkehrsmittel_ <> (maybe)
@@ -484,8 +484,8 @@
 = <> _oeffentliche_verkehrsmittel_ <> _nahverkehr_ <> (maybe)
 = <> _oeffentliche_verkehrsmittel_ <> _oeffentlicher_personennahverkehr_ <> (maybe)
 = <> _oeffentliche_verkehrsmittel_ <> _oepnv_ <> (maybe)
-= <> _oeffentlichkeit_ <> _allgemeinheit_maybe_ 
-= <> _oeffentlichkeit_ <> _gemeinwesen_maybe_ 
+= <> _oeffentlichkeit_ <> _allgemeinheit_ <> (maybe) 
+= <> _oeffentlichkeit_ <> _gemeinwesen_ <> (maybe) 
 = <> _oeffentlichkeitsarbeit_ <> _pr-arbeit_ <> (maybe)
 = <> _oeffentlichkeitsarbeit_ <> _pressearbeit_ <> (maybe)
 = <> _oeffentlichkeitsarbeit_ <> _pr_ <> (maybe)
@@ -1886,7 +1886,7 @@
 = <> _ort_ <> _fleck_ <> (maybe)
 = <> _ort_ <> _gegend_ <> (maybe)
 = <> _ort_ <> _gemarkung_ <> (maybe)
-= <> _ort_ <> _gemeinde_maybe_ 
+= <> _ort_ <> _gemeinde_ <> (maybe) 
 = <> _orthodoxie_ <> _rechtglaeubigkeit_ <> (maybe)
 = <> _orthodox_ <> _pur_ <> (maybe)
 = <> _orthodox_ <> _rechtglaeubig_ <> (maybe)
@@ -1930,7 +1930,7 @@
 = <> _ortschaft_ <> _dorf_ <> (maybe)
 = <> _ortschaft_ <> _flecken_ <> (maybe)
 = <> _ortschaft_ <> _gemarkung_ <> (maybe)
-= <> _ortschaft_ <> _gemeinde_maybe_ 
+= <> _ortschaft_ <> _gemeinde_ <> (maybe) 
 = <> _ortschaft_ <> _marktflecken_ <> (maybe)
 = <> _ortschaft_ <> _markt_ <> (maybe)
 = <> _ortschaft_ <> _ort_ <> (maybe)
@@ -1953,7 +1953,7 @@
 = <> _ort_ <> _stelle_ <> (maybe)
 = <> _ortsvorsteher_ <> _buergermeister_ <> (maybe)
 = <> _ortsvorsteher_ <> _dorfschulze_ <> (maybe)
-= <> _ortsvorsteher_ <> _gemeindevorsteher_maybe_ 
+= <> _ortsvorsteher_ <> _gemeindevorsteher_ <> (maybe) 
 = <> _ortsvorsteher_ <> _rathauschef_ <> (maybe)
 = <> _ortsvorsteher_ <> _stadtammann_ <> (maybe)
 = <> _ortsvorsteher_ <> _stadtdirektor_ <> (maybe)

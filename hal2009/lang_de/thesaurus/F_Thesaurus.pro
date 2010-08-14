@@ -114,7 +114,7 @@
 = <> _fachgerecht_ <> _fachgemaess_ <> (maybe)
 = <> _fachgerecht_ <> _professionell_ <> (maybe)
 = <> _fachgeschaeft_ <> _fachhaendler_ <> (maybe)
-= <> _fachgruppe_ <> _arbeitsgemeinschaft_maybe_ 
+= <> _fachgruppe_ <> _arbeitsgemeinschaft_ <> (maybe) 
 = <> _fachgruppe_ <> _arbeitsgruppe_ <> (maybe)
 = <> _fachgruppe_ <> _arbeitskreis_ <> (maybe)
 = <> _fachgruppe_ <> _projektgruppe_ <> (maybe)
@@ -877,7 +877,7 @@
 = <> _falsch_gedeutet_ <> _fehlinterpretiert_ <> (maybe)
 = <> _falsch_gedeutet_ <> _missverstanden_ <> (maybe)
 = <> _falschheit_ <> _abscheulichkeit_ <> (maybe)
-= <> _falschheit_ <> _gemeinheit_maybe_ 
+= <> _falschheit_ <> _gemeinheit_ <> (maybe) 
 = <> _falschheit_ <> _niedertracht_ <> (maybe)
 = <> _falschheit_ <> _niedertraechtigkeit_ <> (maybe)
 = <> _falschheit_ <> _verlogenheit_ <> (maybe)
@@ -1578,7 +1578,7 @@
 = <> _fax_ <> _telefaxgeraet_ <> (maybe)
 = <> _fax_ <> _telefaxnachricht_ <> (maybe)
 = <> _fax_ <> _telefax_ <> (maybe)
-= <> _faz_ <> _frankfurter_allgemeine_zeitung_maybe_ 
+= <> _faz_ <> _frankfurter_allgemeine_zeitung_ <> (maybe) 
 = <> _fazit_ <> _analyse_ <> (maybe)
 = <> _fazit_ <> _resuemee_ <> (maybe)
 = <> _fazit_ <> _schlussbemerkung_ <> (maybe)
@@ -2373,8 +2373,8 @@
 = <> _fertigmachen_ <> _den_rest_geben_ <> (maybe)
 = <> _fertig_machen_ <> _die_leviten_lesen_ <> (maybe)
 = <> _fertigmachen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _fertig_machen_ <> _jemandem_seine_meinung_geigen_maybe_ 
-= <> _fertigmachen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _fertig_machen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
+= <> _fertigmachen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _fertig_machen_ <> _abfertigen_ <> (maybe)
 = <> _fertig_machen_ <> _anfertigen_ <> (maybe)
 = <> _fertig_machen_ <> _anpfeifen_ <> (maybe)
@@ -3606,7 +3606,6 @@
 = <> _flackern_ <> _blinken_ <> (maybe)
 = <> _flackern_ <> _flimmern_ <> (maybe)
 = <> _flackern_ <> _aufblinken_ <> (maybe)
-= <> _fladenkuchen_ <> _hippe_ <> (maybe)
 = <> _flaeche_ <> _areal_ <> (maybe)
 = <> _flaeche_ <> _bereich_ <> (maybe)
 = <> _flaeche_ <> _bezirk_ <> (maybe)
@@ -3750,7 +3749,7 @@
 = <> _flecken_ <> _dorf_ <> (maybe)
 = <> _fleckenfoermig_ <> _knoetchenfoermig_ <> (maybe)
 = <> _fleckenfoermig_ <> _makulopapuloes_ <> (maybe)
-= <> _flecken_ <> _gemeinde_maybe_ 
+= <> _flecken_ <> _gemeinde_ <> (maybe) 
 = <> _flecken_ <> _marktflecken_ <> (maybe)
 = <> _flecken_ <> _markt_ <> (maybe)
 = <> _flecken_ <> _ortschaft_ <> (maybe)
@@ -5097,7 +5096,7 @@
 = <> _fortpflanzung_ <> _reproduktion_ <> (maybe)
 = <> _fortpflanzungsfaehig_ <> _fruchtbar_ <> (maybe)
 = <> _fortpflanzungsfaehig_ <> _geschlechtsreif_ <> (maybe)
-= <> _fortpflanzungsgemeinschaft_ <> _population_maybe_ 
+= <> _fortpflanzungsgemeinschaft_ <> _population_ <> (maybe) 
 = <> _fortpflanzungsorgan_ <> _genital_ <> (maybe)
 = <> _fortpflanzungsorgan_ <> _geschlechtsorgan_ <> (maybe)
 = <> _fortpflanzungsorgan_ <> _geschlechtsteil_ <> (maybe)
@@ -7244,7 +7243,6 @@
 = <> _furie_ <> _erinnye_ <> (maybe)
 = <> _furie_ <> _eumenide_ <> (maybe)
 = <> _furie_ <> _hausdrachen_ <> (maybe)
-= <> _furie_ <> _hippe_ <> (maybe)
 = <> _furie_ <> _kratzbuerste_ <> (maybe)
 = <> _furie_ <> _megaere_ <> (maybe)
 = <> _furie_ <> _rachegoettin_ <> (maybe)

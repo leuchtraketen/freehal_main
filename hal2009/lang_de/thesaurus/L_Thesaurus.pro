@@ -1446,9 +1446,9 @@
 = <> _lebensgefuehl_ <> _denkweise_ <> (maybe)
 = <> _lebensgefuehl_ <> _lebensart_ <> (maybe)
 = <> _lebensgefuehl_ <> _zeitgeist_ <> (maybe)
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _mutualismus_ <> _(zum_gegenseitigen)_maybe_ 
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _symbiose_ <> _(zum_gegenseitigen)_maybe_ 
-= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _zweckbeziehung_ <> _(zum_gegenseitigen)_maybe_ 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _mutualismus_ <> _(zum_gegenseitigen)_ <> (maybe) 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _symbiose_ <> _(zum_gegenseitigen)_ <> (maybe) 
+= <> _lebensgemeinschaft_verschiedener_arten_nutzen_ <> _zweckbeziehung_ <> _(zum_gegenseitigen)_ <> (maybe) 
 = <> _lebensgeschichte_ <> _biografie_ <> (maybe)
 = <> _lebensgeschichte_ <> _biographie_ <> (maybe)
 = <> _lebensgeschichte_ <> _lebensablauf_ <> (maybe)
@@ -1873,7 +1873,7 @@
 = <> _lehre_der_ethischen_pflichten_ <> _pflichtethik_ <> (maybe)
 = <> _lehre_ <> _dogma_ <> (maybe)
 = <> _lehre_ <> _glaubenssatz_ <> (maybe)
-= <> _lehre_ <> _lehrmeinung_maybe_ 
+= <> _lehre_ <> _lehrmeinung_ <> (maybe) 
 = <> _lehre_ <> _lehrsatz_ <> (maybe)
 = <> _lehre_ <> _lektion_ <> (maybe)
 = <> _lehre_ <> _massregelung_ <> (maybe)
@@ -1927,12 +1927,12 @@
 = <> _lehrling_ <> _azubi_ <> (maybe)
 = <> _lehrlingsausbildungssystem_ <> _lehrlingssystem_ <> (maybe)
 = <> _lehrling_ <> _stift_ <> (maybe)
-= <> _lehrmeinung_ <> _dogma_maybe_ 
-= <> _lehrmeinung_ <> _glaubenssatz_maybe_ 
-= <> _lehrmeinung_ <> _lehre_maybe_ 
-= <> _lehrmeinung_ <> _lehrsatz_maybe_ 
-= <> _lehrmeinung_ <> _leitbild_maybe_ 
-= <> _lehrmeinung_ <> _paradigma_maybe_ 
+= <> _lehrmeinung_ <> _dogma_ <> (maybe) 
+= <> _lehrmeinung_ <> _glaubenssatz_ <> (maybe) 
+= <> _lehrmeinung_ <> _lehre_ <> (maybe) 
+= <> _lehrmeinung_ <> _lehrsatz_ <> (maybe) 
+= <> _lehrmeinung_ <> _leitbild_ <> (maybe) 
+= <> _lehrmeinung_ <> _paradigma_ <> (maybe) 
 = <> _lehrplan_ <> _curriculum_ <> (maybe)
 = <> _lehrplan_ <> _kurrikulum_ <> (maybe)
 = <> _lehrplan_ <> _lehrprogramm_ <> (maybe)
@@ -1953,7 +1953,7 @@
 = <> _lehrsatz_ <> _dogma_ <> (maybe)
 = <> _lehrsatz_ <> _glaubenssatz_ <> (maybe)
 = <> _lehrsatz_ <> _lehre_ <> (maybe)
-= <> _lehrsatz_ <> _lehrmeinung_maybe_ 
+= <> _lehrsatz_ <> _lehrmeinung_ <> (maybe) 
 = <> _lehrstoff_ <> _aufgabe_ <> (maybe)
 = <> _lehrstoff_ <> _hausaufgabe_ <> (maybe)
 = <> _lehrstoff_ <> _lektion_ <> (maybe)
@@ -2216,7 +2216,7 @@
 = <> _leider_gottes_ <> _leider_ <> (maybe)
 = <> _leider_gottes_ <> _schlechterdings_ <> (maybe)
 = <> _leider_gottes_ <> _ungluecklicherweise_ <> (maybe)
-= <> _leider_gottes_ <> _zu_meinem_bedauern_maybe_ 
+= <> _leider_gottes_ <> _zu_meinem_bedauern_ <> (maybe) 
 = <> _leider_ <> _leider_gottes_ <> (maybe)
 = <> _leider_ <> _bedauerlicherweise_ <> (maybe)
 = <> _leider_ <> _bloederweise_ <> (maybe)
@@ -2224,7 +2224,7 @@
 = <> _leider_ <> _idiotischerweise_ <> (maybe)
 = <> _leider_ <> _schlechterdings_ <> (maybe)
 = <> _leider_ <> _ungluecklicherweise_ <> (maybe)
-= <> _leider_ <> _zu_meinem_bedauern_maybe_ 
+= <> _leider_ <> _zu_meinem_bedauern_ <> (maybe) 
 = <> _leidig_ <> _aergerlich_ <> (maybe)
 = <> _leidig_ <> _laestig_ <> (maybe)
 = <> _leidig_ <> _nicht_erwuenscht_ <> (maybe)
@@ -2416,7 +2416,7 @@
 = <> _leistung_ <> _verdienste_ <> (maybe)
 = <> _leistung_ <> _verdienst_ <> (maybe)
 = <> _leitbild_ <> _idol_ <> (maybe)
-= <> _leitbild_ <> _lehrmeinung_maybe_ 
+= <> _leitbild_ <> _lehrmeinung_ <> (maybe) 
 = <> _leitbild_ <> _paradigma_ <> (maybe)
 = <> _leitbild_ <> _vorbild_ <> (maybe)
 = <> _leitendes_gremium_ <> _praesidium_ <> (maybe)
@@ -3664,7 +3664,7 @@
 = <> _literaturliste_ <> _literaturangaben_ <> (maybe)
 = <> _literatur_ <> _schriftwerk_ <> (maybe)
 = <> _literatur_ <> _text_ <> (maybe)
-= <> _literaturverein_ <> _buchgemeinschaft_maybe_ 
+= <> _literaturverein_ <> _buchgemeinschaft_ <> (maybe) 
 = <> _literaturverein_ <> _buchklub_ <> (maybe)
 = <> _litfasssaeule_ <> _anschlagsaeule_ <> (maybe)
 = <> _litfasssaeule_ <> _plakatsaeule_ <> (maybe)
@@ -3713,7 +3713,7 @@
 = <> _lkw_ <> _sattelzug_ <> (maybe)
 = <> _lobby_ <> _eingangshalle_ <> (maybe)
 = <> _lobby_ <> _gesellschaft_ <> (maybe)
-= <> _lobby_ <> _interessengemeinschaft_maybe_ 
+= <> _lobby_ <> _interessengemeinschaft_ <> (maybe) 
 = <> _lobby_ <> _interessengruppe_ <> (maybe)
 = <> _lobby_ <> _interessenverband_ <> (maybe)
 = <> _lobby_ <> _seilschaft_ <> (maybe)
@@ -3961,7 +3961,7 @@
 = <> _logische_korrektheit_ <> _uebereinstimmung_ <> (maybe)
 = <> _logischer_schluss_ <> _aus_zwei_praemissen_gezogener_logischer_schluss_ <> (maybe)
 = <> _logischer_schluss_ <> _syllogismus_ <> (maybe)
-= <> _logischer_schluss_ <> _vom_allgemeinen_auf_das_besondere_maybe_ 
+= <> _logischer_schluss_ <> _vom_allgemeinen_auf_das_besondere_ <> (maybe) 
 = <> _logisch_ <> _logo_ <> (maybe)
 = <> _logisch_ <> _abgeleitet_ <> (maybe)
 = <> _logisch_ <> _beweisend_ <> (maybe)

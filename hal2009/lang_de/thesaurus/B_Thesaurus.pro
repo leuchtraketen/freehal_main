@@ -1328,7 +1328,7 @@
 = <> _bedauerlicherweise_ <> _leider_ <> (maybe)
 = <> _bedauerlicherweise_ <> _schlechterdings_ <> (maybe)
 = <> _bedauerlicherweise_ <> _ungluecklicherweise_ <> (maybe)
-= <> _bedauerlicherweise_ <> _zu_meinem_bedauern_maybe_ 
+= <> _bedauerlicherweise_ <> _zu_meinem_bedauern_ <> (maybe) 
 = <> _bedauerlich_ <> _bedauernswert_ <> (maybe)
 = <> _bedauerlich_ <> _beklagenswert_ <> (maybe)
 = <> _bedauerlich_ <> _deplorabel_ <> (maybe)
@@ -6969,7 +6969,7 @@
 = <> _betrachtung_ <> _erforschung_ <> (maybe)
 = <> _betrachtung_ <> _hinblick_ <> (maybe)
 = <> _betrachtung_ <> _hinsicht_ <> (maybe)
-= <> _betrachtung_ <> _meinung_maybe_ 
+= <> _betrachtung_ <> _meinung_ <> (maybe) 
 = <> _betrachtung_ <> _pruefung_ <> (maybe)
 = <> _betrachtung_ <> _reflexion_ <> (maybe)
 = <> _betrachtung_ <> _studie_ <> (maybe)
@@ -9526,7 +9526,7 @@
 = <> _bloederweise_ <> _leider_ <> (maybe)
 = <> _bloederweise_ <> _schlechterdings_ <> (maybe)
 = <> _bloederweise_ <> _ungluecklicherweise_ <> (maybe)
-= <> _bloederweise_ <> _zu_meinem_bedauern_maybe_ 
+= <> _bloederweise_ <> _zu_meinem_bedauern_ <> (maybe) 
 = <> _bloedheit_ <> _dilettantismus_ <> (maybe)
 = <> _bloedheit_ <> _dummheit_ <> (maybe)
 = <> _bloedheit_ <> _ignoranz_ <> (maybe)
@@ -9850,7 +9850,6 @@
 = <> _bock_ <> _genuss_ <> (maybe)
 = <> _bock_haben_ <> _darauf_brennen_ <> (maybe)
 = <> _bock_haben_ <> _(etwas_zu_tun);_lust_haben_ <> (maybe)
-= <> _bock_ <> _hippe_ <> (maybe)
 = <> _bockig_ <> _gereizt_ <> (maybe)
 = <> _bockig_ <> _griesgraemig_ <> (maybe)
 = <> _bockig_ <> _launisch_ <> (maybe)
@@ -10075,7 +10074,7 @@
 = <> _boese_ <> _unsportlich_ <> (maybe)
 = <> _boese_ <> _verrucht_ <> (maybe)
 = <> _boese_ <> _widerwaertig_ <> (maybe)
-= <> _boeses_ <> _gemeinheit_maybe_ 
+= <> _boeses_ <> _gemeinheit_ <> (maybe) 
 = <> _boeses_ <> _schurkerei_ <> (maybe)
 = <> _boeses_ <> _teufelei_ <> (maybe)
 = <> _boeses_treiben_ <> _unwesen_ <> (maybe)
@@ -10332,7 +10331,7 @@
 = <> _boshaft_ <> _boese_ <> (maybe)
 = <> _boshaftigkeit_ <> _bosheit_ <> (maybe)
 = <> _boshaftigkeit_ <> _gehaessigkeit_ <> (maybe)
-= <> _boshaftigkeit_ <> _gemeinheit_maybe_ 
+= <> _boshaftigkeit_ <> _gemeinheit_ <> (maybe) 
 = <> _boshaftigkeit_ <> _niedertracht_ <> (maybe)
 = <> _boshaft_ <> _arglistig_ <> (maybe)
 = <> _boshaft_ <> _boesartig_ <> (maybe)
@@ -10364,7 +10363,7 @@
 = <> _bosheit_ <> _boeswilligkeit_ <> (maybe)
 = <> _bosheit_ <> _boshaftigkeit_ <> (maybe)
 = <> _bosheit_ <> _gehaessigkeit_ <> (maybe)
-= <> _bosheit_ <> _gemeinheit_maybe_ 
+= <> _bosheit_ <> _gemeinheit_ <> (maybe) 
 = <> _bosheit_ <> _hinterlist_ <> (maybe)
 = <> _bosheit_ <> _niedertracht_ <> (maybe)
 = <> _bosheit_ <> _tuecke_ <> (maybe)
@@ -11345,8 +11344,8 @@
 = <> _buchfuehrung_ <> _geschaeftsbuchhaltung_ <> (maybe)
 = <> _buchfuehrungssystem_ <> _buchhaltungssystem_ <> (maybe)
 = <> _buchgelehrter_ <> _stubengelehrter_ <> (maybe)
-= <> _buchgemeinschaft_ <> _buchklub_maybe_ 
-= <> _buchgemeinschaft_ <> _literaturverein_maybe_ 
+= <> _buchgemeinschaft_ <> _buchklub_ <> (maybe) 
+= <> _buchgemeinschaft_ <> _literaturverein_ <> (maybe) 
 = <> _buchgeschaeft_ <> _buchhandlung_ <> (maybe)
 = <> _buchgeschaeft_ <> _buchladen_ <> (maybe)
 = <> _buchgewinn_ <> _rechnerischer_gewinn_ <> (maybe)
@@ -11358,7 +11357,7 @@
 = <> _buchhaltung_ <> _rechnungswesen_ <> (maybe)
 = <> _buchhandlung_ <> _buchgeschaeft_ <> (maybe)
 = <> _buchhandlung_ <> _buchladen_ <> (maybe)
-= <> _buchklub_ <> _buchgemeinschaft_maybe_ 
+= <> _buchklub_ <> _buchgemeinschaft_ <> (maybe) 
 = <> _buchklub_ <> _literaturverein_ <> (maybe)
 = <> _buchladen_ <> _buchgeschaeft_ <> (maybe)
 = <> _buchladen_ <> _buchhandlung_ <> (maybe)
@@ -11568,12 +11567,12 @@
 = <> _buergerheer_ <> _volksmiliz_ <> (maybe)
 = <> _buergerinitiative_ <> _aktionsgruppe_ <> (maybe)
 = <> _buergerinitiative_ <> _initiativgrupppe_ <> (maybe)
-= <> _buergerinitiative_ <> _interessengemeinschaft_maybe_ 
+= <> _buergerinitiative_ <> _interessengemeinschaft_ <> (maybe) 
 = <> _buergerinitiative_ <> _selbsthilfegruppe_ <> (maybe)
 = <> _buerger_ <> _landsmann_ <> (maybe)
 = <> _buergerliches_gesetzbuch_ <> _bgb_ <> (maybe)
 = <> _buergermeister_ <> _dorfschulze_ <> (maybe)
-= <> _buergermeister_ <> _gemeindevorsteher_maybe_ 
+= <> _buergermeister_ <> _gemeindevorsteher_ <> (maybe) 
 = <> _buergermeister_ <> _ortsvorsteher_ <> (maybe)
 = <> _buergermeister_ <> _rathauschef_ <> (maybe)
 = <> _buergermeister_ <> _stadtammann_ <> (maybe)

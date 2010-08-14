@@ -822,7 +822,7 @@
 = <> _comedian_ <> _komoediant_ <> (maybe)
 = <> _comic_ <> _comicstrip_ <> (maybe)
 = <> _co_ <> _mitinhaber_ <> (maybe)
-= <> _community_ <> _gemeinschaft_maybe_ 
+= <> _community_ <> _gemeinschaft_ <> (maybe) 
 = <> _community_ <> _netzwerk_ <> (maybe)
 = <> _compact_disc_ <> _cd_ <> (maybe)
 = <> _compact_disc_ <> _silberscheibe_ <> (maybe)

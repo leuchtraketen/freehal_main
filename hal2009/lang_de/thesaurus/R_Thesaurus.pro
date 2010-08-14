@@ -122,12 +122,12 @@
 = <> _radieren_ <> _zuruecksetzen_ <> (maybe)
 = <> _radiergummi_ <> _ratzefummel_ <> (maybe)
 = <> _radikal_ <> _extrem_ <> (maybe)
-= <> _radikalismus_ <> _allgemeingueltigkeit_maybe_ 
+= <> _radikalismus_ <> _allgemeingueltigkeit_ <> (maybe) 
 = <> _radikalismus_ <> _extremismus_ <> (maybe)
 = <> _radikalismus_ <> _kompromisslosigkeit_ <> (maybe)
 = <> _radikalismus_ <> _radikalitaet_ <> (maybe)
 = <> _radikalismus_ <> _ruecksichtslosigkeit_ <> (maybe)
-= <> _radikalitaet_ <> _allgemeingueltigkeit_maybe_ 
+= <> _radikalitaet_ <> _allgemeingueltigkeit_ <> (maybe) 
 = <> _radikalitaet_ <> _extremismus_ <> (maybe)
 = <> _radikalitaet_ <> _kompromisslosigkeit_ <> (maybe)
 = <> _radikalitaet_ <> _radikalismus_ <> (maybe)
@@ -865,7 +865,7 @@
 = <> _rat_ <> _gremium_ <> (maybe)
 = <> _rathauschef_ <> _buergermeister_ <> (maybe)
 = <> _rathauschef_ <> _dorfschulze_ <> (maybe)
-= <> _rathauschef_ <> _gemeindevorsteher_maybe_ 
+= <> _rathauschef_ <> _gemeindevorsteher_ <> (maybe) 
 = <> _rathauschef_ <> _ortsvorsteher_ <> (maybe)
 = <> _rathauschef_ <> _stadtammann_ <> (maybe)
 = <> _rathauschef_ <> _stadtdirektor_ <> (maybe)
@@ -4894,7 +4894,7 @@
 = <> _ruecksichtsloser_mensch_ <> _gewalttaetiger_mensch_ <> (maybe)
 = <> _ruecksichtsloser_mensch_ <> _rabauke_ <> (maybe)
 = <> _ruecksichtsloser_mensch_ <> _ruepel_ <> (maybe)
-= <> _ruecksichtslosigkeit_ <> _allgemeingueltigkeit_maybe_ 
+= <> _ruecksichtslosigkeit_ <> _allgemeingueltigkeit_ <> (maybe) 
 = <> _ruecksichtslosigkeit_ <> _extremismus_ <> (maybe)
 = <> _ruecksichtslosigkeit_ <> _kompromisslosigkeit_ <> (maybe)
 = <> _ruecksichtslosigkeit_ <> _radikalismus_ <> (maybe)
@@ -5423,7 +5423,7 @@
 = <> _rundlokschuppen_ <> _ringlokschuppen_ <> (maybe)
 = <> _rundlokschuppen_ <> _ringschuppen_ <> (maybe)
 = <> _rund_machen_ <> _die_leviten_lesen_ <> (maybe)
-= <> _rund_machen_ <> _jemandem_seine_meinung_geigen_maybe_ 
+= <> _rund_machen_ <> _jemandem_seine_meinung_geigen_ <> (maybe) 
 = <> _rund_machen_ <> _anpfeifen_ <> (maybe)
 = <> _rund_machen_ <> _anraunzen_ <> (maybe)
 = <> _rund_machen_ <> _ausschelten_ <> (maybe)

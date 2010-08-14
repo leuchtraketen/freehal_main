@@ -1332,7 +1332,7 @@
 = <> _wegen_ <> _auf_grund_ <> (maybe)
 = <> _wegen_ <> _dank_ <> (maybe)
 = <> _wegen_ <> _in_sachen_ <> (maybe)
-= <> _wegen_mir_ <> _meinerseits_maybe_ 
+= <> _wegen_mir_ <> _meinerseits_ <> (maybe) 
 = <> _wegen_mir_ <> _meinethalben_ <> (maybe)
 = <> _wegen_mir_ <> _meinetwegen_ <> (maybe)
 = <> _wegen_mir_ <> _meinetwillen_ <> (maybe)
@@ -2140,7 +2140,7 @@
 = <> _weite_verbreitung_ <> _praevalenz_ <> (maybe)
 = <> _weite_verbreitung_ <> _ueberhandnehmen_ <> (maybe)
 = <> _weitgehend_ <> _grossteils_ <> (maybe)
-= <> _weitgehend_ <> _im_allgemeinen_maybe_ 
+= <> _weitgehend_ <> _im_allgemeinen_ <> (maybe) 
 = <> _weitgehend_ <> _im_grossen_und_ganzen_ <> (maybe)
 = <> _weitgehend_ <> _in_der_gesamtheit_ <> (maybe)
 = <> _weitgehend_ <> _in_der_regel_ <> (maybe)
@@ -3030,7 +3030,7 @@
 = <> _wetzen_ <> _rasen_ <> (maybe)
 = <> _wetzen_ <> _schnell_laufen_ <> (maybe)
 = <> _wg_ <> _kommune_ <> (maybe)
-= <> _wg_ <> _wohngemeinschaft_maybe_ 
+= <> _wg_ <> _wohngemeinschaft_ <> (maybe) 
 = <> _wg_ <> _wohngruppe_ <> (maybe)
 = <> _whirlpool_ <> _jacuzzi_ <> (maybe)
 = <> _whirlpool_ <> _sprudelbad_ <> (maybe)
@@ -5021,12 +5021,12 @@
 = <> _wohngegend_ <> _wohnbezirk_ <> (maybe)
 = <> _wohngegend_ <> _wohngebiet_ <> (maybe)
 = <> _wohngegend_ <> _wohnviertel_ <> (maybe)
-= <> _wohngemeinschaft_ <> _kommune_maybe_ 
-= <> _wohngemeinschaft_ <> _wg_maybe_ 
-= <> _wohngemeinschaft_ <> _wohngruppe_maybe_ 
+= <> _wohngemeinschaft_ <> _kommune_ <> (maybe) 
+= <> _wohngemeinschaft_ <> _wg_ <> (maybe) 
+= <> _wohngemeinschaft_ <> _wohngruppe_ <> (maybe) 
 = <> _wohngruppe_ <> _kommune_ <> (maybe)
 = <> _wohngruppe_ <> _wg_ <> (maybe)
-= <> _wohngruppe_ <> _wohngemeinschaft_maybe_ 
+= <> _wohngruppe_ <> _wohngemeinschaft_ <> (maybe) 
 = <> _wohnhaft_ <> _ansaessig_ <> (maybe)
 = <> _wohnhaft_ <> _beheimatet_ <> (maybe)
 = <> _wohnhaft_ <> _ortsansaessig_ <> (maybe)
@@ -5231,7 +5231,7 @@
 = <> _wort_fuer_wort_ <> _wortwoertlich_ <> (maybe)
 = <> _wortgefecht_ <> _auseinandersetzung_ <> (maybe)
 = <> _wortgefecht_ <> _disput_ <> (maybe)
-= <> _wortgefecht_ <> _meinungsverschiedenheit_maybe_ 
+= <> _wortgefecht_ <> _meinungsverschiedenheit_ <> (maybe) 
 = <> _wortgefecht_ <> _streitigkeit_ <> (maybe)
 = <> _wortgefecht_ <> _streit_ <> (maybe)
 = <> _wortgefecht_ <> _zank_ <> (maybe)
