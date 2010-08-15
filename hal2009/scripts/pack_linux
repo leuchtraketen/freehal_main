@@ -1,5 +1,5 @@
 mkdir freehal-$1-ubuntu
-for x in `cat MANIFEST` hal2009 lang_de/database.*
+for x in `cat MANIFEST` hal2009 hal2009-server lang_de/database.*
 do
 	mkdir freehal-$1-ubuntu/$(dirname $x) 2>&1 > /dev/null
 	cp $x freehal-$1-ubuntu/$(dirname $x)
