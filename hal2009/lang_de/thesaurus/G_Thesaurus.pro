@@ -2792,7 +2792,6 @@ empfangen <> _kriegen_=_ <> (maybe)
 = <> _gelber_fluss_ <> _hwangho_ <> (maybe)
 = <> _gelber_fluss_ <> _huang_he_ <> (maybe)
 = <> _gelbe_ruebe_ <> _karotte_ <> (maybe)
-
 = <> _gelblich_braun_ <> _sandfarben_ <> (maybe)
 = <> _gelblich_braun_ <> _sandfarbig_ <> (maybe)
 = <> _gelbruebe_ <> _karotte_ <> (maybe)

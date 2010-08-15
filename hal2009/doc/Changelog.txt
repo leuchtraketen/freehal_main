@@ -1,3 +1,7 @@
+1156:
+
+- Bug 651 korrigiert
+
 1155:
 
 - Bug 653 korrigiert

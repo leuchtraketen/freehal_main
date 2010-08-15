@@ -855,7 +855,6 @@
 = <> _karotte_ <> _gelbruebe_ <> (maybe)
 = <> _karotte_ <> _moehre_ <> (maybe)
 = <> _karotte_ <> _mohrruebe_ <> (maybe)
-
 = <> _karre_ <> _automobil_ <> (maybe)
 = <> _karre_ <> _auto_ <> (maybe)
 = <> _karree_ <> _kotelett_ <> (maybe)
