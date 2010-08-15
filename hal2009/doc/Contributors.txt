@@ -20,6 +20,7 @@ David Kleuker
 David Lawson
 David Tomecko
 Dirk Gudensch ­ Wager
+Dr . Joerg Kulaczew ­ Ski
 Erik Tol
 Fabrice Viatge
 Free Enterprise Productions
@@ -47,10 +48,12 @@ Marvin Stenhammar
 Matthias vom Brocke
 Michael Hank
 Michael Hartung
+Michael Pruett
 Michael Rottluff
 Michael Schuermann
 Michal Kysel
 Mirko Wunder
+Mohamed Meskine
 Mokross Andreas
 Monika Morlock
 Oliver Timm
@@ -60,6 +63,7 @@ Paul Williams
 Peter -­ Christia ­N Artzen
 Ralf Over
 Rene Marx
+Richard Johnson
 Robert Maier
 Roland Bender
 Roland Haeder
@@ -75,12 +79,14 @@ Sven Burkhart
 Teemu Mannermaa
 theage
 Thierry Drumel
+Thomas Kleinhen ­N
 Thomas Lott
 Timo Zenker
 Torsten Kiebs
 Uli Waibel
 Ulrich Fries
 Vaughan Davies
+Victor Pilyugin
 Viktor Kosan
 Vincent F Splain
 Volker Hatzenberger
