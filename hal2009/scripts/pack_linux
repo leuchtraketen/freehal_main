@@ -4,5 +4,9 @@ do
 	mkdir freehal-$1-ubuntu/$(dirname $x) 2>&1 > /dev/null
 	cp $x freehal-$1-ubuntu/$(dirname $x)
 done
+
+cp gui-qt/bin/freehal freehal-$1-ubuntu/freehal-gui
+cp gui-qt/*{ui,png,src,jpg,ico} freehal-$1-ubuntu/ -r
+
 tar cplSzf freehal-$1-ubuntu.tar.gz freehal-$1-ubuntu
 rm -r freehal-$1-ubuntu
