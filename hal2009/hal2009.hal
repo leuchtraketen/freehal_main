@@ -3356,7 +3356,7 @@ define action logic with var input, var lang, var path, hash parsed do
     do wait 0.3 seconds
 
     while not exists: '_input__get_csv', end test do
-        do wait 0.1 seconds
+        do wait 1 seconds
     done
     print "File exists now: _input__get_csv"
     print new line
@@ -5784,7 +5784,7 @@ define action init_pro_files with var current_language, var path do
                 # Wait...
                 # CODE
                 while not exists: '_input__add_pro_file', end test do
-                    do wait 0.1 seconds
+                    do wait 1 seconds
                 done
 
                 set new var copy_input_handle to handle for file name var file, read

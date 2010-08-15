@@ -446,17 +446,29 @@ int linux_stop_runner() {
     std::system("killall hal2009-server");
 }
 
+int linux_invoke_runner_thread(int current_working_directory) {
+    string cmd;
+    if (current_working_directory) {
+        cmd += "./";
+    }
+    cmd += "hal2009-server ";
+    cmd += freehal::get_lang_str().ref();
+    cmd += " ";
+    cmd += database_engine;
+
+    cout << cmd << endl;
+    std::system(cmd.c_str());
+}
+
 int linux_invoke_runner() {
     cout << "start server..." << endl;
 
     ifstream i_1("hal2009-server");
     if (i_1) {
-        boost::thread t_v(boost::bind(std::system, ("./hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "./hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
+        boost::thread t_v(boost::bind(linux_invoke_runner_thread, 1));
     }
     else {
-        boost::thread t_v(boost::bind(std::system, ("hal2009-server " + freehal::get_lang_str().ref()).c_str() ));
-        cout << "hal2009-server " << freehal::get_lang_str().ref() << " " << database_engine << endl;
+        boost::thread t_v(boost::bind(linux_invoke_runner_thread, 0));
     }
     freehal::msleep(1000);
 
@@ -465,6 +477,7 @@ int linux_invoke_runner() {
 }
 
 int is_booted () {
+
     ifstream i("booted");
     if (i) {
         return 1;
@@ -476,7 +489,7 @@ int is_booted () {
 int invoke_runner() {
     unlink("booted");
 
-    while (!is_booted()) {
+//    while (!is_booted()) {
 #ifdef linux
     std::system("pwd");
     linux_invoke_runner();
@@ -484,8 +497,8 @@ int invoke_runner() {
     windows_invoke_runner();
 #endif
 
-    freehal::msleep(3000);
-    }
+//    freehal::msleep(3000);
+//    }
 }
 
 int compile_runner() {

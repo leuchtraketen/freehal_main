@@ -4,6 +4,11 @@ do
 	mkdir freehal-$1-ubuntu/$(dirname $x) 2>&1 > /dev/null
 	cp $x freehal-$1-ubuntu/$(dirname $x)
 done
+mkdir freehal-$1-ubuntu/saved
+mkdir freehal-$1-ubuntu/saved/de
+mkdir freehal-$1-ubuntu/saved/en
+cp lang_de/*.pro lang_de/*/*.pro freehal-$1-ubuntu/saved/de
+cp lang_en/*.pro lang_en/*/*.pro freehal-$1-ubuntu/saved/en
 
 cp gui-qt/bin/freehal freehal-$1-ubuntu/freehal-gui
 cp gui-qt/*{ui,png,src,jpg,ico} freehal-$1-ubuntu/ -r
