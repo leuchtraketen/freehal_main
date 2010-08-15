@@ -2,8 +2,6 @@
 = <> _quacksalberei_ <> _scharlatanerie_ <> (maybe)
 = <> _quacksalber_ <> _kurpfuscher_ <> (maybe)
 = <> _quacksalber_ <> _scharlatan_ <> (maybe)
-= <> _quaddel_ <> _schwellung_ <> (maybe)
-= <> _quaddel_ <> _wulst_ <> (maybe)
 = <> _quader_ <> _rechtkant_ <> (maybe)
 = <> _quadrat_ <> _geviert_ <> (maybe)
 = <> _quadratlatsche_ <> _fuss_ <> (maybe)

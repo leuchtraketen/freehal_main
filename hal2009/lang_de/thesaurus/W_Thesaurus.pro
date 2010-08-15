@@ -5526,7 +5526,6 @@
 = <> _wulstig_ <> _angeschwollen_ <> (maybe)
 = <> _wulstig_ <> _dick_ <> (maybe)
 = <> _wulstig_ <> _geschwollen_ <> (maybe)
-= <> _wulst_ <> _quaddel_ <> (maybe)
 = <> _wulst_ <> _schwellung_ <> (maybe)
 = <> _wunderbar_ <> _brillant_ <> (maybe)
 = <> _wunderbar_ <> _atemberaubend_ <> (maybe)

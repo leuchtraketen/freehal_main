@@ -6434,7 +6434,6 @@
 = <> _schwellung_ <> _neoplasie_ <> (maybe)
 = <> _schwellung_ <> _vorschieben_ <> (maybe)
 = <> _schwellung_ <> _protrusion_ <> (maybe)
-= <> _schwellung_ <> _quaddel_ <> (maybe)
 = <> _schwellung_ <> _raumforderung_ <> (maybe)
 = <> _schwellung_ <> _tumor_ <> (maybe)
 = <> _schwellung_ <> _vorwoelbung_ <> (maybe)

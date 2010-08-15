@@ -4086,11 +4086,11 @@ define action stem_nouns with array phrases do
             #if var noun matches /e<[nr]>$/ do
             #    do regex using var noun: /e<[nr]>$/, "e*", :global:i
             #done
-            if var noun matches /<[bdfghklmnt]>st$/ do
-                if length(var noun) > 5 do
-                    do regex using var noun: /st$/, "*", :global:i
-                done
-            done
+            #if var noun matches /<[bdfghklmnt]>st$/ do
+            #    if length(var noun) > 5 do
+            #        do regex using var noun: /st$/, "*", :global:i
+            #    done
+            #done
             #if var noun matches /.....(end|ung)$/ do
             #    do regex using var noun: /(end|ung)$/, "*", :global:i
             #    

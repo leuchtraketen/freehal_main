@@ -1,3 +1,7 @@
+1158:
+
+- Bug 647 korrigiert
+
 1157:
 
 - "doc/Contributors.txt" aktualisiert
