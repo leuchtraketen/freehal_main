@@ -1119,7 +1119,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
         return 1;
     }
     
-    if (argc <= 5 || (!argv[1] || !strlen(argv[1])) || ((!argv[2] || !strlen(argv[2])) && (!argv[3] || !strlen(argv[3])))) {
+    if (argc <= 5 || (!argv[1] || !strlen(argv[1])) || ((!argv[2] || !strlen(argv[2])) && (!argv[3] || !strlen(argv[3])) && (!argv[4] || !strlen(argv[4])) && (!argv[5] || !strlen(argv[5])))) {
         return 0;
     }
     

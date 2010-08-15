@@ -2457,9 +2457,10 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
                 if (can_be_a_pointer(list[l])) {
                     struct fact** clauses = search_clauses(list[l]->pk);
                     if (can_be_a_pointer(clauses) && can_be_a_pointer(clauses[0])) {
+                        printf("pk %d, clauses!\n", list[l]->pk);
                         int c;
                         for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
-                            printf("clause %d, question word %s\n", c, clauses[c]->questionword);
+                            printf("pk %d, clause %d, question word %s\n", list[l]->pk, c, clauses[c]->questionword);
                             
                             if (is_conditional_questionword(clauses[c]->questionword)) {
                                 set_to_invalid_fact(&(list[l]));
@@ -3448,6 +3449,8 @@ int append_on_dataset_record(int offset, int limit, char** record, struct fact**
             }
             
             column_count = offset+(d*6)+6;
+            
+            printf("appended clause: %s, %s, %s, %s, %s", record[offset+(d*6)+0], record[offset+(d*6)+1], record[offset+(d*6)+2], record[offset+(d*6)+3], record[offset+(d*6)+4]);
             
             if (offset+(d*6)+6*2 >= limit) {
                 break;

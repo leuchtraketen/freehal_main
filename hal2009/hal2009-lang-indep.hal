@@ -564,6 +564,20 @@ define action compute_input with var input is rw, var lang, var path do
         do regex using var input: /^((?:ein|eine)\s+?)(.+?)\s+?(ist|sind)\s+?((?:ein|eine)\s+?)(.+?)$/, "$1 = $4", :global:i
         do regex using var input: /^((?:der|die|das)\s+?)(.+?)\s+?(ist|sind)\s+?((?:der|die|das)\s+?)(.+?)$/, "$1 = $4", :global:i
         do regex using var input: /^(.+?)\s+?(ist|sind)\s+?((?:ein|eine|der|die|das)\s+?)(.+?)$/, "$0 = $3", :global:i
+        
+        if var input not matches /ein|eine|der|die|das/ do
+            do regex using var input: /^(.+?)\s+?(ist|sind)\s+?(<[a-zA-Z]><[a-z]>.+?)\s?$/, "$0 = $2", :global:i
+        done
+    done
+    
+    set new var __input to var input
+    while var __input matches /(ein.?.?)\s(<[A-Z]><[a-z]>+?)(\s|$)/ do
+        set new var word to lc with $1
+        set new array _collective_nouns to global array collective_nouns
+        push into array _collective_nouns, var word
+        print "collective noun: " concat var word concat new line
+        
+        do regex using var __input: /(ein.?.?)\s(var word)/, "", :global:i
     done
 
     do regex using var input: /(^|\s)du hast (.*?) aus /, "$0du bekommst $1 aus ", :global:i

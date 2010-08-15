@@ -19,6 +19,16 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+set multi-line new global array collective_nouns to [
+];
+
+set multi-line new global array custom_names to [
+];
+
+set multi-line new global array builtin_female_names to [
+
+];
+
 set multi-line new global array builtin_male_names to [
           "aaron",
           "abraham",
@@ -1879,6 +1889,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'dunkel' => "adj",
           'durch' => "prep",
           'durch' => "prep",
+          'durst' => "prep",
           'eben' => "adj",
           'ebenfalls' => "adj",
           'echt' => "adj",
@@ -3479,6 +3490,7 @@ define action compute_output with var output do
     do regex using var output: /\/should/, "", :global:i
     
     do regex using var output: / nicht noch /, " noch nicht ", :global:i
+    do regex using var output: /(etwas|nichts) (schon|noch)/, "$1 $0", :global:i
 
     do regex using var output: /<[{]><[{]><[{]>.*?<[}]><[}]><[}]>/, "", :global:i
 
@@ -3487,10 +3499,12 @@ define action compute_output with var output do
 
     set new array _clauses to split using /<[,]>/, var output
     for each new var _clause in array _clauses is rw do
-        if var _clause matches /\sein/ and lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
+        # var _clause matches /\sein/ and 
+        if lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
             do regex using var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
             do regex using var _clause: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
             do regex using var _clause: /\sein(.?.?.?)$/, " kein$0", :global:i
+            do regex using var _clause: /(^|\s)etwas(\s|$)/, "$0nichts$1", :global:i
         done
     done
     set var output to join using ", ", items of array _clauses
@@ -4823,6 +4837,10 @@ done
 
 define action adj_for_still without arguments do
     do return with "noch"
+done
+
+define action adj_for_not without arguments do
+    do return with "nicht"
 done
 
 define action upper_case_correction with var phrase, hash tags, var lang, var path do

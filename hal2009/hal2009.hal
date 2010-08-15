@@ -1702,6 +1702,51 @@ define action entity_chose_add_current_word with var lang, array words, hash tag
     do return with flag add_current_word
 done
 
+define action is_name with var lang, var word do
+    set new var is_a_name to 0
+    
+    set new array male_names to global array builtin_male_names
+    for each new var name in array male_names do
+        if lc(var name) matches lc(var word) do
+            set var is_a_name to "m"
+        done
+    done
+    
+    set new array female_names to global array builtin_female_names
+    for each new var name in array female_names do
+        if lc(var name) matches lc(var word) do
+            set var is_a_name to "f"
+        done
+    done
+    
+    set new array custom_names to global array custom_names
+    for each new var name in array custom_names do
+        if lc(var name) matches lc(var word) do
+            set var is_a_name to "q"
+        done
+    done
+    
+    do return with var is_a_name
+done
+
+define action is_collective_noun with var lang, var word do
+    set new var is_a_collective_noun to 1
+    
+    set new var is_a_name to is_name with var lang, var word
+    if var is_a_name do
+        set var is_a_collective_noun to 0
+    done
+    
+    set new array _collective_nouns to global array collective_nouns
+    for each new var name in array _collective_nouns do
+        if lc(var name) matches lc(var word) do
+            set var is_a_collective_noun to "q"
+        done
+    done
+    
+    do return with var is_a_collective_noun
+done
+
 define action entity_chose_end_of_entity with var lang, array words, hash tags, var current_tag, var next_tag, var current_word, var next_word, flag found_subject, var count_of_words_through_looop do
     if flag found_subject do
         do return with 0
@@ -1721,14 +1766,8 @@ define action entity_chose_end_of_entity with var lang, array words, hash tags, 
         set flag end_of_entity to 1
     done
 
-    set new var current_is_male_name to 0
-    set new array male_names to global array builtin_male_names
-    for each new var name in array male_names do
-        if lc(var name) matches lc(var current_word) do
-            set var current_is_male_name to 1
-        done
-    done
-    if from hash sym_noun item { var current_tag } and from hash sym_noun item { var next_tag } and ( var current_is_male_name is true and var current_word not matches /_/ ) do
+    set new var current_is_name to is_name with var current_word
+    if from hash sym_noun item { var current_tag } and from hash sym_noun item { var next_tag } and ( var current_is_name is true and var current_word not matches /_/ ) do
         set flag end_of_entity to 0
     done
     
@@ -3030,11 +3069,12 @@ define action reasonof_logic_from_object with array results, array verbs, var la
 
     set new var already to adj_for_already without arguments
     set new var still to adj_for_still without arguments
+    set new var n_o_t to adj_for_not without arguments
     
     set new array adverbials to an empty array
     push into array adverbials, var already concat " ? "
-    push into array adverbials, var still concat " ? "
-    push into array adverbials, ""
+    push into array adverbials, var still concat " " concat var n_o_t concat " ? "
+    push into array adverbials, var n_o_t
     
     for each new var adverbial in array adverbials do
         # Has A already done B?
@@ -3081,12 +3121,12 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             push into array main_clause, var object
             push into array main_clause, var adverbial concat " (+++)"
             
-            if var object matches /nothing/ and var adverbial matches /schon/ do
-                go to next
-            done
-            if ( not var object matches /nothing/ ) and var adverbial matches /noch/ do
-                go to next
-            done
+            #if var object matches /nothing/ and var adverbial matches /schon/ do
+            #    go to next
+            #done
+            #if ( not var object matches /nothing/ ) and var adverbial matches /noch/ do
+            #    go to next
+            #done
             
             set new array constructed_result to an empty array
             push into array constructed_result, 0
@@ -3681,28 +3721,26 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 
                 set new var subject_article to ""
                 set new var object_article to ""
-                set new var is_male_name_subject to 0
-                set new array male_names to global array builtin_male_names
-                for each new var name in array male_names do
-                    if lc(var name) matches lc(var subject_last_word) and lc(var subject_last_word) matches lc(var name) do
-                        set var is_male_name_subject to 1
-
-                        print "is_male_name_subject: " concat var name
-                        print new line
-                    done
-                done
-
+                set new var is_name_subject to is_name with var lang, var subject_last_word
+                set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
 
                 set var subject_article to get_article with var subject_genus, "subject", "indefinite"
                 set var object_article to get_article with var object_genus, "subject", "indefinite"
 
-                if from array proper_verbs 1st item not matches /^equal_pl/ and from array clause item [1] not matches /(\s.*?\s)|<[_]>|<[0-9]>/ and from array clause item [2] not matches /ein/ and var is_male_name_subject is false do
-                    if from array clause item [2] matches /(^|\s)(der|die|das|the|(?:a ))/ do
-                        set var subject_article to get_article with var subject_genus, "subject", "definite"
+                # subject article
+                if from array proper_verbs 1st item not matches /^equal_pl/ and from array clause item [1] not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ do
+                    if var is_name_subject is false or var is_collective_noun_subject is true do
+                        if from array clause item [2] matches /(^|\s)(der|die|das|the|(?:a ))/ do
+                            set var subject_article to get_article with var subject_genus, "subject", "definite"
+                        done
+                        push into array sentence, var subject_article
                     done
-                    push into array sentence, var subject_article
                 done
+
+                # subject
                 push into array sentence, from array clause item [1]
+
+                # verb
                 if from array clause item [2] not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
                     if from array subject_props 1st item matches /^v/ do
                         set new var verb to get_verb with "is-same-as", var subject_person
@@ -3726,7 +3764,11 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     set new var verb to get_verb with "be", var subject_person
                     push into array sentence, var verb
                 done
+
+                # object
                 push into array sentence, from array clause item [2]
+                
+                # adverbs
                 push into array sentence, from array clause item [3]
                 
                 if var final_sentence do
@@ -4463,7 +4505,6 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     set new array copy_subjects to from hash parsed item { 'subjects' }
     set new var genus_subject to 'q'
     set new var subject to ''
-    set new var male_names to global array builtin_male_names
     set new var subject_person to "3s"
     for each new array arr in array copy_subjects do
         if var subject do
@@ -4479,10 +4520,9 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
             set var genus_subject to from hash genus_of item { lc(join " ", items of array arr) }
         done
-        for each new var male_name in array male_names do
-            if var male_name matches lc(join " ", items of array arr) do
-                set var genus_subject to 'm'
-            done
+        set new var is_a_name to is_name with lc(join " ", items of array arr)
+        if var is_a_name matches "m" do
+            set var genus_subject to 'm'
         done
     done
 
@@ -4498,10 +4538,9 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
             set var genus_object to from hash genus_of item { lc(join " ", items of array arr) }
         done
-        for each new var male_name in array male_names do
-            if var male_name matches lc(join " ", items of array arr) do
-                set var genus_subject to 'm'
-            done
+        set new var is_a_name to is_name with lc(join " ", items of array arr)
+        if var is_a_name matches "m" do
+            set var genus_subject to 'm'
         done
     done
     
@@ -4569,6 +4608,9 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         set array results to logic with var input, var lang, var path, hash parsed
         set new array results_reasonof to reasonof with var input, var lang, var path, hash parsed
         if items of array results_reasonof do
+            if array results matches "TOOMUCH" and items of array results_reasonof do
+                set array results to an empty array
+            done
             push into array results, items of array results_reasonof
         done
         if array results matches "TOOMUCH" do
@@ -4829,9 +4871,16 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             set from array verbs 1st item to "="
             set from hash parsed item { 'verbs' } to array verbs
             
+            set new var objects to join using ' ', items of that array: from hash parsed item { 'objects' } end-items-of
             set new var adverbs to join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
-            if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
-                set from hash parsed item { 'adverbs' } to an empty array
+            if var objects do
+                if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
+                    set from hash parsed item { 'adverbs' } to an empty array
+                done
+            done
+            
+            if var objects not matches /./ and var adverbs not matches /./ do
+                go to next
             done
         done
 

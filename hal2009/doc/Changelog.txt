@@ -1,3 +1,7 @@
+1155:
+
+- Bug 653 korrigiert
+
 1151:
 
 - Bug bei der Synonymsuche behoben

@@ -464,13 +464,28 @@ int linux_invoke_runner() {
     return 0;
 }
 
+int is_booted () {
+    ifstream i("booted");
+    if (i) {
+        return 1;
+    }
+
+    return 0;
+}
+
 int invoke_runner() {
+    unlink("booted");
+
+    while (!is_booted()) {
 #ifdef linux
     std::system("pwd");
     linux_invoke_runner();
 #else
     windows_invoke_runner();
 #endif
+
+    freehal::msleep(3000);
+    }
 }
 
 int compile_runner() {
