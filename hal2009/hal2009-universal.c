@@ -3142,6 +3142,15 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
         list = search_facts_by_weakness(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, WEAK);
     }
     
+    void* temp;
+    temp                  = synonym_set-> objects;
+    synonym_set-> objects = synonym_set->subjects;
+    synonym_set->subjects =                  temp;
+
+    if (!can_be_a_pointer(list) || !count_list((void**)list)) {
+        list = search_facts_by_weakness(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, WEAK);
+    }
+
     free_synonym_set(synonym_set);
     
     return list;

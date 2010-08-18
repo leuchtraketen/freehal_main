@@ -1465,6 +1465,7 @@ void* hal2009_answer_thread(void* parameters) {
     }
     stuck_here = 0;
     pthread_exit(0);
+
     return 0;
 }
 

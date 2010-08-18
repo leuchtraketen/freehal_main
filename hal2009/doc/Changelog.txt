@@ -1,3 +1,7 @@
+1162:
+
+- Bug 655 korrigiert
+
 1158:
 
 - Bug 647 korrigiert

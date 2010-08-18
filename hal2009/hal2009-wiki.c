@@ -187,10 +187,22 @@ char* transform_sentence(char* sentence, const char* entity) {
     else if (verb_str = strstr(sentence, "rt zu ")) {
         verb_str += 6;
     }
+    else if (verb_str = strstr(sentence, " ist ") && strstr(sentence, " ist ") < strstr(sentence, ".")) {
+        verb_str += 5;
+    }
+    else if (verb_str = strstr(sentence, " sind ") && strstr(sentence, " sind ") < strstr(sentence, ".")) {
+        verb_str += 6;
+    }
     else if (verb_str = strstr(sentence, " ist ")) {
         verb_str += 5;
     }
+    else if (verb_str = strstr(sentence, " sind ")) {
+        verb_str += 6;
+    }
     else if (verb_str = strstr(sentence, " war ")) {
+        verb_str += 5;
+    }
+    else if (verb_str = strstr(sentence, " waren ")) {
         verb_str += 5;
     }
     else if (verb_str = strstr(sentence, " heissen ")) {
