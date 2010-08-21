@@ -3622,6 +3622,9 @@ int is_a_trivial_word(const char* word) {
             0 == strcmp(word, "the")
          || 0 == strcmp(word, "a")
          || 0 == strcmp(word, "an")
+         
+         || 0 == strcmp(word, "(a)")
+         || 0 == strcmp(word, "_(a)_")
     
          || 0 == strcmp(word, "der")
          || 0 == strcmp(word, "die")
@@ -3733,6 +3736,8 @@ int is_important_word(const char* word) {
          && strcmp(word, "$$notaswellas$$")
          && strcmp(word, "wie")
          && !strstr(word, "viel")
+         
+         && strcmp(word, "(a)")
     
          && !strstr(word, "$")
          && !strstr(word, "ein")

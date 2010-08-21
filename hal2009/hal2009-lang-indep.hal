@@ -600,7 +600,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /teil von ein.?.?\s/, "teil von ", :global:i
     
     if var input not matches /<[?]>/ and var input not matches /<[,]>/ do
-        if var input matches /^(.+?)\s+?((?:gehoert zu)|(?:liegt in)|(?:\s?ist in)|(?:\s?ist .*?teil von))\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?((?:gehoert zu)|(?:liegt in)|(?:\s?ist in)|(?:\s?ist .*?teil von))\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
             
@@ -633,7 +633,7 @@ define action compute_input with var input is rw, var lang, var path do
             
             set var input to var a concat " is-part " concat var b
         done
-        if var input matches /^(.+?)\s+?(gehoert)\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?(gehoert)\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
             
@@ -666,7 +666,7 @@ define action compute_input with var input is rw, var lang, var path do
             
             set var input to var a concat " is-own " concat var b
         done
-        if var input matches /^(.+?)\s+?(beinhaltet)\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?(beinhaltet)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
             
@@ -699,7 +699,7 @@ define action compute_input with var input is rw, var lang, var path do
             
             set var input to var a concat " is-part " concat var b
         done
-        if var input matches /^(.+?)\s+?(besitzt)\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?(besitzt)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
             
@@ -732,7 +732,7 @@ define action compute_input with var input is rw, var lang, var path do
             
             set var input to var a concat " is-own " concat var b
         done
-        if var input matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
             
@@ -767,7 +767,7 @@ define action compute_input with var input is rw, var lang, var path do
             print "a:" concat var a
             print "b:" concat var b
             
-            if flag a_article do
+            if flag a_article or var input matches /<[=]>/ do
                 set var input to var a concat " = " concat var b
             done
             else do
