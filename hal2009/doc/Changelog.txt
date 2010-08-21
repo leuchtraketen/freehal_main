@@ -1,3 +1,12 @@
+1163:
+
+- neue Fakt-verben eingefuehrt
+  Fakt-Verben:
+    A "=" B 		-> Synonym: A ist das gleiche wie B
+    A "is-a" B 		-> Wortklassen: A ist ein Beispiel fuer ein B
+    A "is-part" B 	-> Hierarchie physisch: A ist ein Teil von B (A gehoert zu B)
+    A "is-own" B 	-> Hierarchie Eigentum: A ist ein Eigentum von B (A gehoert B)
+
 1162:
 
 - Bug 655 korrigiert

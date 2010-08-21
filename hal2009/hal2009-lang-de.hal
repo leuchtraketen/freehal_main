@@ -1654,6 +1654,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'always' => "adj",
           'am' => "prep",
           'a' => "n",
+          '(a)' => "art",
           'anbrennen' => "v",
           'andere' => "adj",
           'anderen' => "adj",
@@ -2755,6 +2756,9 @@ set multi-line new global hash builtin_part_of_speech to {
           '==' => "v",
           '=>' => "v",
           '=' => "v",
+          'is-a' => "v",
+          'is-part' => "v",
+          'is-own' => "v",
           '=' => "v",
           '>>>' => "v",
           '->' => "v",
@@ -3294,7 +3298,69 @@ define action get_verb with var verb, var person do
         done
     done
 
-    
+    if var verb matches "is-part-0" do
+        if var person matches "1s" do
+            do return with "gehoere zu"
+        done
+        if var person matches "2s" do
+            do return with "gehoerst zu"
+        done
+        if var person matches "3s" do
+            do return with "gehoert zu"
+        done
+        if var person matches "1p" do
+            do return with "gehoeren zu"
+        done
+        if var person matches "2p" do
+            do return with "gehoert zu"
+        done
+        if var person matches "3p" do
+            do return with "gehoeren zu"
+        done
+    done
+
+    if var verb matches "is-part-1" do
+        if var person matches "1s" do
+            do return with "bin ein Teil von"
+        done
+        if var person matches "2s" do
+            do return with "bist ein Teil von"
+        done
+        if var person matches "3s" do
+            do return with "ist ein Teil von"
+        done
+        if var person matches "1p" do
+            do return with "sind ein Teil von"
+        done
+        if var person matches "2p" do
+            do return with "seid ein Teil von"
+        done
+        if var person matches "3p" do
+            do return with "sind ein Teil von"
+        done
+    done
+
+    if var verb matches /is-own-/ do
+        if var person matches "1s" do
+            do return with "gehoere"
+        done
+        if var person matches "2s" do
+            do return with "gehoerst"
+        done
+        if var person matches "3s" do
+            do return with "gehoert"
+        done
+        if var person matches "1p" do
+            do return with "gehoeren"
+        done
+        if var person matches "2p" do
+            do return with "gehoert"
+        done
+        if var person matches "3p" do
+            do return with "gehoeren"
+        done
+    done
+
     do return with ""
 done
 
@@ -4004,6 +4070,9 @@ define action stem_nouns with array phrases do
             # Delete articles...
             # CODE
 
+            if var noun matches /^\(a\)$/ do
+                do regex using var noun: /^\(a\)$/, "*", :global:i
+            done
             if not var noun matches /....../ do
                 if var noun matches /^ein.?.?$/ do
                     do regex using var noun: /^ein.?.?$/, "*", :global:i

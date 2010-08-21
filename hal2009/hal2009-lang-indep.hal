@@ -560,14 +560,227 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex using var input: /^\s+/, "", :global
     
-    if not ( var input matches /(^|\s)(von|fuer)(\s|$)/ or var input matches /<[?]>/ or var input matches /<[,]>/ ) do
-        do regex using var input: /^((?:ein|eine)\s+?)(.+?)\s+?(ist|sind)\s+?((?:ein|eine)\s+?)(.+?)$/, "$1 = $4", :global:i
-        do regex using var input: /^((?:der|die|das)\s+?)(.+?)\s+?(ist|sind)\s+?((?:der|die|das)\s+?)(.+?)$/, "$1 = $4", :global:i
-        do regex using var input: /^(.+?)\s+?(ist|sind)\s+?((?:ein|eine|der|die|das)\s+?)(.+?)$/, "$0 = $3", :global:i
-        
-        if var input not matches /ein|eine|der|die|das/ do
-            do regex using var input: /^(.+?)\s+?(ist|sind)\s+?(<[a-zA-Z]><[a-z]>.+?)\s?$/, "$0 = $2", :global:i
+    do regex using var input: /(^|\s)sein\s([A-Z])/, "$0sein{{{art}}} $1", :global:i
+
+    do regex using var input: /\seines\s(.*?<[a-z]>)s(\s|$)/, " von einem $0$1", :global:i
+    do regex using var input: /\seines\s/, " von einem ", :global:i
+    do regex using var input: /\seines\s/, " von einem ", :global:i
+    do regex using var input: /\seiner\s/, " von einer ", :global:i
+    do regex using var input: /\s(aus|von|in|an)\svon\seine([rs])\s/, " $0 eine$1 ", :global:i
+
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/, "$0$1 von der $2", :global
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von dem $2$3", :global
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z])/, "$0$1 von dem $2", :global
+
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/, "$0$1 von jeder $2", :global
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von jedem $2$3", :global
+    do regex using var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
+
+    do regex using var input: /(\s)([A-Z][a-z]*?)\s(mehrer|viel|wenig|einig)er\s([A-Z])/, "$0$1 von $2en $3", :global
+
+    if var input matches /(^|\s)(.+?)\s(den|dem|der|des)\s([A-Z])/ do
+        if lc(var input) matches /(^|\s)(laut|nach)\s(den|dem|der|des)\s/ do
+            set new var preposition to $1
+            do regex using var input: /(^|\s)(laut|nach)\s(den|dem|der|des)\s/, "$0_var {preposition}_ $2 ", :global:i
         done
+    done
+
+    # var input matches /(^|\s)(von|fuer)(\s|$)/ or 
+
+    do regex using var input: /\s?ist dasselbe wie\s?/, " = ", :global:i
+    do regex using var input: /\s?ist dasgleiche wie\s?/, " = ", :global:i
+    do regex using var input: /\s?ist das selbe wie\s?/, " = ", :global:i
+    do regex using var input: /\s?ist das gleiche wie\s?/, " = ", :global:i
+
+    do regex using var input: /\s?is the same as\s?/, " = ", :global:i
+    do regex using var input: /\s?is same as\s?/, " = ", :global:i
+
+    do regex using var input: /befindet sich/, "liegt", :global
+    do regex using var input: /sich (.*?)befindet/, "$0liegt", :global
+    do regex using var input: /teil von ein.?.?\s/, "teil von ", :global:i
+    
+    if var input not matches /<[?]>/ and var input not matches /<[,]>/ do
+        if var input matches /^(.+?)\s+?((?:gehoert zu)|(?:liegt in)|(?:\s?ist in)|(?:\s?ist .*?teil von))\s+?(.+?)$/ do
+            set new var a to $0
+            set new var b to $2
+            
+            set new flag a_article to 0
+            if var a matches /(^|\s)ein/ do
+                set flag a_article to 1
+            done
+            set new flag b_article to 0
+            if var b matches /(^|\s)ein/ do
+                set flag b_article to 1
+            done
+            do regex using var a: /^(ein|eine)\s/, " ", :global:i
+            do regex using var b: /^(ein|eine)\s/, " ", :global:i
+            do regex using var a: /^(der|die|das)\s/, " ", :global:i
+            do regex using var b: /^(der|die|das)\s/, " ", :global:i
+            do regex using var a: /^\s+?/, "", :global:i
+            do regex using var b: /^\s+?/, "", :global:i
+            do regex using var a: /\s+?$/, "", :global:i
+            do regex using var b: /\s+?$/, "", :global:i
+            do regex using var a: /\s/, "_", :global:i
+            do regex using var b: /\s/, "_", :global:i
+            set var a to "_" concat var a concat "_"
+            set var b to "_" concat var b concat "_"
+            if flag a_article do
+                set var a to "(a) " concat var a
+            done
+            if flag b_article do
+                set var b to "(a) " concat var b
+            done
+            
+            set var input to var a concat " is-part " concat var b
+        done
+        if var input matches /^(.+?)\s+?(gehoert)\s+?(.+?)$/ do
+            set new var a to $0
+            set new var b to $2
+            
+            set new flag a_article to 0
+            if var a matches /(^|\s)ein/ do
+                set flag a_article to 1
+            done
+            set new flag b_article to 0
+            if var b matches /(^|\s)ein/ do
+                set flag b_article to 1
+            done
+            do regex using var a: /^(ein|eine)\s/, " ", :global:i
+            do regex using var b: /^(ein|eine)\s/, " ", :global:i
+            do regex using var a: /^(der|die|das)\s/, " ", :global:i
+            do regex using var b: /^(der|die|das)\s/, " ", :global:i
+            do regex using var a: /^\s+?/, "", :global:i
+            do regex using var b: /^\s+?/, "", :global:i
+            do regex using var a: /\s+?$/, "", :global:i
+            do regex using var b: /\s+?$/, "", :global:i
+            do regex using var a: /\s/, "_", :global:i
+            do regex using var b: /\s/, "_", :global:i
+            set var a to "_" concat var a concat "_"
+            set var b to "_" concat var b concat "_"
+            if flag a_article do
+                set var a to "(a) " concat var a
+            done
+            if flag b_article do
+                set var b to "(a) " concat var b
+            done
+            
+            set var input to var a concat " is-own " concat var b
+        done
+        if var input matches /^(.+?)\s+?(beinhaltet)\s+?(.+?)$/ do
+            set new var a to $2
+            set new var b to $0
+            
+            set new flag a_article to 0
+            if var a matches /(^|\s)ein/ do
+                set flag a_article to 1
+            done
+            set new flag b_article to 0
+            if var b matches /(^|\s)ein/ do
+                set flag b_article to 1
+            done
+            do regex using var a: /^(ein|eine)\s/, " ", :global:i
+            do regex using var b: /^(ein|eine)\s/, " ", :global:i
+            do regex using var a: /^(der|die|das)\s/, " ", :global:i
+            do regex using var b: /^(der|die|das)\s/, " ", :global:i
+            do regex using var a: /^\s+?/, "", :global:i
+            do regex using var b: /^\s+?/, "", :global:i
+            do regex using var a: /\s+?$/, "", :global:i
+            do regex using var b: /\s+?$/, "", :global:i
+            do regex using var a: /\s/, "_", :global:i
+            do regex using var b: /\s/, "_", :global:i
+            set var a to "_" concat var a concat "_"
+            set var b to "_" concat var b concat "_"
+            if flag a_article do
+                set var a to "(a) " concat var a
+            done
+            if flag b_article do
+                set var b to "(a) " concat var b
+            done
+            
+            set var input to var a concat " is-part " concat var b
+        done
+        if var input matches /^(.+?)\s+?(besitzt)\s+?(.+?)$/ do
+            set new var a to $2
+            set new var b to $0
+            
+            set new flag a_article to 0
+            if var a matches /(^|\s)ein/ do
+                set flag a_article to 1
+            done
+            set new flag b_article to 0
+            if var b matches /(^|\s)ein/ do
+                set flag b_article to 1
+            done
+            do regex using var a: /^(ein|eine)\s/, " ", :global:i
+            do regex using var b: /^(ein|eine)\s/, " ", :global:i
+            do regex using var a: /^(der|die|das)\s/, " ", :global:i
+            do regex using var b: /^(der|die|das)\s/, " ", :global:i
+            do regex using var a: /^\s+?/, "", :global:i
+            do regex using var b: /^\s+?/, "", :global:i
+            do regex using var a: /\s+?$/, "", :global:i
+            do regex using var b: /\s+?$/, "", :global:i
+            do regex using var a: /\s/, "_", :global:i
+            do regex using var b: /\s/, "_", :global:i
+            set var a to "_" concat var a concat "_"
+            set var b to "_" concat var b concat "_"
+            if flag a_article do
+                set var a to "(a) " concat var a
+            done
+            if flag b_article do
+                set var b to "(a) " concat var b
+            done
+            
+            set var input to var a concat " is-own " concat var b
+        done
+        if var input matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ do
+            set new var a to $0
+            set new var b to $2
+            
+            set new flag a_article to 0
+            if var a matches /(^|\s)ein/ do
+                set flag a_article to 1
+            done
+            set new flag b_article to 0
+            if var b matches /(^|\s)ein/ do
+                set flag b_article to 1
+            done
+            print "a:" concat var a concat flag a_article
+            print "b:" concat var b
+            do regex using var a: /^(ein|eine)\s/, " ", :global:i
+            do regex using var b: /^(ein|eine)\s/, " ", :global:i
+            do regex using var a: /^(der|die|das)\s/, " ", :global:i
+            do regex using var b: /^(der|die|das)\s/, " ", :global:i
+            do regex using var a: /^\s+?/, "", :global:i
+            do regex using var b: /^\s+?/, "", :global:i
+            do regex using var a: /\s+?$/, "", :global:i
+            do regex using var b: /\s+?$/, "", :global:i
+            do regex using var a: /\s/, "_", :global:i
+            do regex using var b: /\s/, "_", :global:i
+            set var a to "_" concat var a concat "_"
+            set var b to "_" concat var b concat "_"
+            if flag a_article do
+                set var a to "(a) " concat var a
+            done
+            if flag b_article do
+                set var b to "(a) " concat var b
+            done
+            print "a:" concat var a
+            print "b:" concat var b
+            
+            if flag a_article do
+                set var input to var a concat " = " concat var b
+            done
+            else do
+                set var input to var a concat " is-a " concat var b
+            done
+        done
+        
+
+        if var input not matches /ein|eine|der|die|das/ do
+            do regex using var input: /^(.+?)\s+?(ist|sind)\s+?(.+?)\s?$/, "$0 = $2", :global:i
+        done
+        
+        do regex using var input: /^(ein|eine)\s/, " ", :global:i
     done
     
     set new var __input to var input
@@ -1190,29 +1403,6 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /^hm \, /, " ", :global:i
     do regex using var input: /\shm\, /, " ", :global:i
     do regex using var input: /\shm \, /, " ", :global:i
-
-    do regex using var input: /(^|\s)sein\s([A-Z])/, "$0sein{{{art}}} $1", :global:i
-
-    do regex using var input: /\seines\s/, " von einem ", :global:i
-    do regex using var input: /\seiner\s/, " von einer ", :global:i
-    do regex using var input: /\s(aus|von|in|an)\svon\seine([rs])\s/, " $0 eine$1 ", :global:i
-
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/, "$0$1 von der $2", :global
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von dem $2$3", :global
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z])/, "$0$1 von dem $2", :global
-
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/, "$0$1 von jeder $2", :global
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z][a-z]*?)s([^a-zA-Z])/, "$0$1 von jedem $2$3", :global
-    do regex using var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/, "$0$1 von jedem $2", :global
-
-    do regex using var input: /(\s)([A-Z][a-z]*?)\s(mehrer|viel|wenig|einig)er\s([A-Z])/, "$0$1 von $2en $3", :global
-
-    if var input matches /(^|\s)(.+?)\s(den|dem|der|des)\s([A-Z])/ do
-        if lc(var input) matches /(^|\s)(laut|nach)\s(den|dem|der|des)\s/ do
-            set new var preposition to $1
-            do regex using var input: /(^|\s)(laut|nach)\s(den|dem|der|des)\s/, "$0_var {preposition}_ $2 ", :global:i
-        done
-    done
 
     #do regex using var input: /was ist /, "ISUNKNOWN ", :global:i
     #do regex using var input: /wer ist /, "ISUNKNOWN ", :global:i

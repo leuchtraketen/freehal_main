@@ -1344,7 +1344,6 @@ set multi-line new global hash builtin_entity_ends to {
           'd' => 1,
           'c' => 1,
           'b' => 1,
-          'a' => 1,
           'he' => 1,
           'she' => 1,
           'it' => 1,
@@ -1639,7 +1638,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'berufst' => "v",
           'sauer' => "adj",
           'rarely' => "adj",
-          'a' => "n",
+          'a' => "art",
+          '(a)' => "art",
           'genau' => "adj",
           'ein' => "art",
           'bloed' => "adj",
@@ -1934,7 +1934,18 @@ set multi-line new global hash builtin_part_of_speech to {
           'nothing' => "n",
           'sen' => "adj",
           'vierzig' => "adj",
+          '~~~' => "v",
+          '==' => "v",
+          '=>' => "v",
           '=' => "v",
+          'is-a' => "v",
+          'is-part' => "v",
+          'is-own' => "v",
+          '=' => "v",
+          '>>>' => "v",
+          '->' => "v",
+          '!=>' => "v",
+          '?=>' => "v",
           'opposite' => "v",
           'ihr' => "art",
           'rauh' => "adj",
@@ -2747,6 +2758,26 @@ define action get_verb with var verb, var person do
             do return with "mean"
         done
     done
+
+    if var verb matches "is-part" do
+        if var person matches "1s" do
+            do return with "am a part of"
+        done
+        if var person matches "3s" do
+            do return with "is a part of"
+        done
+        do return with "are a part of"
+    done
+
+    if var verb matches "is-own" do
+        if var person matches "1s" do
+            do return with "am owned by"
+        done
+        if var person matches "3s" do
+            do return with "is owned by"
+        done
+        do return with "are owned by"
+    done
     
     return ""
 done
@@ -3141,6 +3172,9 @@ define action stem_nouns with array phrases do
             # TEXT
             # Delete articles...
             # CODE
+            if var noun matches /^\(a\)$/ do
+                do regex using var noun: /^\(a\)$/, "*", :global:i
+            done
             if var noun matches /^a$/ do
                 do regex using var noun: /^a$/, "*", :global:i
             done
