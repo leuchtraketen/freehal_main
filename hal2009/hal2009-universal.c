@@ -3328,13 +3328,13 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the wiki search?\n");
     
-    /*if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
+    if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
         printf("No, no what-context.\n");
     }
-    else if ((strstr(context, "what") || strstr(context, "who")) && !(verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && is_a_fact_verb(verbs))) {
+    /*else if ((strstr(context, "what") || strstr(context, "who")) && !(verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && is_a_fact_verb(verbs))) {
         printf("No, no what-context.\n");
-    }
-    else */if (!can_be_a_pointer(list) || !count_list((void**)list)) {
+    }*/
+    else if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         printf("We do.\n");
         
         if (wiki_begin()) {
