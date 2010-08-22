@@ -131,7 +131,8 @@ void* cpu_thread (void* p) {
         }
         boinc_report_app_status(now - start, checkpoint_cpu, frac);
 
-        if ( (from_checkpoint || is_slow()) && ((now - start) / (max_seconds)) >= 1 ) {
+//        if ( (from_checkpoint || is_slow()) && ((now - start) / (max_seconds)) >= 1 ) {
+        if ( ((now - start) / (max_seconds)) >= 1 ) {
             srand (time_seed());
             int N = 30;
             int M = 600;
