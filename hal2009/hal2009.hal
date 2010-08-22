@@ -2818,6 +2818,9 @@ define action compute_context with hash parsed do
     if from array questionword_array 1st item matches /^wer/ or from array questionword_array 1st item matches "who" do
         do return with "q_who"
     done
+    if lc(from array questionword_array 1st item) matches "what-nowiki" do
+        do return with "q_what_nowiki"
+    done
     if lc(from array questionword_array 1st item) matches "was" or lc(from array questionword_array 1st item) matches "what" do
         if from array verb_array 1st item 1st item matches /^(bist|bi|bin)$/ do
             do return with "q_what_exactly"

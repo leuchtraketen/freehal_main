@@ -1785,6 +1785,8 @@ int fact_matches_questionword_rules(struct fact* fact, struct request* request) 
     if (can_be_a_pointer(request->context)) {
         if (0 == strcmp(request->context, "q_what_weakly"))
             return fact_matches_questionword_rules_of_q_what_weakly(fact, request);
+        if (0 == strcmp(request->context, "q_what_nowiki"))
+            return fact_matches_questionword_rules_of_q_what_weakly(fact, request);
         if (0 == strcmp(request->context, "q_what_exactly"))
             return fact_matches_questionword_rules_of_q_what_exactly(fact, request);
         if (0 == strcmp(request->context, "q_what_extra"))
@@ -3328,9 +3330,13 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     printf("\n------------------------------------------------------------------------\n\n");
     printf("Do we need the wiki search?\n");
     
-    if ((!strstr(context, "what") && !strstr(context, "how") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
+    if ((!strstr(context, "what") && !strstr(context, "who")) || strstr(context, "what_prep") || strlen(adverbs) >= 3) {
         printf("No, no what-context.\n");
     }
+    else if (strstr(context, "nowiki")) {
+        printf("No, no-wiki-context.\n");
+    }
+    // && !strstr(context, "how")
     /*else if ((strstr(context, "what") || strstr(context, "who")) && !(verbs && verbs[0] && verbs[0] != '0' && verbs[0] != ' ' && is_a_fact_verb(verbs))) {
         printf("No, no what-context.\n");
     }*/

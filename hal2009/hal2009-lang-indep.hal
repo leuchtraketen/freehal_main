@@ -977,6 +977,7 @@ define action compute_input with var input is rw, var lang, var path do
 #    do regex using var input: / so /, " ", :global:i
 
     if not var input matches / aus.?.?.?.?$/ do
+        do regex using var input: /kennst du ein(e|en) /, "what-nowiki ist ", :global:i
         do regex using var input: /kennst du /, "was ist ", :global:i
     done
     

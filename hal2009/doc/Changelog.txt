@@ -1,3 +1,7 @@
+1172:
+
+- bei "kennst du EINEN/EINE"-Fragen wird nicht mehr in der Wikipedia gesucht, bei sonstigen "kennst du"-Fragen schon
+
 1169:
 
 - Changelog aktualisiert

@@ -1577,6 +1577,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'tiere' => "n",
           'boes' => "adj",
           'what' => "questionword",
+          'what-nowiki' => "questionword",
           'mueden' => "adj",
           'ster' => "adj",
           'locker' => "adj",

@@ -2842,6 +2842,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'weshalb' => "questionword",
           'west' => "adj",
           'what' => "questionword",
+          'what-nowiki' => "questionword",
           'when' => "questionword",
           'where' => "questionword",
           'whether' => "questionword",
