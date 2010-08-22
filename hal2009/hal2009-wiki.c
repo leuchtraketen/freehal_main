@@ -133,43 +133,74 @@ char* concat(const char* a, const char* b) {
 }
 
 const char* define_general_verb(char* sentence, const char* entity) {
-    if (strstr(sentence, " ist ") && (strstr(sentence, "ein") < strstr(sentence, " ist ") || strstr(sentence, "Ein") < strstr(sentence, " ist "))) {
-        return "equal_in";
+
+    char* position_ist = strstr(sentence, " ist ");
+    char* position_sind = strstr(sentence, " sind ");
+    char* position_war = strstr(sentence, " war ");
+    char* position_waren = strstr(sentence, " waren ");
+    char* position_dot = strstr(sentence, ".");
+    char* position_article_indef = 0;
+    if (position_article_indef == 0) position_article_indef = strstr(sentence, "Ein ");
+    if (position_article_indef == 0) position_article_indef = strstr(sentence, "Eine ");
+    if (position_article_indef == 0) position_article_indef = strstr(sentence, "ein ");
+    if (position_article_indef == 0) position_article_indef = strstr(sentence, "eine ");
+    char* position_article_def = 0;
+    if (position_article_def == 0) position_article_def = strstr(sentence, "Der ");
+    if (position_article_def == 0) position_article_def = strstr(sentence, "Die ");
+    if (position_article_def == 0) position_article_def = strstr(sentence, "Das ");
+    if (position_article_def == 0) position_article_def = strstr(sentence, "der ");
+    if (position_article_def == 0) position_article_def = strstr(sentence, "die ");
+    if (position_article_def == 0) position_article_def = strstr(sentence, "das ");
+
+
+    if (position_article_def < position_ist && position_ist < position_dot) {
+        return "equal-sg-def";
     }
-    else if (strstr(sentence, "ezeichnung ")) {
-        return "equal_in";
+    if (position_article_indef < position_ist && position_ist < position_dot) {
+        return "equal-sg-indef";
     }
-    else if (strstr(sentence, " sind ")) {
-        return "equal_pl";
+    if (position_article_def < position_sind && position_sind < position_dot) {
+        return "equal-pl-def";
     }
-    else if (strstr(sentence, " heissen ")) {
-        return "equal_pl";
+    if (position_article_indef < position_sind && position_sind < position_dot) {
+        return "equal-pl-indef";
     }
-    else if (strstr(sentence, " entspri")) {
-        return "equal_sg";
+    if (position_ist < position_dot) {
+        return "equal-sg";
     }
-    else if (strstr(sentence, " entspr")) {
-        return "equal_pl";
+    if (position_sind < position_dot) {
+        return "equal-pl";
     }
-    else if (strstr(sentence, " waren ")) {
-        return "equal_pl";
+
+    if (position_war < position_dot) {
+        return "equal-sg";
     }
-    else if (strstr(sentence, " nennt man ")) {
-        return "equal_pl";
+    if (position_waren < position_dot) {
+        return "equal-pl";
     }
-    else if (strstr(sentence, "bezeichnen")) {
-        return "equal_pl";
+
+    if (strstr(sentence, " entspri")) {
+        return "equal-sg";
     }
-    else if (strstr(sentence, "beschreibt")) {
-        return "equal_in";
+    if (strstr(sentence, " entspre")) {
+        return "equal-pl";
     }
-    else if (strstr(sentence, "beschreiben")) {
-        return "equal_in";
+    if (strstr(sentence, " nennt man ")) {
+        return "equal-pl";
     }
-    else if (strstr(sentence, " und ")) {
-        return "equal_pl";
+    if (strstr(sentence, "bezeichnen")) {
+        return "equal-pl";
     }
-    return "equal_sg";
+    if (strstr(sentence, "beschreibt")) {
+        return "equal";
+    }
+    if (strstr(sentence, "beschreiben")) {
+        return "equal";
+    }
+    if (strstr(sentence, " und ")) {
+        return "equal-pl";
+    }
+    return "equal-sg";
 }
 
 char* transform_sentence(char* sentence, const char* entity) {
@@ -184,88 +215,148 @@ char* transform_sentence(char* sentence, const char* entity) {
     short verb__sind__before_dot = strstr(sentence, " sind ") < strstr(sentence, ".");
     
     char* verb_str = 0;
-    if (verb_str == 0 && (verb_str = strstr(sentence, "rt zu den "))) {
-        verb_str += 9;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, "rt zu "))) {
-        verb_str += 6;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " ist ")) && verb__ist__before_dot) {
-        verb_str += 5;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " sind ")) && verb__sind__before_dot) {
-        verb_str += 6;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " ist "))) {
-        verb_str += 5;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " sind "))) {
-        verb_str += 6;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " war "))) {
-        verb_str += 5;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " waren "))) {
-        verb_str += 5;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " heissen "))) {
-        verb_str += 9;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " versteht man "))) {
-        verb_str += 14;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " bezeichnet man "))) {
-        verb_str += 16;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " nennt man "))) {
-        verb_str += 11;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " entspricht "))) {
-        verb_str += 12;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " entsprechen "))) {
-        verb_str += 13;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " entsprach "))) {
-        verb_str += 11;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " beschreibt "))) {
-        verb_str += 12;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " beschreiben "))) {
-        verb_str += 13;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " bezeichnet "))) {
-        verb_str += 12;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " bezeichnen "))) {
-        verb_str += 12;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, _verb_1))) {
-        verb_str += strlen(_verb_1);
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " waren "))) {
-        verb_str += 7;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " sind sie "))) {
-        verb_str += 10;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " sind "))) {
-        verb_str += 6;
-    }
-    if (verb_str == 0 && (verb_str = strstr(sentence, " wird "))) {
-        verb_str += 6;
-        if (strstr(sentence, " bezeichnet, ")) {
-            strcpy(strstr(sentence, " bezeichnet, "), strstr(sentence, " bezeichnet, ") + strlen(" bezeichnet, ") - 1);
-        }
-        else if (strstr(sentence, " bezeichnet")) {
-            strstr(sentence, " bezeichnet")[0] = '\0';
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, "rt zu den "))) {
+            verb_str += 9;
         }
     }
-    else if (verb_str = sentence) {
-        // do nothing
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, "rt zu "))) {
+            verb_str += 6;
+        }
     }
-    else {
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " ist "))) {
+            if (verb__ist__before_dot) {
+                verb_str += 5;
+            }
+            else {
+                verb_str = 0;
+            }
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " sind "))) {
+            if (verb__sind__before_dot) {
+                verb_str += 6;
+            }
+            else {
+                verb_str = 0;
+            }
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " ist "))) {
+            verb_str += 5;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " sind "))) {
+            verb_str += 6;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " war "))) {
+            verb_str += 5;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " waren "))) {
+            verb_str += 5;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " heissen "))) {
+            verb_str += 9;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " versteht man "))) {
+            verb_str += 14;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " bezeichnet man "))) {
+            verb_str += 16;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " nennt man "))) {
+            verb_str += 11;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " entspricht "))) {
+            verb_str += 12;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " entsprechen "))) {
+            verb_str += 13;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " entsprach "))) {
+            verb_str += 11;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " beschreibt "))) {
+            verb_str += 12;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " beschreiben "))) {
+            verb_str += 13;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " bezeichnet "))) {
+            verb_str += 12;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " bezeichnen "))) {
+            verb_str += 12;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, _verb_1))) {
+            verb_str += strlen(_verb_1);
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " waren "))) {
+            verb_str += 7;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " sind sie "))) {
+            verb_str += 10;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " sind "))) {
+            verb_str += 6;
+        }
+    }
+    if (verb_str == 0) {
+        if ((verb_str = strstr(sentence, " wird "))) {
+            verb_str += 6;
+            if (strstr(sentence, " bezeichnet, ")) {
+                strcpy(strstr(sentence, " bezeichnet, "), strstr(sentence, " bezeichnet, ") + strlen(" bezeichnet, ") - 1);
+            }
+            else if (strstr(sentence, " bezeichnet")) {
+                strstr(sentence, " bezeichnet")[0] = '\0';
+            }
+        }
+    }
+    if (verb_str == 0) {
+        if (verb_str = sentence) {
+            // do nothing
+        }
+    }
+    if (verb_str == 0) {
         return 0;
     }
     

@@ -3750,7 +3750,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_genus to from array subject_props 2nd item
                 set new var object_genus to from array  object_props 2nd item
                 set new var subject_person to get_person with from array clause 2nd item
-                if from array proper_verbs 1st item matches /^equal_pl/ do
+                if from array proper_verbs 1st item matches /^equal-pl/ do
                     set var subject_person to "3p"
                 done
                 
@@ -3776,9 +3776,9 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 if from array proper_verbs 1st item matches /^(equal)/ do
                     
                     # subject article
-                    if from array proper_verbs 1st item not matches /^equal_pl/ and from array clause 2nd item not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ do
+                    if from array proper_verbs 1st item not matches /^equal-pl/ and from array clause 2nd item not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ do
                         if var is_name_subject is false or var is_collective_noun_subject is true or flag subject_article_included is true do
-                            if from array clause 3rd item matches /(^|\s)(der|die|das|the|(?:a ))/ do
+                            if from array proper_verbs 1st item matches /^(equal-sg-def)/ do
                                 set var subject_article to get_article with var subject_genus, "subject", "definite"
                             done
                             push into array sentence, var subject_article
@@ -3803,7 +3803,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                             set new var verb to get_verb with "is-same-as", var subject_person
                             push into array sentence, var verb
                         done
-                        else if from array proper_verbs 1st item matches /^equal_pl/ do
+                        else if from array proper_verbs 1st item matches /^equal-pl/ do
                             set new var verb to get_verb with "be", var subject_person
                             push into array sentence, var verb
                         done
@@ -5734,7 +5734,8 @@ define action correct_human_edit_typos with var file, var current_language, var 
         done
         set var line to join using "<>", items of array parts
         do regex using var line: /(<[a-zA-Z]>)_maybe_/, "$0_ <> (maybe)"
-        do regex using var line: /\s_(a)_/, " (a) _"
+        do regex using var line: /\s_\(a\)_/, " (a) _"
+        do regex using var line: /_\(a\)_/, "(a) _"
         
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
