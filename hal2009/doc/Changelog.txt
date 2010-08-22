@@ -1,3 +1,15 @@
+1169:
+
+- Changelog aktualisiert
+
+1168:
+
+- Bug 658 korrigiert
+
+1167:
+
+- "doc/Contributors.txt" aktualisiert
+
 1163:
 
 - neue Fakt-verben eingefuehrt
