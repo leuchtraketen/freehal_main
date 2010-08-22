@@ -283669,5 +283669,682 @@ dahinterstehenden:
 ABC:
 genus  : s
   type: n
+meteorologische:
+  type: adj
+Monsun:
+genus  : m
+  type: n
+Passate:
+genus  : f
+  type: n
+grossraeumige:
+  type: adj 
+Tropen:
+genus  : f
+  type: n
+Subtropen:
+genus  : f
+  type: n
+Schnapsidee:
+genus  : f
+  type: n  
+bibelfilm:
+genus  : m
+  type: n
+Wasserquelle:
+genus  : f
+  type: n
+Wasserkoerper:
+genus  : m
+  type: n
+Laserstrahl:
+genus  : m
+  type: n   
+Stoffen:
+  type: n
+geeigneten:
+  type: adj
+Periodendauer:
+genus  : f
+  type: n
+Frequenzspektrum:
+genus  : s
+  type: n
+Stoergroesse:
+genus  : f
+  type: n
+breitem:
+  type: adj
+unspezifischem:
+  type: adj
+Bachforelle:
+genus  : f
+  type: n
+Raubfisch:
+genus  : m
+  type: n
+Salmoniden:
+genus  : f
+  type: n
+zaehlender:
+  type: adj 
+Luftpolster:
+  type: n
+Suppentopf:
+genus  : m
+  type: n
+Tchibo:
+  type: n
+Kaffeesorte:
+genus  : f
+  type: n
+Kuerbiskern:
+genus  : m
+  type: n
+Nacktsamigen:
+  type: adj
+Lieferanten:
+genus  : f
+  type: n
+abendlaendischen:
+  type: adj
+uebliches:
+  type: adj
+grafisches:
+  type: adj
+Kopfskeletts:
+  type: n
+frontal:
+  type: adj
+Profil:
+genus  : s
+  type: n
+Unterkiefer:
+genus  : m
+  type: n
+Griechischer:
+  type: adj
+Jaegerschnitzel:
+genus  : s
+  type: n
+Sahnesauce:
+genus  : f
+  type: n
+gebratenem:
+  type: adj
+Schweineschnitzel:
+genus  : s
+  type: n
+Mehlspeise:
+genus  : f
+  type: n
+Pfeffersauce:
+genus  : f
+  type: n
+frostempfindlich:
+  type: adj 
+Mindesttemperatur:
+genus  : f
+  type: n
+Pfefferschote:
+genus  : f
+  type: n
+Capsicum:
+genus  : s
+  type: n
+verantwortlichen:
+  type: adj
+Capsaicin:
+genus  : s
+  type: n
+Gulaschsuppe:
+genus  : f
+  type: n
+angebratenen:
+  type: adj
+Fleischstueckchen:
+  type: n
+Kuerbiscremesuppe:
+genus  : f
+  type: n
+Hauptzutat:
+genus  : f
+  type: n
+Knoblauchsuppe:
+genus  : f
+  type: n 
+Zwiebelsuppe:
+genus  : f
+  type: n
+Gemuesebruehe:
+genus  : f
+  type: n
+geduensteter:
+  type: adj 
+Nachmittag:
+genus  : m
+  type: n
+dauerurlaub:
+genus  : m
+  type: n
+vorlaeufige:
+  type: adj 
+wunderschoenen:
+  type: adj
+ebendiese:
+  type: adj
+selbige:
+  type: adj 
+fluessiger:
+  type: adj
+gasfoermiger:
+  type: adj
+Hauptachse:
+genus  : f
+  type: n
+Gehoelze:
+genus  : f
+  type: n 
+Wuchsform:
+genus  : f
+  type: n
+Koenigssaeure:
+genus  : f
+  type: n
+Grunewald:
+  type: n
+Stickstoffs:
+  type: n  
+stabilste:
+  type: adj
+Sauerstoffsaeure:
+genus  : f
+  type: n
+Andromedanebel:
+genus  : m
+  type: n
+gesichtete:
+  type: adj
+eintretende:
+  type: adj
+helle:
+  type: adj
+vernichtet:
+  type: vi
+Tiefsee:
+genus  : f
+  type: n
+erforscht:
+  type: vi
+Suedkontinents:
+  type: n
+Antarktika:
+genus  : f
+  type: n  
+geographischer:
+  type: adj
+Nordlichter:
+genus  : f
+  type: n
+Sonnenwindes:
+  type: n
+Polargebieten:
+  type: n
+Triumphalis:
+  type: n
+Feldherrn:
+  type: n
+Roemischen:
+  type: adj
+Segelfahrzeugen:
+  type: n
+Windes:
+  type: n
+Handgranate:
+genus  : f
+  type: n
+gefuellter:
+  type: adj
+versehener:
+  type: adj
+Kunststoffhohlkoerper:
+genus  : m
+  type: n
+geworfen:
+  type: vi
+unmittelbare:
+  type: adj
+gebrachte:
+  type: adj
+Sprengstoffmasse:
+genus  : f
+  type: n 
+lose:
+  type: adj
+abgedeckt:
+  type: adj
+eingebracht:
+  type: adj
+kernphysikalischen:
+  type: adj
+Prozessen:
+  type: n 
+Tirols:
+  type: n
+noerdliche:
+  type: adj
+Osttirol:
+  type: n
+Verwaltungsbezirk:
+genus  : m
+  type: n 
+Handlungsfaehigkeit:
+genus  : f
+  type: n  
+bezeichneten:
+  type: adj
+ausgelegt:
+  type: v
+ausgelegten:
+  type: v  
+Moerderwal:
+  type: n
+Orka:
+  type: n
+idee:
+genus  : f
+  type: n 
+Stofftuch:
+genus  : s
+  type: n
+Nassreinigung:
+genus  : f
+  type: n
+Staubtuch:
+genus  : s
+  type: n
+Staublappen:
+genus  : m
+  type: n
+Dekorationsgegenstaenden:
+  type: n 
+aufzuwirbeln:
+  type: vi  
+tiefes:
+  type: adj
+Brackwassermeer:
+genus  : s
+  type: n 
+Randmeer:
+genus  : s
+  type: n
+Ozeans:
+  type: n
+nordwestlichen:
+  type: adj
+katalanischer:
+  type: adj
+Aegaeis:
+genus  : f
+  type: n
+Mittelmeers:
+  type: n
+Nebenmeer:
+genus  : s
+  type: n
+Katalane:
+genus  : m
+  type: n
+katalanischen:
+  type: adj
+Nationalisten:
+genus  : f
+  type: n  
+unumschraenkte:
+  type: adj 
+Urlaubsinsel:
+genus  : f
+  type: n
+Urlaubsziel:
+genus  : s
+  type: n
+Sonneninsel:
+genus  : f
+  type: n
+Beliebtes:
+  type: adj
+Berglandes:
+  type: n 
+Mehrzahl:
+genus  : f
+  type: n
+Singular:
+  type: n
+Grenzflaeche:
+genus  : f
+  type: n
+Raumzeit:
+genus  : f
+  type: n
+Ereignisse:
+genus  : f
+  type: n
+Beobachter:
+  type: n
+Blutegel:
+  type: n
+Mondumlaufbahn:
+genus  : f
+  type: n
+Orbiter:
+  type: n
+Ordnungen:
+genus  : f
+  type: n
+Guertelwuermer:
+genus  : f
+  type: n
+ihrerseits:
+  type: adj
+Ringelwuermern:
+  type: n 
+Jungtier:
+genus  : s
+  type: n
+geschluepfter:
+  type: adj
+Welpe:
+genus  : m
+  type: n
+arktische:
+  type: adj
+eismeer:
+genus  : s
+  type: n
+Barentsee:
+genus  : f
+  type: n 
+gesundheitsgefaehrdend:
+  type: adj
+Wundauflage:
+genus  : f
+  type: n
+PVC:
+genus  : s
+  type: n
+Klebeband:
+genus  : s
+  type: n
+Hinkelstein:
+genus  : m
+  type: n 
+Jungsteinzeit:
+genus  : f
+  type: n
+datiert:
+  type: vi
+Steinzeit:
+genus  : f
+  type: n
+verwendeten:
+  type: adj
+Menschheitsgeschichte:
+genus  : f
+  type: n
+damaligen:
+  type: adj
+monolithisch:
+  type: adj
+selbsttragende:
+  type: adj
+gasdichte:
+genus  : f
+  type: n
+Eigenantrieb:
+genus  : m
+  type: n 
+Jungbrunnen:
+genus  : m
+  type: n
+verheisst:
+  type: vi
+ueberschneidende:
+  type: adj 
+Jugendschutz:
+genus  : m
+  type: n
+Normen:
+genus  : f
+  type: n
+Jugendschutzes:
+  type: n
+Spielmaterials:
+  type: n
+Gastgewerbe:
+genus  : s
+  type: n  
+Unterwasserfahrzeug:
+genus  : s
+  type: n
+Segelschulschiff:
+genus  : s
+  type: n
+nautischen:
+  type: adj
+Personals:
+  type: n
+Marinen:
+genus  : f
+  type: n
+Handelsschifffahrt:
+genus  : f
+  type: n
+Klabautermann:
+genus  : m
+  type: n
+warnt:
+  type: vi
+seemaennischen:
+  type: adj
+Aberglauben:
+  type: n
+Schiffsgeist:
+genus  : m
+  type: n
+Nylon:
+genus  : s
+  type: n
+Warpspule:
+genus  : f
+  type: n
+Hauptfiguren:
+genus  : f
+  type: n 
+Titelheld:
+genus  : m
+  type: n
+Unterbrechungen:
+genus  : f
+  type: n  
+Erscheinungsformen:
+genus  : f
+  type: n
+Verwaltungsakt:
+genus  : m
+  type: n
+Verwaltungsrechts:
+  type: n
+Nebenbestimmung:
+genus  : f
+  type: n 
+Sonnensturm:
+genus  : m
+  type: n
+Magnetosphaere:
+genus  : f
+  type: n
+umkreist:
+  type: vi
+Oberflaechenspannung:
+genus  : f
+  type: n  
+Rollreibung:
+genus  : f
+  type: n 
+zurueckkehrt:
+  type: vi
+Programmes:
+  type: n
+Programmteilen:
+  type: n
+aufrufende:
+  type: adj
+Zigarettenstummel:
+  type: n
+Aschenbecher:
+  type: n
+Osterei:
+genus  : s
+  type: n 
+gefaerbtes:
+  type: adj
+Motiven:
+  type: n
+bemaltes:
+  type: adj
+verziertes:
+  type: adj
+Bananenstrauch:
+genus  : m
+  type: n
+Schmetterlingsbluetler:
+genus  : m
+  type: n
+Blasenstrauch:
+genus  : m
+  type: n
+Zuckerruebe:
+genus  : f
+  type: n
+Fuchsschwanzgewaechse:
+genus  : f
+  type: n
+intensive:
+  type: adj
+Kontakten:
+  type: n
+Forschungsbereich:
+genus  : m
+  type: n
+Militaertechnik:
+genus  : f
+  type: n
+Panzerungen:
+genus  : f
+  type: n
+Projektile:
+  type: n
+Bewegungsenergie:
+genus  : f
+  type: n
+Geschosses:
+  type: n
+geplante:
+  type: adj
+Erkenntnissen:
+  type: n
+zufaelligen:
+  type: adj
+Apelstrudel:
+  type: n
+Pathos:
+  type: n
+Ueberzeugungsmittel:
+genus  : s
+  type: n
+ionischen:
+  type: adj
+Kleinasiens:
+  type: n  
+landeinwaertigen:
+  type: adj
+Steilwand:
+genus  : f
+  type: n 
+mastrubation:
+genus  : f
+  type: n 
+Unterhaltungsindustrie:
+genus  : f
+  type: n
+Wirtschaftszweig:
+genus  : m
+  type: n
+anbietet:
+  type: vi
+verbale:
+  type: adj
+geschuetzte:
+  type: adj
+Bauwerke:
+genus  : f
+  type: n
+Insassen:
+genus  : f
+  type: n
+direkter:
+  type: adj
+Gefaehrdung:
+genus  : f
+  type: n
+Libelle:
+genus  : f
+  type: n
+Massen:
+genus  : f
+  type: n
+bedeutendes:
+  type: adj
+bewohnte:
+  type: adj
+Orte:
+genus  : f
+  type: n
+charakterisiert:
+  type: vi
+Flaechenstuecks:
+  type: n
+geradlinig:
+  type: adj
+Kugelkoerper:
+  type: n
+Kugelflaeche:
+genus  : f
+  type: n
+walzenfoermiger:
+  type: adj
+gebauchter:
+  type: adj
+Halbkugel:
+genus  : f
+  type: n
+Osterinseln:
+genus  : f
+  type: n
+Indischen:
+  type: adj
+westaustralischen:
+  type: adju
+Science-Fiction-Fernsehserie:
+genus  : f
+  type: n
+Firefly:
+  type: n
+US-Fernsehserie:
+genus  : f
+  type: n
+US-Fernsehsender:
+genus  : m
+  type: n   
 
                    
