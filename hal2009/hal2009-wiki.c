@@ -153,6 +153,10 @@ const char* define_general_verb(char* sentence, const char* entity) {
     if (position_article_def == 0) position_article_def = strstr(sentence, "das ");
 
 
+    if (strstr(sentence, " gehoeren") && strstr(sentence, " gehoeren") < position_dot) {
+        return "equal-pl-def";
+    }
+
     if (position_article_def < position_ist && position_ist < position_dot) {
         return "equal-sg-def";
     }
@@ -178,6 +182,7 @@ const char* define_general_verb(char* sentence, const char* entity) {
     if (position_waren < position_dot) {
         return "equal-pl";
     }
+
 
     if (strstr(sentence, " entspri")) {
         return "equal-sg";
@@ -215,16 +220,6 @@ char* transform_sentence(char* sentence, const char* entity) {
     short verb__sind__before_dot = strstr(sentence, " sind ") < strstr(sentence, ".");
     
     char* verb_str = 0;
-    if (verb_str == 0) {
-        if ((verb_str = strstr(sentence, "rt zu den "))) {
-            verb_str += 9;
-        }
-    }
-    if (verb_str == 0) {
-        if ((verb_str = strstr(sentence, "rt zu "))) {
-            verb_str += 6;
-        }
-    }
     if (verb_str == 0) {
         if ((verb_str = strstr(sentence, " ist "))) {
             if (verb__ist__before_dot) {
@@ -293,6 +288,30 @@ char* transform_sentence(char* sentence, const char* entity) {
     if (verb_str == 0) {
         if ((verb_str = strstr(sentence, " entsprechen "))) {
             verb_str += 13;
+        }
+    }
+    if (verb_str == 0) {
+        if (verb_str == 0) verb_str = strstr(sentence, " gehoeren ");
+        if (verb_str == 0) verb_str = strstr(sentence, " gehoert ");
+        if (verb_str) {
+            if (strstr(sentence, " zu den ")) {
+                verb_str = strstr(sentence, " zu den ") + 8;
+            }
+            else if (strstr(sentence, " zu der ")) {
+                verb_str = strstr(sentence, " zu der ") + 8;
+            }
+            else if (strstr(sentence, " zu ")) {
+                verb_str = strstr(sentence, " zu ") + 4;
+            }
+            else {
+                verb_str = 0;
+            }
+        }
+        if (verb_str) {
+            char* dot = strstr(verb_str, ".");
+            if (dot) {
+                strcpy(dot, "");
+            }
         }
     }
     if (verb_str == 0) {
