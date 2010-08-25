@@ -76,7 +76,12 @@ print into var report data new line
 
 #########
 
-set new var text to join with "", items of array all_input_lines
-set new var summ to summarize with var text, var file_output_nl, var file_output_pro, var current_language, var path
+set new var j to 0
+while var j < 100 do
+	set new var text to join with "", items of array all_input_lines
+	set new var summ to summarize with var text, var file_output_nl, var file_output_pro, var current_language, var path
+
+	set var j to var j + 1
+done
 
 
