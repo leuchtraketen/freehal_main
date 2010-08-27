@@ -2580,28 +2580,29 @@ done
         if from hash sym_linking item { from hash tags item { var word } 1st item } and from hash sym_verb item { from hash tags item { from array list_of_words item [ var i - 1 ] } 1st item } and from hash sym_entity item { from hash tags item { from array list_of_words item [ var i + 1 ] } 1st item } do
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
-            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
-#            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+#            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
         done
         else if from hash sym_linking item { from hash tags item { var word } 1st item } and from hash sym_verb item { from hash tags item { from array list_of_words item [ var i - 1 ] } 1st item } and from hash sym_prep item { from hash tags item { from array list_of_words item [ var i + 1 ] } 1st item } do
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
-            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
-#            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+#            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
         done
         else if from hash sym_linking item { from hash tags item { var word } 1st item } and from hash sym_verb item { from hash tags item { from array list_of_words item [ var i + 1 ] } 1st item } do
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
-            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
-#            do push into that array: from array list_of_list_of_words item [ var array_index ] end-items-of, var word
+#            push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] if not then an empty array end of array
         done
         else if from hash sym_linking item { from hash tags item { var word } 1st item } and from hash sym_entity item { from hash tags item { from array list_of_words item [ var i + 1 ] } 1st item } do
             # A is B and C and D and E and F
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
-            if from array list_of_questionwords item [ var array_index - 1 ] do
-                push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
-            done
+##################################################################################################################################################################
+##################################################################################################################################################################
+##################################################################################################################################################################
+##################################################################################################################################################################
+#            if from array list_of_questionwords item [ var array_index - 1 ] do
+#                push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
+#            done
             
             print "Template found: 'A is B and C and D and E and F'."
             print new line
