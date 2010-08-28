@@ -287,58 +287,69 @@ char* fact_read_from_source (const char* source) {
     return strdup("");
 }
 
-int remove_negation (char* line, double* truth_ref, int* only_logic) {
+int remove_negation (char* _line, double* truth_ref, int* only_logic) {
     halstring sline;
     sline.do_free = 0;
     halstring* sline_ref = &sline;
     char l[4196];
     sline.s = l;
-    strncpy(l, line, 4196);
-    
+    strncpy(l, _line, 4196);
+    char* line = _line;
+
 //    printf("\nline (1): %s\n", line);
     if (strstr(line, "kein")) {
         sline_ref = replace(sline_ref, "kein", "ein");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
     if (strstr(line, " nicht ")) {
         sline_ref = replace(sline_ref, " nicht ", " ");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
-    if (strstr(line, " nicht<")) {
-        sline_ref = replace(sline_ref, " nicht<", " ");
+    if (strstr(line, " nicht") && (line+strlen(line)-6) == strstr(line, " nicht")) {
+        sline_ref = replace(sline_ref, " nicht", " ");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
     if (strstr(line, "nicht ")) {
         sline_ref = replace(sline_ref, "nicht ", " ");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
-//    printf("\nline (2): %s\n", line);
-    if (strstr(line, "nicht") == line && strlen(line) < 7) {
-        sline_ref = replace(sline_ref, "nicht", " ");
+    if (0 == strcmp(line, "nicht")) {
+    printf("\nline (2): %s\n", line);
+        sline_ref = replace(sline_ref, "nicht", "");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
     if (strstr(line, " not ")) {
         sline_ref = replace(sline_ref, " not ", "");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
     if (strstr(line, " 50")) {
         sline_ref = replace(sline_ref, " 50", "");
         sline_ref = replace(sline_ref, " <> 50", "");
+        line = sline.s;
         (*truth_ref) = 0.5;
     }
     if (strstr(line, "(true)")) {
         sline_ref = replace(sline_ref, " (true)", "");
         sline_ref = replace(sline_ref, "(true)", "");
+        line = sline.s;
         (*truth_ref) = 1.0;
     }
     if (strstr(line, "(maybe)")) {
         sline_ref = replace(sline_ref, " (maybe)", "");
         sline_ref = replace(sline_ref, "(maybe)", "");
+        line = sline.s;
         (*truth_ref) = 0.5;
     }
     if (strstr(line, "(false)")) {
         sline_ref = replace(sline_ref, " (false)", "");
         sline_ref = replace(sline_ref, "(false)", "");
+        line = sline.s;
         (*truth_ref) = 0.0;
     }
     
@@ -347,12 +358,13 @@ int remove_negation (char* line, double* truth_ref, int* only_logic) {
     if (strstr(line, "(logic)")) {
         sline_ref = replace(sline_ref, " (logic)", "");
         sline_ref = replace(sline_ref, "(logic)", "");
+        line = sline.s;
         (*only_logic) = 1;
     }
     
-    strncpy(line, sline_ref->s, 4196);
-    if (line[0] == ' ') {
-        strcpy(line, line+1);
+    strncpy(_line, sline_ref->s, 4196);
+    if (_line[0] == ' ') {
+        strcpy(_line, _line+1);
     }
     
     if (sline_ref->do_free) halfree(sline_ref->s);
