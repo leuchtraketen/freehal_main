@@ -313,10 +313,10 @@ int remove_negation (char* line, double* truth_ref, int* only_logic) {
         (*truth_ref) = 0.0;
     }
 //    printf("\nline (2): %s\n", line);
-    /*if (strstr(line, "nicht") == line) {
+    if (strstr(line, "nicht") == line && strlen(line) < 7) {
         sline_ref = replace(sline_ref, "nicht", " ");
         (*truth_ref) = 0.0;
-    }*/
+    }
     if (strstr(line, " not ")) {
         sline_ref = replace(sline_ref, " not ", "");
         (*truth_ref) = 0.0;
