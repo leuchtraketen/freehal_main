@@ -1499,7 +1499,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
     
     if (count_requests == 0) {
         catchf("  (the following match is '-1' because: count_requests = 0)\n", -1);
-        return INVALID_POINTER;
+        return -1;
     }
     
     if (does_match)  {
@@ -1620,14 +1620,14 @@ int fact_matches_questionword_rules_of_q_what_exactly(struct fact* fact, struct 
     int i;
     if (can_be_a_pointer(fact->subjects)) {
         for (i = 0; can_be_a_pointer(fact->subjects[i]) && can_be_a_pointer(fact->subjects[i]->name); ++i) {
-            if (0 == strcmp(fact->subjects[i]->name, "ein") || 0 == strcmp(fact->subjects[i]->name, "eine")) {
+            if (0 == strcmp(fact->subjects[i]->name, "ein") || 0 == strcmp(fact->subjects[i]->name, "eine") || 0 == strcmp(fact->subjects[i]->name, "(a)")) {
                 does_match = 1;
             }
         }
     }
     if (can_be_a_pointer(fact->objects)) {
         for (i = 0; can_be_a_pointer(fact->objects[i]) && can_be_a_pointer(fact->objects[i]->name); ++i) {
-            if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine")) {
+            if (0 == strcmp(fact->objects[i]->name, "ein") || 0 == strcmp(fact->objects[i]->name, "eine") || 0 == strcmp(fact->objects[i]->name, "(a)")) {
                 does_match = 1;
             }
         }
@@ -1825,7 +1825,7 @@ int fact_matches_verb(struct fact* fact, struct request* request) {
             int m;
             for (m = 0; fact->verbs[m] && fact->verbs[m]->name; ++m) {
                 //debugf("Does %s match %s?\n", fact->verbs[m]->name, splitted_by_pipe[p]);
-                if (0 == strcmp(fact->verbs[m]->name, splitted_by_pipe[p]) || (strstr(fact->verbs[m]->name, " ") && fact->verbs[m]->name == strstr(fact->verbs[m]->name, splitted_by_pipe[p]))) {
+                if (0 == strcmp(fact->verbs[m]->name, splitted_by_pipe[p]) || fact->verbs[m]->name == strstr(fact->verbs[m]->name, splitted_by_pipe[p])) { //(!strstr(fact->verbs[m]->name, " ") && 
                     does_match_here = 1;
                 }
             }
