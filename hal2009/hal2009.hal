@@ -1477,6 +1477,7 @@ define action compute_tags with var word, var lang, var path do
 done
 
 define action guess_part_of_speech with var word, var lang, var path do
+    do regex using var word: /<[+]>/, "", :global
     print "Tagger..." concat new line
     print "word: " concat var word concat new line
     print "" concat new line
