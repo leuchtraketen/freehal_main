@@ -69,17 +69,31 @@ target_link_libraries (hal2009-cgi m crypt pthread perl dl z boost_thread-mt boo
 add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/libboinc_graphics2.a /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c) 
 target_link_libraries (hal2009-boinc m crypt pthread dl boinc_api boinc_graphics2 boinc z /usr/lib/libperl.a) 
 
-add_executable (gprof-hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
-target_link_libraries (gprof-hal2009 m crypt pthread perl dl z) 
+add_executable (hal2009-debug hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
+target_link_libraries (hal2009-debug m crypt pthread perl dl z) 
 
-add_executable (gprof-hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
-target_link_libraries (gprof-hal2009-server m crypt pthread perl dl z boost_thread-mt boost_system-mt)
+add_executable (hal2009-server-debug hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
+target_link_libraries (hal2009-server-debug m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
-set_target_properties("gprof-hal2009" PROPERTIES COMPILE_FLAGS "-pg -g")
-set_target_properties("gprof-hal2009" PROPERTIES LINK_FLAGS "-pg -g")
-set_target_properties("gprof-hal2009-server" PROPERTIES COMPILE_FLAGS "-pg -g")
-set_target_properties("gprof-hal2009-server" PROPERTIES LINK_FLAGS "-pg -g")
+set_target_properties("hal2009-debug" PROPERTIES COMPILE_FLAGS "-pg -g")
+set_target_properties("hal2009-debug" PROPERTIES LINK_FLAGS "-pg -g")
+set_target_properties("hal2009-server-debug" PROPERTIES COMPILE_FLAGS "-pg -g")
+set_target_properties("hal2009-server-debug" PROPERTIES LINK_FLAGS "-pg -g")
 
+
+add_executable (hal2009-intel-pentium4 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+target_link_libraries (hal2009-intel-pentium4 m crypt pthread perl dl z) 
+add_executable (hal2009-server-intel-pentium4 hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+target_link_libraries (hal2009-server-intel-pentium4 m crypt pthread perl dl z boost_thread-mt boost_system-mt)
+set_target_properties("hal2009-intel-pentium4" PROPERTIES COMPILE_FLAGS "-march=pentium4 -O2 -O3")
+set_target_properties("hal2009-server-intel-pentium4" PROPERTIES COMPILE_FLAGS "-march=pentium4 -O2 -O3")
+
+add_executable (hal2009-amd-athlon-xp hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+target_link_libraries (hal2009-amd-athlon-xp m crypt pthread perl dl z) 
+add_executable (hal2009-server-amd-athlon-xp hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+target_link_libraries (hal2009-server-amd-athlon-xp m crypt pthread perl dl z boost_thread-mt boost_system-mt)
+set_target_properties("hal2009-amd-athlon-xp" PROPERTIES COMPILE_FLAGS "-march=athlon-xp -O2 -O3")
+set_target_properties("hal2009-server-amd-athlon-xp" PROPERTIES COMPILE_FLAGS "-march=athlon-xp -O2 -O3")
 
 endif(MINGW)
 

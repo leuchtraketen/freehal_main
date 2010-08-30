@@ -824,6 +824,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             if (strstr(lines[current_line]->s, "Koordinaten")) {
                 continue;
             }
+            if (strstr(lines[current_line]->s, "gesichtete Version")) {
+                continue;
+            }
             if (strstr(lines[current_line]->s, "latitude")) {
                 continue;
             }
