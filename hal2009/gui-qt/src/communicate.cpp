@@ -204,6 +204,8 @@ void server() {
 }
 
 void client(std::string host, bool verbose = true, bool wait = false) {
+    cout << "connection prepared..." << endl;
+
     if (wait) {
         while ( 1 ) {
             ifstream i("booted");
