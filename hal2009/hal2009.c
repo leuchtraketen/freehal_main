@@ -317,6 +317,11 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic) {
         line = sline.s;
         (*truth_ref) = 0.0;
     }
+    if (strstr(line, "nicht") && strlen(line) <= 7) {
+        sline_ref = replace(sline_ref, " nicht", " ");
+        line = sline.s;
+        (*truth_ref) = 0.0;
+    }
     if (0 == strcmp(line, "nicht")) {
     //printf("\nline (2): %s\n", line);
         sline_ref = replace(sline_ref, "nicht", "");

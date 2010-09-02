@@ -3556,7 +3556,7 @@ define action compute_output with var output do
     do regex using var output: /\/want/, "", :global:i
     do regex using var output: /\/should/, "", :global:i
     
-    do regex using var output: / nicht noch /, " noch nicht ", :global:i
+    do regex using var output: / nicht (noch|sicher) /, " $0 nicht ", :global:i
     do regex using var output: /(etwas|nichts) (schon|noch)/, "$1 $0", :global:i
 
     do regex using var output: /<[{]><[{]><[{]>.*?<[}]><[}]><[}]>/, "", :global:i
@@ -3567,7 +3567,7 @@ define action compute_output with var output do
     set new array _clauses to split using /<[,]>/, var output
     for each new var _clause in array _clauses is rw do
         # var _clause matches /\sein/ and 
-        if lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ do
+        if lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ and lc(var _clause) matches /(^|\s)(ein.?.?)(\s|$)/ do
             do regex using var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
             do regex using var _clause: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
             do regex using var _clause: /\sein(.?.?.?)$/, " kein$0", :global:i
@@ -4056,7 +4056,7 @@ define action adjust_truth with array result, var truth, var number_of_clause, v
             do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
+            set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause) ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
         done
     done
 done
