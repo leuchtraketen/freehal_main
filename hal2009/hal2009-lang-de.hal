@@ -2506,6 +2506,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'reich' => "adj",
           'rein' => "adj",
           'reizen' => "v",
+          'Riechen' => "v",
+          'riechen' => "v",
           'roh' => "adj",
           'rot' => "adj",
           'r' => "questionword",

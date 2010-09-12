@@ -1172,7 +1172,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
-        if (1|| DEBUG__LONG_LISTINGS) {
+        if (DEBUG__LONG_LISTINGS) {
             debugf("added fact no %d at %p:  %s, %s, %s, %s\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
         }
     }

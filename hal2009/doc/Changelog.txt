@@ -1,3 +1,9 @@
+1187:
+
+- Bug 644 korrigiert
+- Bug 646 korrigiert
+- Bug 662 korrigiert
+
 1183:
 
 - Fehler in der word_types.memory-Limitierung korrigiert
