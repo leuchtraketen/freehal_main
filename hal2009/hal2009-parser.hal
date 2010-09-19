@@ -272,9 +272,9 @@ define action list_grammar with array grammar do
                                 push into array _new_replacements, [ items of array _new_replacement, items of array _parts_of_replacement ]
                             done
                             
-                            print var part_of_replacement concat " "
-                            do print_array with array _parts_of_replacement
-                            print new line
+                            #print var part_of_replacement concat " "
+                            #do print_array with array _parts_of_replacement
+                            #print new line
                         done
                         
                     done
@@ -291,15 +291,16 @@ define action list_grammar with array grammar do
                 set items of array _grammar to (var symbol, items of array new_replacements)
             done
         done
+    
         set hash cache__every_except to an empty hash
     done
 
-    set new array reduced_list to from_grammar with array grammar, "s-all"
-    set new array _replacements to every_except_first with array reduced_list
-    for each new array __replacements in array _replacements do
-        do print_array with array __replacements
-        print new line
-    done
+    #set new array reduced_list to from_grammar with array grammar, "s-all"
+    #set new array _replacements to every_except_first with array reduced_list
+    #for each new array __replacements in array _replacements do
+    #    do print_array with array __replacements
+    #    print new line
+    #done
     #do exit with 0
     
     for each new array _grammar in array grammar do
@@ -660,6 +661,11 @@ set multi-line new global array grammar to [
     [ "s-adverbs-closed",
         [  ],
         [ "d-preposition", "replace:s-entity-closed", ],
+        [ "d-adjective", ],
+        [ "d-adjective", "d-adjective", ],
+        [ "d-adjective", "d-adjective", "d-adjective", ],
+        [ "d-adjective", "d-adjective", "d-adjective", "d-adjective", ],
+        [ "d-adjective", "d-adjective", "d-adjective", "d-adjective", "d-adjective", ],
    #     [ "d-preposition", "d-title", "d-noun", ],
    #     [ "d-preposition", "d-noun", ],
    #     [ "d-preposition", "d-adjective", "d-noun", ],

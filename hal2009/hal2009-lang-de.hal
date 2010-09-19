@@ -4415,6 +4415,10 @@ define action multiple_choices_verb with var verb do
         push into array choices, "wurde"
         push into array choices, "wuerdet"
         push into array choices, "werdet"
+        push into array choices, "bezeichne"
+        push into array choices, "bezeichnet"
+        push into array choices, "bezeichnen"
+        push into array choices, "bezeichnest"
     done
     else if var verb matches "ha" or var verb matches "hab" do
         push into array choices, var verb

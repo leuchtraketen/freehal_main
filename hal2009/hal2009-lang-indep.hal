@@ -299,6 +299,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /aneinander /, "aneinander", :global:i
     do regex using var input: /\shaben\swir\sheute/, " haben wir ", :global:i
     do regex using var input: /\sist\sheute/, " ist ", :global:i
+    do regex using var input: /(\s|^)(ist|bist)\s(.*?)\sheute\s/, "$0$1 $2 ", :global:i
     do regex using var input: /welchen\stag\shaben\swir\s/, "welch Datum haben wir ", :global:i
     do regex using var input: /welcher\stag\sist\s/, "welch Datum haben wir ", :global:i
 
