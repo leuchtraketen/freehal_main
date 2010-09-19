@@ -1,3 +1,8 @@
+1188:
+
+- Bottom-Up-Parser in hal2009-parser.hal
+- Absturzbug korrigiert
+
 1187:
 
 - Bug 644 korrigiert

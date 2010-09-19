@@ -2634,11 +2634,13 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
             for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
                 if (can_be_a_pointer(list[l])) {
                     if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
-                        printf("verb:     %s\n", list[l]->verbs[0]->name);
-                        printf("subjects: %s\n", list[l]->subjects[0]->name);
-                        printf("objects:  %s\n", list[l]->objects[0]->name);
-                        if (strcmp(list[l]->verbs[0]->name, "is-a") && strcmp(list[l]->verbs[0]->name, "=")) {
-                            set_to_invalid_fact(&(list[l]));
+                        if (can_be_a_pointer(list[l]->objects) && can_be_a_pointer(list[l]->objects[0]) && can_be_a_pointer(list[l]->objects[0]->name)) {
+                            printf("verb:     %s\n", list[l]->verbs[0]->name);
+                            printf("subjects: %s\n", list[l]->subjects[0]->name);
+                            printf("objects:  %s\n", list[l]->objects[0]->name);
+                            if (strcmp(list[l]->verbs[0]->name, "is-a") && strcmp(list[l]->verbs[0]->name, "=")) {
+                                set_to_invalid_fact(&(list[l]));
+                            }
                         }
                     }
                 }

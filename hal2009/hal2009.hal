@@ -53,6 +53,9 @@ require source hal2009-defs.hal
 compile source hal2009-lang-indep.hal
 require source hal2009-lang-indep.hal
 
+compile source hal2009-parser.hal
+require source hal2009-parser.hal
+
 
 define action be_slow without arguments do
     if exists: "SLOW", end test do
@@ -1885,7 +1888,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
 
         set new flag end_of_entity to 0
-        if flag found_subject is 0 do
+        if flag found_subject is false do
             set flag end_of_entity to entity_chose_end_of_entity with var lang, array words, hash tags, from array current_tag 1st item, from array next_tag 1st item, var current_word, var next_word, flag found_subject, var count_of_words_through_looop
         done
 
@@ -4570,7 +4573,13 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             # Then toggle the identities (user <-> machine).
             # CODE
             if is an empty hash parsed do
-                set hash parsed to parse with var lang, array words, hash tags
+        
+                set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
+                set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
+                if hash parsed is false do
+                    set hash parsed to parse with var lang, array words, hash tags
+                done
+        
                 set new array entities to an empty array
                 push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
                 push into array entities, items of that array: from hash parsed item { 'objects' } end items of
@@ -4582,7 +4591,13 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
                 set from hash parsed item { 'clauses' } to an empty array
             done
             else do
-                set new hash parsed_clause to parse with var lang, array words, hash tags
+        
+                set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
+                set new hash parsed_clause to new_parser_start with global array grammar, array data, var lang, var path
+                if hash parsed_clause is false do
+                    set hash parsed_clause to parse with var lang, array words, hash tags
+                done
+        
                 set new array entities to an empty array
                 push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
                 push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
