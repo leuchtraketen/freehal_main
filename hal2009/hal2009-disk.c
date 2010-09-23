@@ -793,8 +793,10 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         int is_new = 1;
         if (can_be_a_pointer(words[n][0])) {
             for (q = 0; words[q] && q+1 < n; ++q) {
-                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0])
+                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0]) {
                     is_new = 0;
+                    break;
+                }
             }
         }
         if (can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0])) {
@@ -888,7 +890,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
-    
+    printf(sql);
     return sql;
 }
 

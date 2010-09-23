@@ -215,7 +215,7 @@ struct fact** search_facts_double_facts(struct synonym_set* synonym_set, const c
 struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level, int weak);
 struct fact** search_facts_synonyms(const char* subjects, const char** subjects_array, const char* objects, const char** objects_array, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact** search_facts_thesaurus(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak);
-struct fact** search_in_net(struct request* fact, struct fact** list);
+struct fact** search_in_net(struct request* fact, struct fact** list, const char* hints);
 struct list* look_at_list(struct list* l);
 struct request* negotiate_deep_search(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, const struct fact* if_clause, const struct fact* then_clause);
 struct synonym** add_synonyms_by_search(const char** exps, struct synonym** synonyms, int* position, const char* category);

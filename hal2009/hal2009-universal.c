@@ -2155,7 +2155,7 @@ int divide_and_round_up(int a, int b) {
     return ((int)ceil(c));
 }
 
-struct fact** search_in_net(struct request* fact, struct fact** list) {
+struct fact** search_in_net(struct request* fact, struct fact** list, const char* hints) {
     int limit = 10000;
     if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
         limit = 1000000;
@@ -2196,8 +2196,10 @@ struct fact** search_in_net(struct request* fact, struct fact** list) {
     flowchart_lines += higher(count_of_synonym(fact->adverbs), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
     int succ_4 = 0;
     if (0 == strcmp(fact->context, "search_reasons") || !(fact->subjects[0] && fact->subjects[1] && fact->subjects[2])) {
-        succ_4 = search_facts_for_words_in_net(fact->extra,    facts, limit, &position);
-        flowchart_lines += higher(count_of_synonym(fact->extra), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+        if (!strstr(hints, "no-extra")) {
+            succ_4 = search_facts_for_words_in_net(fact->extra,    facts, limit, &position);
+            flowchart_lines += higher(count_of_synonym(fact->extra), COUNT_OF_SYNONYMS_PER_LINE_IN_FLOWCHART);
+        }
     }
     int succ_5 = 0;
 
@@ -2425,10 +2427,18 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
             questionword);
 
         list = filter_list_by_rules (
-            search_in_net(fact, list),
+            search_in_net(fact, list, "no-extra"),
             fact,
             weak
         );
+
+        if (!can_be_a_pointer(list) || !count_list((void**)list)) {
+            list = filter_list_by_rules (
+                search_in_net(fact, list, ""),
+                fact,
+                weak
+            );
+        }
         
         if (list != TOOMUCH_P) {
             
@@ -2539,7 +2549,7 @@ struct fact** search_facts_double_facts(struct synonym_set* synonym_set, const c
             questionword);
 
         list = filter_list_by_rules (
-            search_in_net(fact, list),
+            search_in_net(fact, list, ""),
             fact,
             weak
         );
@@ -2622,7 +2632,7 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
             questionword);
 
         list = filter_list_by_rules (
-            search_in_net(fact, list),
+            search_in_net(fact, list, ""),
             fact,
             VERY_EXACT
         );
@@ -2951,7 +2961,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
             questionword);
 
         linking_list = filter_list_by_rules (
-            search_in_net(fact, linking_list),
+            search_in_net(fact, linking_list, ""),
             fact,
             weak
         );
@@ -3007,7 +3017,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                 questionword);
 
                             list = filter_list_by_rules (
-                                search_in_net(req, list),
+                                search_in_net(req, list, ""),
                                 req,
                                 weak
                             );
@@ -3116,7 +3126,7 @@ struct fact** search_facts_thesaurus(struct synonym_set* synonym_set, const char
             questionword);
 
         list = filter_list_by_rules (
-            search_in_net(fact, list),
+            search_in_net(fact, list, ""),
             fact,
             weak
         );
