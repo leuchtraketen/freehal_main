@@ -2973,6 +2973,9 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             set new array must_haves to from hash parsed item { 'adverbs' } 1st item
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
+                if var must_have matches "0" do
+                    go to next
+                done
 
                 set new array tags to an empty array
                 if var must_have matches /\s/ do
@@ -3017,6 +3020,10 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             set new array must_haves to from hash parsed item { 'objects' } 1st item
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
+                if var must_have matches "0" do
+                    go to next
+                done
+
                 if ( not var must_have ) or not lc( from array result 2nd item 2nd item ) matches /var must_have/ do
                     print "[-] Does not have must-have (no 2) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
                     print new line
@@ -3039,6 +3046,9 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             for each new array must_haves in array _must_haves do
                 for each new var must_have in array must_haves do
                     set var must_have to lc with var must_have
+                    if var must_have matches "0" do
+                        go to next
+                    done
                     do regex using var must_have: /...$/, "", :i
                     if length(var must_have) > 2 do
                         if not lc( from array result 2nd item 2nd item ) matches /var must_have/ do
