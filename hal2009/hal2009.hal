@@ -3756,6 +3756,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             set from array clause 3rd item to check_for_as_well_as with from array clause 3rd item, from array clause 4th item, var lang, var path
             set from array clause 4th item to check_for_as_well_as with from array clause 4th item, from array clause 4th item, var lang, var path
             
+                print "auxiliary verbs... "
+                print items of array auxiliary_verbs
+                print new line
+                print "proper verbs... "
+                print items of array proper_verbs
+                print new line
             # TEXT
             # Build the final sentence.
             # CODE
@@ -5621,7 +5627,7 @@ define action init_part_of_speech_pro_file with var current_language, var path d
         
                 if var pos_raw matches /^(v).?.?$/ and var pos_word do
                     if var entry not matches /_/ do
-                        print into var path_pos_dest_handle data "= <> _" concat var entry concat "_ <> (a) _" concat var pos_word concat "_ <>  <> (maybe)" concat new line
+                        print into var path_pos_dest_handle data "is-a <> _" concat var entry concat "_ <> (a) " concat var pos_word concat " <>  <> (maybe)" concat new line
                     done
                 done
             done

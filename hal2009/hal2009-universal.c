@@ -2458,6 +2458,10 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
                                 printf("fact %d: from thesaurus => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
                             }
+                            else if (strstr(list[l]->from, "part_of_speech")) {
+                                printf("fact %d: from part_of_speech => invalid\n", l);
+                                set_to_invalid_fact(&(list[l]));
+                            }
                             else if (strstr(list[l]->from, "ps-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT)) {
                                 printf("fact %d: from ps-... => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
