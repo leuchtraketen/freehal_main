@@ -755,7 +755,7 @@ define action memory_limit with var file_name, var lang, var path do
     
     set var average_count to var average_count / var count_items
     if var average_count < 1 do
-        set var average_count to var var average_count + 1
+        set var average_count to var average_count + 1
     done
     
     print "Average is " concat var average_count
@@ -2608,10 +2608,6 @@ done
             # A is B and C and D and E and F
             set var array_index to var array_index + 1
             push into array list_of_list_of_words, an empty array
-##################################################################################################################################################################
-##################################################################################################################################################################
-##################################################################################################################################################################
-##################################################################################################################################################################
 #            if from array list_of_questionwords item [ var array_index - 1 ] do
 #                push into array list_of_questionwords, items of that array: from array list_of_questionwords item [ var array_index - 1 ] end-items-of
 #            done
@@ -3049,17 +3045,18 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     if var must_have matches "0" do
                         go to next
                     done
-                    do regex using var must_have: /...$/, "", :i
-                    if length(var must_have) > 2 do
-                        if not lc( from array result 2nd item 2nd item ) matches /var must_have/ do
-                            print "[-] Does not have must-have (no 3) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                    set new var _must_have to var must_have
+                    do regex using var _must_have: /...$/, "", :i
+                    if length(var _must_have) > 2 do
+                        if not lc( from array result 2nd item 2nd item ) matches /var _must_have/ do
+                            print "[-] Does not have must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
                             print new line
                             set flag go_next to 1
                         done
                         else do
-                            print "[+] Has must-have (no 3) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                            print "[+] Has must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
                             print new line
-                            if var must_have do
+                            if var _must_have do
                                 set var num_must_haves to var num_must_haves + 1
                             done
                         done
@@ -4128,7 +4125,15 @@ define action phrase with var lang, var path, var mode, array results, hash pars
     print "8" concat new line
                             if items of array proper_verbs do
     print "7" concat new line
-                                if from global hash builtin_time_place_adverbs item { from array clause 4th item } do
+                                if from array clause 5th item matches /(der|die|das)$/ do
+    print "14" concat new line
+                                    push into array sentence, items of array auxiliary_verbs
+                                    push into array sentence, from array clause 2nd item
+                                    push into array sentence, from array clause 4th item
+                                    push into array sentence, from array clause 3rd item
+                                    push into array sentence, items of array auxiliary_verbs
+                                done
+                                else if from global hash builtin_time_place_adverbs item { from array clause 4th item } do
     print "6" concat new line
                                     push into array sentence, from array clause 2nd item
                                     push into array sentence, items of array auxiliary_verbs
@@ -4586,6 +4591,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         
                 set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
                 set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
+#                set hash parsed to 0
                 if hash parsed is false do
                     set hash parsed to parse with var lang, array words, hash tags
                 done
@@ -4888,10 +4894,14 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         for each new array verb in array verbs do
             set var verb to from array verb 1st item
             
+print "verb: " concat var verb concat new line
+
             set new var verb_category to verb_category with var verb
             if var verb_category and var verb not matches /\// do
                 set var verb to var verb concat "/" concat var verb_category
             done
+
+print "verb: " concat var verb concat new line
             
             if var verb matches /opposite/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
@@ -5584,6 +5594,47 @@ define action transform_psprot_line with var line, var main_word, var current_la
     do return with array lines
 done
 
+define action init_part_of_speech_pro_file with var current_language, var path do
+
+    set new var path_pos_dest to var path concat '/lang_' concat var current_language concat '/part_of_speech.pro'
+    if exists: var path_pos_dest, end test do
+        do return without arguments
+    done
+    set new var path_pos_dest_handle to handle for file name var path_pos_dest, write
+
+    set new array sub_directories to an empty array
+    push into array sub_directories, 'word_types.brain'
+    push into array sub_directories, 'word_types.memory'
+    
+    for each new var sub_dir in array sub_directories is copy do
+        set new var path_pos_source to var path concat '/lang_' concat var current_language concat '/' concat var sub_dir
+        set new var path_pos_source_handle to handle for file name var path_pos_source, read
+
+        set new var entry to ""
+
+        for each new var _line from var path_pos_source_handle is rw do
+            do be_slow without arguments
+
+            if var _line matches /^.?.?type:\s?(.*?)$/ do
+                set new var pos_raw to $0
+                set new var pos_word to get_pos_word with var pos_raw
+        
+                if var pos_raw matches /^(v).?.?$/ and var pos_word do
+                    if var entry not matches /_/ do
+                        print into var path_pos_dest_handle data "= <> _" concat var entry concat "_ <> (a) _" concat var pos_word concat "_ <>  <> (maybe)" concat new line
+                    done
+                done
+            done
+            else do
+                if var _line matches /^([^\s]*?):/ do
+                    set var entry to $0
+                done
+            done
+        done
+    done
+    
+done
+
 define action init_prot_files with var current_language, var path do
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
@@ -5700,6 +5751,8 @@ define action init_prot_files with var current_language, var path do
 done
 
 define action init with var current_language, var path do
+    do init_part_of_speech_pro_file with var current_language, var path
+
     do init_prot_files with var current_language, var path
     do init_pro_files with var current_language, var path
 done

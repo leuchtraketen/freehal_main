@@ -2687,6 +2687,19 @@ define action get_plural with var str do
     do return with var str
 done
 
+define action get_pos_word with var str do
+    if var str matches /^v/ do
+        do return with "verb"
+    done
+    if var str matches /^n/ do
+        do return with "noun"
+    done
+    if var str matches /^adj/ do
+        do return with "adjective"
+    done
+    do return with ""
+done
+
 define action get_verb with var verb, var person do
 
     if var verb matches "be" do
