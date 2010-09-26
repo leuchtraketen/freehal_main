@@ -5610,7 +5610,7 @@ define action init_part_of_speech_pro_file with var current_language, var path d
 
     set new array sub_directories to an empty array
     push into array sub_directories, 'word_types.brain'
-    push into array sub_directories, 'word_types.memory'
+#    push into array sub_directories, 'word_types.memory'
     
     for each new var sub_dir in array sub_directories is copy do
         set new var path_pos_source to var path concat '/lang_' concat var current_language concat '/' concat var sub_dir
