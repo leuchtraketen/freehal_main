@@ -101,6 +101,8 @@ struct synonym_set {
     int position_objects;
     int position_adverbs;
     int position_extra;
+
+    short subject_object_switched;
 };
 
 struct word {
@@ -158,7 +160,7 @@ int end_catchf();
 int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, int weak);
 int fact_matches_adverb_by_object(struct fact* fact, struct request* request, int weak);
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request);
-int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags);
+int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags, const char* comment);
 int fact_matches_object_by_adverb(struct fact* fact, struct request* request, int weak);
 int fact_matches_object_by_object(struct fact* fact, struct request* request, int weak);
 int fact_matches_object_by_subject(struct fact* fact, struct request* request, int weak);

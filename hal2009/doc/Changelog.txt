@@ -1,3 +1,7 @@
+1201:
+
+- Bug 665 korrigiert
+
 1195:
 
 - Bug 567 korrigiert
