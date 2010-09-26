@@ -56,7 +56,7 @@ aussieht <> a <> nothing <>  <> hat <> a <> ein aussehen <>  <> wenn <>  <> (tru
 #Antwort auf die Eingabe aussehen mit aussieht
 hat <> a <> ein aussehen <>  <> aussieht <> a <> nothing <>  <> wenn <>  <> (true)
 #Variablendeklaration damit Freehal auf die Frage"Was hast du an?" antworten kann
-anhat <> _a_b_ <> nothing <>  <> anhaben kann/can <> _a_b_ <> nothing <>  <> wenn <>  <> (true)
+anhat <> (a) _b_ <> nothing <>  <> anhaben kann/can <> _a_b_ <> nothing <>  <> wenn <>  <> (true)
 anhat <> a <> nothing <>  <> anhaben kann/can <> a <> nothing <>  <> wenn <>  <> (true)
 #Direkte Antwort auf die Frage "Warum heiﬂt du nicht mehr Jeliza"#
 heisst <> a <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing <> immer mit eliza <>  <>  <> (true)
