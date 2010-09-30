@@ -1,3 +1,7 @@
+1203:
+
+- Bug in der Tiefensuche korrigiert
+
 1202:
 
 - alle Variablen bei Wenn-Dann-Beziehungen werden nun als "$a$" / "$b$" statt "a" / "b" in die .pro eingetragen

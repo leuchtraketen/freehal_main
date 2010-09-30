@@ -3008,7 +3008,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                         if (is_conditional_questionword(clauses[c]->questionword)) {
                             printf("There is a sentence with a conditional questionword.\n");
                             
-                            struct request* req = negotiate_deep_search(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, context, clauses[c], linking_list[l]);
+                            struct request* req = negotiate_deep_search(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, "q_deep_search", clauses[c], linking_list[l]);
                             
                             delete_in_first_if_in_second(req->subjects, req->objects);
                             
@@ -3063,6 +3063,27 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                                     }
                                                 }
                                             }
+                                        }
+                                    }
+                                    if (can_be_a_pointer(list[l])) {
+                                        struct fact** clauses = search_clauses(list[l]->pk);
+                                        if (can_be_a_pointer(clauses) && can_be_a_pointer(clauses[0])) {
+                                            printf("pk %d, clauses!\n", list[l]->pk);
+                                            int c;
+                                            for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
+                                                printf("pk %d, clause %d, question word %s\n", list[l]->pk, c, clauses[c]->questionword);
+                                                
+                                                if (is_conditional_questionword(clauses[c]->questionword)) {
+                                                    set_to_invalid_fact(&(list[l]));
+                                                    break;
+                                                }
+                                            }
+                                            for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
+                                                set_to_invalid_fact(&(clauses[c]));
+                                            }
+                                        }
+                                        if (is_engine("disk")) {
+                                            free(clauses);
                                         }
                                     }
                                 }
