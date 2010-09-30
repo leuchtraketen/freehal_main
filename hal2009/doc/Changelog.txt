@@ -1,6 +1,7 @@
 1203:
 
 - Bug in der Tiefensuche korrigiert
+- Bug 667 korrigiert
 
 1202:
 
