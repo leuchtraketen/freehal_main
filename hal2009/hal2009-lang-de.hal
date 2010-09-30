@@ -1995,6 +1995,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'fest' => "prep",
           'fett' => "adj",
           'feucht' => "adj",
+          'fisch' => "n",
+          'fische' => "n",
           'fidel' => "adj",
           'fies' => "adj",
           'film' => "n",
