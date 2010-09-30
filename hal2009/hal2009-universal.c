@@ -2457,8 +2457,11 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
 
             int l;
             for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
+                printf("list[l]: %d\n", list[l]);
                 if (can_be_a_pointer(list[l])) {
+                    printf("list[l]->verbs: %d\n", list[l]->verbs);
                     if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
+                        printf("list[l]->verbs[0]->name: %s\n", list[l]->verbs[0]->name);
                         if (is_a_fact_verb(list[l]->verbs[0]->name) && strlen(verbs)) {
 
                             if (!subject_syonyms_level_0) {
@@ -3656,8 +3659,8 @@ int is_a_variable(const char* word) {
 int is_a_equal_verb(const char* word) {
     return (
         can_be_a_pointer((void*)word) && (
-            0 == strcmp(word, "=")
-         || 0 == strcmp(word, "is-a")
+            word == strstr(word, "=")
+         || word == strstr(word, "is-a")
         )
          ?  1
          :  0
@@ -3667,10 +3670,10 @@ int is_a_equal_verb(const char* word) {
 int is_a_fact_verb(const char* word) {
     return (
         can_be_a_pointer((void*)word) && (
-            0 == strcmp(word, "=")
-         || 0 == strcmp(word, "is-part")
-         || 0 == strcmp(word, "is-own")
-         || 0 == strcmp(word, "is-a")
+            word == strstr(word, "=")
+         || word == strstr(word, "is-part")
+         || word == strstr(word, "is-own")
+         || word == strstr(word, "is-a")
         )
          ?  1
          :  0

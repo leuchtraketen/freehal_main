@@ -738,7 +738,7 @@ define action compute_input with var input is rw, var lang, var path do
             
             set var input to var a concat " is-own " concat var b
         done
-        if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ do
+        if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ and lc(var input) not matches /(wie|wer|was|wo|wann|warum|wieso|weshalb|<[?]>)/ do
             set new var a to $0
             set new var b to $2
             

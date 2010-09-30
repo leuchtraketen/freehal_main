@@ -1,3 +1,7 @@
+1205:
+
+- Bug 666 korrigiert
+
 1203:
 
 - Bug in der Tiefensuche korrigiert

@@ -2893,6 +2893,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'wurden' => "v",
           'wurdest' => "v",
           'wurde' => "v",
+          'wurst' => "n",
           'xxtoxx' => "questionword",
           'XXtoXX' => "questionword",
           'yesterday' => "adj",
