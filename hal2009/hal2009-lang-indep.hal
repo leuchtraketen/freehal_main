@@ -1203,6 +1203,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\swozu\s/, " wie ", :global:i
     do regex using var input: /\soppo\s/, " opposite ", :global:i
     do regex using var input: /\s.?.?opposite.?.?\s/, " opposite ", :global:i
+
+    do regex using var input: /(^|\s)(ich|du|das) (weiss) /, "$0$1 $2\{\{\{v\}\}\} ", :global:i
+    do regex using var input: / (weiss) (ich|du|das) /, " $0\{\{\{v\}\}\} $1 ", :global:i
     
     if var input matches / opposite / do
         do regex using var input: /^\s+/, "", :global

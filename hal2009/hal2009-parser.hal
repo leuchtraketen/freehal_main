@@ -256,7 +256,7 @@ define action list_grammar with array grammar do
 
                 set new array _new_replacements to [ [] ]
                 for each new var part_of_replacement in array replacement do
-                    if var part_of_replacement matches /^(replace:.*?)$/ do
+                    if var part_of_replacement matches /^(r-.*?)$/ do
                         set new var search_symbol to $0
                         set flag found_replace_parts to 1
             
@@ -326,13 +326,13 @@ define action list_grammar with array grammar do
             done
             do regex using var symbol_str: /^\s+/, "", :global
         
-        set var symbol_str to var symbol concat " ~\\1 \\2 \\3 \\4 \\5 \\6 \\7 \\8 \\9~"
-            
-            if var symbol_str matches /s-all/ do
+            set var symbol_str to var symbol concat " ~\\1 \\2 \\3 \\4 \\5 \\6 \\7 \\8 \\9~"
+
+            if var symbol_str matches /^s-all/ do
                 #set var replacement_str to "^\\s*?" concat var replacement_str concat "\\s*?\$"
             done
 
-            if var replacement_str and var symbol not matches /replace:/ do
+            if var replacement_str and var symbol not matches /r-/ do
                 if not from hash rules item { var replacement_str } do
                     set from hash rules item { var replacement_str } to an empty array
                 done
@@ -360,15 +360,36 @@ define action match_in_grammar with hash rules, array data_types, array data_wor
     set var data_types_str to var data_types_str concat " "
     print var data_types_str concat new line
     
-    set new array rule_left_names to an empty array
-    set items of array rule_left_names to keys with items of hash rules
-    set items of array rule_left_names to sort {count_spaces_regexp(var b) <=> count_spaces_regexp(var a)} with items of array rule_left_names
-    do unshift with items of array rule_left_names, "s-adverbs-closed"
-    do unshift with items of array rule_left_names, "s-questionword-part"
-    print "first it: " concat from array rule_left_names first item concat new line
+    set new array _rule_left_names to an empty array
+    set items of array _rule_left_names to keys with items of hash rules
+    set items of array _rule_left_names to sort {count_spaces_regexp(var b) <=> count_spaces_regexp(var a)} with items of array _rule_left_names
+    set new array rule_left_names_other to an empty array
+    set new array rule_left_names_final to an empty array
+    for each new var rule_left_name in array _rule_left_names do
+        set new array right_symbols to from hash rules item { var rule_left_name }
+        set new flag final to 0
     
+        for each new var right_symbol in array right_symbols do
+            if var right_symbol matches /s-all/ do
+                set flag final to 1
+            done
+        done
+        
+        if flag final is true do
+            push into array rule_left_names_final, var rule_left_name
+            print var rule_left_name concat new line
+        done
+        else do
+            push into array rule_left_names_other, var rule_left_name
+        done
+    done
+
     set new array data_types_list to [ [ var data_types_str, []] ]
-    set new array replaced_history to reduce_with_rules with array rule_left_names, hash rules, array data_types_list, array data_types, array data_words
+    set new array data_types_list to reduce_with_rules with array rule_left_names_other, hash rules, array data_types_list, array data_types, array data_words, 50, 0
+    
+        print new line concat new line concat new line
+    
+    set new array replaced_history to reduce_with_rules with array rule_left_names_final, hash rules, array data_types_list, array data_types, array data_words, 50, 1
     
     if array replaced_history is false do
         do return with 0
@@ -378,7 +399,11 @@ define action match_in_grammar with hash rules, array data_types, array data_wor
     do return with hash parsed
 done
 
-define action reduce_with_rules with array rule_left_names, hash rules, array data_types_list, array data_types, array data_words do
+define action reduce_with_rules with array rule_left_names, hash rules, array data_types_list, array data_types, array data_words, var maxdepth, flag final do
+    if var maxdepth <= 0 do
+        do return with 0
+    done
+
     print "reduce_with_rules:  "
     set new array data_types_list_symbols to items_of_array with array data_types_list, 0
     do print_array with array data_types_list_symbols
@@ -450,6 +475,9 @@ define action reduce_with_rules with array rule_left_names, hash rules, array da
                             set new var history_symbol_str to var symbol_str
                             do regex using var history_symbol_str: /[~].*/, ""
                             do regex using var history_symbol_str: /\s+$/, ""
+                print "history_symbol_str: " concat var history_symbol_str concat new line
+                print "symbol_str: " concat var symbol_str concat new line
+                print "history_rule_left_name: " concat var history_rule_left_name concat new line
                             push into array replaced_history, [ var history_symbol_str, var history_rule_left_name ]
                 
                             push into array data_types_list, [ var _data_types_str, array replaced_history ]
@@ -473,24 +501,29 @@ define action reduce_with_rules with array rule_left_names, hash rules, array da
         done
 
         if var successful do
-            set new array replaced_history to reduce_with_rules with array rule_left_names, hash rules, array data_types_list, array data_types, array data_words
+            set new array replaced_history to reduce_with_rules with array rule_left_names, hash rules, array data_types_list, array data_types, array data_words, var maxdepth - 1, flag final
             if array replaced_history is true do
                 do return with array replaced_history
             done
         done
     done
     
-    for each new array data_types_item in array data_types_list do
-        set new var data_types_str to from array data_types_item 1st item
-        
-        if var data_types_str matches /^\s*?s-all [~][^~]*?[~]\s*?$/ do
-            set new array replaced_history to from array data_types_item 2nd item
-            for each new array replaced_history_item in array replaced_history do
-                do print_array with array replaced_history_item
-                print new line
+    if flag final do
+        for each new array data_types_item in array data_types_list do
+            set new var data_types_str to from array data_types_item 1st item
+            
+            if var data_types_str matches /^\s*?s-all [~][^~]*?[~]\s*?$/ do
+                set new array replaced_history to from array data_types_item 2nd item
+                for each new array replaced_history_item in array replaced_history do
+                    do print_array with array replaced_history_item
+                    print new line
+                done
+                do return with array replaced_history
             done
-            do return with array replaced_history
         done
+    done
+    else do
+        do return with array data_types_list
     done
     
     do return with 0
@@ -511,146 +544,80 @@ done
 set multi-line new global array grammar to [
     
     [ "s-all",
-        [ "replace:s-sentence", ],
+        [ "r-sentence", ],
     ],
     
-    [ "replace:s-sentence",
-        [                                            "replace:s-sentence-spo", ],
-        [                                            "replace:s-sentence-pso", ],
-        [                                            "replace:s-sentence-sop", ],
-        [                                            "replace:s-sentence-p", ],
-        [                     "s-questionword-part", "replace:s-sentence-spo", ],
-        [                     "s-questionword-part", "replace:s-sentence-pso", ],
-        [                     "s-questionword-part", "replace:s-sentence-sop", ],
-        [                     "s-questionword-part", "replace:s-sentence-p", ],
-        [ "s-adverbs-closed",                        "replace:s-sentence-spo", ],
-        [ "s-adverbs-closed",                        "replace:s-sentence-pso", ],
-        [ "s-adverbs-closed",                        "replace:s-sentence-sop", ],
-        [ "s-adverbs-closed",                        "replace:s-sentence-p", ],
-        [ "s-adverbs-closed", "s-questionword-part", "replace:s-sentence-spo", ],
-        [ "s-adverbs-closed", "s-questionword-part", "replace:s-sentence-pso", ],
-        [ "s-adverbs-closed", "s-questionword-part", "replace:s-sentence-sop", ],
-        [ "s-adverbs-closed", "s-questionword-part", "replace:s-sentence-p", ],
+    [ "r-sentence",
+        [ "r-adverbs-closed",                        "r-sentence-spo", ],
+        [ "r-adverbs-closed",                        "r-sentence-pso", ],
+        [ "r-adverbs-closed",                        "r-sentence-sop", ],
+        [ "r-adverbs-closed",                        "r-sentence-p", ],
+        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-spo", ],
+        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-pso", ],
+        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-sop", ],
+        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-p", ],
+    
+        [ "s-questionword-part", "s-subject-open", "s-verb", "s-object-open", "s-adverbs-closed", "s-verb", ],
     ],
     
     [ "s-questionword-part",
-        [ "d-questionword", "replace:s-extra" ],
+        [ "d-questionword", "r-extra" ],
         [ "d-questionword", ],
     ],
     
-    [ "replace:s-sentence-spo",
-        [ "s-subject-closed",                     "s-verb",                     "s-object-closed",                     ],
-        [ "s-subject-open",                       "s-verb",                     "s-object-closed",                     ],
-        [ "s-subject-closed",                     "s-verb",                     "s-object-open",                       ],
-        [ "s-subject-open",                       "s-verb",                     "s-object-open",                       ],
+    [ "r-sentence-spo",
+        [ "s-subject-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", ],
+        [ "s-subject-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", ],
 
-        [ "s-subject-closed",                     "s-verb",                     "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-open",                       "s-verb",                     "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-closed",                     "s-verb",                     "s-object-open",   "s-adverbs-closed", ],
-        [ "s-subject-open",                       "s-verb",                     "s-object-open",   "s-adverbs-closed", ],
-
-        [ "s-subject-closed",                     "s-verb", "s-adverbs-closed", "s-object-closed",                     ],
-        [ "s-subject-open",                       "s-verb", "s-adverbs-closed", "s-object-closed",                     ],
-        [ "s-subject-closed",                     "s-verb", "s-adverbs-closed", "s-object-open",                       ],
-        [ "s-subject-open",                       "s-verb", "s-adverbs-closed", "s-object-open",                       ],
-
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb",                     "s-object-closed",                     ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb",                     "s-object-closed",                     ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb",                     "s-object-open",                       ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb",                     "s-object-open",                       ],
-
-        [ "s-subject-closed",                     "s-verb", "s-adverbs-closed", "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-open",                       "s-verb", "s-adverbs-closed", "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-closed",                     "s-verb", "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", ],
-        [ "s-subject-open",                       "s-verb", "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", ],
-
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb",                     "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb",                     "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb",                     "s-object-open",   "s-adverbs-closed", ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb",                     "s-object-open",   "s-adverbs-closed", ],
-
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-closed",                     ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-closed",                     ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-open",                       ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-open",                       ],
-
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-closed", "s-adverbs-closed", ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", ],
+        [ "s-subject-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-closed", "r-adverbs-closed", ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-closed", "r-adverbs-closed", ],
+        [ "s-subject-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", ],
     ],
-    [ "replace:s-sentence-pso",
-        [ "s-verb",                               "s-subject-closed",                     "s-object-closed", ],
-        [ "s-verb",                               "s-subject-closed",                     "s-object-open",   ],
-        [ "s-verb",                               "s-subject-closed",                                        ],
-        [ "s-verb",                               "s-subject-open",                       "s-object-open",   ],
-        [ "s-verb",                               "s-subject-open",                                          ],
-
-        [ "s-verb",                               "s-subject-closed", "s-adverbs-closed", "s-object-closed", ],
-        [ "s-verb",                               "s-subject-closed", "s-adverbs-closed", "s-object-open",   ],
-        [ "s-verb",                               "s-subject-closed", "s-adverbs-closed",                    ],
-        [ "s-verb",                               "s-subject-open",   "s-adverbs-closed", "s-object-open",   ],
-        [ "s-verb",                               "s-subject-open",   "s-adverbs-closed",                    ],
-
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed",                     "s-object-closed", ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed",                     "s-object-open",   ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed",                                        ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-open",                       "s-object-open",   ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-open",                                          ],
-
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed", "s-adverbs-closed", "s-object-closed", ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed", "s-adverbs-closed", "s-object-open",   ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-closed", "s-adverbs-closed",                    ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-open",   "s-adverbs-closed", "s-object-open",   ],
-        [ "s-verb",           "s-adverbs-closed", "s-subject-open",   "s-adverbs-closed",                    ],
+    [ "r-sentence-pso",
+        [ "s-verb",           "r-adverbs-closed", "s-subject-closed", "r-adverbs-closed", "s-object-closed", ],
+        [ "s-verb",           "r-adverbs-closed", "s-subject-closed", "r-adverbs-closed", "s-object-open",   ],
+        [ "s-verb",           "r-adverbs-closed", "s-subject-closed", "r-adverbs-closed",                    ],
+        [ "s-verb",           "r-adverbs-closed", "s-subject-open",   "r-adverbs-closed", "s-object-open",   ],
+        [ "s-verb",           "r-adverbs-closed", "s-subject-open",   "r-adverbs-closed",                    ],
     ],
-    [ "replace:s-sentence-sop",
-        [ "s-subject-closed",                     "s-object-closed",                     "s-verb",                       ],
-        [ "s-subject-closed",                     "s-object-open",                       "s-verb",                       ],
-        [ "s-subject-closed",                     "s-verb",                                                              ],
-        [ "s-subject-open",                       "s-object-open",                       "s-verb",                       ],
-        [ "s-subject-open",                       "s-verb",                                                              ],
-
-        [ "s-subject-closed",                     "s-object-closed",                     "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed",                     "s-object-open",                       "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed",                     "s-verb",                                                              ],
-        [ "s-subject-open",                       "s-object-open",                       "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-open",                       "s-verb",                                                              ],
-
-        [ "s-subject-closed",                     "s-object-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed",                     "s-object-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed",                     "s-verb",          "s-adverbs-closed",                                 ],
-        [ "s-subject-open",                       "s-object-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-open",                       "s-verb",          "s-adverbs-closed",                                 ],
-
-        [ "s-subject-closed", "s-adverbs-closed", "s-object-closed", "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-closed", "s-adverbs-closed", "s-verb",          "s-adverbs-closed",                                 ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-object-open",   "s-adverbs-closed", "s-verb", "s-adverbs-closed",   ],
-        [ "s-subject-open",   "s-adverbs-closed", "s-verb",          "s-adverbs-closed",                                 ],
+    [ "r-sentence-sop",
+        [ "s-subject-closed", "r-adverbs-closed", "s-object-closed", "r-adverbs-closed", "s-verb", "r-adverbs-closed",   ],
+        [ "s-subject-closed", "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed",   ],
+        [ "s-subject-closed", "r-adverbs-closed", "s-verb",          "r-adverbs-closed",                                 ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-object-open",   "r-adverbs-closed", "s-verb", "r-adverbs-closed",   ],
+        [ "s-subject-open",   "r-adverbs-closed", "s-verb",          "r-adverbs-closed",                                 ],
     ],
-    [ "replace:s-sentence-p",
+    [ "r-sentence-p",
         [ "s-verb",           "s-adverbs-closed", ],
         [ "s-verb",                               ],
     ],
     
     [ "s-subject-open",
-        [ "replace:s-entity-open", ],
+        [ "r-entity-open", ],
+        [ "r-entity-closed", "r-entity-open", ],
     ],
     [ "s-subject-closed",
-        [ "replace:s-entity-closed", ],
+        [ "r-entity-closed", ],
     ],
     [ "s-object-open",
-        [ "replace:s-entity-open", ],
+        [ "r-entity-open", ],
+        [ "r-entity-open", "r-entity-open", ],
+        [ "r-entity-closed", "r-entity-open", ],
     ],
     [ "s-object-closed",
-        [ "replace:s-entity-closed", ],
+        [ "r-entity-closed", ],
+        [ "r-entity-closed", "r-entity-closed", ],
     ],
     
-    [ "replace:s-entity-open",
+    [ "r-entity-open",
         [ "d-title", ],
+        [ "d-article", ],
+        [ "d-article", "d-title", ],
     ],
-    [ "replace:s-entity-closed",
+    [ "r-entity-closed",
         [ "d-noun", ],
         [ "d-title", "d-noun", ],
         [ "d-adjective", "d-noun", ],
@@ -658,9 +625,13 @@ set multi-line new global array grammar to [
         [ "d-article", "d-adjective", "d-noun", ],
     ],
     
-    [ "s-adverbs-closed",
+    [ "r-adverbs-closed",
+        [ "s-adverbs-closed", ],
         [  ],
-        [ "d-preposition", "replace:s-entity-closed", ],
+    ],
+    
+    [ "s-adverbs-closed",
+        [ "d-preposition", "r-entity-closed", ],
         [ "d-adjective", ],
         [ "d-adjective", "d-adjective", ],
         [ "d-adjective", "d-adjective", "d-adjective", ],
@@ -677,7 +648,7 @@ set multi-line new global array grammar to [
         [ "d-verb", ],
     ],
 
-    [ "replace:s-extra",
+    [ "r-extra",
         [ "d-adjective", ],
         [ "d-noun", ],
     ],

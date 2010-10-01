@@ -1,3 +1,7 @@
+1207:
+
+- Bug 669 korrigiert
+
 1206:
 
 - Bug 669 korrigiert
