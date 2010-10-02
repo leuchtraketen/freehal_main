@@ -197,10 +197,14 @@ define action match_in_replaced_history with array replaced_history, array data_
         if var symbol matches /s-adverbs/ do
             push into array adverbs, items of array words
         done
-        if var symbol matches /s-questionword-part/ do
-            set new array words_extra to every_except_first with array words
-            push into array questionwords, from array words first item
-            push into array extra, items of array words_extra
+        if var symbol matches /s-questionword/ do
+            push into array questionwords, items of array words
+        done
+        if var symbol matches /s-extra-after/ do
+            push into array extra, items of array words
+        done
+        if var symbol matches /s-extra-before/ do
+            do unshift with items of array adverbs, items of array words
         done
 
         set var i to var i + 1
@@ -551,18 +555,32 @@ set multi-line new global array grammar to [
         [ "r-adverbs-closed",                        "r-sentence-spo", ],
         [ "r-adverbs-closed",                        "r-sentence-pso", ],
         [ "r-adverbs-closed",                        "r-sentence-sop", ],
+        [ "r-adverbs-closed",                        "r-sentence-ps", ],
+        [ "r-adverbs-closed",                        "r-sentence-sp", ],
         [ "r-adverbs-closed",                        "r-sentence-p", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-spo", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-pso", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-sop", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-ps", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-sp", ],
-        [ "r-adverbs-closed", "s-questionword-part", "r-sentence-p", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-spo", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-pso", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-sop", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-ps", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-sp", ],
+        [ "r-adverbs-closed", "r-questionword-part", "r-sentence-p", ],
     ],
     
-    [ "s-questionword-part",
-        [ "d-questionword", "r-extra" ],
+    [ "r-questionword-part",
+        [ "s-extra-before", "s-questionword", "s-extra-after" ],
+        [ "s-questionword", "s-extra-after" ],
+        [ "s-questionword", ],
+    ],
+    
+    [ "s-questionword",
         [ "d-questionword", ],
+    ],
+    [ "s-extra-after",
+        [ "d-adjective", ],
+        [ "d-noun", ],
+    ],
+    [ "s-extra-before",
+        [ "d-preposition", ],
     ],
     
     [ "r-sentence-spo",
@@ -654,11 +672,6 @@ set multi-line new global array grammar to [
     
     [ "s-verb",
         [ "d-verb", ],
-    ],
-
-    [ "r-extra",
-        [ "d-adjective", ],
-        [ "d-noun", ],
     ],
 ];
 

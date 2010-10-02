@@ -1,3 +1,7 @@
+1209:
+
+- Korrektur am Parser
+
 1208:
 
 - Beschleunigung der Tiefensuche
