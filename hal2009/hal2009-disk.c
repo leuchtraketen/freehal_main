@@ -481,7 +481,7 @@ char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, c
     return sql;
 }
 
-char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
+char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
 
     char key[101];
     snprintf(key, 100, "%d", pk);
@@ -494,6 +494,11 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     int num_of_words = 0;
     char** words = calloc(501*sizeof(char*), 1);
     detect_words(&num_of_words, words, verbs, subjects, objects, adverbs, "");
+    
+    if (has_conditional_questionword) {
+        ++num_of_words;
+        words[num_of_words] = strdup("$$has_conditional_questionword$$");
+    }
     
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
@@ -535,7 +540,6 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     free(words);
 
     strcat(sql, ";\n");
-    
     return sql;
 }
 
@@ -951,7 +955,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
         free(sql);
         
         sql = 0;
-        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
+        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0, 0);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
@@ -959,7 +963,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
     return 0;
 }
 
-struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
+struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
     if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
@@ -974,7 +978,7 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
         free(sql);
         
         sql = 0;
-        sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
+        sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
@@ -1180,6 +1184,18 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     }
     ++(*req->position);
     
+    return 0;
+}
+
+int disk_net_go_way_conditional_questionword(struct request* fact, struct fact** facts, int limit, int* position) {
+    struct word*** words = calloc(1, 2*sizeof(char**));
+    words[0] = calloc(1, 2*sizeof(char**));
+    char* has_conditional_questionword = strdup("$$has_conditional_questionword$$");
+    words[0][0] = set_word(has_conditional_questionword);
+    search_facts_for_words_in_net(words, facts, limit, position);
+    free(words[0]);
+    free(words);
+    free(has_conditional_questionword);
     return 0;
 }
 

@@ -65,8 +65,8 @@ struct fact {
     float truth;
     int pk;
     int rel;
-    
-    int only_logic;
+
+    short only_logic;
 };
 
 struct request {
@@ -81,8 +81,9 @@ struct request {
     struct list* clauses;
     char* from;
     float truth;
-    
-    int only_logic;
+
+    short only_logic;
+    short has_conditional_questionword;
 };
 
 struct synonym {
@@ -206,7 +207,7 @@ struct DATASET as_dataset(struct fact** list);
 struct DATASET search_clauses_as_dataset(int rel);
 struct DATASET search_facts_as_dataset(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
 struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
-struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic);
+struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, int weak);
 struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak);
 struct fact** search_clauses(int rel);
@@ -243,4 +244,5 @@ void print_word_list_3rd_order(struct word*** list);
 
 
 #endif
+
 

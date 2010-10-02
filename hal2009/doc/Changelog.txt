@@ -1,3 +1,9 @@
+1208:
+
+- Beschleunigung der Tiefensuche
+- die Funktion is_a_trivial_word ist nun sprachenabhaengig
+- mehrere Speicherlecks korrigiert
+
 1207:
 
 - Bug 669 korrigiert
