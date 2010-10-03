@@ -1380,7 +1380,6 @@ int matches(const char* a, const char* b) {
 
 
 int word_matches_word_array(struct word* word, struct word** words, int flags) {
-    // debugf("    does this word match?: %i - %s\n", word, word->name);
 
     if (word->name == strstr(word->name, "%")) {
         return 1;
@@ -1393,20 +1392,21 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
                 
                 if (matches(word->name, words[m]->name) || (is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
                     char tmp[1000];
-                    snprintf(tmp, 999, "      %s matches      %s\n", word->name, words[m]->name);
+                    snprintf(tmp, 999, "      '%s' = '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
+                    
                     return 1;
                 }
                 else {
                     char tmp[1000];
-                    snprintf(tmp, 999, "      %s not matches  %s\n", word->name, words[m]->name);
+                    snprintf(tmp, 999, "      '%s' <> '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
                     
                 }
             //}
         }
     }
-    
+
     return 0;
 }
 
