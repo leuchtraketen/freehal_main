@@ -381,7 +381,6 @@ define action match_in_grammar with hash rules, array data_types, array data_wor
         
         if flag final is true do
             push into array rule_left_names_final, var rule_left_name
-            print var rule_left_name concat new line
         done
         else do
             push into array rule_left_names_other, var rule_left_name

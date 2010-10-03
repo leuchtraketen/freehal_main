@@ -1500,6 +1500,15 @@ set multi-line new global hash builtin_auxiliary_verbs to {
 };
 
 set multi-line new global hash builtin_part_of_speech to {
+          '$a$' => "n",
+          '$b$' => "n",
+          '$c$' => "n",
+          '$d$' => "n",
+          '$e$' => "n",
+          '$f$' => "n",
+          '$g$' => "n",
+          '$h$' => "n",
+          '$i$' => "n",
           '_(true)_' => "adj",
           '_(maybe)_' => "adj",
           '_(false)_' => "adj",

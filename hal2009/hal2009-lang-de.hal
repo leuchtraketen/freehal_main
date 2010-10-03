@@ -1625,6 +1625,15 @@ set multi-line new global hash builtin_auxiliary_verbs to {
 };
 
 set multi-line new global hash builtin_part_of_speech to {
+          '$a$' => "n",
+          '$b$' => "n",
+          '$c$' => "n",
+          '$d$' => "n",
+          '$e$' => "n",
+          '$f$' => "n",
+          '$g$' => "n",
+          '$h$' => "n",
+          '$i$' => "n",
           'abends' => "adj",
           'aber' => "adj",
           'about' => "prep",
@@ -1709,6 +1718,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'beeinflusse' => "v",
           'beeinflusst' => "v",
           'beendet' => "v",
+          'beherrscht' => "v",
           'beiden' => "adj",
           'beiderseits' => "adj",
           'bei' => "prep",
@@ -3892,125 +3902,27 @@ define action toggle_verbs with array verbs, array entities do
         if var verb matches /^gew/ do
             go to next
         done
-        if var verb matches /bin$/ do
-            do regex using var verb: /bin$/, "bist", :global:i
+
+        set new var _verb to var verb
+        set new var verbs_input_handle to handle for file name "lang_de/verbs.csv", read
+        for each new var verbs_line from var verbs_input_handle is rw do
+            if var verbs_line matches /^(.+?)<[,]>(.+?)$/ do
+                set new var _search to $0
+                set new var _replace to $1
+                if var verb matches /var _search$/ do
+                    do regex using var verb: /var _search$/, "var _replace", :global:i
+                    go to last
+                done
+            done
         done
-        else if var verb matches /bist$/ do
-            do regex using var verb: /bist$/, "bin", :global:i
-        done
-        else if var verb matches /hast$/ do
-            do regex using var verb: /hast$/, "habe", :global:i
-        done
-        else if var verb matches /hab.?$/ do
-            do regex using var verb: /hab.?$/, "hast", :global:i
-        done
-        else if var verb matches /heisst$/ do
-            do regex using var verb: /heisst$/, "heisse", :global:i
-        done
-        else if var verb matches /heisse$/ do
-            do regex using var verb: /heisse$/, "heisst", :global:i
-        done
-        else if var verb matches /weisst$/ do
-            do regex using var verb: /weisst$/, "weiss", :global:i
-        done
-        else if var verb matches /weiss$/ do
-            do regex using var verb: /weiss$/, "weisst", :global:i
-        done
-        else if var verb matches /musst$/ do
-            do regex using var verb: /musst$/, "muss", :global:i
-        done
-        else if var verb matches /muss$/ do
-            do regex using var verb: /muss$/, "musst", :global:i
-        done
-        else if var verb matches /laesst/ do
-            do regex using var verb: /laesst$/, "lasse", :global:i
-        done
-        else if var verb matches /lasse$/ do
-            do regex using var verb: /lasse$/, "laesst", :global:i
-        done
-        else if var verb matches /traegst$/ do
-            do regex using var verb: /traegst$/, "trage", :global:i
-        done
-        else if var verb matches /trage$/ do
-            do regex using var verb: /trage$/, "traegst", :global:i
-        done
-        else if var verb matches /stirbst$/ do
-            do regex using var verb: /stirbst$/, "sterbe", :global:i
-        done
-        else if var verb matches /sterbe$/ do
-            do regex using var verb: /sterbe$/, "stirbst", :global:i
-        done
-        else if var verb matches /nimmst$/ do
-            do regex using var verb: /nimmst$/, "nehme", :global:i
-        done
-        else if var verb matches /nehme$/ do
-            do regex using var verb: /nehme$/, "nimmst", :global:i
-        done
-        else if var verb matches /haeltst$/ do
-            do regex using var verb: /haeltst$/, "halte", :global:i
-        done
-        else if var verb matches /halte$/ do
-            do regex using var verb: /halte$/, "haeltst", :global:i
-        done
-        else if var verb matches /willst$/ do
-            do regex using var verb: /willst$/, "will", :global:i
-        done
-        else if var verb matches /will$/ do
-            do regex using var verb: /will$/, "willst", :global:i
-        done
-        else if var verb matches /kannst$/ do
-            do regex using var verb: /kannst$/, "kann", :global:i
-        done
-        else if var verb matches /kann$/ do
-            do regex using var verb: /kann$/, "kannst", :global:i
-        done
-        else if var verb matches /kennst$/ do
-            do regex using var verb: /kennst$/, "kenne", :global:i
-        done
-        else if var verb matches /kenne$/ do
-            do regex using var verb: /kenne$/, "kennst", :global:i
-        done
-        else if var verb matches /mag$/ do
-            do regex using var verb: /mag$/, "magst", :global:i
-        done
-        else if var verb matches /magst$/ do
-            do regex using var verb: /magst$/, "mag", :global:i
-        done
-        else if var verb matches /sprichst$/ do
-            do regex using var verb: /sprichst$/, "spreche", :global:i
-        done
-        else if var verb matches /spreche$/ do
-            do regex using var verb: /spreche$/, "sprichst", :global:i
-        done
-        else if var verb matches /wirst$/ do
-            do regex using var verb: /wirst$/, "werde", :global:i
-        done
-        else if var verb matches /werde$/ do
-            do regex using var verb: /werde$/, "wirst", :global:i
-        done
-        else if var verb matches /schlaefst$/ do
-            do regex using var verb: /schlaefst$/, "schlafe", :global:i
-        done
-        else if var verb matches /schlafe$/ do
-            do regex using var verb: /schlafe$/, "schlaefst", :global:i
-        done
-        else if var verb matches /laeufst$/ do
-            do regex using var verb: /laeufst$/, "laufe", :global:i
-        done
-        else if var verb matches /laufe$/ do
-            do regex using var verb: /laufe$/, "laeufst", :global:i
+
+        if var _verb not matches var verb do
         done
         else if var verb matches /(<[gdm]>)elst$/ do
             do regex using var verb: /(<[gdm]>)elst$/, "$0le", :global:i
         done
         else if var verb matches /(<[gdm]>)le$/ do
             do regex using var verb: /(<[gdm]>)le$/, "$0elst", :global:i
-        done
-        else if var verb matches /isst$/ do
-            do regex using var verb: /isst$/, "esse", :global:i
-        done
-        else if var verb matches /esse$/ do
-            do regex using var verb: /esse$/, "isst", :global:i
         done
         else if var verb matches /test$/ do
             do regex using var verb: /test$/, "te", :global:i

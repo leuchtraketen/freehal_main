@@ -1,3 +1,8 @@
+1210:
+
+- In der Datei lang_XY/verbs.csv stehen nun einige unregelmaessige Verben, damit sie nicht doppelt im .hal-Teil und im C-teil implementiert werden muessen
+- die Tiefensuche wurde weiter verbessert
+
 1209:
 
 - Korrektur am Parser

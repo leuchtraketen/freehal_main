@@ -857,6 +857,7 @@ struct word*** filter_synonyms(struct synonym** synonyms, int level, short direc
         struct synonym* syn = synonyms[i];
         
         if (syn && syn != INVALID_POINTER) {
+            //printf("level (%d) >= syn->level (%d) && direction (%d) == syn->direction (%d)\n", level, syn->level, direction, syn->direction);
             if (level >= syn->level && (direction == syn->direction || direction == REVERSE)) {
                 filtered[k] = syn->words;
                 ++k;
@@ -1886,6 +1887,7 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, in
                  && (
                         fact_matches_object_by_object   (fact, request, weak)
                      || fact_matches_object_by_adverb   (fact, request, weak)
+                     || fact_matches_adverb_by_object   (fact, request, weak)
                     )
                 )
             ||  (
@@ -2404,13 +2406,9 @@ int delete_in_first_if_second(struct word*** list, const char* exp) {
 
 int delete_in_first_if_in_second(struct word*** delete_in, struct word*** find_in) {
     int i;
-    printf("----> %p\n", find_in);
     for (i = 0; find_in[i]; ++i) {
-        printf("------> %p\n", find_in[i]);
         if (can_be_a_pointer(find_in[i])) {
-            printf("--------> %p\n", find_in[i]);
             char* joined = join_words(find_in[i]);
-            printf("\n\n\njoined: %s\n\n\n\n", joined);
             if (joined) {
                 delete_in_first_if_second(delete_in, joined);
                 free(joined);
@@ -2733,34 +2731,84 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
     return list;
 }
 
-char* generalize_verb(char* verb) {
-    char* verb_1_chk =        "|=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are|";
-    char* verb_1     = strdup( "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are");
+char* replace_chars(char* data, char a, char b) {
+    int i;
+    for (i = 0; i < strlen(data); ++i) {
+        data[i] = (data[i] == a ? b : data[i]);
+    }
     
-    char* verb_chk   = calloc(strlen(verb)+3, 1);
-    sprintf(verb_chk, "|%s", verb);
-    if (strstr(verb_chk, "0")) {
-        strstr(verb_chk, "0")[0] = '\0';
-    }
-    if (strstr(verb_chk, "1")) {
-        strstr(verb_chk, "1")[0] = '\0';
-    }
-    printf("strstr: Is '%s' in '%s'?\n", verb_chk, verb_1_chk);
-    if (strstr(verb_1_chk, verb_chk)) {
-        printf("  yes.\n");
-        free(verb_chk);
-        free(verb);
-        return (verb_1);
-    }
-    else {
-        printf("  no.\n");
-        free(verb_chk);
-        free(verb_1);
-        return (verb);
-    }
+    return data;
 }
 
-struct request* negotiate_deep_search(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, const struct fact* if_clause, const struct fact* then_clause) {
+char* cut_newlines(char* data) {
+    data = replace_chars(data, '\r', '\0');
+    data = replace_chars(data, '\n', '\0');
+    
+    return data;
+}
+
+char* generalize_verb(char* verb) {
+    {
+        char* verb_1_chk =        "|=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are|";
+        char* verb_1     = strdup( "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are");
+        
+        char* verb_chk   = calloc(strlen(verb)+3, 1);
+        sprintf(verb_chk, "|%s", verb);
+        if (strstr(verb_chk, "0")) {
+            strstr(verb_chk, "0")[0] = '\0';
+        }
+        if (strstr(verb_chk, "1")) {
+            strstr(verb_chk, "1")[0] = '\0';
+        }
+        printf("strstr: Is '%s' in '%s'?\n", verb_chk, verb_1_chk);
+        if (strstr(verb_1_chk, verb_chk)) {
+            printf("  yes.\n");
+            free(verb_chk);
+            return (verb_1);
+        }
+        else {
+            printf("  no.\n");
+            free(verb_chk);
+            free(verb_1);
+        }
+    }
+    
+    {
+        char filename[100];
+        snprintf(filename, 99, "lang_%s/verbs.csv", hal2009_get_text_language());
+        FILE* file = fopen(filename, "r");
+        if (file) {
+            char* buffer;
+            while (file && (buffer = halgetline(file)) != NULL) {
+                buffer = cut_newlines(buffer);
+                char* verb_chk   = calloc(strlen(verb)+4, 1);
+                sprintf(verb_chk, ",%s,", verb);
+                char* buffer_chk = calloc(strlen(buffer)+4, 1);
+                sprintf(buffer_chk, ",%s,", buffer);
+                
+                char* to_return = 0;
+                printf("strstr(\"%s\", \"%s\")\n", buffer_chk, verb_chk);
+                if (strstr(buffer_chk, verb_chk)) {
+                    to_return = strdup(buffer);
+                    to_return = replace_chars(to_return, ',', '|');
+                }
+                
+                if (buffer) free(buffer);
+                if (verb_chk) free(verb_chk);
+                if (buffer_chk) free(buffer_chk);
+                
+                if (to_return) {
+                    return(to_return);
+                }
+            }
+            fclose(file);
+        }
+    }
+    
+    return (strdup(verb));
+}
+
+struct request* negotiate_deep_search(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, const struct fact* if_clause, const struct fact* then_clause, int level, int direction) {
     struct request* req = calloc(sizeof(struct request), 1);
     req->has_conditional_questionword = 0;
     
@@ -2891,13 +2939,13 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
     printf("if_clause_has_variable_subjects: %s\n", if_clause_has_variable_subjects);
 
     if (then_clause_has_variable_subjects) {
-        struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, 1, FORWARD);
+        struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, level, FORWARD);
         
         if (if_clause_has_variable_subjects && 0 == req->subjects) {
             req->subjects = thing_to_insert;
             
             if (then_clause_objects_match_if_clause_objects) {
-                struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, 1, FORWARD) : filter_synonyms(synonym_set->extra, 1, FORWARD));
+                struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, level, direction) : filter_synonyms(synonym_set->extra, level, direction));
                 req->objects = thing_to_insert;
             }
         }
@@ -2905,19 +2953,19 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
             req->objects = thing_to_insert;
             
             if (then_clause_objects_match_if_clause_subjects) {
-                struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, 1, FORWARD) : filter_synonyms(synonym_set->extra, 1, FORWARD));
+                struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, level, direction) : filter_synonyms(synonym_set->extra, level, direction));
                 req->subjects = thing_to_insert;
             }
         }
     }
     if (then_clause_has_variable_objects) {
-        struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, 1, FORWARD) : filter_synonyms(synonym_set->extra, 1, FORWARD));
+        struct word*** thing_to_insert = (strlen(objects) ? filter_synonyms(synonym_set->objects, level, direction) : filter_synonyms(synonym_set->extra, level, direction));
         
         if (if_clause_has_variable_subjects && 0 == req->subjects) {
             req->subjects = thing_to_insert;
             
             if (then_clause_objects_match_if_clause_subjects) {
-                struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, 1, FORWARD);
+                struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, level, direction);
                 req->objects = thing_to_insert;
             }
         }
@@ -2925,7 +2973,7 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
             req->objects = thing_to_insert;
             
             if (then_clause_subjects_match_if_clause_subjects) {
-                struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, 1, FORWARD);
+                struct word*** thing_to_insert = filter_synonyms(synonym_set->subjects, level, direction);
                 req->subjects = thing_to_insert;
             }
         }
@@ -2982,7 +3030,9 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
     int j;
     for (j = 0; req->verbs[j]; ++j) {
         if (req->verbs[j] && strlen(req->verbs[j]->name) >= 1) {
-            req->verbs[j] = set_word(generalize_verb(req->verbs[j]->name));
+            char* general_verb = generalize_verb(req->verbs[j]->name);
+            req->verbs[j] = set_word(general_verb);
+            free(general_verb);
         }
     }
     
@@ -3042,7 +3092,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
             weak
         );
         
-        if (list == TOOMUCH_P) {
+        if (linking_list == TOOMUCH_P) {
             return TOOMUCH_P;
         }
         
@@ -3066,37 +3116,61 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                         if (is_conditional_questionword(clauses[c]->questionword)) {
                             printf("There is a sentence with a conditional questionword.\n");
                             
-                            struct request* req = negotiate_deep_search(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, "q_deep_search", clauses[c], linking_list[l]);
+                            if (list) {
+                                free(list);
+                                list = 0;
+                            }
                             
-                            delete_in_first_if_in_second(req->subjects, req->objects);
-                            
-                            debugf(
-                                "Negotiated request:\n"
-                                "    subjects\n");
-                            print_word_list_3rd_order(req->subjects);
-                            debugf(
-                                "    objects\n");
-                            print_word_list_3rd_order(req->objects);
-                            char* verbs = join_words(req->verbs);
-                            debugf(
-                                "    verbs:\n - %s\n"
-                                "    adverbs:\n",
-                                verbs
-                            );
-                            if (verbs) free(verbs);
-                            print_word_list_3rd_order(req->adverbs);
-                            debugf(
-                                "    extra:\n");
-                            print_word_list_3rd_order(req->extra);
-                            debugf(
-                                "    questionword:\n - %s\n",
-                                questionword);
+                            struct request* req = 0;
+                            int _level;
+                            for (_level = 1; _level <= 3; ++_level) {
+                                int _direction = (_level == 1 ? FORWARD : REVERSE);
+                                
+                                if (req) {
+                                    free(req);
+                                    req = 0;
+                                }
+                                
+                                req = negotiate_deep_search(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, "q_deep_search", clauses[c], linking_list[l], _level, _direction);
+                                delete_in_first_if_in_second(req->subjects, req->objects);
+                                
+                                debugf(
+                                    "Negotiated request:\n"
+                                    "    subjects\n");
+                                print_word_list_3rd_order(req->subjects);
+                                debugf(
+                                    "    objects\n");
+                                print_word_list_3rd_order(req->objects);
+                                char* verbs = join_words(req->verbs);
+                                debugf(
+                                    "    verbs:\n - %s\n"
+                                    "    adverbs:\n",
+                                    verbs
+                                );
+                                if (verbs) free(verbs);
+                                print_word_list_3rd_order(req->adverbs);
+                                debugf(
+                                    "    extra:\n");
+                                print_word_list_3rd_order(req->extra);
+                                debugf(
+                                    "    questionword:\n - %s\n",
+                                    questionword);
+                                    
+                                if (list) {
+                                    free(list);
+                                    list = 0;
+                                }
 
-                            list = filter_list_by_rules (
-                                search_in_net(req, list, ""),
-                                req,
-                                weak
-                            );
+                                list = filter_list_by_rules (
+                                    search_in_net(req, list, ""),
+                                    req,
+                                    weak
+                                );
+
+                                if (can_be_a_pointer(list) && count_list((void**)list)) {
+                                    break;
+                                }
+                            }
 
                             if (list != TOOMUCH_P) {
 
@@ -3148,15 +3222,15 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                 
                             }
                             
-                            if (is_engine("ram")) {
+                            if (req) {
                                 free(req);
-                            }
-                            else {
-                                free(req);
+                                req = 0;
                             }
                             
-                            loop_go_on = 0;
-                            break;
+                            if (can_be_a_pointer(list) && count_list((void**)list)) {
+                                loop_go_on = 0;
+                                break;
+                            }
                         }
                     }
                 }
