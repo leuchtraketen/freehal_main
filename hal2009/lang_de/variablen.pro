@@ -88,3 +88,5 @@ ist <> $a$ <> nothing <> blond <> macht q=> <> blond wirklich <> bloed <>  <>  <
 hat <> $a$ <> hunger <>  <> essen f=> solltest <> $a$ <> etwas <>  <>  <>  ;; f=> pluendern sollte <> $a$ <> den kuehlschrank <>  <>  <>  <> (true)
 # Für Fragen nach "Wie alt"
 sein <> $a$ <>  <> alt <> gestorben ist <> $a$ <>  <>  <> wenn <> (maybe) 
+$a$ beherrscht $b$, wenn $a$ $b$ spricht
+--> beherrscht <> $a$ <> $b$ <>  <> spricht <> $a$ <> $b$ <>  <> wenn <> (maybe)

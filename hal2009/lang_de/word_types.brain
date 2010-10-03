@@ -26455,15 +26455,7 @@ urkaine:
 grundlsee:
   genus  : m
   type: n
-halla-san:
-  type: adj
-haltiatunturi:
-  type: n
 hermon:
-  type: n
-hkakabo-raziist:
-  type: vi
-hombon-tondo:
   type: n
 hubbard-gletscher:
   type: n
@@ -44776,8 +44768,6 @@ Amentet:
 Brennstoffteilchen:
   genus: s
   type: n
-2vermaschen:
-  type: adv
 Kamelen:
   genus: f
   type: n
@@ -45927,8 +45917,6 @@ Handylizenz:
 anschlag:
   genus: m
   type: n
-2verknoechern:
-  type: vi
 unheilsprophet:
   genus: m
   type: n
@@ -47328,8 +47316,6 @@ Restaurants:
 Buechlein:
   genus: s
   type: n
-2zu:
-  type: n
 Aktienpaket:
   genus: s
   type: n
@@ -47693,8 +47679,6 @@ datenraten:
 kalibrierung:
   genus: f
   type: n
-2verbesserten:
-  type: vi
 Offline:
   type: adv
 Mg:
@@ -54483,8 +54467,6 @@ Apologie:
   type: n
 Fernanruf:
   genus: m
-  type: n
-C17h21no4:
   type: n
 Anschnittsteuerung:
   genus: f
@@ -71051,8 +71033,6 @@ Loser:
   type: n
 kollateral:
   type: adj
-Tk25:
-  type: n
 erschaffen:
   type: vi
 Kegel:
@@ -78761,8 +78741,6 @@ ungeschicklichkeit:
   type: n
 vorgegenwart:
   type: vi
-2zweckmaessig:
-  type: adv
 Ausbringung:
   type: n
 Cuanza:
@@ -78827,8 +78805,6 @@ inzucht:
   type: adv
 zugsicherung:
   type: adj
-2unausgegoren:
-  type: vi
 Austesten:
   type: n
 Programmier:
@@ -79212,8 +79188,6 @@ Glasgow:
   type: n
 Calami:
   type: n
-2vorangegangen:
-  type: vi
 schwaengerung:
   type: adj
 Bruderherz:
@@ -80473,8 +80447,6 @@ Fuehlbarkeit:
 Foerderkohle:
   type: n
 weitererzaehlen:
-  type: vi
-2vermummen:
   type: vi
 Aussenstaende:
   type: n
@@ -185506,8 +185478,6 @@ Gesetzmaessigkeiten:
 kamerad:
   genus  : m
   type: adj
-c17h21no4:
-  type: n
 Interessenvertreter:
   genus  : m
   type: n
@@ -220651,8 +220621,6 @@ durchkontaktieren:
   type: vi
 bisschen:
   type: adj
-N5116342:
-  type: n
 Vollstaendig:
   type: adj
 Betriebspruefung:
@@ -248701,8 +248669,6 @@ Zocken:
   type: n
 Castres:
   type: n
-22mal:
-  type: adj
 Generierung:
   genus  : f
   type: n
@@ -284334,7 +284300,7 @@ genus  : f
 Indischen:
   type: adj
 westaustralischen:
-  type: adju
+  type: adj
 Science-Fiction-Fernsehserie:
 genus  : f
   type: n
@@ -284345,6 +284311,185 @@ genus  : f
   type: n
 US-Fernsehsender:
 genus  : m
-  type: n   
-
-                   
+  type: n
+natuerliche
+  type: adj
+  umkreiste:
+  type: vi
+erbaute:
+  type: vi
+bemannte:
+  type: adj
+kontrollierten:
+  type: adj
+Absturz:
+genus  : m
+  type: n
+Nutzpflanze:
+genus  : f
+  type: n
+Berichterstattung:
+genus  : f
+  type: n
+Kamerafuehrung:
+genus  : f
+  type: n
+Bildgestaltung:
+genus  : f
+  type: n
+Dokumentarfilmen:
+  type: n
+Fernsehspielen:
+  type: n
+Fernsehsendungen:
+  type: n
+Live-Aufzeichnungen:
+  type: n
+Records:
+  type: n
+Verleger:
+  type: n
+UBM:
+  type: n
+Largo:
+  type: n
+Minzen:
+  type: n
+Gewuerzpflanze:
+genus  : f
+  type: n
+Biersorte:
+genus  : f
+  type: n
+Bierspezialitaet:
+genus  : f
+  type: n
+Spontangaerung:
+genus  : f
+  type: n
+Eurovision:
+genus  : f
+  type: n
+Brighton:
+  type: n 
+Kleidungsstuecken:
+  type: n
+In-Form-Bringen:
+genus  : s
+  type: n
+Pilz-Sahnesauce:
+genus  : f
+  type: n
+Pilzsauce:
+genus  : f
+  type: n
+Verwaltungsgemeinschaft:
+genus  : f
+  type: n 
+Wuerstel:
+  type: n
+auszufuehren:
+  type: vi
+Individualsportart:
+genus  : f
+  type: n
+Turngeraeten:
+  type: n
+Uebungen:
+genus  : f
+  type: n
+vorgegebenen:
+  type: adj
+Kriterien:
+genus  : f
+  type: n
+Deutschlands:
+  type: n
+Sautens:
+  type: n
+bulgarische:
+  type: adj
+halbfeste:
+  type: adj
+aussehende:
+  type: adj
+Schleimhaeuten:
+  type: n  
+herbeizufuehren:
+  type: vi 
+rivalisierender:
+  type: adj
+Verpflegungsbetrieb:
+genus  : m
+  type: n
+Ausdrucks:
+  type: n
+Naturlautes:
+  type: n
+sonstigen:
+  type: adj
+aussersprachlichen:
+  type: adj
+akustischen:
+  type: adj
+Phaenomens:
+  type: n
+klanglich:
+  type: adj
+Lautgestalt:
+genus  : f
+  type: n
+Buff:
+  type: n
+hektischen:
+  type: adj 
+Mahlzeiten:
+  type: n
+Getraenken:
+  type: n
+mobilen:
+  type: adj
+fliessend:
+  type: adj
+Verkoestigung:
+genus  : f
+  type: n 
+raschen:
+  type: adj
+Heiler:
+  type: n
+alternativmedizinischer:
+  type: adj
+esoterischer:
+  type: adj
+religioeser:
+  type: adj
+Behandlungsmethoden:
+genus  : f
+  type: n
+Erkennung:
+genus  : f
+  type: n
+Verletzungen:
+genus  : f
+  type: n
+Polytrauma:
+genus  : s
+  type: n
+Koerperregionen:
+genus  : f
+  type: n 
+gemaeht:
+  type: adj
+Fleischauer:
+  type: n
+Hanfgewaechse:
+genus  : f
+  type: n 
+HAL:
+  type: n
+duftwahrnehmung:
+genus  : f
+  type: n
+Igel:
+  type: n                     
