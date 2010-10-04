@@ -3455,6 +3455,23 @@ define action compute_output with var output do
     do regex using var output: /^(.*?) _(wie|wer|was|wo|wann|warum|wieso|weshalb)_(.*?)$/, "$1 $0 $2", :global:i
 
     do regex using var output: / [&] /, " und ", :global:i
+    
+    if var output matches /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/ do
+        set new var result to $0 * $1
+        do regex using var output: /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/, " var result ", :i
+    done
+    if var output matches /\s(<[0-9]>+?)<[\/]>(<[0-9]>+?)\s/ do
+        set new var result to $0 / $1
+        do regex using var output: /\s(<[0-9]>+?)<[\/]>(<[0-9]>+?)\s/, " var result ", :i
+    done
+    if var output matches /\s(<[0-9]>+?)<[+]>(<[0-9]>+?)\s/ do
+        set new var result to $0 + $1
+        do regex using var output: /\s(<[0-9]>+?)<[+]>(<[0-9]>+?)\s/, " var result ", :i
+    done
+    if var output matches /\s(<[0-9]>+?)<[-]>(<[0-9]>+?)\s/ do
+        set new var result to $0 - $1
+        do regex using var output: /\s(<[0-9]>+?)<[-]>(<[0-9]>+?)\s/, " var result ", :i
+    done
 
     do regex using var output: /f=>/, "", :global:i
     do regex using var output: /!=>/, "", :global:i

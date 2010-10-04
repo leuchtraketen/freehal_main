@@ -297,19 +297,26 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /wozu braucht man /, "was ist ", :global:i
     do regex using var input: /(brauch)(st|e|en)(.*?)zu\s(haben)/, "$0$1$2 $3/, "
     
+    
+    do regex using var input: /(^|\s)X(\s|$)/, "$0\$a\$$1", :global
+    do regex using var input: /(^|\s)Y(\s|$)/, "$0\$b\$$1", :global
+    do regex using var input: /(^|\s)Z(\s|$)/, "$0\$c\$$1", :global
+    
+    do regex using var input: /(<[0-9]>|\$)\s*?(mal)\s*?(<[0-9]>|\$)/, "$0*$2", :global:i
+    
     #if var input matches /<[*\/+-]>/ do
-        set new var i to 1
-        do regex using var input: /(^|\s)(<[+-]>)ein(\s|$)/, "$0$1var i$2", :global:i
-        set new array numbers to an empty array
-        push into array numbers, "eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun", "zehn"
-        push into array numbers, "elf", "zwoelf", "dreizehn", "vierzehn", "fuenfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn", "zwanzig"
+    set new var i to 1
+    do regex using var input: /(^|\s)(<[+-]>)ein(\s|$)/, "$0$1var i$2", :global:i
+    set new array numbers to an empty array
+    push into array numbers, "eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun", "zehn"
+    push into array numbers, "elf", "zwoelf", "dreizehn", "vierzehn", "fuenfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn", "zwanzig"
 
-        for each new var number in array numbers do
-            print var input concat new line
-            do regex using var input: /(^|\s)(<[+-]>?)var number(\s|$)/, "$0$1var i$2", :global:i
-            print var input concat new line
-            set var i to var i + 1
-        done
+    for each new var number in array numbers do
+        print var input concat new line
+        do regex using var input: /(^|\s)(<[+-]>?)var number(\s|$)/, "$0$1var i$2", :global:i
+        print var input concat new line
+        set var i to var i + 1
+    done
     #done
     
     do regex using var input: /(tag|datum|monat|woche|jahr) war\s/, "$0 ist ", :global:i

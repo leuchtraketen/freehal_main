@@ -573,6 +573,9 @@ struct synonym** add_synonyms_by_string(const char** exps, struct synonym** syno
             continue;
         }
     
+        struct word** words = divide_words(exp);
+        synonyms = put_synonym(construct_synonym(0, 0, 0, words, 0, FORWARD), synonyms, position);
+
         if (strlen(exp) > 1) {
             synonyms[*position] = calloc(sizeof(struct word*), strlen(exp)+10);
             
@@ -589,11 +592,7 @@ struct synonym** add_synonyms_by_string(const char** exps, struct synonym** syno
             
             synonyms = put_synonym(construct_synonym(_exp, 0, 0, 0, 0, FORWARD), synonyms, position);
         }
-        
-        struct word** words = divide_words(exp);
-        synonyms = put_synonym(construct_synonym(0, 0, 0, words, 0, FORWARD), synonyms, position);
 
-        
         if (exp[0] == '*' && strlen(exp) > 1) {
             struct word** words = divide_words(exp+1);
 
@@ -1392,14 +1391,26 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
                 
                 if (matches(word->name, words[m]->name) || (is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
                     char tmp[1000];
-                    snprintf(tmp, 999, "      '%s' = '%s'\n", word->name, words[m]->name);
+                    snprintf(tmp, 999, " ---     '%s' = '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
+                    
+                    if (is_a_variable(words[m]->name) && to_number(word->name)) {
+                        if (variable_replacements == 0) {
+                            variable_replacements = calloc(1, sizeof(struct word*)*100);
+                            variable_replacements_c = 0;
+                        }
+                        if (variable_replacements_c < 97) {
+                            variable_replacements[variable_replacements_c] = words[m];
+                            variable_replacements[variable_replacements_c+1] = word;
+                            variable_replacements_c += 2;
+                        }
+                    }
                     
                     return 1;
                 }
                 else {
                     char tmp[1000];
-                    snprintf(tmp, 999, "      '%s' <> '%s'\n", word->name, words[m]->name);
+                    snprintf(tmp, 999, " ---     '%s' <> '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
                     
                 }
@@ -1921,6 +1932,56 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, in
 
     return fact;
 }
+
+struct word* replace_variables_in_word(struct word* word) {
+    int i;
+    for (i = 0; i < variable_replacements_c; i += 2) {
+        if (0==strcmp(word->name, variable_replacements[i]->name)) {
+            word = variable_replacements[i+1];
+        }
+        else if (strstr(word->name, variable_replacements[i]->name)) {
+            printf("word->name: %s\n", word->name);
+            printf("variable_replacements[i]->name: %s\n", variable_replacements[i]->name);
+            char* o_name = strdup(word->name);
+            char* varpos = strstr(o_name, variable_replacements[i]->name);
+            if (varpos >= 0) {
+                varpos[0] = '\0';
+                char* rest = varpos+strlen(variable_replacements[i]->name);
+                char* new_name = calloc(1, strlen(variable_replacements[i]->name)+strlen(word->name)+3);
+                snprintf(new_name, strlen(variable_replacements[i]->name)+strlen(word->name)+2, "%s%s%s", o_name, variable_replacements[i+1]->name, rest);
+                word = set_word(new_name);
+                free(new_name);
+            }
+            free(o_name);
+            printf("word->name: %s\n\n", word->name);
+        }
+    }
+    return word;
+}
+struct word** replace_variables_in_words(struct word** list) {
+    int b;
+    for (b = 0; list[b]; ++b) {
+        list[b] = replace_variables_in_word(list[b]);
+    }
+    return list;
+}
+struct fact* replace_variables_in_fact(struct fact* fact) {
+    fact->subjects = replace_variables_in_words(fact->subjects);
+    fact->objects  = replace_variables_in_words(fact->objects);
+    fact->adverbs  = replace_variables_in_words(fact->adverbs);
+    return fact;
+}
+struct fact** replace_variables_in_list(struct fact** list) {
+    int b;
+    for (b = 0; list[b]; ++b) {
+    
+        if (list[b] != INVALID_POINTER) {
+            list[b] = replace_variables_in_fact(list[b]);
+        }
+    }
+    return list;
+}
+
 
 struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak) {
     printf("Starting fact filter!\n");
@@ -2486,6 +2547,7 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
             weak
         );
         
+        list = replace_variables_in_list(list);
 
         if (!can_be_a_pointer(list) || !count_list((void**)list)) {
             if (can_be_a_pointer(list)) {

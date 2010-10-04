@@ -1,3 +1,7 @@
+1213:
+
+- Variablenersetzung durch Zahlen findet jetzt statt
+
 1210:
 
 - In der Datei lang_XY/verbs.csv stehen nun einige unregelmaessige Verben, damit sie nicht doppelt im .hal-Teil und im C-teil implementiert werden muessen

@@ -126,6 +126,10 @@ struct string_pair {
 };
 
 
+struct word** variable_replacements = 0;
+int variable_replacements_c = 0;
+
+
 int wiki_begin();
 struct fact** search_facts_wiki(const char*, short);
 
