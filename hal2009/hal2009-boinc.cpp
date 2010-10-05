@@ -24,7 +24,6 @@
 #include "hal2009.h"
 
 #include <BOINC/boinc_api.h>
-#include <BOINC/boinc_zip.h>
 
 #include <getopt.h>
 #include <signal.h>

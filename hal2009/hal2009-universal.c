@@ -2866,7 +2866,6 @@ char* generalize_verb(char* verb) {
             fclose(file);
         }
     }
-    
     return (strdup(verb));
 }
 

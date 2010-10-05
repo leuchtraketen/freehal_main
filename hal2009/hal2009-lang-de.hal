@@ -3928,6 +3928,7 @@ define action toggle_verbs with array verbs, array entities do
                 set new var _replace to $1
                 if var verb matches /var _search$/ do
                     do regex using var verb: /var _search$/, "var _replace", :global:i
+                    do regex using var verb: /<[,]>/, "|", :global:i
                     go to last
                 done
             done
