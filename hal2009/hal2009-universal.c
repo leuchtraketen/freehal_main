@@ -21,6 +21,11 @@
 
 #include "hal2009-universal.h"
 
+struct word** variable_replacements = 0;
+int variable_replacements_c = 0;
+
+
+
 // printf catcher
 static char catched[20480];
 static int size_catched = 20479;
