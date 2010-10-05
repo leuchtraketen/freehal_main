@@ -126,8 +126,8 @@ struct string_pair {
 };
 
 
-extern struct word** variable_replacements = 0;
-extern int variable_replacements_c = 0;
+extern struct word** variable_replacements;
+extern int variable_replacements_c;
 
 
 int wiki_begin();
