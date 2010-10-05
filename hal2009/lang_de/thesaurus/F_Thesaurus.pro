@@ -1143,7 +1143,6 @@
 = <> _farbe_ <> _schattierung_ <> (maybe)
 = <> _farbe_ <> _schimmer_ <> (maybe)
 = <> _farbe_ <> _toenung_ <> (maybe)
-= <> _farbe_ <> _ton_ <> (maybe)
 = <> _farbfehlsichtigkeit_ <> _achromatopsie_ <> (maybe)
 = <> _farbfehlsichtigkeit_ <> _farbenblindheit_ <> (maybe)
 = <> _farbfehlsichtigkeit_ <> _farbenfehlsichtigkeit_ <> (maybe)
