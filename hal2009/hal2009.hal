@@ -4595,12 +4595,15 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             # CODE
             if is an empty hash parsed do
         
+                do be_slow without arguments
                 set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
+                do be_slow without arguments
                 set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
-#                set hash parsed to 0
+                do be_slow without arguments
                 if hash parsed is false do
                     set hash parsed to parse with var lang, array words, hash tags
                 done
+                do be_slow without arguments
         
                 set new array entities to an empty array
                 push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
@@ -4614,11 +4617,15 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             done
             else do
         
+                do be_slow without arguments
                 set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
+                do be_slow without arguments
                 set new hash parsed_clause to new_parser_start with global array grammar, array data, var lang, var path
+                do be_slow without arguments
                 if hash parsed_clause is false do
                     set hash parsed_clause to parse with var lang, array words, hash tags
                 done
+                do be_slow without arguments
         
                 set new array entities to an empty array
                 push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of

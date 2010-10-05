@@ -1315,6 +1315,8 @@ set multi-line new global array builtin_male_names to [
           "zeno",
 ];
 
+set new global array verbs_csv_lines to an empty array
+
 set multi-line new global array builtin_entity_ends_pair to [
           [ 'das', 'ein' ],
           [ 'das', 'eine' ],
@@ -3921,8 +3923,14 @@ define action toggle_verbs with array verbs, array entities do
         done
 
         set new var _verb to var verb
-        set new var verbs_input_handle to handle for file name "lang_de/verbs.csv", read
-        for each new var verbs_line from var verbs_input_handle is rw do
+        if is an empty global array verbs_csv_lines do
+            set new var verbs_input_handle to handle for file name "lang_de/verbs.csv", read
+            for each new var verbs_line from var verbs_input_handle is rw do
+                push into global array verbs_csv_lines, var verbs_line
+            done
+        done
+        do be_slow without arguments
+        for each new var verbs_line in global array verbs_csv_lines is rw do
             if var verbs_line matches /^(.+?)<[,]>(.+?)$/ do
                 set new var _search to $0
                 set new var _replace to $1

@@ -107,6 +107,9 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
         hals = replace(hals, "set global ", "use vars '");
         strcat(hals->s, "';");
     }
+    hals = replace(hals, "global hash ", "hash ::");
+    hals = replace(hals, "global array ", "array ::");
+    hals = replace(hals, "global var ", "var ::");
     hals = replace(hals, "size of", "items of");
     hals = replace(hals, " is true", " ");
     hals = replace(hals, " is wrong", " == 0 ");
@@ -127,9 +130,6 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "that array not is empty ", "items of that array: ");
     hals = replace(hals, "that array has items: ", "items of that array: ");
     hals = replace(hals, "that array has items ", "items of that array: ");
-    hals = replace(hals, "global hash ", "hash ::");
-    hals = replace(hals, "global array ", "array ::");
-    hals = replace(hals, "global var ", "var ::");
     hals = replace(hals, "first item", "item [ 0 ]");
     hals = replace(hals, "second item", "item [ 1 ]");
     hals = replace(hals, "third item", "item [ 2 ]");
@@ -442,8 +442,9 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
         hals = replace(hals, " from ", " = <");
     }
     if (strstr(hals->s, "for each " ) && (strstr(hals->s, " in " ))) {
-        hals = replace(hals, " do", ":");
-        hals = replace(hals, ":", ") {");
+        hals = replace(hals, ":", " do");
+        hals = replace(hals, " do", ") {");
+        hals = replace(hals, ") {) {", "::");
         hals = replace(hals, "for each ", "foreach ");
         hals = replace(hals, " file ", " ");
         hals = replace(hals, " in ", " (@");
@@ -452,6 +453,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
         hals = replace(hals, " do", ":");
         hals = replace(hals, "for", "for (");
         hals = replace(hals, ":", ") {");
+        hals = replace(hals, ") {) {", "::");
     }
     hals = replace(hals, " { ", "{");
     hals = replace(hals, " } ", "} ");
