@@ -61,7 +61,8 @@ struct fact {
     struct word** extra;
     char* questionword;
     struct fact** clauses;
-    char* from;
+    char* filename;
+    char* line;
     float truth;
     int pk;
     int rel;
@@ -79,7 +80,8 @@ struct request {
     char* questionword;
     char* context;
     struct list* clauses;
-    char* from;
+    char* filename;
+    char* line;
     float truth;
 
     short only_logic;
@@ -210,8 +212,8 @@ long can_be_a_pointer(void* _p);
 struct DATASET as_dataset(struct fact** list);
 struct DATASET search_clauses_as_dataset(int rel);
 struct DATASET search_facts_as_dataset(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
-struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
-struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
+struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
+struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, int weak);
 struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak);
 struct fact** search_clauses(int rel);

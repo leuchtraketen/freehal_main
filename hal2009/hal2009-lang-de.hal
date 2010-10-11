@@ -3921,6 +3921,9 @@ define action toggle_verbs with array verbs, array entities do
         if var verb matches /^gew/ do
             go to next
         done
+        if var verb matches /<[|]>/ do
+            go to next
+        done
 
         set new var _verb to var verb
         if is an empty global array verbs_csv_lines do
@@ -3931,11 +3934,21 @@ define action toggle_verbs with array verbs, array entities do
         done
         do be_slow without arguments
         for each new var verbs_line in global array verbs_csv_lines is rw do
-            if var verbs_line matches /^(.+?)<[,]>(.+?)$/ do
-                set new var _search to $0
-                set new var _replace to $1
-                if var verb matches /var _search$/ do
-                    do regex using var verb: /var _search$/, "var _replace", :global:i
+            if var verbs_line matches /^(.+?)<[,]>(.+?)<[,]>(.+?)$/ do
+                set new var _first to $0
+                set new var _second to $1
+                set new var _other to $2
+                if var verb matches /var _first$/ do
+                    set new var _verb to var verb
+                    do regex using var verb: /var _first$/, "var _second", :global:i
+                    set var verb to var verb concat "|" concat var _first concat "|" concat var _other
+                    do regex using var verb: /<[,]>/, "|", :global:i
+                    go to last
+                done
+                if var verb matches /var _second$/ do
+                    set new var _verb to var verb
+                    do regex using var verb: /var _second$/, "var _first", :global:i
+                    set var verb to var verb concat "|" concat var _second concat "|" concat var _other
                     do regex using var verb: /<[,]>/, "|", :global:i
                     go to last
                 done
@@ -4017,23 +4030,23 @@ define action toggle_entities with array entities do
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
-    if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] ) do
-        if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+    if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] ) do
+        if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
+        else if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
+        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause) ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
+            set from array result item [ var number_of_clause ] item [ 3  + (7*var number_of_subclause) ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (7*var number_of_subclause) ]
         done
     done
 done
@@ -4852,6 +4865,7 @@ define action replace_she with var text, var replacement do
 done
 
 define action verb_category with var verb do
+    
     if var verb matches /\// do
         do return with ""
     done

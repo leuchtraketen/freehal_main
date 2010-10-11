@@ -128,7 +128,8 @@ int set_to_invalid_fact(struct fact** p) {
         free_words_weak((*p)->objects);
         free_words_weak((*p)->adverbs);
         free_words_weak((*p)->extra);
-        free((*p)->from);
+        free((*p)->filename);
+        free((*p)->line);
         
         return disk_set_to_invalid_value(p);
     }
@@ -784,10 +785,10 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
                 if (facts_synonyms != TOOMUCH) {
                     int f;
                     for (f = 0; facts_synonyms[f]; ++f) {
-                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "ps-")) {
                             set_to_invalid_fact(&(facts_synonyms[f]));
                         }
-                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "fa-")) {
                             set_to_invalid_fact(&(facts_synonyms[f]));
                         }
                     }
@@ -807,10 +808,10 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
                 if (facts_synonyms != TOOMUCH) {
                     int f;
                     for (f = 0; facts_synonyms[f]; ++f) {
-                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "ps-")) {
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "ps-")) {
                             set_to_invalid_fact(&(facts_synonyms[f]));
                         }
-                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->from) && strstr(facts_synonyms[f]->from, "fa-")) {
+                        if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "fa-")) {
                             set_to_invalid_fact(&(facts_synonyms[f]));
                         }
                     }
@@ -1263,21 +1264,21 @@ char* use_thesaurus_synonyms(const char* key) {
     get_thesaurus_synonyms(key, facts, limit, &position, 1, 0);
 }
 
-struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     if (is_engine("ram")) {
-        return ram_add_clause(rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        return ram_add_clause(rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
     }
     else {
-        return disk_add_clause(rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+        return disk_add_clause(rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
     }
 }
 
-struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
+struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
     if (is_engine("ram")) {
-        return ram_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
+        return ram_add_fact(subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
     }
     else {
-        return disk_add_fact(subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
+        return disk_add_fact(subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
     }
 }
 
@@ -1382,6 +1383,27 @@ int matches(const char* a, const char* b) {
     return 0;
 }
 
+int matches_with_pipe(const char* a, const char* b) {
+    if (!strstr(b, "|")) {
+        return matches(a, b);
+    }
+    
+    char** splitted_b = divide_by('|', b);
+    int p;
+    int match = 0;
+    for (p = 0; splitted_b[p]; ++p) {
+        if (matches(a, splitted_b[p])) {
+            match = 1;
+            break;
+        }
+    }
+    for (p = 0; splitted_b[p]; ++p) {
+        free(splitted_b[p]);
+    }
+    free(splitted_b);
+    
+    return match;
+}
 
 int word_matches_word_array(struct word* word, struct word** words, int flags) {
 
@@ -1394,7 +1416,7 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
         if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
             //if (!is_a_trivial_word(words[m]->name)) {
                 
-                if (matches(word->name, words[m]->name) || (is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
+                if (matches_with_pipe(word->name, words[m]->name) || (is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
                     char tmp[1000];
                     snprintf(tmp, 999, " ---     '%s' = '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
@@ -2118,6 +2140,13 @@ int universal_delete_everything_from(const char* filename) {
     return -1;
 }
 
+int universal_add_filename(const char* filename) {
+    if (is_engine("disk")) {
+        return disk_add_filename(filename);
+    }
+    return -1;
+}
+
 int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position) {
     if (is_engine("ram")) {
         return ram_search_facts_for_words_in_net(words, facts, limit, position);
@@ -2583,19 +2612,19 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
                                 subject_syonyms_level_0 = filter_synonyms(synonym_set->subjects, 1, FORWARD);
                             }
 
-                            if (strstr(list[l]->from, "thes")) {
+                            if (strstr(list[l]->filename, "thes")) {
                                 printf("fact %d: from thesaurus => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
                             }
-                            else if (strstr(list[l]->from, "part_of_speech")) {
+                            else if (strstr(list[l]->filename, "part_of_speech")) {
                                 printf("fact %d: from part_of_speech => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
                             }
-                            else if (strstr(list[l]->from, "ps-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
+                            else if (strstr(list[l]->filename, "ps-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
                                 printf("fact %d: from ps-... => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
                             }
-                            else if (strstr(list[l]->from, "fa-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
+                            else if (strstr(list[l]->filename, "fa-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
                                 printf("fact %d: from fa-... => invalid\n", l);
                                 set_to_invalid_fact(&(list[l]));
                             }
@@ -2935,7 +2964,7 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
                 int i_if = i;
                 
                 if (strlen(then_clause->subjects[i_then]->name) > 1 && strlen(if_clause->subjects[i_if]->name) > 1) {
-                    if (matches(then_clause->subjects[i_then]->name, if_clause->subjects[i_if]->name)) {
+                    if (matches_with_pipe(then_clause->subjects[i_then]->name, if_clause->subjects[i_if]->name)) {
                         then_clause_subjects_match_if_clause_subjects = 1;
                     }
                 }
@@ -2950,7 +2979,7 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
                 int i_if = i;
                 
                 if (strlen(then_clause->subjects[i_then]->name) > 1 && strlen(if_clause->objects[i_if]->name) > 1) {
-                    if (matches(then_clause->subjects[i_then]->name, if_clause->objects[i_if]->name)) {
+                    if (matches_with_pipe(then_clause->subjects[i_then]->name, if_clause->objects[i_if]->name)) {
                         then_clause_subjects_match_if_clause_objects = 1;
                     }
                 }
@@ -2972,7 +3001,7 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
                 int i_if = i;
                 
                 if (strlen(then_clause->objects[i_then]->name) > 1 && strlen(if_clause->subjects[i_if]->name) > 1) {
-                    if (matches(then_clause->objects[i_then]->name, if_clause->subjects[i_if]->name)) {
+                    if (matches_with_pipe(then_clause->objects[i_then]->name, if_clause->subjects[i_if]->name)) {
                         then_clause_objects_match_if_clause_subjects = 1;
                     }
                 }
@@ -2987,7 +3016,7 @@ struct request* negotiate_deep_search(struct synonym_set* synonym_set, const cha
                 int i_if = i;
                 
                 if (strlen(then_clause->objects[i_then]->name) > 1 && strlen(if_clause->objects[i_if]->name) > 1) {
-                    if (matches(then_clause->objects[i_then]->name, if_clause->objects[i_if]->name)) {
+                    if (matches_with_pipe(then_clause->objects[i_then]->name, if_clause->objects[i_if]->name)) {
                         then_clause_objects_match_if_clause_objects = 1;
                     }
                 }
@@ -3245,13 +3274,13 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                     if (can_be_a_pointer(list[l])) {
                                         if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                                             if (is_a_fact_verb(list[l]->verbs[0]->name)) {
-                                                if (strstr(list[l]->from, "thes")) {
+                                                if (strstr(list[l]->filename, "thes")) {
                                                     set_to_invalid_fact(&(list[l]));
                                                 }
-                                                else if (strstr(list[l]->from, "ps-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT, "")) {
+                                                else if (strstr(list[l]->filename, "ps-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT, "")) {
                                                     set_to_invalid_fact(&(list[l]));
                                                 }
-                                                else if (strstr(list[l]->from, "fa-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT, "")) {
+                                                else if (strstr(list[l]->filename, "fa-") && fact_matches_entity_by_entity(list[l]->objects, fact->subjects, EXACT, "")) {
                                                     set_to_invalid_fact(&(list[l]));
                                                 }
                                                 else {
@@ -3793,7 +3822,7 @@ struct DATASET as_dataset(struct fact** list) {
     }
     
     set.size = size;
-    set.column_count = 8;
+    set.column_count = 9;
     set.data = calloc(sizeof(char*), size+2);
     
     int d;
@@ -3801,23 +3830,24 @@ struct DATASET as_dataset(struct fact** list) {
         if (list[d] != INVALID_POINTER) {
             //char** record = calloc(sizeof(char*), sizeof(struct fact)*100);
             char** record = calloc(sizeof(char*), 100);
-            record[0] = calloc(sizeof(char), 10);
+            record[0] = calloc(sizeof(char), 11);
             sprintf(record[0], "%d", (int)(list[d]->pk));
             record[1] = join_words(list[d]->verbs);
             record[2] = join_words(list[d]->subjects);
             record[3] = join_words(list[d]->objects);
             record[4] = join_words(list[d]->adverbs);
             record[5] = strdup("50");
-            record[6] = strdup(list[d]->from ? list[d]->from : "");
-            record[7] = calloc(sizeof(char), 10);
+            record[6] = strdup(list[d]->filename ? list[d]->filename : "");
+            record[7] = strdup(list[d]->line ? list[d]->line : "");
+            record[8] = calloc(sizeof(char), 10);
             if (list[d]->truth > 0.2 && list[d]->truth < 0.8) {
-                sprintf(record[7], "0.5");
+                sprintf(record[8], "0.5");
             }
             else {
-                sprintf(record[7], "%d.0", (int)(list[d]->truth));
+                sprintf(record[8], "%d.0", (int)(list[d]->truth));
             }
             
-            int column_count = append_on_dataset_record(8, 100, record, search_clauses(list[d]->pk));
+            int column_count = append_on_dataset_record(9, 100, record, search_clauses(list[d]->pk));
             if (column_count > set.column_count)
                 set.column_count = column_count;
             
@@ -4023,6 +4053,15 @@ int is_important_word(const char* word) {
     );
 }
 
+char* fileid(const char* filename) {
+    int result = - strlen(filename);
+    int i;
+    for (i = 0; i < strlen(filename); ++i) {
+        result += filename[i];
+    }
+    return result;
+}
+
 char* small_identifier(const char* word) {
     if (word[0] == '_' || word[0] == '*' || word[0] == '%') {
         if (strlen(word) >= 3) {
@@ -4052,6 +4091,8 @@ char* small_identifier(const char* word) {
                   ?  word[1]
                   :  '_'
                   ;
+                  
+    identifier[1] = 'a';
 
     return identifier;
 }

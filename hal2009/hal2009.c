@@ -121,6 +121,10 @@ int hal2009_delete_everything_from(const char* filename) {
     return sql_delete_everything_from(filename);
 }
 
+int hal2009_add_filename(const char* filename) {
+    return sql_add_filename(filename);
+}
+
 int fact_replace_in_source (const char* source, const char* _replacement) {
     char* replacement;
     if (_replacement) {
@@ -379,6 +383,7 @@ int hal2009_add_pro_file (char* filename) {
     fprintf(output(), "Clearing DB: .pro file %s.\n", filename);
     sql_begin();
     hal2009_delete_everything_from(filename);
+    hal2009_add_filename(filename);
     fprintf(output(), "Add .pro file %s.\n", filename);
     position_in_insertions = 0;
     time_t start = 0;
@@ -484,9 +489,9 @@ int hal2009_add_pro_file (char* filename) {
                     remove_negation(r.objects, &(r.truth), &(r.only_logic));
                     buffer = strtok(NULL, "^"); strcpy(r.adverbs,           (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.adverbs, &(r.truth), &(r.only_logic));
-                    buffer = filename;          strcpy(r.from,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                    strcat(r.from, ":");
-                    sprintf(r.from+strlen(r.from), "%d", line_number);
+                    buffer = filename;          strcpy(r.filename,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                    snprintf(r.line, 100, "%d", line_number);
+                    strcpy(r.line, from_number(line_number));
                     strcpy(r.extra, "");
                     
                     r.verb_flag_want    = 0;
@@ -553,9 +558,8 @@ int hal2009_add_pro_file (char* filename) {
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         remove_negation(sub_clause->adverbs, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        buffer = filename;          strcpy(sub_clause->from,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-                        strcat(sub_clause->from, ":");
-                        sprintf(sub_clause->from+strlen(sub_clause->from), "%d", line_number);
+                        buffer = filename;          strcpy(sub_clause->filename,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+                        snprintf(sub_clause->line, 100, "%d", line_number);
                         strcpy(sub_clause->extra, "");
                         
                         // a common error in malformed pro files

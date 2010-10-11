@@ -887,7 +887,8 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             fact->adverbs      = divide_words("...");
             fact->extra        = divide_words("");
             fact->questionword = strdup("");
-            fact->from         = strdup("");
+            fact->filename     = strdup("");
+            fact->line         = strdup("");
             fact->truth        = 1.0;
             
             /// write to prot file

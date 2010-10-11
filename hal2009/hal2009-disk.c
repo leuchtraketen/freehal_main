@@ -365,7 +365,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     free(extra);
 }
 
-char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
+char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
     
     const char* last_subject_word = subjects;
     if (subjects && strlen(subjects)) {
@@ -398,7 +398,9 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     }
     strcat(sql, "INSERT INTO ");
     strcat(sql, rel ? "clauses" : "facts");
-    strcat(sql, " (`pk`, `mix_1`, `verb`, `verbgroup`, `subjects`, `objects`, `last_subject_word`, `last_object_word`, `adverbs`, `questionword`, `prio`, `from`, `rel`, `truth`, `only_logic`) VALUES (");
+    strcat(sql, " (`pk`, `mix_1`, `verb`, `verbgroup`, `subjects`, `objects`, "
+    "`last_subject_word`, `last_object_word`, `adverbs`, `questionword`, `prio`, "
+    "`fileid`, `line`, `rel`, `truth`, `only_logic`, `can_be_synonym`) VALUES (");
     char num_of_records_str[10];
     snprintf(num_of_records_str, 9, "%d", pk);
     strcat(sql, num_of_records_str);
@@ -437,9 +439,11 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     strcat(sql, "\", \"");
     if (questionword)    strcat(sql, questionword);
     else                 strcat(sql, "NULL");
-    strcat(sql, "\", 50, \"");
-    strcat(sql, from);
-    strcat(sql, "\", ");
+    strcat(sql, "\", 50, ");
+    strcat(sql, from_number(fileid(filename)));
+    strcat(sql, ", ");
+    strcat(sql, line);
+    strcat(sql, ", ");
     if (rel) strcat(sql, from_number(rel));
     else     strcat(sql, "-1");
     strcat(sql, ", ");
@@ -448,12 +452,14 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     strcat(sql, truth_str);
     strcat(sql, ", ");
     strcat(sql, only_logic?"1":"0");
+    strcat(sql, ", ");
+    strcat(sql, strstr(filename, "fa-")?"0":"1");
     strcat(sql, ");\n");
     
     return sql;
 }
 
-char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
+char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
     
     char key[101];
     snprintf(key, 100, "%d", pk);
@@ -481,7 +487,7 @@ char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, c
     return sql;
 }
 
-char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
+char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
 
     char key[101];
     snprintf(key, 100, "%d", pk);
@@ -548,13 +554,17 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     char* sql = malloc(102400);
     *sql = 0;
     
-    strcat(sql, "SELECT DISTINCT -1, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, 0 ");
+    strcat(sql, "SELECT DISTINCT -1, "
+    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
+    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
     strcat(sql, " FROM clauses AS nmain JOIN rel_clause_flag AS rff ON nmain.pk = rff.fact WHERE nmain.rel = ");
     char rel_str[10];
     snprintf(rel_str, 9, "%d", rel);
     strcat(sql, rel_str);
     strcat(sql, " UNION ALL ");
-    strcat(sql, "SELECT DISTINCT -1, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, 0 ");
+    strcat(sql, "SELECT DISTINCT -1, "
+    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
+    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
     strcat(sql, " FROM facts AS nmain JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact WHERE nmain.pk IN ");
     strcat(sql, " (SELECT f2 FROM `linking` WHERE f1 = ");
     strcat(sql, rel_str);
@@ -568,9 +578,25 @@ char* gen_sql_get_double_facts() {
     char* sql = malloc(102400);
     *sql = 0;
     
-    strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, `nmain`.`only_logic` ");
+    strcat(sql, "SELECT `nmain`.`pk`, "
+    "`nmain`.`verb` || \"00000\", "
+    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM facts WHERE mix_1||verb IN ( SELECT mix_1||verb AS a FROM facts GROUP BY a HAVING count(pk) >= 2) order by mix_1, verb;");
     
+    return sql;
+}
+
+char* gen_sql_add_filename(const char* filename) {
+
+    char* sql = malloc(1024*30);
+    *sql = 0;
+
+    strcat(sql, "INSERT OR IGNORE INTO `files` (`id`, `filename`) VALUES ( ");
+    strcat(sql, from_number(fileid(filename)));
+    strcat(sql, ", \"");
+    strcat(sql, filename);
+    strcat(sql, "\");\n");
+
     return sql;
 }
 
@@ -581,14 +607,17 @@ char* gen_sql_delete_everything_from(const char* filename) {
 
     printf("Clean index...\n");
 
-    strcat(sql, "delete from cache_facts ; INSERT OR IGNORE INTO cache_facts SELECT `pk`, `from`, `verb`, `verbgroup`, `subjects`, `objects`, `last_subject_word`, `last_object_word`, `adverbs`, `mix_1`, `questionword`, `prio`, `rel`, `type`, `truth`, `hash_clauses`, `only_logic` FROM facts WHERE `from` GLOB '");
-    strcat(sql, filename);
-    strcat(sql, "*';\n");
+    strcat(sql, "delete from cache_ids ; INSERT OR IGNORE INTO cache_ids SELECT `pk` FROM facts WHERE `fileid` = ");
+    strcat(sql, from_number(fileid(filename)));
+    strcat(sql, ";\n");
 
     int error = sql_execute(sql, NULL, NULL);
 
     int i;
     for (i = 'a'; i <= 'z'; ++i) {
+        int error1 = sql_execute("COMMIT;", NULL, NULL);
+        int error2 = sql_execute("BEGIN;", NULL, NULL);
+        
         printf("\r%fl\t\t\t", (100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
         fflush(stdout);
         *sql = 0;
@@ -601,27 +630,19 @@ char* gen_sql_delete_everything_from(const char* filename) {
             z[1] = k;
             z[2] = 0;
             strcat(sql, z);
-            strcat(sql, "` WHERE fact IN ( SELECT pk FROM cache_facts );\n");
+            strcat(sql, "` WHERE fact IN ( SELECT id FROM cache_ids );\n");
         }
 
         int error = sql_execute(sql, NULL, NULL);
     }
     
     *sql = 0;
-    strcat(sql, "DELETE FROM facts WHERE `from` GLOB '");
-    strcat(sql, filename);
-    strcat(sql, "*';");
+    strcat(sql, "DELETE FROM facts WHERE `fileid` = ");
+    strcat(sql, from_number(fileid(filename)));
+    strcat(sql, ";");
    
 
-            printf("\r%s\n", sql);
-    /*
-    static int first_run = 1;
-    if (first_run) {
-        first_run = 0;
-        strcat(sql, "COMMIT; VACUUM; BEGIN;");
-    }
-    */
-    
+    printf("\r%s\n", sql);
     return sql;
 }
 
@@ -632,17 +653,26 @@ char* disk_get_source(const char* key) {
     
     char* source = calloc(512, 1);
     {
-        char* sql = malloc(1024);
-        *sql = 0;
+        char* _where = malloc(1024);
+        *_where = 0;
         if (0 == strcmp(key, "a")) {
-            strcat(sql, "SELECT `from` FROM facts WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1);");
+            strcat(_where, " WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1) ");
         }
         else {
-            strcat(sql, "SELECT `from` FROM facts WHERE pk = ");
-            strcat(sql, key);
-            strcat(sql, " LIMIT 1;");
+            strcat(_where, " WHERE pk = ");
+            strcat(_where, key);
+            strcat(_where, " ");
         }
         
+        char* sql = malloc(1024);
+        *sql = 0;
+        
+        strcat(sql, "SELECT filename||\":\"||(SELECT line FROM facts ");
+        strcat(sql, _where);
+        strcat(sql, ") from files where id = (select fileid FROM facts ");
+        strcat(sql, _where);
+        strcat(sql, ");");
+        free(_where);
         
         int error = sql_execute(sql, select_primary_key, source);
         free(sql);
@@ -670,58 +700,95 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
             if (level == 1) {
                 strcat(sql, "select e.last_subject_word, e.objects from facts as e where e.verb = \"=\" and e.objects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and `from` not like \"%fa-%\";");
+                strcat(sql, "\" and `can_be_synonym` = 1;");
             }
             else if (level == 2) {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250));"
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms`;");
                 strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
                 strcat(sql, key);
                 strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
+                "select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
-                strcat(sql, "select e.last_subject_word, e.objects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
+                strcat(sql, "\" and u.`can_be_synonym` = 1;");
+                
+                strcat(sql, "select e.last_subject_word, e.objects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
             }
             else {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); delete from `_tmp_thesaurus_synonyms_2`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms_2`;");
                 strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
                 strcat(sql, key);
                 strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
+                "select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) select distinct e.subjects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
-                strcat(sql, "select e.last_subject_word, e.objects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_object_word = `word`);");
+                strcat(sql, "\" and u.`can_be_synonym` = 1;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) "
+                "select distinct e.subjects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
+                strcat(sql, "select e.last_subject_word, e.objects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_object_word = `word`);");
             }
         }
         else {
             if (level == 1) {
                 strcat(sql, "select e.last_object_word, e.subjects from facts as e where e.verb = \"=\" and e.subjects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and `from` not like \"%fa-%\";");
+                strcat(sql, "\" and `can_be_synonym` = 1;");
             }
             else if (level == 2) {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms`;");
                 strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
                 strcat(sql, key);
                 strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
+                "select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
-                strcat(sql, "select e.last_object_word, e.subjects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_subject_word = `word`);");
+                strcat(sql, "\" and u.`can_be_synonym` = 1;");
+                strcat(sql, "select e.last_object_word, e.subjects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_subject_word = `word`);");
             }
             else {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); delete from `_tmp_thesaurus_synonyms_2`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms`;");
+                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` "
+                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
+                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); "
+                "delete from `_tmp_thesaurus_synonyms_2`;");
                 strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
                 strcat(sql, key);
                 strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
+                "select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
                 strcat(sql, key);
-                strcat(sql, "\" and u.`from` not like  \"%fa-%\";");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) select distinct e.objects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms` where e.object_word = `word`);");
-                strcat(sql, "select e.last_object_word, e.subjects from facts as e where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`from` not like \"%fa-%\" and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_subject_word = `word`);");
+                strcat(sql, "\" and u.`can_be_synonym` = 1;");
+                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) "
+                "select distinct e.objects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.object_word = `word`);");
+                strcat(sql, "select e.last_object_word, e.subjects from facts as e "
+                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
+                "and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_subject_word = `word`);");
             }
         }
         printf("%s\n", sql);
@@ -889,9 +956,19 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         strcat(sql, ")");
     }
     strcat(sql, ";");
-    strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT i FROM cache_indices);");
+    strcat(sql, " ; INSERT OR IGNORE INTO cache_facts "
+    "(pk, fileid, line, verb, verbgroup, subjects, objects, adverbs, "
+    "mix_1, questionword, prio, rel, type, truth, hash_clauses, only_logic, can_be_synonym) "
+    "SELECT "
+    "pk, fileid, line, verb, verbgroup, subjects, objects, adverbs, "
+    "mix_1, questionword, prio, rel, type, truth, hash_clauses, only_logic, can_be_synonym "
+    "FROM facts WHERE pk in (SELECT i FROM cache_indices);");
                 
-    strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, `nmain`.`only_logic` ");
+    strcat(sql, "SELECT DISTINCT "
+    "`nmain`.`pk`, "
+    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
+    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, "
+    "`nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
     printf(sql);
@@ -940,7 +1017,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
     return error_to_return;
 }
 
-struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
@@ -949,13 +1026,13 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
 
     {
         char* sql = 0;
-        sql = gen_sql_add_entry(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
-        sql = gen_sql_add_verb_flags(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
+        sql = gen_sql_add_entry(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
+        sql = gen_sql_add_verb_flags(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
         
         sql = 0;
-        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0, 0);
+        sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0, 0);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
@@ -963,7 +1040,7 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
     return 0;
 }
 
-struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
+struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
     if ((is_bad(subjects) && is_bad(objects) && is_bad(verbs) && !(verb_flag_want || verb_flag_must || verb_flag_can || verb_flag_may || verb_flag_should)) || (questionword && questionword[0] == ')')) {
         return 0;
     }
@@ -972,13 +1049,13 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
     int error = 0;
     {
         char* sql = 0;
-        sql = gen_sql_add_entry(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
-        sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
+        sql = gen_sql_add_entry(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
+        sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
         
         sql = 0;
-        sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, from, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
+        sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
@@ -1122,40 +1199,26 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     struct request_get_facts_for_words* req = arg;
     
     if (*req->position >= req->limit) {
-/*
-        printf("abort\n");
-        printf("*req->position: %d\n", *req->position);
-        printf("req->limit: %d\n", req->limit);
-*/
         return 1;
     }
     
     if (argc <= 5 || (!argv[1] || !strlen(argv[1])) || ((!argv[2] || !strlen(argv[2])) && (!argv[3] || !strlen(argv[3])) && (!argv[4] || !strlen(argv[4])) && (!argv[5] || !strlen(argv[5])))) {
-/*
-        printf("abort\n");
-        printf("argv[1]: %s\n", argv[1]);
-        printf("argv[2]: %s\n", argv[2]);
-        printf("argv[3]: %s\n", argv[3]);
-        printf("argv[4]: %s\n", argv[4]);
-        printf("argv[5]: %s\n", argv[5]);
-*/
         return 0;
     }
     
 
     if (req->make_rawfacts && (req->hash_n_1 || req->hash_n_2 || req->hash_n_3)) {
-//        int i_right = find_query_cache_entry(req, 1);
         int i_right = req->i_right;
 
         // printf("if (%d < %d)\n", query_cache_list[i_right]->position, req->limit);
         if (query_cache_list[i_right]->position < req->limit) {
-            char** rawfact = calloc(sizeof(char*), 10);
+            char** rawfact = calloc(sizeof(char*), 11);
             int k;
-            for (k = 0; k <= 8; ++k) {
+            for (k = 0; k <= 9; ++k) {
                 rawfact[k] = argv[k] ? strdup(argv[k]) : 0;
                 // printf("rawfact[%d]: %s\n", k, rawfact[k] ? rawfact[k] : "(null)");
             }
-            rawfact[9] = 0;
+            rawfact[10] = 0;
 
             // add new fact into entry
             query_cache_list[i_right]->rawfacts[query_cache_list[i_right]->position] = rawfact;
@@ -1172,9 +1235,10 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->adverbs      = divide_words(argv[4] ? argv[4] : "");
     fact->extra        = divide_words("");
     fact->questionword = strdup(argv[5] ? argv[5] : "");
-    fact->from         = strdup(argv[6] ? argv[6] : "");
-    fact->truth        = (argv[7] && argv[7][0] && argv[7][0] == '1') ? 1.0 : ((argv[7] && argv[7][0] && argv[7][0] && argv[7][1] && argv[7][2] != '0') ? 0.5 : 0.0);
-    fact->only_logic   = argv[8] && argv[8][0] && argv[8][0] == '1' ? 1 : 0;
+    fact->filename     = strdup(argv[6] ? argv[6] : "");
+    fact->line         = strdup(argv[7] ? argv[7] : "");
+    fact->truth        = (argv[8] && argv[8][0] && argv[8][0] == '1') ? 1.0 : ((argv[8] && argv[8][0] && argv[8][0] && argv[8][1] && argv[8][2] != '0') ? 0.5 : 0.0);
+    fact->only_logic   = argv[9] && argv[9][0] && argv[9][0] == '1' ? 1 : 0;
     
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
@@ -1240,7 +1304,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
             for (k = 0; k < query_cache_list[i_right]->position; ++k) {
                 char** argv = query_cache_list[i_right]->rawfacts[k];
                 if (argv) {
-                    callback_get_facts(&req, 9, argv, 0);
+                    callback_get_facts(&req, 10, argv, 0);
                 }
             }
         }
@@ -1349,11 +1413,13 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
 int disk_re_index() {
     {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
+        int error2 = sql_execute("BEGIN;", NULL, NULL);
         printf("Delete old index...\n");
-        int error2 = sql_execute("delete from `db_index`.`rel_word_fact__aa`; delete from `db_index`.`rel_word_fact__ab`; delete from `db_index`.`rel_word_fact__ac`; delete from `db_index`.`rel_word_fact__ad`; delete from `db_index`.`rel_word_fact__ae`; delete from `db_index`.`rel_word_fact__af`; delete from `db_index`.`rel_word_fact__ag`; delete from `db_index`.`rel_word_fact__ah`; delete from `db_index`.`rel_word_fact__ai`; delete from `db_index`.`rel_word_fact__aj`; delete from `db_index`.`rel_word_fact__ak`; delete from `db_index`.`rel_word_fact__al`; delete from `db_index`.`rel_word_fact__am`; delete from `db_index`.`rel_word_fact__an`; delete from `db_index`.`rel_word_fact__ao`; delete from `db_index`.`rel_word_fact__ap`; delete from `db_index`.`rel_word_fact__aq`; delete from `db_index`.`rel_word_fact__ar`; delete from `db_index`.`rel_word_fact__as`; delete from `db_index`.`rel_word_fact__at`; delete from `db_index`.`rel_word_fact__au`; delete from `db_index`.`rel_word_fact__av`; delete from `db_index`.`rel_word_fact__aw`; delete from `db_index`.`rel_word_fact__ax`; delete from `db_index`.`rel_word_fact__ay`; delete from `db_index`.`rel_word_fact__az`; delete from `db_index`.`rel_word_fact__a_`; delete from `db_index`.`rel_word_fact__ba`; delete from `db_index`.`rel_word_fact__bb`; delete from `db_index`.`rel_word_fact__bc`; delete from `db_index`.`rel_word_fact__bd`; delete from `db_index`.`rel_word_fact__be`; delete from `db_index`.`rel_word_fact__bf`; delete from `db_index`.`rel_word_fact__bg`; delete from `db_index`.`rel_word_fact__bh`; delete from `db_index`.`rel_word_fact__bi`; delete from `db_index`.`rel_word_fact__bj`; delete from `db_index`.`rel_word_fact__bk`; delete from `db_index`.`rel_word_fact__bl`; delete from `db_index`.`rel_word_fact__bm`; delete from `db_index`.`rel_word_fact__bn`; delete from `db_index`.`rel_word_fact__bo`; delete from `db_index`.`rel_word_fact__bp`; delete from `db_index`.`rel_word_fact__bq`; delete from `db_index`.`rel_word_fact__br`; delete from `db_index`.`rel_word_fact__bs`; delete from `db_index`.`rel_word_fact__bt`; delete from `db_index`.`rel_word_fact__bu`; delete from `db_index`.`rel_word_fact__bv`; delete from `db_index`.`rel_word_fact__bw`; delete from `db_index`.`rel_word_fact__bx`; delete from `db_index`.`rel_word_fact__by`; delete from `db_index`.`rel_word_fact__bz`; delete from `db_index`.`rel_word_fact__b_`; delete from `db_index`.`rel_word_fact__ca`; delete from `db_index`.`rel_word_fact__cb`; delete from `db_index`.`rel_word_fact__cc`; delete from `db_index`.`rel_word_fact__cd`; delete from `db_index`.`rel_word_fact__ce`; delete from `db_index`.`rel_word_fact__cf`; delete from `db_index`.`rel_word_fact__cg`; delete from `db_index`.`rel_word_fact__ch`; delete from `db_index`.`rel_word_fact__ci`; delete from `db_index`.`rel_word_fact__cj`; delete from `db_index`.`rel_word_fact__ck`; delete from `db_index`.`rel_word_fact__cl`; delete from `db_index`.`rel_word_fact__cm`; delete from `db_index`.`rel_word_fact__cn`; delete from `db_index`.`rel_word_fact__co`; delete from `db_index`.`rel_word_fact__cp`; delete from `db_index`.`rel_word_fact__cq`; delete from `db_index`.`rel_word_fact__cr`; delete from `db_index`.`rel_word_fact__cs`; delete from `db_index`.`rel_word_fact__ct`; delete from `db_index`.`rel_word_fact__cu`; delete from `db_index`.`rel_word_fact__cv`; delete from `db_index`.`rel_word_fact__cw`; delete from `db_index`.`rel_word_fact__cx`; delete from `db_index`.`rel_word_fact__cy`; delete from `db_index`.`rel_word_fact__cz`; delete from `db_index`.`rel_word_fact__c_`; delete from `db_index`.`rel_word_fact__da`; delete from `db_index`.`rel_word_fact__db`; delete from `db_index`.`rel_word_fact__dc`; delete from `db_index`.`rel_word_fact__dd`; delete from `db_index`.`rel_word_fact__de`; delete from `db_index`.`rel_word_fact__df`; delete from `db_index`.`rel_word_fact__dg`; delete from `db_index`.`rel_word_fact__dh`; delete from `db_index`.`rel_word_fact__di`; delete from `db_index`.`rel_word_fact__dj`; delete from `db_index`.`rel_word_fact__dk`; delete from `db_index`.`rel_word_fact__dl`; delete from `db_index`.`rel_word_fact__dm`; delete from `db_index`.`rel_word_fact__dn`; delete from `db_index`.`rel_word_fact__do`; delete from `db_index`.`rel_word_fact__dp`; delete from `db_index`.`rel_word_fact__dq`; delete from `db_index`.`rel_word_fact__dr`; delete from `db_index`.`rel_word_fact__ds`; delete from `db_index`.`rel_word_fact__dt`; delete from `db_index`.`rel_word_fact__du`; delete from `db_index`.`rel_word_fact__dv`; delete from `db_index`.`rel_word_fact__dw`; delete from `db_index`.`rel_word_fact__dx`; delete from `db_index`.`rel_word_fact__dy`; delete from `db_index`.`rel_word_fact__dz`; delete from `db_index`.`rel_word_fact__d_`; delete from `db_index`.`rel_word_fact__ea`; delete from `db_index`.`rel_word_fact__eb`; delete from `db_index`.`rel_word_fact__ec`; delete from `db_index`.`rel_word_fact__ed`; delete from `db_index`.`rel_word_fact__ee`; delete from `db_index`.`rel_word_fact__ef`; delete from `db_index`.`rel_word_fact__eg`; delete from `db_index`.`rel_word_fact__eh`; delete from `db_index`.`rel_word_fact__ei`; delete from `db_index`.`rel_word_fact__ej`; delete from `db_index`.`rel_word_fact__ek`; delete from `db_index`.`rel_word_fact__el`; delete from `db_index`.`rel_word_fact__em`; delete from `db_index`.`rel_word_fact__en`; delete from `db_index`.`rel_word_fact__eo`; delete from `db_index`.`rel_word_fact__ep`; delete from `db_index`.`rel_word_fact__eq`; delete from `db_index`.`rel_word_fact__er`; delete from `db_index`.`rel_word_fact__es`; delete from `db_index`.`rel_word_fact__et`; delete from `db_index`.`rel_word_fact__eu`; delete from `db_index`.`rel_word_fact__ev`; delete from `db_index`.`rel_word_fact__ew`; delete from `db_index`.`rel_word_fact__ex`; delete from `db_index`.`rel_word_fact__ey`; delete from `db_index`.`rel_word_fact__ez`; delete from `db_index`.`rel_word_fact__e_`; delete from `db_index`.`rel_word_fact__fa`; delete from `db_index`.`rel_word_fact__fb`; delete from `db_index`.`rel_word_fact__fc`; delete from `db_index`.`rel_word_fact__fd`; delete from `db_index`.`rel_word_fact__fe`; delete from `db_index`.`rel_word_fact__ff`; delete from `db_index`.`rel_word_fact__fg`; delete from `db_index`.`rel_word_fact__fh`; delete from `db_index`.`rel_word_fact__fi`; delete from `db_index`.`rel_word_fact__fj`; delete from `db_index`.`rel_word_fact__fk`; delete from `db_index`.`rel_word_fact__fl`; delete from `db_index`.`rel_word_fact__fm`; delete from `db_index`.`rel_word_fact__fn`; delete from `db_index`.`rel_word_fact__fo`; delete from `db_index`.`rel_word_fact__fp`; delete from `db_index`.`rel_word_fact__fq`; delete from `db_index`.`rel_word_fact__fr`; delete from `db_index`.`rel_word_fact__fs`; delete from `db_index`.`rel_word_fact__ft`; delete from `db_index`.`rel_word_fact__fu`; delete from `db_index`.`rel_word_fact__fv`; delete from `db_index`.`rel_word_fact__fw`; delete from `db_index`.`rel_word_fact__fx`; delete from `db_index`.`rel_word_fact__fy`; delete from `db_index`.`rel_word_fact__fz`; delete from `db_index`.`rel_word_fact__f_`; delete from `db_index`.`rel_word_fact__ga`; delete from `db_index`.`rel_word_fact__gb`; delete from `db_index`.`rel_word_fact__gc`; delete from `db_index`.`rel_word_fact__gd`; delete from `db_index`.`rel_word_fact__ge`; delete from `db_index`.`rel_word_fact__gf`; delete from `db_index`.`rel_word_fact__gg`; delete from `db_index`.`rel_word_fact__gh`; delete from `db_index`.`rel_word_fact__gi`; delete from `db_index`.`rel_word_fact__gj`; delete from `db_index`.`rel_word_fact__gk`; delete from `db_index`.`rel_word_fact__gl`; delete from `db_index`.`rel_word_fact__gm`; delete from `db_index`.`rel_word_fact__gn`; delete from `db_index`.`rel_word_fact__go`; delete from `db_index`.`rel_word_fact__gp`; delete from `db_index`.`rel_word_fact__gq`; delete from `db_index`.`rel_word_fact__gr`; delete from `db_index`.`rel_word_fact__gs`; delete from `db_index`.`rel_word_fact__gt`; delete from `db_index`.`rel_word_fact__gu`; delete from `db_index`.`rel_word_fact__gv`; delete from `db_index`.`rel_word_fact__gw`; delete from `db_index`.`rel_word_fact__gx`; delete from `db_index`.`rel_word_fact__gy`; delete from `db_index`.`rel_word_fact__gz`; delete from `db_index`.`rel_word_fact__g_`; delete from `db_index`.`rel_word_fact__ha`; delete from `db_index`.`rel_word_fact__hb`; delete from `db_index`.`rel_word_fact__hc`; delete from `db_index`.`rel_word_fact__hd`; delete from `db_index`.`rel_word_fact__he`; delete from `db_index`.`rel_word_fact__hf`; delete from `db_index`.`rel_word_fact__hg`; delete from `db_index`.`rel_word_fact__hh`; delete from `db_index`.`rel_word_fact__hi`; delete from `db_index`.`rel_word_fact__hj`; delete from `db_index`.`rel_word_fact__hk`; delete from `db_index`.`rel_word_fact__hl`; delete from `db_index`.`rel_word_fact__hm`; delete from `db_index`.`rel_word_fact__hn`; delete from `db_index`.`rel_word_fact__ho`; delete from `db_index`.`rel_word_fact__hp`; delete from `db_index`.`rel_word_fact__hq`; delete from `db_index`.`rel_word_fact__hr`; delete from `db_index`.`rel_word_fact__hs`; delete from `db_index`.`rel_word_fact__ht`; delete from `db_index`.`rel_word_fact__hu`; delete from `db_index`.`rel_word_fact__hv`; delete from `db_index`.`rel_word_fact__hw`; delete from `db_index`.`rel_word_fact__hx`; delete from `db_index`.`rel_word_fact__hy`; delete from `db_index`.`rel_word_fact__hz`; delete from `db_index`.`rel_word_fact__h_`; delete from `db_index`.`rel_word_fact__ia`; delete from `db_index`.`rel_word_fact__ib`; delete from `db_index`.`rel_word_fact__ic`; delete from `db_index`.`rel_word_fact__id`; delete from `db_index`.`rel_word_fact__ie`; delete from `db_index`.`rel_word_fact__if`; delete from `db_index`.`rel_word_fact__ig`; delete from `db_index`.`rel_word_fact__ih`; delete from `db_index`.`rel_word_fact__ii`; delete from `db_index`.`rel_word_fact__ij`; delete from `db_index`.`rel_word_fact__ik`; delete from `db_index`.`rel_word_fact__il`; delete from `db_index`.`rel_word_fact__im`; delete from `db_index`.`rel_word_fact__in`; delete from `db_index`.`rel_word_fact__io`; delete from `db_index`.`rel_word_fact__ip`; delete from `db_index`.`rel_word_fact__iq`; delete from `db_index`.`rel_word_fact__ir`; delete from `db_index`.`rel_word_fact__is`; delete from `db_index`.`rel_word_fact__it`; delete from `db_index`.`rel_word_fact__iu`; delete from `db_index`.`rel_word_fact__iv`; delete from `db_index`.`rel_word_fact__iw`; delete from `db_index`.`rel_word_fact__ix`; delete from `db_index`.`rel_word_fact__iy`; delete from `db_index`.`rel_word_fact__iz`; delete from `db_index`.`rel_word_fact__i_`; delete from `db_index`.`rel_word_fact__ja`; delete from `db_index`.`rel_word_fact__jb`; delete from `db_index`.`rel_word_fact__jc`; delete from `db_index`.`rel_word_fact__jd`; delete from `db_index`.`rel_word_fact__je`; delete from `db_index`.`rel_word_fact__jf`; delete from `db_index`.`rel_word_fact__jg`; delete from `db_index`.`rel_word_fact__jh`; delete from `db_index`.`rel_word_fact__ji`; delete from `db_index`.`rel_word_fact__jj`; delete from `db_index`.`rel_word_fact__jk`; delete from `db_index`.`rel_word_fact__jl`; delete from `db_index`.`rel_word_fact__jm`; delete from `db_index`.`rel_word_fact__jn`; delete from `db_index`.`rel_word_fact__jo`; delete from `db_index`.`rel_word_fact__jp`; delete from `db_index`.`rel_word_fact__jq`; delete from `db_index`.`rel_word_fact__jr`; delete from `db_index`.`rel_word_fact__js`; delete from `db_index`.`rel_word_fact__jt`; delete from `db_index`.`rel_word_fact__ju`; delete from `db_index`.`rel_word_fact__jv`; delete from `db_index`.`rel_word_fact__jw`; delete from `db_index`.`rel_word_fact__jx`; delete from `db_index`.`rel_word_fact__jy`; delete from `db_index`.`rel_word_fact__jz`; delete from `db_index`.`rel_word_fact__j_`; delete from `db_index`.`rel_word_fact__ka`; delete from `db_index`.`rel_word_fact__kb`; delete from `db_index`.`rel_word_fact__kc`; delete from `db_index`.`rel_word_fact__kd`; delete from `db_index`.`rel_word_fact__ke`; delete from `db_index`.`rel_word_fact__kf`; delete from `db_index`.`rel_word_fact__kg`; delete from `db_index`.`rel_word_fact__kh`; delete from `db_index`.`rel_word_fact__ki`; delete from `db_index`.`rel_word_fact__kj`; delete from `db_index`.`rel_word_fact__kk`; delete from `db_index`.`rel_word_fact__kl`; delete from `db_index`.`rel_word_fact__km`; delete from `db_index`.`rel_word_fact__kn`; delete from `db_index`.`rel_word_fact__ko`; delete from `db_index`.`rel_word_fact__kp`; delete from `db_index`.`rel_word_fact__kq`; delete from `db_index`.`rel_word_fact__kr`; delete from `db_index`.`rel_word_fact__ks`; delete from `db_index`.`rel_word_fact__kt`; delete from `db_index`.`rel_word_fact__ku`; delete from `db_index`.`rel_word_fact__kv`; delete from `db_index`.`rel_word_fact__kw`; delete from `db_index`.`rel_word_fact__kx`; delete from `db_index`.`rel_word_fact__ky`; delete from `db_index`.`rel_word_fact__kz`; delete from `db_index`.`rel_word_fact__k_`; delete from `db_index`.`rel_word_fact__la`; delete from `db_index`.`rel_word_fact__lb`; delete from `db_index`.`rel_word_fact__lc`; delete from `db_index`.`rel_word_fact__ld`; delete from `db_index`.`rel_word_fact__le`; delete from `db_index`.`rel_word_fact__lf`; delete from `db_index`.`rel_word_fact__lg`; delete from `db_index`.`rel_word_fact__lh`; delete from `db_index`.`rel_word_fact__li`; delete from `db_index`.`rel_word_fact__lj`; delete from `db_index`.`rel_word_fact__lk`; delete from `db_index`.`rel_word_fact__ll`; delete from `db_index`.`rel_word_fact__lm`; delete from `db_index`.`rel_word_fact__ln`; delete from `db_index`.`rel_word_fact__lo`; delete from `db_index`.`rel_word_fact__lp`; delete from `db_index`.`rel_word_fact__lq`; delete from `db_index`.`rel_word_fact__lr`; delete from `db_index`.`rel_word_fact__ls`; delete from `db_index`.`rel_word_fact__lt`; delete from `db_index`.`rel_word_fact__lu`; delete from `db_index`.`rel_word_fact__lv`; delete from `db_index`.`rel_word_fact__lw`; delete from `db_index`.`rel_word_fact__lx`; delete from `db_index`.`rel_word_fact__ly`; delete from `db_index`.`rel_word_fact__lz`; delete from `db_index`.`rel_word_fact__l_`; delete from `db_index`.`rel_word_fact__ma`; delete from `db_index`.`rel_word_fact__mb`; delete from `db_index`.`rel_word_fact__mc`; delete from `db_index`.`rel_word_fact__md`; delete from `db_index`.`rel_word_fact__me`; delete from `db_index`.`rel_word_fact__mf`; delete from `db_index`.`rel_word_fact__mg`; delete from `db_index`.`rel_word_fact__mh`; delete from `db_index`.`rel_word_fact__mi`; delete from `db_index`.`rel_word_fact__mj`; delete from `db_index`.`rel_word_fact__mk`; delete from `db_index`.`rel_word_fact__ml`; delete from `db_index`.`rel_word_fact__mm`; delete from `db_index`.`rel_word_fact__mn`; delete from `db_index`.`rel_word_fact__mo`; delete from `db_index`.`rel_word_fact__mp`; delete from `db_index`.`rel_word_fact__mq`; delete from `db_index`.`rel_word_fact__mr`; delete from `db_index`.`rel_word_fact__ms`; delete from `db_index`.`rel_word_fact__mt`; delete from `db_index`.`rel_word_fact__mu`; delete from `db_index`.`rel_word_fact__mv`; delete from `db_index`.`rel_word_fact__mw`; delete from `db_index`.`rel_word_fact__mx`; delete from `db_index`.`rel_word_fact__my`; delete from `db_index`.`rel_word_fact__mz`; delete from `db_index`.`rel_word_fact__m_`; delete from `db_index`.`rel_word_fact__na`; delete from `db_index`.`rel_word_fact__nb`; delete from `db_index`.`rel_word_fact__nc`; delete from `db_index`.`rel_word_fact__nd`; delete from `db_index`.`rel_word_fact__ne`; delete from `db_index`.`rel_word_fact__nf`; delete from `db_index`.`rel_word_fact__ng`; delete from `db_index`.`rel_word_fact__nh`; delete from `db_index`.`rel_word_fact__ni`; delete from `db_index`.`rel_word_fact__nj`; delete from `db_index`.`rel_word_fact__nk`; delete from `db_index`.`rel_word_fact__nl`; delete from `db_index`.`rel_word_fact__nm`; delete from `db_index`.`rel_word_fact__nn`; delete from `db_index`.`rel_word_fact__no`; delete from `db_index`.`rel_word_fact__np`; delete from `db_index`.`rel_word_fact__nq`; delete from `db_index`.`rel_word_fact__nr`; delete from `db_index`.`rel_word_fact__ns`; delete from `db_index`.`rel_word_fact__nt`; delete from `db_index`.`rel_word_fact__nu`; delete from `db_index`.`rel_word_fact__nv`; delete from `db_index`.`rel_word_fact__nw`; delete from `db_index`.`rel_word_fact__nx`; delete from `db_index`.`rel_word_fact__ny`; delete from `db_index`.`rel_word_fact__nz`; delete from `db_index`.`rel_word_fact__n_`; delete from `db_index`.`rel_word_fact__oa`; delete from `db_index`.`rel_word_fact__ob`; delete from `db_index`.`rel_word_fact__oc`; delete from `db_index`.`rel_word_fact__od`; delete from `db_index`.`rel_word_fact__oe`; delete from `db_index`.`rel_word_fact__of`; delete from `db_index`.`rel_word_fact__og`; delete from `db_index`.`rel_word_fact__oh`; delete from `db_index`.`rel_word_fact__oi`; delete from `db_index`.`rel_word_fact__oj`; delete from `db_index`.`rel_word_fact__ok`; delete from `db_index`.`rel_word_fact__ol`; delete from `db_index`.`rel_word_fact__om`; delete from `db_index`.`rel_word_fact__on`; delete from `db_index`.`rel_word_fact__oo`; delete from `db_index`.`rel_word_fact__op`; delete from `db_index`.`rel_word_fact__oq`; delete from `db_index`.`rel_word_fact__or`; delete from `db_index`.`rel_word_fact__os`; delete from `db_index`.`rel_word_fact__ot`; delete from `db_index`.`rel_word_fact__ou`; delete from `db_index`.`rel_word_fact__ov`; delete from `db_index`.`rel_word_fact__ow`; delete from `db_index`.`rel_word_fact__ox`; delete from `db_index`.`rel_word_fact__oy`; delete from `db_index`.`rel_word_fact__oz`; delete from `db_index`.`rel_word_fact__o_`; delete from `db_index`.`rel_word_fact__pa`; delete from `db_index`.`rel_word_fact__pb`; delete from `db_index`.`rel_word_fact__pc`; delete from `db_index`.`rel_word_fact__pd`; delete from `db_index`.`rel_word_fact__pe`; delete from `db_index`.`rel_word_fact__pf`; delete from `db_index`.`rel_word_fact__pg`; delete from `db_index`.`rel_word_fact__ph`; delete from `db_index`.`rel_word_fact__pi`; delete from `db_index`.`rel_word_fact__pj`; delete from `db_index`.`rel_word_fact__pk`; delete from `db_index`.`rel_word_fact__pl`; delete from `db_index`.`rel_word_fact__pm`; delete from `db_index`.`rel_word_fact__pn`; delete from `db_index`.`rel_word_fact__po`; delete from `db_index`.`rel_word_fact__pp`; delete from `db_index`.`rel_word_fact__pq`; delete from `db_index`.`rel_word_fact__pr`; delete from `db_index`.`rel_word_fact__ps`; delete from `db_index`.`rel_word_fact__pt`; delete from `db_index`.`rel_word_fact__pu`; delete from `db_index`.`rel_word_fact__pv`; delete from `db_index`.`rel_word_fact__pw`; delete from `db_index`.`rel_word_fact__px`; delete from `db_index`.`rel_word_fact__py`; delete from `db_index`.`rel_word_fact__pz`; delete from `db_index`.`rel_word_fact__p_`; delete from `db_index`.`rel_word_fact__qa`; delete from `db_index`.`rel_word_fact__qb`; delete from `db_index`.`rel_word_fact__qc`; delete from `db_index`.`rel_word_fact__qd`; delete from `db_index`.`rel_word_fact__qe`; delete from `db_index`.`rel_word_fact__qf`; delete from `db_index`.`rel_word_fact__qg`; delete from `db_index`.`rel_word_fact__qh`; delete from `db_index`.`rel_word_fact__qi`; delete from `db_index`.`rel_word_fact__qj`; delete from `db_index`.`rel_word_fact__qk`; delete from `db_index`.`rel_word_fact__ql`; delete from `db_index`.`rel_word_fact__qm`; delete from `db_index`.`rel_word_fact__qn`; delete from `db_index`.`rel_word_fact__qo`; delete from `db_index`.`rel_word_fact__qp`; delete from `db_index`.`rel_word_fact__qq`; delete from `db_index`.`rel_word_fact__qr`; delete from `db_index`.`rel_word_fact__qs`; delete from `db_index`.`rel_word_fact__qt`; delete from `db_index`.`rel_word_fact__qu`; delete from `db_index`.`rel_word_fact__qv`; delete from `db_index`.`rel_word_fact__qw`; delete from `db_index`.`rel_word_fact__qx`; delete from `db_index`.`rel_word_fact__qy`; delete from `db_index`.`rel_word_fact__qz`; delete from `db_index`.`rel_word_fact__q_`; delete from `db_index`.`rel_word_fact__ra`; delete from `db_index`.`rel_word_fact__rb`; delete from `db_index`.`rel_word_fact__rc`; delete from `db_index`.`rel_word_fact__rd`; delete from `db_index`.`rel_word_fact__re`; delete from `db_index`.`rel_word_fact__rf`; delete from `db_index`.`rel_word_fact__rg`; delete from `db_index`.`rel_word_fact__rh`; delete from `db_index`.`rel_word_fact__ri`; delete from `db_index`.`rel_word_fact__rj`; delete from `db_index`.`rel_word_fact__rk`; delete from `db_index`.`rel_word_fact__rl`; delete from `db_index`.`rel_word_fact__rm`; delete from `db_index`.`rel_word_fact__rn`; delete from `db_index`.`rel_word_fact__ro`; delete from `db_index`.`rel_word_fact__rp`; delete from `db_index`.`rel_word_fact__rq`; delete from `db_index`.`rel_word_fact__rr`; delete from `db_index`.`rel_word_fact__rs`; delete from `db_index`.`rel_word_fact__rt`; delete from `db_index`.`rel_word_fact__ru`; delete from `db_index`.`rel_word_fact__rv`; delete from `db_index`.`rel_word_fact__rw`; delete from `db_index`.`rel_word_fact__rx`; delete from `db_index`.`rel_word_fact__ry`; delete from `db_index`.`rel_word_fact__rz`; delete from `db_index`.`rel_word_fact__r_`; delete from `db_index`.`rel_word_fact__sa`; delete from `db_index`.`rel_word_fact__sb`; delete from `db_index`.`rel_word_fact__sc`; delete from `db_index`.`rel_word_fact__sd`; delete from `db_index`.`rel_word_fact__se`; delete from `db_index`.`rel_word_fact__sf`; delete from `db_index`.`rel_word_fact__sg`; delete from `db_index`.`rel_word_fact__sh`; delete from `db_index`.`rel_word_fact__si`; delete from `db_index`.`rel_word_fact__sj`; delete from `db_index`.`rel_word_fact__sk`; delete from `db_index`.`rel_word_fact__sl`; delete from `db_index`.`rel_word_fact__sm`; delete from `db_index`.`rel_word_fact__sn`; delete from `db_index`.`rel_word_fact__so`; delete from `db_index`.`rel_word_fact__sp`; delete from `db_index`.`rel_word_fact__sq`; delete from `db_index`.`rel_word_fact__sr`; delete from `db_index`.`rel_word_fact__ss`; delete from `db_index`.`rel_word_fact__st`; delete from `db_index`.`rel_word_fact__su`; delete from `db_index`.`rel_word_fact__sv`; delete from `db_index`.`rel_word_fact__sw`; delete from `db_index`.`rel_word_fact__sx`; delete from `db_index`.`rel_word_fact__sy`; delete from `db_index`.`rel_word_fact__sz`; delete from `db_index`.`rel_word_fact__s_`; delete from `db_index`.`rel_word_fact__ta`; delete from `db_index`.`rel_word_fact__tb`; delete from `db_index`.`rel_word_fact__tc`; delete from `db_index`.`rel_word_fact__td`; delete from `db_index`.`rel_word_fact__te`; delete from `db_index`.`rel_word_fact__tf`; delete from `db_index`.`rel_word_fact__tg`; delete from `db_index`.`rel_word_fact__th`; delete from `db_index`.`rel_word_fact__ti`; delete from `db_index`.`rel_word_fact__tj`; delete from `db_index`.`rel_word_fact__tk`; delete from `db_index`.`rel_word_fact__tl`; delete from `db_index`.`rel_word_fact__tm`; delete from `db_index`.`rel_word_fact__tn`; delete from `db_index`.`rel_word_fact__to`; delete from `db_index`.`rel_word_fact__tp`; delete from `db_index`.`rel_word_fact__tq`; delete from `db_index`.`rel_word_fact__tr`; delete from `db_index`.`rel_word_fact__ts`; delete from `db_index`.`rel_word_fact__tt`; delete from `db_index`.`rel_word_fact__tu`; delete from `db_index`.`rel_word_fact__tv`; delete from `db_index`.`rel_word_fact__tw`; delete from `db_index`.`rel_word_fact__tx`; delete from `db_index`.`rel_word_fact__ty`; delete from `db_index`.`rel_word_fact__tz`; delete from `db_index`.`rel_word_fact__t_`; delete from `db_index`.`rel_word_fact__ua`; delete from `db_index`.`rel_word_fact__ub`; delete from `db_index`.`rel_word_fact__uc`; delete from `db_index`.`rel_word_fact__ud`; delete from `db_index`.`rel_word_fact__ue`; delete from `db_index`.`rel_word_fact__uf`; delete from `db_index`.`rel_word_fact__ug`; delete from `db_index`.`rel_word_fact__uh`; delete from `db_index`.`rel_word_fact__ui`; delete from `db_index`.`rel_word_fact__uj`; delete from `db_index`.`rel_word_fact__uk`; delete from `db_index`.`rel_word_fact__ul`; delete from `db_index`.`rel_word_fact__um`; delete from `db_index`.`rel_word_fact__un`; delete from `db_index`.`rel_word_fact__uo`; delete from `db_index`.`rel_word_fact__up`; delete from `db_index`.`rel_word_fact__uq`; delete from `db_index`.`rel_word_fact__ur`; delete from `db_index`.`rel_word_fact__us`; delete from `db_index`.`rel_word_fact__ut`; delete from `db_index`.`rel_word_fact__uu`; delete from `db_index`.`rel_word_fact__uv`; delete from `db_index`.`rel_word_fact__uw`; delete from `db_index`.`rel_word_fact__ux`; delete from `db_index`.`rel_word_fact__uy`; delete from `db_index`.`rel_word_fact__uz`; delete from `db_index`.`rel_word_fact__u_`; delete from `db_index`.`rel_word_fact__va`; delete from `db_index`.`rel_word_fact__vb`; delete from `db_index`.`rel_word_fact__vc`; delete from `db_index`.`rel_word_fact__vd`; delete from `db_index`.`rel_word_fact__ve`; delete from `db_index`.`rel_word_fact__vf`; delete from `db_index`.`rel_word_fact__vg`; delete from `db_index`.`rel_word_fact__vh`; delete from `db_index`.`rel_word_fact__vi`; delete from `db_index`.`rel_word_fact__vj`; delete from `db_index`.`rel_word_fact__vk`; delete from `db_index`.`rel_word_fact__vl`; delete from `db_index`.`rel_word_fact__vm`; delete from `db_index`.`rel_word_fact__vn`; delete from `db_index`.`rel_word_fact__vo`; delete from `db_index`.`rel_word_fact__vp`; delete from `db_index`.`rel_word_fact__vq`; delete from `db_index`.`rel_word_fact__vr`; delete from `db_index`.`rel_word_fact__vs`; delete from `db_index`.`rel_word_fact__vt`; delete from `db_index`.`rel_word_fact__vu`; delete from `db_index`.`rel_word_fact__vv`; delete from `db_index`.`rel_word_fact__vw`; delete from `db_index`.`rel_word_fact__vx`; delete from `db_index`.`rel_word_fact__vy`; delete from `db_index`.`rel_word_fact__vz`; delete from `db_index`.`rel_word_fact__v_`; delete from `db_index`.`rel_word_fact__wa`; delete from `db_index`.`rel_word_fact__wb`; delete from `db_index`.`rel_word_fact__wc`; delete from `db_index`.`rel_word_fact__wd`; delete from `db_index`.`rel_word_fact__we`; delete from `db_index`.`rel_word_fact__wf`; delete from `db_index`.`rel_word_fact__wg`; delete from `db_index`.`rel_word_fact__wh`; delete from `db_index`.`rel_word_fact__wi`; delete from `db_index`.`rel_word_fact__wj`; delete from `db_index`.`rel_word_fact__wk`; delete from `db_index`.`rel_word_fact__wl`; delete from `db_index`.`rel_word_fact__wm`; delete from `db_index`.`rel_word_fact__wn`; delete from `db_index`.`rel_word_fact__wo`; delete from `db_index`.`rel_word_fact__wp`; delete from `db_index`.`rel_word_fact__wq`; delete from `db_index`.`rel_word_fact__wr`; delete from `db_index`.`rel_word_fact__ws`; delete from `db_index`.`rel_word_fact__wt`; delete from `db_index`.`rel_word_fact__wu`; delete from `db_index`.`rel_word_fact__wv`; delete from `db_index`.`rel_word_fact__ww`; delete from `db_index`.`rel_word_fact__wx`; delete from `db_index`.`rel_word_fact__wy`; delete from `db_index`.`rel_word_fact__wz`; delete from `db_index`.`rel_word_fact__w_`; delete from `db_index`.`rel_word_fact__xa`; delete from `db_index`.`rel_word_fact__xb`; delete from `db_index`.`rel_word_fact__xc`; delete from `db_index`.`rel_word_fact__xd`; delete from `db_index`.`rel_word_fact__xe`; delete from `db_index`.`rel_word_fact__xf`; delete from `db_index`.`rel_word_fact__xg`; delete from `db_index`.`rel_word_fact__xh`; delete from `db_index`.`rel_word_fact__xi`; delete from `db_index`.`rel_word_fact__xj`; delete from `db_index`.`rel_word_fact__xk`; delete from `db_index`.`rel_word_fact__xl`; delete from `db_index`.`rel_word_fact__xm`; delete from `db_index`.`rel_word_fact__xn`; delete from `db_index`.`rel_word_fact__xo`; delete from `db_index`.`rel_word_fact__xp`; delete from `db_index`.`rel_word_fact__xq`; delete from `db_index`.`rel_word_fact__xr`; delete from `db_index`.`rel_word_fact__xs`; delete from `db_index`.`rel_word_fact__xt`; delete from `db_index`.`rel_word_fact__xu`; delete from `db_index`.`rel_word_fact__xv`; delete from `db_index`.`rel_word_fact__xw`; delete from `db_index`.`rel_word_fact__xx`; delete from `db_index`.`rel_word_fact__xy`; delete from `db_index`.`rel_word_fact__xz`; delete from `db_index`.`rel_word_fact__x_`; delete from `db_index`.`rel_word_fact__ya`; delete from `db_index`.`rel_word_fact__yb`; delete from `db_index`.`rel_word_fact__yc`; delete from `db_index`.`rel_word_fact__yd`; delete from `db_index`.`rel_word_fact__ye`; delete from `db_index`.`rel_word_fact__yf`; delete from `db_index`.`rel_word_fact__yg`; delete from `db_index`.`rel_word_fact__yh`; delete from `db_index`.`rel_word_fact__yi`; delete from `db_index`.`rel_word_fact__yj`; delete from `db_index`.`rel_word_fact__yk`; delete from `db_index`.`rel_word_fact__yl`; delete from `db_index`.`rel_word_fact__ym`; delete from `db_index`.`rel_word_fact__yn`; delete from `db_index`.`rel_word_fact__yo`; delete from `db_index`.`rel_word_fact__yp`; delete from `db_index`.`rel_word_fact__yq`; delete from `db_index`.`rel_word_fact__yr`; delete from `db_index`.`rel_word_fact__ys`; delete from `db_index`.`rel_word_fact__yt`; delete from `db_index`.`rel_word_fact__yu`; delete from `db_index`.`rel_word_fact__yv`; delete from `db_index`.`rel_word_fact__yw`; delete from `db_index`.`rel_word_fact__yx`; delete from `db_index`.`rel_word_fact__yy`; delete from `db_index`.`rel_word_fact__yz`; delete from `db_index`.`rel_word_fact__y_`; delete from `db_index`.`rel_word_fact__za`; delete from `db_index`.`rel_word_fact__zb`; delete from `db_index`.`rel_word_fact__zc`; delete from `db_index`.`rel_word_fact__zd`; delete from `db_index`.`rel_word_fact__ze`; delete from `db_index`.`rel_word_fact__zf`; delete from `db_index`.`rel_word_fact__zg`; delete from `db_index`.`rel_word_fact__zh`; delete from `db_index`.`rel_word_fact__zi`; delete from `db_index`.`rel_word_fact__zj`; delete from `db_index`.`rel_word_fact__zk`; delete from `db_index`.`rel_word_fact__zl`; delete from `db_index`.`rel_word_fact__zm`; delete from `db_index`.`rel_word_fact__zn`; delete from `db_index`.`rel_word_fact__zo`; delete from `db_index`.`rel_word_fact__zp`; delete from `db_index`.`rel_word_fact__zq`; delete from `db_index`.`rel_word_fact__zr`; delete from `db_index`.`rel_word_fact__zs`; delete from `db_index`.`rel_word_fact__zt`; delete from `db_index`.`rel_word_fact__zu`; delete from `db_index`.`rel_word_fact__zv`; delete from `db_index`.`rel_word_fact__zw`; delete from `db_index`.`rel_word_fact__zx`; delete from `db_index`.`rel_word_fact__zy`; delete from `db_index`.`rel_word_fact__zz`;", NULL, NULL);
+        int error3 = sql_execute("delete from `db_index`.`rel_word_fact__aa`; delete from `db_index`.`rel_word_fact__ab`; delete from `db_index`.`rel_word_fact__ac`; delete from `db_index`.`rel_word_fact__ad`; delete from `db_index`.`rel_word_fact__ae`; delete from `db_index`.`rel_word_fact__af`; delete from `db_index`.`rel_word_fact__ag`; delete from `db_index`.`rel_word_fact__ah`; delete from `db_index`.`rel_word_fact__ai`; delete from `db_index`.`rel_word_fact__aj`; delete from `db_index`.`rel_word_fact__ak`; delete from `db_index`.`rel_word_fact__al`; delete from `db_index`.`rel_word_fact__am`; delete from `db_index`.`rel_word_fact__an`; delete from `db_index`.`rel_word_fact__ao`; delete from `db_index`.`rel_word_fact__ap`; delete from `db_index`.`rel_word_fact__aq`; delete from `db_index`.`rel_word_fact__ar`; delete from `db_index`.`rel_word_fact__as`; delete from `db_index`.`rel_word_fact__at`; delete from `db_index`.`rel_word_fact__au`; delete from `db_index`.`rel_word_fact__av`; delete from `db_index`.`rel_word_fact__aw`; delete from `db_index`.`rel_word_fact__ax`; delete from `db_index`.`rel_word_fact__ay`; delete from `db_index`.`rel_word_fact__az`; delete from `db_index`.`rel_word_fact__a_`; delete from `db_index`.`rel_word_fact__ba`; delete from `db_index`.`rel_word_fact__bb`; delete from `db_index`.`rel_word_fact__bc`; delete from `db_index`.`rel_word_fact__bd`; delete from `db_index`.`rel_word_fact__be`; delete from `db_index`.`rel_word_fact__bf`; delete from `db_index`.`rel_word_fact__bg`; delete from `db_index`.`rel_word_fact__bh`; delete from `db_index`.`rel_word_fact__bi`; delete from `db_index`.`rel_word_fact__bj`; delete from `db_index`.`rel_word_fact__bk`; delete from `db_index`.`rel_word_fact__bl`; delete from `db_index`.`rel_word_fact__bm`; delete from `db_index`.`rel_word_fact__bn`; delete from `db_index`.`rel_word_fact__bo`; delete from `db_index`.`rel_word_fact__bp`; delete from `db_index`.`rel_word_fact__bq`; delete from `db_index`.`rel_word_fact__br`; delete from `db_index`.`rel_word_fact__bs`; delete from `db_index`.`rel_word_fact__bt`; delete from `db_index`.`rel_word_fact__bu`; delete from `db_index`.`rel_word_fact__bv`; delete from `db_index`.`rel_word_fact__bw`; delete from `db_index`.`rel_word_fact__bx`; delete from `db_index`.`rel_word_fact__by`; delete from `db_index`.`rel_word_fact__bz`; delete from `db_index`.`rel_word_fact__b_`; delete from `db_index`.`rel_word_fact__ca`; delete from `db_index`.`rel_word_fact__cb`; delete from `db_index`.`rel_word_fact__cc`; delete from `db_index`.`rel_word_fact__cd`; delete from `db_index`.`rel_word_fact__ce`; delete from `db_index`.`rel_word_fact__cf`; delete from `db_index`.`rel_word_fact__cg`; delete from `db_index`.`rel_word_fact__ch`; delete from `db_index`.`rel_word_fact__ci`; delete from `db_index`.`rel_word_fact__cj`; delete from `db_index`.`rel_word_fact__ck`; delete from `db_index`.`rel_word_fact__cl`; delete from `db_index`.`rel_word_fact__cm`; delete from `db_index`.`rel_word_fact__cn`; delete from `db_index`.`rel_word_fact__co`; delete from `db_index`.`rel_word_fact__cp`; delete from `db_index`.`rel_word_fact__cq`; delete from `db_index`.`rel_word_fact__cr`; delete from `db_index`.`rel_word_fact__cs`; delete from `db_index`.`rel_word_fact__ct`; delete from `db_index`.`rel_word_fact__cu`; delete from `db_index`.`rel_word_fact__cv`; delete from `db_index`.`rel_word_fact__cw`; delete from `db_index`.`rel_word_fact__cx`; delete from `db_index`.`rel_word_fact__cy`; delete from `db_index`.`rel_word_fact__cz`; delete from `db_index`.`rel_word_fact__c_`; delete from `db_index`.`rel_word_fact__da`; delete from `db_index`.`rel_word_fact__db`; delete from `db_index`.`rel_word_fact__dc`; delete from `db_index`.`rel_word_fact__dd`; delete from `db_index`.`rel_word_fact__de`; delete from `db_index`.`rel_word_fact__df`; delete from `db_index`.`rel_word_fact__dg`; delete from `db_index`.`rel_word_fact__dh`; delete from `db_index`.`rel_word_fact__di`; delete from `db_index`.`rel_word_fact__dj`; delete from `db_index`.`rel_word_fact__dk`; delete from `db_index`.`rel_word_fact__dl`; delete from `db_index`.`rel_word_fact__dm`; delete from `db_index`.`rel_word_fact__dn`; delete from `db_index`.`rel_word_fact__do`; delete from `db_index`.`rel_word_fact__dp`; delete from `db_index`.`rel_word_fact__dq`; delete from `db_index`.`rel_word_fact__dr`; delete from `db_index`.`rel_word_fact__ds`; delete from `db_index`.`rel_word_fact__dt`; delete from `db_index`.`rel_word_fact__du`; delete from `db_index`.`rel_word_fact__dv`; delete from `db_index`.`rel_word_fact__dw`; delete from `db_index`.`rel_word_fact__dx`; delete from `db_index`.`rel_word_fact__dy`; delete from `db_index`.`rel_word_fact__dz`; delete from `db_index`.`rel_word_fact__d_`; delete from `db_index`.`rel_word_fact__ea`; delete from `db_index`.`rel_word_fact__eb`; delete from `db_index`.`rel_word_fact__ec`; delete from `db_index`.`rel_word_fact__ed`; delete from `db_index`.`rel_word_fact__ee`; delete from `db_index`.`rel_word_fact__ef`; delete from `db_index`.`rel_word_fact__eg`; delete from `db_index`.`rel_word_fact__eh`; delete from `db_index`.`rel_word_fact__ei`; delete from `db_index`.`rel_word_fact__ej`; delete from `db_index`.`rel_word_fact__ek`; delete from `db_index`.`rel_word_fact__el`; delete from `db_index`.`rel_word_fact__em`; delete from `db_index`.`rel_word_fact__en`; delete from `db_index`.`rel_word_fact__eo`; delete from `db_index`.`rel_word_fact__ep`; delete from `db_index`.`rel_word_fact__eq`; delete from `db_index`.`rel_word_fact__er`; delete from `db_index`.`rel_word_fact__es`; delete from `db_index`.`rel_word_fact__et`; delete from `db_index`.`rel_word_fact__eu`; delete from `db_index`.`rel_word_fact__ev`; delete from `db_index`.`rel_word_fact__ew`; delete from `db_index`.`rel_word_fact__ex`; delete from `db_index`.`rel_word_fact__ey`; delete from `db_index`.`rel_word_fact__ez`; delete from `db_index`.`rel_word_fact__e_`; delete from `db_index`.`rel_word_fact__fa`; delete from `db_index`.`rel_word_fact__fb`; delete from `db_index`.`rel_word_fact__fc`; delete from `db_index`.`rel_word_fact__fd`; delete from `db_index`.`rel_word_fact__fe`; delete from `db_index`.`rel_word_fact__ff`; delete from `db_index`.`rel_word_fact__fg`; delete from `db_index`.`rel_word_fact__fh`; delete from `db_index`.`rel_word_fact__fi`; delete from `db_index`.`rel_word_fact__fj`; delete from `db_index`.`rel_word_fact__fk`; delete from `db_index`.`rel_word_fact__fl`; delete from `db_index`.`rel_word_fact__fm`; delete from `db_index`.`rel_word_fact__fn`; delete from `db_index`.`rel_word_fact__fo`; delete from `db_index`.`rel_word_fact__fp`; delete from `db_index`.`rel_word_fact__fq`; delete from `db_index`.`rel_word_fact__fr`; delete from `db_index`.`rel_word_fact__fs`; delete from `db_index`.`rel_word_fact__ft`; delete from `db_index`.`rel_word_fact__fu`; delete from `db_index`.`rel_word_fact__fv`; delete from `db_index`.`rel_word_fact__fw`; delete from `db_index`.`rel_word_fact__fx`; delete from `db_index`.`rel_word_fact__fy`; delete from `db_index`.`rel_word_fact__fz`; delete from `db_index`.`rel_word_fact__f_`; delete from `db_index`.`rel_word_fact__ga`; delete from `db_index`.`rel_word_fact__gb`; delete from `db_index`.`rel_word_fact__gc`; delete from `db_index`.`rel_word_fact__gd`; delete from `db_index`.`rel_word_fact__ge`; delete from `db_index`.`rel_word_fact__gf`; delete from `db_index`.`rel_word_fact__gg`; delete from `db_index`.`rel_word_fact__gh`; delete from `db_index`.`rel_word_fact__gi`; delete from `db_index`.`rel_word_fact__gj`; delete from `db_index`.`rel_word_fact__gk`; delete from `db_index`.`rel_word_fact__gl`; delete from `db_index`.`rel_word_fact__gm`; delete from `db_index`.`rel_word_fact__gn`; delete from `db_index`.`rel_word_fact__go`; delete from `db_index`.`rel_word_fact__gp`; delete from `db_index`.`rel_word_fact__gq`; delete from `db_index`.`rel_word_fact__gr`; delete from `db_index`.`rel_word_fact__gs`; delete from `db_index`.`rel_word_fact__gt`; delete from `db_index`.`rel_word_fact__gu`; delete from `db_index`.`rel_word_fact__gv`; delete from `db_index`.`rel_word_fact__gw`; delete from `db_index`.`rel_word_fact__gx`; delete from `db_index`.`rel_word_fact__gy`; delete from `db_index`.`rel_word_fact__gz`; delete from `db_index`.`rel_word_fact__g_`; delete from `db_index`.`rel_word_fact__ha`; delete from `db_index`.`rel_word_fact__hb`; delete from `db_index`.`rel_word_fact__hc`; delete from `db_index`.`rel_word_fact__hd`; delete from `db_index`.`rel_word_fact__he`; delete from `db_index`.`rel_word_fact__hf`; delete from `db_index`.`rel_word_fact__hg`; delete from `db_index`.`rel_word_fact__hh`; delete from `db_index`.`rel_word_fact__hi`; delete from `db_index`.`rel_word_fact__hj`; delete from `db_index`.`rel_word_fact__hk`; delete from `db_index`.`rel_word_fact__hl`; delete from `db_index`.`rel_word_fact__hm`; delete from `db_index`.`rel_word_fact__hn`; delete from `db_index`.`rel_word_fact__ho`; delete from `db_index`.`rel_word_fact__hp`; delete from `db_index`.`rel_word_fact__hq`; delete from `db_index`.`rel_word_fact__hr`; delete from `db_index`.`rel_word_fact__hs`; delete from `db_index`.`rel_word_fact__ht`; delete from `db_index`.`rel_word_fact__hu`; delete from `db_index`.`rel_word_fact__hv`; delete from `db_index`.`rel_word_fact__hw`; delete from `db_index`.`rel_word_fact__hx`; delete from `db_index`.`rel_word_fact__hy`; delete from `db_index`.`rel_word_fact__hz`; delete from `db_index`.`rel_word_fact__h_`; delete from `db_index`.`rel_word_fact__ia`; delete from `db_index`.`rel_word_fact__ib`; delete from `db_index`.`rel_word_fact__ic`; delete from `db_index`.`rel_word_fact__id`; delete from `db_index`.`rel_word_fact__ie`; delete from `db_index`.`rel_word_fact__if`; delete from `db_index`.`rel_word_fact__ig`; delete from `db_index`.`rel_word_fact__ih`; delete from `db_index`.`rel_word_fact__ii`; delete from `db_index`.`rel_word_fact__ij`; delete from `db_index`.`rel_word_fact__ik`; delete from `db_index`.`rel_word_fact__il`; delete from `db_index`.`rel_word_fact__im`; delete from `db_index`.`rel_word_fact__in`; delete from `db_index`.`rel_word_fact__io`; delete from `db_index`.`rel_word_fact__ip`; delete from `db_index`.`rel_word_fact__iq`; delete from `db_index`.`rel_word_fact__ir`; delete from `db_index`.`rel_word_fact__is`; delete from `db_index`.`rel_word_fact__it`; delete from `db_index`.`rel_word_fact__iu`; delete from `db_index`.`rel_word_fact__iv`; delete from `db_index`.`rel_word_fact__iw`; delete from `db_index`.`rel_word_fact__ix`; delete from `db_index`.`rel_word_fact__iy`; delete from `db_index`.`rel_word_fact__iz`; delete from `db_index`.`rel_word_fact__i_`; delete from `db_index`.`rel_word_fact__ja`; delete from `db_index`.`rel_word_fact__jb`; delete from `db_index`.`rel_word_fact__jc`; delete from `db_index`.`rel_word_fact__jd`; delete from `db_index`.`rel_word_fact__je`; delete from `db_index`.`rel_word_fact__jf`; delete from `db_index`.`rel_word_fact__jg`; delete from `db_index`.`rel_word_fact__jh`; delete from `db_index`.`rel_word_fact__ji`; delete from `db_index`.`rel_word_fact__jj`; delete from `db_index`.`rel_word_fact__jk`; delete from `db_index`.`rel_word_fact__jl`; delete from `db_index`.`rel_word_fact__jm`; delete from `db_index`.`rel_word_fact__jn`; delete from `db_index`.`rel_word_fact__jo`; delete from `db_index`.`rel_word_fact__jp`; delete from `db_index`.`rel_word_fact__jq`; delete from `db_index`.`rel_word_fact__jr`; delete from `db_index`.`rel_word_fact__js`; delete from `db_index`.`rel_word_fact__jt`; delete from `db_index`.`rel_word_fact__ju`; delete from `db_index`.`rel_word_fact__jv`; delete from `db_index`.`rel_word_fact__jw`; delete from `db_index`.`rel_word_fact__jx`; delete from `db_index`.`rel_word_fact__jy`; delete from `db_index`.`rel_word_fact__jz`; delete from `db_index`.`rel_word_fact__j_`; delete from `db_index`.`rel_word_fact__ka`; delete from `db_index`.`rel_word_fact__kb`; delete from `db_index`.`rel_word_fact__kc`; delete from `db_index`.`rel_word_fact__kd`; delete from `db_index`.`rel_word_fact__ke`; delete from `db_index`.`rel_word_fact__kf`; delete from `db_index`.`rel_word_fact__kg`; delete from `db_index`.`rel_word_fact__kh`; delete from `db_index`.`rel_word_fact__ki`; delete from `db_index`.`rel_word_fact__kj`; delete from `db_index`.`rel_word_fact__kk`; delete from `db_index`.`rel_word_fact__kl`; delete from `db_index`.`rel_word_fact__km`; delete from `db_index`.`rel_word_fact__kn`; delete from `db_index`.`rel_word_fact__ko`; delete from `db_index`.`rel_word_fact__kp`; delete from `db_index`.`rel_word_fact__kq`; delete from `db_index`.`rel_word_fact__kr`; delete from `db_index`.`rel_word_fact__ks`; delete from `db_index`.`rel_word_fact__kt`; delete from `db_index`.`rel_word_fact__ku`; delete from `db_index`.`rel_word_fact__kv`; delete from `db_index`.`rel_word_fact__kw`; delete from `db_index`.`rel_word_fact__kx`; delete from `db_index`.`rel_word_fact__ky`; delete from `db_index`.`rel_word_fact__kz`; delete from `db_index`.`rel_word_fact__k_`; delete from `db_index`.`rel_word_fact__la`; delete from `db_index`.`rel_word_fact__lb`; delete from `db_index`.`rel_word_fact__lc`; delete from `db_index`.`rel_word_fact__ld`; delete from `db_index`.`rel_word_fact__le`; delete from `db_index`.`rel_word_fact__lf`; delete from `db_index`.`rel_word_fact__lg`; delete from `db_index`.`rel_word_fact__lh`; delete from `db_index`.`rel_word_fact__li`; delete from `db_index`.`rel_word_fact__lj`; delete from `db_index`.`rel_word_fact__lk`; delete from `db_index`.`rel_word_fact__ll`; delete from `db_index`.`rel_word_fact__lm`; delete from `db_index`.`rel_word_fact__ln`; delete from `db_index`.`rel_word_fact__lo`; delete from `db_index`.`rel_word_fact__lp`; delete from `db_index`.`rel_word_fact__lq`; delete from `db_index`.`rel_word_fact__lr`; delete from `db_index`.`rel_word_fact__ls`; delete from `db_index`.`rel_word_fact__lt`; delete from `db_index`.`rel_word_fact__lu`; delete from `db_index`.`rel_word_fact__lv`; delete from `db_index`.`rel_word_fact__lw`; delete from `db_index`.`rel_word_fact__lx`; delete from `db_index`.`rel_word_fact__ly`; delete from `db_index`.`rel_word_fact__lz`; delete from `db_index`.`rel_word_fact__l_`; delete from `db_index`.`rel_word_fact__ma`; delete from `db_index`.`rel_word_fact__mb`; delete from `db_index`.`rel_word_fact__mc`; delete from `db_index`.`rel_word_fact__md`; delete from `db_index`.`rel_word_fact__me`; delete from `db_index`.`rel_word_fact__mf`; delete from `db_index`.`rel_word_fact__mg`; delete from `db_index`.`rel_word_fact__mh`; delete from `db_index`.`rel_word_fact__mi`; delete from `db_index`.`rel_word_fact__mj`; delete from `db_index`.`rel_word_fact__mk`; delete from `db_index`.`rel_word_fact__ml`; delete from `db_index`.`rel_word_fact__mm`; delete from `db_index`.`rel_word_fact__mn`; delete from `db_index`.`rel_word_fact__mo`; delete from `db_index`.`rel_word_fact__mp`; delete from `db_index`.`rel_word_fact__mq`; delete from `db_index`.`rel_word_fact__mr`; delete from `db_index`.`rel_word_fact__ms`; delete from `db_index`.`rel_word_fact__mt`; delete from `db_index`.`rel_word_fact__mu`; delete from `db_index`.`rel_word_fact__mv`; delete from `db_index`.`rel_word_fact__mw`; delete from `db_index`.`rel_word_fact__mx`; delete from `db_index`.`rel_word_fact__my`; delete from `db_index`.`rel_word_fact__mz`; delete from `db_index`.`rel_word_fact__m_`; delete from `db_index`.`rel_word_fact__na`; delete from `db_index`.`rel_word_fact__nb`; delete from `db_index`.`rel_word_fact__nc`; delete from `db_index`.`rel_word_fact__nd`; delete from `db_index`.`rel_word_fact__ne`; delete from `db_index`.`rel_word_fact__nf`; delete from `db_index`.`rel_word_fact__ng`; delete from `db_index`.`rel_word_fact__nh`; delete from `db_index`.`rel_word_fact__ni`; delete from `db_index`.`rel_word_fact__nj`; delete from `db_index`.`rel_word_fact__nk`; delete from `db_index`.`rel_word_fact__nl`; delete from `db_index`.`rel_word_fact__nm`; delete from `db_index`.`rel_word_fact__nn`; delete from `db_index`.`rel_word_fact__no`; delete from `db_index`.`rel_word_fact__np`; delete from `db_index`.`rel_word_fact__nq`; delete from `db_index`.`rel_word_fact__nr`; delete from `db_index`.`rel_word_fact__ns`; delete from `db_index`.`rel_word_fact__nt`; delete from `db_index`.`rel_word_fact__nu`; delete from `db_index`.`rel_word_fact__nv`; delete from `db_index`.`rel_word_fact__nw`; delete from `db_index`.`rel_word_fact__nx`; delete from `db_index`.`rel_word_fact__ny`; delete from `db_index`.`rel_word_fact__nz`; delete from `db_index`.`rel_word_fact__n_`; delete from `db_index`.`rel_word_fact__oa`; delete from `db_index`.`rel_word_fact__ob`; delete from `db_index`.`rel_word_fact__oc`; delete from `db_index`.`rel_word_fact__od`; delete from `db_index`.`rel_word_fact__oe`; delete from `db_index`.`rel_word_fact__of`; delete from `db_index`.`rel_word_fact__og`; delete from `db_index`.`rel_word_fact__oh`; delete from `db_index`.`rel_word_fact__oi`; delete from `db_index`.`rel_word_fact__oj`; delete from `db_index`.`rel_word_fact__ok`; delete from `db_index`.`rel_word_fact__ol`; delete from `db_index`.`rel_word_fact__om`; delete from `db_index`.`rel_word_fact__on`; delete from `db_index`.`rel_word_fact__oo`; delete from `db_index`.`rel_word_fact__op`; delete from `db_index`.`rel_word_fact__oq`; delete from `db_index`.`rel_word_fact__or`; delete from `db_index`.`rel_word_fact__os`; delete from `db_index`.`rel_word_fact__ot`; delete from `db_index`.`rel_word_fact__ou`; delete from `db_index`.`rel_word_fact__ov`; delete from `db_index`.`rel_word_fact__ow`; delete from `db_index`.`rel_word_fact__ox`; delete from `db_index`.`rel_word_fact__oy`; delete from `db_index`.`rel_word_fact__oz`; delete from `db_index`.`rel_word_fact__o_`; delete from `db_index`.`rel_word_fact__pa`; delete from `db_index`.`rel_word_fact__pb`; delete from `db_index`.`rel_word_fact__pc`; delete from `db_index`.`rel_word_fact__pd`; delete from `db_index`.`rel_word_fact__pe`; delete from `db_index`.`rel_word_fact__pf`; delete from `db_index`.`rel_word_fact__pg`; delete from `db_index`.`rel_word_fact__ph`; delete from `db_index`.`rel_word_fact__pi`; delete from `db_index`.`rel_word_fact__pj`; delete from `db_index`.`rel_word_fact__pk`; delete from `db_index`.`rel_word_fact__pl`; delete from `db_index`.`rel_word_fact__pm`; delete from `db_index`.`rel_word_fact__pn`; delete from `db_index`.`rel_word_fact__po`; delete from `db_index`.`rel_word_fact__pp`; delete from `db_index`.`rel_word_fact__pq`; delete from `db_index`.`rel_word_fact__pr`; delete from `db_index`.`rel_word_fact__ps`; delete from `db_index`.`rel_word_fact__pt`; delete from `db_index`.`rel_word_fact__pu`; delete from `db_index`.`rel_word_fact__pv`; delete from `db_index`.`rel_word_fact__pw`; delete from `db_index`.`rel_word_fact__px`; delete from `db_index`.`rel_word_fact__py`; delete from `db_index`.`rel_word_fact__pz`; delete from `db_index`.`rel_word_fact__p_`; delete from `db_index`.`rel_word_fact__qa`; delete from `db_index`.`rel_word_fact__qb`; delete from `db_index`.`rel_word_fact__qc`; delete from `db_index`.`rel_word_fact__qd`; delete from `db_index`.`rel_word_fact__qe`; delete from `db_index`.`rel_word_fact__qf`; delete from `db_index`.`rel_word_fact__qg`; delete from `db_index`.`rel_word_fact__qh`; delete from `db_index`.`rel_word_fact__qi`; delete from `db_index`.`rel_word_fact__qj`; delete from `db_index`.`rel_word_fact__qk`; delete from `db_index`.`rel_word_fact__ql`; delete from `db_index`.`rel_word_fact__qm`; delete from `db_index`.`rel_word_fact__qn`; delete from `db_index`.`rel_word_fact__qo`; delete from `db_index`.`rel_word_fact__qp`; delete from `db_index`.`rel_word_fact__qq`; delete from `db_index`.`rel_word_fact__qr`; delete from `db_index`.`rel_word_fact__qs`; delete from `db_index`.`rel_word_fact__qt`; delete from `db_index`.`rel_word_fact__qu`; delete from `db_index`.`rel_word_fact__qv`; delete from `db_index`.`rel_word_fact__qw`; delete from `db_index`.`rel_word_fact__qx`; delete from `db_index`.`rel_word_fact__qy`; delete from `db_index`.`rel_word_fact__qz`; delete from `db_index`.`rel_word_fact__q_`; delete from `db_index`.`rel_word_fact__ra`; delete from `db_index`.`rel_word_fact__rb`; delete from `db_index`.`rel_word_fact__rc`; delete from `db_index`.`rel_word_fact__rd`; delete from `db_index`.`rel_word_fact__re`; delete from `db_index`.`rel_word_fact__rf`; delete from `db_index`.`rel_word_fact__rg`; delete from `db_index`.`rel_word_fact__rh`; delete from `db_index`.`rel_word_fact__ri`; delete from `db_index`.`rel_word_fact__rj`; delete from `db_index`.`rel_word_fact__rk`; delete from `db_index`.`rel_word_fact__rl`; delete from `db_index`.`rel_word_fact__rm`; delete from `db_index`.`rel_word_fact__rn`; delete from `db_index`.`rel_word_fact__ro`; delete from `db_index`.`rel_word_fact__rp`; delete from `db_index`.`rel_word_fact__rq`; delete from `db_index`.`rel_word_fact__rr`; delete from `db_index`.`rel_word_fact__rs`; delete from `db_index`.`rel_word_fact__rt`; delete from `db_index`.`rel_word_fact__ru`; delete from `db_index`.`rel_word_fact__rv`; delete from `db_index`.`rel_word_fact__rw`; delete from `db_index`.`rel_word_fact__rx`; delete from `db_index`.`rel_word_fact__ry`; delete from `db_index`.`rel_word_fact__rz`; delete from `db_index`.`rel_word_fact__r_`; delete from `db_index`.`rel_word_fact__sa`; delete from `db_index`.`rel_word_fact__sb`; delete from `db_index`.`rel_word_fact__sc`; delete from `db_index`.`rel_word_fact__sd`; delete from `db_index`.`rel_word_fact__se`; delete from `db_index`.`rel_word_fact__sf`; delete from `db_index`.`rel_word_fact__sg`; delete from `db_index`.`rel_word_fact__sh`; delete from `db_index`.`rel_word_fact__si`; delete from `db_index`.`rel_word_fact__sj`; delete from `db_index`.`rel_word_fact__sk`; delete from `db_index`.`rel_word_fact__sl`; delete from `db_index`.`rel_word_fact__sm`; delete from `db_index`.`rel_word_fact__sn`; delete from `db_index`.`rel_word_fact__so`; delete from `db_index`.`rel_word_fact__sp`; delete from `db_index`.`rel_word_fact__sq`; delete from `db_index`.`rel_word_fact__sr`; delete from `db_index`.`rel_word_fact__ss`; delete from `db_index`.`rel_word_fact__st`; delete from `db_index`.`rel_word_fact__su`; delete from `db_index`.`rel_word_fact__sv`; delete from `db_index`.`rel_word_fact__sw`; delete from `db_index`.`rel_word_fact__sx`; delete from `db_index`.`rel_word_fact__sy`; delete from `db_index`.`rel_word_fact__sz`; delete from `db_index`.`rel_word_fact__s_`; delete from `db_index`.`rel_word_fact__ta`; delete from `db_index`.`rel_word_fact__tb`; delete from `db_index`.`rel_word_fact__tc`; delete from `db_index`.`rel_word_fact__td`; delete from `db_index`.`rel_word_fact__te`; delete from `db_index`.`rel_word_fact__tf`; delete from `db_index`.`rel_word_fact__tg`; delete from `db_index`.`rel_word_fact__th`; delete from `db_index`.`rel_word_fact__ti`; delete from `db_index`.`rel_word_fact__tj`; delete from `db_index`.`rel_word_fact__tk`; delete from `db_index`.`rel_word_fact__tl`; delete from `db_index`.`rel_word_fact__tm`; delete from `db_index`.`rel_word_fact__tn`; delete from `db_index`.`rel_word_fact__to`; delete from `db_index`.`rel_word_fact__tp`; delete from `db_index`.`rel_word_fact__tq`; delete from `db_index`.`rel_word_fact__tr`; delete from `db_index`.`rel_word_fact__ts`; delete from `db_index`.`rel_word_fact__tt`; delete from `db_index`.`rel_word_fact__tu`; delete from `db_index`.`rel_word_fact__tv`; delete from `db_index`.`rel_word_fact__tw`; delete from `db_index`.`rel_word_fact__tx`; delete from `db_index`.`rel_word_fact__ty`; delete from `db_index`.`rel_word_fact__tz`; delete from `db_index`.`rel_word_fact__t_`; delete from `db_index`.`rel_word_fact__ua`; delete from `db_index`.`rel_word_fact__ub`; delete from `db_index`.`rel_word_fact__uc`; delete from `db_index`.`rel_word_fact__ud`; delete from `db_index`.`rel_word_fact__ue`; delete from `db_index`.`rel_word_fact__uf`; delete from `db_index`.`rel_word_fact__ug`; delete from `db_index`.`rel_word_fact__uh`; delete from `db_index`.`rel_word_fact__ui`; delete from `db_index`.`rel_word_fact__uj`; delete from `db_index`.`rel_word_fact__uk`; delete from `db_index`.`rel_word_fact__ul`; delete from `db_index`.`rel_word_fact__um`; delete from `db_index`.`rel_word_fact__un`; delete from `db_index`.`rel_word_fact__uo`; delete from `db_index`.`rel_word_fact__up`; delete from `db_index`.`rel_word_fact__uq`; delete from `db_index`.`rel_word_fact__ur`; delete from `db_index`.`rel_word_fact__us`; delete from `db_index`.`rel_word_fact__ut`; delete from `db_index`.`rel_word_fact__uu`; delete from `db_index`.`rel_word_fact__uv`; delete from `db_index`.`rel_word_fact__uw`; delete from `db_index`.`rel_word_fact__ux`; delete from `db_index`.`rel_word_fact__uy`; delete from `db_index`.`rel_word_fact__uz`; delete from `db_index`.`rel_word_fact__u_`; delete from `db_index`.`rel_word_fact__va`; delete from `db_index`.`rel_word_fact__vb`; delete from `db_index`.`rel_word_fact__vc`; delete from `db_index`.`rel_word_fact__vd`; delete from `db_index`.`rel_word_fact__ve`; delete from `db_index`.`rel_word_fact__vf`; delete from `db_index`.`rel_word_fact__vg`; delete from `db_index`.`rel_word_fact__vh`; delete from `db_index`.`rel_word_fact__vi`; delete from `db_index`.`rel_word_fact__vj`; delete from `db_index`.`rel_word_fact__vk`; delete from `db_index`.`rel_word_fact__vl`; delete from `db_index`.`rel_word_fact__vm`; delete from `db_index`.`rel_word_fact__vn`; delete from `db_index`.`rel_word_fact__vo`; delete from `db_index`.`rel_word_fact__vp`; delete from `db_index`.`rel_word_fact__vq`; delete from `db_index`.`rel_word_fact__vr`; delete from `db_index`.`rel_word_fact__vs`; delete from `db_index`.`rel_word_fact__vt`; delete from `db_index`.`rel_word_fact__vu`; delete from `db_index`.`rel_word_fact__vv`; delete from `db_index`.`rel_word_fact__vw`; delete from `db_index`.`rel_word_fact__vx`; delete from `db_index`.`rel_word_fact__vy`; delete from `db_index`.`rel_word_fact__vz`; delete from `db_index`.`rel_word_fact__v_`; delete from `db_index`.`rel_word_fact__wa`; delete from `db_index`.`rel_word_fact__wb`; delete from `db_index`.`rel_word_fact__wc`; delete from `db_index`.`rel_word_fact__wd`; delete from `db_index`.`rel_word_fact__we`; delete from `db_index`.`rel_word_fact__wf`; delete from `db_index`.`rel_word_fact__wg`; delete from `db_index`.`rel_word_fact__wh`; delete from `db_index`.`rel_word_fact__wi`; delete from `db_index`.`rel_word_fact__wj`; delete from `db_index`.`rel_word_fact__wk`; delete from `db_index`.`rel_word_fact__wl`; delete from `db_index`.`rel_word_fact__wm`; delete from `db_index`.`rel_word_fact__wn`; delete from `db_index`.`rel_word_fact__wo`; delete from `db_index`.`rel_word_fact__wp`; delete from `db_index`.`rel_word_fact__wq`; delete from `db_index`.`rel_word_fact__wr`; delete from `db_index`.`rel_word_fact__ws`; delete from `db_index`.`rel_word_fact__wt`; delete from `db_index`.`rel_word_fact__wu`; delete from `db_index`.`rel_word_fact__wv`; delete from `db_index`.`rel_word_fact__ww`; delete from `db_index`.`rel_word_fact__wx`; delete from `db_index`.`rel_word_fact__wy`; delete from `db_index`.`rel_word_fact__wz`; delete from `db_index`.`rel_word_fact__w_`; delete from `db_index`.`rel_word_fact__xa`; delete from `db_index`.`rel_word_fact__xb`; delete from `db_index`.`rel_word_fact__xc`; delete from `db_index`.`rel_word_fact__xd`; delete from `db_index`.`rel_word_fact__xe`; delete from `db_index`.`rel_word_fact__xf`; delete from `db_index`.`rel_word_fact__xg`; delete from `db_index`.`rel_word_fact__xh`; delete from `db_index`.`rel_word_fact__xi`; delete from `db_index`.`rel_word_fact__xj`; delete from `db_index`.`rel_word_fact__xk`; delete from `db_index`.`rel_word_fact__xl`; delete from `db_index`.`rel_word_fact__xm`; delete from `db_index`.`rel_word_fact__xn`; delete from `db_index`.`rel_word_fact__xo`; delete from `db_index`.`rel_word_fact__xp`; delete from `db_index`.`rel_word_fact__xq`; delete from `db_index`.`rel_word_fact__xr`; delete from `db_index`.`rel_word_fact__xs`; delete from `db_index`.`rel_word_fact__xt`; delete from `db_index`.`rel_word_fact__xu`; delete from `db_index`.`rel_word_fact__xv`; delete from `db_index`.`rel_word_fact__xw`; delete from `db_index`.`rel_word_fact__xx`; delete from `db_index`.`rel_word_fact__xy`; delete from `db_index`.`rel_word_fact__xz`; delete from `db_index`.`rel_word_fact__x_`; delete from `db_index`.`rel_word_fact__ya`; delete from `db_index`.`rel_word_fact__yb`; delete from `db_index`.`rel_word_fact__yc`; delete from `db_index`.`rel_word_fact__yd`; delete from `db_index`.`rel_word_fact__ye`; delete from `db_index`.`rel_word_fact__yf`; delete from `db_index`.`rel_word_fact__yg`; delete from `db_index`.`rel_word_fact__yh`; delete from `db_index`.`rel_word_fact__yi`; delete from `db_index`.`rel_word_fact__yj`; delete from `db_index`.`rel_word_fact__yk`; delete from `db_index`.`rel_word_fact__yl`; delete from `db_index`.`rel_word_fact__ym`; delete from `db_index`.`rel_word_fact__yn`; delete from `db_index`.`rel_word_fact__yo`; delete from `db_index`.`rel_word_fact__yp`; delete from `db_index`.`rel_word_fact__yq`; delete from `db_index`.`rel_word_fact__yr`; delete from `db_index`.`rel_word_fact__ys`; delete from `db_index`.`rel_word_fact__yt`; delete from `db_index`.`rel_word_fact__yu`; delete from `db_index`.`rel_word_fact__yv`; delete from `db_index`.`rel_word_fact__yw`; delete from `db_index`.`rel_word_fact__yx`; delete from `db_index`.`rel_word_fact__yy`; delete from `db_index`.`rel_word_fact__yz`; delete from `db_index`.`rel_word_fact__y_`; delete from `db_index`.`rel_word_fact__za`; delete from `db_index`.`rel_word_fact__zb`; delete from `db_index`.`rel_word_fact__zc`; delete from `db_index`.`rel_word_fact__zd`; delete from `db_index`.`rel_word_fact__ze`; delete from `db_index`.`rel_word_fact__zf`; delete from `db_index`.`rel_word_fact__zg`; delete from `db_index`.`rel_word_fact__zh`; delete from `db_index`.`rel_word_fact__zi`; delete from `db_index`.`rel_word_fact__zj`; delete from `db_index`.`rel_word_fact__zk`; delete from `db_index`.`rel_word_fact__zl`; delete from `db_index`.`rel_word_fact__zm`; delete from `db_index`.`rel_word_fact__zn`; delete from `db_index`.`rel_word_fact__zo`; delete from `db_index`.`rel_word_fact__zp`; delete from `db_index`.`rel_word_fact__zq`; delete from `db_index`.`rel_word_fact__zr`; delete from `db_index`.`rel_word_fact__zs`; delete from `db_index`.`rel_word_fact__zt`; delete from `db_index`.`rel_word_fact__zu`; delete from `db_index`.`rel_word_fact__zv`; delete from `db_index`.`rel_word_fact__zw`; delete from `db_index`.`rel_word_fact__zx`; delete from `db_index`.`rel_word_fact__zy`; delete from `db_index`.`rel_word_fact__zz`;", NULL, NULL);
+        int error4 = sql_execute("COMMIT;", NULL, NULL);
         printf("Done.\n");
         printf("Run vacuum...\n");
-        int error3 = sql_execute("VACUUM;", NULL, NULL);
+        int error5 = sql_execute("VACUUM;", NULL, NULL);
         printf("Done.\n");
         printf("Create new index...\n");
         
@@ -1374,7 +1440,7 @@ int disk_re_index() {
             int k = 0;
             while (k < count) {
                 *sql = 0;
-                strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`");
+                strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`");
                 strcat(sql, " FROM facts AS nmain LIMIT ");
                 char _k_1[40];
                 snprintf(_k_1, 39, "%d", k);
@@ -1391,7 +1457,7 @@ int disk_re_index() {
         }
         
         printf("Done.\n");
-        int error4 = sql_execute("BEGIN;", NULL, NULL);
+        int error6 = sql_execute("BEGIN;", NULL, NULL);
     }
     return 0;
 }
@@ -1430,6 +1496,16 @@ struct fact** disk_search_clauses(int rel) {
 int disk_delete_everything_from(const char* filename) {
     {
         char* sql = gen_sql_delete_everything_from(filename);
+        int error = sql_execute(sql, NULL, NULL);
+        free(sql);
+        return error;
+    }
+    return INVALID_POINTER;
+}
+
+int disk_add_filename(const char* filename) {
+    {
+        char* sql = gen_sql_add_filename(filename);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
         return error;

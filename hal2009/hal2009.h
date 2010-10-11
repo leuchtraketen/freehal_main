@@ -152,7 +152,8 @@ struct RECORD {
     char subjects[LINE_SIZE];
     char objects[LINE_SIZE];
     char adverbs[LINE_SIZE];
-    char from[LINE_SIZE];
+    char filename[LINE_SIZE];
+    char line[LINE_SIZE];
     char extra[LINE_SIZE];
     char questionword[LINE_SIZE];
     char context[LINE_SIZE];
@@ -178,7 +179,8 @@ struct RECORD_short {
     char subjects[50];
     char objects[50];
     char adverbs[50];
-    char from[50];
+    char filename[50];
+    char line[50];
     char extra[50];
     char questionword[50];
     char context[50];

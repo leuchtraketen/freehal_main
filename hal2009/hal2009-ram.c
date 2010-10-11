@@ -193,7 +193,7 @@ int insert_fact_at_key(int rel, struct fact* fact) {
 }
 
 
-struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
+struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should) {
     if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
@@ -205,7 +205,8 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     fact->adverbs      = divide_words(adverbs);
     fact->extra        = divide_words(extra);
     fact->questionword = strdup(questionword);
-    fact->from         = strdup(from);
+    fact->filename     = strdup(filename);
+    fact->line         = strdup(line);
     fact->truth        = truth;
     
     insert_ram_fact_by_key(fact);
@@ -216,7 +217,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     return fact;
 }
 
-struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
+struct fact* ram_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
     if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
@@ -228,7 +229,8 @@ struct fact* ram_add_fact(const char* subjects, const char* objects, const char*
     fact->adverbs      = divide_words(adverbs);
     fact->extra        = divide_words(extra);
     fact->questionword = strdup(questionword);
-    fact->from         = strdup(from);
+    fact->filename     = strdup(filename);
+    fact->line         = strdup(line);
     fact->truth        = truth;
     fact->only_logic   = only_logic;
     
@@ -382,7 +384,7 @@ char* ram_get_thesaurus_synonyms(const char* key, struct string_pair** facts, in
                 char* joined_subjects = join_words(unfiltered[i]->subjects);
                 char* joined_objects = join_words(unfiltered[i]->objects);
                 char* joined_verbs = join_words(unfiltered[i]->verbs);
-                if (strstr(joined_verbs, "=") && 0 == strcmp(joined_objects, key) && !strstr(unfiltered[i]->from, "fa-")) {
+                if (strstr(joined_verbs, "=") && 0 == strcmp(joined_objects, key) && !strstr(unfiltered[i]->filename, "fa-")) {
                     struct string_pair* pair  = calloc(sizeof(struct string_pair), 1);
                     pair->subjects     = strdup(joined_subjects);
                     pair->objects      = strdup(joined_objects);
@@ -415,7 +417,7 @@ char* ram_get_thesaurus_synonyms(const char* key, struct string_pair** facts, in
                     char* joined_objects = join_words(unfiltered[i]->objects);
                     char* joined_verbs = join_words(unfiltered[i]->verbs);
 
-                    if ((strstr(joined_verbs, "=") || strstr(joined_verbs, "ist")) && strstr(joined_objects, level_1_joined_subjects) && !strstr(unfiltered[i]->from, "fa-")) {
+                    if ((strstr(joined_verbs, "=") || strstr(joined_verbs, "ist")) && strstr(joined_objects, level_1_joined_subjects) && !strstr(unfiltered[i]->filename, "fa-")) {
                         struct string_pair* pair  = calloc(sizeof(struct string_pair), 1);
                         pair->subjects     = strdup(joined_subjects);
                         pair->objects      = strdup(joined_objects);

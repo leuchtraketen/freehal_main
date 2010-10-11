@@ -28,8 +28,8 @@ int disk_begin();
 int disk_end();
 struct word* disk_get_word(const char* name);
 int insert_fact_by_list_into_net(struct word** list, struct fact* fact);
-struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
-struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
+struct fact* disk_add_clause(int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should);
+struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
 struct word* disk_set_word(const char* name);
 int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
 struct fact** disk_search_clauses(int rel);
@@ -86,7 +86,11 @@ struct request_string_pair {
 
 static char* sqlite_sql_create_table = ""
 "CREATE TABLE IF NOT EXISTS `facts` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
-"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), `only_logic` integer(50) );"
+"`fileid` INTEGER, `line` varchar(10), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), "
+"`last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), "
+"`questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), "
+"`hash_clauses` integer(50), `only_logic` integer(50), `can_be_synonym` integer(2) );"
+""
 "CREATE INDEX `idx_facts_rel` ON `facts` (`rel`);"
 "CREATE INDEX `idx_facts_truth` ON `facts` (`truth`);"
 "CREATE INDEX `idx_facts_verb` ON `facts` (`verb`); "
@@ -96,10 +100,14 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_facts_adverbs` ON `facts` (`adverbs`); "
 "CREATE INDEX `idx_facts_mix_1` ON `facts` (`mix_1`); "
 "CREATE INDEX `idx_facts_only_logic` ON `facts` (`only_logic`); "
+"CREATE INDEX `idx_facts_fileid` ON `facts` (`fileid`); "
 
 "CREATE TABLE IF NOT EXISTS `cache_facts` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
-"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), `only_logic` integer(50)"
-");"
+"`fileid` INTEGER, `line` varchar(10), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), "
+"`last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), "
+"`questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), "
+"`hash_clauses` integer(50), `only_logic` integer(50), `can_be_synonym` integer(2) );"
+""
 "CREATE INDEX `idx_cache_facts_rel` ON `cache_facts` (`rel`);"
 "CREATE INDEX `idx_cache_facts_truth` ON `cache_facts` (`truth`);"
 "CREATE INDEX `idx_cache_facts_verb` ON `cache_facts` (`verb`); "
@@ -109,9 +117,14 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_cache_facts_adverbs` ON `cache_facts` (`adverbs`); "
 "CREATE INDEX `idx_cache_facts_mix_1` ON `cache_facts` (`mix_1`); "
 "CREATE INDEX `idx_cache_facts_only_logic` ON `cache_facts` (`only_logic`); "
+"CREATE INDEX `idx_cache_facts_fileid` ON `cache_facts` (`fileid`); "
 
 "CREATE TABLE IF NOT EXISTS `clauses` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
-"`from` varchar(250), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), `last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), `questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), `hash_clauses` integer(50), `only_logic` integer(50) );"
+"`fileid` INTEGER, `line` varchar(10), `verb` varchar(50), `verbgroup` varchar(50), `subjects` varchar(50), `objects` varchar(50), "
+"`last_subject_word` varchar(50), `last_object_word` varchar(50), `adverbs` varchar(50), `mix_1` varchar(150), "
+"`questionword` varchar(50), `prio` varchar(50), `rel` integer(50), `type` integer(50), `truth` double(50), "
+"`hash_clauses` integer(50), `only_logic` integer(50), `can_be_synonym` integer(2) );"
+""
 "CREATE INDEX `idx_clauses_rel` ON `clauses` (`rel`);"
 "CREATE INDEX `idx_clauses_truth` ON `clauses` (`truth`);"
 "CREATE INDEX `idx_clauses_verb` ON `clauses` (`verb`); "
@@ -120,6 +133,7 @@ static char* sqlite_sql_create_table = ""
 "CREATE INDEX `idx_clauses_objects` ON `clauses` (`objects`); "
 "CREATE INDEX `idx_clauses_adverbs` ON `clauses` (`adverbs`); "
 "CREATE INDEX `idx_clauses_mix_1` ON `clauses` (`mix_1`); "
+"CREATE INDEX `idx_clauses_fileid` ON `cache_facts` (`fileid`); "
 
 "CREATE TABLE IF NOT EXISTS `linking` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT, "
 "`f1` INTEGER, `f2` INTEGER, `link` varchar(50), "
@@ -146,6 +160,9 @@ static char* sqlite_sql_create_table = ""
 
 "CREATE TABLE IF NOT EXISTS `cache_indices` (`i` integer);"
 "CREATE INDEX `idx_i_cache_indices` ON `cache_indices` (`i`);"
+
+"CREATE TABLE IF NOT EXISTS `cache_ids` (`id` INTEGER PRIMARY KEY AUTOINCREMENT);"
+"CREATE TABLE IF NOT EXISTS `files` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `filename` varchar(50), UNIQUE(`filename`) );"
 
 
 //"CREATE TABLE IF NOT EXISTS `db_index`.`rel_word_fact__a` (`word` varchar(50), `fact` INTEGER PRIMARY KEY, `table` varchar(50), "

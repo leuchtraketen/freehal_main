@@ -1,3 +1,10 @@
+1220:
+
+- Statt der Dateinamen werden wegen der hoeheren Effizienz nun Dateinummern in der Datenbank abgespeichert
+- Die Zeilenangabe und die Dateiangabe sind nun in zwei getrennten Spalten
+- Die Tabellen "facts" und "clauses" sowie die Cache-Tabelle wurden veraendert und eine Tabelle zur Zuordnung von Dateinamen und Dateinummern wurde hinzugefuegt
+- Ein Bug in der lang_de/verbs.csv-Datei wurde korrigiert
+
 1213:
 
 - Variablenersetzung durch Zahlen findet jetzt statt

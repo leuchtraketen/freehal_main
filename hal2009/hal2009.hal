@@ -3418,9 +3418,6 @@ define action logic with var input, var lang, var path, hash parsed do
         # CODE
         set new var primary_key to shift with items of array rawresult
         
-        if from array rawresult item [ 5 ] matches /film.pro/ do
-            set from array rawresult item [ 3 ] to from array rawresult item [ 3 ] concat " (--)"
-        done
         
         # TEXT
         # Divide main clause and sub clauses
@@ -3428,7 +3425,7 @@ define action logic with var input, var lang, var path, hash parsed do
         push into array result, an empty array
         set new var number_of_clause to 0
         set new var i to 0
-        while var i < 6 do
+        while var i < 7 do
             push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ var i ]
             set var i to var i + 1
         done
@@ -3450,13 +3447,14 @@ define action logic with var input, var lang, var path, hash parsed do
         set var number_of_clause to var number_of_clause + 1
         set var i to 0
         while var i < 10 do
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 0 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 1 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 2 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 3 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 4 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 5 ]
-            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 6) + var offs + 6 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 0 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 1 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 2 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 3 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 4 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 5 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 6 ]
+            push into that array: from array result item [ var number_of_clause ] end items of, from array rawresult item [ (var i * 7) + var offs + 7 ]
             do adjust_truth with array result, from array rawresult item [ var offs - 1 + 6 ], var number_of_clause, var i
             set var i to var i + 1
             push into array result, an empty array
@@ -4909,6 +4907,8 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             
 print "verb: " concat var verb concat new line
 
+            do regex using var verb: /<[|]>.*/, "", :global:i
+        
             set new var verb_category to verb_category with var verb
             if var verb_category and var verb not matches /\// do
                 set var verb to var verb concat "/" concat var verb_category

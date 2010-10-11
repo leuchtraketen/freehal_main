@@ -3164,16 +3164,16 @@ done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
     if var truth not matches "" and var truth < 0.5 do
-        if from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ] matches /^a/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^a(.?.?.?)$/, "no$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (6*var number_of_subclause) ]: /^a(.?.?.?)\s/, "no$0 ", :global:i
+        if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /^a/ do
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/, "no$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/, "no$0 ", :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^a(.?.?.?)$/, "no$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (6*var number_of_subclause) ]: /^a(.?.?.?)\s/, "no$0 ", :global:i
+        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/, "no$0", :global:i
+            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/, "no$0 ", :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3  + (6*var number_of_subclause)] to "not " concat from array result item [ var number_of_clause ] item [ 3 + (6*var number_of_subclause) ]
+            set from array result item [ var number_of_clause ] item [ 3  + (7*var number_of_subclause)] to "not " concat from array result item [ var number_of_clause ] item [ 3 + (7*var number_of_subclause) ]
         done
     done
 done

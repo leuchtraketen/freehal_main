@@ -56,6 +56,10 @@ int sql_universal_delete_everything_from(const char* filename) {
     return universal_delete_everything_from(filename);
 }
 
+int sql_universal_add_filename(const char* filename) {
+    return universal_add_filename(filename);
+}
+
 int sql_universal_re_index() {
     return universal_re_index();
 }
@@ -76,7 +80,7 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
             }
         }
 
-        struct fact* fact = add_fact(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->from, r->truth, r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should, r->only_logic, has_conditional_questionword);
+        struct fact* fact = add_fact(r->subjects, r->objects, r->verb, r->adverbs, r->extra, r->questionword, r->filename, r->line, r->truth, r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should, r->only_logic, has_conditional_questionword);
 
         if (fact && fact->pk) {
             FILE* input_key = fopen("_input_key", "w+b");
@@ -99,7 +103,8 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
                         ((struct RECORD*)(r->clauses[n]))->adverbs,
                         ((struct RECORD*)(r->clauses[n]))->extra,
                         ((struct RECORD*)(r->clauses[n]))->questionword,
-                        ((struct RECORD*)(r->clauses[n]))->from,
+                        ((struct RECORD*)(r->clauses[n]))->filename,
+                        ((struct RECORD*)(r->clauses[n]))->line,
                         ((struct RECORD*)(r->clauses[n]))->truth,
                         ((struct RECORD*)(r->clauses[n]))->verb_flag_want,
                         ((struct RECORD*)(r->clauses[n]))->verb_flag_must,
