@@ -147,6 +147,7 @@ void* cpu_thread (void* p) {
                 cpf_o << diff;
                 cpf_o.close();
                 cerr << "checkpoint: " << diff << "s..." << endl;
+                boinc_checkpoint_completed();
             }
         }
 
