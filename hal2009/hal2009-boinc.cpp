@@ -215,6 +215,10 @@ int main (int argc, char** argv) {
     sql_engine = (char*)calloc(64, 1);
     strcpy(sql_engine, "disk");
 
+    pthread_t thread_cpu;
+    int nul = NULL;
+    pthread_create (&thread_cpu, NULL, cpu_thread, &nul);
+
     srand (time_seed()+(long)((void*)(sql_engine))%17);
     int N = 30;
     int M = 600;
@@ -236,13 +240,15 @@ int main (int argc, char** argv) {
         pthread_t thread_app;
         int nul = NULL;
         pthread_create (&thread_app, NULL, app_thread, &nul);
-        cpu_thread(&nul);
+//        cpu_thread(&nul);
+        pthread_join((pthread_t)(thread_cpu), NULL);
     }
     else {
         pthread_t thread_app;
         int nul = NULL;
         pthread_create (&thread_app, NULL, app_thread, &nul);
-        cpu_thread(&nul);
+//        cpu_thread(&nul);
+        pthread_join((pthread_t)(thread_cpu), NULL);
     }
 
     boinc_finish(0);
