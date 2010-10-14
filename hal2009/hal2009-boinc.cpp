@@ -133,8 +133,8 @@ void* cpu_thread (void* p) {
 //        if ( (from_checkpoint || is_slow()) && ((now - start) / (max_seconds)) >= 1 ) {
         if ( ((now - start) / (max_seconds)) >= 1 ) {
             srand (time_seed());
-            int N = 30;
-            int M = 600;
+            int N = 5;
+            int M = 120;
             boinc_sleep_if_slow(1000*(M + uniform_deviate (rand()) * (N - M)));
             boinc_finish(0);
         }
@@ -220,8 +220,8 @@ int main (int argc, char** argv) {
     pthread_create (&thread_cpu, NULL, cpu_thread, &nul);
 
     srand (time_seed()+(long)((void*)(sql_engine))%17);
-    int N = 30;
-    int M = 600;
+    int N = 10;
+    int M = 60;
     boinc_sleep_if_slow(1000*(N + rand() % (M - N)));
     void* rand_1 = malloc(17);
     boinc_sleep_if_slow(1000*((long)((void*)(rand_1))%257));
