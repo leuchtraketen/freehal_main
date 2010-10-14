@@ -5531,7 +5531,10 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         # Then toggle the identities (user <-> machine).
         # CODE
         if flag number_of_clause is 0 do
-            set hash parsed to parse with var lang, array words, hash tags
+            set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
+            if hash parsed is false do
+                set hash parsed to parse with var lang, array words, hash tags
+            done
             set new array entities to an empty array
             push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
             push into array entities, items of that array: from hash parsed item { 'objects' } end items of
@@ -5544,7 +5547,10 @@ define action work_prot_line with var input, var file_name, var lang, var path d
             set flag number_of_clause to 1
         done
         else do
-            set new hash parsed_clause to parse with var lang, array words, hash tags
+            set new hash parsed_clause to new_parser_start with global array grammar, array data, var lang, var path
+            if hash parsed is false do
+                set hash parsed_clause to parse with var lang, array words, hash tags
+            done
             set new array entities to an empty array
             push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
             push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
