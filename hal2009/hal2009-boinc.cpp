@@ -223,13 +223,8 @@ int main (int argc, char** argv) {
     int N = 10;
     int M = 60;
     boinc_sleep_if_slow(1000*(N + rand() % (M - N)));
-    void* rand_1 = malloc(17);
-    boinc_sleep_if_slow(1000*((long)((void*)(rand_1))%257));
 
     extract();
-
-    void* rand_2 = malloc(7);
-    boinc_sleep_if_slow(1000*((long)((void*)(rand_2))%257));
 
     // pthread_t thread_cpu;
     // int nul = NULL;
