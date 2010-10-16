@@ -3934,7 +3934,7 @@ define action toggle_verbs with array verbs, array entities do
         done
         do be_slow without arguments
         for each new var verbs_line in global array verbs_csv_lines is rw do
-            if var verbs_line matches /^(.+?)<[,]>(.+?)<[,]>(.+?)$/ do
+            if var verbs_line matches /^(.+?)<[,]>(.+?)<[,]>(.*?)$/ do
                 set new var _first to $0
                 set new var _second to $1
                 set new var _other to $2
