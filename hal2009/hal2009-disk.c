@@ -637,6 +637,9 @@ char* gen_sql_delete_everything_from(const char* filename) {
     }
     
     *sql = 0;
+    strcat(sql, "DELETE FROM clauses WHERE `fileid` = ");
+    strcat(sql, from_number(fileid(filename)));
+    strcat(sql, ";");
     strcat(sql, "DELETE FROM facts WHERE `fileid` = ");
     strcat(sql, from_number(fileid(filename)));
     strcat(sql, ";");
