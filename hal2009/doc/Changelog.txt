@@ -1,3 +1,7 @@
+1227:
+
+- Bug 677 korrigiert
+
 1220:
 
 - Statt der Dateinamen werden wegen der hoeheren Effizienz nun Dateinummern in der Datenbank abgespeichert

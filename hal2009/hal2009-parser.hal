@@ -622,11 +622,9 @@ set multi-line new global array grammar to [
     
     [ "s-subject-open",
         [ "r-entity-open", ],
-        [ "r-entity-closed", "r-entity-open", ],
     ],
     [ "s-subject-closed",
         [ "r-entity-closed", ],
-        [ "r-entity-closed", "r-entity-closed", ],
     ],
     [ "s-object-open",
         [ "r-entity-open", ],
