@@ -5531,6 +5531,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         # Then toggle the identities (user <-> machine).
         # CODE
         if flag number_of_clause is 0 do
+            set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
             set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
             if hash parsed is false do
                 set hash parsed to parse with var lang, array words, hash tags
@@ -5547,6 +5548,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
             set flag number_of_clause to 1
         done
         else do
+            set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
             set new hash parsed_clause to new_parser_start with global array grammar, array data, var lang, var path
             if hash parsed is false do
                 set hash parsed_clause to parse with var lang, array words, hash tags
