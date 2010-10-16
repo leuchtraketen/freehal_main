@@ -1139,6 +1139,26 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
     return 0;
 }
 
+int disk_clear_cache() {
+    if (!query_cache_list) {
+        return 0;
+    }
+    
+    int i = 0;
+    while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
+        int b;
+        for (b = 0; b < query_cache_list[i]->position; ++b) {
+            free(query_cache_list[i]->rawfacts[b]);
+            query_cache_list[i]->rawfacts[b] = 0;
+        }
+        free(query_cache_list[i]->rawfacts);
+        free(query_cache_list[i]);
+        query_cache_list[i] = 0;
+        ++i;
+    }
+    return 0;
+}
+
 int find_query_cache_entry (struct request_get_facts_for_words* req, short if_needed_create_entry) {
     if (!query_cache_list) {
         query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
@@ -1159,18 +1179,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
     }
     if (i >= QUERY_CACHE_SIZE) {
         // free the whole list
-        i = 0;
-        while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
-            int b;
-            for (b = 0; b < query_cache_list[i]->position; ++b) {
-                free(query_cache_list[i]->rawfacts[b]);
-                query_cache_list[i]->rawfacts[b] = 0;
-            }
-            free(query_cache_list[i]->rawfacts);
-            free(query_cache_list[i]);
-            query_cache_list[i] = 0;
-            ++i;
-        }
+        disk_clear_cache();
 
         need_to_create = 1;
         i = 0;

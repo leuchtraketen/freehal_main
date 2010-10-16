@@ -5177,7 +5177,7 @@ define action reread_pro_file with var file, var lang do
         print new line
         do return with 1
     done
-    do wait 2 seconds
+    do wait 1 seconds
     # TEXT
     # Write the signal file for re-reading
     # CODE

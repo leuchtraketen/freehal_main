@@ -84,6 +84,14 @@ int universal_end() {
     return r;
 }
 
+int universal_clear_cache() {
+    int r = 0;
+    if (is_engine("disk")) {
+        r = disk_clear_cache();
+    }
+    return r;
+}
+
 struct word* get_word(const char* name) {
     if (is_engine("ram")) {
         return ram_get_word(name);
@@ -3428,6 +3436,8 @@ const char* clean_str (const char* str) {
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list = 0;
     
+    universal_clear_cache();
+    
     subjects     = clean_str(    subjects);
     objects      = clean_str(     objects);
     adverbs      = clean_str(     adverbs);
@@ -4053,7 +4063,7 @@ int is_important_word(const char* word) {
     );
 }
 
-char* fileid(const char* filename) {
+int fileid(const char* filename) {
     int result = - strlen(filename);
     int i;
     for (i = 0; i < strlen(filename); ++i) {

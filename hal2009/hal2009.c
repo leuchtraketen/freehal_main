@@ -269,12 +269,12 @@ char* fact_read_from_source (const char* source) {
         }
         --lines;
         fclose(file);
-        
+
         file = fopen(filename, "r");
         if (file) {
             int line_number = 1;
             while (file && (buffer = halgetline(file)) != NULL && line_number <= lines) {
-                
+
                 if (line_number == line_int) {
                     found = strdup(buffer);
                 }
@@ -288,7 +288,7 @@ char* fact_read_from_source (const char* source) {
     }
     printf("Unable to open file.\n");
     
-    return strdup("");
+    return 0;
 }
 
 int remove_negation (char* _line, double* truth_ref, int* only_logic) {

@@ -207,6 +207,7 @@ int universal_begin();
 int universal_delete_everything_from(const char* filename);
 int universal_end();
 int universal_re_index();
+int universal_clear_cache();
 int word_matches_word_array(struct word* word, struct word** words, int flags);
 long can_be_a_pointer(void* _p);
 struct DATASET as_dataset(struct fact** list);

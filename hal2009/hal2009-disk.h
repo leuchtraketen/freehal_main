@@ -37,6 +37,7 @@ char* disk_get_source(const char* key);
 char* disk_del_record(const char* key);
 char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse);
 static int callback_string_pair(void* arg, int argc, char **argv, char **azColName);
+int disk_clear_cache();
 
 
 static struct list*** disk_net = 0;
