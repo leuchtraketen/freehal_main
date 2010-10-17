@@ -4,6 +4,7 @@ cmake .
 make hal2009
 
 zip -r fh-102.zip lang_de/*.pro
+zip -r fh-102.zip lang_de/*.csv
 zip -r fh-102.zip lang_de/{berufe,fakten,namen,ps_dateien}/*.pro
 zip -r fh-102.zip lang_de/word*.{brain,memory,self-taggered}
 zip -d fh-102.zip lang_de/facts.pro
