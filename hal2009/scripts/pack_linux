@@ -1,3 +1,5 @@
+bash ./scripts/create_manifest
+
 mkdir freehal-$1-ubuntu
 for x in `cat MANIFEST` hal2009 hal2009-server lang_de/database.*
 do
