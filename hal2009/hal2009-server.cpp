@@ -167,7 +167,7 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
 
 #else
 
-#define NUM_ELEMENTS(x)  (sizeof((x)) / sizeof((x)[0])) // Für IP auslesen
+#define NUM_ELEMENTS(x)  (sizeof((x)) / sizeof((x)[0])) // Fuer IP auslesen
 
 void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
     fprintf(output(), "Searching IP addresses...\n");
@@ -843,6 +843,14 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 if (editable_fact_data) {
                     (*stream) << "PROFACT:" << editable_fact_data << endl;
                     free(editable_fact_data);
+                }
+                char* filename = strdup(source);
+                if (strstr(filename, ":")) {
+                    strstr(filename, ":")[0] = '\0';
+                    sql_end();
+                    hal2009_add_pro_file(filename);
+                    // hal2009_add_pro_file() free's filename
+                    sql_begin();
                 }
                 free(source);
             }

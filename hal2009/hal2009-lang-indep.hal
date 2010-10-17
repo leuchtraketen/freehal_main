@@ -859,7 +859,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: / mich befinde /, " liege ", :global:i
     do regex using var input: / dich befindest /, " liegst ", :global:i
     
-    do regex using var input: /(^|\s)da(<[r]>?)(durch|auf|fuer|an|um) /, " $2 _das_ ", :global:i
+    do regex using var input: /(^|\s)da(<[r]>?)(durch|auf|fuer|an) /, " $2 _das_ ", :global:i
 
     do regex using var input: /(<[0-9]>)(<[a-z]>|<[A-Z]>)/, "$0 $1", :global:i
     do regex using var input: /(<[a-z]>|<[A-Z]>)(<[0-9]>)/, "$0 $1", :global:i
