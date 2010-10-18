@@ -5072,6 +5072,13 @@ print "verb: " concat var verb concat new line
             set new array verbs to from hash parsed item { 'verbs' }
             for each new array verb in array verbs do
                 set var verb to from array verb 1st item
+                
+                do regex using var verb: /<[|]>.*/, "", :global:i
+        
+                set new var verb_category to verb_category with var verb
+                if var verb_category and var verb not matches /\// do
+                    set var verb to var verb concat "/" concat var verb_category
+                done
             done
             set new array subjects to from hash parsed item { 'subjects' }
             for each new array subject in array subjects do
