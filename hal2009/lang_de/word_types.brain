@@ -264268,7 +264268,7 @@ Monteur:
 genus  : m
   type: n
 soweit:
-  type: adv
+  type: fw
 senken:
   type: vi
 patentloesung:
@@ -284492,4 +284492,131 @@ duftwahrnehmung:
 genus  : f
   type: n
 Igel:
-  type: n                     
+  type: n
+pizza:
+  genus  : f
+  type: n
+Fechtschule:
+genus  : f
+  type: n
+eingeordnet:
+  type: adj
+vermittelt:
+  type: vi 
+litauischen:
+  type: adj 
+Rueckenspeck:
+genus  : m
+  type: n
+Geraeucherter:
+  type: adj
+Pifferlinge:
+genus  : f
+  type: n 
+Steinpilze:
+genus  : f
+  type: n 
+Bedecktsamigen:
+  type: adj 
+allgemeinere:
+  type: adj
+Nuklid:
+genus  : m
+  type: n
+gleichbedeutend:
+  type: adj
+Ionenstrahl:
+genus  : m
+  type: n
+Microwellen:
+genus  : f
+  type: n
+Sonnenstrahl:
+genus  : m
+  type: n
+ausgesandte:
+  type: adj
+aufsteigt:
+  type: vi
+geologische:
+  type: adj
+drueckenden:
+  type: adj
+Mouspad:
+genus  : s
+  type: n 
+Eingabegeraete:
+genus  : f
+  type: n
+modernen:
+  type: adj
+Autocad:
+  type: n
+CAD-Produktpalette:
+genus  : f
+  type: n
+Autodesk:
+  type: n
+darstellt:
+  type: vi
+Funktionsgraphen:
+genus  : f
+  type: n
+Zeichnungen:
+genus  : f
+  type: n
+Vektorgrafiken:
+genus  : f
+  type: n
+zerfaellt:
+  type: vi
+verformbare:
+  type: adj
+schmeckende:
+  type: adj
+Kontinenten:
+  type: n 
+wochenende:
+genus  : s
+  type: adj
+Wochenende:
+genus  : s
+  type: n
+wartest:
+  type: vi
+beantwortest:
+  type: vi
+entsprechende:
+  type: adj 
+Stroh:
+genus  : s
+  type: n
+nackte:
+  type: adj
+kahle:
+  type: adj
+hartes:
+  type: adj
+sauerkraut:
+genus  : s
+  type: n
+fiber:
+genus  : s
+  type: n
+ungebildeter:
+  type: adj
+volltrottel:
+genus  : m
+  type: n
+Volltrottel:
+genus  : m
+  type: n
+rinnt:
+  type: adj 
+braunschweiger:
+  type: n
+fortgang:
+genus  : m
+  type: n 
+elliptischen:
+  type: adj                     

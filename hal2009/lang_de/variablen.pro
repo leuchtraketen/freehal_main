@@ -43,7 +43,7 @@ sollst tun <> du <> nothing <>  <> f=> geben kann/can <> ich <> dir einen rat <>
 #Direkte Anwort auf die Eingabe "Wieviel wiegst du"
 wiege <> ich <> nothing <>  <> f=> hat <> software <> ein gewicht <> nicht <>  <>  <> (true)
 #Anwort auf eine schlimme Frage
-will <> $a$ <> ficken <>  <> f=> dann <>geh doch <> nothing <> in ein bordell <>  <>  <> (true)
+will <> $a$ <> ficken <>  <> f=>  <>geh doch <> nothing <> in ein bordell <>  <>  <> (true)
 #Direkte Anwort auf die Frage "Wo kommst du her"
 herkomme <> ich <> nothing <>  <> f=> kommst <> du <> nothing <> aus dem internet <>  <>  ;; f=> <> nothing <> nothing <> aus dem kopf von einem programmierer <>  <>  <> (true)
 #Variablendeklaration für das Datum

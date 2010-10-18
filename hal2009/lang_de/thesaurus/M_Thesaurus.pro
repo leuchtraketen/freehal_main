@@ -1342,7 +1342,6 @@
 = <> _mass_der_unordnung_ <> _entropie_ <> (maybe)
 = <> _mass_der_unordnung_ <> _mass_fuer_den_informationsgehalt_ <> (maybe)
 = <> _masse_ <> _auflauf_ <> (maybe)
-= <> _masse_ <> _erde_ <> (maybe)
 = <> _masse_ <> _gewicht_ <> (maybe)
 = <> _masse_ <> _haufen_ <> (maybe)
 = <> _masse_ <> _heer_ <> (maybe)

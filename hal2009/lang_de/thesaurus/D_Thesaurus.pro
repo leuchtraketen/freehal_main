@@ -3187,7 +3187,6 @@
 = <> _deutschland_ <> _deutscher_bund_ <> (maybe)
 = <> _deutschland_ <> _deutsches_reich_ <> (maybe)
 = <> _deutschland_ <> _germania_ <> (maybe)
-= <> _deutschland_ <> _heiliges_roemisches_reich_deutscher_nation_ <> (maybe)
 = <> _deutschland_ <> _teutonia_ <> (maybe)
 = <> _deutsch_ <> _germanisch_ <> (maybe)
 = <> _deutsch_ <> _teutonisch_ <> (maybe)

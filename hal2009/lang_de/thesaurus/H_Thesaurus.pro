@@ -2172,7 +2172,6 @@
 = <> _heiliges_buch_des_islam_ <> _koran_ <> (maybe)
 = <> _heiliges_roemisches_reich_deutscher_nation_ <> _deutscher_bund_ <> (maybe)
 = <> _heiliges_roemisches_reich_deutscher_nation_ <> _deutsches_reich_ <> (maybe)
-= <> _heiliges_roemisches_reich_deutscher_nation_ <> _deutschland_ <> (maybe)
 = <> _heilig_ <> _ausgesondert_ <> (maybe)
 = <> _heilig_ <> _ehrwuerdig_ <> (maybe)
 = <> _heilig_ <> _geheiligt_ <> (maybe)
