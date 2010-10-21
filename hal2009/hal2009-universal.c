@@ -21,8 +21,12 @@
 
 #include "hal2009-universal.h"
 
+// variables
 struct word** variable_replacements = 0;
 int variable_replacements_c = 0;
+
+
+short config_match_variables = 0;
 
 
 
@@ -1424,7 +1428,7 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
         if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
             //if (!is_a_trivial_word(words[m]->name)) {
                 
-                if (matches_with_pipe(word->name, words[m]->name) || (is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
+                if (matches_with_pipe(word->name, words[m]->name) || (config_match_variables && is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
                     char tmp[1000];
                     snprintf(tmp, 999, " ---     '%s' = '%s'\n", word->name, words[m]->name);
                     catchf(tmp, 0);
@@ -2542,6 +2546,8 @@ int free_request(struct request* fact) {
 struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int level, int weak) {
     struct fact** list = 0;
     
+    config_match_variables = 0;
+    
     {
         if (0 == strcmp(context, "reasonof")) {
             level = 1;
@@ -2678,8 +2684,6 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
     return list;
 }
 
-
-
 struct fact** search_facts_double_facts(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** list = 0;
     
@@ -2764,6 +2768,8 @@ struct word*** fake_synonyms(const char* exp, const char** exp_array) {
 
 struct fact** search_facts_synonyms(const char* subjects, const char** subjects_array, const char* objects, const char** objects_array, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context) {
     struct fact** list = 0;
+    
+    config_match_variables = 0;
     
     {
         struct request* fact = calloc(sizeof(struct request), 1);
@@ -3150,6 +3156,8 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
     struct fact** linking_list = 0;
     struct fact**         list = 0;
     
+    config_match_variables = 1; // match variables!
+    
     {
         struct request* fact = calloc(sizeof(struct request), 1);
         fact->adverbs_any  = 0;
@@ -3234,6 +3242,9 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                     req = 0;
                                 }
                                 
+                                // do not match variables!
+                                config_match_variables = 0;
+                                
                                 req = negotiate_deep_search(synonym_set, subjects, objects, verbs, adverbs, extra, questionword, "q_deep_search", clauses[c], linking_list[l], _level, _direction);
                                 delete_in_first_if_in_second(req->subjects, req->objects);
                                 
@@ -3280,6 +3291,16 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
                                 int l;
                                 for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
                                     if (can_be_a_pointer(list[l])) {
+                                        // no variables
+                                        if (can_be_a_pointer(list[l]->subjects) && can_be_a_pointer(list[l]->subjects[0]) && can_be_a_pointer(list[l]->subjects[0]->name) && is_a_variable(list[l]->subjects[0]->name)) {
+                                            set_to_invalid_fact(&(list[l]));
+                                            continue;
+                                        }
+                                        if (can_be_a_pointer(list[l]->objects) && can_be_a_pointer(list[l]->objects[0]) && can_be_a_pointer(list[l]->objects[0]->name) && is_a_variable(list[l]->objects[0]->name)) {
+                                            set_to_invalid_fact(&(list[l]));
+                                            continue;
+                                        }
+                                        // no thesaurus, ps- and fa-facts
                                         if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                                             if (is_a_fact_verb(list[l]->verbs[0]->name)) {
                                                 if (strstr(list[l]->filename, "thes")) {
@@ -3359,6 +3380,8 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
     
 struct fact** search_facts_thesaurus(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
     struct fact** list = 0;
+    
+    config_match_variables = 0;
     
     {
         if (strstr(context, "where")) {
