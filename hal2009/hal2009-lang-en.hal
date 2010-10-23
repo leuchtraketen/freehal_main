@@ -3440,7 +3440,34 @@ define action multiple_choices_verb with var verb do
     do return with var verbs
 done
 
-define action find_mode with var input, var only_learn, var lang, var path do
+define action modify_input with var input, var current_language, var path do
+    if length(var input) < 10 and var input matches /why/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', read
+        set new var last_output to ''
+        for each new var line from var input_handle do
+            set var last_output to var line
+        done
+        
+        if var last_output do
+            set var input to "why " concat var last_output concat "?"
+        done
+    done
+    if var input matches /^because/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/input.history', read
+        set new var last_input to ''
+        for each new var line from var input_handle do
+            set var last_input to var line
+        done
+        
+        if var last_input do
+            set var input to var last_input concat " " concat var input
+        done
+    done
+    
+    return var input
+done
+
+define action find_mode_of_input with var input, var only_learn, var lang, var path do
     if var input matches /<[?]>/ do
         print "Sentence contains a question mark"
         print new line
@@ -3544,29 +3571,6 @@ define action use_random with var input, var current_language, var path, var mod
     done
 
     do return with array random
-done
-
-define action check_invoke with var statement do
-    set new var appname to ""
-    set new var statement_lower to lc with var statement
-    
-    if var statement_lower matches /^execute (.*?)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^exec (.*?)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^start (.*)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^run (.*)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^invoke (.*?)/ do
-        set var appname to $0
-    done
-    
-    return var appname
 done
 
 define action check_sentence_for_weather with var input do

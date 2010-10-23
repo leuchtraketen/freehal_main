@@ -1,0 +1,1066 @@
+#
+# This file is part of FreeHAL 2010.
+#
+# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
+# http://freehal.org
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 3
+# of the License, or any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+
+set new global hash content_of_memory_file to an empty hash
+
+# TEXT
+# ~~~~~ TAGGER CODE ~~~~~
+# CODE
+
+define action get_tag_part_of_speech with var word, var lang do
+    if (not var word) or (var word matches /^\s*?$/) or exists: "_no_user_ask", end test do
+        set new array return_array to an empty array
+        push into array return_array, "q"
+        push into array return_array, "q"
+        do return with array return_array
+    done
+    
+    set new var output_file_name to '_output__pos'
+    set new var output_handle to handle for file name var output_file_name, write
+    print into var output_handle data var word
+    do close with var output_handle
+
+    set new var timeout to 120
+    while var timeout > 0 do
+        set new var input_file_name to '_input__pos'
+        set new var input_handle to handle for file name var input_file_name, read
+
+        if var input_handle do
+            set new var response to the next line from var input_handle
+            if var response do
+                print "Got input: '" concat var response concat "'"
+                print new line
+                do close with var input_handle
+                do wait 1 seconds
+                do unlink with '_input__pos'
+                
+                set new array return_array to split with /<[,:]>/, var response
+                do return with array return_array
+            done
+        done
+        do wait 0.5 seconds
+        set var timeout to var timeout - 1
+    done
+    
+    set new array return_array to an empty array
+    push into array return_array, "q"
+    push into array return_array, "q"
+    do return with array return_array
+done
+
+# TEXT
+# Save the word "name_of_entry" in the memory file.
+# The memory file contains the parts of speech.
+# CODE
+define action memory_set_by_name with var file_name, var name_of_entry, array tags, var lang, var path do
+    set new var write_protocol to 1
+    if var file_name matches /NO PROTOCOL / do
+        set var write_protocol to 0
+        do regex using var file_name: /NO PROTOCOL /, "", :global:i
+    done
+
+    set new array check_tags to memory_get_by_name using var file_name, var name_of_entry, var lang, var path
+    if not is an empty array check_tags do
+        print "Already in ?-file: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    set new array check_tags to memory_get_by_name using "word_types.memory", var name_of_entry, var lang, var path
+    if not is an empty array check_tags do
+        print "Already in memory file: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    set new array check_tags to memory_get_by_name using "word_types.self-taggered", var name_of_entry, var lang, var path
+    if not is an empty array check_tags do
+        print "Already in self-taggered file: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    #set new array check_tags to memory_get_by_name using "protocol.memory", var name_of_entry, var lang, var path
+    #if not is an empty array check_tags do
+    #    print "Already in protocol file: " concat var name_of_entry
+    #    print new line
+    #    do return without arguments
+    #done
+    #set new array check_tags to memory_get_by_name using "word_types.brain", var name_of_entry, var lang, var path
+    #if not is an empty array check_tags do
+    #    print "Already in brain file: " concat var name_of_entry
+    #    print new line
+    #    do return without arguments
+    #done
+
+    if var name_of_entry matches /br[0-9]+?$/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /[0-9]+?/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /<[}{]>/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /__$/ do
+        print "Illegal word: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /_/ do
+        print "Do not save \"_\" words: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /\s/ do
+        print "Do not save words with spaces: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if var name_of_entry matches /[-]$/ do
+        print "Do not save words with minus: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if from array tags 1st item is 1 and var name_of_entry matches /zu/ do
+        print "Do not save verbs with 'zu': " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+    if not var name_of_entry do
+        print "Do not save empty words: " concat var name_of_entry
+        print new line
+        do return without arguments
+    done
+
+    do be_slow without arguments
+    print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name concat "\t to " concat from array tags 1st item
+    print new line
+    
+    if not from array tags 1st item do
+        set from array tags 1st item to 'q'
+    done
+    if not from array tags 2nd item do
+        set from array tags 2nd item to 'q'
+    done
+
+    if from array tags 1st item is 1 do
+        set from array tags 1st item to 'v'
+    done
+    if from array tags 1st item is 2 do
+        set from array tags 1st item to 'n'
+    done
+    if from array tags 1st item is 3 do
+        set from array tags 1st item to 'adj'
+    done
+    if from array tags 1st item is 5 do
+        set from array tags 1st item to 'questionword'
+    done
+    if from array tags 1st item is 6 do
+        set from array tags 1st item to 'prep'
+    done
+    if from array tags 1st item is 7 do
+        set from array tags 1st item to 'inter'
+    done
+    
+    if from array tags 1st item matches /q/ do
+        print "POS matches 'q', exiting memory_set_by_name..."
+        print new line
+        do return without arguments
+    done
+
+    set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, append
+    print into var output_handle data var name_of_entry concat ":"
+    print into var output_handle data new line
+    if not from array tags 2nd item matches /q/ do
+        print into var output_handle data "  genus: " concat from array tags 2nd item concat new line
+        do push into that array: from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags 2nd item
+    done
+    print into var output_handle data "  type: " concat from array tags 1st item concat new line
+    do push into that array: from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags 1st item
+    
+    if not var file_name matches /brain/ do
+        if not from array tags 1st item matches /q/ do
+            #print into var output_handle data "  count: 1" concat new line
+        done
+    done
+
+    do close with var output_handle
+
+    if var write_protocol do
+        # TEXT
+        # Protocol file:
+        # CODE
+        set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/protocol.memory", append
+        print into var output_handle data var name_of_entry concat ":"
+        print into var output_handle data new line
+        if not from array tags 2nd item matches /q/ do
+            print into var output_handle data "  genus: " concat from array tags 2nd item concat new line
+            do push into that array: from global hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  genus: " concat from array tags 2nd item
+        done
+        print into var output_handle data "  type: " concat from array tags 1st item concat new line
+        do push into that array: from global hash content_of_memory_file item { "protocol.memory" } item { var name_of_entry concat ":" } end-items-of, "  type: " concat from array tags 1st item
+    done
+
+    do close with var output_handle
+done
+
+define action memory_build_cache with var file_name, var lang, var path do
+    if not from global hash content_of_memory_file item { var file_name } do
+        
+        # read file into cache if there is no cache yet
+        set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
+        
+        do be_slow without arguments
+        print "Caching file " concat var file_name concat "..."
+        print new line
+        
+        set new var entry to ""
+        set new array lines to an empty array
+        set items of array lines to all lines from var input_handle
+        for each new var line in array lines is rw do
+            # no line ending
+            do regex using var line: /<[\r\n]>/, "", :global
+            
+            if var line matches /^ / do
+                do push into that array: from global hash content_of_memory_file item { var file_name } item { var entry } end-items-of, var line
+            done
+            else do
+                set var entry to var line
+            done
+        done
+    done
+done
+
+# TEXT
+# Search in the memory file for the word "name_of_entry".
+# The memory file contains the parts of speech.
+# CODE
+define action memory_get_by_name with var file_name, var name_of_entry, var lang, var path do
+    if exists: "SLOW", end test do
+        print "Running in SLOW mode... "
+        print new line
+    done
+    
+    if not var name_of_entry or var name_of_entry matches /^\s*?$/ do
+        do return using an empty array
+    done
+    
+    do memory_build_cache with var file_name, var lang, var path
+    
+    do be_slow without arguments
+    print "search    in " concat var file_name concat ": " concat var name_of_entry
+    print new line
+    
+    set new array contents to an empty array
+    set new var end_of_entry_line to ':'
+    do regex using var name_of_entry: /[\[\]]/, "", :global:i
+    
+    set new var matched_id to ""
+    
+    if (not array contents) or is an empty array contents do
+        set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
+        set var matched_id to var name_of_entry concat var end_of_entry_line
+    done
+    do regex using var name_of_entry: /[\(\)]/, "", :global:i
+    if (not array contents) or is an empty array contents do
+        set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var end_of_entry_line }
+        set var matched_id to var name_of_entry concat var end_of_entry_line
+    done
+    for each new var suffix in array standard_suffixes do
+        if (not array contents) or is an empty array contents do
+            set array contents to from global hash content_of_memory_file item { var file_name } item { var name_of_entry concat var suffix concat var end_of_entry_line }
+            set var matched_id to var name_of_entry concat var suffix concat var end_of_entry_line
+        done
+    done
+    
+    
+    set new var type to 'q'
+    set new var genus to 'q'
+    set new var count to 0
+    
+    do be_slow without arguments
+    
+    set new var i to 0
+    # go through the lines
+    while array contents and var i < items of array contents do
+        set new var line to from array contents item [ var i ]
+        do regex using var line: /\s*?<[var end_of_entry_line]>/, "var end_of_entry_line", :global
+        
+        if var line matches /^\s*?(\S*?)<[var end_of_entry_line]>\s*?(\S+)/ do
+            set new var t to $1
+            if $0 matches /type/ do
+                set var type to var t
+            done
+            else if $0 matches /genus/ do
+                set var genus to var t
+            done
+            else if $0 matches /count/ do
+                set var count to var t
+            done
+            do be_slow without arguments
+        done
+        else if var line matches /^\s*?(\S*?)<[var end_of_entry_line\s]>*?(\S+)/ do
+            set new var t to $1
+            if $0 matches /type/ do
+                set var type to var t
+            done
+            else if $0 matches /genus/ do
+                set var genus to var t
+            done
+            else if $0 matches /count/ do
+                set var count to var t
+            done
+            do be_slow without arguments
+        done
+        else do
+            go to last
+        done
+        
+        set var i to var i + 1
+    done
+    if (not var type matches "q") or (not var genus matches "q") do
+        print "found     in " concat var file_name concat ": " concat var name_of_entry
+        print new line
+        
+        print "    type:  " concat var type
+        print new line
+        print "    genus: " concat var genus
+        print new line
+        print "    count: " concat var count
+        print new line
+        
+        do memory_plus with var file_name, var matched_id, var count + 1, var lang, var path
+        
+        do return with [ var type, var genus ]
+    done
+
+    print "not found in " concat var file_name concat ": " concat var name_of_entry
+    print new line
+    do return using an empty array
+done
+
+# TEXT
+# Ensure the memory limit
+# CODE
+define action memory_limit with var file_name, var lang, var path do
+    if var file_name matches /brain/ do
+        do return without arguments
+    done
+    
+    set new var limit to 1000
+    
+    print "There is a memory limit of " concat var limit concat ", file " concat var file_name
+    print new line
+    
+    # TEXT
+    # read file
+    # CODE
+    set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
+    set new var average_count to 0
+    set new var count_items to 1
+    set new var entry to ""
+    set new array lines to an empty array
+    set new array names to an empty array
+    set new hash file_to_limit to an empty hash
+    set new hash count_values to an empty hash
+    set items of array lines to all lines from var input_handle
+    do close with var input_handle
+    for each new var line in array lines is rw do
+        # no line ending
+        do regex using var line: /<[\r\n]>/, "", :global
+        
+        if var line matches /type.?.?q/ do
+            go to next
+        done
+        else if var line matches /^ / do
+            do push into that array: from hash file_to_limit item { var entry } end-items-of, var line
+            
+            if var line matches /count..(.*)/ do
+                set new var cnt to $0
+                set var average_count to var average_count + var cnt
+                set var count_items to var count_items + 1
+                
+                do push into that array: from hash count_values item { var entry } end-items-of, var cnt
+            done
+        done
+        else do
+            set var entry to var line
+            do push into array names, var entry
+        done
+    done
+    
+    set var average_count to var average_count / var count_items
+    if var average_count < 1 do
+        set var average_count to var average_count + 1
+    done
+    
+    print "Average is " concat var average_count
+    print new line
+    
+    # TEXT
+    # ensure that the limit is not exceeded
+    # CODE
+    
+    set new var count_over_avg to 0
+    set new var count_under_avg to 0
+    set new array entries_over_avg to an empty array
+    set new array entries_under_avg to an empty array
+    for each new var entry in array names do
+        if from hash count_values item { var entry } >= var average_count do
+            set var count_over_avg to var count_over_avg + 1
+            push into array entries_over_avg, var entry
+        done
+        if from hash count_values item { var entry } < var average_count do
+            set var count_under_avg to var count_under_avg + 1
+            push into array entries_under_avg, var entry
+        done
+    done
+    
+    print "Over  average: " concat var count_over_avg concat new line
+    print "Under average: " concat var count_under_avg concat new line
+    print "All          : " concat items of array names concat new line
+    
+    set items of array entries_over_avg to sort with items of array entries_over_avg
+    set items of array entries_under_avg to sort with items of array entries_under_avg
+    set items of array entries_over_avg to reverse with items of array entries_over_avg
+    #set items of array entries_under_avg to reverse with items of array entries_under_avg
+    
+    if var count_over_avg > var limit do
+        set new var count_to_remove to var count_over_avg - var limit
+        print "Remove over  average: " concat var count_to_remove concat new line
+        while var count_to_remove > 0 do
+            do shift with items of array entries_over_avg
+        
+            set var count_to_remove to var count_to_remove - 1
+        done
+    done
+    if var count_under_avg > var limit do
+        set new var count_to_remove to var count_under_avg - var limit
+        print "Remove under average: " concat var count_to_remove concat new line
+        while var count_to_remove > 0 do
+            do shift with items of array entries_under_avg
+        
+            set var count_to_remove to var count_to_remove - 1
+        done
+    done
+    
+    set items of array entries_over_avg to reverse with items of array entries_over_avg
+    #set items of array entries_under_avg to reverse with items of array entries_under_avg
+    
+    # TEXT
+    # save everything
+    # CODE
+    set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, write
+    for each new var entry in array entries_over_avg is rw do
+        print into var output_handle data var entry
+        print into var output_handle data new line
+        
+        set new array lines to from hash file_to_limit item { var entry }
+        
+        if array lines do
+            for each new var line in array lines is rw do
+                print into var output_handle data var line
+                print into var output_handle data new line
+            done
+        done
+    done
+    for each new var entry in array entries_under_avg is rw do
+        print into var output_handle data var entry
+        print into var output_handle data new line
+        
+        set new array lines to from hash file_to_limit item { var entry }
+        
+        if array lines do
+            for each new var line in array lines is rw do
+                print into var output_handle data var line
+                print into var output_handle data new line
+            done
+        done
+    done
+    do close with var output_handle
+done
+
+# TEXT
+# Update the "count" value
+# CODE
+define action memory_plus with var file_name, var matched_id, var count, var lang, var path do
+    if var file_name matches /brain/ do
+        do return without arguments
+    done
+    
+    # print "Updating count field in " concat var file_name concat "..."
+    # print new line
+    set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
+    do be_slow without arguments
+    # print "Reading file " concat var file_name concat "..."
+    # print new line
+    
+    set new var entry to ""
+    set new array lines to an empty array
+    set items of array lines to all lines from var input_handle
+    set new flag found to 0
+    for each new var line in array lines is rw do
+        if var line matches /var matched_id/ do
+            set var entry to var line
+            go to next
+        done
+        
+        if var entry do
+            if var line matches /^ / do
+                if var line matches /count/ do
+                    set var line to "  count: " concat var count concat new line
+                    set flag found to 1
+                    go to last
+                done
+            done
+            else do
+                go to last
+            done
+        done
+    done
+    
+    if not flag found do
+        for each new var line in array lines is rw do
+            if var line matches /var matched_id/ do
+                set var entry to var line
+                set var line to var line concat "  count: " concat var count concat new line
+                go to last
+            done
+        done
+    done
+    
+    do close with var input_handle
+    set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, write
+    for each new var line in array lines is rw do
+        print into var output_handle data var line
+    done
+    do close with var output_handle
+done
+
+# TEXT
+# For BOINC
+# CODE
+define action boinc_guess_part_of_speech with var word, var lang, var path do
+    if var word matches /[A-Z]/ do
+        do return with "n"
+    done
+    else do
+        do return with "adj"
+    done
+done
+
+# TEXT
+# Find out the part of speech
+# CODE
+define action compute_tags with var word, var lang, var path do
+    do regex using var word: /<[\x80-\xFF]>/, "", :global
+    if ( var word matches /<[(]>/ and var word not matches /<[)]>/ ) or ( var word matches /<[)]>/ and var word not matches /<[(]>/ ) do
+        do regex using var word: /<[)(]>/, "", :global
+    done
+    
+    set new var is_tagger_on to check_config with "tagger", 1, var lang, var path
+
+    set new array tags to an empty array
+    
+    if var word matches /^$/ do
+        do return with array tags
+    done
+    
+    set new array main_files to an empty array
+    push into array main_files, "word_types.memory"
+    push into array main_files, "word_types.self-taggered"
+    push into array main_files, "word_types.brain"
+
+    for each new var main_file in array main_files do
+    
+        if is an empty array tags do
+            if lc(var word) matches /time_/ do
+                set from array tags 1st item to "adj"
+            done
+            
+            if ( not is an empty array tags ) and ( not from array tags 1st item matches /n/ ) do
+                go to last
+            done
+        done
+    
+        # TEXT
+        # Is it built in into FreeHAL?
+        # CODE
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, var word, var lang, var path
+            set from array tags 1st item to from global hash builtin_part_of_speech item { var word }
+            
+            if not from array tags 1st item do
+                set array tags to an empty array
+                print "NOT built in: " concat var word
+                print new line
+            done
+            else do
+                print "built in: " concat from array tags 1st item
+                print new line
+                
+                # TEXT
+                # If no noun, we need no genus, so skip the rest
+                # CODE
+                if not from array tags 1st item matches /n/ do
+                    go to last
+                done
+            done
+        done
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, ucfirst(var word), var lang, var path
+            set from array tags 1st item to from global hash builtin_part_of_speech item { ucfirst(var word) }
+            
+            if not from array tags 1st item do
+                set array tags to an empty array
+                print "NOT built in: " concat var word
+                print new line
+            done
+            else do
+                print "built in: " concat from array tags 1st item
+                print new line
+                
+                # TEXT
+                # If no noun, we need no genus, so skip the rest
+                # CODE
+                if not from array tags 1st item matches /n/ do
+                    go to last
+                done
+            done
+        done
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
+            set from array tags 1st item to from global hash builtin_part_of_speech item { lc(var word) }
+            
+            if not from array tags 1st item do
+                set array tags to an empty array
+                print "NOT built in: " concat var word
+                print new line
+            done
+            else do
+                print "built in: " concat from array tags 1st item
+                print new line
+                
+                # TEXT
+                # If no noun, we need no genus, so skip the rest
+                # CODE
+                if not from array tags 1st item matches /n/ do
+                    go to last
+                done
+            done
+        done
+        
+        if is an empty array tags do
+            if lc(var word) matches /<[{]><[{]><[{]>(.*?)<[}]><[}]><[}]>/ do
+                print "predefined: " concat $0
+                print new line
+                set from array tags 1st item to $0
+                go to last
+            done
+            if lc(var word) matches /no-question/ do
+                set from array tags 1st item to "qq"
+            done
+            if lc(var word) matches /_(wie|wer|was|wo|wann|warum|wieso|weshalb)_/ do
+                set from array tags 1st item to "adj"
+            done
+            if lc(var word) matches /^in_/ do
+                set from array tags 1st item to "adj"
+            done
+            if lc(var word) matches /^zu<[rm]>_/ do
+                set from array tags 1st item to "adj"
+            done
+            if lc(var word) matches /tion(|en)?$/ do
+                set from array tags 1st item to "n"
+            done
+            if lc(var word) matches /^jahr/ do
+                set from array tags 1st item to "n"
+            done
+            if var word matches /<[0123456789]>/ do
+                set from array tags 1st item to "adj"
+            done
+            if var word matches /<[_]>/ do
+                set from array tags 1st item to "n"
+            done
+            if var word matches /<[-]>$/ do
+                set from array tags 1st item to "adj"
+            done
+            if var word matches /\s/ do
+                set from array tags 1st item to "n"
+            done
+            if lc(var word) matches var word and var lang matches "de" do
+                if lc(var word) matches /ste<[nmrs]>?$/ do
+                    set from array tags 1st item to "adj"
+                done
+                if var word matches /ist$/ do
+                    set from array tags 1st item to "n"
+                done
+                if var word matches /(los|voll|frei|ig)(e|es|er|en|em)?$/ do
+                    set from array tags 1st item to "adj"
+                done
+                if var word matches /ere(n|r|m|s)$/ do
+                    set from array tags 1st item to "adj"
+                done
+                if var word matches /st$/ do
+                    set from array tags 1st item to "vi"
+                done
+                if var word matches /iert$/ do
+                    set from array tags 1st item to "vi"
+                done
+                if var word matches /ieren$/ do
+                    set from array tags 1st item to "vi"
+                done
+                if var word matches /iere$/ do
+                    set from array tags 1st item to "vi"
+                done
+                if var word matches /ierst$/ do
+                    set from array tags 1st item to "vi"
+                done
+                
+                # write it
+                if from array tags 1st item do
+                    do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+                done
+            done
+            if var word matches /system$/ do
+                set from array tags 1st item to "n"
+            done
+            else if ucfirst(var word) matches var word and var lang matches "de" do
+                if var word matches /est$/ do
+                    set from array tags 1st item to "vi"
+                done
+            done
+            else if var word matches /<[ABCDEFGHIJKLMNOPQRSTUVWXYZ]>/ do
+                set from array tags 1st item to "n"
+            done
+            
+            if ( not is an empty array tags ) and ( not from array tags 1st item matches /n/ ) do
+                go to last
+            done
+        done
+        
+        # TEXT
+        # Look if the lower case variant of the word is a verb in the memory file.
+        # CODE
+        if is an empty array tags and lc(var word) matches var word do
+            set array tags to memory_get_by_name using var main_file, ucfirst(var word), var lang, var path
+            
+            if not from hash sym_noun item { from array tags 1st item } do
+                set array tags to an empty array
+            done
+        done
+
+        # TEXT
+        # Look if the lower case variant of the word is a verb in the memory file.
+        # CODE
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
+            
+            if not from hash sym_verb item { from array tags 1st item } do
+                set array tags to an empty array
+            done
+        done
+
+        # TEXT
+        # Look if the lower case variant of the word is a preposition in the memory file.
+        # CODE
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
+            
+            if not from hash sym_prep item { from array tags 1st item } do
+                set array tags to an empty array
+            done
+        done
+        
+        # TEXT
+        # Look in the memory file.
+        # CODE
+        if is an empty array tags do
+            set array tags to memory_get_by_name using var main_file, var word, var lang, var path
+        done
+        
+        if not is an empty array tags do
+            do memory_set_by_name with "NO PROTOCOL word_types.memory", var word, array tags, var lang, var path
+            go to last
+        done
+
+        # TEXT
+        # Look for similar words.
+        # CODE
+        #if is an empty array tags do
+        #    set new var modified_word to var word
+        #    for each new var suffix in array standard_suffixes do
+        #        do regex using var modified_word: /var suffix$/, "", :global
+        #    done
+        #    
+        #    set array tags to memory_get_by_name using var main_file, var modified_word, var lang, var path
+        #done
+        do be_slow without arguments
+        
+        if not is an empty array tags do
+            go to last
+        done
+    done
+    
+    if is an empty array tags and exists: "SLOW", end test do
+        set from array tags 1st item to boinc_guess_part_of_speech, var word, var lang, var path
+        go to last
+    done
+    
+    # TEXT
+    # Ask the user.
+    # CODE
+    if is an empty array tags do
+        print "Ask the user: "
+        print ( exists: var path concat "/no-tagger.txt", end test )
+        print " or "
+        print not var is_tagger_on
+        print new line
+        if exists: var path concat "/no-tagger.txt", end test or not var is_tagger_on do
+            if not var word matches /\s/ do
+                set array tags to an empty array
+                set from array tags to get_tag_part_of_speech using var word, var lang
+                do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+            done
+        done
+    done
+    
+    # TEXT
+    # Guess.
+    # CODE
+    if is an empty array tags do
+        print "Guess: "
+        print ( not exists: var path concat "/no-tagger.txt", end test )
+        print " or "
+        print var is_tagger_on
+        print new line
+        if ( not exists: var path concat "/no-tagger.txt", end test ) or ( var is_tagger_on ) do
+            set array tags to an empty array
+            set from array tags 1st item to guess_part_of_speech using var word, var lang, var path
+            
+            if not from array tags 1st item do
+                set array tags to an empty array
+            done
+            else do
+                do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
+            done
+        done
+    done
+    
+    # TEXT
+    # Ask the user.
+    # CODE
+    if is an empty array tags do
+        set array tags to an empty array
+        set from array tags to get_tag_part_of_speech using var word, var lang
+        do memory_set_by_name with "word_types.memory", var word, array tags, var lang, var path
+    done
+    
+    do regex using from array tags 1st item: /,/, "", :global
+    
+    if var word matches /^_(.*?)_$/ do
+        do compute_tags with $0, var lang, var path
+    done
+
+    # TEXT
+    # Return the result.
+    # CODE
+    do return using array tags
+done
+
+define action guess_part_of_speech with var word, var lang, var path do
+    do regex using var word: /<[+]>/, "", :global
+    print "Tagger..." concat new line
+    print "word: " concat var word concat new line
+    print "" concat new line
+    
+    if from global hash builtin_part_of_speech item { var word } do
+        do return with from global hash builtin_part_of_speech item { var word }
+    done
+    
+    do memory_build_cache with "word_types.brain", var lang, var path
+    set new hash cache to from global hash content_of_memory_file item { "word_types.brain" }
+    set new array cache_keys to an empty array
+    set items of array cache_keys to keys with items of hash cache
+    
+    set new var end_of_entry_line to ':'
+    set new hash pos_to_rating to an empty hash
+    set new hash pos_to_count_words to an empty hash
+    
+    set new var word_e_1 to var word
+    do regex using var word_e_1: /^.*?(.)$/, "$0", :i
+    set new var word_e_2 to var word
+    do regex using var word_e_2: /^.*?(..)$/, "$0", :i
+    set new var word_e_3 to var word
+    do regex using var word_e_3: /^.*?(...)$/, "$0", :i
+    set new var word_e_4 to var word
+    do regex using var word_e_4: /^.*?(....)$/, "$0", :i
+    set new var word_e_5 to var word
+    do regex using var word_e_5: /^.*?(.....)$/, "$0", :i
+    set new var word_e_6 to var word
+    do regex using var word_e_6: /^.*?(......)$/, "$0", :i
+    set new var word_b_1 to var word
+    do regex using var word_b_1: /^(.).*?$/, "$0", :i
+    set new var word_b_2 to var word
+    do regex using var word_b_2: /^(..).*?$/, "$0", :i
+    set new var word_b_3 to var word
+    do regex using var word_b_3: /^(...).*?$/, "$0", :i
+    set new var word_b_4 to var word
+    do regex using var word_b_4: /^(....).*?$/, "$0", :i
+    
+    for each new var _key in array cache_keys do
+        set new var factor to 1
+        if var _key matches /<[A-Z]>/ and not var word matches /<[A-Z]>/ do
+            set var factor to 0
+        done
+        if var word matches /<[A-Z]>/ and not var _key matches /<[A-Z]>/ do
+            set var factor to 0
+        done
+        
+        set new var key to var _key
+        do regex using var key: /var end_of_entry_line$/, "", :i
+        
+        if var _key matches /<[A-Z]>/ and lc(var key) matches /^var word$/ and length(var word) > 6 do
+            #do return with "n"
+        done
+        
+        
+        # get part of speech from hash
+        set new var _pos to 'q'
+        set new array _lines to from hash cache item { var key concat ":" }
+        for each new var _line in array _lines do
+            if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
+                set var _pos to $1
+                go to last
+            done
+        done
+        set var _pos to lc with var _pos
+        
+        if var _key not matches /<[A-Z]>/ and var word not matches /<[A-Z]>/ and var _pos matches /n/ do
+            set var factor to 0.05
+        done
+        
+        # set points
+        if var key matches /var word_e_6$/ do
+            set from hash pos_to_rating item { var _pos } to 12 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /var word_e_5$/ do
+            set from hash pos_to_rating item { var _pos } to 10 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /var word_e_4$/ do
+            set from hash pos_to_rating item { var _pos } to 8 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /var word_e_3$/ do
+            set from hash pos_to_rating item { var _pos } to 12 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_2$/ do
+            set from hash pos_to_rating item { var _pos } to 6 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /var word_e_1$/ do
+            set from hash pos_to_rating item { var _pos } to 2 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /^var word_b_4/ do
+            set from hash pos_to_rating item { var _pos } to 4 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /^var word_b_3/ do
+            set from hash pos_to_rating item { var _pos } to 3 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        if var key matches /^var word_b_2/ do
+            set from hash pos_to_rating item { var _pos } to 3 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+        else if var key matches /^var word_b_1/ do
+            set from hash pos_to_rating item { var _pos } to 1 * var factor + from hash pos_to_rating item { var _pos }
+            set from hash pos_to_count_words item { var _pos } to 1 + from hash pos_to_count_words item { var _pos }
+        done
+    done
+    
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "vt" }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "vi" }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "v," }
+    set from hash pos_to_count_words item { "v" } to from hash pos_to_count_words item { "v" } + from hash pos_to_count_words item { "ci" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "asj" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "afj" }
+    set from hash pos_to_count_words item { "adj" } to from hash pos_to_count_words item { "adj" } + from hash pos_to_count_words item { "adv" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n," }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,m,f" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "n,f,m" }
+    set from hash pos_to_count_words item { "n" } to from hash pos_to_count_words item { "n" } + from hash pos_to_count_words item { "pron" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "vt" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "vi" }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "v," }
+    set from hash pos_to_rating item { "v" } to from hash pos_to_rating item { "v" } + from hash pos_to_rating item { "ci" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "asj" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "afj" }
+    set from hash pos_to_rating item { "adj" } to from hash pos_to_rating item { "adj" } + from hash pos_to_rating item { "adv" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n," }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,m,f" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "n,f,m" }
+    set from hash pos_to_rating item { "n" } to from hash pos_to_rating item { "n" } + from hash pos_to_rating item { "pron" }
+    
+    set new var best_pos to 'q'
+    set new var best_score to 0
+    
+    set new array pos_to_rating_keys to an empty array
+    set items of array pos_to_rating_keys to keys with items of hash pos_to_rating
+    for each new var pos_key in array pos_to_rating_keys do
+        if not var pos_key matches /^(n|v|adj)$/ do
+            go to next
+        done
+        set new var score to from hash pos_to_rating item { var pos_key }
+        if var score is 0 do
+            go to next
+        done
+        set new var cnt to from hash pos_to_count_words item { var pos_key }
+        set var score to var score * var score / var cnt
+        set var score to int with var score * 100
+        
+        if var score > var best_score do
+            set var best_score to var score
+            set var best_pos to var pos_key
+        done
+        print "- score of '" concat var pos_key concat "': " concat var score concat new line
+    done
+    print "" concat new line
+    print "'" concat var word concat "' => '" concat var best_pos concat "'" concat new line
+    
+    
+    do return with var best_pos
+done

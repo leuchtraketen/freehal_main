@@ -514,7 +514,7 @@ char* convert_to_perl5(char* hals, int just_compile) {
         halfreef(s, "convert_to_perl5/4");
     }
     strcat(newcode, "\n1\n");
-    fprintf(output(), "%s", "done.\n");
+//    fprintf(output(), "%s", "done.\n");
     halfree(lines);
     halfree(hals);
     
@@ -534,7 +534,6 @@ int convert_to_perl5_convert_file(char* filename) {
         fprintf(output(), "compiler: abort, unnecessary!\n");
         return 0;
     }
-    fprintf(output(), "compiler: file: %s\n", filename);
     FILE* source = fopen(filename, "r");
     if ( !source ) {
         fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", filename);
@@ -556,8 +555,6 @@ int convert_to_perl5_convert_file(char* filename) {
         strcat(filename_tmp, ".tmp");
         FILE* source_tmp = fopen(filename_tmp, "r");
         if ( !source_tmp ) {
-            // just a cache
-            // fprintf(output(), "\ncompiler: file not found (at: P2, lang: perl5): %s\n", filename_tmp);
         }
         else {
             stat(filename_tmp, &stbuf);
@@ -567,7 +564,7 @@ int convert_to_perl5_convert_file(char* filename) {
             halclose(source_tmp);
 
             if (0 == strcmp(code, code_tmp) && !strstr(filename, "temp")) {
-                fprintf(output(), "compiler: no change: %s\n", filename);
+//                fprintf(output(), "compiler: no change: %s\n", filename);
                 just_compile = 1;
             }
             free(code_tmp);

@@ -1,3 +1,8 @@
+1240:
+
+- Aufteilung der Datei hal2009.hal in nach Programmteilen geordnete Einzeldateien
+- Entzerrung der ehemaligen use_mode-Funktion
+
 1227:
 
 - Bug 677 korrigiert

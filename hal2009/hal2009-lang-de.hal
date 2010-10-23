@@ -4464,7 +4464,63 @@ define action multiple_choices_verb with var verb do
     do return with var verbs
 done
 
-define action find_mode with var input, var only_learn, var lang, var path do
+define action modify_input with var input, var current_language, var path do
+    if length(var input) < 10 and var input matches /warum/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', read
+        set new var last_output to ''
+        for each new var line from var input_handle do
+            set var last_output to var line
+        done
+        
+        if var last_output do
+            set var input to "warum " concat var last_output concat "?"
+        done
+    done
+    if length(var input) < 15 and var input matches /warum das/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', read
+        set new var last_output to ''
+        for each new var line from var input_handle do
+            set var last_output to var line
+        done
+        
+        if var last_output do
+            set var input to "warum " concat var last_output
+        done
+    done
+    if lc(var input) matches /(^|\s)dessen(\s|$)/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', read
+        set new var last_output to ''
+        for each new var line from var input_handle do
+            if var line matches /\s/ do
+                if length(var line) >= 10 do
+                    if not var line matches /<[,]>/ do
+                        set var last_output to var line
+                    done
+                done
+            done
+        done
+        
+        if var last_output do
+            do regex using var input: /(^|\s)dessen(\s|$)/, "$0$1", :global:i
+            do regex using var input: /(<[?!.]>|$)/, ", dass var last_output$0", :i
+        done
+    done
+    if var input matches /^weil/ do
+        set new var input_handle to handle for file name var path concat '/lang_' concat var current_language concat '/input.history', read
+        set new var last_input to ''
+        for each new var line from var input_handle do
+            set var last_input to var line
+        done
+        
+        if var last_input do
+            set var input to var last_input concat " " concat var input
+        done
+    done
+    
+    return var input
+done
+
+define action find_mode_of_input with var input, var only_learn, var lang, var path do
     if var only_learn do
         print "Sentence should only be learned!"
         print new line
@@ -4705,35 +4761,6 @@ define action use_random with var input, var current_language, var path, var mod
     done
 
     do return with array random
-done
-
-define action check_invoke with var statement do
-    set new var appname to ""
-    set new var statement_lower to lc with var statement
-    
-    if var statement_lower matches /^rufe (.*?) auf/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^ruf (.*?) auf/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^starte (.*)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^start (.*)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^run (.*)/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^fuehre (.*?) aus/ do
-        set var appname to $0
-    done
-    if var statement_lower matches /^fuehr (.*?) aus/ do
-        set var appname to $0
-    done
-    
-    do return with var appname
 done
 
 define action check_sentence_for_weather with var input do

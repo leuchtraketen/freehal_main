@@ -3497,7 +3497,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
     free_synonym_set(synonym_set);
     return list;
     
-    void* temp;
+    /*void* temp;
     temp                  = synonym_set-> objects;
     synonym_set-> objects = synonym_set->subjects;
     synonym_set->subjects =                  temp;
@@ -3509,6 +3509,7 @@ struct fact** search_facts(const char* subjects, const char* objects, const char
 
     free_synonym_set(synonym_set);
     return list;
+    */
 }
 
 struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak) {
