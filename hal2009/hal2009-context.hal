@@ -262,7 +262,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     
     if var mode matches "statement" do
         set array results to logic with var input, var lang, var path, hash parsed
-        set new array results_reasonof to feature_reasonof with var input, var lang, var path, hash parsed
+        set new array results_reasonof to feature_reasonof with var input, hash parsed, var lang, var path
         
         if array results matches "TOOMUCH" do
             if items of array results_reasonof do
