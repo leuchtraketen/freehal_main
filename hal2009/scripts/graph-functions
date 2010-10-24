@@ -1,0 +1,144 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my @builtin = qw(
+	regex handle
+	shift unshift pop push system exit sort rand return
+	lc uc lcfirst ucfirst length int open close opendir closedir readdir
+	keys values mkdir unlink join split reverse grep map
+
+	print_array is_name extend_array
+);
+
+my %is_builtin = map { $_ => 1 } @builtin;
+my %most_used = ();
+
+sub hal_file {
+	my ($filename, $show_functions_without_links) = @_;
+
+	my %relations_hash = ();
+	my @functions = ();
+	my $function_1 = '';
+
+	open my $input_file, "<", $filename;
+	while (my $line = <$input_file>) {
+		if ($line =~ /define action ([^\s]+?) /) {
+			$function_1 = $1;
+			push @functions, $1;
+		}
+
+		my $function_2 = '';
+		if ($line =~ /do ([^\s]+?) (with|using) /) {
+			$function_2 = $1;
+		}
+		if ($line =~ /set .*? to ([^\s]+?) (with|using) /) {
+			$function_2 = $1;
+		}
+		$function_2 = '' if $is_builtin{$function_2};
+
+		if ($function_1 && $function_2) {
+			$relations_hash{ 'edge [color=blue];' . $function_1 . ' -> ' . $function_2 } += 1;
+			$most_used{ $function_2 } += 1;
+		}
+	}
+	close $input_file;
+
+	if ($show_functions_without_links) {
+		foreach my $function (@functions) {
+			$relations_hash{ 'edge [color=green];' . '"' . $filename . '" -> ' . $function } += 1;
+		}
+	}
+
+	my @relations = keys %relations_hash;
+	return (@relations);
+}
+
+sub analyse_files {
+	my ($files, $output_filename, $show_functions_without_links) = @_;
+
+	open my $output_file, ">", $output_filename . ".dot";
+	print { $output_file } "digraph functions {\n  rankdir=LR;\n";
+	foreach my $filename (@$files) {
+		print { $output_file } map { "  " . $_ . "\n" } hal_file($filename, $show_functions_without_links);
+	}
+	print { $output_file } "}\n";
+	close $output_file;
+
+	my $cmd = qq{dot -Tpng "$output_filename.dot" -o "$output_filename" 2>&1 >/dev/null};
+	system($cmd);
+}
+
+sub write_img {
+	my ($docu_path, $filename, $_to, $style) = @_;
+
+	my $cmd = q{identify }.$docu_path.$filename.q{ | cut -d" " -f3};
+	my ($x, $y) = split(/x/, `$cmd`);
+
+	if ($y > $x*2) {
+		$x *= $_to/$y;
+		$y = $_to;
+	}	
+	elsif ($x > $_to) {
+		$y *= $_to/$x;
+		$x = $_to;
+	}
+	else {
+		$x *= 0.5;
+		$y *= 0.5;
+	}	
+
+	return q{<a href="} . $filename . q{"><img width="}.int($x).q{" height="}.int($y).q{" style="}.$style.q{" src="} . $filename . q{" /></a>};
+}
+
+sub write_index_html {
+	my ($files, $output_filename, $docu_path) = @_;
+
+	open my $output_file, ">", $output_filename;
+
+	print { $output_file } qq{<p style="font-size: 1.4em;">FreeHAL 2010</p>};
+	print { $output_file } qq{<p style="font-size: 1.3em;">*.hal files:</p>};
+	print { $output_file } qq{<table>};
+	my @_files = @$files;
+	while (@_files && ((my $sub_files, @_files) = ([@_files[0..5]], @_files[6..@_files]))) {
+		@$sub_files = grep {$_} @$sub_files;
+		print { $output_file } qq{<tr>};
+		foreach my $filename (@$sub_files) {
+			print { $output_file } qq{<th>$filename</th>};
+		}
+		print { $output_file } qq{</tr><tr>};
+		foreach my $filename (@$sub_files) {
+			print { $output_file } qq{<td style="text-align: center;">} . write_img($docu_path, "functions-$filename.png", 100, "border: 1px solid grey;") . qq{</td>};
+		}
+		print { $output_file } qq{</tr>};
+	}
+	print { $output_file } qq{</table>};
+
+	print { $output_file } qq{<p style="font-size: 1.0em;">} . write_img($docu_path, "functions.png", 1000, "") . qq{</p>};
+
+	foreach my $filename (@$files) {
+		print { $output_file } qq{<p style="font-size: 1.2em;">$filename</p>};
+		print { $output_file } qq{<p style="font-size: 1.0em;">} . write_img($docu_path, "functions-$filename.png", 1000, "") . qq{</p>};
+	}
+	
+	close $output_file;
+}
+
+my $docu_path = "doc/freehal-2010/";
+
+opendir my $dir_handle, ".";
+my @files = sort grep {/^hal.*?.hal$/} readdir($dir_handle);
+foreach my $filename (@files) {
+	analyse_files([$filename], $docu_path . "functions-" . $filename . ".png", 1);
+}
+analyse_files([@files], $docu_path . "functions.png", 1);
+
+write_index_html([@files], $docu_path . "index.html", $docu_path);
+
+print "most used:\n";
+my @most_used_functions = sort { $most_used{$a} <=> $most_used{$b} } keys %most_used;
+foreach my $function (@most_used_functions) {
+	print "  - " . $most_used{$function} . ": " . $function . "\n";
+}
+
