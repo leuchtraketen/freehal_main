@@ -342,217 +342,29 @@ define action compute_input with var input is rw, var lang, var path do
     do regex using var input: /\snoch[-](nie|nicht)(<[\s!.,?]>+)/, " noch $0$1", :global:i
     do regex using var input: /(^|<[\s!.,?]>+)(so)\setwas(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
     do regex using var input: /(^|<[\s!.,?]>+)(so)was(<[\s!.,?]>+)/, "$0_$1_etwas_$2", :global:i
-    do regex using var input: /\sauch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\setwa(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sungefaehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdenn(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sueberhaupt(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\salsbald(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbald(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbei zeiten(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbeinahe(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbeizeiten(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdemnach(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seinwenig(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sfast(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sfortan(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgegebenenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgleichwohl(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sguenstigenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shierauf(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shierbei(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shierdurch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shoechstens(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sirgenwann einmal(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sirgendwanneinmal(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sjedenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sjemals(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\skeinesfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\skopfueber(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\skurzerhand(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smanchmal(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snebenbei(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snoetigenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snormalerweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sschlimmstenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\ssehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\ssoeben(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\ssogleich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sstets(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\suebrigens(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svermutlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbisweilen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szeitlebens(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sabsolut(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sabsoluter(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\saesserst(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\salledem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallenthalben(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallerdings(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallerseits(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallgemein(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallmaehlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sall zusehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallzusehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sallsdann(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sandauernd(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sangeblich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sanscheinend(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sansonsten(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sastrein(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\saugenblicklich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sausnahmslos(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sausreichend(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sausserdem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbedauerlicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbedenkenlos(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbemerkenswerterweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbetraechtlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdann und wann(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdamit(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdemnaechst(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdennoch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdermassen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sderzeit(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdes weiteren(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdeswegen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdochnoch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgar(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdurchwegs(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sebenfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sehemals(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seigentlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sein bisschen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seinigermassen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seinstweilen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seinwandfrei(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sendgueltig(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sdagegen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sendlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\senorm(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\serfreulicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sernsthaft(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\serstaunlicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\seventuell(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sfreundlicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgerechterweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgewissermassen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgewoehnlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgleichermassen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgluecklicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgroesstenteils(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgrundlegend(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sgrundsaetzlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shauptsaechlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shingegen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sidealerweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\simmerfort(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\simmerhin(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\simnachhinein(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\simuebrigen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\simwesentlichen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sinetwa(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sinfolgedessen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sinsbesondere(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sinsgesamt(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\skeinesfalls(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\skeineswegs(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\slediglich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sleider(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sletztendlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smerkwuerdigerweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smindestens(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smitnichten(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smitunter(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smoeglicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smomentan(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snachtraeglich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snachwievor(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snatuerlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sneuerdings(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snichtstetotrotz(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snichtstetoweniger(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snotwenigerweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sobwohl(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soffenbar(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soffensichtlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\softmals(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sohnedies(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sohneweiteres(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\spraktisch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sproblemlos(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sregelrecht(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\srelativ(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sringsherum(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sschlussendlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sseitdem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sseltsamerweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\ssicherlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\ssozusagen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sstattdessen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\statsaechlich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\stoerichterweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sueberaus(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\suebermassig(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sueberraschenderweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sueblicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sumsomehr(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sunteranderem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\surspruenglich(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sunterdessen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sunverstaendlicherweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sunzweifelhaft(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svergleichsweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svollkommen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svor allem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svorallem(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\svorzugsweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\swaehrenddessen(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sweiterhin(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\swiederum(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szeitlebens(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szunehmend(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szunaechst(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szwangslaeufig(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szweifellos(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sbloederweise(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /^\s+?und(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\saber(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sa so(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sach so(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sachso(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sach(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\saehm(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\saha(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\salso(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shay(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shey(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\shuch(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sma(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sna(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sna du(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sna na(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sna ja(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snana(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snaja(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snene(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sne ne(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\snun ja(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soh(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soh wei(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soje(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\solola(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\soops(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\stja(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sui(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sui je(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\smeist(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\szumeist(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\salso(<[\s!.,?]>+)/, "$0", :global:i
     
-    do regex using var input: /\swell(<[\s!.,?]>+)/, "$0", :global:i
-    do regex using var input: /\sso(<[\s!.,?]>+)/, "$0", :global:i
+    
+    set new var remove_words_file to handle for file name var path concat '/lang_' concat var lang concat '/remove-words.csv', read
+    for each new var remove_word from var remove_words_file do
+        do regex using var remove_word: /^\s+?/, "", :global
+        do regex using var remove_word: /\s+?$/, "", :global
+
+        set new flag at_beginning to 0
+        if var remove_word matches /\^/ do
+            do regex using var remove_word: /\^/, "", :global
+            set flag at_beginning to 1
+        done
+    
+        if flag at_beginning do
+            do regex using var input: /^(<[\s!.,?]>+)var remove_word(<[\s!.,?]>+)/, "", :global:i
+        done
+        else do
+            do regex using var input: /(<[\s!.,?]>+)var remove_word(<[\s!.,?]>+)/, "", :global:i
+        done
+    done
+    do close with var remove_words_file
+    
+    
     do regex using var input: /do you know /, "", :global:i
     do regex using var input: /^\s+/, "", :global
     do regex using var input: /^you know (wh)/, "$0", :global:i
