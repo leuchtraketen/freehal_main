@@ -189,18 +189,18 @@ define action to_unixtime with var sentence, var lang, var path do
             print " = ..."
             print new line
             
-            do regex using var sentence: /(^|\s)(\d+?)<[*]>\s(var rel)(\s|$)/, "$0$2$3", :i
+            do regex with var sentence: /(^|\s)(\d+?)<[*]>\s(var rel)(\s|$)/ -> "$0$2$3" :i
             if lc(var sentence) matches /(von|ab|seit|since)(^|\s)var rel(\s|$)/ do
                 set var replacement to var replacement concat " time_from-" concat var i_begin
-                do regex using var sentence: /(von|ab|seit|since)(^|\s)var rel(\s|$)/, "$2", :global:i
+                do regex with var sentence: /(von|ab|seit|since)(^|\s)var rel(\s|$)/ -> "$2" :global:i
             done
             else if lc(var sentence) matches /(bis|till|until)(^|\s)var rel(\s|$)/ do
                 set var replacement to var replacement concat " time_to-" concat var i_end
-                do regex using var sentence: /(bis|till|until)(^|\s)var rel(\s|$)/, "$2", :global:i
+                do regex with var sentence: /(bis|till|until)(^|\s)var rel(\s|$)/ -> "$2" :global:i
             done
             else do
                 set var replacement to var replacement concat " time_from-" concat var i_begin concat " " concat "time_to-" concat var i_end
-                do regex using var sentence: /(^|\s)var rel(\s|$)/, "$1", :global:i
+                do regex with var sentence: /(^|\s)var rel(\s|$)/ -> "$1" :global:i
             done
             
             set var i_begin to 0
@@ -249,7 +249,7 @@ define action to_unixtime with var sentence, var lang, var path do
             done
             print var sentence
             print new line
-            do regex using var sentence: /(am|vom|bis)<[-]>(\d+?)\.(\d+?)\.(\d+?) /, "", :i
+            do regex with var sentence: /(am|vom|bis)<[-]>(\d+?)\.(\d+?)\.(\d+?) / -> "" :i
         done
         else do
             go to last
@@ -266,7 +266,7 @@ define action to_unixtime with var sentence, var lang, var path do
     done
     
     if var replacement do
-        do regex using var sentence: /(<[?!.,]>|$)/, "var replacement $0", :i
+        do regex with var sentence: /(<[?!.,]>|$)/ -> "var replacement $0" :i
     done
     
     print "to_unixtime finished."

@@ -328,7 +328,7 @@ define action list_grammar with array grammar do
                 set var symbol_str to var symbol_str concat " " concat var symbol concat "_" concat var part_of_replacement concat "_\\var i"
                 set var i to var i + 1
             done
-            do regex using var symbol_str: /^\s+/, "", :global
+            do regex with var symbol_str: /^\s+/ -> "" :global
         
             set var symbol_str to var symbol concat " ~\\1 \\2 \\3 \\4 \\5 \\6 \\7 \\8 \\9~"
 
@@ -449,18 +449,18 @@ define action reduce_with_rules with array rule_left_names, hash rules, array da
                     
                     set new var _data_types_str to var data_types_str
                     while var _data_types_str matches / var rule_left_name/ do
-                        do regex using var _data_types_str: / var rule_left_name/, " var symbol_str"
-                        do regex using var _data_types_str: /\\1/, "var _0"
-                        do regex using var _data_types_str: /\\2/, "var _1"
-                        do regex using var _data_types_str: /\\3/, "var _2"
-                        do regex using var _data_types_str: /\\4/, "var _3"
-                        do regex using var _data_types_str: /\\5/, "var _4"
-                        do regex using var _data_types_str: /\\6/, "var _5"
-                        do regex using var _data_types_str: /\\7/, "var _6"
-                        do regex using var _data_types_str: /\\8/, "var _7"
-                        do regex using var _data_types_str: /\\9/, "var _8"
-                        do regex using var _data_types_str: /\s+/, " ", :global
-                        do regex using var _data_types_str: /[~]([^\s]*?)\s[~]/, "~$0~", :global
+                        do regex with var _data_types_str: / var rule_left_name/ -> " var symbol_str"
+                        do regex with var _data_types_str: /\\1/ -> "var _0"
+                        do regex with var _data_types_str: /\\2/ -> "var _1"
+                        do regex with var _data_types_str: /\\3/ -> "var _2"
+                        do regex with var _data_types_str: /\\4/ -> "var _3"
+                        do regex with var _data_types_str: /\\5/ -> "var _4"
+                        do regex with var _data_types_str: /\\6/ -> "var _5"
+                        do regex with var _data_types_str: /\\7/ -> "var _6"
+                        do regex with var _data_types_str: /\\8/ -> "var _7"
+                        do regex with var _data_types_str: /\\9/ -> "var _8"
+                        do regex with var _data_types_str: /\s+/ -> " " :global
+                        do regex with var _data_types_str: /[~]([^\s]*?)\s[~]/ -> "~$0~" :global
             
                         if var data_types_str ne var _data_types_str do
                             print "reduce_with_rules:  " concat var data_types_str concat new line
@@ -473,11 +473,11 @@ define action reduce_with_rules with array rule_left_names, hash rules, array da
                             set new array replaced_history to an empty array
                             set items of array replaced_history to items of that array: from array data_types_item 2nd item end of items
                             set new var history_rule_left_name to var rule_left_name
-                            do regex using var history_rule_left_name: /.*/, "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
-                            do regex using var history_rule_left_name: /\s+$/, ""
+                            do regex with var history_rule_left_name: /.*/ -> "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
+                            do regex with var history_rule_left_name: /\s+$/ -> ""
                             set new var history_symbol_str to var symbol_str
-                            do regex using var history_symbol_str: /[~].*/, ""
-                            do regex using var history_symbol_str: /\s+$/, ""
+                            do regex with var history_symbol_str: /[~].*/ -> ""
+                            do regex with var history_symbol_str: /\s+$/ -> ""
                 print "history_symbol_str: " concat var history_symbol_str concat new line
                 print "symbol_str: " concat var symbol_str concat new line
                 print "history_rule_left_name: " concat var history_rule_left_name concat new line

@@ -73,8 +73,8 @@ define action check_config with var name, var default, var lang, var path do
         for each new var line from var input_handle do
             if var line matches /var name\s*?<[=]>\s*?(.*?)\s*?$/ do
                 set new var value to $0
-                do regex using var value: /^\s+?/, "", :global
-                do regex using var value: /\s+?$/, "", :global
+                do regex with var value: /^\s+?/ -> "" :global
+                do regex with var value: /\s+?$/ -> "" :global
                 print var config_path concat ": " concat var name concat " = " concat var value
                 print new line
                 do return with var value
@@ -112,8 +112,8 @@ define action join_items with array list do
 done
 
 define action escape_html with var text do
-    do regex using var text: /<[<]>/, "&lt;", :global
-    do regex using var text: /<[>]>/, "&gt;", :global
+    do regex with var text: /<[<]>/ -> "&lt;" :global
+    do regex with var text: /<[>]>/ -> "&gt;" :global
     
     do return with var text
 done

@@ -257,11 +257,22 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
         hals = replace(hals, " handle for ", " open with ");
     }
     if (strstr(hals->s, "do regex using " )) {
-        hals = replace(hals, "do regex using ", "");
+        hals = replace(hals, "do regex using ", "do regex ");
+    }
+    if (strstr(hals->s, "do regex with " )) {
+        hals = replace(hals, "do regex with ", "do regex ");
+    }
+    if (strstr(hals->s, "do regex " )) {
+        hals = replace(hals, "do regex ", "regex ");
+    }
+    if (strstr(hals->s, "regex " )) {
+        hals = replace(hals, "regex ", "");
         hals = replace(hals, ": ", " =~ s");
+        hals = replace(hals, "/ -> \"", "/");
         hals = replace(hals, "/, \"", "/");
         hals = replace(hals, "\"", "/");
         hals = replace(hals, "/, :", "/:");
+        hals = replace(hals, "/ :", "/:");
         hals = replace(hals, ":global", "g");
         hals = replace(hals, ":i", "i");
         //hals = realloc(hals, strlen(hals) + 1 + 2);

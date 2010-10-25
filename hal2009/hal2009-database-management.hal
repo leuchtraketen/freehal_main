@@ -37,7 +37,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             
 print "verb: " concat var verb concat new line
 
-            do regex using var verb: /<[|]>.*/, "", :global:i
+            do regex with var verb: /<[|]>.*/ -> "" :global:i
         
             set new var verb_category to verb_category with var verb
             if var verb_category and var verb not matches /\// do
@@ -203,7 +203,7 @@ print "verb: " concat var verb concat new line
             for each new array verb in array verbs do
                 set var verb to from array verb 1st item
                 
-                do regex using var verb: /<[|]>.*/, "", :global:i
+                do regex with var verb: /<[|]>.*/ -> "" :global:i
         
                 set new var verb_category to verb_category with var verb
                 if var verb_category and var verb not matches /\// do
@@ -251,9 +251,9 @@ print "verb: " concat var verb concat new line
     set new var divisor to ' ~ '
     set new var line to join with var divisor, items of array line_array
     
-    do regex using var line: /\{\{\{questionword\}\}\}/, "", :global
+    do regex with var line: /\{\{\{questionword\}\}\}/ -> "" :global
 
-    do regex using var line: /<[_]>+/, "_", :global
+    do regex with var line: /<[_]>+/ -> "_" :global
     
     if var pro_file_name matches "-" do
         print "Do not write any facts."
@@ -283,7 +283,7 @@ done
 define action update_list_of_pro_file with var file, var lang, var path do
     set new var input_pro to handle for file name var file, read
     set new var file_output to var file
-    do regex using var file_output: /.pro/, ".list", :global
+    do regex with var file_output: /.pro/ -> ".list" :global
     set new var output_list to handle for file name var file_output, write
     do close with output_list
     
@@ -329,21 +329,21 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     set new var classification to ''
     if var input matches /^(\S+?[:][:])/ do
         set var classification to $0
-        do regex using var input: /^(\S+?)[:][:]/, "", :global
+        do regex with var input: /^(\S+?)[:][:]/ -> "" :global
     done
 
     do be_slow without arguments
-    do regex using var input: /(<[.!?]>)/, "", :global
+    do regex with var input: /(<[.!?]>)/ -> "" :global
     # TEXT
     # Make the komma's readable.
     # CODE
     set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
     
-    do regex using var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) /, "$0 _$1_ _no-question_ ", :global:i
-    do regex using var input: /<[,]>\s/, " KOMMA ", :global:i
-    do regex using var input: /(\D)<[.]>/, "${1} DOT ", :global:i
-    do regex using var input: /\s+/, " ", :global:i
+    do regex with var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) / -> "$0 _$1_ _no-question_ " :global:i
+    do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
+    do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
+    do regex with var input: /\s+/ -> " " :global:i
     set new array clauses_input to split with " KOMMA ", var input
     set new hash parsed to an empty hash
     set from hash parsed item { 'verbs' } to an empty array
@@ -417,9 +417,9 @@ define action work_prot_line with var input, var file_name, var lang, var path d
 done
 
 define action transform_psprot_line with var line, var main_word, var current_language, var path do
-    do regex using var line: /^\s+/, "", :global
-    do regex using var line: /\s+$/, "", :global
-    do regex using var line: /\s+/, " ", :global
+    do regex with var line: /^\s+/ -> "" :global
+    do regex with var line: /\s+$/ -> "" :global
+    do regex with var line: /\s+/ -> " " :global
     set new array words to an empty array
     set array words to split with /<[",.;!?]>/, var line
     
@@ -533,7 +533,7 @@ define action init_prot_files with var current_language, var path do
             done
             
             set new var pro_file to var file
-            do regex using var pro_file: /t$/, "", :i
+            do regex with var pro_file: /t$/ -> "" :i
             
             #if (not var pro_file matches /data/) or exists: var pro_file, end test do
             #    go to next
@@ -662,31 +662,31 @@ define action correct_human_edit_typos with var file, var current_language, var 
             if var part matches /_/ or var part matches /time/ do
                 set var part to " " concat var part concat " "
                 if var part not matches /\s<[a-z0-9]>\s/ and var j is not 4 and (var j - 4) % 4 is not 0 do
-                    do regex using var part: /\s/, "_", :global
-                    do regex using var part: /<[_]>+/, "_", :global
+                    do regex with var part: /\s/ -> "_" :global
+                    do regex with var part: /<[_]>+/ -> "_" :global
                     set var part to " " concat var part concat " "
                 done
-                do regex using var part: /_time_from/, " time_from", :global
-                do regex using var part: /_time_to/, " time_to", :global
+                do regex with var part: /_time_from/ -> " time_from" :global
+                do regex with var part: /_time_to/ -> " time_to" :global
                 if var part matches / time_(to|from)/ do
-                    do regex using var part: /(<[a-z0-9]>)_/, "$0 ", :global
-                    do regex using var part: /_/, " ", :global
+                    do regex with var part: /(<[a-z0-9]>)_/ -> "$0 " :global
+                    do regex with var part: /_/ -> " " :global
                 done
-                do regex using var part: / time from/, " time_from", :global
-                do regex using var part: / time to/, " time_to", :global
-                do regex using var part: /(<[a-z)(]>)<[;]>(<[a-z)(]>)/, "$0 $1", :global
+                do regex with var part: / time from/ -> " time_from" :global
+                do regex with var part: / time to/ -> " time_to" :global
+                do regex with var part: /(<[a-z)(]>)<[;]>(<[a-z)(]>)/ -> "$0 $1" :global
 
-                do regex using var part: /(<[(\[]>)_/, "$0", :global
-                do regex using var part: /_(<[)\]]>)/, "$0", :global
-                do regex using var part: /^\s+/, " ", :global
-                do regex using var part: /\s+$/, " ", :global
+                do regex with var part: /(<[(\[]>)_/ -> "$0" :global
+                do regex with var part: /_(<[)\]]>)/ -> "$0" :global
+                do regex with var part: /^\s+/ -> " " :global
+                do regex with var part: /\s+$/ -> " " :global
             done
             set var j to var j + 1
         done
         set var line to join using "<>", items of array parts
-        do regex using var line: /(<[a-zA-Z]>)_maybe_/, "$0_ <> (maybe)"
-        do regex using var line: /\s_\(a\)_/, " (a) _"
-        do regex using var line: /_\(a\)_/, "(a) _"
+        do regex with var line: /(<[a-zA-Z]>)_maybe_/ -> "$0_ <> (maybe)"
+        do regex with var line: /\s_\(a\)_/ -> " (a) _"
+        do regex with var line: /_\(a\)_/ -> "(a) _"
         
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line

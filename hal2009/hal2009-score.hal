@@ -45,7 +45,7 @@ define action check_score with var possible_score do
     if var possible_score matches /^(<[0-9]>+)\s?/ do
         set var output_num to $0
         print "( Output number: " concat var output_num concat " ) "
-        do regex using var possible_score: /^<[0-9]>+\s?/, "", :global
+        do regex with var possible_score: /^<[0-9]>+\s?/ -> "" :global
     done
 
     if not var possible_score matches /[a-zA-Z]/ do
@@ -161,7 +161,7 @@ define action get_score with array words, var sentence, var lang, var path do
         set new var last_word to ""
         for each new var line from var input_handle do
             set var line to lc with var line
-            do regex using var line: /<[?]>|<[!.,+]>|<[\s\r\n]>+?/, "", :global
+            do regex with var line: /<[?]>|<[!.,+]>|<[\s\r\n]>+?/ -> "" :global
             if var line matches /[\[]/ do
                 set var last_word to var line
             done
@@ -173,8 +173,8 @@ define action get_score with array words, var sentence, var lang, var path do
     done
 
     set var sentence to lc with var sentence
-    do regex using var sentence: /<[?]>|<[!.,\-]>|\s/, "", :global
-    do regex using var sentence: /(<[)(+-]>)/, "\\$0", :global
+    do regex with var sentence: /<[?]>|<[!.,\-]>|\s/ -> "" :global
+    do regex with var sentence: /(<[)(+-]>)/ -> "\\$0" :global
     set new var sum to 1
     set new var num_words to items of array words
     set new var index_of_this_word to -1
@@ -185,7 +185,7 @@ define action get_score with array words, var sentence, var lang, var path do
         if from hash content_of_score_file item { "[var word]" } do
             set new var line_no to -1
             set new var size to size of that array: from hash content_of_score_file item { "[var word]" } (end array)
-            do regex using var word: /<[?]>|<[!.,\-]>/, "", :global
+            do regex with var word: /<[?]>|<[!.,\-]>/ -> "" :global
 
             while var line_no < var size do
                 set var line_no to var line_no + 1
@@ -198,7 +198,7 @@ define action get_score with array words, var sentence, var lang, var path do
                 if var line_2 matches /var sentence/ do
                     set new array parts to split with ":", var line_2
                     set new var score_here to from array parts 2nd item
-                    do regex using var score_here: /\s/, "", :global
+                    do regex with var score_here: /\s/ -> "" :global
 #                    print "score: " concat var score_here concat new line
 
                     if (0+var score_here) > -1 do

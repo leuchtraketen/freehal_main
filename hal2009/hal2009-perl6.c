@@ -170,7 +170,16 @@ static inline void convert_to_perl6_structure (halstring* hals) {
         hals = replace(hals, " append", " :a");
     }
     if (strstr(hals->s, "do regex using " )) {
-        hals = replace(hals, "do regex using ", "");
+        hals = replace(hals, "do regex using ", "do regex ");
+    }
+    if (strstr(hals->s, "do regex with " )) {
+        hals = replace(hals, "do regex with ", "do regex ");
+    }
+    if (strstr(hals->s, "do regex " )) {
+        hals = replace(hals, "do regex ", "regex ");
+    }
+    if (strstr(hals->s, "regex " )) {
+        hals = replace(hals, "regex ", "");
         hals = replace(hals, ": ", ".subst(");
         //hals = realloc(hals, strlen(hals) + 1 + 2);
         strcat(hals->s, ");");

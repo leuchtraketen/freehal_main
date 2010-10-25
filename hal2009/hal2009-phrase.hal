@@ -37,7 +37,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     set flag add_result to 1
                 done
                 
-                do regex using from array clause 1st item: /is<[-]>(part|own)(<[-]><[0-9]>)?/, "is-$0-var i", :global:i
+                do regex with from array clause 1st item: /is<[-]>(part|own)(<[-]><[0-9]>)?/ -> "is-$0-var i" :global:i
                 
                 set new array copy_clause to an empty array
                 push into array copy_clause, items of array clause
@@ -130,7 +130,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                     
-                    do regex using var verb: /([01])([01])([01])([01])([01])$/, "", :global
+                    do regex with var verb: /([01])([01])([01])([01])([01])$/ -> "" :global
                 done
                 
                 if from global hash builtin_auxiliary_verbs item { var verb } do
@@ -149,15 +149,15 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             
             if from array clause 4th item matches /(^|\s)zu(\s|$)/ and length( from array clause 4th item ) < 5 do
                 do unshift with items of array proper_verbs, "zu"
-                do regex using from array clause 4th item: /(^|\s)zu(\s|$)/, "$0", :global
+                do regex with from array clause 4th item: /(^|\s)zu(\s|$)/ -> "$0" :global
             done
             if from array clause 4th item matches /(^|\s)_to_(\s|$)/ and length( from array clause 4th item ) < 5 do
                 do unshift with items of array proper_verbs, "zu"
-                do regex using from array clause 4th item: /(^|\s)_to_(\s|$)/, "$0", :global
+                do regex with from array clause 4th item: /(^|\s)_to_(\s|$)/ -> "$0" :global
             done
             if from array clause 5th item matches /(^|\s)_to_(\s|$)/ and length( from array clause 5th item ) < 5 do
                 do unshift with items of array proper_verbs, "zu"
-                do regex using from array clause 5th item: /(^|\s)_to_(\s|$)/, "$0", :global
+                do regex with from array clause 5th item: /(^|\s)_to_(\s|$)/ -> "$0" :global
             done
 
             set from array clause 2nd item to check_for_as_well_as with from array clause 2nd item, from array clause 4th item, var lang, var path
@@ -202,12 +202,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var subject_article_included to 0
                 if from array clause 2nd item matches /\(a\)/ do
                     set var subject_article_included to 1
-                    do regex using from array clause 2nd item: /\(a\)\s+?/, "", :global
+                    do regex with from array clause 2nd item: /\(a\)\s+?/ -> "" :global
                 done
                 set new var object_article_included to 0
                 if from array clause 3rd item matches /\(a\)/ do
                     set var object_article_included to 1
-                    do regex using from array clause 3rd item: /\(a\)\s+?/, "", :global
+                    do regex with from array clause 3rd item: /\(a\)\s+?/ -> "" :global
                 done
 
                 if from array proper_verbs 1st item matches /^(equal)/ do
@@ -615,8 +615,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             done
         done
         
-        do regex using var final_sentence: /<[,]>\s*?$/, "", :global
-        do regex using var final_sentence: /<[,]>$/, "", :global
+        do regex with var final_sentence: /<[,]>\s*?$/ -> "" :global
+        do regex with var final_sentence: /<[,]>$/ -> "" :global
         
         if not var final_sentence matches /time.(from|to)/ do
             set new array input_adverbs to from hash parsed item { 'adverbs' }
@@ -745,12 +745,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         set var final_sentence to compute_output with var final_sentence
         
         if var final_sentence matches /<[?]>/ do
-            do regex using var final_sentence: /<[?]>/, "", :global
+            do regex with var final_sentence: /<[?]>/ -> "" :global
             set var final_sentence to var final_sentence concat "?"
         done
         
-        do regex using var final_sentence: /<[,]>\s*?$/, "", :global
-        do regex using var final_sentence: /<[,]>$/, "", :global
+        do regex with var final_sentence: /<[,]>\s*?$/ -> "" :global
+        do regex with var final_sentence: /<[,]>$/ -> "" :global
         
         push into array phrases, [ var primary_key, var final_sentence ]
     done
@@ -762,8 +762,8 @@ define action filter_nothing with var text do
     if var text matches /nothing/ do
         do return with ""
     done
-    do regex using var text: /<[;]>/, "", :global:i
-    do regex using var text: /\/.*?$/, "", :global:i
+    do regex with var text: /<[;]>/ -> "" :global:i
+    do regex with var text: /\/.*?$/ -> "" :global:i
     do return with var text
 done
 

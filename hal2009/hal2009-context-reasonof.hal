@@ -94,13 +94,13 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 set new array tags to an empty array
                 if var must_have matches /\s/ do
                     set new var _must_have to var must_have
-                    do regex using var _must_have: /\s.*/, "", :global
+                    do regex with var _must_have: /\s.*/ -> "" :global
                     set array tags to compute_tags with var _must_have, var lang, var path
                     
                     if from hash sym_prep item { from array tags 1st item } do
                         set var _must_have to var must_have
-                        do regex using var _must_have: /^.*?\s/, "", :i
-                        do regex using var _must_have: /\s.*/, "", :global
+                        do regex with var _must_have: /^.*?\s/ -> "" :i
+                        do regex with var _must_have: /\s.*/ -> "" :global
                         set array tags to compute_tags with var _must_have, var lang, var path
                     done
                 done
@@ -164,7 +164,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                         go to next
                     done
                     set new var _must_have to var must_have
-                    do regex using var _must_have: /...$/, "", :i
+                    do regex with var _must_have: /...$/ -> "" :i
                     if length(var _must_have) > 2 do
                         if not lc( from array result 2nd item 2nd item ) matches /var _must_have/ do
                             print "[-] Does not have must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
@@ -291,13 +291,13 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
         done
         else do
             if from array verb 1st item matches /est$/ do
-                do regex using from array verb 1st item: /est$/, "en", :i
+                do regex with from array verb 1st item: /est$/ -> "en" :i
             done
             else if from array verb 1st item matches /st$/ do
-                do regex using from array verb 1st item: /st$/, "en", :i
+                do regex with from array verb 1st item: /st$/ -> "en" :i
             done
             else if from array verb 1st item matches /e$/ do
-                do regex using from array verb 1st item: /e$/, "en", :i
+                do regex with from array verb 1st item: /e$/ -> "en" :i
             done
             else if from array verb 1st item matches /ben$/ do
                 # do nothing
@@ -305,10 +305,10 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
             else if items of array verbs is 1 do
                 set new var len to length with from array verb 1st item
                 if var len > 6 do
-                    do regex using from array verb 1st item: /...$/, "*", :i
+                    do regex with from array verb 1st item: /...$/ -> "*" :i
                 done
                 else if var len > 5 do
-                    do regex using from array verb 1st item: /..$/, "*", :i
+                    do regex with from array verb 1st item: /..$/ -> "*" :i
                 done
             done
             else do

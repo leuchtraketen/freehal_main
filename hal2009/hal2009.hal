@@ -630,8 +630,8 @@ define action to_array_from_pro_line with var line, var lang do
     set new array result to an empty array
     push into array result, an empty array
 
-    do regex using var line: / <[<]><[>]> /, "<>", :global
-    do regex using var line: / <[;]><[;]> /, ";;<>", :global
+    do regex with var line: / <[<]><[>]> / -> "<>" :global
+    do regex with var line: / <[;]><[;]> / -> ";;<>" :global
     set new array parts to split with /[<][>]/, var line
     do pop with items of array parts
     
@@ -691,7 +691,7 @@ define action to_array_from_hash_parsed with var line, var lang do
     set new array result to an empty array
     push into array result, an empty array
 
-    do regex using var line: / [<][>] /, "<>", :global
+    do regex with var line: / [<][>] / -> "<>" :global
     set new array parts to split with /[<][>]/, var line
     do pop with items of array parts
     
@@ -737,7 +737,7 @@ define action save_input with var input, var current_language, var path do
 done
 
 define action save_output with var input, var current_language, var path do
-    do regex using var input: /\(.*/, "", :global
+    do regex with var input: /\(.*/ -> "" :global
     set new var output_handle to handle for file name var path concat '/lang_' concat var current_language concat '/output.history', append
     set new array outputs to split with /([<]br[>].*?\s)/, var input
     for each new var output in array outputs do
@@ -902,11 +902,11 @@ define action decide with array output, var input, flag all_output_phrases, var 
             for each new var _output in array output do
                 set new var output to from array _output 2nd item
                 
-                do regex using var output: /\(.*/, "", :global
-                do regex using var output: /\((<[+]>+?)\)\s/, "", :global
-                do regex using var output: /\((<[-]>+?)\)\s/, "", :global
-                do regex using var output: /\((<[+]>+?)\)/, "", :global
-                do regex using var output: /\((<[-]>+?)\)/, "", :global
+                do regex with var output: /\(.*/ -> "" :global
+                do regex with var output: /\((<[+]>+?)\)\s/ -> "" :global
+                do regex with var output: /\((<[-]>+?)\)\s/ -> "" :global
+                do regex with var output: /\((<[+]>+?)\)/ -> "" :global
+                do regex with var output: /\((<[-]>+?)\)/ -> "" :global
                 
                 print "maybe current output: " concat var output concat new line
                 
@@ -989,13 +989,13 @@ define action shell with var current_language, var path do
         print "Do learn: " concat var do_learn concat new line
         print "Do talk:  " concat var do_talk  concat new line
     
-        do regex using var sentences_as_line_2: /[?]+/, "?", :global
-        do regex using var sentences_as_line_2: /([?])/, "$0.", :global
-        do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
-        do regex using var sentences_as_line_2: /[.!~]\s*?[.!~]/, "~", :global
-        do regex using var sentences_as_line_2: /<[.]>(\s|$)/, " STOP ", :global
-        do regex using var sentences_as_line_2: /(\d) STOP /, "$0. ", :global
-        do regex using var sentences_as_line_2: / STOP \((.*)\)/, " ($0) STOP . ", :global
+        do regex with var sentences_as_line_2: /[?]+/ -> "?" :global
+        do regex with var sentences_as_line_2: /([?])/ -> "$0." :global
+        do regex with var sentences_as_line_2: /[.!~]\s*?[.!~]/ -> "~" :global
+        do regex with var sentences_as_line_2: /[.!~]\s*?[.!~]/ -> "~" :global
+        do regex with var sentences_as_line_2: /<[.]>(\s|$)/ -> " STOP " :global
+        do regex with var sentences_as_line_2: /(\d) STOP / -> "$0. " :global
+        do regex with var sentences_as_line_2: / STOP \((.*)\)/ -> " ($0) STOP . " :global
         
         set var sentences_as_line_2 to divide_input with var sentences_as_line_2, var current_language, var path
         
@@ -1009,23 +1009,23 @@ define action shell with var current_language, var path do
 
             for each new var line in array sentences do
             
-                do regex using var line: /^\s+/, "", :global
-                do regex using var line: /\s+$/, "", :global
-                do regex using var line: /\.$/, "", :global
-                do regex using var line: /^\./, "", :global
+                do regex with var line: /^\s+/ -> "" :global
+                do regex with var line: /\s+$/ -> "" :global
+                do regex with var line: /\.$/ -> "" :global
+                do regex with var line: /^\./ -> "" :global
                 if not var line do
                     go to next
                 done
 
                 set new flag all_output_phrases to 0
                 if lc(var line) matches /^\/all / do
-                    do regex using var line: /^\/all /, "", :global:i
+                    do regex with var line: /^\/all / -> "" :global:i
                     set flag all_output_phrases to 1
                 done
                 if lc(var line) matches /^\/gen list/ do
-                    do regex using var line: /^\/gen list /, "", :global:i
-                    do regex using var line: /^\/gen list/, "", :global:i
-                    do regex using var line: /.pro/, "", :global:i
+                    do regex with var line: /^\/gen list / -> "" :global:i
+                    do regex with var line: /^\/gen list/ -> "" :global:i
+                    do regex with var line: /.pro/ -> "" :global:i
                     if not var line do
                         set var line to ""
                     done
@@ -1040,10 +1040,10 @@ define action shell with var current_language, var path do
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
                 
                 set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
-                do regex using var final_output: /\((<[+]>+?)\)\s/, "", :global
-                do regex using var final_output: /\((<[-]>+?)\)\s/, "", :global
-                do regex using var final_output: /\((<[+]>+?)\)/, "", :global
-                do regex using var final_output: /\((<[-]>+?)\)/, "", :global
+                do regex with var final_output: /\((<[+]>+?)\)\s/ -> "" :global
+                do regex with var final_output: /\((<[-]>+?)\)\s/ -> "" :global
+                do regex with var final_output: /\((<[+]>+?)\)/ -> "" :global
+                do regex with var final_output: /\((<[-]>+?)\)/ -> "" :global
         
                 set new var time_second to time without arguments
                 set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"

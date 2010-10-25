@@ -2987,19 +2987,19 @@ set new global array builtin_time_relations_names to an empty array
 set items of global array builtin_time_relations_names to keys with items of hash builtin_time_relations
 
 define action time_pre_transformations with var sentence, var lang, var path do
-    do regex using var sentence: /(in|vor)\s*?einer\s*?(<[a-zA-Z]>*?stund<[a-zA-Z]>*?)(\s|$)/, "$0 $1$2", :global:i
-    do regex using var sentence: /(in|vor)\s*?(<[0-9]>+?)\s*?(stunden|wochen|tagen)/, "$1* $0-$2", :global:i
-    do regex using var sentence: /(te|se)<[rnmt]>?\s*?(stunde|woche|tage)/, "$0 $1", :global:i
-    do regex using var sentence: /Anfang (letzter|dieser|naechster)/, "$0", :global:i
-    do regex using var sentence: /(^|\s)an dem (\d+?\.\d+?\.\d+?)(\s|$)/, " am-$1 ", :global:i
-    do regex using var sentence: /(^|\s)am (\d+?\.\d+?\.\d+?)(\s|$)/, " am-$1 ", :global:i
-    do regex using var sentence: /(^|\s)(?:von|seit|ab) dem (\d+?\.\d+?\.\d+?)(\s|$)/, " vom-$1 ", :global:i
-    do regex using var sentence: /(^|\s)(?:von|seit|ab) (\d+?\.\d+?\.\d+?)(\s|$)/, " vom-$1 ", :global:i
-    do regex using var sentence: /(^|\s)vom (\d+?\.\d+?\.\d+?)(\s|$)/, " vom-$1 ", :global:i
-    do regex using var sentence: /(^|\s)bis zu dem (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
-    do regex using var sentence: /(^|\s)bis zum (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
-    do regex using var sentence: /(^|\s)bis (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
-    do regex using var sentence: /(^|\s)zum (\d+?\.\d+?\.\d+?)(\s|$)/, " bis-$1 ", :global:i
+    do regex with var sentence: /(in|vor)\s*?einer\s*?(<[a-zA-Z]>*?stund<[a-zA-Z]>*?)(\s|$)/ -> "$0 $1$2" :global:i
+    do regex with var sentence: /(in|vor)\s*?(<[0-9]>+?)\s*?(stunden|wochen|tagen)/ -> "$1* $0-$2" :global:i
+    do regex with var sentence: /(te|se)<[rnmt]>?\s*?(stunde|woche|tage)/ -> "$0 $1" :global:i
+    do regex with var sentence: /Anfang (letzter|dieser|naechster)/ -> "$0" :global:i
+    do regex with var sentence: /(^|\s)an dem (\d+?\.\d+?\.\d+?)(\s|$)/ -> " am-$1 " :global:i
+    do regex with var sentence: /(^|\s)am (\d+?\.\d+?\.\d+?)(\s|$)/ -> " am-$1 " :global:i
+    do regex with var sentence: /(^|\s)(?:von|seit|ab) dem (\d+?\.\d+?\.\d+?)(\s|$)/ -> " vom-$1 " :global:i
+    do regex with var sentence: /(^|\s)(?:von|seit|ab) (\d+?\.\d+?\.\d+?)(\s|$)/ -> " vom-$1 " :global:i
+    do regex with var sentence: /(^|\s)vom (\d+?\.\d+?\.\d+?)(\s|$)/ -> " vom-$1 " :global:i
+    do regex with var sentence: /(^|\s)bis zu dem (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
+    do regex with var sentence: /(^|\s)bis zum (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
+    do regex with var sentence: /(^|\s)bis (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
+    do regex with var sentence: /(^|\s)zum (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
     
     do return with var sentence
 done
@@ -3141,7 +3141,7 @@ done
 
 define action get_plural with var str do
     if var str matches /e$/ do
-        do regex using var str: /e$/, "", :i
+        do regex with var str: /e$/ -> "" :i
     done
     do return with var str
 done
@@ -3439,9 +3439,9 @@ define action replace_general_reflexive_pronoun with var text, var person do
         set var better_pronoun to "sich"
     done
 
-    do regex using var text: /\svar general_pronoun$/, " var better_pronoun", :global:i
-    do regex using var text: /^var general_pronoun\s/, "var better_pronoun ", :global:i
-    do regex using var text: /^var general_pronoun$/, "var better_pronoun", :global:i
+    do regex with var text: /\svar general_pronoun$/ -> " var better_pronoun" :global:i
+    do regex with var text: /^var general_pronoun\s/ -> "var better_pronoun " :global:i
+    do regex with var text: /^var general_pronoun$/ -> "var better_pronoun" :global:i
 
     do return with var text
 done
@@ -3451,37 +3451,37 @@ define action compute_output with var output do
         do return with var output
     done
 
-    do regex using var output: /in dem/, "im", :global:i
-    do regex using var output: /an dem/, "am", :global:i
+    do regex with var output: /in dem/ -> "im" :global:i
+    do regex with var output: /an dem/ -> "am" :global:i
     
-    do regex using var output: /^(.*?) _(wie|wer|was|wo|wann|warum|wieso|weshalb)_(.*?)$/, "$1 $0 $2", :global:i
+    do regex with var output: /^(.*?) _(wie|wer|was|wo|wann|warum|wieso|weshalb)_(.*?)$/ -> "$1 $0 $2" :global:i
 
-    do regex using var output: / [&] /, " und ", :global:i
+    do regex with var output: / [&] / -> " und " :global:i
     
     if var output matches /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/ do
         set new var result to $0 * $1
-        do regex using var output: /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/, " var result ", :i
+        do regex with var output: /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/ -> " var result " :i
     done
     if var output matches /\s(<[0-9]>+?)<[\/]>(<[0-9]>+?)\s/ do
         set new var result to $0 / $1
-        do regex using var output: /\s(<[0-9]>+?)<[\/]>(<[0-9]>+?)\s/, " var result ", :i
+        do regex with var output: /\s(<[0-9]>+?)<[\/]>(<[0-9]>+?)\s/ -> " var result " :i
     done
     if var output matches /\s(<[0-9]>+?)<[+]>(<[0-9]>+?)\s/ do
         set new var result to $0 + $1
-        do regex using var output: /\s(<[0-9]>+?)<[+]>(<[0-9]>+?)\s/, " var result ", :i
+        do regex with var output: /\s(<[0-9]>+?)<[+]>(<[0-9]>+?)\s/ -> " var result " :i
     done
     if var output matches /\s(<[0-9]>+?)<[-]>(<[0-9]>+?)\s/ do
         set new var result to $0 - $1
-        do regex using var output: /\s(<[0-9]>+?)<[-]>(<[0-9]>+?)\s/, " var result ", :i
+        do regex with var output: /\s(<[0-9]>+?)<[-]>(<[0-9]>+?)\s/ -> " var result " :i
     done
 
-    do regex using var output: /f=>/, "", :global:i
-    do regex using var output: /!=>/, "", :global:i
+    do regex with var output: /f=>/ -> "" :global:i
+    do regex with var output: /!=>/ -> "" :global:i
     if var output matches /q=>/ do
-        do regex using var output: /q=>/, "", :global:i
+        do regex with var output: /q=>/ -> "" :global:i
         set var output to var output concat "?"
     done
-    do regex using var output: /=>/, "", :global:i
+    do regex with var output: /=>/ -> "" :global:i
     
     if var output matches /\$\$username\$\$/ do
         print new line
@@ -3522,7 +3522,7 @@ define action compute_output with var output do
         print new line
 
         if var username do
-            do regex using var output: /\$\$username\$\$/, "var username", :global:i
+            do regex with var output: /\$\$username\$\$/ -> "var username" :global:i
         done
     done
 
@@ -3599,58 +3599,58 @@ define action compute_output with var output do
         print new line
 
         if var username do
-            do regex using var output: /\$\$unknownproperty\$\$/, "var username", :global:i
+            do regex with var output: /\$\$unknownproperty\$\$/ -> "var username" :global:i
         done
         else do
-            do regex using var output: /\$\$unknownproperty\$\$/, "etwas", :global:i
+            do regex with var output: /\$\$unknownproperty\$\$/ -> "etwas" :global:i
         done
     done
 
     set new var random_number to rand using items of array builtin_male_names
     set new var name to from array builtin_male_names item [ var random_number ]
 
-    do regex using var output: /\$\$randomname\$\$/, "var name", :global:i
+    do regex with var output: /\$\$randomname\$\$/ -> "var name" :global:i
     if not var output matches /......./ do
-        do regex using var output: /<[*]>/, "var name", :global:i
+        do regex with var output: /<[*]>/ -> "var name" :global:i
     done
-    do regex using var output: /<[*]>/, "", :global:i
+    do regex with var output: /<[*]>/ -> "" :global:i
 
-    do regex using var output: / von den /, " der ", :global:i
-    do regex using var output: / von dem /, " des ", :global:i
+    do regex with var output: / von den / -> " der " :global:i
+    do regex with var output: / von dem / -> " des " :global:i
     
-    do regex using var output: /\/must/, "", :global:i
-    do regex using var output: /\/may/, "", :global:i
-    do regex using var output: /\/can/, "", :global:i
-    do regex using var output: /\/want/, "", :global:i
-    do regex using var output: /\/should/, "", :global:i
+    do regex with var output: /\/must/ -> "" :global:i
+    do regex with var output: /\/may/ -> "" :global:i
+    do regex with var output: /\/can/ -> "" :global:i
+    do regex with var output: /\/want/ -> "" :global:i
+    do regex with var output: /\/should/ -> "" :global:i
     
-    do regex using var output: / nicht (noch|sicher) /, " $0 nicht ", :global:i
-    do regex using var output: /(etwas|nichts) (schon|noch)/, "$1 $0", :global:i
+    do regex with var output: / nicht (noch|sicher) / -> " $0 nicht " :global:i
+    do regex with var output: /(etwas|nichts) (schon|noch)/ -> "$1 $0" :global:i
 
-    do regex using var output: /<[{]><[{]><[{]>.*?<[}]><[}]><[}]>/, "", :global:i
+    do regex with var output: /<[{]><[{]><[{]>.*?<[}]><[}]><[}]>/ -> "" :global:i
 
-    do regex using var output: / in jahre_/, " im Jahre ", :global:i
-    do regex using var output: / in_jahre_/, " im Jahre ", :global:i
+    do regex with var output: / in jahre_/ -> " im Jahre " :global:i
+    do regex with var output: / in_jahre_/ -> " im Jahre " :global:i
 
     set new array _clauses to split using /<[,]>/, var output
     for each new var _clause in array _clauses is rw do
         # var _clause matches /\sein/ and 
         if lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ and lc(var _clause) matches /(^|\s)(ein.?.?)(\s|$)/ do
-            do regex using var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/, "$1", :global:i
-            do regex using var _clause: /\sein(.?.?.?)\s/, " kein$0 ", :global:i
-            do regex using var _clause: /\sein(.?.?.?)$/, " kein$0", :global:i
-            do regex using var _clause: /(^|\s)etwas(\s|$)/, "$0nichts$1", :global:i
+            do regex with var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ -> "$1" :global:i
+            do regex with var _clause: /\sein(.?.?.?)\s/ -> " kein$0 " :global:i
+            do regex with var _clause: /\sein(.?.?.?)$/ -> " kein$0" :global:i
+            do regex with var _clause: /(^|\s)etwas(\s|$)/ -> "$0nichts$1" :global:i
         done
     done
     set var output to join using ", ", items of array _clauses
 
-    do regex using var output: /_/, " ", :global:i
+    do regex with var output: /_/ -> " " :global:i
     # Time From <-> time from
-    do regex using var output: /time(<[\s]>|<[_]>|<[-]>)from(<[\s]>|<[_]>|<[-]>)/, "time from ", :global:i
-    do regex using var output: /time from\s+/, "time from ", :global:i
+    do regex with var output: /time(<[\s]>|<[_]>|<[-]>)from(<[\s]>|<[_]>|<[-]>)/ -> "time from " :global:i
+    do regex with var output: /time from\s+/ -> "time from " :global:i
     # Time To   <-> time to
-    do regex using var output: /time(<[\s]>|<[_]>|<[-]>)to(<[\s]>|<[_]>|<[-]>)/, "time to ", :global:i
-    do regex using var output: /time to\s+/, "time to ", :global:i
+    do regex with var output: /time(<[\s]>|<[_]>|<[-]>)to(<[\s]>|<[_]>|<[-]>)/ -> "time to " :global:i
+    do regex with var output: /time to\s+/ -> "time to " :global:i
 
     set new var time_now to time without arguments
     set new var time_begin to time without arguments
@@ -3760,17 +3760,17 @@ define action compute_output with var output do
     done
     
     
-    do regex using var output: /\$\$time\$\$/, "var hour:var min:var sec", :global:i
-    do regex using var output: /\$\$wday\$\$/, "var weekday", :global:i
-    do regex using var output: /\$\$mday\$\$/, "var mday", :global:i
-    do regex using var output: /\$\$month\$\$/, "var monthname", :global:i
-    do regex using var output: /\$\$year\$\$/, "var year", :global:i
-    do regex using var output: / das datum (\$\$date\$\$)/, " $0", :global:i
-    do regex using var output: /\$\$date\$\$/, "var weekday, den var mday.var mon.var year", :global:i
+    do regex with var output: /\$\$time\$\$/ -> "var hour:var min:var sec" :global:i
+    do regex with var output: /\$\$wday\$\$/ -> "var weekday" :global:i
+    do regex with var output: /\$\$mday\$\$/ -> "var mday" :global:i
+    do regex with var output: /\$\$month\$\$/ -> "var monthname" :global:i
+    do regex with var output: /\$\$year\$\$/ -> "var year" :global:i
+    do regex with var output: / das datum (\$\$date\$\$)/ -> " $0" :global:i
+    do regex with var output: /\$\$date\$\$/ -> "var weekday, den var mday.var mon.var year" :global:i
 
-    do regex using var output: /array\(.*?\)/, "", :global:i
+    do regex with var output: /array\(.*?\)/ -> "" :global:i
     
-    do regex using var output: /<[~]>time.*/, "", :global:i
+    do regex with var output: /<[~]>time.*/ -> "" :global:i
     
     
     if var time_end + 24*60*60 is var time_begin do
@@ -3788,8 +3788,8 @@ define action compute_output with var output do
             if var hour or var min or var sec do
                 set var replacement to var replacement concat ' um ' concat var hour concat ':' concat var min
             done
-            do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement", :global:i
-            do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "", :global:i
+            do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement" :global:i
+            do regex with var output: /time to (<[0-9]>+?)(\s|$)/ -> "" :global:i
         done
     done
     else do
@@ -3802,7 +3802,7 @@ define action compute_output with var output do
             else if var hour or var min or var sec do
                 set var replacement to var replacement concat ' von ' concat var hour concat ':' concat var min
             done
-            do regex using var output: /time from (<[0-9]>+?)(\s|$)/, "var replacement ", :global:i
+            do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement " :global:i
         done
         
         set new array date_time_array to items-returning localtime with var time_end
@@ -3844,20 +3844,20 @@ define action compute_output with var output do
             else if var hour or var min or var sec do
                 set var replacement to var replacement concat ' bis ' concat var hour concat ':' concat var min
             done
-            do regex using var output: /time to (<[0-9]>+?)(\s|$)/, "var replacement ", :global:i
+            do regex with var output: /time to (<[0-9]>+?)(\s|$)/ -> "var replacement " :global:i
         done
     done
     
-    do regex using var output: /nothing/, "nichts", :global:i
-    do regex using var output: /NULL/, "", :global:i
-    do regex using var output: /<[;]>/, " ", :global:i
-    #do regex using var output: / = /, " bedeutet ", :global:i
-    do regex using var output: /_/, " ", :global:i
-    do regex using var output: /\s+/, " ", :global:i
-    do regex using var output: /\s+<[,]>/, ",", :global:i
-    do regex using var output: /\s\s/, " ", :global:i
-    do regex using var output: /^\s/, "", :global:i
-    do regex using var output: /\s$/, "", :global:i
+    do regex with var output: /nothing/ -> "nichts" :global:i
+    do regex with var output: /NULL/ -> "" :global:i
+    do regex with var output: /<[;]>/ -> " " :global:i
+    #do regex with var output: / = / -> " bedeutet " :global:i
+    do regex with var output: /_/ -> " " :global:i
+    do regex with var output: /\s+/ -> " " :global:i
+    do regex with var output: /\s+<[,]>/ -> "," :global:i
+    do regex with var output: /\s\s/ -> " " :global:i
+    do regex with var output: /^\s/ -> "" :global:i
+    do regex with var output: /\s$/ -> "" :global:i
     set var output to ucfirst with var output
 
     if not var output matches /<[?!]>/ do
@@ -3875,20 +3875,20 @@ define action check_for_as_well_as with var text, var adverbs, var lang, var pat
     set new flag negative to 0
     if var adverbs matches /nicht/ do
         set flag negative to 1
-        do regex using var text: /(^|\s)nicht(\s|$)/, " ", :i
-        do regex using var text: /\s+/, " ", :i
+        do regex with var text: /(^|\s)nicht(\s|$)/ -> " " :i
+        do regex with var text: /\s+/ -> " " :i
     done
 
     if var text matches /\$\$aswellas\$\$/ and flag negative is false do
         set var text to "sowohl " concat var text
-        do regex using var text: /\$\$aswellas\$\$/, " als auch ", :i
-        do regex using var text: /\s+/, " ", :i
+        do regex with var text: /\$\$aswellas\$\$/ -> " als auch " :i
+        do regex with var text: /\s+/ -> " " :i
     done
     if var text matches /\$\$(notaswellas)\$\$/ or ( var text matches /\$\$aswellas\$\$/ and flag negative is true ) do
         set var text to "weder " concat var text
-        do regex using var text: /\$\$(notaswellas)\$\$/, " noch ", :i
-        do regex using var text: /\$\$(aswellas)\$\$/, " noch ", :i
-        do regex using var text: /\s+/, " ", :i
+        do regex with var text: /\$\$(notaswellas)\$\$/ -> " noch " :i
+        do regex with var text: /\$\$(aswellas)\$\$/ -> " noch " :i
+        do regex with var text: /\s+/ -> " " :i
     done
     do return with var text
 done
@@ -3940,16 +3940,16 @@ define action toggle_verbs with array verbs, array entities do
                 set new var _other to $2
                 if var verb matches /var _first$/ do
                     set new var _verb to var verb
-                    do regex using var verb: /var _first$/, "var _second", :global:i
+                    do regex with var verb: /var _first$/ -> "var _second" :global:i
                     set var verb to var verb concat "|" concat var _first concat "|" concat var _other
-                    do regex using var verb: /<[,]>/, "|", :global:i
+                    do regex with var verb: /<[,]>/ -> "|" :global:i
                     go to last
                 done
                 if var verb matches /var _second$/ do
                     set new var _verb to var verb
-                    do regex using var verb: /var _second$/, "var _first", :global:i
+                    do regex with var verb: /var _second$/ -> "var _first" :global:i
                     set var verb to var verb concat "|" concat var _second concat "|" concat var _other
-                    do regex using var verb: /<[,]>/, "|", :global:i
+                    do regex with var verb: /<[,]>/ -> "|" :global:i
                     go to last
                 done
             done
@@ -3958,33 +3958,33 @@ define action toggle_verbs with array verbs, array entities do
         if var _verb not matches var verb do
         done
         else if var verb matches /(<[gdm]>)elst$/ do
-            do regex using var verb: /(<[gdm]>)elst$/, "$0le", :global:i
+            do regex with var verb: /(<[gdm]>)elst$/ -> "$0le" :global:i
         done
         else if var verb matches /(<[gdm]>)le$/ do
-            do regex using var verb: /(<[gdm]>)le$/, "$0elst", :global:i
+            do regex with var verb: /(<[gdm]>)le$/ -> "$0elst" :global:i
         done
         else if var verb matches /test$/ do
-            do regex using var verb: /test$/, "te", :global:i
+            do regex with var verb: /test$/ -> "te" :global:i
         done
         else if var verb matches /te$/ do
-            do regex using var verb: /te$/, "test", :global:i
+            do regex with var verb: /te$/ -> "test" :global:i
         done
         else if var verb matches /sst$/ do
-            do regex using var verb: /sst$/, "sse", :global:i
+            do regex with var verb: /sst$/ -> "sse" :global:i
         done
         else if var verb matches /est$/ do
-            do regex using var verb: /est$/, "e", :global:i
+            do regex with var verb: /est$/ -> "e" :global:i
         done
         else if var verb matches /st$/ do
-            do regex using var verb: /st$/, "e", :global:i
+            do regex with var verb: /st$/ -> "e" :global:i
         done
         else if var verb matches /<[td]>e$/ do
-            do regex using var verb: /<[td]>e$/, "<[td]>est", :global:i
+            do regex with var verb: /<[td]>e$/ -> "<[td]>est" :global:i
         done
         else if var verb matches /e$/ do
-            do regex using var verb: /e$/, "st", :global:i
+            do regex with var verb: /e$/ -> "st" :global:i
         done
-        do regex using var verb: /sss/, "ss", :global:i
+        do regex with var verb: /sss/ -> "ss" :global:i
         set from array verb_array 1st item to var verb
     done
     do return with array verbs
@@ -3994,34 +3994,34 @@ define action toggle_entities with array entities do
     for each new array entity_array in array entities is rw do
         set new var entity to from array entity_array 1st item
         if lc(var entity) matches /(^|\s)mir($|\s)/ do
-            do regex using var entity: /(^|\s)mir($|\s)/, "${1}dir$2", :global:i
+            do regex with var entity: /(^|\s)mir($|\s)/ -> "${1}dir$2" :global:i
         done
         else if lc(var entity) matches /(^|\s)dir($|\s)/ do
-            do regex using var entity: /(^|\s)dir($|\s)/, "${1}mir$2", :global:i
+            do regex with var entity: /(^|\s)dir($|\s)/ -> "${1}mir$2" :global:i
         done
         else if lc(var entity) matches /(^|\s)mich($|\s)/ do
-            do regex using var entity: /(^|\s)mich($|\s)/, "${1}dich$2", :global:i
+            do regex with var entity: /(^|\s)mich($|\s)/ -> "${1}dich$2" :global:i
         done
         else if lc(var entity) matches /(^|\s)dich($|\s)/ do
-            do regex using var entity: /(^|\s)dich($|\s)/, "${1}mich$2", :global:i
+            do regex with var entity: /(^|\s)dich($|\s)/ -> "${1}mich$2" :global:i
         done
         else if lc(var entity) matches /(^|\s)ich($|\s)/ do
-            do regex using var entity: /(^|\s)ich($|\s)/, "${1}du$2", :global:i
+            do regex with var entity: /(^|\s)ich($|\s)/ -> "${1}du$2" :global:i
         done
         else if lc(var entity) matches /(^|\s)du($|\s)/ do
-            do regex using var entity: /(^|\s)du($|\s)/, "${1}ich$2", :global:i
+            do regex with var entity: /(^|\s)du($|\s)/ -> "${1}ich$2" :global:i
         done
         else if   (var entity) matches /(^|\s|<[_]>)mein/ do
-            do regex using var entity: /(^|\s|<[_]>)mein/, "${1}dein", :global:i
+            do regex with var entity: /(^|\s|<[_]>)mein/ -> "${1}dein" :global:i
         done
         else if   (var entity) matches /(^|\s|<[_]>)dein/ do
-            do regex using var entity: /(^|\s|<[_]>)dein/, "${1}mein", :global:i
+            do regex with var entity: /(^|\s|<[_]>)dein/ -> "${1}mein" :global:i
         done
         else if lc(var entity) matches /(^|<[_]>)mein/ and not lc(var entity) matches /meinung/ do
-            do regex using var entity: /(^|<[_]>)mein/, "${1}dein", :global:i
+            do regex with var entity: /(^|<[_]>)mein/ -> "${1}dein" :global:i
         done
         else if lc(var entity) matches /(^|<[_]>)dein/ do
-            do regex using var entity: /(^|<[_]>)dein/, "${1}mein", :global:i
+            do regex with var entity: /(^|<[_]>)dein/ -> "${1}mein" :global:i
         done
         
         set from array entity_array 1st item to var entity
@@ -4032,18 +4032,18 @@ done
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
     if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] ) do
         if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
         done
         else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/, "\$\$notaswellas\$\$", :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
         done
         else if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
         done
         else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/, "kein$0", :global:i
-            do regex using from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/, "kein$0 ", :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
+            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
         done
         else do
             set from array result item [ var number_of_clause ] item [ 3  + (7*var number_of_subclause) ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (7*var number_of_subclause) ]
@@ -4062,26 +4062,26 @@ define action stem_nouns with array phrases do
             # CODE
 
             if var noun matches /^\(a\)$/ do
-                do regex using var noun: /^\(a\)$/, "*", :global:i
+                do regex with var noun: /^\(a\)$/ -> "*" :global:i
             done
             if not var noun matches /....../ do
                 if var noun matches /^ein.?.?$/ do
-                    do regex using var noun: /^ein.?.?$/, "*", :global:i
+                    do regex with var noun: /^ein.?.?$/ -> "*" :global:i
                 done
                 if var noun matches /^ein.?.?$/ do
-                    do regex using var noun: /ein.?.?$/, "ei*", :global:i
+                    do regex with var noun: /ein.?.?$/ -> "ei*" :global:i
                 done
                 if var noun matches /^ein$/ do
-                    do regex using var noun: /ein$/, "*", :global:i
+                    do regex with var noun: /ein$/ -> "*" :global:i
                 done
             done
             if var noun matches /^(der|die|das|den|dem|des)$/ and not items of array words is 1 do
-                #do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
+                #do regex with var noun: /^(der|die|das|den|dem|des)$/ -> "*" :global:i
                 if items of array words > 2 do
-                    do regex using var noun: /^(der|die|das|den|dem|des)$/, "*", :global:i
+                    do regex with var noun: /^(der|die|das|den|dem|des)$/ -> "*" :global:i
                 done
                 else do
-                    do regex using var noun: /^(der|die|das|den|dem|des)$/, "", :global:i
+                    do regex with var noun: /^(der|die|das|den|dem|des)$/ -> "" :global:i
                 done
                 go to next
             done
@@ -4121,61 +4121,61 @@ define action stem_nouns with array phrases do
                 go to next
             done
             if var noun matches /ern$/ and var noun not matches /<[yt]>ern$/ do
-                do regex using var noun: /ern$/, "er*", :global:i
+                do regex with var noun: /ern$/ -> "er*" :global:i
             done
             if length(var noun) > 8 and var noun matches /[c][hkg]e$/ do
-                do regex using var noun: /e$/, "e*", :global:i
+                do regex with var noun: /e$/ -> "e*" :global:i
             done
             if var noun matches /ger$/ do
-                do regex using var noun: /ger$/, "ge*", :global:i
+                do regex with var noun: /ger$/ -> "ge*" :global:i
             done
             #if var noun matches /e<[mnrs]>$/ do
-            #    do regex using var noun: /e<[mnrs]>$/, "e*", :global:i
+            #    do regex with var noun: /e<[mnrs]>$/ -> "e*" :global:i
             #done
             #if var noun matches /e$/ do
-            #    do regex using var noun: /e$/, "*", :global:i
+            #    do regex with var noun: /e$/ -> "*" :global:i
             #done
             #if var noun matches /<[bdfghklmnrt]>s$/ do
-            #    do regex using var noun: /s$/, "*", :global:i
+            #    do regex with var noun: /s$/ -> "*" :global:i
             #done
             if length(var noun) > 8 do
                 if var noun matches /est$/ do
-                    do regex using var noun: /est$/, "*", :global:i
+                    do regex with var noun: /est$/ -> "*" :global:i
                 done
             done
             #if var noun matches /e<[nr]>$/ do
-            #    do regex using var noun: /e<[nr]>$/, "e*", :global:i
+            #    do regex with var noun: /e<[nr]>$/ -> "e*" :global:i
             #done
             #if var noun matches /<[bdfghklmnt]>st$/ do
             #    if length(var noun) > 5 do
-            #        do regex using var noun: /st$/, "*", :global:i
+            #        do regex with var noun: /st$/ -> "*" :global:i
             #    done
             #done
             #if var noun matches /.....(end|ung)$/ do
-            #    do regex using var noun: /(end|ung)$/, "*", :global:i
+            #    do regex with var noun: /(end|ung)$/ -> "*" :global:i
             #    
             #    #if var noun matches /ig$/ and not var noun matches /eig$/ do
-            #    #    do regex using var noun: /ig$/, "*", :global:i
+            #    #    do regex with var noun: /ig$/ -> "*" :global:i
             #    #done
             #done
             #if var noun matches /....(ig|ik|isch)$/ and not var noun matches /e(ig|ik|isch)$/ do
-            #    do regex using var noun: /(ig|ik|isch)$/, "*", :global:i
+            #    do regex with var noun: /(ig|ik|isch)$/ -> "*" :global:i
             #done
             if var noun matches /(lich|heit)$/ do
-                do regex using var noun: /(lich|heit)$/, "*", :global:i
+                do regex with var noun: /(lich|heit)$/ -> "*" :global:i
             done
             if var noun matches /(lich|ig)?keit$/ do
-                do regex using var noun: /(lich|ig)?keit$/, "*", :global:i
+                do regex with var noun: /(lich|ig)?keit$/ -> "*" :global:i
             done
         done
         set var phrase to join using " ", items of array words
         
-        do regex using var phrase: /<[*]>\s/, "*", :global
-        do regex using var phrase: /\s<[*]>/, "*", :global
-        do regex using var phrase: /\$<[*]>/, "\$ *", :global
-        do regex using var phrase: /^\s+/, "", :global
-        do regex using var phrase: /\s+<[|]>/, "|", :global
-        do regex using var phrase: /\s+$/, "", :global
+        do regex with var phrase: /<[*]>\s/ -> "*" :global
+        do regex with var phrase: /\s<[*]>/ -> "*" :global
+        do regex with var phrase: /\$<[*]>/ -> "\$ *" :global
+        do regex with var phrase: /^\s+/ -> "" :global
+        do regex with var phrase: /\s+<[|]>/ -> "|" :global
+        do regex with var phrase: /\s+$/ -> "" :global
     done
     
     do return with array phrases
@@ -4184,67 +4184,67 @@ done
 define action check_for_math with var input do
     set new var math to var input
     
-    do regex using var math: /dreizehn/, "13", :global:i
-    do regex using var math: /vierzehn/, "14", :global:i
-    do regex using var math: /fuenfzehn/, "15", :global:i
-    do regex using var math: /sechzehn/, "16", :global:i
-    do regex using var math: /siebzehn/, "17", :global:i
-    do regex using var math: /achtzehn/, "18", :global:i
-    do regex using var math: /neunzehn/, "19", :global:i
-    do regex using var math: /zwanzig/, "20", :global:i
-    do regex using var math: /hundert/, "100", :global:i
-    do regex using var math: /tausend/, "1000", :global:i
-    do regex using var math: /eins/, "1", :global:i
-    do regex using var math: /zwei/, "2", :global:i
-    do regex using var math: /drei/, "3", :global:i
-    do regex using var math: /vier/, "4", :global:i
-    do regex using var math: /fuenf/, "5", :global:i
-    do regex using var math: /sechs/, "6", :global:i
-    do regex using var math: /sieben/, "7", :global:i
-    do regex using var math: /acht/, "8", :global:i
-    do regex using var math: /neun/, "9", :global:i
-    do regex using var math: /zehn/, "10", :global:i
-    do regex using var math: /elf/, "11", :global:i
-    do regex using var math: /zwoelf/, "12", :global:i
+    do regex with var math: /dreizehn/ -> "13" :global:i
+    do regex with var math: /vierzehn/ -> "14" :global:i
+    do regex with var math: /fuenfzehn/ -> "15" :global:i
+    do regex with var math: /sechzehn/ -> "16" :global:i
+    do regex with var math: /siebzehn/ -> "17" :global:i
+    do regex with var math: /achtzehn/ -> "18" :global:i
+    do regex with var math: /neunzehn/ -> "19" :global:i
+    do regex with var math: /zwanzig/ -> "20" :global:i
+    do regex with var math: /hundert/ -> "100" :global:i
+    do regex with var math: /tausend/ -> "1000" :global:i
+    do regex with var math: /eins/ -> "1" :global:i
+    do regex with var math: /zwei/ -> "2" :global:i
+    do regex with var math: /drei/ -> "3" :global:i
+    do regex with var math: /vier/ -> "4" :global:i
+    do regex with var math: /fuenf/ -> "5" :global:i
+    do regex with var math: /sechs/ -> "6" :global:i
+    do regex with var math: /sieben/ -> "7" :global:i
+    do regex with var math: /acht/ -> "8" :global:i
+    do regex with var math: /neun/ -> "9" :global:i
+    do regex with var math: /zehn/ -> "10" :global:i
+    do regex with var math: /elf/ -> "11" :global:i
+    do regex with var math: /zwoelf/ -> "12" :global:i
     
-    do regex using var math: /<[=?!._]>/, "", :global:i
-    do regex using var math: /hoch/, "**", :global:i
-    do regex using var math: /\^/, "**", :global:i
-    do regex using var math: /wie/, "", :global:i
-    do regex using var math: /viel/, "", :global:i
-    do regex using var math: /was/, "", :global:i
-    do regex using var math: /jahre/, "", :global:i
-    do regex using var math: /ISUNKNOWN/, "", :global:i
-    do regex using var math: /ergebnis/, "", :global:i
-    do regex using var math: /von/, "", :global:i
-    do regex using var math: /ist/, "", :global:i
-    do regex using var math: /sind/, "", :global:i
-    do regex using var math: /what/, "", :global:i
-    do regex using var math: /is/, "", :global:i
-    do regex using var math: /does/, "", :global:i
-    do regex using var math: /makes/, "", :global:i
-    do regex using var math: /ergibt/, "", :global:i
-    do regex using var math: /gibt/, "", :global:i
-    do regex using var math: /aus/, " ", :global:i
-    do regex using var math: /jahre/, " ", :global:i
-    do regex using var math: /sich/, " ", :global:i
-    do regex using var math: /der|die|das/, " ", :global:i
-    do regex using var math: / plus /, "+", :global:i
-    do regex using var math: / und /, "+", :global:i
-    do regex using var math: / half of (\d+)/, "( $1 \/ 2 )", :global:i
-    do regex using var math: / minus /, "-", :global:i
-    do regex using var math: / weniger /, "-", :global:i
+    do regex with var math: /<[=?!._]>/ -> "" :global:i
+    do regex with var math: /hoch/ -> "**" :global:i
+    do regex with var math: /\^/ -> "**" :global:i
+    do regex with var math: /wie/ -> "" :global:i
+    do regex with var math: /viel/ -> "" :global:i
+    do regex with var math: /was/ -> "" :global:i
+    do regex with var math: /jahre/ -> "" :global:i
+    do regex with var math: /ISUNKNOWN/ -> "" :global:i
+    do regex with var math: /ergebnis/ -> "" :global:i
+    do regex with var math: /von/ -> "" :global:i
+    do regex with var math: /ist/ -> "" :global:i
+    do regex with var math: /sind/ -> "" :global:i
+    do regex with var math: /what/ -> "" :global:i
+    do regex with var math: /is/ -> "" :global:i
+    do regex with var math: /does/ -> "" :global:i
+    do regex with var math: /makes/ -> "" :global:i
+    do regex with var math: /ergibt/ -> "" :global:i
+    do regex with var math: /gibt/ -> "" :global:i
+    do regex with var math: /aus/ -> " " :global:i
+    do regex with var math: /jahre/ -> " " :global:i
+    do regex with var math: /sich/ -> " " :global:i
+    do regex with var math: /der|die|das/ -> " " :global:i
+    do regex with var math: / plus / -> "+" :global:i
+    do regex with var math: / und / -> "+" :global:i
+    do regex with var math: / half of (\d+)/ -> "( $1 \/ 2 )" :global:i
+    do regex with var math: / minus / -> "-" :global:i
+    do regex with var math: / weniger / -> "-" :global:i
     set new var slash to "/"
-    do regex using var math: / geteilt durch /, "var slash", :global:i
-    do regex using var math: / dividiert durch /, "var slash", :global:i
-    do regex using var math: / durch /, "var slash", :global:i
-    do regex using var math: / mal /, "*", :global:i
-    do regex using var math: /in/, "", :global:i
-    do regex using var math: /x/, "*", :global:i
-    do regex using var math: /\s+/, "", :global:i
-    do regex using var math: /quadratwurzel/, "sqrt ", :global:i
-    do regex using var math: /wurzel/, "sqrt ", :global:i
-    do regex using var math: /<[,]>/, ".", :global:i
+    do regex with var math: / geteilt durch / -> "var slash" :global:i
+    do regex with var math: / dividiert durch / -> "var slash" :global:i
+    do regex with var math: / durch / -> "var slash" :global:i
+    do regex with var math: / mal / -> "*" :global:i
+    do regex with var math: /in/ -> "" :global:i
+    do regex with var math: /x/ -> "*" :global:i
+    do regex with var math: /\s+/ -> "" :global:i
+    do regex with var math: /quadratwurzel/ -> "sqrt " :global:i
+    do regex with var math: /wurzel/ -> "sqrt " :global:i
+    do regex with var math: /<[,]>/ -> "." :global:i
     set new var value to undef
     
     print "Checking for math expression: "
@@ -4256,7 +4256,7 @@ define action check_for_math with var input do
         if var math matches /(<[+\-*.\/]>|(sqrt)|(sin)|(cos)|(tan)|(cot))/ do
             print "Ok."
             print new line
-            do regex using var math: /(sin|cos|tan|cot)(<[\d]>+)/, "$1($2)", :global:i
+            do regex with var math: /(sin|cos|tan|cot)(<[\d]>+)/ -> "$1($2)" :global:i
             do eval with 'var value = ' concat var math concat ';'
             if defined(var value) do
                 do return with [ 0, "Das Ergebnis ist " concat var value concat "."  ]
@@ -4347,15 +4347,15 @@ define action greet with var user do
 done
 
 define action make_parsable with var input do
-    do regex using var input: / weil /, ", weil ", :global:i
-    do regex using var input: / dass /, ", dass ", :global:i
-    do regex using var input: / wenn /, ", wenn ", :global:i
-    do regex using var input: / falls /, ", falls ", :global:i
-    do regex using var input: / dann /, ", dann ", :global:i
-    do regex using var input: /<[,]>\s*?<[,]>/, ",", :global:i
-    do regex using var input: /<[,]>\s*?<[,]>/, ",", :global:i
-    do regex using var input: /<[,]>\s*?<[,]>/, ",", :global:i
-    do regex using var input: /<[,]>\s*?<[,]>/, ",", :global:i
+    do regex with var input: / weil / -> ", weil " :global:i
+    do regex with var input: / dass / -> ", dass " :global:i
+    do regex with var input: / wenn / -> ", wenn " :global:i
+    do regex with var input: / falls / -> ", falls " :global:i
+    do regex with var input: / dann / -> ", dann " :global:i
+    do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
+    do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
+    do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
+    do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
     
     do return with var input
 done
@@ -4374,7 +4374,7 @@ define action multiple_choices_verb with var verb do
 
     for each new var ending in array endings do
         set new var copied_verb to var verb
-        do regex using var verb: /var ending$/, "", :i
+        do regex with var verb: /var ending$/ -> "" :i
         if not var copied_verb matches var verb do
             go to last
         done
@@ -4447,7 +4447,7 @@ define action multiple_choices_verb with var verb do
         for each new var ending in array endings do
             push into array choices, var verb concat var ending
         done
-        do regex using var verb: /(<[gdm]>)l$/, "$0el"
+        do regex with var verb: /(<[gdm]>)l$/ -> "$0el"
         push into array choices, var verb
         for each new var ending in array endings do
             push into array choices, var verb concat var ending
@@ -4501,8 +4501,8 @@ define action modify_input with var input, var current_language, var path do
         done
         
         if var last_output do
-            do regex using var input: /(^|\s)dessen(\s|$)/, "$0$1", :global:i
-            do regex using var input: /(<[?!.]>|$)/, ", dass var last_output$0", :i
+            do regex with var input: /(^|\s)dessen(\s|$)/ -> "$0$1" :global:i
+            do regex with var input: /(<[?!.]>|$)/ -> ", dass var last_output$0" :i
         done
     done
     if var input matches /^weil/ do
@@ -4607,7 +4607,7 @@ define action use_bug_feature with array results, hash parsed do
             set var objects to var objects concat " "
             set var objects to var objects concat from array obj 1st item
         done
-        do regex using var objects: /^\s/, "", :global
+        do regex with var objects: /^\s/ -> "" :global
         
         if var objects matches /^\sein/ do
             push into array clause, 'k' concat var objects
@@ -4619,7 +4619,7 @@ define action use_bug_feature with array results, hash parsed do
         
         set var objects to lc with var objects
         set new var lastnoun to var objects
-        do regex using var lastnoun: /^.*?\s/, "", :global
+        do regex with var lastnoun: /^.*?\s/ -> "" :global
         if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var objects/ do
             if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var lastnoun/ do
                 push into array result, array clause
@@ -4767,7 +4767,7 @@ define action check_sentence_for_weather with var input do
     if lc(var input) matches /wetter in ([^\s]+(?:\san de.\s[^\s]+)?(?:\sin\s[^\s]+)?)/ do
         if $0 do
             set new var city to $0
-            do regex using var city: /an dem/, "am", :global
+            do regex with var city: /an dem/ -> "am" :global
             print "I have to check the weather for " concat var city
             print new line
             do return with var city
@@ -4787,7 +4787,7 @@ done
 
 define action check_for_weather with var place, var lang, var path do
     do chdir with var path
-    do regex using var place: /\s+/, "\\s", :global
+    do regex with var place: /\s+/ -> "\\s" :global
     do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather.txt http://www.wetter.com/suche/?search=" concat var place concat "&search_type_weather=1&search_type_site=1"
     
     set new var pro_file_name to "./lang_" concat var lang concat "/weather.pro"
@@ -4798,8 +4798,8 @@ define action check_for_weather with var place, var lang, var path do
     for each new var line from var search_results do
         if var line matches /["]search_result["]/ do
             set new var url to var line
-            do regex using var url: /^.*?http/, "http", :global
-            do regex using var url: /html.*?$/, "html", :global
+            do regex with var url: /^.*?http/ -> "http" :global
+            do regex with var url: /html.*?$/ -> "html" :global
             print var url
             print new line
             
@@ -4813,15 +4813,15 @@ define action check_for_weather with var place, var lang, var path do
             for each new var line from var city do
                 if var line matches /google_kw / do
                     print var line concat new line
-                    do regex using var line: /google_kw/, "", :global
-                    do regex using var line: /[<][^>]*?[>]/, "", :global
-                    do regex using var line: /[&].*/, "", :global
-                    do regex using var line: /<[^a-zA-Z0-9,\s]>/, "", :global:i
-                    do regex using var line: /^\s+/, "", :global:i
-                    do regex using var line: /\s+$/, "", :global:i
-                    do regex using var line: /,/, " in ", :global
+                    do regex with var line: /google_kw/ -> "" :global
+                    do regex with var line: /[<][^>]*?[>]/ -> "" :global
+                    do regex with var line: /[&].*/ -> "" :global
+                    do regex with var line: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+                    do regex with var line: /^\s+/ -> "" :global:i
+                    do regex with var line: /\s+$/ -> "" :global:i
+                    do regex with var line: /,/ -> " in " :global
                     set new var unwanted_chars to '="'
-                    do regex using var line: /<[var unwanted_chars]>/, "", :global
+                    do regex with var line: /<[var unwanted_chars]>/ -> "" :global
                     print var line concat new line
                     if var line do
                         set var name to var line
@@ -4830,10 +4830,10 @@ define action check_for_weather with var place, var lang, var path do
                 if var line matches /deg text_l temp_w/ do
                     set new array parts to split with /<.div>/, var line
                     set var line to from array parts 1st item
-                    do regex using var line: /[<][^>]*?[>]/, "", :global
-                    do regex using var line: /[&].*/, "", :global
-                    do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
-                    do regex using var line: /,/, " in ", :global
+                    do regex with var line: /[<][^>]*?[>]/ -> "" :global
+                    do regex with var line: /[&].*/ -> "" :global
+                    do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
+                    do regex with var line: /,/ -> " in " :global
                     if var line do
                         set var temperature to var line
                         
@@ -4844,10 +4844,10 @@ define action check_for_weather with var place, var lang, var path do
                 if var line matches /deg text_l temp_w/ do
                     set new array parts to split with /<.div>/, var line
                     set var line to from array parts 2nd item
-                    do regex using var line: /[<][^>]*?[>]/, "", :global
-                    do regex using var line: /[&].*/, "", :global
-                    do regex using var line: /[^a-zA-Z0-9,. ]/, "", :global:i
-                    do regex using var line: /,/, " in ", :global
+                    do regex with var line: /[<][^>]*?[>]/ -> "" :global
+                    do regex with var line: /[&].*/ -> "" :global
+                    do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
+                    do regex with var line: /,/ -> " in " :global
                     if var line do
                         set var weather to var line
                         
@@ -4882,12 +4882,12 @@ define action check_for_weather with var place, var lang, var path do
 done
 
 define action replace_he with var text, var replacement do
-    do regex using var text: /\s+?(er|ihn)\s+?/, " var replacement ", :global:i
+    do regex with var text: /\s+?(er|ihn)\s+?/ -> " var replacement " :global:i
     do return with var text
 done
 
 define action replace_she with var text, var replacement do
-    do regex using var text: /\s+?(sie)\s+?/, " var replacement ", :global:i
+    do regex with var text: /\s+?(sie)\s+?/ -> " var replacement " :global:i
     do return with var text
 done
 
@@ -4941,7 +4941,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     for each new var word in array words do
         if not from hash tags item { var word } do
             set new var word_to_check to var word
-            do regex using var word_to_check: /<[^a-zA-Z0-9-]>/, "", :global:i
+            do regex with var word_to_check: /<[^a-zA-Z0-9-]>/ -> "" :global:i
             set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
         done
         if from hash tags item { var word } 1st item matches /n/ and not from hash tags item { var word } 1st item matches /linking|question/ do
@@ -4989,11 +4989,11 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
                 go to next
             done
 
-            do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)<[,]>/, " $1$2 $0,", :global
-            do regex using var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)$/, " $1$2 $0", :global
+            do regex with var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)<[,]>/ -> " $1$2 $0," :global
+            do regex with var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)$/ -> " $1$2 $0" :global
             
             if var phrase not matches /<[?]>/ do
-                do regex using var phrase: /<[.]>/, "", :global
+                do regex with var phrase: /<[.]>/ -> "" :global
                 set var phrase to var phrase concat "."
             done
         done
@@ -5014,26 +5014,26 @@ define action to_verb_root_left with var verb, var lang, var path do
         if length(var verb) > 4 and var verb matches /<[aeiou]>/ do
             for each new var prefix in array verb_prefixes do
                 if var verb matches /^var prefix/ do
-                    do regex using var verb: /^var prefix/, "", :i
+                    do regex with var verb: /^var prefix/ -> "" :i
                     set var allprefix to var allprefix concat var prefix
                     go to last
                 done
             done
             
             if var verb matches /^ver/ and not var verb matches /^verge/ do
-                do regex using var verb: /^ver/, "", :i
+                do regex with var verb: /^ver/ -> "" :i
                 set var allprefix to var allprefix concat "ver"
             done
             if var verb matches /^ge/ and length(var verb) > 5 and not var verb matches /^gelt/ do
-                do regex using var verb: /^ge/, "", :i
+                do regex with var verb: /^ge/ -> "" :i
                 set var allprefix to var allprefix concat "ge"
             done
             if var verb matches /^be/ and length(var verb) > 6 and not var verb matches /^bei|ber/ do
-                do regex using var verb: /^be/, "", :i
+                do regex with var verb: /^be/ -> "" :i
                 set var allprefix to var allprefix concat "be"
             done
             if var verb matches /^zu/ do
-                do regex using var verb: /^zu/, "", :i
+                do regex with var verb: /^zu/ -> "" :i
                 set var allprefix to var allprefix concat "zu"
             done
         done
@@ -5046,34 +5046,34 @@ define action to_verb_root_right with var verb, var lang, var path do
     
     if var verb matches /e<[rl]>n$/ do
         if var verb matches /h/ do
-            do regex using var verb: /(<[rl]>)n$/, "$0", :global
+            do regex with var verb: /(<[rl]>)n$/ -> "$0" :global
         done
         else do
-            do regex using var verb: /(e<[rl]>)n$/, "$0", :global
+            do regex with var verb: /(e<[rl]>)n$/ -> "$0" :global
         done
     done
     
     else if var verb matches /eigen$/ do
-        do regex using var verb: /en$/, "", :global
+        do regex with var verb: /en$/ -> "" :global
     done
     else if var verb matches /igen$/ do
-        do regex using var verb: /igen$/, "", :global
+        do regex with var verb: /igen$/ -> "" :global
     done
     else if var verb matches /lichen$/ do
-        do regex using var verb: /lichen$/, "", :global
+        do regex with var verb: /lichen$/ -> "" :global
     done
     
     else if var verb matches /eien$/ do
-        do regex using var verb: /en$/, "", :global
+        do regex with var verb: /en$/ -> "" :global
     done
     else if var verb matches /ien$/ do
-        do regex using var verb: /n$/, "", :global
+        do regex with var verb: /n$/ -> "" :global
     done
     else if var verb matches /en$/ do
-        do regex using var verb: /en$/, "", :global
+        do regex with var verb: /en$/ -> "" :global
     done
     else if var verb matches /n$/ do
-        do regex using var verb: /n$/, "", :global
+        do regex with var verb: /n$/ -> "" :global
     done
     
     do return with var verb
@@ -5107,7 +5107,7 @@ define action to_verb_nucleus_right with var verb, var lang, var path do
 
     if var verb matches /h$/ do
         set flag has_h to 1
-        do regex using var verb: /h$/, "", :i
+        do regex with var verb: /h$/ -> "" :i
     done
     
     if var verb matches /(ei|au|eu|aeu|ou|ie|aa|ee|oo|uu|oeu|oe|ue|ae)$/ do
@@ -5125,7 +5125,7 @@ done
 
 define action to_verb_nucleus with var verb, var lang, var path do
     set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
-    do regex using var verb: /var postnucleus$/, "", :i
+    do regex with var verb: /var postnucleus$/ -> "" :i
     
     set var verb to to_verb_nucleus_right with var verb, var lang, var path
     
@@ -5138,13 +5138,13 @@ define action to_verb_prenucleus_right with var verb, var lang, var path do
 
     if var verb matches /h$/ do
         set flag has_h to 1
-        do regex using var verb: /h$/, "", :i
+        do regex with var verb: /h$/ -> "" :i
     done
     
     set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
-    do regex using var verb: /var postnucleus$/, "", :i
+    do regex with var verb: /var postnucleus$/ -> "" :i
     set new var nucleus to to_verb_nucleus with var verb, var lang, var path
-    do regex using var verb: /var nucleus$/, "", :i
+    do regex with var verb: /var nucleus$/ -> "" :i
     
     do return with var verb
 done
@@ -5162,12 +5162,12 @@ define action to_verb_postnucleus_right with var verb, var lang, var path do
 
     if var verb matches /(d)er$/ do
         set var postnucleus to "er" concat var postnucleus
-        do regex using var verb: /(d)er$/, "$0", :i
+        do regex with var verb: /(d)er$/ -> "$0" :i
     done
     
     while var verb matches /(<[bcdfghjklmnpqrstvwxyz]>)$/ do
         set var postnucleus to $0 concat var postnucleus
-        do regex using var verb: /$0$/, "", :i
+        do regex with var verb: /$0$/ -> "" :i
     done
     
     do return with var postnucleus
@@ -5714,7 +5714,7 @@ print var verb_participle concat new line
 done
 
 define action make_participle with var participle, var lang, var path do
-    do regex using var participle: /<[-]>/, "", :global
+    do regex with var participle: /<[-]>/ -> "" :global
     if not var participle matches /(t)$/ do
         set var participle to var participle concat "en"
     done

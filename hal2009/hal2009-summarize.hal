@@ -28,15 +28,15 @@ require source hal2009.hal
 
 
 define action prepare_text with var text, var lang, var path do
-    do regex using var text: /[?]+/, "?", :global
-    do regex using var text: /([?])/, "$0.", :global
-    do regex using var text: /[.!~]\s*?[.!~]/, "~", :global
-    do regex using var text: /[.!~]\s*?[.!~]/, "~", :global
-    do regex using var text: /<[.]>(\s|$)/, " STOP ", :global
-    do regex using var text: /(\d) STOP /, "$0. ", :global
-    do regex using var text: / STOP \((.*)\)/, " ($0) STOP . ", :global
+    do regex with var text: /[?]+/ -> "?" :global
+    do regex with var text: /([?])/ -> "$0." :global
+    do regex with var text: /[.!~]\s*?[.!~]/ -> "~" :global
+    do regex with var text: /[.!~]\s*?[.!~]/ -> "~" :global
+    do regex with var text: /<[.]>(\s|$)/ -> " STOP " :global
+    do regex with var text: /(\d) STOP / -> "$0. " :global
+    do regex with var text: / STOP \((.*)\)/ -> " ($0) STOP . " :global
 
-    do regex using var text: / und  /, " & ", :global
+    do regex with var text: / und  / -> " & " :global
 
     set new array lines to split with /\sSTOP\s/, var text
     set new array new_lines to an empty array
@@ -71,16 +71,16 @@ define action read_from_input_file_array with var lang, var path do
 done
 
 define action summarize_line with var input, hash tags, var lang, var path do
-    do regex using var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) /, "$0 _$1_ _no-question_ ", :global:i
-    do regex using var input: /<[?]>/, "", :global:i
-    do regex using var input: /<[,]>\s/, " KOMMA ", :global:i
-    do regex using var input: /(\D)<[.]>/, "${1} DOT ", :global:i
-    do regex using var input: /\s+/, " ", :global:i
+    do regex with var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) / -> "$0 _$1_ _no-question_ " :global:i
+    do regex with var input: /<[?]>/ -> "" :global:i
+    do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
+    do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
+    do regex with var input: /\s+/ -> " " :global:i
 
     set new flag has_questionword to 0
     if var input matches /<[?]>/ do
         set flag has_questionword to 1
-        do regex using var input: /<[?]>/, "", :global
+        do regex with var input: /<[?]>/ -> "" :global
     done
 
     set new array clauses_input to split with " KOMMA ", var input
@@ -177,12 +177,12 @@ define action summarize with var input, var file_output_nl, var file_output_pro,
                 set new var final_output to upper_case_correction with from array output_line 2nd item, hash tags, var lang, var path
 
                 if from hash parsed item { "has_questionword" } do
-                    do regex using var final_output: /<[.]>/, "", :global
+                    do regex with var final_output: /<[.]>/ -> "" :global
                     set var final_output to var final_output concat "?"
                 done
 
                 set new var output_list to handle for file name var file_output_pro, append
-                do regex using var saved_data: /<[~]>/, "\n", :global
+                do regex with var saved_data: /<[~]>/ -> "\n" :global
                 print into var output_list data var saved_data
                 print into var output_list data new line
                 do close with output_list

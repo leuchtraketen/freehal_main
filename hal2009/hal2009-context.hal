@@ -24,9 +24,9 @@ define action run_parser with var input, hash tags, var lang, var path do
     # Make input parsable
     # CODE
     set var input to make_parsable with var input
-    do regex using var input: /<[,]>\s/, " KOMMA ", :global:i
-    do regex using var input: /(\D)<[.]>/, "${1} DOT ", :global:i
-    do regex using var input: /\s+/, " ", :global:i
+    do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
+    do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
+    do regex with var input: /\s+/ -> " " :global:i
     print "Parsable sentence(s): "
     print var input
     print new line
@@ -194,9 +194,9 @@ define action decide_save_input with var input, var mode, var lang, var path do
 done
 
 define action use_mode with var input is copy, array facts_to_save, hash tags, var mode, var lang, var path do
-    do regex using var input: /(<[.!?]>)/, "", :global
+    do regex with var input: /(<[.!?]>)/ -> "" :global
     set new flag save_input to decide_save_input with var input, var mode, var lang, var path
-    do regex using var input: /^\/save /, "", :global:i
+    do regex with var input: /^\/save / -> "" :global:i
     
     # TEXT
     # --- WITHOUT LOGIC
