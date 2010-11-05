@@ -1,3 +1,7 @@
+1252:
+
+- Entfernen der alten englischen database.db, inzwischen gab es einige Aenderungen am Datenbankformat
+
 1240:
 
 - Aufteilung der Datei hal2009.hal in nach Programmteilen geordnete Einzeldateien
