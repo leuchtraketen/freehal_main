@@ -1,6 +1,7 @@
 1254:
 
 - Inkonsistenzen beim .pro-Format korrigiert
+- die Programmiersprache der .hal-Dateien wurde etwas veraendert und vereinfacht
 
 1252:
 
