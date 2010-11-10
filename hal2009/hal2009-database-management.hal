@@ -31,9 +31,9 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         set new var line to ''
         set new var truth to "(maybe)"
         
-        set new array verbs to from hash parsed item { 'verbs' }
+        set new array verbs to from hash parsed element { 'verbs' }
         for each new array verb in array verbs do
-            set var verb to from array verb 1st item
+            set var verb to from array verb 1st element
             
 print "verb: " concat var verb concat new line
 
@@ -54,104 +54,104 @@ print "verb: " concat var verb concat new line
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/beziehungen.pro'
             done
         done
-        set new array subjects to from hash parsed item { 'subjects' }
+        set new array subjects to from hash parsed element { 'subjects' }
         for each new array subject in array subjects do
-            set var subject to from array subject 1st item
+            set var subject to from array subject 1st element
         done
-        set new array objects to from hash parsed item { 'objects' }
-        set new array adverbs to from hash parsed item { 'adverbs' }
+        set new array objects to from hash parsed element { 'objects' }
+        set new array adverbs to from hash parsed element { 'adverbs' }
         set new flag clear_all_objects to 0
         for each new array object in array objects do
             if flag clear_all_objects do
                 set var object to ''
                 go to next
             done
-            if from array object 1st item matches /^(nicht|not)$/ do
+            if from array object 1st element matches /^(nicht|not)$/ do
                 set new array temp to an empty array
-                push into array temp, from array object 1st item
+                push into array temp, from array object 1st element
                 push into array adverbs, array temp
                 set var object to ''
                 go to next
             done
             
-            if from array object 1st item matches /^.?\(true\).?$/ do
+            if from array object 1st element matches /^.?\(true\).?$/ do
                 set var truth to "(true)"
                 set var object to ''
                 go to next
             done
-            if from array object 1st item matches /^.?\(maybe\).?$/ do
+            if from array object 1st element matches /^.?\(maybe\).?$/ do
                 set var truth to "(maybe)"
                 set var object to ''
                 go to next
             done
-            if from array object 1st item matches /^.?\(false\).?$/ do
+            if from array object 1st element matches /^.?\(false\).?$/ do
                 set var truth to "(false)"
                 set var object to ''
                 go to next
             done
             
-            if from array object 1st item matches /^.?\(bad\).?$/ do
+            if from array object 1st element matches /^.?\(bad\).?$/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
             done
-            if from array object 1st item matches /^.?\(good\).?$/ do
+            if from array object 1st element matches /^.?\(good\).?$/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-good.pro'
             done
             
-            set var object to from array object 1st item
+            set var object to from array object 1st element
             
-            if from array verbs 1st item matches "~~~" do
-                if from hash tags item { var object } and from hash sym_noun item { from hash tags item { var object } 1st item } do
+            if from array verbs 1st element matches "~~~" do
+                if from hash tags element { var object } and from hash sym_noun element { from hash tags element { var object } 1st element } do
                     set flag clear_all_objects to 1
                 done
             done
         done
         for each new array adverb in array adverbs do
-            if from array adverb 1st item matches /^.?\(true\).?$/ do
+            if from array adverb 1st element matches /^.?\(true\).?$/ do
                 set var truth to "(true)"
                 set var adverb to ''
                 go to next
             done
-            if from array adverb 1st item matches /^.?\(maybe\).?$/ do
+            if from array adverb 1st element matches /^.?\(maybe\).?$/ do
                 set var truth to "(maybe)"
                 set var adverb to ''
                 go to next
             done
-            if from array adverb 1st item matches /^.?\(false\).?$/ do
+            if from array adverb 1st element matches /^.?\(false\).?$/ do
                 set var truth to "(false)"
                 set var adverb to ''
                 go to next
             done
             
-            if from array adverb 1st item matches /^.?\(logic\).?$/ do
+            if from array adverb 1st element matches /^.?\(logic\).?$/ do
                 set var adverb to '(logic)'
                 go to next
             done
             
-            set var adverb to from array adverb 1st item
+            set var adverb to from array adverb 1st element
         done
         
         # TEXT
         # Replace ~~~ with =
         # CODE
-        if from array verbs 1st item matches "~~~" do
+        if from array verbs 1st element matches "~~~" do
             set from array verbs to an empty array
-            set from array verbs 1st item to "="
-            set from hash parsed item { 'verbs' } to array verbs
+            set from array verbs 1st element to "="
+            set from hash parsed element { 'verbs' } to array verbs
         done
         
         # TEXT
         # Delete all other verbs if there is a "="
         # CODE
-        if from array verbs 1st item matches "=" do
+        if from array verbs 1st element matches "=" do
             set from array verbs to an empty array
-            set from array verbs 1st item to "="
-            set from hash parsed item { 'verbs' } to array verbs
+            set from array verbs 1st element to "="
+            set from hash parsed element { 'verbs' } to array verbs
             
-            set new var objects to join using ' ', items of that array: from hash parsed item { 'objects' } end-items-of
-            set new var adverbs to join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
+            set new var objects to join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
+            set new var adverbs to join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
             if var objects do
                 if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
-                    set from hash parsed item { 'adverbs' } to an empty array
+                    set from hash parsed element { 'adverbs' } to an empty array
                 done
             done
             
@@ -160,31 +160,31 @@ print "verb: " concat var verb concat new line
             done
         done
 
-#        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
-        set var line to var line concat join using ' ', items of array verbs
+#        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
+        set var line to var line concat join using ' ', elements of array verbs
         set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'subjects' } end-items-of
+        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
         set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'objects' } end-items-of
+        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
         set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
+        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
         
-        if not from hash parsed item { 'clauses' } do
-            set from hash parsed item { 'clauses' } to an empty array
+        if not from hash parsed element { 'clauses' } do
+            set from hash parsed element { 'clauses' } to an empty array
             set new hash empty_clause to an empty hash
-            set from hash empty_clause item { 'verbs' } to an empty array
-            set from hash empty_clause item { 'subjects' } to an empty array
-            set from hash empty_clause item { 'objects' } to an empty array
-            set from hash empty_clause item { 'adverbs' } to an empty array
-            set from hash empty_clause item { 'questionword' } to an empty array
-            do push items of that array: from hash parsed item { 'clauses' } end-items-of, hash empty_clause
+            set from hash empty_clause element { 'verbs' } to an empty array
+            set from hash empty_clause element { 'subjects' } to an empty array
+            set from hash empty_clause element { 'objects' } to an empty array
+            set from hash empty_clause element { 'adverbs' } to an empty array
+            set from hash empty_clause element { 'questionword' } to an empty array
+            do push elements of that array: from hash parsed element { 'clauses' } end of elements, hash empty_clause
         done
         
-        if that array is empty: from hash parsed item { 'verbs' } end check and that array is empty: from hash parsed item { 'clauses' } end check do
+        if that array is empty: from hash parsed element { 'verbs' } end check and that array is empty: from hash parsed element { 'clauses' } end check do
             go to next
         done
         
-        set new array clauses to from hash parsed item { 'clauses' }
+        set new array clauses to from hash parsed element { 'clauses' }
         
         set new var number_of_clauses to 0
         for each new hash parsed in array clauses is rw do
@@ -199,9 +199,9 @@ print "verb: " concat var verb concat new line
                 set var line to var line concat ' <> '
             done
         
-            set new array verbs to from hash parsed item { 'verbs' }
+            set new array verbs to from hash parsed element { 'verbs' }
             for each new array verb in array verbs do
-                set var verb to from array verb 1st item
+                set var verb to from array verb 1st element
                 
                 do regex with var verb: /<[|]>.*/ -> "" :global:i
         
@@ -210,35 +210,35 @@ print "verb: " concat var verb concat new line
                     set var verb to var verb concat "/" concat var verb_category
                 done
             done
-            set new array subjects to from hash parsed item { 'subjects' }
+            set new array subjects to from hash parsed element { 'subjects' }
             for each new array subject in array subjects do
-                set var subject to from array subject 1st item
+                set var subject to from array subject 1st element
             done
-            set new array objects to from hash parsed item { 'objects' }
+            set new array objects to from hash parsed element { 'objects' }
             for each new array object in array objects do
-                set var object to from array object 1st item
+                set var object to from array object 1st element
             done
-            set new array adverbs to from hash parsed item { 'adverbs' }
+            set new array adverbs to from hash parsed element { 'adverbs' }
             for each new array adverb in array adverbs do
-                set var adverb to from array adverb 1st item
+                set var adverb to from array adverb 1st element
             done
-            if not from hash parsed item { 'questionword' } do
-                set from hash parsed item { 'questionword' } to an empty array
+            if not from hash parsed element { 'questionword' } do
+                set from hash parsed element { 'questionword' } to an empty array
             done
-            set new array questionwords to from hash parsed item { 'questionword' }
+            set new array questionwords to from hash parsed element { 'questionword' }
             for each new array questionword in array questionwords do
-                set var questionword to from array questionword 1st item
+                set var questionword to from array questionword 1st element
             done
             
-            set var line to var line concat join using ' ', items of that array: from hash parsed item { 'verbs' } end-items-of
+            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
             set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', items of that array: from hash parsed item { 'subjects' } end-items-of
+            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
             set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', items of that array: from hash parsed item { 'objects' } end-items-of
+            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
             set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', items of that array: from hash parsed item { 'adverbs' } end-items-of
+            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
             set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', items of that array: from hash parsed item { 'questionword' } end-items-of
+            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'questionword' } end of elements
             
             set var number_of_clauses to var number_of_clauses + 1
         done
@@ -249,7 +249,7 @@ print "verb: " concat var verb concat new line
     done
     
     set new var divisor to ' ~ '
-    set new var line to join with var divisor, items of array line_array
+    set new var line to join with var divisor, elements of array line_array
     
     do regex with var line: /\{\{\{questionword\}\}\}/ -> "" :global
 
@@ -293,12 +293,12 @@ define action update_list_of_pro_file with var file, var lang, var path do
         set new array output_array to phrase with var lang, var path, "default", array results, hash parsed
         
         for each new array output_line in array output_array do
-            if from array output_line 2nd item do
+            if from array output_line 2nd element do
                 set new var output_list to handle for file name var file_output, append
                 
                 set new hash tags to an empty hash
                 
-                set new var final_output to upper_case_correction with from array output_line 2nd item, hash tags, var lang, var path
+                set new var final_output to upper_case_correction with from array output_line 2nd element, hash tags, var lang, var path
                 print into var output_list data var final_output
                 print into var output_list data new line
                 
@@ -321,6 +321,9 @@ define action reread_pro_file with var file, var lang do
     set new var output_handle to handle for file name "_output__add_pro_file", write
     print into var output_handle data var file
     do close with var output_handle
+
+    do trigger_check_files without arguments
+
     do wait 2 seconds
 done
 
@@ -346,12 +349,12 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     do regex with var input: /\s+/ -> " " :global:i
     set new array clauses_input to split with " KOMMA ", var input
     set new hash parsed to an empty hash
-    set from hash parsed item { 'verbs' } to an empty array
-    set from hash parsed item { 'subjects' } to an empty array
-    set from hash parsed item { 'objects' } to an empty array
-    set from hash parsed item { 'clauses' } to an empty array
-    set from hash parsed item { 'adverbs' } to an empty array
-    set from hash parsed item { 'questionword' } to an empty array
+    set from hash parsed element { 'verbs' } to an empty array
+    set from hash parsed element { 'subjects' } to an empty array
+    set from hash parsed element { 'objects' } to an empty array
+    set from hash parsed element { 'clauses' } to an empty array
+    set from hash parsed element { 'adverbs' } to an empty array
+    set from hash parsed element { 'questionword' } to an empty array
     set new flag number_of_clause to 0
     set new hash tags to an empty hash
     for each new var clause in array clauses_input do
@@ -368,7 +371,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         # CODE
         for each new var word in array words is rw do
             do be_slow without arguments
-            set from hash tags item { var word } to compute_tags with var word, var lang, var path
+            set from hash tags element { var word } to compute_tags with var word, var lang, var path
         end for
         
         # TEXT
@@ -381,13 +384,13 @@ define action work_prot_line with var input, var file_name, var lang, var path d
                 set hash parsed to parse with var lang, array words, hash tags
             done
             set new array entities to an empty array
-            push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
-            push into array entities, items of that array: from hash parsed item { 'objects' } end items of
-            set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }, array entities
-            set from hash parsed item { 'subjects' } to toggle_entities using from hash parsed item { 'subjects' }
-            set from hash parsed item { 'objects' } to toggle_entities using from hash parsed item { 'objects' }
-            set from hash parsed item { 'adverbs' } to toggle_entities using from hash parsed item { 'adverbs' }
-            set from hash parsed item { 'clauses' } to an empty array
+            push into array entities, elements of that array: from hash parsed element { 'subjects' } end of elements
+            push into array entities, elements of that array: from hash parsed element { 'objects' } end of elements
+            set from hash parsed element { 'verbs' } to toggle_verbs using from hash parsed element { 'verbs' }, array entities
+            set from hash parsed element { 'subjects' } to toggle_entities using from hash parsed element { 'subjects' }
+            set from hash parsed element { 'objects' } to toggle_entities using from hash parsed element { 'objects' }
+            set from hash parsed element { 'adverbs' } to toggle_entities using from hash parsed element { 'adverbs' }
+            set from hash parsed element { 'clauses' } to an empty array
             
             set flag number_of_clause to 1
         done
@@ -398,17 +401,17 @@ define action work_prot_line with var input, var file_name, var lang, var path d
                 set hash parsed_clause to parse with var lang, array words, hash tags
             done
             set new array entities to an empty array
-            push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
-            push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
-            set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }, array entities
-            set from hash parsed_clause item { 'subjects' } to toggle_entities using from hash parsed_clause item { 'subjects' }
-            set from hash parsed_clause item { 'objects' } to toggle_entities using from hash parsed_clause item { 'objects' }
-            set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }
-            set from hash parsed_clause item { 'clauses' } to an empty array
-            if not from hash parsed_clause item { 'questionword' } do
-                set from hash parsed_clause item { 'questionword' } to an empty array
+            push into array entities, elements of that array: from hash parsed_clause element { 'subjects' } end of elements
+            push into array entities, elements of that array: from hash parsed_clause element { 'objects' } end of elements
+            set from hash parsed_clause element { 'verbs' } to toggle_verbs using from hash parsed_clause element { 'verbs' }, array entities
+            set from hash parsed_clause element { 'subjects' } to toggle_entities using from hash parsed_clause element { 'subjects' }
+            set from hash parsed_clause element { 'objects' } to toggle_entities using from hash parsed_clause element { 'objects' }
+            set from hash parsed_clause element { 'adverbs' } to toggle_entities using from hash parsed_clause element { 'adverbs' }
+            set from hash parsed_clause element { 'clauses' } to an empty array
+            if not from hash parsed_clause element { 'questionword' } do
+                set from hash parsed_clause element { 'questionword' } to an empty array
             done
-            push into that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
+            push into that array: from hash parsed element { 'clauses' }, hash parsed_clause
         done
     done
     if not is an empty hash parsed do
@@ -582,7 +585,7 @@ define action init_prot_files with var current_language, var path do
                         set new array main_words to split with /<[-]>/, var main_words_str
                         for each new var main_word in array main_words do
                             set new array subarray to transform_psprot_line with var _line, var main_word, var current_language, var path
-                            push into array lines, items of array subarray
+                            push into array lines, elements of array subarray
                         done
                     done
                     else do
@@ -683,10 +686,13 @@ define action correct_human_edit_typos with var file, var current_language, var 
             done
             set var j to var j + 1
         done
-        set var line to join using "<>", items of array parts
-        do regex with var line: /(<[a-zA-Z]>)_maybe_/ -> "$0_ <> (maybe)"
+        set var line to join using "<>", elements of array parts
+        do regex with var line: /(<[a-zA-Z]>)_maybe_/ -> "$0_ (maybe)"
         do regex with var line: /\s_\(a\)_/ -> " (a) _"
         do regex with var line: /_\(a\)_/ -> "(a) _"
+
+        do regex with var line: /<[;]>{2}/ -> "<>"
+        do regex with var line: /<[<]><[>]>\s+?\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "($0)"
         
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
@@ -814,6 +820,8 @@ define action init_pro_files with var current_language, var path do
                 set new var output_handle to handle for file name "_output__add_pro_file", write
                 print into var output_handle data var file
                 do close with var output_handle
+                do trigger_check_files without arguments
+
                 #do wait 1 seconds
 
                 # TEXT
@@ -857,6 +865,8 @@ define action link_facts with var type, var f1, var f2 do
         print into var output_handle data var f2
         print into var output_handle data new line
     do close with var output_handle
+
+    do trigger_check_files without arguments
 done
 
 define action init with var current_language, var path do

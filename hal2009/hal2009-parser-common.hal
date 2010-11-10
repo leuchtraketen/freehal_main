@@ -21,11 +21,11 @@
 
 define action fake_hash_parsed without arguments do
     set new hash parsed to an empty hash
-    set from hash parsed item { 'verbs' } to an empty array
-    set from hash parsed item { 'subjects' } to an empty array
-    set from hash parsed item { 'objects' } to an empty array
-    set from hash parsed item { 'clauses' } to an empty array
-    set from hash parsed item { 'adverbs' } to an empty array
-    set from hash parsed item { 'questionword' } to an empty array
+    set from hash parsed element { 'verbs' } to an empty array
+    set from hash parsed element { 'subjects' } to an empty array
+    set from hash parsed element { 'objects' } to an empty array
+    set from hash parsed element { 'clauses' } to an empty array
+    set from hash parsed element { 'adverbs' } to an empty array
+    set from hash parsed element { 'questionword' } to an empty array
     do return with hash parsed
 done

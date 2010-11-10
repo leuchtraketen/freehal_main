@@ -124,16 +124,16 @@ define action to_unixtime with var sentence, var lang, var path do
     
     for each new var rel in array _builtin_time_relations_names do
         if lc(var sentence) matches /(^|\s)var rel(\s|$)/ do
-            set new array date_time_array to items-returning localtime with var c_time
-            set new var sec to from array date_time_array item [ 0 ]
-            set new var min to from array date_time_array item [ 1 ]
-            set new var hour to from array date_time_array item [ 2 ]
-            set new var mday to from array date_time_array item [ 3 ]
-            set new var mon to from array date_time_array item [ 4 ]
-            set new var year to from array date_time_array item [ 5 ]
-            set new var wday to from array date_time_array item [ 6 ]
-            set new var yday to from array date_time_array item [ 7 ]
-            set new var isdst to from array date_time_array item [ 8 ]
+            set new array date_time_array to elements-returning localtime with var c_time
+            set new var sec to from array date_time_array element [ 0 ]
+            set new var min to from array date_time_array element [ 1 ]
+            set new var hour to from array date_time_array element [ 2 ]
+            set new var mday to from array date_time_array element [ 3 ]
+            set new var mon to from array date_time_array element [ 4 ]
+            set new var year to from array date_time_array element [ 5 ]
+            set new var wday to from array date_time_array element [ 6 ]
+            set new var yday to from array date_time_array element [ 7 ]
+            set new var isdst to from array date_time_array element [ 8 ]
             
             print "Time, now:       "
             print var c_time
@@ -141,8 +141,8 @@ define action to_unixtime with var sentence, var lang, var path do
             print var sec concat ", " concat var min concat ", " concat var hour concat ", " concat var mday concat ", " concat var mon concat ", " concat var year concat ", " concat var wday concat ", " concat var yday concat ", " concat var isdst
             print new line
             
-            set new var i_range to from hash _builtin_time_relations item { var rel } 1st item
-            set new var i_plusminus to from hash _builtin_time_relations item { var rel } 2nd item
+            set new var i_range to from hash _builtin_time_relations element { var rel } 1st element
+            set new var i_plusminus to from hash _builtin_time_relations element { var rel } 2nd element
             
             if lc(var sentence) matches /(^|\s)(\d+?)<[*]>\svar rel(\s|$)/ do
                 set var i_plusminus to var i_plusminus * $1

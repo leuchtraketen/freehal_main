@@ -45,8 +45,8 @@ define action run_parser with var input, hash tags, var lang, var path do
         # Then compute the parts of speech etc.
         # CODE
         for each new var word in array list_of_words is rw do
-            set from hash tags item { var word } to compute_tags with var word, var lang, var path
-            set from hash genus_of item { lc(var word) } to from hash tags item { var word } 1st item
+            set from hash tags element { var word } to compute_tags with var word, var lang, var path
+            set from hash genus_of element { lc(var word) } to from hash tags element { var word } 1st element
         end for
         
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
@@ -68,14 +68,14 @@ define action run_parser with var input, hash tags, var lang, var path do
                 do be_slow without arguments
         
                 set new array entities to an empty array
-                push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
-                push into array entities, items of that array: from hash parsed item { 'objects' } end items of
-                set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }, array entities
-                set from hash parsed item { 'subjects' } to toggle_entities using from hash parsed item { 'subjects' }
-                set from hash parsed item { 'objects' } to toggle_entities using from hash parsed item { 'objects' }
-                set from hash parsed item { 'adverbs' } to toggle_entities using from hash parsed item { 'adverbs' }
-                set from hash parsed item { 'extra' } to toggle_entities using from hash parsed item { 'extra' }
-                set from hash parsed item { 'clauses' } to an empty array
+                push into array entities, elements of that array: from hash parsed element { 'subjects' } end of elements
+                push into array entities, elements of that array: from hash parsed element { 'objects' } end of elements
+                set from hash parsed element { 'verbs' } to toggle_verbs using from hash parsed element { 'verbs' }, array entities
+                set from hash parsed element { 'subjects' } to toggle_entities using from hash parsed element { 'subjects' }
+                set from hash parsed element { 'objects' } to toggle_entities using from hash parsed element { 'objects' }
+                set from hash parsed element { 'adverbs' } to toggle_entities using from hash parsed element { 'adverbs' }
+                set from hash parsed element { 'extra' } to toggle_entities using from hash parsed element { 'extra' }
+                set from hash parsed element { 'clauses' } to an empty array
             done
             else do
         
@@ -90,15 +90,15 @@ define action run_parser with var input, hash tags, var lang, var path do
                 do be_slow without arguments
         
                 set new array entities to an empty array
-                push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
-                push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
-                set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }, array entities
-                set from hash parsed_clause item { 'subjects' } to toggle_entities using from hash parsed_clause item { 'subjects' }
-                set from hash parsed_clause item { 'objects' } to toggle_entities using from hash parsed_clause item { 'objects' }
-                set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }
-                set from hash parsed_clause item { 'extra' } to toggle_entities using from hash parsed_clause item { 'extra' }
-                set from hash parsed_clause item { 'clauses' } to an empty array
-                push into that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
+                push into array entities, elements of that array: from hash parsed_clause element { 'subjects' } end of elements
+                push into array entities, elements of that array: from hash parsed_clause element { 'objects' } end of elements
+                set from hash parsed_clause element { 'verbs' } to toggle_verbs using from hash parsed_clause element { 'verbs' }, array entities
+                set from hash parsed_clause element { 'subjects' } to toggle_entities using from hash parsed_clause element { 'subjects' }
+                set from hash parsed_clause element { 'objects' } to toggle_entities using from hash parsed_clause element { 'objects' }
+                set from hash parsed_clause element { 'adverbs' } to toggle_entities using from hash parsed_clause element { 'adverbs' }
+                set from hash parsed_clause element { 'extra' } to toggle_entities using from hash parsed_clause element { 'extra' }
+                set from hash parsed_clause element { 'clauses' } to an empty array
+                push into that array: from hash parsed element { 'clauses' }, hash parsed_clause
             done
         done
     done
@@ -107,37 +107,37 @@ define action run_parser with var input, hash tags, var lang, var path do
     # Save male and female substantives
     # CODE
     
-    set new array copy_subjects to from hash parsed item { 'subjects' }
+    set new array copy_subjects to from hash parsed element { 'subjects' }
     set new var genus_subject to 'q'
     set new var subject to ''
     for each new array arr in array copy_subjects do
         if var subject do
             set var subject to var subject concat ' '
         done
-        set var subject to var subject concat join " ", items of array arr
+        set var subject to var subject concat join " ", elements of array arr
         
-        if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
-            set var genus_subject to from hash genus_of item { lc(join " ", items of array arr) }
+        if from hash genus_of element { lc(join " ", elements of array arr) } matches /m|f/ do
+            set var genus_subject to from hash genus_of element { lc(join " ", elements of array arr) }
         done
-        set new var is_a_name to is_name with lc(join " ", items of array arr)
+        set new var is_a_name to is_name with lc(join " ", elements of array arr)
         if var is_a_name matches "m" do
             set var genus_subject to 'm'
         done
     done
 
-    set new array copy_objects to from hash parsed item { 'objects' }
+    set new array copy_objects to from hash parsed element { 'objects' }
     set new var genus_object to 'q'
     set new var object to ''
     for each new array arr in array copy_objects do
         if var object do
             set var object to var object concat ' '
         done
-        set var object to var object concat join " ", items of array arr
+        set var object to var object concat join " ", elements of array arr
         
-        if from hash genus_of item { lc(join " ", items of array arr) } matches /m|f/ do
-            set var genus_object to from hash genus_of item { lc(join " ", items of array arr) }
+        if from hash genus_of element { lc(join " ", elements of array arr) } matches /m|f/ do
+            set var genus_object to from hash genus_of element { lc(join " ", elements of array arr) }
         done
-        set new var is_a_name to is_name with lc(join " ", items of array arr)
+        set new var is_a_name to is_name with lc(join " ", elements of array arr)
         if var is_a_name matches "m" do
             set var genus_subject to 'm'
         done
@@ -249,12 +249,12 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             set array results to use_bug_feature with array results, hash parsed
         done
     
-        if not items of array results do
+        if not elements of array results do
             set new flag use_reasonof to check_reasonof using var input, hash parsed, var lang, var path
             if flag use_reasonof is true do
                 set new array results_reasonof to feature_reasonof with var input, hash parsed, var lang, var path
-                if items of array results_reasonof do
-                    push into array results, items of array results_reasonof
+                if elements of array results_reasonof do
+                    push into array results, elements of array results_reasonof
                 done
             done
         done
@@ -265,7 +265,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         set new array results_reasonof to feature_reasonof with var input, hash parsed, var lang, var path
         
         if array results matches "TOOMUCH" do
-            if items of array results_reasonof do
+            if elements of array results_reasonof do
                 set array results to an empty array
             done
             else do
@@ -274,7 +274,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             done
         done
     
-        push into array results, items of array results_reasonof
+        push into array results, elements of array results_reasonof
     done
     
     # save input
@@ -297,22 +297,22 @@ define action sort_out_best with array results, var mode, hash parsed do
     set new array results_important to an empty array
 
     for each new array result in array results do
-        set new var primary_key to shift with items of array result
+        set new var primary_key to shift with elements of array result
         
         for each new array clause in array result do
-            if lc( from array clause 2nd item ) matches /(00000)/ do
+            if lc( from array clause 2nd element ) matches /(00000)/ do
                 go to next
             done
-            if lc( from array clause 3rd item ) matches /(00000)/ do
+            if lc( from array clause 3rd element ) matches /(00000)/ do
                 go to next
             done
-            if lc( from array clause 2nd item ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 2nd item ) < 5 do
+            if lc( from array clause 2nd element ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 2nd element ) < 5 do
                 go to next
             done
-            if lc( from array clause 3rd item ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 3rd item ) < 5 do
+            if lc( from array clause 3rd element ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 3rd element ) < 5 do
                 go to next
             done
-            if lc( from array clause 4th item ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 4th item ) < 5 do
+            if lc( from array clause 4th element ) matches /(50|0\.0|1\.0|100)/ and length( from array clause 4th element ) < 5 do
                 go to next
             done
         done
@@ -325,7 +325,7 @@ define action sort_out_best with array results, var mode, hash parsed do
             # TEXT
             # Look at the verbs. Do they contain "=>"? Verbs with "=>" would only be used if no other verbs are there.
             # CODE
-            set new array raw_verbs to [ split ' ', from array clause 1st item ]
+            set new array raw_verbs to [ split ' ', from array clause 1st element ]
             set new var symbol to "=>"
             for each new var verb in array raw_verbs do
                 if var verb matches /var symbol/ do
@@ -333,14 +333,14 @@ define action sort_out_best with array results, var mode, hash parsed do
                 done
             done
             
-            if lc( from array clause 3rd item ) matches /freehal/ do
-                if lc( from hash parsed item { 'questionword' } 1st item 1st item ) matches /wer|who/ do
+            if lc( from array clause 3rd element ) matches /freehal/ do
+                if lc( from hash parsed element { 'questionword' } 1st element 1st element ) matches /wer|who/ do
                     set flag is_important to 1
                 done
             done
         done
         
-        do unshift with items of array result, var primary_key
+        do unshift with elements of array result, var primary_key
         
         # TEXT
         # It is an important fact, for example "I am FreeHAL", because it contains "freehal"
@@ -362,7 +362,7 @@ define action sort_out_best with array results, var mode, hash parsed do
         done
     done
     
-    set new array questionword_array to from hash parsed item { 'questionword' } 1st item
+    set new array questionword_array to from hash parsed element { 'questionword' } 1st element
     # TEXT
     # First, prefer important answers
     # CODE
@@ -378,26 +378,26 @@ define action sort_out_best with array results, var mode, hash parsed do
     # TEXT
     # If there is no questionword, prefer proper answers
     # CODE
-    if not from array questionword_array 1st item do
-        if is an empty array results_variable_answer or (items of array results_variable_answer)+50 < (items of array results_proper) do
-            print "-> results_proper (1): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
+    if not from array questionword_array 1st element do
+        if is an empty array results_variable_answer or (elements of array results_variable_answer)+50 < (elements of array results_proper) do
+            print "-> results_proper (1): " concat elements of array results_proper concat " <-> " concat elements of array results_variable_answer concat " = " concat elements of array results
             print new line
             do return with array results_proper
         done
         else do
-            print "-> results_variable_answer (2): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
+            print "-> results_variable_answer (2): " concat elements of array results_variable_answer concat " <-> " concat elements of array results_proper concat " = " concat elements of array results
             print new line
             do return with array results_variable_answer
         done
     done
     else do
         if is an empty array results_proper do
-            print "-> results_variable_answer (1): " concat items of array results_variable_answer concat " <-> " concat items of array results_proper concat " = " concat items of array results
+            print "-> results_variable_answer (1): " concat elements of array results_variable_answer concat " <-> " concat elements of array results_proper concat " = " concat elements of array results
             print new line
             do return with array results_variable_answer
         done
         else do
-            print "-> results_proper (2): " concat items of array results_proper concat " <-> " concat items of array results_variable_answer concat " = " concat items of array results
+            print "-> results_proper (2): " concat elements of array results_proper concat " <-> " concat elements of array results_variable_answer concat " = " concat elements of array results
             print new line
             do return with array results_proper
         done

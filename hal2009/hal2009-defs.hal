@@ -38,7 +38,7 @@ set hash sym_pp to { "pron" => 1, }
 set hash sym_unimportant to { "nothing" => 1, }
 set hash sym_linking to { "linking" => 1, }
 set hash sym_art to { "art" => 1, }
-set hash sym_entity to { items of hash sym_adj, items of hash sym_art, items of hash sym_noun }
+set hash sym_entity to { elements of hash sym_adj, elements of hash sym_art, elements of hash sym_noun }
 set hash sym_keyword to { "ISUNKNOWN" => 1, "ENUMALL" => 1, }
 
 set hash val_omit to { "a" => 1, "b" => 1, "c" => 1, "d" => 1, "e" => 1, "f" => 1, "g" => 1, "h" => 1, }

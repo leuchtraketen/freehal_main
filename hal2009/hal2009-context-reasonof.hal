@@ -21,10 +21,10 @@
 
 
 define action check_reasonof with var input, hash parsed, var lang, var path do
-    set new array copy_subjects to from hash parsed item { 'subjects' }
+    set new array copy_subjects to from hash parsed element { 'subjects' }
     set new var subject_person to "3s"
     for each new array arr in array copy_subjects do
-        set new var subject to join " ", items of array arr
+        set new var subject to join " ", elements of array arr
         set new var _subject_person to get_person with var subject
         if var _subject_person is not "3s" do
             set var subject_person to var _subject_person
@@ -43,10 +43,10 @@ define action feature_reasonof with var input, hash parsed, var lang, var path d
     set new array results to an empty array
 
     set new array verbs to an empty array
-    set new array _verbs to from hash parsed item { 'verbs' }
+    set new array _verbs to from hash parsed element { 'verbs' }
     for each new array _verb in array _verbs do
         set new array verb to an empty array
-        set items of array verb to items of array _verb
+        set elements of array verb to elements of array _verb
         push into array verbs, array verb
     done
     
@@ -54,7 +54,7 @@ define action feature_reasonof with var input, hash parsed, var lang, var path d
     set new array results_2 to logic with var input, var lang, var path, hash parsed_2
     if array results_2 not matches "TOOMUCH" do
         set array results_2 to reasonof_logic_from_object with array results_2, array verbs, var lang, var path, hash parsed
-        push into array results, items of array results_2
+        push into array results, elements of array results_2
     done
     
     do return with array results
@@ -62,18 +62,18 @@ done
 
 define action reasonof_logic_from_object with array results, array verbs, var lang, var path, hash parsed do
 
-    set new array request_subjects_array to from hash parsed item { 'subjects' }
+    set new array request_subjects_array to from hash parsed element { 'subjects' }
     set new array request_subjects to an empty array
     for each new array subjects in array request_subjects_array is rw do
-        push into array request_subjects, from array subjects 1st item
+        push into array request_subjects, from array subjects 1st element
     done
-    set new var subject to join using ' ', items of array request_subjects
+    set new var subject to join using ' ', elements of array request_subjects
     set new var subject_person to get_person with var subject
 
     set new array constructed_results to an empty array
     
     set new array _results to an empty array
-    set items of array _results to items of array results
+    set elements of array _results to elements of array results
     set array results to an empty array
     
     for each new array result in array _results do
@@ -83,8 +83,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         
         # adverbs
         
-        if from hash parsed item { 'adverbs' } do
-            set new array must_haves to from hash parsed item { 'adverbs' } 1st item
+        if from hash parsed element { 'adverbs' } do
+            set new array must_haves to from hash parsed element { 'adverbs' } 1st element
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
                 if var must_have matches "0" do
@@ -97,7 +97,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     do regex with var _must_have: /\s.*/ -> "" :global
                     set array tags to compute_tags with var _must_have, var lang, var path
                     
-                    if from hash sym_prep item { from array tags 1st item } do
+                    if from hash sym_prep element { from array tags 1st element } do
                         set var _must_have to var must_have
                         do regex with var _must_have: /^.*?\s/ -> "" :i
                         do regex with var _must_have: /\s.*/ -> "" :global
@@ -109,19 +109,19 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                 done
                 set new flag is_builtin to builtin_has_time_place_adverbs_suffix with var must_have
 
-                if var must_have and lc( from array result 2nd item 2nd item ) matches /var must_have/ or flag is_builtin do
-                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                if var must_have and lc( from array result 2nd element 2nd element ) matches /var must_have/ or flag is_builtin do
+                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                     print new line
                     if var must_have do
                         set var num_must_haves to var num_must_haves + 1
                     done
                 done
-                else if from hash sym_prep item { from array tags 1st item } do
-                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "' (but does not need to have it: prep)"
+                else if from hash sym_prep element { from array tags 1st element } do
+                    print "[+] Has must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd element 2nd element concat "' (but does not need to have it: prep)"
                     print new line
                 done
                 else do
-                    print "[-] Does not have must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                    print "[-] Does not have must-have (no 1) '" concat var must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                     print new line
                     set flag go_next to 1
                 done
@@ -130,21 +130,21 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         
         # objects
         
-        if from hash parsed item { 'objects' } do
-            set new array must_haves to from hash parsed item { 'objects' } 1st item
+        if from hash parsed element { 'objects' } do
+            set new array must_haves to from hash parsed element { 'objects' } 1st element
             for each new var must_have in array must_haves do
                 set var must_have to lc with var must_have
                 if var must_have matches "0" do
                     go to next
                 done
 
-                if ( not var must_have ) or not lc( from array result 2nd item 2nd item ) matches /var must_have/ do
-                    print "[-] Does not have must-have (no 2) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                if ( not var must_have ) or not lc( from array result 2nd element 2nd element ) matches /var must_have/ do
+                    print "[-] Does not have must-have (no 2) '" concat var must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                     print new line
                     set flag go_next to 1
                 done
                 else do
-                    print "[+] Has must-have (no 2) '" concat var must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                    print "[+] Has must-have (no 2) '" concat var must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                     print new line
                     if var must_have do
                         set var num_must_haves to var num_must_haves + 1
@@ -155,8 +155,8 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         
         # verbs
         
-        if from hash parsed item { 'verbs' } do
-            set new array _must_haves to from hash parsed item { 'verbs' }
+        if from hash parsed element { 'verbs' } do
+            set new array _must_haves to from hash parsed element { 'verbs' }
             for each new array must_haves in array _must_haves do
                 for each new var must_have in array must_haves do
                     set var must_have to lc with var must_have
@@ -166,13 +166,13 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     set new var _must_have to var must_have
                     do regex with var _must_have: /...$/ -> "" :i
                     if length(var _must_have) > 2 do
-                        if not lc( from array result 2nd item 2nd item ) matches /var _must_have/ do
-                            print "[-] Does not have must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                        if not lc( from array result 2nd element 2nd element ) matches /var _must_have/ do
+                            print "[-] Does not have must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                             print new line
                             set flag go_next to 1
                         done
                         else do
-                            print "[+] Has must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd item 2nd item concat "'"
+                            print "[+] Has must-have (no 3) '" concat var _must_have concat "': '" concat from array result 2nd element 2nd element concat "'"
                             print new line
                             if var _must_have do
                                 set var num_must_haves to var num_must_haves + 1
@@ -192,10 +192,10 @@ define action reasonof_logic_from_object with array results, array verbs, var la
     for each new array result in array results do
         set new array main_clause to an empty array
         
-        set new var expr to from array result 2nd item 3rd item
+        set new var expr to from array result 2nd element 3rd element
         set new array words to split with " ", var expr
-        set new var verb to pop with items of array words
-        set new var object to join using ' ', items of array words
+        set new var verb to pop with elements of array words
+        set new var object to join using ' ', elements of array words
         
         set var object to replace_general_reflexive_pronoun with var object, var subject_person
         
@@ -224,16 +224,16 @@ define action reasonof_logic_from_object with array results, array verbs, var la
         for each new array result in array results do
             set new array main_clause to an empty array
             
-            set new var expr to from array result 2nd item 3rd item
+            set new var expr to from array result 2nd element 3rd element
             if not var expr do
-                set var expr to from array result 2nd item 4th item
+                set var expr to from array result 2nd element 4th element
             done
             print "expr: " concat var expr concat new line
             set new array words to split with " ", var expr
-            set new var verb to pop with items of array words
+            set new var verb to pop with elements of array words
             set new var verb_second to ""
-            while from array words item [ items of array words - 1 ] matches /en$/ do
-                set new var _verb to pop with items of array words
+            while from array words element [ elements of array words - 1 ] matches /en$/ do
+                set new var _verb to pop with elements of array words
                 
                 if var verb_second do
                     set var verb_second to var _verb concat " " concat var verb_second
@@ -242,7 +242,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
                     set var verb_second to var _verb
                 done
             done
-            set new var object to join using ' ', items of array words
+            set new var object to join using ' ', elements of array words
 
             set var object to replace_general_reflexive_pronoun with var object, var subject_person
             
@@ -253,7 +253,7 @@ define action reasonof_logic_from_object with array results, array verbs, var la
             set new var root to to_verb_root with var verb, var lang, var path
             print "root: " concat var root concat new line
             set new array conj to to_verb_conjugation with var root, var prefix, var lang, var path
-            set new var participle to make_participle with from array conj 3rd item, var lang, var path
+            set new var participle to make_participle with from array conj 3rd element, var lang, var path
             
             set new var person to get_person with var subject
             set new var verb_modal to get_modal_verb_for_verb with var verb_second concat " " concat var participle, var lang, var path
@@ -283,32 +283,32 @@ done
 
 define action reasonof_construct_hash with array verbs, var lang, var path, hash parsed do
     for each new array verb in array verbs is rw do
-        if from array verb 1st item matches /^(habe|hast|hab|haben|habt)$/ do
-            set from array verb 1st item to "haben"
+        if from array verb 1st element matches /^(habe|hast|hab|haben|habt)$/ do
+            set from array verb 1st element to "haben"
         done
-        else if from array verb 1st item matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
-            set from array verb 1st item to "sein"
+        else if from array verb 1st element matches /^(ien|bi|<[=]>|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet)$/ do
+            set from array verb 1st element to "sein"
         done
         else do
-            if from array verb 1st item matches /est$/ do
-                do regex with from array verb 1st item: /est$/ -> "en" :i
+            if from array verb 1st element matches /est$/ do
+                do regex with from array verb 1st element: /est$/ -> "en" :i
             done
-            else if from array verb 1st item matches /st$/ do
-                do regex with from array verb 1st item: /st$/ -> "en" :i
+            else if from array verb 1st element matches /st$/ do
+                do regex with from array verb 1st element: /st$/ -> "en" :i
             done
-            else if from array verb 1st item matches /e$/ do
-                do regex with from array verb 1st item: /e$/ -> "en" :i
+            else if from array verb 1st element matches /e$/ do
+                do regex with from array verb 1st element: /e$/ -> "en" :i
             done
-            else if from array verb 1st item matches /ben$/ do
+            else if from array verb 1st element matches /ben$/ do
                 # do nothing
             done
-            else if items of array verbs is 1 do
-                set new var len to length with from array verb 1st item
+            else if elements of array verbs is 1 do
+                set new var len to length with from array verb 1st element
                 if var len > 6 do
-                    do regex with from array verb 1st item: /...$/ -> "*" :i
+                    do regex with from array verb 1st element: /...$/ -> "*" :i
                 done
                 else if var len > 5 do
-                    do regex with from array verb 1st item: /..$/ -> "*" :i
+                    do regex with from array verb 1st element: /..$/ -> "*" :i
                 done
             done
             else do
@@ -318,17 +318,17 @@ define action reasonof_construct_hash with array verbs, var lang, var path, hash
     done
 
     set new hash parsed_1 to fake_hash_parsed without arguments
-    set from hash parsed_1 item { 'verbs' } to an empty array
+    set from hash parsed_1 element { 'verbs' } to an empty array
     set new array verb to an empty array
     push into array verb, "reasonof"
-    push into that array: from hash parsed_1 item { 'verbs' } end items of, array verb
-    set from hash parsed_1 item { 'subjects' } to an empty array
-    # push into that array: from hash parsed_1 item { 'subjects' } end items of, items of array subjects
-    push into that array: from hash parsed_1 item { 'subjects' } end items of, items of array verbs
-    set from hash parsed_1 item { 'objects' } to an empty array
-    set from hash parsed_1 item { 'clauses' } to an empty array
-    set from hash parsed_1 item { 'adverbs' } to an empty array
-    set from hash parsed_1 item { 'questionword' } to an empty array
+    push into that array: from hash parsed_1 element { 'verbs' }, array verb
+    set from hash parsed_1 element { 'subjects' } to an empty array
+    # push into that array: from hash parsed_1 element { 'subjects' }, elements of array subjects
+    push into that array: from hash parsed_1 element { 'subjects' }, elements of array verbs
+    set from hash parsed_1 element { 'objects' } to an empty array
+    set from hash parsed_1 element { 'clauses' } to an empty array
+    set from hash parsed_1 element { 'adverbs' } to an empty array
+    set from hash parsed_1 element { 'questionword' } to an empty array
     
     do return with hash parsed_1
 done

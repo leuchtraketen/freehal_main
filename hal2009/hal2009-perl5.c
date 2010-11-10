@@ -78,6 +78,8 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     else if (strstr(hals->s, "print " )) {
         hals = replace(hals, "print ", "do print with ");
     }
+
+    hals = replace(hals, "item", "element");
     
     hals = replace(hals, "# TEXT", "#---------------------------------------");
     hals = replace(hals, "# CODE", "#---------------------------------------");
@@ -110,36 +112,36 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "global hash ", "hash ::");
     hals = replace(hals, "global array ", "array ::");
     hals = replace(hals, "global var ", "var ::");
-    hals = replace(hals, "size of", "items of");
+    hals = replace(hals, "size of", "elements of");
     hals = replace(hals, " is true", " ");
     hals = replace(hals, " is wrong", " == 0 ");
     hals = replace(hals, " is false", " == 0 ");
     hals = replace(hals, " the hash ", " from hash ");
-    hals = replace(hals, " has item ", " item ");
-    hals = replace(hals, " contains item ", " item ");
-    hals = replace(hals, " has the item ", " item ");
-    hals = replace(hals, " contains the item ", " item ");
+    hals = replace(hals, " has element ", " element ");
+    hals = replace(hals, " contains element ", " element ");
+    hals = replace(hals, " has the element ", " element ");
+    hals = replace(hals, " contains the element ", " element ");
     hals = replace(hals, " is not ", " not is ");
     hals = replace(hals, " an empty string", " empty string");
     hals = replace(hals, " a empty string", " empty string");
     hals = replace(hals, " is empty string", " matches empty string");
     hals = replace(hals, " empty string", " '' ");
-    hals = replace(hals, "that array is empty: ", "0 == items of that array: ");
-    hals = replace(hals, "that array is empty ", "0 == items of that array: ");
-    hals = replace(hals, "that array not is empty: ", "items of that array: ");
-    hals = replace(hals, "that array not is empty ", "items of that array: ");
-    hals = replace(hals, "that array has items: ", "items of that array: ");
-    hals = replace(hals, "that array has items ", "items of that array: ");
-    hals = replace(hals, "first item", "item [ 0 ]");
-    hals = replace(hals, "second item", "item [ 1 ]");
-    hals = replace(hals, "third item", "item [ 2 ]");
-    hals = replace(hals, "last item", "item [ -1 ]");
+    hals = replace(hals, "that array is empty: ", "0 == elements of that array: ");
+    hals = replace(hals, "that array is empty ", "0 == elements of that array: ");
+    hals = replace(hals, "that array not is empty: ", "elements of that array: ");
+    hals = replace(hals, "that array not is empty ", "elements of that array: ");
+    hals = replace(hals, "that array has elements: ", "elements of that array: ");
+    hals = replace(hals, "that array has elements ", "elements of that array: ");
+    hals = replace(hals, "first element", "element [ 0 ]");
+    hals = replace(hals, "second element", "element [ 1 ]");
+    hals = replace(hals, "third element", "element [ 2 ]");
+    hals = replace(hals, "last element", "element [ -1 ]");
     {
         char _search_for[99];
         char* search_for = _search_for;
-        sprintf(search_for+4, " item");
+        sprintf(search_for+4, " element");
         char replace_with[99];
-        sprintf(replace_with, " item [    - 1 ]");
+        sprintf(replace_with, " element [    - 1 ]");
 
         char _no_1, no_1, no_2;
         for (_no_1 = '0'; _no_1 <= '9'; ++_no_1) {
@@ -148,8 +150,8 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
                 no_1 =  ' ';
             }
             for (no_2 = '0'; no_2 <= '9'; ++no_2) {
-                replace_with[8] = no_1;
-                replace_with[9] = no_2;
+                replace_with[11] = no_1;
+                replace_with[12] = no_2;
 
                 search_for[0] = no_1;
                 search_for[1] = no_2;
@@ -189,29 +191,33 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "that array not is empty: ", "0 != @{ ");
     hals = replace(hals, "that hash not is empty: ", "0 != %{ ");
     hals = replace(hals, "end check", " }");
-    hals = replace(hals, "push into that", "do push with items of that");
+    hals = replace(hals, "do push into", "push into");
+    if (strstr(hals->s, "push into that" )) {
+        hals = replace(hals, "push into that", "do push with elements of that");
+        hals = replace(hals, ", ", " end of elements, ");
+    }
     hals = replace(hals, "push into", "do push with into");
-    hals = replace(hals, "shift from that", "do shift with items of that");
+    hals = replace(hals, "shift from that", "do shift with elements of that");
     hals = replace(hals, "shift from", "do shift with into");
     hals = replace(hals, "into array ", "@$");
     hals = replace(hals, "into hash ", "%$");
-    hals = replace(hals, "items of array ", "@$");
-    hals = replace(hals, "items of hash ", "%$");
+    hals = replace(hals, "elements of array ", "@$");
+    hals = replace(hals, "elements of hash ", "%$");
     hals = replace(hals, "of array ", "@$");
     hals = replace(hals, "of hash ", "%$");
-    hals = replace(hals, "items of that array: ", "@{");
-    hals = replace(hals, "items of that hash: ", "%{");
-    hals = replace(hals, "items of that array ", "@{");
-    hals = replace(hals, "items of that hash ", "%{");
-    hals = replace(hals, "end-items-of", "}");
-    hals = replace(hals, "end items of", "}");
-    hals = replace(hals, "end-of-items", "}");
-    hals = replace(hals, "end of items", "}");
-    hals = replace(hals, "end-items", "}");
-    hals = replace(hals, "end items", "}");
+    hals = replace(hals, "elements of that array: ", "@{");
+    hals = replace(hals, "elements of that hash: ", "%{");
+    hals = replace(hals, "elements of that array ", "@{");
+    hals = replace(hals, "elements of that hash ", "%{");
+    hals = replace(hals, "end-elements-of", "}");
+    hals = replace(hals, "end elements of", "}");
+    hals = replace(hals, "end-of-elements", "}");
+    hals = replace(hals, "end of elements", "}");
+    hals = replace(hals, "end-elements", "}");
+    hals = replace(hals, "end elements", "}");
     hals = replace(hals, " of that ", " of ");
-    hals = replace(hals, "items of hash: ", "%{");
-    hals = replace(hals, "items of array: ", "@{");
+    hals = replace(hals, "elements of hash: ", "%{");
+    hals = replace(hals, "elements of array: ", "@{");
     hals = replace(hals, "end-array", "}");
     hals = replace(hals, "end-hash", "}");
     hals = replace(hals, "end array", "}");
@@ -232,7 +238,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     hals = replace(hals, "from hash ", "$");
     hals = replace(hals, " hash ", " $");
     hals = replace(hals, "'hash ", "'$");
-    hals = replace(hals, " item ", "->");
+    hals = replace(hals, " element ", "->");
     if (strstr(hals->s, "exists:" )) {
         hals = replace(hals, " exists: ", " -e ");
         hals = replace(hals, ", end test", "");
@@ -409,8 +415,8 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
             hals = replace(hals, "to array-returning ", "to @{");
             strcat(hals->s, "}");
         }
-        if (strstr(hals->s, "to items-returning " )) {
-            hals = replace(hals, "to items-returning ", "to [");
+        if (strstr(hals->s, "to elements-returning " )) {
+            hals = replace(hals, "to elements-returning ", "to [");
             strcat(hals->s, "]");
         }
         strcat(hals->s, ";");

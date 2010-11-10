@@ -458,9 +458,8 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "nothing", " ");
                     sline_ref = replace(sline_ref, "nichts", "nothing");
                     sline_ref = replace(sline_ref, "\"", "'");
-                    sline_ref = replace(sline_ref, ";;", "YYY");
+                    sline_ref = replace(sline_ref, ";;", "^");
                     sline_ref = replace(sline_ref, ";", " ");
-                    sline_ref = replace(sline_ref, "YYY", ";");
                     sline_ref = replace(sline_ref, "()", "");
                     sline_ref = replace(sline_ref, " <> ", "^");
                     sline_ref = replace(sline_ref, "<>", "^");
@@ -473,6 +472,9 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
                     sline_ref = replace(sline_ref, "^^", "^ ^");
+                    sline_ref = replace(sline_ref, "^(true)", "(true)");
+                    sline_ref = replace(sline_ref, "^(maybe)", "(maybe)");
+                    sline_ref = replace(sline_ref, "^(false)", "(false)");
                     sline_ref = replace(sline_ref, "\r", "");
                     sline_ref = replace(sline_ref, "\n", "");
                     line = sline_ref->s;
@@ -544,31 +546,37 @@ int hal2009_add_pro_file (char* filename) {
                                 }
                             }
                         }
-                        
+
                         r.clauses[i] = malloc(sizeof(struct RECORD));
                         struct RECORD* sub_clause = r.clauses[i];
                         sub_clause->truth = 0.5;
 
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+printf("\n1: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->verb, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+printf("\n2: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->subjects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+printf("\n3: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->objects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+printf("\n4: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->adverbs, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
+printf("\n5: %s\n", buffer?buffer:"-");
+                        remove_negation(sub_clause->questionword, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = filename;          strcpy(sub_clause->filename,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         snprintf(sub_clause->line, 100, "%d", line_number);
                         strcpy(sub_clause->extra, "");
-                        
+
                         // a common error in malformed pro files
                         if (0 == strcmp(sub_clause->questionword, "50")) {
                             free(r.clauses[i]);
                             r.clauses[i] = NULL;
                             break;
                         }
-                        
+
                         sub_clause->verb_flag_want    = 0;
                         sub_clause->verb_flag_must    = 0;
                         sub_clause->verb_flag_can     = 0;
@@ -577,17 +585,17 @@ int hal2009_add_pro_file (char* filename) {
 
 
                         sub_clause->prio  = 50;
-                        
+
                         r.clauses[i] = sub_clause;
                         r.clauses[i+1] = NULL;
-                        ++(sub_clause->num_clauses);
+                        ++(r.num_clauses);
                         ++i;
                         buffer = strtok(NULL, "^");
                     }
                     r.clauses[i] = NULL;
-                    
+
                     halfree(line);
-                    
+
                     if (0 == strlen(r.verb)) {
                         continue;
                     }
@@ -1233,7 +1241,7 @@ int hal2009_execute_code(char* code, char* planguage) {
 
 void hal2009_clean() {
     int number_of_files_to_delete = 13;
-    char files_to_delete[14][100] = { "_output", "_output__pos", "_input__pos", "_output__add_pro_file", "_input__add_pro_file", "_output__get_csv", "_input__get_csv", "_exit", "_exit_by_user", "_exit_hal2009_signal_handler", "_do_not_need_a_signal_handler", "_input_server", "_change_text_language" };
+    char files_to_delete[15][100] = { "_check_files", "_output", "_output__pos", "_input__pos", "_output__add_pro_file", "_input__add_pro_file", "_output__get_csv", "_input__get_csv", "_exit", "_exit_by_user", "_exit_hal2009_signal_handler", "_do_not_need_a_signal_handler", "_input_server", "_change_text_language" };
     
     int i;
     for (i = 0; i < number_of_files_to_delete; ++i) {
@@ -1271,6 +1279,20 @@ void* hal2009_signal_handler(void* parameters) {
     int i;
     
     while ( 1 ) {
+
+        short check_files = 0;
+        {
+            FILE* source = NULL;
+            if ( source = fopen("_check_files", "r") ) {
+                check_files = 1;
+                unlink("_check_files");
+            }
+        }
+
+        if (!check_files) {
+            halusleep(1000);
+        }
+
         for (i = 0; i < number_of_files_to_check; ++i) {
             FILE* source = NULL;
             if ( source = fopen("_change_text_language", "r") ) {
@@ -1336,8 +1358,6 @@ void* hal2009_signal_handler(void* parameters) {
                 }
             }
         }
-
-        halusleep(1000);
     }
     
     halfree(temporary_memory);

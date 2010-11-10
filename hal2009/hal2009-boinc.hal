@@ -46,7 +46,7 @@ for each new var line in array all_input_lines do
     done
 done
 
-set new var text to join with "", items of array input_lines
+set new var text to join with "", elements of array input_lines
 
 print into var report data "input:" concat new line
 print into var report data "-------------------------------------------------------" concat new line
@@ -65,8 +65,8 @@ print into var report data new line
 set new var filename to var path concat "/" concat var file_output_pro
 set new var handle to handle for file name var filename, read
 set new array all_lines to an empty array
-set items of array all_lines to all lines from var handle
-set new var pro_text to join with "", items of array all_lines
+set elements of array all_lines to all lines from var handle
+set new var pro_text to join with "", elements of array all_lines
 
 print into var report data ".pro file:" concat new line
 print into var report data "-------------------------------------------------------" concat new line
@@ -78,7 +78,7 @@ print into var report data new line
 
 set new var j to 0
 while var j < 100 do
-	set new var text to join with "", items of array all_input_lines
+	set new var text to join with "", elements of array all_input_lines
 	set new var summ to summarize with var text, var file_output_nl, var file_output_pro, var current_language, var path
 
 	set var j to var j + 1

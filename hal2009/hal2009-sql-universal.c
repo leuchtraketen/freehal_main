@@ -92,11 +92,12 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
         if (r->clauses && r->clauses[0] && fact && fact->pk) {
             int n;
             int broken = 0;
-            for (n = 0; n <= r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
+            for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
                 if (broken) {
                     continue;
                 }
-                if (!add_clause(fact->pk,
+		struct fact* clause = 0;
+                clause = add_clause(fact->pk,
                         ((struct RECORD*)(r->clauses[n]))->subjects,
                         ((struct RECORD*)(r->clauses[n]))->objects,
                         ((struct RECORD*)(r->clauses[n]))->verb,
@@ -110,9 +111,12 @@ int sql_universal_add_record(struct RECORD* r, const char* relation_to) {
                         ((struct RECORD*)(r->clauses[n]))->verb_flag_must,
                         ((struct RECORD*)(r->clauses[n]))->verb_flag_can,
                         ((struct RECORD*)(r->clauses[n]))->verb_flag_may,
-                        ((struct RECORD*)(r->clauses[n]))->verb_flag_should
-                )) {
-                
+                        ((struct RECORD*)(r->clauses[n]))->verb_flag_should );
+
+                if (clause) {
+                    free(clause);
+                }
+                else {
                     broken = 1;
                 }
             }

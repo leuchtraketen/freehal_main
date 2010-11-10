@@ -45,7 +45,7 @@ define action prepare_text with var text, var lang, var path do
         push into array new_lines, var line
     done
 
-    set var text to join ' STOP ', items of array new_lines
+    set var text to join ' STOP ', elements of array new_lines
     do return with var text
 done
 
@@ -54,8 +54,8 @@ define action read_from_input_file with var lang, var path do
 	set new var filename to var path concat "/input.txt"
 	set new var handle to handle for file name var filename, read
 	set new array lines to an empty array
-	set items of array lines to all lines from var handle
-	set new var text to join with "", items of array lines
+	set elements of array lines to all lines from var handle
+	set new var text to join with "", elements of array lines
 
 	do return with var text
 done
@@ -65,7 +65,7 @@ define action read_from_input_file_array with var lang, var path do
 	set new var filename to var path concat "/input.txt"
 	set new var handle to handle for file name var filename, read
 	set new array lines to an empty array
-	set items of array lines to all lines from var handle
+	set elements of array lines to all lines from var handle
 
 	do return with array lines
 done
@@ -85,12 +85,12 @@ define action summarize_line with var input, hash tags, var lang, var path do
 
     set new array clauses_input to split with " KOMMA ", var input
     set new hash parsed to an empty hash
-    set from hash parsed item { 'verbs' } to an empty array
-    set from hash parsed item { 'subjects' } to an empty array
-    set from hash parsed item { 'objects' } to an empty array
-    set from hash parsed item { 'clauses' } to an empty array
-    set from hash parsed item { 'adverbs' } to an empty array
-    set from hash parsed item { 'questionword' } to an empty array
+    set from hash parsed element { 'verbs' } to an empty array
+    set from hash parsed element { 'subjects' } to an empty array
+    set from hash parsed element { 'objects' } to an empty array
+    set from hash parsed element { 'clauses' } to an empty array
+    set from hash parsed element { 'adverbs' } to an empty array
+    set from hash parsed element { 'questionword' } to an empty array
     set new flag number_of_clause to 0
     for each new var clause in array clauses_input do
         do be_slow without arguments
@@ -106,7 +106,7 @@ define action summarize_line with var input, hash tags, var lang, var path do
         # CODE
         for each new var word in array list_of_words is rw do
             do be_slow without arguments
-            set from hash tags item { var word } to compute_tags with var word, var lang, var path
+            set from hash tags element { var word } to compute_tags with var word, var lang, var path
         end for
         
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
@@ -118,36 +118,36 @@ define action summarize_line with var input, hash tags, var lang, var path do
             if flag number_of_clause is 0 do
                 set hash parsed to parse with var lang, array words, hash tags
                 set new array entities to an empty array
-                push into array entities, items of that array: from hash parsed item { 'subjects' } end items of
-                push into array entities, items of that array: from hash parsed item { 'objects' } end items of
-                set from hash parsed item { 'verbs' } to toggle_verbs using from hash parsed item { 'verbs' }, array entities
-                set from hash parsed item { 'subjects' } to toggle_entities using from hash parsed item { 'subjects' }
-                set from hash parsed item { 'objects' } to toggle_entities using from hash parsed item { 'objects' }
-                set from hash parsed item { 'adverbs' } to toggle_entities using from hash parsed item { 'adverbs' }
-                set from hash parsed item { 'clauses' } to an empty array
+                push into array entities, elements of that array: from hash parsed element { 'subjects' } end of elements
+                push into array entities, elements of that array: from hash parsed element { 'objects' } end of elements
+                set from hash parsed element { 'verbs' } to toggle_verbs using from hash parsed element { 'verbs' }, array entities
+                set from hash parsed element { 'subjects' } to toggle_entities using from hash parsed element { 'subjects' }
+                set from hash parsed element { 'objects' } to toggle_entities using from hash parsed element { 'objects' }
+                set from hash parsed element { 'adverbs' } to toggle_entities using from hash parsed element { 'adverbs' }
+                set from hash parsed element { 'clauses' } to an empty array
                 
                 set flag number_of_clause to 1
             done
             else do
                 set new hash parsed_clause to parse with var lang, array words, hash tags
                 set new array entities to an empty array
-                push into array entities, items of that array: from hash parsed_clause item { 'subjects' } end items of
-                push into array entities, items of that array: from hash parsed_clause item { 'objects' } end items of
-                set from hash parsed_clause item { 'verbs' } to toggle_verbs using from hash parsed_clause item { 'verbs' }, array entities
-                set from hash parsed_clause item { 'subjects' } to toggle_entities using from hash parsed_clause item { 'subjects' }
-                set from hash parsed_clause item { 'objects' } to toggle_entities using from hash parsed_clause item { 'objects' }
-                set from hash parsed_clause item { 'adverbs' } to toggle_entities using from hash parsed_clause item { 'adverbs' }
-                set from hash parsed_clause item { 'clauses' } to an empty array
-                if not from hash parsed_clause item { 'questionword' } do
-                    set from hash parsed_clause item { 'questionword' } to an empty array
+                push into array entities, elements of that array: from hash parsed_clause element { 'subjects' } end of elements
+                push into array entities, elements of that array: from hash parsed_clause element { 'objects' } end of elements
+                set from hash parsed_clause element { 'verbs' } to toggle_verbs using from hash parsed_clause element { 'verbs' }, array entities
+                set from hash parsed_clause element { 'subjects' } to toggle_entities using from hash parsed_clause element { 'subjects' }
+                set from hash parsed_clause element { 'objects' } to toggle_entities using from hash parsed_clause element { 'objects' }
+                set from hash parsed_clause element { 'adverbs' } to toggle_entities using from hash parsed_clause element { 'adverbs' }
+                set from hash parsed_clause element { 'clauses' } to an empty array
+                if not from hash parsed_clause element { 'questionword' } do
+                    set from hash parsed_clause element { 'questionword' } to an empty array
                 done
-                push into that array: from hash parsed item { 'clauses' } end-items-of, hash parsed_clause
+                push into that array: from hash parsed element { 'clauses' }, hash parsed_clause
             done
 
         done
     done
 
-    set from hash parsed item { "has_questionword" } to flag has_questionword
+    set from hash parsed element { "has_questionword" } to flag has_questionword
 
     do return with hash parsed
 done
@@ -169,14 +169,14 @@ define action summarize with var input, var file_output_nl, var file_output_pro,
         for each new var pro_line in array pro_lines do
             set new array results to to_array_from_pro_line with var pro_line, var lang
             set new array _output_array to phrase with var lang, var path, "default", array results, hash parsed
-            push into array output_array, items of array _output_array
+            push into array output_array, elements of array _output_array
         done
 
         for each new array output_line in array output_array do
-            if from array output_line 2nd item do
-                set new var final_output to upper_case_correction with from array output_line 2nd item, hash tags, var lang, var path
+            if from array output_line 2nd element do
+                set new var final_output to upper_case_correction with from array output_line 2nd element, hash tags, var lang, var path
 
-                if from hash parsed item { "has_questionword" } do
+                if from hash parsed element { "has_questionword" } do
                     do regex with var final_output: /<[.]>/ -> "" :global
                     set var final_output to var final_output concat "?"
                 done

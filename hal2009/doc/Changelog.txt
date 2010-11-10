@@ -1,3 +1,7 @@
+1254:
+
+- Inkonsistenzen beim .pro-Format korrigiert
+
 1252:
 
 - Entfernen der alten englischen database.db, inzwischen gab es einige Aenderungen am Datenbankformat

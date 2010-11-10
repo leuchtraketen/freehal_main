@@ -2154,6 +2154,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'heisse' => "v",
           'heisst' => "v",
           'heiter' => "adj",
+          'helfen' => "v",
           'hell' => "adj",
           'her' => "adj",
           'herauf' => "prep",
@@ -2347,6 +2348,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'man' => "n",
           '_maybe_' => "adj",
           '_(maybe)_' => "adj",
+          'maiziere' => "n",
           'mehr' => "adj",
           'mehrals' => "prep",
           'mehrmals' => "adj",
@@ -2941,7 +2943,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'zwei' => "adj",
           'zweimal' => "adj",
           'zweite' => "adj",
-          'zweitem' => "adj",
+          'zweelement' => "adj",
           'zweiten' => "adj",
           'zweiter' => "adj",
           'zweites' => "adj",
@@ -2984,7 +2986,7 @@ set multi-line new global hash builtin_time_relations to {
 };
 
 set new global array builtin_time_relations_names to an empty array
-set items of global array builtin_time_relations_names to keys with items of hash builtin_time_relations
+set elements of global array builtin_time_relations_names to keys with elements of hash builtin_time_relations
 
 define action time_pre_transformations with var sentence, var lang, var path do
     do regex with var sentence: /(in|vor)\s*?einer\s*?(<[a-zA-Z]>*?stund<[a-zA-Z]>*?)(\s|$)/ -> "$0 $1$2" :global:i
@@ -3005,14 +3007,66 @@ define action time_pre_transformations with var sentence, var lang, var path do
 done
 
 define action add_undefined_time with array clause do
-    set new var adverbs to from array clause item [3]
+    set new var adverbs to from array clause element [3]
     if var adverbs do
         set var adverbs to var adverbs concat " "
     done
     set var adverbs to var adverbs concat "zu dieser Zeit"
-    set from array clause item [3] to var adverbs
+    set from array clause element [3] to var adverbs
     
     do return with array clause
+done
+
+define action is_job with var lang, var _word do
+
+    set new var word to lc with var _word
+    set new flag is_a_job to 0
+
+    if flag is_a_job is false do
+        if var word matches /(^bundes)|(minister)|(meister$)/ do
+            set flag is_a_job to 1
+        done
+    done
+
+    if flag is_a_job is false do
+        set new hash jobs to an empty hash
+
+        set new var cache_file_name to '_cache_jobs'
+        if not exists: var cache_file_name, end test do
+            set new var output_file_name to '_output__get_csv'
+            set new var csv_output to '=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet^0^beruf^0^0^default^0^0^0^0^0^0'
+            do unlink with '_input__get_csv'
+            set new var output_handle to handle for file name var output_file_name, write
+            print into var output_handle data var csv_output
+            do close with var output_handle
+            do trigger_check_files without arguments
+            while not exists: '_input__get_csv', end test do
+                do wait 0.5 seconds
+            done
+            set new var input_file_name to '_input__get_csv'
+            set new var input_handle to handle for file name var input_file_name, read
+
+            set new var cache_output to handle for file name var cache_file_name, write
+            for each new var line from var input_handle is rw do
+                push into global array replace_array, var line
+                print into var cache_output data var line concat new line
+            done
+            do close with var cache_output
+            do trigger_check_files without arguments
+        done
+        if exists: var cache_file_name, end test do
+            set new var cache_input to handle for file name var cache_file_name, read
+            for each new var line from var cache_input is rw do
+                set from hash jobs item { var line } to 1
+            done
+        done
+
+        if from hash jobs item { var word } do
+            set flag is_a_job to 1
+        done
+    done
+
+    do return with flag is_a_job
 done
 
 define action phrases_error_toomuch without arguments do
@@ -3498,6 +3552,7 @@ define action compute_output with var output do
         set new var output_handle to handle for file name var output_file_name, write
         print into var output_handle data var csv_output
         do close with var output_handle
+        do trigger_check_files without arguments
 
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
@@ -3511,12 +3566,12 @@ define action compute_output with var output do
             set new array result to an empty array
             set new array rawresult to split using /\^/, var line
             if var line do
-                push into array usernames, from array rawresult item [ 3 ]
+                push into array usernames, from array rawresult element [ 3 ]
             done
         done
 
-        set new var random_number to rand using items of array usernames
-        set var username to from array usernames item [ var random_number ]
+        set new var random_number to rand using elements of array usernames
+        set var username to from array usernames element [ var random_number ]
 
         print var username
         print new line
@@ -3542,6 +3597,7 @@ define action compute_output with var output do
         set new var output_handle to handle for file name var output_file_name, write
         print into var output_handle data var csv_output
         do close with var output_handle
+        do trigger_check_files without arguments
 
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
@@ -3554,8 +3610,8 @@ define action compute_output with var output do
         for each new var line from var input_handle is rw do
             set new array result to an empty array
             set new array rawresult to split using /\^/, var line
-            if var line and from array rawresult item [ 3 ] do
-                push into array usernames, from array rawresult item [ 3 ]
+            if var line and from array rawresult element [ 3 ] do
+                push into array usernames, from array rawresult element [ 3 ]
             done
         done
         
@@ -3568,6 +3624,7 @@ define action compute_output with var output do
         set new var output_handle to handle for file name var output_file_name, write
         print into var output_handle data var csv_output
         do close with var output_handle
+        do trigger_check_files without arguments
 
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
@@ -3582,8 +3639,8 @@ define action compute_output with var output do
             if var line do
                 set new var i to 0
                 for each new var property in array usernames do
-                    if var property matches from array rawresult item [ 3 ] do
-                        do delete with from array usernames item [ var i ]
+                    if var property matches from array rawresult element [ 3 ] do
+                        do delete with from array usernames element [ var i ]
                         go to last
                     done
                     set var i to var i + 1
@@ -3592,8 +3649,8 @@ define action compute_output with var output do
         done
 
         # Replace the variable
-        set new var random_number to rand using items of array usernames
-        set var username to from array usernames item [ var random_number ]
+        set new var random_number to rand using elements of array usernames
+        set var username to from array usernames element [ var random_number ]
 
         print var username
         print new line
@@ -3606,8 +3663,8 @@ define action compute_output with var output do
         done
     done
 
-    set new var random_number to rand using items of array builtin_male_names
-    set new var name to from array builtin_male_names item [ var random_number ]
+    set new var random_number to rand using elements of array builtin_male_names
+    set new var name to from array builtin_male_names element [ var random_number ]
 
     do regex with var output: /\$\$randomname\$\$/ -> "var name" :global:i
     if not var output matches /......./ do
@@ -3642,7 +3699,7 @@ define action compute_output with var output do
             do regex with var _clause: /(^|\s)etwas(\s|$)/ -> "$0nichts$1" :global:i
         done
     done
-    set var output to join using ", ", items of array _clauses
+    set var output to join using ", ", elements of array _clauses
 
     do regex with var output: /_/ -> " " :global:i
     # Time From <-> time from
@@ -3668,16 +3725,16 @@ define action compute_output with var output do
         set var time_end to $0
     done
     
-    set new array date_time_array to items-returning localtime with var time_begin
-    set new var sec to from array date_time_array item [ 0 ]
-    set new var min to from array date_time_array item [ 1 ]
-    set new var hour to from array date_time_array item [ 2 ]
-    set new var mday to from array date_time_array item [ 3 ]
-    set new var mon to from array date_time_array item [ 4 ]
-    set new var year to from array date_time_array item [ 5 ]
-    set new var wday to from array date_time_array item [ 6 ]
-    set new var yday to from array date_time_array item [ 7 ]
-    set new var isdst to from array date_time_array item [ 8 ]
+    set new array date_time_array to elements-returning localtime with var time_begin
+    set new var sec to from array date_time_array element [ 0 ]
+    set new var min to from array date_time_array element [ 1 ]
+    set new var hour to from array date_time_array element [ 2 ]
+    set new var mday to from array date_time_array element [ 3 ]
+    set new var mon to from array date_time_array element [ 4 ]
+    set new var year to from array date_time_array element [ 5 ]
+    set new var wday to from array date_time_array element [ 6 ]
+    set new var yday to from array date_time_array element [ 7 ]
+    set new var isdst to from array date_time_array element [ 8 ]
     
     if not var min matches /../ do
         set var min to "0" concat var min
@@ -3805,16 +3862,16 @@ define action compute_output with var output do
             do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement " :global:i
         done
         
-        set new array date_time_array to items-returning localtime with var time_end
-        set new var sec to from array date_time_array item [ 0 ]
-        set new var min to from array date_time_array item [ 1 ]
-        set new var hour to from array date_time_array item [ 2 ]
-        set new var mday to from array date_time_array item [ 3 ]
-        set new var mon to from array date_time_array item [ 4 ]
-        set new var year to from array date_time_array item [ 5 ]
-        set new var wday to from array date_time_array item [ 6 ]
-        set new var yday to from array date_time_array item [ 7 ]
-        set new var isdst to from array date_time_array item [ 8 ]
+        set new array date_time_array to elements-returning localtime with var time_end
+        set new var sec to from array date_time_array element [ 0 ]
+        set new var min to from array date_time_array element [ 1 ]
+        set new var hour to from array date_time_array element [ 2 ]
+        set new var mday to from array date_time_array element [ 3 ]
+        set new var mon to from array date_time_array element [ 4 ]
+        set new var year to from array date_time_array element [ 5 ]
+        set new var wday to from array date_time_array element [ 6 ]
+        set new var yday to from array date_time_array element [ 7 ]
+        set new var isdst to from array date_time_array element [ 8 ]
         
         if not var min matches /../ do
             set var min to "0" concat var min
@@ -3896,7 +3953,7 @@ done
 define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array 1st item
+        set new var entity to from array entity_array 1st element
         
         if lc(var entity) matches /(^|\s)(ich|du|mich|dich)(\s|$)/ do
             set flag continue to 1
@@ -3912,7 +3969,7 @@ define action toggle_verbs with array verbs, array entities do
     print new line
     
     for each new array verb_array in array verbs is rw do
-        set new var verb to lc with from array verb_array 1st item
+        set new var verb to lc with from array verb_array 1st element
         print "verb: " concat var verb
         print new line
         if var verb matches "ist" do
@@ -3985,14 +4042,14 @@ define action toggle_verbs with array verbs, array entities do
             do regex with var verb: /e$/ -> "st" :global:i
         done
         do regex with var verb: /sss/ -> "ss" :global:i
-        set from array verb_array 1st item to var verb
+        set from array verb_array 1st element to var verb
     done
     do return with array verbs
 done
 
 define action toggle_entities with array entities do
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array 1st item
+        set new var entity to from array entity_array 1st element
         if lc(var entity) matches /(^|\s)mir($|\s)/ do
             do regex with var entity: /(^|\s)mir($|\s)/ -> "${1}dir$2" :global:i
         done
@@ -4024,29 +4081,29 @@ define action toggle_entities with array entities do
             do regex with var entity: /(^|<[_]>)dein/ -> "${1}mein" :global:i
         done
         
-        set from array entity_array 1st item to var entity
+        set from array entity_array 1st element to var entity
     done
     do return with array entities
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
-    if var truth < 0.5 and ( from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] or from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] ) do
-        if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
+    if var truth < 0.5 and ( from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ] or from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ] ) do
+        if from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex with from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
-            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
+        else if from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ] matches /\$\$aswellas\$\$/ do
+            do regex with from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ]: /\$\$aswellas\$\$/ -> "\$\$notaswellas\$\$" :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /^ein/ do
-            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
-            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
+        else if from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex with from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
+            do regex with from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
-            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
-            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
+        else if from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex with from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)$/ -> "kein$0" :global:i
+            do regex with from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ]: /^ein(.?.?.?)\s/ -> "kein$0 " :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3  + (7*var number_of_subclause) ] to "nicht " concat from array result item [ var number_of_clause ] item [ 3 + (7*var number_of_subclause) ]
+            set from array result element [ var number_of_clause ] element [ 3  + (7*var number_of_subclause) ] to "nicht " concat from array result element [ var number_of_clause ] element [ 3 + (7*var number_of_subclause) ]
         done
     done
 done
@@ -4075,9 +4132,9 @@ define action stem_nouns with array phrases do
                     do regex with var noun: /ein$/ -> "*" :global:i
                 done
             done
-            if var noun matches /^(der|die|das|den|dem|des)$/ and not items of array words is 1 do
+            if var noun matches /^(der|die|das|den|dem|des)$/ and not elements of array words is 1 do
                 #do regex with var noun: /^(der|die|das|den|dem|des)$/ -> "*" :global:i
-                if items of array words > 2 do
+                if elements of array words > 2 do
                     do regex with var noun: /^(der|die|das|den|dem|des)$/ -> "*" :global:i
                 done
                 else do
@@ -4168,7 +4225,7 @@ define action stem_nouns with array phrases do
                 do regex with var noun: /(lich|ig)?keit$/ -> "*" :global:i
             done
         done
-        set var phrase to join using " ", items of array words
+        set var phrase to join using " ", elements of array words
         
         do regex with var phrase: /<[*]>\s/ -> "*" :global
         do regex with var phrase: /\s<[*]>/ -> "*" :global
@@ -4286,8 +4343,8 @@ define action say_answer_thanks with var user do
     set new array answers to an empty array
     push into array answers, "Nichts zu danken."
     push into array answers, "Gern geschehen."
-    set new var random_number to rand using items of array answers
-    set new var answer to from array answers item [ var random_number ]
+    set new var random_number to rand using elements of array answers
+    set new var answer to from array answers element [ var random_number ]
     
     do return with [ 0, var answer ]
 done
@@ -4313,8 +4370,8 @@ define action check_for_greeting with var input do
 done
 
 define action greet with var user do
-    set new array time_now to items-returning localtime without arguments
-    set new var hour to from array time_now item [ 2 ]
+    set new array time_now to elements-returning localtime without arguments
+    set new var hour to from array time_now element [ 2 ]
 
     if var user do
         if var hour >= 0 and var hour < 5 do
@@ -4460,7 +4517,7 @@ define action multiple_choices_verb with var verb do
         done
     done
     
-    set new var verbs to join with "|", items of array choices
+    set new var verbs to join with "|", elements of array choices
     do return with var verbs
 done
 
@@ -4541,7 +4598,7 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
     done
     else if (not var input matches /_no-question_/) and lc(var input) matches /^(<[A-Za-z]>+?)\s/ do
         set new array tags to compute_tags with $0, var lang, var path
-        if from array tags 1st item matches /v/ and not from array tags 1st item matches /adv/ do
+        if from array tags 1st element matches /v/ and not from array tags 1st element matches /adv/ do
             print "Sentence contains a verb as first word..."
             print new line
             
@@ -4594,7 +4651,7 @@ define action use_bug_feature with array results, hash parsed do
         set new array clause to an empty array
         
         push into array clause, ''
-        if from array result item [ 1 ] item [ 3 ] matches /nicht/ do
+        if from array result element [ 1 ] element [ 3 ] matches /nicht/ do
             push into array clause, 'und auch'
         done
         else do
@@ -4602,10 +4659,10 @@ define action use_bug_feature with array results, hash parsed do
         done
         
         set new var objects to ''
-        set new array objects_separated to from hash parsed item { 'objects' }
+        set new array objects_separated to from hash parsed element { 'objects' }
         for each new array obj in array objects_separated do
             set var objects to var objects concat " "
-            set var objects to var objects concat from array obj 1st item
+            set var objects to var objects concat from array obj 1st element
         done
         do regex with var objects: /^\s/ -> "" :global
         
@@ -4620,8 +4677,8 @@ define action use_bug_feature with array results, hash parsed do
         set var objects to lc with var objects
         set new var lastnoun to var objects
         do regex with var lastnoun: /^.*?\s/ -> "" :global
-        if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var objects/ do
-            if not lc( from array result item [ 1 ] item [ 1 ] concat " " concat from array result item [ 1 ] item [ 2 ] concat " " concat from array result item [ 1 ] item [ 3 ] ) matches /var lastnoun/ do
+        if not lc( from array result element [ 1 ] element [ 1 ] concat " " concat from array result element [ 1 ] element [ 2 ] concat " " concat from array result element [ 1 ] element [ 3 ] ) matches /var objects/ do
+            if not lc( from array result element [ 1 ] element [ 1 ] concat " " concat from array result element [ 1 ] element [ 2 ] concat " " concat from array result element [ 1 ] element [ 3 ] ) matches /var lastnoun/ do
                 push into array result, array clause
             done
         done
@@ -4683,7 +4740,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Fuer diese Eingabe fehlt mir momentan das notwendige Wissen, um diese genau zu beantworten."
             push into array random, "Bitte nicht boese sein, aber auf diese Eingabe habe ich keine Antwort."
 
-            push into array random, items of array random
+            push into array random, elements of array random
         done
         else if lc(" " concat var input concat " ") matches /(\sja\s)|(\snein\s)/ do
             push into array random, "Wieso nicht?"
@@ -4691,7 +4748,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Ja, klar."
             push into array random, "Ja klar."
             push into array random, "Natuerlich."
-            push into array random, items of array random
+            push into array random, elements of array random
         done
         else if lc(" " concat var input concat " ") matches /(\swarum\s)|(\swieso\s)|(\swes)/ do
             push into array random, "Wieso nicht?"
@@ -4702,7 +4759,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Hm, das kann ich dir nicht sagen."
             push into array random, "Das weiss ich nicht."
             push into array random, "Ich weiss das nicht, kannst du es mir sagen?"
-            push into array random, items of array random
+            push into array random, elements of array random
         done
         else do
             push into array random, "Nein."
@@ -4793,6 +4850,7 @@ define action check_for_weather with var place, var lang, var path do
     set new var pro_file_name to "./lang_" concat var lang concat "/weather.pro"
     set new var weather_pro_file to handle for file name var pro_file_name, write
     do close with var weather_pro_file
+    do trigger_check_files without arguments
     
     set new var search_results to handle for file name "weather.txt", read
     for each new var line from var search_results do
@@ -4829,7 +4887,7 @@ define action check_for_weather with var place, var lang, var path do
                 done
                 if var line matches /deg text_l temp_w/ do
                     set new array parts to split with /<.div>/, var line
-                    set var line to from array parts 1st item
+                    set var line to from array parts 1st element
                     do regex with var line: /[<][^>]*?[>]/ -> "" :global
                     do regex with var line: /[&].*/ -> "" :global
                     do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
@@ -4843,7 +4901,7 @@ define action check_for_weather with var place, var lang, var path do
                 done
                 if var line matches /deg text_l temp_w/ do
                     set new array parts to split with /<.div>/, var line
-                    set var line to from array parts 2nd item
+                    set var line to from array parts 2nd element
                     do regex with var line: /[<][^>]*?[>]/ -> "" :global
                     do regex with var line: /[&].*/ -> "" :global
                     do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
@@ -4939,30 +4997,30 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
     set new array words to split with /\s+?/, var phrase
     
     for each new var word in array words do
-        if not from hash tags item { var word } do
+        if not from hash tags element { var word } do
             set new var word_to_check to var word
             do regex with var word_to_check: /<[^a-zA-Z0-9-]>/ -> "" :global:i
-            set from hash tags item { var word } to compute_tags with var word_to_check, var lang, var path
+            set from hash tags element { var word } to compute_tags with var word_to_check, var lang, var path
         done
-        if from hash tags item { var word } 1st item matches /n/ and not from hash tags item { var word } 1st item matches /linking|question/ do
+        if from hash tags element { var word } 1st element matches /n/ and not from hash tags element { var word } 1st element matches /linking|question/ do
             set new array parts_of_word to split with /<[-]>/, var word
             for each new var part in array parts_of_word do
                 set var part to ucfirst with var part
             done
-            set var word to join '-', items of array parts_of_word
+            set var word to join '-', elements of array parts_of_word
             set var word to ucfirst with var word
         done
     done
     
-    set var phrase to join ' ', items of array words
+    set var phrase to join ' ', elements of array words
     
-    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
+    set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
     
     for each new var prefix in array verb_prefixes do
-        if from hash builtin_verb_prefixes_no_split item { var prefix } do
+        if from hash builtin_verb_prefixes_no_split element { var prefix } do
             go to next
         done
-        if from hash builtin_auxiliary_verbs item { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs item { var prefix } do
+        if from hash builtin_auxiliary_verbs element { var prefix } and not from hash builtin_verb_prefixes_with_auxiliary_verbs element { var prefix } do
             go to next
         done
         if var phrase matches /kann|soll|muss|muess|darf/ do
@@ -4980,10 +5038,10 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             print "possible verb: "
             print lc( $0 concat $1 )
             print " = "
-            print from hash tags item { lc( $0 concat $1 ) } 1st item
+            print from hash tags element { lc( $0 concat $1 ) } 1st element
             print new line
             
-            if (not from hash tags item { lc( $0 concat $1 ) } 1st item matches /v/) or from hash tags item { lc( $0 concat $1 ) } 1st item matches /adv/ or from hash tags item { lc( $0 concat $1 ) } 1st item matches /adj/ do
+            if (not from hash tags element { lc( $0 concat $1 ) } 1st element matches /v/) or from hash tags element { lc( $0 concat $1 ) } 1st element matches /adv/ or from hash tags element { lc( $0 concat $1 ) } 1st element matches /adj/ do
                 print "no verb to replace... (1)"
                 print new line
                 go to next
@@ -5003,7 +5061,7 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
 done
 
 define action to_verb_root_left with var verb, var lang, var path do
-    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
+    set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
     
     set new var allprefix to ''
     
@@ -5083,7 +5141,7 @@ define action to_verb_root with var verb, var lang, var path do
 
     
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
-    set var verb to from array verb_and_prefix 1st item
+    set var verb to from array verb_and_prefix 1st element
 
     set var verb to to_verb_root_right with var verb, var lang, var path
     
@@ -5094,7 +5152,7 @@ define action to_verb_prefix with var verb, var lang, var path do
 
     
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
-    set new var prefix to from array verb_and_prefix 2nd item
+    set new var prefix to from array verb_and_prefix 2nd element
     
     set var verb to to_verb_root_right with var verb, var lang, var path
     

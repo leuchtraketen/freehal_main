@@ -129,8 +129,8 @@ define action set_score_for_num with var score, var num, var lang, var path do
         done
 
         push into array last_output, var line
-        if items of array last_output > var num - 1 do
-            do shift with items of array last_output
+        if elements of array last_output > var num - 1 do
+            do shift with elements of array last_output
         done
     done
     
@@ -143,7 +143,7 @@ define action set_score_for_num with var score, var num, var lang, var path do
     set new array words to split with " ", var last_input
     
     if var last_output do
-        do set_score with array words, from array last_output 1st item, var score, var lang, var path
+        do set_score with array words, from array last_output 1st element, var score, var lang, var path
     done
 done
 
@@ -151,7 +151,7 @@ set new hash content_of_score_file to an empty hash
 
 define action get_score with array words, var sentence, var lang, var path do
     set new array maybe_is_score to check_score with var sentence
-    if array maybe_is_score and from array maybe_is_score 2nd item do
+    if array maybe_is_score and from array maybe_is_score 2nd element do
         return 0
     done
 
@@ -166,7 +166,7 @@ define action get_score with array words, var sentence, var lang, var path do
                 set var last_word to var line
             done
             else do
-                push into that array: from hash content_of_score_file item { var last_word } (end array), var line
+                push into that array: from hash content_of_score_file element { var last_word }, var line
             done
         done
         do close with var input_handle
@@ -176,28 +176,28 @@ define action get_score with array words, var sentence, var lang, var path do
     do regex with var sentence: /<[?]>|<[!.,\-]>|\s/ -> "" :global
     do regex with var sentence: /(<[)(+-]>)/ -> "\\$0" :global
     set new var sum to 1
-    set new var num_words to items of array words
+    set new var num_words to elements of array words
     set new var index_of_this_word to -1
     for each new var word in array words do
 
         set var index_of_this_word to var index_of_this_word + 1
 
-        if from hash content_of_score_file item { "[var word]" } do
+        if from hash content_of_score_file element { "[var word]" } do
             set new var line_no to -1
-            set new var size to size of that array: from hash content_of_score_file item { "[var word]" } (end array)
+            set new var size to size of that array: from hash content_of_score_file element { "[var word]" } end of elements
             do regex with var word: /<[?]>|<[!.,\-]>/ -> "" :global
 
             while var line_no < var size do
                 set var line_no to var line_no + 1
 
-                set new var line_2 to from hash content_of_score_file item { "[var word]" } item [ var line_no ]
+                set new var line_2 to from hash content_of_score_file element { "[var word]" } element [ var line_no ]
 
                 if var line_2 matches "" do
                     go to next
                 done
                 if var line_2 matches /var sentence/ do
                     set new array parts to split with ":", var line_2
-                    set new var score_here to from array parts 2nd item
+                    set new var score_here to from array parts 2nd element
                     do regex with var score_here: /\s/ -> "" :global
 #                    print "score: " concat var score_here concat new line
 

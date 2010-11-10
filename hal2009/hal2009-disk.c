@@ -1033,14 +1033,17 @@ struct fact* disk_add_clause(int rel, const char* subjects, const char* objects,
         sql = gen_sql_add_verb_flags(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0);
         int error = sql_execute(sql, NULL, NULL);
         free(sql);
-        
+
         sql = 0;
         sql = gen_sql_add_word_fact_relations(sql, pk, rel, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, 0, 0);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
 
-    return 0;
+    struct fact* fact = calloc(sizeof(struct fact), 1);
+    fact->pk = pk;
+
+    return fact;
 }
 
 struct fact* disk_add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {

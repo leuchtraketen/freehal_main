@@ -2536,7 +2536,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'neu' => "adj",
           'macht' => "v",
           'vieles' => "adj",
-          'zweitem' => "adj",
+          'zweelement' => "adj",
           'dich' => "n",
           'wichtiges' => "adj",
           'dienstags' => "adj",
@@ -2621,7 +2621,7 @@ set multi-line new global hash builtin_time_relations to {
 };
 
 set new global array builtin_time_relations_names to an empty array
-set items of global array builtin_time_relations_names to keys with items of hash builtin_time_relations
+set elements of global array builtin_time_relations_names to keys with elements of hash builtin_time_relations
 
 define action time_pre_transformations with var sentence, var lang, var path do
     do regex with var sentence: /(in|ago)\s*?(?:a|an)\s*?(<[a-zA-Z]>*?hour<[a-zA-Z]>*?)(\s|$)/ -> "$0 $1$2" :global:i
@@ -2844,15 +2844,15 @@ define action compute_output with var output do
     done
     do regex with var output: /=>/ -> "" :global:i
     
-    set new array verb_prefixes to items-returning keys with items of hash builtin_verb_prefixes
+    set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
     
     for each new var prefix in array verb_prefixes do
         do regex with var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/ -> " $1 $2 $0 " :global
         do regex with var output: /\s($prefix)(<[a-zA-Z0-9]>*?)$/ -> " $1 $0" :global
     done
     
-    set new var random_number to rand using items of array builtin_male_names
-    set new var name to from array builtin_male_names item [ var random_number ]
+    set new var random_number to rand using elements of array builtin_male_names
+    set new var name to from array builtin_male_names element [ var random_number ]
 
     do regex with var output: /\$\$randomname\$\$/ -> "var name" :global:i
     do regex with var output: /<[*]>/ -> "var name" :global:i
@@ -2861,16 +2861,16 @@ define action compute_output with var output do
     do regex with var output: / von dem / -> " des " :global:i
 
     set new var time_now to time without arguments
-    set new array date_time_array to items-returning localtime with var time_now
-    set new var sec to from array date_time_array item [ 0 ]
-    set new var min to from array date_time_array item [ 1 ]
-    set new var hour to from array date_time_array item [ 2 ]
-    set new var mday to from array date_time_array item [ 3 ]
-    set new var mon to from array date_time_array item [ 4 ]
-    set new var year to from array date_time_array item [ 5 ]
-    set new var wday to from array date_time_array item [ 6 ]
-    set new var yday to from array date_time_array item [ 7 ]
-    set new var isdst to from array date_time_array item [ 8 ]
+    set new array date_time_array to elements-returning localtime with var time_now
+    set new var sec to from array date_time_array element [ 0 ]
+    set new var min to from array date_time_array element [ 1 ]
+    set new var hour to from array date_time_array element [ 2 ]
+    set new var mday to from array date_time_array element [ 3 ]
+    set new var mon to from array date_time_array element [ 4 ]
+    set new var year to from array date_time_array element [ 5 ]
+    set new var wday to from array date_time_array element [ 6 ]
+    set new var yday to from array date_time_array element [ 7 ]
+    set new var isdst to from array date_time_array element [ 8 ]
     
     set new var weekday to 'nothing'
     if var wday is 0 do
@@ -2933,16 +2933,16 @@ define action compute_output with var output do
         set var time_end to $0
     done
     
-    set new array date_time_array to items-returning localtime with var time_begin
-    set new var sec to from array date_time_array item [ 0 ]
-    set new var min to from array date_time_array item [ 1 ]
-    set new var hour to from array date_time_array item [ 2 ]
-    set new var mday to from array date_time_array item [ 3 ]
-    set new var mon to from array date_time_array item [ 4 ]
-    set new var year to from array date_time_array item [ 5 ]
-    set new var wday to from array date_time_array item [ 6 ]
-    set new var yday to from array date_time_array item [ 7 ]
-    set new var isdst to from array date_time_array item [ 8 ]
+    set new array date_time_array to elements-returning localtime with var time_begin
+    set new var sec to from array date_time_array element [ 0 ]
+    set new var min to from array date_time_array element [ 1 ]
+    set new var hour to from array date_time_array element [ 2 ]
+    set new var mday to from array date_time_array element [ 3 ]
+    set new var mon to from array date_time_array element [ 4 ]
+    set new var year to from array date_time_array element [ 5 ]
+    set new var wday to from array date_time_array element [ 6 ]
+    set new var yday to from array date_time_array element [ 7 ]
+    set new var isdst to from array date_time_array element [ 8 ]
     
     if not var min matches /../ do
         set var min to "0" concat var min
@@ -3030,16 +3030,16 @@ define action compute_output with var output do
             do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement" :global:i
         done
         
-        set new array date_time_array to items-returning localtime with var time_end
-        set new var sec to from array date_time_array item [ 0 ]
-        set new var min to from array date_time_array item [ 1 ]
-        set new var hour to from array date_time_array item [ 2 ]
-        set new var mday to from array date_time_array item [ 3 ]
-        set new var mon to from array date_time_array item [ 4 ]
-        set new var year to from array date_time_array item [ 5 ]
-        set new var wday to from array date_time_array item [ 6 ]
-        set new var yday to from array date_time_array item [ 7 ]
-        set new var isdst to from array date_time_array item [ 8 ]
+        set new array date_time_array to elements-returning localtime with var time_end
+        set new var sec to from array date_time_array element [ 0 ]
+        set new var min to from array date_time_array element [ 1 ]
+        set new var hour to from array date_time_array element [ 2 ]
+        set new var mday to from array date_time_array element [ 3 ]
+        set new var mon to from array date_time_array element [ 4 ]
+        set new var year to from array date_time_array element [ 5 ]
+        set new var wday to from array date_time_array element [ 6 ]
+        set new var yday to from array date_time_array element [ 7 ]
+        set new var isdst to from array date_time_array element [ 8 ]
         
         if not var min matches /../ do
             set var min to "0" concat var min
@@ -3109,7 +3109,7 @@ done
 define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array 1st item
+        set new var entity to from array entity_array 1st element
         
         if lc(var entity) matches /(^|\s)(i|you|me|myself|yourself)(\s|$)/ do
             set flag continue to 1
@@ -3121,7 +3121,7 @@ define action toggle_verbs with array verbs, array entities do
     done
     
     for each new array verb_array in array verbs is rw do
-        set new var verb to from array verb_array 1st item
+        set new var verb to from array verb_array 1st element
         if var verb matches "is" do
             go to next
         done
@@ -3131,14 +3131,14 @@ define action toggle_verbs with array verbs, array entities do
         else if var verb matches /^are$/ do
             do regex with var verb: /^are$/ -> "am" :global:i
         done
-        set from array verb_array 1st item to var verb
+        set from array verb_array 1st element to var verb
     done
     do return with array verbs
 done
 
 define action toggle_entities with array entities do
     for each new array entity_array in array entities is rw do
-        set new var entity to from array entity_array 1st item
+        set new var entity to from array entity_array 1st element
         if lc(var entity) matches /(^|\s)you($|\s)/ do
             do regex with var entity: /(^|\s)you($|\s)/ -> "${1}i$2" :global:i
         done
@@ -3157,23 +3157,23 @@ define action toggle_entities with array entities do
         else if lc(var entity) matches /(^|\s)yours($|\s)/ do
             do regex with var entity: /(^|\s)yours($|\s)/ -> "${1}mine$2" :global:i
         done
-        set from array entity_array 1st item to var entity
+        set from array entity_array 1st element to var entity
     done
     do return with array entities
 done
 
 define action adjust_truth with array result, var truth, var number_of_clause, var number_of_subclause do
     if var truth not matches "" and var truth < 0.5 do
-        if from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ] matches /^a/ do
-            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/ -> "no$0" :global:i
-            do regex with from array result item [ var number_of_clause ] item [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/ -> "no$0 " :global:i
+        if from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ] matches /^a/ do
+            do regex with from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/ -> "no$0" :global:i
+            do regex with from array result element [ var number_of_clause ] element [ 2 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/ -> "no$0 " :global:i
         done
-        else if from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
-            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/ -> "no$0" :global:i
-            do regex with from array result item [ var number_of_clause ] item [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/ -> "no$0 " :global:i
+        else if from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ] matches /^ein/ do
+            do regex with from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)$/ -> "no$0" :global:i
+            do regex with from array result element [ var number_of_clause ] element [ 1 + (7*var number_of_subclause) ]: /^a(.?.?.?)\s/ -> "no$0 " :global:i
         done
         else do
-            set from array result item [ var number_of_clause ] item [ 3  + (7*var number_of_subclause)] to "not " concat from array result item [ var number_of_clause ] item [ 3 + (7*var number_of_subclause) ]
+            set from array result element [ var number_of_clause ] element [ 3  + (7*var number_of_subclause)] to "not " concat from array result element [ var number_of_clause ] element [ 3 + (7*var number_of_subclause) ]
         done
     done
 done
@@ -3252,7 +3252,7 @@ define action stem_nouns with array phrases do
                 do regex with var noun: /(lich|ig)?keit$/ -> "*" :global:i
             done
         done
-        set var phrase to join using " ", items of array words
+        set var phrase to join using " ", elements of array words
         
         do regex with var phrase: /<[*]>\s/ -> "*" :global
         do regex with var phrase: /\s<[*]>/ -> "*" :global
@@ -3327,8 +3327,8 @@ done
 define action say_answer_thanks with var user do
     set new array answers to an empty array
     push into array answers, "Okay"
-    set new var random_number to rand using items of array answers
-    set new var answer to from array answers item [ var random_number ]
+    set new var random_number to rand using elements of array answers
+    set new var answer to from array answers element [ var random_number ]
     
     do return with [ 0, var answer ]
 done
@@ -3354,8 +3354,8 @@ define action check_for_greeting with var input do
 done
 
 define action greet with var user do
-    set new array time_now to items-returning localtime without arguments
-    set new var hour to from array time_now item [ 2 ]
+    set new array time_now to elements-returning localtime without arguments
+    set new var hour to from array time_now element [ 2 ]
 
     if var user do
         if var hour >= 0 and var hour < 5 do
@@ -3436,7 +3436,7 @@ define action multiple_choices_verb with var verb do
         done
     done
     
-    set new var verbs to join with "|", items of array choices
+    set new var verbs to join with "|", elements of array choices
     do return with var verbs
 done
 
@@ -3527,7 +3527,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Well."
             push into array random, "Okay."
             push into array random, "Of course."
-            push into array random, items of array random
+            push into array random, elements of array random
         done
         else if lc(" " concat var input concat " ") matches /(\swho\s)|(\swhat\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhose\s)|(\swhom\s)/ do
             push into array random, "I don't know."
@@ -3544,7 +3544,7 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "I have never heard about it."
             push into array random, "I have never heard about this."
             push into array random, "Can you tell me?"
-            push into array random, items of array random
+            push into array random, elements of array random
         done
         else do
             push into array random, "No."

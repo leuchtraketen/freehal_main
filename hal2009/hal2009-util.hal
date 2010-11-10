@@ -101,11 +101,11 @@ define action make_ascii with var text is rw do
     do return with var text
 done
 
-define action join_items with array list do
+define action join_elements with array list do
     set new var txt to ''
-    for each new var listitem in array list do
+    for each new var listelement in array list do
         set var txt to var txt concat " ("
-        set var txt to var txt concat var listitem
+        set var txt to var txt concat var listelement
         set var txt to var txt concat "), "
     done
     do return with var txt
@@ -117,4 +117,11 @@ define action escape_html with var text do
     
     do return with var text
 done
+
+define action trigger_check_files without arguments do
+    set new var output_handle to handle for file name "_check_files", write
+    do close with var output_handle
+done
+
+
 

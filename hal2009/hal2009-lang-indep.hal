@@ -249,8 +249,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /(Anfang|Ende) (januar|jaenner|februar|maerz|april|mai|juni|juli|august|september|oktober|november|dezember)/ -> "in dem _$1_" :global:i
 
     set new var c_time to time without arguments
-    set new array date_time_array to items-returning localtime with var c_time
-    set new var year to from array date_time_array item [ 5 ]
+    set new array date_time_array to elements-returning localtime with var c_time
+    set new var year to from array date_time_array element [ 5 ]
     set var year to var year + 1900
 
     do regex with var input: /jaenner/ -> "januar" :global:i
@@ -1055,7 +1055,7 @@ define action compute_input with var input is rw, var lang, var path do
         do regex with var input: /\s+$/ -> "" :global
         do regex with var input: /\s+/ -> "_" :global
         set new array opposites to split using /_opposite_/, var input
-        set var input to "_" concat from array opposites 1st item concat "_ opposite _" concat from array opposites 2nd item concat "_"
+        set var input to "_" concat from array opposites 1st element concat "_ opposite _" concat from array opposites 2nd element concat "_"
     done
     
     do regex with var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/ -> " $1 , _to_ $0 $2" :global
@@ -1072,12 +1072,12 @@ define action compute_input with var input is rw, var lang, var path do
                 if var word do
                     if var word not matches var zu_verb do
                         set new array tag to compute_tags with var word, var lang, var path
-                        if from hash sym_linking item { from array tag 1st item } do
+                        if from hash sym_linking element { from array tag 1st element } do
                             if flag found_zu_verb is true do
                                 go to last
                             done
                         done
-                        if from hash sym_verb item { from array tag 1st item } do
+                        if from hash sym_verb element { from array tag 1st element } do
                             set flag found_other_verb to 1
                             print "other verb: " concat var word concat new line
                         done
@@ -1131,6 +1131,7 @@ define action compute_input with var input is rw, var lang, var path do
             set new var output_handle to handle for file name var output_file_name, write
             print into var output_handle data var csv_output
             do close with var output_handle
+            do trigger_check_files without arguments
             while not exists: '_input__get_csv', end test do
                 do wait 0.5 seconds
             done
@@ -1143,6 +1144,7 @@ define action compute_input with var input is rw, var lang, var path do
                 print into var cache_output data var line concat new line
             done
             do close with var cache_output
+            do trigger_check_files without arguments
         done
         
         push into global array replace_array, ""
@@ -1152,8 +1154,8 @@ define action compute_input with var input is rw, var lang, var path do
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
         if var line do
-            set new var a to from array rawresult item [ 2 ]
-            set new var b to from array rawresult item [ 3 ]
+            set new var a to from array rawresult element [ 2 ]
+            set new var b to from array rawresult element [ 3 ]
             if var a and var b and var a not matches var b do
                 do regex with var input: /(^|\s)var a(\s|$)/ -> "$0var b$1" :global:i
                 
@@ -1274,7 +1276,7 @@ define action compute_input with var input is rw, var lang, var path do
 
             set new flag next_is_a_verb to 0
             set new array tag to compute_tags with var rel_verb, var lang, var path
-            if from hash sym_verb item { from array tag 1st item } or size of array words < 3 or ( size of array words < 4 and from hash sym_verb item { from array tag 1st item } ) do
+            if from hash sym_verb element { from array tag 1st element } or size of array words < 3 or ( size of array words < 4 and from hash sym_verb element { from array tag 1st element } ) do
                 set flag next_is_a_verb to 1
                 print "not found an relative clause verb: " concat var rel_verb concat new line
             done
