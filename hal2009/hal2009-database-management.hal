@@ -30,6 +30,9 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
     for each new hash parsed in array facts_parsed do
         set new var line to ''
         set new var truth to "(maybe)"
+
+print hash parsed
+print new line
         
         set new array verbs to from hash parsed element { 'verbs' }
         for each new array verb in array verbs do
@@ -189,11 +192,7 @@ print "verb: " concat var verb concat new line
         set new var number_of_clauses to 0
         for each new hash parsed in array clauses is rw do
             if var number_of_clauses do
-                # TEXT
-                # We can only add one ; per line because it's a keyword in hal2009 language
-                # CODE
-                set var line to var line concat ' ;'
-                set var line to var line concat '; '
+                set var line to var line concat ' <> '
             done
             else do
                 set var line to var line concat ' <> '
@@ -242,7 +241,8 @@ print "verb: " concat var verb concat new line
             
             set var number_of_clauses to var number_of_clauses + 1
         done
-        set var line to var line concat ' <> '
+        ###set var line to var line concat ' <> '
+        set var line to var line concat ' '
         set var line to var line concat var truth
         
         push into array line_array, var line
@@ -348,13 +348,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
     do regex with var input: /\s+/ -> " " :global:i
     set new array clauses_input to split with " KOMMA ", var input
-    set new hash parsed to an empty hash
-    set from hash parsed element { 'verbs' } to an empty array
-    set from hash parsed element { 'subjects' } to an empty array
-    set from hash parsed element { 'objects' } to an empty array
-    set from hash parsed element { 'clauses' } to an empty array
-    set from hash parsed element { 'adverbs' } to an empty array
-    set from hash parsed element { 'questionword' } to an empty array
+    set new hash parsed to fake_hash_parsed without arguments
     set new flag number_of_clause to 0
     set new hash tags to an empty hash
     for each new var clause in array clauses_input do
@@ -618,6 +612,139 @@ define action init_prot_files with var current_language, var path do
     done
 done
 
+define action transform_csv_line with var line, var current_language, var path do
+
+    set new var delete_chars to '"\''
+    do regex with var line: /<[var delete_chars]>/ -> "" :global
+
+    do regex with var line: /^\s+/ -> "" :global
+    do regex with var line: /\s+$/ -> "" :global
+    do regex with var line: /\s+/ -> " " :global
+    set new array words to an empty array
+    set array words to split with /<[,;]>/, var line
+
+    set new var main_word to shift from array words
+
+    set new array hashes to an empty array
+    for each new var word in array words do
+        if var word do
+            set new hash parsed to fake_hash_parsed without arguments
+            push into that array: from hash parsed element { 'verbs' }, [ "=" ]
+            push into that array: from hash parsed element { 'subjects' }, [ var word ]
+            push into that array: from hash parsed element { 'objects' }, [ var main_word ]
+
+            push into array hashes, hash parsed
+        done
+    done
+
+    do return with array hashes
+done
+
+define action init_csv_files with var current_language, var path do
+    set new var save_path to var path concat '/saved/'
+    do mkdir with var save_path
+    set var save_path to var save_path concat var current_language concat '/'
+    do mkdir with var save_path
+    do mkdir with var path concat '/lang_' concat var current_language concat '/wiki'
+    set new array sub_directories to [ '', '/thesaurus', '/..' ]   
+    push into array sub_directories, '/namen'
+    push into array sub_directories, '/berufe'
+    push into array sub_directories, '/ps_dateien'
+    push into array sub_directories, '/wiki'
+    push into array sub_directories, '/fakten'
+    
+    for each new var sub_dir in array sub_directories is copy do
+        set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+
+        do opendir with new var dir_handle, var language_directory
+        set new array files to [ readdir(var dir_handle) ]
+        # TEXT
+        # Read all .prot files by parsing them
+        # CODE
+        for each new var file_name in array files is rw do
+            set new var file to var language_directory concat '/' concat var file_name
+        
+            do be_slow without arguments
+            if not var file matches /csv$/ do
+                go to next
+            done
+            if var file matches /((remove-words)|(verbs)).csv/ do
+                go to next
+            done
+
+            set new var pro_file to var file
+            do regex with var pro_file: /csv$/ -> "pro" :i
+            
+            set new var check_input_handle_one to handle for file name var file, read
+            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var i to 1
+            for each new var line from var check_input_handle_one is rw do
+                set var i to var i + 1 + length(var line)
+            done
+            set new var j to 1
+            for each new var line from var check_input_handle_two is rw do
+                set var j to var j + 1 + length(var line)
+            done
+
+            if not var i is var j do
+
+                print "Read (prot) file "
+                print var file
+                print new line
+                
+                do be_slow without arguments
+                
+                set new var pro_handle to handle for file name var pro_file, write
+                do close with var pro_handle
+                do be_slow without arguments
+                
+                set new var translation_input_handle to handle for file name var file, read
+
+                # first line contains column names
+                set new var dummy to the next line from var translation_input_handle
+
+                for each new var _line from var translation_input_handle is rw do
+                    do be_slow without arguments
+                    
+                    print "in init_csv_files (1): "
+                    print var _line
+                    print new line
+                    
+                    if var _line matches /<[#]>/ do
+                        print into var pro_file data var _line
+                        print into var pro_file data new line
+                        go to next
+                    done
+                
+                    set new array lines to an empty array
+                    set new array subarray to transform_csv_line with var _line, var current_language, var path
+                    push into array lines, elements of array subarray
+                    
+                    set new hash tags to an empty hash
+                    set new var classification to ''
+                    for each new hash parsed in array lines do
+                        do save_facts with [ hash parsed ], hash tags, var pro_file, var classification, 1, var current_language, var path
+                    done
+                done
+                do close using var translation_input_handle
+                
+                do reread_pro_file with var pro_file, var current_language
+
+                do be_slow without arguments
+                set new var copy_input_handle to handle for file name var file, read
+                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                for each new var line from var copy_input_handle is rw do
+                    print into var copy_output_handle data var line
+                    print into var copy_output_handle data new line
+                done
+                do close using var copy_output_handle
+                do close using var copy_input_handle
+
+            done
+        done
+    done
+done
+
 define action update_list_of_pro_files with var pattern, var current_language, var path do
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
@@ -692,7 +819,7 @@ define action correct_human_edit_typos with var file, var current_language, var 
         do regex with var line: /_\(a\)_/ -> "(a) _"
 
         do regex with var line: /<[;]>{2}/ -> "<>"
-        do regex with var line: /<[<]><[>]>\s+?\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "($0)"
+        do regex with var line: /^(.*?<[<]><[>]>\s+?){6,}\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
         
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
@@ -872,6 +999,7 @@ done
 define action init with var current_language, var path do
     do init_part_of_speech_pro_file with var current_language, var path
 
+    do init_csv_files with var current_language, var path
     do init_prot_files with var current_language, var path
     do init_pro_files with var current_language, var path
 done

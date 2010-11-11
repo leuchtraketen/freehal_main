@@ -552,19 +552,14 @@ int hal2009_add_pro_file (char* filename) {
                         sub_clause->truth = 0.5;
 
                                                     strcpy(sub_clause->verb,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-printf("\n1: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->verb, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->subjects,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-printf("\n2: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->subjects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->objects,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-printf("\n3: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->objects, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->adverbs,       (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-printf("\n4: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->adverbs, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = strtok(NULL, "^"); strcpy(sub_clause->questionword,  (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
-printf("\n5: %s\n", buffer?buffer:"-");
                         remove_negation(sub_clause->questionword, &(sub_clause->truth), &(sub_clause->only_logic));
                         buffer = filename;          strcpy(sub_clause->filename,      (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                         snprintf(sub_clause->line, 100, "%d", line_number);
