@@ -20,12 +20,13 @@
 */
 
 #define NOT_HEADER_ONLY 1
+#include <dirent.h>
 #include "hal2009.h"
 
 int unzipper(const char *zipfilename);
 
 
-void extract() {
+void __extract__() {
     FILE* do_not_extract = fopen(".do-not-extract", "r");
     if ( !do_not_extract ) {
         int i;
@@ -48,6 +49,24 @@ void extract() {
 
             free(filename);
         }
+    }
+}
+
+
+
+void extract() {
+    FILE* do_not_extract = fopen(".do-not-extract", "r");
+    if ( !do_not_extract ) {
+        DIR *hdir;
+        struct dirent *entry;
+        hdir = opendir(".");
+        do {
+            entry = readdir(hdir);
+            if (entry) {
+                unzipper(entry->d_name);
+            }
+        } while (entry);
+        closedir(hdir);
     }
 }
 
