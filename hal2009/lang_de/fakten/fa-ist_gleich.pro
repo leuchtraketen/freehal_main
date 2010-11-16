@@ -1,4 +1,5 @@
-= <> hauptstadt <> stadt <>  <> (maybe)
+= <> _stinkt_ <> _riecht unangenehm_ <>  <> (maybe)
+= <> _hauptstadt_ <> _stadt_ <>  <> (maybe)
 = <> _angst_haben_ <> _sich_fuerchten_ <> <> 50
 = <> _antialkoholisch_ <> _alkoholfrei_ <> <> (true)
 = <> _beibringen_ <> _lernen_ <> <> (true)

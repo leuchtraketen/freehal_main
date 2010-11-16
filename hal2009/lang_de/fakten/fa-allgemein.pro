@@ -114,6 +114,7 @@
 = <> _1_schaltjahr_ <> _366_tage_ <>  <> (maybe)
 = <> _ein_schaltjahr_ <> _366_tage_ <>  <> (maybe)
 = <> _jaenner_ <> _monat_ <>  <> (maybe)
+= <> _januar_ <> _monat_ <>  <> (maybe)
 = <> _februar_ <> _monat_ <>  <> (maybe)
 = <> _maerz_ <> _monat_ <>  <> (maybe)
 = <> _april_ <> _monat_ <>  <> (maybe)
