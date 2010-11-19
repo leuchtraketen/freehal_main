@@ -139,6 +139,7 @@ const char* define_general_verb(char* sentence, const char* entity) {
     char* position_war = strstr(sentence, " war ");
     char* position_waren = strstr(sentence, " waren ");
     char* position_dot = strstr(sentence, ".");
+    char* position_komma = strstr(sentence, ",");
     char* position_article_indef = 0;
     if (position_article_indef == 0) position_article_indef = strstr(sentence, "Ein ");
     if (position_article_indef == 0) position_article_indef = strstr(sentence, "Eine ");
@@ -157,16 +158,16 @@ const char* define_general_verb(char* sentence, const char* entity) {
         return "equal-pl-def";
     }
 
-    if (position_article_def < position_ist && position_ist < position_dot) {
+    if (position_article_def && position_article_def < position_ist && position_ist < position_dot && position_article_def < position_komma) {
         return "equal-sg-def";
     }
-    if (position_article_indef < position_ist && position_ist < position_dot) {
+    if (position_article_indef && position_article_indef < position_ist && position_ist < position_dot && position_article_indef < position_komma) {
         return "equal-sg-indef";
     }
-    if (position_article_def < position_sind && position_sind < position_dot) {
+    if (position_article_def && position_article_def < position_sind && position_sind < position_dot && position_article_def < position_komma) {
         return "equal-pl-def";
     }
-    if (position_article_indef < position_sind && position_sind < position_dot) {
+    if (position_article_indef && position_article_indef < position_sind && position_sind < position_dot && position_article_indef < position_komma) {
         return "equal-pl-indef";
     }
     if (position_ist < position_dot) {

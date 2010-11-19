@@ -2771,6 +2771,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'us-amerikanisches' => "adj",
           'usually' => "adj",
           '~~~' => "v",
+          '~' => "v",
           '==' => "v",
           '=>' => "v",
           '=' => "v",
@@ -4441,6 +4442,8 @@ define action multiple_choices_verb with var verb do
     if var verb matches "bi" or var verb matches "i" or var verb matches "is" or var verb matches "sind" or var verb matches /heis/ or var verb matches /wurd/ do
         push into array choices, var verb
         push into array choices, "="
+        push into array choices, "~"
+        push into array choices, "is-a"
         push into array choices, "bin"
         push into array choices, "bist"
         push into array choices, "ist"

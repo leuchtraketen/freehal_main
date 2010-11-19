@@ -1,6 +1,7 @@
 1261:
 
 - Bug 664 korrigiert
+- Bug 607 korrigiert
 
 1260:
 

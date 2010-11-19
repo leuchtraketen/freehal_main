@@ -628,8 +628,14 @@ define action transform_csv_line with var line, var current_language, var path d
     set new array hashes to an empty array
     for each new var word in array words do
         if var word do
+
+            set new var verb to '~'
+            if var word matches /<[A-Z]>/ do
+                set var verb to '='
+            done
+
             set new hash parsed to fake_hash_parsed without arguments
-            push into that array: from hash parsed element { 'verbs' }, [ "=" ]
+            push into that array: from hash parsed element { 'verbs' }, [ var verb ]
             push into that array: from hash parsed element { 'subjects' }, [ var word ]
             push into that array: from hash parsed element { 'objects' }, [ var main_word ]
 
