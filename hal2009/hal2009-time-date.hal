@@ -123,7 +123,11 @@ define action to_unixtime with var sentence, var lang, var path do
     set new var replacement to ""
     
     for each new var rel in array _builtin_time_relations_names do
-        if lc(var sentence) matches /(^|\s)var rel(\s|$)/ do
+
+        set new var sentence_length to length with var sentence
+        set new var rel_length to length with var rel
+
+        if lc(var sentence) matches /(^|\s)var rel(\s|$)/ and var sentence_length - var rel_length > 7 do
             set new array date_time_array to elements-returning localtime with var c_time
             set new var sec to from array date_time_array element [ 0 ]
             set new var min to from array date_time_array element [ 1 ]

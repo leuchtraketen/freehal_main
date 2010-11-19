@@ -1,3 +1,7 @@
+1260:
+
+- Bug 680 korrigiert
+
 1254:
 
 - Inkonsistenzen beim .pro-Format korrigiert
