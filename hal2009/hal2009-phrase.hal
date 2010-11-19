@@ -196,7 +196,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 set new var is_name_subject to is_name with var lang, var subject_last_word
                 set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
 
-                set var subject_article to get_article with var subject_genus, "subject", "indefinite"
+                if from array proper_verbs 1st element matches /^(equal-sg-def)/ do
+                    set var subject_article to get_article with var subject_genus, "subject", "definite"
+                done
+                else do
+                    set var subject_article to get_article with var subject_genus, "subject", "indefinite"
+                done
                 set var object_article to get_article with var object_genus, "subject", "indefinite"
                 
                 set new var subject_article_included to 0
@@ -213,11 +218,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 if from array proper_verbs 1st element matches /^(equal)/ do
                     
                     # subject article
-                    if from array proper_verbs 1st element not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and from array proper_verbs 1st element matches /(def|indef)/ do
+                    if ( from array proper_verbs 1st element not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and from array proper_verbs 1st element matches /(def|indef)/ ) or flag subject_article_included is true do
                         if var is_name_subject is false or var is_collective_noun_subject is true or flag subject_article_included is true do
-                            if from array proper_verbs 1st element matches /^(equal-sg-def)/ do
-                                set var subject_article to get_article with var subject_genus, "subject", "definite"
-                            done
                             push into array sentence, var subject_article
                         done
                     done
