@@ -4299,6 +4299,7 @@ define action check_for_math with var input do
     do regex with var math: /in/ -> "" :global:i
     do regex with var math: /x/ -> "*" :global:i
     do regex with var math: /\s+/ -> "" :global:i
+    do regex with var math: /pi/ -> "3.14" :global:i
     do regex with var math: /quadratwurzel/ -> "sqrt " :global:i
     do regex with var math: /wurzel/ -> "sqrt " :global:i
     do regex with var math: /<[,]>/ -> "." :global:i
