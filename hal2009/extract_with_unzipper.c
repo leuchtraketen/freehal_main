@@ -58,7 +58,13 @@ void extract() {
     FILE* do_not_extract = fopen(".do-not-extract", "r");
     if ( !do_not_extract ) {
         DIR *hdir;
+
+#if defined (__MINGW) || defined(__MINGW32__)
+        struct direct *entry;
+#else
         struct dirent *entry;
+#endif
+
         hdir = opendir(".");
         do {
             entry = readdir(hdir);
