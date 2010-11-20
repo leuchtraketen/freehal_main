@@ -75,6 +75,7 @@ void extract() {
         closedir(hdir);
 
         hdir = opendir("../../projects/freehal.net_freehal_at_home");
+        if (hdir) {
         do {
             entry = readdir(hdir);
             if (entry) {
@@ -84,9 +85,11 @@ void extract() {
                 unzipper(name);
             }
         } while (entry);
+        }
         closedir(hdir);
 
         hdir = opendir("../../projects/www.freehal.net_freehal_at_home");
+        if (hdir) {
         do {
             entry = readdir(hdir);
             if (entry) {
@@ -96,6 +99,7 @@ void extract() {
                 unzipper(name);
             }
         } while (entry);
+        }
         closedir(hdir);
     }
 }

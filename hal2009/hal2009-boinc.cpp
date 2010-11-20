@@ -193,7 +193,7 @@ int main (int argc, char** argv) {
     options.handle_process_control = false;
     options.send_status_msgs = true;
     boinc_init_options(&options);
-    fprintf(stderr, "freeHAL 2010: starting...\n");
+    fprintf(stderr, "FreeHAL 2010: starting...\n");
     
     string resolved_name;
     boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
