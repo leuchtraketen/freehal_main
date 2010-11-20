@@ -73,6 +73,30 @@ void extract() {
             }
         } while (entry);
         closedir(hdir);
+
+        hdir = opendir("../../projects/freehal.net_freehal_at_home");
+        do {
+            entry = readdir(hdir);
+            if (entry) {
+                char name[999];
+                strcpy(name, "../../projects/freehal.net_freehal_at_home/");
+                strcat(name, entry->d_name);
+                unzipper(name);
+            }
+        } while (entry);
+        closedir(hdir);
+
+        hdir = opendir("../../projects/www.freehal.net_freehal_at_home");
+        do {
+            entry = readdir(hdir);
+            if (entry) {
+                char name[999];
+                strcpy(name, "../../projects/www.freehal.net_freehal_at_home/");
+                strcat(name, entry->d_name);
+                unzipper(name);
+            }
+        } while (entry);
+        closedir(hdir);
     }
 }
 
