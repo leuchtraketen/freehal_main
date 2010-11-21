@@ -132,11 +132,8 @@ void* cpu_thread (void* p) {
 
 //        if ( (from_checkpoint || is_slow()) && ((now - start) / (max_seconds)) >= 1 ) {
         if ( ((now - start) / (max_seconds)) >= 1 ) {
-            srand (time_seed());
-            int N = 5;
-            int M = 120;
-            boinc_sleep_if_slow(1000*(M + uniform_deviate (rand()) * (N - M)));
             boinc_finish(0);
+            exit(0);
         }
 
         if ( time_to_checkpoint - now < 0 ) {
