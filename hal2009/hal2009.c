@@ -1270,24 +1270,25 @@ void* hal2009_signal_handler(void* parameters) {
     }
     FILE* signal_handler_lock = fopen("_do_not_need_a_signal_handler", "w");
     halclose(signal_handler_lock);
-    
-    
+
     int number_of_files_to_check = 8;
     char files_to_check[9][100] = { "_output", "_output__link", "_output__pos", "_output__add_pro_file", "_output__get_csv", "_exit", "_cgi_request", "_exit_by_user", };
     int i;
-    
-    while ( 1 ) {
 
-        short check_files = 0;
+    short check_files = 0;
+    while ( 1 ) {
+        if (check_files > 0) --check_files;
+
         {
             FILE* source = NULL;
             if ( source = fopen("_check_files", "r") ) {
-                check_files = 1;
+                check_files += 10;
+                halclose(source);
                 unlink("_check_files");
             }
         }
 
-        if (!check_files) {
+        if (check_files <= 0) {
             halusleep(1000);
         }
 
