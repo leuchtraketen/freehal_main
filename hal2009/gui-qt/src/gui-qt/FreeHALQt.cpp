@@ -2384,3 +2384,4 @@ void FreeHALWindow::on_db_search_save_clicked()
 
     freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
 }
+
