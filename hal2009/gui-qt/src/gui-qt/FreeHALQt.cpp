@@ -552,8 +552,8 @@ void make_connection(int show_connection_window) {
         show_connection_window = 0;
         dialog_connection->from->ip->setText("178.22.67.4");
         main_window->showWindowNormal();
-        main_window->user_interface_main_window->Chart->setVisible(false);
-        main_window->user_interface_main_window->Database->setVisible(false);
+        main_window->user_interface_main_window->tabWidget->removeTab(2);
+        main_window->user_interface_main_window->tabWidget->removeTab(1);
     }
     if (show_connection_window) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
