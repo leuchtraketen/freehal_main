@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Sun Dec 5 16:59:58 2010
+** Created: Sun Dec 5 17:14:09 2010
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -89,7 +89,7 @@ public:
     QPushButton *normalscreen;
     QPushButton *pushButton_learn;
     QPushButton *pushButton;
-    QWidget *tab;
+    QWidget *Chart;
     QGridLayout *gridLayout_6;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -396,11 +396,11 @@ public:
         verticalLayout->addWidget(frame_2);
 
         tabWidget->addTab(Talk, QString());
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        gridLayout_6 = new QGridLayout(tab);
+        Chart = new QWidget();
+        Chart->setObjectName(QString::fromUtf8("Chart"));
+        gridLayout_6 = new QGridLayout(Chart);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        scrollArea = new QScrollArea(tab);
+        scrollArea = new QScrollArea(Chart);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setFrameShape(QFrame::NoFrame);
         scrollArea->setFrameShadow(QFrame::Plain);
@@ -532,7 +532,7 @@ public:
 
         gridLayout_6->addWidget(scrollArea, 0, 0, 1, 1);
 
-        tabWidget->addTab(tab, QString());
+        tabWidget->addTab(Chart, QString());
         Database = new QWidget();
         Database->setObjectName(QString::fromUtf8("Database"));
         gridLayout_7 = new QGridLayout(Database);
@@ -733,7 +733,7 @@ public:
 
         retranslateUi(freehalWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(freehalWindow);
@@ -802,7 +802,7 @@ public:
         minus->setText(QApplication::translate("freehalWindow", "-", 0, QApplication::UnicodeUTF8));
         flowchart_fact_edit->setText(QApplication::translate("freehalWindow", "Save fact", 0, QApplication::UnicodeUTF8));
         flowchart_fact_delete->setText(QApplication::translate("freehalWindow", "Delete fact", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("freehalWindow", "Chart", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(Chart), QApplication::translate("freehalWindow", "Chart", 0, QApplication::UnicodeUTF8));
         label_14->setText(QApplication::translate("freehalWindow", "Subject:", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("freehalWindow", "Adverbs:", 0, QApplication::UnicodeUTF8));
         label_15->setText(QApplication::translate("freehalWindow", "Verb:", 0, QApplication::UnicodeUTF8));
