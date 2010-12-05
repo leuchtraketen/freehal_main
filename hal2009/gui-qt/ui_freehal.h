@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Sat Jul 24 11:36:21 2010
-**      by: Qt User Interface Compiler version 4.6.2
+** Created: Sun Dec 5 16:59:58 2010
+**      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -87,14 +87,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QComboBox *lineedit_talk;
     QPushButton *normalscreen;
-    QPushButton *pushButton;
-    QWidget *Learn;
-    QVBoxLayout *verticalLayout_2;
-    QTextEdit *textedit_learn;
-    QFrame *frame_3;
-    QHBoxLayout *horizontalLayout_2;
-    QComboBox *lineedit_learn;
     QPushButton *pushButton_learn;
+    QPushButton *pushButton;
     QWidget *tab;
     QGridLayout *gridLayout_6;
     QScrollArea *scrollArea;
@@ -359,14 +353,10 @@ public:
         frame_2->setFrameShape(QFrame::NoFrame);
         frame_2->setFrameShadow(QFrame::Plain);
         horizontalLayout = new QHBoxLayout(frame_2);
-#ifndef Q_OS_MAC
-        horizontalLayout->setSpacing(6);
-#endif
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         lineedit_talk = new QComboBox(frame_2);
         lineedit_talk->setObjectName(QString::fromUtf8("lineedit_talk"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(lineedit_talk->sizePolicy().hasHeightForWidth());
@@ -388,6 +378,13 @@ public:
 
         horizontalLayout->addWidget(normalscreen);
 
+        pushButton_learn = new QPushButton(frame_2);
+        pushButton_learn->setObjectName(QString::fromUtf8("pushButton_learn"));
+        sizePolicy3.setHeightForWidth(pushButton_learn->sizePolicy().hasHeightForWidth());
+        pushButton_learn->setSizePolicy(sizePolicy3);
+
+        horizontalLayout->addWidget(pushButton_learn);
+
         pushButton = new QPushButton(frame_2);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
@@ -399,44 +396,6 @@ public:
         verticalLayout->addWidget(frame_2);
 
         tabWidget->addTab(Talk, QString());
-        Learn = new QWidget();
-        Learn->setObjectName(QString::fromUtf8("Learn"));
-        verticalLayout_2 = new QVBoxLayout(Learn);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        textedit_learn = new QTextEdit(Learn);
-        textedit_learn->setObjectName(QString::fromUtf8("textedit_learn"));
-        textedit_learn->setEnabled(true);
-        textedit_learn->setFont(font);
-        textedit_learn->setReadOnly(true);
-
-        verticalLayout_2->addWidget(textedit_learn);
-
-        frame_3 = new QFrame(Learn);
-        frame_3->setObjectName(QString::fromUtf8("frame_3"));
-        frame_3->setFrameShape(QFrame::NoFrame);
-        frame_3->setFrameShadow(QFrame::Plain);
-        horizontalLayout_2 = new QHBoxLayout(frame_3);
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        lineedit_learn = new QComboBox(frame_3);
-        lineedit_learn->setObjectName(QString::fromUtf8("lineedit_learn"));
-        lineedit_learn->setEditable(true);
-        lineedit_learn->setMaxVisibleItems(20);
-        lineedit_learn->setInsertPolicy(QComboBox::NoInsert);
-
-        horizontalLayout_2->addWidget(lineedit_learn);
-
-        pushButton_learn = new QPushButton(frame_3);
-        pushButton_learn->setObjectName(QString::fromUtf8("pushButton_learn"));
-        sizePolicy3.setHeightForWidth(pushButton_learn->sizePolicy().hasHeightForWidth());
-        pushButton_learn->setSizePolicy(sizePolicy3);
-
-        horizontalLayout_2->addWidget(pushButton_learn);
-
-
-        verticalLayout_2->addWidget(frame_3);
-
-        tabWidget->addTab(Learn, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_6 = new QGridLayout(tab);
@@ -510,8 +469,11 @@ public:
 
         flowchart_view = new QLabel(scrollAreaWidgetContents);
         flowchart_view->setObjectName(QString::fromUtf8("flowchart_view"));
-        sizePolicy2.setHeightForWidth(flowchart_view->sizePolicy().hasHeightForWidth());
-        flowchart_view->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(flowchart_view->sizePolicy().hasHeightForWidth());
+        flowchart_view->setSizePolicy(sizePolicy5);
 
         gridLayout_3->addWidget(flowchart_view, 4, 2, 1, 5);
 
@@ -663,8 +625,8 @@ public:
 
         allfacts = new QPushButton(frame);
         allfacts->setObjectName(QString::fromUtf8("allfacts"));
-        sizePolicy2.setHeightForWidth(allfacts->sizePolicy().hasHeightForWidth());
-        allfacts->setSizePolicy(sizePolicy2);
+        sizePolicy5.setHeightForWidth(allfacts->sizePolicy().hasHeightForWidth());
+        allfacts->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(allfacts, 0, 4, 1, 1);
 
@@ -826,19 +788,9 @@ public:
          << QString()
         );
         normalscreen->setText(QApplication::translate("freehalWindow", " Exit ", 0, QApplication::UnicodeUTF8));
+        pushButton_learn->setText(QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(Talk), QApplication::translate("freehalWindow", "Talk", 0, QApplication::UnicodeUTF8));
-        textedit_learn->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
-        lineedit_learn->clear();
-        lineedit_learn->insertItems(0, QStringList()
-         << QString()
-        );
-        pushButton_learn->setText(QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(Learn), QApplication::translate("freehalWindow", "Learn", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("freehalWindow", "Input text:", 0, QApplication::UnicodeUTF8));
         compute_output->setText(QApplication::translate("freehalWindow", "Answer again!", 0, QApplication::UnicodeUTF8));
         refresh_chart->setText(QApplication::translate("freehalWindow", "Refresh", 0, QApplication::UnicodeUTF8));

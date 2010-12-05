@@ -73,7 +73,7 @@ INCLUDEPATH += . \
     src
 MOCSRC += src/gui-qt/FreeHALQt.cpp
 MOCSRC += src/communicate.cpp
-MOCSRC += src/socketload.cpp
+#MOCSRC += src/socketload.cpp
 TRANSLATIONS = freehal_de.ts \
     freehal_en.ts \
     freehal_sp.ts
@@ -90,10 +90,10 @@ FORMS +=
 
 # Input
 HEADERS += src/gui-qt/FreeHALQt.h \
-    src/communicate.h \
-    src/socketload.h
+    src/communicate.h
+#    src/socketload.h
 SOURCES += src/sentence.cpp \
-    src/socketload.cpp \
+#    src/socketload.cpp 
     src/util.cpp \
     src/communicate.cpp \
     src/gui-qt/FreeHALQt.cpp \

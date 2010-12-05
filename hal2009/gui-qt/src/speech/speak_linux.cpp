@@ -49,6 +49,7 @@ void speech_init() {
 
 
 void speak(string str) {
+/*
     ofstream o("./mplayer.sh");
     o << "#!/bin/bash" << endl;
     o << "mplayer \"http://tobias-schulz.info/freehal/online/now.au.pl?text=" + str + "\" &" << endl;
@@ -59,5 +60,6 @@ void speak(string str) {
     }
     
     boost::thread t_v(boost::bind(std::system, "bash mplayer.sh"));
+*/
 }
 

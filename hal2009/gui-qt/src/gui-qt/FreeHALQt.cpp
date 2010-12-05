@@ -297,8 +297,10 @@ void FreeHALWindow::on_pushButton_clicked() {
 }
 
 void FreeHALWindow::on_pushButton_learn_clicked() {
-    main_window->user_interface_main_window->lineedit_learn->setFocus(Qt::OtherFocusReason);
-    button_talk("LEARN:", user_interface_main_window->lineedit_learn);
+    //main_window->user_interface_main_window->lineedit_learn->setFocus(Qt::OtherFocusReason);
+    //button_talk("LEARN:", user_interface_main_window->lineedit_learn);
+    main_window->user_interface_main_window->lineedit_talk->setFocus(Qt::OtherFocusReason);
+    button_talk("LEARN:", user_interface_main_window->lineedit_talk);
 }
 
 void FreeHALWindow::on_compute_output_clicked() {
@@ -350,6 +352,7 @@ void check_new_version() {
     // dont't check. It does not make sense currently
     return;
 
+    /*
     while (!version.size()) {
             freehal::msleep(1000);
     }
@@ -365,6 +368,7 @@ void check_new_version() {
     if (new_online != version) {
         emit helper->signalNewVersionOnline(QString(new_online.ref().c_str()));
     }
+    */
 }
 
 void Helper::slotNewVersionOnline(QString new_online) {
@@ -728,14 +732,14 @@ QScrollArea* scrollArea = new QScrollArea;
              main_window->user_interface_main_window->textedit_talk, SLOT(setHtml(QString)));
     helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
              main_window->user_interface_main_window->textedit_talk, SLOT(scrollToAnchor(QString)));
-    helper->connect(&(*helper), SIGNAL(signalAnswerTalk(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
-    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndTalk(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
-    helper->connect(&(*helper), SIGNAL(signalAnswerLearn(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
-    helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
-             main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
+    //helper->connect(&(*helper), SIGNAL(signalAnswerTalk(QString)),
+    //         main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+    //helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndTalk(QString)),
+    //         main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
+    //helper->connect(&(*helper), SIGNAL(signalAnswerLearn(QString)),
+    //         main_window->user_interface_main_window->textedit_learn, SLOT(setHtml(QString)));
+    //helper->connect(&(*helper), SIGNAL(signalTalkingScrollEndLearn(QString)),
+    //         main_window->user_interface_main_window->textedit_learn, SLOT(scrollToAnchor(QString)));
 
     helper->connect(&(*helper), SIGNAL(signalUpdateStatusbar(QString)),
             main_window->user_interface_main_window->statusbar, SLOT(showMessage(QString)));
@@ -798,11 +802,11 @@ QScrollArea* scrollArea = new QScrollArea;
     main_window->user_interface_main_window->lineedit_talk->setFocus();
 
     QLineEdit* internal_lineedit_talk  = new QLineEdit;
-    QLineEdit* internal_lineedit_learn = new QLineEdit;
+    //QLineEdit* internal_lineedit_learn = new QLineEdit;
     main_window->user_interface_main_window->lineedit_talk->setLineEdit(internal_lineedit_talk);
-    main_window->user_interface_main_window->lineedit_learn->setLineEdit(internal_lineedit_learn);
+    //main_window->user_interface_main_window->lineedit_learn->setLineEdit(internal_lineedit_learn);
     app.connect(internal_lineedit_talk, SIGNAL(returnPressed()), main_window, SLOT(on_pushButton_clicked()));
-    app.connect(internal_lineedit_learn, SIGNAL(returnPressed()), main_window, SLOT(on_pushButton_learn_clicked()));
+    //app.connect(internal_lineedit_learn, SIGNAL(returnPressed()), main_window, SLOT(on_pushButton_learn_clicked()));
     
     offline_mode  = !(0 == strcmp(check_config(freehal::string("online"), "1"), "1"));
     www_surf_mode =  (0 == strcmp(check_config(freehal::string("use-www"), "1"), "1"));
