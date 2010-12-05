@@ -60,20 +60,29 @@ clear; echo src/util.cpp
 clear; echo ../gui-qt/src/speech/speak_win.cpp
 (i586-mingw32msvc-g++ $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -Iinclude/ms-agent/ -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -Iinclude/python-win/Include/ -I/usr/include/qt4 -I. -Isrc -I. -I. -o speak_win.o ../gui-qt/src/speech/speak_win.cpp  || exit 0) 2>&1 | grep -v Warnung
 
+clear; echo ../gui-qt/src/special_normal.cpp
+(i586-mingw32msvc-g++ $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -Iinclude/ms-agent/ -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -Iinclude/python-win/Include/ -I/usr/include/qt4 -I. -Isrc -I. -I. -o special_normal.o ../gui-qt/src/special_normal.cpp  || exit 0) 2>&1 | grep -v Warnung
+
+clear; echo ../gui-qt/src/special_onlinedemo.cpp
+(i586-mingw32msvc-g++ $II -Iinclude/ -Ilib/asio/ -O1 -O2 -O3 -Iinclude/ms-agent/ -c -pipe  -g -D_REENTRANT -Wall -W  -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -Iinclude/python-win/Include/ -I/usr/include/qt4 -I. -Isrc -I. -I. -o special_onlinedemo.o ../gui-qt/src/special_onlinedemo.cpp  || exit 0) 2>&1 | grep -v Warnung
+
 clear
 echo Compiling FreeHALQt
-i586-mingw32msvc-g++ $II -L../../windows/lib/ ../../windows/lib/boost_system.lib ../../windows/lib/boost_thread_win32.lib -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-QT.exe FreeHALQt.o speak_win.o sentence.o socketload.o util.o moc_FreeHALQt.o moc_communicate.o communicate.o -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ -lboost_system -lboost_thread_win32
+i586-mingw32msvc-g++ $II -L../../windows/lib/ ../../windows/lib/boost_system.lib ../../windows/lib/boost_thread_win32.lib -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-QT.exe FreeHALQt.o special_normal.o speak_win.o sentence.o socketload.o util.o moc_FreeHALQt.o moc_communicate.o communicate.o -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ -lboost_system -lboost_thread_win32
+i586-mingw32msvc-g++ $II -L../../windows/lib/ ../../windows/lib/boost_system.lib ../../windows/lib/boost_thread_win32.lib -Iinclude/ -static -Ilib/asio/ -O1 -O2 -O3 -o FreeHAL-Online-Demo.exe FreeHALQt.o special_onlinedemo.o speak_win.o sentence.o socketload.o util.o moc_FreeHALQt.o moc_communicate.o communicate.o -L. -L../.. -L$QTPATH/lib/ -lm -lQtXml4 -lQtGui4 -lQtCore4 -lQtUiTools -Iinclude/pthread-win/ -lpthread-win -mthreads -lws2_32 -lmswsock -lwsock32 -L. -lole32 -loleaut32 -lwinmm -luuid -L/usr/lib/gcc/i586-mingw32msvc/4.2.1-sjlj -lstdc++ -lboost_system -lboost_thread_win32
 i586-mingw32msvc-strip FreeHAL-QT.exe
+i586-mingw32msvc-strip FreeHAL-Online-Demo.exe
 echo Ok
 
 
-mv FreeHAL-QT.exe ../FreeHAL-QT.exe
+mv FreeHAL-*.exe ../
 cd ..
 rm -rf ./win-compile
 mkdir ./win-compile
-mv FreeHAL-QT.exe ./win-compile/FreeHAL-QT.exe
+mv FreeHAL-*.exe ./win-compile/
 
 cd gui-qt/
 echo Upload...
 scp -C ../win-compile/FreeHAL-QT.exe tobias@freehal.net:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
+scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@freehal.net:/disk/compiler/add2/source/hal2009/
 echo Upload done.

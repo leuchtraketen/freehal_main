@@ -549,4 +549,5 @@ private:
 
 extern "C" void init_sql();
 
+extern int special_autoconnect_onlinedemo();
 

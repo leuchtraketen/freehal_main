@@ -96,7 +96,8 @@ SOURCES += src/sentence.cpp \
     src/socketload.cpp \
     src/util.cpp \
     src/communicate.cpp \
-    src/gui-qt/FreeHALQt.cpp
+    src/gui-qt/FreeHALQt.cpp \
+    src/special_normal.cpp
 OTHER_FILES += ui/view.png \
     ui/logo.png \
     ui/bs.gif

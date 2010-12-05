@@ -544,6 +544,10 @@ void make_connection(int show_connection_window) {
         chdir("..");
     }
 
+    if (special_autoconnect_onlinedemo()) {
+        show_connection_window = 0;
+        dialog_connection->from->ip->setText("178.22.67.4");
+    }
     if (show_connection_window) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
         dialog_connection->from->buttonBox->buttons().at(0)->setFocus(Qt::OtherFocusReason);
@@ -567,10 +571,10 @@ void make_connection(int show_connection_window) {
 
     database_engine = dialog_connection->from->database_engine->currentText().toStdString();
     if (database_engine == "disk (traditional)")
-        database_engine = "sqlite";
+        database_engine = "disk";
     if (database_engine == "semtree")
         database_engine = "disk";
-    if (database_engine.size() < 3 || (database_engine != "ram" && database_engine != "disk" && database_engine != "sqlite"))
+    if (database_engine.size() < 3 || (database_engine != "ram" && database_engine != "disk"))
         database_engine = "disk";
 
     string ip = freehal::string(dialog_connection->from->ip->displayText().toStdString()).get_strip().ref();
