@@ -547,6 +547,7 @@ void make_connection(int show_connection_window) {
     if (special_autoconnect_onlinedemo()) {
         show_connection_window = 0;
         dialog_connection->from->ip->setText("178.22.67.4");
+        main_window->showWindowNormal();
     }
     if (show_connection_window) {
         dialog_connection->from->buttonBox->setFocus(Qt::OtherFocusReason);
