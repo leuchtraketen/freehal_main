@@ -1,0 +1,46 @@
+#!/bin/bash
+
+test -d /var/lib/apt && (
+	echo Install dependencies
+	sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget \
+	|| (
+		echo "Could not install dependencies. Please run as root:"
+		echo
+		echo sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget
+		echo
+		exit 0
+	)
+)
+
+function depmiss {
+	echo "Dependencies are missing. Please install "$*
+}
+
+wget --help >/dev/null 2>&1 || depmiss wget
+cmake --help >/dev/null 2>&1 || depmiss cmake
+qmake -help >/dev/null 2>&1 || depmiss "QT, at least version 4.5"
+
+
+cd ~
+mkdir bin 2>/dev/null
+cd bin
+
+rm -rf freehal-demo-svn 2>/dev/null
+echo Download source code...
+svn co http://freehal.org/code/hal2009/gui-qt freehal-demo-svn > /dev/null || (echo Error: Download source code ; exit 0)
+cd freehal-demo-svn
+echo Compile GUI
+(qmake online-demo.pro && make) > ../compile-gui.log 2>&1 || (echo Error: Compile GUI ; exit 0)
+
+source /etc/lsb-release
+export arch=32
+file /bin/bash | grep 64 && export arch=64
+cp ~/bin/freehal-demo-svn/bin/online-demo ~/bin/freehal-demo-svn/bin/online-demo_${arch}bit_${DISTRIB_ID}_${DISTRIB_RELEASE}
+zip -r ~/bin/freehal-demo.zip ~/bin/freehal-demo-svn/bin/online-demo_*
+
+echo Create links...
+echo '#!/bin/bash' > ~/bin/freehal-demo
+echo "cd ~/bin/freehal-demo-svn/" >> ~/bin/freehal-demo
+echo "./bin/online-demo" >> ~/bin/freehal-demo
+chmod 0777 ~/bin/freehal-demo
+sudo ln -sf ~/bin/freehal-demo /usr/local/bin/freehal-demo
