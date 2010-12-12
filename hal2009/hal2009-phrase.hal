@@ -191,35 +191,34 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     set var subject_person to "3p"
                 done
                 
-                set new var subject_article to ""
-                set new var object_article to ""
                 set new var is_name_subject to is_name with var lang, var subject_last_word
                 set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
+                set new var verb_options to from array proper_verbs 1st element
 
-                if from array proper_verbs 1st element matches /^(equal-sg-def)/ do
-                    set var subject_article to get_article with var subject_genus, "subject", "definite"
-                done
-                else do
-                    set var subject_article to get_article with var subject_genus, "subject", "indefinite"
-                done
-                set var object_article to get_article with var object_genus, "subject", "indefinite"
-                
-                set new var subject_article_included to 0
+                set new var subject_article to ""
                 if from array clause 2nd element matches /\(a\)/ do
-                    set var subject_article_included to 1
+                    set var subject_article to get_article with var subject_genus, "subject", "indefinite"
                     do regex with from array clause 2nd element: /\(a\)\s+?/ -> "" :global
                 done
-                set new var object_article_included to 0
+                if from array clause 2nd element matches /\(the\)/ do
+                    set var subject_article to get_article with var subject_genus, "subject", "definite"
+                    do regex with from array clause 2nd element: /\(the\)\s+?/ -> "" :global
+                done
+                set new var object_article to ""
                 if from array clause 3rd element matches /\(a\)/ do
-                    set var object_article_included to 1
+                    set var object_article to get_article with var subject_genus, "subject", "indefinite"
                     do regex with from array clause 3rd element: /\(a\)\s+?/ -> "" :global
+                done
+                if from array clause 3rd element matches /\(the\)/ do
+                    set var object_article to get_article with var subject_genus, "subject", "definite"
+                    do regex with from array clause 3rd element: /\(the\)\s+?/ -> "" :global
                 done
 
                 if from array proper_verbs 1st element matches /^(equal)/ do
                     
                     # subject article
-                    if ( from array proper_verbs 1st element not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and from array proper_verbs 1st element matches /(def|indef)/ ) or flag subject_article_included is true do
-                        if var is_name_subject is false or var is_collective_noun_subject is true or flag subject_article_included is true do
+                    if var subject_article is true or ( var verb_options not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and var verb_options matches /(def|indef)/ ) do
+                        if var is_name_subject is false or var is_collective_noun_subject is true or var subject_article is true do
                             push into array sentence, var subject_article
                         done
                     done
@@ -227,9 +226,14 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # subject
                     push into array sentence, from array clause 2nd element
 
+                    if var subject_article is true and var object_article is false do
+                        # adverbs
+                        push into array sentence, from array clause 4th element
+                    done
+
                     # verb
                     if from array clause 3rd element not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
-                        if flag object_article_included is true do
+                        if var object_article is true do
                             set new var verb to get_verb with "be", var subject_person
                             push into array sentence, var verb
                             push into array sentence, var object_article
@@ -260,8 +264,10 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # object
                     push into array sentence, from array clause 3rd element
                     
-                    # adverbs
-                    push into array sentence, from array clause 4th element
+                    if not ( var subject_article is true and var object_article is false ) do
+                        # adverbs
+                        push into array sentence, from array clause 4th element
+                    done
                     
                     if var final_sentence do
                         set var final_sentence to var final_sentence concat ', '
@@ -271,26 +277,33 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 if from array proper_verbs 1st element matches /^(is<[-]>)/ do
                     # subject article
-                    if flag subject_article_included is true do
+                    if var subject_article is true do
                         push into array sentence, var subject_article
                     done
 
                     # subject
                     push into array sentence, from array clause 2nd element
 
+                    if var subject_article is true and var object_article is false do
+                        # adverbs
+                        push into array sentence, from array clause 4th element
+                    done
+
                     # verb
                     set new var verb to get_verb with from array proper_verbs 1st element, var subject_person
                     push into array sentence, var verb
                     
-                    if flag object_article_included is true do
+                    if var object_article is true do
                         push into array sentence, var object_article
                     done
                     
                     # object
                     push into array sentence, from array clause 3rd element
                     
-                    # adverbs
-                    push into array sentence, from array clause 4th element
+                    if not ( var subject_article is true and var object_article is false ) do
+                        # adverbs
+                        push into array sentence, from array clause 4th element
+                    done
                     
                     if var final_sentence do
                         set var final_sentence to var final_sentence concat ', '

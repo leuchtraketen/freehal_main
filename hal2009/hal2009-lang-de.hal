@@ -1666,6 +1666,7 @@ set multi-line new global hash builtin_part_of_speech to {
           'am' => "prep",
           'a' => "n",
           '(a)' => "art",
+          '(the)' => "art",
           'anbrennen' => "v",
           'andere' => "adj",
           'anderen' => "adj",
@@ -4122,6 +4123,9 @@ define action stem_nouns with array phrases do
             if var noun matches /^\(a\)$/ do
                 do regex with var noun: /^\(a\)$/ -> "*" :global:i
             done
+            if var noun matches /^\(the\)$/ do
+                do regex with var noun: /^\(the\)$/ -> "*" :global:i
+            done
             if not var noun matches /....../ do
                 if var noun matches /^ein.?.?$/ do
                     do regex with var noun: /^ein.?.?$/ -> "*" :global:i
@@ -5794,3 +5798,43 @@ define action get_score_answer without arguments do
     do return with [ 0, "Bewertung erfolgreich." ]
 done
 
+define action transform_to_name with var text do
+
+    set new flag article_undef to 0
+    if var text matches /(^|\s)ein/ do
+        set flag article_undef to 1
+    done
+    do regex with var text: /^(ein|eine)\s/ -> " " :global:i
+
+    set new flag article_def to 0
+    if var text matches /(^|\s)(der|die|das)/ do
+        set flag article_def to 1
+    done
+    do regex with var text: /^(der|die|das)\s/ -> " " :global:i
+
+    do regex with var text: /^\s+?/ -> "" :global:i
+    do regex with var text: /\s+?$/ -> "" :global:i
+    do regex with var text: /\s/ -> "_" :global:i
+
+    set var text to "_" concat var text concat "_"
+    if flag article_undef do
+        set var text to "(a) " concat var text
+    done
+    if flag article_def do
+        set var text to "(the) " concat var text
+    done
+
+    do return with var text
+done
+
+define action remove_adverbs with var text, var adverbs do
+    if var text matches /^(.*?)\s(von)(.*?)$/ do
+        set var text to $0
+        if var adverbs do
+            set var adverbs to var adverbs concat " "
+        done
+        set var adverbs to var adverbs concat $1 concat $2
+    done
+
+    do return using [ var text, var adverbs ]
+done

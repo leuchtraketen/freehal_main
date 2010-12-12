@@ -411,11 +411,11 @@ define action compute_input with var input is rw, var lang, var path do
     
     do regex with var input: /(^|\s)sein\s([A-Z])/ -> "$0sein{{{art}}} $1" :global:i
 
-    do regex with var input: /\seines\s(.*?<[a-z]>)s(\s|$)/ -> " von einem $0$1" :global:i
-    do regex with var input: /\seines\s/ -> " von einem " :global:i
-    do regex with var input: /\seines\s/ -> " von einem " :global:i
-    do regex with var input: /\seiner\s/ -> " von einer " :global:i
-    do regex with var input: /\s(aus|von|in|an)\svon\seine([rs])\s/ -> " $0 eine$1 " :global:i
+    do regex with var input: /\s(<[mds]>)eines\s(.*?<[a-z]>)s(\s|$)/ -> " von $0einem $1$2" :global:i
+    do regex with var input: /\s(<[mds]>)eines\s/ -> " von $0einem " :global:i
+    do regex with var input: /\s(<[mds]>)eines\s/ -> " von $0einem " :global:i
+    do regex with var input: /\s(<[mds]>)einer\s/ -> " von $0einer " :global:i
+    do regex with var input: /\s(aus|von|in|an)\svon\s(<[mds]>)eine([rs])\s/ -> " $0 $1eine$2 " :global:i
 
     do regex with var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/ -> "$0$1 von der $2" :global
     do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von dem $2$3" :global
@@ -452,175 +452,71 @@ define action compute_input with var input is rw, var lang, var path do
         if lc(var input) matches /^(.+?)\s+?((?:gehoert zu)|(?:liegt in)|(?:\s?ist in)|(?:\s?ist .*?teil von))\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
+
+            set new var adverbs to ''
+            set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
+            set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+
+            set var a to transform_to_name with var a
+            set var b to transform_to_name with var b
             
-            set new flag a_article to 0
-            if var a matches /(^|\s)ein/ do
-                set flag a_article to 1
-            done
-            set new flag b_article to 0
-            if var b matches /(^|\s)ein/ do
-                set flag b_article to 1
-            done
-            do regex with var a: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var b: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var a: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var b: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var a: /^\s+?/ -> "" :global:i
-            do regex with var b: /^\s+?/ -> "" :global:i
-            do regex with var a: /\s+?$/ -> "" :global:i
-            do regex with var b: /\s+?$/ -> "" :global:i
-            do regex with var a: /\s/ -> "_" :global:i
-            do regex with var b: /\s/ -> "_" :global:i
-            set var a to "_" concat var a concat "_"
-            set var b to "_" concat var b concat "_"
-            if flag a_article do
-                set var a to "(a) " concat var a
-            done
-            if flag b_article do
-                set var b to "(a) " concat var b
-            done
-            
-            set var input to var a concat " is-part " concat var b
+            set var input to var a concat " is-part " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(gehoert)\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
             
-            set new flag a_article to 0
-            if var a matches /(^|\s)ein/ do
-                set flag a_article to 1
-            done
-            set new flag b_article to 0
-            if var b matches /(^|\s)ein/ do
-                set flag b_article to 1
-            done
-            do regex with var a: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var b: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var a: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var b: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var a: /^\s+?/ -> "" :global:i
-            do regex with var b: /^\s+?/ -> "" :global:i
-            do regex with var a: /\s+?$/ -> "" :global:i
-            do regex with var b: /\s+?$/ -> "" :global:i
-            do regex with var a: /\s/ -> "_" :global:i
-            do regex with var b: /\s/ -> "_" :global:i
-            set var a to "_" concat var a concat "_"
-            set var b to "_" concat var b concat "_"
-            if flag a_article do
-                set var a to "(a) " concat var a
-            done
-            if flag b_article do
-                set var b to "(a) " concat var b
-            done
+            set new var adverbs to ''
+            set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
+            set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+
+            set var a to transform_to_name with var a
+            set var b to transform_to_name with var b
             
-            set var input to var a concat " is-own " concat var b
+            set var input to var a concat " is-own " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(beinhaltet)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
             
-            set new flag a_article to 0
-            if var a matches /(^|\s)ein/ do
-                set flag a_article to 1
-            done
-            set new flag b_article to 0
-            if var b matches /(^|\s)ein/ do
-                set flag b_article to 1
-            done
-            do regex with var a: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var b: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var a: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var b: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var a: /^\s+?/ -> "" :global:i
-            do regex with var b: /^\s+?/ -> "" :global:i
-            do regex with var a: /\s+?$/ -> "" :global:i
-            do regex with var b: /\s+?$/ -> "" :global:i
-            do regex with var a: /\s/ -> "_" :global:i
-            do regex with var b: /\s/ -> "_" :global:i
-            set var a to "_" concat var a concat "_"
-            set var b to "_" concat var b concat "_"
-            if flag a_article do
-                set var a to "(a) " concat var a
-            done
-            if flag b_article do
-                set var b to "(a) " concat var b
-            done
+            set new var adverbs to ''
+            set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
+            set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+
+            set var a to transform_to_name with var a
+            set var b to transform_to_name with var b
             
-            set var input to var a concat " is-part " concat var b
+            set var input to var a concat " is-part " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(besitzt)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
             
-            set new flag a_article to 0
-            if var a matches /(^|\s)ein/ do
-                set flag a_article to 1
-            done
-            set new flag b_article to 0
-            if var b matches /(^|\s)ein/ do
-                set flag b_article to 1
-            done
-            do regex with var a: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var b: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var a: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var b: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var a: /^\s+?/ -> "" :global:i
-            do regex with var b: /^\s+?/ -> "" :global:i
-            do regex with var a: /\s+?$/ -> "" :global:i
-            do regex with var b: /\s+?$/ -> "" :global:i
-            do regex with var a: /\s/ -> "_" :global:i
-            do regex with var b: /\s/ -> "_" :global:i
-            set var a to "_" concat var a concat "_"
-            set var b to "_" concat var b concat "_"
-            if flag a_article do
-                set var a to "(a) " concat var a
-            done
-            if flag b_article do
-                set var b to "(a) " concat var b
-            done
+            set new var adverbs to ''
+            set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
+            set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+
+            set var a to transform_to_name with var a
+            set var b to transform_to_name with var b
             
-            set var input to var a concat " is-own " concat var b
+            set var input to var a concat " is-own " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ and lc(var input) not matches /(wie|wer|was|wo|wann|warum|wieso|weshalb|<[?]>)/ do
             set new var a to $0
             set new var b to $2
+
+            set new var adverbs to ''
+            set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
+            set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+
+            set var a to transform_to_name with var a
+            set var b to transform_to_name with var b
             
-            set new flag a_article to 0
-            if var a matches /(^|\s)ein/ do
-                set flag a_article to 1
-            done
-            set new flag b_article to 0
-            if var b matches /(^|\s)ein/ do
-                set flag b_article to 1
-            done
-            print "a:" concat var a concat flag a_article
-            print "b:" concat var b
-            do regex with var a: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var b: /^(ein|eine)\s/ -> " " :global:i
-            do regex with var a: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var b: /^(der|die|das)\s/ -> " " :global:i
-            do regex with var a: /^\s+?/ -> "" :global:i
-            do regex with var b: /^\s+?/ -> "" :global:i
-            do regex with var a: /\s+?$/ -> "" :global:i
-            do regex with var b: /\s+?$/ -> "" :global:i
-            do regex with var a: /\s/ -> "_" :global:i
-            do regex with var b: /\s/ -> "_" :global:i
-            set var a to "_" concat var a concat "_"
-            set var b to "_" concat var b concat "_"
-            if flag a_article do
-                set var a to "(a) " concat var a
-            done
-            if flag b_article do
-                set var b to "(a) " concat var b
-            done
-            print "a:" concat var a
-            print "b:" concat var b
-            
-            if flag a_article or var input matches /<[=]>/ do
-                set var input to var a concat " = " concat var b
+            if var a not matches /\(a\)/ and var b matches /\(a\)/ and var input not matches /<[=]>/ do
+                set var input to var a concat " is-a " concat var b concat " " concat var adverbs
             done
             else do
-                set var input to var a concat " is-a " concat var b
+                set var input to var a concat " = " concat var b concat " " concat var adverbs
             done
         done
         

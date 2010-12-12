@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ee.ui'
 **
-** Created: Sun Dec 5 18:32:57 2010
+** Created: Sun Dec 12 18:47:13 2010
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
