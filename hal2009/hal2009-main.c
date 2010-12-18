@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -57,7 +57,7 @@ int usage (char* exe_name) {
 "\n"
 "Report bugs to <info@freehal.org>.\n"
 
-    
+
     );
 }
 
@@ -75,7 +75,7 @@ int main (int argc, char** argv) {
     sql_engine = calloc(OPTION_SIZE + 1, 1);
     char* exe_name = argv[0];
     int c;
-    
+
     strcpy(programming_language, "perl5");
     strcpy(language, "de");
     strcpy(base_dir, ".");
@@ -113,19 +113,19 @@ int main (int argc, char** argv) {
             case 's':
                 strncpy(input, "?", OPTION_SIZE);
                 break;
-            
+
             case '?':
                 break;
             default:
                 abort ();
         }
     }
-    
+
     if (method && input && compile_file && execute_file && doc_file && *method == 0 && *input == 0 && *compile_file == 0 && *execute_file == 0 && *doc_file == 0) {
         usage(exe_name);
         exit(1);
     }
-    
+
     {
         char* sqlite_filename = calloc(OPTION_SIZE + 1, 1);
         strcat(sqlite_filename, base_dir);
@@ -137,7 +137,7 @@ int main (int argc, char** argv) {
 
     hal2009_clean();
     chdir(base_dir);
-    
+
     if (doc_file && *doc_file) {
         hal2009_doc(doc_file);
     }
@@ -169,7 +169,7 @@ int main (int argc, char** argv) {
         fprintf(output(), "TODO: Start method here...");
         // start method here
     }
-    
+
     return 0;
 }
 
@@ -202,7 +202,7 @@ void hal2009_handle_signal(void* arg) {
     char* type       = ((void**)arg)[0];
     char* text       = ((void**)arg)[1];
     char* start_type = ((void**)arg)[2];
-    
+
     if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech: %s\n\nPlease type it in: ", text);
         scanf("%s", text);

@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -82,7 +82,7 @@ unsigned time_seed() {
     unsigned char *p = (unsigned char *)&now;
     unsigned seed = 0;
     size_t i;
- 
+
     for ( i = 0; i < sizeof now; i++ )
         seed = seed * ( UCHAR_MAX + 2U ) + p[i];
     return seed;
@@ -191,7 +191,7 @@ int main (int argc, char** argv) {
     options.send_status_msgs = true;
     boinc_init_options(&options);
     fprintf(stderr, "FreeHAL 2010: starting...\n");
-    
+
     string resolved_name;
     boinc_resolve_filename_s("boincXYZ.pro", resolved_name);
     {

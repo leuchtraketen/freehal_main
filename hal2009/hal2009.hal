@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -76,51 +76,51 @@ require source hal2009-util.hal
 
 define action is_name with var lang, var word do
     set new var is_a_name to 0
-    
+
     set new array male_names to global array builtin_male_names
     for each new var name in array male_names do
         if lc(var name) matches lc(var word) do
             set var is_a_name to "m"
         done
     done
-    
+
     set new array female_names to global array builtin_female_names
     for each new var name in array female_names do
         if lc(var name) matches lc(var word) do
             set var is_a_name to "f"
         done
     done
-    
+
     set new array custom_names to global array custom_names
     for each new var name in array custom_names do
         if lc(var name) matches lc(var word) do
             set var is_a_name to "q"
         done
     done
-    
+
     set new flag is_a_job to is_job with var lang, var word
     if flag is_a_job is true do
         set var is_a_name to "q"
     done
-    
+
     do return with var is_a_name
 done
 
 define action is_collective_noun with var lang, var word do
     set new var is_a_collective_noun to 1
-    
+
     set new var is_a_name to is_name with var lang, var word
     if var is_a_name do
         set var is_a_collective_noun to 0
     done
-    
+
     set new array _collective_nouns to global array collective_nouns
     for each new var name in array _collective_nouns do
         if lc(var name) matches lc(var word) do
             set var is_a_collective_noun to "q"
         done
     done
-    
+
     do return with var is_a_collective_noun
 done
 
@@ -128,7 +128,7 @@ define action compute_context with hash parsed do
     set new array questionword_array to from hash parsed element { 'questionword' } 1st element
     set new array verb_array to from hash parsed element { 'verbs' }
     set new array extra_array to from hash parsed element { 'extra' }
-    
+
     if from array questionword_array 1st element matches "wie" or from array questionword_array 1st element matches "how" do
         do return with "q_how"
     done
@@ -164,13 +164,13 @@ define action compute_context with hash parsed do
         set from hash parsed element { 'extra' } to array extra_array
         do return with "enum_all"
     done
-    
+
     for each new var verb in array verb_array do
         if var verb 1st element matches /reasonof/ do
             do return with "reasonof"
         done
     done
-    
+
     # TEXT
     # Look for something like "Das habe ich nicht gemeint"
     # CODE
@@ -212,18 +212,18 @@ define action logic with var input, var lang, var path, hash parsed do
                         set flag do_removed to 1
                         go to next
                     done
-                    
+
                     # TEXT
                     # Turn verbs like "must" or "want" into flags
                     # CODE
                     set new var verb_category to verb_category with var verb
-                    
+
                     if var verb_category and var verb not matches /\// do
                         set var verb to var verb concat "/" concat var verb_category
                         set from array verb_array 1st element to var verb
                         push into array override_verb_array, array verb_array
                     done
-                    
+
                     if var verb_category matches 'want' do
                         set flag verb_flag_want to 1
                         go to next
@@ -249,7 +249,7 @@ define action logic with var input, var lang, var path, hash parsed do
                 push into array override_verb_array, array verb_array
             done
             set elements of array request_verb_array to elements of array new_verbs
-            
+
             # if there is only one verb which is a modal verb
             #
             # then do nothing!
@@ -310,9 +310,9 @@ define action logic with var input, var lang, var path, hash parsed do
             push into array request_extra, from array extra 1st element
         done
     done
-    
+
     set elements of array request_verb to sort with elements of array request_verb
-    
+
     set new var request_verb_string to join using ' ', elements of array request_verb
     set new var request_subjects_string to join using ' ', elements of array request_subjects
     set new var request_objects_string to join using ' ', elements of array request_objects
@@ -381,7 +381,7 @@ define action logic with var input, var lang, var path, hash parsed do
     set var output to var output concat ( lc(var request_context_string) || '0' )
     set var output to var output concat ( '^' )
     set var output to var output concat ( lc(var request_primary_key) || '0' )
-    
+
     set var output to var output concat ( '^' )
     set var output to var output concat ( flag verb_flag_want   || '0' )
     set var output to var output concat ( '^' )
@@ -399,7 +399,7 @@ define action logic with var input, var lang, var path, hash parsed do
     print into var output_handle data var output
     do close with var output_handle
     do trigger_check_files without arguments
-    
+
     do wait 0.3 seconds
 
     while not exists: '_input__get_csv', end test do
@@ -407,14 +407,14 @@ define action logic with var input, var lang, var path, hash parsed do
     done
     print "File exists now: _input__get_csv"
     print new line
-    
+
     set new array results_true to an empty array
     set new array results_other_modal_verb_true to an empty array
     set new array results_false to an empty array
     set new array results_other_modal_verb_false to an empty array
     set new array results_maybe to an empty array
     set new array results_other_modal_verb_maybe to an empty array
-    
+
     set new var input_file_name to '_input__get_csv'
     set new var input_handle to handle for file name var input_file_name, read
 
@@ -427,20 +427,20 @@ define action logic with var input, var lang, var path, hash parsed do
         if length(var line) < 3 do
             go to next
         done
-        
+
         if "/err:TOOMUCH" matches var line do
             do return using "TOOMUCH"
         done
-        
+
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
-        
+
         # TEXT
         # Shift Primary key
         # CODE
         set new var primary_key to shift with elements of array rawresult
-        
-        
+
+
         # TEXT
         # Divide main clause and sub clauses
         # CODE
@@ -451,19 +451,19 @@ define action logic with var input, var lang, var path, hash parsed do
             push into that array: from array result element [ var number_of_clause ], from array rawresult element [ var i ]
             set var i to var i + 1
         done
-        
+
         # TEXT
         # Truth goes from 1.0 to 0.0.
         # CODE
-        
+
         set new var truth to from array rawresult element [ var i ]
         do adjust_truth with array result, from array rawresult element [ var i ], var number_of_clause, 0
         set var i to var i + 1
-        
+
         # TEXT
         # Now add the subclauses to the array.
         # CODE
-        
+
         set new var offs to var i
         push into array result, an empty array
         set var number_of_clause to var number_of_clause + 1
@@ -481,14 +481,14 @@ define action logic with var input, var lang, var path, hash parsed do
             push into array result, an empty array
             set var number_of_clause to var number_of_clause + 1
         done
-        
+
         # TEXT
         # Unshift Primary key
         # CODE
         do unshift with elements of array result, var primary_key
-        
-        
-        
+
+
+
         # TEXT
         # Be sure that the modal verbs are matched
         # CODE
@@ -496,7 +496,7 @@ define action logic with var input, var lang, var path, hash parsed do
         if (not from array rawresult element [ 0 ] matches /var modal_verb_template/) and from array rawresult element [ 0 ] matches /([01])([01])([01])([01])([01])/ do
             print "Not matching to: " concat var modal_verb_template
             print new line
-            
+
             if var truth > 0.75 do
                 push into array results_other_modal_verb_true, array result
             done
@@ -519,11 +519,11 @@ define action logic with var input, var lang, var path, hash parsed do
             done
         done
     done
-    
+
     if is an empty array results_true and is an empty array results_maybe and not is an empty array results_false do
         set array results_other_modal_verb_maybe to an empty array
     done
-    
+
     if is an empty array results_true do
         set array results_true to array results_other_modal_verb_true
     done
@@ -533,11 +533,11 @@ define action logic with var input, var lang, var path, hash parsed do
     if is an empty array results_maybe do
         set array results_maybe to array results_other_modal_verb_maybe
     done
-    
+
     print "Found " concat elements of array results_true concat " true sentences" concat new line
     print "Found " concat elements of array results_false concat " false sentences" concat new line
     print "Found " concat elements of array results_maybe concat " maybe sentences" concat new line
-    
+
     set new hash in_true to an empty hash
     set new hash in_false to an empty hash
     for each new array result in array results_true do
@@ -546,7 +546,7 @@ define action logic with var input, var lang, var path, hash parsed do
             set from hash in_true element { var expr } to an empty array
         done
         push into that array: from hash in_true element { var expr }, array result
-        
+
         print "A true expression:  " concat var expr concat new line
     done
     for each new array result in array results_false do
@@ -555,17 +555,17 @@ define action logic with var input, var lang, var path, hash parsed do
             set from hash in_false element { var expr } to an empty array
         done
         push into that array: from hash in_false element { var expr }, array result
-        
+
         print "A false expression: " concat var expr concat new line
     done
-    
+
     set new array results to an empty array
-    
+
     for each new array result in array results_maybe do
         set new var expr to from array result 2nd element element [ 0 ] concat ' ' concat from array result 2nd element element [ 1 ]
-        
+
         print "A maybe expression: " concat var expr concat new line
-        
+
         if from hash in_true element { var expr } do
             push into array results, elements of that array: from hash in_true element { var expr } end of elements
             set from hash in_true element { var expr } to an empty array
@@ -578,7 +578,7 @@ define action logic with var input, var lang, var path, hash parsed do
             push into array results, array result
         done
     done
-    
+
     set new array true_arrays to an empty array
     set elements of array true_arrays to values of hash in_true
     for each new array result_array in array true_arrays do
@@ -589,8 +589,8 @@ define action logic with var input, var lang, var path, hash parsed do
     for each new array result_array in array false_arrays do
         push into array results, elements of array result_array
     done
-    
-    
+
+
     print "After t/m/f correction: found " concat elements of array results concat " sentences"
     print new line
 
@@ -599,7 +599,7 @@ define action logic with var input, var lang, var path, hash parsed do
     # CODE
     if var request_context_string matches "enum_all" and elements of array results do
         set new hash subjects to an empty hash
-    
+
         for each new array result in array results do
             print from array result 2nd element 1st element concat new line
             print from array result 2nd element 2nd element concat new line
@@ -612,7 +612,7 @@ define action logic with var input, var lang, var path, hash parsed do
             print "---"
             print new line
             print new line
-        
+
             set from hash subjects element { from array result 2nd element 2nd element } to 1
         done
 
@@ -624,7 +624,7 @@ define action logic with var input, var lang, var path, hash parsed do
         set array results to an empty array
         push into array results, array overall_result
     done
-    
+
     do unlink with '_input__get_csv'
 
     do return using array results
@@ -639,7 +639,7 @@ define action to_array_from_pro_line with var line, var lang do
     do regex with var line: / <[;]><[;]> / -> ";;<>" :global
     set new array parts to split with /[<][>]/, var line
     do pop with elements of array parts
-    
+
     set new array clause to an empty array
     push into array clause, filter_nothing(from array parts 1st element)
     push into array clause, filter_nothing(from array parts 2nd element)
@@ -663,12 +663,12 @@ define action to_array_from_pro_line with var line, var lang do
         push into array clause, filter_nothing(from array parts element [ var i + 2 ])
         push into array clause, filter_nothing(from array parts element [ var i + 3 ])
         push into array clause, filter_nothing(from array parts element [ var i + 4 ])
-        
+
         set var i to var i + 1
         while var i < 100 and from array parts element [ var i ] not matches /<[;]><[;]>/ do
             set var i to var i + 1
         done
-        
+
     print "1.: " concat from array clause 1st element concat new line
     print "2.: " concat from array clause 2nd element concat new line
     print "3.: " concat from array clause 3rd element concat new line
@@ -685,9 +685,9 @@ define action to_array_from_pro_line with var line, var lang do
         done
         push into array result, array clause
     done
-    
+
     push into array results, array result
-    
+
     do return with array results
 done
 
@@ -699,14 +699,14 @@ define action to_array_from_hash_parsed with var line, var lang do
     do regex with var line: / [<][>] / -> "<>" :global
     set new array parts to split with /[<][>]/, var line
     do pop with elements of array parts
-    
+
     set new array clause to an empty array
     push into array clause, filter_nothing(from array parts 1st element)
     push into array clause, filter_nothing(from array parts 2nd element)
     push into array clause, filter_nothing(from array parts element [ 2 ])
     push into array clause, filter_nothing(from array parts element [ 3 ])
     push into array result, array clause
-    
+
     set new var i to 4
     while var i < 100 do
         set new array clause to an empty array
@@ -715,9 +715,9 @@ define action to_array_from_hash_parsed with var line, var lang do
         push into array clause, filter_nothing(from array parts element [ var i + 2 ])
         push into array clause, filter_nothing(from array parts element [ var i + 3 ])
         push into array clause, filter_nothing(from array parts element [ var i + 4 ])
-        
+
         set var i to var i + 5
-        
+
         if from array clause 1st element matches 50 do
             go to next
         done
@@ -726,9 +726,9 @@ define action to_array_from_hash_parsed with var line, var lang do
         done
         push into array result, array clause
     done
-    
+
     push into array results, array result
-    
+
     do return with array results
 done
 
@@ -773,7 +773,7 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
         set new var answer to get_score_answer without arguments
         do return with [ var answer ]
     done
-    
+
     set array score to check_score_command using var input, var current_language, var path
     if array score and from array score 1st element do
         do set_score with from array score 2nd element, from array score 3rd element, from array score 1st element, var current_language, var path
@@ -798,7 +798,7 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
     print "Transformed (?) to: "
     print var input
     print new line
-    
+
     # TEXT
     # --- GET OUTPUT
     # CODE
@@ -815,13 +815,13 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
             print new line
         done
     done
-    
+
     # TEXT
     # --- Flow chart
     # CODE
     do flowchart_out_answers with array sentences, var current_language, var path
 
-    
+
     # TEXT
     # --- NO SUCCESS
     # CODE
@@ -831,12 +831,12 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
         set new array random to use_random with var input, var current_language, var path, var mode
         push into array sentences, elements of array random
     done
-    
+
     do return using array sentences
 done
 
 define action flowchart_out_answers with array sentences, var current_language, var path do
-    
+
     set new var num to elements of array sentences
     set var num to var num + 1
     set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
@@ -856,14 +856,14 @@ define action flowchart_out_answers with array sentences, var current_language, 
     for each new array sentence in array sentences do
         if from array sentence 2nd element do
             if ( not from array sentence 1st element ) or ( not from hash primary_keys element { from array sentence 1st element } ) do
-            
+
                 print into var flowchart_log data "linkcontent 000000 \t - " concat from array sentence 1st element concat ": " concat from array sentence 2nd element
                 print into var flowchart_log data new line
                 print into var flowchart_log data "property    pk     " concat from array sentence 1st element
                 print into var flowchart_log data new line
-                
+
                 set from hash primary_keys element { from array sentence 1st element } to 1
-                
+
             done
         done
         else do
@@ -894,33 +894,33 @@ define action decide with array output, var input, flag all_output_phrases, var 
         return var output_str
     done
     else do
-        
+
         if 2 <= size of array output do
             set new var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/output.history', read
             set new var last_output to ''
             for each new var line from var input_handle do
                 set var last_output to var line
             done
-            
+
             print "previous output: " concat var last_output concat new line
-            
+
             for each new var _output in array output do
                 set new var output to from array _output 2nd element
-                
+
                 do regex with var output: /\(.*/ -> "" :global
                 do regex with var output: /\((<[+]>+?)\)\s/ -> "" :global
                 do regex with var output: /\((<[-]>+?)\)\s/ -> "" :global
                 do regex with var output: /\((<[+]>+?)\)/ -> "" :global
                 do regex with var output: /\((<[-]>+?)\)/ -> "" :global
-                
+
                 print "maybe current output: " concat var output concat new line
-                
+
                 if lc(var last_output) matches lc(var output) do
                     set from array _output 2nd element to ''
                     go to last
                 done
             done
-            
+
             set new array replacement_for_output to an empty array
             for each new var _output in array output do
                 if from array _output 2nd element do
@@ -929,7 +929,7 @@ define action decide with array output, var input, flag all_output_phrases, var 
             done
             set array output to array replacement_for_output
         done
-        
+
         set new array words to split with " ", lc(var input)
         set new array rel_output to an empty array
         for each new array _element in array output do
@@ -943,14 +943,14 @@ define action decide with array output, var input, flag all_output_phrases, var 
                 set var k to var k + 1
             done
         done
-        
+
         # TEXT
         # If all scores are negative...
         # CODE
         if is an empty array rel_output do
             set array rel_output to array output
         done
-        
+
         # TEXT
         # Choose an answer
         # CODE
@@ -964,7 +964,7 @@ done
 define action shell with var current_language, var path do
     set new var input_file_name to '_input'
     set new var input_handle to handle for file name var input_file_name, read
-    
+
     set new var time_first to time without arguments
     set new var do_learn to 1
     set new var do_talk  to 1
@@ -990,10 +990,10 @@ define action shell with var current_language, var path do
             set var do_learn to 0
             set var do_talk  to 0
         done
-        
+
         print "Do learn: " concat var do_learn concat new line
         print "Do talk:  " concat var do_talk  concat new line
-    
+
         do regex with var sentences_as_line_2: /[?]+/ -> "?" :global
         do regex with var sentences_as_line_2: /([?])/ -> "$0." :global
         do regex with var sentences_as_line_2: /[.!~]\s*?[.!~]/ -> "~" :global
@@ -1001,19 +1001,19 @@ define action shell with var current_language, var path do
         do regex with var sentences_as_line_2: /<[.]>(\s|$)/ -> " STOP " :global
         do regex with var sentences_as_line_2: /(\d) STOP / -> "$0. " :global
         do regex with var sentences_as_line_2: / STOP \((.*)\)/ -> " ($0) STOP . " :global
-        
+
         set var sentences_as_line_2 to divide_input with var sentences_as_line_2, var current_language, var path
-        
+
         set new array sentences_as_line_array to split with /\sSTOP\s/, var sentences_as_line_2
         for each new var sentences_as_line in array sentences_as_line_array do
-            
+
             set new array facts_to_save to an empty array
             set new hash tags to an empty hash
-            
+
             set new array sentences to split with /[!~]/, var sentences_as_line
 
             for each new var line in array sentences do
-            
+
                 do regex with var line: /^\s+/ -> "" :global
                 do regex with var line: /\s+$/ -> "" :global
                 do regex with var line: /\.$/ -> "" :global
@@ -1037,19 +1037,19 @@ define action shell with var current_language, var path do
                     do update_list_of_pro_files with var line, var current_language, var path
                     go to next
                 done
-                
+
 #                do unlink with '_output'
                 set new array output to give_output with var line, (not var do_talk), array facts_to_save, hash tags, var current_language, var path
 #                do unlink with '_output'
 
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
-                
+
                 set var final_output to upper_case_correction with var final_output, hash tags, var current_language, var path
                 do regex with var final_output: /\((<[+]>+?)\)\s/ -> "" :global
                 do regex with var final_output: /\((<[-]>+?)\)\s/ -> "" :global
                 do regex with var final_output: /\((<[+]>+?)\)/ -> "" :global
                 do regex with var final_output: /\((<[-]>+?)\)/ -> "" :global
-        
+
                 set new var time_second to time without arguments
                 set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
 
@@ -1069,7 +1069,7 @@ define action shell with var current_language, var path do
                 print var final_output
                 print new line
             done
-            
+
             set new var saved_data to ''
             if var do_learn do
                 set var saved_data to save_facts with array facts_to_save, hash tags, '',  '', 0, var current_language, var path
@@ -1079,7 +1079,7 @@ define action shell with var current_language, var path do
                 set var saved_data to save_facts with array facts_to_save, hash tags, '-', '', 0, var current_language, var path
                 set var saved_data to escape_html using var saved_data
             done
-            
+
             if not var do_talk do
                 if var saved_data and length(var saved_data) > 5 do
                     set new var output_file_name to '_output'
@@ -1088,17 +1088,17 @@ define action shell with var current_language, var path do
                     do close with var output_handle
                 done
             done
-            
+
             print "Do learn: " concat var do_learn concat new line
             print "Do talk:  " concat var do_talk  concat new line
         done
     done
-    
+
     do memory_limit with "word_types.memory", var current_language, var path
     do memory_limit with "word_types.self-taggered", var current_language, var path
-    
+
     do wait 3 seconds
-    
+
     set new var exit_file_name to '_exit'
     set new var exit_handle to handle for file name var exit_file_name, write
     do close with var exit_handle

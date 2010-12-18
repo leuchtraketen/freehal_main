@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -91,27 +91,27 @@ int main (int argc, char** argv) {
         strcat(sqlite_filename, "/database.db");
         sql_sqlite_set_filename(sqlite_filename);
     }
-    
+
     hal2009_clean();
     chdir(base_dir);
-    
+
     pthread_t signal_thread = hal2009_start_signal_handler(strdup(programming_language), strdup(language), MULTI);
     hal2009_init(strdup(programming_language), strdup(language), strdup(base_dir));
 
     while (1) {
         halsleep(1);
     }
-    
+
     return 0;
 }
 
 void for__input__add_pro_file(void* arg) {
     char* text = (char*)arg;
-    
+
     hal2009_add_pro_file(text);
     FILE* target = fopen("_input__add_pro_file", "w+b");
     halclose(target);
-    
+
     if (text) free(text);
 }
 
@@ -131,7 +131,7 @@ void hal2009_handle_signal(void* arg) {
     char* type       = ((void**)arg)[0];
     char* text       = ((void**)arg)[1];
     char* start_type = ((void**)arg)[2];
-    
+
     if (0 == strcmp(type, "_output__pos")) {
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
         strcpy(text, "q");

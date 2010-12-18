@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -30,14 +30,14 @@ int disk_begin() {
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         disk_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-        
+
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
             disk_net[i][k] = calloc(sizeof(struct list), 1);
             disk_net[i][k]->size = 0;
             disk_net[i][k]->list = 0;
         }
-        
+
         k = WRONG;
         disk_net[i][k] = calloc(sizeof(struct list), 1);
         disk_net[i][k]->size = 0;
@@ -55,7 +55,7 @@ int disk_begin() {
     disk_net[i][k] = calloc(sizeof(struct list), 1);
     disk_net[i][k]->size = 0;
     disk_net[i][k]->list = 0;
-    
+
     disk_cache_clauses = -1;
     disk_cache_facts   = -1;
 
@@ -141,13 +141,13 @@ int disk_end() {
             return NO_CONNECTION;
         }
     }
-    
+
     char* err;
     sqlite3_exec(sqlite_connection, "COMMIT;", NULL, NULL, &err);
     sqlite3_free(err);
     sqlite3_close(sqlite_connection);
     sqlite_connection = 0;
-    
+
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         int k;
@@ -156,12 +156,12 @@ int disk_end() {
             free(disk_net[i][k]);
             disk_net[i][k] = 0;
         }
-        
+
         k = WRONG;
         disk_free_wordlist(i, k);
         free(disk_net[i][k]);
         disk_net[i][k] = 0;
-        
+
         free(disk_net[i]);
         disk_net[i] = 0;
     }
@@ -201,16 +201,16 @@ struct word* disk_get_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     int length = strlen(name);
-    
+
     struct word** list = (struct word**)(disk_net[i][k]->list);
-    
+
     if (0 == list) {
         //debugf("illegal list while searching %s.\n", name);
         return 0;
     }
-    
+
     int g;
     for (g = 0; g < disk_net[i][k]->size; ++g) {
         if (length == list[g]->length && 0 == strcmp(list[g]->name, name)) {
@@ -218,7 +218,7 @@ struct word* disk_get_word(const char* name) {
             return list[g];
         }
     }
-    
+
     return 0;
 }
 
@@ -241,7 +241,7 @@ int get_last_pk(int rel) {
             return disk_cache_facts;
         }
     }
-    
+
     // no cache
     char sql[5120];
     *sql = 0;
@@ -251,14 +251,14 @@ int get_last_pk(int rel) {
 
     char key[99];
     int error = sql_execute(sql, select_primary_key, key);
-    
+
     if (rel) {
         disk_cache_clauses = to_number(key);
     }
     else {
         disk_cache_facts = to_number(key);
     }
-    
+
     return (rel ? disk_cache_clauses : disk_cache_facts);
 }
 
@@ -269,7 +269,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     char* advs  = strdup(r_adverbs  ? r_adverbs  : "");
     char* extra = strdup(r_extra    ? r_extra    : "");
     char* buffer;
-    
+
     *num_of_words = 1;
     words[0] = strdup("0");
 
@@ -277,22 +277,22 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         words[*num_of_words] = strdup(verbs);
         ++(*num_of_words);
     }
-    
+
     if (strcmp(subj, "0")) {
         words[*num_of_words] = strdup(subj);
         ++(*num_of_words);
     }
-    
+
     if (strcmp( obj, "0")) {
         words[*num_of_words] = strdup( obj);
         ++(*num_of_words);
     }
-    
+
     if (strcmp(advs, "0")) {
         words[*num_of_words] = strdup(advs);
         ++(*num_of_words);
     }
-    
+
     buffer = strtok(verbs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -304,8 +304,8 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
-    
+
+
     buffer = strtok(subj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -317,7 +317,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     buffer = strtok( obj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -329,7 +329,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     buffer = strtok(advs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -341,7 +341,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     if (extra) {
         buffer = strtok(extra, " ;.)(-,_");
         while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
@@ -357,7 +357,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     }
 
     --(*num_of_words);
-    
+
     free(verbs);
     free(subj);
     free(obj);
@@ -366,7 +366,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
 }
 
 char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
-    
+
     const char* last_subject_word = subjects;
     if (subjects && strlen(subjects)) {
         const char* found;
@@ -391,7 +391,7 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
             }
         }
     }
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
@@ -455,15 +455,15 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     strcat(sql, ", ");
     strcat(sql, strstr(filename, "fa-")?"0":"1");
     strcat(sql, ");\n");
-    
+
     return sql;
 }
 
 char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
-    
+
     char key[101];
     snprintf(key, 100, "%d", pk);
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
@@ -483,7 +483,7 @@ char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, c
     strcat(sql, ", ");
     strcat(sql, verb_flag_should?"1":"0");
     strcat(sql, ");\n");
-    
+
     return sql;
 }
 
@@ -491,21 +491,21 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
 
     char key[101];
     snprintf(key, 100, "%d", pk);
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
     }
-    
+
     int num_of_words = 0;
     char** words = calloc(501*sizeof(char*), 1);
     detect_words(&num_of_words, words, verbs, subjects, objects, adverbs, "");
-    
+
     if (has_conditional_questionword) {
         ++num_of_words;
         words[num_of_words] = strdup("$$has_conditional_questionword$$");
     }
-    
+
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
             if (words[num_of_words][0] != '0') {
@@ -553,7 +553,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
 
     char* sql = malloc(102400);
     *sql = 0;
-    
+
     strcat(sql, "SELECT DISTINCT -1, "
     "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
     "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
@@ -569,7 +569,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     strcat(sql, " (SELECT f2 FROM `linking` WHERE f1 = ");
     strcat(sql, rel_str);
     strcat(sql, " );");
-    
+
     return sql;
 }
 
@@ -577,12 +577,12 @@ char* gen_sql_get_double_facts() {
 
     char* sql = malloc(102400);
     *sql = 0;
-    
+
     strcat(sql, "SELECT `nmain`.`pk`, "
     "`nmain`.`verb` || \"00000\", "
     "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM facts WHERE mix_1||verb IN ( SELECT mix_1||verb AS a FROM facts GROUP BY a HAVING count(pk) >= 2) order by mix_1, verb;");
-    
+
     return sql;
 }
 
@@ -617,7 +617,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
     for (i = 'a'; i <= 'z'; ++i) {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
         int error2 = sql_execute("BEGIN;", NULL, NULL);
-        
+
         printf("\r%fl\t\t\t", (100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
         fflush(stdout);
         *sql = 0;
@@ -635,7 +635,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
 
         int error = sql_execute(sql, NULL, NULL);
     }
-    
+
     *sql = 0;
     strcat(sql, "DELETE FROM clauses WHERE `fileid` = ");
     strcat(sql, from_number(fileid(filename)));
@@ -643,7 +643,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
     strcat(sql, "DELETE FROM facts WHERE `fileid` = ");
     strcat(sql, from_number(fileid(filename)));
     strcat(sql, ";");
-   
+
 
     printf("\r%s\n", sql);
     return sql;
@@ -653,7 +653,7 @@ char* disk_get_source(const char* key) {
     printf("disk_get_source: %s\n", key);
     if (!key || !key[0])
         return (char*)1;
-    
+
     char* source = calloc(512, 1);
     {
         char* _where = malloc(1024);
@@ -666,22 +666,22 @@ char* disk_get_source(const char* key) {
             strcat(_where, key);
             strcat(_where, " ");
         }
-        
+
         char* sql = malloc(1024);
         *sql = 0;
-        
+
         strcat(sql, "SELECT filename||\":\"||(SELECT line FROM facts ");
         strcat(sql, _where);
         strcat(sql, ") from files where id = (select fileid FROM facts ");
         strcat(sql, _where);
         strcat(sql, ");");
         free(_where);
-        
+
         int error = sql_execute(sql, select_primary_key, source);
         free(sql);
     }
     printf("source: %s\n", source);
-    
+
     return source;
 }
 
@@ -689,13 +689,13 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
     printf("disk_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
         return (char*)1;
-    
+
     struct request_string_pair req;
     req.facts    = facts;
     req.limit    = limit;
     req.position = position;
     req.rel      = 0;
-    
+
     {
         char* sql = malloc(1024);
         *sql = 0;
@@ -717,7 +717,7 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
                 "select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
                 strcat(sql, key);
                 strcat(sql, "\" and u.`can_be_synonym` = 1;");
-                
+
                 strcat(sql, "select e.last_subject_word, e.objects from facts as e "
                 "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
                 "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
@@ -795,7 +795,7 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
             }
         }
         printf("%s\n", sql);
-        
+
         int error = sql_execute(sql, callback_string_pair, &req);
         free(sql);
     }
@@ -804,9 +804,9 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
 char* disk_del_record(const char* key) {
     if (!key || !key[0])
         return (char*)1;
-    
+
     char* source = disk_get_source(key);
-    
+
     char* sql = malloc(1024);
     *sql = 0;
     if (0 == strcmp(key, "a")) {
@@ -818,7 +818,7 @@ char* disk_del_record(const char* key) {
         strcat(sql, ";");
     }
     printf("pkey (in hal2009-disk.c): %s, SQL: %s\n", key, sql);
-    
+
     int error = sql_execute(sql, NULL, NULL);
 
     int i;
@@ -840,7 +840,7 @@ char* disk_del_record(const char* key) {
     }
 
     free(sql);
-    
+
     return source;
 }
 
@@ -849,7 +849,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     char* sql = malloc(512000);
     *sql = 0;
     int n, m, q;
-    
+
     if (0 == can_be_a_pointer(words[0])) {
         return sql;
     }
@@ -863,7 +863,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         if (!can_be_a_pointer(words[n])) {
             continue;
         }
-        
+
         int is_new = 1;
         if (can_be_a_pointer(words[n][0])) {
             for (q = 0; words[q] && q+1 < n; ++q) {
@@ -885,7 +885,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             debugf("not new.\n");
             continue;
         }
-        
+
         for (m = 0; words[n][m]; ++m) {
             if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
                 continue;
@@ -915,11 +915,11 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                     in_bracket = 0;
                 }
                 strcat(sql, " ; \nINSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
-                
+
                 strcat(sql, " `db_index`.`rel_word_fact__");
                 strcat(sql, smid);
                 strcat(sql, "` AS rel_word_fact ");
-                
+
                 strcat(sql, " WHERE 0 ");
             }
             if (last_smid) {
@@ -928,7 +928,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             last_smid = strdup(smid);
             free(smid);
 
-            
+
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
                 if (strstr(words[n][m]->name+1, "*")) {
                     strcat(sql, "OR rel_word_fact.word GLOB \"");
@@ -966,7 +966,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     "pk, fileid, line, verb, verbgroup, subjects, objects, adverbs, "
     "mix_1, questionword, prio, rel, type, truth, hash_clauses, only_logic, can_be_synonym "
     "FROM facts WHERE pk in (SELECT i FROM cache_indices);");
-                
+
     strcat(sql, "SELECT DISTINCT "
     "`nmain`.`pk`, "
     "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
@@ -993,7 +993,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         if (strstr(err, "no such table")) {
             printf("SQL Error:\n------------\n%s\n\n", err, sql);
             sqlite3_free(err);
-            
+
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
                 printf("Table creation: SQL Error:\n------------\n%s\n\n", err, sql);
 //                printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
@@ -1011,12 +1011,12 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         }
     }
     sqlite3_free(err);
-    
+
     if (error_to_return) {
         disk_cache_clauses = -1;
         disk_cache_facts   = -1;
     }
-    
+
     return error_to_return;
 }
 
@@ -1059,13 +1059,13 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
         sql = gen_sql_add_verb_flags(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
-        
+
         sql = 0;
         sql = gen_sql_add_word_fact_relations(sql, pk, 0, subjects, objects, verbs, adverbs, extra, questionword, filename, line, truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should, only_logic, has_conditional_questionword);
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
-    
+
     if (error) {
         printf("Error in disk_add_fact.\n");
         return 0;
@@ -1073,7 +1073,7 @@ struct fact* disk_add_fact(const char* subjects, const char* objects, const char
 
     struct fact* fact = calloc(sizeof(struct fact), 1);
     fact->pk = pk;
-    
+
     return fact;
 }
 
@@ -1093,14 +1093,14 @@ struct word* disk_set_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     if (0 == disk_net[i][k]->list) {
         // debugf("empty list wile inserting %s.\n", name);
     }
     else {
         0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, disk_net[i][k]->list, disk_net[i][k]->size, ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size-1]->name);
     }
-    
+
     if (disk_net[i][k]->size == 0) {
         disk_net[i][k]->list = calloc(sizeof(struct word*), 11);
         disk_net[i][k]->allocated_until = 10;
@@ -1109,11 +1109,11 @@ struct word* disk_set_word(const char* name) {
         disk_net[i][k]->allocated_until += 10;
         disk_net[i][k]->list = realloc(disk_net[i][k]->list, sizeof(struct word*)*(disk_net[i][k]->allocated_until+1));
     }
-    
+
     disk_net[i][k]->list[disk_net[i][k]->size] = calloc(1, sizeof(struct word));
     ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name   = strdup(name);
     ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->length = strlen(name);
-    0 && debugf("inserted: %s = %p, %p.\n", 
+    0 && debugf("inserted: %s = %p, %p.\n",
             ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name,
             disk_net[i][k]->list[disk_net[i][k]->size],
             disk_net[i][k]->size);
@@ -1123,25 +1123,25 @@ struct word* disk_set_word(const char* name) {
 
 static int callback_string_pair(void* arg, int argc, char **argv, char **azColName) {
     struct request_string_pair* req = arg;
-    
+
     if (*req->position >= req->limit) {
         return 1;
     }
-    
+
     if (argc < 2) {
         return 0;
     }
-    
+
     struct string_pair* fact  = calloc(sizeof(struct string_pair), 1);
     fact->subjects     = strdup(argv[0] ? argv[0] : "");
     fact->objects      = strdup(argv[1] ? argv[1] : "");
-    
+
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
         debugf("Added string pair no %d at %p (%s, %s).\n", *req->position, req->facts[*req->position], fact->subjects, fact->objects);
     }
     ++(*req->position);
-    
+
     return 0;
 }
 
@@ -1149,7 +1149,7 @@ int disk_clear_cache() {
     if (!query_cache_list) {
         return 0;
     }
-    
+
     int i = 0;
     while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
         int b;
@@ -1173,14 +1173,12 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
     int i_right = INVALID_POINTER;
     int i = 0;
     // check whether there is a matching entry
-        printf("search in query_cache: %d - %d - %d\n", req->hash_n_1, req->hash_n_2, req->hash_n_3);
     while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
         struct query_cache_entry* entry = query_cache_list[i];
         if (entry->hash_n_1 == req->hash_n_1 && entry->hash_n_2 == req->hash_n_2 && entry->hash_n_2 == req->hash_n_2) {
             need_to_create = 0;
             i_right = i;
         }
-            printf("found in query_cache:  %d - %d - %d\n", entry->hash_n_1, entry->hash_n_2, entry->hash_n_3);
         ++i;
     }
     if (i >= QUERY_CACHE_SIZE) {
@@ -1212,15 +1210,15 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
 
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {
     struct request_get_facts_for_words* req = arg;
-    
+
     if (*req->position >= req->limit) {
         return 1;
     }
-    
+
     if (argc <= 5 || (!argv[1] || !strlen(argv[1])) || ((!argv[2] || !strlen(argv[2])) && (!argv[3] || !strlen(argv[3])) && (!argv[4] || !strlen(argv[4])) && (!argv[5] || !strlen(argv[5])))) {
         return 0;
     }
-    
+
 
     if (req->make_rawfacts && (req->hash_n_1 || req->hash_n_2 || req->hash_n_3)) {
         int i_right = req->i_right;
@@ -1254,7 +1252,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->line         = strdup(argv[7] ? argv[7] : "");
     fact->truth        = (argv[8] && argv[8][0] && argv[8][0] == '1') ? 1.0 : ((argv[8] && argv[8][0] && argv[8][0] && argv[8][1] && argv[8][2] != '0') ? 0.5 : 0.0);
     fact->only_logic   = argv[9] && argv[9][0] && argv[9][0] == '1' ? 1 : 0;
-    
+
     req->facts[*req->position] = fact;
     if (!argv[1] || !strstr(argv[1], ">>>")) {
         if (DEBUG__LONG_LISTINGS) {
@@ -1262,7 +1260,7 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
         }
     }
     ++(*req->position);
-    
+
     return 0;
 }
 
@@ -1299,7 +1297,7 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
 
         /*
         printf("%s\n", sql);
-        
+
         printf("%s\n", "\n");
         printf("hash_n_1: %d\n", req.hash_n_1);
         printf("hash_n_2: %d\n", req.hash_n_2);
@@ -1332,11 +1330,11 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
 
         free(sql);
     }
-    
+
     if (*req.position > limit - 10) {
         return TOOMUCH;
     }
-    
+
     return 0;
 }
 
@@ -1349,7 +1347,7 @@ int disk_search_double_facts(struct word*** words, struct fact** facts, int limi
     req.rel      = 0;
     req.make_rawfacts = 0;
     req.debug_facts = 0;
-    
+
     {
         req.hash_n_1 = 0;
         req.hash_n_2 = 0;
@@ -1360,11 +1358,11 @@ int disk_search_double_facts(struct word*** words, struct fact** facts, int limi
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
-    
+
     if (*req.position > limit - 10) {
         return TOOMUCH;
     }
-    
+
     return 0;
 }
 
@@ -1374,21 +1372,21 @@ int re_index_in_facts = 1;
 
 static int callback_re_index(void* arg, int argc, char **argv, char **azColName) {
     char* re_index_sql = *((void**)(arg));
-    
+
     char** verbs       = divide_string(argv[1] ? argv[1] : "");
     char** subjects    = divide_string(argv[2] ? argv[2] : "");
     char** objects     = divide_string(argv[3] ? argv[3] : "");
     char** adverbs     = divide_string(argv[4] ? argv[4] : "");
-    
+
     int stage;
     for (stage = 1; stage <= 4; ++stage) {
-        
+
         char** words;
         if (stage == 1) words = verbs;
         if (stage == 2) words = subjects;
         if (stage == 3) words = objects;
         if (stage == 4) words = adverbs;
-        
+
         int i;
         for (i = 0; words[i]; ++i) {
             char* smid = small_identifier(words[i]);
@@ -1405,7 +1403,7 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
                 strcat(sql, re_index_in_facts ? "f" : "c");
                 strcat(sql, "\"");
                 strcat(sql, ");");
-                
+
                 int size_sql = strlen(sql);
                 if (!(re_index_pos_sql + size_sql < re_index_size_sql - 10)) {
                     re_index_size_sql += 10000;
@@ -1418,10 +1416,10 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
             free(smid);
             free(words[i]);
         }
-        
+
         free(words);
     }
-    
+
     return 0;
 }
 
@@ -1437,11 +1435,11 @@ int disk_re_index() {
         int error5 = sql_execute("VACUUM;", NULL, NULL);
         printf("Done.\n");
         printf("Create new index...\n");
-        
+
         re_index_size_sql = 10001;
         re_index_pos_sql = 10001;
         char* sql = calloc(re_index_size_sql, 1);
-        
+
         re_index_in_facts = 1;
         {
             char sql[5120];
@@ -1451,7 +1449,7 @@ int disk_re_index() {
             char key[99];
             int error = sql_execute(sql, select_primary_key, key);
             int count = to_number(key ? key : "0");
-            
+
             int k = 0;
             while (k < count) {
                 *sql = 0;
@@ -1466,11 +1464,11 @@ int disk_re_index() {
                 strcat(sql, _k_2);
                 strcat(sql, ";");
                 printf("%s\n", sql);
-                
+
                 int error = sql_execute(sql, callback_re_index, key);
             }
         }
-        
+
         printf("Done.\n");
         int error6 = sql_execute("BEGIN;", NULL, NULL);
     }
@@ -1493,7 +1491,7 @@ struct fact** disk_search_clauses(int rel) {
     req.rel      = rel;
     req.make_rawfacts = 0;
     req.debug_facts = 0;
-    
+
     {
         req.hash_n_1 = 0;
         req.hash_n_2 = 0;
@@ -1504,7 +1502,7 @@ struct fact** disk_search_clauses(int rel) {
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
-    
+
     return clauses;
 }
 
@@ -1555,7 +1553,7 @@ int disk_add_link (const char* link, int key_1, int key_2) {
     strcat(sql, ", ");
     strcat(sql, str_fact_2);
     strcat(sql, ");");
-    
+
     int error = sql_execute(sql, NULL, NULL);
     return error;
 }

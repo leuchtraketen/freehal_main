@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -64,12 +64,12 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     if (just_compile) {
         return;
     }
-    
+
     if (strstr(hals->s, "require source " )) {
         hals = replace(hals, "require source ", "require(\"");
         strcat(hals->s, ".pl\");");
     }
-    
+
     if (strstr(hals->s, "print into " )) {
         hals = replace(hals, "print into ", "print {");
         hals = replace(hals, " data ", "} ");
@@ -80,7 +80,7 @@ static inline void convert_to_perl5_structure (halstring* hals, int just_compile
     }
 
     hals = replace(hals, "item", "element");
-    
+
     hals = replace(hals, "# TEXT", "#---------------------------------------");
     hals = replace(hals, "# CODE", "#---------------------------------------");
     hals = replace(hals, "(end array)", "}");
@@ -492,12 +492,12 @@ char* convert_to_perl5(char* hals, int just_compile) {
     string.s = hals;
     string.do_free = 1;
     halstring** lines = stringtoarray(&string, '\n', &number_of_lines);
-    
+
     long new_code_size = (LINE_SIZE + 100) * (number_of_lines + 1);
     char* newcode;
     newcode = halmalloc(new_code_size, "convert_to_perl5"); // be sure we have enough space
     zero_p(newcode, new_code_size);
-    
+
     strcat(newcode, "use strict;\n\n");
     int current_line;
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
@@ -512,14 +512,14 @@ char* convert_to_perl5(char* hals, int just_compile) {
             halfree(lines[current_line]);
             continue;
         }
-        
+
         char* newline = halmalloc(LINE_SIZE + 100, "convert_to_perl5/9"); // be sure we have enough space
         zero_p(newline, LINE_SIZE + 100);
         strcpy(newline, lines[current_line]->s);
         halstring* s = calloc(sizeof(halstring), 1);
         s->s = newline;
         s->do_free = 1;
-        
+
         convert_to_perl5_structure(s, just_compile);
         strcat(newcode, s->s);
         strcat(newcode, "\n");
@@ -534,11 +534,11 @@ char* convert_to_perl5(char* hals, int just_compile) {
 //    fprintf(output(), "%s", "done.\n");
     halfree(lines);
     halfree(hals);
-    
+
     char* newcode_return = halmalloc(strlen(newcode) + 2, "convert_to_perl5/10");
     strcpy(newcode_return, newcode);
     halfree(newcode);
-    
+
     return newcode_return;
 }
 
@@ -563,7 +563,7 @@ int convert_to_perl5_convert_file(char* filename) {
     char* code = halmalloc(file_size+1, "convert_to_perl5_convert_file");
     fread(code, 1, file_size, source);
     halclose(source);
-    
+
     int just_compile = 0;
     /// Look whether nothing has changed
     {
@@ -592,7 +592,7 @@ int convert_to_perl5_convert_file(char* filename) {
         halclose(target);
         halfree(filename_tmp);
     }
-    
+
     fprintf(output(), "compiler: compile %s (size: %i bytes, lang: perl5)\n", filename, file_size);
     char* targetcode = convert_to_perl5(code, just_compile);
     if (!just_compile) {
@@ -601,7 +601,7 @@ int convert_to_perl5_convert_file(char* filename) {
             char targetname[100];
             strcpy(targetname, filename);
             strcat(targetname, ".pl");
-            
+
             target = fopen(targetname, "w");
         }
         if ( !target ) {
@@ -616,7 +616,7 @@ int convert_to_perl5_convert_file(char* filename) {
     if (last_filename)
         free(last_filename);
     last_filename = strdup(filename);
-    
+
     return 0;
 }
 
@@ -638,11 +638,11 @@ void execute_perl5(char* filename) {
         fprintf(output(), "%s\n", "");
         convert_to_perl5_convert_file(filename);
     }
-    
+
     // INIT
     fprintf(output(), "%s\n", "compiler: module init (lang: perl5)");
     PERL_SYS_INIT3(NULL, NULL, NULL);
-    
+
     // CONSTRUCT
     fprintf(output(), "%s\n", "compiler: module constructor (lang: perl5)");
     if ((my_perl = perl_alloc()) == NULL) {

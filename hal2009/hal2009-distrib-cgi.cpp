@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -25,7 +25,7 @@
 #include "hal2009-distrib.cpp"
 
 int main (int argc, char** argv) {
-    
+
     if (argc < 2) {
         printf("usage: %s \"INPUT\"\n", argv[0]);
         return 1;
@@ -38,12 +38,12 @@ int main (int argc, char** argv) {
         {
             const char* copy_of_input = argv[1];
             const char* copy_of_language = "de";
-            
+
             sprintf(param, "%s:%s", copy_of_language, copy_of_input);
         }
-        
+
         hal2009_distrib_invoke_on(servers[i], distrib_port, "hal2009_answer__1", param);
-        
+
         free((void*)servers[i]);
         ++i;
     }

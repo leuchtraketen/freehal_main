@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -86,7 +86,7 @@ char* halgetline(FILE *handle) {
     if(zeichen == EOF) {
         return NULL;
     }
-   
+
     line = malloc(LINE_SIZE+1);
     int index = 0;
     line[index] = zeichen;
@@ -98,7 +98,7 @@ char* halgetline(FILE *handle) {
             ++index;
             break;
         }
-    
+
         if (EOF == zeichen) { /* feof() verwenden? */
             break;
         }
@@ -107,9 +107,9 @@ char* halgetline(FILE *handle) {
         ++index;
     }
     while(1 && index < LINE_SIZE - 1);
-    
+
     line[index] = 0;
-      
+
     return line;
 }
 
@@ -136,12 +136,12 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         replacement = calloc(5, 1);
         strcpy(replacement, "\n");
     }
-    
+
     char filename[999];
     char line[999];
     filename[0] = '\0';
     line[0] = '\0';
-    
+
     int i;
     int len = strlen(source);
     for (i = 0; i < 999 && i < len; ++i) {
@@ -150,20 +150,20 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         filename[i] = source[i];
     }
     filename[i] = '\0';
-    
+
     int l_i;
     for (l_i = 0, ++i; i < 999 && i < len; ++i, ++l_i) {
         line[l_i] = source[i];
     }
     line[l_i] = '\0';
-    
+
     printf("File: %s\n", filename);
     printf("Line: %s\n", line && line[0] ? line : "no line");
-    
+
     int line_int = line && line[0] ? atoi(line) : 0;
-    
+
     // Manipulate file
-    
+
     FILE* file = fopen(filename, "r");
     if (file) {
         char* buffer;
@@ -174,13 +174,13 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
         }
         --lines;
         fclose(file);
-        
+
         file = fopen(filename, "r");
         if (file) {
             char** data = calloc(lines+2, sizeof(char*));
             int line_number = 1;
             while (file && (buffer = halgetline(file)) != NULL && line_number <= lines) {
-                
+
                 if (line_number != line_int) {
                     data[line_number] = strdup(buffer);
                 }
@@ -191,7 +191,7 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
                 ++line_number;
             }
             fclose(file);
-            
+
             file = fopen(filename, "w");
             if (file) {
                 for (line_number = 1; line_number <= lines; ++line_number) {
@@ -210,18 +210,18 @@ int fact_replace_in_source (const char* source, const char* _replacement) {
     }
     else {
         printf("Unable to open file.\n");
-        
+
         if (replacement) {
             free(replacement);
         }
-        
+
         return 1;
     }
-    
+
     if (replacement) {
         free(replacement);
     }
-    
+
     return 0;
 }
 
@@ -235,7 +235,7 @@ char* fact_read_from_source (const char* source) {
     char line[999];
     filename[0] = '\0';
     line[0] = '\0';
-    
+
     int i;
     int len = strlen(source);
     for (i = 0; i < 999 && i < len; ++i) {
@@ -244,20 +244,20 @@ char* fact_read_from_source (const char* source) {
         filename[i] = source[i];
     }
     filename[i] = '\0';
-    
+
     int l_i;
     for (l_i = 0, ++i; i < 999 && i < len; ++i, ++l_i) {
         line[l_i] = source[i];
     }
     line[l_i] = '\0';
-    
+
     printf("File: %s\n", filename);
     printf("Line: %s\n", line && line[0] ? line : "no line");
-    
+
     int line_int = line && line[0] ? atoi(line) : 0;
-    
+
     // Manipulate file
-    
+
     FILE* file = fopen(filename, "r");
     if (file) {
         char* buffer;
@@ -283,11 +283,11 @@ char* fact_read_from_source (const char* source) {
             }
             fclose(file);
         }
-        
+
         return found;
     }
     printf("Unable to open file.\n");
-    
+
     return 0;
 }
 
@@ -362,23 +362,23 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic) {
         line = sline.s;
         (*truth_ref) = 0.0;
     }
-    
+
     if ((*only_logic) != 1) {
         (*only_logic) = 0;
     }
-    
+
     if (strstr(line, "(logic)")) {
         sline_ref = replace(sline_ref, " (logic)", "");
         sline_ref = replace(sline_ref, "(logic)", "");
         line = sline.s;
         (*only_logic) = 1;
     }
-    
+
     strncpy(_line, sline_ref->s, 4196);
     if (_line[0] == ' ') {
         strcpy(_line, _line+1);
     }
-    
+
     if (sline_ref->do_free) halfree(sline_ref->s);
 }
 
@@ -400,7 +400,7 @@ int hal2009_add_pro_file (char* filename) {
         int line_number = 0;
         while ((wholeline = halgetline(input)) != NULL) {
             ++line_number;
-            
+
             if (strstr(wholeline, "#")) {
                 free(wholeline);
                 continue;
@@ -411,12 +411,12 @@ int hal2009_add_pro_file (char* filename) {
                 free(wholeline);
                 wholeline = a;
             }
-            
+
             int d;
             int f;
             int first_record_in_this_line = 1;
             char* line = calloc(line_size + 100+1, 1);
-            
+
             for (d = 0, f = 0; d <= strlen(wholeline); ++d, ++f) {
                 line[f] = wholeline[d];
                 if (!wholeline[d] || (d+3 < strlen(wholeline) && wholeline[d] == ' ' && wholeline[d+1] == '~' && wholeline[d] == ' ')) {
@@ -432,14 +432,14 @@ int hal2009_add_pro_file (char* filename) {
                             fclose(target);
                         }
                     }
-                    
+
                     /// Make lower case
                     int i_size = strlen(line);
                     int ij;
                     for (ij = 0; ij < i_size; ++ij) {
                         line[ij] = (char)(tolower((int)(line[ij])));
                     }
-                    
+
                     /// Compute the hash
                     int hash_clauses = 1;
                     int j;
@@ -450,7 +450,7 @@ int hal2009_add_pro_file (char* filename) {
                     //hash_clauses /= strlen(line)+1;
                     if (hash_clauses < 0)
                         hash_clauses = -hash_clauses;
-                    
+
                     /// Add the fact
                     struct RECORD r;
                     r.truth = 0.5;
@@ -481,11 +481,11 @@ int hal2009_add_pro_file (char* filename) {
                     sline_ref = replace(sline_ref, "\r", "");
                     sline_ref = replace(sline_ref, "\n", "");
                     line = sline_ref->s;
-                    
+
                     char* buffer;
-                    
+
                     strcpy(r.questionword, "");
-                    
+
                     buffer = strtok(line, "^"); strcpy(r.verb,              (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     remove_negation(r.verb, &(r.truth), &(r.only_logic));
                     buffer = strtok(NULL, "^"); strcpy(r.subjects,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
@@ -498,13 +498,13 @@ int hal2009_add_pro_file (char* filename) {
                     snprintf(r.line, 100, "%d", line_number);
                     strcpy(r.line, from_number(line_number));
                     strcpy(r.extra, "");
-                    
+
                     r.verb_flag_want    = 0;
                     r.verb_flag_must    = 0;
                     r.verb_flag_can     = 0;
                     r.verb_flag_may     = 0;
                     r.verb_flag_should  = 0;
-                    
+
                     if (strstr(r.verb, "/")) {
                         if (strstr(r.verb, "/want")) {
                             r.verb_flag_want = 1;
@@ -527,9 +527,9 @@ int hal2009_add_pro_file (char* filename) {
                             strcpy(strstr(r.verb, "/should"), strstr(r.verb, "/should")+7);
                         }
                     }
-                    
+
                     r.prio = 50;
-                    
+
                     buffer = strtok(NULL, "^");
                     int i;
                     i = 0;
@@ -610,47 +610,18 @@ int hal2009_add_pro_file (char* filename) {
                     r.hash_clauses = hash_clauses;
 
                     int err;
-                    
+
                     if (strstr(r.subjects, "_") && strlen(r.subjects) > 2) {
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
-                        
-                        int size_subjects = strlen(r.subjects);
-                        if (r.subjects[0] == '_') {
-                            char* subj_bak = strdup(r.subjects);
-                            strcpy(r.subjects, subj_bak+1);
-                            if (subj_bak) free(subj_bak);
-                        }
-                        
-                        int j;
-                        for (j = 0; j < LINE_SIZE-1; ++j) {
-                            if (r.subjects[j] == '_') {
-                                if (j > size_subjects-3) {
-                                    r.subjects[j] = '\0';
-                                }
-                                else {
-                                    r.subjects[j] = ' ';
-                                }
-                            }
-                        }
-                        
-                        int size_objects = strlen(r.objects);
-                        if (r.objects[0] == '_') {
-                            char* obj_bak = strdup(r.objects);
-                            strcpy(r.objects, obj_bak+1);
-                            if (obj_bak) free(obj_bak);
-                        }
-                        
-                        for (j = 0; j < LINE_SIZE-1; ++j) {
-                            if (r.objects[j] == '_') {
-                                if (j > size_objects-3) {
-                                    r.objects[j] = '\0';
-                                }
-                                else {
-                                    r.objects[j] = ' ';
-                                }
-                            }
-                        }
+
+                        char* _tmp;
+                        _tmp = delete_underscores(r.subjects);
+                        strcpy(r.subjects, _tmp);
+                        free(_tmp);
+                        _tmp = delete_underscores(r.objects);
+                        strcpy(r.objects, _tmp);
+                        free(_tmp);
 
                         ++num_facts_added_during_this_run;
                         err = sql_add_record(&r);
@@ -662,13 +633,13 @@ int hal2009_add_pro_file (char* filename) {
                         }
                         ++num_facts_added_during_this_run;
                     }
-                    
+
                     int k = 0;
                     while (k+1 < MAX_CLAUSES && k < i && r.clauses[k]) {
                         halfree(r.clauses[k]);
                         ++k;
                     }
-                    
+
                     if (err) {
                         if (err == NO_CONNECTION) {
                             fprintf(output(), "\n");
@@ -698,29 +669,29 @@ int hal2009_add_pro_file (char* filename) {
 
                     halfree(line);
                     line = calloc(line_size + 100+1, 1);
-                    
+
                     if (last_pk) {
                         //printf("last_pk: %d\n", last_pk);
                         int current_pk;
-                        
+
                         FILE* target = fopen("_input_key", "r");
                         if (target) {
                             fscanf(target, "%d", &current_pk);
                             fclose(target);
                             //printf("current_pk: %d\n", current_pk);
-                            
+
                             hal2009_add_link("order", last_pk, current_pk);
                         }
                         else {
                             //printf("could not open _input_key\n", last_pk);
                         }
                     }
-                    
+
                     first_record_in_this_line = 0;
                 }
-                
+
             }
-            
+
             if (first_record_in_this_line) {
                 printf ("Error in line: %s\n%s\n", wholeline, "No database entry made.");
             }
@@ -731,7 +702,7 @@ int hal2009_add_pro_file (char* filename) {
             free(wholeline);
         }
     }
-    
+
     int position_in_insertions_simulated = position_in_insertions;
     while (position_in_insertions_simulated % 750 != 0) {
         ++position_in_insertions_simulated;
@@ -749,7 +720,7 @@ int hal2009_add_pro_file (char* filename) {
     fprintf(output(), "\n");
     fflush(stdout);
     sql_end();
-    
+
     fprintf(output(), "\nAdded %d facts.", num_facts_added_during_this_run > 0 ? num_facts_added_during_this_run : 0);
     fprintf(output(), "\nNot added %d facts because they already exist in the database.", num_facts_not_added_during_this_run_because_exist);
     fprintf(output(), "\nNot added %d facts because of an other error.", num_facts_not_added_during_this_run_because_other_error);
@@ -757,9 +728,37 @@ int hal2009_add_pro_file (char* filename) {
         + num_facts_not_added_during_this_run_because_exist
         + num_facts_not_added_during_this_run_because_other_error);
     fprintf(output(), "\n\n");
-    
+
 
     return 0;
+}
+
+char* delete_underscores(char* _text) {
+    char* text = strdup(_text);
+
+    halstring sline;
+    sline.do_free = 1;
+    halstring* sline_ref = &sline;
+    sline.s = text;
+    sline_ref = replace(sline_ref, "_", " ");
+    sline_ref = replace(sline_ref, "  ", " ");
+    text = sline_ref->s;
+
+    int size = strlen(text);
+    if (text[0] == ' ') {
+        char* bak = strdup(text);
+        strcpy(text, bak+1);
+        if (bak) free(bak);
+    }
+
+    int j;
+    for (j = 0; j < LINE_SIZE-1; ++j) {
+        if (text[j] == ' ' && j > size-3) {
+            text[j] = '\0';
+        }
+    }
+
+    return text;
 }
 
 struct DATASET hal2009_get_csv(char* csv_request) {
@@ -783,7 +782,7 @@ struct DATASET hal2009_get_csv(char* csv_request) {
     buffer = strtok(NULL,        "^"); r.verb_flag_can     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
     buffer = strtok(NULL,        "^"); r.verb_flag_may     =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
     buffer = strtok(NULL,        "^"); r.verb_flag_should  =        ((buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) > 1))?atoi(buffer):0);
-    
+
     buffer = strtok(NULL,        "^");
     if (buffer && 0 == strcmp(buffer, "everything")) {
         r.everything_q = EVERYTHING;
@@ -825,7 +824,7 @@ char* hal2009_make_csv(struct DATASET* set) {
     if (set->err == TOOMUCH) {
         return strdup("/err:TOOMUCH\n");
     }
-    
+
     fprintf(output(), "Compute CSV data, %li records, %li columns\n", set->size, set->column_count);
     int j;
     int m;
@@ -944,10 +943,10 @@ char* ascii(const char* not_ascii) {
 	        strcat(ascii, array);
 	    }
 	}
-    
+
     if (s_ref->do_free) halfree(s_ref->s);
 
-   
+
     return ascii;
 }
 
@@ -956,11 +955,11 @@ halstring* replace(halstring *src, const char *from, const char *to) {
     if (0 == strstr(src->s, from)) {
         return src;
     }
-    
+
     char* full_string_pointer = halmalloc(line_size + 100, "replace");
     char* to_free__full_string_pointer = full_string_pointer;
     strcpy(full_string_pointer, src->s);
-    
+
     size_t size = strlen(src->s) + 1;
     size_t fromlen = strlen(from);
     size_t tolen = strlen(to);
@@ -1002,35 +1001,35 @@ halstring* replace(halstring *src, const char *from, const char *to) {
             }
         }
     }
-    
+
     if ( src->do_free ) {
         halfreef(src->s, "replace");
     }
-    
+
     src->s = value;
     src->do_free = 1;
     halfreef(to_free__full_string_pointer, "replace");
-    
+
     return src;
 }
 
 /* a split function */
-halstring **stringtoarray(halstring *string, char delimiter, int *size) { 
+halstring **stringtoarray(halstring *string, char delimiter, int *size) {
   halstring **array = halmalloc(sizeof(halstring*), "stringtoarray");
   char *ptr, *oldptr;
   int flag = 1;
   int count;
-    
+
   *size = 0;
   ptr = string->s;
 
-  for(count=0 ; flag ; ++count) 
+  for(count=0 ; flag ; ++count)
   {
     for (oldptr=ptr;*ptr&&*ptr!=delimiter;*ptr++)
       ;
     if (!*ptr) flag = 0;
     *ptr++ = '\0';
-    (*size)++;                                                       
+    (*size)++;
 
     array = realloc(array, (count+2)*sizeof(halstring *));
     halstring* s = halmalloc(sizeof(halstring), "stringtoarray");
@@ -1039,7 +1038,7 @@ halstring **stringtoarray(halstring *string, char delimiter, int *size) {
     strncpy(s->s, oldptr, line_size + 99);
     s->do_free = 1;
     array[count] = s;
-  
+
   }
   array[count] = 0;
   return array;
@@ -1079,7 +1078,7 @@ int hal2009_doc(char* filename) {
         char targetname[100];
         strcpy(targetname, filename);
         strcat(targetname, ".html");
-        
+
         target = fopen(targetname, "w");
     }
     if ( !target ) {
@@ -1087,11 +1086,11 @@ int hal2009_doc(char* filename) {
         return 1;
     }
     fprintf(output(), "Generate Documentation for %s...", filename);
-    
+
     char header_1[2048] = "<html>"
 "<head>"
 "<title>";
-    
+
     char header_2[2048] = "</title>"
 "<style type=\"text/css\">"
 "*, body, html {"
@@ -1155,7 +1154,7 @@ int hal2009_doc(char* filename) {
     string.s = code;
     string.do_free = 0;
     halstring** lines = stringtoarray(&string, '\n', &number_of_lines);
-    
+
     int current_line;
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
         char* newline;
@@ -1167,7 +1166,7 @@ int hal2009_doc(char* filename) {
         s.do_free = 1;
 
         halstring* s_ref = &s;
-        
+
         {
             if (strstr(s.s, "# TEXT")) {
                 if ( s.do_free ) halfree(s.s);
@@ -1194,15 +1193,15 @@ int hal2009_doc(char* filename) {
                 s_ref = replace(s_ref, "#", "");
             }
         }
-        
-        
+
+
         halwrite(s_ref->s, 1, strlen(s_ref->s), target);
         halwrite("\n", 1, 1, target);
-        
+
         if ( lines[current_line]->do_free ) halfree(lines[current_line]->s);
         halfree(lines[current_line]);
         if ( s_ref->do_free ) halfree(s_ref->s);
-        
+
         fprintf(output(), "%s", ".");
     }
     fprintf(output(), "%s", "\n");
@@ -1240,7 +1239,7 @@ int hal2009_execute_code(char* code, char* planguage) {
 void hal2009_clean() {
     int number_of_files_to_delete = 13;
     char files_to_delete[15][100] = { "_check_files", "_output", "_output__pos", "_input__pos", "_output__add_pro_file", "_input__add_pro_file", "_output__get_csv", "_input__get_csv", "_exit", "_exit_by_user", "_exit_hal2009_signal_handler", "_do_not_need_a_signal_handler", "_input_server", "_change_text_language" };
-    
+
     int i;
     for (i = 0; i < number_of_files_to_delete; ++i) {
         unlink(files_to_delete[i]);
@@ -1261,7 +1260,7 @@ void* hal2009_signal_handler(void* parameters) {
     free(params);
 
     void* temporary_memory = halmalloc(5120, "hal2009_signal_handler");
-    
+
     if ( stat("_do_not_need_a_signal_handler", temporary_memory) == 0 ) {
         halfree(temporary_memory);
         halfree(planguage);
@@ -1358,7 +1357,7 @@ void* hal2009_signal_handler(void* parameters) {
             }
         }
     }
-    
+
     halfree(temporary_memory);
     halfree(tlanguage);
     halfree(planguage);
@@ -1399,7 +1398,7 @@ pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* ba
     halwrite(input, 1, strlen(input), target);
     halwrite("\n", 1, strlen("\n"), target);
     halclose(target);
-    
+
     pthread_t thread_no_1;
     struct params_answer* parameters = calloc(sizeof(struct params_answer)+1, 1);
     parameters->input = input;
@@ -1409,7 +1408,7 @@ pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* ba
     parameters->start_type = start_type;
     fprintf(output(), "Start thread now. Language is %s\n", tlanguage);
     pthread_create (&thread_no_1, NULL, hal2009_answer_thread, (void*)parameters);
-    
+
     if ( join == JOIN ) {
         pthread_join(thread_no_1, NULL);
     }
@@ -1436,7 +1435,7 @@ void* hal2009_answer_thread(void* parameters) {
     if (planguage == NULL || tlanguage == NULL) {
         return 0;
     }
-    
+
     static int stuck_here = 0;
     while (stuck_here) {
         halsleep(1);
@@ -1446,13 +1445,13 @@ void* hal2009_answer_thread(void* parameters) {
     reset_stdout();
 
     char* tempfile = calloc(strlen(base_dir)+1000, 1);
-    
+
     snprintf(tempfile, strlen(base_dir)+1000-1, "%s/flowchart.log", base_dir);
     FILE* flowchart_log = fopen(tempfile, "w");
     if (flowchart_log)
         fclose(flowchart_log);
     *tempfile = 0;
-    
+
     snprintf(tempfile, strlen(base_dir)+1000-1, "%s/temp_%s_%i.hal", base_dir, tlanguage, strlen(base_dir));
     FILE* startfile = fopen(tempfile, "w");
     char* content = halmalloc(1024, "hal2009_answer_thread");
@@ -1490,14 +1489,14 @@ void* hal2009_answer_thread(void* parameters) {
         execute_perl5(tempfile);
     }
     halfree(tempfile);
-    
+
     halfree(planguage);
     halfree(tlanguage);
     halfree(base_dir);
     halfree(input);
-    
+
     halfree(parameters);
-    
+
     {
         FILE* file_done = fopen("_done", "w");
         halwrite("1", 1, strlen("1"), file_done);
@@ -1575,7 +1574,7 @@ const char* check_config (const char* name, const char* _default) {
                 halstring* haltemp_ref = &haltemp;
                 haltemp_ref->do_free = 1;
                 haltemp_ref->s = temp;
-                
+
                 haltemp_ref = replace(haltemp_ref, " =", "=");
                 haltemp_ref = replace(haltemp_ref, "= ", "=");
                 haltemp_ref = replace(haltemp_ref, "\n", "=");
@@ -1592,11 +1591,11 @@ const char* check_config (const char* name, const char* _default) {
                 if (!strstr(name, "limit")) {
                     printf("%s: %s = %s, default %s\n", config_file, name, copy, _default);
                 }
-                
+
                 if (haltemp_ref->do_free && haltemp_ref->s) {
                     free(haltemp_ref->s);
                 }
-                
+
                 return copy;
             }
             else {
@@ -1605,12 +1604,12 @@ const char* check_config (const char* name, const char* _default) {
         }
         fclose(i);
     }
-    
+
     FILE* o = fopen(config_file, "a");
     if (o) {
         fprintf(o, "%s = %s\n", name, _default);
         fclose(o);
     }
-    
+
     return _default;
 }

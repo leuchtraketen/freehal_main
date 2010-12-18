@@ -248,6 +248,8 @@ extern "C" {
     int fact_delete_from_source(const char* source);
     int fact_replace_in_source(const char* source, const char* replacement);
     char* fact_read_from_source(const char* source);
+
+
 #ifdef __cplusplus
 }
 #endif
@@ -348,6 +350,42 @@ FILE* unset_output_pipe() {
 # define INVALID_FD -1
 #endif
 
+
+char* ascii(const char* not_ascii);
+char* delete_underscores(char* text);
+char* fact_read_from_source (const char* source);
+char* hal2009_make_csv(struct DATASET* set);
+char* halgetline(FILE *handle);
+const char* check_config (const char* name, const char* _default);
+const char* hal2009_get_text_language();
+halstring* replace(halstring *src, const char *from, const char *to);
+halstring **stringtoarray(halstring *string, char delimiter, int *size);
+int _debugf(const char* c, ...);
+int fact_delete_from_source (const char* source);
+int fact_replace_in_source (const char* source, const char* _replacement);
+int hal2009_add_filename(const char* filename);
+int hal2009_add_link (char* link, int key_1, int key_2);
+int hal2009_add_pro_file (char* filename);
+int hal2009_compile(char* file, char* planguage);
+int hal2009_delete_everything_from(const char* filename);
+int hal2009_doc(char* filename);
+int hal2009_execute_code(char* code, char* planguage);
+int hal2009_execute_file(char* file, char* planguage);
+int hal2009_set_text_language(const char* s);
+int halsleep(double seconds);
+int halusleep(double seconds);
+int remove_negation (char* _line, double* truth_ref, int* only_logic);
+pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* base_dir, int join, short start_type);
+pthread_t hal2009_start_signal_handler(char* planguage, char* tlanguage, short start_type);
+struct DATASET hal2009_get_csv(char* csv_request);
+void* hal2009_answer_thread(void* parameters);
+void hal2009_clean();
+void hal2009_init(char* planguage, char* tlanguage, char* base_dir);
+void* hal2009_signal_handler(void* parameters);
+void* halfilecalloc( long s, long si, char* str );
+void* halfilefree( void* s );
+
+
 #define PerlIO_stdout stdout
 #define Perl_PerlIO_stdout stdout
 #include "hal2009-sql.c"
@@ -355,7 +393,6 @@ FILE* unset_output_pipe() {
 #endif /* NOT_HEADER_ONLY */
 
 /************* END INTERNAL STUFF *********/
-
 
 #endif /* HAL2009 */
 

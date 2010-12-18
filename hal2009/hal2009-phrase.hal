@@ -22,37 +22,37 @@
 define action phrase with var lang, var path, var mode, array results, hash parsed do
     set new array phrases to an empty array
     set new array additional_results to an empty array
-    
+
     set new var i to 1
     while var i >= 0 do
         for each new array result in array results do
             set new flag add_result to 0
-        
+
             set new array copy_result to an empty array
             set new var primary_key to shift with elements of array result
             push into array copy_result, var primary_key
             for each new array clause in array result do
-            
+
                 if from array clause 1st element matches /is<[-]>(part|own)/ do
                     set flag add_result to 1
                 done
-                
+
                 do regex with from array clause 1st element: /is<[-]>(part|own)(<[-]><[0-9]>)?/ -> "is-$0-var i" :global:i
-                
+
                 set new array copy_clause to an empty array
                 push into array copy_clause, elements of array clause
                 push into array copy_result, array copy_clause
             done
             do unshift with elements of array result, from array copy_result 1st element
-            
+
             if flag add_result is true and var i do
                 push into array additional_results, array copy_result
             done
         done
-        
+
         set var i to var i - 1
     done
-    
+
     push into array results, elements of array additional_results
 
     # TEXT
@@ -62,7 +62,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         set new var primary_key to shift with elements of array result
 
         set new var final_sentence to ""
-        
+
         for each new array clause in array result do
             set new array sentence to an empty array
 
@@ -72,7 +72,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             set new array raw_verbs to [ split ' ', from array clause 1st element ]
             set new array proper_verbs to an empty array
             set new hash auxiliary_verbs_hash to an empty hash
-            
+
             for each new var verb in array raw_verbs do
                 if var verb matches /=>/ do
                     # TEXT
@@ -82,57 +82,57 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # CODE
                     set var final_sentence to ""
                 done
-                
+
                 if var verb matches /([01])([01])([01])([01])([01])$/ do
                     set new var person to get_person with from array clause 2nd element
                     if var person matches "3s" do
                         set var person to get_person with hash parsed element { 'subjects' } 1st element
                     done
-                    
+
                     set new var is_want to $0
                     set new var is_must to $1
                     set new var is_can to $2
                     set new var is_may to $3
                     set new var is_should to $4
-                    
+
                     if var is_want do
                         set new var new_verb to get_verb with "want", var person
                         if var new_verb do
                             set from hash auxiliary_verbs_hash element { var new_verb } to 1
                         done
                     done
-                    
+
                     if var is_must do
                         set new var new_verb to get_verb with "must", var person
                         if var new_verb do
                             set from hash auxiliary_verbs_hash element { var new_verb } to 1
                         done
                     done
-                    
+
                     if var is_can do
                         set new var new_verb to get_verb with "can", var person
                         if var new_verb do
                             set from hash auxiliary_verbs_hash element { var new_verb } to 1
                         done
                     done
-                    
+
                     if var is_may do
                         set new var new_verb to get_verb with "may", var person
                         if var new_verb do
                             set from hash auxiliary_verbs_hash element { var new_verb } to 1
                         done
                     done
-                    
+
                     if var is_should do
                         set new var new_verb to get_verb with "should", var person
                         if var new_verb do
                             set from hash auxiliary_verbs_hash element { var new_verb } to 1
                         done
                     done
-                    
+
                     do regex with var verb: /([01])([01])([01])([01])([01])$/ -> "" :global
                 done
-                
+
                 if from global hash builtin_auxiliary_verbs element { var verb } do
                     set from hash auxiliary_verbs_hash element { var verb } to 1
                 done
@@ -140,13 +140,13 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     push into array proper_verbs, var verb
                 done
             done
-            
+
             set new array auxiliary_verbs to an empty array
             set elements of array auxiliary_verbs to keys with elements of hash auxiliary_verbs_hash
 ####            set new array proper_verbs to an empty array
 ####            set elements of array proper_verbs to keys with elements of hash proper_verbs_hash
 ####             set elements of array proper_verbs to sort with elements of array proper_verbs
-            
+
             if from array clause 4th element matches /(^|\s)zu(\s|$)/ and length( from array clause 4th element ) < 5 do
                 do unshift with elements of array proper_verbs, "zu"
                 do regex with from array clause 4th element: /(^|\s)zu(\s|$)/ -> "$0" :global
@@ -163,7 +163,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             set from array clause 2nd element to check_for_as_well_as with from array clause 2nd element, from array clause 4th element, var lang, var path
             set from array clause 3rd element to check_for_as_well_as with from array clause 3rd element, from array clause 4th element, var lang, var path
             set from array clause 4th element to check_for_as_well_as with from array clause 4th element, from array clause 4th element, var lang, var path
-            
+
                 print "auxiliary verbs... "
                 print elements of array auxiliary_verbs
                 print new line
@@ -176,12 +176,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             if from array proper_verbs 1st element and from array proper_verbs 1st element matches /^(equal|is<[-]>)/ do
                 set new var _no_user_ask to handle for file name "_no_user_ask", write
                 do close with var _no_user_ask
-                
+
                 set new array subject_words to split with " ", from array clause 2nd element
                 set new array object_words to split with " ", from array clause 3rd element
                 set new var subject_last_word to from array subject_words element [ size of array subject_words - 1 ]
                 set new var object_last_word to from array object_words element [ size of array object_words - 1 ]
-                
+
                 set new array subject_props to compute_tags with var subject_last_word, var lang, var path
                 set new array object_props to compute_tags with var object_last_word, var lang, var path
                 set new var subject_genus to from array subject_props 2nd element
@@ -190,7 +190,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 if from array proper_verbs 1st element matches /^equal-pl/ do
                     set var subject_person to "3p"
                 done
-                
+
                 set new var is_name_subject to is_name with var lang, var subject_last_word
                 set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
                 set new var verb_options to from array proper_verbs 1st element
@@ -215,7 +215,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
 
                 if from array proper_verbs 1st element matches /^(equal)/ do
-                    
+
                     # subject article
                     if var subject_article is true or ( var verb_options not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and var verb_options matches /(def|indef)/ ) do
                         if var is_name_subject is false or var is_collective_noun_subject is true or var subject_article is true do
@@ -260,19 +260,19 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         set new var verb to get_verb with "be", var subject_person
                         push into array sentence, var verb
                     done
-                    
+
                     # object
                     push into array sentence, from array clause 3rd element
-                    
+
                     if not ( var subject_article is true and var object_article is false ) do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done
-                    
+
                     if var final_sentence do
                         set var final_sentence to var final_sentence concat ', '
                     done
-                    
+
                     set var final_sentence to var final_sentence concat join ' ', elements of array sentence
                 done
                 if from array proper_verbs 1st element matches /^(is<[-]>)/ do
@@ -292,23 +292,23 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # verb
                     set new var verb to get_verb with from array proper_verbs 1st element, var subject_person
                     push into array sentence, var verb
-                    
+
                     if var object_article is true do
                         push into array sentence, var object_article
                     done
-                    
+
                     # object
                     push into array sentence, from array clause 3rd element
-                    
+
                     if not ( var subject_article is true and var object_article is false ) do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done
-                    
+
                     if var final_sentence do
                         set var final_sentence to var final_sentence concat ', '
                     done
-                    
+
                     set var final_sentence to var final_sentence concat join ' ', elements of array sentence
                 done
 
@@ -321,12 +321,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 print "proper verbs: "
                 print elements of array proper_verbs
                 print new line
-                
+
                 if not elements of array auxiliary_verbs do
                     set elements of array auxiliary_verbs to elements of array proper_verbs
                     set array proper_verbs to an empty array
                 done
-                
+
                 # TEXT
                 # When there is a time period mentioned in the question, but not in the answer
                 # CODE
@@ -337,15 +337,15 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         if lc(var adverb) matches /array/ do
                             set var adverb to from array adverb 1st element
                         done
-                        
+
                         if lc(var adverb) matches /time_/ do
                             set array clause to add_undefined_time with array clause
-                            
+
                             go to last
                         done
                     done
                 done
-                
+
                 # TEXT
                 # Replace *s
                 # CODE
@@ -385,12 +385,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                 done
-                
+
                 if from array clause 2nd element matches "_" do
                     set from array clause 2nd element to noun_for_anonymous without arguments
                 done
- 
-# Unsicher: wozu? ^da ? dass?               
+
+# Unsicher: wozu? ^da ? dass?
 #                if var final_sentence do
 #                    if from array clause 5th element do
 #                        if not from array clause 5th element matches /^dass/ do
@@ -404,8 +404,8 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         push into array sentence, from array clause 5th element
                     done
                 done
-                
-                
+
+
                 if from array clause 4th element matches /<[?]>/ do
 
                     if from array clause 3rd element matches "NULL" or not from array clause 3rd element do
@@ -608,12 +608,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                         done
                     done
                 done
-                
+
                 if ( join ' ', elements of array sentence ) matches /50/ do
                     go to next
                 done
-                
-# Unsicher: wozu? ^da ? dass?               
+
+# Unsicher: wozu? ^da ? dass?
 #                if var final_sentence do
 #                    if from array clause 5th element do
 #                        if from array clause 5th element matches /^da/ do
@@ -621,18 +621,18 @@ define action phrase with var lang, var path, var mode, array results, hash pars
 #                        done
 #                    done
 #                done
-                
+
                 if var final_sentence do
                     set var final_sentence to var final_sentence concat ', '
                 done
-                
+
                 set var final_sentence to var final_sentence concat join ' ', elements of array sentence
             done
         done
-        
+
         do regex with var final_sentence: /<[,]>\s*?$/ -> "" :global
         do regex with var final_sentence: /<[,]>$/ -> "" :global
-        
+
         if not var final_sentence matches /time.(from|to)/ do
             set new array input_adverbs to from hash parsed element { 'adverbs' }
             for each new var _adverb in array input_adverbs do
@@ -640,7 +640,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 if lc(var adverb) matches /array/ do
                     set var adverb to from array adverb 1st element
                 done
-                
+
                 if lc(var adverb) matches /time_/ do
                     set var final_sentence to var final_sentence concat " ~" concat var adverb
                 done
@@ -657,7 +657,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches /<[,]> 50/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -668,7 +668,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches /anyone/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -679,7 +679,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches /reasonof/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -690,7 +690,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches /[>][>][>]/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -701,7 +701,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if lc(var final_sentence) matches / (ist|sind|sein|equal.?.?.?) (ein.?.?)? (name|eigenname)/ do
             # TEXT
             # A Sentence must not end with e.g. dachte
@@ -712,7 +712,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches / <[=]>/ do
             # TEXT
             # A Sentence must not have the verb "="
@@ -723,7 +723,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches / opposite / do
             # TEXT
             # A Sentence must not have the verb "="
@@ -734,7 +734,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         if var final_sentence matches /\(good|bad\)/ do
             # TEXT
             # A Sentence must not have the verb "="
@@ -745,31 +745,31 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             print new line
             go to next
         done
-        
+
         # or from hash parsed element { 'verbs' } 1st element 1st element matches "ist"
-        
+
         if ( var final_sentence matches /\s(bin|bist|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed element { 'verbs' } 1st element matches "ist" ) do
             print "Cannot answer bin/bist when it has been asked for ist:"
             print new line
             print var final_sentence
             print new line
-            
+
             go to next
         done
-        
+
         set var final_sentence to compute_output with var final_sentence
-        
+
         if var final_sentence matches /<[?]>/ do
             do regex with var final_sentence: /<[?]>/ -> "" :global
             set var final_sentence to var final_sentence concat "?"
         done
-        
+
         do regex with var final_sentence: /<[,]>\s*?$/ -> "" :global
         do regex with var final_sentence: /<[,]>$/ -> "" :global
-        
+
         push into array phrases, [ var primary_key, var final_sentence ]
     done
-    
+
     do return using array phrases
 done
 
@@ -784,7 +784,7 @@ done
 
 define action post_phrase with var lang, var path, var mode, hash parsed, array output do
     set new var primary_key to shift with elements of array output
-    
+
     set new var final_sentence to from array output 1st element
 
     # TEXT

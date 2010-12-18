@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -50,14 +50,14 @@ int mysql_begin() {
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         mysql_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-        
+
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
             mysql_net[i][k] = calloc(sizeof(struct list), 1);
             mysql_net[i][k]->size = 0;
             mysql_net[i][k]->list = 0;
         }
-        
+
         k = WRONG;
         mysql_net[i][k] = calloc(sizeof(struct list), 1);
         mysql_net[i][k]->size = 0;
@@ -94,13 +94,13 @@ int mysql_free_wordlist(int i, int k) {
 
 int mysql_end() {
     mysql_construct();
-    
+
     char sql[99];
     strcpy(sql, "COMMIT;");
     mysql_real_query(mysql_connection, sql, (unsigned int)strlen(sql));
     mysql_close(mysql_connection);
     mysql_connection = 0;
-    
+
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         int k;
@@ -109,12 +109,12 @@ int mysql_end() {
             free(mysql_net[i][k]);
             mysql_net[i][k] = 0;
         }
-        
+
         k = WRONG;
         mysql_free_wordlist(i, k);
         free(mysql_net[i][k]);
         mysql_net[i][k] = 0;
-        
+
         free(mysql_net[i]);
         mysql_net[i] = 0;
     }
@@ -154,16 +154,16 @@ struct word* mysql_get_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     int length = strlen(name);
-    
+
     struct word** list = (struct word**)(mysql_net[i][k]->list);
-    
+
     if (0 == list) {
         //debugf("illegal list while searching %s.\n", name);
         return 0;
     }
-    
+
     int g;
     for (g = 0; g < mysql_net[i][k]->size; ++g) {
         if (length == list[g]->length && 0 == strcmp(list[g]->name, name)) {
@@ -171,7 +171,7 @@ struct word* mysql_get_word(const char* name) {
             return list[g];
         }
     }
-    
+
     return 0;
 }
 
@@ -196,7 +196,7 @@ int get_last_pk(int rel) {
             return cache_facts;
         }
     }
-    
+
     // no cache
     char sql[5120];
     *sql = 0;
@@ -206,7 +206,7 @@ int get_last_pk(int rel) {
 
     char key[99];
     int error = sql_execute(sql, select_primary_key, key);
-    
+
     if (rel) {
         cache_clauses = to_number(key);
     }
@@ -214,7 +214,7 @@ int get_last_pk(int rel) {
         cache_facts = to_number(key);
         printf("cache_facts: %d\n", cache_facts);
     }
-    
+
     return (rel?cache_clauses:cache_facts);
 }
 
@@ -225,7 +225,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     char* advs  = strdup(r_adverbs  ? r_adverbs  : "");
     char* extra = strdup(r_extra    ? r_extra    : "");
     char* buffer;
-    
+
     *num_of_words = 1;
     words[0] = strdup("0");
 
@@ -233,22 +233,22 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         words[*num_of_words] = strdup(verbs);
         ++(*num_of_words);
     }
-    
+
     if (strcmp(subj, "0")) {
         words[*num_of_words] = strdup(subj);
         ++(*num_of_words);
     }
-    
+
     if (strcmp( obj, "0")) {
         words[*num_of_words] = strdup( obj);
         ++(*num_of_words);
     }
-    
+
     if (strcmp(advs, "0")) {
         words[*num_of_words] = strdup(advs);
         ++(*num_of_words);
     }
-    
+
     buffer = strtok(verbs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -260,8 +260,8 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
-    
+
+
     buffer = strtok(subj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -273,7 +273,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     buffer = strtok( obj, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -285,7 +285,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     buffer = strtok(advs, " ;.)(-,_");
     while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
         if (is_a_trivial_word(buffer)) {
@@ -297,7 +297,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
         ++(*num_of_words);
         if (*num_of_words >= 500) break;
     }
-    
+
     if (extra) {
         buffer = strtok(extra, " ;.)(-,_");
         while (buffer && strlen(buffer) && strcmp(buffer, "0")) {
@@ -313,7 +313,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     }
 
     --(*num_of_words);
-    
+
     free(verbs);
     free(subj);
     free(obj);
@@ -322,7 +322,7 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
 }
 
 char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
@@ -374,15 +374,15 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     strcat(sql, ", ");
     strcat(sql, only_logic?"1":"0");
     strcat(sql, ");\n");
-    
+
     return sql;
 }
 
 char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* from, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
-    
+
     char key[101];
     snprintf(key, 100, "%d", pk);
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
@@ -402,7 +402,7 @@ char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, c
     strcat(sql, ", ");
     strcat(sql, verb_flag_should?"1":"0");
     strcat(sql, ");\n");
-    
+
     return sql;
 }
 
@@ -410,16 +410,16 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
 
     char key[101];
     snprintf(key, 100, "%d", pk);
-    
+
     if (0 == sql) {
         sql = malloc(102400);
         *sql = 0;
     }
-    
+
     int num_of_words = 0;
     char** words = calloc(501*sizeof(char*), 1);
     detect_words(&num_of_words, words, verbs, subjects, objects, adverbs, "");
-    
+
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
             if (words[num_of_words][0] != '0') {
@@ -460,7 +460,7 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
     free(words);
 
     strcat(sql, ";\n");
-    
+
     return sql;
 }
 
@@ -468,7 +468,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
 
     char* sql = malloc(102400);
     *sql = 0;
-    
+
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, 0 ");
     strcat(sql, " FROM clauses AS nmain JOIN rel_clause_flag AS rff ON nmain.pk = rff.fact WHERE nmain.rel = ");
     char rel_str[10];
@@ -480,7 +480,7 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     strcat(sql, " (SELECT f2 FROM `linking` WHERE f1 = ");
     strcat(sql, rel_str);
     strcat(sql, " );");
-    
+
     return sql;
 }
 
@@ -488,10 +488,10 @@ char* gen_sql_get_double_facts() {
 
     char* sql = malloc(102400);
     *sql = 0;
-    
+
     strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM facts AS nmain WHERE mix_1||verb IN ( SELECT mix_1||verb AS a FROM facts GROUP BY a HAVING count(pk) >= 2) order by mix_1, verb;");
-    
+
     return sql;
 }
 
@@ -527,12 +527,12 @@ char* gen_sql_delete_everything_from(const char* filename) {
 
         int error = sql_execute(sql, NULL, NULL);
     }
-    
+
     *sql = 0;
     strcat(sql, "DELETE FROM facts WHERE `from` GLOB '");
     strcat(sql, filename);
     strcat(sql, "*';");
-   
+
 
             printf("\r%s\n", sql);
     /*
@@ -542,7 +542,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
         strcat(sql, "COMMIT; VACUUM; BEGIN;");
     }
     */
-    
+
     return sql;
 }
 
@@ -550,7 +550,7 @@ char* mysql_get_source(const char* key) {
     printf("mysql_get_source: %s\n", key);
     if (!key || !key[0])
         return 1;
-    
+
     char* source = calloc(512, 1);
     {
         char* sql = malloc(1024);
@@ -563,22 +563,22 @@ char* mysql_get_source(const char* key) {
             strcat(sql, key);
             strcat(sql, " LIMIT 1;");
         }
-        
-        
+
+
         int error = sql_execute(sql, select_primary_key, source);
         free(sql);
     }
     printf("source: %s\n", source);
-    
+
     return source;
 }
 
 char* mysql_del_record(const char* key) {
     if (!key || !key[0])
         return 1;
-    
+
     char* source = mysql_get_source(key);
-    
+
     char* sql = malloc(1024);
     *sql = 0;
     if (0 == strcmp(key, "a")) {
@@ -590,7 +590,7 @@ char* mysql_del_record(const char* key) {
         strcat(sql, ";");
     }
     printf("pkey (in hal2009-disk.c): %s, SQL: %s\n", key, sql);
-    
+
     int error = sql_execute(sql, NULL, NULL);
 
     int i;
@@ -612,7 +612,7 @@ char* mysql_del_record(const char* key) {
     }
 
     free(sql);
-    
+
     return source;
 }
 
@@ -621,7 +621,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     char* sql = malloc(512000);
     *sql = 0;
     int n, m, q;
-    
+
     if (0 == can_be_a_pointer(words[0])) {
         return sql;
     }
@@ -635,7 +635,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
         if (!can_be_a_pointer(words[n])) {
             continue;
         }
-        
+
         int is_new = 1;
         if (can_be_a_pointer(words[n][0])) {
             for (q = 0; words[q] && q+1 < n; ++q) {
@@ -655,7 +655,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             debugf("not new.\n");
             continue;
         }
-        
+
         for (m = 0; words[n][m]; ++m) {
             if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
                 continue;
@@ -674,11 +674,11 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
                     in_bracket = 0;
                 }
                 strcat(sql, " ; INSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
-                
+
                 strcat(sql, " rel_word_fact__");
                 strcat(sql, smid);
                 strcat(sql, " AS rel_word_fact ");
-                
+
                 strcat(sql, " WHERE 0 ");
             }
             if (last_smid) {
@@ -687,7 +687,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
             last_smid = strdup(smid);
             free(smid);
 
-            
+
             if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
                 if (strstr(words[n][m]->name+1, "*")) {
                     strcat(sql, "OR rel_word_fact.word GLOB \"");
@@ -719,11 +719,11 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     }
     strcat(sql, ";");
     strcat(sql, " ; INSERT OR IGNORE INTO cache_facts (pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses) SELECT pk, `from`, verb, verbgroup, subjects, objects, adverbs, mix_1, questionword, prio, rel, type, truth, hash_clauses FROM facts WHERE pk in (SELECT i FROM cache_indices);");
-                
+
     strcat(sql, "SELECT DISTINCT `nmain`.`pk`, `nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`from`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
     strcat(sql, ";");
-    
+
     return sql;
 }
 
@@ -742,7 +742,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
         if (strstr(err, "no such table")) {
             TODO3_free(err);
-            
+
             if (TODO3_exec(TODO_connection, TODO_sql_create_table, NULL, NULL, &err)) {
                 printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
                 error_to_return = TABLE_ERROR;
@@ -758,7 +758,7 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
         }
     }
     TODO3_free(err);
-    
+
     return error_to_return;
 }
 
@@ -797,7 +797,7 @@ struct fact* mysql_add_fact(const char* subjects, const char* objects, const cha
         error = sql_execute(sql, NULL, NULL);
         free(sql);
     }
-    
+
     if (error) {
         printf("Error in mysql_add_fact.\n");
         return 0;
@@ -805,7 +805,7 @@ struct fact* mysql_add_fact(const char* subjects, const char* objects, const cha
 
     struct fact* fact = calloc(sizeof(struct fact), 1);
     fact->pk = pk;
-    
+
     return fact;
 }
 
@@ -825,14 +825,14 @@ struct word* mysql_set_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     if (0 == mysql_net[i][k]->list) {
         // debugf("empty list wile inserting %s.\n", name);
     }
     else {
         0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, mysql_net[i][k]->list, mysql_net[i][k]->size, ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size-1]->name);
     }
-    
+
     if (mysql_net[i][k]->size == 0) {
         mysql_net[i][k]->list = calloc(sizeof(struct word*), 11);
         mysql_net[i][k]->allocated_until = 10;
@@ -841,11 +841,11 @@ struct word* mysql_set_word(const char* name) {
         mysql_net[i][k]->allocated_until += 10;
         mysql_net[i][k]->list = realloc(mysql_net[i][k]->list, sizeof(struct word*)*(mysql_net[i][k]->allocated_until+1));
     }
-    
+
     mysql_net[i][k]->list[mysql_net[i][k]->size] = calloc(1, sizeof(struct word));
     ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->name   = strdup(name);
     ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->length = strlen(name);
-    0 && debugf("inserted: %s = %p, %p.\n", 
+    0 && debugf("inserted: %s = %p, %p.\n",
             ((struct word**)(mysql_net[i][k]->list))[mysql_net[i][k]->size]->name,
             mysql_net[i][k]->list[mysql_net[i][k]->size],
             mysql_net[i][k]->size);
@@ -855,15 +855,15 @@ struct word* mysql_set_word(const char* name) {
 
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {
     struct request_get_facts_for_words* req = arg;
-    
+
     if (*req->position >= req->limit) {
         return 1;
     }
-    
+
     if (argc <= 5 || (!argv[1] || !strlen(argv[1])) || ((!argv[2] || !strlen(argv[2])) && (!argv[3] || !strlen(argv[3])))) {
         return 0;
     }
-    
+
     struct fact* fact  = calloc(sizeof(struct fact), 1);
     fact->pk           = to_number(argv[0] ? argv[0] : "0");
     fact->verbs        = divide_words(argv[1] ? argv[1] : "");
@@ -875,11 +875,11 @@ static int callback_get_facts(void* arg, int argc, char **argv, char **azColName
     fact->from         = strdup(argv[6] ? argv[6] : "");
     fact->truth        = (argv[7] && argv[7][0] && argv[7][0] == '1') ? 1.0 : ((argv[7] && argv[7][0] && argv[7][0] && argv[7][1] && argv[7][2] != '0') ? 0.5 : 0.0);
     fact->only_logic   = argv[8] && argv[8][0] && argv[8][0] == '1' ? 1 : 0;
-    
+
     req->facts[*req->position] = fact;
     debugf("Added fact no %d at %p (%s, %s, %s, %s).\n", *req->position, req->facts[*req->position], argv[1], argv[2], argv[3], argv[4]);
     ++(*req->position);
-    
+
     return 0;
 }
 
@@ -890,18 +890,18 @@ int mysql_search_facts_for_words_in_net(struct word*** words, struct fact** fact
     req.limit    = limit;
     req.position = position;
     req.rel      = 0;
-    
+
     {
         char* sql = gen_sql_get_facts_for_words(words, facts, limit, position);
         printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
-    
+
     if (*req.position > limit - 10) {
         return TOOMUCH;
     }
-    
+
     return 0;
 }
 
@@ -912,18 +912,18 @@ int mysql_search_double_facts(struct word*** words, struct fact** facts, int lim
     req.limit    = limit;
     req.position = position;
     req.rel      = 0;
-    
+
     {
         char* sql = gen_sql_get_double_facts();
         printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
-    
+
     if (*req.position > limit - 10) {
         return TOOMUCH;
     }
-    
+
     return 0;
 }
 
@@ -933,21 +933,21 @@ int re_index_in_facts = 1;
 
 static int callback_re_index(void* arg, int argc, char **argv, char **azColName) {
     char* re_index_sql = *((void**)(arg));
-    
+
     char** verbs       = divide_string(argv[1] ? argv[1] : "");
     char** subjects    = divide_string(argv[2] ? argv[2] : "");
     char** objects     = divide_string(argv[3] ? argv[3] : "");
     char** adverbs     = divide_string(argv[4] ? argv[4] : "");
-    
+
     int stage;
     for (stage = 1; stage <= 4; ++stage) {
-        
+
         char** words;
         if (stage == 1) words = verbs;
         if (stage == 2) words = subjects;
         if (stage == 3) words = objects;
         if (stage == 4) words = adverbs;
-        
+
         int i;
         for (i = 0; words[i]; ++i) {
             char* smid = small_identifier(words[i]);
@@ -964,7 +964,7 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
                 strcat(sql, re_index_in_facts ? "f" : "c");
                 strcat(sql, "\"");
                 strcat(sql, ");");
-                
+
                 int size_sql = strlen(sql);
                 if (!(re_index_pos_sql + size_sql < re_index_size_sql - 10)) {
                     re_index_size_sql += 10000;
@@ -977,10 +977,10 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
             free(smid);
             free(words[i]);
         }
-        
+
         free(words);
     }
-    
+
     return 0;
 }
 
@@ -994,11 +994,11 @@ int mysql_re_index() {
         int error3 = sql_execute("VACUUM;", NULL, NULL);
         printf("Done.\n");
         printf("Create new index...\n");
-        
+
         re_index_size_sql = 10001;
         re_index_pos_sql = 10001;
         char* sql = calloc(re_index_size_sql, 1);
-        
+
         re_index_in_facts = 1;
         {
             char sql[5120];
@@ -1008,7 +1008,7 @@ int mysql_re_index() {
             char key[99];
             int error = sql_execute(sql, select_primary_key, key);
             int count = to_number(key ? key : "0");
-            
+
             int k = 0;
             while (k < count) {
                 *sql = 0;
@@ -1023,11 +1023,11 @@ int mysql_re_index() {
                 strcat(sql, _k_2);
                 strcat(sql, ";");
                 printf("%s\n", sql);
-                
+
                 int error = sql_execute(sql, callback_re_index, key);
             }
         }
-        
+
         printf("Done.\n");
         int error4 = sql_execute("BEGIN;", NULL, NULL);
     }
@@ -1048,14 +1048,14 @@ struct fact** mysql_search_clauses(int rel) {
     req.limit    = limit;
     req.position = &position;
     req.rel      = rel;
-    
+
     {
         char* sql = gen_sql_get_clauses_for_rel(rel, clauses, limit, &position);
         //printf("%s\n", sql);
         int error = sql_execute(sql, callback_get_facts, &req);
         free(sql);
     }
-    
+
     return clauses;
 }
 
@@ -1096,7 +1096,7 @@ int mysql_add_link (const char* link, int key_1, int key_2) {
     strcat(sql, ", ");
     strcat(sql, str_fact_2);
     strcat(sql, ");");
-    
+
     int error = sql_execute(sql, NULL, NULL);
     return error;
 }

@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -33,26 +33,26 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
 
 print hash parsed
 print new line
-        
+
         set new array verbs to from hash parsed element { 'verbs' }
         for each new array verb in array verbs do
             set var verb to from array verb 1st element
-            
+
 print "verb: " concat var verb concat new line
 
             do regex with var verb: /<[|]>.*/ -> "" :global:i
-        
+
             set new var verb_category to verb_category with var verb
             if var verb_category and var verb not matches /\// do
                 set var verb to var verb concat "/" concat var verb_category
             done
 
 print "verb: " concat var verb concat new line
-            
+
             if var verb matches /opposite/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
             done
-            
+
             if var verb matches /reasonof/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/beziehungen.pro'
             done
@@ -76,7 +76,7 @@ print "verb: " concat var verb concat new line
                 set var object to ''
                 go to next
             done
-            
+
             if from array object 1st element matches /^.?\(true\).?$/ do
                 set var truth to "(true)"
                 set var object to ''
@@ -92,16 +92,16 @@ print "verb: " concat var verb concat new line
                 set var object to ''
                 go to next
             done
-            
+
             if from array object 1st element matches /^.?\(bad\).?$/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
             done
             if from array object 1st element matches /^.?\(good\).?$/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-good.pro'
             done
-            
+
             set var object to from array object 1st element
-            
+
             if from array verbs 1st element matches "~~~" do
                 if from hash tags element { var object } and from hash sym_noun element { from hash tags element { var object } 1st element } do
                     set flag clear_all_objects to 1
@@ -124,15 +124,15 @@ print "verb: " concat var verb concat new line
                 set var adverb to ''
                 go to next
             done
-            
+
             if from array adverb 1st element matches /^.?\(logic\).?$/ do
                 set var adverb to '(logic)'
                 go to next
             done
-            
+
             set var adverb to from array adverb 1st element
         done
-        
+
         # TEXT
         # Replace ~~~ with =
         # CODE
@@ -141,7 +141,7 @@ print "verb: " concat var verb concat new line
             set from array verbs 1st element to "="
             set from hash parsed element { 'verbs' } to array verbs
         done
-        
+
         # TEXT
         # Delete all other verbs if there is a "="
         # CODE
@@ -149,15 +149,15 @@ print "verb: " concat var verb concat new line
             set from array verbs to an empty array
             set from array verbs 1st element to "="
             set from hash parsed element { 'verbs' } to array verbs
-            
+
             set new var objects to join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
             set new var adverbs to join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
             if var objects do
-                if not var adverbs matches /^\s*?(in|von)\s+?...?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?$/ do
+                if not var adverbs matches /^\s*?(in|von)\s+?.{5}/ do
                     set from hash parsed element { 'adverbs' } to an empty array
                 done
             done
-            
+
             if var objects not matches /./ and var adverbs not matches /./ do
                 go to next
             done
@@ -171,7 +171,7 @@ print "verb: " concat var verb concat new line
         set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
         set var line to var line concat ' <> '
         set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
-        
+
         if not from hash parsed element { 'clauses' } do
             set from hash parsed element { 'clauses' } to an empty array
             set new hash empty_clause to an empty hash
@@ -182,13 +182,13 @@ print "verb: " concat var verb concat new line
             set from hash empty_clause element { 'questionword' } to an empty array
             do push elements of that array: from hash parsed element { 'clauses' } end of elements, hash empty_clause
         done
-        
+
         if that array is empty: from hash parsed element { 'verbs' } end check and that array is empty: from hash parsed element { 'clauses' } end check do
             go to next
         done
-        
+
         set new array clauses to from hash parsed element { 'clauses' }
-        
+
         set new var number_of_clauses to 0
         for each new hash parsed in array clauses is rw do
             if var number_of_clauses do
@@ -197,13 +197,13 @@ print "verb: " concat var verb concat new line
             else do
                 set var line to var line concat ' <> '
             done
-        
+
             set new array verbs to from hash parsed element { 'verbs' }
             for each new array verb in array verbs do
                 set var verb to from array verb 1st element
-                
+
                 do regex with var verb: /<[|]>.*/ -> "" :global:i
-        
+
                 set new var verb_category to verb_category with var verb
                 if var verb_category and var verb not matches /\// do
                     set var verb to var verb concat "/" concat var verb_category
@@ -228,7 +228,7 @@ print "verb: " concat var verb concat new line
             for each new array questionword in array questionwords do
                 set var questionword to from array questionword 1st element
             done
-            
+
             set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
             set var line to var line concat ' <> '
             set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
@@ -238,23 +238,23 @@ print "verb: " concat var verb concat new line
             set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
             set var line to var line concat ' <> '
             set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'questionword' } end of elements
-            
+
             set var number_of_clauses to var number_of_clauses + 1
         done
         ###set var line to var line concat ' <> '
         set var line to var line concat ' '
         set var line to var line concat var truth
-        
+
         push into array line_array, var line
     done
-    
+
     set new var divisor to ' ~ '
     set new var line to join with var divisor, elements of array line_array
-    
+
     do regex with var line: /\{\{\{questionword\}\}\}/ -> "" :global
 
     do regex with var line: /<[_]>+/ -> "_" :global
-    
+
     if var pro_file_name matches "-" do
         print "Do not write any facts."
         print new line
@@ -269,14 +269,14 @@ print "verb: " concat var verb concat new line
             print into var pro_file data lc(var line)
             print into var pro_file data new line
         done
-        
+
         do close with var pro_file
-        
+
         if not flag no_reread do
             do reread_pro_file with var pro_file_name, var lang
         done
     done
-    
+
     do return with var line
 done
 
@@ -286,22 +286,22 @@ define action update_list_of_pro_file with var file, var lang, var path do
     do regex with var file_output: /.pro/ -> ".list" :global
     set new var output_list to handle for file name var file_output, write
     do close with output_list
-    
+
     for each new var line from var input_pro do
         set new array results to to_array_from_pro_line with var line, var lang
         set new hash parsed to fake_hash_parsed without arguments
         set new array output_array to phrase with var lang, var path, "default", array results, hash parsed
-        
+
         for each new array output_line in array output_array do
             if from array output_line 2nd element do
                 set new var output_list to handle for file name var file_output, append
-                
+
                 set new hash tags to an empty hash
-                
+
                 set new var final_output to upper_case_correction with from array output_line 2nd element, hash tags, var lang, var path
                 print into var output_list data var final_output
                 print into var output_list data new line
-                
+
                 do close with output_list
             done
         done
@@ -342,7 +342,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     # CODE
     set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
-    
+
     do regex with var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) / -> "$0 _$1_ _no-question_ " :global:i
     do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
     do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
@@ -357,9 +357,9 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         # TEXT
         # Split the sentence.
         # CODE
-        
+
         set new array words to split with " ", var clause
-        
+
         # TEXT
         # Then compute the parts of speech etc.
         # CODE
@@ -367,7 +367,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
             do be_slow without arguments
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
         end for
-        
+
         # TEXT
         # Then toggle the identities (user <-> machine).
         # CODE
@@ -385,7 +385,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
             set from hash parsed element { 'objects' } to toggle_entities using from hash parsed element { 'objects' }
             set from hash parsed element { 'adverbs' } to toggle_entities using from hash parsed element { 'adverbs' }
             set from hash parsed element { 'clauses' } to an empty array
-            
+
             set flag number_of_clause to 1
         done
         else do
@@ -419,14 +419,14 @@ define action transform_psprot_line with var line, var main_word, var current_la
     do regex with var line: /\s+/ -> " " :global
     set new array words to an empty array
     set array words to split with /<[",.;!?]>/, var line
-    
+
     if var main_word matches /^.?bad.?$/ do
         set var main_word to "_(bad)_"
     done
     if var main_word matches /^.?good.?$/ do
         set var main_word to "_(good)_"
     done
-    
+
     set new array lines to an empty array
     if not lc(var main_word) matches var main_word do
         for each new var word in array words do
@@ -452,7 +452,7 @@ define action transform_psprot_line with var line, var main_word, var current_la
             done
         done
     done
-    
+
     do return with array lines
 done
 
@@ -467,7 +467,7 @@ define action init_part_of_speech_pro_file with var current_language, var path d
     set new array sub_directories to an empty array
     push into array sub_directories, 'word_types.brain'
 #    push into array sub_directories, 'word_types.memory'
-    
+
     for each new var sub_dir in array sub_directories is copy do
         set new var path_pos_source to var path concat '/lang_' concat var current_language concat '/' concat var sub_dir
         set new var path_pos_source_handle to handle for file name var path_pos_source, read
@@ -480,7 +480,7 @@ define action init_part_of_speech_pro_file with var current_language, var path d
             if var _line matches /^.?.?type:\s?(.*?)$/ do
                 set new var pos_raw to $0
                 set new var pos_word to get_pos_word with var pos_raw
-        
+
                 if var pos_raw matches /^(v).?.?$/ and var pos_word do
                     if var entry not matches /_/ do
                         print into var path_pos_dest_handle data "is-a <> _" concat var entry concat "_ <> (a) " concat var pos_word concat " <>  <> (maybe)" concat new line
@@ -494,7 +494,7 @@ define action init_part_of_speech_pro_file with var current_language, var path d
             done
         done
     done
-    
+
 done
 
 define action init_prot_files with var current_language, var path do
@@ -503,13 +503,13 @@ define action init_prot_files with var current_language, var path do
     set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     do mkdir with var path concat '/lang_' concat var current_language concat '/wiki'
-    set new array sub_directories to [ '', '/thesaurus', '/..' ]   
+    set new array sub_directories to [ '', '/thesaurus', '/..' ]
     push into array sub_directories, '/namen'
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
     push into array sub_directories, '/fakten'
-    
+
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
@@ -520,7 +520,7 @@ define action init_prot_files with var current_language, var path do
         # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
-        
+
             do be_slow without arguments
             if not var file matches /prot$/ do
                 go to next
@@ -528,10 +528,10 @@ define action init_prot_files with var current_language, var path do
             if var file matches /wiki\// do
                 go to next
             done
-            
+
             set new var pro_file to var file
             do regex with var pro_file: /t$/ -> "" :i
-            
+
             #if (not var pro_file matches /data/) or exists: var pro_file, end test do
             #    go to next
             #done
@@ -552,27 +552,27 @@ define action init_prot_files with var current_language, var path do
                 print "Read (prot) file "
                 print var file
                 print new line
-                
+
                 do be_slow without arguments
-                
+
                 set new var pro_handle to handle for file name var pro_file, write
                 do close with var pro_handle
                 do be_slow without arguments
-                
+
                 set new var translation_input_handle to handle for file name var file, read
                 for each new var _line from var translation_input_handle is rw do
                     do be_slow without arguments
-                    
+
                     print "in init_prot_files (1): "
                     print var _line
                     print new line
-                    
+
                     if var _line matches /<[#]>/ do
                         print into var pro_file data var _line
                         print into var pro_file data new line
                         go to next
                     done
-                
+
                     set new array lines to an empty array
                     if var file matches /ps-(.*?).prot/ do
                         set new var main_words_str to $0
@@ -585,7 +585,7 @@ define action init_prot_files with var current_language, var path do
                     else do
                         push into array lines, var _line
                     done
-                    
+
                     for each new var line in array lines do
                         print "in init_prot_files (2): "
                         print var line
@@ -594,7 +594,7 @@ define action init_prot_files with var current_language, var path do
                     done
                 done
                 do close using var translation_input_handle
-                
+
                 do reread_pro_file with var pro_file, var current_language
 
                 do be_slow without arguments
@@ -652,13 +652,13 @@ define action init_csv_files with var current_language, var path do
     set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     do mkdir with var path concat '/lang_' concat var current_language concat '/wiki'
-    set new array sub_directories to [ '', '/thesaurus', '/..' ]   
+    set new array sub_directories to [ '', '/thesaurus', '/..' ]
     push into array sub_directories, '/namen'
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
     push into array sub_directories, '/fakten'
-    
+
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
@@ -669,7 +669,7 @@ define action init_csv_files with var current_language, var path do
         # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
-        
+
             do be_slow without arguments
             if not var file matches /csv$/ do
                 go to next
@@ -680,7 +680,7 @@ define action init_csv_files with var current_language, var path do
 
             set new var pro_file to var file
             do regex with var pro_file: /csv$/ -> "pro" :i
-            
+
             set new var check_input_handle_one to handle for file name var file, read
             set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
             set new var i to 1
@@ -697,13 +697,13 @@ define action init_csv_files with var current_language, var path do
                 print "Read (prot) file "
                 print var file
                 print new line
-                
+
                 do be_slow without arguments
-                
+
                 set new var pro_handle to handle for file name var pro_file, write
                 do close with var pro_handle
                 do be_slow without arguments
-                
+
                 set new var translation_input_handle to handle for file name var file, read
 
                 # first line contains column names
@@ -711,21 +711,21 @@ define action init_csv_files with var current_language, var path do
 
                 for each new var _line from var translation_input_handle is rw do
                     do be_slow without arguments
-                    
+
                     print "in init_csv_files (1): "
                     print var _line
                     print new line
-                    
+
                     if var _line matches /<[#]>/ do
                         print into var pro_file data var _line
                         print into var pro_file data new line
                         go to next
                     done
-                
+
                     set new array lines to an empty array
                     set new array subarray to transform_csv_line with var _line, var current_language, var path
                     push into array lines, elements of array subarray
-                    
+
                     set new hash tags to an empty hash
                     set new var classification to ''
                     for each new hash parsed in array lines do
@@ -733,7 +733,7 @@ define action init_csv_files with var current_language, var path do
                     done
                 done
                 do close using var translation_input_handle
-                
+
                 do reread_pro_file with var pro_file, var current_language
 
                 do be_slow without arguments
@@ -757,12 +757,12 @@ define action update_list_of_pro_files with var pattern, var current_language, v
     set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
-    push into array sub_directories, '/namen'   
+    push into array sub_directories, '/namen'
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
     push into array sub_directories, '/fakten'
-    
+
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
@@ -791,7 +791,7 @@ define action correct_human_edit_typos with var file, var current_language, var 
     set new var output_1 to handle for file name var file concat ".tmp", write
     for each new var line from var input_1 is rw do
         set new var _copy to var line
-        
+
         set new array parts to split using /<[<]><[>]>/, var line
         set new var j to 1
         for each new var part in array parts do
@@ -828,18 +828,18 @@ define action correct_human_edit_typos with var file, var current_language, var 
 
         do regex with var line: /<[;]>{2}/ -> "<>"
         do regex with var line: /^((?:.*?<[<]><[>]>\s+?){6,})\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
-        
+
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
             print "                => " concat var line concat new line
         done
-    
+
         print into var output_1 data var line
         print into var output_1 data new line
     done
     do close with var input_1
     do close with var output_1
-    
+
     set new var input_2 to handle for file name var file concat ".tmp", read
     set new var output_2 to handle for file name var file, write
     for each new var line from var input_2 is rw do
@@ -848,9 +848,9 @@ define action correct_human_edit_typos with var file, var current_language, var 
     done
     do close with var input_2
     do close with var output_2
-    
+
     do unlink with var file concat ".tmp"
-    
+
     do return without arguments
 done
 
@@ -859,7 +859,7 @@ define action clear_empty_lines with var file, var current_language, var path do
     for each new var line from var _input is rw do
         if length(var line) < 3 do
             do close with var _input
-            
+
             set new var input_1 to handle for file name var file, read
             set new var output_1 to handle for file name var file concat ".tmp", write
             for each new var line from var input_1 is rw do
@@ -870,7 +870,7 @@ define action clear_empty_lines with var file, var current_language, var path do
             done
             do close with var input_1
             do close with var output_1
-            
+
             set new var input_2 to handle for file name var file concat ".tmp", read
             set new var output_2 to handle for file name var file, write
             for each new var line from var input_2 is rw do
@@ -879,9 +879,9 @@ define action clear_empty_lines with var file, var current_language, var path do
             done
             do close with var input_2
             do close with var output_2
-            
+
             do unlink with var file concat ".tmp"
-            
+
             do return without arguments
         done
     done
@@ -899,12 +899,12 @@ define action init_pro_files with var current_language, var path do
     set var save_path to var save_path concat var current_language concat '/'
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
-    push into array sub_directories, '/namen'   
+    push into array sub_directories, '/namen'
     push into array sub_directories, '/berufe'
     push into array sub_directories, '/ps_dateien'
     push into array sub_directories, '/wiki'
     push into array sub_directories, '/fakten'
-    
+
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
@@ -916,7 +916,7 @@ define action init_pro_files with var current_language, var path do
         for each new var file_name in array files is rw do
             #print var file_name concat "..."
             #print new line
-            
+
             do be_slow without arguments
             set new var file to var language_directory concat '/' concat var file_name
 
@@ -926,7 +926,7 @@ define action init_pro_files with var current_language, var path do
 
             do unlink with '_output__add_pro_file'
             do unlink with '_input__add_pro_file'
-            
+
             do clear_empty_lines with var file, var current_language, var path
 
             set new var check_input_handle_one to handle for file name var file, read
@@ -939,9 +939,9 @@ define action init_pro_files with var current_language, var path do
             for each new var line from var check_input_handle_two is rw do
                 set var j to var j + 1 + length(var line)
             done
-            
+
             if not var i is var j do
-            
+
                 do correct_human_edit_typos with var file, var current_language, var path
 
                 print "Read file "

@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -109,7 +109,7 @@ void hal2009_netcom_unlock() {
 
 void hal2009_netcom_start() {
     try {
-        
+
         tcp::endpoint endpoint(tcp::v4(), netcom_port);
         hal2009_netcom_acceptor = new tcp::acceptor(io_service, endpoint);
     }
@@ -121,10 +121,10 @@ void hal2009_netcom_start() {
 #if defined(__linux__)
 void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
     fprintf(output(), "Searching IP addresses...\n");
-    
+
     /**
     Comment this out to test the functionality of FreeHAL NETCOM on the local subnet (127.0.0.1)
-    
+
     {
         ips[*num_of_ips] = strdup("127.0.0.1");
         ++(*num_of_ips);
@@ -139,7 +139,7 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
         if (0 == buffer.size()) {
             break;
         }
-        
+
         if ((*num_of_ips) < 10) {
             ips[*num_of_ips] = (char*)(malloc(buffer.size()));
             for (int z = 0; z < buffer.size(); ++z) {
@@ -152,13 +152,13 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
             }
 
             fprintf(output(), "IP: %s\n", ips[*num_of_ips]);
-            
+
             ++(*num_of_ips);
         }
     }
-    
+
     fprintf(output(), "Searched IP addresses.\n");
-    
+
     arp_file.close();
 }
 
@@ -171,10 +171,10 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
 
 void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
     fprintf(output(), "Searching IP addresses...\n");
-    
+
     /**
     Comment this out to test the functionality of FreeHAL NETCOM on the local subnet (127.0.0.1)
-    
+
     {
         ips[*num_of_ips] = strdup("127.0.0.1");
         ++(*num_of_ips);
@@ -185,7 +185,7 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
     WSADATA   wsaData;
     UCHAR     ucAddress[4];
     CHAR      szHostName[MAX_PATH];
-    int       x;  
+    int       x;
 
     WSAStartup(MAKEWORD(1, 1), &wsaData);
     if(SOCKET_ERROR != gethostname(szHostName, NUM_ELEMENTS(szHostName))) {
@@ -204,7 +204,7 @@ void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
         }
     }
     WSACleanup();
-    
+
     fprintf(output(), "Searched IP addresses.\n");
 }
 
@@ -219,7 +219,7 @@ void* hal2009_netcom_do_accept(void* arg) {
     fprintf(output(), "(hal2009_netcom_do_accept) Started NETCOM 'do accept' thread.\n");
     try {
         tcp::iostream* stream = (tcp::iostream*) arg;
-        
+
         char* filename = (char*) malloc(200+strlen(signal_handler_tlanguage)+strlen(base_dir));
         strcpy(filename, "");
         strcat(filename, base_dir);
@@ -228,7 +228,7 @@ void* hal2009_netcom_do_accept(void* arg) {
         strcat(filename, "/from-");
         strcat(filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str());
         strcat(filename, ".pro");
-        
+
         fprintf(output(), "(hal2009_netcom_do_accept) Open pro file %s. I will write into it whatever %s says (stream is %d).\n", filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
         ofstream pro_file(filename, ios::out | ios::app);
         string buffer;
@@ -258,7 +258,7 @@ void* hal2009_netcom_do_give(void* arg) {
     fprintf(output(), "(hal2009_netcom_do_give)   Started NETCOM 'do give' thread.\n");
     try {
         tcp::iostream* stream = (tcp::iostream*) arg;
-        
+
         char* filename = (char*) malloc(200+strlen(signal_handler_tlanguage)+strlen(base_dir));
         strcpy(filename, "");
         strcat(filename, base_dir);
@@ -266,7 +266,7 @@ void* hal2009_netcom_do_give(void* arg) {
         strcat(filename, signal_handler_tlanguage);
         strcat(filename, "/facts.pro");
         fprintf(output(), "(hal2009_netcom_do_give)   Giving file %s.\n", filename);
-        
+
         fprintf(output(), "(hal2009_netcom_do_give)   I will send it to %s (stream is %d).\n", filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
         ifstream pro_file(filename);
         string buffer;
@@ -288,7 +288,7 @@ void* hal2009_netcom_do_give(void* arg) {
         halusleep(2000);
         /*
         it is in the stack!!
-        
+
         if ( stream ) {
             delete stream;
             stream = 0;
@@ -301,7 +301,7 @@ void* hal2009_netcom_do_give(void* arg) {
     }
 
     fprintf(output(), "(hal2009_netcom_do_give)   Closed everything.\n");
-    
+
     i_am_giving = false;
 }
 void* hal2009_netcom_ip2net(int* sn1, int* sn2, int* sn3, const char* ip) {
@@ -310,7 +310,7 @@ void* hal2009_netcom_ip2net(int* sn1, int* sn2, int* sn3, const char* ip) {
             ++g;
             continue;
         }
-        
+
         if (g == 1)
             (*sn1) = ((*sn1)*10)+(ip[k]-48);
         if (g == 2)
@@ -321,7 +321,7 @@ void* hal2009_netcom_ip2net(int* sn1, int* sn2, int* sn3, const char* ip) {
 }
 void* hal2009_netcom_run_accept(void*) {
     fprintf(output(), "Started NETCOM 'accept' thread.\n");
-    
+
     for (;;) {
         tcp::iostream* stream;
         try {
@@ -370,19 +370,19 @@ void* hal2009_netcom_run_accept(void*) {
 int num_of_probethreads = 0;
 void* hal2009_netcom_run_give_probethread(void* arg) {
     ++num_of_probethreads;
-    
+
     char* remote_ip = (char*)arg;
-    
+
     fprintf(output(), "Probing Remote IP: %s\n", remote_ip);
 
     tcp::iostream stream;
-    try {    
+    try {
 //        stream = new tcp::iostream();
         tcp::endpoint endp(asio::ip::address_v4::from_string(remote_ip), (unsigned short)(netcom_port));
-        
+
         stream.close();
         bool success = 0;
-        
+
         if (stream.rdbuf()->connect(endp)) {
             i_am_giving = true;
             fprintf(output(), "Successful Probe!\nFound a valid FreeHAL on server %s.\n", remote_ip);
@@ -396,9 +396,9 @@ void* hal2009_netcom_run_give_probethread(void* arg) {
         // ignore errors
     }
     free((void*)remote_ip);
-    
+
     --num_of_probethreads;
-    
+
     pthread_exit(0);
 }
 void* hal2009_netcom_run_give(void*) {
@@ -409,28 +409,28 @@ void* hal2009_netcom_run_give(void*) {
         char* ips[11];
         short num_of_ips = 0;
         hal2009_netcom_get_ips(ips, &num_of_ips);
-        
+
         for (int i = 0; i < 10 && i < num_of_ips; ++i) {
-            
+
             fprintf(output(), "One of my IPs is %s.\n", ips[i]);
-            
+
             int subnet_1 = 0;
             int subnet_2 = 0;
             int subnet_3 = 0;
             hal2009_netcom_ip2net(&subnet_1, &subnet_2, &subnet_3, ips[i]);
             fprintf(output(), "Subnet: %d.%d.%d.*\n", subnet_1, subnet_2, subnet_3);
-            
+
             for (int subnet_4 = 1; subnet_4 < 254;) {
                 pthread_t threadlist[12];
                 int subnet_4_max = subnet_4 + 5;
-            
+
                 for (; subnet_4 < subnet_4_max && subnet_4 < 254; ++subnet_4) {
                     char* remote_ip = (char*)cxxhalmalloc(255, "hal2009_netcom_run_give");
                     snprintf(remote_ip, 254, "%d.%d.%d.%d", subnet_1, subnet_2, subnet_3, subnet_4);
 
                     pthread_t t;
                     pthread_create (&t, NULL, hal2009_netcom_run_give_probethread, (void*)(remote_ip));
-                    
+
                     int s = 0;
                     while (s < 11 && PTHREAD_IS_NOT_NULL(threadlist[s])) {
                         ++s;
@@ -443,7 +443,7 @@ void* hal2009_netcom_run_give(void*) {
                     halusleep(100);
                     timeout -= 0.1;
                 }
-                
+
                 int e = 0;
                 while (e < 11 && PTHREAD_IS_NOT_NULL(threadlist[e])) {
                     //pthread_detach(threadlist[e]);
@@ -452,7 +452,7 @@ void* hal2009_netcom_run_give(void*) {
                     ++e;
                 }
             }
-            
+
             free(ips[i]);
         }
     }
@@ -563,7 +563,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     FILE* change_text_language = fopen("_change_text_language", "w");
     halwrite(language, 1, 2, change_text_language);
     halclose(change_text_language);
-    
+
     char* programming_language = (char*)cxxhalmalloc(16, "hal2009_server_statement");
     strcpy(programming_language, "perl5");
     char* base_dir             = (char*)cxxhalmalloc(16, "hal2009_server_statement");
@@ -597,8 +597,8 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     static string last_input = string();
     static long last_input_time = 0;
     while (0 == strlen(answer_from_c) && timeout > 0) {
-        
-        
+
+
         time_t now;
         time(&now);
         cout << "input: now:  " << input      << endl;
@@ -609,7 +609,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         }
         last_input = string(input);
         last_input_time = now;
-        
+
         cout << "Delete nonsense." << endl;
         unlink("_output2");
         hal2009_clean();
@@ -651,7 +651,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         unlink("_output2");
         if (answer_from_c) free(answer_from_c);
         answer_from_c = strdup(output.c_str());
-        
+
         --timeout;
         hal2009_clean();
     }
@@ -662,7 +662,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
     else {
         last_input_time = 0;
     }
-    
+
     if (!do_talk) {
         (*to_display) += "<b>Learned</b>: " + string(answer_from_c) + "<br />";
         (*stream) << "LEARNED:1:" << (*to_display) << endl;
@@ -700,38 +700,38 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     ofstream booted_file("booted");
     booted_file.close();
     vector<boost::thread*>* threads = new vector<boost::thread*>();
-    
+
     hal2009_netcom_lock();
     (*stream) << "READY:EVERYTHING_INITIALIZED" << endl;
     (*stream) << "JELIZA_FULL_VERSION:" << FULL_VERSION << endl;
-    
+
     /// for svn versions
     (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << " (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
-    
+
     /// for stable versions
     /// (*stream) << "NAME:" << FULL_NAME << " Step 2   24.12.09   (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
-    
+
     (*stream) << "Perl:." << endl;
     hal2009_netcom_unlock();
-    
+
     string username;
     getline(*stream, username);
     replace_all(username, "USER:", "");
     trim(username);
-    
+
     cout << "Got username." << endl;
     cout << "    " << username << endl;
 
     char* language             = (char*)cxxhalmalloc(16, "hal2009_server_client_connection");
     strcpy(language,             signal_handler_tlanguage);
-    
+
     while (init_thread_ended <= 0) {
-        
+
         (*stream) << "DISPLAY:" << "FreeHAL reads the database. This can take some seconds to several minutes." << endl;
-        
+
         halusleep(1000);
     }
-        
+
     (*stream) << "DISPLAY:" << "<i> </i>" << endl;
 
     string line;
@@ -740,7 +740,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         booted_file.close();
 
         std::vector<std::string>* result = simple_split( line, ":" );
-        
+
         std::vector<std::string>* result_underscore = simple_split( line, "_" );
         if ( result_underscore->at(0) == string("HERE") && result->size() >= 2 ) {
             cout << "Got a HERE_IS_* statement at the wrong place in code" << endl;
@@ -760,10 +760,10 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             for (pos = 0; csv_data[pos]; ++pos) {
                 if (csv_data[pos] == '\n') {
                     csv_data[pos] = '\0';
-                    
+
                     out_csv_data << csv_data + last_pos << endl;
                     cout << "CSV_RESULT:" << csv_data + last_pos << endl;
-                    
+
                     if (csv_data[pos+1]) last_pos = pos+1;
                     else                 last_pos = -1;
                 }
@@ -801,7 +801,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             printf("Stop.\nNew Index.\n");
             (*stream) << "REINDEX:SUCCESS" << endl << "REINDEX:SUCCESS" << endl;
         }
-        
+
         if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
@@ -825,7 +825,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             }
             sql_end();
         }
-        
+
         if ( result->at(0) == string("REPLACE") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
@@ -859,7 +859,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             }
             sql_end();
         }
-        
+
         if ( init_thread_ended > 0 && result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             string input;
             for (int i = 1; i < result->size(); ++i) {
@@ -871,7 +871,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             replace_all(input, "::", ":");
             hal2009_server_statement(stream, input, username, language, true, true);
         }
-        
+
         if ( init_thread_ended > 0 && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
             string input;
             for (int i = 1; i < result->size(); ++i) {
@@ -881,7 +881,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 input += result->at(i);
             }
             replace_all(input, "::", ":");
-            
+
             if (result->at(0) == string("LEARN") && result->at(1) != string("LEARN")) {
                 hal2009_server_statement(stream, input, username, language, true, false);
             }
@@ -892,7 +892,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 hal2009_server_statement(stream, input, username, language, true, true);
             }
         }
-        
+
         delete result;
         delete result_underscore;
     }
@@ -904,7 +904,7 @@ void hal2009_server_run() {
     booted_file.close();
 
     boost::thread* log_streamer = 0;
-    
+
     for (;;) {
         tcp::iostream* stream;
         try {
@@ -934,11 +934,11 @@ void hal2009_server_run() {
         }
         try {
             hal2009_server_clients.push_back(stream);
-            
-            
+
+
             if (init_thread_ended == 0) {
                 init_thread_ended = -1;
-                
+
                 pthread_t thread_init;
                 pthread_create (&thread_init, NULL, hal2009_init_thread, (void*)NULL);
 
@@ -970,10 +970,10 @@ char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
         halusleep(1000);
     }
     tcp::iostream* stream = hal2009_server_clients[hal2009_server_clients.size()-1];
-    
+
     cout << "Print into stream." << endl;
     (*stream) << "GET_" << s1 << ":" << s2 << endl;
-    
+
     cout << "Wait for stream." << endl;
     std::vector<std::string>* result;
     string line;
@@ -1017,7 +1017,7 @@ int set_nonblocking(int fd)
     return ioctl(fd, FIOBIO, &flags);
 #endif
 #endif
-} 
+}
 
 void* hal2009_init_thread (void*) {
     time_t start = 0;
@@ -1095,7 +1095,7 @@ int main(int argc, char** argv) {
     set_output_pipe (fdopen (fd[0], "r"));
 //  set_output      (fdopen (fd[1], "w"));
     freopen("x", "w", stdout);
-    
+
 //  set_output_fd   (fd[1]);
 */
     fprintf(output(), "Opened new stdout: stdout = %li\n", (long int)(get_output()));
@@ -1108,10 +1108,10 @@ int main(int argc, char** argv) {
 
     hal2009_server_start();
     hal2009_netcom_start();
-    
+
     pthread_create (&thread_netcom, NULL, hal2009_netcom_run, (void*)NULL);
     hal2009_server_run();
-    
+
     hal2009_server_stop();
 }
 
@@ -1173,7 +1173,7 @@ void hal2009_handle_signal(void* arg) {
         out.close();
         unlink("_output");
         ///pthread_exit(0);*/
-        
+
         ofstream out("_output2");
         out << text << endl;
         out.close();

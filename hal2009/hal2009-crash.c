@@ -33,7 +33,7 @@ void sighandler(int sig)
 	fatalerror(tmp);
 }
 
-#if defined(LINUX) || defined(MACINTOSH) 
+#if defined(LINUX) || defined(MACINTOSH)
 #include <execinfo.h>
 #endif
 

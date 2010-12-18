@@ -157,6 +157,7 @@ int can_be_a_synonym(const char* word);
 int catchf(const char* fmt, void* arg1);
 int check_synonym(struct synonym* syn_a, struct synonym** synonyms, int a, int b);
 int clear_catchf();
+int next_in_list(void** list);
 int count_list(void** list);
 int count_of_synonym(struct word*** words);
 int delete_in_first_if_in_second(struct word*** delete_in, struct word*** find_in);
@@ -232,8 +233,9 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
 struct synonym** add_synonyms_by_string(const char** exps, struct synonym** synonyms, int* position, const char* category);
 struct synonym** add_synonyms(const char* exp, const char** exps, struct synonym** synonyms, int* position, const char* category);
 struct synonym* construct_synonym(const char* _exp, const char** _exps, struct word* word, struct word** words, int level, int direction);
-struct synonym** prepare_synonyms(const char* exp, const char** exps, int* position);
+struct synonym** prepare_synonyms();
 struct synonym** put_search_synonyms(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct fact** facts, struct synonym** synonyms, int* position, int level, short direction);
+struct synonym** put_synonym_raw(struct synonym* syn, struct synonym** synonyms, int* position);
 struct synonym** put_synonym(struct synonym* syn, struct synonym** synonyms, int* position);
 struct word*** __add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, struct fact** facts, int* position, int* allocated_until);
 struct word*** __add_synonyms_by_string(const char* exp, struct word*** synonyms, int* position, int* allocated_until);

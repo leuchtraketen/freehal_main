@@ -27,14 +27,14 @@ define action check_score_command with var possible_score, var lang, var path do
     if var possible_score matches /^\/SCORE\s+?(<[-+0-9]>+)\s+?(.*?)$/ do
         set new var plusminus to $0
         set new var output to $1
-        
+
         set new var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/input.history', read
         set new var last_input to ''
         for each new var line from var input_handle do
             set var last_input to var line
         done
         set new array words to split with " ", var last_input
-        
+
         do return with [ $0, array words, var output ]
     done
     do return with 0
@@ -100,7 +100,7 @@ define action set_score_for_last with var score, var lang, var path do
     for each new var line from var input_handle do
         set var last_output to var line
     done
-    
+
     set var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/input.history', read
     set new var last_input to ''
     for each new var line from var input_handle do
@@ -108,7 +108,7 @@ define action set_score_for_last with var score, var lang, var path do
     done
 
     set new array words to split with " ", var last_input
-    
+
     if var last_output do
         do set_score with array words, var last_output, var score, var lang, var path
     done
@@ -133,7 +133,7 @@ define action set_score_for_num with var score, var num, var lang, var path do
             do shift with elements of array last_output
         done
     done
-    
+
     set var input_handle to handle for file name var path concat '/lang_' concat var lang concat '/input.history', read
     set new var last_input to ''
     for each new var line from var input_handle do
@@ -141,7 +141,7 @@ define action set_score_for_num with var score, var num, var lang, var path do
     done
 
     set new array words to split with " ", var last_input
-    
+
     if var last_output do
         do set_score with array words, from array last_output 1st element, var score, var lang, var path
     done
@@ -236,12 +236,12 @@ define action get_score with array words, var sentence, var lang, var path do
     if var sentence matches /\(<[-]>\)/ do
         set var sum to var sum - 40 * var num_words
     done
-    
-    set var sum to (var sum + 1) / var num_words 
+
+    set var sum to (var sum + 1) / var num_words
     if var sum < 1 do
         set var sum to 1
     done
-    
+
     do return with var sum
 done
 

@@ -63,10 +63,10 @@ define action make_yearday_from_monthday with var mday, var mon do
         if var mon is 11 do
             set var yday to var yday + 31
         done
-        
+
         set var mon to var mon - 1
     done
-    
+
     do return with var yday
 done
 
@@ -77,51 +77,51 @@ define action timelocal with var sec, var min, var hour, var mday, var mon, var 
     set var year to var year - 70
 
     set new var seconds to 0
-    
+
     set var seconds to var seconds + var sec
     set var seconds to var seconds + var min        * 60
     set var seconds to var seconds + var hour       * 60*60
     set var seconds to var seconds + var yday       * 60*60*24
     set var seconds to var seconds + var year       * 60*60*24*365
-    
+
     # leap years
     set new var full_year to var year + 1970
     while var full_year >= 1970 do
         if (var full_year % 4 == 0 and var full_year % 100 != 0) or (var full_year % 400 == 0) do
             set var seconds to var seconds + 60*60*24
         done
-    
+
         set var full_year to var full_year - 1
     done
-    
+
     if not var isdst do
         set var seconds to var seconds - 60*60
     done
-    
+
     do return with var seconds
 done
 
 define action to_unixtime with var sentence, var lang, var path do
     set new array _builtin_time_relations_names to global array builtin_time_relations_names
     set new hash _builtin_time_relations to global hash builtin_time_relations
-    
+
     print "to_unixtime called."
     print new line
-    
+
     print "First:               "
     print var sentence
     print new line
-    
+
     set var sentence to time_pre_transformations with var sentence, var lang, var path
     print "Pre-Transformations: "
     print var sentence
     print new line
-    
+
     set new var i_begin to 0
     set new var i_end to 0
     set new var c_time to time without arguments
     set new var replacement to ""
-    
+
     for each new var rel in array _builtin_time_relations_names do
 
         set new var sentence_length to length with var sentence
@@ -138,20 +138,20 @@ define action to_unixtime with var sentence, var lang, var path do
             set new var wday to from array date_time_array element [ 6 ]
             set new var yday to from array date_time_array element [ 7 ]
             set new var isdst to from array date_time_array element [ 8 ]
-            
+
             print "Time, now:       "
             print var c_time
             print " = "
             print var sec concat ", " concat var min concat ", " concat var hour concat ", " concat var mday concat ", " concat var mon concat ", " concat var year concat ", " concat var wday concat ", " concat var yday concat ", " concat var isdst
             print new line
-            
+
             set new var i_range to from hash _builtin_time_relations element { var rel } 1st element
             set new var i_plusminus to from hash _builtin_time_relations element { var rel } 2nd element
-            
+
             if lc(var sentence) matches /(^|\s)(\d+?)<[*]>\svar rel(\s|$)/ do
                 set var i_plusminus to var i_plusminus * $1
             done
-            
+
             print "Time, interval:  "
             print var i_range
             print " sec"
@@ -177,8 +177,8 @@ define action to_unixtime with var sentence, var lang, var path do
                 set var min to 0
                 set var hour to 0
             done
-            
-            
+
+
             set var i_begin to timelocal with var sec, var min, var hour, var mday, var mon, var year, var wday, var yday, var isdst
             set var i_begin to var i_begin + var i_plusminus * var i_range
             print "Time, begin:     "
@@ -186,13 +186,13 @@ define action to_unixtime with var sentence, var lang, var path do
             print " = "
             print var sec concat ", " concat var min concat ", " concat var hour concat ", " concat var mday concat ", " concat var mon concat ", " concat var year concat ", " concat var wday concat ", " concat var yday concat ", " concat var isdst
             print new line
-            
+
             set var i_end to var i_begin + var i_range
             print "Time, end:       "
             print var i_end
             print " = ..."
             print new line
-            
+
             do regex with var sentence: /(^|\s)(\d+?)<[*]>\s(var rel)(\s|$)/ -> "$0$2$3" :i
             if lc(var sentence) matches /(von|ab|seit|since)(^|\s)var rel(\s|$)/ do
                 set var replacement to var replacement concat " time_from-" concat var i_begin
@@ -206,16 +206,16 @@ define action to_unixtime with var sentence, var lang, var path do
                 set var replacement to var replacement concat " time_from-" concat var i_begin concat " " concat "time_to-" concat var i_end
                 do regex with var sentence: /(^|\s)var rel(\s|$)/ -> "$1" :global:i
             done
-            
+
             set var i_begin to 0
             set var i_end to 0
         done
     done
-    
+
     while 1 do
         if lc(var sentence) matches /(am|seit|vom|bis)<[-]>(\d+?)\.(\d+?)\.(\d+?) / do
             set new var prep to $0
-            
+
             set new var sec to 0
             set new var min to 0
             set new var hour to 0
@@ -225,7 +225,7 @@ define action to_unixtime with var sentence, var lang, var path do
             set new var wday to 0
             set new var yday to make_yearday_from_monthday with var mday, var mon
             set new var isdst to 0
-            
+
             print "Day of month:    "
             print var mday
             print new line
@@ -238,7 +238,7 @@ define action to_unixtime with var sentence, var lang, var path do
             print "Day of year:     "
             print var yday
             print new line
-            
+
             if var prep matches "am" do
                 set var i_begin to timelocal with var sec, var min, var hour, var mday, var mon, var year, var wday, var yday, var isdst
                 set var yday to var yday + 1
@@ -259,7 +259,7 @@ define action to_unixtime with var sentence, var lang, var path do
             go to last
         done
     done
-    
+
     if var i_begin do
         set var replacement to var replacement concat " time_from-" concat var i_begin
         set var i_begin to 0
@@ -268,14 +268,14 @@ define action to_unixtime with var sentence, var lang, var path do
         set var replacement to var replacement concat " time_to-" concat var i_end
         set var i_end to 0
     done
-    
+
     if var replacement do
         do regex with var sentence: /(<[?!.,]>|$)/ -> "var replacement $0" :i
     done
-    
+
     print "to_unixtime finished."
     print new line
-    
+
     do return with var sentence
 done
 

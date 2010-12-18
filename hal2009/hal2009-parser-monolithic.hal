@@ -48,21 +48,21 @@ define action entity_chose_end_of_entity with var lang, array words, hash tags, 
     if from hash sym_noun element { var current_tag } and from hash sym_noun element { var next_tag } and ( var current_is_name is true and var current_word not matches /_/ ) do
         set flag end_of_entity to 0
     done
-    
+
     if from global hash builtin_entity_ends element { lc(var current_word) } do
         set flag end_of_entity to 1
     done
-    
+
     set new array pairs to global array builtin_entity_ends_pair
     for each new array pair in array pairs do
-        
+
         if lc(var current_word) matches from array pair 1st element or not from array pair 1st element do
             if lc(var next_word) matches from array pair 2nd element or not from array pair 2nd element do
                 set flag end_of_entity to 1
             done
         done
     done
-    
+
     set new flag entity_does_not_end to builtin_entity_does_not_end with var current_word, var current_tag
     if flag entity_does_not_end do
         set flag end_of_entity to 0
@@ -103,7 +103,7 @@ define action entity_choose_add_current_word with var lang, array words, hash ta
         print "not add current word: current is adj and next is an 'aswellas' variable, and word is first in loop!!" concat new line
         set flag add_current_word to 0
     done
-    
+
     if var lang matches "en" do
         if flag found_subject is true and from global hash builtin_time_place_adverbs element { var current_word } do
             print "not add current word: lang is en and we are in the objects (found_subject=1) and current is time_place_adverb" concat new line
@@ -159,7 +159,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
 
     set new flag count to 20
     while flag add_current_word do
-    
+
         set flag count to flag count - 1
         if flag count <= 0 do
             go to last
@@ -235,7 +235,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
 
     set new array pairs to global array builtin_entity_ends_pair
     for each new array pair in array pairs do
-        
+
         if lc(var current_word) matches from array pair 1st element or not from array pair 1st element do
             if lc(var next_word) matches from array pair 2nd element or not from array pair 2nd element do
                 set flag found_subject to 1
@@ -263,7 +263,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             set flag found_subject to 1
         done
     done
-    
+
     # TEXT
     # The subject ends when the current word is an article and the next one is a verb
     # CODE
@@ -272,7 +272,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             set flag found_subject to 1
         done
     done
-    
+
     # TEXT
     # The subject ends when the current word is an adjective/adverb and the next one is a verb
     # CODE
@@ -281,7 +281,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             set flag found_subject to 1
         done
     done
-    
+
     if not var what matches "nothing" do
 
         # TEXT
@@ -307,7 +307,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             # It's not empty. The "0" means that we are at the end of the sentence.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
             # CODE
-            
+
             set new array keys to [ keys of hash parsed ]
             for each new var key in array keys do
                 set new array new_value to from hash full_entity element { var key }
@@ -316,7 +316,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             done
         done
     done
-        
+
     print var ident
     print "#    "
     print "End do parse_using_entity."
@@ -331,13 +331,13 @@ define action parse_using_verb with var lang, array words, hash tags, flag found
     print "#    "
     print "Begin do parse_using_verb."
     print new line
-    
+
     set new array full_entity to an empty array
-    
+
     set new var current_word to from array words 1st element
     push into array full_entity, [ var current_word ]
     shift from array words
-    
+
     print var ident
     print "#    "
     print "End do parse_using_verb."
@@ -352,7 +352,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
     print "#    "
     print "Begin do parse_using_preposition."
     print new line
-    
+
     # TEXT
     # This will be returned.
     # CODE
@@ -378,21 +378,21 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
 
     set new var entity to var current_word
     shift from array words
-    
+
     if from hash sym_adj element { from array current_tag element [ const TYPE ] } do
         # The word is an adverb. Do nothing.
     done
     if from hash sym_prep element { from array current_tag element [ const TYPE ] } do
-    
+
         # The word is a preposition. Search an entitiy after this word.
         set new hash parsed to parse_what with var lang, array words, hash tags, "entity", flag found_subject
-        
+
         if hash parsed and that hash is not empty: hash parsed end check do
             # TEXT
             # It's not empty.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
             # CODE
-            
+
             if not from hash parsed element { "questionword" } do
                 set from hash parsed element { "questionword" } to an empty array
             done
@@ -405,7 +405,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 print new line
                 print "Instead, add everything where it fits best."
                 print new line
-                
+
                 set new array keys to [ keys of hash parsed ]
                 for each new var key in array keys do
                     set new array new_value to from hash full_entity element { var key }
@@ -422,7 +422,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 print new line
                 print "Add everything to the \"adverbs\" column."
                 print new line
-                
+
                 set new flag found_an_article to 0
                 set new array keys to [ 'adverbs', 'subjects', 'objects' ]
                 for each new var key in array keys do
@@ -444,7 +444,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                         done
                     done
                 done
-                
+
                 # TEXT
                 # Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie
                 # CODE
@@ -464,7 +464,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                     set var entity to var entity concat ' ' concat from array words 1st element
                     do shift with elements of array words
                 done
-                
+
             done
         done
     done
@@ -485,7 +485,7 @@ define action parse_using_questionword with var lang, array words, hash tags, fl
     print "#    "
     print "Begin do parse_using_questionword."
     print new line
-    
+
     # TEXT
     # This will be returned.
     # CODE
@@ -519,7 +519,7 @@ define action parse_using_questionword with var lang, array words, hash tags, fl
             shift from array words
         done
     done
-    
+
     set from hash full_entity element { "questionword" } to [ [ lc(var current_word) ] ]
 
     print var ident
@@ -536,7 +536,7 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
     print "#    "
     print "Begin do parse_using_keyword."
     print new line
-    
+
     # TEXT
     # This will be returned.
     # CODE
@@ -565,7 +565,7 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
         set array current_tag to from hash tags element { var current_word }
         set var next_word to from array words 2nd element
         set array next_tag to from hash tags element { var next_word }
-        
+
         if from hash sym_prep element { from array current_tag 1st element } do
             go to last
         done
@@ -573,7 +573,7 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
             go to last
         done
     done
-    
+
     print var ident
     print "#    "
     print "End do parse_using_keyword."
@@ -612,14 +612,14 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
 
     set new var go_on to 1
     while var go_on do
-    
+
         do be_slow without arguments
 
         set new var current_word to from array words 1st element
         set new array current_tag to from hash tags element { var current_word }
         set new var next_word to from array words 2nd element
         set new array next_tag to from hash tags element { var next_word }
-        
+
         if not var current_word do
             print var ident
             print "#    "
@@ -647,7 +647,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 push into array new_value, elements of that array: from hash add_parsed element { var key } end of elements
                 set from hash parsed element { var key } to array new_value
             done
-            
+
             if var current_word matches "ENUMALL" do
                 do unshift using elements of that array: from hash parsed element { "extra" } end of elements, [ var current_word ]
             done
@@ -662,7 +662,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed
             done
-            
+
             set ( new hash add_parsed, new var go_on ) to array-returning parse_using_entity using var lang, array words, hash tags, flag found_subject, var what
             set new array keys to [ keys of hash add_parsed ]
             for each new var key in array keys do
@@ -685,7 +685,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
             print ( from hash sym_adj element { from array current_tag element [ const TYPE ] } and not from hash sym_entity element { from array next_tag element [ const TYPE ] } )
             print new line
             print "----" concat new line
-        
+
             if var what matches "entity" do
                 print var ident
                 print "#    "
@@ -694,7 +694,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed
             done
-            
+
             set ( new hash add_parsed, new var go_on ) to array-returning parse_using_preposition using var lang, array words, hash tags, flag found_subject
             set new array keys to [ keys of hash add_parsed ]
             for each new var key in array keys do
@@ -792,7 +792,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 set var ident to var ident concat "\b\b"
                 do return using hash parsed
             done
-            
+
             set ( new hash add_parsed, new var go_on ) to array-returning parse_using_preposition using var lang, array words, hash tags, flag found_subject
             set new array keys to [ keys of hash add_parsed ]
             for each new var key in array keys do
@@ -800,7 +800,7 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
                 push into array new_value, elements of that array: from hash add_parsed element { var key } end of elements
                 set from hash parsed element { var key } to array new_value
             done
-            
+
             set new var preposition to var current_word
             set var current_word to from array words 1st element
             set array current_tag to from hash tags element { var current_word }
@@ -911,13 +911,13 @@ done
 #            if from array list_of_questionwords element [ var array_index - 1 ] do
 #                push into array list_of_questionwords, elements of that array: from array list_of_questionwords element [ var array_index - 1 ] end of elements
 #            done
-            
+
             print "Template found: 'A is B and C and D and E and F'."
             print new line
-            
+
             # set current part to last part
             push into that array: from array list_of_list_of_words element [ var array_index ], elements of that array: from array list_of_list_of_words element [ var array_index - 1 ] end of elements
-            
+
             # current part (= last part) has an article near the end?
             set new var part_size to size of that array: from array list_of_list_of_words element [ var array_index ] end of elements
             # "near the end" is defined as 4 words
@@ -925,37 +925,37 @@ done
             if var near_end < 0 do
                 set var near_end to 0
             done
-            
+
             set new var the_end to -1
             set new var d to var part_size - 1
             while var d >= var near_end do
                 set new var word_d to from array list_of_list_of_words element [ var array_index ] element [ var d ]
-                
+
                 if from hash sym_art element { from hash tags element { var word_d } 1st element } do
                     set var the_end to var d
                 done
-                
+
                 set var d to var d - 1
             done
-            
+
             if not var the_end is -1 do
                 print "found an article."
                 print new line
             done
-            
+
             # found an article? if not, search last adjective
             if var the_end is -1 do
                 print "found no article."
                 print new line
-                
+
                 set new var d to var part_size - 1
                 while var d >= var near_end do
                     set new var word_d to from array list_of_list_of_words element [ var array_index ] element [ var d ]
-                    
+
                     if from hash sym_adj element { from hash tags element { var word_d } 1st element } do
                         set var the_end to var d
                     done
-                    
+
                     set var d to var d - 1
                 done
             done
@@ -969,22 +969,22 @@ done
             if var the_end is -1 do
                 print "found no adjective."
                 print new line
-                
+
                 set new var d to var part_size - 1
                 while var d >= var near_end do
                     set new var word_d to from array list_of_list_of_words element [ var array_index ] element [ var d ]
-                    
+
                     if from hash sym_noun element { from hash tags element { var word_d } 1st element } do
                         set var the_end to var d
                     done
                     if from hash sym_verb element { from hash tags element { var word_d } 1st element } do
                         go to last
                     done
-                    
+
                     set var d to var d - 1
                 done
             done
-            
+
             if not var the_end is -1 do
                 print "found a noun."
                 print new line
@@ -1005,7 +1005,7 @@ done
         done
         else do
             push into that array: from array list_of_list_of_words element [ var array_index ], var word
-            
+
             if from hash sym_questionword element { from hash tags element { var word } 1st element } do
                 push into that array: from array list_of_questionwords element [ var array_index ], var word
             done
@@ -1013,7 +1013,7 @@ done
 
         set var i to var i + 1
     done
-    
+
     print new line
     print "Pre-Parser (index: var array_index size: "
     set new var temp_size to elements of array list_of_list_of_words
@@ -1033,7 +1033,7 @@ done
     print "-------------------------------------------------------"
     print new line
     print new line
-    
+
     do return with array list_of_list_of_words
 done
 
@@ -1051,9 +1051,9 @@ define action parse with var lang, array words, hash tags do
     # <br /><br />
     # Search prefixes:
     # CODE
-    
+
     set new var prefix to ''
-    
+
     set new array words_correct to an empty array
     set new var i to 0
     for each new var word in array words is copy do
@@ -1061,7 +1061,7 @@ define action parse with var lang, array words, hash tags do
             # TEXT
             # It is a prefix.
             # CODE
-            
+
             if var word do
                 set var prefix to var word
             done
@@ -1070,14 +1070,14 @@ define action parse with var lang, array words, hash tags do
             # TEXT
             # It's another word. Add it to the new words array.
             # CODE
-            
+
             push into array words_correct, var word
         done
         set var i to var i + 1
     done
-    
-    
-    
+
+
+
     # TEXT
     # Add prefixes to the verb(s):
     # CODE
@@ -1089,16 +1089,16 @@ define action parse with var lang, array words, hash tags do
                 # TEXT
                 # It is a verb.
                 # CODE
-                
+
                 set from hash tags element { var prefix concat var word } to from hash tags element { var word }
-                
+
                 set var word to var prefix concat var word
             done
 
             push into array words_correct, var word
         done
     done
-    
+
     set hash parsed to parse_what using var lang, array words_correct, hash tags, "full", 0
     DEBUG VAR: hash parsed STOP DEBUG
     if hash parsed is false do

@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -40,8 +40,8 @@ char *strstri(char *t, const char *s) {
     for (i=0; t[i] != '\0'; i++) {
         for(j=0; s[j] != '\0'; j++) {
             if (toupper(s[j])==toupper(t[i+j]))
-                continue; 
-            else 
+                continue;
+            else
                 break;
         }
 
@@ -59,12 +59,12 @@ halstring* remove_between(const halstring* s_text, char start, char stop) {
     if (!s_text || !s_text->s) {
         return 0;
     }
-    
+
     halstring* t_text = calloc(sizeof(halstring), 1);
     t_text->do_free   = 1;
     int size          = strlen(s_text->s);
     t_text->s         = calloc(size+3, 1);
-    
+
     int i;
     int j;
     int in_gap = 0;
@@ -72,33 +72,33 @@ halstring* remove_between(const halstring* s_text, char start, char stop) {
         if (s_text->s[i] == start) {
             ++in_gap;
         }
-        
+
         if (0 == in_gap) {
             t_text->s[j] = s_text->s[i];
             ++j;
         }
-        
+
         if (s_text->s[i] == stop) {
             --in_gap;
         }
     }
-    
+
     if (s_text->do_free) {
         free(s_text->s);
     }
-    
+
     return t_text;
 }
 
 char* replace_spaces(const char* s) {
     int size          = strlen(s);
     char* n           = calloc(size+2, 1);
-    
+
     int i;
     for (i = 0; i < size; ++i) {
         n[i] = s[i] == ' ' ? '_' : s[i] == '\t' ? '_' : s[i] == '\r' ? '_' : s[i] == '\n' ? '_' : s[i];
     }
-    
+
     return n;
 }
 
@@ -106,7 +106,7 @@ char* replace_spaces(const char* s) {
 char* delete_bad_chars(const char* s, int with_star, int with_underscore) {
     int size          = strlen(s);
     char* n           = calloc(size+3, 1);
-    
+
     int i;
     int j;
     for (i = 0, j = 0; i < size; ++i) {
@@ -120,7 +120,7 @@ char* delete_bad_chars(const char* s, int with_star, int with_underscore) {
         ++j;
     }
     n[j] = '\0';
-    
+
     return n;
 }
 
@@ -128,7 +128,7 @@ char* concat(const char* a, const char* b) {
     char* c = (char*)calloc(strlen(a)+strlen(b)+3, 1);
     strcpy(c, a);
     strcat(c, b);
-    
+
     return c;
 }
 
@@ -210,16 +210,16 @@ const char* define_general_verb(char* sentence, const char* entity) {
 }
 
 char* transform_sentence(char* sentence, const char* entity) {
-    
+
     printf("sentence: %s\n", sentence);
-    
+
     char _verb_1[100];
     strcpy(_verb_1, "");
     snprintf(_verb_1, 99, " ist %s ", entity);
-    
+
     short verb__ist__before_dot = strstr(sentence, " ist ") < strstr(sentence, ".");
     short verb__sind__before_dot = strstr(sentence, " sind ") < strstr(sentence, ".");
-    
+
     char* verb_str = 0;
     if (verb_str == 0) {
         if ((verb_str = strstr(sentence, " ist "))) {
@@ -379,7 +379,7 @@ char* transform_sentence(char* sentence, const char* entity) {
     if (verb_str == 0) {
         return 0;
     }
-    
+
     int size     = strlen(verb_str);
     char* object = calloc(size+5, 1);
     int i;
@@ -389,7 +389,7 @@ char* transform_sentence(char* sentence, const char* entity) {
         if (verb_str[i] == toupper(verb_str[i]) && i && verb_str[i-1] == ' ') {
             ++in_last_word;
         }
-        
+
         if (in_last_word && verb_str[i] == ' ') {
             break;
         }
@@ -399,11 +399,11 @@ char* transform_sentence(char* sentence, const char* entity) {
         if (i+1 < size && verb_str[i] == ',' && verb_str[i+1] == ' ') {
             continue;
         }
-        
+
         object[j] = verb_str[i];
         ++j;
     }
-    
+
     int maybe_end = j;
     int number_of_spaces = 0;
     for (; i < size; ++i) {
@@ -434,42 +434,42 @@ char* transform_sentence(char* sentence, const char* entity) {
         if (i+1 < size && verb_str[i] == ',' && verb_str[i+1] == ' ') {
             continue;
         }
-        
+
         if (verb_str[i] == ' ') {
             ++number_of_spaces;
         }
-        
+
         object[j] = verb_str[i];
         ++j;
     }
-    
+
     if (number_of_spaces > 20) {
         object[maybe_end] = '\0';
     }
-    
+
     printf("object:   %s\n", object);
-    
+
     return object;
 }
 
 char* upper (const char* s) {
     int size          = strlen(s);
     char* n           = calloc(size+2, 1);
-    
+
     int i;
     for (i = 0; i < size; ++i) {
         n[i] = (i == 0 || (i && (s[i-1] == ' ' || s[i-1] == '\t' || s[i-1] == '\n' || s[i-1] == '\r'))) ? toupper(s[i]) : s[i];
     }
-    
+
     return n;
 }
 
 char* delete_articles(const char* s) {
     int size          = strlen(s);
     char* n           = calloc(size+2, 1);
-    
+
     int offset = 0;
-    
+
     /// brackets
     int i;
     for (i = 0; i < 3 && i < size; ++i) {
@@ -488,7 +488,7 @@ char* delete_articles(const char* s) {
             break;
         }
     }
-    
+
     if (size > 4) {
              if (offset+s == strstr(offset+s, "der "))      offset += 4;
         else if (offset+s == strstr(offset+s, "die "))      offset += 4;
@@ -501,7 +501,7 @@ char* delete_articles(const char* s) {
         else if (offset+s == strstr(offset+s, "einem "))    offset += 6;
         else if (offset+s == strstr(offset+s, "einen "))    offset += 6;
     }
-    
+
     strcpy(n, s+offset);
     return n;
 }
@@ -549,8 +549,8 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     if (strcmp("1", check_config("online", "1"))) {
         return 0;
     }
-    
-    
+
+
     char* entity_without_bad_chars = 0;
     char* entity_without_stars = 0;
     char* entity_without_articles = 0;
@@ -561,11 +561,11 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     char* url = 0;
     halstring** lines = 0;
     int number_of_lines = 0;
-    
+
     entity_without_bad_chars        = delete_bad_chars(entity, 1, 1);
     entity_without_articles         = delete_articles(entity_without_bad_chars);
     entity_upper                    = upper(entity_without_articles);
-    
+
     entity_without_stars            = delete_bad_chars(entity, 1, 0);
     entity_to_save_without_articles = delete_articles(entity_without_stars);
     entity_to_save_upper            = upper(entity_to_save_without_articles);
@@ -580,7 +580,7 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
         /// entity_upper is free'd at the end of the function
         free( _url);
         free(  url);
-        
+
         if (!file) {
             free(entity_without_stars);
             free(entity_upper);
@@ -605,14 +605,14 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
             free(search_results_entity);
             search_results_entity = 0;
         }
-    
+
         search_results_entity   = strdup(entity_to_save_upper);
 
         number_of_lines = 0;
         lines = stringtoarray(file, '\n', &number_of_lines);
         search_results = lines;
         search_results_lines = number_of_lines;
-        
+
         if (!file) {
             printf("Was not successful: download_from_url\n");
             return 0;
@@ -636,10 +636,10 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
     free(entity_upper);
     free(entity_to_save_without_articles);
     free(entity_to_save_upper);
-    
-    
+
+
     struct fact** facts = 0;
-    
+
     int current_line;
     if (todo == NEW) {
         current_line = 0;
@@ -660,43 +660,43 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
             lines[current_line] = 0;
             continue;
         }
-        
-        
+
+
         if (strstr(lines[current_line]->s, "<li><a href=\"/wiki/")) {
             char* start = strstr(lines[current_line]->s, "\"");
             if (!start) continue;
             ++start;
-            
+
             char* stop = strstr(start, "\"");
             if (!stop) continue;
             stop[0] = '\0';
-            
+
             printf("page: \"%s\"\n", start);
-            
+
             facts = search_facts_wiki_page(start, search_results_entity);
             if (facts) {
                 search_results_line = current_line;
                 break;
             }
         }
-        
+
         if (strstr(lines[current_line]->s, "searchdidyoumean") && strlen(lines[current_line]->s) > 55) {
             char* start = strstr(lines[current_line]->s + 50, "search=");
             if (strlen(start) > 20) {
                 start += 6;
-                
+
                 if (!start) continue;
                 ++start;
-                
+
                 char* stop = strstr(start, "&");
                 if (!stop) continue;
                 stop[0] = '\0';
-                
+
                 printf("page: \"%s\"\n", start);
-                
+
                 char* path = calloc(strlen(start) + 20, 1);
                 sprintf(path, "/wiki/%s", start);
-                
+
                 facts = search_facts_wiki_page(path, search_results_entity);
                 free(path);
                 if (facts) {
@@ -706,8 +706,8 @@ struct fact** search_facts_wiki(const char* entity, short todo) {
             }
         }
     }
-    
-    
+
+
     return facts;
 }
 
@@ -715,7 +715,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
     if (!entity_upper || strlen(entity_upper) < 3) {
         return 0;
     }
-    
+
     printf("page: __url: %s\n", __url);
     char* ___url                  = concat(".wikipedia.org", __url);
     char* _url                    = concat(hal2009_get_text_language(), ___url);
@@ -727,12 +727,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
     /// entity_upper is free'd at the end of the function
     free( _url);
     free(  url);
-    
+
     if (!file) {
         printf("page: Was not successful: download_from_url\n");
         return 0;
     }
-    
+
     struct fact** facts = calloc(sizeof(struct fact*), 2);
 
     int number_of_lines = 0;
@@ -754,7 +754,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             lines[current_line] = 0;
             continue;
         }
-        
+
         if (strstr(lines[current_line]->s, "class=\"noprint\"") || strstr(lines[current_line]->s, "Wechseln zu")) {
             in_header = 0;
             continue;
@@ -771,7 +771,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
         if (strstr(lines[current_line]->s, "</ul>")) {
             --in_ul;
         }
-        
+
         if (0 == in_header) {
             if (strstr(lines[current_line]->s, "<table")) {
                 in_table += 1;
@@ -785,7 +785,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             if (strstr(lines[current_line]->s, "</script")) {
                 in_script -= 1;
             }
-            
+
             if (0 < in_script || 0 < in_table) {
                 continue;
             }
@@ -793,13 +793,13 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 char* start = strstr(lines[current_line]->s, "\"");
                 if (!start) continue;
                 ++start;
-                
+
                 char* stop = strstr(start, "\"");
                 if (!stop) continue;
                 stop[0] = '\0';
-                
+
                 printf("page: \"%s\"\n", start);
-                
+
                 struct fact** temp = search_facts_wiki_page(start, entity_upper);
                 if (temp) {
                     if (facts) free(facts);
@@ -849,37 +849,37 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             if (strstr(lines[current_line]->s, "iehe:")) {
                 continue;
             }
-            
-            
+
+
             lines[current_line] = remove_between(lines[current_line], '(', ')');
             lines[current_line] = remove_between(lines[current_line], '[', ']');
             lines[current_line] = remove_between(lines[current_line], '<', '>');
             lines[current_line] = remove_between(lines[current_line], '&', ';');
-            
+
             if (!can_be_a_pointer(lines[current_line]) || !can_be_a_pointer(lines[current_line]->s)) {
                 continue;
             }
-            
+
             char* ascii_text = ascii(lines[current_line]->s);
             if (ascii_text) {
                 lines[current_line]->s = ascii_text;
             }
-            
+
             while (lines[current_line]->s[0] == ' ' || lines[current_line]->s[0] == '\t') {
                 strcpy(lines[current_line]->s, lines[current_line]->s+1);
             }
-            
+
             if (strlen(lines[current_line]->s) < 30) {
                 continue;
             }
-            
+
             const char* general_verb = define_general_verb(lines[current_line]->s, entity_upper);
             char* object      = transform_sentence(lines[current_line]->s, entity_upper);
             if (strstr(object, ":")-object > strlen(object)-5 && strstr(object, ":")-object < strlen(object)+1) {
                 free(object);
                 break;
             }
-            
+
             struct fact* fact  = calloc(sizeof(struct fact), 1);
             fact->pk           = 0;
             fact->verbs        = divide_words(general_verb);
@@ -891,7 +891,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             fact->filename     = strdup("");
             fact->line         = strdup("");
             fact->truth        = 1.0;
-            
+
             /// write to prot file
             {
                 char file[501];
@@ -903,7 +903,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                 char* object_working = object;
                 char* end;
                 while (end = strstr(object_working, ",")) {
-                    
+
                     char* i;
                     short found_big_letter = 0;
                     for (i = object_working; i != end; ++i) {
@@ -911,7 +911,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                             ++found_big_letter;
                         }
                     }
-                    
+
                     if (found_big_letter) {
                         end[0] = '\0';
                         break;
@@ -936,9 +936,9 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
                     }
                 }
             }
-            
+
             facts[0] = fact;
-            
+
             if (strlen(object) && object[0] != ' ' && object[0] != '\t') {
                 free(object);
                 break;
@@ -951,7 +951,7 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             continue;
         if (0 == lines[current_line]->s)
             continue;
-        
+
         {
             halfree(lines[current_line]->s);
             halfree(lines[current_line]);
@@ -959,12 +959,12 @@ struct fact** search_facts_wiki_page(const char* __url, const char* entity_upper
             continue;
         }
     }
-    
-    
+
+
     if (file->do_free) {
         free(file->s);
     }
-    
+
     return facts;
 }
 

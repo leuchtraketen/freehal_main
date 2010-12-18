@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -46,7 +46,7 @@ require source hal2009-defs.hal
 
 define action input_data_for_bottom_up_parser with array words, hash tags, var lang, var path do
     set new array data to an empty array
-    
+
     for each new var word in array words do
         set new array current_tag to from hash tags element { var word }
         set new var tag to "q"
@@ -87,10 +87,10 @@ define action input_data_for_bottom_up_parser with array words, hash tags, var l
         if var tag_this matches "d-title" and var tag_last matches "d-title" do
             set from array data element [ var i - 1 ] second element to "d-noun"
         done
-        
+
         set var i to var i + 1
     done
-    
+
     do return with array data
 done
 
@@ -100,27 +100,27 @@ define action elements_of_array_match with array data, var i do
             do return with 1
         done
     done
-    
+
     do return with 0
 done
 
 define action elements_of_array with array data, var i do
     set new array _data to an empty array
-    
+
     for each new array __data in array data do
         push into array _data, from array __data element [ var i ]
     done
-    
+
     do return with array _data
 done
 
 define action extend_array with array data do
     set new array __data to an empty array
-    
+
     for each new array _data in array data do
         push into array __data, [ array _data, 0 ]
     done
-    
+
     do return with array __data
 done
 
@@ -132,17 +132,17 @@ define action every_except_first with array data do
 
     set new var i to 0
     set new array _data to an empty array
-    
+
     for each new var __data in array data do
         set var i to var i + 1
-    
+
         if var i > 1 do
             push into array _data, var __data
         done
     done
-    
+
     set from hash cache__every_except element { array data } to array _data
-    
+
     do return with array _data
 done
 
@@ -154,7 +154,7 @@ define action print_array with array data do
         if flag i is true do
             print ", "
         done
-        
+
         set flag i to 1
         print "'" concat var __data concat "'"
     done
@@ -175,11 +175,11 @@ define action from_grammar with array grammar, var name do
             do return with array _grammar
         done
     done
-    
+
     set new array _grammar to [ var name, [ var name ] ]
 
     set from hash cache__from_grammar element { var name } to array _grammar
-    
+
     do return with array _grammar
 done
 
@@ -206,7 +206,10 @@ define action match_in_replaced_history with array replaced_history, array data_
         if var symbol matches /s-verb/ do
             push into array verbs, elements of array words
         done
-        if var symbol matches /s-adverbs/ do
+        if var symbol matches /s-adverb$/ do
+            if size of array adverbs do
+                push into array adverbs, ";"
+            done
             push into array adverbs, elements of array words
         done
         if var symbol matches /s-questionword/ do
@@ -221,7 +224,7 @@ define action match_in_replaced_history with array replaced_history, array data_
 
         set var i to var i + 1
     done
-    
+
     print new line
 
     print "subjects: "
@@ -255,7 +258,7 @@ define action match_in_replaced_history with array replaced_history, array data_
 done
 
 define action list_grammar with array grammar do
-    
+
     set new hash rules to an empty hash
     set new flag found_replace_parts to 1
     while flag found_replace_parts do
@@ -275,24 +278,24 @@ define action list_grammar with array grammar do
                     if var part_of_replacement matches /^(r-.*?)$/ do
                         set new var search_symbol to $0
                         set flag found_replace_parts to 1
-            
+
                         set new array _new_replacements_tmp to an empty array
                         set elements of array _new_replacements_tmp to elements of array _new_replacements
                         set array _new_replacements to an empty array
-                        
+
                         set new array reduced_list to from_grammar with array grammar, var search_symbol
                         set new array _replacements to every_except_first with array reduced_list
                         for each new array _parts_of_replacement in array _replacements do
-                            
+
                             for each new array _new_replacement in array _new_replacements_tmp do
                                 push into array _new_replacements, [ elements of array _new_replacement, elements of array _parts_of_replacement ]
                             done
-                            
+
                             #print var part_of_replacement concat " "
                             #do print_array with array _parts_of_replacement
                             #print new line
                         done
-                        
+
                     done
                     else do
                         for each new array _new_replacement in array _new_replacements do
@@ -307,7 +310,7 @@ define action list_grammar with array grammar do
                 set elements of array _grammar to (var symbol, elements of array new_replacements)
             done
         done
-    
+
         set hash cache__every_except to an empty hash
     done
 
@@ -318,45 +321,47 @@ define action list_grammar with array grammar do
     #    print new line
     #done
     #do exit with 0
-    
+
     for each new array _grammar in array grammar do
         set new var symbol to from array _grammar first element
 
         set new array replacements to every_except_first with array _grammar
         for each new array replacement in array replacements do
 
-            set new var replacement_str to ""
+            set new var premise_str to ""
             for each new var part_of_replacement in array replacement do
-                if var replacement_str do
-                    set var replacement_str to var replacement_str concat "\\s?"
+                if var premise_str do
+                    set var premise_str to var premise_str concat "\\s?"
                 done
-                set var replacement_str to var replacement_str concat var part_of_replacement concat " ~([^~]*?)~"
+                set var premise_str to var premise_str concat var part_of_replacement concat " ~([^~]*?)~"
         # concat "(?:_)?([^\\\s]*?)\\\s"
             done
-            
+
             set new var conclusion to ""
-            set new var i to 1
-            for each new var part_of_replacement in array replacement do
-                set var conclusion to var conclusion concat " " concat var symbol concat "_" concat var part_of_replacement concat "_\\var i"
-                set var i to var i + 1
-            done
-            do regex with var conclusion: /^\s+/ -> "" :global
-        
+            ##set new var i to 1
+            ##for each new var part_of_replacement in array replacement do
+            ##    set var conclusion to var conclusion concat " " concat var symbol concat "_" concat var part_of_replacement concat "_\\var i"
+            ##    set var i to var i + 1
+            ##done
+            ##do regex with var conclusion: /^\s+/ -> "" :global
+
             set var conclusion to var symbol concat " ~\\1 \\2 \\3 \\4 \\5 \\6 \\7 \\8 \\9~"
 
             if var conclusion matches /^s-all/ do
-                #set var replacement_str to "^\\s*?" concat var replacement_str concat "\\s*?\$"
+                #set var premise_str to "^\\s*?" concat var premise_str concat "\\s*?\$"
             done
 
-            if var replacement_str and var symbol not matches /r-/ do
-                if not from hash rules element { var replacement_str } do
-                    set from hash rules element { var replacement_str } to an empty array
+#print var premise_str concat " ----- " concat var conclusion concat new line
+
+            if var premise_str and var symbol not matches /r-/ do
+                if not from hash rules element { var premise_str } do
+                    set from hash rules element { var premise_str } to an empty array
                 done
-                push into that array: from hash rules element { var replacement_str }, var conclusion
+                push into that array: from hash rules element { var premise_str }, var conclusion
             done
         done
     done
-    
+
     set new array premises to an empty array
     set elements of array premises to keys with elements of hash rules
     for each new var premise in array premises do
@@ -368,7 +373,7 @@ define action list_grammar with array grammar do
         set elements of array conclusions to keys with elements of hash _unique_conclusions
         set from hash rules element { var premise } to array conclusions
     done
-    
+
     do return with hash rules
 done
 
@@ -378,7 +383,7 @@ define action count_spaces_regexp with var data do
 done
 
 define action match_in_grammar with hash rules, array data_pos, array data_words, array data do
-    
+
     set new var data_pos_str to ""
     for each new array data_element in array data do
         set new var symbol to from array data_element second element
@@ -387,7 +392,7 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
     done
     set var data_pos_str to var data_pos_str concat " "
     print var data_pos_str concat new line
-    
+
     set new array _premises to an empty array
     set elements of array _premises to keys with elements of hash rules
     set elements of array _premises to sort {count_spaces_regexp(var b) <=> count_spaces_regexp(var a)} with elements of array _premises
@@ -396,13 +401,13 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
     for each new var premise in array _premises do
         set new array conclusionss to from hash rules element { var premise }
         set new flag final to 0
-    
+
         for each new var conclusions in array conclusionss do
             if var conclusions matches /s-all/ do
                 set flag final to 1
             done
         done
-        
+
         if flag final is true do
             push into array premises_final, var premise
         done
@@ -413,15 +418,15 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
 
     set new array data_pos_list to [ [ var data_pos_str, []] ]
     set new array data_pos_list to reduce_with_rules with array premises_other, hash rules, array data_pos_list, array data_pos, array data_words, 50, 0
-    
+
         print new line concat new line concat new line
-    
+
     set new array replaced_history to reduce_with_rules with array premises_final, hash rules, array data_pos_list, array data_pos, array data_words, 50, 1
-    
+
     if array replaced_history is false do
         do return with 0
     done
-    
+
     set new hash parsed to match_in_replaced_history with array replaced_history, array data_pos, array data_words
     do return with hash parsed
 done
@@ -442,24 +447,24 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
         if not var premise do
             go to next
         done
-    
+
         set new array data_pos_list_tmp to an empty array
         set elements of array data_pos_list_tmp to elements of array data_pos_list
         set array data_pos_list to an empty array
-    
+
         set new var successful to 0
         for each new array data_pos_element in array data_pos_list_tmp do
             set new var data_pos_str to from array data_pos_element 1st element
 
             if var data_pos_str matches / var premise/ do
                 print "found: " concat var premise concat new line
-        
+
                 set new var successful_replacements to 0
-            
+
                 set new array conclusions to from hash rules element { var premise }
                 for each new var conclusion in array conclusions do
                     print "rule:               '" concat var premise concat "' '" concat var conclusion concat "'" concat new line
-                    
+
                     set new var _data_pos_str to var data_pos_str
                     while var _data_pos_str matches / var premise/ do
                         set new var _0 to $0
@@ -472,7 +477,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                         set new var _7 to $7
                         set new var _8 to $8
                         set new var _9 to $9
-                
+
                         do regex with var _data_pos_str: / var premise/ -> " var conclusion"
                         do regex with var _data_pos_str: /\\1/ -> "var _0"
                         do regex with var _data_pos_str: /\\2/ -> "var _1"
@@ -485,7 +490,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                         do regex with var _data_pos_str: /\\9/ -> "var _8"
                         do regex with var _data_pos_str: /\s+/ -> " " :global
                         do regex with var _data_pos_str: /[~]([^\s]*?)\s[~]/ -> "~$0~" :global
-            
+
                         if var data_pos_str ne var _data_pos_str do
                             print "before reduction:  " concat var data_pos_str concat new line
                             print "after reduction:   " concat var _data_pos_str concat new line
@@ -493,7 +498,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
 
                             set var successful_replacements to var successful_replacements + 1
                             set var successful to 1
-                            
+
                             set new array replaced_history to an empty array
                             set elements of array replaced_history to elements of that array: from array data_pos_element 2nd element end of elements
                             set new var history_premise to var premise
@@ -506,9 +511,9 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                 print "conclusion: " concat var conclusion concat new line
                 print "history_premise: " concat var history_premise concat new line
                             push into array replaced_history, [ var history_conclusion, var history_premise ]
-                
+
                             push into array data_pos_list, [ var _data_pos_str, array replaced_history ]
-                
+
                             for each new array replaced_history_element in array replaced_history do
                                 print "- "
                                 do print_array with array replaced_history_element
@@ -517,7 +522,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                         done
                     done
                 done
-        
+
                 if not var successful_replacements do
                     push into array data_pos_list, array data_pos_element
                 done
@@ -534,11 +539,11 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
             done
         done
     done
-    
+
     if flag final do
         for each new array data_pos_element in array data_pos_list do
             set new var data_pos_str to from array data_pos_element 1st element
-            
+
             if var data_pos_str matches /^\s*?s-all [~][^~]*?[~]\s*?$/ do
                 set new array replaced_history to from array data_pos_element 2nd element
                 for each new array replaced_history_element in array replaced_history do
@@ -552,28 +557,28 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
     else do
         do return with array data_pos_list
     done
-    
+
     do return with 0
 done
-    
+
 define action new_parser_start with array grammar, array data, var lang, var path do
-    
+
     set new array data_words to elements_of_array with array data, 0
     set new array data_pos to elements_of_array with array data, 1
 
     set new hash rules to list_grammar with array grammar
     set new hash parsed to match_in_grammar with hash rules, array data_pos, array data_words, array data
-    
+
     do return with hash parsed
 done
 
 
 set multi-line new global array grammar to [
-    
+
     [ "s-all",
         [ "r-sentence", ],
     ],
-    
+
     [ "r-sentence",
         [ "r-adverbs",                        "r-sentence-spo", ],
         [ "r-adverbs",                        "r-sentence-pso", ],
@@ -588,13 +593,13 @@ set multi-line new global array grammar to [
         [ "r-adverbs", "r-questionword-part", "r-sentence-sp", ],
         [ "r-adverbs", "r-questionword-part", "r-sentence-p", ],
     ],
-    
+
     [ "r-questionword-part",
         [ "s-extra-before", "s-questionword", "s-extra-after" ],
         [ "s-questionword", "s-extra-after" ],
         [ "s-questionword", ],
     ],
-    
+
     [ "s-questionword",
         [ "d-questionword", ],
     ],
@@ -605,7 +610,7 @@ set multi-line new global array grammar to [
     [ "s-extra-before",
         [ "d-preposition", ],
     ],
-    
+
     [ "r-sentence-spo",
         [ "s-subject", "r-adverbs", "s-verb", "r-adverbs", "r-objects", "r-adverbs", ],
         [ "s-subject", "r-adverbs", "s-verb", "r-adverbs", "r-objects", "r-adverbs", "s-verb", "r-adverbs", ],
@@ -626,7 +631,7 @@ set multi-line new global array grammar to [
     [ "r-sentence-p",
         [ "s-verb",    "r-adverbs", ],
     ],
-    
+
     [ "s-subject",
         [ "r-nounphrase", ],
     ],
@@ -638,7 +643,7 @@ set multi-line new global array grammar to [
         [ "s-object", "s-object", ],
         [ "s-object", "s-object", "s-object", ],
     ],
-    
+
     [ "r-nounphrase",
         [ "d-title", ],
         [ "d-noun", ],
@@ -648,25 +653,32 @@ set multi-line new global array grammar to [
         [ "d-article", "d-noun", ],
         [ "d-article", "d-adjective", "d-noun", ],
     ],
-    
+
     [ "r-adverbs",
         [ "s-adverbs", ],
         [  ],
     ],
-    
+
     [ "s-adverbs",
-        [ "r-adverb", ],
-        [ "r-adverb", "r-adverb", ],
-        [ "r-adverb", "r-adverb", "r-adverb", ],
-        [ "r-adverb", "r-adverb", "r-adverb", "r-adverb", ],
+        [ "s-adverb", ],
+        [ "s-adverb", "s-adverb", ],
+        [ "s-adverb", "s-adverb", "s-adverb", ],
+        [ "s-adverb", "s-adverb", "s-adverb", "s-adverb", ],
     ],
-    
-    [ "r-adverb",
+
+#    [ "s-adverbs",
+#        [ "r-adverb", ],
+#        [ "r-adverb", "r-adverb", ],
+#        [ "r-adverb", "r-adverb", "r-adverb", ],
+#        [ "r-adverb", "r-adverb", "r-adverb", "r-adverb", ],
+#    ],
+
+    [ "s-adverb",
         [ "d-preposition", "r-nounphrase", ],
         [ "d-adjective", ],
         [ "d-adjective", "d-adjective", ],
     ],
-    
+
     [ "s-verb",
         [ "d-verb", ],
     ],

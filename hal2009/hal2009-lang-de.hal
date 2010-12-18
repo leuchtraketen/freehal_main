@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -1333,7 +1333,7 @@ done
 
 set multi-line new global hash builtin_entity_does_not_end to {
           'mac' => 1,
-          
+
 };
 
 set multi-line new global hash builtin_entity_ends to {
@@ -1544,27 +1544,27 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'ist' => 1,
           'sind' => 1,
           'seid' => 1,
-          
+
           'habe' => 1,
           'hab' => 1,
           'hast' => 1,
           'hat' => 1,
           'haben' => 1,
           'habt' => 1,
-          
+
           'werde' => 1,
           'werd' => 1,
           'wirst' => 1,
           'wird' => 1,
           'werden' => 1,
           'werdet' => 1,
-          
+
           'kann' => 1,
           'kannst' => 1,
           'kann' => 1,
           'koennen' => 1,
           'koennt' => 1,
-          
+
           'will' => 1,
           'willst' => 1,
           'will' => 1,
@@ -1575,50 +1575,50 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'moechtest' => 1,
           'moechten' => 1,
           'moechtet' => 1,
-          
+
           'muss' => 1,
           'musst' => 1,
           'muss' => 1,
           'muessen' => 1,
           'muesst' => 1,
-          
+
           'bin/be' => 1,
           'bist/be' => 1,
           'ist/be' => 1,
           'sind/be' => 1,
           'seid/be' => 1,
-          
+
           'habe/have' => 1,
           'hab/have' => 1,
           'hast/have' => 1,
           'hat/have' => 1,
           'haben/have' => 1,
           'habt/have' => 1,
-          
+
           'werde' => 1,
           'werd' => 1,
           'wirst' => 1,
           'wird' => 1,
           'werden' => 1,
           'werdet' => 1,
-          
+
           'wurde' => 1,
           'wurdest' => 1,
           'wurden' => 1,
           'wurdet' => 1,
-          
+
           'kann/can' => 1,
           'kannst/can' => 1,
           'kann/can' => 1,
           'koennen/can' => 1,
           'koennt/can' => 1,
-          
+
           'will/want' => 1,
           'willst/want' => 1,
           'will/want' => 1,
           'wollen/want' => 1,
           'wollt/want' => 1,
-          
+
           'muss/must' => 1,
           'musst/must' => 1,
           'muss/must' => 1,
@@ -2965,7 +2965,7 @@ set multi-line new global hash builtin_time_relations to {
         "ueberuebermorgen" =>       [ 24*60*60,      +3     ],
         "in-tagen" =>               [ 24*60*60,      +1     ],
         "vor-tagen" =>              [ 24*60*60,      -1     ],
-        
+
         "diese woche" =>            [ 7*24*60*60,    0      ],
         "letzte woche" =>           [ 7*24*60*60,    -1     ],
         "vorletzte woche" =>        [ 7*24*60*60,    -2     ],
@@ -2973,7 +2973,7 @@ set multi-line new global hash builtin_time_relations to {
         "uebernaechste woche" =>    [ 7*24*60*60,    +2     ],
         "in-wochen" =>              [ 7*24*60*60,    +1     ],
         "vor-wochen" =>             [ 7*24*60*60,    -1     ],
-        
+
         "in viertelstunde" =>       [ 15*60,         +1     ],
         "vor viertelstunde" =>      [ 15*60,         -1     ],
         "in halbe stunde" =>        [ 30*60,         +1     ],
@@ -2984,7 +2984,7 @@ set multi-line new global hash builtin_time_relations to {
         "vor stunde" =>             [ 60*60,         -1     ],
         "in-stunden" =>             [ 60*60,         +1     ],
         "vor-stunden" =>            [ 60*60,         -1     ],
-        
+
 };
 
 set new global array builtin_time_relations_names to an empty array
@@ -3004,7 +3004,7 @@ define action time_pre_transformations with var sentence, var lang, var path do
     do regex with var sentence: /(^|\s)bis zum (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
     do regex with var sentence: /(^|\s)bis (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
     do regex with var sentence: /(^|\s)zum (\d+?\.\d+?\.\d+?)(\s|$)/ -> " bis-$1 " :global:i
-    
+
     do return with var sentence
 done
 
@@ -3015,7 +3015,7 @@ define action add_undefined_time with array clause do
     done
     set var adverbs to var adverbs concat "zu dieser Zeit"
     set from array clause element [3] to var adverbs
-    
+
     do return with array clause
 done
 
@@ -3109,7 +3109,7 @@ done
 #    if var word matches /<[A-Z]>/ do
 #        set var guessed to 'n'
 #    done
-#    
+#
 #    do return using var guessed
 #done
 
@@ -3166,13 +3166,13 @@ define action get_article with var genus, var part_of_sentence, var def do
             done
         done
     done
-    
+
     do return with ""
 done
 
 define action get_person with var _noun do
     set new var noun to lc with var _noun
-    
+
     if var noun matches "ich" do
         do return with "1s"
     done
@@ -3191,7 +3191,7 @@ define action get_person with var _noun do
     if var noun matches "sie" do
         do return with "3p"
     done
-    
+
     do return with "3s"
 done
 
@@ -3237,7 +3237,7 @@ define action get_verb with var verb, var person do
             do return with "sind"
         done
     done
-    
+
     if var verb matches "have" do
         if var person matches "1s" do
             do return with "habe"
@@ -3258,7 +3258,7 @@ define action get_verb with var verb, var person do
             do return with "haben"
         done
     done
-    
+
     if var verb matches "want" do
         if var person matches "1s" do
             do return with "will"
@@ -3279,7 +3279,7 @@ define action get_verb with var verb, var person do
             do return with "wollen"
         done
     done
-    
+
     if var verb matches "must" do
         if var person matches "1s" do
             do return with "muss"
@@ -3300,7 +3300,7 @@ define action get_verb with var verb, var person do
             do return with "muessen"
         done
     done
-    
+
     if var verb matches "can" do
         if var person matches "1s" do
             do return with "kann"
@@ -3321,7 +3321,7 @@ define action get_verb with var verb, var person do
             do return with "koennen"
         done
     done
-    
+
     if var verb matches "may" do
         if var person matches "1s" do
             do return with "darf"
@@ -3342,7 +3342,7 @@ define action get_verb with var verb, var person do
             do return with "duerfen"
         done
     done
-    
+
     if var verb matches "should" do
         if var person matches "1s" do
             do return with "sollte"
@@ -3475,7 +3475,7 @@ done
 define action replace_general_reflexive_pronoun with var text, var person do
     set new var general_pronoun to "sich"
     set new var better_pronoun to "sich"
-    
+
     if var person matches "1s" do
         set var better_pronoun to "mich"
     done
@@ -3509,11 +3509,11 @@ define action compute_output with var output do
 
     do regex with var output: /in dem/ -> "im" :global:i
     do regex with var output: /an dem/ -> "am" :global:i
-    
+
     do regex with var output: /^(.*?) _(wie|wer|was|wo|wann|warum|wieso|weshalb)_(.*?)$/ -> "$1 $0 $2" :global:i
 
     do regex with var output: / [&] / -> " und " :global:i
-    
+
     if var output matches /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/ do
         set new var result to $0 * $1
         do regex with var output: /\s(<[0-9]>+?)<[*]>(<[0-9]>+?)\s/ -> " var result " :i
@@ -3538,7 +3538,7 @@ define action compute_output with var output do
         set var output to var output concat "?"
     done
     do regex with var output: /=>/ -> "" :global:i
-    
+
     if var output matches /\$\$username\$\$/ do
         print new line
         print "Searching for the user's name"
@@ -3559,7 +3559,7 @@ define action compute_output with var output do
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
         done
-        
+
         set new array usernames to an empty array
         set new var input_file_name to '_input__get_csv'
         set new var input_handle to handle for file name var input_file_name, read
@@ -3604,7 +3604,7 @@ define action compute_output with var output do
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
         done
-        
+
         set new array usernames to an empty array
         set new var input_file_name to '_input__get_csv'
         set new var input_handle to handle for file name var input_file_name, read
@@ -3616,7 +3616,7 @@ define action compute_output with var output do
                 push into array usernames, from array rawresult element [ 3 ]
             done
         done
-        
+
         # Then, look what is already given
         set new var output_file_name to '_output__get_csv'
         set new var csv_output to 'haenen|haen|hast|hat|han|hae|ha^du^0^0^0^default^0^0^0^0^0^0'
@@ -3631,7 +3631,7 @@ define action compute_output with var output do
         while not exists: '_input__get_csv', end test do
             do wait 0.5 seconds
         done
-        
+
         set new var input_file_name to '_input__get_csv'
         set new var input_handle to handle for file name var input_file_name, read
 
@@ -3676,13 +3676,13 @@ define action compute_output with var output do
 
     do regex with var output: / von den / -> " der " :global:i
     do regex with var output: / von dem / -> " des " :global:i
-    
+
     do regex with var output: /\/must/ -> "" :global:i
     do regex with var output: /\/may/ -> "" :global:i
     do regex with var output: /\/can/ -> "" :global:i
     do regex with var output: /\/want/ -> "" :global:i
     do regex with var output: /\/should/ -> "" :global:i
-    
+
     do regex with var output: / nicht (noch|sicher) / -> " $0 nicht " :global:i
     do regex with var output: /(etwas|nichts) (schon|noch)/ -> "$1 $0" :global:i
 
@@ -3693,7 +3693,7 @@ define action compute_output with var output do
 
     set new array _clauses to split using /<[,]>/, var output
     for each new var _clause in array _clauses is rw do
-        # var _clause matches /\sein/ and 
+        # var _clause matches /\sein/ and
         if lc(var _clause) matches /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ and lc(var _clause) matches /(^|\s)(ein.?.?)(\s|$)/ do
             do regex with var _clause: /(^|<[,.]>|\s)nicht(\s|<[,.]>|$)/ -> "$1" :global:i
             do regex with var _clause: /\sein(.?.?.?)\s/ -> " kein$0 " :global:i
@@ -3726,7 +3726,7 @@ define action compute_output with var output do
     if var output matches /time to (<[0-9]>+?)(\s|$)/ do
         set var time_end to $0
     done
-    
+
     set new array date_time_array to elements-returning localtime with var time_begin
     set new var sec to from array date_time_array element [ 0 ]
     set new var min to from array date_time_array element [ 1 ]
@@ -3737,7 +3737,7 @@ define action compute_output with var output do
     set new var wday to from array date_time_array element [ 6 ]
     set new var yday to from array date_time_array element [ 7 ]
     set new var isdst to from array date_time_array element [ 8 ]
-    
+
     if not var min matches /../ do
         set var min to "0" concat var min
     done
@@ -3747,7 +3747,7 @@ define action compute_output with var output do
     if not var hour matches /../ do
         set var hour to "0" concat var hour
     done
-    
+
     set new var weekday to 'nichts'
     if var wday is 0 do
         set var weekday to "Sonntag"
@@ -3770,7 +3770,7 @@ define action compute_output with var output do
     if var wday is 6 do
         set var weekday to "Samstag"
     done
-    
+
     set var year to var year + 1900
     set var mon to var mon + 1
     if var mon matches /^.$/ do
@@ -3779,7 +3779,7 @@ define action compute_output with var output do
     if var mday matches /^.$/ do
         set var mday to "0" concat var mday
     done
-    
+
     set new var monthname to 'Monat'
     if var mon is 1 do
         set var monthname to "Januar"
@@ -3817,8 +3817,8 @@ define action compute_output with var output do
     if var mon is 12 do
         set var monthname to "Dezember"
     done
-    
-    
+
+
     do regex with var output: /\$\$time\$\$/ -> "var hour:var min:var sec" :global:i
     do regex with var output: /\$\$wday\$\$/ -> "var weekday" :global:i
     do regex with var output: /\$\$mday\$\$/ -> "var mday" :global:i
@@ -3828,16 +3828,16 @@ define action compute_output with var output do
     do regex with var output: /\$\$date\$\$/ -> "var weekday, den var mday.var mon.var year" :global:i
 
     do regex with var output: /array\(.*?\)/ -> "" :global:i
-    
+
     do regex with var output: /<[~]>time.*/ -> "" :global:i
-    
-    
+
+
     if var time_end + 24*60*60 is var time_begin do
         set new var temp to var time_end
         set var time_end to var time_begin
         set var time_begin to var temp
     done
-    
+
     if var time_begin + 24*60*60 is var time_end do
         if var output matches /time from (<[0-9]>+?)(\s|$)/ do
             set new var replacement to ''
@@ -3863,7 +3863,7 @@ define action compute_output with var output do
             done
             do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement " :global:i
         done
-        
+
         set new array date_time_array to elements-returning localtime with var time_end
         set new var sec to from array date_time_array element [ 0 ]
         set new var min to from array date_time_array element [ 1 ]
@@ -3874,7 +3874,7 @@ define action compute_output with var output do
         set new var wday to from array date_time_array element [ 6 ]
         set new var yday to from array date_time_array element [ 7 ]
         set new var isdst to from array date_time_array element [ 8 ]
-        
+
         if not var min matches /../ do
             set var min to "0" concat var min
         done
@@ -3884,7 +3884,7 @@ define action compute_output with var output do
         if not var hour matches /../ do
             set var hour to "0" concat var hour
         done
-        
+
         set var year to var year + 1900
         set var mon to var mon + 1
         if var mon matches /^.$/ do
@@ -3893,7 +3893,7 @@ define action compute_output with var output do
         if var mday matches /^.$/ do
             set var mday to "0" concat var mday
         done
-        
+
         if var output matches /time to (<[0-9]>+?)(\s|$)/ do
             print "To:   " concat var mday concat '.' concat var mon concat '.' concat var year concat ' ' concat var hour concat ':' concat var min concat new line
             set new var replacement to ''
@@ -3906,7 +3906,7 @@ define action compute_output with var output do
             do regex with var output: /time to (<[0-9]>+?)(\s|$)/ -> "var replacement " :global:i
         done
     done
-    
+
     do regex with var output: /nothing/ -> "nichts" :global:i
     do regex with var output: /NULL/ -> "" :global:i
     do regex with var output: /<[;]>/ -> " " :global:i
@@ -3922,7 +3922,7 @@ define action compute_output with var output do
     if not var output matches /<[?!]>/ do
         set var output to var output concat "."
     done
-    
+
     do return with var output
 done
 
@@ -3956,12 +3956,12 @@ define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
         set new var entity to from array entity_array 1st element
-        
+
         if lc(var entity) matches /(^|\s)(ich|du|mich|dich)(\s|$)/ do
             set flag continue to 1
         done
     done
-    
+
     if not flag continue do
         print "Does not contain a personal pronoun."
         print new line
@@ -3969,7 +3969,7 @@ define action toggle_verbs with array verbs, array entities do
     done
     print "Contains a personal pronoun."
     print new line
-    
+
     for each new array verb_array in array verbs is rw do
         set new var verb to lc with from array verb_array 1st element
         print "verb: " concat var verb
@@ -4082,7 +4082,7 @@ define action toggle_entities with array entities do
         else if lc(var entity) matches /(^|<[_]>)dein/ do
             do regex with var entity: /(^|<[_]>)dein/ -> "${1}mein" :global:i
         done
-        
+
         set from array entity_array 1st element to var entity
     done
     do return with array entities
@@ -4147,26 +4147,26 @@ define action stem_nouns with array phrases do
                 done
                 go to next
             done
-            
+
             if length(var noun) <= 3 do
                 go to next
             done
-            
+
             # TEXT
             # That's the stemming algorithm
             # CODE
             if var noun matches /((ein)|(ie.)|(tes)|(be)|([mnpl][ksl]er))$/ do
                 go to next
             done
-            
+
             if var noun matches /ei.$/ do
                 go to next
             done
-            
+
             if var noun matches /^oder$/ do
                 set var noun to '|'
             done
-            
+
             if var noun matches /sen$/ do
                 go to next
             done
@@ -4215,7 +4215,7 @@ define action stem_nouns with array phrases do
             #done
             #if var noun matches /.....(end|ung)$/ do
             #    do regex with var noun: /(end|ung)$/ -> "*" :global:i
-            #    
+            #
             #    #if var noun matches /ig$/ and not var noun matches /eig$/ do
             #    #    do regex with var noun: /ig$/ -> "*" :global:i
             #    #done
@@ -4231,7 +4231,7 @@ define action stem_nouns with array phrases do
             done
         done
         set var phrase to join using " ", elements of array words
-        
+
         do regex with var phrase: /<[*]>\s/ -> "*" :global
         do regex with var phrase: /\s<[*]>/ -> "*" :global
         do regex with var phrase: /\$<[*]>/ -> "\$ *" :global
@@ -4239,13 +4239,13 @@ define action stem_nouns with array phrases do
         do regex with var phrase: /\s+<[|]>/ -> "|" :global
         do regex with var phrase: /\s+$/ -> "" :global
     done
-    
+
     do return with array phrases
 done
 
 define action check_for_math with var input do
     set new var math to var input
-    
+
     do regex with var math: /dreizehn/ -> "13" :global:i
     do regex with var math: /vierzehn/ -> "14" :global:i
     do regex with var math: /fuenfzehn/ -> "15" :global:i
@@ -4268,7 +4268,7 @@ define action check_for_math with var input do
     do regex with var math: /zehn/ -> "10" :global:i
     do regex with var math: /elf/ -> "11" :global:i
     do regex with var math: /zwoelf/ -> "12" :global:i
-    
+
     do regex with var math: /<[=?!._]>/ -> "" :global:i
     do regex with var math: /hoch/ -> "**" :global:i
     do regex with var math: /\^/ -> "**" :global:i
@@ -4309,7 +4309,7 @@ define action check_for_math with var input do
     do regex with var math: /wurzel/ -> "sqrt " :global:i
     do regex with var math: /<[,]>/ -> "." :global:i
     set new var value to undef
-    
+
     print "Checking for math expression: "
     print new line
     print var math
@@ -4341,7 +4341,7 @@ define action check_for_thanks with var input do
             do return with 1
         done
     done
-    
+
     do return with 0
 done
 
@@ -4351,7 +4351,7 @@ define action say_answer_thanks with var user do
     push into array answers, "Gern geschehen."
     set new var random_number to rand using elements of array answers
     set new var answer to from array answers element [ var random_number ]
-    
+
     do return with [ 0, var answer ]
 done
 
@@ -4371,7 +4371,7 @@ define action check_for_greeting with var input do
             do return with 1
         done
     done
-    
+
     do return with 0
 done
 
@@ -4419,14 +4419,14 @@ define action make_parsable with var input do
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
-    
+
     do return with var input
 done
 
 define action multiple_choices_verb with var verb do
     set new array choices to an empty array
     set new array endings to an empty array
-    
+
     push into array endings, "enen"
     push into array endings, "en"
     push into array endings, "st"
@@ -4442,7 +4442,7 @@ define action multiple_choices_verb with var verb do
             go to last
         done
     done
-    
+
     if var verb matches "bi" or var verb matches "i" or var verb matches "is" or var verb matches "sind" or var verb matches /heis/ or var verb matches /wurd/ do
         push into array choices, var verb
         push into array choices, "="
@@ -4524,7 +4524,7 @@ define action multiple_choices_verb with var verb do
             push into array choices, var verb concat var ending
         done
     done
-    
+
     set new var verbs to join with "|", elements of array choices
     do return with var verbs
 done
@@ -4536,7 +4536,7 @@ define action modify_input with var input, var current_language, var path do
         for each new var line from var input_handle do
             set var last_output to var line
         done
-        
+
         if var last_output do
             set var input to "warum " concat var last_output concat "?"
         done
@@ -4547,7 +4547,7 @@ define action modify_input with var input, var current_language, var path do
         for each new var line from var input_handle do
             set var last_output to var line
         done
-        
+
         if var last_output do
             set var input to "warum " concat var last_output
         done
@@ -4564,7 +4564,7 @@ define action modify_input with var input, var current_language, var path do
                 done
             done
         done
-        
+
         if var last_output do
             do regex with var input: /(^|\s)dessen(\s|$)/ -> "$0$1" :global:i
             do regex with var input: /(<[?!.]>|$)/ -> ", dass var last_output$0" :i
@@ -4576,12 +4576,12 @@ define action modify_input with var input, var current_language, var path do
         for each new var line from var input_handle do
             set var last_input to var line
         done
-        
+
         if var last_input do
             set var input to var last_input concat " " concat var input
         done
     done
-    
+
     return var input
 done
 
@@ -4589,19 +4589,19 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
     if var only_learn do
         print "Sentence should only be learned!"
         print new line
-        
+
         do return with "learn"
     done
     else if var input matches /<[?]>/ do
         print "Sentence contains a question mark"
         print new line
-        
+
         do return with "question"
     done
     else if (not var input matches /_no-question_/) and lc(var input) matches /^((kannst\s)|(kann\s))/ do
         print "Sentence contains a question with can..."
         print new line
-        
+
         do return with "question"
     done
     else if (not var input matches /_no-question_/) and lc(var input) matches /^(<[A-Za-z]>+?)\s/ do
@@ -4609,7 +4609,7 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
         if from array tags 1st element matches /v/ and not from array tags 1st element matches /adv/ do
             print "Sentence contains a verb as first word..."
             print new line
-            
+
             do return with "question"
         done
     done
@@ -4640,24 +4640,24 @@ define action but_feature_is_useful with var input do
     if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         do return with 0
     done
-    
+
     if lc(" " concat var input concat " ") matches /(\sdas\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         if lc(" " concat var input concat " ") matches /(\sist\s)|(\ssind\s)/ do
             do return with 1
         done
     done
-    
+
     if lc(" " concat var input concat " ") matches /(\shast\s)|(\shat\s)|(\shabe\s)/ do
         do return with 1
     done
-    
+
     do return with 0
 done
 
 define action use_bug_feature with array results, hash parsed do
     for each new array result in array results do
         set new array clause to an empty array
-        
+
         push into array clause, ''
         if from array result element [ 1 ] element [ 3 ] matches /nicht/ do
             push into array clause, 'und auch'
@@ -4665,7 +4665,7 @@ define action use_bug_feature with array results, hash parsed do
         else do
             push into array clause, 'aber'
         done
-        
+
         set new var objects to ''
         set new array objects_separated to from hash parsed element { 'objects' }
         for each new array obj in array objects_separated do
@@ -4673,7 +4673,7 @@ define action use_bug_feature with array results, hash parsed do
             set var objects to var objects concat from array obj 1st element
         done
         do regex with var objects: /^\s/ -> "" :global
-        
+
         if var objects matches /^\sein/ do
             push into array clause, 'k' concat var objects
         done
@@ -4681,7 +4681,7 @@ define action use_bug_feature with array results, hash parsed do
             push into array clause, 'nicht ' concat var objects
         done
         push into array clause, ''
-        
+
         set var objects to lc with var objects
         set new var lastnoun to var objects
         do regex with var lastnoun: /^.*?\s/ -> "" :global
@@ -4691,7 +4691,7 @@ define action use_bug_feature with array results, hash parsed do
             done
         done
     done
-    
+
     do return with array results
 done
 
@@ -4793,34 +4793,34 @@ define action use_random with var input, var current_language, var path, var mod
             push into array random, "Nein."
 
             if lc(" " concat var input concat " ") matches /(\shast\s)/ do
-                push into array random, "Nein, habe ich leider verliehen." 
-                push into array random, "Nein, ich bin nuechtern." 
-                push into array random, "Nein, ich habe eine Menge Freunde." 
-                push into array random, "Nein, ich habe viele Freunde und Bekannte." 
+                push into array random, "Nein, habe ich leider verliehen."
+                push into array random, "Nein, ich bin nuechtern."
+                push into array random, "Nein, ich habe eine Menge Freunde."
+                push into array random, "Nein, ich habe viele Freunde und Bekannte."
             done
             if lc(" " concat var input concat " ") matches /(\smagst\s)/ do
                 push into array random, "Nein, ich mag das nicht."
             done
-            push into array random, "Nein eigentlich so gut wie nie." 
-            push into array random, "Nein, ganz im Gegenteil." 
+            push into array random, "Nein eigentlich so gut wie nie."
+            push into array random, "Nein, ganz im Gegenteil."
             push into array random, "Nein, ganz und gar nicht."
-            push into array random, "Nein, keinesfalls." 
+            push into array random, "Nein, keinesfalls."
             push into array random, "Nein, ich sehe keinen Grund dazu ."
-            push into array random, "Nein, ich vertreibe mir mit chatten die Langeweile." 
-            push into array random, "Nein, tu ich sicher nicht." 
-            push into array random, "Nein, nicht direkt, darueber will ich nicht reden." 
-            push into array random, "Nein, nur ganz selten." 
-            push into array random, "Nicht falsch verstehen, aber ich denke nicht das dich das etwas angeht." 
+            push into array random, "Nein, ich vertreibe mir mit chatten die Langeweile."
+            push into array random, "Nein, tu ich sicher nicht."
+            push into array random, "Nein, nicht direkt, darueber will ich nicht reden."
+            push into array random, "Nein, nur ganz selten."
+            push into array random, "Nicht falsch verstehen, aber ich denke nicht das dich das etwas angeht."
             if lc(" " concat var input concat " ") matches /(\sviel\s)/ do
-                push into array random, "Nicht gerade wenig." 
-                push into array random, "Nicht mehr und nicht weniger als andere." 
+                push into array random, "Nicht gerade wenig."
+                push into array random, "Nicht mehr und nicht weniger als andere."
             done
             if lc(" " concat var input concat " ") matches /(\sfeig)/ do
                 push into array random, "Nicht feige, nur vorsichtig."
             done
         done
     done
-    
+
     for each new var r in array random do
         set var r to [ 0, var r ]
     done
@@ -4846,7 +4846,7 @@ define action check_sentence_for_weather with var input do
         print "I don't have to check the weather"
         print new line
     done
-    
+
     do return with ''
 done
 
@@ -4854,12 +4854,12 @@ define action check_for_weather with var place, var lang, var path do
     do chdir with var path
     do regex with var place: /\s+/ -> "\\s" :global
     do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather.txt http://www.wetter.com/suche/?search=" concat var place concat "&search_type_weather=1&search_type_site=1"
-    
+
     set new var pro_file_name to "./lang_" concat var lang concat "/weather.pro"
     set new var weather_pro_file to handle for file name var pro_file_name, write
     do close with var weather_pro_file
     do trigger_check_files without arguments
-    
+
     set new var search_results to handle for file name "weather.txt", read
     for each new var line from var search_results do
         if var line matches /["]search_result["]/ do
@@ -4868,11 +4868,11 @@ define action check_for_weather with var place, var lang, var path do
             do regex with var url: /html.*?$/ -> "html" :global
             print var url
             print new line
-            
+
             set new var name to ''
             set new var temperature to ''
             set new var weather to ''
-            
+
             do wait 2 seconds
             do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather-city.txt " concat var url
             set new var city to handle for file name "weather-city.txt", read
@@ -4902,7 +4902,7 @@ define action check_for_weather with var place, var lang, var path do
                     do regex with var line: /,/ -> " in " :global
                     if var line do
                         set var temperature to var line
-                        
+
                         print var line
                         print new line
                     done
@@ -4916,14 +4916,14 @@ define action check_for_weather with var place, var lang, var path do
                     do regex with var line: /,/ -> " in " :global
                     if var line do
                         set var weather to var line
-                        
+
                         print var line
                         print new line
                     done
                 done
             done
             do close with var city
-            
+
             set new var weather_pro_file to handle for file name var pro_file_name, append
             print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> (true)"
             print into var weather_pro_file data new line
@@ -4941,9 +4941,9 @@ define action check_for_weather with var place, var lang, var path do
         done
     done
     do close with var search_results
-    
+
     do reread_pro_file with var pro_file_name
-    
+
     do return without arguments
 done
 
@@ -4958,7 +4958,7 @@ define action replace_she with var text, var replacement do
 done
 
 define action verb_category with var verb do
-    
+
     if var verb matches /\// do
         do return with ""
     done
@@ -4981,7 +4981,7 @@ define action verb_category with var verb do
     if var verb matches /(soll)|(sollst)|(sollen)|(solltest)|(solltet)|(sollte)/ do
         do return with "should"
     done
-    
+
     do return with ""
 done
 
@@ -5003,7 +5003,7 @@ done
 
 define action upper_case_correction with var phrase, hash tags, var lang, var path do
     set new array words to split with /\s+?/, var phrase
-    
+
     for each new var word in array words do
         if not from hash tags element { var word } do
             set new var word_to_check to var word
@@ -5019,11 +5019,11 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
             set var word to ucfirst with var word
         done
     done
-    
+
     set var phrase to join ' ', elements of array words
-    
+
     set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
-    
+
     for each new var prefix in array verb_prefixes do
         if from hash builtin_verb_prefixes_no_split element { var prefix } do
             go to next
@@ -5034,21 +5034,21 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
         if var phrase matches /kann|soll|muss|muess|darf/ do
             go to next
         done
-        
+
         if lc(var phrase) matches /(andro)/ do
             go to next
         done
         if lc(var phrase) matches /\.\.\./ do
             go to next
         done
-        
+
         if var phrase matches /\s($prefix)(<[a-zA-Z0-9]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?)(\s|$)/ do
             print "possible verb: "
             print lc( $0 concat $1 )
             print " = "
             print from hash tags element { lc( $0 concat $1 ) } 1st element
             print new line
-            
+
             if (not from hash tags element { lc( $0 concat $1 ) } 1st element matches /v/) or from hash tags element { lc( $0 concat $1 ) } 1st element matches /adv/ or from hash tags element { lc( $0 concat $1 ) } 1st element matches /adj/ do
                 print "no verb to replace... (1)"
                 print new line
@@ -5057,26 +5057,26 @@ define action upper_case_correction with var phrase, hash tags, var lang, var pa
 
             do regex with var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)<[,]>/ -> " $1$2 $0," :global
             do regex with var phrase: /\s($prefix)(<[a-zA-Z0-9]>+?)(\s?.*?)$/ -> " $1$2 $0" :global
-            
+
             if var phrase not matches /<[?]>/ do
                 do regex with var phrase: /<[.]>/ -> "" :global
                 set var phrase to var phrase concat "."
             done
         done
     done
-    
+
     do return with var phrase
 done
 
 define action to_verb_root_left with var verb, var lang, var path do
     set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
-    
+
     set new var allprefix to ''
-    
+
     set new var last_verb to ''
     while not var verb matches var last_verb do
         set var last_verb to var verb
-        
+
         if length(var verb) > 4 and var verb matches /<[aeiou]>/ do
             for each new var prefix in array verb_prefixes do
                 if var verb matches /^var prefix/ do
@@ -5085,7 +5085,7 @@ define action to_verb_root_left with var verb, var lang, var path do
                     go to last
                 done
             done
-            
+
             if var verb matches /^ver/ and not var verb matches /^verge/ do
                 do regex with var verb: /^ver/ -> "" :i
                 set var allprefix to var allprefix concat "ver"
@@ -5109,7 +5109,7 @@ define action to_verb_root_left with var verb, var lang, var path do
 done
 
 define action to_verb_root_right with var verb, var lang, var path do
-    
+
     if var verb matches /e<[rl]>n$/ do
         if var verb matches /h/ do
             do regex with var verb: /(<[rl]>)n$/ -> "$0" :global
@@ -5118,7 +5118,7 @@ define action to_verb_root_right with var verb, var lang, var path do
             do regex with var verb: /(e<[rl]>)n$/ -> "$0" :global
         done
     done
-    
+
     else if var verb matches /eigen$/ do
         do regex with var verb: /en$/ -> "" :global
     done
@@ -5128,7 +5128,7 @@ define action to_verb_root_right with var verb, var lang, var path do
     else if var verb matches /lichen$/ do
         do regex with var verb: /lichen$/ -> "" :global
     done
-    
+
     else if var verb matches /eien$/ do
         do regex with var verb: /en$/ -> "" :global
     done
@@ -5141,29 +5141,29 @@ define action to_verb_root_right with var verb, var lang, var path do
     else if var verb matches /n$/ do
         do regex with var verb: /n$/ -> "" :global
     done
-    
+
     do return with var verb
 done
 
 define action to_verb_root with var verb, var lang, var path do
 
-    
+
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
     set var verb to from array verb_and_prefix 1st element
 
     set var verb to to_verb_root_right with var verb, var lang, var path
-    
+
     do return with var verb
 done
 
 define action to_verb_prefix with var verb, var lang, var path do
 
-    
+
     set new array verb_and_prefix to to_verb_root_left with var verb, var lang, var path
     set new var prefix to from array verb_and_prefix 2nd element
-    
+
     set var verb to to_verb_root_right with var verb, var lang, var path
-    
+
     do return with var prefix
 done
 
@@ -5175,7 +5175,7 @@ define action to_verb_nucleus_right with var verb, var lang, var path do
         set flag has_h to 1
         do regex with var verb: /h$/ -> "" :i
     done
-    
+
     if var verb matches /(ei|au|eu|aeu|ou|ie|aa|ee|oo|uu|oeu|oe|ue|ae)$/ do
         do return with $0
     done
@@ -5185,16 +5185,16 @@ define action to_verb_nucleus_right with var verb, var lang, var path do
     if var verb matches /(a|e|i|o|u)$/ do
         do return with $0
     done
-    
+
     do return with var verb
 done
 
 define action to_verb_nucleus with var verb, var lang, var path do
     set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
     do regex with var verb: /var postnucleus$/ -> "" :i
-    
+
     set var verb to to_verb_nucleus_right with var verb, var lang, var path
-    
+
     do return with var verb
 done
 
@@ -5206,19 +5206,19 @@ define action to_verb_prenucleus_right with var verb, var lang, var path do
         set flag has_h to 1
         do regex with var verb: /h$/ -> "" :i
     done
-    
+
     set new var postnucleus to to_verb_postnucleus with var verb, var lang, var path
     do regex with var verb: /var postnucleus$/ -> "" :i
     set new var nucleus to to_verb_nucleus with var verb, var lang, var path
     do regex with var verb: /var nucleus$/ -> "" :i
-    
+
     do return with var verb
 done
 
 define action to_verb_prenucleus with var verb, var lang, var path do
 
     set var verb to to_verb_prenucleus_right with var verb, var lang, var path
-    
+
     do return with var verb
 done
 
@@ -5230,19 +5230,19 @@ define action to_verb_postnucleus_right with var verb, var lang, var path do
         set var postnucleus to "er" concat var postnucleus
         do regex with var verb: /(d)er$/ -> "$0" :i
     done
-    
+
     while var verb matches /(<[bcdfghjklmnpqrstvwxyz]>)$/ do
         set var postnucleus to $0 concat var postnucleus
         do regex with var verb: /$0$/ -> "" :i
     done
-    
+
     do return with var postnucleus
 done
 
 define action to_verb_postnucleus with var verb, var lang, var path do
 
     set var verb to to_verb_postnucleus_right with var verb, var lang, var path
-    
+
     do return with var verb
 done
 
@@ -5255,12 +5255,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     done
     set new var verb_prenucleus to to_verb_prenucleus with var verb, var lang, var path
     set new var verb_postnucleus to to_verb_postnucleus with var verb, var lang, var path
-    
+
     set new var verb_past_nucleus to var verb_nucleus
     set new var verb_past_prefix to var verb_prefix
     set new var verb_past_prenucleus to var verb_prenucleus
     set new var verb_past_postnucleus to var verb_postnucleus
-    
+
     set new var verb_participle_nucleus to var verb_nucleus
     set new var verb_participle_prefix to var verb_prefix
     set new var verb_participle_prenucleus to var verb_prenucleus
@@ -5271,11 +5271,11 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
     print "verb_prefix:      " concat var verb_prefix concat new line
     print "verb_prenucleus:  " concat var verb_prenucleus concat new line
     print "verb_postnucleus: " concat var verb_postnucleus concat new line
-    
+
     set new flag is_strong_verb to 0
-    
+
     # irregular
-    
+
     # s-ei-n
     if (not flag is_strong_verb) and var verb_nucleus matches /^(ei)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^$/ do
         set var verb_past_nucleus to 'i'
@@ -5289,7 +5289,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # g-e-h-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(g)/ and var verb_postnucleus matches /^(h)$/ do
         set var verb_past_nucleus to 'i'
@@ -5301,7 +5301,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # w-i-ss-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(ss)$/ do
         set var verb_past_nucleus to 'u'
@@ -5313,10 +5313,10 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
-    
+
+
     # 4th
-    
+
     # ge-b-ae-r-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(ae)$/ and var verb_prenucleus matches /(b)/ and var verb_postnucleus matches /^(r)$/ do
         set var verb_past_nucleus to 'a'
@@ -5326,7 +5326,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # be-f-e-hl- / empf-e-hl-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(f|empf|bef)/ and var verb_postnucleus matches /^(hl)$/ do
         set var verb_past_nucleus to 'a'
@@ -5336,7 +5336,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # k-o-mm-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(o)$/ and var verb_prenucleus matches /(k|gek)/ and var verb_postnucleus matches /^(mm)$/ do
         set var verb_past_nucleus to 'a'
@@ -5347,7 +5347,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # n-e-hm-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(n)/ and var verb_postnucleus matches /^(hm|m)$/ do
         set var verb_past_nucleus to 'a'
@@ -5359,7 +5359,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # er-schr-e-ck-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(schr|erschr)/ and var verb_postnucleus matches /^(ck|k)$/ do
         set var verb_past_nucleus to 'a'
@@ -5371,7 +5371,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # spr-e-ch- / st-e-ch- / st-e-hl- / br-e-ch-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e|i)$/ and var verb_prenucleus matches /(spr|st|erst|st|br)/ and var verb_postnucleus matches /^(ch|hl)$/ do
         set var verb_past_nucleus to 'a'
@@ -5381,7 +5381,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # tr-e-ff-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(tr)/ and var verb_postnucleus matches /^(ff|f)$/ do
         set var verb_past_nucleus to 'a'
@@ -5393,7 +5393,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # ver-g-ae-r-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(ae)$/ and var verb_prenucleus matches /(g)/ and var verb_postnucleus matches /^(r)$/ do
         set var verb_past_nucleus to 'o'
@@ -5403,7 +5403,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # sch-e-r- / schw-oe-r- / er-w-ae-g-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e|oe|ae)$/ and var verb_prenucleus matches /(sch|schw|w|erw)/ and var verb_postnucleus matches /^(r|g)$/ do
         set var verb_past_nucleus to 'o'
@@ -5413,7 +5413,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # w-e-b-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(b)$/ do
         set var verb_past_nucleus to 'o'
@@ -5423,11 +5423,11 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
-    
+
+
     # 5th
-    
-    # e-ss- / fr-e-ss- / m-e-ss- / ver-g-e-ss- 
+
+    # e-ss- / fr-e-ss- / m-e-ss- / ver-g-e-ss-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(|fr|m|verg|g|)/ and var verb_postnucleus matches /^(ss)$/ do
         set var verb_past_nucleus to 'a'
         set var verb_participle_nucleus to 'e'
@@ -5439,7 +5439,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # s-i-tz-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^(tz)$/ do
         set var verb_past_nucleus to 'a'
@@ -5451,7 +5451,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # b-i-tt-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(i)$/ and var verb_prenucleus matches /(b)/ and var verb_postnucleus matches /^(tt|t)$/ do
         set var verb_past_nucleus to 'a'
@@ -5463,7 +5463,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # g-e-b- / tr-e-t-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(g|erg|verg|tr)/ and var verb_postnucleus matches /^(b|t)$/ do
         set var verb_past_nucleus to 'a'
@@ -5473,7 +5473,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # l-e-s- / l-ie-g- / l-e-g- / ge-n-e-s- / ge-sch-e-h-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e|ie)$/ and var verb_prenucleus matches /^(l|n|gen|sch|gesch)$/ and var verb_postnucleus matches /^(g|s|h)$/ do
         set var verb_past_nucleus to 'a'
@@ -5483,10 +5483,10 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
-    
+
+
     # 6th
-    
+
     # f-a-hr- / gr-a-b- / l-a-d- / sch-a-ff- / schl-a-g- / tr-a-g-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(f|gr|l|sch|schl|tr)/ and var verb_postnucleus matches /^(hr|r|b|d|ff|g)$/ do
         set var verb_past_nucleus to 'u'
@@ -5499,7 +5499,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # h-e-b-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(h)/ and var verb_postnucleus matches /^(b)$/ do
         set var verb_past_nucleus to 'o'
@@ -5509,7 +5509,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # schw-oe-r-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(oe)$/ and var verb_prenucleus matches /(schw)/ and var verb_postnucleus matches /^(r)$/ do
         set var verb_past_nucleus to 'o'
@@ -5519,7 +5519,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # w-a-chs- / w-a-sch-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(w)/ and var verb_postnucleus matches /^(chs|sch)$/ do
         set var verb_past_nucleus to 'u'
@@ -5529,10 +5529,10 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
-    
+
+
     # 6th
-    
+
     # l-a-ss-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(a)$/ and var verb_prenucleus matches /(l)/ and var verb_postnucleus matches /^(ss)$/ do
         set var verb_past_nucleus to 'ie'
@@ -5541,7 +5541,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # l-au-f- / st-o-ss- / f-a-ll / h-a-lt- / r-u-f- / bl-a-s- / br-a-t-
     # r-a-t- / schl-a-f-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(au|o|a|u)$/ and var verb_prenucleus matches /(l|st|f|gef|h|r|bl|br|schl)/ and var verb_postnucleus matches /^(f|ss|ll|lt|s|t)$/ do
@@ -5554,7 +5554,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # s-e-h-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(e)$/ and var verb_prenucleus matches /(s)/ and var verb_postnucleus matches /^(h)$/ do
         set var verb_past_nucleus to 'ie'
@@ -5564,7 +5564,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # f-a-ng- / h-ae-ng-
     if (not flag is_strong_verb) and var verb_nucleus matches /^(a|ae)$/ and var verb_prenucleus matches /(f|h)/ and var verb_postnucleus matches /^(ng)$/ do
         set var verb_past_nucleus to 'i'
@@ -5573,7 +5573,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
+
     # t-u-n
     if (not flag is_strong_verb) and var verb_nucleus matches /^(u)$/ and var verb_prenucleus matches /(t)/ and var verb_postnucleus matches /^(|n|en|)$/ do
         set var verb_past_nucleus to 'a'
@@ -5584,12 +5584,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         done
         set flag is_strong_verb to 1
     done
-    
 
-    
-    
+
+
+
     # 1st
-    
+
     if (not flag is_strong_verb) and var verb_nucleus matches /ei/ do
         # bl-ei-b- / ge-d-ei-h- / l-ei-h- / m-ei-d- / pr-ei-s- / r-ei-b- / sch-ei-d- /
         # schr-ei-b- / schr-ei-h- / schw-ei-g- / sp-ei- / st-ei-g- / tr-ei-b- / w-ei-s- / z-ei-h-
@@ -5597,8 +5597,8 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
         # b-ei-ss- / bl-ei-ch- / gl-ei-ch- / gl-ei-t- / gr-ei-f- / k-ei-f- / kn-ei-f- /
         # kn-ei-p- / kr-ei-ss- / kr-ei-sch- / l-ei-d- / pf-ei-ff- / r-ei-ss- / r-ei-t- /
         # sch-ei-ss- / schl-ei-ch- / schl-ei-f- / schl-ei-ss- / schm-ei-ss- / schn-ei-d- /
-        # schr-ei-t- / spl-ei-ss- / str-ei-ch- / str-ei-t- / w-ei-ch- / 
-    
+        # schr-ei-t- / spl-ei-ss- / str-ei-ch- / str-ei-t- / w-ei-ch- /
+
         if var verb_prenucleus matches /(bl|d|l|m|pr|r|sch|schr|schw|sp|st|tr|w|z)/ or var verb_prenucleus matches /(b|bl|gl|gr|k|kn|kr|kr|l|pf|r|sch|schl|schm|schn|schr|spl|str|w)/ do
             if var verb_postnucleus matches "" or var verb_postnucleus matches /^(b|s|n|g|d)$/ or var verb_postnucleus matches "h" do
                 set var verb_past_nucleus to 'ie'
@@ -5612,7 +5612,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                     set var verb_past_postnucleus to "tt"
                     set var verb_participle_postnucleus to "tt"
                 done
-                
+
                 set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
@@ -5621,7 +5621,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
-                
+
                 set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
@@ -5632,21 +5632,21 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 done
                 set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
                 set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
-                
+
                 set flag is_strong_verb to 1
             done
         done
     done
-    
+
     # 2nd
-    
+
     if (not flag is_strong_verb) and ( var verb_nucleus matches /ie/ or ( var verb_nucleus matches /ue/ and var verb_prenucleus matches /(l|tr)/ ) or ( var verb_nucleus matches /au/ and var verb_prenucleus matches /(s)/ ) ) do
         # b-ie-g- / b-ie-t- / fl-ie-g- / fl-ie-g- / fl-ie-h- / fr-ie-r- / ver-l-ie-r- /
         # l-ue-g- / sch-ie-b- / tr-ue-g- / z-ie-h-
         #
         # ver-dr-ie-ss- / fl-ie-ss- / g-ie-ss- / kr-ie-ch- / ge-n-ie-ss- / r-ie-ch- /
-        # s-au-f- / s-au-g- / sch-ie-ss- / schl-ie-ss- / spr-ie-ss- 
-    
+        # s-au-f- / s-au-g- / sch-ie-ss- / schl-ie-ss- / spr-ie-ss-
+
         if var verb_prenucleus matches /(b|fl|fr|sch|st|tr|z|verl|l)/ or var verb_prenucleus matches /(dr|fl|g|kr|n|r|s|schl|spr)/ or ( var verb_nucleus matches /ue/ and var verb_prenucleus matches /(l|tr)/ ) do
             if var verb_postnucleus matches "" or var verb_postnucleus matches /^(g|t|r|b|s|d)$/ or var verb_postnucleus matches "h" do
                 set var verb_past_nucleus to 'o'
@@ -5658,12 +5658,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                     set var verb_past_postnucleus to "g"
                     set var verb_participle_postnucleus to "g"
                 done
-                
+
                 if var verb_past_postnucleus matches "d" do
                     set var verb_past_postnucleus to "tt"
                     set var verb_participle_postnucleus to "tt"
                 done
-                
+
                 set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches "ss" or var verb_postnucleus matches /^(ch|ss|sch|)$/ do
@@ -5672,7 +5672,7 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
-                
+
                 set flag is_strong_verb to 1
             done
             else if var verb_postnucleus matches /^(t|f|p|)$/ or var verb_postnucleus matches "h" do
@@ -5683,14 +5683,14 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 done
                 set var verb_past_postnucleus to var verb_past_postnucleus concat var verb_past_postnucleus
                 set var verb_participle_postnucleus to var verb_participle_postnucleus concat var verb_participle_postnucleus
-                
+
                 set flag is_strong_verb to 1
             done
         done
     done
-    
+
     # 3rd
-    
+
     if (not flag is_strong_verb) and var verb_nucleus matches /^i$/ do
         # b-i-nd / dr-i-ng- / f-in-d- / kl-i-ng- / ge-l-i-ng- / r-in-g- / schl-i-ng- /
         # schw-i-nd- / schw-i-ng- / s-i-ng- / s-i-nk- / spr-i-ng- / st-i-nk- / tr-i-nk- /
@@ -5703,12 +5703,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
-                
+
                 set flag is_strong_verb to 1
             done
         done
     done
-    
+
     if (not flag is_strong_verb) and ( var verb_nucleus matches /^(e)$/ ) do
         # b-e-rg- / b-e-rst- / ver-d-e-rb- / dr-e-sch- / f-e-cht- / fl-e-cht- / g-e-lt- /
         # be-g-i-nn- / gl-i-mm- / h-e-lf- / kl-i-mm- / l-oe-sch- / m-e-lk- / r-i-nn- /
@@ -5722,12 +5722,12 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
-                
+
                 set flag is_strong_verb to 1
             done
         done
     done
-    
+
     if (not flag is_strong_verb) and ( var verb_nucleus matches /^(i|e)$/ ) do
         # b-e-rg- / b-e-rst- / ver-d-e-rb- / dr-e-sch- / f-e-cht- / fl-e-cht- / g-e-lt- /
         # be-g-i-nn- / gl-i-mm- / h-e-lf- / kl-i-mm- / l-oe-sch- / m-e-lk- / r-i-nn- /
@@ -5741,14 +5741,14 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
                 if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
                     set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
                 done
-                
+
                 set flag is_strong_verb to 1
             done
         done
     done
-    
-    
-    
+
+
+
     if flag is_strong_verb do
         set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
         set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
@@ -5756,25 +5756,25 @@ define action to_verb_conjugation with var verb, var pre, var lang, var path do
 print var verb concat new line
 print var verb_past concat new line
 print var verb_participle concat new line
-        
+
         do return with [ var pre concat var verb, var verb_past, var verb_participle ]
     done
     else do
         if ( not var verb_participle_prefix matches /ver|ge|be|zer|er/ ) and ( not var verb_prenucleus matches /ver|ge|be|zer|er/ ) do
             set var verb_participle_prefix to var verb_participle_prefix concat 'ge'
         done
-        
+
         if not var verb_past_postnucleus matches /t/ do
             set var verb_past_postnucleus to var verb_past_postnucleus concat "t"
         done
-        
+
         if not var verb_participle_postnucleus matches /s|z|t|l|f/ do
             set var verb_participle_postnucleus to var verb_participle_postnucleus concat "t"
         done
-        
+
         set new var verb_past to var verb_past_prefix concat '-' concat var verb_past_prenucleus concat '-' concat var verb_past_nucleus concat '-' concat var verb_past_postnucleus
         set new var verb_participle to var verb_participle_prefix concat '-' concat var verb_participle_prenucleus concat '-' concat var verb_participle_nucleus concat '-' concat var verb_participle_postnucleus
-        
+
         do return with [ var pre concat var verb, var verb_past, var verb_participle ]
     done
 done

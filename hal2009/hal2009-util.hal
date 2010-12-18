@@ -31,17 +31,17 @@ define action be_slow without arguments do
             print STDERR var diff
             print STDERR " cpu seconds were used."
             print STDERR new line
-            
+
             set new var timeout to 25 * var diff
             set new var last_time to time without arguments
             while var timeout > 0 do
                 do wait var timeout seconds
-                
+
                 set new var new_time to time without arguments
                 set var timeout to var timeout - var new_time + var last_time
                 set var last_time to var new_time
             done
-            
+
             set var be_slow__last_time to time without arguments
         done
     done
@@ -68,7 +68,7 @@ define action check_config with var name, var default, var lang, var path do
         set var config_path to "../" concat var file_name
         set var input_handle to handle for file name var config_path, read
     done
-    
+
     if var input_handle do
         for each new var line from var input_handle do
             if var line matches /var name\s*?<[=]>\s*?(.*?)\s*?$/ do
@@ -81,7 +81,7 @@ define action check_config with var name, var default, var lang, var path do
             done
         done
     done
-    
+
     set new var output_handle to handle for file name var config_path, append
     if not var output_handle do
         set var config_path to var path concat "/" concat var file_name
@@ -91,7 +91,7 @@ define action check_config with var name, var default, var lang, var path do
         print into var output_handle data var name concat " = " concat var default concat new line
         do close with var output_handle
     done
-    
+
     print var config_path concat ": " concat var name concat " = ???, default = " concat var default
     print new line
     do return with var default
@@ -114,7 +114,7 @@ done
 define action escape_html with var text do
     do regex with var text: /<[<]>/ -> "&lt;" :global
     do regex with var text: /<[>]>/ -> "&gt;" :global
-    
+
     do return with var text
 done
 

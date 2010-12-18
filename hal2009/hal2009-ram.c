@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -27,13 +27,13 @@ int ram_begin() {
     if (called) {
         return 1;
     }
-    
+
     // initialize semantic ram_net
     ram_net = calloc(sizeof(void*)*(4+'z'-'a'), 1);
     int i;
     for (i = n('a'); i <= n('z'); ++i) {
         ram_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-        
+
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
             ram_net[i][k] = calloc(sizeof(struct list), 1);
@@ -45,7 +45,7 @@ int ram_begin() {
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
-        
+
         k = WRONG;
         ram_net[i][k] = calloc(sizeof(struct list), 1);
         ram_net[i][k]->size = 0;
@@ -53,7 +53,7 @@ int ram_begin() {
     }
     for (i = n('0'); i <= n('9'); ++i) {
         ram_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
-        
+
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
             ram_net[i][k] = calloc(sizeof(struct list), 1);
@@ -65,7 +65,7 @@ int ram_begin() {
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
-        
+
         k = WRONG;
         ram_net[i][k] = calloc(sizeof(struct list), 1);
         ram_net[i][k]->size = 0;
@@ -88,23 +88,23 @@ int ram_begin() {
     ram_net[i][k] = calloc(sizeof(struct list), 1);
     ram_net[i][k]->size = 0;
     ram_net[i][k]->list = 0;
-    
+
     // initialize ram_fact_by_key array
     ram_fact_by_key                  = calloc(sizeof(struct list), 1);
     ram_fact_by_key->size            = 0;
     ram_fact_by_key->allocated_until = 0;
     ram_fact_by_key->list            = calloc(sizeof(struct fact*), ram_fact_by_key->allocated_until+1);
-    
-    
+
+
     // initialize ram_linking array
     ram_linking                  = calloc(sizeof(struct list), 1);
     ram_linking->size            = 0;
     ram_linking->allocated_until = 10;
     ram_linking->list            = calloc(sizeof(struct fact*), ram_linking->allocated_until+1);
-    
+
     // done
     called = 1;
-    
+
     return 0;
 }
 
@@ -124,16 +124,16 @@ struct word* ram_get_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     int length = strlen(name);
-    
+
     struct word** list = (struct word**)(ram_net[i][k]->list);
-    
+
     if (0 == list) {
         // debugf("illegal list while searching %s.\n", name);
         return 0;
     }
-    
+
     int g;
     for (g = 0; g < ram_net[i][k]->size; ++g) {
         if (length == list[g]->length && 0 == strcmp(list[g]->name, name)) {
@@ -141,7 +141,7 @@ struct word* ram_get_word(const char* name) {
             return list[g];
         }
     }
-    
+
     return 0;
 }
 
@@ -149,7 +149,7 @@ int insert_fact_by_list_into_ram_net(struct word** list, struct fact* fact) {
     int n;
     for (n = 0; n < 100 && list[n]; ++n) {
         list[n]->related_facts = look_at_list(list[n]->related_facts);
-        
+
         if (list[n]->related_facts->size == 0) {
             list[n]->related_facts->list = calloc(sizeof(struct fact*), 11);
             list[n]->related_facts->allocated_until = 10;
@@ -158,12 +158,12 @@ int insert_fact_by_list_into_ram_net(struct word** list, struct fact* fact) {
             list[n]->related_facts->allocated_until += 10;
             list[n]->related_facts->list = realloc(list[n]->related_facts->list, sizeof(struct word*)*(list[n]->related_facts->allocated_until+1));
         }
-        
+
         list[n]->related_facts->list[list[n]->related_facts->size] = fact;
         ++(list[n]->related_facts->size);
     }
-    
-    
+
+
     return 0;
 }
 
@@ -172,11 +172,11 @@ int insert_ram_fact_by_key(struct fact* fact) {
         ram_fact_by_key->allocated_until += 20;
         ram_fact_by_key->list = realloc(ram_fact_by_key->list, sizeof(struct fact*)*(ram_fact_by_key->allocated_until+1));
     }
-    
+
     fact->pk  = ram_fact_by_key->size;
     fact->rel = 0;
     ram_fact_by_key->list[ram_fact_by_key->size] = fact;
-    
+
     ++ram_fact_by_key->size;
 }
 
@@ -187,7 +187,7 @@ int insert_fact_at_key(int rel, struct fact* fact) {
     int pos;
     for (pos = 0; ((struct fact*)ram_fact_by_key->list[rel])->clauses[pos] && pos < 20; ++pos)
     { }
-    
+
     fact->rel = rel;
     ((struct fact*)ram_fact_by_key->list[rel])->clauses[pos] = fact;
 }
@@ -197,7 +197,7 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     if ((is_bad(subjects) && is_bad(objects)) && is_bad(verbs)) {
         return 0;
     }
-    
+
     struct fact* fact  = calloc(sizeof(struct fact), 1);
     fact->subjects     = divide_words(subjects);
     fact->objects      = divide_words(objects);
@@ -208,12 +208,12 @@ struct fact* ram_add_clause(int rel, const char* subjects, const char* objects, 
     fact->filename     = strdup(filename);
     fact->line         = strdup(line);
     fact->truth        = truth;
-    
+
     insert_ram_fact_by_key(fact);
     insert_fact_at_key(rel, fact);
-    
+
 //    printf("Inserted a fact at rel=%d.\n", rel);
-    
+
     return fact;
 }
 
@@ -233,12 +233,12 @@ struct fact* ram_add_fact(const char* subjects, const char* objects, const char*
     fact->line         = strdup(line);
     fact->truth        = truth;
     fact->only_logic   = only_logic;
-    
+
     insert_fact_by_list_into_ram_net(fact->subjects, fact);
     insert_fact_by_list_into_ram_net(fact->objects, fact);
     insert_fact_by_list_into_ram_net(fact->adverbs, fact);
     insert_ram_fact_by_key          (fact);
-    
+
     return fact;
 }
 
@@ -258,14 +258,14 @@ struct word* ram_set_word(const char* name) {
     if (strlen(name) >= 2) {
         k = n(name[1]);
     }
-    
+
     if (0 == ram_net[i][k]->list) {
         // debugf("empty list wile inserting %s.\n", name);
     }
     else {
         // debugf("not empty list wile inserting %s: %d, %d entries, last entry = %s\n", name, ram_net[i][k]->list, ram_net[i][k]->size, ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size-1]->name);
     }
-    
+
     if (ram_net[i][k]->size == 0) {
         ram_net[i][k]->list = calloc(sizeof(struct word*), 11);
         ram_net[i][k]->allocated_until = 10;
@@ -274,11 +274,11 @@ struct word* ram_set_word(const char* name) {
         ram_net[i][k]->allocated_until += 10;
         ram_net[i][k]->list = realloc(ram_net[i][k]->list, sizeof(struct word*)*(ram_net[i][k]->allocated_until+1));
     }
-    
+
     ram_net[i][k]->list[ram_net[i][k]->size] = calloc(1, sizeof(struct word));
     ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size]->name   = strdup(name);
     ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size]->length = strlen(name);
-    0 && debugf("inserted: %s = %d, %d.\n", 
+    0 && debugf("inserted: %s = %d, %d.\n",
             ((struct word**)(ram_net[i][k]->list))[ram_net[i][k]->size]->name,
             ram_net[i][k]->list[ram_net[i][k]->size],
             ram_net[i][k]->size);
@@ -306,7 +306,7 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
             debugf("not new.\n");
             continue;
         }
-        
+
         for (m = 0; *position < limit && can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0]; ++m) {
             if (0 == words[n][m]->related_facts) {
                 continue;
@@ -314,7 +314,7 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
             if (is_a_trivial_word(words[n][m]->name)) {
                 continue;
             }
-            
+
             int size = words[n][m]->related_facts->size;
             debugf("word: %s, size of related facts array: %d.\n", words[n][m]->name, size);
             int z;
@@ -334,7 +334,7 @@ int ram_search_facts_for_words_in_net(struct word*** words, struct fact** facts,
             }
         }
     }
-    
+
     return 0;
 }
 
@@ -342,7 +342,7 @@ struct fact** related_facts_of_word(struct word* key, struct fact** facts, int l
     if (!facts) {
         facts = calloc(1, sizeof(struct fact*)*(limit+1));
     }
-    
+
     int size = key->related_facts->size;
     debugf("word: %s, size of related facts array: %d.\n", key->name, size);
     int z;
@@ -371,9 +371,9 @@ char* ram_get_thesaurus_synonyms(const char* key, struct string_pair** facts, in
     printf("ram_get_thesaurus_synonyms: %s\n", key);
     if (!key || !key[0])
         return 1;
-    
+
     int i;
-    
+
     // first level
     int position_before_level_1 = *position;
     if (level >= 1) {
@@ -398,7 +398,7 @@ char* ram_get_thesaurus_synonyms(const char* key, struct string_pair** facts, in
         }
         free(unfiltered);
     }
-    
+
     // second level
     int position_before_level_2 = *position;
     if (level >= 2) {
@@ -439,18 +439,18 @@ struct fact** ram_search_clauses(int rel) {
         printf("Valid fact no: %d.\n", rel);
         if (ram_fact_by_key->list[rel]) {
             printf("Valid fact: %d.\n", rel);
-            
+
             if (((struct fact*)(ram_fact_by_key->list[rel]))->clauses) {
                 printf("There are clauses for %d.\n", rel);
-                
+
                 struct fact** clauses = calloc(1, sizeof(struct fact*)*21);
-                
+
                 int i;
                 for (i = 0; i < 20; ++i) {
                     printf("clause: %d.\n", ((struct fact*)(ram_fact_by_key->list[rel]))->clauses[i]);
                     clauses[i] = ((struct fact*)(ram_fact_by_key->list[rel]))->clauses[i];
                 }
-                
+
                 return clauses;
             }
             else {
@@ -478,13 +478,13 @@ int ram_add_link (const char* link, int key_1, int key_2) {
         ram_linking->allocated_until += 20;
         ram_linking->list = realloc(ram_linking->list, sizeof(struct fact*)*(ram_linking->allocated_until+1));
     }
-    
+
     struct linking_entity* entity = calloc(sizeof(struct linking_entity), 1);
     entity->_1 = key_1;
     entity->_2 = key_2;
     entity->type = strdup(link);
     ram_linking->list[ram_linking->size] = entity;
-    
+
     ++ram_linking->size;
     return 0;
 }

@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -85,7 +85,7 @@ unsigned short           distrib_port              = 5171;
 void hal2009_distrib_server_start() {
     while (!distrib_server_acceptor) {
         try {
-            
+
             tcp::endpoint endpoint(tcp::v4(), distrib_port);
             distrib_server_acceptor = new tcp::acceptor(io_service, endpoint);
         }
@@ -93,7 +93,7 @@ void hal2009_distrib_server_start() {
         {
             std::cerr << e.what() << std::endl;
         }
-        
+
         halusleep(2000);
     }
 }

@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -59,23 +59,23 @@ halstring* cpp_download_from_url(const char* _url) {
         halstring url_st;
         url_st.s = strdup(_url);
         url_st.do_free = 1;
-        
+
         halstring* url = &url_st;
-        
+
         if (!url->s) {
             return 0;
         }
-        
+
         string host;
         string path;
-        
+
         int i;
         int assign_to = 1;
         for (i = 0; i < strlen(url->s); ++i) {
             if (assign_to == 1 && url->s[i] == '/') {
                 assign_to = 2;
             }
-            
+
             char c[2];
             c[0] = url->s[i];
             c[1] = '\0';
@@ -87,7 +87,7 @@ halstring* cpp_download_from_url(const char* _url) {
                 path += c;
             }
         }
-        
+
         cout << endl
         << "Host: " << host.c_str() << endl
         << "Path: " << path.c_str() << endl

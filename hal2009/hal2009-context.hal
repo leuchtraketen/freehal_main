@@ -30,7 +30,7 @@ define action run_parser with var input, hash tags, var lang, var path do
     print "Parsable sentence(s): "
     print var input
     print new line
-    
+
     set new hash genus_of to an empty hash
 
     set new array clauses_input to split with " KOMMA ", var input
@@ -40,7 +40,7 @@ define action run_parser with var input, hash tags, var lang, var path do
         # Split the sentence.
         # CODE
         set new array list_of_words to split with " ", var clause
-        
+
         # TEXT
         # Then compute the parts of speech etc.
         # CODE
@@ -48,15 +48,15 @@ define action run_parser with var input, hash tags, var lang, var path do
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
             set from hash genus_of element { lc(var word) } to from hash tags element { var word } 1st element
         end for
-        
+
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
-        
+
         for each new array words in array list_of_list_of_words is rw do
             # TEXT
             # Then toggle the identities (user <-> machine).
             # CODE
             if is an empty hash parsed do
-        
+
                 do be_slow without arguments
                 set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
                 do be_slow without arguments
@@ -66,7 +66,7 @@ define action run_parser with var input, hash tags, var lang, var path do
                     set hash parsed to parse with var lang, array words, hash tags
                 done
                 do be_slow without arguments
-        
+
                 set new array entities to an empty array
                 push into array entities, elements of that array: from hash parsed element { 'subjects' } end of elements
                 push into array entities, elements of that array: from hash parsed element { 'objects' } end of elements
@@ -78,7 +78,7 @@ define action run_parser with var input, hash tags, var lang, var path do
                 set from hash parsed element { 'clauses' } to an empty array
             done
             else do
-        
+
                 do be_slow without arguments
                 set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
                 do be_slow without arguments
@@ -88,7 +88,7 @@ define action run_parser with var input, hash tags, var lang, var path do
                     set hash parsed_clause to parse with var lang, array words, hash tags
                 done
                 do be_slow without arguments
-        
+
                 set new array entities to an empty array
                 push into array entities, elements of that array: from hash parsed_clause element { 'subjects' } end of elements
                 push into array entities, elements of that array: from hash parsed_clause element { 'objects' } end of elements
@@ -102,11 +102,11 @@ define action run_parser with var input, hash tags, var lang, var path do
             done
         done
     done
-    
+
     # TEXT
     # Save male and female substantives
     # CODE
-    
+
     set new array copy_subjects to from hash parsed element { 'subjects' }
     set new var genus_subject to 'q'
     set new var subject to ''
@@ -115,7 +115,7 @@ define action run_parser with var input, hash tags, var lang, var path do
             set var subject to var subject concat ' '
         done
         set var subject to var subject concat join " ", elements of array arr
-        
+
         if from hash genus_of element { lc(join " ", elements of array arr) } matches /m|f/ do
             set var genus_subject to from hash genus_of element { lc(join " ", elements of array arr) }
         done
@@ -133,7 +133,7 @@ define action run_parser with var input, hash tags, var lang, var path do
             set var object to var object concat ' '
         done
         set var object to var object concat join " ", elements of array arr
-        
+
         if from hash genus_of element { lc(join " ", elements of array arr) } matches /m|f/ do
             set var genus_object to from hash genus_of element { lc(join " ", elements of array arr) }
         done
@@ -142,17 +142,17 @@ define action run_parser with var input, hash tags, var lang, var path do
             set var genus_subject to 'm'
         done
     done
-    
+
     print "genus of subject: ", var genus_subject, new line
     print "genus of object:  ", var genus_object,  new line
-    
+
     if var subject matches /^(er|sie|es|ihn|ihm|ihr)$/ do
         set var subject to ''
     done
     if var object matches /^(er|sie|es|ihn|ihm|ihr)$/ do
         set var object to ''
     done
-    
+
     set new var male_file to handle for file name var path concat '/lang_' concat var lang concat '/male.history', append
     if var genus_subject matches "m" and var subject do
         print into var male_file data var subject
@@ -163,7 +163,7 @@ define action run_parser with var input, hash tags, var lang, var path do
         print into var male_file data new line
     done
     do close with var male_file
-    
+
     set new var female_file to handle for file name var path concat '/lang_' concat var lang concat '/female.history', append
     if var genus_subject matches "f" and var subject do
         print into var female_file data var subject
@@ -174,7 +174,7 @@ define action run_parser with var input, hash tags, var lang, var path do
         print into var female_file data new line
     done
     do close with var female_file
-    
+
     do return with hash parsed
 done
 
@@ -189,7 +189,7 @@ define action decide_save_input with var input, var mode, var lang, var path do
     if lc(var input) matches /^\/save / do
         set flag save_input to 1
     done
-    
+
     do return with flag save_input
 done
 
@@ -197,31 +197,31 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     do regex with var input: /(<[.!?]>)/ -> "" :global
     set new flag save_input to decide_save_input with var input, var mode, var lang, var path
     do regex with var input: /^\/save / -> "" :global:i
-    
+
     # TEXT
     # --- WITHOUT LOGIC
     # CODE
-    
+
     # greeting
     set new flag is_a_greeting to check_for_greeting using var input
     if flag is_a_greeting do
         set new var greeting to greet with ''
         do return with [ var greeting ]
     done
-    
+
     # thanks
     set new flag is_a_thanks to check_for_thanks using var input
     if flag is_a_thanks do
         set new var thanks to say_answer_thanks with ''
         do return with [ var thanks ]
     done
-    
+
     # math
     set new flag is_math to check_for_math using var input
     if flag is_math do
         do return with [ flag is_math ]
     done
-    
+
     # weather
     set new var place to check_sentence_for_weather with var input
     if var place do
@@ -231,24 +231,24 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     # TEXT
     # --- LOGIC
     # CODE
-    
+
     set new hash parsed to run_parser with var input, hash tags, var lang, var path
-    
+
 
     set new array results to an empty array
     if var mode matches "question" do
         set array results to logic with var input, var lang, var path, hash parsed
-    
+
         if array results matches "TOOMUCH" do
             set new array standard_phrases to phrases_error_toomuch without arguments
             do return with array standard_phrases
         done
-        
+
         set new flag bug_feature to but_feature_is_useful with var input
         if flag bug_feature do
             set array results to use_bug_feature with array results, hash parsed
         done
-    
+
         if not elements of array results do
             set new flag use_reasonof to check_reasonof using var input, hash parsed, var lang, var path
             if flag use_reasonof is true do
@@ -259,11 +259,11 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
             done
         done
     done
-    
+
     if var mode matches "statement" do
         set array results to logic with var input, var lang, var path, hash parsed
         set new array results_reasonof to feature_reasonof with var input, hash parsed, var lang, var path
-        
+
         if array results matches "TOOMUCH" do
             if elements of array results_reasonof do
                 set array results to an empty array
@@ -273,21 +273,21 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
                 do return with array standard_phrases
             done
         done
-    
+
         push into array results, elements of array results_reasonof
     done
-    
+
     # save input
-    
+
     if flag save_input is true do
         push into array facts_to_save, hash parsed
     done
-    
+
     # choose the best facts and phrase
-    
+
     set array results to sort_out_best with array results, var mode, hash parsed
     set new array phrases to phrase with var lang, var path, var mode, array results, hash parsed
-    
+
     do return with array phrases
 done
 
@@ -298,7 +298,7 @@ define action sort_out_best with array results, var mode, hash parsed do
 
     for each new array result in array results do
         set new var primary_key to shift with elements of array result
-        
+
         for each new array clause in array result do
             if lc( from array clause 2nd element ) matches /(00000)/ do
                 go to next
@@ -316,7 +316,7 @@ define action sort_out_best with array results, var mode, hash parsed do
                 go to next
             done
         done
-    
+
         set new flag is_proper to 1
         set new flag is_important to 0
         for each new array clause in array result do
@@ -332,22 +332,22 @@ define action sort_out_best with array results, var mode, hash parsed do
                     set flag is_proper to 0
                 done
             done
-            
+
             if lc( from array clause 3rd element ) matches /freehal/ do
                 if lc( from hash parsed element { 'questionword' } 1st element 1st element ) matches /wer|who/ do
                     set flag is_important to 1
                 done
             done
         done
-        
+
         do unshift with elements of array result, var primary_key
-        
+
         # TEXT
         # It is an important fact, for example "I am FreeHAL", because it contains "freehal"
         if flag is_important do
             push into array results_important, array result
         done
-        
+
         # TEXT
         # Result is a proper result.
         # CODE
@@ -361,7 +361,7 @@ define action sort_out_best with array results, var mode, hash parsed do
             push into array results_variable_answer, array result
         done
     done
-    
+
     set new array questionword_array to from hash parsed element { 'questionword' } 1st element
     # TEXT
     # First, prefer important answers

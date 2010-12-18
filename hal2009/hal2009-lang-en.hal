@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -1332,7 +1332,7 @@ done
 
 set multi-line new global hash builtin_entity_does_not_end to {
           'mac' => 1,
-          
+
 };
 
 set multi-line new global hash builtin_entity_ends to {
@@ -1478,23 +1478,23 @@ set multi-line new global hash builtin_auxiliary_verbs to {
           'be' => 1,
           'was' => 1,
           'were' => 1,
-          
+
           'have' => 1,
           'has' => 1,
-          
+
           'become' => 1,
           'became' => 1,
           'becomes' => 1,
-          
+
           'can' => 1,
           'could' => 1,
           'would' => 1,
           'may' => 1,
-          
+
           'want' => 1,
           'wants' => 1,
           'wanted' => 1,
-          
+
           'must' => 1,
           'should' => 1,
 };
@@ -2588,7 +2588,7 @@ set multi-line new global hash builtin_time_relations to {
         "tomorrow" =>               [ 24*60*60,      +1     ],
         "in-days" =>                [ 24*60*60,      +1     ],
         "ago-days" =>               [ 24*60*60,      -1     ],
-        
+
         "this week" =>              [ 7*24*60*60,    0      ],
         "current week" =>           [ 7*24*60*60,    0      ],
         "last week" =>              [ 7*24*60*60,    -1     ],
@@ -2597,7 +2597,7 @@ set multi-line new global hash builtin_time_relations to {
         "following week" =>         [ 7*24*60*60,    +1     ],
         "in-weeks" =>               [ 7*24*60*60,    +1     ],
         "ago-weeks" =>              [ 7*24*60*60,    -1     ],
-        
+
         "in a quarter" =>              [ 15*60,         +1     ],
         "in a quarter-hour" =>         [ 15*60,         +1     ],
         "in a quarter of an hour" =>   [ 15*60,         +1     ],
@@ -2618,7 +2618,7 @@ set multi-line new global hash builtin_time_relations to {
         "ago hour" =>                  [ 60*60,         -1     ],
         "in-hours" =>                  [ 60*60,         +1     ],
         "ago-hours" =>                 [ 60*60,         -1     ],
-        
+
 };
 
 set new global array builtin_time_relations_names to an empty array
@@ -2633,7 +2633,7 @@ define action time_pre_transformations with var sentence, var lang, var path do
     do regex with var sentence: /(^|\s)(on|at) (\d+?\<[-.\/]>\d+?\<[-.\/]>\d+?)(\s|$)/ -> " on-$1 " :global:i
     do regex with var sentence: /(^|\s)(?:since|from) (\d+?\<[-.\/]>\d+?\<[-.\/]>\d+?)(\s|$)/ -> " from-$1 " :global:i
     do regex with var sentence: /(^|\s)(to|until|till) (\d+?\.\d+?\.\d+?)(\s|$)/ -> " to-$1 " :global:i
-    
+
     do return with var sentence
 done
 
@@ -2647,13 +2647,13 @@ define action phrases_error_toomuch without arguments do
     do return with array phrases
 done
 
-        
+
 #define action guess_part_of_speech with var word do
 #    set new var guessed to 'n'
 #    if var word matches /ste$/ do
 #        set var guessed to 'adj'
 #    done
-#    
+#
 #    do return using var guessed
 #done
 
@@ -2664,13 +2664,13 @@ define action get_article with var genus, var part_of_sentence, var def do
     else do
         do return with "the"
     done
-    
+
     do return with ""
 done
 
 define action get_person with var _noun do
     set new var noun to lc with var _noun
-    
+
     if var noun matches "i" do
         do return with "1s"
     done
@@ -2689,7 +2689,7 @@ define action get_person with var _noun do
     if var noun matches "they" do
         do return with "3p"
     done
-    
+
     do return with "3s"
 done
 
@@ -2732,7 +2732,7 @@ define action get_verb with var verb, var person do
             return "are"
         done
     done
-    
+
     if var verb matches "have" do
         if var person matches "1s" do
             return "have"
@@ -2753,23 +2753,23 @@ define action get_verb with var verb, var person do
             return "have"
         done
     done
-    
+
     if var verb matches "want" do
         do return with var verb
     done
-    
+
     if var verb matches "must" do
         do return with var verb
     done
-    
+
     if var verb matches "can" do
         do return with var verb
     done
-    
+
     if var verb matches "may" do
         do return with var verb
     done
-    
+
     if var verb matches "should" do
         do return with var verb
     done
@@ -2802,14 +2802,14 @@ define action get_verb with var verb, var person do
         done
         do return with "are owned by"
     done
-    
+
     return ""
 done
 
 define action replace_general_reflexive_pronoun with var text, var person do
     set new var general_pronoun to "sich"
     set new var better_pronoun to "sich"
-    
+
     if var person matches "1s" do
         set var better_pronoun to "mich"
     done
@@ -2844,14 +2844,14 @@ define action compute_output with var output do
         set var output to var output concat "?"
     done
     do regex with var output: /=>/ -> "" :global:i
-    
+
     set new array verb_prefixes to elements-returning keys with elements of hash builtin_verb_prefixes
-    
+
     for each new var prefix in array verb_prefixes do
         do regex with var output: /\s($prefix)(<[a-zA-Z0-9]>*?)\s(<[a-zA-Z0-9]>*?)\s/ -> " $1 $2 $0 " :global
         do regex with var output: /\s($prefix)(<[a-zA-Z0-9]>*?)$/ -> " $1 $0" :global
     done
-    
+
     set new var random_number to rand using elements of array builtin_male_names
     set new var name to from array builtin_male_names element [ var random_number ]
 
@@ -2872,7 +2872,7 @@ define action compute_output with var output do
     set new var wday to from array date_time_array element [ 6 ]
     set new var yday to from array date_time_array element [ 7 ]
     set new var isdst to from array date_time_array element [ 8 ]
-    
+
     set new var weekday to 'nothing'
     if var wday is 0 do
         set var weekday to "Sonday"
@@ -2895,9 +2895,9 @@ define action compute_output with var output do
     if var wday is 6 do
         set var weekday to "Saturday"
     done
-    
+
     set var year to var year + 1900
-    
+
     do regex with var output: /\$\$ uhr/ -> "\$\$" :global:i
     do regex with var output: /\$\$time\$\$/ -> "var hour:var min:var sec" :global:i
     do regex with var output: /\$\$wday\$\$/ -> "var weekday" :global:i
@@ -2933,7 +2933,7 @@ define action compute_output with var output do
     if var output matches /time to (<[0-9]>+?)(\s|$)/ do
         set var time_end to $0
     done
-    
+
     set new array date_time_array to elements-returning localtime with var time_begin
     set new var sec to from array date_time_array element [ 0 ]
     set new var min to from array date_time_array element [ 1 ]
@@ -2944,7 +2944,7 @@ define action compute_output with var output do
     set new var wday to from array date_time_array element [ 6 ]
     set new var yday to from array date_time_array element [ 7 ]
     set new var isdst to from array date_time_array element [ 8 ]
-    
+
     if not var min matches /../ do
         set var min to "0" concat var min
     done
@@ -2954,7 +2954,7 @@ define action compute_output with var output do
     if not var hour matches /../ do
         set var hour to "0" concat var hour
     done
-    
+
     set new var weekday to 'nichts'
     if var wday is 0 do
         set var weekday to "Sonntag"
@@ -2977,7 +2977,7 @@ define action compute_output with var output do
     if var wday is 6 do
         set var weekday to "Samstag"
     done
-    
+
     set var year to var year + 1900
     set var mon to var mon + 1
     if var mon matches /^.$/ do
@@ -2986,7 +2986,7 @@ define action compute_output with var output do
     if var mday matches /^.$/ do
         set var mday to "0" concat var mday
     done
-    
+
     do regex with var output: /\$\$time\$\$/ -> "var hour:var min:var sec" :global:i
     do regex with var output: /\$\$wday\$\$/ -> "var weekday" :global:i
     do regex with var output: /\$\$mday\$\$/ -> "var mday" :global:i
@@ -2995,16 +2995,16 @@ define action compute_output with var output do
     do regex with var output: /\$\$date\$\$/ -> "var mday\/var mon\/var year" :global:i
 
     do regex with var output: /array\(.*?\)/ -> "" :global:i
-    
+
     do regex with var output: /<[~]>time.*/ -> "" :global:i
-    
-    
+
+
     if var time_end + 24*60*60 is var time_begin do
         set new var temp to var time_end
         set var time_end to var time_begin
         set var time_begin to var temp
     done
-    
+
     if var time_begin + 24*60*60 is var time_end do
         if var output matches /time from (<[0-9]>+?)(\s|$)/ do
             set new var replacement to ''
@@ -3030,7 +3030,7 @@ define action compute_output with var output do
             done
             do regex with var output: /time from (<[0-9]>+?)(\s|$)/ -> "var replacement" :global:i
         done
-        
+
         set new array date_time_array to elements-returning localtime with var time_end
         set new var sec to from array date_time_array element [ 0 ]
         set new var min to from array date_time_array element [ 1 ]
@@ -3041,7 +3041,7 @@ define action compute_output with var output do
         set new var wday to from array date_time_array element [ 6 ]
         set new var yday to from array date_time_array element [ 7 ]
         set new var isdst to from array date_time_array element [ 8 ]
-        
+
         if not var min matches /../ do
             set var min to "0" concat var min
         done
@@ -3051,7 +3051,7 @@ define action compute_output with var output do
         if not var hour matches /../ do
             set var hour to "0" concat var hour
         done
-        
+
         set var year to var year + 1900
         set var mon to var mon + 1
         if var mon matches /^.$/ do
@@ -3060,7 +3060,7 @@ define action compute_output with var output do
         if var mday matches /^.$/ do
             set var mday to "0" concat var mday
         done
-        
+
         if var output matches /time to (<[0-9]>+?)(\s|$)/ do
             print "To:   " concat var mday concat '.' concat var mon concat '.' concat var year concat ' ' concat var hour concat ':' concat var min concat new line
             set new var replacement to ''
@@ -3073,7 +3073,7 @@ define action compute_output with var output do
             do regex with var output: /time to (<[0-9]>+?)(\s|$)/ -> "var replacement" :global:i
         done
     done
-    
+
 
 
     do regex with var output: /NULL/ -> "" :global:i
@@ -3111,16 +3111,16 @@ define action toggle_verbs with array verbs, array entities do
     set new flag continue to 0
     for each new array entity_array in array entities is rw do
         set new var entity to from array entity_array 1st element
-        
+
         if lc(var entity) matches /(^|\s)(i|you|me|myself|yourself)(\s|$)/ do
             set flag continue to 1
         done
     done
-    
+
     if not flag continue do
         do return with array verbs
     done
-    
+
     for each new array verb_array in array verbs is rw do
         set new var verb to from array verb_array 1st element
         if var verb matches "is" do
@@ -3205,11 +3205,11 @@ define action stem_nouns with array phrases do
             if var noun matches /(the|that|this)$/ do
                 do regex with var noun: /(the|that|this)$/ -> "*" :global:i
             done
-            
+
             if length(var noun) <= 3 do
                 go to next
             done
-            
+
             # TEXT
             # That's the stemming algorithm
             # CODE
@@ -3238,7 +3238,7 @@ define action stem_nouns with array phrases do
             done
             if var noun matches /(end|ung)$/ do
                 do regex with var noun: /(end|ung)$/ -> "*" :global:i
-                
+
                 if var noun matches /ig$/ and not var noun matches /eig$/ do
                     do regex with var noun: /ig$/ -> "*" :global:i
                 done
@@ -3254,17 +3254,17 @@ define action stem_nouns with array phrases do
             done
         done
         set var phrase to join using " ", elements of array words
-        
+
         do regex with var phrase: /<[*]>\s/ -> "*" :global
         do regex with var phrase: /\s<[*]>/ -> "*" :global
     done
-    
+
     return array phrases
 done
 
 define action check_for_math with var input do
     set new var math to var input
-    
+
     do regex with var math: /<[=?!.]>/ -> "" :global:i
     do regex with var math: /hoch/ -> "**" :global:i
     do regex with var math: /\^/ -> "**" :global:i
@@ -3321,7 +3321,7 @@ define action check_for_thanks with var input do
             return 1
         done
     done
-    
+
     return 0
 done
 
@@ -3330,7 +3330,7 @@ define action say_answer_thanks with var user do
     push into array answers, "Okay"
     set new var random_number to rand using elements of array answers
     set new var answer to from array answers element [ var random_number ]
-    
+
     do return with [ 0, var answer ]
 done
 
@@ -3398,14 +3398,14 @@ define action make_parsable with var input do
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
     do regex with var input: /<[,]>\s*?<[,]>/ -> "," :global:i
-    
+
     do return with var input
 done
 
 define action multiple_choices_verb with var verb do
     set new array choices to an empty array
     set new array endings to an empty array
-    
+
     push into array endings, "en"
     push into array endings, "st"
     push into array endings, "t"
@@ -3420,7 +3420,7 @@ define action multiple_choices_verb with var verb do
             go to last
         done
     done
-    
+
     if var verb matches "bi" or var verb matches "is" or var verb matches /heis/ do
         push into array choices, "bin"
         push into array choices, "bist"
@@ -3436,7 +3436,7 @@ define action multiple_choices_verb with var verb do
             push into array choices, var verb concat var ending
         done
     done
-    
+
     set new var verbs to join with "|", elements of array choices
     do return with var verbs
 done
@@ -3448,7 +3448,7 @@ define action modify_input with var input, var current_language, var path do
         for each new var line from var input_handle do
             set var last_output to var line
         done
-        
+
         if var last_output do
             set var input to "why " concat var last_output concat "?"
         done
@@ -3459,12 +3459,12 @@ define action modify_input with var input, var current_language, var path do
         for each new var line from var input_handle do
             set var last_input to var line
         done
-        
+
         if var last_input do
             set var input to var last_input concat " " concat var input
         done
     done
-    
+
     return var input
 done
 
@@ -3472,7 +3472,7 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
     if var input matches /<[?]>/ do
         print "Sentence contains a question mark"
         print new line
-        
+
         do return with "question"
     done
     else if lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swhat\s)|(\swho\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhom\s)).*?(<[,]>|(komma))/ do
@@ -3494,7 +3494,7 @@ define action but_feature_is_useful with var input do
     if (" " concat var input concat " ") matches /(\swhat\s)|(\swho\s)|(\show\s)|(\swhere\s)|(\swhen\s)|(\swhy\s)|(\swhom\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         do return with 0
     done
-    
+
     do return with 1
 done
 
@@ -3566,7 +3566,7 @@ define action use_random with var input, var current_language, var path, var mod
         done
     done
 
-    
+
     for each new var r in array random do
         set var r to [ 0, var r ]
     done
@@ -3612,7 +3612,7 @@ define action verb_category with var verb do
     if var verb matches /(should)/ do
         do return with "should"
     done
-    
+
     do return with ""
 done
 

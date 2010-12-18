@@ -3,7 +3,7 @@
  *
  * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
  * http://freehal.org
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -27,19 +27,19 @@
 /* PERL 6 convert functions */
 
 static inline void convert_to_perl6_structure (halstring* hals) {
-    
+
     if (strstr(hals->s, "compile source " )) {
         hals = replace(hals, "compile source ", "");
         convert_to_perl6_convert_file(hals->s);
         strcpy(hals->s, "");
         return;
     }
-    
+
     if (strstr(hals->s, "require source " )) {
         hals = replace(hals, "require source ", "require(\"");
         strcat(hals->s, ".pl6\");");
     }
-    
+
     if (strstr(hals->s, "print into " )) {
         hals = replace(hals, "print into ", " ");
         hals = replace(hals, " data ", ".print: ");
@@ -48,7 +48,7 @@ static inline void convert_to_perl6_structure (halstring* hals) {
     else if (strstr(hals->s, "print " )) {
         hals = replace(hals, "print ", "do print with ");
     }
-    
+
     if (strstr(hals->s, "~" )) {
         hals = replace(hals, "~", "$");
     }
@@ -342,12 +342,12 @@ char* convert_to_perl6 (char* hals) {
     string.s = hals;
     string.do_free = 0;
     halstring** lines = stringtoarray(&string, '\n', &number_of_lines);
-    
+
     long new_code_size = (line_size + 100) * (number_of_lines + 1);
     char* newcode;
     newcode = halmalloc(new_code_size, "convert_to_perl6"); // be sure we have enough space
     zero_p(newcode, new_code_size);
-    
+
     int current_line;
     for (current_line = 0; current_line < number_of_lines; ++current_line) {
         char* newline;
@@ -357,20 +357,20 @@ char* convert_to_perl6 (char* hals) {
         halstring s;
         s.s = newline;
         s.do_free = 1;
-        
+
         convert_to_perl6_structure(&s);
         strcat(newcode, s.s);
         strcat(newcode, "\n");
         if ( lines[current_line]->do_free ) halfree(lines[current_line]->s);
         halfree(lines[current_line]);
         if ( s.do_free ) halfree(s.s);
-        
+
         if (current_line % 20 == 0) fprintf(output(), "%s", ".");
     }
     fprintf(output(), "%s", "\n");
     halfree(lines);
     halfree(hals);
-    
+
     return newcode;
 }
 
@@ -392,13 +392,13 @@ int convert_to_perl6_convert_file(char* filename) {
     fseek(source, 0, SEEK_SET);
     fread(code, 1, file_size, source);
     halclose(source);
-    
+
     FILE* target;
     {
         char targetname[300];
         strcpy(targetname, filename);
         strcat(targetname, ".pl6");
-        
+
         target = fopen(targetname, "w");
     }
     if ( !target ) {
@@ -414,7 +414,7 @@ int convert_to_perl6_convert_file(char* filename) {
     halwrite(targetcode, 1, strlen(targetcode), target);
     halclose(target);
     halfree(targetcode);
-    
+
     return 0;
 }
 
@@ -442,7 +442,7 @@ void execute_perl6(char* filename) {
 
     fprintf(output(), "%s\n", "compile FreeHAL...");
     convert_to_perl6_convert_file(filename);
-    
+
     {
         int argc = 3;
         char** argv = malloc(100+strlen(filename));

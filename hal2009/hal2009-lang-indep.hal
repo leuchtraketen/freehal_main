@@ -3,7 +3,7 @@
 #
 # Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
 # http://freehal.org
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 3
@@ -23,7 +23,7 @@ set new global array replace_array to an empty array
 
 define action divide_input with var input is rw, var lang, var path do
     set new var verb_be_3rd_person_singular to get_verb with "be", "3s"
-    
+
     do regex with var input: /[=][=][=][>]/ -> " reasonof " :global:i
     do regex with var input: /[-][-][-][>]/ -> " reasonof " :global:i
     do regex with var input: /[=][=][>]/ -> " reasonof " :global:i
@@ -38,7 +38,7 @@ define action divide_input with var input is rw, var lang, var path do
         do regex with var input: /reasonof/ -> "@" :global:i
         set new array words to split with /[@]/, var input
         set var input to ""
-        
+
         set new var i to 0
         for each new var word_1 in array words do
             set new var j to 0
@@ -62,7 +62,7 @@ define action divide_input with var input is rw, var lang, var path do
             set var i to var i + 1
         done
     done
-    
+
     if lc(var input) matches /[=].*?[=]/ do
         do regex with var input: /\s+?[=]\s+?/ -> "=" :global:i
         do regex with var input: /[=]/ -> "@" :global:i
@@ -110,17 +110,17 @@ define action divide_input with var input is rw, var lang, var path do
             done
         done
     done
-    
+
     print "Input (separated sentences): "
     print var input
     print new line
-    
+
     do return with var input
 done
 
 define action compute_input with var input is rw, var lang, var path do
     set new var no_change_pronouns to 0
-    
+
     set new var flowchart_log to handle for file name var path concat '/flowchart.log', append
     print into var flowchart_log data "begin box"
     print into var flowchart_log data new line
@@ -189,14 +189,14 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /\s\s/ -> " " :global:i
     do regex with var input: /^<[,]>/ -> " " :global:i
     do regex with var input: /\s\s/ -> " " :global:i
-    
+
     if var input matches /(?:^|\s)http:(?:(?:\/\/)|(?:__))([^\s]+?)\s/ do
-    
+
         do regex with var input: /(?:^|\s)http:(?:(?:\/\/)|(?:__))([^\s]+?)\s/ -> "$0" :global:i
     done
-    
+
     do regex with var input: /^du\s(<[a-zA-Z0-9]>+?.?.?)$/ -> "$0" :global:i
-    
+
     do regex with var input: /\(true\)/ -> "_(true)_" :global:i
     do regex with var input: /\(maybe\)/ -> "_(maybe)_" :global:i
     do regex with var input: /\(false\)/ -> "_(false)_" :global:i
@@ -224,7 +224,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex with var input: /^(.*?)du mir deinen Namen.*?$/ -> "Wie ist dein Name? " :global:i
     do regex with var input: /^(.*?)du mir.*?deinen Namen.*?$/ -> "Wie ist dein Name? " :global:i
-    
+
     if var input matches /\(bad\)/ do
         do regex with var input: /\s*?\(bad\)/ -> "" :global:i
         do regex with var input: /^\s+/ -> "" :global:i
@@ -245,7 +245,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /weder\s(.+?)noch(<[a-z0-9\s]>*?<[A-Z]><[a-z]+?)(\s|$)/ -> "nicht $0 \$\$aswellas\$\$ $1$2" :global:i
     do regex with var input: /weder\s(.+?)noch(.*)/ -> "nicht $0 \$\$aswellas\$\$ $1" :global:i
 
-    
+
     do regex with var input: /(Anfang|Ende) (januar|jaenner|februar|maerz|april|mai|juni|juli|august|september|oktober|november|dezember)/ -> "in dem _$1_" :global:i
 
     set new var c_time to time without arguments
@@ -265,14 +265,14 @@ define action compute_input with var input is rw, var lang, var path do
 
 
     do regex with var input: /(^)(<[A-Z]><[a-z]>+?en) (ist) / -> "$0_$1_ $2 " :global:i
-    
+
     do regex with var input: /(^|\s)genauso (.*?) wie / -> "$0genauso $1 wie{{{adj}}} " :global:i
     do regex with var input: /(^|\s)so (.*?) wie / -> "$0so $1 wie{{{adj}}} " :global:i
 
 
     do regex with var input: /was ist / -> "was ist " :global:i
     do regex with var input: /was ist (<[A-Z]><[a-z]+?)(<[\.?!+,;-\s]>*?)$/ -> "was ist _$0_$1" :global
-    
+
     do regex with var input: /wie war / -> "wie ist " :global:i
     do regex with var input: /\s+kein/ -> " nicht ein" :global:i
     do regex with var input: /(^|\s)?und sonst(\s|\$)/ -> " wie geht es dir " :global:i
@@ -296,14 +296,14 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /^kein(.*)/ -> "ein$0 nicht" :global:i
     do regex with var input: /wozu braucht man / -> "was ist " :global:i
     do regex with var input: /(brauch)(st|e|en)(.*?)zu\s(haben)/ -> "$0$1$2 $3/ -> "
-    
-    
+
+
     do regex with var input: /(^|\s)X(\s|$)/ -> "$0\$a\$$1" :global
     do regex with var input: /(^|\s)Y(\s|$)/ -> "$0\$b\$$1" :global
     do regex with var input: /(^|\s)Z(\s|$)/ -> "$0\$c\$$1" :global
-    
+
     do regex with var input: /(<[0-9]>|\$)\s*?(mal)\s*?(<[0-9]>|\$)/ -> "$0*$2" :global:i
-    
+
     #if var input matches /<[*\/+-]>/ do
     set new var i to 1
     do regex with var input: /(^|\s)(<[+-]>)ein(\s|$)/ -> "$0$1var i$2" :global:i
@@ -318,7 +318,7 @@ define action compute_input with var input is rw, var lang, var path do
         set var i to var i + 1
     done
     #done
-    
+
     do regex with var input: /(tag|datum|monat|woche|jahr) war\s/ -> "$0 ist " :global:i
     do regex with var input: /welche uhrzeit\s/ -> "wie uhr " :global:i
     do regex with var input: /\suhr\shaben\swir\s/ -> " uhr ist es " :global:i
@@ -342,8 +342,8 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /\snoch[-](nie|nicht)(<[\s!.,?]>+)/ -> " noch $0$1" :global:i
     do regex with var input: /(^|<[\s!.,?]>+)(so)\setwas(<[\s!.,?]>+)/ -> "$0_$1_etwas_$2" :global:i
     do regex with var input: /(^|<[\s!.,?]>+)(so)was(<[\s!.,?]>+)/ -> "$0_$1_etwas_$2" :global:i
-    
-    
+
+
     set new var remove_words_file to handle for file name var path concat '/lang_' concat var lang concat '/remove-words.csv', read
     for each new var remove_word from var remove_words_file do
         do regex with var remove_word: /^\s+?/ -> "" :global
@@ -359,7 +359,7 @@ define action compute_input with var input is rw, var lang, var path do
             do regex with var remove_word: /\$/ -> "" :global
             set flag at_end to 1
         done
-    
+
         if flag at_beginning do
             do regex with var input: /^(<[\s!.,?]>+)var remove_word(<[\s!.,?]>+)/ -> "$0$1" :global:i
         done
@@ -372,20 +372,20 @@ define action compute_input with var input is rw, var lang, var path do
         do regex with var input: /\s+/ -> " " :global:i
     done
     do close with var remove_words_file
-    
-    
+
+
     do regex with var input: /do you know / -> "" :global:i
     do regex with var input: /^\s+/ -> "" :global
     do regex with var input: /^you know (wh)/ -> "$0" :global:i
-    
+
     do regex with var input: /\sreally/ -> "" :global:i
-    
+
     do regex with var input: /world wide web/ -> "_world_wide_web_" :global:i
     do regex with var input: /Hersteller von/ -> "Hersteller fuer" :global:i
 
     do regex with var input: /mein name/ -> "_mein_name_" :global:i
     do regex with var input: /dein name/ -> "_dein_name_" :global:i
-    
+
 
     do regex with var input: /(^|\s)(\d+?)\.\s*?januar(\s|$)/ -> "$0$1.01.$3" :global:i
     do regex with var input: /(^|\s)(\d+?)\.\s*?jaenner(\s|$)/ -> "$0$1.01.$3" :global:i
@@ -400,15 +400,15 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /(^|\s)(\d+?)\.\s*?oktober(\s|$)/ -> "$0$1.10.$3" :global:i
     do regex with var input: /(^|\s)(\d+?)\.\s*?november(\s|$)/ -> "$0$1.11.$3" :global:i
     do regex with var input: /(^|\s)(\d+?)\.\s*?dezember(\s|$)/ -> "$0$1.12.$3" :global:i
-    
+
     do regex with var input: /(^|\s)(\d)\.(\d+?)\.(\d+?)(\s|$)/ -> "$0 0$1.$2.$3$4" :global:i
     do regex with var input: /(^|\s)(\d+?)\.(\d)\.(\d+?)(\s|$)/ -> "$0$1.0$2.$3$4" :global:i
     do regex with var input: /(^|\s)(\d+?)\.(\d+?)\.(\d\d)(\s|$)/ -> "$0$1.$2.19$3$4" :global:i
     do regex with var input: /(^|\s)(\d+?)\.(\d+?)\.(\d+?)(\s|$)/ -> "$1.$2.$3$4" :global
     do regex with var input: /(^|\s)(\d+?)\.(\d+?)\.?(\s|$)/ -> "$1.$2.0000$4" :global
-    
+
     do regex with var input: /^\s+/ -> "" :global
-    
+
     do regex with var input: /(^|\s)sein\s([A-Z])/ -> "$0sein{{{art}}} $1" :global:i
 
     do regex with var input: /\s(<[mds]>)eines\s(.*?<[a-z]>)s(\s|$)/ -> " von $0einem $1$2" :global:i
@@ -434,7 +434,7 @@ define action compute_input with var input is rw, var lang, var path do
         done
     done
 
-    # var input matches /(^|\s)(von|fuer)(\s|$)/ or 
+    # var input matches /(^|\s)(von|fuer)(\s|$)/ or
 
     do regex with var input: /\s?ist dasselbe wie\s?/ -> " = " :global:i
     do regex with var input: /\s?ist dasgleiche wie\s?/ -> " = " :global:i
@@ -447,7 +447,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /befindet sich/ -> "liegt" :global
     do regex with var input: /sich (.*?)befindet/ -> "$0liegt" :global
     do regex with var input: /teil von ein.?.?\s/ -> "teil von " :global:i
-    
+
     if var input not matches /<[?]>/ and var input not matches /<[,]>/ do
         if lc(var input) matches /^(.+?)\s+?((?:gehoert zu)|(?:liegt in)|(?:\s?ist in)|(?:\s?ist .*?teil von))\s+?(.+?)$/ do
             set new var a to $0
@@ -459,46 +459,46 @@ define action compute_input with var input is rw, var lang, var path do
 
             set var a to transform_to_name with var a
             set var b to transform_to_name with var b
-            
+
             set var input to var a concat " is-part " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(gehoert)\s+?(.+?)$/ do
             set new var a to $0
             set new var b to $2
-            
+
             set new var adverbs to ''
             set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
             set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
 
             set var a to transform_to_name with var a
             set var b to transform_to_name with var b
-            
+
             set var input to var a concat " is-own " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(beinhaltet)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
-            
+
             set new var adverbs to ''
             set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
             set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
 
             set var a to transform_to_name with var a
             set var b to transform_to_name with var b
-            
+
             set var input to var a concat " is-part " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(besitzt)\s+?(.+?)$/ do
             set new var a to $2
             set new var b to $0
-            
+
             set new var adverbs to ''
             set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
             set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
 
             set var a to transform_to_name with var a
             set var b to transform_to_name with var b
-            
+
             set var input to var a concat " is-own " concat var b concat " " concat var adverbs
         done
         if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ and lc(var input) not matches /(wie|wer|was|wo|wann|warum|wieso|weshalb|<[?]>)/ do
@@ -511,7 +511,7 @@ define action compute_input with var input is rw, var lang, var path do
 
             set var a to transform_to_name with var a
             set var b to transform_to_name with var b
-            
+
             if var a not matches /\(a\)/ and var b matches /\(a\)/ and var input not matches /<[=]>/ do
                 set var input to var a concat " is-a " concat var b concat " " concat var adverbs
             done
@@ -519,29 +519,29 @@ define action compute_input with var input is rw, var lang, var path do
                 set var input to var a concat " = " concat var b concat " " concat var adverbs
             done
         done
-        
+
 
         if var input not matches /ein|eine|der|die|das/ do
             do regex with var input: /^(.+?)\s+?(ist|sind)\s+?(.+?)\s?$/ -> "$0 = $2" :global:i
         done
-        
+
         do regex with var input: /^(ein|eine)\s/ -> " " :global:i
     done
-    
+
     set new var __input to var input
     while var __input matches /(ein.?.?)\s(<[A-Z]><[a-z]>+?)(\s|$)/ do
         set new var word to lc with $1
         set new array _collective_nouns to global array collective_nouns
         push into array _collective_nouns, var word
         print "collective noun: " concat var word concat new line
-        
+
         do regex with var __input: /(ein.?.?)\s(var word)/ -> "" :global:i
     done
 
     do regex with var input: /(^|\s)du hast (.*?) aus / -> "$0du bekommst $1 aus " :global:i
     do regex with var input: /(^|\s)woher hast du / -> "$0woher bekommst du " :global:i
     do regex with var input: /(^|\s)woher hast du / -> "$0woher bekommst du " :global:i
-    
+
     do regex with var input: / wehnig / -> " wenig " :global:i
     do regex with var input: /niss(\s|$)/ -> "nis$0" :global:i
     do regex with var input: /^wovon / -> "was " :global:i
@@ -553,20 +553,20 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex with var input: / wirst du genannt/ -> " heisst du " :global:i
     do regex with var input: / wird (.*?) genannt/ -> " $0 ist " :global:i
-    
+
     do regex with var input: /^das\s(<[a-z]>+?)\s(ich|du)/ -> "$1 $0 das " :global:i
-    
+
     do regex with var input: / ein jeder / -> " _jeder_ " :global:i
     do regex with var input: / sinn des lebens/ -> " _sinn_des_lebens_ " :global:i
-    
+
     #do regex with var input: / (<[a-z]>+?)<[-]> (und|oder) (<[a-z]>+?)(haltig|artig|ig|haft)(es|er|en|em|e|) / -> " $0$3$4 $1 $2$3$4 " :global:i
-    
+
     #do regex with var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?)<[,\sund]>*?\s(<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) / -> " $0 $1 $2 $3 " :global:i
     #do regex with var input: / (<[a-z]><[a-z]><[a-z]><[a-z]>+?) und (<[a-z]><[a-z]><[a-z]><[a-z]>+?) (<[A-Z]><[a-z]><[a-z]><[a-z]>+?) / -> " $0 $1 $2 " :global:i
 
     do regex with var input: / du jetzt / -> " du " :global:i
     do regex with var input: / ich jetzt / -> " ich " :global:i
-    
+
     do regex with var input: / befindet sich / -> " liegt " :global:i
     do regex with var input: / befinden sich / -> " liegen " :global:i
     do regex with var input: / befinde mich / -> " liege " :global:i
@@ -575,7 +575,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: / sich befinden / -> " liegen " :global:i
     do regex with var input: / mich befinde / -> " liege " :global:i
     do regex with var input: / dich befindest / -> " liegst " :global:i
-    
+
     do regex with var input: /(^|\s)da(<[r]>?)(durch|auf|fuer|an) / -> " $2 _das_ " :global:i
 
     do regex with var input: /(<[0-9]>)(<[a-z]>|<[A-Z]>)/ -> "$0 $1" :global:i
@@ -603,17 +603,17 @@ define action compute_input with var input is rw, var lang, var path do
         do regex with var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/ -> "$0 $2 $1 $2 $3" :global:i
         do regex with var input: /(<[-_a-zA-Z]>+?\s+?<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/ -> "$0 $2 $1 $2 $3" :global:i
         do regex with var input: /(<[-_a-zA-Z]>+?)\s*?<[,]>\s*?(<[-_a-zA-Z]>+?)\s*?(und|oder)\s*?(<[-_a-zA-Z]>+?)/ -> "$0 $2 $1 $2 $3" :global:i
-        
+
     end for
 
     do regex with var input: /^was\sgeht<ws><[?]>/ -> "wie geht es dir?" :global:i
     do regex with var input: /^was\sgeht$/ -> "wie geht es dir?" :global:i
     do regex with var input: /^was\sgeht\sab<ws><[?]>/ -> "wie geht es dir?" :global:i
     do regex with var input: /^was\sgeht\sab$/ -> "wie geht es dir?" :global:i
-    
+
     do regex with var input: /^wie\slang\s/ -> "wie " :global:i
     do regex with var input: /^wie\slange\s/ -> "wie " :global:i
-    
+
     do regex with var input: /Ihnen/ -> "dir" :global:i
     do regex with var input: /\sdenn<ws>?<[?]>/ -> " ?" :global:i
     do regex with var input: /\sdenn<[?]>/ -> " ?" :global:i
@@ -671,7 +671,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /erzaele etwas(?:(<[\s!?.]>?.*?$)|$)/ -> "was ist $0 ?" :global:i
     do regex with var input: /Erzaehlst du .*/ -> "was ist?" :global:i
     do regex with var input: /was ist\s+?ueber / -> "was ist " :global:i
-    
+
     if lc(var input) matches /(was heisst) (<[a-z]>)/ do
         set new var temp to ucfirst with $1
         do regex with var input: /(was heisst) (<[a-z]>)/ -> "$0 var temp" :global:i
@@ -689,7 +689,7 @@ define action compute_input with var input is rw, var lang, var path do
         do regex with var input: /<[?]>/ -> "" :global:i
         set var input to var input concat " ?"
     done
-    
+
     do regex with var input: /(was (?:machst|tust) du).*?(heute|jetzt|momentan|gerade|grade).*?$/ -> "$0 ?" :global:i
     do regex with var input: /(das weiss ich,)$/ -> "$0 ?" :global:i
     do regex with var input: /(das weiss ich)$/ -> "$0 ?" :global:i
@@ -714,7 +714,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /can you tell me (who|how|where|when|if|what)/ -> "$0 " :global:i
     do regex with var input: /can you tell me\s/ -> "what is " :global:i
     #do regex with var input: /gemacht\s+?<[?]>/ -> " ?" :global:i
-    
+
     do regex with var input: /^sobald\s*?(.*),\s*?(.*)$/ -> "$0, wenn $1" :global:i
     do regex with var input: /^(.*),\s*?sobald\s*?(.*)$/ -> "$1, wenn $0" :global:i
     do regex with var input: /^wenn\s*?(.*),\s*?(.*)$/ -> "$1, wenn $0" :global:i
@@ -725,13 +725,13 @@ define action compute_input with var input is rw, var lang, var path do
         do regex with var input: /kennst du ein(e|en) / -> "what-nowiki ist " :global:i
         do regex with var input: /kennst du / -> "was ist " :global:i
     done
-    
+
     do regex with var input: /wie heisst du mit / -> "du " :global:i
-    
+
     do regex with var input: / (<[A-Z]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?er)\s+?(<[A-Z]><[a-z]>+?) / -> " _$0_$1_ " :global
-    
+
     do regex with var input: /was macht / -> "was " :global:i
-    
+
     do regex with var input: /kannst du (.*?isch)($|(?:.?.?.?.?$))/ -> "kannst du $0 sprechen $1" :global:i
     do regex with var input: /kann ich (.*?isch)($|(?:.?.?.?.?$))/ -> "kann ich $0 sprechen $1" :global:i
 
@@ -747,7 +747,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     print "Computed input (no. 3) ... ", var input
     print new line
-    
+
     if var input matches /\s(|d|m|k)ein\s([a-z]+?en)(\s|$)/ do
         set new var noun to ucfirst with $1
         do regex with var input: /\s(|d|m|k)ein\s([a-z]+?en)(\s|$)/ -> " $0ein var noun$2" :global
@@ -806,16 +806,16 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /heisst\sdu/ -> "ist _dein_name_" :global:i
     do regex with var input: /du\sheisst/ -> "_dein_name_ ist" :global:i
 
-    
+
     do regex with var input: /(ist) (<[A-Z]><[a-z]>+?) (ein)/ -> "$0 _$1_ $2" :global
-    
+
     do regex with var input: /, die du kennst\s/ -> " " :global:i
     do regex with var input: /die du kennst\s/ -> " " :global:i
-    
+
     do regex with var input: /(^|\s)es leben/ -> "$0leben" :global:i
-    
+
     do regex with var input: / (\d+?)\s*?(gb|gigabyte|mb|megabyte|kb|kilobyte|byte)\s*?(ram|arbeitsspeicher|festplatte|speicher)/ -> " _$0_$1_$2_ " :global:i
-    
+
     do regex with var input: / brauchst du / -> " du brauchst " :global:i
     do regex with var input: / brauche ich / -> " ich brauche " :global:i
 
@@ -830,7 +830,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /Zaehle die (.*)en auf.*/ -> "ENUMALL eine $0e" :global:i
     do regex with var input: /Zaehle den (.*)en auf.*/ -> "ENUMALL ein $0e" :global:i
     do regex with var input: /Zaehle das (.*)en auf.*/ -> "ENUMALL ein $0e" :global:i
-    
+
     do regex with var input: /Zaehle mir alle (.*)n auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle mir die (.*)n auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle mir den (.*)n auf.*/ -> "ENUMALL ein $0" :global:i
@@ -839,7 +839,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /Zaehle die (.*)n auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle den (.*)n auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle das (.*)n auf.*/ -> "ENUMALL ein $0" :global:i
-    
+
     do regex with var input: /Zaehle mir alle (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle mir die (.*)s auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle mir den (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
@@ -848,7 +848,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /Zaehle die (.*)s auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle den (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle das (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
-    
+
     do regex with var input: /Zaehle mir alle (.*) auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle mir die (.*) auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle mir den (.*) auf.*/ -> "ENUMALL ein $0" :global:i
@@ -857,7 +857,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /Zaehle die (.*) auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle den (.*) auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle das (.*) auf.*/ -> "ENUMALL ein $0" :global:i
-    
+
     do regex with var input: /Zaehle (.*) auf.*/ -> "ENUMALL $0" :global:i
     do regex with var input: /ENUMALL mir (.*?) auf.*/ -> "ENUMALL $0" :global:i
     do regex with var input: /ENUMALL mir (.*)/ -> "ENUMALL $0" :global:i
@@ -894,14 +894,14 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /hast du was mal von (.*?) gehoert/ -> "was ist $0" :global:i
     do regex with var input: /^(...*?) hast du / -> "du hast $0 " :global:i
     do regex with var input: /^(...*?) habe ich / -> "ich habe $0 " :global:i
-    
+
     if length(var input) > 24 and var input matches /(question|fact)next/ do
         do regex with var input: /^weisst du<ws><[,]>*<ws>/ -> "" :global:i
         do regex with var input: /^weisst du/ -> "" :global:i
     done
     do regex with var input: /^weisst du<ws><[,]>*<ws>/ -> "" :global:i
     do regex with var input: /^weisst du/ -> "" :global:i
-    
+
     set var input to ' ' concat var input concat ' '
     do regex with var input: /\snoch\s(nie|nicht)(<[\s!.,?]>+)/ -> " noch-$0$1" :global:i
     do regex with var input: /\snoch(<[\s!.,?]>+)/ -> "$0" :global:i
@@ -933,7 +933,7 @@ define action compute_input with var input is rw, var lang, var path do
             do regex with var input: /\szu(<[mt]>)\s+(<[a-zA-Z_]>+)\s+(<[a-zA-Z_]>+)(<ws>?<[,.?!]>*?<ws>?)$/ -> " zu$0_\l$1_\l$2 $3" :global:i
         done
     done
-    
+
     do regex with var input: /\szu(<[mr]>)\s+(<[a-zA-Z_]>+)\s+(<[A-Z_]><[a-zA-Z_]>+)/ -> " zu$0_\l$1_\l$2 " :global:i
     do regex with var input: /\szu(<[mr]>)\s+(<[a-zA-Z_]>+)/ -> " zu$0_\l$1 " :global:i
     do regex with var input: /^zu(<[mr]>)\s+(<[a-zA-Z_]>+)/ -> " zu$0_\l$1 " :global:i
@@ -945,7 +945,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex with var input: /(^|\s)(ich|du|das) (weiss) / -> "$0$1 $2\{\{\{v\}\}\} " :global:i
     do regex with var input: / (weiss) (ich|du|das) / -> " $0\{\{\{v\}\}\} $1 " :global:i
-    
+
     if var input matches / opposite / do
         do regex with var input: /^\s+/ -> "" :global
         do regex with var input: /\s+$/ -> "" :global
@@ -953,7 +953,7 @@ define action compute_input with var input is rw, var lang, var path do
         set new array opposites to split using /_opposite_/, var input
         set var input to "_" concat from array opposites 1st element concat "_ opposite _" concat from array opposites 2nd element concat "_"
     done
-    
+
     do regex with var input: /\szu\s(<[a-z]>+?)\s(<[a-z]>+?)(.?.?.?)$/ -> " $1 , _to_ $0 $2" :global
 
     set new array clauses to split using /(<[,]>|KOMMA)/, var input
@@ -1005,7 +1005,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /^\s+/ -> "" :global:i
     do regex with var input: /^<[,]>/ -> "" :global:i
     do regex with var input: /^\s+/ -> "" :global:i
-    
+
     # TEXT
     # Here was the chapter about replacing user defined strings
     # CODE
@@ -1042,7 +1042,7 @@ define action compute_input with var input is rw, var lang, var path do
             do close with var cache_output
             do trigger_check_files without arguments
         done
-        
+
         push into global array replace_array, ""
     done
     set new array _replace_array to global array replace_array
@@ -1054,7 +1054,7 @@ define action compute_input with var input is rw, var lang, var path do
             set new var b to from array rawresult element [ 3 ]
             if var a and var b and var a not matches var b do
                 do regex with var input: /(^|\s)var a(\s|$)/ -> "$0var b$1" :global:i
-                
+
                 #print "#var a# --> #var b#"
                 #print new line
                 #print var input
@@ -1193,13 +1193,13 @@ define action compute_input with var input is rw, var lang, var path do
 
     print "Computed input (no. 7) ... ", var input
     print new line
-    
+
     set var input to to_unixtime with var input, var lang, var path
-    
+
     set new var mark to "\""
 
     do regex with var input: /\svar {mark}\s?(<[A-Za-z0-9_var {mark}]>+?)\s?var {mark}/ -> " var {mark}$0var {mark}" :global:i
-    
+
     do regex with var input: /in dem jahr (<[\d]>+)/ -> "in dem var {mark}jahre $0var {mark}" :global:i
     do regex with var input: /in dem jahre (<[\d]>+)/ -> "in dem var {mark}jahre $0var {mark}" :global:i
 
@@ -1230,14 +1230,14 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /<[,]>+/ -> " , " :global:i
     do regex with var input: /\s+/ -> " " :global:i
     do regex with var input: /<[_]>+/ -> "_" :global:i
-    
+
     if var input matches /<[?]>/ do
         set var input to lcfirst with var input
     done
 
     print "Computed input (no. 9) ... ", var input
     print new line
-    
+
     set new var male_file to handle for file name var path concat '/lang_' concat var lang concat '/male.history', read
     set new var last_male_substantive to ''
     for each new var line from var male_file do
@@ -1251,7 +1251,7 @@ define action compute_input with var input is rw, var lang, var path do
         set var last_female_substantive to var line
     done
     do close with var male_file
-    
+
     if var last_male_substantive do
         set var input to replace_he with var input, var last_male_substantive
     done
@@ -1282,7 +1282,7 @@ define action put_underscore_names_into_builtin_names with var input, var lang, 
             push into array male_names, $0
         done
     done
-    
+
 done
 
 

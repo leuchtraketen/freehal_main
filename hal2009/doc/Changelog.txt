@@ -1,3 +1,7 @@
+1285:
+
+- Die Synonymsuche funktioniert nun auch innerhalb der adverbialen Bestimmungen
+
 1261:
 
 - Bug 664 korrigiert
