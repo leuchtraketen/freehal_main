@@ -206,14 +206,33 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                 done
                 set new var object_article to ""
                 if from array clause 3rd element matches /\(a\)/ do
-                    set var object_article to get_article with var subject_genus, "subject", "indefinite"
+                    set var object_article to get_article with var object_genus, "subject", "indefinite"
                     do regex with from array clause 3rd element: /\(a\)\s+?/ -> "" :global
                 done
                 if from array clause 3rd element matches /\(the\)/ do
-                    set var object_article to get_article with var subject_genus, "subject", "definite"
+                    set var object_article to get_article with var object_genus, "subject", "definite"
                     do regex with from array clause 3rd element: /\(the\)\s+?/ -> "" :global
                 done
+                
+                set new array adverbs_parts to split with ";", from array clause 4th element
+                for each new var adverb_part in array adverbs_parts do
+                    set new array adverb_part_words to split with " ", var adverb_part
+                    set new var adverb_part_last_word to from array adverb_part_words element [ size of array adverb_part_words - 1 ]
+                    set new array adverb_part_props to compute_tags with var adverb_part_last_word, var lang, var path
+                    set new var adverb_part_genus to from array adverb_part_props 2nd element
 
+                    if var adverb_part matches /\(a\)/ do
+                        set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "indefinite"
+                        do regex with var adverb_part: /\(a\)\s+?/ -> "var adverb_part_article " :global
+                    done
+                    if var adverb_part matches /\(the\)/ do
+                        set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "definite"
+                        do regex with var adverb_part: /\(the\)\s+?/ -> "var adverb_part_article " :global
+                    done
+                done
+                set new var _tmp to join with ";", elements of array adverbs_parts
+                set from array clause 4th element to var _tmp
+                
                 if from array proper_verbs 1st element matches /^(equal)/ do
 
                     # subject article
@@ -226,7 +245,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # subject
                     push into array sentence, from array clause 2nd element
 
-                    if var subject_article is true and var object_article is false do
+                    if var subject_article is true and var object_article is an empty string do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done
@@ -264,7 +283,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # object
                     push into array sentence, from array clause 3rd element
 
-                    if not ( var subject_article is true and var object_article is false ) do
+                    if not ( var subject_article is true and var object_article is an empty string ) do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done
@@ -275,7 +294,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
 
                     set var final_sentence to var final_sentence concat join ' ', elements of array sentence
                 done
-                if from array proper_verbs 1st element matches /^(is<[-]>)/ do
+                if from array proper_verbs 1st element matches /^(is<[-]>property)/ do
                     # subject article
                     if var subject_article is true do
                         push into array sentence, var subject_article
@@ -284,7 +303,44 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # subject
                     push into array sentence, from array clause 2nd element
 
-                    if var subject_article is true and var object_article is false do
+                    if var subject_article is true and var object_article is an empty string do
+                        # adverbs
+                        push into array sentence, from array clause 4th element
+                    done
+
+                    # verb
+                    set new var verb to get_verb with "have", var subject_person
+                    push into array sentence, var verb
+
+                    set var object_article to get_article with var object_genus, "subject", "definite"
+                    push into array sentence, var object_article
+
+                    # object
+                    set new var object to from array clause 3rd element
+                    do regex with var object: /<[:]>/ -> "" :global
+                    push into array sentence, var object
+
+                    # adverbs
+                    if not ( var subject_article is true and var object_article is an empty string ) do
+                        push into array sentence, from array clause 4th element
+                    done
+
+                    if var final_sentence do
+                        set var final_sentence to var final_sentence concat ', '
+                    done
+
+                    set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+                done
+                else if from array proper_verbs 1st element matches /^(is<[-]>)/ do
+                    # subject article
+                    if var subject_article is true do
+                        push into array sentence, var subject_article
+                    done
+
+                    # subject
+                    push into array sentence, from array clause 2nd element
+
+                    if var subject_article is true and var object_article is an empty string do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done
@@ -300,7 +356,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
                     # object
                     push into array sentence, from array clause 3rd element
 
-                    if not ( var subject_article is true and var object_article is false ) do
+                    if not ( var subject_article is true and var object_article is an empty string ) do
                         # adverbs
                         push into array sentence, from array clause 4th element
                     done

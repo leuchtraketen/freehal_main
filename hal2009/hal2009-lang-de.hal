@@ -19,6 +19,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+set new global var questionwords_reg_ex to '(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)'
+
 set multi-line new global array collective_nouns to [
 ];
 
@@ -2779,12 +2781,14 @@ set multi-line new global hash builtin_part_of_speech to {
           '=' => "v",
           'is-a' => "v",
           'is-part' => "v",
+          'is-property' => "v",
           'is-own' => "v",
           '=' => "v",
           '>>>' => "v",
           '->' => "v",
           '!=>' => "v",
           '?=>' => "v",
+          ':' => "n",
           'vereinigten' => "adj",
           'verfuegbar' => "adj",
           'verliebt' => "v",
@@ -4449,6 +4453,7 @@ define action multiple_choices_verb with var verb do
         push into array choices, "="
         push into array choices, "~"
         push into array choices, "is-a"
+        push into array choices, "is-property"
         push into array choices, "bin"
         push into array choices, "bist"
         push into array choices, "ist"
@@ -4614,13 +4619,13 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
             do return with "question"
         done
     done
-    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /((\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)).*?(<[,]>|(komma))/ do
+    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ and (" " concat var input concat " ") matches /(global var questionwords_reg_ex).*?(<[,]>|(komma))/ do
         print "Sentence contains a question word and sub clauses"
         print new line
 
         do return with "question"
     done
-    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+    else if (not var input matches /_no-question_/) and lc(" " concat var input concat " ") matches /(global var questionwords_reg_ex)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         print "Sentence contains a question word"
         print new line
 
@@ -4638,7 +4643,7 @@ define action find_mode_of_input with var input, var only_learn, var lang, var p
 done
 
 define action but_feature_is_useful with var input do
-    if (" " concat var input concat " ") matches /(\swas\s)|(\swer\s)|(\swie\s)|(\swo\s)|(\swann\s)|(\swieso\s)|(\swarum\s)|(\swes)|(\swen\s)|(\swem\s)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
+    if (" " concat var input concat " ") matches /(global var questionwords_reg_ex)/ and not lc(" " concat var input concat " ") matches /(<[,]>)|(komma)/ do
         do return with 0
     done
 

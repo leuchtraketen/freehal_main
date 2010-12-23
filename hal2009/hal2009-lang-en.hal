@@ -19,6 +19,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+set new global var questionwords_reg_ex to '(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)'
+
 set multi-line new global array collective_nouns to [
 ];
 
@@ -1953,12 +1955,14 @@ set multi-line new global hash builtin_part_of_speech to {
           '=' => "v",
           'is-a' => "v",
           'is-part' => "v",
+          'is-property' => "v",
           'is-own' => "v",
           '=' => "v",
           '>>>' => "v",
           '->' => "v",
           '!=>' => "v",
           '?=>' => "v",
+          ':' => "n",
           'opposite' => "v",
           'ihr' => "art",
           'rauh' => "adj",
@@ -3422,15 +3426,24 @@ define action multiple_choices_verb with var verb do
         done
     done
 
-    if var verb matches "bi" or var verb matches "is" or var verb matches /heis/ do
-        push into array choices, "bin"
-        push into array choices, "bist"
-        push into array choices, "ist"
-        push into array choices, "sind"
-        push into array choices, "seid"
-        push into array choices, "heisst"
-        push into array choices, "heisse"
-        push into array choices, "heissen"
+    if var verb matches "bi" or var verb matches "i" or var verb matches "is" or var verb matches "ar" or var verb matches "b" do
+        push into array choices, var verb
+        push into array choices, "="
+        push into array choices, "~"
+        push into array choices, "is-a"
+        push into array choices, "is-property"
+        push into array choices, "am"
+        push into array choices, "are"
+        push into array choices, "is"
+        push into array choices, "be"
+        push into array choices, "was"
+        push into array choices, "were"
+    done
+    else if var verb matches "ha" or var verb matches "hab" do
+        push into array choices, var verb
+        push into array choices, "has"
+        push into array choices, "have"
+        push into array choices, "had"
     done
     else do
         for each new var ending in array endings do

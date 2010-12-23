@@ -2032,6 +2032,13 @@ struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, in
         weak = (0 == strcmp(request->context, "reasonof")) ? WEAK : EXACT;
     }
 
+    int m;
+    for (m = 0; fact->verbs[m] && fact->verbs[m]->name; ++m) {
+        if (fact->verbs[m]->name == strstr(fact->verbs[m]->name, "is-property")) {
+            weak = WEAK;
+        }
+    }
+
     if (!(
             fact_matches_verb                 (fact, request)
          && (

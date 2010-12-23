@@ -752,7 +752,7 @@ char* delete_underscores(char* _text) {
     }
 
     int j;
-    for (j = 0; j < LINE_SIZE-1; ++j) {
+    for (j = 0; text[j]; ++j) {
         if (text[j] == ' ' && j > size-3) {
             text[j] = '\0';
         }

@@ -31,14 +31,9 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         set new var line to ''
         set new var truth to "(maybe)"
 
-print hash parsed
-print new line
-
         set new array verbs to from hash parsed element { 'verbs' }
         for each new array verb in array verbs do
             set var verb to from array verb 1st element
-
-print "verb: " concat var verb concat new line
 
             do regex with var verb: /<[|]>.*/ -> "" :global:i
 
@@ -46,8 +41,6 @@ print "verb: " concat var verb concat new line
             if var verb_category and var verb not matches /\// do
                 set var verb to var verb concat "/" concat var verb_category
             done
-
-print "verb: " concat var verb concat new line
 
             if var verb matches /opposite/ do
                 set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
@@ -343,7 +336,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
 
-    do regex with var input: /(\s|^)(wie|wer|was|wo|wann|warum|wieso|weshalb|who|how|where|when|if|what) / -> "$0 _$1_ _no-question_ " :global:i
+    do regex with var input: /(\s|^)(global var questionwords_reg_ex) / -> "$0 _$1_ _no-question_ " :global:i
     do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
     do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
     do regex with var input: /\s+/ -> " " :global:i
@@ -737,6 +730,7 @@ define action init_csv_files with var current_language, var path do
                 do reread_pro_file with var pro_file, var current_language
 
                 do be_slow without arguments
+print "sync '" concat var file concat "' is '" concat var save_path concat var file_name concat "'"
                 set new var copy_input_handle to handle for file name var file, read
                 set new var copy_output_handle to handle for file name var save_path concat var file_name, write
                 for each new var line from var copy_input_handle is rw do
@@ -791,6 +785,15 @@ define action correct_human_edit_typos with var file, var current_language, var 
     set new var output_1 to handle for file name var file concat ".tmp", write
     for each new var line from var input_1 is rw do
         set new var _copy to var line
+        
+        do regex with var line: /^(ist|is-a) <> (<[^<]>*?) <> (eine|ein) (.*?)$/ -> "is-a <> $1 <> (a) $3"
+        do regex with var line: /^(ist|is-a) <> (eine|ein) (.*?)$/ -> "is-a <> (a) $2"
+        do regex with var line: /^(ist|is-a) <> (<[^<]>*?) <> (der|die|das) (.*?)$/ -> "is-a <> $1 <> (the) $3"
+        do regex with var line: /^(ist|is-a) <> (der|die|das) (.*?)$/ -> "is-a <> (the) $2"
+        do regex with var line: /^(is-.*?) <> (<[^<]>*?) <> (eine|ein) (.*?)$/ -> "$0 <> $1 <> (a) $3"
+        do regex with var line: /^(is-.*?) <> (eine|ein) (.*?)$/ -> "$0 <> (a) $2"
+        do regex with var line: /^(is-.*?) <> (<[^<]>*?) <> (der|die|das) (.*?)$/ -> "$0 <> $1 <> (the) $3"
+        do regex with var line: /^(is-.*?) <> (der|die|das) (.*?)$/ -> "$0 <> (the) $2"
 
         set new array parts to split using /<[<]><[>]>/, var line
         set new var j to 1
@@ -825,7 +828,10 @@ define action correct_human_edit_typos with var file, var current_language, var 
         do regex with var line: /_\(a\)_/ -> "(a) _"
         do regex with var line: /\s_\(the\)_/ -> " (the) _"
         do regex with var line: /_\(the\)_/ -> "(the) _"
-
+        
+        set new var _tmp to ":"
+        do regex with var line: /_<[:]>_/ -> "_ var _tmp _"
+        
         do regex with var line: /<[;]>{2}/ -> "<>"
         do regex with var line: /^((?:.*?<[<]><[>]>\s+?){6,})\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
 

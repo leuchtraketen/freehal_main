@@ -1,3 +1,21 @@
+1289:
+
+- Eine separate Syntax fuer Eigenschaften von Dingen wurde eingefuehrt:
+  stellt eine Beziehung zwischen einem Objekt, einer Eigenschaft und einer bestimmten Auspraegung dieser Eigenschaft dar
+
+  Syntax:   is-property <> objekt <> eigenschaft : wert <> <> (maybe)
+
+  Beispiel: Der Baum ist gruen
+    (oder:) Der Baum hat die Farbe gruen
+  Syntax:   is-property <> (the) baum <> farbe : gruen <> <> (maybe)
+
+  Beispiel: Der Ball ist rund
+  Syntax:   is-property <> (the) ball <> form : rund <> <> (maybe)
+
+  Wenn der Ueberbegriff der Eigenschaft nicht im Aussagesatz gegeben ist, muss er vorher bekannt sein.
+  Beispiel: "rund" ist eine Form
+  Syntax:   is-a <> _rund_ <> (a) form <> <> (maybe)
+
 1285:
 
 - Die Synonymsuche funktioniert nun auch innerhalb der adverbialen Bestimmungen
