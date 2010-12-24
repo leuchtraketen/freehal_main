@@ -7,9 +7,9 @@ befindet <> $a$ <> sich <> in $b$ <> steht <> $a$ <> nothing <> in $b$ <> wenn <
 # Direkte Anwort 
 bin <> ich <> online <> lange <> bin f=> <> ich <> immer online <>  <>  <>  <> 100
 #Direkte Anwort mit mehreren Möglichkeiten
-frage <> ich <> nothing <>  <> bin f=> <> ich <> nothing <> neugierig <>  <>  ;; f=> will wissen <> ich es <> nothing <>  <>  <>  ;; bin f=> wissbegierig <> ich <> nothing <>  <>  <>  <> 100
+frage <> ich <> nothing <>  <> bin f=> <> ich <> nothing <> neugierig <>  <>  <> f=> will wissen <> ich es <> nothing <>  <>  <>  ;; bin f=> wissbegierig <> ich <> nothing <>  <>  <>  <> 100
 #Direkte Anwort auf gegessen
-gegessen hat <> $a$ <> $b$ <>  <> => geschmeckt hat <> $b$ <> $a$ <>  <>  <>  ;; => geschmeckt hat <> $b$ <> $a$ 
+gegessen hat <> $a$ <> $b$ <>  <> => geschmeckt hat <> $b$ <> $a$ <>  <>  <>  <> => geschmeckt hat <> $b$ <> $a$ 
 #Direkte Anwort auf gegessen
 gegessen hat <> $a$ <> $b$ <>  <> => geschmeckt hat <> $b$ <> $a$ <>  <> wie <>  <> (true)
 #Direkte Anwort auf "Geh ins Bett"
@@ -18,13 +18,13 @@ geh <> nothing <> nothing <> ins bett <> f=> schlaefe <> ich <> nothing <> nie <
 geht <> es <> mir so <>  <> f=> geht <> es <> mir <> sehr gut <>  <>  <> 100  
 #Ausgabe einer Variablen
 #Direkte Anwort auf die Eingabe "Ich habe Durst"
-hat <> $a$ <> durst <>  <> f=> sollte trinken <> $a$ <> etwas <>  <>  <>  ;; q=> trinkt <> $a$ <> nichts <>  <> warum <>  <> (true)
+hat <> $a$ <> durst <>  <> f=> sollte trinken <> $a$ <> etwas <>  <>  <>  <> q=> trinkt <> $a$ <> nichts <>  <> warum <>  <> (true)
 #Direkte Anwort auf die Frage "Wer hat dir diesen Namen gegeben"
 hat <> mir <> diesen namen <> gegeben <> f=> hat <> das team <> dir diesen namen <> gegeben <>  <>  <> (true)
 #Variablendeklaration
-ist <> $$month$$ <> ein monat <>  <> (true)
+is-a <> $$month$$ <> (a) monat <>  <> (true)
 #Variablendeklaration
-ist <> $$year$$ <> ein jahr <>  <> (true)
+is-a <> $$year$$ <> (a) jahr <>  <> (true)
 #Wenn Durchmesser in der Datenbank steht wird auch auf groß geantwortet
 ist <> $a$ <> $b$ <> gross <> hat <> $a$ <> einen durchmesser <> von $b$ <> wenn <>  <> (true)
 #Wenn hoch in der Datenbank steht wird auch auf groß geantwortet
@@ -45,7 +45,7 @@ wiege <> ich <> nothing <>  <> f=> hat <> software <> ein gewicht <> nicht <>  <
 #Anwort auf eine schlimme Frage
 will <> $a$ <> ficken <>  <> f=>  <>geh doch <> nothing <> in ein bordell <>  <>  <> (true)
 #Direkte Anwort auf die Frage "Wo kommst du her"
-herkomme <> ich <> nothing <>  <> f=> kommst <> du <> nothing <> aus dem internet <>  <>  ;; f=> <> nothing <> nothing <> aus dem kopf von einem programmierer <>  <>  <> (true)
+herkomme <> ich <> nothing <>  <> f=> kommst <> du <> nothing <> aus dem internet <>  <>  <> f=> <> nothing <> nothing <> aus dem kopf von einem programmierer <>  <>  <> (true)
 #Variablendeklaration für das Datum
 ist <> _$$mday$$_$$month$$_$$year$$_ <>ein datum <>  <> (true)
 #Ausgabe bei der Frage nach dem Datum
@@ -62,19 +62,19 @@ anhat <> $a$ <> nothing <>  <> anhaben kann/can <> $a$ <> nothing <>  <> wenn <>
 heisst <> $a$ <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing <> immer mit eliza <>  <>  <> (true)
 #Wenn ist in der Datenbank steht, wird auf bedeutet geantwortet #
 bedeutet <> $a$ <> nothing <>  <> ist <> $a$ <> nothing <>  <> wenn <>  <> (true)
-besitzt <> du <> $a$ <>  <> f=> moechte <> ich <> auch $a$ <>  <>  <>  ;; q=> schenkst <> du <> mir dann $a$ <> nicht <> warum <>  <> (true)
+besitzt <> du <> $a$ <>  <> f=> moechte <> ich <> auch $a$ <>  <>  <>  <> q=> schenkst <> du <> mir dann $a$ <> nicht <> warum <>  <> (true)
 #Direkte Anwort auf die Eingabe "ich gehe jetzt"#
-geht <> $a$ <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  ;; f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
+geht <> $a$ <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  <> f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
 #Variablendeklaration für Wochentag
-ist <> $$wday$$ <> ein tag <>  <> (true)
+is-a <> $$wday$$ <> (a) tag <>  <> (true)
 # Bei der Eingabe "Ich heisse oder mein Name ist ..." Wird ein Zufallsnamen aus der Datenbank ausgegeben#
 ist <> dein name <> $a$ <>  <> dachte f=> heisst <> ich du <> $$randomname$$ <>  <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe " ? studiert ?#
-studiert <> $a$ <> $b$ <>  <> f=> ist <> $b$ <> sicher sehr interessant <>  <>  <>  ;; q=> <> gefaellt <> mir an  <> $b$ <> was <>  <> (true)
+studiert <> $a$ <> $b$ <>  <> f=> ist <> $b$ <> sicher sehr interessant <>  <>  <>  <> q=> <> gefaellt <> mir an  <> $b$ <> was <>  <> (true)
 #Direkte Antwort auf die Eingabe "Ich bin dick"#
 ist <> $a$ <> nothing <> dick <> abnehmen f=> solltest <> $a$ <> nothing <>  <>  <>  <> (true)
 #Direkte Anwort auf die Eingabe "Ich wohne in "xy"#
-wohnt <> $a$ <> nothing <> in $b$ <> q=> wohnt <> $a$ <> nothing <> in b;schon lange <>  <>  ;; q=> <> gefaellt <> es $a$ <> in $b$ <> wie <>  <> (true)
+wohnt <> $a$ <> nothing <> in $b$ <> q=> wohnt <> $a$ <> nothing <> in b;schon lange <>  <>  <> q=> <> gefaellt <> es $a$ <> in $b$ <> wie <>  <> (true)
 #Wenn erfand in der Datenbank steht, wird auf eine Frage mit erfunden geantwortet#
 erfunden hat <> $a$ <> $b$ <>  <> erfand <> $a$ <> $b$ <>  <> wenn <>  <> (true)
 #Direkte Antwort auf die Frage "Was ist mit XY?" #
@@ -85,7 +85,7 @@ hat <> $a$ <> heute geburtstag <>  <> f=> <> nothing <> nothing <> alle gute <> 
 #Direkte Antwort auf die Eingabe "Ich bin blond" #
 ist <> $a$ <> nothing <> blond <> macht q=> <> blond wirklich <> bloed <>  <>  <>  <> (true)
 #Direkte Antwort auf die Eingabe "Ich habe Hunger"#
-hat <> $a$ <> hunger <>  <> essen f=> solltest <> $a$ <> etwas <>  <>  <>  ;; f=> pluendern sollte <> $a$ <> den kuehlschrank <>  <>  <>  <> (true)
+hat <> $a$ <> hunger <>  <> essen f=> solltest <> $a$ <> etwas <>  <>  <>  <> f=> pluendern sollte <> $a$ <> den kuehlschrank <>  <>  <>  <> (true)
 # Für Fragen nach "Wie alt"
 sein <> $a$ <>  <> alt <> gestorben ist <> $a$ <>  <>  <> wenn <> (maybe) 
 $a$ beherrscht $b$, wenn $a$ $b$ spricht
