@@ -2703,6 +2703,8 @@ set multi-line new global hash builtin_part_of_speech to {
           'their' => "art",
           'this' => "art",
           'tief' => "adj",
+          'time' => "n",
+          '$$time$$' => "n",
           'tiere' => "n",
           'tlerweile' => "adj",
           'today' => "adj",
@@ -4479,7 +4481,7 @@ define action multiple_choices_verb with var verb do
         push into array choices, "bezeichnen"
         push into array choices, "bezeichnest"
     done
-    else if var verb matches "ha" or var verb matches "hab" do
+    else if var verb matches "ha" or var verb matches "hab" or var verb matches /is-property/ do
         push into array choices, var verb
         push into array choices, "hab"
         push into array choices, "habe"

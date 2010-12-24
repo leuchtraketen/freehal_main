@@ -541,6 +541,8 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
     done
 
     if flag final do
+        set new array replaced_histories to an empty array
+        
         for each new array data_pos_element in array data_pos_list do
             set new var data_pos_str to from array data_pos_element 1st element
 
@@ -550,8 +552,22 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                     do print_array with array replaced_history_element
                     print new line
                 done
-                do return with array replaced_history
+                print new line
+
+                push into array replaced_histories, array replaced_history
             done
+        done
+        
+        # prefer results which have an "extra" entry!
+        if size of array replaced_histories do
+            for each new array replaced_history in array replaced_histories do
+                for each new array replaced_history_element in array replaced_history do
+                    if from array replaced_history_element 1st item matches "s-extra-after" do
+                        do return with array replaced_history
+                    done
+                done
+            done
+            do return with from array replaced_histories 1st item
         done
     done
     else do

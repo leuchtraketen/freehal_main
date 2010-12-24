@@ -940,6 +940,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /wieviel<[a-zA-Z]>*\s/ -> "wie " :global:i
     do regex with var input: /wie spaet/ -> "wie uhr" :global:i
     do regex with var input: /wie frueh/ -> "wie uhr" :global:i
+    set new var dollardollar_time_dollardollar to '_$$time$$_'
+    do regex with var input: /wie uhr / -> "wie var dollardollar_time_dollardollar " :global:i
+
     do regex with var input: /<[=]>/ -> " = " :global:i
     do regex with var input: /opposite/ -> " opposite " :global
     do regex with var input: /wofuer steht / -> "was ist " :global:i
@@ -954,7 +957,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /hast du was mal von (.*?) gehoert/ -> "was ist $0" :global:i
     do regex with var input: /^(...*?) hast du / -> "du hast $0 " :global:i
     do regex with var input: /^(...*?) habe ich / -> "ich habe $0 " :global:i
-
+    
     print "Computed input (no. 4.2) ... ", var input
     print new line
 

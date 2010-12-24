@@ -1525,12 +1525,16 @@ int word_matches_word_array(struct word* word, struct word** words, int flags) {
     if (word->name == strstr(word->name, "%")) {
         return 1;
     }
+    if (strstr(word->name, "$$time$$")) {
+        return 1;
+    }
 
     int m;
     for (m = 0; words[m] && words[m]->name; ++m) {
         if (is_good(words[m]->name) && strlen(words[m]->name) >= 1) {
             //if (!is_a_trivial_word(words[m]->name)) {
 
+                // || strstr(words[m]->name, "$$time$$")
                 if (matches_with_pipe(word->name, words[m]->name) || (config_match_variables && is_a_variable(words[m]->name) && !is_a_variable(word->name))) {
                     char tmp[1000];
                     snprintf(tmp, 999, " ---     '%s' = '%s'\n", word->name, words[m]->name);
