@@ -836,7 +836,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /didn<['`']>t/ -> "did not" :global:i
     do regex with var input: /mustn<['`']>t/ -> "must not" :global:i
     do regex with var input: /n<['`']>t/ -> " not" :global:i
-    do regex with var input: /gehts(.?.?.?)/ -> "geht es dir?" :global:i
+    do regex with var input: /gehts(.?.?.?.?)$/ -> "geht es dir?" :global:i
     do regex with var input: /gehts/ -> "geht es" :global:i
     do regex with var input: /geht<['`']>s/ -> "geht es" :global:i
     do regex with var input: /^(.?.?)gibt es / -> "$0was ist " :global:i

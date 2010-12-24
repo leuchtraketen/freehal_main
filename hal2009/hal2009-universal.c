@@ -2711,7 +2711,17 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
             weak
         );
 
+        if (list == TOOMUCH_P) {
+            free_request(fact);
+            return TOOMUCH_P;
+        }
+
         list = replace_variables_in_list(list);
+
+        if (list == TOOMUCH_P) {
+            free_request(fact);
+            return TOOMUCH_P;
+        }
 
         if (!can_be_a_pointer(list) || !count_list((void**)list)) {
             if (can_be_a_pointer(list)) {
@@ -2726,72 +2736,73 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
             );
         }
 
-        if (list != TOOMUCH_P) {
+        if (list == TOOMUCH_P) {
+            free_request(fact);
+            return TOOMUCH_P;
+        }
 
-            struct word*** subject_syonyms_level_0 = 0;
+        struct word*** subject_syonyms_level_0 = 0;
 
-            int l;
-            for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
-                if (can_be_a_pointer(list[l])) {
-                    printf("list[l]->verbs: %d\n", list[l]->verbs);
-                    if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
-                        printf("list[l]->verbs[0]->name: %s\n", list[l]->verbs[0]->name);
-                        if (is_a_fact_verb(list[l]->verbs[0]->name) && strlen(verbs)) {
+        int l;
+        for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
+            if (can_be_a_pointer(list[l])) {
+                printf("list[l]->verbs: %d\n", list[l]->verbs);
+                if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
+                    printf("list[l]->verbs[0]->name: %s\n", list[l]->verbs[0]->name);
+                    if (is_a_fact_verb(list[l]->verbs[0]->name) && strlen(verbs)) {
 
-                            if (!subject_syonyms_level_0) {
-                                subject_syonyms_level_0 = filter_synonyms(synonym_set->subjects, 1, FORWARD);
-                            }
+                        if (!subject_syonyms_level_0) {
+                            subject_syonyms_level_0 = filter_synonyms(synonym_set->subjects, 1, FORWARD);
+                        }
 
-                            if (strstr(list[l]->filename, "thes")) {
-                                printf("fact %d: from thesaurus => invalid\n", l);
-                                set_to_invalid_fact(&(list[l]));
-                            }
-                            else if (strstr(list[l]->filename, "part_of_speech")) {
-                                printf("fact %d: from part_of_speech => invalid\n", l);
-                                set_to_invalid_fact(&(list[l]));
-                            }
-                            else if (strstr(list[l]->filename, "ps-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
-                                printf("fact %d: from ps-... => invalid\n", l);
-                                set_to_invalid_fact(&(list[l]));
-                            }
-                            else if (strstr(list[l]->filename, "fa-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
-                                printf("fact %d: from fa-... => invalid\n", l);
-                                set_to_invalid_fact(&(list[l]));
-                            }
-                            else {
-                                printf("fact %d: => valid\n", l);
-                                if (is_a_equal_verb(list[l]->verbs[0]->name)) {
-                                    free(list[l]->verbs);
-                                    list[l]->verbs = divide_words("equal");
-                                }
+                        if (strstr(list[l]->filename, "thes")) {
+                            printf("fact %d: from thesaurus => invalid\n", l);
+                            set_to_invalid_fact(&(list[l]));
+                        }
+                        else if (strstr(list[l]->filename, "part_of_speech")) {
+                            printf("fact %d: from part_of_speech => invalid\n", l);
+                            set_to_invalid_fact(&(list[l]));
+                        }
+                        else if (strstr(list[l]->filename, "ps-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
+                            printf("fact %d: from ps-... => invalid\n", l);
+                            set_to_invalid_fact(&(list[l]));
+                        }
+                        else if (strstr(list[l]->filename, "fa-") && fact_matches_entity_by_entity(list[l]->objects, subject_syonyms_level_0, EXACT, "")) {
+                            printf("fact %d: from fa-... => invalid\n", l);
+                            set_to_invalid_fact(&(list[l]));
+                        }
+                        else {
+                            printf("fact %d: => valid\n", l);
+                            if (is_a_equal_verb(list[l]->verbs[0]->name)) {
+                                free(list[l]->verbs);
+                                list[l]->verbs = divide_words("equal");
                             }
                         }
-                    }
-                }
-
-                if (can_be_a_pointer(list[l])) {
-                    struct fact** clauses = search_clauses(list[l]->pk);
-                    if (can_be_a_pointer(clauses) && can_be_a_pointer(clauses[0])) {
-                        printf("pk %d, clauses!\n", list[l]->pk);
-                        int c;
-                        for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
-                            printf("pk %d, clause %d, question word %s\n", list[l]->pk, c, clauses[c]->questionword);
-
-                            if (is_conditional_questionword(clauses[c]->questionword)) {
-                                set_to_invalid_fact(&(list[l]));
-                                break;
-                            }
-                        }
-                        for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
-                            set_to_invalid_fact(&(clauses[c]));
-                        }
-                    }
-                    if (is_engine("disk")) {
-                        free(clauses);
                     }
                 }
             }
 
+            if (can_be_a_pointer(list[l])) {
+                struct fact** clauses = search_clauses(list[l]->pk);
+                if (can_be_a_pointer(clauses) && can_be_a_pointer(clauses[0])) {
+                    printf("pk %d, clauses!\n", list[l]->pk);
+                    int c;
+                    for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
+                        printf("pk %d, clause %d, question word %s\n", list[l]->pk, c, clauses[c]->questionword);
+
+                        if (is_conditional_questionword(clauses[c]->questionword)) {
+                            set_to_invalid_fact(&(list[l]));
+                            break;
+                        }
+                    }
+                    for (c = 0; can_be_a_pointer(clauses[c]); ++c) {
+                        set_to_invalid_fact(&(clauses[c]));
+                    }
+                }
+                if (is_engine("disk")) {
+                    free(clauses);
+                }
+            }
         }
 
         free_request(fact);
@@ -2939,9 +2950,9 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
                 if (can_be_a_pointer(list[l])) {
                     if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                         if (can_be_a_pointer(list[l]->objects) && can_be_a_pointer(list[l]->objects[0]) && can_be_a_pointer(list[l]->objects[0]->name)) {
-                            printf("verb:     %s\n", list[l]->verbs[0]->name);
-                            printf("subjects: %s\n", list[l]->subjects[0]->name);
-                            printf("objects:  %s\n", list[l]->objects[0]->name);
+                            //printf("verb:     %s\n", list[l]->verbs[0]->name);
+                            //printf("subjects: %s\n", list[l]->subjects[0]->name);
+                            //printf("objects:  %s\n", list[l]->objects[0]->name);
                             if (strcmp(list[l]->verbs[0]->name, "is-a00000") && strcmp(list[l]->verbs[0]->name, "=00000")) {
                                 set_to_invalid_fact(&(list[l]));
                             }
@@ -3320,6 +3331,7 @@ struct fact** search_facts_deep(struct synonym_set* synonym_set, const char* sub
         );
 
         if (linking_list == TOOMUCH_P) {
+            free_request(fact);
             return TOOMUCH_P;
         }
 
@@ -3546,6 +3558,7 @@ struct fact** search_facts_thesaurus(struct synonym_set* synonym_set, const char
         );
 
         if (list == TOOMUCH_P) {
+            free_request(fact);
             return TOOMUCH_P;
         }
 
@@ -3678,7 +3691,7 @@ struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const ch
     if (!can_be_a_pointer(list) || !count_list((void**)list)) {
         printf("We do.\n");
 
-        int level = 2;
+        int level = 0;
 
         if (0 == strcmp(context, "nosynonyms")) {
             level = 1;
