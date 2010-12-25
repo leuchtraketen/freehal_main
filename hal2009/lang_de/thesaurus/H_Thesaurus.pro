@@ -3006,7 +3006,6 @@
 = <> _hernach_ <> _spaeter_ <> (maybe)
 = <> _heroin_ <> _diacetylmorphin_ <> (maybe)
 = <> _heroin_ <> _diamorphin_ <> (maybe)
-= <> _heroin_ <> _schnee_ <> (maybe)
 = <> _heroismus_ <> _heldenmut_ <> (maybe)
 = <> _heroismus_ <> _heldentum_ <> (maybe)
 = <> _heroismus_ <> _mannhaftigkeit_ <> (maybe)

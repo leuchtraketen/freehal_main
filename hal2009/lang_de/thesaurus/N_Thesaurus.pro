@@ -3700,7 +3700,6 @@
 = <> _nose_candy_ <> _c17h21no4_ <> (maybe)
 = <> _nose_candy_ <> _kokain_ <> (maybe)
 = <> _nose_candy_ <> _koks_ <> (maybe)
-= <> _nose_candy_ <> _schnee_ <> (maybe)
 = <> _nose_candy_ <> _snow_ <> (maybe)
 = <> _nosomanie_ <> _hypochondrische_stoerung_ <> (maybe)
 = <> _nosomanie_ <> _krankheitsfurcht_ <> (maybe)

@@ -6432,7 +6432,7 @@
 = <> _pullover_ <> _pulli_ <> (maybe)
 = <> _pullover_ <> _sweatshirt_ <> (maybe)
 = <> _pulpa_ <> _zahnmark_ <> (maybe)
-= <> _pulsar_ <> _magnetar_ <> (maybe)
+
 = <> _pulsar_ <> _neutronenstern_ <> (maybe)
 = <> _pulsstrahltriebwerk_ <> _argus-rohr_ <> (maybe)
 = <> _pulsstrahltriebwerk_ <> _argus-schmidt-rohr_ <> (maybe)
