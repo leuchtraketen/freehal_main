@@ -610,8 +610,7 @@ int hal2009_add_pro_file (char* filename) {
                     r.hash_clauses = hash_clauses;
 
                     int err;
-
-                    if (strstr(r.subjects, "_") && strlen(r.subjects) > 2) {
+                    if ((strstr(r.subjects, "_") && strlen(r.subjects) > 2) || (strstr(r.objects, "_") && strlen(r.objects) > 2)) {
                         // Modify hash
                         r.hash_clauses = hash_clauses-5;
 

@@ -973,7 +973,7 @@ char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int
     "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, "
     "`nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
     strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
-    strcat(sql, ";");
+    strcat(sql, ";\n");
     printf(sql);
     return sql;
 }
