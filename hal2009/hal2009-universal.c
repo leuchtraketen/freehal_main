@@ -381,7 +381,7 @@ struct word*** __add_synonyms_by_search(const char* subj, const char* obj, const
 }
 */
 
-static int max_synonym_count = 9999;
+static int max_synonym_count = 99;
 static int max_entity_words_count = 9;
 
 struct synonym* construct_synonym(const char* _exp, const char** _exps, struct word* word, struct word** words, int level, int direction) {
@@ -794,7 +794,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
 
         // level 2 forward
         int begin_level_2 = *position;
-        {
+        if (begin_level_2-begin_level_1 < 39) {
             if (begin_level_2 - begin_level_1 > 0) {
                 char** exps = synonyms_to_expressions(synonyms, begin_level_1, begin_level_2);
                 struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
@@ -817,7 +817,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
 
         // level 3 forward
         int begin_level_3 = *position;
-        {
+        if (begin_level_3-begin_level_2 < 39) {
             if (begin_level_3 - begin_level_2 > 0) {
                 char** exps = synonyms_to_expressions(synonyms, begin_level_2, begin_level_3);
                 struct fact** facts_synonyms = search_facts_synonyms("", (const char*)exps, "", 0, synonym_verbs, "", "", "", "default");

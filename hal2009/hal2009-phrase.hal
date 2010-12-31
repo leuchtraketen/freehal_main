@@ -19,6 +19,586 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
+define action sort_verbs with array clause, var final_sentence, hash parsed do
+
+    set new array raw_verbs to [ split ' ', from array clause 1st element ]
+    set new array proper_verbs to an empty array
+    set new hash auxiliary_verbs_hash to an empty hash
+
+    for each new var verb in array raw_verbs do
+        if var verb matches /=>/ do
+            # TEXT
+            # We have such a sentence:
+            # "Clause to match , => Clause to print"
+            # SO we have to remove the first one
+            # CODE
+            set var final_sentence to ""
+        done
+
+        if var verb matches /([01])([01])([01])([01])([01])$/ do
+            set new var person to get_person with from array clause 2nd element
+            if var person matches "3s" do
+                set var person to get_person with hash parsed element { 'subjects' } 1st element
+            done
+
+            set new var is_want to $0
+            set new var is_must to $1
+            set new var is_can to $2
+            set new var is_may to $3
+            set new var is_should to $4
+
+            if var is_want do
+                set new var new_verb to get_verb with "want", var person
+                if var new_verb do
+                    set from hash auxiliary_verbs_hash element { var new_verb } to 1
+                done
+            done
+
+            if var is_must do
+                set new var new_verb to get_verb with "must", var person
+                if var new_verb do
+                    set from hash auxiliary_verbs_hash element { var new_verb } to 1
+                done
+            done
+
+            if var is_can do
+                set new var new_verb to get_verb with "can", var person
+                if var new_verb do
+                    set from hash auxiliary_verbs_hash element { var new_verb } to 1
+                done
+            done
+
+            if var is_may do
+                set new var new_verb to get_verb with "may", var person
+                if var new_verb do
+                    set from hash auxiliary_verbs_hash element { var new_verb } to 1
+                done
+            done
+
+            if var is_should do
+                set new var new_verb to get_verb with "should", var person
+                if var new_verb do
+                    set from hash auxiliary_verbs_hash element { var new_verb } to 1
+                done
+            done
+
+            do regex with var verb: /([01])([01])([01])([01])([01])$/ -> "" :global
+        done
+
+        if from global hash builtin_auxiliary_verbs element { var verb } do
+            set from hash auxiliary_verbs_hash element { var verb } to 1
+        done
+        else do
+            push into array proper_verbs, var verb
+        done
+    done
+
+    set new array auxiliary_verbs to an empty array
+    set elements of array auxiliary_verbs to keys with elements of hash auxiliary_verbs_hash
+
+    if from array clause 4th element matches /(^|\s)zu(\s|$)/ and length( from array clause 4th element ) < 5 do
+        do unshift with elements of array proper_verbs, "zu"
+        do regex with from array clause 4th element: /(^|\s)zu(\s|$)/ -> "$0" :global
+    done
+    if from array clause 4th element matches /(^|\s)_to_(\s|$)/ and length( from array clause 4th element ) < 5 do
+        do unshift with elements of array proper_verbs, "zu"
+        do regex with from array clause 4th element: /(^|\s)_to_(\s|$)/ -> "$0" :global
+    done
+    if from array clause 5th element matches /(^|\s)_to_(\s|$)/ and length( from array clause 5th element ) < 5 do
+        do unshift with elements of array proper_verbs, "zu"
+        do regex with from array clause 5th element: /(^|\s)_to_(\s|$)/ -> "$0" :global
+    done
+    
+    print "auxiliary verbs: "
+    do print_array with array auxiliary_verbs
+    print new line
+    print "proper verbs: "
+    do print_array with array proper_verbs
+    print new line
+
+    do return with [ array auxiliary_verbs, array proper_verbs, var final_sentence, hash parsed ]
+done
+
+define action phrase_fact with array sentence, array clause, var final_sentence, hash parsed, array auxiliary_verbs, array proper_verbs, var lang, var path do
+    set new var _no_user_ask to handle for file name "_no_user_ask", write
+    do close with var _no_user_ask
+
+    set new array subject_words to split with " ", from array clause 2nd element
+    set new array object_words to split with " ", from array clause 3rd element
+    set new var subject_last_word to last_element with array subject_words
+    set new var object_last_word to last_element with array object_words
+
+    set new array subject_props to compute_tags with var subject_last_word, var lang, var path
+    set new array object_props to compute_tags with var object_last_word, var lang, var path
+    set new var subject_genus to from array subject_props 2nd element
+    set new var object_genus to from array object_props 2nd element
+    set new var subject_person to get_person with from array clause 2nd element
+    if from array proper_verbs 1st element matches /^equal-pl/ do
+        set var subject_person to "3p"
+    done
+
+    set new var is_name_subject to is_name with var lang, var subject_last_word
+    set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
+    set new var verb_options to from array proper_verbs 1st element
+
+    set new var subject_article to ""
+    if from array clause 2nd element matches /\(a\)/ do
+        set var subject_article to get_article with var subject_genus, "subject", "indefinite"
+        do regex with from array clause 2nd element: /\(a\)\s+?/ -> "" :global
+    done
+    if from array clause 2nd element matches /\(the\)/ do
+        set var subject_article to get_article with var subject_genus, "subject", "definite"
+        do regex with from array clause 2nd element: /\(the\)\s+?/ -> "" :global
+    done
+    set new var object_article to ""
+    if from array clause 3rd element matches /\(a\)/ do
+        set var object_article to get_article with var object_genus, "subject", "indefinite"
+        do regex with from array clause 3rd element: /\(a\)\s+?/ -> "" :global
+    done
+    if from array clause 3rd element matches /\(the\)/ do
+        set var object_article to get_article with var object_genus, "subject", "definite"
+        do regex with from array clause 3rd element: /\(the\)\s+?/ -> "" :global
+    done
+    
+    set new array adverbs_parts to split with ";", from array clause 4th element
+    for each new var adverb_part in array adverbs_parts do
+        set new array adverb_part_words to split with " ", var adverb_part
+        set new var adverb_part_last_word to from array adverb_part_words element [ size of array adverb_part_words - 1 ]
+        set new array adverb_part_props to compute_tags with var adverb_part_last_word, var lang, var path
+        set new var adverb_part_genus to from array adverb_part_props 2nd element
+
+        if var adverb_part matches /\(a\)/ do
+            set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "indefinite"
+            do regex with var adverb_part: /\(a\)\s+?/ -> "var adverb_part_article " :global
+        done
+        if var adverb_part matches /\(the\)/ do
+            set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "definite"
+            do regex with var adverb_part: /\(the\)\s+?/ -> "var adverb_part_article " :global
+        done
+    done
+    set new var _tmp to join with ";", elements of array adverbs_parts
+    set from array clause 4th element to var _tmp
+    
+    if from array proper_verbs 1st element matches /^(equal)/ do
+
+        # subject article
+        if var subject_article is true or ( var verb_options not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and var verb_options matches /(def|indef)/ ) do
+            if var is_name_subject is false or var is_collective_noun_subject is true or var subject_article is true do
+                push into array sentence, var subject_article
+            done
+        done
+
+        # subject
+        push into array sentence, from array clause 2nd element
+
+        if var subject_article is true and var object_article is an empty string do
+            # adverbs
+            push into array sentence, from array clause 4th element
+        done
+
+        # verb
+        if from array clause 3rd element not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
+            if var object_article is true do
+                set new var verb to get_verb with "be", var subject_person
+                push into array sentence, var verb
+                push into array sentence, var object_article
+            done
+            else if from array subject_props 1st element matches /^v/ do
+                set new var verb to get_verb with "is-same-as", var subject_person
+                push into array sentence, var verb
+            done
+            else if from array clause 3rd element matches /<[0-9]>/ do
+                set new var verb to get_verb with "is-same-as", var subject_person
+                push into array sentence, var verb
+            done
+            else if from array proper_verbs 1st element matches /^equal-pl/ do
+                set new var verb to get_verb with "be", var subject_person
+                push into array sentence, var verb
+            done
+            else do
+                set new var verb to get_verb with "be", var subject_person
+                push into array sentence, var verb
+                push into array sentence, var object_article
+            done
+        done
+        else do
+            set new var verb to get_verb with "be", var subject_person
+            push into array sentence, var verb
+        done
+
+        # object
+        push into array sentence, from array clause 3rd element
+
+        if not ( var subject_article is true and var object_article is an empty string ) do
+            # adverbs
+            push into array sentence, from array clause 4th element
+        done
+
+        if var final_sentence do
+            set var final_sentence to var final_sentence concat ', '
+        done
+
+        set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+    done
+    if from array proper_verbs 1st element matches /^(is<[-]>property)/ do
+        # subject article
+        if var subject_article is true do
+            push into array sentence, var subject_article
+        done
+
+        # subject
+        push into array sentence, from array clause 2nd element
+
+        if var subject_article is true and var object_article is an empty string do
+            # adverbs
+            push into array sentence, from array clause 4th element
+        done
+
+        # verb
+        set new var verb to get_verb with "have", var subject_person
+        push into array sentence, var verb
+
+        set var object_article to get_article with var object_genus, "subject", "definite"
+        push into array sentence, var object_article
+
+        # object
+        set new var object to from array clause 3rd element
+        do regex with var object: /<[:]>/ -> "" :global
+        push into array sentence, var object
+
+        # adverbs
+        if not ( var subject_article is true and var object_article is an empty string ) do
+            push into array sentence, from array clause 4th element
+        done
+
+        if var final_sentence do
+            set var final_sentence to var final_sentence concat ', '
+        done
+
+        set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+    done
+    else if from array proper_verbs 1st element matches /^(is<[-]>)/ do
+        # subject article
+        if var subject_article is true do
+            push into array sentence, var subject_article
+        done
+
+        # subject
+        push into array sentence, from array clause 2nd element
+
+        if var subject_article is true and var object_article is an empty string do
+            # adverbs
+            push into array sentence, from array clause 4th element
+        done
+
+        # verb
+        set new var verb to get_verb with from array proper_verbs 1st element, var subject_person
+        push into array sentence, var verb
+
+        if var object_article is true do
+            push into array sentence, var object_article
+        done
+
+        # object
+        push into array sentence, from array clause 3rd element
+
+        if not ( var subject_article is true and var object_article is an empty string ) do
+            # adverbs
+            push into array sentence, from array clause 4th element
+        done
+
+        if var final_sentence do
+            set var final_sentence to var final_sentence concat ', '
+        done
+
+        set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+    done
+
+    do unlink with "_no_user_ask"
+    do return with [ var final_sentence, array sentence, hash parsed ]
+done
+
+define action phrase_sentence with array sentence, array clause, var final_sentence, hash parsed, array auxiliary_verbs, array proper_verbs, var lang, var path do
+    if not elements of array auxiliary_verbs do
+        set elements of array auxiliary_verbs to elements of array proper_verbs
+        set array proper_verbs to an empty array
+    done
+
+    # TEXT
+    # When there is a time period mentioned in the question, but not in the answer
+    # CODE
+    if from array clause 4th element not matches /time.(from|to)/ and from array clause 3rd element not matches /time.(from|to)/ do
+        set new array input_adverbs to from hash parsed element { 'adverbs' }
+        for each new var _adverb in array input_adverbs do
+            set new var adverb to var _adverb
+            if lc(var adverb) matches /array/ do
+                set var adverb to from array adverb 1st element
+            done
+
+            if lc(var adverb) matches /time_/ do
+                set array clause to add_undefined_time with array clause
+
+                go to last
+            done
+        done
+    done
+
+    # TEXT
+    # Replace *s
+    # CODE
+    if from array clause 2nd element matches "*" do
+        if from array clause 3rd element matches "*" do
+            if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
+                set from array clause 2nd element to hash parsed element { 'subjects' } 1st element 1st element
+            done
+            else do
+                set from array clause 2nd element to hash parsed element { 'subjects' } 1st element
+            done
+        done
+        else do
+            if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
+                set from array clause 2nd element to hash parsed element { 'subjects' } 1st element 1st element
+            done
+            else do
+                set from array clause 2nd element to hash parsed element { 'subjects' } 1st element
+            done
+        done
+    done
+    if from array clause 3rd element matches "*" do
+        if from array clause 2nd element matches "*" do
+            if lc( hash parsed element { 'objects' } 1st element ) matches /array/ do
+                set from array clause 3rd element to hash parsed element { 'objects' } 1st element 1st element
+            done
+            else do
+                set from array clause 3rd element to hash parsed element { 'objects' } 1st element
+            done
+        done
+        else do
+            if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
+                set from array clause 3rd element to hash parsed element { 'subjects' } 1st element 1st element
+            done
+            else do
+                set from array clause 3rd element to hash parsed element { 'subjects' } 1st element
+            done
+        done
+    done
+
+    if from array clause 2nd element matches "_" do
+        set from array clause 2nd element to noun_for_anonymous without arguments
+    done
+
+    if var final_sentence do
+        if from array clause 5th element do
+            set new var questionword to from array clause 5th element
+
+            if var questionword matches /\(the\)/ do
+                set new array words to split with " ", var final_sentence
+                set new var last_word to last_element with array words
+                set new array props to compute_tags with var last_word, var lang, var path
+                set new var genus to from array props 2nd element
+                set var questionword to get_article with var genus, "subject", "definite"
+            done
+
+            push into array sentence, var questionword
+        done
+    done
+
+
+    if from array clause 4th element matches /<[?]>/ do
+
+        if from array clause 3rd element matches "NULL" or not from array clause 3rd element do
+
+            if elements of array proper_verbs do
+                push into array sentence, elements of array auxiliary_verbs
+                push into array sentence, from array clause 2nd element
+                push into array sentence, from array clause 4th element
+                push into array sentence, elements of array proper_verbs
+            done
+            else do
+                if from array clause 4th element matches /.../ and from global hash builtin_time_place_adverbs element { from array clause 4th element } and not from array clause 4th element matches /\s/ do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, from array clause 2nd element
+                done
+                else do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, from array clause 4th element
+                done
+            done
+        done
+        else if from array clause 4th element matches /von/ do
+
+            if elements of array proper_verbs do
+                push into array sentence, elements of array auxiliary_verbs
+                push into array sentence, from array clause 2nd element
+                push into array sentence, from array clause 3rd element
+                push into array sentence, from array clause 4th element
+                push into array sentence, elements of array proper_verbs
+            done
+            else do
+                push into array sentence, elements of array auxiliary_verbs
+                push into array sentence, from array clause 2nd element
+                push into array sentence, from array clause 3rd element
+                push into array sentence, from array clause 4th element
+            done
+        done
+        else do
+
+            if elements of array proper_verbs do
+                if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, elements of array proper_verbs
+                done
+                else do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, elements of array proper_verbs
+                done
+            done
+            else do
+                if from array clause 4th element matches /zu / do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, elements of array proper_verbs
+                done
+                else do
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, elements of array proper_verbs
+                done
+            done
+        done
+    done
+    else do
+        if var lang matches "en" do
+            if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
+                push into array sentence, from array clause 2nd element
+                push into array sentence, from array clause 4th element
+                push into array sentence, elements of array auxiliary_verbs
+                push into array sentence, elements of array proper_verbs
+                push into array sentence, from array clause 3rd element
+            done
+            else do
+                push into array sentence, from array clause 2nd element
+                push into array sentence, elements of array auxiliary_verbs
+                push into array sentence, elements of array proper_verbs
+                push into array sentence, from array clause 3rd element
+                push into array sentence, from array clause 4th element
+            done
+        done
+        if var lang matches "de" do
+            if from array clause 3rd element matches "NULL" or not from array clause 3rd element do
+                if elements of array proper_verbs do
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, elements of array proper_verbs
+                done
+                else do
+                    if from array clause 5th element matches /(der|die|das|the)/ do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, elements of array auxiliary_verbs
+                    done
+                    else if from array clause 4th element matches /.../ and from global hash builtin_time_place_adverbs element { from array clause 4th element } and not from array clause 4th element matches /\s|(nicht|not)/ do
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 2nd element
+                    done
+                    else do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 4th element
+                    done
+                done
+            done
+            else if from array clause 4th element matches /von/ do
+                if elements of array proper_verbs do
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, from array clause 4th element
+                    push into array sentence, elements of array proper_verbs
+                done
+                else do
+                    push into array sentence, from array clause 2nd element
+                    push into array sentence, elements of array auxiliary_verbs
+                    push into array sentence, from array clause 3rd element
+                    push into array sentence, from array clause 4th element
+                done
+            done
+            else do
+                if elements of array proper_verbs do
+                    if from array clause 5th element matches /(der|die|das|the)/ do
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, elements of array auxiliary_verbs
+                    done
+                    else if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, elements of array proper_verbs
+                    done
+                    else do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, elements of array proper_verbs
+                    done
+                done
+                else do
+                    if from array clause 5th element matches /(der|die|das|the)/ do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, elements of array auxiliary_verbs
+                    done
+                    else if from global hash builtin_time_place_adverbs element { from array clause 4th element } or from array clause 4th element not matches /\s/ or from array clause 4th element matches /zu / do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, elements of array proper_verbs
+                    done
+                    else do
+                        push into array sentence, from array clause 2nd element
+                        push into array sentence, elements of array auxiliary_verbs
+                        push into array sentence, from array clause 3rd element
+                        push into array sentence, from array clause 4th element
+                        push into array sentence, elements of array proper_verbs
+                    done
+                done
+            done
+        done
+    done
+
+#                if ( join ' ', elements of array sentence ) matches /50/ do
+#                    go to next
+#                done
+
+    if var final_sentence do
+        set var final_sentence to var final_sentence concat ', '
+    done
+
+    set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+    do return with [ var final_sentence, array sentence, hash parsed ]
+done
+
 define action phrase with var lang, var path, var mode, array results, hash parsed do
     set new array phrases to an empty array
     set new array additional_results to an empty array
@@ -62,627 +642,29 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         set new var primary_key to shift with elements of array result
 
         set new var final_sentence to ""
-
         for each new array clause in array result do
             set new array sentence to an empty array
 
             # TEXT
             # Tag and sort all verbs.
             # CODE
-            set new array raw_verbs to [ split ' ', from array clause 1st element ]
-            set new array proper_verbs to an empty array
-            set new hash auxiliary_verbs_hash to an empty hash
-
-            for each new var verb in array raw_verbs do
-                if var verb matches /=>/ do
-                    # TEXT
-                    # We have such a sentence:
-                    # "Clause to match , => Clause to print"
-                    # SO we have to remove the first one
-                    # CODE
-                    set var final_sentence to ""
-                done
-
-                if var verb matches /([01])([01])([01])([01])([01])$/ do
-                    set new var person to get_person with from array clause 2nd element
-                    if var person matches "3s" do
-                        set var person to get_person with hash parsed element { 'subjects' } 1st element
-                    done
-
-                    set new var is_want to $0
-                    set new var is_must to $1
-                    set new var is_can to $2
-                    set new var is_may to $3
-                    set new var is_should to $4
-
-                    if var is_want do
-                        set new var new_verb to get_verb with "want", var person
-                        if var new_verb do
-                            set from hash auxiliary_verbs_hash element { var new_verb } to 1
-                        done
-                    done
-
-                    if var is_must do
-                        set new var new_verb to get_verb with "must", var person
-                        if var new_verb do
-                            set from hash auxiliary_verbs_hash element { var new_verb } to 1
-                        done
-                    done
-
-                    if var is_can do
-                        set new var new_verb to get_verb with "can", var person
-                        if var new_verb do
-                            set from hash auxiliary_verbs_hash element { var new_verb } to 1
-                        done
-                    done
-
-                    if var is_may do
-                        set new var new_verb to get_verb with "may", var person
-                        if var new_verb do
-                            set from hash auxiliary_verbs_hash element { var new_verb } to 1
-                        done
-                    done
-
-                    if var is_should do
-                        set new var new_verb to get_verb with "should", var person
-                        if var new_verb do
-                            set from hash auxiliary_verbs_hash element { var new_verb } to 1
-                        done
-                    done
-
-                    do regex with var verb: /([01])([01])([01])([01])([01])$/ -> "" :global
-                done
-
-                if from global hash builtin_auxiliary_verbs element { var verb } do
-                    set from hash auxiliary_verbs_hash element { var verb } to 1
-                done
-                else do
-                    push into array proper_verbs, var verb
-                done
-            done
-
-            set new array auxiliary_verbs to an empty array
-            set elements of array auxiliary_verbs to keys with elements of hash auxiliary_verbs_hash
-####            set new array proper_verbs to an empty array
-####            set elements of array proper_verbs to keys with elements of hash proper_verbs_hash
-####             set elements of array proper_verbs to sort with elements of array proper_verbs
-
-            if from array clause 4th element matches /(^|\s)zu(\s|$)/ and length( from array clause 4th element ) < 5 do
-                do unshift with elements of array proper_verbs, "zu"
-                do regex with from array clause 4th element: /(^|\s)zu(\s|$)/ -> "$0" :global
-            done
-            if from array clause 4th element matches /(^|\s)_to_(\s|$)/ and length( from array clause 4th element ) < 5 do
-                do unshift with elements of array proper_verbs, "zu"
-                do regex with from array clause 4th element: /(^|\s)_to_(\s|$)/ -> "$0" :global
-            done
-            if from array clause 5th element matches /(^|\s)_to_(\s|$)/ and length( from array clause 5th element ) < 5 do
-                do unshift with elements of array proper_verbs, "zu"
-                do regex with from array clause 5th element: /(^|\s)_to_(\s|$)/ -> "$0" :global
-            done
+            
+            set ( new array auxiliary_verbs, new array proper_verbs, var final_sentence, hash parsed ) to array-returning sort_verbs with array clause, var final_sentence, hash parsed
 
             set from array clause 2nd element to check_for_as_well_as with from array clause 2nd element, from array clause 4th element, var lang, var path
             set from array clause 3rd element to check_for_as_well_as with from array clause 3rd element, from array clause 4th element, var lang, var path
             set from array clause 4th element to check_for_as_well_as with from array clause 4th element, from array clause 4th element, var lang, var path
 
-                print "auxiliary verbs... "
-                print elements of array auxiliary_verbs
-                print new line
-                print "proper verbs... "
-                print elements of array proper_verbs
-                print new line
             # TEXT
             # Build the final sentence.
             # CODE
             if from array proper_verbs 1st element and from array proper_verbs 1st element matches /^(equal|is<[-]>)/ do
-                set new var _no_user_ask to handle for file name "_no_user_ask", write
-                do close with var _no_user_ask
 
-                set new array subject_words to split with " ", from array clause 2nd element
-                set new array object_words to split with " ", from array clause 3rd element
-                set new var subject_last_word to from array subject_words element [ size of array subject_words - 1 ]
-                set new var object_last_word to from array object_words element [ size of array object_words - 1 ]
-
-                set new array subject_props to compute_tags with var subject_last_word, var lang, var path
-                set new array object_props to compute_tags with var object_last_word, var lang, var path
-                set new var subject_genus to from array subject_props 2nd element
-                set new var object_genus to from array  object_props 2nd element
-                set new var subject_person to get_person with from array clause 2nd element
-                if from array proper_verbs 1st element matches /^equal-pl/ do
-                    set var subject_person to "3p"
-                done
-
-                set new var is_name_subject to is_name with var lang, var subject_last_word
-                set new var is_collective_noun_subject to is_collective_noun with var lang, var subject_last_word
-                set new var verb_options to from array proper_verbs 1st element
-
-                set new var subject_article to ""
-                if from array clause 2nd element matches /\(a\)/ do
-                    set var subject_article to get_article with var subject_genus, "subject", "indefinite"
-                    do regex with from array clause 2nd element: /\(a\)\s+?/ -> "" :global
-                done
-                if from array clause 2nd element matches /\(the\)/ do
-                    set var subject_article to get_article with var subject_genus, "subject", "definite"
-                    do regex with from array clause 2nd element: /\(the\)\s+?/ -> "" :global
-                done
-                set new var object_article to ""
-                if from array clause 3rd element matches /\(a\)/ do
-                    set var object_article to get_article with var object_genus, "subject", "indefinite"
-                    do regex with from array clause 3rd element: /\(a\)\s+?/ -> "" :global
-                done
-                if from array clause 3rd element matches /\(the\)/ do
-                    set var object_article to get_article with var object_genus, "subject", "definite"
-                    do regex with from array clause 3rd element: /\(the\)\s+?/ -> "" :global
-                done
-                
-                set new array adverbs_parts to split with ";", from array clause 4th element
-                for each new var adverb_part in array adverbs_parts do
-                    set new array adverb_part_words to split with " ", var adverb_part
-                    set new var adverb_part_last_word to from array adverb_part_words element [ size of array adverb_part_words - 1 ]
-                    set new array adverb_part_props to compute_tags with var adverb_part_last_word, var lang, var path
-                    set new var adverb_part_genus to from array adverb_part_props 2nd element
-
-                    if var adverb_part matches /\(a\)/ do
-                        set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "indefinite"
-                        do regex with var adverb_part: /\(a\)\s+?/ -> "var adverb_part_article " :global
-                    done
-                    if var adverb_part matches /\(the\)/ do
-                        set new var adverb_part_article to get_article with var adverb_part_genus, "subject", "definite"
-                        do regex with var adverb_part: /\(the\)\s+?/ -> "var adverb_part_article " :global
-                    done
-                done
-                set new var _tmp to join with ";", elements of array adverbs_parts
-                set from array clause 4th element to var _tmp
-                
-                if from array proper_verbs 1st element matches /^(equal)/ do
-
-                    # subject article
-                    if var subject_article is true or ( var verb_options not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and var verb_options matches /(def|indef)/ ) do
-                        if var is_name_subject is false or var is_collective_noun_subject is true or var subject_article is true do
-                            push into array sentence, var subject_article
-                        done
-                    done
-
-                    # subject
-                    push into array sentence, from array clause 2nd element
-
-                    if var subject_article is true and var object_article is an empty string do
-                        # adverbs
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    # verb
-                    if from array clause 3rd element not matches /(^|\s)(ein|der|die|das|the|(?:a ))/ do
-                        if var object_article is true do
-                            set new var verb to get_verb with "be", var subject_person
-                            push into array sentence, var verb
-                            push into array sentence, var object_article
-                        done
-                        else if from array subject_props 1st element matches /^v/ do
-                            set new var verb to get_verb with "is-same-as", var subject_person
-                            push into array sentence, var verb
-                        done
-                        else if from array clause 3rd element matches /<[0-9]>/ do
-                            set new var verb to get_verb with "is-same-as", var subject_person
-                            push into array sentence, var verb
-                        done
-                        else if from array proper_verbs 1st element matches /^equal-pl/ do
-                            set new var verb to get_verb with "be", var subject_person
-                            push into array sentence, var verb
-                        done
-                        else do
-                            set new var verb to get_verb with "be", var subject_person
-                            push into array sentence, var verb
-                            push into array sentence, var object_article
-                        done
-                    done
-                    else do
-                        set new var verb to get_verb with "be", var subject_person
-                        push into array sentence, var verb
-                    done
-
-                    # object
-                    push into array sentence, from array clause 3rd element
-
-                    if not ( var subject_article is true and var object_article is an empty string ) do
-                        # adverbs
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    if var final_sentence do
-                        set var final_sentence to var final_sentence concat ', '
-                    done
-
-                    set var final_sentence to var final_sentence concat join ' ', elements of array sentence
-                done
-                if from array proper_verbs 1st element matches /^(is<[-]>property)/ do
-                    # subject article
-                    if var subject_article is true do
-                        push into array sentence, var subject_article
-                    done
-
-                    # subject
-                    push into array sentence, from array clause 2nd element
-
-                    if var subject_article is true and var object_article is an empty string do
-                        # adverbs
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    # verb
-                    set new var verb to get_verb with "have", var subject_person
-                    push into array sentence, var verb
-
-                    set var object_article to get_article with var object_genus, "subject", "definite"
-                    push into array sentence, var object_article
-
-                    # object
-                    set new var object to from array clause 3rd element
-                    do regex with var object: /<[:]>/ -> "" :global
-                    push into array sentence, var object
-
-                    # adverbs
-                    if not ( var subject_article is true and var object_article is an empty string ) do
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    if var final_sentence do
-                        set var final_sentence to var final_sentence concat ', '
-                    done
-
-                    set var final_sentence to var final_sentence concat join ' ', elements of array sentence
-                done
-                else if from array proper_verbs 1st element matches /^(is<[-]>)/ do
-                    # subject article
-                    if var subject_article is true do
-                        push into array sentence, var subject_article
-                    done
-
-                    # subject
-                    push into array sentence, from array clause 2nd element
-
-                    if var subject_article is true and var object_article is an empty string do
-                        # adverbs
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    # verb
-                    set new var verb to get_verb with from array proper_verbs 1st element, var subject_person
-                    push into array sentence, var verb
-
-                    if var object_article is true do
-                        push into array sentence, var object_article
-                    done
-
-                    # object
-                    push into array sentence, from array clause 3rd element
-
-                    if not ( var subject_article is true and var object_article is an empty string ) do
-                        # adverbs
-                        push into array sentence, from array clause 4th element
-                    done
-
-                    if var final_sentence do
-                        set var final_sentence to var final_sentence concat ', '
-                    done
-
-                    set var final_sentence to var final_sentence concat join ' ', elements of array sentence
-                done
-
-                do unlink with "_no_user_ask"
+                set ( var final_sentence, array sentence, hash parsed ) to array-returning phrase_fact with array sentence, array clause, var final_sentence, hash parsed, array auxiliary_verbs, array proper_verbs, var lang, var path
             done
             else if elements of array auxiliary_verbs or elements of array proper_verbs or from array clause 2nd element or from array clause 3rd element or from array clause 4th element do
-                print "auxiliary verbs: "
-                print elements of array auxiliary_verbs
-                print new line
-                print "proper verbs: "
-                print elements of array proper_verbs
-                print new line
 
-                if not elements of array auxiliary_verbs do
-                    set elements of array auxiliary_verbs to elements of array proper_verbs
-                    set array proper_verbs to an empty array
-                done
-
-                # TEXT
-                # When there is a time period mentioned in the question, but not in the answer
-                # CODE
-                if from array clause 4th element not matches /time.(from|to)/ and from array clause 3rd element not matches /time.(from|to)/ do
-                    set new array input_adverbs to from hash parsed element { 'adverbs' }
-                    for each new var _adverb in array input_adverbs do
-                        set new var adverb to var _adverb
-                        if lc(var adverb) matches /array/ do
-                            set var adverb to from array adverb 1st element
-                        done
-
-                        if lc(var adverb) matches /time_/ do
-                            set array clause to add_undefined_time with array clause
-
-                            go to last
-                        done
-                    done
-                done
-
-                # TEXT
-                # Replace *s
-                # CODE
-                if from array clause 2nd element matches "*" do
-                    if from array clause 3rd element matches "*" do
-                        if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
-                            set from array clause 2nd element to hash parsed element { 'subjects' } 1st element 1st element
-                        done
-                        else do
-                            set from array clause 2nd element to hash parsed element { 'subjects' } 1st element
-                        done
-                    done
-                    else do
-                        if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
-                            set from array clause 2nd element to hash parsed element { 'subjects' } 1st element 1st element
-                        done
-                        else do
-                            set from array clause 2nd element to hash parsed element { 'subjects' } 1st element
-                        done
-                    done
-                done
-                if from array clause 3rd element matches "*" do
-                    if from array clause 2nd element matches "*" do
-                        if lc( hash parsed element { 'objects' } 1st element ) matches /array/ do
-                            set from array clause 3rd element to hash parsed element { 'objects' } 1st element 1st element
-                        done
-                        else do
-                            set from array clause 3rd element to hash parsed element { 'objects' } 1st element
-                        done
-                    done
-                    else do
-                        if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
-                            set from array clause 3rd element to hash parsed element { 'subjects' } 1st element 1st element
-                        done
-                        else do
-                            set from array clause 3rd element to hash parsed element { 'subjects' } 1st element
-                        done
-                    done
-                done
-
-                if from array clause 2nd element matches "_" do
-                    set from array clause 2nd element to noun_for_anonymous without arguments
-                done
-
-# Unsicher: wozu? ^da ? dass?
-#                if var final_sentence do
-#                    if from array clause 5th element do
-#                        if not from array clause 5th element matches /^dass/ do
-#                            push into array sentence, from array clause 5th element
-#                        done
-#                    done
-#                done
-
-                if var final_sentence do
-                    if from array clause 5th element do
-                        push into array sentence, from array clause 5th element
-                    done
-                done
-
-
-                if from array clause 4th element matches /<[?]>/ do
-
-                    if from array clause 3rd element matches "NULL" or not from array clause 3rd element do
-
-                        if elements of array proper_verbs do
-                            push into array sentence, elements of array auxiliary_verbs
-                            push into array sentence, from array clause 2nd element
-                            push into array sentence, from array clause 4th element
-                            push into array sentence, elements of array proper_verbs
-                        done
-                        else do
-                            if from array clause 4th element matches /.../ and from global hash builtin_time_place_adverbs element { from array clause 4th element } and not from array clause 4th element matches /\s/ do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, from array clause 2nd element
-                            done
-                            else do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, from array clause 4th element
-                            done
-                        done
-                    done
-                    else if from array clause 4th element matches /von/ do
-
-                        if elements of array proper_verbs do
-                            push into array sentence, elements of array auxiliary_verbs
-                            push into array sentence, from array clause 2nd element
-                            push into array sentence, from array clause 3rd element
-                            push into array sentence, from array clause 4th element
-                            push into array sentence, elements of array proper_verbs
-                        done
-                        else do
-                            push into array sentence, elements of array auxiliary_verbs
-                            push into array sentence, from array clause 2nd element
-                            push into array sentence, from array clause 3rd element
-                            push into array sentence, from array clause 4th element
-                        done
-                    done
-                    else do
-
-                        if elements of array proper_verbs do
-                            if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                            else do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                        done
-                        else do
-                            if from array clause 4th element matches /zu / do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                            else do
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                        done
-                    done
-                done
-                else do
-                    if var lang matches "en" do
-                        if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
-                            push into array sentence, from array clause 2nd element
-                            push into array sentence, from array clause 4th element
-                            push into array sentence, elements of array auxiliary_verbs
-                            push into array sentence, elements of array proper_verbs
-                            push into array sentence, from array clause 3rd element
-                        done
-                        else do
-                            push into array sentence, from array clause 2nd element
-                            push into array sentence, elements of array auxiliary_verbs
-                            push into array sentence, elements of array proper_verbs
-                            push into array sentence, from array clause 3rd element
-                            push into array sentence, from array clause 4th element
-                        done
-                    done
-    print "19" concat new line
-                    if var lang matches "de" do
-    print "18" concat new line
-                        if from array clause 3rd element matches "NULL" or not from array clause 3rd element do
-    print "17" concat new line
-                            if elements of array proper_verbs do
-    print "16" concat new line
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                            else do
-    print "15" concat new line
-                                if from array clause 5th element matches /(der|die|das)$/ do
-    print "14" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                done
-                                else if from array clause 4th element matches /.../ and from global hash builtin_time_place_adverbs element { from array clause 4th element } and not from array clause 4th element matches /\s|(nicht|not)/ do
-    print "13" concat new line
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 2nd element
-                                done
-                                else do
-    print "12" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 4th element
-                                done
-                            done
-                        done
-                        else if from array clause 4th element matches /von/ do
-    print "11" concat new line
-                            if elements of array proper_verbs do
-    print "10" concat new line
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, from array clause 4th element
-                                push into array sentence, elements of array proper_verbs
-                            done
-                            else do
-    print "9" concat new line
-                                push into array sentence, from array clause 2nd element
-                                push into array sentence, elements of array auxiliary_verbs
-                                push into array sentence, from array clause 3rd element
-                                push into array sentence, from array clause 4th element
-                            done
-                        done
-                        else do
-    print "8" concat new line
-                            if elements of array proper_verbs do
-    print "7" concat new line
-                                if from array clause 5th element matches /(der|die|das)$/ do
-    print "14" concat new line
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                done
-                                else if from global hash builtin_time_place_adverbs element { from array clause 4th element } do
-    print "6" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, elements of array proper_verbs
-                                done
-                                else do
-    print "5" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, elements of array proper_verbs
-                                done
-                            done
-                            else do
-    print "4" concat new line
-                                if from array clause 5th element matches /(der|die|das)$/ do
-    print "3" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                done
-                                else if from global hash builtin_time_place_adverbs element { from array clause 4th element } or from array clause 4th element not matches /\s/ or from array clause 4th element matches /zu / do
-    print "2" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, elements of array proper_verbs
-                                done
-                                else do
-    print "1" concat new line
-                                    push into array sentence, from array clause 2nd element
-                                    push into array sentence, elements of array auxiliary_verbs
-                                    push into array sentence, from array clause 3rd element
-                                    push into array sentence, from array clause 4th element
-                                    push into array sentence, elements of array proper_verbs
-                                done
-                            done
-                        done
-                    done
-                done
-
-                if ( join ' ', elements of array sentence ) matches /50/ do
-                    go to next
-                done
-
-# Unsicher: wozu? ^da ? dass?
-#                if var final_sentence do
-#                    if from array clause 5th element do
-#                        if from array clause 5th element matches /^da/ do
-#                            push into array sentence, from array clause 5th element
-#                        done
-#                    done
-#                done
-
-                if var final_sentence do
-                    set var final_sentence to var final_sentence concat ', '
-                done
-
-                set var final_sentence to var final_sentence concat join ' ', elements of array sentence
+                set ( var final_sentence, array sentence, hash parsed ) to array-returning phrase_sentence with array sentence, array clause, var final_sentence, hash parsed, array auxiliary_verbs, array proper_verbs, var lang, var path
             done
         done
 
@@ -703,113 +685,12 @@ define action phrase with var lang, var path, var mode, array results, hash pars
             done
         done
 
-        if var final_sentence matches / dacht/ and not var final_sentence matches /<[,]>/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
+        if ( var final_sentence matches / dacht/ and not var final_sentence matches /<[,]>/ ) or ( var final_sentence matches /<[,]> 50/ ) or ( var final_sentence matches /anyone/ ) or ( var final_sentence matches /reasonof/ ) or ( var final_sentence matches /[>][>][>]/ ) or ( lc(var final_sentence) matches / (ist|sind|sein|equal.?.?.?) (ein.?.?)? (name|eigenname)/ ) or ( var final_sentence matches / <[=]>/ ) or ( var final_sentence matches / opposite / ) or ( var final_sentence matches /\(good|bad\)/ ) or ( ( var final_sentence matches /\s(bin|bist|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed element { 'verbs' } 1st element matches "ist" ) ) do
+
             set var final_sentence to compute_output with var final_sentence
             print "Invalid sentence: "
             print var final_sentence
             print new line
-            go to next
-        done
-
-        if var final_sentence matches /<[,]> 50/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches /anyone/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches /reasonof/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches /[>][>][>]/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if lc(var final_sentence) matches / (ist|sind|sein|equal.?.?.?) (ein.?.?)? (name|eigenname)/ do
-            # TEXT
-            # A Sentence must not end with e.g. dachte
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches / <[=]>/ do
-            # TEXT
-            # A Sentence must not have the verb "="
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches / opposite / do
-            # TEXT
-            # A Sentence must not have the verb "="
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        if var final_sentence matches /\(good|bad\)/ do
-            # TEXT
-            # A Sentence must not have the verb "="
-            # CODE
-            set var final_sentence to compute_output with var final_sentence
-            print "Invalid sentence: "
-            print var final_sentence
-            print new line
-            go to next
-        done
-
-        # or from hash parsed element { 'verbs' } 1st element 1st element matches "ist"
-
-        if ( var final_sentence matches /\s(bin|bist|kannst|darfst|musst)\s/ or var final_sentence matches /(iere|ierst) / ) and ( from hash parsed element { 'verbs' } 1st element matches "ist" ) do
-            print "Cannot answer bin/bist when it has been asked for ist:"
-            print new line
-            print var final_sentence
-            print new line
-
             go to next
         done
 

@@ -146,21 +146,6 @@ define action every_except_first with array data do
     do return with array _data
 done
 
-define action print_array with array data do
-    set new flag i to 0
-
-    print "[ "
-    for each new var __data in array data do
-        if flag i is true do
-            print ", "
-        done
-
-        set flag i to 1
-        print "'" concat var __data concat "'"
-    done
-    print " ]"
-done
-
 set new hash cache__from_grammar to an empty hash
 define action from_grammar with array grammar, var name do
     if from hash cache__from_grammar element { var name } do

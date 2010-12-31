@@ -1,3 +1,17 @@
+1295:
+
+- Bug 699 korrigiert
+- Bug 700 korrigiert
+- Bug 696 korrigiert
+- Bug 695 korrigiert
+- Bug 694 korrigiert
+- Bug 693 korrigiert
+- Bug 690 korrigiert
+- Bug 656 korrigiert
+- Bug 652 korrigiert
+- Bug 637 korrigiert
+- Bug 626 korrigiert
+
 1289:
 
 - Eine separate Syntax fuer Eigenschaften von Dingen wurde eingefuehrt:

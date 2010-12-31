@@ -101,6 +101,21 @@ define action make_ascii with var text is rw do
     do return with var text
 done
 
+define action print_array with array data do
+    set new flag i to 0
+
+    print "[ "
+    for each new var __data in array data do
+        if flag i is true do
+            print ", "
+        done
+
+        set flag i to 1
+        print "'" concat var __data concat "'"
+    done
+    print " ]"
+done
+
 define action join_elements with array list do
     set new var txt to ''
     for each new var listelement in array list do
@@ -109,6 +124,10 @@ define action join_elements with array list do
         set var txt to var txt concat "), "
     done
     do return with var txt
+done
+
+define action last_element with array list do
+    do return with from array list element [ size of array list - 1 ]
 done
 
 define action escape_html with var text do

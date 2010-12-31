@@ -77,6 +77,10 @@ require source hal2009-util.hal
 define action is_name with var lang, var word do
     set new var is_a_name to 0
 
+    if from global hash builtin_entity_ends item { var word } do
+        do return with 0
+    done
+
     set new array male_names to global array builtin_male_names
     for each new var name in array male_names do
         if lc(var name) matches lc(var word) do
@@ -159,9 +163,8 @@ define action compute_context with hash parsed do
         done
     done
 
-    if lc(from array extra_array 1st element 1st element) matches "enumall" do
-        do shift with elements of that array: from array extra_array 1st element end of elements
-        set from hash parsed element { 'extra' } to array extra_array
+    if lc(from array verb_array 1st element 1st element) matches "enumall" do
+        set from hash parsed element { 'verbs' } to an empty array
         do return with "enum_all"
     done
 
@@ -185,6 +188,9 @@ define action compute_context with hash parsed do
 done
 
 define action logic with var input, var lang, var path, hash parsed do
+
+    set new var request_context_string to compute_context using hash parsed
+
     set new array request_verb_array to an empty array
     if from hash parsed element { 'verbs' } do
         push into array request_verb_array, elements of that array: from hash parsed element { 'verbs' } end of elements
@@ -300,8 +306,6 @@ define action logic with var input, var lang, var path, hash parsed do
             push into array request_adverbs, from array adverbs 1st element
         done
     done
-
-    set new var request_context_string to compute_context using hash parsed
 
     set new array request_extra_array to from hash parsed element { 'extra' }
     set new array request_extra to an empty array
@@ -613,7 +617,10 @@ define action logic with var input, var lang, var path, hash parsed do
             print new line
             print new line
 
-            set from hash subjects element { from array result 2nd element 2nd element } to 1
+            set new var single_subject to from array result 2nd element 2nd element
+            do regex with var single_subject: /\((a|the)\)\s*?/ -> "" :global
+
+            set from hash subjects element { var single_subject } to 1
         done
 
         set new array overall_result to an empty array

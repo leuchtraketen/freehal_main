@@ -423,7 +423,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /\s(aus|von|in|an)\svon\s(<[mds]>)eine([rs])\s/ -> " $0 $1eine$2 " :global:i
 
     do regex with var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/ -> "$0$1 von der $2" :global
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von dem $2$3" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s((?:[a-z]+?\s)*[A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von dem $2$3" :global
     do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z])/ -> "$0$1 von dem $2" :global
 
     do regex with var input: /(\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/ -> "$0$1 von jeder $2" :global
@@ -904,6 +904,9 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /Zaehle die (.*)s auf.*/ -> "ENUMALL eine $0" :global:i
     do regex with var input: /Zaehle den (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle das (.*)s auf.*/ -> "ENUMALL ein $0" :global:i
+
+    do regex with var input: /Zaehle mir alle (.*[rmndtp])e auf.*/ -> "ENUMALL ein $0" :global:i
+    do regex with var input: /Zaehle alle (.*[rmndtp]) auf.*/ -> "ENUMALL ein $0" :global:i
 
     do regex with var input: /Zaehle mir alle (.*) auf.*/ -> "ENUMALL ein $0" :global:i
     do regex with var input: /Zaehle mir die (.*) auf.*/ -> "ENUMALL eine $0" :global:i
