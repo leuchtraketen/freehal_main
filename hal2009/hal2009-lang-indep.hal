@@ -422,13 +422,13 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /\s(<[mds]>)einer\s/ -> " von $0einer " :global:i
     do regex with var input: /\s(aus|von|in|an)\svon\s(<[mds]>)eine([rs])\s/ -> " $0 $1eine$2 " :global:i
 
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/ -> "$0$1 von der $2" :global
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s((?:[a-z]+?\s)*[A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von dem $2$3" :global
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z])/ -> "$0$1 von dem $2" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sder\s([A-Z])/ -> "$0$1 von der _$2_" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s((?:[a-z]+?\s)*[A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von dem _$2_$3" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sdes\s([A-Z])/ -> "$0$1 von dem _$2_" :global
 
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/ -> "$0$1 von jeder $2" :global
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von jedem $2$3" :global
-    do regex with var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/ -> "$0$1 von jedem $2" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sjeder\s([A-Z])/ -> "$0$1 von jeder _$2_" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z][a-z]*?)s([^a-zA-Z])/ -> "$0$1 von jedem _$2_$3" :global
+    do regex with var input: /(\s)([A-Z][a-z]*?)\sjedes\s([A-Z])/ -> "$0$1 von jedem _$2_" :global
 
     do regex with var input: /(\s)([A-Z][a-z]*?)\s(mehrer|viel|wenig|einig)er\s([A-Z])/ -> "$0$1 von $2en $3" :global
 
@@ -557,7 +557,7 @@ define action compute_input with var input is rw, var lang, var path do
 
             set var input to var a concat " is-own " concat var b concat " " concat var adverbs
         done
-        if lc(var input) matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ and flag is_question is false do
+        if var input matches /^(.+?)\s+?(ist|sind|<[=]>)\s+?(.+?)$/ and flag is_question is false do
             set new var a to $0
             set new var b to $2
 
