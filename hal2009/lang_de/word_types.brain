@@ -284619,4 +284619,356 @@ fortgang:
 genus  : m
   type: n 
 elliptischen:
-  type: adj                     
+  type: adj
+rtist:
+genus  : m
+  type: n
+Lagune:
+genus  : f
+  type: n
+Wasserlatte:
+genus  : f
+  type: n
+umweltbewusst:
+  type: adj
+umweltfreundlich:
+  type: adj
+umweltschonend:
+  type: adj
+umweltvertraeglich:
+  type: adj
+unqualifiziert:
+  type: adj
+unwissend:
+  type: adj
+Unerfahren:
+  type: adj
+handtelefon:
+genus  : s
+  type: n
+mobilfunktelefon:
+genus  : s
+  type: n
+Onlinedatenbank:
+genus  : f
+  type: n
+karteikasten:
+genus  : m
+  type: n
+moehre:
+genus  : f
+  type: n
+Ferengi:
+  type: n
+Bussardkollektor:
+genus  : m
+  type: n
+hypothetisches:
+  type: adj
+Hyperraumfenster:
+  type: n
+Fernsehprogramms:
+  type: n
+begrenzte:
+  type: adj
+solarkollektor:
+genus  : m
+  type: n 
+spezielles:
+  type: adj
+Koerpertemperatur:
+genus  : f
+  type: n
+IATA-Flughafen-Codes:
+genus  : f
+  type: n
+Geilheit:
+genus  : f
+  type: n 
+luesternheit:
+genus  : f
+  type: n
+wollust:
+genus  : f
+  type: n
+Vibrator:
+genus  : m
+  type: n
+elektromechanische:
+  type: adj
+Sexspielzeuge:
+genus  : f
+  type: n
+versetzt:
+  type: vi
+Weinkeller:
+  type: n
+Kunststoffkanistern:
+  type: n
+Lagerraum:
+genus  : m
+  type: n
+Glasflaschen:
+genus  : f
+  type: n
+Faessern:
+  type: n
+Glasballons:
+  type: n
+Amphoren:
+genus  : f
+  type: n
+Energy-Drink:
+genus  : m
+  type: n
+metropole:
+genus  : f
+  type: n 
+Orionnebel:
+genus  : m
+  type: n
+Emissionsnebel:
+  type: n
+Einzelobjekten:
+  type: n
+Spiralgalaxie:
+genus  : f
+  type: n  
+Tuxer:
+  type: n
+eifig:
+  type: adj
+Kaskade:
+genus  : f
+  type: n
+Stufen:
+genus  : f
+  type: n
+Bohrinsel:
+genus  : f
+  type: n
+Standflaeche:
+genus  : f
+  type: n
+Niederbringen:
+genus  : s
+  type: n
+Protonen:
+genus  : f
+  type: n
+langlebiges:
+  type: adj
+Hadron:
+genus  : s
+  type: n
+Formelzeichen:
+  type: n
+ungeladenes:
+  type: adj
+Obelisk:
+genus  : m
+  type: n
+freistehender:
+  type: adj
+verjuengender:
+  type: adj
+Steinpfeiler:
+  type: n
+pyramidenfoermige:
+  type: adj
+Vorlonen:
+genus  : f
+  type: n
+Terraner:
+genus  : f
+  type: n
+hoeheres:
+  type: adj
+Replikator:
+genus  : m
+  type: n
+formulierbaren:
+  type: adj
+roter:
+  type: adj
+sterngigant:
+genus  : m
+  type: n
+geheimniss:
+genus  : s
+  type: n
+Wuestenschiff:
+genus  : s
+  type: n
+Saeugetiergattung:
+genus  : f
+  type: n
+aufteilt:
+  type: adj
+Trampeltier:
+genus  : s
+  type: n
+Hochseeregatta:
+genus  : f
+  type: n
+Testergebnis:
+genus  : s
+  type: n
+standardisierten:
+  type: adj
+Standardabweichungen:
+genus  : f
+  type: n
+Getesteten:
+  type: adj
+Autorennen:
+  type: n
+Motorsports:
+  type: n 
+Wettbewerbe:
+genus  : f
+  type: n
+geschickte:
+  type: adj
+motorgetriebener:
+  type: adj
+vierraedriger:
+  type: adj
+schaumkrone:
+genus  : f
+  type: n
+nettes:
+  type: adj
+Rattenschwanz:
+genus  : m
+  type: n
+geflochtener:
+  type: adj
+Haargrenze:
+genus  : f
+  type: n
+kacke:
+genus  : f
+  type: n
+trottelig:
+  type: adj
+unterbelichtet:
+  type: adj
+debil:
+  type: adj
+grenzdebil:
+  type: adj
+schwachsinnig:
+  type: adj
+dusselig:
+  type: adj
+sparflamme:
+genus  : f
+  type: n 
+feldstein:
+genus  : m
+  type: n
+geroellblock:
+genus  : m
+  type: n
+uncool:
+  type: adj
+duenger:
+  type: n 
+stupide:
+  type: adj
+vergeudend:
+  type: adj
+krimskrams:
+genus  : m
+  type: n 
+sammelsurium:
+genus  : s
+  type: n
+einsatzgruppe:
+genus  : f
+  type: n
+horde:
+genus  : f
+  type: n
+kaste:
+genus  : f
+  type: n
+kohorte:
+genus  : f
+  type: n 
+verband:
+genus  : m
+  type: n
+scheibenhonig:
+genus  : m
+  type: n
+scheibenkleister:
+genus  : m
+  type: n 
+schrittweise:
+  type: adj
+zeitweise:
+  type: adj
+menschenmasse:
+genus  : f
+  type: n
+meute:
+genus  : f
+  type: n
+traegheitsmoment:
+genus  : s
+  type: n
+kennziffer:
+genus  : f
+  type: n
+patrouille:
+genus  : f
+  type: n 
+wachdienst:
+genus  : m
+  type: n 
+wachtposten:
+genus  : m
+  type: n
+schund:
+genus  : m
+  type: n  
+sitzgelegenheit:
+genus  : f
+  type: n
+impuls:
+genus  : m
+  type: n
+pomadig:
+  type: adj 
+coca-cola:
+genus  : f
+  type: n 
+knete:
+  type: vi
+maeuse:
+genus  : f
+  type: n
+moos:
+genus  : s
+  type: n 
+zaster:
+genus  : m
+  type: n
+kaltes:
+  type: adj
+Muslimen:
+genus  : f
+  type: n
+offeriert:
+  type: vi
+Computerfunktionalitaet:
+genus  : f
+  type: n
+herkoemliches:
+  type: adj
+fortschrittliches:
+  type: adj
+betreibst:
+  type: vi                        

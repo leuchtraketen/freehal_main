@@ -17,7 +17,7 @@ is-a <> _iphoto_ <> (a) software <> _von_apple_ <> 50
 is-a <> _iweb_ <> (a) software <> _von_apple_ <> 50
 is-a <> _idvd_ <> (a) software <> _von_apple_ <> 50
 is-a <> _garageband_ <> (a) software <> _von_apple_ <> 50
-besteht <> _ilife_ <>  <> _aus_itunes_ <>  <> _imovie_ <>  <>  <>  <>  <> _iphoto_ <>  <>  <>  ;;  <> _iweb_ <>  <>  <>  ;;  <> _idvd_und_garageband_ <>  <>  <>  <> 50
+besteht <> _ilife_ <>  <> _aus_itunes_ <>  <> _imovie_ <>  <>  <>  <>  <> _iphoto_ <>  <>  <>  <>  <> _iweb_ <>  <>  <>  <>  <> _idvd_und_garageband_ <>  <>  <>  <> 50
 is-a <> _iwork_ <> (the) office-packet <> _von_apple_ <> 50
 is-a <> _pages_ <> (a) textverarbeitungs-software <> _von_apple_ <> 50
 is-a <> _numbers_ <> (a) tabellenkalkulations-software <> _von_apple_ <> 50

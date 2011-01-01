@@ -7,7 +7,7 @@ befindet <> $a$ <> sich <> in $b$ <> steht <> $a$ <> nothing <> in $b$ <> wenn <
 # Direkte Anwort 
 bin <> ich <> online <> lange <> bin f=> <> ich <> immer online <>  <>  <>  <> 100
 #Direkte Anwort mit mehreren Möglichkeiten
-frage <> ich <> nothing <>  <> bin f=> <> ich <> nothing <> neugierig <>  <>  <> f=> will wissen <> ich es <> nothing <>  <>  <>  ;; bin f=> wissbegierig <> ich <> nothing <>  <>  <>  <> 100
+frage <> ich <> nothing <>  <> bin f=> <> ich <> nothing <> neugierig <>  <>  <> f=> will wissen <> ich es <> nothing <>  <>  <>  <> bin f=> wissbegierig <> ich <> nothing <>  <>  <>  <> 100
 #Direkte Anwort auf gegessen
 gegessen hat <> $a$ <> $b$ <>  <> => geschmeckt hat <> $b$ <> $a$ <>  <>  <>  <> => geschmeckt hat <> $b$ <> $a$ 
 #Direkte Anwort auf gegessen
@@ -64,7 +64,7 @@ heisst <> $a$ <> mehr jeliza <> nicht <> f=> verwechselt wurde <> ich <> nothing
 bedeutet <> $a$ <> nothing <>  <> ist <> $a$ <> nothing <>  <> wenn <>  <> (true)
 besitzt <> du <> $a$ <>  <> f=> moechte <> ich <> auch $a$ <>  <>  <>  <> q=> schenkst <> du <> mir dann $a$ <> nicht <> warum <>  <> (true)
 #Direkte Anwort auf die Eingabe "ich gehe jetzt"#
-geht <> $a$ <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  <> f=> <> danke <> nothing <> fuer das gespraech <>  <>  ;;  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
+geht <> $a$ <> nothing <> jetzt <> f=> <> ich <> wuensche dir einen schoenen tag <>  <>  <>  <> f=> <> danke <> nothing <> fuer das gespraech <>  <>  <>  <> nothing <> nothing <>  <>  <>   <> nothing <> nothing <>  <>  <>  <> (true)
 #Variablendeklaration für Wochentag
 is-a <> $$wday$$ <> (a) tag <>  <> (true)
 # Bei der Eingabe "Ich heisse oder mein Name ist ..." Wird ein Zufallsnamen aus der Datenbank ausgegeben#
