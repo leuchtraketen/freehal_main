@@ -507,7 +507,7 @@ define action init_prot_files with var current_language, var path do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
         do opendir with new var dir_handle, var language_directory
-        set new array files to [ readdir(var dir_handle) ]
+        set new array files to [ sort(readdir(var dir_handle)) ]
         # TEXT
         # Read all .prot files by parsing them
         # CODE
@@ -656,7 +656,7 @@ define action init_csv_files with var current_language, var path do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
         do opendir with new var dir_handle, var language_directory
-        set new array files to [ readdir(var dir_handle) ]
+        set new array files to [ sort(readdir(var dir_handle)) ]
         # TEXT
         # Read all .prot files by parsing them
         # CODE
@@ -761,7 +761,7 @@ define action update_list_of_pro_files with var pattern, var current_language, v
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
         do opendir with new var dir_handle, var language_directory
-        set new array files to [ readdir(var dir_handle) ]
+        set new array files to [ sort(readdir(var dir_handle)) ]
         # TEXT
         # Read all .pro files by sending a signal to the C thread
         # CODE
@@ -864,16 +864,30 @@ define action correct_human_edit_typos with var file, var current_language, var 
     do return without arguments
 done
 
+define action check_delete_line with var line, var file, var current_language, var path do
+    if length(var line) < 3 do
+        do return with 1
+    done
+
+    if var line matches /_(auf|ab|ueber|in|am|an|am|unter|von|hin|her|seit)_/ and var file matches /thesaurus/ do
+        do return with 1
+    done
+
+    do return with 0
+done
+
 define action clear_empty_lines with var file, var current_language, var path do
     set new var _input to handle for file name var file, read
     for each new var line from var _input is rw do
-        if length(var line) < 3 do
+        set new flag _delete_line to check_delete_line with var line, var file, var current_language, var path
+        if flag _delete_line is true do
             do close with var _input
 
             set new var input_1 to handle for file name var file, read
             set new var output_1 to handle for file name var file concat ".tmp", write
             for each new var line from var input_1 is rw do
-                if length(var line) >= 3 do
+                set new flag _delete_line to check_delete_line with var line, var file, var current_language, var path
+                if flag _delete_line is false do
                     print into var output_1 data var line
                     print into var output_1 data new line
                 done
@@ -919,7 +933,7 @@ define action init_pro_files with var current_language, var path do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
 
         do opendir with new var dir_handle, var language_directory
-        set new array files to [ readdir(var dir_handle) ]
+        set new array files to [ sort(readdir(var dir_handle)) ]
         # TEXT
         # Read all .pro files by sending a signal to the C thread
         # CODE
@@ -937,8 +951,6 @@ define action init_pro_files with var current_language, var path do
             do unlink with '_output__add_pro_file'
             do unlink with '_input__add_pro_file'
 
-            do clear_empty_lines with var file, var current_language, var path
-
             set new var check_input_handle_one to handle for file name var file, read
             set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
             set new var i to 1
@@ -949,8 +961,12 @@ define action init_pro_files with var current_language, var path do
             for each new var line from var check_input_handle_two is rw do
                 set var j to var j + 1 + length(var line)
             done
+            do close with var check_input_handle_one
+            do close with var check_input_handle_two
 
             if not var i is var j do
+
+                do clear_empty_lines with var file, var current_language, var path
 
                 do correct_human_edit_typos with var file, var current_language, var path
 

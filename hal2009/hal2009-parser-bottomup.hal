@@ -172,6 +172,7 @@ define action match_in_replaced_history with array replaced_history, array data_
     set new array subjects to an empty array
     set new array objects to an empty array
     set new array verbs to an empty array
+    set new array verbprefixes to an empty array
     set new array adverbs to an empty array
     set new array questionwords to an empty array
     set new array extra to an empty array
@@ -188,10 +189,13 @@ define action match_in_replaced_history with array replaced_history, array data_
         if var symbol matches /s-object/ do
             push into array objects, elements of array words
         done
-        if var symbol matches /s-verb/ do
+        if var symbol matches /s-verb/ and var symbol not matches /s-verbprefix/ do
             push into array verbs, elements of array words
         done
-        if var symbol matches /s-adverb$/ do
+        if var symbol matches /s-verbprefix/ do
+            push into array verbprefixes, elements of array words
+        done
+        if var symbol matches /s-(long)?adverb$/ do
             if size of array adverbs do
                 push into array adverbs, ";"
             done
@@ -211,6 +215,13 @@ define action match_in_replaced_history with array replaced_history, array data_
     done
 
     print new line
+
+    if size of array verbs > 1 do
+        push into array adverbs, items of array verbprefixes
+    done
+    else do
+        set from array verbs 1st item to from array verbprefixes 1st item concat from array verbs 1st item
+    done
 
     print "subjects: "
     do print_array with array subjects
@@ -613,24 +624,24 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-sentence-spo",
-        [ "s-subject", "r-adverbs", "s-verb", "r-adverbs", "r-objects", "r-adverbs", ],
-        [ "s-subject", "r-adverbs", "s-verb", "r-adverbs", "r-objects", "r-adverbs", "s-verb", "r-adverbs", ],
+        [ "s-subject", "r-longadverbs", "s-verb", "r-adverbs", "r-objects", "r-longadverbs", "r-verbprefix", ],
+        [ "s-subject", "r-longadverbs", "s-verb", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs", "r-verbprefix", ],
     ],
     [ "r-sentence-ps",
-        [ "s-verb",    "r-adverbs", "s-subject", "r-adverbs", ],
+        [ "s-verb",    "r-adverbs", "s-subject", "r-longadverbs", ],
     ],
     [ "r-sentence-sp",
-        [ "s-subject", "r-adverbs", "s-verb", "r-adverbs", ],
+        [ "s-subject", "r-longadverbs", "s-verb", "r-longadverbs", "r-verbprefix", ],
     ],
     [ "r-sentence-pso",
-        [ "s-verb",    "r-adverbs", "s-subject", "r-adverbs", "r-objects", "r-adverbs", ],
-        [ "s-verb",    "r-adverbs", "s-subject", "r-adverbs", "r-objects", "r-adverbs", "s-verb", "r-adverbs", ],
+        [ "s-verb",    "r-adverbs", "s-subject", "r-adverbs", "r-objects", "r-longadverbs", ],
+        [ "s-verb",    "r-adverbs", "s-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs", ],
     ],
     [ "r-sentence-sop",
-        [ "s-subject", "r-adverbs", "r-objects", "r-adverbs", "s-verb", "r-adverbs",   ],
+        [ "s-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs",   ],
     ],
     [ "r-sentence-p",
-        [ "s-verb",    "r-adverbs", ],
+        [ "s-verb",    "r-longadverbs", ],
     ],
 
     [ "s-subject",
@@ -653,6 +664,32 @@ set multi-line new global array grammar to [
         [ "d-adjective", "d-noun", ],
         [ "d-article", "d-noun", ],
         [ "d-article", "d-adjective", "d-noun", ],
+    ],
+
+    [ "r-verbprefix",
+        [ "s-verbprefix", ],
+        [  ],
+    ],
+
+    [ "s-verbprefix",
+        [ "d-preposition" ],
+    ],
+
+    [ "r-longadverbs",
+        [ "s-longadverbs", ],
+        [ "s-adverbs", ],
+        [  ],
+    ],
+
+    [ "s-longadverbs",
+        [ "s-longadverb", ],
+        [ "s-longadverb", "s-longadverb", ],
+        [ "s-longadverb", "s-longadverb", "s-longadverb", ],
+        [ "s-longadverb", "s-longadverb", "s-longadverb", "s-longadverb", ],
+    ],
+
+    [ "s-longadverb",
+        [ "d-preposition", "r-nounphrase", "r-nounphrase", ],
     ],
 
     [ "r-adverbs",
