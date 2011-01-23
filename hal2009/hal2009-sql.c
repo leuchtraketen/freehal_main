@@ -26,6 +26,7 @@
 #include "hal2009-sql-universal.c"
 
 
+static int sql_begin_end_quiet = 0;
 static int database_used = 0;
 
 struct DATASET sql_get_records(struct RECORD* r) {
@@ -98,12 +99,17 @@ int sql_re_index() {
     return sql_universal_re_index();
 }
 
+int sql_set_quiet(int i) {
+    sql_begin_end_quiet = i?1:0;
+}
+
 int sql_begin() {
     while (database_used) {
         fprintf(output(), "Wait while database is used.\n");
         halsleep(1);
     }
-    fprintf(output(), "%s\n", "Start database access.");
+    if (!sql_begin_end_quiet)
+        fprintf(output(), "%s\n", "Start database access.");
     database_used = 1;
     /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
         return sql_sqlite_begin();
@@ -129,7 +135,8 @@ int sql_end() {
     */
     ret = sql_universal_end();
     //}
-    fprintf(output(), "%s\n", "Stop database access.");
+    if (!sql_begin_end_quiet)
+        fprintf(output(), "%s\n", "Stop database access.");
     database_used = 0;
 
     return ret;

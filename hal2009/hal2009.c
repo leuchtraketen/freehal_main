@@ -19,6 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+char* record_to_xml(struct RECORD* r);
+
 static int position_in_insertions = 0;
 char* sql_engine = 0;
 
@@ -382,16 +384,56 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic) {
     if (sline_ref->do_free) halfree(sline_ref->s);
 }
 
-int hal2009_add_pro_file (char* filename) {
-    fprintf(output(), "Clearing DB: .pro file %s.\n", filename);
+int hal2009_add_xml_file (char* filename) {
+    fprintf(output(), "Clearing DB: .xml file %s.\n", filename);
     sql_begin();
     hal2009_delete_everything_from(filename);
     hal2009_add_filename(filename);
-    fprintf(output(), "Add .pro file %s.\n", filename);
+
+    sql_end();
+
+    fprintf(output(), "Add .xml file %s.\n", filename);
     position_in_insertions = 0;
     time_t start = 0;
     time(&start);
     FILE* input = fopen(filename, "rb");
+
+    add_xml_fact_file(filename);
+
+    int position_in_insertions_simulated = position_in_insertions;
+    while (position_in_insertions_simulated % 750 != 0) {
+        ++position_in_insertions_simulated;
+        if (position_in_insertions_simulated % 25 == 0) {
+            fprintf(output(), " ");
+            fflush(stdout);
+        }
+    }
+    time_t now = 0;
+    time(&now);
+    long int facts_per_second = position_in_insertions / ((now - start)>0?(now - start):1);
+
+    fprintf(output(), "\n");
+
+    return 0;
+}
+
+int hal2009_add_pro_file (char* _filename) {
+    char* filename = malloc(sizeof(char)*(strlen(_filename)+5));
+    strcpy(filename, _filename);
+    char* dot = strstr(filename, ".pro");
+    if (dot) {
+        strcpy(dot, ".xml");
+    }
+    else {
+        strcat(filename, ".xml");
+    }
+    FILE* xml_out = fopen(filename, "w");
+
+    fprintf(output(), "Convert .pro file %s to .xml file %s.\n", _filename, filename);
+    position_in_insertions = 0;
+    time_t start = 0;
+    time(&start);
+    FILE* input = fopen(_filename, "rb");
     fprintf(output(), " _______________________________\n");
     fprintf(output(), "|                               |\n|");
     if ( input ) {
@@ -496,7 +538,9 @@ int hal2009_add_pro_file (char* filename) {
                     remove_negation(r.adverbs, &(r.truth), &(r.only_logic));
                     buffer = filename;          strcpy(r.filename,          (buffer && ((buffer[0] != ' ' && buffer[0] != '*') || strlen(buffer) >= 1))?buffer:"\0");
                     snprintf(r.line, 100, "%d", line_number);
-                    strcpy(r.line, from_number(line_number));
+                    char* _n = from_number(line_number);
+                    strcpy(r.line, _n);
+                    free(_n);
                     strcpy(r.extra, "");
 
                     r.verb_flag_want    = 0;
@@ -575,6 +619,12 @@ int hal2009_add_pro_file (char* filename) {
                             break;
                         }
 
+                        if  (!sub_clause->subjects && !sub_clause->objects && !sub_clause->verb && !sub_clause->questionword) {
+                            free(r.clauses[i]);
+                            r.clauses[i] = NULL;
+                            break;
+                        }
+
                         sub_clause->verb_flag_want    = 0;
                         sub_clause->verb_flag_must    = 0;
                         sub_clause->verb_flag_can     = 0;
@@ -623,10 +673,18 @@ int hal2009_add_pro_file (char* filename) {
                         free(_tmp);
 
                         ++num_facts_added_during_this_run;
-                        err = sql_add_record(&r);
+
+//                        err = sql_add_record(&r);
+                        char* _xml = record_to_xml(&r);
+                        fprintf(xml_out, "%s", _xml);
+                        free(_xml);
                     }
                     else {
-                        err = sql_add_record(&r);
+//                        err = sql_add_record(&r);
+                        char* _xml = record_to_xml(&r);
+                        fprintf(xml_out, "%s", _xml);
+                        free(_xml);
+
                         if (err) {
                             printf("Error: %s\n", wholeline);
                         }
@@ -637,15 +695,6 @@ int hal2009_add_pro_file (char* filename) {
                     while (k+1 < MAX_CLAUSES && k < i && r.clauses[k]) {
                         halfree(r.clauses[k]);
                         ++k;
-                    }
-
-                    if (err) {
-                        if (err == NO_CONNECTION) {
-                            fprintf(output(), "\n");
-                            fflush(stdout);
-                            sql_end();
-                            return err;
-                        }
                     }
 
                     ++position_in_insertions;
@@ -668,23 +717,6 @@ int hal2009_add_pro_file (char* filename) {
 
                     halfree(line);
                     line = calloc(line_size + 100+1, 1);
-
-                    if (last_pk) {
-                        //printf("last_pk: %d\n", last_pk);
-                        int current_pk;
-
-                        FILE* target = fopen("_input_key", "r");
-                        if (target) {
-                            fscanf(target, "%d", &current_pk);
-                            fclose(target);
-                            //printf("current_pk: %d\n", current_pk);
-
-                            hal2009_add_link("order", last_pk, current_pk);
-                        }
-                        else {
-                            //printf("could not open _input_key\n", last_pk);
-                        }
-                    }
 
                     first_record_in_this_line = 0;
                 }
@@ -710,6 +742,9 @@ int hal2009_add_pro_file (char* filename) {
             fflush(stdout);
         }
     }
+
+    fclose(xml_out);
+
     fprintf(output(), " | ---\n|");
     time_t now = 0;
     time(&now);
@@ -718,16 +753,14 @@ int hal2009_add_pro_file (char* filename) {
     fflush(stdout);
     fprintf(output(), "\n");
     fflush(stdout);
-    sql_end();
 
-    fprintf(output(), "\nAdded %d facts.", num_facts_added_during_this_run > 0 ? num_facts_added_during_this_run : 0);
-    fprintf(output(), "\nNot added %d facts because they already exist in the database.", num_facts_not_added_during_this_run_because_exist);
-    fprintf(output(), "\nNot added %d facts because of an other error.", num_facts_not_added_during_this_run_because_other_error);
+    fprintf(output(), "\Converted %d facts.", num_facts_added_during_this_run > 0 ? num_facts_added_during_this_run : 0);
     fprintf(output(), "\n(%d facts)", num_facts_added_during_this_run
         + num_facts_not_added_during_this_run_because_exist
         + num_facts_not_added_during_this_run_because_other_error);
     fprintf(output(), "\n\n");
 
+    hal2009_add_xml_file (filename);
 
     return 0;
 }

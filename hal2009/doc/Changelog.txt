@@ -1,3 +1,7 @@
+1299:
+
+- Eine erste Implementierung des xml-Dateiformats als Ersatz fuer .pro-Dateien
+
 1298:
 
 - von 165.530 Thesaurus-Eintraegen wurden 6077 Eintraege entfernt, weil sie besonders haeufig zu problematischen Synonym-Verkettungen fuehren

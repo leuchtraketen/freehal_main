@@ -148,7 +148,7 @@ char* universal_del_record(char* key);
 char* universal_get_source(char* key);
 char* use_thesaurus_synonyms(const char* key);
 const char* clean_str (const char* str);
-const char* from_number(int i);
+char* from_number(int i);
 const char* get_catchf();
 int append_on_dataset_record(int offset, int limit, char** record, struct fact** list);
 int begin_catchf();

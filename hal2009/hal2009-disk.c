@@ -440,12 +440,20 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     if (questionword)    strcat(sql, questionword);
     else                 strcat(sql, "NULL");
     strcat(sql, "\", 50, ");
-    strcat(sql, from_number(fileid(filename)));
+    char* _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
     strcat(sql, ", ");
     strcat(sql, line);
     strcat(sql, ", ");
-    if (rel) strcat(sql, from_number(rel));
-    else     strcat(sql, "-1");
+    if (rel) {
+        char* _n = from_number(rel);
+        strcat(sql, _n);
+        free(_n);
+    }
+    else {
+        strcat(sql, "-1");
+    }
     strcat(sql, ", ");
     char truth_str[10];
     snprintf(truth_str, 9, "%f", truth);
@@ -536,10 +544,9 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
                     strcat(sql, ");");
                 }
                 free(smid);
-
-                free(words[num_of_words]);
-                words[num_of_words] = 0;
             }
+            free(words[num_of_words]);
+            words[num_of_words] = 0;
         }
         --num_of_words;
     }
@@ -592,7 +599,9 @@ char* gen_sql_add_filename(const char* filename) {
     *sql = 0;
 
     strcat(sql, "INSERT OR IGNORE INTO `files` (`id`, `filename`) VALUES ( ");
-    strcat(sql, from_number(fileid(filename)));
+    char* _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
     strcat(sql, ", \"");
     strcat(sql, filename);
     strcat(sql, "\");\n");
@@ -608,7 +617,9 @@ char* gen_sql_delete_everything_from(const char* filename) {
     printf("Clean index...\n");
 
     strcat(sql, "delete from cache_ids ; INSERT OR IGNORE INTO cache_ids SELECT `pk` FROM facts WHERE `fileid` = ");
-    strcat(sql, from_number(fileid(filename)));
+    char* _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
     strcat(sql, ";\n");
 
     int error = sql_execute(sql, NULL, NULL);
@@ -638,12 +649,15 @@ char* gen_sql_delete_everything_from(const char* filename) {
 
     *sql = 0;
     strcat(sql, "DELETE FROM clauses WHERE `fileid` = ");
-    strcat(sql, from_number(fileid(filename)));
+    _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
     strcat(sql, ";");
     strcat(sql, "DELETE FROM facts WHERE `fileid` = ");
-    strcat(sql, from_number(fileid(filename)));
+    _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
     strcat(sql, ";");
-
 
     printf("\r%s\n", sql);
     return sql;

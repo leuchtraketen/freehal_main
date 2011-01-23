@@ -1348,10 +1348,11 @@ int to_number(const char* str) {
     );
 }
 
-const char* from_number(int i) {
+char* from_number(int i) {
     char str[101];
+    strcpy(str, "");
     snprintf(str, 100, "%d", i);
-    return str;
+    return strdup(str);
 }
 
 int is_bad(const char* s) {
