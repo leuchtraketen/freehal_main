@@ -37,13 +37,13 @@ include_directories (/compiler/lib /compiler/include perl5/ parrot/include /add1
 add_executable (hal2009-test hal2009-test.c hal2009-perl6.c hal2009-perl5.c sqlite3.c hal2009-as-debug.c) 
 target_link_libraries (hal2009-test parrot m crypt pthread dl)
 
-add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c /compiler/lib/libperl510.a iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c)
+add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c /compiler/lib/libperl510.a iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp)
 target_link_libraries (hal2009 m pthreadGC2 /compiler/lib/libperl510.a z) 
 
-add_executable (runner hal2009-server.c hal2009-server.cpp /compiler/boost/libs/thread/src/tss_null.cpp hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c /compiler/lib/libperl510.a iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c /compiler/boost/libs/thread/src/win32/exceptions.cpp /compiler/boost/libs/thread/src/win32/thread.cpp /compiler/boost/libs/thread/src/win32/tss_dll.cpp /compiler/boost/libs/thread/src/win32/tss_pe.cpp hal2009-crash.c precompiled/mingw/mingw_ntdll-a_RtlCaptureStackBackTrace.o hal2009-as-release.c)
+add_executable (runner hal2009-server.c hal2009-server.cpp /compiler/boost/libs/thread/src/tss_null.cpp hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c /compiler/lib/libperl510.a iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c /compiler/boost/libs/thread/src/win32/exceptions.cpp /compiler/boost/libs/thread/src/win32/thread.cpp /compiler/boost/libs/thread/src/win32/tss_dll.cpp /compiler/boost/libs/thread/src/win32/tss_pe.cpp hal2009-crash.c precompiled/mingw/mingw_ntdll-a_RtlCaptureStackBackTrace.o hal2009-as-release.c hal2009-xml.cpp)
 target_link_libraries (runner m /compiler/lib/libboost_system-mgw-mt-1_37.a /compiler/lib/libboost_iostreams-mgw-mt-1_37.a pthread pthreadGC2 /compiler/lib/libperl510.a z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 /compiler/lib/libpthreadGC2.a /source/hal2009/mingw_ntdll.a)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.c hal2009-perl5.c /compiler/lib/libpthread.a /compiler/boost/libs/thread/src/tss_null.cpp diagnostics_win.C sqlite3.c extract_with_unzipper.c unzipper.c unzip.c libcrypto.a libgdi32.a libsched.a libssl.a iowin32.c ioapi.c /compiler/lib/libperl510.a hal2009-wiki-dummy.c boinc_api.o hal2009-as-debug.c)
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.c hal2009-perl5.c /compiler/lib/libpthread.a /compiler/boost/libs/thread/src/tss_null.cpp diagnostics_win.C sqlite3.c extract_with_unzipper.c unzipper.c unzip.c libcrypto.a libgdi32.a libsched.a libssl.a iowin32.c ioapi.c /compiler/lib/libperl510.a hal2009-wiki-dummy.c boinc_api.o hal2009-as-debug.c hal2009-xml.cpp)
 target_link_libraries (hal2009-boinc m pthread pthreadGC2 /compiler/lib/libperl510.a boinc boinc_api boinc_zip boinc_graphics2 z)
 
 ###################################################
@@ -57,22 +57,22 @@ else(MINGW)
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include) 
 include_directories (/add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
 
-add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp) 
 target_link_libraries (hal2009 m crypt pthread perl dl z) 
 
-add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
+add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-server m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
 add_executable (hal2009-cgi hal2009-cgi.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp hal2009-as-debug.c) 
 target_link_libraries (hal2009-cgi m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c) 
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-boinc m crypt pthread dl boinc_api boinc z /usr/lib/libperl.a) 
 
-add_executable (hal2009-debug hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
+add_executable (hal2009-debug hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-debug m crypt pthread perl dl z) 
 
-add_executable (hal2009-server-debug hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c) 
+add_executable (hal2009-server-debug hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-server-debug m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
 set_target_properties("hal2009-debug" PROPERTIES COMPILE_FLAGS "-pg -g")

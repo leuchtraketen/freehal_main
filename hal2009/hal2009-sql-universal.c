@@ -30,8 +30,8 @@
 int sql_universal_set_filename(const char* filename) {
 }
 
-int sql_universal_begin() {
-    return universal_begin();
+int sql_universal_begin(const char* modes) {
+    return universal_begin(modes);
 }
 
 int sql_universal_end() {

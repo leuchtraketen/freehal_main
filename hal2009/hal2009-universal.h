@@ -204,7 +204,7 @@ int set_to_invalid_value(void** p);
 int sql_universal_add_link (const char* link, int key_1, int key_2);
 int store_synonyms(const char* exp, struct word*** synonyms, int level);
 int to_number(const char* str);
-int universal_begin();
+int universal_begin(const char* begin);
 int universal_delete_everything_from(const char* filename);
 int universal_end();
 int universal_re_index();

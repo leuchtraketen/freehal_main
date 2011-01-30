@@ -239,7 +239,7 @@ extern "C" {
     void* halfilecalloc( long s, long si, char* f );
     void* halfilefree( void* s );
     int sql_set_quiet(int);
-    int sql_begin();
+    int sql_begin(const char* begin);
     int sql_end();
     const char* engine();
     const char* is_engine(const char*);

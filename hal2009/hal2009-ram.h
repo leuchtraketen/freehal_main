@@ -32,7 +32,7 @@ struct linking_entity {
     char* type;
 };
 
-int ram_begin();
+int ram_begin(const char* begin);
 int ram_end();
 struct word* ram_get_word(const char* name);
 int insert_fact_by_list_into_net(struct word** list, struct fact* fact);

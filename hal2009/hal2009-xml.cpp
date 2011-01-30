@@ -401,7 +401,7 @@ extern "C" {
     }
 
     int add_xml_fact_file(const char* filename) {
-        sql_begin();
+        sql_begin("faster");
 
         time_t start = 0;
         time(&start);
@@ -439,11 +439,11 @@ extern "C" {
                     cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - start << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts.size()*(k+1)) << "% done)          \r" << flush;
                 }
             }
-            if (k&&((k+1)%5000)==0) {
+            if (k&&((k+1)%15000)==0) {
                 cout << endl;
                 sql_set_quiet(1);
                 sql_end();
-                sql_begin();
+                sql_begin("faster");
                 sql_set_quiet(0);
             }
 
@@ -495,29 +495,31 @@ extern "C" {
             }
         }
 
-        std::vector<XML_Object*> _content = xfact->part("clause");
-        string str;
-        int k;
-        for (k = 0; k < _content.size(); ++k) {
-            XML_Fact* xclause = (XML_Fact*)_content[k];
+        if (fact && fact->pk) {
+            std::vector<XML_Object*> _content = xfact->part("clause");
+            string str;
+            int k;
+            for (k = 0; k < _content.size(); ++k) {
+                XML_Fact* xclause = (XML_Fact*)_content[k];
 
-            string subject = xclause->print_str("subject");
-            string object = xclause->print_str("object");
-            string verb = xclause->print_str("verb");
-            string adverbs = xclause->print_str("adverbs");
-            string extra = xclause->print_str("extra");
-            string questionword = xclause->print_str("questionword");
-            string truth_str = xclause->print_str("truth");
-            float truth;
-            sscanf(truth_str.c_str(), "%fl", &truth);
-            string verb_flags = xclause->print_str("flags");
-            int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0, verb_flag_may = 0, verb_flag_should = 0;
-            if (verb_flags.size()==5) sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want, &verb_flag_must, &verb_flag_can, &verb_flag_may, &verb_flag_should);
+                string subject = xclause->print_str("subject");
+                string object = xclause->print_str("object");
+                string verb = xclause->print_str("verb");
+                string adverbs = xclause->print_str("adverbs");
+                string extra = xclause->print_str("extra");
+                string questionword = xclause->print_str("questionword");
+                string truth_str = xclause->print_str("truth");
+                float truth;
+                sscanf(truth_str.c_str(), "%fl", &truth);
+                string verb_flags = xclause->print_str("flags");
+                int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0, verb_flag_may = 0, verb_flag_should = 0;
+                if (verb_flags.size()==5) sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want, &verb_flag_must, &verb_flag_can, &verb_flag_may, &verb_flag_should);
 
-            struct fact* clause = add_clause(fact->pk, subject.c_str(), object.c_str(), verb.c_str(), adverbs.c_str(), extra.c_str(), questionword.c_str(), filename.c_str(), line.c_str(), truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+                struct fact* clause = add_clause(fact->pk, subject.c_str(), object.c_str(), verb.c_str(), adverbs.c_str(), extra.c_str(), questionword.c_str(), filename.c_str(), line.c_str(), truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
 
-            if (clause) {
-                free(clause);
+                if (clause && clause != INVALID_POINTER) {
+                    free(clause);
+                }
             }
         }
 

@@ -24,7 +24,7 @@
 int disk_cache_clauses = -1;
 int disk_cache_facts = -1;
 
-int disk_begin() {
+int disk_begin(const char* modes) {
     // initialize semantic ram_net
     disk_net = calloc(sizeof(void*)*(4+'z'-'a'), 1);
     int i;
@@ -70,10 +70,12 @@ int disk_begin() {
             struct stat stbuf;
             stat(db_main, &stbuf);
             int file_size = &stbuf ? stbuf.st_size : 0;
+      //      printf("file_size %i\n", file_size);
             if (file_size < 1000) {
                 create_tables = 1;
             }
         }
+    //    printf("create tables? %i (1)\n", create_tables);
 
         if (sqlite3_open(db_main, &sqlite_connection)) {
             printf("%s%s\n", "Could not open SQLite connection to file: ", sqlite_filename);
@@ -110,6 +112,7 @@ int disk_begin() {
         if (err) printf("SQL error: %s\n", err);
         sqlite3_free(err);
 
+  //      printf("create tables? %i (2)\n", create_tables);
         if (create_tables) {
             printf("create tables...\n");
             sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err);
@@ -118,6 +121,14 @@ int disk_begin() {
         }
     }
 
+    if (strstr(modes, "faster")) {
+        char* err;
+        sqlite3_exec(sqlite_connection, "PRAGMA synchronous = OFF; PRAGMA temp_store=MEMORY;", NULL, NULL, &err);
+        if (err) printf("SQL error: %s\n", err);
+        sqlite3_free(err);
+    }
+
+//    printf("create tables? (3)\n");
     char* err;
     sqlite3_exec(sqlite_connection, "BEGIN;", NULL, NULL, &err);
     sqlite3_free(err);
@@ -415,6 +426,7 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     strcat(sql, "\", \"");
     strcat(sql, verbs);
     strcat(sql, "\", \"");
+//printf("%s\n", sql);
     if (0==strcmp(verbs, "=") || 0==strcmp(verbs, "ist") || 0==strcmp(verbs, "bist") || 0==strcmp(verbs, "bin") || 0==strcmp(verbs, "sind") || 0==strcmp(verbs, "sein") || 0==strcmp(verbs, "heisst") || 0==strcmp(verbs, "heisse") || 0==strcmp(verbs, "heissen") || 0==strcmp(verbs, "war") || 0==strcmp(verbs, "is") || 0==strcmp(verbs, "are") || 0==strcmp(verbs, "am") || 0==strcmp(verbs, "was")) {
         strcat(sql, "be");
     }
@@ -629,7 +641,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
         int error2 = sql_execute("BEGIN;", NULL, NULL);
 
-        printf("\r%fl\t\t\t", (100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
+        printf("\r%d\% deleted\t\t\t", (int)(100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
         fflush(stdout);
         *sql = 0;
 

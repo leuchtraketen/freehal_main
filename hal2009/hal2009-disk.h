@@ -24,7 +24,7 @@
 
 #include "sqlite3.h"
 
-int disk_begin();
+int disk_begin(const char* begin);
 int disk_end();
 struct word* disk_get_word(const char* name);
 int insert_fact_by_list_into_net(struct word** list, struct fact* fact);

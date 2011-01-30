@@ -386,7 +386,7 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic) {
 
 int hal2009_add_xml_file (char* filename) {
     fprintf(output(), "Clearing DB: .xml file %s.\n", filename);
-    sql_begin();
+    sql_begin("faster");
     hal2009_delete_everything_from(filename);
     hal2009_add_filename(filename);
 
@@ -795,7 +795,7 @@ char* delete_underscores(char* _text) {
 
 struct DATASET hal2009_get_csv(char* csv_request) {
     fprintf(output(), "Get CSV data: %s.\n", csv_request);
-    sql_begin();
+    sql_begin("");
     position_in_insertions = 0;
 
     struct RECORD r;

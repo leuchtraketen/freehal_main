@@ -65,13 +65,13 @@ int end_catchf() {
 }
 
 
-int universal_begin() {
+int universal_begin(const char* modes) {
     int r = 0;
     if (is_engine("ram")) {
-        r = ram_begin();
+        r = ram_begin(modes);
     }
     else {
-        r = disk_begin();
+        r = disk_begin(modes);
     }
 
     return r;
@@ -4263,7 +4263,7 @@ char* small_identifier(const char* word) {
                   :  '_'
                   ;
 
-    identifier[1] = 'a';
+//    identifier[1] = 'a';
 
     return identifier;
 }

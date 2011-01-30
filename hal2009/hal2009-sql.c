@@ -103,7 +103,7 @@ int sql_set_quiet(int i) {
     sql_begin_end_quiet = i?1:0;
 }
 
-int sql_begin() {
+int sql_begin(const char* modes) {
     while (database_used) {
         fprintf(output(), "Wait while database is used.\n");
         halsleep(1);
@@ -119,7 +119,7 @@ int sql_begin() {
     }
     else {
     */
-    return sql_universal_begin();
+    return sql_universal_begin(modes);
     //}
 }
 

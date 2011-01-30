@@ -22,7 +22,7 @@
 #include "hal2009-ram.h"
 
 
-int ram_begin() {
+int ram_begin(const char* modes) {
     static int called = 0;
     if (called) {
         return 1;
