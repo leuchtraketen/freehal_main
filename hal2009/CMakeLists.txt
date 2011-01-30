@@ -63,7 +63,7 @@ target_link_libraries (hal2009 m crypt pthread perl dl z)
 add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-server m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-cgi hal2009-cgi.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp hal2009-as-debug.c) 
+add_executable (hal2009-cgi hal2009-cgi.c hal2009-perl6-dummy.c hal2009-perl5.c sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp hal2009-as-debug.c hal2009-xml.cpp) 
 target_link_libraries (hal2009-cgi m crypt pthread perl dl z boost_thread-mt boost_system-mt)
 
 add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c /usr/lib/libperl.a hal2009-perl5.c sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp) 
