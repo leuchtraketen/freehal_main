@@ -518,7 +518,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         struct RECORD r;
         strcpy(r.pkey, "a");
         printf("pkey (in hal2009-server, 2): %s\n", r.pkey);
-        sql_begin();
+        sql_begin("");
         char* source = sql_del_record(&r);
         if (source) {
             fact_delete_from_source(source);
@@ -782,7 +782,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
             printf("pkey (in hal2009-server, 1): %s\n", r.pkey);
-            sql_begin();
+            sql_begin("");
             char* source = sql_del_record(&r);
             if (source) {
                 fact_delete_from_source(source);
@@ -795,7 +795,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
         if ( result->at(0) == string("REINDEX") ) {
             printf("Running re-index function.\n");
             printf("Start.\n");
-            sql_begin();
+            sql_begin("");
             sql_re_index();
             sql_end();
             printf("Stop.\nNew Index.\n");
@@ -809,7 +809,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 r.pkey[strlen(r.pkey)-1] = '\0';
             }
             printf("get .pro entry (in hal2009-server, 1): %s\n", r.pkey);
-            sql_begin();
+            sql_begin("");
             char* source = sql_get_source(&r);
             printf("source: '%s'\n", source ? source : "(null)");
             if (source) {
@@ -835,7 +835,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 replacement[strlen(replacement)-1] = '\0';
             }
             printf("replace .pro entry (in hal2009-server, 1): %s by '%s'\n", r.pkey, replacement);
-            sql_begin();
+            sql_begin("");
             char* source = sql_get_source(&r);
             if (source) {
                 fact_replace_in_source(source, replacement);
@@ -850,7 +850,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                     sql_end();
                     hal2009_add_pro_file(filename);
                     // hal2009_add_pro_file() free's filename
-                    sql_begin();
+                    sql_begin("");
                 }
                 free(source);
             }
