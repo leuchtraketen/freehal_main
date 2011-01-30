@@ -495,7 +495,7 @@ extern "C" {
             }
         }
 
-        if (fact && fact->pk) {
+        if (fact && fact != INVALID_POINTER && fact->pk) {
             std::vector<XML_Object*> _content = xfact->part("clause");
             string str;
             int k;
@@ -521,10 +521,10 @@ extern "C" {
                     free(clause);
                 }
             }
-        }
 
-        if (fact && fact->pk && is_engine("disk")) {
-            free(fact);
+            if (is_engine("disk")) {
+                free(fact);
+            }
         }
 
         return 0;
