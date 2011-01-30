@@ -36,28 +36,28 @@ do close with var output_handle
 do memory_build_cache with "temp.brain", var lang, var path
 
 set new array cache_keys to an empty array
-set items of array cache_keys to keys with items of that hash: from global hash content_of_memory_file item { "word_types.brain" } end of items
+set elements of array cache_keys to keys with elements of that hash: from global hash content_of_memory_file element { "word_types.brain" } end of elements
 
-set new array all_available_test_items to an empty array
-set items of array all_available_test_items to keys with items of that hash: from global hash content_of_memory_file item { "temp.brain" } end of items
-do fisher_yates_shuffle with array all_available_test_items
-set new var count_test_items to 5000
-set new array test_items to an empty array
-while var count_test_items > 0 do
-    set new var k to pop with items of array all_available_test_items
+set new array all_available_test_elements to an empty array
+set elements of array all_available_test_elements to keys with elements of that hash: from global hash content_of_memory_file element { "temp.brain" } end of elements
+do fisher_yates_shuffle with array all_available_test_elements
+set new var count_test_elements to 5000
+set new array test_elements to an empty array
+while var count_test_elements > 0 do
+    set new var k to pop with elements of array all_available_test_elements
     if var k matches lc(var k) do
-        push into array test_items, var k
+        push into array test_elements, var k
     done
-    set var count_test_items to var count_test_items - 1
+    set var count_test_elements to var count_test_elements - 1
 done
 
 set new var end_of_entry_line to ':'
 
 set new var cnt to 0
 set new var pct to 0
-for each new var _test_item in array test_items do
+for each new var _test_element in array test_elements do
     set new var _pos to 'q'
-    set new array _lines to from global hash content_of_memory_file item { "word_types.brain" } item { var _test_item }
+    set new array _lines to from global hash content_of_memory_file element { "word_types.brain" } element { var _test_element }
     for each new var _line in array _lines do
         if var _line matches /^\s*?(type)<[var end_of_entry_line]>\s*?(\S+)/ do
             set var _pos to $1
@@ -70,15 +70,15 @@ for each new var _test_item in array test_items do
     done
 
 
-    if from global hash content_of_memory_file item { "word_types.brain" } item { ucfirst( var _test_item ) } do
+    if from global hash content_of_memory_file element { "word_types.brain" } element { ucfirst( var _test_element ) } do
         go to next
     done
 
 
     
-    set new var test_item to var _test_item
-    do regex using var test_item: /var end_of_entry_line$/, "", :i
-    set new var res to guess_part_of_speech with var test_item, var lang, var path
+    set new var test_element to var _test_element
+    do regex using var test_element: /var end_of_entry_line$/, "", :i
+    set new var res to guess_part_of_speech with var test_element, var lang, var path
     print var res
     print new line
     
@@ -97,7 +97,7 @@ for each new var _test_item in array test_items do
         set var cnt to var cnt + 1
         print "-----------------------------------" concat new line
         print "Tagger bug:" concat new line
-        print "- word:  " concat var test_item concat new line
+        print "- word:  " concat var test_element concat new line
         print "- wrong: " concat var res concat new line
         print "- right: " concat var _pos concat new line
         print "-----------------------------------" concat new line

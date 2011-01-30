@@ -28,8 +28,10 @@ require source hal2009-parser.hal
 # set new array data to [ ["frisst", "d-verb"], ["tobias", "d-title"], ["schulz", "d-noun"] ];
 # set new array data to [ ["wie", "d-questionword"], ["fressen", "d-verb"], ["die", "d-article"], ["ziegen", "d-noun"], ["gras", "d-noun"] ];
 # set new array data to [ ["wie", "d-questionword"], ["fressen", "d-verb"], ["die", "d-article"], ["ziegen", "d-noun"], ["im", "d-preposition"], ["winter", "d-noun"], ["gras", "d-noun"] ];
+# set new array data to [ ["welche", "d-questionword"], ["stadt", "d-noun"], ["liegt", "d-verb"], ["in", "d-preposition"], ["deutschland", "d-noun"] ];
 
-set new array data to [ ["welche", "d-questionword"], ["stadt", "d-noun"], ["liegt", "d-verb"], ["in", "d-preposition"], ["deutschland", "d-noun"] ];
+# d-questionword ~warum~ d-title ~Ich~ d-verb ~kann~ d-title ~Dir~ d-article ~das~ d-adjective ~nicht~ d-verb ~erklaeren~
+set new array data to [ ["warum", "d-questionword"], ["Ich", "d-title"], ["kann", "d-verb"], ["Dir", "d-title"], ["das", "d-article"], ["nicht", "d-adjective"], ["erklaeren", "d-verb"], ];
 
 do new_parser_start with global array grammar, array data, "de", "."
 

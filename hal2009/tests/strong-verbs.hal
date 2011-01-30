@@ -29,15 +29,15 @@ for each new var argv from var f do
 	print new line
 	
 	set new array conj to to_verb_conjugation with var root, var prefix, var current_language, var path
-	print "past:         " concat from array conj second item
+	print "past:         " concat from array conj second element
 	print new line
 	set new array conj to to_verb_conjugation with var root, var prefix, var current_language, var path
-	print "participle:   " concat from array conj third item
+	print "participle:   " concat from array conj third element
 	print new line
 
-	set new var pres to from array conj first item concat "en"
-	set new var past to from array conj second item concat ""
-	set new var pret to from array conj third item concat "en"
+	set new var pres to from array conj first element concat "en"
+	set new var past to from array conj second element concat ""
+	set new var pret to from array conj third element concat "en"
 
 	do regex using var pres: /<[-]>/, "", :global
 	do regex using var past: /<[-]>/, "", :global
