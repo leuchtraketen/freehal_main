@@ -128,7 +128,7 @@ string XML_Object::print_str() {
         }
         return(str);
     }
-    return(string());
+    return(string(""));
 }
 
 XML_Fact::XML_Fact() {
@@ -502,20 +502,20 @@ extern "C" {
             for (k = 0; k < _content.size(); ++k) {
                 XML_Fact* xclause = (XML_Fact*)_content[k];
 
-                string subject = xclause->print_str("subject");
-                string object = xclause->print_str("object");
-                string verb = xclause->print_str("verb");
-                string adverbs = xclause->print_str("adverbs");
-                string extra = xclause->print_str("extra");
-                string questionword = xclause->print_str("questionword");
-                string truth_str = xclause->print_str("truth");
-                float truth;
-                sscanf(truth_str.c_str(), "%fl", &truth);
-                string verb_flags = xclause->print_str("flags");
-                int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0, verb_flag_may = 0, verb_flag_should = 0;
-                if (verb_flags.size()==5) sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want, &verb_flag_must, &verb_flag_can, &verb_flag_may, &verb_flag_should);
+                string clause_subject = xclause->print_str("subject");
+                string clause_object = xclause->print_str("object");
+                string clause_verb = xclause->print_str("verb");
+                string clause_adverbs = xclause->print_str("adverbs");
+                string clause_extra = xclause->print_str("extra");
+                string clause_questionword = xclause->print_str("questionword");
+                string clause_truth_str = xclause->print_str("truth");
+                float clause_truth;
+                sscanf(clause_truth_str.c_str(), "%fl", &clause_truth);
+                string clause_verb_flags = xclause->print_str("flags");
+                int clause_verb_flag_want = 0, clause_verb_flag_must = 0, clause_verb_flag_can = 0, clause_verb_flag_may = 0, clause_verb_flag_should = 0;
+                if (clause_verb_flags.size()==5) sscanf(clause_verb_flags.c_str(), "%d%d%d%d%d", &clause_verb_flag_want, &clause_verb_flag_must, &clause_verb_flag_can, &clause_verb_flag_may, &clause_verb_flag_should);
 
-                struct fact* clause = add_clause(fact->pk, subject.c_str(), object.c_str(), verb.c_str(), adverbs.c_str(), extra.c_str(), questionword.c_str(), filename.c_str(), line.c_str(), truth, verb_flag_want, verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should);
+                struct fact* clause = add_clause(fact->pk, clause_subject.c_str(), clause_object.c_str(), clause_verb.c_str(), clause_adverbs.c_str(), clause_extra.c_str(), clause_questionword.c_str(), filename.c_str(), line.c_str(), clause_truth, clause_verb_flag_want, clause_verb_flag_must, clause_verb_flag_can, clause_verb_flag_may, clause_verb_flag_should);
 
                 if (clause && clause != INVALID_POINTER) {
                     free(clause);

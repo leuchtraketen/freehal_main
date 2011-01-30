@@ -839,6 +839,9 @@ define action correct_human_edit_typos with var file, var current_language, var 
             do regex with var line: /\(true\)/ -> "(maybe)"
         done
 
+        do regex with var line: /[>][<]\s/ -> "<> "
+        do regex with var line: /\s[>][<]/ -> " <>"
+
         if var _copy not matches var line do
             print "Corrected typo:    " concat var _copy concat new line
             print "                => " concat var line concat new line

@@ -135,6 +135,23 @@ int disk_begin(const char* modes) {
     return 0;
 }
 
+int sql_reset() {
+    FILE* f;
+    char _db[999];
+
+    sprintf(_db, "%s.main", sqlite_filename);
+    f = fopen(_db, "w");
+    fclose(f);
+
+    sprintf(_db, "%s.index", sqlite_filename);
+    f = fopen(_db, "w");
+    fclose(f);
+
+    sprintf(_db, "%s.cache", sqlite_filename);
+    f = fopen(_db, "w");
+    fclose(f);
+}
+
 int disk_free_wordlist(int i, int k) {
     int g;
     for (g = 0; g < disk_net[i][k]->size; ++g) {
@@ -1023,6 +1040,21 @@ int sql_execute(char* sql, int (*callback)(void*,int,char**,char**), void* arg) 
             if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
                 printf("Table creation: SQL Error:\n------------\n%s\n\n", err, sql);
 //                printf("SQL Error:\n------------\n%s\n------------\n%s\n------------\n\n", err, sql);
+                error_to_return = TABLE_ERROR;
+                break;
+            }
+            continue;
+        }
+        else if (strstr(err, "database disk image is malformed")) {
+            printf("SQL: database disk image is malformed\n");
+            sqlite3_free(err);
+
+            sql_end();
+            sql_reset();
+            sql_begin("");
+            if (sqlite3_exec(sqlite_connection, sqlite_sql_create_table, NULL, NULL, &err)) {
+                printf("Table creation: SQL Error:\n------------\n%s\n\n", err, sql);
+
                 error_to_return = TABLE_ERROR;
                 break;
             }
