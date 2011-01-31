@@ -658,7 +658,7 @@ char* gen_sql_delete_everything_from(const char* filename) {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
         int error2 = sql_execute("BEGIN;", NULL, NULL);
 
-        printf("\r%d\% deleted\t\t\t", (int)(100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ));
+        printf("\r%d%s deleted\t\t\t", (int)(100.0 / (float)(('z'-'a')*('z'-'a')) * (float)(('z'-'a')*(i-'a')) ), "%");
         fflush(stdout);
         *sql = 0;
 

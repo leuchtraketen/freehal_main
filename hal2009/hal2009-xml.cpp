@@ -261,7 +261,7 @@ XML_Fact* halxml_readfact(vector<string>& lines, int& i) {
     return(fact);
 }
 
-vector<XML_Fact*> halxml_readfacts(string& prestr) {
+vector<XML_Fact*> halxml_readfacts(string& prestr, int(*use)(void*, int, time_t*, const char**, int), time_t* start_ref, const char** filename_ref) {
     vector<string> lines;
     {
         string _str;
@@ -273,13 +273,32 @@ vector<XML_Fact*> halxml_readfacts(string& prestr) {
     }
 
     vector<XML_Fact*> xml_facts;
-    int i = 0;
+    int i;
+    int xml_facts_size = 0;
+    for (i = 0; i < lines.size(); ++i) {
+        if (lines[i] == "<") {
+            ++i;
+            if (lines[i] == "fact") {
+                ++xml_facts_size;
+            }
+        }
+    }
+    i = 0;
+    int facts_so_far = 0;
     while (i < lines.size()) {
         if (lines[i] == "<") {
             ++i;
             if (lines[i] == "fact") {
+                ++i;
                 XML_Fact* fact = halxml_readfact(lines, i);
-                xml_facts.push_back(fact);
+
+                if (use) {
+                    use(fact, xml_facts_size, start_ref, filename_ref, facts_so_far);
+                    ++facts_so_far;
+                }
+                else {
+                    xml_facts.push_back(fact);
+                }
             }
         }
         ++i;
@@ -400,6 +419,38 @@ extern "C" {
         return(ret);
     }
 
+    int use_xml_fact(void* _fact, int xml_facts_size, time_t* start_ref, const char** filename_ref, int k) {
+        XML_Fact* xfact = (XML_Fact*)_fact;
+        xfact->filename = *filename_ref;
+        stringstream sst;
+        sst << k+1;
+        sst >> xfact->line;
+
+        if (k+1 == xml_facts_size || ((k+1)%100)==0) {
+            time_t now = 0;
+            time(&now);
+            if (now - *start_ref == 0) {
+                now = *start_ref + 1;
+            }
+            {
+                long int facts_per_second = k / (now - *start_ref);
+                long int time_needed = (xml_facts_size-k)/(facts_per_second+1);
+
+                cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - *start_ref << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts_size*(k+1)) << "% done)          \r" << flush;
+            }
+        }
+        if (k&&((k+1)%15000)==0) {
+            cout << endl;
+            sql_set_quiet(1);
+            sql_end();
+            sql_begin("faster");
+            sql_set_quiet(0);
+        }
+
+        add_xml_fact(xfact);
+        delete(xfact);
+    }
+
     int add_xml_fact_file(const char* filename) {
         sql_begin("faster");
 
@@ -414,43 +465,14 @@ extern "C" {
         string prestr;
         halxml_ordertags(instr, prestr);
 
-        vector<XML_Fact*> xml_facts = halxml_readfacts(prestr);
-
         cout << filename << ": " << endl;
-        int k;
+        vector<XML_Fact*> xml_facts = halxml_readfacts(prestr, use_xml_fact, &start, &filename);
+
+/*        int k;
         int xml_facts_size = xml_facts.size();
         for (k = 0; k < xml_facts_size; ++k) {
-            XML_Fact* xfact = xml_facts[k];
-            xfact->filename = filename;
-            stringstream sst;
-            sst << k+1;
-            sst >> xfact->line;
-
-            if (k+1 == xml_facts_size || ((k+1)%100)==0) {
-                time_t now = 0;
-                time(&now);
-                if (now - start == 0) {
-                    now = start + 1;
-                }
-                {
-                    long int facts_per_second = k / (now - start);
-                    long int time_needed = (xml_facts_size-k)/(facts_per_second+1);
-
-                    cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - start << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts.size()*(k+1)) << "% done)          \r" << flush;
-                }
-            }
-            if (k&&((k+1)%15000)==0) {
-                cout << endl;
-                sql_set_quiet(1);
-                sql_end();
-                sql_begin("faster");
-                sql_set_quiet(0);
-            }
-
-            add_xml_fact(xfact);
-            delete(xfact);
         }
-
+*/
         cout << endl << endl;
         sql_end();
 
