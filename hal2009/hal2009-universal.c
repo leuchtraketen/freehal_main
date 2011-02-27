@@ -1267,7 +1267,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                         ++request_words_all_also_trivial;
                         
                         if (0 == strcmp(request_words[u][c]->name, "&")) {
-                            flags = CHECK_LOGIC_OPERATORS;
+                            check_logic_operators = 1;
                         }
                     }
                 }
@@ -1292,13 +1292,14 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             if (strstr(request_words[u][c]->name, "time_")) {
                                 should_match_this_synonym -= 10;
                             }
-                            else if (0 == strcmp(request_words[u][c]->name, "&")) {
+                            else if (check_logic_operators && 0 == strcmp(request_words[u][c]->name, "&")) {
                                 if (does_match_this_synonym == 0) {
                                     allow_match_this_synonym  = 0;
-                                    should_match_this_synonym = 0;
                                 }
+                                does_match_this_synonym   = 0;
+                                should_match_this_synonym = 0;
                             }
-                            else if (0 == strcmp(request_words[u][c]->name, "|")) {
+                            else if (check_logic_operators && 0 == strcmp(request_words[u][c]->name, "|")) {
                                 allow_match_this_synonym  = 1;
                             }
                             else {
@@ -1307,6 +1308,9 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             }
                         }
                     }
+                }
+                if (check_logic_operators && does_match_this_synonym == 0) {
+                    
                 }
 
                 printf("flags == %s\n", flags == WEAK ? "WEAK" : flags == EXACT ? "EXACT" : flags == VERY_EXACT ? "VERY_EXACT" : "?");
