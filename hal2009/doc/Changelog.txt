@@ -1,6 +1,7 @@
 1308:
 
 - die erste Implementierung der logischen Operatoren & und |
+- weitgehende Verbesserungen des bottomup-Parsers 
 
 1299:
 
