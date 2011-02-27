@@ -1301,6 +1301,9 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             }
                             else if (check_logic_operators && 0 == strcmp(request_words[u][c]->name, "|")) {
                                 allow_match_this_synonym  = 1;
+                                if (does_match_this_synonym) {
+                                    break;
+                                }
                             }
                             else {
                                 does_match_this_synonym   += allow_match_this_synonym ? word_matches_word_array(request_words[u][c], words, words_begin, words_end, flags) : 0;
@@ -3277,6 +3280,14 @@ char** divide_by_logical_operators(char* exp) {
                 else {
                     sprintf(divided[d], "%s", splitted_exp_by_or[q]);
                 }
+                
+                while (divided[d][0] && divided[d][0] == ' ') {
+                    strcpy(divided[d], divided[d]+1);
+                }
+                while (divided[d][0] && strlen(divided[d]) > 0 && divided[d][strlen(divided[d])-1] == ' ') {
+                    divided[d][strlen(divided[d])-1] = '\0';
+                }
+                
                 printf("-> %s\n", divided[d]);
                 ++d;
             }
