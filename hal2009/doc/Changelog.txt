@@ -1,3 +1,7 @@
+1308:
+
+- die erste Implementierung der logischen Operatoren & und |
+
 1299:
 
 - Eine erste Implementierung des xml-Dateiformats als Ersatz fuer .pro-Dateien

@@ -434,7 +434,8 @@ extern "C" {
             }
             {
                 long int facts_per_second = k / (now - *start_ref);
-                long int time_needed = (xml_facts_size-k)/(facts_per_second+1);
+                static long int time_needed = 1;
+                time_needed = time_needed*0.5 + 0.5*(xml_facts_size-k)/(facts_per_second+1);
 
                 cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - *start_ref << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts_size*(k+1)) << "% done)          \r" << flush;
             }
@@ -454,9 +455,6 @@ extern "C" {
     int add_xml_fact_file(const char* filename) {
         sql_begin("faster");
 
-        time_t start = 0;
-        time(&start);
-
         string instr = halxml_readfile(filename);
         if (instr.size() == 0) {
             cerr << "Error: file could not be opened " << endl;
@@ -465,6 +463,8 @@ extern "C" {
         string prestr;
         halxml_ordertags(instr, prestr);
 
+        time_t start = 0;
+        time(&start);
         cout << filename << ": " << endl;
         vector<XML_Fact*> xml_facts = halxml_readfacts(prestr, use_xml_fact, &start, &filename);
 

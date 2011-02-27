@@ -19,7 +19,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-define action run_parser with var input, hash tags, var lang, var path do
+define action run_parser with var input, hash tags, var mode, var lang, var path do
     # TEXT
     # Make input parsable
     # CODE
@@ -49,7 +49,7 @@ define action run_parser with var input, hash tags, var lang, var path do
             set from hash genus_of element { lc(var word) } to from hash tags element { var word } 1st element
         end for
 
-        set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var lang, var path
+        set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var mode, var lang, var path
 
         for each new array words in array list_of_list_of_words is rw do
             # TEXT
@@ -232,7 +232,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     # --- LOGIC
     # CODE
 
-    set new hash parsed to run_parser with var input, hash tags, var lang, var path
+    set new hash parsed to run_parser with var input, hash tags, var mode, var lang, var path
 
 
     set new array results to an empty array

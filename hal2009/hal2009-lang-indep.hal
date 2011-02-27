@@ -1111,6 +1111,7 @@ define action compute_input with var input is rw, var lang, var path do
 
             set new var cache_output to handle for file name var cache_file_name, write
             for each new var line from var input_handle is rw do
+                do regex with var a: /<[+]>/ -> "\\+" :global:i
                 push into global array replace_array, var line
                 print into var cache_output data var line concat new line
             done

@@ -1502,6 +1502,8 @@ set multi-line new global hash builtin_auxiliary_verbs to {
 };
 
 set multi-line new global hash builtin_part_of_speech to {
+          '&' => "linking",
+          '|' => "linking",
           '?' => "n",
           '$a$' => "n",
           '$b$' => "n",
@@ -2844,6 +2846,10 @@ define action replace_general_reflexive_pronoun with var text, var person do
 done
 
 define action compute_output with var output do
+
+    do regex with var output: / [&] / -> " und " :global:i
+    do regex with var output: / [|] / -> " oder " :global:i
+
     do regex with var output: /f=>/ -> "" :global:i
     do regex with var output: /!=>/ -> "" :global:i
     if var output matches /q=>/ do
@@ -3733,3 +3739,12 @@ define action remove_adverbs with var text, var adverbs do
     do return using [ var text, var adverbs ]
 done
 
+define action find_logical_operator with var word, var lang, var path do
+    if var word matches /^(und|and)$/ do
+        do return with "&"
+    done
+    if var word matches /^(oder|or)$/ do
+        do return with "|"
+    done
+    do return with var word 
+done

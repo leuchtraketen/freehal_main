@@ -209,7 +209,7 @@ int universal_delete_everything_from(const char* filename);
 int universal_end();
 int universal_re_index();
 int universal_clear_cache();
-int word_matches_word_array(struct word* word, struct word** words, int flags);
+int word_matches_word_array(struct word* word, struct word** words, int words_begin, int words_end, int flags);
 long can_be_a_pointer(void* _p);
 struct DATASET as_dataset(struct fact** list);
 struct DATASET search_clauses_as_dataset(int rel);

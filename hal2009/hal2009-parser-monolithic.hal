@@ -869,7 +869,15 @@ define action parse_what with var lang, array words, hash tags, var what, flag f
     do return using hash parsed
 done
 
-define action pre_parse with array list_of_words, hash tags, var lang, var path do
+define action pre_parse with array list_of_words, hash tags, var mode, var lang, var path do
+######################################
+
+    set new array _tmp to an empty array
+    push into array _tmp, var list_of_words
+    do return with array _tmp
+
+######################################
+
     set new array list_of_list_of_words to an empty array
     set new array list_of_questionwords to an empty array
     push into array list_of_list_of_words, an empty array

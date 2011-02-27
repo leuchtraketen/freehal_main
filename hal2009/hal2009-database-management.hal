@@ -824,13 +824,16 @@ define action correct_human_edit_typos with var file, var current_language, var 
         done
         set var line to join using "<>", elements of array parts
         do regex with var line: /(<[a-zA-Z]>)_maybe_/ -> "$0_ (maybe)"
-        do regex with var line: /\s_\(a\)_/ -> " (a) _"
-        do regex with var line: /_\(a\)_/ -> "(a) _"
-        do regex with var line: /\s_\(the\)_/ -> " (the) _"
-        do regex with var line: /_\(the\)_/ -> "(the) _"
+        do regex with var line: /\s_\(a\)_/ -> " (a) _" :global
+        do regex with var line: /_\(a\)_/ -> "(a) _" :global
+        do regex with var line: /\s_\(the\)_/ -> " (the) _" :global
+        do regex with var line: /_\(the\)_/ -> "(the) _" :global
+
+        do regex with var line: /_<[&]>_/ -> "_ & _" :global
+        do regex with var line: /_<[|]>_/ -> "_ | _" :global
         
         set new var _tmp to ":"
-        do regex with var line: /_<[:]>_/ -> "_ var _tmp _"
+        do regex with var line: /_<[:]>_/ -> "_ var _tmp _" :global
         
         do regex with var line: /<[;]>{2}/ -> "<>"
         do regex with var line: /^((?:.*?<[<]><[>]>\s+?){6,})\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
