@@ -1208,7 +1208,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         if (words[words_i] && words[words_i]->name && strcmp(words[words_i]->name, "|")) {
             continue;
         }
-        if (words[words_i] && words[words_i]->name && 0==strcmp(words[words_i]->name, "|")) {
+        if (flags == WEAK && words[words_i] && words[words_i]->name && 0==strcmp(words[words_i]->name, "|") && 0==strcmp(words[words_i]->name, "&")) {
             flags = EXACT;
         }
 
@@ -1270,6 +1270,7 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
 
                 // debugf("  next synonym.\n");
                 int   does_match_this_synonym = 0;
+                int  allow_match_this_synonym = 1;
                 int should_match_this_synonym = 0;
 
                 for (c = 0; request_words[u][c] && (INVALID_POINTER == request_words[u][c] || request_words[u][c]->name); ++c) {
@@ -1285,8 +1286,11 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
                             if (strstr(request_words[u][c]->name, "time_")) {
                                 should_match_this_synonym -= 10;
                             }
+                            else if (strstr(request_words[u][c]->name, "&")) {
+                                allow_match_this_synonym  = does_match_this_synonym ? 1 : 0;
+                            }
                             else {
-                                does_match_this_synonym   += word_matches_word_array(request_words[u][c], words, words_begin, words_end, flags);
+                                does_match_this_synonym   += allow_match_this_synonym ? word_matches_word_array(request_words[u][c], words, words_begin, words_end, flags) : 0;
                                 should_match_this_synonym += 1;
                             }
                         }
