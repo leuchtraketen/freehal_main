@@ -2,11 +2,11 @@
 
 test -d /var/lib/apt && (
 	echo Install dependencies
-	sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget \
+	sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget zip lsb-release \
 	|| (
 		echo "Could not install dependencies. Please run as root:"
 		echo
-		echo sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget
+		echo sudo apt-get install build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget zip lsb-release
 		echo
 		exit 0
 	)
@@ -32,7 +32,9 @@ cd freehal-demo-svn
 echo Compile GUI
 (qmake online-demo.pro && make) > ../compile-gui.log 2>&1 || (echo Error: Compile GUI ; exit 0)
 
-source /etc/lsb-release
+export DISTRIB_ID=$(lsb_release -i | perl -ne 's/^(.*?)[:]\s*//gm; s/[^a-zA-Z0-9.]//gm; print')
+export DISTRIB_RELEASE=$(lsb_release -r | perl -ne 's/^(.*?)[:]\s*//gm; s/[^a-zA-Z0-9.]//gm; print')
+source /etc/lsb-release 2>/dev/null
 export arch=32
 file /bin/bash | grep 64 && export arch=64
 cp ~/bin/freehal-demo-svn/bin/online-demo ~/bin/freehal-demo-svn/bin/online-demo_${arch}bit_${DISTRIB_ID}_${DISTRIB_RELEASE}
