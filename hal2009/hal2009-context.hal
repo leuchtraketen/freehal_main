@@ -47,7 +47,7 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
         for each new var word in array list_of_words is rw do
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
             set from hash genus_of element { lc(var word) } to from hash tags element { var word } 1st element
-        end for
+        done
 
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var mode, var lang, var path
 

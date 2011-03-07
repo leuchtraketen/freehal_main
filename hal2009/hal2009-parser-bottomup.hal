@@ -87,12 +87,28 @@ define action input_data_for_bottom_up_parser with array words, hash tags, var l
     # no d-title's twice
     set new var i to 0
     while from array data element [ var i ] do
-        set new var tag_last to from array data element [ var i - 1 ] second element
+        set new var tag_prev to from array data element [ var i - 1 ] second element
         set new var tag_this to from array data element [ var i ] second element
-        if var tag_this matches "d-title" and var tag_last matches "d-title" do
+        if var tag_this matches "d-title" and var tag_prev matches "d-title" do
             set from array data element [ var i - 1 ] second element to "d-noun"
         done
 
+        set var i to var i + 1
+    done
+
+    # no d-title's twice
+    set new var end_i to var i
+    set var i to 0
+    while from array data element [ var i ] do
+        if var i + 1 is var end_i - 1 do
+            set new var tag_prev to from array data element [ var i - 1 ] second element
+            set new var tag_last to from array data element [ var i + 1 ] second element
+            set new var tag_this to from array data element [ var i ] second element
+            if var tag_last matches "d-noun" and var tag_this matches "d-title" and var tag_prev matches "d-linking" do
+                set from array data element [ var i ] second element to "d-noun"
+            done
+
+        done
         set var i to var i + 1
     done
 

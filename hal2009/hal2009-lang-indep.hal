@@ -775,8 +775,6 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /^(.*),\s*?sobald\s*?(.*)$/ -> "$1, wenn $0" :global:i
     do regex with var input: /^wenn\s*?(.*),\s*?(.*)$/ -> "$1, wenn $0" :global:i
 
-#    do regex with var input: / so / -> " " :global:i
-
     if not var input matches / aus.?.?.?.?$/ do
         do regex with var input: /kennst du ein(e|en) / -> "what-nowiki ist " :global:i
         do regex with var input: /kennst du / -> "was ist " :global:i
@@ -784,7 +782,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex with var input: /wie heisst du mit / -> "du " :global:i
 
-    do regex with var input: / (<[A-Z]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?er)\s+?(<[A-Z]><[a-z]>+?) / -> " _$0_$1_ " :global
+#    do regex with var input: / (<[A-Z]><[a-zA-Z0-9]><[a-zA-Z0-9]>+?er)\s+?(<[A-Z]><[a-z]>+?) / -> " _$0_$1_ " :global
 
     do regex with var input: /was macht / -> "was " :global:i
 
