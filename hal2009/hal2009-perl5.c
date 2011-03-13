@@ -626,7 +626,7 @@ void execute_perl5(char* filename) {
 
 #if defined(MINGW) || defined(WIN32)
     char* perl_cmd = halmalloc(strlen(perl_filename)+100, "execute_perl5");
-    sprintf(perl_cmd, "runtime-perl5-win32\\perl.exe %s", perl_filename);
+    sprintf(perl_cmd, "runtime-perl5-win32\\bin\\perl.exe %s", perl_filename);
     system(perl_cmd);
 #else
     char* perl_cmd = halmalloc(strlen(perl_filename)+100, "execute_perl5");
