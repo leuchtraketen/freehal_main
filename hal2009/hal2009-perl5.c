@@ -22,34 +22,9 @@
 #define NOT_HEADER_ONLY 1
 #define DONT_DECLARE_STD 1
 
-#include <uconfig.h>
-#include <config.h>
-#include <EXTERN.h>
-#include <perl.h>
 #include <stdio.h>
 
 #include "hal2009.h"
-
-void xs_init (pTHX);
-
-#ifdef fopen
-#undef fopen
-#endif
-#ifdef fwrite
-#undef fwrite
-#endif
-#ifdef fread
-#undef fread
-#endif
-#ifdef fclose
-#undef fclose
-#endif
-#ifdef fseek
-#undef fseek
-#endif
-#ifdef stat
-#undef stat
-#endif
 
 /* PERL 5 convert functions */
 static inline void convert_to_perl5_structure (halstring* hals, int just_compile) {
@@ -621,7 +596,6 @@ int convert_to_perl5_convert_file(char* filename) {
 }
 
 void execute_perl5(char* filename) {
-    static PerlInterpreter* my_perl = NULL;
 
     static char* last_filename = INVALID_POINTER;
     if (last_filename == INVALID_POINTER) {
@@ -641,33 +615,31 @@ void execute_perl5(char* filename) {
 
     // INIT
     fprintf(output(), "%s\n", "compiler: module init (lang: perl5)");
-    PERL_SYS_INIT3(NULL, NULL, NULL);
 
     // CONSTRUCT
     fprintf(output(), "%s\n", "compiler: module constructor (lang: perl5)");
-    if ((my_perl = perl_alloc()) == NULL) {
-        fprintf(stderr, "no memory!");
-        exit(1);
-    }
-    perl_construct(my_perl);
 
     // RUN
     char* perl_filename = halmalloc(strlen(filename)+4, "execute_perl5");
     strcpy(perl_filename, filename);
     strcat(perl_filename, ".pl");
 
-    char* embedding[] = { "", perl_filename };
-    fprintf(output(), "%s\n", perl_parse(my_perl, xs_init, 2, embedding, (char **)NULL) ? "No success." : "Success.");
-    reset_stdout();
-    perl_run(my_perl);
+#if defined(MINGW) || defined(WIN32)
+    char* perl_cmd = halmalloc(strlen(perl_filename)+100, "execute_perl5");
+    sprintf(perl_cmd, "runtime-perl5-win32\\perl.exe %s", perl_filename);
+    system(perl_cmd);
+#else
+    char* perl_cmd = halmalloc(strlen(perl_filename)+100, "execute_perl5");
+    sprintf(perl_cmd, "perl %s", perl_filename);
+    system(perl_cmd);
+#endif
+    
+    free(perl_filename);
+    free(perl_cmd);
 
     // DECONSTRUCT
     fprintf(output(), "%s\n", "compiler: module destructor (lang: perl5)");
     fprintf(output(), "%s\n", "");
-    if ( my_perl ) {
-        perl_destruct(my_perl);
-        perl_free(my_perl);
-    }
 
     if (last_filename)
         free(last_filename);
