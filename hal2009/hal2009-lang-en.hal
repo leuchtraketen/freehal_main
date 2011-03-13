@@ -2650,6 +2650,59 @@ define action add_undefined_time with array clause do
     do return with array clause
 done
 
+
+define action is_job with var lang, var _word do
+
+    set new var word to lc with var _word
+    set new flag is_a_job to 0
+
+#    if flag is_a_job is false do
+#        if var word matches /(^bundes)|(minister)|(meister$)/ do
+#            set flag is_a_job to 1
+#        done
+#    done
+
+    if flag is_a_job is false do
+        set new hash jobs to an empty hash
+
+        set new var cache_file_name to '_cache_jobs'
+        if not exists: var cache_file_name, end test do
+            set new var output_file_name to '_output__get_csv'
+            set new var csv_output to '=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet^0^beruf^0^0^default^0^0^0^0^0^0'
+            do unlink with '_input__get_csv'
+            set new var output_handle to handle for file name var output_file_name, write
+            print into var output_handle data var csv_output
+            do close with var output_handle
+            do trigger_check_files without arguments
+            while not exists: '_input__get_csv', end test do
+                do wait 0.5 seconds
+            done
+            set new var input_file_name to '_input__get_csv'
+            set new var input_handle to handle for file name var input_file_name, read
+
+            set new var cache_output to handle for file name var cache_file_name, write
+            for each new var line from var input_handle is rw do
+                push into global array replace_array, var line
+                print into var cache_output data var line concat new line
+            done
+            do close with var cache_output
+            do trigger_check_files without arguments
+        done
+        if exists: var cache_file_name, end test do
+            set new var cache_input to handle for file name var cache_file_name, read
+            for each new var line from var cache_input is rw do
+                set from hash jobs item { var line } to 1
+            done
+        done
+
+        if from hash jobs item { var word } do
+            set flag is_a_job to 1
+        done
+    done
+
+    do return with flag is_a_job
+done
+
 define action phrases_error_toomuch without arguments do
     set new array phrases to an empty array
     push into array phrases, [ 0, "Sorry, but there's too much data about that topic." ]
@@ -3295,6 +3348,7 @@ define action check_for_math with var input do
     do regex with var math: /ergibt/ -> "" :global:i
     do regex with var math: /gibt/ -> "" :global:i
     do regex with var math: /aus/ -> " " :global:i
+    do regex with var math: /by/ -> " " :global:i
     do regex with var math: /sich/ -> " " :global:i
     do regex with var math: /der|die|das/ -> " " :global:i
     do regex with var math: / plus / -> "+" :global:i
@@ -3302,23 +3356,32 @@ define action check_for_math with var input do
     do regex with var math: / minus / -> "-" :global:i
     set new var slash to "/"
     do regex with var math: / geteilt durch / -> "var slash" :global:i
-    do regex with var math: / dividiert durch / -> "var slash" :global:i
+    do regex with var math: / divided / -> "var slash" :global:i
     do regex with var math: / durch / -> "var slash" :global:i
-    do regex with var math: / mal / -> "*" :global:i
+    do regex with var math: / mul[a-zA-Z]+? / -> "*" :global:i
     do regex with var math: /x/ -> "*" :global:i
     do regex with var math: /\s+/ -> "" :global:i
     do regex with var math: /wurzel/ -> "sqrt " :global:i
     do regex with var math: /<[,]>/ -> "." :global:i
     set new var value to undef
 
-    if var math matches /^(<[\d+\-*.\/\s)(]>|(sqrt)|(sin)|(cos)|(tan)|(cot))+$/ do
-        do regex with var math: /(sin|cos|tan|cot)(<[\d]>+)/ -> "$1($2)" :global:i
-        do eval with 'var value = ' concat var math concat ';'
-        if var value do
-            return [ 0, var math concat " = " concat var value concat "." ]
-        done
-        else do
-            return 0
+    if var math matches /^(<[0-9\d+\-*.\/\s)(]>|(sqrt)|(sin)|(cos)|(tan)|(cot))+$/ do
+        if var math matches /(<[+\-*.\/]>|(sqrt)|(sin)|(cos)|(tan)|(cot))/ do
+            print "Ok."
+            print new line
+            do regex with var math: /(sin|cos|tan|cot)(<[\d]>+)/ -> "$1($2)" :global:i
+#            do eval with 'var value = ' concat var math concat ';'
+            set new var dbz to undef
+            do eval with 'local $@; eval { var value = ' concat var math concat '; }; var dbz = $@ && $@ =~ /division by zero/;'
+            if defined(var dbz) and var dbz do
+                do return with [ 0, "Illegal division by zero."  ]
+            done
+            else if defined(var value) do
+                do return with [ 0, var math concat " = " concat var value concat "."  ]
+            done
+            else do
+                do return with 0
+            done
         done
     done
     return 0
