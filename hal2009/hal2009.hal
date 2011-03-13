@@ -1,3 +1,5 @@
+use Socket;
+
 #
 # This file is part of FreeHAL 2010.
 #

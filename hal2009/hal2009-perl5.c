@@ -657,7 +657,7 @@ void execute_perl5(char* filename) {
     strcat(perl_filename, ".pl");
 
     char* embedding[] = { "", perl_filename };
-    fprintf(output(), "%s\n", perl_parse(my_perl, NULL, 2, embedding, (char **)NULL) ? "No success." : "Success.");
+    fprintf(output(), "%s\n", perl_parse(my_perl, xs_init, 2, embedding, (char **)NULL) ? "No success." : "Success.");
     reset_stdout();
     perl_run(my_perl);
 
@@ -673,3 +673,4 @@ void execute_perl5(char* filename) {
         free(last_filename);
     last_filename = strdup(filename);
 }
+
