@@ -372,7 +372,6 @@ define action logic with var input, var lang, var path, hash parsed do
         set var request_primary_key to "0"
     done
 
-    set new var output_file_name to '_output__get_csv'
     set new var output to ''
     set var output to var output concat ( lc(var request_verb_string) || '0' )
     set var output to var output concat ( '^' )
@@ -400,18 +399,11 @@ define action logic with var input, var lang, var path, hash parsed do
     set var output to var output concat ( flag verb_flag_should || '0' )
 
 
-    do unlink with '_input__get_csv'
-    set new var output_handle to handle for file name var output_file_name, write
-    print into var output_handle data var output
-    do close with var output_handle
-    do trigger_check_files without arguments
-
-    do wait 0.3 seconds
-
-    while not exists: '_input__get_csv', end test do
-        do wait 0.5 seconds
-    done
-    print "File exists now: _input__get_csv"
+    do hal2009_send_signal with "database_request", var output
+    set new var input to hal2009_fetch_signal with "database_request"
+    set new array input_lines to split with /\r?\n/, var input
+    
+    print "got: input (database request)"
     print new line
 
     set new array results_true to an empty array
@@ -421,10 +413,7 @@ define action logic with var input, var lang, var path, hash parsed do
     set new array results_maybe to an empty array
     set new array results_other_modal_verb_maybe to an empty array
 
-    set new var input_file_name to '_input__get_csv'
-    set new var input_handle to handle for file name var input_file_name, read
-
-    for each new var line from var input_handle is rw do
+    for each new var line in array input_lines do
         print var line
         print new line
         if var line matches /^<[\^]>/ do
@@ -633,8 +622,6 @@ define action logic with var input, var lang, var path, hash parsed do
         set array results to an empty array
         push into array results, array overall_result
     done
-
-    do unlink with '_input__get_csv'
 
     do return using array results
 done
@@ -971,14 +958,15 @@ define action decide with array output, var input, flag all_output_phrases, var 
 done
 
 define action shell with var current_language, var path do
-    set new var input_file_name to '_input'
-    set new var input_handle to handle for file name var input_file_name, read
+
+    set new var _input to hal2009_fetch_signal with "input"
+    set new array input_lines to split with /\r?\n/, var _input
 
     set new var time_first to time without arguments
     set new var do_learn to 1
     set new var do_talk  to 1
 
-    for each new var sentences_as_line_2 from var input_handle is rw do
+    for each new var sentences_as_line_2 in array input_lines do
         if var sentences_as_line_2 matches /^do_learn_do_talk: (.*?)$/ do
             set var sentences_as_line_2 to $0
             set var do_learn to 1
@@ -1047,9 +1035,7 @@ define action shell with var current_language, var path do
                     go to next
                 done
 
-#                do unlink with '_output'
                 set new array output to give_output with var line, (not var do_talk), array facts_to_save, hash tags, var current_language, var path
-#                do unlink with '_output'
 
                 set new var final_output to decide using array output, var line, flag all_output_phrases, var current_language, var path
 
@@ -1062,7 +1048,6 @@ define action shell with var current_language, var path do
                 set new var time_second to time without arguments
                 set var final_output to var final_output concat " (" concat (var time_second - var time_first) concat " sec)"
 
-#                do unlink with '_output'
                 do save_output with var final_output, var current_language, var path
                 if var do_talk do
                     set new var output_file_name to '_output'
@@ -1107,10 +1092,7 @@ define action shell with var current_language, var path do
     do memory_limit with "word_types.self-taggered", var current_language, var path
 
     do wait 3 seconds
-
-    set new var exit_file_name to '_exit'
-    set new var exit_handle to handle for file name var exit_file_name, write
-    do close with var exit_handle
-    do trigger_check_files without arguments
+    
+    do hal2009_send_signal with "exit", ""
     do exit with 0
 done

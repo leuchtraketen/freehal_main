@@ -145,12 +145,14 @@ done
 #    do hal2009_send_signal with "add_pro_file", var file
 
 define action hal2009_send_signal with var vfile, var data do
-    print "I-P-C-:" concat new line
+    print "send (hal->c): IPC:" concat new line
     print var vfile concat new line
     print var data concat new line
+    print "." concat new line
     print "IPC:" concat new line
     print var vfile concat new line
     print var data concat new line
+    print "." concat new line
 done
 
 set new array stdin_responses to an empty array
@@ -175,10 +177,21 @@ define action hal2009_fetch_signal with var _vfile do
         set new var response to the next line from STDIN
         do chomp with var response
         if var response matches "IPC:" do
+            print "get (c->hal): IPC:" concat new line
             set new var vfile to the next line from STDIN
             do chomp with var vfile
-            set new var data to the next line from STDIN
-            do chomp with var data
+            print var vfile concat new line
+            set new var data to ""
+            set new var data_line to ""
+            while var data_line not matches "." do
+                set var data_line to the next line from STDIN
+                do chomp with var data_line
+                if var data do
+                    set var data to var data concat new line
+                done
+                set var data to var data concat var data_line
+                print var data_line concat new line
+            done
             
             if var vfile matches var _vfile do
                 do return with var data

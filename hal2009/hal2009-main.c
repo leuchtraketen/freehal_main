@@ -231,12 +231,10 @@ void* hal2009_handle_signal(void* arg) {
         hal2009_add_pro_file(strdup(text));
         hal2009_send_signal("add_pro_file", "");
     }
-    else if (0 == strcmp(type, "_output__get_csv")) {
+    else if (0 == strcmp(type, "database_request")) {
         struct DATASET set = hal2009_get_csv(text);
         const char* csv_data = hal2009_make_csv(&set);
-        FILE* target = fopen("_input__get_csv", "w+b");
-        halwrite(csv_data, 1, strlen(csv_data), target);
-        halclose(target);
+        hal2009_send_signal("database_request", csv_data);
         fprintf(output(), "Release memory now.\n");
         free(csv_data);
         fprintf(output(), "Memory is released.\n");

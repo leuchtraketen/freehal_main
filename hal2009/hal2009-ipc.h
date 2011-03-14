@@ -1,5 +1,5 @@
-#ifndef HAL2009_PERL5
-#define HAL2009_PERL5 1
+#ifndef HAL2009_IPC
+#define HAL2009_IPC 1
 
 /*
  * This file is part of FreeHAL 2010.
@@ -28,28 +28,22 @@
 #include <cstdlib>
 #include <vector>
 
-#include <boost/process.hpp>
 #include <boost/algorithm/string.hpp>
 
 using namespace std;
-namespace bp = ::boost::process;
 
 #define NOT_HEADER_ONLY 1
 #define DONT_DECLARE_STD 1
 #define USE_CXX 1
 #include "hal2009.h"
 
-#include "hal2009-ipc.h"
 
-string convert_to_perl5(string hals, int just_compile);
-int convert_to_perl5_convert_file(string filename);
-static inline void convert_to_perl5_structure (string& hals, int just_compile);
-void execute_perl5(string filename);
-void perl5_hal2009_send_signal(string vfile, string data);
-
-bp::postream* child_stdin = 0;
-bp::pistream* child_stdout = 0;
-
+extern "C" {
+	extern std::vector<std::pair<string, string> > signals_to_child;
+	void hal2009_send_signal(char* vfile, char* data);
+	void hal2009_send_signals();
+}
+extern void (*hal2009_send_signal_func)(string vfile, string data);
 
 #endif
 

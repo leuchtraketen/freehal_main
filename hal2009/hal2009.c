@@ -19,8 +19,6 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-void (*hal2009_send_signal_func)(char* vfile, char* data) = 0;
-
 char* record_to_xml(struct RECORD* r);
 
 static int position_in_insertions = 0;
@@ -1428,10 +1426,7 @@ struct params_answer {
 pthread_t hal2009_answer(char* input, char* planguage, char* tlanguage, char* base_dir, int join, short start_type) {
     input = ascii(input);
 
-    FILE* target = fopen("_input", "w");
-    halwrite(input, 1, strlen(input), target);
-    halwrite("\n", 1, strlen("\n"), target);
-    halclose(target);
+    hal2009_send_signal("input", input);
 
     pthread_t thread_no_1;
     struct params_answer* parameters = calloc(sizeof(struct params_answer)+1, 1);
@@ -1647,11 +1642,4 @@ const char* check_config (const char* name, const char* _default) {
 
     return _default;
 }
-
-void hal2009_send_signal(char* vfile, char* data) {
-    if (hal2009_send_signal_func) {
-        hal2009_send_signal_func(vfile, data);
-    }
-}
-
 

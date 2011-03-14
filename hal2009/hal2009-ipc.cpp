@@ -1,6 +1,3 @@
-#ifndef HAL2009_PERL5
-#define HAL2009_PERL5 1
-
 /*
  * This file is part of FreeHAL 2010.
  *
@@ -22,34 +19,23 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-
-#include <boost/process.hpp>
-#include <boost/algorithm/string.hpp>
-
-using namespace std;
-namespace bp = ::boost::process;
-
-#define NOT_HEADER_ONLY 1
-#define DONT_DECLARE_STD 1
-#define USE_CXX 1
-#include "hal2009.h"
-
 #include "hal2009-ipc.h"
 
-string convert_to_perl5(string hals, int just_compile);
-int convert_to_perl5_convert_file(string filename);
-static inline void convert_to_perl5_structure (string& hals, int just_compile);
-void execute_perl5(string filename);
-void perl5_hal2009_send_signal(string vfile, string data);
+void (*hal2009_send_signal_func)(string vfile, string data) = 0;
+std::vector<std::pair<string, string> > signals_to_child;
 
-bp::postream* child_stdin = 0;
-bp::pistream* child_stdout = 0;
+extern "C" void hal2009_send_signal(char* vfile, char* data) {
+    signals_to_child.push_back(make_pair<string, string>(vfile, data));
 
+    hal2009_send_signals();
+}
+extern "C" void hal2009_send_signals() {
+    if (hal2009_send_signal_func) {
+        for (int i = 0; i < signals_to_child.size(); ++i) {
+            hal2009_send_signal_func(signals_to_child[i].first, signals_to_child[i].second);
+        }
+        signals_to_child.clear();
+    }
+}
 
-#endif
 

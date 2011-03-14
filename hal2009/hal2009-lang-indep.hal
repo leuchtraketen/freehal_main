@@ -1094,21 +1094,13 @@ define action compute_input with var input is rw, var lang, var path do
         done
         else do
 
-            set new var output_file_name to '_output__get_csv'
             set new var csv_output to '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
-            do unlink with '_input__get_csv'
-            set new var output_handle to handle for file name var output_file_name, write
-            print into var output_handle data var csv_output
-            do close with var output_handle
-            do trigger_check_files without arguments
-            while not exists: '_input__get_csv', end test do
-                do wait 0.5 seconds
-            done
-            set new var input_file_name to '_input__get_csv'
-            set new var input_handle to handle for file name var input_file_name, read
+            do hal2009_send_signal with "database_request", var csv_output
+            set new var csv_input to hal2009_fetch_signal with "database_request"
+            set new array csv_input_lines to split with /\r?\n/, var csv_input
 
             set new var cache_output to handle for file name var cache_file_name, write
-            for each new var line from var input_handle is rw do
+            for each new var line in array csv_input_lines do
                 do regex with var a: /<[+]>/ -> "\\+" :global:i
                 push into global array replace_array, var line
                 print into var cache_output data var line concat new line
@@ -1363,21 +1355,14 @@ define action put_underscore_names_into_builtin_names with var input, var lang, 
 done
 
 define action find_property_by_value with var value, var lang, var path do
-    set new var output_file_name to '_output__get_csv'
+
     set new var csv_output to 'i|=|~|is-a|bin|bist|ist|sind|seid|sein|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|bezeichne|bezeichnet|bezeichnen|bezeichnest^_' concat var value concat '_^0^0^0^q_what_weakly^0^0^0^0^0^0'
-    do unlink with '_input__get_csv'
-    set new var output_handle to handle for file name var output_file_name, write
-    print into var output_handle data var csv_output
-    do close with var output_handle
-    do trigger_check_files without arguments
-    while not exists: '_input__get_csv', end test do
-        do wait 0.5 seconds
-    done
-    set new var input_file_name to '_input__get_csv'
-    set new var input_handle to handle for file name var input_file_name, read
+    do hal2009_send_signal with "database_request", var csv_output
+    set new var csv_input to hal2009_fetch_signal with "database_request"
+    set new array csv_input_lines to split with /\r?\n/, var csv_input
 
     set new array objects to an empty array
-    for each new var line from var input_handle is rw do
+    for each new var line in array csv_input_lines do
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
         if var line do
@@ -1388,7 +1373,6 @@ define action find_property_by_value with var value, var lang, var path do
             done
         done
     done
-    do close with var input_handle
     do return with array objects
 done
 

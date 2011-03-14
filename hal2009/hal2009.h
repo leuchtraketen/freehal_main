@@ -250,8 +250,6 @@ extern "C" {
     int fact_replace_in_source(const char* source, const char* replacement);
     char* fact_read_from_source(const char* source);
 
-    extern void (*hal2009_send_signal_func)(char* vfile, char* data);
-
 #ifdef __cplusplus
 }
 #endif

@@ -590,14 +590,24 @@ void execute_perl5(char* filename) {
     bp::child c = bp::launch(exec, args, ctx);
     child_stdout = &c.get_stdout();
     child_stdin = &c.get_stdin();
+    hal2009_send_signals();
     std::string line;
 
     while (std::getline(*child_stdout, line)) {
         if (line.find("IPC:") == 0) {
+            cout << "get (hal->c): IPC:" << endl;
             std::string vfile;
-            std::string data;
             std::getline(*child_stdout, vfile);
-            std::getline(*child_stdout, data);
+            cout << vfile << endl;
+            
+            std::string data;
+            std::string data_line;
+            while (data_line != ".") {
+                data += data.size()?"\n":"";
+                data += data_line;
+                std::getline(*child_stdout, data_line);
+                cout << data_line << endl;
+            }
             
             char* parameters[3] = {strdup(vfile.c_str()), strdup(data.c_str()), (char*)MULTI};
             pthread_t thread_no_1;
@@ -619,11 +629,16 @@ void execute_perl5(char* filename) {
     last_filename = filename;
 }
 
-void perl5_hal2009_send_signal(char* vfile, char* data) {
+void perl5_hal2009_send_signal(string vfile, string data) {
     if (child_stdin) {
+        cout << "send (c->hal): IPC:" << endl;
+        cout << vfile << endl;
+        cout << data << endl;
+        cout << "." << endl;
         *child_stdin << "IPC:" << endl;
         *child_stdin << vfile << endl;
         *child_stdin << data << endl;
+        *child_stdin << "." << endl;
     }
 }
 
