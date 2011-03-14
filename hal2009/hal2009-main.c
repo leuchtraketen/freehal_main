@@ -198,7 +198,7 @@ void shell(char* programming_language, char* language, char* base_dir) {
     }
 }
 
-void hal2009_handle_signal(void* arg) {
+void* hal2009_handle_signal(void* arg) {
     char* type       = ((void**)arg)[0];
     char* text       = ((void**)arg)[1];
     char* start_type = ((void**)arg)[2];
@@ -227,10 +227,9 @@ void hal2009_handle_signal(void* arg) {
             hal2009_add_link(link, f1, f2);
         }
     }
-    else if (0 == strcmp(type, "_output__add_pro_file")) {
-        hal2009_add_pro_file(text);
-        FILE* target = fopen("_input__add_pro_file", "w+b");
-        halclose(target);
+    else if (0 == strcmp(type, "add_pro_file")) {
+        hal2009_add_pro_file(strdup(text));
+        hal2009_send_signal("add_pro_file", "");
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
         struct DATASET set = hal2009_get_csv(text);
@@ -249,6 +248,9 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
         exit(0);
     }
+
+    free(type);
+    free(text);
 }
 
 

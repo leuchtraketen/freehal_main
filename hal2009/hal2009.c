@@ -19,6 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+void (*hal2009_send_signal_func)(char* vfile, char* data) = 0;
+
 char* record_to_xml(struct RECORD* r);
 
 static int position_in_insertions = 0;
@@ -1084,7 +1086,7 @@ int hal2009_compile(char* file, char* planguage) {
         convert_to_perl6_convert_file(strlen(file) ? file : "hal2009.hal");
     }
     else if (0 == strcmp(planguage, "perl5")) {
-        convert_to_perl5_convert_file(strlen(file) ? file : "hal2009.hal");
+        cxx_convert_to_perl5_convert_file(strlen(file) ? file : "hal2009.hal");
     }
 }
 
@@ -1375,8 +1377,8 @@ void* hal2009_signal_handler(void* parameters) {
                 unlink(files_to_check[i]);
                 halfree(buffer);
 
-                pthread_t thread_no_1;
-                char* parameters[3] = {files_to_check[i], code, start_type};
+                char* parameters[3] = {strdup(files_to_check[i]), strdup(code), start_type};
+                /// pthread_t thread_no_1;
                 /// pthread_create (&thread_no_1, NULL, hal2009_handle_signal, (void*)parameters);
                 hal2009_handle_signal((void*)parameters);
                 halfree(code);
@@ -1645,3 +1647,11 @@ const char* check_config (const char* name, const char* _default) {
 
     return _default;
 }
+
+void hal2009_send_signal(char* vfile, char* data) {
+    if (hal2009_send_signal_func) {
+        hal2009_send_signal_func(vfile, data);
+    }
+}
+
+

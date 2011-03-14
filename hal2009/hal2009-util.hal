@@ -142,5 +142,55 @@ define action trigger_check_files without arguments do
     do close with var output_handle
 done
 
+#    do hal2009_send_signal with "add_pro_file", var file
+
+define action hal2009_send_signal with var vfile, var data do
+    print "I-P-C-:" concat new line
+    print var vfile concat new line
+    print var data concat new line
+    print "IPC:" concat new line
+    print var vfile concat new line
+    print var data concat new line
+done
+
+set new array stdin_responses to an empty array
+
+define action hal2009_fetch_signal with var _vfile do
+    print "hal2009_fetch_signal:" concat var _vfile concat new line
+    
+    for each new array _response in array stdin_responses do
+        if from array _response 1st item matches var _vfile do
+            set new array new_stdin_responses to an empty array
+            for each new array new_response in array stdin_responses do
+                if array new_response not matches array _response do
+                    push into array new_stdin_responses, array new_response
+                done
+            done
+            set array stdin_responses to array new_stdin_responses
+            do return with from array _response 2nd item
+        done
+    done
+    
+    while 1 do
+        set new var response to the next line from STDIN
+        do chomp with var response
+        if var response matches "IPC:" do
+            set new var vfile to the next line from STDIN
+            do chomp with var vfile
+            set new var data to the next line from STDIN
+            do chomp with var data
+            
+            if var vfile matches var _vfile do
+                do return with var data
+            done
+            else do
+                set new array _response to an empty array
+                push into array _response, var vfile
+                push into array _response, var data
+                push into array stdin_responses, array _response
+            done
+        done
+    done
+done
 
 

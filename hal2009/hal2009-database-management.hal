@@ -311,10 +311,7 @@ define action reread_pro_file with var file, var lang do
     # TEXT
     # Write the signal file for re-reading
     # CODE
-    set new var output_handle to handle for file name "_output__add_pro_file", write
-    print into var output_handle data var file
-    do close with var output_handle
-
+    do hal2009_send_signal with "add_pro_file", var file
     do trigger_check_files without arguments
 
     do wait 2 seconds
@@ -954,9 +951,6 @@ define action init_pro_files with var current_language, var path do
                 go to next
             done
 
-            do unlink with '_output__add_pro_file'
-            do unlink with '_input__add_pro_file'
-
             set new var check_input_handle_one to handle for file name var file, read
             set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
             set new var i to 1
@@ -983,10 +977,7 @@ define action init_pro_files with var current_language, var path do
                 # TEXT
                 # Write the signal file
                 # CODE
-                do unlink with '_input__add_pro_file'
-                set new var output_handle to handle for file name "_output__add_pro_file", write
-                print into var output_handle data var file
-                do close with var output_handle
+                do hal2009_send_signal with "add_pro_file", var file
                 do trigger_check_files without arguments
 
                 #do wait 1 seconds
@@ -994,9 +985,7 @@ define action init_pro_files with var current_language, var path do
                 # TEXT
                 # Wait...
                 # CODE
-                while not exists: '_input__add_pro_file', end test do
-                    do wait 0.5 seconds
-                done
+                do hal2009_fetch_signal with "add_pro_file"
 
                 set new var copy_input_handle to handle for file name var file, read
                 set new var copy_output_handle to handle for file name var save_path concat var file_name, write
@@ -1013,7 +1002,6 @@ define action init_pro_files with var current_language, var path do
                 print var file
                 print "."
                 print new line
-
             done
         done
     done

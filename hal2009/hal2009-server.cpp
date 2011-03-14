@@ -1115,7 +1115,7 @@ int main(int argc, char** argv) {
     hal2009_server_stop();
 }
 
-void hal2009_handle_signal(void* arg) {
+void* hal2009_handle_signal(void* arg) {
     char* type = (char*)((void**)arg)[0];
     char* text = (char*)((void**)arg)[1];
 
@@ -1149,10 +1149,9 @@ void hal2009_handle_signal(void* arg) {
             hal2009_add_link(link, f1, f2);
         }
     }
-    else if (0 == strcmp(type, "_output__add_pro_file")) {
+    else if (0 == strcmp(type, "add_pro_file")) {
         hal2009_add_pro_file(strdup(text));
-        FILE* target = fopen("_input__add_pro_file", "w+b");
-        halclose(target);
+        hal2009_send_signal("add_pro_file", "");
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
         hal2009_set_text_language(signal_handler_tlanguage);
@@ -1182,5 +1181,8 @@ void hal2009_handle_signal(void* arg) {
     else if (0 == strcmp(type, "_exit_by_user")) {
         exit(0);
     }
+
+    free(type);
+    free(text);
 }
 

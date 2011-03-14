@@ -225,7 +225,7 @@ extern "C" {
     void hal2009_init(char* planguage, char* tlanguage, char* base_dir);
     void* hal2009_answer_thread(void*);
     pthread_t hal2009_start_signal_handler(char*, char*, short);
-    void hal2009_handle_signal(void*);
+    void* hal2009_handle_signal(void*);
     /* execute functions */
     void execute_perl6(char* filename);
     void execute_perl5(char* filename);
@@ -250,6 +250,7 @@ extern "C" {
     int fact_replace_in_source(const char* source, const char* replacement);
     char* fact_read_from_source(const char* source);
 
+    extern void (*hal2009_send_signal_func)(char* vfile, char* data);
 
 #ifdef __cplusplus
 }
