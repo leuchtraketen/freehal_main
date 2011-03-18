@@ -34,7 +34,7 @@ int init_thread_ended = 0;
 #include <windows.h>
 int win32_bind (SOCKET s, const struct sockaddr* addr, int);
 namespace boost {
-    #include <sys/socket.h>
+//    #include <sys/socket.h>
 }
 #endif
 
