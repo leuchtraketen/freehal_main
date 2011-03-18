@@ -19,36 +19,16 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_PERL5
-#define HAL2009_PERL5 1
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-
-#include <boost/process.hpp>
-#include <boost/algorithm/string.hpp>
-
-using namespace std;
-namespace bp = ::boost::process;
-
-#define NOT_HEADER_ONLY 1
-#define DONT_DECLARE_STD 1
-#define USE_CXX 1
 #include "hal2009.h"
+#include "hal2009-perl6.h"
 
-#include "hal2009-ipc.h"
 
-string perl5_convert_code(string hals, int just_compile);
-int perl5_convert_file(string filename);
-static inline void perl5_convert_structure (string& hals, int just_compile);
-void perl5_execute(string filename);
-void perl5_hal2009_send_signal(string vfile, string data);
+void perl6_execute(string filename) {
+    fprintf(output(), "Perl6 (Parrot) is not compiled into this FreeHAL. Sorry.\n");
+}
 
-extern bp::postream* child_stdin;
-extern bp::pistream* child_stdout;
-
-#endif
+int perl6_convert_file(string filename) {
+    fprintf(output(), "Perl6 (Parrot) is not compiled into this FreeHAL. Sorry.\n");
+    return 0;
+}
 

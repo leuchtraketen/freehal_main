@@ -35,16 +35,13 @@ include_directories (.)
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include /compiler/boost) 
 include_directories (/compiler/lib /compiler/include perl5/ parrot/include /add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
 
-add_executable (hal2009-test hal2009-test.c hal2009-perl6.c hal2009-perl5.cpp sqlite3.c hal2009-as-debug.c) 
-target_link_libraries (hal2009-test parrot m crypt pthread dl)
+add_executable (hal2009 hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
+target_link_libraries (hal2009 m pthreadGC2 z)
 
-add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp)
-target_link_libraries (hal2009 m pthreadGC2 z) 
-
-add_executable (runner hal2009-server.c hal2009-server.cpp /compiler/boost/libs/thread/src/tss_null.cpp hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c /compiler/boost/libs/thread/src/win32/exceptions.cpp /compiler/boost/libs/thread/src/win32/thread.cpp /compiler/boost/libs/thread/src/win32/tss_dll.cpp /compiler/boost/libs/thread/src/win32/tss_pe.cpp hal2009-crash.c precompiled/mingw/mingw_ntdll-a_RtlCaptureStackBackTrace.o hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (runner hal2009-download.cpp hal2009-wiki.cpp hal2009-server.cpp /compiler/boost/libs/thread/src/tss_null.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c /compiler/boost/libs/thread/src/win32/exceptions.cpp /compiler/boost/libs/thread/src/win32/thread.cpp /compiler/boost/libs/thread/src/win32/tss_dll.cpp /compiler/boost/libs/thread/src/win32/tss_pe.cpp hal2009.cpprash.c precompiled/mingw/mingw_ntdll-a_RtlCaptureStackBackTrace.o hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (runner m /compiler/lib/libboost_system-mgw-mt-1_37.a /compiler/lib/libboost_iostreams-mgw-mt-1_37.a pthread pthreadGC2 z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 /compiler/lib/libpthreadGC2.a /source/hal2009/mingw_ntdll.a)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.c hal2009-perl5.cpp /compiler/lib/libpthread.a /compiler/boost/libs/thread/src/tss_null.cpp diagnostics_win.C sqlite3.c extract_with_unzipper.c unzipper.c unzip.c libcrypto.a libgdi32.a libsched.a libssl.a iowin32.c ioapi.c hal2009-wiki-dummy.c boinc_api.o hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp /compiler/lib/libpthread.a /compiler/boost/libs/thread/src/tss_null.cpp diagnostics_win.C sqlite3.c extract_with_unzipper.c unzipper.c unzip.c libcrypto.a libgdi32.a libsched.a libssl.a iowin32.c ioapi.c hal2009-wiki-dummy.c boinc_api.o hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009-boinc m pthread pthreadGC2 boinc boinc_api boinc_zip boinc_graphics2 z)
 
 ###################################################
@@ -59,22 +56,22 @@ include_directories (.)
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include) 
 include_directories (/add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
 
-add_executable (hal2009 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp)
-target_link_libraries (hal2009 m crypt pthread dl z boost_thread-mt boost_system-mt) 
+add_executable (hal2009 hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
+target_link_libraries (hal2009 m crypt pthread dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-server hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (hal2009-server hal2009-server.cpp hal2009-download.cpp hal2009-wiki.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009-server m crypt pthread dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-cgi hal2009-cgi.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp)
-target_link_libraries (hal2009-cgi m crypt pthread dl z boost_thread-mt boost_system-mt)
+add_executable (hal2009.cgi hal2009-cgi.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-download.cpp hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009.cpp hal2009-sql.c)
+target_link_libraries (hal2009.cgi m crypt pthread dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-wiki-dummy.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009-boinc m crypt pthread dl boinc_api boinc z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-debug hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (hal2009-debug hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009-debug m crypt pthread dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2009-server-debug hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp)
+add_executable (hal2009-server-debug hal2009-server.cpp hal2009-download.cpp hal2009-wiki.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009-server-debug m crypt pthread dl z boost_thread-mt boost_system-mt)
 
 set_target_properties("hal2009-debug" PROPERTIES COMPILE_FLAGS "-pg -g")
@@ -83,19 +80,8 @@ set_target_properties("hal2009-server-debug" PROPERTIES COMPILE_FLAGS "-pg -g")
 set_target_properties("hal2009-server-debug" PROPERTIES LINK_FLAGS "-pg -g")
 
 
-add_executable (hal2009-intel-pentium4 hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
-target_link_libraries (hal2009-intel-pentium4 m crypt pthread dl z) 
-add_executable (hal2009-server-intel-pentium4 hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
-target_link_libraries (hal2009-server-intel-pentium4 m crypt pthread dl z boost_thread-mt boost_system-mt)
-set_target_properties("hal2009-intel-pentium4" PROPERTIES COMPILE_FLAGS "-march=pentium4 -O2 -O3")
-set_target_properties("hal2009-server-intel-pentium4" PROPERTIES COMPILE_FLAGS "-march=pentium4 -O2 -O3")
-
-add_executable (hal2009-amd-athlon-xp hal2009-main.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
-target_link_libraries (hal2009-amd-athlon-xp m crypt pthread dl z) 
-add_executable (hal2009-server-amd-athlon-xp hal2009-server.cpp hal2009-server.c hal2009-perl6-dummy.c hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2009-as-release.c) 
-target_link_libraries (hal2009-server-amd-athlon-xp m crypt pthread dl z boost_thread-mt boost_system-mt)
-set_target_properties("hal2009-amd-athlon-xp" PROPERTIES COMPILE_FLAGS "-march=athlon-xp -O2 -O3")
-set_target_properties("hal2009-server-amd-athlon-xp" PROPERTIES COMPILE_FLAGS "-march=athlon-xp -O2 -O3")
+#set_target_properties("hal2009-intel-pentium4" PROPERTIES COMPILE_FLAGS "-march=pentium4 -O2 -O3")
+#set_target_properties("hal2009-amd-athlon-xp" PROPERTIES COMPILE_FLAGS "-march=athlon-xp -O2 -O3")
 
 endif(MINGW)
 

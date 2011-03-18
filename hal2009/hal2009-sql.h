@@ -19,36 +19,20 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_PERL5
-#define HAL2009_PERL5 1
+BEGIN_EXTERN_C
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
+char* sql_del_record(struct RECORD* r);
+char* sql_get_source(struct RECORD* r);
+const char* engine();
+const char* is_engine(const char* m);
+int sql_add_filename(const char* filename);
+int sql_add_link (char* link, int key_1, int key_2);
+int sql_add_record(struct RECORD* r);
+int sql_begin(const char* modes);
+int sql_delete_everything_from(const char* filename);
+int sql_end();
+int sql_re_index();
+int sql_set_quiet(int i);
+struct DATASET sql_get_records(struct RECORD* r);
 
-#include <boost/process.hpp>
-#include <boost/algorithm/string.hpp>
-
-using namespace std;
-namespace bp = ::boost::process;
-
-#define NOT_HEADER_ONLY 1
-#define DONT_DECLARE_STD 1
-#define USE_CXX 1
-#include "hal2009.h"
-
-#include "hal2009-ipc.h"
-
-string perl5_convert_code(string hals, int just_compile);
-int perl5_convert_file(string filename);
-static inline void perl5_convert_structure (string& hals, int just_compile);
-void perl5_execute(string filename);
-void perl5_hal2009_send_signal(string vfile, string data);
-
-extern bp::postream* child_stdin;
-extern bp::pistream* child_stdout;
-
-#endif
-
+END_EXTERN_C

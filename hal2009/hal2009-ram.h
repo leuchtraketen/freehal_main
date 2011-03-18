@@ -22,9 +22,9 @@
 #ifndef HAL2009_RAM_H
 #define HAL2009_RAM_H 1
 
-static struct list*** ram_net = 0;
-static struct list*   ram_fact_by_key = 0;
-static struct list*   ram_linking = 0;
+static struct flist*** ram_net = 0;
+static struct flist*   ram_fact_by_key = 0;
+static struct flist*   ram_linking = 0;
 
 struct linking_entity {
     int _1;

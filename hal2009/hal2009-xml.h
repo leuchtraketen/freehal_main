@@ -1,3 +1,24 @@
+/*
+ * This file is part of FreeHAL 2010.
+ *
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
+ * http://freehal.org
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+*/
+
 
 #ifndef HAL2009_XML
 #define HAL2009_XML 1
@@ -96,9 +117,10 @@ vector<XML_Fact*> halxml_readfacts(string& prestr);
 
 XML_Fact* record_to_fact(struct RECORD* r, int level);
 extern "C" {
-    char* record_to_xml_by_xml(struct RECORD* r);
+    char* record_to_xml(struct RECORD* r);
     int add_record(struct RECORD* r);
     int add_xml_fact(XML_Fact* fact);
+    int add_xml_fact_file(const char* filename);
 }
 
 #endif /* HAL2009_XML */

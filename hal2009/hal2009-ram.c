@@ -36,18 +36,18 @@ int ram_begin(const char* modes) {
 
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
-            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k] = calloc(sizeof(struct flist), 1);
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
         for (k = n('0'); k <= n('9'); ++k) {
-            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k] = calloc(sizeof(struct flist), 1);
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
 
         k = WRONG;
-        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k] = calloc(sizeof(struct flist), 1);
         ram_net[i][k]->size = 0;
         ram_net[i][k]->list = 0;
     }
@@ -56,18 +56,18 @@ int ram_begin(const char* modes) {
 
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
-            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k] = calloc(sizeof(struct flist), 1);
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
         for (k = n('0'); k <= n('9'); ++k) {
-            ram_net[i][k] = calloc(sizeof(struct list), 1);
+            ram_net[i][k] = calloc(sizeof(struct flist), 1);
             ram_net[i][k]->size = 0;
             ram_net[i][k]->list = 0;
         }
 
         k = WRONG;
-        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k] = calloc(sizeof(struct flist), 1);
         ram_net[i][k]->size = 0;
         ram_net[i][k]->list = 0;
     }
@@ -75,29 +75,29 @@ int ram_begin(const char* modes) {
     ram_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
     int k;
     for (k = n('a'); k <= n('z'); ++k) {
-        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k] = calloc(sizeof(struct flist), 1);
         ram_net[i][k]->size = 0;
         ram_net[i][k]->list = 0;
     }
     for (k = n('0'); k <= n('9'); ++k) {
-        ram_net[i][k] = calloc(sizeof(struct list), 1);
+        ram_net[i][k] = calloc(sizeof(struct flist), 1);
         ram_net[i][k]->size = 0;
         ram_net[i][k]->list = 0;
     }
     k = WRONG;
-    ram_net[i][k] = calloc(sizeof(struct list), 1);
+    ram_net[i][k] = calloc(sizeof(struct flist), 1);
     ram_net[i][k]->size = 0;
     ram_net[i][k]->list = 0;
 
     // initialize ram_fact_by_key array
-    ram_fact_by_key                  = calloc(sizeof(struct list), 1);
+    ram_fact_by_key                  = calloc(sizeof(struct flist), 1);
     ram_fact_by_key->size            = 0;
     ram_fact_by_key->allocated_until = 0;
     ram_fact_by_key->list            = calloc(sizeof(struct fact*), ram_fact_by_key->allocated_until+1);
 
 
     // initialize ram_linking array
-    ram_linking                  = calloc(sizeof(struct list), 1);
+    ram_linking                  = calloc(sizeof(struct flist), 1);
     ram_linking->size            = 0;
     ram_linking->allocated_until = 10;
     ram_linking->list            = calloc(sizeof(struct fact*), ram_linking->allocated_until+1);

@@ -19,9 +19,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-
-//#include "hal2009-sql-semtree.c"
-//#include "hal2009-sql-sqlite.c"
+#include "hal2009.h"
 
 #include "hal2009-sql-universal.c"
 

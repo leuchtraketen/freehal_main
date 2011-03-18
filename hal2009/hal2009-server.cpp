@@ -19,51 +19,17 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-// C++ headers
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <map>
-
-// Boost headers
-#undef BOOST_ASIO_HAS_EPOLL
-#undef BOOST_ASIO_HAS_KQUEUE
-#undef BOOST_ASIO_HAS_DEV_POLL
-#define BOOST_ASIO_DISABLE_EPOLL 1
-#ifndef NO_ASIO_HERE
-#include <boost/asio.hpp>
-#endif
-#include <boost/thread.hpp>
-#include <boost/bind.hpp>
-#include <boost/algorithm/string.hpp>
-#undef BOOST_ASIO_HAS_EPOLL
-#undef BOOST_ASIO_HAS_KQUEUE
-#undef BOOST_ASIO_HAS_DEV_POLL
-
-#define NOT_HEADER_ONLY 1
-#define DONT_DECLARE_STD 1
-#define USE_CXX 1
 #include "hal2009.h"
-#include "hal2009-download.cpp"
+#include "hal2009-ipc.h"
+#include "hal2009-pro.h"
 
 #include <pthread.h>
-
-using namespace std;
-using namespace boost;
-using namespace algorithm;
-using boost::asio::ip::tcp;
 
 unsigned short server_port = 5173;
 unsigned short netcom_port = 5172;
 vector<tcp::iostream*> hal2009_server_clients;
-
-char* copy_for_init_planguage = 0;
-char* copy_for_init_signal_handler_tlanguage = 0;
-char* copy_for_init_base_dir = 0;
 int init_thread_ended = 0;
 
-#ifndef NO_PERL
 #ifdef WINDOWS
 #include <windows.h>
 int win32_bind (SOCKET s, const struct sockaddr* addr, int);
@@ -71,10 +37,8 @@ namespace boost {
     #include <sys/socket.h>
 }
 #endif
-#endif
 
-extern "C" int cstat (char* c, struct stat* s);
-extern "C" void extract();
+EXTERN_C void extract();
 
 void hal2009_server_start();
 char* hal2009_server_get_value_from_socket(char* s1, const char* s2);
@@ -84,13 +48,22 @@ void* hal2009_init_thread (void*);
 boost::asio::io_service io_service;
 tcp::acceptor* hal2009_server_acceptor;
 tcp::acceptor* hal2009_netcom_acceptor;
-char* signal_handler_tlanguage;
-char* base_dir;
+
+string planguage;
+string tlanguage;
+string base_dir;
+
+string output_by_signal;
+
 
 std::vector<std::string>* simple_split (const string text, const string search) {
     std::vector<std::string>* result = new std::vector<std::string>();
     boost::algorithm::split(*result, text, is_any_of(search.c_str()));
     return result;
+}
+
+EXTERN_C int cstat (char* c, struct stat* s) {
+    return stat(c, s);
 }
 
 int locked_netcom = 0;
@@ -220,17 +193,12 @@ void* hal2009_netcom_do_accept(void* arg) {
     try {
         tcp::iostream* stream = (tcp::iostream*) arg;
 
-        char* filename = (char*) malloc(200+strlen(signal_handler_tlanguage)+strlen(base_dir));
-        strcpy(filename, "");
-        strcat(filename, base_dir);
-        strcat(filename, "/lang_");
-        strcat(filename, signal_handler_tlanguage);
-        strcat(filename, "/from-");
-        strcat(filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str());
-        strcat(filename, ".pro");
+        string filename = base_dir + "/lang_" + tlanguage + "/from-"
+                + stream->rdbuf()->remote_endpoint().address().to_string()
+                + ".pro";
 
-        fprintf(output(), "(hal2009_netcom_do_accept) Open pro file %s. I will write into it whatever %s says (stream is %d).\n", filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
-        ofstream pro_file(filename, ios::out | ios::app);
+        fprintf(output(), "(hal2009_netcom_do_accept) Open pro file %s. I will write into it whatever %s says (stream is %d).\n", filename.c_str(), stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
+        ofstream pro_file(filename.c_str(), ios::out | ios::app);
         string buffer;
         while (stream && *stream) {
             getline(*stream, buffer);
@@ -239,11 +207,10 @@ void* hal2009_netcom_do_accept(void* arg) {
             }
             pro_file << buffer << "\n";
         }
-        fprintf(output(), "(hal2009_netcom_do_accept) Close pro file %s...\n", filename);
+        fprintf(output(), "(hal2009_netcom_do_accept) Close pro file %s...\n", filename.c_str());
         pro_file.close();
-        fprintf(output(), "(hal2009_netcom_do_accept) Close socket for pro file %s...\n", filename);
+        fprintf(output(), "(hal2009_netcom_do_accept) Close socket for pro file %s...\n", filename.c_str());
         stream->close();
-        free(filename);
         halusleep(1500);
         if ( stream ) delete stream;
     }
@@ -259,16 +226,11 @@ void* hal2009_netcom_do_give(void* arg) {
     try {
         tcp::iostream* stream = (tcp::iostream*) arg;
 
-        char* filename = (char*) malloc(200+strlen(signal_handler_tlanguage)+strlen(base_dir));
-        strcpy(filename, "");
-        strcat(filename, base_dir);
-        strcat(filename, "/lang_");
-        strcat(filename, signal_handler_tlanguage);
-        strcat(filename, "/facts.pro");
-        fprintf(output(), "(hal2009_netcom_do_give)   Giving file %s.\n", filename);
+        string filename = base_dir + "/lang_" + tlanguage + "/facts.pro";
+        fprintf(output(), "(hal2009_netcom_do_give)   Giving file %s.\n", filename.c_str());
 
-        fprintf(output(), "(hal2009_netcom_do_give)   I will send it to %s (stream is %d).\n", filename, stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
-        ifstream pro_file(filename);
+        fprintf(output(), "(hal2009_netcom_do_give)   I will send it to %s (stream is %d).\n", filename.c_str(), stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
+        ifstream pro_file(filename.c_str());
         string buffer;
         hal2009_netcom_lock();
         while (stream && *stream && pro_file) {
@@ -280,11 +242,10 @@ void* hal2009_netcom_do_give(void* arg) {
         }
         (*stream) << "EXIT" << "\n";
         hal2009_netcom_unlock();
-        fprintf(output(), "(hal2009_netcom_do_give)   Close pro file %s...\n", filename);
+        fprintf(output(), "(hal2009_netcom_do_give)   Close pro file %s...\n", filename.c_str());
         pro_file.close();
-        fprintf(output(), "(hal2009_netcom_do_give)   Close socket for pro file %s...\n", filename);
+        fprintf(output(), "(hal2009_netcom_do_give)   Close socket for pro file %s...\n", filename.c_str());
         stream->close();
-        free(filename);
         halusleep(2000);
         /*
         it is in the stack!!
@@ -488,7 +449,7 @@ void hal2009_server_start() {
     }
 }
 
-void hal2009_server_statement(tcp::iostream* stream, const string s, string& username, char* language, bool do_learn, bool do_talk) {
+void hal2009_server_statement(tcp::iostream* stream, const string& s, const string& username, bool do_learn, bool do_talk) {
     cout << "Begin of statement process." << endl;
     static string* to_display_talk = 0;
     static string* to_display_learn = 0;
@@ -526,7 +487,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         }
         sql_end();
 
-        (*to_display) += "<b>" + string(username) + "</b>: " + s + "<br />";
+        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
         (*to_display) += "<b>FreeHAL</b>: Deleted.<br />";
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*to_display) << endl;
@@ -536,10 +497,10 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         return;
     }
     if (s == "de" || s == "deutsch" || s == "Deutsch" || s == "german" || s == "German" || s == "Deutsch!" || s == "deutsch!") {
-        strcpy(language,             "de");
+        tlanguage = "de";
 
-        (*to_display) += "<b>" + string(username) + "</b>: " + s + "<br />";
-        (*to_display) += "<b>FreeHAL</b>: Language is " + string(language) + "<br />";
+        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
+        (*to_display) += "<b>FreeHAL</b>: Language is " + tlanguage + "<br />";
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*to_display) << endl;
         (*stream) << "DISPLAY:" << (*to_display) << endl;
@@ -548,10 +509,10 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         return;
     }
     if (s == "en" || s == "english" || s == "English" || s == "englisch" || s == "Englisch" || s == "English!" || s == "english!") {
-        strcpy(language,             "en");
+        tlanguage = "en";
 
-        (*to_display) += "<b>" + string(username) + "</b>: " + s + "<br />";
-        (*to_display) += "<b>FreeHAL</b>: Language is " + string(language) + "<br />";
+        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
+        (*to_display) += "<b>FreeHAL</b>: Language is " + tlanguage + "<br />";
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*to_display) << endl;
         (*stream) << "DISPLAY:" << (*to_display) << endl;
@@ -559,116 +520,91 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         hal2009_clean();
         return;
     }
-    strcpy(signal_handler_tlanguage, language);
-    FILE* change_text_language = fopen("_change_text_language", "w");
-    halwrite(language, 1, 2, change_text_language);
-    halclose(change_text_language);
+    
+    {
+        ofstream change_text_language("_change_text_language");
+        change_text_language << tlanguage;
+        change_text_language.close();
+    }
 
-    char* programming_language = (char*)cxxhalmalloc(16, "hal2009_server_statement");
-    strcpy(programming_language, "perl5");
-    char* base_dir             = (char*)cxxhalmalloc(16, "hal2009_server_statement");
-    strcpy(base_dir,             ".");
-    char* language_copy        = (char*)cxxhalmalloc(16, "hal2009_server_statement");
-    strcpy(language_copy,        language);
-    char* input                = (char*)cxxhalmalloc(1025, "hal2009_server_statement");
+    string input;
     if (do_learn) {
         if (do_talk) {
-            strncpy(input, "do_learn_do_talk: ", 1024);
-            strncat(input, s.c_str(), 1000);
+            input += "do_learn_do_talk: ";
         }
         else {
-            strncpy(input, "do_learn_no_talk: ", 1024);
-            strncat(input, s.c_str(), 1000);
+            input += "do_learn_no_talk: ";
         }
     }
     else {
         if (do_talk) {
-            strncpy(input, "no_learn_do_talk: ", 1024);
-            strncat(input, s.c_str(), 1000);
+            input += "no_learn_do_talk: ";
         }
         else {
-            strncpy(input, "no_learn_no_talk: ", 1024);
-            strncat(input, s.c_str(), 1000);
+            input += "no_learn_no_talk: ";
         }
     }
+    input += s;
 
-    char* answer_from_c = (char*)calloc(1, 1);
+    string output;
     int timeout = 3;
     static string last_input = string();
     static long last_input_time = 0;
-    while (0 == strlen(answer_from_c) && timeout > 0) {
-
+    while (output.size() == 0 && timeout > 0) {
 
         time_t now;
         time(&now);
         cout << "input: now:  " << input      << endl;
         cout << "input: last: " << last_input << endl;
-        if (input && (now - last_input_time) <= 3600 && last_input == string(input) ) {
-            unlink("_output2");
+        
+        if (input.size() > 0 && (now - last_input_time) <= 3600 && last_input == input ) {
             return;
         }
-        last_input = string(input);
+        last_input = input;
         last_input_time = now;
 
         cout << "Delete nonsense." << endl;
-        unlink("_output2");
         hal2009_clean();
+        output_by_signal = "";
 
         if (!do_talk) {
             (*to_display) += "<b>Input</b>: " + s + "<br />";
             (*stream) << "LEARNED:0:" << (*to_display) << endl;
         }
         else {
-            (*to_display) += "<b>" + string(username) + "</b>: " + s + "<br />";
+            (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
             hal2009_netcom_lock();
             (*stream) << "DISPLAY:" << (*to_display) << endl;
             hal2009_netcom_unlock();
         }
 
-        cout << "Start threads (language: " << language_copy << ")." << endl;
-        pthread_t answer_thread = hal2009_answer(strdup(input), strdup(programming_language), strdup(language_copy), strdup(base_dir), NOT_JOIN, MULTI);
-        halusleep(1000);
-        //pthread_t signal_thread = hal2009_start_signal_handler(programming_language, language, MULTI);
+        cout << "Start threads (language: " << tlanguage << "). input=\"" << input << "\"" << endl;
+        pthread_t answer_thread = hal2009_answer(input, planguage, tlanguage, base_dir, NOT_JOIN, MULTI);
         pthread_join(answer_thread, NULL);
 
-        FILE* f;
-        while (!(f = fopen("_output2", "r"))) {
-            halusleep(1000);
+        
+        while (output_by_signal.size() == 0) {
+            halusleep(100);
         }
-        if (f) {
-            fclose(f);
-        }
-        ifstream output_stream("_output2");
-        halusleep(500);
-        string output;
-        getline(output_stream, output);
-        if (output.size() == 0) {
-            ifstream output_stream("_output2");
-            halusleep(500);
-            string output;//
-            getline(output_stream, output);
-        }
-        unlink("_output2");
-        if (answer_from_c) free(answer_from_c);
-        answer_from_c = strdup(output.c_str());
+        
+        output = output_by_signal;
 
         --timeout;
         hal2009_clean();
     }
-    if (0 == strlen(answer_from_c)) {
-        if (answer_from_c) free(answer_from_c);
-        answer_from_c = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
+    if (output.size() == 0) {
+        output = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
     }
     else {
         last_input_time = 0;
     }
 
     if (!do_talk) {
-        (*to_display) += "<b>Learned</b>: " + string(answer_from_c) + "<br />";
+        (*to_display) += "<b>Learned</b>: " + output + "<br />";
         (*stream) << "LEARNED:1:" << (*to_display) << endl;
     }
     else {
-        (*to_display) += "<b>FreeHAL</b>: " + string(answer_from_c) + "<br />";
+        (*to_display) += "<b>FreeHAL</b>: " + output + "<br />";
 
         cout << "Got something to display from '" << username << "'." << endl;
         cout << "    " << (*to_display) << endl;
@@ -676,10 +612,7 @@ void hal2009_server_statement(tcp::iostream* stream, const string s, string& use
         (*stream) << "DISPLAY:" << (*to_display) << endl;
         hal2009_netcom_unlock();
     }
-
-    if (answer_from_c) free(answer_from_c);
-
-    unlink("_output2");
+    
     hal2009_clean();
     cout << "End of statement process." << endl;
 }
@@ -722,11 +655,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
     cout << "Got username." << endl;
     cout << "    " << username << endl;
 
-    char* language             = (char*)cxxhalmalloc(16, "hal2009_server_client_connection");
-    strcpy(language,             signal_handler_tlanguage);
-
     while (init_thread_ended <= 0) {
-
         (*stream) << "DISPLAY:" << "FreeHAL reads the database. This can take some seconds to several minutes." << endl;
 
         halusleep(1000);
@@ -848,7 +777,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 if (strstr(filename, ":")) {
                     strstr(filename, ":")[0] = '\0';
                     sql_end();
-                    hal2009_add_pro_file(filename);
+                    hal2009_add_xml_file(filename);
                     // hal2009_add_pro_file() free's filename
                     sql_begin("");
                 }
@@ -869,7 +798,7 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
                 input += result->at(i);
             }
             replace_all(input, "::", ":");
-            hal2009_server_statement(stream, input, username, language, true, true);
+            hal2009_server_statement(stream, input, username, true, true);
         }
 
         if ( init_thread_ended > 0 && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
@@ -883,13 +812,13 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             replace_all(input, "::", ":");
 
             if (result->at(0) == string("LEARN") && result->at(1) != string("LEARN")) {
-                hal2009_server_statement(stream, input, username, language, true, false);
+                hal2009_server_statement(stream, input, username, true, false);
             }
             else if (result->at(0) == string("TALK") && result->at(1) != string("TALK")) {
-                hal2009_server_statement(stream, input, username, language, false, true);
+                hal2009_server_statement(stream, input, username, false, true);
             }
             else if (result->at(0) == string("TALK_LEARN") && result->at(1) != string("TALK_LEARN")) {
-                hal2009_server_statement(stream, input, username, language, true, true);
+                hal2009_server_statement(stream, input, username, true, true);
             }
         }
 
@@ -1023,7 +952,7 @@ void* hal2009_init_thread (void*) {
     time_t start = 0;
     time(&start);
 
-    hal2009_init(strdup(copy_for_init_planguage), strdup(copy_for_init_signal_handler_tlanguage), strdup(copy_for_init_base_dir));
+    hal2009_init(planguage, tlanguage, base_dir);
     init_thread_ended = 1;
 
     time_t end = 0;
@@ -1059,51 +988,26 @@ int main(int argc, char** argv) {
     hal2009_clean();
     extract();
 
-    char* planguage = "perl5";
-    signal_handler_tlanguage = strdup("de");
+    planguage = "perl5";
+    tlanguage = "de";
     for (int g = 0; g < argc; ++g) {
         if (argv[g] && strlen(argv[g]) == 2) {
-            strcpy(signal_handler_tlanguage, argv[g]);
+            tlanguage = argv[g];
         }
     }
-    fprintf(output(), "Language is %s.\n", signal_handler_tlanguage);
+    fprintf(output(), "Language is %s.\n", tlanguage.c_str());
     fprintf(output(), "Database Engine is %s.\n", sql_engine);
     base_dir = ".";
 
     {
-        char* sqlite_filename = (char*)calloc(64+strlen(base_dir)+strlen(signal_handler_tlanguage), 1);
-        strcat(sqlite_filename, base_dir);
-        strcat(sqlite_filename, "/lang_");
-        strcat(sqlite_filename, signal_handler_tlanguage);
-        strcat(sqlite_filename, "/database.db");
-        sql_sqlite_set_filename(sqlite_filename);
+        string sqlite_filename = base_dir + "/lang_" + tlanguage + "/database.db";
+        sql_sqlite_set_filename(strdup(sqlite_filename.c_str()));
     }
 
-    //halclose(stdout);
-    int fd[2];
-/*
-#ifdef WIN32
-	if(!CreatePipe(&fd[0], &fd[1], NULL, 0))
-#else
-	if(pipe(fd))
-#endif
-	{
-        fprintf (output(), "Pipe failed.\n");
-        return EXIT_FAILURE;
-    }
-
-    set_output_pipe (fdopen (fd[0], "r"));
-//  set_output      (fdopen (fd[1], "w"));
-    freopen("x", "w", stdout);
-
-//  set_output_fd   (fd[1]);
-*/
-    fprintf(output(), "Opened new stdout: stdout = %li\n", (long int)(get_output()));
-
-    pthread_t signal_thread = hal2009_start_signal_handler(strdup(planguage), strdup(signal_handler_tlanguage), MULTI);
+    /*pthread_t signal_thread = hal2009_start_signal_handler(strdup(planguage), strdup(tlanguage), MULTI);
     copy_for_init_planguage = strdup(planguage);
     copy_for_init_base_dir = strdup(base_dir);
-    copy_for_init_signal_handler_tlanguage = strdup(signal_handler_tlanguage);
+    copy_for_init_tlanguage = strdup(tlanguage);*/
     pthread_t thread_netcom;
 
     hal2009_server_start();
@@ -1119,27 +1023,15 @@ void* hal2009_handle_signal(void* arg) {
     char* type = (char*)((void**)arg)[0];
     char* text = (char*)((void**)arg)[1];
 
-    if (0 == strcmp(type, "_output__pos")) {
+    if (0 == strcmp(type, "output_pos")) {
         FILE* _doing = fopen("_doing__pos", "w+b");
         halclose(_doing);
         fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
         text = hal2009_server_get_value_from_socket("WORD_TYPE", text);
-        FILE* target = fopen("_input__pos", "w+b");
-        halwrite(text, 1, strlen(text), target);
-        halclose(target);
+        hal2009_send_signal("input_pos", text);
         unlink("_doing__pos");
     }
-    else if (0 == strcmp(type, "_output__genus")) {
-        FILE* _doing = fopen("_doing__genus", "w+b");
-        halclose(_doing);
-        fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
-        text = hal2009_server_get_value_from_socket("GENUS", text);
-        FILE* target = fopen("_input__genus", "w+b");
-        halwrite(text, 1, strlen(text), target);
-        halclose(target);
-        unlink("_doing__genus");
-    }
-    else if (0 == strcmp(type, "_output__link")) {
+    else if (0 == strcmp(type, "output_link")) {
         if (strlen(text) < 99) {
             char link[99] = {0};
             int f1 = 0;
@@ -1150,30 +1042,23 @@ void* hal2009_handle_signal(void* arg) {
         }
     }
     else if (0 == strcmp(type, "add_pro_file")) {
-        hal2009_add_pro_file(strdup(text));
+        hal2009_add_pro_file(text);
         hal2009_send_signal("add_pro_file", "");
+    }
+    else if (0 == strcmp(type, "add_xml_file")) {
+        hal2009_add_xml_file(text);
+        hal2009_send_signal("add_xml_file", "");
     }
     else if (0 == strcmp(type, "database_request")) {
         struct DATASET set = hal2009_get_csv(text);
-        const char* csv_data = hal2009_make_csv(&set);
+        char* csv_data = hal2009_make_csv(&set);
         hal2009_send_signal("database_request", csv_data);
         fprintf(output(), "Release memory now.\n");
         free(csv_data);
         fprintf(output(), "Memory is released.\n");
     }
-    else if (0 == strcmp(type, "_output")) {
-        /*fprintf(output(), "\nFreeHAL: %s\n", text);
-        ofstream out("_output");
-        out << text << endl;
-        cout << "Printing into _input_server: " << text << endl;
-        out.close();
-        unlink("_output");
-        ///pthread_exit(0);*/
-
-        ofstream out("_output2");
-        out << text << endl;
-        out.close();
-        unlink("_output");
+    else if (0 == strcmp(type, "output")) {
+        output_by_signal = text;
     }
     else if (0 == strcmp(type, "_exit_by_user")) {
         exit(0);

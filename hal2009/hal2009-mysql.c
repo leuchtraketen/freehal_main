@@ -53,13 +53,13 @@ int mysql_begin() {
 
         int k;
         for (k = n('a'); k <= n('z'); ++k) {
-            mysql_net[i][k] = calloc(sizeof(struct list), 1);
+            mysql_net[i][k] = calloc(sizeof(struct flist), 1);
             mysql_net[i][k]->size = 0;
             mysql_net[i][k]->list = 0;
         }
 
         k = WRONG;
-        mysql_net[i][k] = calloc(sizeof(struct list), 1);
+        mysql_net[i][k] = calloc(sizeof(struct flist), 1);
         mysql_net[i][k]->size = 0;
         mysql_net[i][k]->list = 0;
     }
@@ -67,12 +67,12 @@ int mysql_begin() {
     mysql_net[i] = calloc(sizeof(void*)*(4+'z'-'a'), 1);
     int k;
     for (k = n('a'); k <= n('z'); ++k) {
-        mysql_net[i][k] = calloc(sizeof(struct list), 1);
+        mysql_net[i][k] = calloc(sizeof(struct flist), 1);
         mysql_net[i][k]->size = 0;
         mysql_net[i][k]->list = 0;
     }
     k = WRONG;
-    mysql_net[i][k] = calloc(sizeof(struct list), 1);
+    mysql_net[i][k] = calloc(sizeof(struct flist), 1);
     mysql_net[i][k]->size = 0;
     mysql_net[i][k]->list = 0;
 
@@ -1036,9 +1036,11 @@ int mysql_re_index() {
 
 struct fact** mysql_search_clauses(int rel) {
     int limit = 8000;
-    if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
+    char* _config_value = check_config("limit-amount-of-answers", "1");
+    if (strcmp("1", _config_value)) {
         limit = 100000;
     }
+    free(_config_value);
     struct fact** clauses = calloc(1, sizeof(struct fact*)*(limit+1));
     int position = 0;
 

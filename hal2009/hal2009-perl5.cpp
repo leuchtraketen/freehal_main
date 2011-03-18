@@ -21,28 +21,16 @@
 
 #include "hal2009-perl5.h"
 
-string replace (string in, string rep, string wit) {
-  int pos;
-  int last_pos = 0;
-  while (true) {
-    pos = in.find(rep, last_pos);
-    if (pos == -1) {
-      break;
-    } else {
-      in.erase(pos, rep.length());
-      in.insert(pos, wit);
-      last_pos = pos + wit.size();
-    }
-  }
-  return in;
-}
+bp::postream* child_stdin = 0;
+bp::pistream* child_stdout = 0;
+
 
 /* PERL 5 convert functions */
-static inline void convert_to_perl5_structure (string& hals, int just_compile) {
+static inline void perl5_convert_structure (string& hals, int just_compile) {
     hals = replace(hals, "\r", "");
     if (string::npos != hals.find("compile source " )) {
         hals = replace(hals, "compile source ", "");
-        convert_to_perl5_convert_file(hals);
+        perl5_convert_file(hals);
         hals = "";
         return;
     }
@@ -454,7 +442,7 @@ static inline void convert_to_perl5_structure (string& hals, int just_compile) {
     return;
 }
 
-string convert_to_perl5(string halcode, int just_compile) {
+string perl5_convert_code(string halcode, int just_compile) {
     std::vector<std::string> lines;
     boost::split(lines, halcode, boost::is_any_of("\n\r"));
 
@@ -469,7 +457,7 @@ string convert_to_perl5(string halcode, int just_compile) {
             continue;
         }
 
-        convert_to_perl5_structure(lines[i], just_compile);
+        perl5_convert_structure(lines[i], just_compile);
 
         newcode += lines[i] + "\n";
     }
@@ -479,87 +467,70 @@ string convert_to_perl5(string halcode, int just_compile) {
     return newcode;
 }
 
-extern "C" int cxx_convert_to_perl5_convert_file(char* filename) {
-    convert_to_perl5_convert_file(string(filename));
-}
-
-int convert_to_perl5_convert_file(string filename) {
+int perl5_convert_file(string filename) {
     static string last_filename = "";
     if (last_filename == filename) {
         fprintf(output(), "compiler: abort, unnecessary!\n");
         return 0;
     }
-    FILE* source = fopen(filename.c_str(), "r");
-    if ( !source ) {
-        fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", filename.c_str());
+    
+    string code;
+    std::ifstream code_i(filename.c_str());
+    if (!code_i.is_open()) {
+        fprintf(output(), "compiler: file not found: %s (at: P1, lang: perl5)\n", filename.c_str());
         return 1;
     }
-
-    struct stat stbuf;
-    stat(filename.c_str(), &stbuf);
-    int file_size = &stbuf ? stbuf.st_size : 0;
-    char* code = (char*)cxxhalmalloc(file_size+1, "convert_to_perl5_convert_file");
-    fread(code, 1, file_size, source);
-    halclose(source);
-
+    else {
+        std::stringstream ss;
+        ss << code_i.rdbuf();
+        code = ss.str();
+    }
+    
     int just_compile = 0;
     /// Look whether nothing has changed
     {
-        string filename_tmp = filename + ".tmp";
-        FILE* source_tmp = fopen(filename_tmp.c_str(), "r");
-        if ( !source_tmp ) {
+        std::ifstream code_tmp_i((filename + ".tmp").c_str());
+        if (!code_tmp_i.is_open()) {
+            fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", (filename + ".tmp").c_str());
         }
         else {
-            stat(filename_tmp.c_str(), &stbuf);
-            file_size = &stbuf ? stbuf.st_size : 0;
-            char* code_tmp = (char*)cxxhalmalloc(file_size+1, "convert_to_perl5_convert_file");
-            fread(code_tmp, 1, file_size, source_tmp);
-            halclose(source_tmp);
-
-            if (0 == strcmp(code, code_tmp) && -1 == filename.find("temp")) {
-//                fprintf(output(), "compiler: no change: %s\n", filename);
+            std::stringstream ss;
+            ss << code_tmp_i.rdbuf();
+            string code_tmp = ss.str();
+            
+            if (code == code_tmp && -1 == filename.find("temp")) {
                 just_compile = 1;
             }
-            free(code_tmp);
         }
-        FILE* target;
-        target = fopen(filename_tmp.c_str(), "w");
-        halwrite(code, 1, strlen(code), target);
-        halclose(target);
+    }
+    {
+        std::ofstream code_tmp_o((filename + ".tmp").c_str());
+        code_tmp_o << code;
+        code_tmp_o.close();
     }
 
-    fprintf(output(), "compiler: compile %s (size: %i bytes, lang: perl5)\n", filename.c_str(), file_size);
-    string targetcode = convert_to_perl5(code, just_compile);
+    fprintf(output(), "compiler: compile %s (size: %i bytes, lang: perl5)\n", filename.c_str(), code.size());
+    string targetcode = perl5_convert_code(code, just_compile);
     if (!just_compile) {
-        FILE* target;
-        {
-            string targetname = filename + ".pl";
-            target = fopen(targetname.c_str(), "w");
-        }
-        if ( !target ) {
-            fprintf(output(), "\ncompiler: cannot create file: %s (at: P3, lang: perl5)\n", filename.c_str());
-            return 1;
-        }
-        halwrite(targetcode.c_str(), 1, targetcode.size(), target);
-        halclose(target);
+        std::ofstream code_target_o((filename + ".pl").c_str());
+        code_target_o << targetcode;
+        code_target_o.close();
     }
 
     last_filename = filename;
     return 0;
 }
 
-void execute_perl5(char* filename) {
+void perl5_execute(string filename) {
 
     // COMPILE
     static string last_filename = "";
     if (last_filename == filename) {
-        fprintf(output(), "compiler: do not compile, unnecessary!\n");
+        cout << "compiler: " << filename << ": do not compile, unnecessary!" << endl;
     }
     else {
-        fprintf(output(), "%s\n", "");
-        fprintf(output(), "%s\n", "compile: compile");
-        fprintf(output(), "%s\n", "");
-        convert_to_perl5_convert_file(filename);
+        cout << "compiler: " << filename << ": compile." << endl;
+        perl5_convert_file(filename);
     }
 
     // INIT
@@ -593,6 +564,7 @@ void execute_perl5(char* filename) {
     hal2009_send_signals();
     std::string line;
 
+    vector<pthread_t> threads;
     while (std::getline(*child_stdout, line)) {
         if (line.find("IPC:") == 0) {
             cout << "get (hal->c): IPC:" << endl;
@@ -612,15 +584,30 @@ void execute_perl5(char* filename) {
             char* parameters[3] = {strdup(vfile.c_str()), strdup(data.c_str()), (char*)MULTI};
             pthread_t thread_no_1;
             pthread_create (&thread_no_1, NULL, hal2009_handle_signal, (void*)parameters);
+            threads.push_back(thread_no_1);
+            
+            if (threads.size() > 20) {
+                int k;
+                for (k = 0; k < threads.size(); ++k) {
+                    pthread_join(threads[k], NULL);
+                }
+                threads.clear();
+            }
         }
         else {
             std::cout << line << std::endl;
         }
     }
+    int k;
+    for (k = 0; k < threads.size(); ++k) {
+        pthread_join(threads[k], NULL);
+    }
+    threads.clear();
 
     bp::status s = c.wait();
     child_stdout = 0;
     child_stdin = 0;
+    hal2009_send_signal_func = 0;
 
     // DECONSTRUCT
     fprintf(output(), "%s\n", "compiler: module destructor (lang: perl5)");

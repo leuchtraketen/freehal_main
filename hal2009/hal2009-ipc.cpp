@@ -24,7 +24,8 @@
 void (*hal2009_send_signal_func)(string vfile, string data) = 0;
 std::vector<std::pair<string, string> > signals_to_child;
 
-extern "C" void hal2009_send_signal(char* vfile, char* data) {
+extern "C" void hal2009_send_signal(const char* vfile, const char* data) {
+    cout << "signals_to_child.push_back(make_pair<string, string>(\"" << vfile << "\", \"" << data << "\"));\"" << endl;
     signals_to_child.push_back(make_pair<string, string>(vfile, data));
 
     hal2009_send_signals();
@@ -32,6 +33,7 @@ extern "C" void hal2009_send_signal(char* vfile, char* data) {
 extern "C" void hal2009_send_signals() {
     if (hal2009_send_signal_func) {
         for (int i = 0; i < signals_to_child.size(); ++i) {
+            cout << "hal2009_send_signal_func(\"" << signals_to_child[i].first << "\", \"" << signals_to_child[i].second << "\");" << endl;
             hal2009_send_signal_func(signals_to_child[i].first, signals_to_child[i].second);
         }
         signals_to_child.clear();

@@ -173,7 +173,13 @@ define action hal2009_fetch_signal with var _vfile do
         done
     done
     
+    set new var check_tell to 10000
     while 1 do
+        set var check_tell to var check_tell - 1
+        if var check_tell is 0 do
+            do exit with 0
+        done
+        
         set new var response to the next line from STDIN
         do chomp with var response
         if var response matches "IPC:" do

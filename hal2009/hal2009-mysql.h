@@ -37,7 +37,7 @@ char* mysql_get_source(const char* key);
 char* mysql_del_record(const char* key);
 
 
-static struct list*** mysql_net = 0;
+static struct flist*** mysql_net = 0;
 
 static MYSQL* mysql_connection = 0;
 static const char* mysql_filename = 0;

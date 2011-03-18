@@ -33,32 +33,15 @@ define action get_tag_part_of_speech with var word, var lang do
         do return with array return_array
     done
 
-    set new var output_file_name to '_output__pos'
-    set new var output_handle to handle for file name var output_file_name, write
-    print into var output_handle data var word
-    do close with var output_handle
-    do trigger_check_files without arguments
+    do hal2009_send_signal with "output_pos", var word
 
-    set new var timeout to 120
-    while var timeout > 0 do
-        set new var input_file_name to '_input__pos'
-        set new var input_handle to handle for file name var input_file_name, read
+    set new var response to hal2009_fetch_signal with "input_pos"
+    if var response do
+        print "Got input: '" concat var response concat "'"
+        print new line
 
-        if var input_handle do
-            set new var response to the next line from var input_handle
-            if var response do
-                print "Got input: '" concat var response concat "'"
-                print new line
-                do close with var input_handle
-                do wait 1 seconds
-                do unlink with '_input__pos'
-
-                set new array return_array to split with /<[,:]>/, var response
-                do return with array return_array
-            done
-        done
-        do wait 0.5 seconds
-        set var timeout to var timeout - 1
+        set new array return_array to split with /<[,:]>/, var response
+        do return with array return_array
     done
 
     set new array return_array to an empty array

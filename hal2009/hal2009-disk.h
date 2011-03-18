@@ -40,7 +40,7 @@ static int callback_string_pair(void* arg, int argc, char **argv, char **azColNa
 int disk_clear_cache();
 
 
-static struct list*** disk_net = 0;
+static struct flist*** disk_net = 0;
 
 // #define QUERY_CACHE_SIZE 99
 #define QUERY_CACHE_SIZE 9

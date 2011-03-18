@@ -24,11 +24,7 @@
 // variables
 struct word** variable_replacements = 0;
 int variable_replacements_c = 0;
-
-
 short config_match_variables = 0;
-
-
 
 // printf catcher
 static char catched[20480];
@@ -944,9 +940,9 @@ char** divide_by(const char by, const char* str) {
     return list;
 }
 
-struct list* look_at_list(struct list* l) {
+struct flist* look_at_list(struct flist* l) {
     if (!l) {
-        l = calloc(sizeof(struct list), 1);
+        l = calloc(sizeof(struct flist), 1);
         l->list = 0;
         l->size = 0;
         l->allocated_until = 0;
@@ -2087,9 +2083,11 @@ int net_go_way(const char* way, int value, struct request* fact, struct fact** f
 
 struct fact** search_in_net(struct request* fact, struct fact** list, const char* hints) {
     int limit = 10000;
-    if (strcmp("1", check_config("limit-amount-of-answers", "1"))) {
-        limit = 1000000;
+    char* _config_value = check_config("limit-amount-of-answers", "1");
+    if (strcmp("1", _config_value)) {
+        limit = 100000;
     }
+    free(_config_value);
 
     struct fact** facts = 0;
     if (list) {

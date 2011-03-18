@@ -1050,11 +1050,7 @@ define action shell with var current_language, var path do
 
                 do save_output with var final_output, var current_language, var path
                 if var do_talk do
-                    set new var output_file_name to '_output'
-                    set new var output_handle to handle for file name var output_file_name, write
-                    print into var output_handle data var final_output
-                    do close with var output_handle
-                    do trigger_check_files without arguments
+                    do hal2009_send_signal with "output", var final_output
                 done
 
                 print "Final output is..."
@@ -1076,10 +1072,7 @@ define action shell with var current_language, var path do
 
             if not var do_talk do
                 if var saved_data and length(var saved_data) > 5 do
-                    set new var output_file_name to '_output'
-                    set new var output_handle to handle for file name var output_file_name, write
-                    print into var output_handle data var saved_data
-                    do close with var output_handle
+                    do hal2009_send_signal with "output", var saved_data
                 done
             done
 
@@ -1091,7 +1084,7 @@ define action shell with var current_language, var path do
     do memory_limit with "word_types.memory", var current_language, var path
     do memory_limit with "word_types.self-taggered", var current_language, var path
 
-    do wait 3 seconds
+#    do wait 3 seconds
     
     do hal2009_send_signal with "exit", ""
     do exit with 0

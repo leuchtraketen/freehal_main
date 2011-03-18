@@ -26,7 +26,7 @@
 
 /* PERL 6 convert functions */
 
-static inline void convert_to_perl6_structure (halstring* hals) {
+/*static inline void convert_to_perl6_structure (halstring* hals) {
 
     if (strstr(hals->s, "compile source " )) {
         hals = replace(hals, "compile source ", "");
@@ -423,9 +423,6 @@ void execute_perl6(char* filename) {
     int      status;
     const char *sourcefile;
 
-    /* internationalization setup */
-    /* setlocale(LC_ALL, ""); */
-
     PARROT_BINDTEXTDOMAIN(PACKAGE, LOCALEDIR);
     PARROT_TEXTDOMAIN(PACKAGE);
 
@@ -434,9 +431,6 @@ void execute_perl6(char* filename) {
     interp = Parrot_new(NULL);
     imcc_initialize(interp);
 
-    /* We parse the arguments, but first store away the name of the Parrot
-       executable, since parsing destroys that and we want to make it
-       available. */
     fprintf(output(), "%s\n", "Set name...");
     Parrot_set_executable_name(interp, string_from_cstring(interp, "FreeHAL", 0));
 
@@ -459,7 +453,10 @@ void execute_perl6(char* filename) {
     }
 
     fprintf(output(), "%s\n", "Destroy Parrot...");
-    /* Clean-up after ourselves */
     Parrot_destroy(interp);
 }
+*/
 
+char* convert_to_perl6 (char* hals) {}
+int convert_to_perl6_convert_file(const char* filename) {}
+void execute_perl6(const char* filename) {}

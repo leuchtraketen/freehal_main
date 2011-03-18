@@ -313,8 +313,20 @@ define action reread_pro_file with var file, var lang do
     # CODE
     do hal2009_send_signal with "add_pro_file", var file
     do trigger_check_files without arguments
+done
 
-    do wait 2 seconds
+define action reread_xml_file with var file, var lang do
+    if exists: "SLOW", end test do
+        print "Don't read a .xml file in SLOW mode."
+        print new line
+        do return with 1
+    done
+    do wait 1 seconds
+    # TEXT
+    # Write the signal file for re-reading
+    # CODE
+    do hal2009_send_signal with "add_xml_file", var file
+    do trigger_check_files without arguments
 done
 
 define action work_prot_line with var input, var file_name, var lang, var path do
@@ -834,7 +846,7 @@ define action correct_human_edit_typos with var file, var current_language, var 
         
         do regex with var line: /<[;]>{2}/ -> "<>"
         do regex with var line: /^((?:.*?<[<]><[>]>\s+?){6,})\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
-
+#print var line concat new line
         if var line matches /^<[=]> / and var line matches /\(true\)/ do
             do regex with var line: /\(true\)/ -> "(maybe)"
         done
@@ -998,7 +1010,98 @@ define action init_pro_files with var current_language, var path do
 
             done
             else do
-                print "No changes have been made in file "
+                print "No changes in file "
+                print var file
+                print "."
+                print new line
+            done
+        done
+    done
+    print "Done..."
+    print new line
+done
+
+define action init_xml_files with var current_language, var path do
+    if exists: "SLOW", end test do
+        print "Don't read the .xml files in SLOW mode."
+        print new line
+        do return with 1
+    done
+
+    set new var save_path to var path concat '/saved/'
+    do mkdir with var save_path
+    set var save_path to var save_path concat var current_language concat '/'
+    do mkdir with var save_path
+    set new array sub_directories to [ '', '/thesaurus' ]
+    push into array sub_directories, '/namen'
+    push into array sub_directories, '/berufe'
+    push into array sub_directories, '/ps_dateien'
+    push into array sub_directories, '/wiki'
+    push into array sub_directories, '/fakten'
+
+    for each new var sub_dir in array sub_directories is copy do
+        set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+
+        do opendir with new var dir_handle, var language_directory
+        set new array files to [ sort(readdir(var dir_handle)) ]
+        # TEXT
+        # Read all .xml files by sending a signal to the C thread
+        # CODE
+        for each new var file_name in array files is rw do
+            #print var file_name concat "..."
+            #print new line
+
+            do be_slow without arguments
+            set new var file to var language_directory concat '/' concat var file_name
+
+            if not var file matches /\.xml$/ do
+                go to next
+            done
+
+            set new var check_input_handle_one to handle for file name var file, read
+            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var i to 1
+            for each new var line from var check_input_handle_one is rw do
+                set var i to var i + 1 + length(var line)
+            done
+            set new var j to 1
+            for each new var line from var check_input_handle_two is rw do
+                set var j to var j + 1 + length(var line)
+            done
+            do close with var check_input_handle_one
+            do close with var check_input_handle_two
+
+            if not var i is var j do
+
+                print "Read file "
+                print var file
+                print new line
+
+                # TEXT
+                # Write the signal file
+                # CODE
+                do hal2009_send_signal with "add_xml_file", var file
+                do trigger_check_files without arguments
+
+                #do wait 1 seconds
+
+                # TEXT
+                # Wait...
+                # CODE
+                do hal2009_fetch_signal with "add_xml_file"
+
+                set new var copy_input_handle to handle for file name var file, read
+                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                for each new var line from var copy_input_handle is rw do
+                    print into var copy_output_handle data var line
+                    print into var copy_output_handle data new line
+                done
+                do close using var copy_output_handle
+                do close using var copy_input_handle
+
+            done
+            else do
+                print "No changes in file "
                 print var file
                 print "."
                 print new line
@@ -1012,16 +1115,8 @@ done
 define action link_facts with var type, var f1, var f2 do
     print "Linking " concat var f1 concat " and " concat var f2 concat " as " concat var type
     print new line
-    set new var output_handle to handle for file name "_output__link", write
-        print into var output_handle data var type
-        print into var output_handle data new line
-        print into var output_handle data var f1
-        print into var output_handle data new line
-        print into var output_handle data var f2
-        print into var output_handle data new line
-    do close with var output_handle
 
-    do trigger_check_files without arguments
+    do hal2009_send_signal with "output_link", var type concat new line concat var f1 concat new line concat var f2 concat new line
 done
 
 define action init with var current_language, var path do
@@ -1030,5 +1125,7 @@ define action init with var current_language, var path do
     do init_csv_files with var current_language, var path
     do init_prot_files with var current_language, var path
     do init_pro_files with var current_language, var path
+    do init_xml_files with var current_language, var path
 done
+
 
