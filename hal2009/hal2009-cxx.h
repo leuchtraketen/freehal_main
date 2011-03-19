@@ -20,22 +20,6 @@
 */
 
 
-#include <cmath>
-#include <cstdio>
-#include <cstring>
-#include <cerrno>
-#include <cstring>
-#include <stdarg.h>
-#include <pthread.h>
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-#include <string>
-#include <map>
-
 // Boost headers
 #undef BOOST_ASIO_HAS_EPOLL
 #undef BOOST_ASIO_HAS_KQUEUE
@@ -53,6 +37,22 @@
 #undef BOOST_ASIO_HAS_EPOLL
 #undef BOOST_ASIO_HAS_KQUEUE
 #undef BOOST_ASIO_HAS_DEV_POLL
+
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <cerrno>
+#include <cstring>
+#include <stdarg.h>
+#include <pthread.h>
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <cstdlib>
+#include <vector>
+#include <string>
+#include <map>
 
 using namespace std;
 using namespace boost;

@@ -22,6 +22,7 @@
 #include "hal2009.h"
 #include "hal2009-main.h"
 #include "hal2009-ipc.h"
+#include "hal2009-pro.h"
 
 BEGIN_EXTERN_C
 #include "hal2009-wiki-dummy.c"
@@ -33,7 +34,7 @@ extern "C" void extract();
 
 int usage (string exe_name) {
     fprintf(stderr, "%s%s%s",
-"Usage: ", exe_name, " OPTION...\n"
+"Usage: ", exe_name.c_str(), " OPTION...\n"
 "FreeHAL is a self-learning conversation simulator, an artificial \n"
 "intelligence using semantic nets to organize its knowledge.\n"
 "\n"

@@ -32,8 +32,6 @@ project (FreeHAL)
 if(MINGW)
 
 include_directories (.) 
-include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include /compiler/boost) 
-include_directories (/usr/local/include /usr/local/lib)
 
 add_executable (hal2009 hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
 target_link_libraries (hal2009 m pthread z)
