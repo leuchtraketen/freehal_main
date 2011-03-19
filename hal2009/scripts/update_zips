@@ -1,34 +1,33 @@
+#!/bin/bash
+export LC_ALL=C
+
 rm fh-*.zip
 
-cmake .
-make hal2009
+zip -r fh-102.zip lang_{de,en}/*.{pro,xml,csv}
+zip -r fh-102.zip lang_{de,en}/{berufe,fakten,namen,ps_dateien}/*.{pro,xml,csv}
+zip -r fh-102.zip lang_{de,en}/word*.{brain,memory,self-taggered}
+zip -d fh-102.zip lang_{de,en}/facts.pro
 
-zip -r fh-102.zip lang_de/*.pro
-zip -r fh-102.zip lang_de/*.csv
-zip -r fh-102.zip lang_de/{berufe,fakten,namen,ps_dateien}/*.pro
-zip -r fh-102.zip lang_de/word*.{brain,memory,self-taggered}
-zip -d fh-102.zip lang_de/facts.pro
-zip -r fh-102.zip lang_en/*.pro
-zip -r fh-102.zip lang_en/*/*.pro
-zip -r fh-102.zip lang_en/word_*
-zip -d fh-102.zip lang_en/facts.pro
-zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm *.php *.pm
+zip -r fh-101.zip hal*.hal */*.hal .version view.png logo.png img/icon.png strict.pm *.php *.pm
 
 rm *.hal.{pl,tmp}
-for x in hal*.hal tests/*.hal
-do
-    ./hal2009 -c $x
-    zip -r fh-101.zip $x
-    zip -r fh-101.zip $x.pl
-done
 
-rm saved/*
-cp lang_de/*.pro lang_de/*/*.pro saved/
-#zip -r fh-102.zip saved/
+rm -rf saved/*
+cp lang_de/*.{pro,xml,csv} lang_de/*/*.{pro,xml,csv} saved/de/
+cp lang_en/*.{pro,xml,csv} lang_en/*/*.{pro,xml,csv} saved/de/
 
 REV=$(echo -n $(svn info | grep Revision: | cut -d" " -f2))
 
 mv fh-101.zip fh-1-$REV.zip
 mv fh-102.zip fh-2-$REV.zip
+
+#cmake .
+#make hal2009
+#for x in hal*.hal tests/*.hal
+#do
+#    ./hal2009 -c $x
+#    zip -r fh-101.zip $x
+#    zip -r fh-101.zip $x.pl
+#done
 
 true

@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_ALL=C
 
 test -d /var/lib/apt && (
 	echo Install dependencies

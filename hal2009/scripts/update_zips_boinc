@@ -1,3 +1,6 @@
+#!/bin/bash
+export LC_ALL=C
+
 svn up
 
 scripts/update_zips
