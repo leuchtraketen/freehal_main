@@ -8,7 +8,7 @@ zip -r fh-102.zip lang_{de,en}/{berufe,fakten,namen,ps_dateien}/*.{pro,xml,csv}
 zip -r fh-102.zip lang_{de,en}/word*.{brain,memory,self-taggered}
 zip -d fh-102.zip lang_{de,en}/facts.pro
 
-zip -r fh-101.zip hal*.hal */*.hal .version view.png logo.png img/icon.png strict.pm *.php *.pm
+zip -r fh-101.zip hal*.hal .version view.png logo.png img/icon.png strict.pm *.php *.pm
 
 rm *.hal.{pl,tmp}
 
