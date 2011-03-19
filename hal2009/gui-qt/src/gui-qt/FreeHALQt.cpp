@@ -1068,7 +1068,7 @@ void Dialog3::on_changelog_clicked() {
 void Dialog4::init_changelog() {
     freehal::string all;
 
-    ifstream i("gpl.txt");
+    ifstream i("doc/gpl-3.0.txt");
     freehal::string temp;
     while (i) {
         getline(i, temp.ref());
