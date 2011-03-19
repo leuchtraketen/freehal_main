@@ -83,6 +83,9 @@ mv FreeHAL-*.exe ./win-compile/
 
 cd gui-qt/
 echo Upload...
-scp -C ../win-compile/FreeHAL-QT.exe tobias@freehal.net:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
-scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@freehal.net:/disk/compiler/add2/source/hal2009/
+for x in freehal.net cloud-2.freehal.net
+do
+	scp -C ../win-compile/FreeHAL-QT.exe tobias@cloud-2.freehal.net:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
+	scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@cloud-2.freehal.net:/disk/compiler/add2/source/hal2009/
+done
 echo Upload done.

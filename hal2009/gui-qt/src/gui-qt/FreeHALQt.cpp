@@ -328,17 +328,9 @@ void FreeHALWindow::on_flowchart_fact_edit_clicked() {
 
 
 void Helper::exitNow() {
-        /*int ret = QMessageBox::warning(main_window, tr("FreeHAL"),
-            tr("Should FreeHAL continue in the background?"),
-            QMessageBox::Yes | QMessageBox::No,
-            QMessageBox::No);
+    freehal::comm_send("EXIT:EXIT");
+    stop_runner();
 
-        if (ret == QMessageBox::No) {
-        */
-    	freehal::comm_send("EXIT:EXIT");
-        stop_runner();
-
-        //}
     delete dialog_options;
     delete dialog_help;
     delete dialog_changelog;
@@ -422,6 +414,7 @@ int windows_compile_runner() {
 }
 
 int windows_stop_runner() {
+    freehal::comm_send("EXIT:EXIT");
     ofstream _exit_by_user("_exit_by_user");
     _exit_by_user.close();
 
@@ -517,6 +510,7 @@ int compile_runner() {
 
 int stop_runner() {
     cout << "stop server..." << endl;
+    freehal::comm_send("EXIT:EXIT");
 #ifdef linux
     std::system("pwd");
     linux_stop_runner();
