@@ -731,6 +731,14 @@ void hal2009_server_client_connection(tcp::iostream* stream) {
             (*stream) << "REINDEX:SUCCESS" << endl << "REINDEX:SUCCESS" << endl;
         }
 
+        if ( result->at(0) == string("READ") && result->at(1) == string("XML") ) {
+            hal2009_add_xml_file(result->at(2));
+        }
+        
+        if ( result->at(0) == string("LIST") && result->at(1) == string("XML") ) {
+            hal2009_add_xml_file(result->at(2));
+        }
+
         if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
             struct RECORD r;
             strcpy(r.pkey, result->at(3).c_str());
