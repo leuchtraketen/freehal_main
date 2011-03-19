@@ -570,6 +570,7 @@ void perl5_execute(string filename) {
             cout << "get (hal->c): IPC:" << endl;
             std::string vfile;
             std::getline(*child_stdout, vfile);
+            trim(vfile);
             cout << vfile << endl;
             
             std::string data;
@@ -578,6 +579,7 @@ void perl5_execute(string filename) {
                 data += data.size()?"\n":"";
                 data += data_line;
                 std::getline(*child_stdout, data_line);
+                trim(data_line);
                 cout << data_line << endl;
             }
             
