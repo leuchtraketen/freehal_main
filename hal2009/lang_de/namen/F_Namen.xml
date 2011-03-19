@@ -1,0 +1,1280 @@
+<fact>
+  <subject>(a) name</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>fidel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabiana</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabiane</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabrizia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fabrizius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fadri</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fadrina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falco</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falko</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>famke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>farald</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faralt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>farina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>farold</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>farolt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faustinus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faustus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faviola</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fee</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felician</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felicianus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feline</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felix</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felizia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felizian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felizitas</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>femke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>femmy</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fenja</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fenna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fenne</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferdi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferdinand</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferdinanda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferdinande</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fernandine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>festina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidelis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidelius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fido</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fiete</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filarete</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filibert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filiberta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filipp</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>finetta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>finja</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>finn</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fiona</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>flemming</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>flora</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florens</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florentin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florentina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florentine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florenz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florenzia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florestan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>floriana</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>floriane</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>florus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>folke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>folko</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fortunat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fortunatus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fraenzi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franciscus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frank</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franka</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franko</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franzi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franziska</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franziskus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frauke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frede</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fredegar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frederice</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frederik</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frederika</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frederike</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fredi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fredy</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freimut</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freja</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frida</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fridenand</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fridolin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fridrun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fridurich</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frieda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedalotta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedbert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friede</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedebrecht</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedegund</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedemann</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frieder</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friederich</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friederika</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friederike</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedger</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedhelm</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedhilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedhold</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedwart</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frieso</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frisch</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friso</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frithjof</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fritz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frodo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frowin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

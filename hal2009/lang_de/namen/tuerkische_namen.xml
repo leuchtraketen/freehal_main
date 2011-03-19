@@ -1,0 +1,8100 @@
+<fact>
+  <subject>abdul</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abdul</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ada</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ada</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahmed</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahmed</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahmet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahmet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>akin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>akin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alara</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alara</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aleyna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aleyna</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aliye</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aliye</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alkim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alkim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alparslan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alparslan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alpay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alpay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>altair</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>altair</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anvi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anvi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>argun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>argun</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arife</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arife</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arslan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arslan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arzu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arzu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asiye</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asiye</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asuman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asuman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aydin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aydin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayfer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayfer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aykut</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aykut</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayla</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aylin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aylin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayse</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayse</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayseguel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ayseguel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aysun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aysun</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aytac</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aytac</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>azdin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>azdin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>azize</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>azize</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bahar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bahar</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bahire</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bahire</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>banu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>banu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baran</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baran</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baris</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baris</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>batu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>batu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>batuhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>batuhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bayram</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bayram</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bebisim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bebisim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beguem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beguem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bekir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bekir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belma</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belma</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berfin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berfin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkant</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkant</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berkay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betuel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betuel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beyza</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beyza</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>billur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>billur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buelent</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buelent</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buenyamin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buenyamin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buersa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buersa</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bumin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bumin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burak</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burak</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burcu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burcu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cagdas</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cagdas</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>canan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>canan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>caner</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>caner</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cansu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cansu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>casin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>casin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>celan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>celan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cemil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cemil</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cengiz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cengiz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cenk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cenk</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceren</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceren</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cevat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cevat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cevet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cevet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceyda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceyda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceylan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceylan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceylin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ceylin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cigdem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cigdem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cihan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cihan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cueneyd</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cueneyd</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>damla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>damla</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>danis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>danis</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dawoud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dawoud</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>defne</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>defne</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>demir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>demir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deniz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deniz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>derya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>derya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>devran</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>devran</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilara</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilara</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilek</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dilek</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>duenya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>duenya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>duygu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>duygu</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ebru</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ebru</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ecrin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ecrin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>efe</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>efe</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ege</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ege</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ehab</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ehab</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ekrem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ekrem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elanur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elanur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elif</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elif</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elife</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elife</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eljesa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eljesa</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elma</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elma</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elvan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elvan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emina</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emine</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emirhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emirhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emrah</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emrah</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emre</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>emre</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ender</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ender</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enes</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enes</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>engin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>engin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enis</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enver</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enver</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erdal</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erdal</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erdem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erdem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eren</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eren</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erguen</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erguen</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erol</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erol</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eron</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eron</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersen</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersen</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ersin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ertan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ertan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esen</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esen</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esma</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esma</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faruk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faruk</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fathin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fathin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehime</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehime</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehmi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fehmi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferhat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferhat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feridi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feridi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fethullah</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fethullah</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feyza</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feyza</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fikret</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fikret</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filiz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filiz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>firat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>firat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>firdevs</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>firdevs</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fuat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fuat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>funda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>funda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>furkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>furkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gamze</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gamze</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gizem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gizem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goekhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goekhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelbin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelbin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelcan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelcan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelistan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelistan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelnaz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelnaz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelsah</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelsah</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelten</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guelten</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guenes</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guenes</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guerbis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guerbis</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gueven</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gueven</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hadice</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hadice</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hakan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hakan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hakime</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hakime</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halil</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halime</subject>
+  <object>ein name</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halime</subject>
+  <object>ein tuerkischer vorname</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halit</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hamdi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hamdi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hamide</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hamide</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>handan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>handan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hanife</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hanife</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hatce</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hatce</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hayat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hayat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hicran</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hicran</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hilal</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hilal</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hmanit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hmanit</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huedanur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huedanur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huelya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huelya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huerriyet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huerriyet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hueseyin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hueseyin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilayda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilayda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilker</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ilker</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ipek</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ipek</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ired</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ired</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>irem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>irem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ismet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ismet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>iteri</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>iteri</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>izel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>izel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>izzetin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>izzetin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jale</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jale</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kadir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kadir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karanfil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karanfil</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kayra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kayra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kemal</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kemal</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kiymet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kiymet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>koray</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>koray</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>korut</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>korut</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kuebra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kuebra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lale</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lale</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lamya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lamya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>levent</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>levent</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leyla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leyla</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lokman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lokman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maali</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maali</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahmud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahmud</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahoud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mahoud</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maide</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maide</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>makbule</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>makbule</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>medine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>medine</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehmed</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehmed</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehmet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehmet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehtap</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehtap</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melek</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melek</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melih</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melih</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meliha</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meliha</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melika</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melika</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melike</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melike</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meltem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meltem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meral</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meral</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merdin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merdin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mert</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merve</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merve</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meryem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meryem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mesut</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mesut</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>metin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>metin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meyra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meyra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>milana</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>milana</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mirac</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mirac</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>miray</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>miray</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mirza</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mirza</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muege</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muege</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muejgan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muejgan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>murat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>murat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>musa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>musa</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mustafa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mustafa</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muzafer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muzafer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muzaffer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muzaffer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nadir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nadir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nadira</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nadira</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nasir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nasir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>necati</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>necati</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>necela</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>necela</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nergis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nergis</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nergiz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nergiz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nermin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nermin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neslihan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neslihan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nesrin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nesrin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neval</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neval</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nevin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nevin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nevzat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nevzat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nihan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nihan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nilay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nilay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niyazi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niyazi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nura</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nura</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nurdan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nurdan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oemer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oemer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oemuer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oemuer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oender</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oender</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezge</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezge</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezguer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezguer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezlem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezlem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezuer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oezuer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>okan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>okan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oktay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oktay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>onur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>onur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orcun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orcun</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>osman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>osman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ozan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ozan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pervin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pervin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pinar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pinar</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rabia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rabia</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramadan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramadan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramazan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramazan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramiz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramiz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rasim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rasim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>recep</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>recep</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>remzi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>remzi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reyhan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reyhan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rifat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rifat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rojin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rojin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rona</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rona</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ruhsar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ruhsar</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rukiye</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rukiye</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ruveyda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ruveyda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sahin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sahin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salah</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salah</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salih</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salih</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sami</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sami</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samya</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samya</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>satet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>satet</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>savas</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>savas</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schahin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schahin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seckin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seckin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sedat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sedat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sefika</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sefika</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selcuk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selcuk</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selma</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selma</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selver</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selver</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selvi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>selvi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semih</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semih</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semiha</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semiha</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sena</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sena</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sener</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sener</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serap</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serap</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serdar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serdar</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serhat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serhat</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serpil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>serpil</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sertac</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sertac</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seval</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seval</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevda</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevgi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevgi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevil</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevinc</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sevinc</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seyma</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seyma</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sezer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sezer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shermin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shermin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shirin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shirin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sibel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sibel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sinan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sinan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sinem</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sinem</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>songuel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>songuel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sudenaz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sudenaz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sueheyla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sueheyla</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>suekrue</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>suekrue</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sueleyman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sueleyman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>suleiman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>suleiman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sultan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sultan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taha</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taha</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tahira</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tahira</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taner</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taner</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tansel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tansel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarek</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarek</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarik</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarik</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tariq</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tariq</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tayfun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tayfun</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taylan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taylan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tayyip</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tayyip</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tekin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tekin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timucin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timucin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tolga</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tolga</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tuelay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tuelay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tufan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tufan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tugba</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tugba</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tuncay</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tuncay</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>uemit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>uemit</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>uenal</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>uenal</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ufuk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ufuk</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ugur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ugur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>umut</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>umut</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>usman</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>usman</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>veysel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>veysel</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>volkan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>volkan</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yagmur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yagmur</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yakup</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yakup</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yaren</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yaren</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasar</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasemin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasemin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yasin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yavuz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yavuz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yeliz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yeliz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yesim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yesim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yessin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yessin</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yildiz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yildiz</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yonca</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yonca</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yorgi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yorgi</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yudum</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yudum</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yunus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yunus</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zafer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zafer</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zafire</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zafire</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zahir</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zahir</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaim</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaim</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaima</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaima</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaynab</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zaynab</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zehra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zehra</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeliha</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeliha</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zelis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zelis</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zelisa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zelisa</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeqije</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeqije</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeynep</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zeynep</subject>
+  <object>(a) tuerkischer vorname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

@@ -1,0 +1,20 @@
+<fact>
+  <subject>ich</subject>
+  <object>die naechsten lottozahlen</object>
+  <verb>kenne</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>deine freundin</object>
+  <verb>kenne</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>

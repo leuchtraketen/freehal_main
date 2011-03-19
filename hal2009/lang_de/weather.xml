@@ -1,0 +1,200 @@
+<fact>
+  <subject>es</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>in frankfurt am main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>1.8 grad celsius</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt am main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>1.8 grad</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt am main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) temperatur</subject>
+  <object>1.8 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt am main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) wetter</subject>
+  <object>bei 1.8 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt am main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>1.7 grad celsius</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>1.7 grad</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) temperatur</subject>
+  <object>1.7 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) wetter</subject>
+  <object>bei 1.7 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>2.9 grad celsius</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>2.9 grad</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) temperatur</subject>
+  <object>2.9 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) wetter</subject>
+  <object>bei 2.9 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>4.4 grad celsius</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>4.4 grad</object>
+  <verb>sind</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) temperatur</subject>
+  <object>4.4 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) wetter</subject>
+  <object>bei 4.4 grad</object>
+  <verb>is-a</verb>
+  <adverbs>in frankfurt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

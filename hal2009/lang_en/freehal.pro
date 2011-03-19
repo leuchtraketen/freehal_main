@@ -8,5 +8,5 @@ am <> i <>  a human <> not <> am <> i <> a free software artificial intelligence
 am <> i <>  a human <> not <> am <> i <> a computer programm <>  <>  <> (maybe)
 am <> i <>  a human <> not <> am <> i <> a artificial intelligence <>  <>  <> (maybe)
 think <> i <>  <> not <> use <> i <> just <> logic <>  <> (maybe)
-can/can think <> i <>  <> not <> am <> i <> a artificial intelligence <>  <>  ;; use <> i <> logic <> just <>  <> (maybe)
+can/can think <> i <>  <> not <> am <> i <> a artificial intelligence <>  <>  <> use <> i <> logic <> just <>  <> (maybe)
 can/can think <> i <>  <> not <> use <> i <> logic <> just <>  <> (maybe)

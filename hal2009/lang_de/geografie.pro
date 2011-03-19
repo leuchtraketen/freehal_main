@@ -8,7 +8,7 @@
 = <> rhodos <> insel <>  <> (maybe)
 = <> rhodos <> sonneninsel <>  <> (maybe)
 = <> rhodos <> urlaubsinsel <>  <> (maybe)
-= <> thiersee <> ort <> in tirol  <> (true)
+= <> thiersee <> ort <> in tirol  <> (maybe)
 = <> universum <> gesamtheit aller dinge <>  <> (maybe)
 aufgeht <> die sonne <> nothing <> in dem osten <> 50
 aufgenommen wurde <> die ddr <> 1973 <> in die uno <> (true)
@@ -1475,7 +1475,7 @@ is-a <> (the) tarim <> 2000 kilometer lang <>  <> (true)
 is-a <> (the) teck <> (a) fluss <>  <> (true)
 is-a <> (the) tejo <> (a) fluss <>  <> (true)
 is-a <> (the) temperatur <> etwa 15 millionen grad <> in dem zentrum der sonne <> (true)
-is-a <> (the) tene kouron <> (the) hoechste berg <> burkina faso <>  <>  >< 50
+is-a <> (the) tene kouron <> (the) hoechste berg <> burkina faso <>  <>  <> 50
 is-a <> (the) tene kouron <> 747 meter <> hoch <> (true)
 is-a <> (the) thabana ntlenyana <> 3482 meter <> hoch <> (true)
 is-a <> (the) themse <>  <> (a) fluss <> (true)

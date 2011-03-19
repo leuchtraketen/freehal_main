@@ -8,7 +8,7 @@
 = <> (a) _kondom_ <> (a) _verhuetungsmittel_ <>  <> (maybe)
 = <> (a) _wurst_ <> (a) _laengliches_fleischprodukt_ <>  <> (maybe)
 = <> _albert_einstein_ <> _genie_ <>  <> (maybe)
-= <> _babylon_5_ <> fernsehserie <>  <> (true)
+= <> _babylon_5_ <> fernsehserie <>  <> (maybe)
 = <> _distributed_computing_ <> _verteiltes_rechnen_ <>  <> (maybe)
 = <> _einstein_ <> _genie_ <>  <> (maybe)
 = <> _genie_ <> _intelligent_ <>  <> (maybe)

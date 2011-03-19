@@ -8,7 +8,6 @@
 = <> _yak_ <> _jak_ <> (maybe)
 = <> _yangtsekiang_ <> _jangtsekiang_ <> (maybe)
 = <> _yangtsekiang_ <> _jangtse_ <> (maybe)
-= <> _yaoundé_ <> _hauptstadt_von_kamerun_ <> (maybe)
 = <> _yaoundé_ <> _jaunde_ <> (maybe)
 = <> _y-koordinate_ <> _ordinatenachse_ <> (maybe)
 = <> _y-koordinate_ <> _ordinate_ <> (maybe)

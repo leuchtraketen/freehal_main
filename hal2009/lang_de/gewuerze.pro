@@ -1,5 +1,5 @@
 = <> _bergthymian_ <> _thymian_ <>  <> 50
-= <> _quendel_ <> _thymian_ <>  <> (true)
+= <> _quendel_ <> _thymian_ <>  <> (maybe)
 is-a <> anis <> (a) gewuerz <>  <> (true)
 is-a <> apfelkuchengewuerz <> (a) gewuerz <>  <> (true)
 is-a <> baerlauch <> (a) gewuerz <>  <>  <>  <> nothing <>  <>  <>  <> (true)
