@@ -60,7 +60,8 @@ void extract() {
         DIR *hdir;
 
 #if defined (__MINGW) || defined(__MINGW32__)
-        struct direct *entry;
+//      struct direct *entry;
+        struct dirent *entry;
 #else
         struct dirent *entry;
 #endif

@@ -1,0 +1,2 @@
+#define FULL_NAME "FreeHAL"
+#define FULL_VERSION 00000

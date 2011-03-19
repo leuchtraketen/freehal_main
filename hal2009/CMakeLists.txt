@@ -1,4 +1,4 @@
-#
+
 # This file is part of FreeHAL 2009.
 #
 # Copyright(c) 2006, 2007, 2008, 2009 Tobias Schulz and contributors.
@@ -33,16 +33,18 @@ if(MINGW)
 
 include_directories (.) 
 include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include /compiler/boost) 
-include_directories (/compiler/lib /compiler/include perl5/ parrot/include /add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
+include_directories (/usr/local/include /usr/local/lib)
 
 add_executable (hal2009 hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
-target_link_libraries (hal2009 m pthreadGC2 z)
+target_link_libraries (hal2009 m pthread z)
 
-add_executable (runner hal2009-download.cpp hal2009-wiki.cpp hal2009-server.cpp /compiler/boost/libs/thread/src/tss_null.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c /compiler/boost/libs/thread/src/win32/exceptions.cpp /compiler/boost/libs/thread/src/win32/thread.cpp /compiler/boost/libs/thread/src/win32/tss_dll.cpp /compiler/boost/libs/thread/src/win32/tss_pe.cpp hal2009-crash.c precompiled/mingw/mingw_ntdll-a_RtlCaptureStackBackTrace.o hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
-target_link_libraries (runner m /compiler/lib/libboost_system-mgw-mt-1_37.a /compiler/lib/libboost_iostreams-mgw-mt-1_37.a pthread pthreadGC2 z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 /compiler/lib/libpthreadGC2.a /source/hal2009/mingw_ntdll.a)
+add_executable (runner hal2009-download.cpp hal2009-wiki.cpp hal2009-server.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
+target_link_libraries (runner m pthread pthread z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 boost_iostreams-mt boost_system-mt boost_thread_win32-mt)
 
-add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp /compiler/lib/libpthread.a /compiler/boost/libs/thread/src/tss_null.cpp diagnostics_win.C sqlite3.c extract_with_unzipper.c unzipper.c unzip.c libcrypto.a libgdi32.a libsched.a libssl.a iowin32.c ioapi.c hal2009-wiki-dummy.c boinc_api.o hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
-target_link_libraries (hal2009-boinc m pthread pthreadGC2 boinc boinc_api boinc_zip boinc_graphics2 z)
+#set_target_properties("runner" PROPERTIES COMPILE_FLAGS "-DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 ")
+
+#add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzipper.c unzip.c iowin32.c ioapi.c hal2009-wiki-dummy.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp)
+#target_link_libraries (hal2009-boinc m pthread pthreadGC2 boinc boinc_api boinc_zip boinc_graphics2 z)
 
 ###################################################
 ##

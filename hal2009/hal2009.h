@@ -22,8 +22,7 @@
 #ifndef HAL2009
 #define HAL2009 1
 
-#define FULL_NAME "FreeHAL"
-#define FULL_VERSION 00000
+#include "hal2009-version.h"
 
 // C or C++? Windows or POSIX?
 #if defined (USE_CXX) || defined(__cplusplus)
@@ -56,6 +55,13 @@
 #endif
 
 #include "hal2009-as.h"
+
+#ifdef WINDOWS
+#   include <winsock2.h>
+#   include <windows.h>
+#   define sleep(x) Sleep(1000*(x))
+#   define usleep(x) Sleep(x)
+#endif
 
 #endif /* HAL2009 */
 

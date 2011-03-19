@@ -83,12 +83,6 @@ void *realloc (void*, size_t);
 #define matchstr(a, b) (0 == strcmp(( a ),( b )))
 #define output() (stdout)
 
-#ifdef WINDOWS
-#   include <windows.h>
-#   define sleep(x) Sleep(1000*(x))
-#   define usleep(x) Sleep(x)
-#endif
-
 /*
 #   define _set_stdout(x) { if (x) { _iob[STDOUT_FILENO] = *(x) ; } else { 1; } }
 #else

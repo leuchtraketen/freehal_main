@@ -42,7 +42,10 @@
 #undef BOOST_ASIO_HAS_DEV_POLL
 #define BOOST_ASIO_DISABLE_EPOLL 1
 #ifndef NO_ASIO_HERE
-#include <boost/asio.hpp>
+#   ifdef WINDOWS
+#       include <winsock2.h>
+#   endif
+#   include <boost/asio.hpp>
 #endif
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
