@@ -563,6 +563,8 @@ void perl5_execute(string filename) {
     child_stdin = &c.get_stdin();
     hal2009_send_signals();
     std::string line;
+    
+    ofstream log("log.txt");
 
     vector<pthread_t> threads;
     while (std::getline(*child_stdout, line)) {
@@ -597,7 +599,11 @@ void perl5_execute(string filename) {
             }
         }
         else {
-            std::cout << line << std::endl;
+#ifdef WINDOWS
+            log << line << endl;
+#else
+            cout << line << endl;
+#endif
         }
     }
     int k;
