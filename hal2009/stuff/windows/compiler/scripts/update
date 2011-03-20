@@ -29,14 +29,6 @@ fi
 export RR=$(echo $R | sed 's@[^0-9]@@igm')
 sed -i "s@00000@$RR@igm" hal2009-version.h
 
-(
-	mkdir -p stuff/windows/compiler/{scripts,local}
-	cp -rf /compiler/{scripts,cmake,qmake} stuff/windows/compiler/
-	cp -rf /compiler/local/{bin,lib} stuff/windows/compiler/local/
-	svn add stuff/windows/*
-	svn commit stuff -m "update compiler backup"
-) &
-
 make clean
 rm -rf CMakeCache.txt CMakeFiles
 cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
@@ -122,3 +114,10 @@ export DLL=$(echo \
 	ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
 )
 
+(
+	mkdir -p stuff/windows/compiler/{scripts,local}
+	cp -rf /compiler/{scripts,cmake,qmake} stuff/windows/compiler/
+	cp -rf /compiler/local/{bin,lib} stuff/windows/compiler/local/
+	svn add stuff/windows/*
+	svn commit stuff -m "update compiler backup"
+)
