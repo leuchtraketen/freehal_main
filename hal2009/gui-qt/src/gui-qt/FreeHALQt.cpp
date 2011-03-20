@@ -33,6 +33,7 @@
 
 #ifndef linux
 # ifndef __APPLE__
+#  include <winsock2.h>
 #  include <windows.h>
 # endif
 #endif

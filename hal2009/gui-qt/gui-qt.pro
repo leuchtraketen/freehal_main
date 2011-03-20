@@ -1,7 +1,7 @@
 CONFIG += qt \
     thread \
     phonon
-CONFIG += uitools
+#CONFIG += uitools
 QT += network
 QMAKE_CXXFLAGS += -g \
     -O1 \
@@ -14,27 +14,20 @@ QMAKE_LFLAGS += -g \
     -O3 \
     -Ilib/asio/
 win32 { 
-    QMAKE_LFLAGS += -L. \
-        -lwinmm \
-        -luuid \
-        -lws2_32 \
-        -lmswsock \
-        -lwsock32 \
-        -lole32 \
-        -DBOOST_WINDOWS=1
+    LIBS += -lm -lz -lmsvcrt -lcrypt32 -lws2_32 -lmswsock -lwsock32 -lole32 -loleaut32 -lwinmm -luuid -lgdi32 \
+        -lboost_thread_win32-mt \
+        -lboost_system-mt
     QMAKE_CXXFLAGS += -g \
         -O1 \
         -O2 \
-        -O3 \
-        -Ilib/asio/ \
-        -IZ:\temp\Symlink-data\workspace\FreeHAL\gui-qt\lib\asio
+        -O3 
     QMAKE_LFLAGS += -lws2_32 \
         -g \
         -O1 \
         -O2 \
-        -O3 \
-        -Ilib/asio/ \
-        -IZ:\temp\Symlink-data\workspace\FreeHAL\gui-qt\lib\asio
+        -O3 
+    TARGET = FreeHAL-QT
+    SOURCES += src/speech/speak_win.cpp
 }
 unix { 
     INCLUDEPATH += /usr/include/python2.5/

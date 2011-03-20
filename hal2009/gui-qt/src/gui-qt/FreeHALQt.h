@@ -55,7 +55,7 @@
 
 #include <QtGui/QApplication>
 #include <QtGui/QPainter>
-#include <QtUiTools/QUiLoader>
+//#include <QtUiTools/QUiLoader>
 #include <QtGui/QMainWindow>
 #include <QtGui/QWidget>
 #include <QtCore/QFile>
