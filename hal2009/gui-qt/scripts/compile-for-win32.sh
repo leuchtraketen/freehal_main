@@ -85,7 +85,9 @@ cd gui-qt/
 echo Upload...
 for x in freehal.net cloud-2.freehal.net
 do
-	scp -C ../win-compile/FreeHAL-QT.exe tobias@cloud-2.freehal.net:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
-	scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@cloud-2.freehal.net:/disk/compiler/add2/source/hal2009/
+	scp -C ../win-compile/FreeHAL-QT.exe tobias@$x:/disk/compiler/add2/source/hal2009/FreeHAL-QT.exe
+	scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@$x:/disk/compiler/add2/source/hal2009/
+	scp -C ../win-compile/FreeHAL-QT.exe tobias@$x:/disk/compiler-win32/compiler/precompiled/
+	scp -C ../win-compile/FreeHAL-Online-Demo.exe tobias@$x:/disk/compiler-win32/compiler/precompiled/
 done
 echo Upload done.
