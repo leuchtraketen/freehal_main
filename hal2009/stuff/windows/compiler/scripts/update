@@ -1,0 +1,124 @@
+#!/bin/bash
+export LC_ALL=C
+
+export TARGET="/var/log/compiler-update.log"
+rm -f $TARGET
+# file descriptor 4 prints to STDOUT and to TARGET
+exec 4> >(while read a; do echo $a; echo $a >>$TARGET; done)
+# file descriptor 5 remembers STDOUT
+exec 5>&1
+# now STDOUT is redirected
+exec >&4
+
+
+if test ! -d /compiler/hal2009/
+then
+	cd /compiler
+	svn co http://www.freehal.org/code/hal2009
+fi
+
+cd /compiler/hal2009
+svn cleanup ; svn cleanup
+svn revert hal2009-version.h
+svn up --non-interactive ; svn up --non-interactive
+export R=svn$(svn up --non-interactive | sed 's@[^0-9]@@igm')
+if [ "x$1" != "x" ]
+then
+        export R="$1"
+fi
+export RR=$(echo $R | sed 's@[^0-9]@@igm')
+sed -i "s@00000@$RR@igm" hal2009-version.h
+
+(
+	mkdir -p stuff/windows/compiler/{scripts,local}
+	cp -rf /compiler/{scripts,cmake,qmake} stuff/windows/compiler/
+	cp -rf /compiler/local/{bin,lib} stuff/windows/compiler/local/
+	svn add stuff/windows/*
+	svn commit stuff -m "update compiler backup"
+) &
+
+make clean
+rm -rf CMakeCache.txt CMakeFiles
+cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
+ln -sf /compiler/local/lib/* /opt/mingw32/i686-w64-mingw32/lib/
+make clean
+rm -f runner.exe
+make runner
+/opt/mingw32/bin/i686-w64-mingw32-strip runner.exe
+
+export DLL=$(echo \
+		/opt/mingw32/bin/zlib1.dll \
+		/compiler/local/lib/libboost_system-mt.dll \
+		/compiler/local/lib/libboost_thread_win32-mt.dll \
+		/compiler/local/bin/pthreadGC2.dll \
+		/opt/mingw32/bin/QtCore4.dll \
+		/opt/mingw32/bin/QtGui4.dll \
+)
+
+(
+	cd gui-qt
+
+	qmake -spec cross-mingw-g++ gui-qt.pro
+	make
+	qmake -spec cross-mingw-g++ online-demo.pro
+	make
+
+	cd ..
+)
+
+(
+	rm -rf Freehal-Online-Demo/
+	mkdir Freehal-Online-Demo
+	cp gui-qt/FreeHAL-Online-Demo.exe $DLL Freehal-Online-Demo/
+	upx Freehal-Online-Demo/*
+	zip -r /tmp/freehal-${R}-online-demo-windows.zip Freehal-Online-Demo/
+	scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-${R}-online-demo-windows.zip
+	scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-latest-online-demo-windows.zip
+)
+
+(
+	rm -rf Freehal/
+	mkdir Freehal/
+	cp runner.exe gui-qt/FreeHAL-QT.exe $DLL Freehal/
+	./scripts/update_zips
+	cd Freehal && unzip ../fh-1*.zip && echo A | unzip ../fh-2*.zip && cd ..
+	mkdir Freehal/temp
+	mkdir -p Freehal/{lang_en,temp,ui,img,saved/de,saved/en,doc}
+	cp gui-qt/ui/*.{svg,png} Freehal/ui/
+	cp gui-qt/*.{png,gif} Freehal/
+	cp img/* Freehal/img/
+	cp doc/* Freehal/doc/
+	cp -rf runtime-perl5-win32/ Freehal/
+	find Freehal/lang_de/ -name "*.pro" -exec cp '{}' Freehal/saved/de \;
+	find Freehal/lang_en/ -name "*.pro" -exec cp '{}' Freehal/saved/en \;
+	find Freehal/lang_de/ -name "*.xml" -exec cp '{}' Freehal/saved/de \;
+	find Freehal/lang_en/ -name "*.xml" -exec cp '{}' Freehal/saved/en \;
+	find Freehal/lang_de/ -name "*.csv" -exec cp '{}' Freehal/saved/de \;
+	find Freehal/lang_en/ -name "*.csv" -exec cp '{}' Freehal/saved/en \;
+	find Freehal/lang_de/ -name "*.prot" -exec cp '{}' Freehal/saved/de \;
+	find Freehal/lang_en/ -name "*.prot" -exec cp '{}' Freehal/saved/en \;
+	find Freehal -name ".svn" -exec rm -rf '{}' \;
+
+# no database
+	rm -rf /tmp/freehal-${R}-no-database-windows.zip
+	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-no-database-windows.zip Freehal-${R} && mv Freehal-${R} Freehal
+	scp -C /tmp/freehal-${R}-no-database-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
+	rm /tmp/freehal-${R}-no-database-windows.zip
+
+# with database
+	for x in lang_de/database*
+	do
+		ln -f $x Freehal/$x
+	done
+	for x in /from-cloud/databases/database*
+	do
+		ln -f $x Freehal/lang_de/
+	done
+	rm -rf /tmp/freehal-${R}-windows.zip
+	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-windows.zip Freehal-${R} && mv Freehal-${R} Freehal
+	scp -C /tmp/freehal-${R}-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
+	rm /tmp/freehal-${R}-windows.zip
+
+	ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
+)
+

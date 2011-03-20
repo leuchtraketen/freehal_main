@@ -1,0 +1,62 @@
+#!/bin/bash
+
+#sudo aptitude install mingw32 mingw32-binutils mingw32-runtime nsis subversion cmake
+# python-software-properties is for add-apt-repository!!
+sudo aptitude install nsis subversion cmake python-software-properties zip upx-ucl openssh-client
+mkdir -p /compiler/local/{include,lib,bin}
+
+sudo add-apt-repository "deb http://ppa.launchpad.net/tobydox/mingw/ubuntu lucid main "
+sudo aptitude update
+sudo aptitude install mingw32-x-binutils mingw32-x-gcc mingw32-x-runtime mingw-x-w32api
+
+
+######################
+# pthreads
+
+#rm -rf /compiler/pthreads
+#mkdir /compiler/pthreads
+#cd /compiler/pthreads
+#wget 'http://www.mirrorservice.org/sites/sourceware.org/pub/pthreads-win32/pthreads-w32-2-8-0-release.tar.gz'
+#tar xvfz pthreads-w32-2-8-0-release.tar.gz
+#cd pthreads-w32-2-8-0-release
+#make CROSS=/opt/mingw32/bin/i686-w64-mingw32- GC-inlined
+#cp libpthreadGC2.a /compiler/local/lib
+#cp *.h /compiler/local/include
+#cp pthreadGC2.dll /compiler/local/bin
+#ln -s libpthreadGC2.a /compiler/local/lib/libpthread.a
+
+######################
+# boost
+
+rm -rf /compiler/boost
+mkdir /compiler/boost
+cd /compiler/boost
+wget "http://downloads.sourceforge.net/project/boost/boost/1.46.1/boost_1_46_1.tar.gz?r=&ts=1300559256&use_mirror=netcologne"
+
+tar xzf boost_1_*tar*
+rm boost_1_*tar*
+
+cd boost_1_* 
+./bootstrap.sh --without-icu
+ 
+echo "using gcc : 4.4 : /opt/mingw32/bin/i686-w64-mingw32-g++
+        :
+        <rc>/opt/mingw32/bin/i686-w64-mingw32-windres
+        <archiver>/opt/mingw32/bin/i686-w64-mingw32-ar
+;" > user-config.jam
+cat user-config.jam
+ 
+./bjam toolset=gcc target-os=windows variant=release threading=multi threadapi=win32\
+    link=shared runtime-link=shared --prefix=/compiler/local --user-config=user-config.jam -j 2\
+    --without-mpi --without-python -sNO_BZIP2=1 -sNO_ZLIB=1 --layout=tagged install
+
+######################
+# correct mingw bugs
+
+sed -i 's@if 0@if 1@gm' /opt/mingw32/i686-w64-mingw32/include/psdk_inc/_socket_types.h
+
+######################
+# setup Qt
+
+mkdir /usr/share/qt4/mkspecs/cross-mingw-g++/
+cp /compiler/qmake/qmake.conf /usr/share/qt4/mkspecs/cross-mingw-g++/qmake.conf
