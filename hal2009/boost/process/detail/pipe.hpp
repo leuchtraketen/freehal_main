@@ -125,7 +125,8 @@ public:
         } 
         ::CloseHandle(overlapped.hEvent); 
 #  else 
-//        if (!::CreatePipe(&hs[0], &hs[1], &sa, 0)) 
+        if (!::CreatePipe(&hs[0], &hs[1], &sa, 0)) 
+            boost::throw_exception(boost::system::system_error(boost::system::error_code(::GetLastError(), boost::system::get_system_category()), "boost::process::detail::pipe::pipe: CreatePipe failed")); 
 //            boost::throw_exception(boost::system::system_error(::GetLastError(), boost::system::system_category, "boost::process::detail::pipe::pipe: CreatePipe failed")); 
 #  endif 
 #endif 
