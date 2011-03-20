@@ -127,7 +127,7 @@ inline std::string find_executable_in_path(const std::string &file, std::string 
 #endif 
 
     if (result.empty()) 
-        cerr << "boost::throw_exception(boost::filesystem::filesystem_error(\"boost::process::find_executable_in_path: file not found\", file, boost::system::errc::make_error_code(boost::system::errc::no_such_file_or_directory))); " << endl << "(at boost/process/operations.hpp)" << endl;
+        std::cerr << "boost::throw_exception(boost::filesystem::filesystem_error(\"boost::process::find_executable_in_path: file not found\", file, boost::system::errc::make_error_code(boost::system::errc::no_such_file_or_directory))); " << std::endl << "(at boost/process/operations.hpp)" << std::endl;
 //        boost::throw_exception(boost::filesystem::filesystem_error("boost::process::find_executable_in_path: file not found", file, boost::system::errc::make_error_code(boost::system::errc::no_such_file_or_directory))); 
 
     return result; 
