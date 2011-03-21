@@ -37,7 +37,7 @@ int catchf(const char* fmt, void* arg1) {
         snprintf(tmp, 255, fmt, arg1);
     }
     else {
-        snprintf(tmp, 255, fmt);
+        snprintf(tmp, 255, "%s", fmt);
     }
     if (len_catched + 256 < size_catched) {
         strcat(catched, tmp);
@@ -104,10 +104,7 @@ struct word* get_word(const char* name) {
 long can_be_a_pointer(void* _p) {
     long p = (long)_p;
     if (p < 0) p = -p;
-    if (p > 1000000*1000*100) {
-        return 1;
-    }
-    if (p > 10000) {
+    if (p > 100000) {
         return 1;
     }
     if (p == (long)INVALID_POINTER) {
@@ -555,7 +552,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
             if (begin_level_1 - 0 > 0) {
                 char** exps = synonyms_to_expressions(synonyms, 0, begin_level_1);
                 struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
-                if (facts_synonyms != TOOMUCH) {
+                if (facts_synonyms != TOOMUCH_P) {
                     synonyms = put_search_synonyms(exp, "", synonym_verbs, "", USE_OBJECTS, facts_synonyms, synonyms, position, 1, FORWARD);
                     free_facts_synonyms(facts_synonyms);
                 }
@@ -569,7 +566,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
             if (begin_level_2 - begin_level_1 > 0) {
                 char** exps = synonyms_to_expressions(synonyms, begin_level_1, begin_level_2);
                 struct fact** facts_synonyms = search_facts_synonyms("", (const char **)exps, "", 0, synonym_verbs, "", "", "", "default");
-                if (facts_synonyms != TOOMUCH) {
+                if (facts_synonyms != TOOMUCH_P) {
                     int f;
                     for (f = 0; facts_synonyms[f]; ++f) {
                         if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "ps-")) {
@@ -591,8 +588,8 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
         if (begin_level_3-begin_level_2 < 39) {
             if (begin_level_3 - begin_level_2 > 0) {
                 char** exps = synonyms_to_expressions(synonyms, begin_level_2, begin_level_3);
-                struct fact** facts_synonyms = search_facts_synonyms("", (const char*)exps, "", 0, synonym_verbs, "", "", "", "default");
-                if (facts_synonyms != TOOMUCH) {
+                struct fact** facts_synonyms = search_facts_synonyms("", (const char**)exps, "", 0, synonym_verbs, "", "", "", "default");
+                if (facts_synonyms != TOOMUCH_P) {
                     int f;
                     for (f = 0; facts_synonyms[f]; ++f) {
                         if (can_be_a_pointer(facts_synonyms[f]) && can_be_a_pointer(facts_synonyms[f]->filename) && strstr(facts_synonyms[f]->filename, "ps-")) {
@@ -641,7 +638,7 @@ struct synonym** add_synonyms_by_search(const char** exps, struct synonym** syno
 }
 
 struct word*** filter_synonyms(struct synonym** synonyms, int level, short direction) {
-    char*** filtered = calloc(sizeof(char*), max_synonym_count+1);
+    struct word*** filtered = calloc(sizeof(char*), max_synonym_count+1);
 
     int i;
     int k = 0;
@@ -692,7 +689,7 @@ struct synonym** add_synonyms(const char* exp, const char** _exps, struct synony
     debugf("synonyms: '%s'\n", category);
 
     /// single value and array...
-    char** exps = _exps;
+    const char** exps = _exps;
     short free_exps =  0;
     if (exp && !exps) {
         exps = calloc(sizeof(const char*), max_synonym_count+1);
@@ -755,10 +752,10 @@ struct synonym** add_synonyms(const char* exp, const char** _exps, struct synony
                     int f;
                     for (f = 0; part_synonyms[j][f]; ++f) {
                         struct word** words = calloc(sizeof(struct word*), max_entity_words_count*max_entity_words_count +1);
-                        copy_list(0, -1, 0, -1, words, last_new_synonyms[n]->words, except_article);
-                        int k = next_in_list(words);
-                        copy_list(k, -1, 0, -1, words, part_synonyms[j][f]->words, except_article);
-                        if (k == next_in_list(words)) {
+                        copy_list(0, -1, 0, -1, (void **)words, (void **)last_new_synonyms[n]->words, except_article);
+                        int k = next_in_list((void **)words);
+                        copy_list(k, -1, 0, -1, (void **)words, (void **)part_synonyms[j][f]->words, except_article);
+                        if (k == next_in_list((void **)words)) {
                             free(words);
                         }
                         else {
@@ -766,12 +763,12 @@ struct synonym** add_synonyms(const char* exp, const char** _exps, struct synony
                         }
                     }
                 }
-                printf("size: last_new_synonyms=%d\n", next_in_list(last_new_synonyms));
+                printf("size: last_new_synonyms=%d\n", next_in_list((void **)last_new_synonyms));
                 free(last_new_synonyms);
                 last_new_synonyms = new_synonyms;
 
-                printf("part_synonyms[%d]=%d\n", j, next_in_list(part_synonyms[j]));
-                printf("size: new_synonyms=%d\n", next_in_list(new_synonyms));
+                printf("part_synonyms[%d]=%d\n", j, next_in_list((void **)part_synonyms[j]));
+                printf("size: new_synonyms=%d\n", next_in_list((void **)new_synonyms));
             }
             printf("4\n");
 
@@ -1071,7 +1068,7 @@ int matches(const char* a, const char* b) {
 //                        catchf("going on...\n", 0);
                         c += i+1;
                         size -= i;
-                        i = INVALID_POINTER;
+                        i = -1;
                     }
                 }
             }
@@ -1191,7 +1188,7 @@ int _diff(int a, int b) {
 
 int fact_matches_entity_by_entity(struct word** words, struct word*** request_words, int flags, const char* comment) {
     if (!request_words[0]) {
-        catchf(comment, -1);
+        catchf(comment, (void **)-1);
         return -1;
     }
     
@@ -1331,17 +1328,17 @@ int fact_matches_entity_by_entity(struct word** words, struct word*** request_wo
         }
 
         if (count_requests == 0) {
-            catchf("  (the following match is '-1' because: count_requests = 0)\n", -1);
-            catchf(comment, -1);
+            catchf("  (the following match is '-1' because: count_requests = 0)\n", (void **)-1);
+            catchf(comment, (void **)-1);
             return -1;
         }
 
         if (does_match)  {
-            catchf(comment, does_match);
+            catchf(comment, (void **)does_match);
             return does_match;
         }
     }
-    catchf(comment, 0);
+    catchf(comment, (void **)0);
     return 0;
 }
 
@@ -2411,7 +2408,7 @@ struct fact** search_facts_simple(struct synonym_set* synonym_set, const char* s
         int l;
         for (l = 0; can_be_a_pointer(list[l]) || INVALID_POINTER == list[l]; ++l) {
             if (can_be_a_pointer(list[l])) {
-                printf("list[l]->verbs: %d\n", list[l]->verbs);
+                printf("list[l]->verbs: %d\n", (int)list[l]->verbs);
                 if (can_be_a_pointer(list[l]->verbs) && can_be_a_pointer(list[l]->verbs[0]) && can_be_a_pointer(list[l]->verbs[0]->name)) {
                     printf("list[l]->verbs[0]->name: %s\n", list[l]->verbs[0]->name);
                     if (is_a_fact_verb(list[l]->verbs[0]->name) && strlen(verbs)) {
@@ -2633,81 +2630,6 @@ struct fact** search_facts_synonyms(const char* subjects, const char** subjects_
     return list;
 }
 
-char* replace_chars(char* data, char a, char b) {
-    int i;
-    for (i = 0; i < strlen(data); ++i) {
-        data[i] = (data[i] == a ? b : data[i]);
-    }
-
-    return data;
-}
-
-char* cut_newlines(char* data) {
-    data = replace_chars(data, '\r', '\0');
-    data = replace_chars(data, '\n', '\0');
-
-    return data;
-}
-
-char* generalize_verb(char* verb) {
-    {
-        char* verb_1_chk =        "|=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are|";
-        char* verb_1     = strdup( "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are");
-
-        char* verb_chk   = calloc(strlen(verb)+3, 1);
-        sprintf(verb_chk, "|%s", verb);
-        if (strstr(verb_chk, "0")) {
-            strstr(verb_chk, "0")[0] = '\0';
-        }
-        if (strstr(verb_chk, "1")) {
-            strstr(verb_chk, "1")[0] = '\0';
-        }
-        printf("strstr: Is '%s' in '%s'?\n", verb_chk, verb_1_chk);
-        if (strstr(verb_1_chk, verb_chk)) {
-            printf("  yes.\n");
-            free(verb_chk);
-            return (verb_1);
-        }
-        else {
-            printf("  no.\n");
-            free(verb_chk);
-            free(verb_1);
-        }
-    }
-
-    {
-        char filename[100];
-        snprintf(filename, 99, "lang_%s/verbs.csv", hal2009_get_text_language());
-        FILE* file = fopen(filename, "r");
-        if (file) {
-            char* buffer;
-            while (file && (buffer = halgetline(file)) != NULL) {
-                buffer = cut_newlines(buffer);
-                char* verb_chk   = calloc(strlen(verb)+4, 1);
-                sprintf(verb_chk, ",%s,", verb);
-                char* buffer_chk = calloc(strlen(buffer)+4, 1);
-                sprintf(buffer_chk, ",%s,", buffer);
-
-                char* to_return = 0;
-                printf("strstr(\"%s\", \"%s\")\n", buffer_chk, verb_chk);
-                if (strstr(buffer_chk, verb_chk)) {
-                    to_return = strdup(buffer);
-                    to_return = replace_chars(to_return, ',', '|');
-                }
-
-                if (buffer) free(buffer);
-                if (verb_chk) free(verb_chk);
-                if (buffer_chk) free(buffer_chk);
-
-                if (to_return) {
-                    return(to_return);
-                }
-            }
-            fclose(file);
-        }
-    }
-    return (strdup(verb));
-}
 
 struct request* negotiate_deep_search(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, const struct fact* if_clause, const struct fact* then_clause, int level, int direction) {
     struct request* req = calloc(sizeof(struct request), 1);

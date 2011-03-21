@@ -789,3 +789,34 @@ EXTERN_C char* halgetline(FILE *handle) {
     return line;
 }
 
+EXTERN_C char* generalize_verb(char* _verb) {
+    string verb = _verb;
+
+    {
+        string verb_1 = "=|bi|is|bin|bist|ist|sind|seid|heisst|heisse|heissen|sei|war|wurde|wurden|werden|werde|wirst|wurdest|wurde|wuerdet|werdet|is|am|are";
+        if (("|" + verb_1 + "|").find("|" + verb) != string::npos) {
+            return strdup(verb_1.c_str());
+        }
+    }
+
+    {
+        string filename = "lang_" + string(hal2009_get_text_language()) + "/verbs.csv";
+        ifstream file(filename.c_str());
+        if (file.is_open()) {
+            string buffer;
+            while (getline(file, buffer)) {
+                trim(buffer);
+
+                char* to_return = 0;
+                if ((","+buffer+",").find(","+verb+",") != string::npos) {
+                    buffer = replace(buffer, ",", "|");
+                    return(strdup(buffer.c_str()));
+                }
+            }
+            file.close();
+        }
+    }
+    return (strdup(_verb));
+}
+
+
