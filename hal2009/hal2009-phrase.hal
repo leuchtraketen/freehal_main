@@ -142,11 +142,11 @@ define action phrase_fact with array sentence, array clause, var final_sentence,
     set new var verb_options to from array proper_verbs 1st element
 
     set new var subject_article to ""
-    if from array clause 2nd element matches /\(a\)/ do
+    if from array clause 2nd element matches /\(a\)/ or var verb_options matches /(indef)/ do
         set var subject_article to get_article with var subject_genus, "subject", "indefinite"
         do regex with from array clause 2nd element: /\(a\)\s+?/ -> "" :global
     done
-    if from array clause 2nd element matches /\(the\)/ do
+    if from array clause 2nd element matches /\(the\)/ or var verb_options matches /(def)/ do
         set var subject_article to get_article with var subject_genus, "subject", "definite"
         do regex with from array clause 2nd element: /\(the\)\s+?/ -> "" :global
     done
@@ -183,7 +183,11 @@ define action phrase_fact with array sentence, array clause, var final_sentence,
 
         # subject article
         if var subject_article is true or ( var verb_options not matches /^equal-pl/ and from array clause 2nd element not matches /.((?:\s.*?\s)|<[_]>|<[0-9]>)./ and var verb_options matches /(def|indef)/ ) do
+print "a" concat new line
+print (var is_name_subject is false) concat " or " concat (var is_collective_noun_subject is true) concat " or " concat (var subject_article is true) concat new line
             if var is_name_subject is false or var is_collective_noun_subject is true or var subject_article is true do
+
+print "var subject_article" concat var subject_article concat new line
                 push into array sentence, var subject_article
             done
         done

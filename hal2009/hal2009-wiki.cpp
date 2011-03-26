@@ -77,30 +77,60 @@ string delete_bad_chars(const string& _s, short with_star, short with_underscore
 
 const string define_general_verb(const string& sentence, const string& entity) {
 
-    int position_ist = sentence.find(" ist ");
-    int position_sind = sentence.find(" sind ");
-    int position_war = sentence.find(" war ");
-    int position_waren = sentence.find(" waren ");
+    int position_ist = sentence.find(hal2009_get_text_language()=="de"?" ist ":" is ");
+    int position_sind = sentence.find(hal2009_get_text_language()=="de"?" sind ":" are ");
+    int position_war = sentence.find(hal2009_get_text_language()=="de"?" war ":" was ");
+    int position_waren = sentence.find(hal2009_get_text_language()=="de"?" waren ":" were ");
     int position_dot = sentence.find(".");
+    if (position_dot == string::npos) position_dot = sentence.size();
     int position_komma = sentence.find(",");
+    if (position_komma == string::npos) position_komma = sentence.size();
+
     int position_article_indef = 0;
-    if (position_article_indef == 0) position_article_indef = sentence.find("Ein ");
-    if (position_article_indef == 0) position_article_indef = sentence.find("Eine ");
-    if (position_article_indef == 0) position_article_indef = sentence.find("ein ");
-    if (position_article_indef == 0) position_article_indef = sentence.find("eine ");
+    vector<string> articles_indef;
+    if (hal2009_get_text_language() == "de") {
+        articles_indef.push_back("ein");
+        articles_indef.push_back("eine");
+        articles_indef.push_back("Ein");
+        articles_indef.push_back("Eine");
+    }
+    if (hal2009_get_text_language() == "en") {
+        articles_indef.push_back("a");
+        articles_indef.push_back("A");
+    }
+    int i;
+    for (i = 0; i < articles_indef.size(); ++i) {
+        int pos = sentence.find(articles_indef[i] + " ");
+        if (pos != string::npos && (position_article_indef == 0 || pos < position_article_indef)) {
+            position_article_indef = pos;
+        }
+    }
+
     int position_article_def = 0;
-    if (position_article_def == 0) position_article_def = sentence.find("Der ");
-    if (position_article_def == 0) position_article_def = sentence.find("Die ");
-    if (position_article_def == 0) position_article_def = sentence.find("Das ");
-    if (position_article_def == 0) position_article_def = sentence.find("der ");
-    if (position_article_def == 0) position_article_def = sentence.find("die ");
-    if (position_article_def == 0) position_article_def = sentence.find("das ");
+    vector<string> articles_def;
+    if (hal2009_get_text_language() == "de") {
+        articles_def.push_back("der");
+        articles_def.push_back("die");
+        articles_def.push_back("das");
+        articles_def.push_back("Der");
+        articles_def.push_back("Die");
+        articles_def.push_back("Das");
+    }
+    if (hal2009_get_text_language() == "en") {
+        articles_def.push_back("the");
+        articles_def.push_back("The");
+    }
+    for (i = 0; i < articles_def.size(); ++i) {
+        int pos = sentence.find(articles_def[i] + " ");
+        if (pos != string::npos && (position_article_def == 0 || pos < position_article_def)) {
+            position_article_def = pos;
+        }
+    }
 
 
     if (sentence.find(" gehoeren") != string::npos && sentence.find(" gehoeren") < position_dot) {
         return "equal-pl-def";
     }
-
     if (position_article_def != string::npos && position_article_def < position_ist && position_ist < position_dot && position_article_def < position_komma) {
         return "equal-sg-def";
     }
@@ -158,26 +188,36 @@ string transform_sentence(const string& _sentence, const string& entity) {
     cout << "sentence: " << sentence << endl;
 
     vector<string> verbs;
-    verbs.push_back("ist");
-    verbs.push_back("sind");
-    verbs.push_back("war");
-    verbs.push_back("waren");
-    verbs.push_back("heissen");
-    verbs.push_back("versteht man");
-    verbs.push_back("bezeichnet man");
-    verbs.push_back("nennt man");
-    verbs.push_back("entspricht");
-    verbs.push_back("entsprechen");
-    verbs.push_back("gehoeren zu den");
-    verbs.push_back("gehoeren zu der");
-    verbs.push_back("gehoeren zu");
-    verbs.push_back("gehoert zu den");
-    verbs.push_back("gehoert zu der");
-    verbs.push_back("gehoert zu");
-    verbs.push_back("entsprach");
-    verbs.push_back("beschreibt");
-    verbs.push_back("beschreiben");
-    verbs.push_back("bezeichnet");
+    if (hal2009_get_text_language() == "de") {
+        verbs.push_back("ist");
+        verbs.push_back("sind");
+        verbs.push_back("war");
+        verbs.push_back("waren");
+        verbs.push_back("heissen");
+        verbs.push_back("versteht man");
+        verbs.push_back("bezeichnet man");
+        verbs.push_back("nennt man");
+        verbs.push_back("entspricht");
+        verbs.push_back("entsprechen");
+        verbs.push_back("gehoeren zu den");
+        verbs.push_back("gehoeren zu der");
+        verbs.push_back("gehoeren zu");
+        verbs.push_back("gehoert zu den");
+        verbs.push_back("gehoert zu der");
+        verbs.push_back("gehoert zu");
+        verbs.push_back("entsprach");
+        verbs.push_back("beschreibt");
+        verbs.push_back("beschreiben");
+        verbs.push_back("bezeichnet");
+    }
+    if (hal2009_get_text_language() == "en") {
+        verbs.push_back("is");
+        verbs.push_back("are");
+        verbs.push_back("was");
+        verbs.push_back("were");
+        verbs.push_back("means");
+        verbs.push_back("describes");
+    }
     
     string verb_str;
 
@@ -550,7 +590,7 @@ struct fact** search_facts_wiki_page(const string& __url, const string& entity_u
             fact->verbs        = divide_words(general_verb.c_str());
             fact->subjects     = divide_words(entity_upper.c_str());
             fact->objects      = divide_words(object.c_str());
-            fact->adverbs      = divide_words("...");
+            fact->adverbs      = divide_words("");
             fact->extra        = divide_words("");
             fact->questionword = strdup("");
             fact->filename     = strdup("");

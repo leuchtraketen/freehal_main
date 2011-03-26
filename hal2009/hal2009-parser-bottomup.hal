@@ -636,6 +636,9 @@ define action new_parser_start with array grammar, array data, var lang, var pat
 
     set new hash rules to list_grammar with array grammar
     set new hash parsed to match_in_grammar with hash rules, array data_pos, array data_words, array data
+    if hash parsed is false do
+        set hash parsed to fake_hash_parsed without arguments
+    done
 
     do return with hash parsed
 done

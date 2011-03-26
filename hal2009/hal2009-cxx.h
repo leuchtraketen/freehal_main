@@ -68,10 +68,13 @@ using boost::asio::ip::tcp;
 
 string ascii(const string& not_ascii);
 string& replace (string& in, const string& rep, const string& wit);
+const string& hal2009_get_text_language();
+int hal2009_set_text_language(const string&);
 
-int hal2009_compile(string file, string planguage);
-int hal2009_execute_code(string code, string planguage);
-int hal2009_execute_file(string file, string planguage);
-pthread_t hal2009_answer(string, string, string, string, int, short);
-void hal2009_init(string planguage, string tlanguage, string base_dir);
+int hal2009_compile(const string& file, const string& planguage);
+int hal2009_execute_code(const string& code, const string& planguage);
+int hal2009_execute_file(const string& file, const string& planguage);
+pthread_t hal2009_answer(const string&, const string&, const string&, const string&, int, short);
+void hal2009_init(const string& planguage, const string& tlanguage, const string& base_dir);
 int hal2009_add_xml_file (const string& filename);
+

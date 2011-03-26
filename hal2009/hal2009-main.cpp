@@ -24,10 +24,6 @@
 #include "hal2009-ipc.h"
 #include "hal2009-pro.h"
 
-BEGIN_EXTERN_C
-#include "hal2009-wiki-dummy.c"
-END_EXTERN_C
-
 extern "C" void extract();
 
 #include <getopt.h>

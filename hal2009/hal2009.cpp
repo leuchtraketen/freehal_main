@@ -26,13 +26,8 @@
 #include "hal2009-perl5.h"
 #include "hal2009-perl6.h"
 
-char* record_to_xml(struct RECORD* r);
-
-static int position_in_insertions = 0;
 char* sql_engine = 0;
-
-extern "C" int _debugf(const char* c, ...) {
-}
+string hal2009_text_language;
 
 extern "C" {
 int halusleep(double seconds) {
@@ -264,7 +259,6 @@ int hal2009_add_xml_file (const string& filename) {
 struct DATASET hal2009_get_csv(char* csv_request) {
     fprintf(output(), "Get CSV data: %s.\n", csv_request);
     sql_begin("");
-    position_in_insertions = 0;
 
     struct RECORD r;
     char* buffer;
@@ -386,7 +380,7 @@ char* hal2009_make_csv(struct DATASET* set) {
 /*
     The main compile function
 */
-int hal2009_compile(string file, string planguage) {
+int hal2009_compile(const string& file, const string& planguage) {
     if (planguage == "perl6") {
         perl6_convert_file(file.size() > 0 ? file : "hal2009.hal");
     }
@@ -395,7 +389,7 @@ int hal2009_compile(string file, string planguage) {
     }
 }
 
-int hal2009_execute_file(string file, string planguage) {
+int hal2009_execute_file(const string& file, const string& planguage) {
     if (planguage == "perl6") {
         perl6_execute(file.size() > 0 ? file : "hal2009.hal");
     }
@@ -407,7 +401,7 @@ int hal2009_execute_file(string file, string planguage) {
 /*
     The main execute function
 */
-int hal2009_execute_code(string code, string planguage) {
+int hal2009_execute_code(const string& code, const string& planguage) {
     ofstream codefile("temp.hal");
     codefile << code;
     codefile.close();
@@ -573,13 +567,15 @@ class params_answer {
     short start_type;
 };
 
-pthread_t hal2009_answer(string _input, string planguage, string tlanguage, string base_dir, int join, short start_type) {
+pthread_t hal2009_answer(const string& _input, const string& planguage, const string& tlanguage, const string& base_dir, int join, short start_type) {
     cout << "input: " << _input << endl;
 //    string input = ascii(_input);
 string input = _input;
     cout << "input: " << input << endl;
 
     hal2009_send_signal("input", input.c_str());
+
+    hal2009_set_text_language(tlanguage);
 
     pthread_t thread_no_1;
     params_answer* parameters = new params_answer();
@@ -663,7 +659,7 @@ void* hal2009_answer_thread(void* parameters) {
     return 0;
 }
 
-void hal2009_init(string planguage, string tlanguage, string base_dir) {
+void hal2009_init(const string& planguage, const string& tlanguage, const string& base_dir) {
 
     stringstream startfile;
     startfile << "compile source hal2009-lang-" << tlanguage << ".hal" << endl;
@@ -678,20 +674,17 @@ void hal2009_init(string planguage, string tlanguage, string base_dir) {
     hal2009_execute_code(content, planguage);
 }
 
-int hal2009_set_text_language(const char* s) {
-    if (!s) {
+int hal2009_set_text_language(const string& s) {
+    if (s.size()==0) {
         return INVALID;
     }
-    if (hal2009_text_language) {
-        free(hal2009_text_language);
-        hal2009_text_language = 0;
-    }
-    hal2009_text_language = strdup(s);
+    hal2009_text_language = s;
+    return 0;
 }
 
-const char* hal2009_get_text_language() {
-    if (!hal2009_text_language) {
-        hal2009_text_language = strdup("de");
+const string& hal2009_get_text_language() {
+    if (hal2009_text_language.size()==0) {
+        hal2009_text_language = "de";
     }
     return hal2009_text_language;
 }

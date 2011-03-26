@@ -1,14 +1,20 @@
+Carnivora:
+  count: 16
+  type: n
+Dog:
+  count: 16
+  type: n
 a:
-  count: 27
+  count: 41
   type: n
 artificial:
   count: 15
   type: adj
 basketball:
-  count: 4
+  count: 1
   type: n
 but:
-  count: 3
+  count: 12
   type: prep
 can:
   count: 16
@@ -20,6 +26,9 @@ computer:
 divided:
   count: 1
   type: v
+dog:
+  count: 18
+  type: n
 free:
   count: 5
   type: adj
@@ -27,7 +36,7 @@ freehal:
   count: 3
   type: n
 hockey:
-  count: 6
+  count: 15
   genus: s
   type: n
 huma:
@@ -59,10 +68,10 @@ software:
   genus: s
   type: n
 sphere:
-  count: 4
+  count: 13
   type: n
 sport:
-  count: 5
+  count: 14
   type: n
 think:
   count: 20
@@ -73,6 +82,7 @@ use:
 you:
   count: 38
   type: n
+.
 Freehal:
   type: n
 Nam:
@@ -87,6 +97,8 @@ cannot:
   type: v
 no:
   type: EXIT
+or:
+  type: linking
 project:
   type: n
 science:

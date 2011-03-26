@@ -198,6 +198,7 @@ define action hal2009_fetch_signal with var _vfile do
                 set var data to var data concat var data_line
                 print var data_line concat new line
             done
+            do regex with var data: /\s*?\.$/, ""
             
             if var vfile matches var _vfile do
                 do return with var data

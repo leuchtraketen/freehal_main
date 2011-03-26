@@ -491,7 +491,7 @@ int perl5_convert_file(string filename) {
     {
         std::ifstream code_tmp_i((filename + ".tmp").c_str());
         if (!code_tmp_i.is_open()) {
-            fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", (filename + ".tmp").c_str());
+//            fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", (filename + ".tmp").c_str());
         }
         else {
             std::stringstream ss;
