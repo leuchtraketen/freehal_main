@@ -34,16 +34,19 @@ cd freehal-svn
 echo Compile server
 (./configure && make hal2009-server) > compile-server.log 2>&1 || (echo Error: Compile server ; exit 0)
 mkdir -p saved/de saved/en
-cp lang_de/*.pro* lang_de/*/*.pro* saved/de/
-cp lang_en/*.pro* lang_en/*/*.pro* saved/en/
+cp lang_de/*.pro* lang_de/*/*.pro* lang_de/*.xml* lang_de/*/*.xml* saved/de/
+cp lang_en/*.pro* lang_en/*/*.pro* lang_en/*.xml* lang_en/*/*.xml* saved/en/
 
 echo Download database...
-wget http://www.freehal.org/download/database.db.main
-wget http://www.freehal.org/download/database.db.index
-wget http://www.freehal.org/download/database.db.cache
-mv database.db.main lang_de/
-mv database.db.index lang_de/
-mv database.db.cache lang_de/
+for x in en de
+do
+	wget http://www.freehal.org/download/${x}-database.db.main
+	wget http://www.freehal.org/download/${x}-database.db.index
+	wget http://www.freehal.org/download/${x}-database.db.cache
+	mv ${x}-database.db.main lang_de/database.db.main
+	mv ${x}-database.db.index lang_de/database.db.index
+	mv ${x}-database.db.cache lang_de/database.db.cache
+done
 
 cd gui-qt
 echo Compile GUI
