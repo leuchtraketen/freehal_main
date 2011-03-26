@@ -5,7 +5,7 @@ Dog:
   count: 16
   type: n
 a:
-  count: 41
+  count: 32
   type: n
 artificial:
   count: 15
@@ -14,7 +14,7 @@ basketball:
   count: 1
   type: n
 but:
-  count: 12
+  count: 8
   type: prep
 can:
   count: 16
@@ -36,7 +36,7 @@ freehal:
   count: 3
   type: n
 hockey:
-  count: 15
+  count: 11
   genus: s
   type: n
 huma:
@@ -68,10 +68,10 @@ software:
   genus: s
   type: n
 sphere:
-  count: 13
+  count: 9
   type: n
 sport:
-  count: 14
+  count: 10
   type: n
 think:
   count: 20
