@@ -217,6 +217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) iran</subject>
@@ -507,6 +517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nirvana</subject>

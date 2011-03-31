@@ -1,0 +1,16 @@
+#!/bin/bash
+
+rm -rf saved/
+mkdir saved/
+
+for l in de en
+do
+	mkdir saved/$l/
+
+	export ds=$(echo -n "./ "; cd lang_$l; echo */; cd ..)
+	for d in $ds
+	do
+		mkdir -p saved/$l/$d
+		cp -f lang_$l/${d}*.{pro,prot,xml,csv} saved/$l/$d 2>/dev/null
+	done
+done

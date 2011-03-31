@@ -7,6 +7,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>apple</subject>
@@ -17,6 +27,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein macintosh</subject>
@@ -27,6 +47,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein ipod</subject>
@@ -37,6 +67,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein iphone</subject>
@@ -47,6 +87,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein imac</subject>
@@ -57,6 +107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein mac mini</subject>
@@ -67,6 +127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein mac pro</subject>
@@ -77,6 +147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein macbook</subject>
@@ -87,6 +167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein macbook pro</subject>
@@ -97,6 +187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein xserve</subject>
@@ -107,6 +207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mac os x</subject>
@@ -117,6 +227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ilife</subject>
@@ -127,6 +247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>itunes</subject>
@@ -137,6 +267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>imovie</subject>
@@ -147,6 +287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>iphoto</subject>
@@ -157,6 +307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>iweb</subject>
@@ -167,6 +327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>idvd</subject>
@@ -177,6 +347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>garageband</subject>
@@ -187,6 +367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ilife</subject>
@@ -237,6 +427,16 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>iwork</subject>
@@ -247,6 +447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>pages</subject>
@@ -257,6 +467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>numbers</subject>
@@ -267,6 +487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>keynote</subject>
@@ -277,6 +507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>iwork</subject>
@@ -297,6 +537,16 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>final cut</subject>
@@ -307,6 +557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>aperture</subject>
@@ -317,6 +577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logic</subject>
@@ -327,6 +597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>adobe</subject>
@@ -337,6 +617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>photoshop</subject>
@@ -347,6 +637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lightroom</subject>
@@ -357,6 +657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>illustrator</subject>
@@ -367,6 +677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>flash</subject>
@@ -377,6 +697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>indesign</subject>
@@ -387,6 +717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>dreamweaver</subject>
@@ -397,6 +737,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>acrobat</subject>
@@ -407,6 +757,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kaspersky</subject>
@@ -417,6 +777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sophos</subject>
@@ -427,6 +797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>avira</subject>
@@ -437,6 +817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mcafee</subject>
@@ -447,6 +837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>g data</subject>
@@ -457,6 +857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>f-secure</subject>
@@ -467,6 +877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>norton</subject>
@@ -477,6 +897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>avg</subject>
@@ -487,6 +917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>alwil</subject>
@@ -497,6 +937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>avast</subject>
@@ -507,6 +957,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>acronis</subject>
@@ -517,6 +977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>vmware</subject>
@@ -527,6 +997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>parallels</subject>
@@ -537,6 +1017,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sun</subject>
@@ -547,6 +1037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>virtual box</subject>
@@ -557,6 +1057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>magix</subject>
@@ -567,6 +1077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>brenn-software</subject>
@@ -587,6 +1107,16 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nero</subject>
@@ -597,6 +1127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>roxio</subject>
@@ -607,6 +1147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>corel</subject>
@@ -617,6 +1167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>coreldraw</subject>
@@ -627,6 +1187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>paint shop pro</subject>
@@ -637,6 +1207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>photoimpact</subject>
@@ -647,6 +1227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>wordperfect</subject>
@@ -657,6 +1247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>winzip</subject>
@@ -667,6 +1267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>windvd</subject>
@@ -677,6 +1287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>videostudio</subject>
@@ -687,6 +1307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>corel painter</subject>
@@ -697,6 +1327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>quark</subject>
@@ -707,6 +1347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>quarkxpress</subject>
@@ -717,6 +1367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>medion</subject>
@@ -727,6 +1387,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>dell</subject>
@@ -737,6 +1407,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>acer</subject>
@@ -747,6 +1427,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -757,6 +1447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>asus</subject>
@@ -767,6 +1467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>toshiba</subject>
@@ -777,6 +1487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>fujitsu-siemens</subject>
@@ -787,6 +1507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -797,6 +1527,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lg</subject>
@@ -807,6 +1547,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>msi</subject>
@@ -817,6 +1567,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ibm</subject>
@@ -827,6 +1587,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>compaq</subject>
@@ -837,6 +1607,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lenovo</subject>
@@ -847,6 +1627,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>shuttle</subject>
@@ -857,6 +1647,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>asus</subject>
@@ -867,6 +1667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>asus</subject>
@@ -877,6 +1687,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -887,6 +1707,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lg</subject>
@@ -897,6 +1727,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lg</subject>
@@ -907,6 +1747,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>liteon</subject>
@@ -917,6 +1767,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>liteon</subject>
@@ -927,6 +1787,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -937,6 +1807,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -947,6 +1827,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sony optiarc</subject>
@@ -957,6 +1847,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sony optiarc</subject>
@@ -967,6 +1867,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>teac</subject>
@@ -977,6 +1887,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>teac</subject>
@@ -987,6 +1907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>intel</subject>
@@ -997,6 +1927,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>amd</subject>
@@ -1007,6 +1947,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>motorola</subject>
@@ -1017,6 +1967,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>arm</subject>
@@ -1027,6 +1987,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>via technologies</subject>
@@ -1037,6 +2007,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sun</subject>
@@ -1047,6 +2027,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sparc</subject>
@@ -1057,6 +2047,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>acer</subject>
@@ -1067,6 +2067,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>asus</subject>
@@ -1077,6 +2087,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>benq</subject>
@@ -1087,6 +2107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>eizo</subject>
@@ -1097,6 +2127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>fujitsu-siemens</subject>
@@ -1107,6 +2147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hannsg</subject>
@@ -1117,6 +2167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -1127,6 +2187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lenovo</subject>
@@ -1137,6 +2207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lg</subject>
@@ -1147,6 +2227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nec</subject>
@@ -1157,6 +2247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -1167,6 +2267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>viewsonic</subject>
@@ -1177,6 +2287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>canon</subject>
@@ -1187,6 +2307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>canon</subject>
@@ -1197,6 +2327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nikon</subject>
@@ -1207,6 +2347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nikon</subject>
@@ -1217,6 +2367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>panasonic</subject>
@@ -1227,6 +2387,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>olympus</subject>
@@ -1237,6 +2407,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>konica</subject>
@@ -1247,6 +2427,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>minolta</subject>
@@ -1257,6 +2447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>casio</subject>
@@ -1267,6 +2467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nikon</subject>
@@ -1277,6 +2487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>fujifilm</subject>
@@ -1287,6 +2507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hasselblad</subject>
@@ -1297,6 +2527,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>leica</subject>
@@ -1307,6 +2547,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>minox</subject>
@@ -1317,6 +2567,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ricoh</subject>
@@ -1327,6 +2587,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>rollei</subject>
@@ -1337,6 +2607,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sigma</subject>
@@ -1347,6 +2627,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sigma</subject>
@@ -1357,6 +2647,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>canon</subject>
@@ -1367,6 +2667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nikon</subject>
@@ -1377,6 +2687,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tamron</subject>
@@ -1387,6 +2707,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zeiss</subject>
@@ -1397,6 +2727,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>schneider kreuznach</subject>
@@ -1407,6 +2747,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>leica</subject>
@@ -1417,6 +2767,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tokina</subject>
@@ -1427,6 +2787,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>rollei</subject>
@@ -1437,6 +2807,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mamiya</subject>
@@ -1447,6 +2827,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>olympus</subject>
@@ -1457,6 +2847,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>phillips</subject>
@@ -1467,6 +2867,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>aeg</subject>
@@ -1477,6 +2887,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>auna</subject>
@@ -1487,6 +2907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bmf</subject>
@@ -1497,6 +2927,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bose</subject>
@@ -1507,6 +2947,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>buffalo</subject>
@@ -1517,6 +2967,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>creative</subject>
@@ -1527,6 +2987,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>denon</subject>
@@ -1537,6 +3007,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>dunlop</subject>
@@ -1547,6 +3027,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>grundig</subject>
@@ -1557,6 +3047,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hifonics</subject>
@@ -1567,6 +3067,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hitec</subject>
@@ -1577,6 +3087,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>jvc</subject>
@@ -1587,6 +3107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>karcher</subject>
@@ -1597,6 +3127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kenwood</subject>
@@ -1607,6 +3147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>koenig</subject>
@@ -1617,6 +3167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lenco</subject>
@@ -1627,6 +3187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lg</subject>
@@ -1637,6 +3207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>loewe</subject>
@@ -1647,6 +3227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -1657,6 +3247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>magnat</subject>
@@ -1667,6 +3267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>muvid</subject>
@@ -1677,6 +3287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>onkyo</subject>
@@ -1687,6 +3307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>panasonic</subject>
@@ -1697,6 +3327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>philips</subject>
@@ -1707,6 +3347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>roth audio</subject>
@@ -1717,6 +3367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -1727,6 +3387,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>schaub</subject>
@@ -1737,6 +3407,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sanyo</subject>
@@ -1747,6 +3427,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sharp</subject>
@@ -1757,6 +3447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sonos</subject>
@@ -1767,6 +3467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sony</subject>
@@ -1777,6 +3487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>soundmaster</subject>
@@ -1787,6 +3507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tcm</subject>
@@ -1797,6 +3527,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>teac</subject>
@@ -1807,6 +3547,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>telefunken</subject>
@@ -1817,6 +3567,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>thomson</subject>
@@ -1827,6 +3587,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>timetron</subject>
@@ -1837,6 +3607,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tivoli</subject>
@@ -1847,6 +3627,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>woerlein</subject>
@@ -1857,6 +3647,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>yamaha</subject>
@@ -1867,6 +3667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -1877,6 +3687,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>creative</subject>
@@ -1887,6 +3707,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>harman kardon</subject>
@@ -1897,6 +3727,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hercules</subject>
@@ -1907,6 +3747,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>labtec</subject>
@@ -1917,6 +3767,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lacie</subject>
@@ -1927,6 +3787,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ms-tech</subject>
@@ -1937,6 +3807,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>razer</subject>
@@ -1947,6 +3827,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>saitek</subject>
@@ -1957,6 +3847,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>speedlink</subject>
@@ -1967,6 +3867,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>teac</subject>
@@ -1977,6 +3887,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -1987,6 +3907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -1997,6 +3927,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -2007,6 +3947,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>logitech</subject>
@@ -2017,6 +3967,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>cherry</subject>
@@ -2027,6 +3987,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>cherry</subject>
@@ -2037,6 +4007,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>microsoft</subject>
@@ -2047,6 +4027,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>microsoft</subject>
@@ -2057,6 +4047,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>wacom</subject>
@@ -2067,6 +4067,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>aiptek</subject>
@@ -2077,6 +4087,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ch products</subject>
@@ -2087,6 +4107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>saitek</subject>
@@ -2097,6 +4127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>saitek</subject>
@@ -2107,6 +4147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>thrustmaster</subject>
@@ -2117,6 +4167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ocz</subject>
@@ -2127,6 +4187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>razer</subject>
@@ -2137,6 +4207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>razer</subject>
@@ -2147,6 +4227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>saitek</subject>
@@ -2157,6 +4247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>saitek</subject>
@@ -2167,6 +4267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>raptor-gaming</subject>
@@ -2177,6 +4287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>raptor-gaming</subject>
@@ -2187,6 +4307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>apple</subject>
@@ -2197,6 +4327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>enermax</subject>
@@ -2207,6 +4347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>keysonic</subject>
@@ -2217,6 +4367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>labtec</subject>
@@ -2227,6 +4387,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ms-tech</subject>
@@ -2237,6 +4407,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>speedlink</subject>
@@ -2247,6 +4427,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>apple</subject>
@@ -2257,6 +4447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>maxfield</subject>
@@ -2267,6 +4467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>philips</subject>
@@ -2277,6 +4487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sandisk</subject>
@@ -2287,6 +4507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>takems</subject>
@@ -2297,6 +4527,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>teac</subject>
@@ -2307,6 +4547,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>transcend</subject>
@@ -2317,6 +4567,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>creative</subject>
@@ -2327,6 +4587,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hauppauge</subject>
@@ -2337,6 +4607,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -2347,6 +4627,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sony</subject>
@@ -2357,6 +4647,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>toshiba</subject>
@@ -2367,6 +4667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>cisco</subject>
@@ -2377,6 +4687,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>netgear</subject>
@@ -2387,6 +4707,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>avm</subject>
@@ -2397,6 +4727,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zyxel</subject>
@@ -2407,6 +4747,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>d-link</subject>
@@ -2417,6 +4767,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>belkin</subject>
@@ -2427,6 +4787,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -2437,6 +4807,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>western digital</subject>
@@ -2447,6 +4827,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>seagate</subject>
@@ -2457,6 +4847,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>matrox</subject>
@@ -2467,6 +4867,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -2477,6 +4887,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hitachi</subject>
@@ -2487,6 +4907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lacie</subject>
@@ -2497,6 +4927,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>freecom</subject>
@@ -2507,6 +4947,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>iomega</subject>
@@ -2517,6 +4967,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>fujitsu-siemens</subject>
@@ -2527,6 +4987,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) usb-stick</subject>
@@ -2537,6 +5007,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sandisk</subject>
@@ -2547,6 +5027,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>trancend</subject>
@@ -2557,6 +5047,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kingston</subject>
@@ -2567,6 +5067,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>intenso</subject>
@@ -2577,6 +5087,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sony</subject>
@@ -2587,6 +5107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>a-data</subject>
@@ -2597,6 +5127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>corsair</subject>
@@ -2607,6 +5147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lacie</subject>
@@ -2617,6 +5167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>patriot</subject>
@@ -2627,6 +5187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>sharkoon</subject>
@@ -2637,6 +5207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>a-data</subject>
@@ -2647,6 +5227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>buffalo</subject>
@@ -2657,6 +5247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>corsair</subject>
@@ -2667,6 +5267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gskill</subject>
@@ -2677,6 +5287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>geil</subject>
@@ -2687,6 +5307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -2697,6 +5327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kingston</subject>
@@ -2707,6 +5347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mdt</subject>
@@ -2717,6 +5367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ocz</subject>
@@ -2727,6 +5387,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>patriot</subject>
@@ -2737,6 +5407,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -2747,6 +5427,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>takems</subject>
@@ -2757,6 +5447,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>trancend</subject>
@@ -2767,6 +5467,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>brother</subject>
@@ -2777,6 +5487,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>canon</subject>
@@ -2787,6 +5507,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>epson</subject>
@@ -2797,6 +5527,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -2807,6 +5547,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kyocera mita</subject>
@@ -2817,6 +5567,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lexmark</subject>
@@ -2827,6 +5587,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>oki</subject>
@@ -2837,6 +5607,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>samsung</subject>
@@ -2847,6 +5627,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>konica minolta</subject>
@@ -2857,6 +5647,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>seiko precision</subject>
@@ -2867,6 +5667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>canon</subject>
@@ -2877,6 +5687,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>epson</subject>
@@ -2887,6 +5707,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hewlett-packard</subject>
@@ -2897,6 +5727,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>microtek</subject>
@@ -2907,6 +5747,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>reflecta</subject>
@@ -2917,6 +5767,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>datalogic</subject>
@@ -2927,6 +5787,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>metrologic</subject>
@@ -2937,6 +5807,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tomtom</subject>
@@ -2947,6 +5827,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>garmin</subject>
@@ -2957,6 +5847,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>navigon</subject>
@@ -2967,6 +5867,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bluetech</subject>
@@ -2977,6 +5887,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>takems</subject>
@@ -2987,6 +5907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>varta</subject>
@@ -2997,6 +5927,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>varta</subject>
@@ -3007,6 +5947,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tesa</subject>
@@ -3017,6 +5967,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>pritt</subject>
@@ -3027,6 +5987,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>pelikan</subject>
@@ -3037,6 +6007,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>schneider</subject>
@@ -3047,6 +6027,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>edding</subject>
@@ -3057,6 +6047,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>faber-castell</subject>
@@ -3067,6 +6067,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>leitz</subject>
@@ -3077,6 +6087,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>belkin</subject>
@@ -3087,6 +6107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hama</subject>
@@ -3097,4 +6127,14 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>

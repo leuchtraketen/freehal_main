@@ -8,13 +8,3 @@
   <truth>0.500000</truth>
   <flags>00000</flags>
 </fact>
-<fact>
-  <subject>abnormitaet</subject>
-  <object>veraenderung</object>
-  <verb>=</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-</fact>

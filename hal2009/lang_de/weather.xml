@@ -7,6 +7,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -17,6 +27,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -27,6 +47,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) temperatur</subject>
@@ -37,6 +67,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) wetter</subject>
@@ -47,6 +87,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -57,6 +107,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -67,6 +127,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -77,6 +147,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) temperatur</subject>
@@ -87,6 +167,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) wetter</subject>
@@ -97,6 +187,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -107,6 +207,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -117,6 +227,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -127,6 +247,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) temperatur</subject>
@@ -137,6 +267,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) wetter</subject>
@@ -147,6 +287,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -157,6 +307,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -167,6 +327,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -177,6 +347,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) temperatur</subject>
@@ -187,6 +367,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) wetter</subject>
@@ -197,4 +387,14 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>

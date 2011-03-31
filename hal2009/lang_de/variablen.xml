@@ -97,6 +97,16 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>100</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>$a$</subject>
@@ -487,6 +497,16 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>$$mday$$ $$month$$ $$year$$</subject>
@@ -707,6 +727,36 @@
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>$$wday$$</subject>
@@ -879,16 +929,6 @@
   </clause>
 </fact>
 <fact>
-  <subject>was</subject>
-  <object></object>
-  <verb>mit $a$</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
   <subject>$a$</subject>
   <object>heute geburtstag</object>
   <verb>hat</verb>
@@ -955,6 +995,16 @@
     <extra></extra>
     <questionword></questionword>
     <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
     <flags>00000</flags>
   </clause>
 </fact>

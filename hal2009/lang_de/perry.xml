@@ -7,6 +7,26 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>50</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die antis</subject>
@@ -17,6 +37,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die aras</subject>
@@ -27,6 +57,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die arkoniden</subject>
@@ -37,6 +77,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die charonii</subject>
@@ -47,6 +97,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die ferronen</subject>
@@ -57,6 +117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die springer</subject>
@@ -67,6 +137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die tefroder</subject>
@@ -77,6 +157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die terraner</subject>
@@ -87,6 +177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ferrol</subject>
@@ -97,6 +197,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>oxtorne</subject>
@@ -107,6 +217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die zaliter</subject>
@@ -117,6 +237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das finanzgenie homer gershwin adams</subject>
@@ -127,6 +257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die akonen</subject>
@@ -137,6 +277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>plophoser</subject>
@@ -147,6 +297,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -157,6 +317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00100</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>roboter cairol</subject>
@@ -167,6 +337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>atlan</subject>
@@ -177,6 +357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die lemurer</subject>
@@ -187,6 +377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die aras</subject>
@@ -197,6 +397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>thoregon</subject>
@@ -207,6 +417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hyperfunk</subject>
@@ -217,6 +437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -227,6 +457,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>praetoria</subject>
@@ -237,6 +477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein antigravitationsfeld</subject>
@@ -247,6 +497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die ersten terranischen kolonisten</subject>
@@ -257,6 +517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein desintegrator</subject>
@@ -267,6 +537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der arkoniden</subject>
@@ -277,6 +557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>paranormal</subject>
@@ -287,6 +577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ihre raumschiffe</subject>
@@ -297,6 +597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>motana</subject>
@@ -307,6 +617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>traditionell</subject>
@@ -317,6 +637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die aarus</subject>
@@ -327,6 +657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das volk der algorrian des kosmos</subject>
@@ -337,6 +677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nathan</subject>
@@ -347,6 +697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>2040 die tiefseekuppel er</subject>
@@ -357,6 +717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die nocturnen</subject>
@@ -367,6 +737,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die cynos</subject>
@@ -377,6 +757,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>springer</subject>
@@ -387,6 +777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die maahks</subject>
@@ -397,6 +797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die tefroder</subject>
@@ -407,6 +817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>raumschiffe</subject>
@@ -417,6 +837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -427,6 +857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -437,6 +877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -447,6 +897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die oberflaeche der sol</subject>
@@ -457,6 +917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der</subject>
@@ -467,6 +937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die charonii</subject>
@@ -477,6 +957,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>eine biopositronik</subject>
@@ -487,6 +977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>drorah</subject>
@@ -497,6 +997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>obelisken</subject>
@@ -527,6 +1037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nugas reaktoren</subject>
@@ -537,6 +1057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>alaska saedelaere</subject>
@@ -547,6 +1077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die eines der</subject>
@@ -557,6 +1097,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>typisch</subject>
@@ -567,6 +1117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein desintegrator</subject>
@@ -577,6 +1137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das aussehen der lemurer</subject>
@@ -587,6 +1157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die technologie der cheborparner</subject>
@@ -597,6 +1177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das</subject>
@@ -607,6 +1197,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die nocturnen</subject>
@@ -617,6 +1217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kartanin</subject>
@@ -627,6 +1237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>herreach</subject>
@@ -637,6 +1257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -647,6 +1277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>cynos</subject>
@@ -657,6 +1297,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die herreach</subject>
@@ -667,6 +1317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein antigrav</subject>
@@ -677,6 +1337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>raumschiffe</subject>
@@ -687,6 +1357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die seecharan eines ablegers</subject>
@@ -697,6 +1377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -707,6 +1397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die ganschkaren</subject>
@@ -717,6 +1417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>3587</subject>
@@ -727,6 +1437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>reginald bull</subject>
@@ -737,6 +1457,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>eine splittergruppe der maahks</subject>
@@ -747,6 +1477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>diese nocturnenstoecke</subject>
@@ -757,6 +1497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die cheborparner</subject>
@@ -767,6 +1517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>rund00 jahre</subject>
@@ -777,6 +1537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die blues</subject>
@@ -787,6 +1557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>siga</subject>
@@ -797,6 +1577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>arkoniden</subject>
@@ -807,6 +1597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>noviel residor</subject>
@@ -817,6 +1617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -827,6 +1637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die erde</subject>
@@ -837,6 +1657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject></subject>
@@ -847,6 +1677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -857,6 +1697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -867,6 +1717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject></subject>
@@ -877,6 +1737,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die beruehmteste kartanin</subject>
@@ -887,6 +1757,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>alaska saedelaere</subject>
@@ -897,6 +1777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>archetz</subject>
@@ -907,6 +1797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>arkon</subject>
@@ -917,6 +1817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>atlan</subject>
@@ -927,6 +1837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>atlan</subject>
@@ -937,6 +1857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>atlan</subject>
@@ -947,6 +1877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bully</subject>
@@ -957,6 +1897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bully</subject>
@@ -967,6 +1917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bully</subject>
@@ -977,6 +1937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>bully</subject>
@@ -987,6 +1957,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>command</subject>
@@ -997,6 +1977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) aussehen der posbis</subject>
@@ -1007,6 +1997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) aussehen der posbis</subject>
@@ -1017,6 +2017,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) hyperraum</subject>
@@ -1027,6 +2037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) lebensraum der nocturnen</subject>
@@ -1037,6 +2057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) basis</subject>
@@ -1047,6 +2077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) heimatwelt der topsider</subject>
@@ -1057,6 +2097,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) hundertsonnenwelt des zentralplasmas</subject>
@@ -1067,6 +2117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die marco polo</subject>
@@ -1077,6 +2137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) milchstrasse</subject>
@@ -1087,6 +2157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) neue heimat der herreach</subject>
@@ -1097,6 +2177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) sol</subject>
@@ -1107,6 +2197,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) sol</subject>
@@ -1117,6 +2217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) technologie der cynos</subject>
@@ -1127,6 +2237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) ursprungswelt der naats</subject>
@@ -1137,6 +2257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) desintegrator</subject>
@@ -1147,6 +2277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) arkonbombe</subject>
@@ -1157,6 +2297,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) korvette</subject>
@@ -1167,6 +2317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) maechtigkeitsballung</subject>
@@ -1177,6 +2337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) positronik</subject>
@@ -1187,6 +2357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) spacejet</subject>
@@ -1197,6 +2377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) transformbombe</subject>
@@ -1207,6 +2397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) flaggschiff</subject>
@@ -1217,6 +2417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) hue-schirm</subject>
@@ -1227,6 +2437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) intelligenzwesen</subject>
@@ -1237,6 +2457,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) kombistrahler</subject>
@@ -1247,6 +2477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) lineartriebwerk</subject>
@@ -1257,6 +2497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) metagrav</subject>
@@ -1267,6 +2517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) paratron</subject>
@@ -1277,6 +2537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) permit</subject>
@@ -1287,6 +2557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) pikosyn</subject>
@@ -1297,6 +2577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die sol</subject>
@@ -1307,6 +2597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) rechner</subject>
@@ -1317,6 +2617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) schwarzes loch</subject>
@@ -1327,6 +2637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(a) serun</subject>
@@ -1337,6 +2657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>epsal</subject>
@@ -1347,6 +2677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ertrus</subject>
@@ -1357,6 +2697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ertrus</subject>
@@ -1367,6 +2717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ertrus</subject>
@@ -1377,6 +2737,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -1407,6 +2777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -1417,6 +2797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -1427,6 +2817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>estartu</subject>
@@ -1437,6 +2837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ferrol</subject>
@@ -1447,6 +2857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1457,6 +2877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1467,6 +2897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1477,6 +2917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1487,6 +2937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1497,6 +2957,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1507,6 +2977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1517,6 +2997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>gucky</subject>
@@ -1527,6 +3017,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>halut</subject>
@@ -1537,6 +3037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>halut</subject>
@@ -1547,6 +3057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>icho tolot</subject>
@@ -1557,6 +3077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>icho tolot</subject>
@@ -1567,6 +3097,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>illema</subject>
@@ -1577,6 +3117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>siga</subject>
@@ -1587,6 +3137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>julian tifflor</subject>
@@ -1597,6 +3157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>jupiter</subject>
@@ -1607,6 +3177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kraschyn</subject>
@@ -1617,6 +3197,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>laotse</subject>
@@ -1627,6 +3217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>eine syntronik</subject>
@@ -1637,6 +3237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lepso</subject>
@@ -1647,6 +3257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>luna</subject>
@@ -1657,6 +3277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>maahkora</subject>
@@ -1667,6 +3297,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>maahkora</subject>
@@ -1677,6 +3317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mars</subject>
@@ -1687,6 +3337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mondra diamond</subject>
@@ -1697,6 +3357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nathan</subject>
@@ -1707,6 +3377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>nathan</subject>
@@ -1717,6 +3397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der hyperraum</subject>
@@ -1727,6 +3417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>noviel residor des tld</subject>
@@ -1737,6 +3437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>olymp</subject>
@@ -1747,6 +3457,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -1757,6 +3477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -1767,6 +3497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodans flaggschiff</subject>
@@ -1777,6 +3517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>plophos</subject>
@@ -1787,6 +3537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>praetoria</subject>
@@ -1797,6 +3557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>pspopta</subject>
@@ -1807,6 +3577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ras tschubai</subject>
@@ -1817,6 +3597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>scheer</subject>
@@ -1827,6 +3617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -1837,6 +3637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>siga</subject>
@@ -1847,6 +3657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>terra des</subject>
@@ -1857,6 +3677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>solonium</subject>
@@ -1867,6 +3697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>swoofon</subject>
@@ -1877,6 +3717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>terra</subject>
@@ -1887,6 +3737,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>terrania</subject>
@@ -1897,6 +3757,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>thoregon</subject>
@@ -1907,6 +3777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>trokan des solsystems</subject>
@@ -1917,6 +3797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>typisch der springer</subject>
@@ -1927,6 +3817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>unith</subject>
@@ -1937,6 +3837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>unith</subject>
@@ -1947,6 +3857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zalit</subject>
@@ -1957,6 +3877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zalit</subject>
@@ -1967,6 +3897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zalit</subject>
@@ -1977,6 +3917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>icho tolot</subject>
@@ -1987,6 +3937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00100</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>naats</subject>
@@ -2017,6 +3977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>terraner</subject>
@@ -2027,6 +3997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die seecharan</subject>
@@ -2037,6 +4017,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das reich der topsider</subject>
@@ -2047,6 +4037,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>eine tiefseekuppel</subject>
@@ -2057,6 +4057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>hangay</subject>
@@ -2067,6 +4077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>vinau</subject>
@@ -2077,6 +4097,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ein deflektorschirm</subject>
@@ -2087,6 +4117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der motana</subject>
@@ -2097,6 +4137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>oxtorner</subject>
@@ -2107,6 +4157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der unither</subject>
@@ -2117,6 +4177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>den dookies</subject>
@@ -2147,6 +4217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die seecharan</subject>
@@ -2157,6 +4237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>humanoide</subject>
@@ -2167,6 +4257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mondra diamond</subject>
@@ -2177,6 +4277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die motana</subject>
@@ -2187,6 +4297,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>androiden</subject>
@@ -2197,6 +4317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>arkoniden</subject>
@@ -2207,6 +4337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>chaotarchen</subject>
@@ -2217,6 +4357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die akonen</subject>
@@ -2227,6 +4377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die antis</subject>
@@ -2237,6 +4397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die aras</subject>
@@ -2247,6 +4417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die blues</subject>
@@ -2257,6 +4437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die cynos</subject>
@@ -2267,6 +4457,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die des kosmos</subject>
@@ -2277,6 +4477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die dron</subject>
@@ -2287,6 +4497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die ertruser</subject>
@@ -2297,6 +4517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die fragmentraumer der posbis</subject>
@@ -2307,6 +4537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die haluter</subject>
@@ -2317,6 +4557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kartanin</subject>
@@ -2327,6 +4577,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kleinen gurkenleute</subject>
@@ -2337,6 +4597,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die maahks</subject>
@@ -2347,6 +4617,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die momserimer</subject>
@@ -2357,6 +4637,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die mordaer</subject>
@@ -2367,6 +4657,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die mordaer</subject>
@@ -2377,6 +4677,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die motana</subject>
@@ -2387,6 +4697,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die plophoser</subject>
@@ -2397,6 +4717,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die swoon</subject>
@@ -2407,6 +4737,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die topsider</subject>
@@ -2417,6 +4757,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>grossen momserimer</subject>
@@ -2427,6 +4777,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>haluter</subject>
@@ -2437,6 +4797,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>haluter</subject>
@@ -2447,6 +4817,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>herreach</subject>
@@ -2457,6 +4837,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kosmokraten</subject>
@@ -2467,6 +4857,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>kugelriesen</subject>
@@ -2477,6 +4877,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>oxtorner</subject>
@@ -2487,6 +4897,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>_(meter_gross)_</adverbs>
+    <extra></extra>
+    <questionword>bis</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>posbis</subject>
@@ -2497,6 +4917,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>roboter</subject>
@@ -2507,6 +4937,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die ertruser</subject>
@@ -2517,6 +4957,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>springer</subject>
@@ -2527,6 +4977,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>transmitter</subject>
@@ -2537,6 +4997,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>typisch</subject>
@@ -2547,6 +5017,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lemurer</subject>
@@ -2557,6 +5037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -2567,6 +5057,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die seecharan</subject>
@@ -2577,6 +5077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die maahks</subject>
@@ -2587,6 +5097,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die</subject>
@@ -2597,6 +5117,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>3540</subject>
@@ -2607,6 +5137,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das arkon-system des kugelsternhaufens</subject>
@@ -2617,6 +5157,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kartanin</subject>
@@ -2627,6 +5177,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kartanin</subject>
@@ -2637,6 +5197,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>perry rhodan</subject>
@@ -2647,6 +5217,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject></subject>
@@ -2657,6 +5237,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>topsid</subject>
@@ -2667,6 +5257,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die maahks</subject>
@@ -2677,6 +5277,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die tefroder</subject>
@@ -2687,6 +5297,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>lebten die momserimer</subject>
@@ -2697,6 +5317,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>es</subject>
@@ -2707,6 +5337,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>haluter</subject>
@@ -2717,6 +5357,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>viele motana</subject>
@@ -2727,6 +5377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zellaktivatoren</subject>
@@ -2737,6 +5397,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>tramp</subject>
@@ -2747,6 +5417,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die urspruengliche heimat der algorrian</subject>
@@ -2757,6 +5437,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>mondra diamond</subject>
@@ -2767,6 +5457,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>paricza</subject>
@@ -2777,6 +5477,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>paricza</subject>
@@ -2787,6 +5497,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>urspruengliche heimatwelt der herreach</subject>
@@ -2797,6 +5517,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>jahren waren die schohaaken die</subject>
@@ -2807,6 +5537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der unither</subject>
@@ -2817,6 +5557,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>einmal sie</subject>

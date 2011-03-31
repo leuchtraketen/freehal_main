@@ -1,24 +1,4 @@
 <fact>
-  <subject></subject>
-  <object></object>
-  <verb>bitte</verb>
-  <adverbs>geschehen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object>gern</object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.500000</truth>
-    <flags>00000</flags>
-  </clause>
-</fact>
-<fact>
   <subject>ein witz</subject>
   <object>kleiner spassiger text</object>
   <verb>=</verb>
@@ -342,28 +322,28 @@
   <subject>dumm sein</subject>
   <object>(a) frage</object>
   <verb>is-a</verb>
-  <adverbs>von der definition</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject></subject>
-  <object></object>
-  <verb>ist</verb>
-  <adverbs>dumm</adverbs>
+  <adverbs>von der definition ~ ist</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
   <clause>
-    <subject>dummes tut</subject>
-    <object></object>
+    <subject></subject>
+    <object>dumm</object>
     <verb></verb>
     <adverbs></adverbs>
     <extra></extra>
-    <questionword>wer</questionword>
+    <questionword>dummes tut</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object>wer</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
     <truth>0.500000</truth>
     <flags>00000</flags>
   </clause>
@@ -517,6 +497,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) ueberhaupt</subject>
@@ -627,6 +617,16 @@
   <questionword></questionword>
   <truth>0.000000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>eher schuechtern</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>das man</subject>

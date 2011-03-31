@@ -19,17 +19,17 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-define action save_facts with array facts_parsed, hash tags, var pro_file_name, var prepend, flag no_reread, var lang, var path do
+define action save_facts with array facts_parsed, hash tags, var xml_file_name, var prepend, flag no_reread, var lang, var path do
 
-    if not var pro_file_name do
-        set var pro_file_name to var path concat '/lang_' concat var lang concat '/facts.pro'
+    if not var xml_file_name do
+        set var xml_file_name to var path concat '/lang_' concat var lang concat '/facts.xml'
     done
 
     set new array line_array to an empty array
 
     for each new hash parsed in array facts_parsed do
         set new var line to ''
-        set new var truth to "(maybe)"
+        set new var truth to 0.5
 
         set new array verbs to from hash parsed element { 'verbs' }
         for each new array verb in array verbs do
@@ -43,11 +43,11 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             done
 
             if var verb matches /opposite/ do
-                set var pro_file_name to var path concat '/lang_' concat var lang concat '/opposite.pro'
+                set var xml_file_name to var path concat '/lang_' concat var lang concat '/opposite.xml'
             done
 
             if var verb matches /reasonof/ do
-                set var pro_file_name to var path concat '/lang_' concat var lang concat '/beziehungen.pro'
+                set var xml_file_name to var path concat '/lang_' concat var lang concat '/beziehungen.xml'
             done
         done
         set new array subjects to from hash parsed element { 'subjects' }
@@ -71,26 +71,26 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             done
 
             if from array object 1st element matches /^.?\(true\).?$/ do
-                set var truth to "(true)"
+                set var truth to 1
                 set var object to ''
                 go to next
             done
             if from array object 1st element matches /^.?\(maybe\).?$/ do
-                set var truth to "(maybe)"
+                set var truth to 0.5
                 set var object to ''
                 go to next
             done
             if from array object 1st element matches /^.?\(false\).?$/ do
-                set var truth to "(false)"
+                set var truth to 0
                 set var object to ''
                 go to next
             done
 
             if from array object 1st element matches /^.?\(bad\).?$/ do
-                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.pro'
+                set var xml_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-bad.xml'
             done
             if from array object 1st element matches /^.?\(good\).?$/ do
-                set var pro_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-good.pro'
+                set var xml_file_name to var path concat '/lang_' concat var lang concat '/ps_dateien/ps-good.xml'
             done
 
             set var object to from array object 1st element
@@ -103,17 +103,17 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         done
         for each new array adverb in array adverbs do
             if from array adverb 1st element matches /^.?\(true\).?$/ do
-                set var truth to "(true)"
+                set var truth to 1
                 set var adverb to ''
                 go to next
             done
             if from array adverb 1st element matches /^.?\(maybe\).?$/ do
-                set var truth to "(maybe)"
+                set var truth to 0.5
                 set var adverb to ''
                 go to next
             done
             if from array adverb 1st element matches /^.?\(false\).?$/ do
-                set var truth to "(false)"
+                set var truth to 0
                 set var adverb to ''
                 go to next
             done
@@ -156,14 +156,25 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
             done
         done
 
-#        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
-        set var line to var line concat join using ' ', elements of array verbs
-        set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
-        set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
-        set var line to var line concat ' <> '
-        set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
+        set new var _subjects to join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
+        set new var _objects to join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
+        set new var _verbs to join using ' ', elements of array verbs
+        set new var _adverbs to join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
+        set new var _flags to "00000"
+        if var _verbs matches /([d]{5})/ do
+            set var _flags to $0
+            do regex with var _verbs: /$0/, "", :global
+        done
+
+        set var line to var line concat "<fact>" concat new line
+        set var line to var line concat "  <subject>" concat var _subjects concat "</subject>" concat new line
+        set var line to var line concat "  <object>" concat var _objects concat "</object>" concat new line
+        set var line to var line concat "  <verb>" concat var _verbs concat "</verb>" concat new line
+        set var line to var line concat "  <adverbs>" concat var _adverbs concat "</adverbs>" concat new line
+        set var line to var line concat "  <extra></extra>" concat new line
+        set var line to var line concat "  <questionword></questionword>" concat new line
+        set var line to var line concat "  <truth>" concat var truth concat "</truth>" concat new line
+        set var line to var line concat "  <flags>" concat var _flags concat "</flags>" concat new line
 
         if not from hash parsed element { 'clauses' } do
             set from hash parsed element { 'clauses' } to an empty array
@@ -184,12 +195,6 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
 
         set new var number_of_clauses to 0
         for each new hash parsed in array clauses is rw do
-            if var number_of_clauses do
-                set var line to var line concat ' <> '
-            done
-            else do
-                set var line to var line concat ' <> '
-            done
 
             set new array verbs to from hash parsed element { 'verbs' }
             for each new array verb in array verbs do
@@ -222,39 +227,52 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
                 set var questionword to from array questionword 1st element
             done
 
-            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
-            set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
-            set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
-            set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
-            set var line to var line concat ' <> '
-            set var line to var line concat join using ' ', elements of that array: from hash parsed element { 'questionword' } end of elements
+            set new var _subjects to join using ' ', elements of that array: from hash parsed element { 'subjects' } end of elements
+            set new var _objects to join using ' ', elements of that array: from hash parsed element { 'objects' } end of elements
+            set new var _verbs to join using ' ', elements of that array: from hash parsed element { 'verbs' } end of elements
+            set new var _adverbs to join using ' ', elements of that array: from hash parsed element { 'adverbs' } end of elements
+            set new var _questionword to join using ' ', elements of that array: from hash parsed element { 'questionword' } end of elements
+            set new var _flags to "00000"
+            if var _verbs matches /([d]{5})/ do
+                set var _flags to $0
+                do regex with var _verbs: /$0/, "", :global
+            done
+
+            set var line to var line concat "  <clause>" concat new line
+            set var line to var line concat "    <subject>" concat var _subjects concat "</subject>" concat new line
+            set var line to var line concat "    <object>" concat var _objects concat "</object>" concat new line
+            set var line to var line concat "    <verb>" concat var _verbs concat "</verb>" concat new line
+            set var line to var line concat "    <adverbs>" concat var _adverbs concat "</adverbs>" concat new line
+            set var line to var line concat "    <extra></extra>" concat new line
+            set var line to var line concat "    <questionword>" concat var _questionword concat "</questionword>" concat new line
+            set var line to var line concat "    <truth>" concat var truth concat "</truth>" concat new line
+            set var line to var line concat "    <flags>" concat var _flags concat "</flags>" concat new line
+            set var line to var line concat "  </clause>" concat new line
 
             set var number_of_clauses to var number_of_clauses + 1
         done
-        ###set var line to var line concat ' <> '
-        set var line to var line concat ' '
-        set var line to var line concat var truth
+
+        set var line to var line concat "</fact>" concat new line
 
         push into array line_array, var line
     done
 
-    set new var divisor to ' ~ '
-    set new var line to join with var divisor, elements of array line_array
+    # set new var divisor to ' ~ '
+    # set new var line to join with var divisor, elements of array line_array
+
+    set new var line to join with "", elements of array line_array
 
     do regex with var line: /\{\{\{questionword\}\}\}/ -> "" :global
 
     do regex with var line: /<[_]>+/ -> "_" :global
 
-    if var pro_file_name matches "-" do
-        print "Do not write any facts."
+    if var xml_file_name matches "-" do
+        print "do not write any facts."
         print new line
     done
     else do
-        set new var pro_file to handle for file name var pro_file_name, append
-        print "Write some facts into " concat var pro_file_name concat "."
+        set new var pro_file to handle for file name var xml_file_name, append
+        print "write some facts into " concat var xml_file_name concat "."
         print new line
 
         if var line do
@@ -266,7 +284,7 @@ define action save_facts with array facts_parsed, hash tags, var pro_file_name, 
         do close with var pro_file
 
         if not flag no_reread do
-            do reread_pro_file with var pro_file_name, var lang
+            do reread_xml_file with var xml_file_name, var lang
         done
     done
 
@@ -514,6 +532,8 @@ define action init_prot_files with var current_language, var path do
 
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+        set new var saved_directory to var save_path concat '/' concat var sub_dir
+        do mkdir with var saved_directory
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
@@ -522,6 +542,7 @@ define action init_prot_files with var current_language, var path do
         # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
+            set new var save_file to var saved_directory concat '/' concat var file_name
 
             do be_slow without arguments
             if not var file matches /prot$/ do
@@ -539,7 +560,7 @@ define action init_prot_files with var current_language, var path do
             #done
 
             set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var check_input_handle_two to handle for file name var save_file, read
             set new var i to 1
             for each new var line from var check_input_handle_one is rw do
                 set var i to var i + 1 + length(var line)
@@ -601,7 +622,7 @@ define action init_prot_files with var current_language, var path do
 
                 do be_slow without arguments
                 set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                set new var copy_output_handle to handle for file name var save_file, write
                 for each new var line from var copy_input_handle is rw do
                     print into var copy_output_handle data var line
                     print into var copy_output_handle data new line
@@ -663,6 +684,8 @@ define action init_csv_files with var current_language, var path do
 
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+        set new var saved_directory to var save_path concat '/' concat var sub_dir
+        do mkdir with var saved_directory
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
@@ -671,6 +694,7 @@ define action init_csv_files with var current_language, var path do
         # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
+            set new var save_file to var saved_directory concat '/' concat var file_name
 
             do be_slow without arguments
             if not var file matches /csv$/ do
@@ -684,7 +708,7 @@ define action init_csv_files with var current_language, var path do
             do regex with var pro_file: /csv$/ -> "pro" :i
 
             set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var check_input_handle_two to handle for file name var save_file, read
             set new var i to 1
             for each new var line from var check_input_handle_one is rw do
                 set var i to var i + 1 + length(var line)
@@ -739,9 +763,9 @@ define action init_csv_files with var current_language, var path do
                 do reread_pro_file with var pro_file, var current_language
 
                 do be_slow without arguments
-print "sync '" concat var file concat "' is '" concat var save_path concat var file_name concat "'"
+print "sync '" concat var file concat "' is '" concat var save_file concat "'"
                 set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                set new var copy_output_handle to handle for file name var save_file, write
                 for each new var line from var copy_input_handle is rw do
                     print into var copy_output_handle data var line
                     print into var copy_output_handle data new line
@@ -768,6 +792,8 @@ define action update_list_of_pro_files with var pattern, var current_language, v
 
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+        set new var saved_directory to var save_path concat '/' concat var sub_dir
+        do mkdir with var saved_directory
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
@@ -776,6 +802,7 @@ define action update_list_of_pro_files with var pattern, var current_language, v
         # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
+            set new var save_file to var saved_directory concat '/' concat var file_name
 
             if not var file matches /\.pro$/ do
                 go to next
@@ -935,7 +962,7 @@ define action init_pro_files with var current_language, var path do
 
     set new var save_path to var path concat '/saved/'
     do mkdir with var save_path
-    set var save_path to var save_path concat var current_language concat '/'
+    set var save_path to var save_path concat var current_language
     do mkdir with var save_path
     set new array sub_directories to [ '', '/thesaurus' ]
     push into array sub_directories, '/namen'
@@ -946,6 +973,8 @@ define action init_pro_files with var current_language, var path do
 
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+        set new var saved_directory to var save_path concat '/' concat var sub_dir
+        do mkdir with var saved_directory
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
@@ -958,13 +987,14 @@ define action init_pro_files with var current_language, var path do
 
             do be_slow without arguments
             set new var file to var language_directory concat '/' concat var file_name
+            set new var save_file to var saved_directory concat '/' concat var file_name
 
             if not var file matches /\.pro$/ do
                 go to next
             done
 
             set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var check_input_handle_two to handle for file name var save_file, read
             set new var i to 1
             for each new var line from var check_input_handle_one is rw do
                 set var i to var i + 1 + length(var line)
@@ -1000,7 +1030,7 @@ define action init_pro_files with var current_language, var path do
                 do hal2009_fetch_signal with "add_pro_file"
 
                 set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                set new var copy_output_handle to handle for file name var save_file, write
                 for each new var line from var copy_input_handle is rw do
                     print into var copy_output_handle data var line
                     print into var copy_output_handle data new line
@@ -1041,6 +1071,8 @@ define action init_xml_files with var current_language, var path do
 
     for each new var sub_dir in array sub_directories is copy do
         set new var language_directory to var path concat '/lang_' concat var current_language concat var sub_dir
+        set new var saved_directory to var save_path concat '/' concat var sub_dir
+        do mkdir with var saved_directory
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
@@ -1053,13 +1085,14 @@ define action init_xml_files with var current_language, var path do
 
             do be_slow without arguments
             set new var file to var language_directory concat '/' concat var file_name
+            set new var save_file to var saved_directory concat '/' concat var file_name
 
             if not var file matches /\.xml$/ do
                 go to next
             done
 
             set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_path concat var file_name, read
+            set new var check_input_handle_two to handle for file name var save_file, read
             set new var i to 1
             for each new var line from var check_input_handle_one is rw do
                 set var i to var i + 1 + length(var line)
@@ -1091,7 +1124,7 @@ define action init_xml_files with var current_language, var path do
                 do hal2009_fetch_signal with "add_xml_file"
 
                 set new var copy_input_handle to handle for file name var file, read
-                set new var copy_output_handle to handle for file name var save_path concat var file_name, write
+                set new var copy_output_handle to handle for file name var save_file, write
                 for each new var line from var copy_input_handle is rw do
                     print into var copy_output_handle data var line
                     print into var copy_output_handle data new line

@@ -81,11 +81,11 @@ Abend:
   genus: m
   type: n
 Abloesung:
-  count: 1
+  count: 4
   genus: f
   type: n
 Abnormitaet:
-  count: 1
+  count: 4
   genus: f
   type: n
 Abschnitt:
@@ -93,7 +93,15 @@ Abschnitt:
   genus: m
   type: n
 Abwandlung:
-  count: 1
+  count: 4
+  genus: f
+  type: n
+Abwechslung:
+  count: 2
+  genus: f
+  type: n
+Abweichung:
+  count: 2
   genus: f
   type: n
 Achmed:
@@ -105,6 +113,10 @@ Adela:
 Adler:
   count: 2
   genus: m
+  type: n
+Aenderung:
+  count: 2
+  genus: f
   type: n
 Ah:
   count: 3
@@ -132,9 +144,12 @@ Antimaterie:
   genus: f
   type: n
 Antwort:
-  count: 1
+  count: 4
   genus: f
   type: n
+Antworten:
+  count: 1
+  type: vi
 Anzahl:
   count: 1
   genus: f
@@ -164,6 +179,26 @@ Arten:
   type: n
 Artist:
   count: 2
+  type: n
+Aufschwung:
+  count: 2
+  genus: m
+  type: n
+Aufstieg:
+  count: 2
+  genus: m
+  type: n
+Ausbau:
+  count: 2
+  genus: m
+  type: n
+Austausch:
+  count: 1
+  genus: m
+  type: n
+Autos:
+  count: 1
+  genus: f
   type: n
 Baby:
   count: 1
@@ -266,7 +301,7 @@ Dieb:
   genus: m
   type: n
 Dietmar:
-  count: 1
+  count: 3
   type: n
 Dir:
   count: 2
@@ -286,7 +321,7 @@ Dromedar:
   genus: s
   type: n
 Du:
-  count: 36
+  count: 40
   type: n
 Dumpfbacke:
   count: 1
@@ -308,6 +343,10 @@ Ekel:
   count: 1
   genus: m
   type: n
+Entwicklungssprung:
+  count: 2
+  genus: m
+  type: n
 Erde:
   count: 12
   genus: f
@@ -322,6 +361,10 @@ Erektion:
 Ergebnis:
   count: 2
   genus: s
+  type: n
+Erneuerung:
+  count: 2
+  genus: f
   type: n
 Es:
   count: 26
@@ -367,7 +410,7 @@ Form:
   genus: f
   type: n
 Fortschritte:
-  count: 1
+  count: 3
   genus: f
   type: n
 Fragen:
@@ -385,6 +428,10 @@ Freunde:
   count: 77
   genus: f
   type: n
+Freundin:
+  count: 3
+  genus: f
+  type: n
 Frosch:
   count: 1
   genus: m
@@ -392,6 +439,10 @@ Frosch:
 Gala:
   count: 1
   genus: f
+  type: n
+Gang:
+  count: 2
+  genus: m
   type: n
 Gattung:
   count: 2
@@ -426,7 +477,7 @@ Grund:
   genus: m
   type: n
 Grundfragen:
-  count: 10
+  count: 12
   genus: f
   type: n
 Gurke:
@@ -476,6 +527,13 @@ Innereien:
   type: n
 Interessen:
   count: 1
+  genus: f
+  type: n
+Internet:
+  count: 1
+  type: n
+Ip:
+  count: 3
   genus: f
   type: n
 Isotop:
@@ -547,21 +605,37 @@ Kuerbis:
   count: 1
   genus: m
   type: n
+Kultivierung:
+  count: 1
+  genus: f
+  type: n
 Land:
   count: 3
   genus: s
+  type: n
+Lauf:
+  count: 1
+  genus: m
   type: n
 Leben:
   count: 1
   type: n
 Lernst:
-  count: 1
+  count: 4
   type: vi
+Leute:
+  count: 1
+  genus: f
+  type: n
 Licht:
   count: 2
   type: n
 Liebe:
   count: 2
+  type: n
+Lottozahlen:
+  count: 3
+  genus: f
   type: n
 Louvre:
   count: 2
@@ -570,8 +644,12 @@ Mann:
   count: 1
   genus: m
   type: n
+Markstein:
+  count: 1
+  genus: m
+  type: n
 Marktwirtschaft:
-  count: 10
+  count: 12
   genus: f
   type: n
 Mars:
@@ -589,15 +667,26 @@ Materie:
   count: 1
   genus: f
   type: n
+Meilenstein:
+  count: 1
+  genus: m
+  type: n
 Mensch:
   count: 4
   type: n
 Menschen:
-  count: 11
+  count: 13
+  genus: f
+  type: n
+Metamorphose:
+  count: 1
   genus: f
   type: n
 Mir:
   count: 2
+  type: n
+Modifikation:
+  count: 1
   type: n
 Moerder:
   count: 1
@@ -612,6 +701,9 @@ Mond:
 Muenchen:
   count: 1
   type: n
+Mutation:
+  count: 1
+  type: n
 Nachtschattengewaechs:
   count: 1
   genus: s
@@ -620,7 +712,7 @@ Name:
   count: 1
   type: n
 Namen:
-  count: 2
+  count: 5
   type: n
 Nase:
   count: 3
@@ -632,6 +724,14 @@ Nasenbaer:
   type: n
 Nein:
   count: 78
+  type: n
+Neubeginn:
+  count: 1
+  genus: m
+  type: n
+Neubelebung:
+  count: 1
+  genus: f
   type: n
 Neutron:
   count: 1
@@ -793,6 +893,10 @@ Strahlung:
   count: 2
   genus: f
   type: n
+Suchmaschinen:
+  count: 1
+  genus: f
+  type: n
 Suedamerika:
   count: 1
   type: n
@@ -818,6 +922,9 @@ Teilchen:
 Tier:
   count: 2
   genus: s
+  type: n
+Tirol:
+  count: 2
   type: n
 Tobias:
   count: 5
@@ -870,6 +977,10 @@ Weltall:
   type: n
 Wissen:
   count: 1
+  type: n
+Woerter:
+  count: 2
+  genus: f
   type: n
 Wolf:
   count: 1
@@ -1005,7 +1116,7 @@ ausscheidung:
   genus: f
   type: n
 austausch:
-  count: 2
+  count: 4
   genus: m
   type: n
 austritt:
@@ -1027,7 +1138,7 @@ automobil:
   genus: s
   type: n
 bad:
-  count: 7
+  count: 9
   type: n
 bagger:
   count: 3
@@ -1390,7 +1501,7 @@ definition:
   count: 4
   type: n
 dem:
-  count: 72
+  count: 74
   type: art
 denke:
   count: 2
@@ -1414,7 +1525,7 @@ deutschland:
   count: 1
   type: n
 dezentral:
-  count: 25
+  count: 27
   type: adj
 diacetylmorphin:
   count: 4
@@ -1437,6 +1548,9 @@ dient:
 diesig:
   count: 18
   type: adj
+dietmar:
+  count: 2
+  type: n
 diktatur:
   count: 1
   genus: f
@@ -1477,7 +1591,7 @@ dreieck:
   genus: s
   type: n
 du:
-  count: 497
+  count: 501
   type: n
 duennbreiige:
   count: 1
@@ -1597,7 +1711,7 @@ enthaelt:
   count: 1
   type: vi
 entschieden:
-  count: 25
+  count: 27
   genus: s
   type: n
 entspricht:
@@ -1829,7 +1943,7 @@ freunde:
   genus: f
   type: n
 freundin:
-  count: 7
+  count: 10
   genus: f
   type: n
 frittierte:
@@ -2277,7 +2391,7 @@ innerhalb:
   count: 3
   type: prep
 ins:
-  count: 100
+  count: 105
   type: n
 insbesondere:
   count: 5
@@ -2298,7 +2412,7 @@ intelligenz:
   genus: f
   type: n
 internet:
-  count: 1
+  count: 3
   type: n
 io:
   count: 7
@@ -2639,7 +2753,7 @@ lernfaehige:
   count: 3
   type: adj
 lernst:
-  count: 5
+  count: 8
   type: vi
 lesbos:
   count: 1
@@ -2761,7 +2875,7 @@ mensch:
   count: 18
   type: n
 menschen:
-  count: 34
+  count: 36
   genus: f
   type: n
 menschenmenge:
@@ -2873,7 +2987,7 @@ nachtfrost:
   count: 18
   type: vi
 naechsten:
-  count: 1
+  count: 5
   type: adj
 nahrungsmittel:
   count: 1
@@ -2883,7 +2997,7 @@ name:
   count: 3
   type: n
 namen:
-  count: 3
+  count: 6
   type: n
 nase:
   count: 2
@@ -2910,7 +3024,7 @@ new:
   genus: f
   type: n
 nichts:
-  count: 250
+  count: 254
   type: adj
 nie:
   count: 2
@@ -3474,112 +3588,6 @@ straftat:
   count: 1
   genus: f
   type: n
-strahlung:
-  count: 3
-  genus: f
-  type: n
-strasse:
-  count: 1
-  genus: f
-  type: n
-strassenmaedchen:
-  count: 1
-  type: n
-strategisches:
-  count: 1
-  type: adv
-strichmaedchen:
-  count: 1
-  genus: s
-  type: n
-stroemt:
-  count: 2
-  type: vi
-stroh:
-  count: 2
-  type: n
-stuermisch:
-  count: 18
-  type: adj
-stuhl:
-  count: 1
-  genus: m
-  type: n
-stumpfsinnig:
-  count: 1
-  type: adj
-sturm:
-  count: 1
-  genus: m
-  type: n
-suedlichste:
-  count: 2
-  type: adj
-super:
-  count: 1
-  genus: m
-  type: n
-suppentopf:
-  count: 2
-  type: n
-tabakerzeugnis:
-  count: 1
-  genus: s
-  type: n
-tag:
-  count: 55
-  type: n
-taifun:
-  count: 18
-  genus: m
-  type: n
-taler:
-  count: 2
-  genus: m
-  type: n
-taschenrechner:
-  count: 1
-  genus: m
-  type: n
-teilweise:
-  count: 1
-  type: adj
-temperatur:
-  count: 18
-  genus: f
-  type: n
-temperaturbestaendig:
-  count: 1
-  type: adj
-terror:
-  count: 2
-  genus: m
-  type: n
-text:
-  count: 1
-  genus: m
-  type: n
-tiefdruckgebiet:
-  count: 18
-  genus: s
-  type: n
-tier:
-  count: 1
-  genus: s
-  type: n
-tischfussball:
-  count: 1
-  genus: s
-  type: n
-tobias:
-  count: 9
-  type: n
-toericht:
-  count: 1
-  type: adv
-toeten:
-  count: 1
-  type: vi
 .
   type: n
 Abgabe:
@@ -3597,14 +3605,8 @@ Elektromotor:
   type: n
 Eni:
   type: n
-Entwicklungssprung:
-  genus: m
-  type: n
 Erdoel:
   genus: s
-  type: n
-Erneuerung:
-  genus: f
   type: n
 Erregung:
   genus: f
@@ -3641,12 +3643,6 @@ Formung:
   genus: f
   type: n
 Frequenzbereich:
-  genus: m
-  type: n
-Freundin:
-  genus: f
-  type: n
-Gang:
   genus: m
   type: n
 Gehoerlosigkeit:
@@ -3695,9 +3691,6 @@ Hochhaus:
 Hunger:
   genus: m
   type: n
-Ip:
-  genus: f
-  type: n
 Italien:
   type: n
 Januar:
@@ -3714,9 +3707,6 @@ Kokain:
 Kueche:
   genus: f
   type: n
-Kultivierung:
-  genus: f
-  type: n
 Kultur:
   genus: f
   type: n
@@ -3724,9 +3714,6 @@ Kunst:
   type: n
 Langeweile:
   genus: f
-  type: n
-Lauf:
-  genus: m
   type: n
 Liberalen:
   type: adj
@@ -3736,16 +3723,10 @@ Liste:
 Loch:
   genus: s
   type: n
-Lottozahlen:
-  genus: f
-  type: n
 Magma:
   genus: s
   type: n
 Markenname:
-  genus: m
-  type: n
-Markstein:
   genus: m
   type: n
 Mastrubation:
@@ -3753,13 +3734,7 @@ Mastrubation:
 Maus:
   genus: f
   type: n
-Meilenstein:
-  genus: m
-  type: n
 Merkel:
-  type: n
-Metamorphose:
-  genus: f
   type: n
 Mich:
   type: n
@@ -3769,20 +3744,15 @@ Mittelwert:
 Mobiltelefon:
   genus: s
   type: n
-Modifikation:
-  type: n
 Mondfaehre:
   genus: f
   type: n
 Mund:
   type: n
-Mutation:
-  type: n
-Neubeginn:
-  genus: m
-  type: n
-Neubelebung:
+Neuordnung:
   genus: f
+  type: n
+Nneuerung:
   type: n
 Nuernberg:
   type: n
@@ -4296,8 +4266,6 @@ dieb:
   type: n
 diesseits:
   genus: s
-  type: n
-dietmar:
   type: n
 dilemma:
   genus: s

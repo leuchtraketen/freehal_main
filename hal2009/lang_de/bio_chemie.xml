@@ -7,6 +7,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>der ph-wert</subject>
@@ -17,6 +27,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>die kernladungszahl</subject>
@@ -27,6 +47,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>cern</subject>
@@ -5877,6 +5907,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>(the) entropie</subject>
@@ -5997,6 +6037,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>dubnium</subject>
@@ -6327,6 +6377,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>100</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>ferrum</subject>
@@ -6607,6 +6667,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>indium</subject>
@@ -7007,6 +7077,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>meitnerium</subject>
@@ -8457,6 +8537,16 @@
   <questionword></questionword>
   <truth>0.500000</truth>
   <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
 </fact>
 <fact>
   <subject>zibet</subject>
@@ -8556,725 +8646,5 @@
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>gallium</subject>
-  <object>sich</object>
-  <verb>laesst schmelzen</verb>
-  <adverbs>durch handwaerme</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>co2</subject>
-  <object>die chemische formel fuer kohlendioxid</object>
-  <verb>lautet</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die formel</subject>
-  <object>masse durch volumen</object>
-  <verb>lautet</verb>
-  <adverbs>fuer dichte</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die summenformel</subject>
-  <object>h2so4</object>
-  <verb>lautet</verb>
-  <adverbs>von schwefelsaeure</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die summenformel</subject>
-  <object>kmno4</object>
-  <verb>lautet</verb>
-  <adverbs>von kaliumpermanganat</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die summenformel</subject>
-  <object>o3</object>
-  <verb>lautet</verb>
-  <adverbs>von ozon</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ein rotes blutkoerperchen</subject>
-  <object>hoechstens 4 monate</object>
-  <verb>lebt</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>silber</subject>
-  <object>elektrzitaet</object>
-  <verb>leitet</verb>
-  <adverbs>an dem besten</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>silber</subject>
-  <object>waerme</object>
-  <verb>leitet</verb>
-  <adverbs>an dem besten</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>bei 0 grad kelvin</subject>
-  <object>der absolute nullpunkt</object>
-  <verb>liegt</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>melatonin</subject>
-  <object>die innere uhr</object>
-  <verb>reguliert</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>wolfram</subject>
-  <object>bei 3422 grad celsius</object>
-  <verb>schmilzt</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>menschen</subject>
-  <object></object>
-  <verb>sehen</verb>
-  <adverbs>in einem wellenbereich von 400-800 nanometern</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>wasser</subject>
-  <object>bei 100 grad celsius</object>
-  <verb>siedet</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>wasser</subject>
-  <object>bei 212 grad fahrenheit</object>
-  <verb>siedet</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>actinoide</subject>
-  <object></object>
-  <verb>sind</verb>
-  <adverbs>radioaktiv</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>alle edelmetalle</subject>
-  <object>schwermetalle</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>alle erdalkalimetalle</subject>
-  <object>unedle metalle</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>alle salze</subject>
-  <object>elektrolyte</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>carbonate</subject>
-  <object>salze</object>
-  <verb>sind</verb>
-  <adverbs>der kohlensaeure</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>chalkogene</subject>
-  <object>elemente des periodensystems</object>
-  <verb>sind</verb>
-  <adverbs>der 6 hauptgruppe</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die hauptbestandteile</subject>
-  <object>pflanzliche oele und butter</object>
-  <verb>sind</verb>
-  <adverbs>von margrine</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die meisten chemischen elemente</subject>
-  <object>metalle</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>disulfidbruecken</subject>
-  <object>chemische bindungsformen</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>edelgase</subject>
-  <object></object>
-  <verb>sind</verb>
-  <adverbs>sehr reaktionstraege</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>eine flatulenz</subject>
-  <object>blaehungen</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>elektronen</subject>
-  <object>negativ geladene elementarteilchen</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>erythrocyten</subject>
-  <object>rote blutkoerperchen</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>kilowattstunden</subject>
-  <object>die einheit fuer arbeit</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>mutationen</subject>
-  <object>aenderungen</object>
-  <verb>sind</verb>
-  <adverbs>der eigenschaften eines lebewesens</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>nitride</subject>
-  <object>verbindungen</object>
-  <verb>sind</verb>
-  <adverbs>aus stickstoff und einem metall</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>oliven</subject>
-  <object>fruechte des oelbaums</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>oxide</subject>
-  <object>chemische verbindungen</object>
-  <verb>sind</verb>
-  <adverbs>mit sauerstoff</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>proteine</subject>
-  <object>eiweisse</object>
-  <verb>sind</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>protuberanzen</subject>
-  <object>gaswolken</object>
-  <verb>sind</verb>
-  <adverbs>auf der sonne</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>schallwellen</subject>
-  <object>schwingungen</object>
-  <verb>sind</verb>
-  <adverbs>der materie</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ein kondensator</subject>
-  <object>elektrische ladung</object>
-  <verb>speichert</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>cr</subject>
-  <object>fuer das schwermetall chrom</object>
-  <verb>steht</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die abkuerzung dvd</subject>
-  <object>digital-versatile-disc</object>
-  <verb>steht</verb>
-  <adverbs>fuer</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>rom</subject>
-  <object>read-only-memory</object>
-  <verb>steht</verb>
-  <adverbs>fuer</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>melatonin</subject>
-  <object>euere innere uhr</object>
-  <verb>steuert</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>melatonin</subject>
-  <object>(a) hormon</object>
-  <verb>is-a</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>keimbahnzellen</subject>
-  <object>sich</object>
-  <verb>teilen</verb>
-  <adverbs>durch mitose nicht</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>gegenstaende</subject>
-  <object></object>
-  <verb>verchromt werden</verb>
-  <adverbs>mit galvanisieren</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>talkum</subject>
-  <object>das verklumpen</object>
-  <verb>verhindert</verb>
-  <adverbs>von lebensmitteln</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ein ozonloch</subject>
-  <object>vermehrte ultraviolettstrahlung</object>
-  <verb>verursacht</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>das symphatische nervensystem</subject>
-  <object>azetylcholin</object>
-  <verb>verwendet</verb>
-  <adverbs>an der ersten synapse</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>aluminium</subject>
-  <object></object>
-  <verb>verwendet wird</verb>
-  <adverbs>in dem flugzeugbau</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ameisensaeureethylester</subject>
-  <object>als aromastoff</object>
-  <verb>verwendet wird</verb>
-  <adverbs>fuer rum</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>titan</subject>
-  <object></object>
-  <verb>verwendet wird</verb>
-  <adverbs>in dem flugzeugbau</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>aluminium</subject>
-  <object></object>
-  <verb>vorkommt</verb>
-  <adverbs>in der erdkruste an dem haeufigsten</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>wasserstoff</subject>
-  <object></object>
-  <verb>vorkommt</verb>
-  <adverbs>in 3 isotopen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>adrenalin</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>im nebennierenmark  produziert</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>aluminium</subject>
-  <object>gewonnen</object>
-  <verb>wird</verb>
-  <adverbs>aus bauxit</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>aluminium</subject>
-  <object>gewonnen</object>
-  <verb>wird</verb>
-  <adverbs>durch elektrolyse</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>aluminium</subject>
-  <object>gewonnen</object>
-  <verb>wird</verb>
-  <adverbs>mit dem bauxit-verfahren</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>benzin</subject>
-  <object>gewonnen</object>
-  <verb>wird</verb>
-  <adverbs>aus erdoel</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>der widerstand</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>in ohm gemessen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die einheit</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>der spannung in volt gemessen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die schallstaerke</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>in dezibel gemessen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>die stromstaerke</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>in ampere gemessen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>gold</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>beim schmelzen gruen</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>lackmus</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>in saeuren rot</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>leder</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>aus tierhaut hergestellt</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>leinen</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>aus flachs hergestellt</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>luft</subject>
-  <object>bei minus 231 grad celsius</object>
-  <verb>wird</verb>
-  <adverbs>fluessig</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>opium</subject>
-  <object>gewonnen</object>
-  <verb>wird</verb>
-  <adverbs>aus schlafmohn</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>papier</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>aus holz hergestellt</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>quecksilber</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>bei zimmertemperatur fluessig</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>raki</subject>
-  <object></object>
-  <verb>wird</verb>
-  <adverbs>_aus_anis_und_rosinen_hergestellt_</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>wasser</subject>
-  <object></object>
-  <verb>wird zerlegt</verb>
-  <adverbs>durch elektrolyse in seine bestandteile</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ein prisma</subject>
-  <object>das licht</object>
-  <verb>zerlegt</verb>
-  <adverbs>in farben</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>1.000000</truth>
   <flags>00000</flags>
 </fact>
