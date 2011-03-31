@@ -81,14 +81,8 @@ export DLL=$(echo \
 	cp img/* Freehal/img/
 	cp doc/* Freehal/doc/
 	cp -rf runtime-perl5-win32/ Freehal/
-	find Freehal/lang_de/ -name "*.pro" -exec cp '{}' Freehal/saved/de \;
-	find Freehal/lang_en/ -name "*.pro" -exec cp '{}' Freehal/saved/en \;
-	find Freehal/lang_de/ -name "*.xml" -exec cp '{}' Freehal/saved/de \;
-	find Freehal/lang_en/ -name "*.xml" -exec cp '{}' Freehal/saved/en \;
-	find Freehal/lang_de/ -name "*.csv" -exec cp '{}' Freehal/saved/de \;
-	find Freehal/lang_en/ -name "*.csv" -exec cp '{}' Freehal/saved/en \;
-	find Freehal/lang_de/ -name "*.prot" -exec cp '{}' Freehal/saved/de \;
-	find Freehal/lang_en/ -name "*.prot" -exec cp '{}' Freehal/saved/en \;
+	../scripts/fill-saved
+	cp -rf saved/* Freehal/saved/
 	find Freehal -name ".svn" -exec rm -rf '{}' \;
 
 # no database
