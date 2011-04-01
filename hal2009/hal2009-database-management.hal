@@ -271,17 +271,17 @@ define action save_facts with array facts_parsed, hash tags, var xml_file_name, 
         print new line
     done
     else do
-        set new var pro_file to handle for file name var xml_file_name, append
+        set new var xml_file to handle for file name var xml_file_name, append
         print "write some facts into " concat var xml_file_name concat "."
         print new line
 
         if var line do
-            print into var pro_file data var prepend
-            print into var pro_file data lc(var line)
-            print into var pro_file data new line
+            print into var xml_file data var prepend
+            print into var xml_file data lc(var line)
+            print into var xml_file data new line
         done
 
-        do close with var pro_file
+        do close with var xml_file
 
         if not flag no_reread do
             do reread_xml_file with var xml_file_name, var lang
@@ -578,7 +578,7 @@ define action init_prot_files with var current_language, var path do
 
                 do be_slow without arguments
 
-                set new var pro_handle to handle for file name var pro_file, write
+                set new var pro_handle to handle for file name var xml_file, write
                 do close with var pro_handle
                 do be_slow without arguments
 
@@ -591,8 +591,8 @@ define action init_prot_files with var current_language, var path do
                     print new line
 
                     if var _line matches /<[#]>/ do
-                        print into var pro_file data var _line
-                        print into var pro_file data new line
+                        print into var xml_file data var _line
+                        print into var xml_file data new line
                         go to next
                     done
 
@@ -613,12 +613,12 @@ define action init_prot_files with var current_language, var path do
                         print "in init_prot_files (2): "
                         print var line
                         print new line
-                        do work_prot_line with var line, var pro_file, var current_language, var path
+                        do work_prot_line with var line, var xml_file, var current_language, var path
                     done
                 done
                 do close using var translation_input_handle
 
-                do reread_pro_file with var pro_file, var current_language
+                do reread_xml_file with var xml_file, var current_language
 
                 do be_slow without arguments
                 set new var copy_input_handle to handle for file name var file, read
@@ -704,8 +704,8 @@ define action init_csv_files with var current_language, var path do
                 go to next
             done
 
-            set new var pro_file to var file
-            do regex with var pro_file: /csv$/ -> "pro" :i
+            set new var xml_file to var file
+            do regex with var xml_file: /csv$/ -> "xml" :i
 
             set new var check_input_handle_one to handle for file name var file, read
             set new var check_input_handle_two to handle for file name var save_file, read
@@ -726,7 +726,7 @@ define action init_csv_files with var current_language, var path do
 
                 do be_slow without arguments
 
-                set new var pro_handle to handle for file name var pro_file, write
+                set new var pro_handle to handle for file name var xml_file, write
                 do close with var pro_handle
                 do be_slow without arguments
 
@@ -743,8 +743,8 @@ define action init_csv_files with var current_language, var path do
                     print new line
 
                     if var _line matches /<[#]>/ do
-                        print into var pro_file data var _line
-                        print into var pro_file data new line
+                        print into var xml_file data var _line
+                        print into var xml_file data new line
                         go to next
                     done
 
@@ -755,15 +755,15 @@ define action init_csv_files with var current_language, var path do
                     set new hash tags to an empty hash
                     set new var classification to ''
                     for each new hash parsed in array lines do
-                        do save_facts with [ hash parsed ], hash tags, var pro_file, var classification, 1, var current_language, var path
+                        do save_facts with [ hash parsed ], hash tags, var xml_file, var classification, 1, var current_language, var path
                     done
                 done
                 do close using var translation_input_handle
 
-                do reread_pro_file with var pro_file, var current_language
+                do reread_xml_file with var xml_file, var current_language
 
                 do be_slow without arguments
-print "sync '" concat var file concat "' is '" concat var save_file concat "'"
+
                 set new var copy_input_handle to handle for file name var file, read
                 set new var copy_output_handle to handle for file name var save_file, write
                 for each new var line from var copy_input_handle is rw do
