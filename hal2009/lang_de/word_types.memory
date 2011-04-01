@@ -509,7 +509,7 @@ Hund:
   genus: m
   type: n
 Ich:
-  count: 171
+  count: 172
   type: n
 Idiot:
   count: 6
@@ -1591,7 +1591,7 @@ dreieck:
   genus: s
   type: n
 du:
-  count: 502
+  count: 503
   type: n
 duennbreiige:
   count: 1
@@ -1925,7 +1925,7 @@ freche:
   count: 5
   type: adj
 freehal:
-  count: 29
+  count: 30
   type: n
 freien:
   count: 16

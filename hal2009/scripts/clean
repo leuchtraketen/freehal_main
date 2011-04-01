@@ -1,6 +1,7 @@
 #!/bin/bash
 export LC_ALL=C
 
+rm -rf saved/
 svn status | grep '?' | grep -v lang_ | cut -c8-100 | xargs rm -r -v
 rm -rf *.out *.o *.gz *.zip grammar* lex* *.txt *.log temp* *.dat *.idx weather* win-* stderr* *.xcu *.xml genhaldebug *.cmake CMakeFiles
 mkdir temp
