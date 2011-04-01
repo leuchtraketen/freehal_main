@@ -386,7 +386,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
         for each new var word in array words is rw do
             do be_slow without arguments
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
-        end for
+        done
 
         # TEXT
         # Then toggle the identities (user <-> machine).
@@ -552,8 +552,8 @@ define action init_prot_files with var current_language, var path do
                 go to next
             done
 
-            set new var pro_file to var file
-            do regex with var pro_file: /t$/ -> "" :i
+            set new var xml_file to var file
+            do regex with var xml_file: /prot$/ -> "xml" :i
 
             #if (not var pro_file matches /data/) or exists: var pro_file, end test do
             #    go to next
