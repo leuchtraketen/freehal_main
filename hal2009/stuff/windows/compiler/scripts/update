@@ -29,6 +29,15 @@ fi
 export RR=$(echo $R | sed 's@[^0-9]@@igm')
 sed -i "s@00000@$RR@igm" hal2009-version.h
 
+echo $R | grep step && (
+	ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_CODE'
+	ssh root@freehal.org 'echo -n Step '$RR' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_TEXT'
+)
+echo $R | grep step || (
+	ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_CODE'
+	ssh root@freehal.org 'echo -n svn'$RR' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_TEXT'
+)
+
 make clean
 rm -rf CMakeCache.txt CMakeFiles
 cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
