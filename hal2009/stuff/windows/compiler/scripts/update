@@ -105,6 +105,12 @@ export DLL=$(echo \
 	scp -C /tmp/freehal-${R}-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
 	rm /tmp/freehal-${R}-windows.zip
 
+# source code
+	rm -rf Freehal/*.{exe,dll} Freehal/runtime-perl5-win32/
+	mv Freehal Freehal-${R} && tar cplSzf /tmp/freehal-${R}.tar.gz Freehal-${R} && mv Freehal-${R} Freehal
+	scp -C /tmp/freehal-${R}.tar.gz root@freehal.org:/var/www/vhosts/default/htdocs/download
+	rm /tmp/freehal-${R}.tar.gz
+
 	ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
 )
 
