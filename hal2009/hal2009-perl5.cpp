@@ -89,8 +89,12 @@ static inline void perl5_convert_structure (string& hals, int just_compile) {
     hals = replace(hals, " is true", " ");
     hals = replace(hals, " is wrong", " == 0 ");
     hals = replace(hals, " is false", " == 0 ");
-    hals = replace(hals, " true", " 1");
-    hals = replace(hals, " false", " 0");
+    if (string::npos == hals.find(" true_")) {
+        hals = replace(hals, " true", " 1");
+    }
+    if (string::npos == hals.find(" false_")) {
+        hals = replace(hals, " false", " 0");
+    }
     hals = replace(hals, " the hash ", " from hash ");
     hals = replace(hals, " has element ", " element ");
     hals = replace(hals, " contains element ", " element ");
