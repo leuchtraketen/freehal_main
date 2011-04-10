@@ -845,8 +845,10 @@ define action compute_tags with var word, var lang, var path do
 
             if from array tags 1st element is false or from array tags 1st element matches "q" do
                 set array tags to an empty array
+                print "tagged: " concat from array tags 1st element concat " (rejected)" concat new line
             done
             else do
+                print "tagged: " concat from array tags 1st element concat new line
                 do memory_set_by_name with "word_types.self-taggered", var word, array tags, var lang, var path
             done
         done
