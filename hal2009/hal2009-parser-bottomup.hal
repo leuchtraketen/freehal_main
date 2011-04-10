@@ -244,6 +244,7 @@ define action match_in_replaced_history with array replaced_history, array data_
         set from array verbs 1st item to from array verbprefixes 1st item concat from array verbs 1st item
     done
 
+    print "marker: begin new parser result" concat new line
     print "subjects: "
     do print_array with array subjects
     print new line
@@ -262,6 +263,7 @@ define action match_in_replaced_history with array replaced_history, array data_
     print "extra: "
     do print_array with array extra
     print new line
+    print "marker: end new parser result" concat new line
 
     set new hash parsed to an empty hash
     set from hash parsed element { 'verbs' } to extend_array with array verbs
