@@ -3035,9 +3035,12 @@ define action is_job with var lang, var _word do
     set new flag is_a_job to 0
 
     if flag is_a_job is false do
-        if var word matches /(^bundes)|(minister)|(meister$)/ do
+    print var word concat new line
+        if var word matches /(^bundes)|(minister)|(meister$)|(ger$)/ do
+    print "is a job" concat new line
             set flag is_a_job to 1
         done
+    print "is no job" concat new line
     done
 
     if flag is_a_job is false do
@@ -3934,11 +3937,11 @@ define action toggle_verbs with array verbs, array entities do
     done
 
     if not flag continue do
-        print "Does not contain a personal pronoun."
+        print "does not contain a personal pronoun."
         print new line
         do return with array verbs
     done
-    print "Contains a personal pronoun."
+    print "contains a personal pronoun."
     print new line
 
     for each new array verb_array in array verbs is rw do

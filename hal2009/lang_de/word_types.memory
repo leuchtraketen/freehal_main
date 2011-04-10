@@ -77,8 +77,11 @@ Aaaa:
   count: 13
   type: n
 Abend:
-  count: 22
+  count: 33
   genus: m
+  type: n
+Abidjan:
+  count: 5
   type: n
 Abloesung:
   count: 4
@@ -124,6 +127,9 @@ Ah:
 Ahnung:
   count: 47
   genus: f
+  type: n
+Alassane:
+  count: 5
   type: n
 Alchemist:
   count: 1
@@ -180,6 +186,9 @@ Arten:
 Artist:
   count: 2
   type: n
+Auenminister:
+  count: 5
+  type: n
 Aufschwung:
   count: 2
   genus: m
@@ -211,6 +220,9 @@ Bahn:
 Banane:
   count: 2
   genus: f
+  type: n
+Bastion:
+  count: 9
   type: n
 Baum:
   count: 1
@@ -374,7 +386,7 @@ FDP:
   genus: f
   type: n
 Faber:
-  count: 4
+  count: 1
   type: n
 Familienname:
   count: 1
@@ -448,6 +460,12 @@ Gattung:
   count: 2
   genus: f
   type: n
+Gbagbo:
+  count: 6
+  type: n
+Gbagbos:
+  count: 5
+  type: n
 Gegenteil:
   count: 1
   genus: s
@@ -455,6 +473,9 @@ Gegenteil:
 Gemuese:
   count: 1
   genus: s
+  type: n
+Generaele:
+  count: 5
   type: n
 Gewuerz:
   count: 1
@@ -551,6 +572,10 @@ KI:
   count: 16
   genus: f
   type: n
+Kaempfer:
+  count: 5
+  genus: m
+  type: n
 Kaffee:
   count: 2
   genus: m
@@ -558,6 +583,9 @@ Kaffee:
 Kamel:
   count: 1
   genus: f
+  type: n
+Kapitulation:
+  count: 5
   type: n
 Karotte:
   count: 1
@@ -601,6 +629,10 @@ Kontinent:
   count: 1
   genus: m
   type: n
+Krieg:
+  count: 5
+  genus: m
+  type: n
 Kuerbis:
   count: 1
   genus: m
@@ -616,6 +648,9 @@ Land:
 Lauf:
   count: 1
   genus: m
+  type: n
+Laurent:
+  count: 6
   type: n
 Leben:
   count: 1
@@ -704,6 +739,10 @@ Muenchen:
 Mutation:
   count: 1
   type: n
+Nachfolger:
+  count: 5
+  genus: m
+  type: n
 Nachtschattengewaechs:
   count: 1
   genus: s
@@ -755,7 +794,7 @@ Oben:
   count: 1
   type: adv
 Oh:
-  count: 3
+  count: 4
   type: inter
 Onanieren:
   count: 1
@@ -770,6 +809,9 @@ Orangensaft:
   type: n
 Orbitalstation:
   count: 1
+  type: n
+Ouattara:
+  count: 5
   type: n
 Ouzo:
   count: 1
@@ -799,6 +841,9 @@ Pizza:
 Plotter:
   count: 1
   genus: m
+  type: n
+Praesidentensitz:
+  count: 5
   type: n
 Primaten:
   count: 1
@@ -923,11 +968,17 @@ Tier:
   count: 2
   genus: s
   type: n
+Tim:
+  count: 1
+  type: n
 Tirol:
   count: 2
   type: n
 Tobias:
   count: 5
+  type: n
+Tom:
+  count: 1
   type: n
 Tut:
   count: 2
@@ -1015,7 +1066,7 @@ aaaa:
   count: 71
   type: n
 abend:
-  count: 21
+  count: 32
   genus: m
   type: n
 absolut:
@@ -1501,7 +1552,7 @@ definition:
   count: 4
   type: n
 dem:
-  count: 74
+  count: 84
   type: art
 denke:
   count: 2
@@ -2019,6 +2070,9 @@ gebundene:
 gechattet:
   count: 2
   type: vi
+gefallen:
+  count: 9
+  type: vi
 gefuehl:
   count: 7
   genus: f
@@ -2254,6 +2308,10 @@ hagel:
 halbfester:
   count: 1
   type: adj
+hallo:
+  count: 11
+  genus: s
+  type: n
 hamburg:
   count: 1
   type: n
@@ -2391,7 +2449,7 @@ innerhalb:
   count: 3
   type: prep
 ins:
-  count: 105
+  count: 111
   type: n
 insbesondere:
   count: 5
@@ -3298,6 +3356,9 @@ sachsen:
 saechlich:
   count: 4
   type: adj
+sagt:
+  count: 5
+  type: vi
 samos:
   count: 6
   type: n
@@ -3521,72 +3582,6 @@ sonneninsel:
 sonnenkollektor:
   count: 1
   genus: m
-  type: n
-sonnenschein:
-  count: 18
-  genus: m
-  type: n
-sonnensystem:
-  count: 1
-  type: adj
-sonnig:
-  count: 18
-  type: adj
-space:
-  count: 1
-  genus: m
-  type: n
-sportart:
-  count: 2
-  type: n
-spreeathen:
-  count: 1
-  type: n
-sprichst:
-  count: 6
-  type: vi
-sprung:
-  count: 1
-  genus: m
-  type: n
-stadt:
-  count: 1
-  genus: f
-  type: n
-staendige:
-  count: 8
-  type: adj
-staerkste:
-  count: 1
-  type: adj
-stamm:
-  count: 1
-  genus: m
-  type: n
-stapel:
-  count: 1
-  genus: m
-  type: n
-stattfindet:
-  count: 1
-  type: vi
-stehe:
-  count: 1
-  type: vi
-sternzeichen:
-  count: 4
-  genus: s
-  type: n
-stift:
-  count: 1
-  type: n
-stoss:
-  count: 1
-  genus: m
-  type: n
-straftat:
-  count: 1
-  genus: f
   type: n
 .
   type: n
@@ -4094,6 +4089,8 @@ benoetigten:
 benzin:
   type: n
 benztown:
+  type: n
+ber:
   type: n
 bereich:
   genus: m
@@ -4751,9 +4748,6 @@ hal:
   type: n
 halbfeste:
   type: adj
-hallo:
-  genus: s
-  type: n
 haltung:
   genus: f
   type: n

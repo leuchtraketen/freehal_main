@@ -473,22 +473,29 @@ define action compute_input with var input is rw, var lang, var path do
             set new var prop to ""
             set new var value to $1
             
-            do regex with var value: /^\s+/ -> "" :global:i
-            do regex with var value: /\s+$/ -> "" :global:i
-            do regex with var value: /\s+/ -> "_" :global:i
-            
-            set new array possible_props to find_property_by_value with var value, var lang, var path
-            for each new var _prop in array possible_props do
-                print "prossible property for value: " concat var _prop concat " = " concat var value concat new line
-                set var prop to var _prop
+            set new flag contains_verb to contains_part_of_speech with var value, var lang, var path
+            if flag contains_verb do
+                set var value to ""
             done
             
-            if var prop do
-                set var prop to transform_to_name with var prop
-                set var value to transform_to_name with var value
-            
-                set new var expr to var prop concat " _:_ " concat var value
-                set var input to "var subject is-property var expr"
+            if var value is true do
+                do regex with var value: /^\s+/ -> "" :global:i
+                do regex with var value: /\s+$/ -> "" :global:i
+                do regex with var value: /\s+/ -> "_" :global:i
+
+                set new array possible_props to find_property_by_value with var value, var lang, var path
+                for each new var _prop in array possible_props do
+                    print "prossible property for value: " concat var _prop concat " = " concat var value concat new line
+                    set var prop to var _prop
+                done
+                
+                if var prop do
+                    set var prop to transform_to_name with var prop
+                    set var value to transform_to_name with var value
+                
+                    set new var expr to var prop concat " _:_ " concat var value
+                    set var input to "var subject is-property var expr"
+                done
             done
         done
     done
@@ -564,21 +571,26 @@ define action compute_input with var input is rw, var lang, var path do
             set new var adverbs to ''
             set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
             set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
+            
+            set new flag contains_verb to contains_part_of_speech with var b, var lang, var path
+            if flag contains_verb is false do
+                set var a to transform_to_name with var a
+                set var b to transform_to_name with var b
 
-            set var a to transform_to_name with var a
-            set var b to transform_to_name with var b
-
-            if var a not matches /\(a\)/ and var b matches /\(a\)/ and var input not matches /<[=]>/ do
-                set var input to var a concat " is-a " concat var b concat " " concat var adverbs
-            done
-            else do
-                set var input to var a concat " = " concat var b concat " " concat var adverbs
+                if var a not matches /\(a\)/ and var b matches /\(a\)/ and var input not matches /<[=]>/ do
+                    set var input to var a concat " is-a " concat var b concat " " concat var adverbs
+                done
+                else do
+                    set var input to var a concat " = " concat var b concat " " concat var adverbs
+                done
             done
         done
 
-
         if var input not matches /ein|eine|der|die|das/ do
-            do regex with var input: /^(.+?)\s+?(ist|sind)\s+?(.+?)\s?$/ -> "$0 = $2" :global:i
+            set new flag contains_verb to contains_part_of_speech with var input, var lang, var path
+            if flag contains_verb is false do
+                do regex with var input: /^(.+?)\s+?(ist|sind)\s+?(.+?)\s?$/ -> "$0 = $2" :global:i
+            done
         done
 
         do regex with var input: /^(ein|eine)\s/ -> " " :global:i
@@ -1351,7 +1363,17 @@ define action put_underscore_names_into_builtin_names with var input, var lang, 
             push into array male_names, $0
         done
     done
+done
 
+define action contains_part_of_speech with var value, var lang, var path do
+    set new array words_value to split with /[\s,.-;]+?/, var value
+    for each new var word in array words_value do
+        set new array value_props to compute_tags with var word, var lang, var path
+        if from array value_props 1st element matches /v/ and from array value_props 1st element not matches /adv/ do
+            do return with true
+        done
+    done
+    do return with false
 done
 
 define action find_property_by_value with var value, var lang, var path do

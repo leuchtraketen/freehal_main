@@ -350,7 +350,8 @@ define action list_grammar with array grammar do
             set new var conclusion to var symbol concat " ~"
             set new var premise_str to ""
             set new var i to 1
-            for each new var part_of_replacement in array replacement do
+            for each new var _part_of_replacement in array replacement do
+                set new var part_of_replacement to var _part_of_replacement
                 set new var virtual_replacement to ""
                 if var part_of_replacement matches /^(.*?)\/(.*?)$/ do
                     set var part_of_replacement to $0
@@ -635,7 +636,9 @@ define action new_parser_start with array grammar, array data, var lang, var pat
     set new array data_pos to elements_of_array with array data, 1
 
     set new hash rules to list_grammar with array grammar
+    print "marker: begin match_in_grammar" concat new line
     set new hash parsed to match_in_grammar with hash rules, array data_pos, array data_words, array data
+    print "marker: end match_in_grammar" concat new line
     if hash parsed is false do
         set hash parsed to fake_hash_parsed without arguments
     done
@@ -715,13 +718,18 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-nounphrase",
+        [ "r-nounphrase-nouns", ],
+        [ "d-adjective", "r-nounphrase-nouns", ],
+        [ "d-article", "r-nounphrase-nouns", ],
+        [ "d-article", "d-adjective", "r-nounphrase-nouns", ],
+    ],
+
+    [ "r-nounphrase-nouns",
         [ "d-title", ],
         [ "d-noun", ],
         [ "d-title", "d-noun", ],
         [ "d-title", "d-title", "d-noun", ],
-        [ "d-adjective", "d-noun", ],
-        [ "d-article", "d-noun", ],
-        [ "d-article", "d-adjective", "d-noun", ],
+        [ "d-title", "d-noun", "d-noun", ],
     ],
 
     [ "r-verbprefix",

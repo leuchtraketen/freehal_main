@@ -69,3 +69,14 @@
   <flags>00000</flags>
 </fact>
 
+<fact>
+  <subject>_tim_</subject>
+  <object>_tom_</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+

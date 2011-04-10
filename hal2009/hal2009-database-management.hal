@@ -176,6 +176,8 @@ define action save_facts with array facts_parsed, hash tags, var xml_file_name, 
         set var line to var line concat "  <truth>" concat var truth concat "</truth>" concat new line
         set var line to var line concat "  <flags>" concat var _flags concat "</flags>" concat new line
 
+        print var line concat new line
+
         if not from hash parsed element { 'clauses' } do
             set from hash parsed element { 'clauses' } to an empty array
             set new hash empty_clause to an empty hash
