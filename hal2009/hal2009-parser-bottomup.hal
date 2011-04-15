@@ -674,7 +674,7 @@ set multi-line new global array grammar to [
         [ "r-extra-before", "r-questionword", "r-extra-after" ],
         [ "r-questionword", "r-extra-after" ],
         [ "r-questionword", ],
-        [ "d-linking", ],
+        [ "d-linking/v-questionword", ],
     ],
 
     [ "r-questionword",
