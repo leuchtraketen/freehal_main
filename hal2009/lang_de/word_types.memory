@@ -122,7 +122,7 @@ Aenderung:
   genus: f
   type: n
 Ah:
-  count: 3
+  count: 6
   type: n
 Ahnung:
   count: 47
@@ -244,6 +244,10 @@ Berlin:
 Bewertung:
   count: 8
   genus: f
+  type: n
+Bild:
+  count: 57
+  genus: s
   type: n
 Biologie:
   count: 1
@@ -519,7 +523,7 @@ Hitler:
   count: 1
   type: n
 Hmm:
-  count: 6
+  count: 9
   type: inter
 Hoecker:
   count: 1
@@ -562,7 +566,7 @@ Isotop:
   genus: f
   type: n
 Ja:
-  count: 18
+  count: 28
   type: adv
 Jupiter:
   count: 2
@@ -632,6 +636,9 @@ Kontinent:
 Krieg:
   count: 5
   genus: m
+  type: n
+Kuba:
+  count: 57
   type: n
 Kuerbis:
   count: 1
@@ -1002,6 +1009,9 @@ Verwandte:
   count: 9
   genus: m
   type: n
+Vonprgen:
+  count: 7
+  type: v
 Vorname:
   count: 1
   genus: m
@@ -1025,6 +1035,9 @@ Wasserstoff:
 Wellen:
   count: 2
   genus: f
+  type: n
+Welt:
+  count: 57
   type: n
 Weltall:
   count: 1
@@ -1078,6 +1091,9 @@ absolut:
   type: adj
 adela:
   count: 2
+  type: n
+ah:
+  count: 3
   type: n
 ahnung:
   count: 28
@@ -1217,6 +1233,9 @@ batzen:
   count: 1
   genus: m
   type: n
+baufllige:
+  count: 57
+  type: adj
 baum:
   count: 4
   genus: m
@@ -2453,7 +2472,7 @@ innerhalb:
   count: 3
   type: prep
 ins:
-  count: 112
+  count: 169
   type: n
 insbesondere:
   count: 5
@@ -2645,6 +2664,9 @@ koks:
   count: 3
   genus: m
   type: n
+kolonialbauten:
+  count: 19
+  type: n
 kombination:
   count: 1
   type: n
@@ -2715,6 +2737,9 @@ kroeten:
   type: n
 krusch:
   count: 1
+  type: n
+kuba:
+  count: 19
   type: n
 kuechengeraet:
   count: 3
@@ -3150,6 +3175,9 @@ oesterreichischen:
 offeriert:
   count: 1
   type: vi
+oldtimer:
+  count: 19
+  type: n
 onanieren:
   count: 1
   type: vi
@@ -3552,44 +3580,10 @@ sie:
 sieht:
   count: 1
   type: vi
-singen:
-  count: 1
-  genus: s
-  type: n
-situation:
-  count: 1
-  type: n
-sitz:
-  count: 2
-  genus: m
-  type: n
-software:
-  count: 7
-  genus: f
-  type: n
-sogar:
-  count: 3
-  type: adv
-solche:
-  count: 1
-  type: adv
-solltest:
-  count: 4
-  type: vi
-sonne:
-  count: 12
-  genus: f
-  type: n
-sonneninsel:
-  count: 2
-  type: n
 .
   type: n
 Abgabe:
   genus: f
-Bild:
-  genus: s
-  type: n
 Ego:
   genus: s
   type: n
@@ -3701,8 +3695,6 @@ Kairo:
   type: n
 Kokain:
   genus: s
-  type: n
-Kuba:
   type: n
 Kueche:
   genus: f
@@ -3885,8 +3877,6 @@ Wein:
 Wellenlaenge:
   genus: f
   type: n
-Welt:
-  type: n
 Wertpapier:
   genus: f
   type: n
@@ -3930,8 +3920,6 @@ afrika:
   type: n
 agitprop:
   genus: f
-  type: n
-ah:
   type: n
 allen:
   type: pron
@@ -4037,8 +4025,6 @@ babys:
   genus: f
   type: n
 bandfoermige:
-  type: adj
-baufllige:
   type: adj
 baukloetze:
   genus: f

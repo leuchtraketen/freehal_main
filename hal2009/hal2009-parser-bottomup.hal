@@ -210,13 +210,13 @@ define action match_in_replaced_history with array replaced_history, array data_
         if var symbol matches /v-object/ do
             push into array objects, elements of array words
         done
-        if var symbol matches /s-verb/ and var symbol not matches /s-verbprefix/ do
+        if var symbol matches /v-verb/ and var symbol not matches /v-verbprefix/ do
             push into array verbs, elements of array words
         done
-        if var symbol matches /s-verbprefix/ do
+        if var symbol matches /v-verbprefix/ do
             push into array verbprefixes, elements of array words
         done
-        if var symbol matches /s-(long)?adverb$/ do
+        if var symbol matches /v-(long)?adverb$/ do
             if size of array adverbs do
                 push into array adverbs, ";"
             done
@@ -274,6 +274,20 @@ define action match_in_replaced_history with array replaced_history, array data_
     set from hash parsed element { 'questionword' } to extend_array with array questionwords
     set from hash parsed element { 'extra' } to extend_array with array extra
     do return with hash parsed
+done
+
+define action get_regex_match_correct_open_end_tags without arguments do
+   # set new var match_correct_open_end_tags_template to '\s?[^<>]*?(?:(?:<___>)?[^<>]*?)*?'
+    set new var match_correct_open_end_tags_template to '\s?[^<>]*?'
+    set new var match_correct_open_end_tags to '<(___)>'
+    set new var i to 5
+    while var i > 0 do
+    print "match_correct_open_end_tags: " concat var match_correct_open_end_tags concat new line
+        do regex with var match_correct_open_end_tags: /___/ -> "var match_correct_open_end_tags_template"
+        set var i to var i - 1
+    done
+    print "match_correct_open_end_tags: " concat var match_correct_open_end_tags concat new line
+    do return with var match_correct_open_end_tags
 done
 
 define action list_grammar with array grammar do
@@ -349,7 +363,7 @@ define action list_grammar with array grammar do
         set new array replacements to every_except_first with array _grammar
         for each new array replacement in array replacements do
 
-            set new var conclusion to var symbol concat " ~"
+            set new var conclusion to var symbol concat " < "
             set new var premise_str to ""
             set new var i to 1
             for each new var _part_of_replacement in array replacement do
@@ -363,10 +377,11 @@ define action list_grammar with array grammar do
                 if var premise_str do
                     set var premise_str to var premise_str concat "\\s?"
                 done
-                set var premise_str to var premise_str concat var part_of_replacement concat " ~([^~]*?)~"
+                # set var premise_str to var premise_str concat var part_of_replacement concat " <([^~]*?)>"
+                set var premise_str to var premise_str concat var part_of_replacement concat " WILDCARD"
                 if var i <= 9 do
                     if var virtual_replacement do
-                        set var conclusion to var conclusion concat "var virtual_replacement <\\" concat var i concat "> "
+                        set var conclusion to var conclusion concat "var virtual_replacement < \\" concat var i concat " > "
                     done
                     else do
                         set var conclusion to var conclusion concat "\\" concat var i concat " "
@@ -375,15 +390,13 @@ define action list_grammar with array grammar do
                 set var i to var i + 1
             done
 
-            set var conclusion to var conclusion concat "~"
-
-#            set var conclusion to var symbol concat " ~\\1 \\2 \\3 \\4 \\5 \\6 \\7 \\8 \\9~"
+            set var conclusion to var conclusion concat ">"
 
             if var conclusion matches /^s-all/ do
                 set var premise_str to "^\\s*?" concat var premise_str concat "\\s*?\$"
             done
-
-#            print var premise_str concat " ------ " concat var conclusion concat new line  
+            
+            print var premise_str concat new line
 
             if var premise_str and var symbol not matches /r-/ do
                 if not from hash rules element { var premise_str } do
@@ -420,7 +433,7 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
     for each new array data_element in array data do
         set new var symbol to from array data_element second element
         set new var word to from array data_element first element
-        set var data_pos_str to var data_pos_str concat " " concat var symbol concat " ~" concat var word concat "~"
+        set var data_pos_str to var data_pos_str concat " " concat var symbol concat " < " concat var word concat " >"
     done
     set var data_pos_str to var data_pos_str concat " "
     print var data_pos_str concat new line
@@ -468,6 +481,8 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
         do return with 0
     done
 
+    set new var match_correct_open_end_tags to get_regex_match_correct_open_end_tags without arguments
+
     set new hash unique_data_pos_list to an empty hash
     for each new array data_pos_element in array data_pos_list do
         set from hash unique_data_pos_list item { array data_pos_element 1st element } to array data_pos_element
@@ -486,6 +501,9 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
             go to next
         done
 
+        set new var premise_regular_exp to var premise
+        do regex with var premise_regular_exp: /WILDCARD/ -> "var match_correct_open_end_tags" :global
+
         set new array data_pos_list_tmp to an empty array
         set elements of array data_pos_list_tmp to elements of array data_pos_list
         set array data_pos_list to an empty array
@@ -494,7 +512,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
         for each new array data_pos_element in array data_pos_list_tmp do
             set new var data_pos_str to from array data_pos_element 1st element
 
-            if var data_pos_str matches /var premise/ do
+            if var data_pos_str matches /var premise_regular_exp/ do
                 print "found: " concat var premise concat new line
 
                 set new var successful_replacements to 0
@@ -504,7 +522,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                     print "rule:               '" concat var premise concat "' '" concat var _conclusion concat "'" concat new line
 
                     set new var _data_pos_str to var data_pos_str
-                    while var _data_pos_str matches /var premise/ do
+                    while var _data_pos_str matches /var premise_regular_exp/ do
                         set new var _0 to $0
                         set new var _1 to $1
                         set new var _2 to $2
@@ -526,9 +544,14 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                         do regex with var conclusion: /\\7/ -> "var _6"
                         do regex with var conclusion: /\\8/ -> "var _7"
                         do regex with var conclusion: /\\9/ -> "var _8"
-                        do regex with var _data_pos_str: /var premise/ -> " var conclusion"
+                        while var _data_pos_str matches /<([^><]*?)<([^><]*?)>([^><]*?)/ do
+                            do regex with var _data_pos_str: /<([^><]*?)<([^><]*?)>([^><]*?)/ -> "<$0($1)$2" :global
+                        done
+                        do regex with var _data_pos_str: /var premise_regular_exp/ -> " var conclusion"
                         do regex with var _data_pos_str: /\s+/ -> " " :global
-                        do regex with var _data_pos_str: /[~]([^\s]*?)\s[~]/ -> "~$0~" :global
+                        while var _data_pos_str matches /<([^><]*?)<([^><]*?)>([^><]*?)/ do
+                            do regex with var _data_pos_str: /<([^><]*?)<([^><]*?)>([^><]*?)/ -> "<$0($1)$2" :global
+                        done
 
                         if var data_pos_str ne var _data_pos_str do
                             print "before reduction:  " concat var data_pos_str concat new line
@@ -540,28 +563,62 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
 
                             set new array replaced_history to an empty array
                             set elements of array replaced_history to elements of that array: from array data_pos_element 2nd element end of elements
-                            set new var history_premise to var premise
-                            do regex with var history_premise: /.*/ -> "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
+                            set new var history_premise to "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
+                            do regex with var history_premise: /^\s+/ -> ""
                             do regex with var history_premise: /\s+$/ -> ""
+                            do regex with var history_premise: /\s+/ -> " "
                             set new var history_conclusion to var conclusion
-                            do regex with var history_conclusion: /[~].*/ -> ""
+                            do regex with var history_conclusion: /[<].*/ -> ""
+                            do regex with var history_conclusion: /^\s+/ -> ""
                             do regex with var history_conclusion: /\s+$/ -> ""
+                            do regex with var history_conclusion: /\s+/ -> " "
                             print "history_conclusion: " concat var history_conclusion concat new line
                             print "conclusion: " concat var conclusion concat new line
                             print "history_premise: " concat var history_premise concat new line
                             push into array replaced_history, [ var history_conclusion, var history_premise ]
 
                             
-                            set var history_conclusion to var conclusion
-                            if var history_conclusion matches /^\s*?(s-all)\s*?[~]/ do
-                                do regex with var history_conclusion: /^[^~]*?[~]/ -> ""
-                                do regex with var history_conclusion: /[~][^~]*?$/ -> ""
-                                do regex with var history_conclusion: /^\s+/ -> ""
-                                do regex with var history_conclusion: /\s+$/ -> ""
-                                print "history_conclusion: " concat var history_conclusion concat new line
-                                while var history_conclusion matches /(^|\s)([^<>\s]*?)\s?<([^>]*?)>/ do
-                                    push into array replaced_history, [ $1, $2 ]
-                                    do regex with var history_conclusion: /(^|\s)([^<>\s]*?)\s?<([^>]*?)>/ -> ""
+                            if var _data_pos_str matches /[(]/ do
+                                set new array conclusion_words to split with /\s+/, var _data_pos_str
+                                set new var j to 0
+                                while var j < size of array conclusion_words do
+                                    set new var word_j to from array conclusion_words element [ var j ]
+                                    if var word_j matches "(" or var word_j matches "<" do
+                                        set new var k to var j
+                                        set new var level to 0
+                                        set new array innerwords to an empty array
+                                        while var k < size of array conclusion_words do
+                                            set new var word_k to from array conclusion_words element [ var k ]
+                                            if var word_k matches "(" or var word_k matches "<" do
+                                                set var level to var level + 1
+                                            done
+                                            else if var word_k matches ")" or var word_k matches ">" do
+                                                set var level to var level - 1
+                                                if var level is 0 do
+                                                    set new var innerpremise to from array conclusion_words element [ var j - 1 ]
+                                                    set new var innertext to join with " ", elements of array innerwords
+                                                    
+                                                    set new flag do_add to true
+                                                    for each new array replaced_history_entry in array replaced_history do
+                                                        if var innerpremise matches from array replaced_history_entry 1st item and var innertext matches from array replaced_history_entry 2nd item do
+                                                            set flag do_add to false
+                                                            go to last
+                                                        done
+                                                    done
+                                                    
+                                                    if flag do_add is true do
+                                                        push into array replaced_history, [ var innerpremise, var innertext ]
+                                                    done
+                                                    go to last
+                                                done
+                                            done
+                                            else do
+                                                push into array innerwords, var word_k
+                                            done
+                                            set var k to var k + 1
+                                        done
+                                    done
+                                    set var j to var j + 1
                                 done
                             done
 
@@ -656,12 +713,12 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-sentence",
-        [ "r-adverbs",                        "r-sentence-spo", ],
-        [ "r-adverbs",                        "r-sentence-pso", ],
-        [ "r-adverbs",                        "r-sentence-sop", ],
-        [ "r-adverbs",                        "r-sentence-ps", ],
-        [ "r-adverbs",                        "r-sentence-sp", ],
-        [ "r-adverbs",                        "r-sentence-p", ],
+        [ "r-adverbs", "r-sentence-spo", ],
+        [ "r-adverbs", "r-sentence-pso", ],
+        [ "r-adverbs", "r-sentence-sop", ],
+        [ "r-adverbs", "r-sentence-ps", ],
+        [ "r-adverbs", "r-sentence-sp", ],
+        [ "r-adverbs", "r-sentence-p", ],
         [ "r-adverbs", "s-questionword-part", "r-sentence-spo", ],
         [ "r-adverbs", "s-questionword-part", "r-sentence-pso", ],
         [ "r-adverbs", "s-questionword-part", "r-sentence-sop", ],
@@ -689,24 +746,24 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-sentence-spo",
-        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb", "r-adverbs", "r-objects", "r-longadverbs", "r-verbprefix", ],
-        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs", "r-verbprefix", ],
+        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", "r-verbprefix", ],
+        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", "r-verbprefix", ],
     ],
     [ "r-sentence-ps",
-        [ "s-verb",    "r-adverbs", "s-nounphrases/v-subject", "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-longadverbs", ],
     ],
     [ "r-sentence-sp",
-        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb", "r-longadverbs", "r-verbprefix", ],
+        [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", "r-verbprefix", ],
     ],
     [ "r-sentence-pso",
-        [ "s-verb",    "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", ],
-        [ "s-verb",    "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
     ],
     [ "r-sentence-sop",
-        [ "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb", "r-longadverbs",   ],
+        [ "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
     ],
     [ "r-sentence-p",
-        [ "s-verb",    "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-longadverbs", ],
     ],
 
     [ "r-objects",
@@ -736,7 +793,7 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-verbprefix",
-        [ "s-verbprefix", ],
+        [ "s-verbprefix/v-verbprefix", ],
         [  ],
     ],
 
@@ -745,16 +802,16 @@ set multi-line new global array grammar to [
     ],
 
     [ "r-longadverbs",
-        [ "s-longadverbs", ],
-        [ "s-adverbs", ],
+        [ "s-longadverbs/v-longadverbs", ],
+        [ "s-adverbs/v-adverbs", ],
         [  ],
     ],
 
     [ "s-longadverbs",
-        [ "s-longadverb", ],
-        [ "s-longadverb", "s-longadverb", ],
-        [ "s-longadverb", "s-longadverb", "s-longadverb", ],
-        [ "s-longadverb", "s-longadverb", "s-longadverb", "s-longadverb", ],
+        [ "s-longadverb/v-longadverb", ],
+        [ "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", ],
+        [ "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", ],
+        [ "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", "s-longadverb/v-longadverb", ],
     ],
 
     [ "s-longadverb",
@@ -767,10 +824,10 @@ set multi-line new global array grammar to [
     ],
 
     [ "s-adverbs",
-        [ "s-adverb", ],
-        [ "s-adverb", "s-adverb", ],
-        [ "s-adverb", "s-adverb", "s-adverb", ],
-        [ "s-adverb", "s-adverb", "s-adverb", "s-adverb", ],
+        [ "s-adverb/v-adverb", ],
+        [ "s-adverb/v-adverb", "s-adverb/v-adverb", ],
+        [ "s-adverb/v-adverb", "s-adverb/v-adverb", "s-adverb/v-adverb", ],
+        [ "s-adverb/v-adverb", "s-adverb/v-adverb", "s-adverb/v-adverb", "s-adverb/v-adverb", ],
     ],
 
 #    [ "s-adverbs",
@@ -782,6 +839,7 @@ set multi-line new global array grammar to [
 
     [ "s-adverb",
         [ "d-preposition", "s-nounphrases", ],
+        [ "s-verbprefix", "s-nounphrases", ],
         [ "d-adjective", ],
         [ "d-adjective", "d-adjective", ],
     ],
