@@ -3037,7 +3037,7 @@ define action is_job with var lang, var _word do
 
     if flag is_a_job is false do
     print var word concat new line
-        if var word matches /(^bundes)|(minister)|(meister$)|(ger$)/ do
+        if var word matches /(gebrueder)|(^bundes)|(minister)|(meister$)|(ger$)/ do
     print "is a job" concat new line
             set flag is_a_job to 1
         done
