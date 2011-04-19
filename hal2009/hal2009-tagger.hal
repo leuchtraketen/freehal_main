@@ -843,7 +843,7 @@ define action compute_tags with var word, var lang, var path do
             set array tags to an empty array
             set from array tags 1st element to guess_part_of_speech using var word, var lang, var path
 
-            if from array tags 1st element is false or from array tags 1st element matches "q" do
+            if from array tags 1st element is empty string or from array tags 1st element matches "q" do
                 set array tags to an empty array
                 print "tagged: " concat from array tags 1st element concat " (rejected)" concat new line
             done

@@ -80,3 +80,14 @@
   <flags>00000</flags>
 </fact>
 
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+

@@ -562,7 +562,7 @@ Isotop:
   genus: f
   type: n
 Ja:
-  count: 17
+  count: 18
   type: adv
 Jupiter:
   count: 2
@@ -933,6 +933,10 @@ Staaten:
 Steinadler:
   count: 1
   genus: m
+  type: n
+Sternbild:
+  count: 1
+  genus: s
   type: n
 Strahlung:
   count: 2
@@ -2449,7 +2453,7 @@ innerhalb:
   count: 3
   type: prep
 ins:
-  count: 111
+  count: 112
   type: n
 insbesondere:
   count: 5
@@ -3579,14 +3583,13 @@ sonne:
 sonneninsel:
   count: 2
   type: n
-sonnenkollektor:
-  count: 1
-  genus: m
-  type: n
 .
   type: n
 Abgabe:
   genus: f
+Bild:
+  genus: s
+  type: n
 Ego:
   genus: s
   type: n
@@ -3698,6 +3701,8 @@ Kairo:
   type: n
 Kokain:
   genus: s
+  type: n
+Kuba:
   type: n
 Kueche:
   genus: f
@@ -3826,9 +3831,6 @@ Sport:
 Sprachen:
   genus: f
   type: n
-Sternbild:
-  genus: s
-  type: n
 Stroemung:
   genus: f
   type: n
@@ -3882,6 +3884,8 @@ Wein:
   type: n
 Wellenlaenge:
   genus: f
+  type: n
+Welt:
   type: n
 Wertpapier:
   genus: f
@@ -4033,6 +4037,8 @@ babys:
   genus: f
   type: n
 bandfoermige:
+  type: adj
+baufllige:
   type: adj
 baukloetze:
   genus: f
