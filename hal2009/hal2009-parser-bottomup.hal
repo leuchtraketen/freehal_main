@@ -563,19 +563,20 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
 
                             set new array replaced_history to an empty array
                             set elements of array replaced_history to elements of that array: from array data_pos_element 2nd element end of elements
-                            set new var history_premise to "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
-                            do regex with var history_premise: /^\s+/ -> ""
-                            do regex with var history_premise: /\s+$/ -> ""
-                            do regex with var history_premise: /\s+/ -> " "
-                            set new var history_conclusion to var conclusion
-                            do regex with var history_conclusion: /[<].*/ -> ""
-                            do regex with var history_conclusion: /^\s+/ -> ""
-                            do regex with var history_conclusion: /\s+$/ -> ""
-                            do regex with var history_conclusion: /\s+/ -> " "
-                            print "history_conclusion: " concat var history_conclusion concat new line
                             print "conclusion: " concat var conclusion concat new line
-                            print "history_premise: " concat var history_premise concat new line
-                            push into array replaced_history, [ var history_conclusion, var history_premise ]
+                            
+                            #set new var history_premise to "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
+                            #do regex with var history_premise: /^\s+/ -> ""
+                            #do regex with var history_premise: /\s+$/ -> ""
+                            #do regex with var history_premise: /\s+/ -> " "
+                            #set new var history_conclusion to var conclusion
+                            #do regex with var history_conclusion: /[<].*/ -> ""
+                            #do regex with var history_conclusion: /^\s+/ -> ""
+                            #do regex with var history_conclusion: /\s+$/ -> ""
+                            #do regex with var history_conclusion: /\s+/ -> " "
+                            #print "history_conclusion: " concat var history_conclusion concat new line
+                            #print "history_premise: " concat var history_premise concat new line
+                            #push into array replaced_history, [ var history_conclusion, var history_premise ]
 
                             
                             if var _data_pos_str matches /[(]/ do
