@@ -189,7 +189,7 @@ define action from_grammar with array grammar, var name do
     do return with array _grammar
 done
 
-define action match_in_replaced_history with array replaced_history, array data_pos, array data_words do
+define action match_in_replaced_history with array replaced_history, array data_pos, array data_words, var prefix do
     set new array subjects to an empty array
     set new array objects to an empty array
     set new array verbs to an empty array
@@ -198,38 +198,43 @@ define action match_in_replaced_history with array replaced_history, array data_
     set new array questionwords to an empty array
     set new array extra to an empty array
 
+    set new var count to 0
     set new var i to 0
     for each new array _symbol in array replaced_history do
         set new var symbol to from array _symbol first element
         set new var words_str to from array _symbol second element
         set new array words to split with " ", var words_str
 
-        if var symbol matches /v-subject/ do
-            push into array subjects, elements of array words
-        done
-        if var symbol matches /v-object/ do
-            push into array objects, elements of array words
-        done
-        if var symbol matches /v-verb/ and var symbol not matches /v-verbprefix/ do
-            push into array verbs, elements of array words
-        done
-        if var symbol matches /v-verbprefix/ do
-            push into array verbprefixes, elements of array words
-        done
-        if var symbol matches /v-(long)?adverb$/ do
-            if size of array adverbs do
-                push into array adverbs, ";"
+        if var symbol matches /var prefix/ do
+            set var count to var count + 1
+        
+            if var symbol matches /v-subject/ do
+                push into array subjects, elements of array words
             done
-            push into array adverbs, elements of array words
-        done
-        if var symbol matches /v-questionword/ do
-            push into array questionwords, elements of array words
-        done
-        if var symbol matches /v-extra-after/ do
-            push into array extra, elements of array words
-        done
-        if var symbol matches /v-extra-before/ do
-            do unshift with elements of array adverbs, elements of array words
+            if var symbol matches /v-object/ do
+                push into array objects, elements of array words
+            done
+            if var symbol matches /v-verb/ and var symbol not matches /v-verbprefix/ do
+                push into array verbs, elements of array words
+            done
+            if var symbol matches /v-verbprefix/ do
+                push into array verbprefixes, elements of array words
+            done
+            if var symbol matches /v-(long)?adverb$/ do
+                if size of array adverbs do
+                    push into array adverbs, ";"
+                done
+                push into array adverbs, elements of array words
+            done
+            if var symbol matches /v-questionword/ do
+                push into array questionwords, elements of array words
+            done
+            if var symbol matches /v-extra-after/ do
+                push into array extra, elements of array words
+            done
+            if var symbol matches /v-extra-before/ do
+                do unshift with elements of array adverbs, elements of array words
+            done
         done
 
         set var i to var i + 1
@@ -264,6 +269,10 @@ define action match_in_replaced_history with array replaced_history, array data_
     do print_array with array extra
     print new line
     print "marker: end new parser result" concat new line
+    
+    if var count is 0 do
+        do return with false
+    done
 
     set new hash parsed to an empty hash
     set from hash parsed element { 'verbs' } to extend_array with array verbs
@@ -396,7 +405,7 @@ define action list_grammar with array grammar do
                 set var premise_str to "^\\s*?" concat var premise_str concat "\\s*?\$"
             done
             
-            print var premise_str concat new line
+            # print var premise_str concat new line
 
             if var premise_str and var symbol not matches /r-/ do
                 if not from hash rules element { var premise_str } do
@@ -472,7 +481,22 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
         do return with 0
     done
 
-    set new hash parsed to match_in_replaced_history with array replaced_history, array data_pos, array data_words
+    set new hash parsed to match_in_replaced_history with array replaced_history, array data_pos, array data_words, "v-clause-1_"
+    if hash parsed is true do
+        set new array clauses to an empty array
+        set new var i to 2
+        while var i < 10 do
+            set new hash parsed_clause to match_in_replaced_history with array replaced_history, array data_pos, array data_words, "v-clause-" concat var i concat "_"
+            
+            if hash parsed_clause is false do
+                go to last
+            done
+            
+            push into array clauses, hash parsed_clause
+            set var i to var i + 1
+        done
+        set from hash parsed element { 'clauses' } to array clauses
+    done
     do return with hash parsed
 done
 
@@ -582,9 +606,14 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                             if var _data_pos_str matches /[(]/ do
                                 set new array conclusion_words to split with /\s+/, var _data_pos_str
                                 set new var j to 0
+                                set new var clause_name to ""
                                 while var j < size of array conclusion_words do
                                     set new var word_j to from array conclusion_words element [ var j ]
                                     if var word_j matches "(" or var word_j matches "<" do
+                                        if from array conclusion_words element [ var j - 1 ] matches /v-clause-/ do
+                                            set var clause_name to from array conclusion_words element [ var j - 1 ]
+                                        done
+                                    
                                         set new var k to var j
                                         set new var level to 0
                                         set new array innerwords to an empty array
@@ -607,8 +636,8 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                                                         done
                                                     done
                                                     
-                                                    if flag do_add is true do
-                                                        push into array replaced_history, [ var innerpremise, var innertext ]
+                                                    if flag do_add is true and var clause_name matches /./ do
+                                                        push into array replaced_history, [ var clause_name concat "_" concat var innerpremise, var innertext ]
                                                     done
                                                     go to last
                                                 done
@@ -710,25 +739,41 @@ done
 set multi-line new global array grammar to [
 
     [ "s-all",
-        [ "r-sentence", ],
+        [ "s-sentence/v-clause-1", ],
+        [ "s-sentence/v-clause-1", "s-followingsentence/v-clause-2", ],
     ],
 
-    [ "r-sentence",
-        [ "r-adverbs", "r-sentence-spo", ],
-        [ "r-adverbs", "r-sentence-pso", ],
-        [ "r-adverbs", "r-sentence-sop", ],
-        [ "r-adverbs", "r-sentence-ps", ],
-        [ "r-adverbs", "r-sentence-sp", ],
-        [ "r-adverbs", "r-sentence-p", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-spo", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-pso", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-sop", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-ps", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-sp", ],
-        [ "r-adverbs", "s-questionword-part", "r-sentence-p", ],
+    [ "s-sentence",
+        [ "r-adverbs", "s-sentence-spo", ],
+        [ "r-adverbs", "s-sentence-pso", ],
+        [ "r-adverbs", "s-sentence-sop", ],
+        [ "r-adverbs", "s-sentence-ps", ],
+        [ "r-adverbs", "s-sentence-sp", ],
+        [ "r-adverbs", "s-sentence-p", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-spo", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-pso", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-sop", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-ps", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-sp", ],
+        [ "r-adverbs", "r-questionword-part", "s-sentence-p", ],
     ],
 
-    [ "s-questionword-part",
+    [ "r-clauselinking",
+        [ "d-linking/v-clauselinking", ],
+    ],
+    [ "s-followingsentence",
+        [ "r-clauselinking", "r-adverbs", "s-sentence-po", ],
+        [ "r-clauselinking", "r-adverbs", "s-sentence-p", ],
+    ],
+    [ "s-sentence-po",
+        [ "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
+    ],
+    [ "s-sentence-p",
+        [ "s-verb/v-verb", "r-longadverbs", ],
+    ],
+
+    [ "r-questionword-part",
         [ "r-extra-before", "r-questionword", "r-extra-after" ],
         [ "r-questionword", "r-extra-after" ],
         [ "r-questionword", ],
@@ -746,24 +791,25 @@ set multi-line new global array grammar to [
         [ "d-preposition/v-extra-before", ],
     ],
 
-    [ "r-sentence-spo",
+    [ "s-sentence-spo",
         [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", "r-verbprefix", ],
         [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", "r-verbprefix", ],
     ],
-    [ "r-sentence-ps",
+    [ "s-sentence-ps",
         [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-longadverbs", ],
+        [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
     ],
-    [ "r-sentence-sp",
+    [ "s-sentence-sp",
         [ "s-nounphrases/v-subject", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", "r-verbprefix", ],
     ],
-    [ "r-sentence-pso",
+    [ "s-sentence-pso",
         [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", ],
         [ "s-verb/v-verb", "r-adverbs", "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
     ],
-    [ "r-sentence-sop",
+    [ "s-sentence-sop",
         [ "s-nounphrases/v-subject", "r-adverbs", "r-objects", "r-longadverbs", "s-verb/v-verb", "r-longadverbs", ],
     ],
-    [ "r-sentence-p",
+    [ "s-sentence-p",
         [ "s-verb/v-verb", "r-longadverbs", ],
     ],
 

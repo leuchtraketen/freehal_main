@@ -64,6 +64,7 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
                 do be_slow without arguments
                 if hash parsed is false do
                     set hash parsed to parse with var lang, array words, hash tags
+                    set from hash parsed element { 'clauses' } to an empty array
                 done
                 do be_slow without arguments
 
@@ -75,7 +76,6 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
                 set from hash parsed element { 'objects' } to toggle_entities using from hash parsed element { 'objects' }
                 set from hash parsed element { 'adverbs' } to toggle_entities using from hash parsed element { 'adverbs' }
                 set from hash parsed element { 'extra' } to toggle_entities using from hash parsed element { 'extra' }
-                set from hash parsed element { 'clauses' } to an empty array
             done
             else do
 
@@ -86,6 +86,7 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
                 do be_slow without arguments
                 if hash parsed_clause is false do
                     set hash parsed_clause to parse with var lang, array words, hash tags
+                    set from hash parsed_clause element { 'clauses' } to an empty array
                 done
                 do be_slow without arguments
 
@@ -97,8 +98,8 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
                 set from hash parsed_clause element { 'objects' } to toggle_entities using from hash parsed_clause element { 'objects' }
                 set from hash parsed_clause element { 'adverbs' } to toggle_entities using from hash parsed_clause element { 'adverbs' }
                 set from hash parsed_clause element { 'extra' } to toggle_entities using from hash parsed_clause element { 'extra' }
-                set from hash parsed_clause element { 'clauses' } to an empty array
                 push into that array: from hash parsed element { 'clauses' }, hash parsed_clause
+                push into that array: from hash parsed element { 'clauses' }, elements of that array: from hash parsed_clause element { 'clauses' } end of elements
             done
         done
     done

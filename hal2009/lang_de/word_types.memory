@@ -122,7 +122,7 @@ Aenderung:
   genus: f
   type: n
 Ah:
-  count: 6
+  count: 10
   type: n
 Ahnung:
   count: 47
@@ -246,7 +246,7 @@ Bewertung:
   genus: f
   type: n
 Bild:
-  count: 57
+  count: 58
   genus: s
   type: n
 Biologie:
@@ -275,6 +275,9 @@ Bull:
 Bundeslaender:
   count: 1
   genus: f
+  type: n
+Castro:
+  count: 24
   type: n
 Cccc:
   count: 15
@@ -470,6 +473,10 @@ Gbagbo:
 Gbagbos:
   count: 5
   type: n
+Gebrueder:
+  count: 24
+  genus: f
+  type: n
 Gegenteil:
   count: 1
   genus: s
@@ -566,7 +573,7 @@ Isotop:
   genus: f
   type: n
 Ja:
-  count: 28
+  count: 29
   type: adv
 Jupiter:
   count: 2
@@ -638,7 +645,7 @@ Krieg:
   genus: m
   type: n
 Kuba:
-  count: 57
+  count: 83
   type: n
 Kuerbis:
   count: 1
@@ -801,7 +808,7 @@ Oben:
   count: 1
   type: adv
 Oh:
-  count: 4
+  count: 5
   type: inter
 Onanieren:
   count: 1
@@ -1037,7 +1044,7 @@ Wellen:
   genus: f
   type: n
 Welt:
-  count: 57
+  count: 58
   type: n
 Weltall:
   count: 1
@@ -1093,7 +1100,7 @@ adela:
   count: 2
   type: n
 ah:
-  count: 3
+  count: 7
   type: n
 ahnung:
   count: 28
@@ -1234,7 +1241,7 @@ batzen:
   genus: m
   type: n
 baufllige:
-  count: 57
+  count: 58
   type: adj
 baum:
   count: 4
@@ -1487,6 +1494,9 @@ c:
   type: n
 candy:
   count: 3
+  type: n
+castro:
+  count: 12
   type: n
 cccc:
   count: 50
@@ -2087,6 +2097,10 @@ gebrauchsgegenstand:
   count: 1
   genus: m
   type: n
+gebrueder:
+  count: 12
+  genus: f
+  type: n
 gebundene:
   count: 1
   type: adj
@@ -2472,7 +2486,7 @@ innerhalb:
   count: 3
   type: prep
 ins:
-  count: 169
+  count: 170
   type: n
 insbesondere:
   count: 5
@@ -2665,7 +2679,7 @@ koks:
   genus: m
   type: n
 kolonialbauten:
-  count: 19
+  count: 20
   type: n
 kombination:
   count: 1
@@ -2739,7 +2753,7 @@ krusch:
   count: 1
   type: n
 kuba:
-  count: 19
+  count: 45
   type: n
 kuechengeraet:
   count: 3
@@ -2989,6 +3003,9 @@ minderbemittelt:
 mindestens:
   count: 2
   type: adv
+minimal:
+  count: 24
+  type: adj
 mir:
   count: 80
   type: n
@@ -3176,7 +3193,7 @@ offeriert:
   count: 1
   type: vi
 oldtimer:
-  count: 19
+  count: 20
   type: n
 onanieren:
   count: 1
@@ -3564,22 +3581,6 @@ set:
   count: 1
   genus: s
   type: n
-sex:
-  count: 8
-  genus: m
-  type: n
-sich:
-  count: 30
-  type: n
-sichtbare:
-  count: 1
-  type: adj
-sie:
-  count: 8
-  type: n
-sieht:
-  count: 1
-  type: vi
 .
   type: n
 Abgabe:
@@ -5575,6 +5576,8 @@ staatliche:
   type: adv
 stabilste:
   type: adj
+stabswechsel:
+  type: n
 stack:
   type: n
 stammt:
