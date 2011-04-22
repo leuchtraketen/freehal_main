@@ -1,8 +1,68 @@
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject>aaaa & bbbb | cccc & dddd</subject>
+  <object>freunde</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aaaa & bbbb | cccc & dddd</subject>
+  <object>freunde</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aaaa & bbbb | cccc & dddd</subject>
+  <object>freunde</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aaa & bbb</subject>
+  <object>verwandte</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ccc & ddd</subject>
+  <object>arbeitskollegen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in tirol</adverbs>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>dietmar</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in tirol</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
@@ -10,10 +70,10 @@
 </fact>
 
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject>_tim_</subject>
+  <object>_tom_</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
@@ -21,296 +81,475 @@
 </fact>
 
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
   <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object>kuba</object>
-    <verb>wollen öffnen</verb>
-    <adverbs>von der _m_arktwirtschaft ; - nur ; ganz minimal</adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
 </fact>
 
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject></subject>
+  <object>das bild</object>
+  <verb>prägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
   <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object>kuba</object>
-    <verb>wollen öffnen</verb>
-    <adverbs>von der _m_arktwirtschaft ; - nur ; ganz minimal</adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
 </fact>
 
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten</subject>
+  <object>das bild</object>
+  <verb>prägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
   <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object>kuba</object>
-    <verb>wollen öffnen</verb>
-    <adverbs>von der _m_arktwirtschaft ; - nur ; ganz minimal</adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
 </fact>
 
 <fact>
-  <subject>die gebrueder castro</subject>
-  <object>den stabswechsel</object>
-  <verb>haben</verb>
-  <adverbs>vollendet</adverbs>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.5</truth>
   <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object>kuba</object>
-    <verb>wollen öffnen</verb>
-    <adverbs>von der _m_arktwirtschaft ; - nur ; ganz minimal</adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.5</truth>
-    <flags>00000</flags>
-  </clause>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb></verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde prägen</subject>
+  <object>tuckernde prägen</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde prägen</subject>
+  <object>tuckernde prägen</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</subject>
+  <object>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</subject>
+  <object>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</subject>
+  <object>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</subject>
+  <object>tuckernde oldtimer & baufällige kolonialbauten prägen das bild von kuba in der welt</object>
+  <verb>vonprägen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>array(0x2a7b778) array(0x2a7b778) array(0x2a7b778) array(0x2a7b778)</subject>
+  <object>array(0x2a7b778) array(0x2a7b778)</object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten tuckernde oldtimer & baufällige kolonialbauten v-verb prägen tuckernde oldtimer & baufällige kolonialbauten v-verb prägen v-object das bild tuckernde oldtimer & baufällige kolonialbauten v-verb prägen v-object das bild v-adverbs von kuba in der welt</subject>
+  <object>das bild das bild v-adverbs von kuba in der welt</object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten</subject>
+  <object>das bild</object>
+  <verb>vonprägen</verb>
+  <adverbs>in der welt ; von kuba</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten</subject>
+  <object>das bild</object>
+  <verb>prägen</verb>
+  <adverbs>von kuba ; in der welt ; von kuba ; in der welt ; von kuba ; in der welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten</subject>
+  <object>das bild</object>
+  <verb>prägen</verb>
+  <adverbs>von kuba ; in der welt ; von kuba ; in der welt ; von kuba ; in der welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
+</fact>
+
+<fact>
+  <subject>tuckernde oldtimer & baufällige kolonialbauten</subject>
+  <object>das bild</object>
+  <verb>prägen</verb>
+  <adverbs>von kuba ; in der welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.5</truth>
+  <flags>00000</flags>
 </fact>
 
