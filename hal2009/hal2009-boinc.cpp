@@ -19,13 +19,14 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include <BOINC/boinc_api.h>
+
 #include "hal2009.h"
 #include "hal2009-main.h"
 #include "hal2009-ipc.h"
 #include "hal2009-pro.h"
 
 extern "C" void extract();
-#include <BOINC/boinc_api.h>
 
 #include <getopt.h>
 #include <signal.h>
