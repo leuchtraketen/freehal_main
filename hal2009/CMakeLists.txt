@@ -32,6 +32,8 @@ project (FreeHAL)
 if(MINGW)
 
 include_directories (.) 
+include_directories (/compiler/local/boinc/include/) 
+link_directories (/compiler/local/boinc/lib/) 
 
 add_executable (hal2009 hal2009-main.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp hal2009-universal.cpp hal2009-wiki.cpp hal2009-download.cpp)
 target_link_libraries (hal2009 m pthread z)
@@ -39,8 +41,10 @@ target_link_libraries (hal2009 m pthread z)
 add_executable (runner hal2009-download.cpp hal2009-wiki.cpp hal2009-server.cpp hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2009-as-release.c hal2009-xml.cpp hal2009-ipc.cpp  hal2009.cpp hal2009-sql.c hal2009-pro.cpp hal2009-universal.cpp)
 target_link_libraries (runner m pthread pthread z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 boost_iostreams-mt boost_system-mt boost_thread_win32-mt)
 
-#set_target_properties("runner" PROPERTIES COMPILE_FLAGS "-DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 ")
+add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c /usr/lib/libboinc_api.a /usr/lib/libboinc.a extract_with_unzipper.c unzipper.c unzip.c ioapi.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp hal2009-universal.cpp hal2009-wiki.cpp hal2009-download.cpp)
+target_link_libraries (hal2009-boinc m pthread pthread z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 boinc_api boinc z boost_thread_win32-mt boost_system-mt boost_iostreams-mt )
 
+#set_target_properties("runner" PROPERTIES COMPILE_FLAGS "-DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 ")
 #add_executable (hal2009-boinc hal2009-boinc.cpp hal2009-boinc.c hal2009-perl6-dummy.cpp hal2009-perl5.cpp sqlite3.c extract_with_unzipper.c unzipper.c unzip.c iowin32.c ioapi.c hal2009-wiki-dummy.c hal2009-as-debug.c hal2009-xml.cpp hal2009-ipc.cpp hal2009.cpp hal2009-sql.c hal2009-pro.cpp hal2009-universal.cpp hal2009-download.cpp)
 #target_link_libraries (hal2009-boinc m pthread pthreadGC2 boinc boinc_api boinc_zip boinc_graphics2 z)
 
