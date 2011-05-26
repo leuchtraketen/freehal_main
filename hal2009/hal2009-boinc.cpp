@@ -19,10 +19,12 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#define NOT_HEADER_ONLY 1
-#define USE_CXX 1
 #include "hal2009.h"
+#include "hal2009-main.h"
+#include "hal2009-ipc.h"
+#include "hal2009-pro.h"
 
+extern "C" void extract();
 #include <BOINC/boinc_api.h>
 
 #include <getopt.h>
@@ -48,11 +50,6 @@ using namespace std;
 extern "C" {
     void extract();
 }
-int sql_sqlite_set_filename(const char*);
-int hal2009_execute_file(char* file, char* planguage);
-int hal2009_add_pro_file (char* filename);
-struct DATASET hal2009_get_csv(char* csv_request);
-char* hal2009_make_csv(struct DATASET* set);
 
 #ifndef UCHAR_MAX
 #   define UCHAR_MAX sizeof(char)
@@ -165,10 +162,10 @@ void* app_thread (void* p) {
 
     hal2009_clean();
 
-    pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
+//  pthread_t signal_thread = hal2009_start_signal_handler("perl5", "de", SINGLE);
     hal2009_execute_file("hal2009-boinc.hal", "perl5");
     if (is_slow()) {
-        pthread_join((pthread_t)(signal_thread), NULL);
+//      pthread_join((pthread_t)(signal_thread), NULL);
     }
     else {
         fprintf(stdout, "hal2009_execute_file done.\n");
@@ -247,25 +244,17 @@ int main (int argc, char** argv) {
     return 0;
 }
 
-void hal2009_handle_signal(void* arg) {
-    char* type = (char*)((void**)arg)[0];
-    char* text = (char*)((void**)arg)[1];
+void* hal2009_handle_signal(void* arg) {
+    char* type       = ((char**)arg)[0];
+    char* text       = ((char**)arg)[1];
+    short start_type = ((short*)arg)[2];
 
-    if (0 == strcmp(type, "_output__pos")) {
-        fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
+    if (0 == strcmp(type, "output_pos")) {
+        fprintf(output(), "\nUnknown part of speech: %s\n\nPlease type it in: ", text);
         strcpy(text, "n");
-        FILE* target = fopen("_input__pos", "w+b");
-        halwrite(text, 1, strlen(text), target);
-        halclose(target);
+        hal2009_send_signal("input_pos", text);
     }
-    else if (0 == strcmp(type, "_output__genus")) {
-        fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
-        strcpy(text, "q");
-        FILE* target = fopen("_input__genus", "w+b");
-        halwrite(text, 1, strlen(text), target);
-        halclose(target);
-    }
-    else if (0 == strcmp(type, "_output__link")) {
+    else if (0 == strcmp(type, "output_link")) {
         if (strlen(text) < 99) {
             char link[99] = {0};
             int f1 = 0;
@@ -275,24 +264,32 @@ void hal2009_handle_signal(void* arg) {
             hal2009_add_link(link, f1, f2);
         }
     }
-    else if (0 == strcmp(type, "_output__add_pro_file")) {
+    else if (0 == strcmp(type, "add_pro_file")) {
         hal2009_add_pro_file(text);
-        FILE* target = fopen("_input__add_pro_file", "w+b");
-        halclose(target);
+        hal2009_send_signal("add_pro_file", "");
     }
-    else if (0 == strcmp(type, "_output__get_csv")) {
+    else if (0 == strcmp(type, "add_xml_file")) {
+        hal2009_add_xml_file(text);
+        hal2009_send_signal("add_xml_file", "");
+    }
+    else if (0 == strcmp(type, "database_request")) {
         struct DATASET set = hal2009_get_csv(text);
-        FILE* target = fopen("_input__get_csv", "w+b");
         char* csv_data = hal2009_make_csv(&set);
-        halwrite(csv_data, 1, strlen(csv_data), target);
-        halclose(target);
+        hal2009_send_signal("database_request", csv_data);
         fprintf(output(), "Release memory now.\n");
-        free((void*)csv_data);
+        free(csv_data);
         fprintf(output(), "Memory is released.\n");
     }
-    else if (0 == strcmp(type, "_output")) {
-        fprintf(output(), "\nFreeHAL: %s\n", text);
+    else if (0 == strcmp(type, "output")) {
+        fprintf(output(), "\n\n--------------------------------------------------------------------------------\n\n", text);
+        fprintf(output(), "FreeHAL: %s\n\n--------------------------------------------------------------------------------\n\n", text);
     }
+    else if (0 == strcmp(type, "_exit") && start_type == SINGLE) {
+        //exit(0);
+    }
+
+    free(type);
+    free(text);
 }
 
 

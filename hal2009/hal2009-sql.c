@@ -23,7 +23,6 @@
 
 #include "hal2009-sql-universal.c"
 
-
 static int sql_begin_end_quiet = 0;
 static int database_used = 0;
 
