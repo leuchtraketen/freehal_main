@@ -1,5 +1,0 @@
-= <> _aaaa_ & _bbbb_ | _cccc_ & _dddd_ <> _freunde_ <>  (maybe)
-= <> _aaaa_ & _bbbb_ | _cccc_ & _dddd_ <> _freunde_ <>  (maybe)
-= <> _aaaa_ & _bbbb_ | _cccc_ & _dddd_ <> _freunde_ <>  (maybe)
-= <> _aaa_ & _bbb_ <> _verwandte_ <>  (maybe)
-= <> _ccc_ & _ddd_ <> _arbeitskollegen_ <>  (maybe)
