@@ -545,7 +545,7 @@ void make_connection(int show_connection_window) {
 
     if (special_autoconnect_onlinedemo()) {
         show_connection_window = 0;
-        dialog_connection->from->ip->setText("178.22.67.4");
+        dialog_connection->from->ip->setText("85.10.193.13");
         main_window->showWindowNormal();
         main_window->user_interface_main_window->tabWidget->removeTab(2);
         main_window->user_interface_main_window->tabWidget->removeTab(1);
