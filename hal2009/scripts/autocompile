@@ -32,7 +32,7 @@ echo Download source code...
 svn co http://freehal.org/code/hal2009 freehal-svn > /dev/null || (echo Error: Download source code ; exit 0)
 cd freehal-svn
 echo Compile server
-(./configure && make hal2009-server) > compile-server.log 2>&1 || (echo Error: Compile server ; exit 0)
+(./configure && make hal2009-server hal2009-server-thread) > compile-server.log 2>&1 || (echo Error: Compile server ; exit 0)
 mkdir -p saved/de saved/en
 cp lang_de/*.pro* lang_de/*/*.pro* lang_de/*.xml* lang_de/*/*.xml* saved/de/
 cp lang_en/*.pro* lang_en/*/*.pro* lang_en/*.xml* lang_en/*/*.xml* saved/en/

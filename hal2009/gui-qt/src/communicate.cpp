@@ -34,12 +34,13 @@ COMMUNICATOR_TYPE CLIENT = 2;
 COMMUNICATOR_TYPE communicator_type;
 
 string host = "127.0.0.1";
-unsigned short port = 5173;
+unsigned short port = 5174;
 
 vector<freehal::string> to_send;
 vector<boost::shared_ptr<tcp::iostream> > streams;
 bool ok_to_write = false;
 bool ready_to_write = false;
+int curr_thread = 0;
 
 const int max_length = 1024;
 typedef boost::shared_ptr<tcp::socket> socket_ptr;
@@ -123,14 +124,15 @@ void comm_write(std::string str) {
 }
 void flush_streams() {
     unsigned int y = 0;
-    
+
     while (true) {
         y += 1;
         for (unsigned int x = 0; x < streams.size(); x++) {
             try {
                 (*(streams[x])).flush();
                 if ( y > 3 ) {
-                    (*(streams[x])) << "HOLD:" << endl;
+//                    (*(streams[x])) << "HOLD:" << endl;
+                    (*(streams[x])) << endl;
                 }
             }
             catch (std::exception& e) {
@@ -139,7 +141,7 @@ void flush_streams() {
                 std::cerr << 3 << "Exception in thread: " << e.what() << "\n";
             }
         }
-        
+
         if ( y > 3 ) {
             y = 0;
         }
@@ -203,8 +205,33 @@ void server() {
     }
 }
 
+int close_stream(int this_thread, int curr_thread, boost::shared_ptr<tcp::iostream>& stream) {
+    {
+        static int z = 0;
+        ++z;
+        if (z > 50) {
+            cout << "this_thread = " << this_thread << ", curr_thread = " << curr_thread << endl;
+            z = 0;
+        }
+    }
+    if (this_thread != curr_thread) {
+        cout << "this_thread = " << this_thread << ", curr_thread = " << curr_thread << endl;
+        int timeout = 5;
+        while (timeout >= 0 && stream && stream->rdbuf() && stream->rdbuf()->is_open()) {
+            (*stream) << "EXIT:EXIT" << endl << "EXIT:EXIT" << endl;
+            freehal::msleep(1500);
+        }
+        stream->close();
+        return 1;
+    }
+    return 0;
+}
+
 void client(std::string host, bool verbose = true, bool wait = false) {
     cout << "connection prepared..." << endl;
+
+    int this_thread = rand() % 100000;
+    curr_thread = this_thread;
 
     if (wait) {
         while ( 1 ) {
@@ -227,25 +254,27 @@ void client(std::string host, bool verbose = true, bool wait = false) {
             }
             freehal::display_sentence(all);
             //emit answerHelper->signalTalkingScrollEnd(QString("anch"));
-            
+
             freehal::msleep(300);
         }
     }
 
     boost::thread t_ios(io_service_run);
 
-    
     while ( 1 ) {
         tcp::socket socket(io_service);
         boost::system::error_code error = asio::error::host_not_found;
         do
         {
+
             try {
                 tcp::endpoint endp(asio::ip::address_v4::from_string(host.c_str()), (unsigned short)(port));
                 boost::shared_ptr<tcp::iostream> stream(new tcp::iostream());
                 stream->close();
 
                 if (stream->rdbuf()->connect(endp)) {
+                    if (close_stream(this_thread, curr_thread, stream)) return;
+
                     if (verbose) {
                         cout << ":: Connected" << endl;
                     }
@@ -260,8 +289,9 @@ void client(std::string host, bool verbose = true, bool wait = false) {
                     streams.push_back(stream);
                     ok_to_write = true;
                     ready_to_write = true;
-                    
+
                     while ( stream->rdbuf()->is_open() ) {
+                        if (close_stream(this_thread, curr_thread, stream)) return;
                         freehal::msleep(200);
                     }
                 }

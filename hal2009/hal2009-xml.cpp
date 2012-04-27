@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 */
 
 #include "hal2009-xml.h"
-
+#include "hal2009-sql.h"
 
 XML_Object::XML_Object(Mode _mode) : mode(_mode), content(0), text(""), name("") {
     init();
@@ -176,7 +176,7 @@ string halxml_readfile(string infile) {
         return string();
     }
     std::string str;
-    indata.seekg(0, std::ios::end);   
+    indata.seekg(0, std::ios::end);
     str.reserve(indata.tellg());
     indata.seekg(0, std::ios::beg);
     str.assign((std::istreambuf_iterator<char>(indata)), std::istreambuf_iterator<char>());
@@ -258,7 +258,7 @@ XML_Fact* halxml_readfact(vector<string>& lines, int& i) {
     XML_Fact* fact = new XML_Fact();
 
     while (i < lines.size()) {
-        
+
         if (lines[i] == ">") {
             ++i;
             if (lines[i] == "fact") {
@@ -445,7 +445,7 @@ extern "C" {
         sst << k+1;
         sst >> xfact->line;
 
-        if (k+1 == xml_facts_size || ((k+1)%100)==0) {
+        if (k+1 == xml_facts_size || ((k+1)%200)==0) {
             time_t now = 0;
             time(&now);
             if (now - *start_ref == 0) {
@@ -456,7 +456,8 @@ extern "C" {
                 static long int time_needed = 1;
                 time_needed = time_needed*0.5 + 0.5*(xml_facts_size-k)/(facts_per_second+1);
 
-                cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - *start_ref << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts_size*(k+1)) << "% done)          \r" << flush;
+//                cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - *start_ref << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts_size*(k+1)) << "% done)          \r" << flush;
+                cout << (k+1) << " of " << xml_facts_size << " added (" << facts_per_second << " facts / sec, " << now - *start_ref << " sec, " << time_needed << " sec needed, " << (100.0/xml_facts_size*(k+1)) << "% done)          \n" << flush;
             }
         }
         if (k&&((k+1)%15000)==0) {
@@ -477,6 +478,7 @@ extern "C" {
         string instr = halxml_readfile(filename);
         if (instr.size() == 0) {
             cerr << "Error: file could not be opened " << endl;
+            sql_end();
             return 1;
         }
         string prestr;
@@ -520,8 +522,13 @@ extern "C" {
         string filename = xfact->filename;
         string line = xfact->line;
         string truth_str = xfact->print_str("truth");
+
         float truth;
         sscanf(truth_str.c_str(), "%fl", &truth);
+	stringstream sst;
+	sst << truth_str;
+	sst >> truth;
+
         string verb_flags = xfact->print_str("flags");
         int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0, verb_flag_may = 0, verb_flag_should = 0;
         if (verb_flags.size()==5) sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want, &verb_flag_must, &verb_flag_can, &verb_flag_may, &verb_flag_should);

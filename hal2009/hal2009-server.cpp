@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -20,419 +20,43 @@
 */
 
 #include "hal2009.h"
-#include "hal2009-ipc.h"
-#include "hal2009-pro.h"
+#include "hal2009-server.h"
+#include "hal2009-util.h"
+#include "hal2009-startup.h"
 
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/date_time/posix_time/posix_time_io.hpp>
+using namespace boost::posix_time;
+#include <boost/process.hpp>
+namespace bp = ::boost::process;
 #include <pthread.h>
-
-unsigned short server_port = 5173;
-unsigned short netcom_port = 5172;
-vector<tcp::iostream*> hal2009_server_clients;
-int init_thread_ended = 0;
 
 #ifdef WINDOWS
 #include <windows.h>
 int win32_bind (SOCKET s, const struct sockaddr* addr, int);
 namespace boost {
-//    #include <sys/socket.h>
 }
 #endif
 
-EXTERN_C void extract();
+debugging_options* current_debugging_options;
+extern instance* current_instance;
+
+vector<tcp::iostream*> hal2009_server_clients;
+vector<boost::thread*> hal2009_server_clients_threads;
 
 void hal2009_server_start();
-char* hal2009_server_get_value_from_socket(char* s1, const char* s2);
+char* hal2009_server_get_value_from_socket(const char* s1, const char* s2);
 int set_nonblocking(int);
-void* hal2009_init_thread (void*);
 
 boost::asio::io_service io_service;
 tcp::acceptor* hal2009_server_acceptor;
-tcp::acceptor* hal2009_netcom_acceptor;
 
-string planguage;
-string tlanguage;
-string base_dir;
-
-string output_by_signal;
-
-
-std::vector<std::string>* simple_split (const string text, const string search) {
-    std::vector<std::string>* result = new std::vector<std::string>();
-    boost::algorithm::split(*result, text, is_any_of(search.c_str()));
-    return result;
-}
-
-EXTERN_C int cstat (char* c, struct stat* s) {
-    return stat(c, s);
-}
-
-int locked_netcom = 0;
-void hal2009_netcom_lock() {
-    while (locked_netcom) {
-        halusleep(50);
-        --locked_netcom;
-    }
-    locked_netcom = 15*1000/50;
-}
-void hal2009_netcom_unlock() {
-    locked_netcom = false;
-}
-
-/// FreeHAL Network communication (NETCOM)
-
-void hal2009_netcom_start() {
-    try {
-
-        tcp::endpoint endpoint(tcp::v4(), netcom_port);
-        hal2009_netcom_acceptor = new tcp::acceptor(io_service, endpoint);
-    }
-    catch (std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-}
-#if defined(__linux__)
-void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
-    fprintf(output(), "Searching IP addresses...\n");
-
-    /**
-    Comment this out to test the functionality of FreeHAL NETCOM on the local subnet (127.0.0.1)
-
-    {
-        ips[*num_of_ips] = strdup("127.0.0.1");
-        ++(*num_of_ips);
-    }
-    **/
-
-    ifstream arp_file("/proc/net/arp");
-    string buffer;
-    getline(arp_file, buffer);
-    while (arp_file) {
-        getline(arp_file, buffer);
-        if (0 == buffer.size()) {
-            break;
-        }
-
-        if ((*num_of_ips) < 10) {
-            ips[*num_of_ips] = (char*)(malloc(buffer.size()));
-            for (int z = 0; z < buffer.size(); ++z) {
-                if (!(buffer[z] == '0' || buffer[z] == '1' || buffer[z] == '2' || buffer[z] == '3' || buffer[z] == '4' || buffer[z] == '5' || buffer[z] == '6' || buffer[z] == '7' || buffer[z] == '8' || buffer[z] == '9' || buffer[z] == '.')) {
-                    break;
-                }
-
-                ips[*num_of_ips][z] = buffer[z];
-                ips[*num_of_ips][z+1] = 0;
-            }
-
-            fprintf(output(), "IP: %s\n", ips[*num_of_ips]);
-
-            ++(*num_of_ips);
-        }
-    }
-
-    fprintf(output(), "Searched IP addresses.\n");
-
-    arp_file.close();
-}
-
-#define PTHREAD_IS_NOT_NULL(x) (x)
-#define PTHREAD_SET_NULL(x) ((x)=0)
-
-#else
-
-#define NUM_ELEMENTS(x)  (sizeof((x)) / sizeof((x)[0])) // Fuer IP auslesen
-
-void hal2009_netcom_get_ips(char** ips, short* num_of_ips) {
-    fprintf(output(), "Searching IP addresses...\n");
-
-    /**
-    Comment this out to test the functionality of FreeHAL NETCOM on the local subnet (127.0.0.1)
-
-    {
-        ips[*num_of_ips] = strdup("127.0.0.1");
-        ++(*num_of_ips);
-    }
-    **/
-
-    struct    hostent* h;
-    WSADATA   wsaData;
-    UCHAR     ucAddress[4];
-    CHAR      szHostName[MAX_PATH];
-    int       x;
-
-    WSAStartup(MAKEWORD(1, 1), &wsaData);
-    if(SOCKET_ERROR != gethostname(szHostName, NUM_ELEMENTS(szHostName))) {
-        if(NULL != (h = gethostbyname(szHostName))) {
-            for(x = 0; (h->h_addr_list[x]); x++) {
-                ucAddress[0] = h->h_addr_list[x][0];
-                ucAddress[1] = h->h_addr_list[x][1];
-                ucAddress[2] = h->h_addr_list[x][2];
-                ucAddress[3] = h->h_addr_list[x][3];
-
-                ips[*num_of_ips] = (char*)(malloc(255));
-                sprintf(ips[*num_of_ips], "%d.%d.%d.%d", ucAddress[0], ucAddress[1], ucAddress[2], ucAddress[3]);
-                fprintf(output(), "IP: %s\n", ips[*num_of_ips]);
-                ++(*num_of_ips);
-            }
-        }
-    }
-    WSACleanup();
-
-    fprintf(output(), "Searched IP addresses.\n");
-}
-
-#define PTHREAD_IS_NOT_NULL(x) (x.p)
-#define PTHREAD_SET_NULL(x) (1)
-
-#endif
-
-static bool i_am_giving = false;
-
-void* hal2009_netcom_do_accept(void* arg) {
-    fprintf(output(), "(hal2009_netcom_do_accept) Started NETCOM 'do accept' thread.\n");
-    try {
-        tcp::iostream* stream = (tcp::iostream*) arg;
-
-        string filename = base_dir + "/lang_" + tlanguage + "/from-"
-                + stream->rdbuf()->remote_endpoint().address().to_string()
-                + ".pro";
-
-        fprintf(output(), "(hal2009_netcom_do_accept) Open pro file %s. I will write into it whatever %s says (stream is %d).\n", filename.c_str(), stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
-        ofstream pro_file(filename.c_str(), ios::out | ios::app);
-        string buffer;
-        while (stream && *stream) {
-            getline(*stream, buffer);
-            if (buffer[0] == 'E' && buffer[1] == 'X' && buffer[2] == 'I' && buffer[3] == 'T') {
-                break;
-            }
-            pro_file << buffer << "\n";
-        }
-        fprintf(output(), "(hal2009_netcom_do_accept) Close pro file %s...\n", filename.c_str());
-        pro_file.close();
-        fprintf(output(), "(hal2009_netcom_do_accept) Close socket for pro file %s...\n", filename.c_str());
-        stream->close();
-        halusleep(1500);
-        if ( stream ) delete stream;
-    }
-    catch (std::exception& e) {
-        std::cerr << e.what() << std::endl;
-        halusleep(1000);
-    }
-
-    fprintf(output(), "(hal2009_netcom_do_accept) Closed everything.\n");
-}
-void* hal2009_netcom_do_give(void* arg) {
-    fprintf(output(), "(hal2009_netcom_do_give)   Started NETCOM 'do give' thread.\n");
-    try {
-        tcp::iostream* stream = (tcp::iostream*) arg;
-
-        string filename = base_dir + "/lang_" + tlanguage + "/facts.pro";
-        fprintf(output(), "(hal2009_netcom_do_give)   Giving file %s.\n", filename.c_str());
-
-        fprintf(output(), "(hal2009_netcom_do_give)   I will send it to %s (stream is %d).\n", filename.c_str(), stream->rdbuf()->remote_endpoint().address().to_string().c_str(),  stream);
-        ifstream pro_file(filename.c_str());
-        string buffer;
-        hal2009_netcom_lock();
-        while (stream && *stream && pro_file) {
-            getline(pro_file, buffer);
-            if (0 == buffer.size()) {
-                break;
-            }
-            (*stream) << buffer << "\n";
-        }
-        (*stream) << "EXIT" << "\n";
-        hal2009_netcom_unlock();
-        fprintf(output(), "(hal2009_netcom_do_give)   Close pro file %s...\n", filename.c_str());
-        pro_file.close();
-        fprintf(output(), "(hal2009_netcom_do_give)   Close socket for pro file %s...\n", filename.c_str());
-        stream->close();
-        halusleep(2000);
-        /*
-        it is in the stack!!
-
-        if ( stream ) {
-            delete stream;
-            stream = 0;
-        }
-        */
-    }
-    catch (std::exception& e) {
-        std::cerr << e.what() << std::endl;
-        halusleep(1500);
-    }
-
-    fprintf(output(), "(hal2009_netcom_do_give)   Closed everything.\n");
-
-    i_am_giving = false;
-}
-void* hal2009_netcom_ip2net(int* sn1, int* sn2, int* sn3, const char* ip) {
-    for (int k = 0, g = 1; k < strlen(ip); ++k) {
-        if (ip[k] == '.') {
-            ++g;
-            continue;
-        }
-
-        if (g == 1)
-            (*sn1) = ((*sn1)*10)+(ip[k]-48);
-        if (g == 2)
-            (*sn2) = ((*sn2)*10)+(ip[k]-48);
-        if (g == 3)
-            (*sn3) = ((*sn3)*10)+(ip[k]-48);
-    }
-}
-void* hal2009_netcom_run_accept(void*) {
-    fprintf(output(), "Started NETCOM 'accept' thread.\n");
-
-    for (;;) {
-        tcp::iostream* stream;
-        try {
-            stream = new tcp::iostream();
-        }
-        catch (std::exception& e)
-        {
-            std::cerr << "(netcom) 1: " << e.what() << std::endl;
-            if ( stream ) delete stream;
-            continue;
-        }
-        try {
-            if (!hal2009_server_acceptor) {
-                hal2009_server_start();
-            }
-            if (!hal2009_netcom_acceptor) {
-                if ( stream ) delete stream;
-                continue;
-            }
-            hal2009_netcom_acceptor->accept(*stream->rdbuf());
-            fprintf(output(), "I got a request.\n");
-        }
-        catch (std::exception& e)
-        {
-            std::cerr << "(netcom) 2: " << e.what() << std::endl;
-            if ( stream ) delete stream;
-            continue;
-        }
-        try {
-            halusleep(1000);
-            if (i_am_giving == false) {
-                pthread_t t;
-                pthread_create (&t, NULL, hal2009_netcom_do_accept, (void*)stream);
-            }
-            else {
-                if ( stream ) delete stream;
-            }
-        }
-        catch (std::exception& e)
-        {
-            std::cerr << e.what() << std::endl;
-        halusleep(1500);
-        }
-    }
-}
-int num_of_probethreads = 0;
-void* hal2009_netcom_run_give_probethread(void* arg) {
-    ++num_of_probethreads;
-
-    char* remote_ip = (char*)arg;
-
-    fprintf(output(), "Probing Remote IP: %s\n", remote_ip);
-
-    tcp::iostream stream;
-    try {
-//        stream = new tcp::iostream();
-        tcp::endpoint endp(asio::ip::address_v4::from_string(remote_ip), (unsigned short)(netcom_port));
-
-        stream.close();
-        bool success = 0;
-
-        if (stream.rdbuf()->connect(endp)) {
-            i_am_giving = true;
-            fprintf(output(), "Successful Probe!\nFound a valid FreeHAL on server %s.\n", remote_ip);
-
-            //pthread_t t;
-            //pthread_create (&t, NULL, hal2009_netcom_do_give, (void*)stream);
-            hal2009_netcom_do_give((void*)(&stream));
-        }
-    }
-    catch (boost::system::system_error e) {
-        // ignore errors
-    }
-    free((void*)remote_ip);
-
-    --num_of_probethreads;
-
-    pthread_exit(0);
-}
-void* hal2009_netcom_run_give(void*) {
-    fprintf(output(), "Started NETCOM 'give' thread.\n");
-    return 0;
-    while (1) {
-
-        char* ips[11];
-        short num_of_ips = 0;
-        hal2009_netcom_get_ips(ips, &num_of_ips);
-
-        for (int i = 0; i < 10 && i < num_of_ips; ++i) {
-
-            fprintf(output(), "One of my IPs is %s.\n", ips[i]);
-
-            int subnet_1 = 0;
-            int subnet_2 = 0;
-            int subnet_3 = 0;
-            hal2009_netcom_ip2net(&subnet_1, &subnet_2, &subnet_3, ips[i]);
-            fprintf(output(), "Subnet: %d.%d.%d.*\n", subnet_1, subnet_2, subnet_3);
-
-            for (int subnet_4 = 1; subnet_4 < 254;) {
-                pthread_t threadlist[12];
-                int subnet_4_max = subnet_4 + 5;
-
-                for (; subnet_4 < subnet_4_max && subnet_4 < 254; ++subnet_4) {
-                    char* remote_ip = (char*)cxxhalmalloc(255, "hal2009_netcom_run_give");
-                    snprintf(remote_ip, 254, "%d.%d.%d.%d", subnet_1, subnet_2, subnet_3, subnet_4);
-
-                    pthread_t t;
-                    pthread_create (&t, NULL, hal2009_netcom_run_give_probethread, (void*)(remote_ip));
-
-                    int s = 0;
-                    while (s < 11 && PTHREAD_IS_NOT_NULL(threadlist[s])) {
-                        ++s;
-                    }
-                    threadlist[s] = t;
-                }
-
-                int timeout = 30;
-                while (num_of_probethreads != 0 && timeout >= 0) {
-                    halusleep(100);
-                    timeout -= 0.1;
-                }
-
-                int e = 0;
-                while (e < 11 && PTHREAD_IS_NOT_NULL(threadlist[e])) {
-                    //pthread_detach(threadlist[e]);
-                    // we use  pthread_exit()  in the threads' function now
-                    PTHREAD_SET_NULL(threadlist[e]);
-                    ++e;
-                }
-            }
-
-            free(ips[i]);
-        }
-    }
-}
-void* hal2009_netcom_run(void* arg) {
-    fprintf(output(), "Started NETCOM 'master' thread.\n");
-    pthread_t t1;
-    pthread_create (&t1, NULL, hal2009_netcom_run_accept, arg);
-    pthread_t t2;
-    pthread_create (&t2, NULL, hal2009_netcom_run_give, arg);
-}
-
-/// Normal FreeHAL communication with GUIs
 
 void hal2009_server_start() {
     int ntry = 5;
     while (!hal2009_server_acceptor) {
         try {
-            tcp::endpoint endpoint(tcp::v4(), server_port);
+            tcp::endpoint endpoint(tcp::v4(), current_instance->server_port);
             hal2009_server_acceptor = new tcp::acceptor(io_service, endpoint);
         }
         catch (std::exception& e)
@@ -449,398 +73,261 @@ void hal2009_server_start() {
     }
 }
 
-void hal2009_server_statement(tcp::iostream* stream, const string& s, const string& username, bool do_learn, bool do_talk) {
-    cout << "Begin of statement process." << endl;
-    static string* to_display_talk = 0;
-    static string* to_display_learn = 0;
-    if (!to_display_talk) {
-        to_display_talk = new string;
-        time_t t;
-        time(&t);
-        char* time = ctime(&t);
-        time[strlen(time)-1] = 0;
-        (*to_display_talk) += "<i>" + string(time) + "</i><br /><br/>";
-    }
-    if (!to_display_learn) {
-        to_display_learn = new string;
-        time_t t;
-        time(&t);
-        char* time = ctime(&t);
-        time[strlen(time)-1] = 0;
-        (*to_display_learn) += "<i>" + string(time) + "</i><br /><br/>";
-    }
-    string* to_display = (do_learn) ? to_display_learn : to_display_talk;
-    cout << "Initialize variables." << endl;
-
-    if (s == "/q" || s == "/quit" || s == "/e" || s == "/exit" || s == "Beenden" || s == "beenden" || s == "exit" || s == "Exit" || s == "quit" || s == "Quit") {
-        exit(0);
-    }
-    if (s == "/del fact" || s == "/del fakt" || s == "/DEL FAKT" || s == "/DEL FACT" || s == "/df" || s == "/DF" || s == "/d f" || s == "/D F") {
-        struct RECORD r;
-        strcpy(r.pkey, "a");
-        printf("pkey (in hal2009-server, 2): %s\n", r.pkey);
-        sql_begin("");
-        char* source = sql_del_record(&r);
-        if (source) {
-            fact_delete_from_source(source);
-            free(source);
-        }
-        sql_end();
-
-        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
-        (*to_display) += "<b>FreeHAL</b>: Deleted.<br />";
-        cout << "Got something to display from '" << username << "'." << endl;
-        cout << "    " << (*to_display) << endl;
-        (*stream) << "DISPLAY:" << (*to_display) << endl;
-        unlink("_output2");
-        hal2009_clean();
-        return;
-    }
-    if (s == "de" || s == "deutsch" || s == "Deutsch" || s == "german" || s == "German" || s == "Deutsch!" || s == "deutsch!") {
-        tlanguage = "de";
-
-        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
-        (*to_display) += "<b>FreeHAL</b>: Language is " + tlanguage + "<br />";
-        cout << "Got something to display from '" << username << "'." << endl;
-        cout << "    " << (*to_display) << endl;
-        (*stream) << "DISPLAY:" << (*to_display) << endl;
-        unlink("_output2");
-        hal2009_clean();
-        return;
-    }
-    if (s == "en" || s == "english" || s == "English" || s == "englisch" || s == "Englisch" || s == "English!" || s == "english!") {
-        tlanguage = "en";
-
-        (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
-        (*to_display) += "<b>FreeHAL</b>: Language is " + tlanguage + "<br />";
-        cout << "Got something to display from '" << username << "'." << endl;
-        cout << "    " << (*to_display) << endl;
-        (*stream) << "DISPLAY:" << (*to_display) << endl;
-        unlink("_output2");
-        hal2009_clean();
-        return;
-    }
-    
-    {
-        ofstream change_text_language("_change_text_language");
-        change_text_language << tlanguage;
-        change_text_language.close();
-    }
-
-    string input;
-    if (do_learn) {
-        if (do_talk) {
-            input += "do_learn_do_talk: ";
-        }
-        else {
-            input += "do_learn_no_talk: ";
+void stream_process_to_std(int num, bool& do_exit, bp::pistream* i, std::ostream* o, bp::postream* o_stdin) {
+    time_facet *facet = new time_facet("%d-%m-%Y %H:%M:%S");
+    o->imbue(locale(o->getloc(), facet));
+    string line;
+    string oldline;
+    int times_oldline = 0;
+    while (!do_exit && *i && *o) {
+	if (getline(*i, line)) {
+            if (current_debugging_options->g_gdb) {
+                if (strstr(line.c_str(), "Program received signal")) {
+                    (*o_stdin) << "bt" << endl;
+                }
+            }
+            if (line == oldline) {
+                ++times_oldline;
+                if (times_oldline % 50 == 0) {
+                    (*o) << "#" << num << " ";
+                    (*o) << second_clock::local_time() << "  ";
+                    (*o) << oldline << " (" << times_oldline << " times)" << endl;
+                }
+            }
+            else {
+                if (times_oldline > 0) {
+                    (*o) << "#" << num << " ";
+                    (*o) << second_clock::local_time() << "  ";
+                    (*o) << oldline << " (" << times_oldline << " times)" << endl;
+                    times_oldline = 0;
+                }
+                (*o) << "#" << num << " ";
+                (*o) << second_clock::local_time() << "  ";
+                (*o) << line << endl;
+                oldline = line;
+            }
         }
     }
-    else {
-        if (do_talk) {
-            input += "no_learn_do_talk: ";
-        }
-        else {
-            input += "no_learn_no_talk: ";
-        }
-    }
-    input += s;
-
-    string output;
-    int timeout = 3;
-    static string last_input = string();
-    static long last_input_time = 0;
-    while (output.size() == 0 && timeout > 0) {
-
-        time_t now;
-        time(&now);
-        cout << "input: now:  " << input      << endl;
-        cout << "input: last: " << last_input << endl;
-        
-        if (input.size() > 0 && (now - last_input_time) <= 3600 && last_input == input ) {
-            return;
-        }
-        last_input = input;
-        last_input_time = now;
-
-        cout << "Delete nonsense." << endl;
-        hal2009_clean();
-        output_by_signal = "";
-
-        if (!do_talk) {
-            (*to_display) += "<b>Input</b>: " + s + "<br />";
-            (*stream) << "LEARNED:0:" << (*to_display) << endl;
-        }
-        else {
-            (*to_display) += "<b>" + username + "</b>: " + s + "<br />";
-            hal2009_netcom_lock();
-            (*stream) << "DISPLAY:" << (*to_display) << endl;
-            hal2009_netcom_unlock();
-        }
-
-        cout << "Start threads (language: " << tlanguage << "). input=\"" << input << "\"" << endl;
-        pthread_t answer_thread = hal2009_answer(input, planguage, tlanguage, base_dir, NOT_JOIN, MULTI);
-        pthread_join(answer_thread, NULL);
-
-        
-        while (output_by_signal.size() == 0) {
-            halusleep(100);
-        }
-        
-        output = output_by_signal;
-
-        --timeout;
-        hal2009_clean();
-    }
-    if (output.size() == 0) {
-        output = "<i>FreeHAL sleeps... Unable to get an answer. Try again later.</i>";
-    }
-    else {
-        last_input_time = 0;
-    }
-
-    if (!do_talk) {
-        (*to_display) += "<b>Learned</b>: " + output + "<br />";
-        (*stream) << "LEARNED:1:" << (*to_display) << endl;
-    }
-    else {
-        (*to_display) += "<b>FreeHAL</b>: " + output + "<br />";
-
-        cout << "Got something to display from '" << username << "'." << endl;
-        cout << "    " << (*to_display) << endl;
-        hal2009_netcom_lock();
-        (*stream) << "DISPLAY:" << (*to_display) << endl;
-        hal2009_netcom_unlock();
-    }
-    
-    hal2009_clean();
-    cout << "End of statement process." << endl;
 }
 
-int get_file_size(const char* filename) {
-    struct stat* stbuf = (struct stat*)malloc(50000);
-    stat(filename, stbuf);
-    int file_size = stbuf ? stbuf->st_size : 0;
-    free(stbuf);
-    return file_size;
+bool lock_db = false;
+
+bool is_locked(int num, string lock_request) {
+    if (strstr(lock_request.c_str(), "LOCK:DB")) {
+        cout << "#" << num << " ";
+        cout << "is_locked: lock_db = " << lock_db << endl;
+        return lock_db;
+    }
+}
+bool set_locked(int num, string lock_request, bool l) {
+    if (strstr(lock_request.c_str(), "LOCK:DB")) {
+        cout << "#" << num << " ";
+        cout << "set_locked: lock_db = " << l << endl;
+        lock_db = l;
+    }
+    return l;
 }
 
-void hal2009_log_streamer(tcp::iostream* stream) {
+void stream_process_to_network(int num, bool& do_exit, bp::pistream* i, tcp::iostream* o, string& lock_request, string& unlock_request, bp::postream* o_lock) {
+    string line;
+    while (!do_exit && *i && *o && o->rdbuf()->is_open()) {
+	if (!do_exit && getline(*i, line)) {
 
+            if (do_exit) return;
+
+            if (line.c_str() == strstr(line.c_str(), "LOCK:")) {
+                lock_request = line;
+                cout << "#" << num << " ";
+                cout << "process requested a lock: " << lock_request << endl;
+                while (is_locked(num, lock_request)) {
+                    halusleep(250);
+                }
+                set_locked(num, lock_request, true);
+                (*o_lock) << lock_request << endl;
+                lock_request = "";
+            }
+            if (do_exit) return;
+            if (line.c_str() == strstr(line.c_str(), "UNLOCK:")) {
+                unlock_request = line;
+                cout << "#" << num << " ";
+                cout << "process released a lock: " << unlock_request << endl;
+                set_locked(num, unlock_request, false);
+                (*o_lock) << unlock_request << endl;
+                unlock_request = "";
+            }
+
+            if (do_exit) return;
+
+            cout << "#" << num << " ";
+            cout << "-------- p -> n: " << line << endl;
+            if (!o->rdbuf()->is_open()) { cout << "#" << num << " "; cout << "-------- stream closed (p -> n)" << endl; return; }
+            (*o) << line << endl;
+        }
+    }
 }
 
-void hal2009_server_client_connection(tcp::iostream* stream) {
+void stream_network_to_process(int num, bool& do_exit, tcp::iostream* i, bp::postream* o, string& lock_request, string& unlock_request) {
+    string line;
+    while (!do_exit && *i && *o) {
+        if (lock_request.size() > 0) {
+            while (is_locked(num, lock_request)) {
+               if (!i->rdbuf()->is_open()) { cout << "#" << num << " "; cout << "-------- stream closed (n -> p)" << endl; return; }
+                halusleep(100);
+            }
+        }
+        if (!i->rdbuf()->is_open()) { cout << "#" << num << " "; cout << "-------- stream closed (n -> p)" << endl; return; }
+	if (getline(*i, line) && !strstr(line.c_str(), "HOLD:") && line.size() > 0) {
+            if (line.c_str() == strstr(line.c_str(), "EXIT:")) {
+                do_exit = true;
+            }
+            cout << "#" << num << " ";
+            cout << "-------- n -> p: " << line << endl;
+            (*o) << line << endl;
+        }
+    }
+}
+
+
+/*void stream_process_to_network(bp::pistream* i, tcp::iostream* o, int* lock_i, int* lock_o) {
+    string line;
+    while (1) {
+        while (*lock_i) {} *lock_i = 1;
+        while (getline(*i, line)) {
+            (*i) >> line;
+
+        }
+        *lock_i = 0;
+    }
+}
+
+void stream_network_to_process(tcp::iostream* i, bp::postream* o, int* lock_i, int* lock_o) {
+    string line;
+    while (1) {
+        while (*lock_i) {} *lock_i = 1;
+        while (getline(*i, line)) {
+            (*i) >> line;
+        }
+        *lock_i = 0;
+    }
+}*/
+
+
+void hal2009_server_client_connection(tcp::iostream* stream, int num) {
     ofstream booted_file("booted");
     booted_file.close();
-    vector<boost::thread*>* threads = new vector<boost::thread*>();
 
-    hal2009_netcom_lock();
-    (*stream) << "READY:EVERYTHING_INITIALIZED" << endl;
-    (*stream) << "JELIZA_FULL_VERSION:" << FULL_VERSION << endl;
+#if defined(MINGW) || defined(WIN32)
+    string exec_fh = "runner-thread.exe";
+#else
+    string exec_fh = "./hal2009-server-thread";
+#endif
 
-    /// for svn versions
-    (*stream) << "NAME:" << FULL_NAME << " SVN-Rev. " << FULL_VERSION << " (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
+    std::vector<std::string> args;
 
-    /// for stable versions
-    /// (*stream) << "NAME:" << FULL_NAME << " Step 2   24.12.09   (database " << (0 == strcmp(sql_engine, "ram") ? "in memory" : (0 == strcmp(sql_engine, "disk") ? "at disk" : "at disk (traditional)")) << ")" << endl;
 
-    (*stream) << "Perl:." << endl;
-    hal2009_netcom_unlock();
+    string exec;
+#if defined(MINGW) || defined(WIN32)
+    exec = exec_fh;
+    args.push_back(exec);
+#else
+    if (current_debugging_options->g_valgrind) {
+        exec = "/usr/bin/valgrind";
+        args.push_back(exec);
+        if (current_debugging_options->g_valgrind_tool.size() > 0) {
+            args.push_back(string("--tool=")+current_debugging_options->g_valgrind_tool);
+        }
+        else {
+            args.push_back("--leak-check=full");
+        }
+        args.push_back(exec_fh);
+    }
+    else if (current_debugging_options->g_gdb) {
+        exec = "/usr/bin/gdb";
+        args.push_back(exec);
+        args.push_back(exec_fh);
+    }
+    else {
+        exec = exec_fh;
+        args.push_back(exec);
+    }
+#endif
 
-    string username;
-    getline(*stream, username);
-    replace_all(username, "USER:", "");
-    trim(username);
+    bp::context ctx;
+    bp::postream* child_stdin = 0;
+    bp::pistream* child_stdout = 0;
+    bp::pistream* child_stderr = 0;
 
-    cout << "Got username." << endl;
-    cout << "    " << username << endl;
+    ctx.environment = bp::self::get_environment();
+    ctx.stdout_behavior = bp::capture_stream();
+    ctx.stderr_behavior = bp::capture_stream();
+//    ctx.stderr_behavior = bp::redirect_stream_to_stdout();
+    ctx.stdin_behavior = bp::capture_stream();
+    bp::child c = bp::launch(exec, args, ctx);
+    child_stdout = &c.get_stdout();
+    child_stderr = &c.get_stderr();
+    child_stdin = &c.get_stdin();
 
-    while (init_thread_ended <= 0) {
-        (*stream) << "DISPLAY:" << "FreeHAL reads the database. This can take some seconds to several minutes." << endl;
-
-        halusleep(1000);
+    if (current_debugging_options->g_gdb) {
+        (*child_stdin) << "run" << endl;
     }
 
-    (*stream) << "DISPLAY:" << "<i> </i>" << endl;
+    (*child_stdin) << "--language" << endl << current_instance->tlanguage << endl;
+    (*child_stdin) << "--sql" << endl << current_instance->sql_engine << endl;
+    (*child_stdin) << "--interpreter" << endl << current_instance->planguage << endl;
+    (*child_stdin) << "." << endl;
 
-    string line;
-    while (*stream && stream->rdbuf() != 0 && getline(*stream, line)) {
-        ofstream booted_file("booted");
-        booted_file.close();
+    (*child_stdin) << "init_thread_ended=" << (num>1?1:0) << endl;
+    cout << "#" << num << ": " << "init_thread_ended=" << (num>1?1:0) << endl;
 
-        std::vector<std::string>* result = simple_split( line, ":" );
+    string lock_request = "";
+    string unlock_request = "";
+    bool do_exit = false;
 
-        std::vector<std::string>* result_underscore = simple_split( line, "_" );
-        if ( result_underscore->at(0) == string("HERE") && result->size() >= 2 ) {
-            cout << "Got a HERE_IS_* statement at the wrong place in code" << endl;
-        }
+    boost::thread t1(boost::bind(&stream_process_to_std, num, do_exit, child_stdout, &cout, child_stdin));
+    boost::thread t2(boost::bind(&stream_process_to_network, num, do_exit, child_stderr, stream, lock_request, unlock_request, child_stdin));
+    boost::thread t3(boost::bind(&stream_network_to_process, num, do_exit, stream, child_stdin, lock_request, unlock_request));
 
-        if ( result->at(0) == string("EXIT") ) {
-            exit(0);
-        }
+/*    while (*stream && !do_exit) {
+        halusleep(100);
+    }*/
 
-        if ( result->at(0) == string("CSV") ) {
-            char* request = strdup(result->at(1).c_str());
-            struct DATASET set = hal2009_get_csv(request);
-            char* csv_data = (char*)hal2009_make_csv(&set);
-            ofstream out_csv_data("_csv-data.txt");
-            int pos;
-            int last_pos = 0;
-            for (pos = 0; csv_data[pos]; ++pos) {
-                if (csv_data[pos] == '\n') {
-                    csv_data[pos] = '\0';
+    t1.join();
+    t2.join();
+    t3.join();
 
-                    out_csv_data << csv_data + last_pos << endl;
-                    cout << "CSV_RESULT:" << csv_data + last_pos << endl;
+    bp::status s = c.wait();
+    boost::thread::id this_id = boost::this_thread::get_id();
 
-                    if (csv_data[pos+1]) last_pos = pos+1;
-                    else                 last_pos = -1;
-                }
-            }
-            if (last_pos >= 0) {
-                out_csv_data << csv_data + last_pos << endl;
-                cout << "CSV_RESULT:" << csv_data + last_pos << endl;
-            }
-            out_csv_data.close();
-            (*stream) << "CSV_RESULT:." << endl;
-            if (request) free(request);
-            if (csv_data) free(csv_data);
-        }
-
-        if ( result->at(0) == string("DELETE") && result->at(1) == string("FACT") && result->at(2) == string("PK") ) {
-            struct RECORD r;
-            strcpy(r.pkey, result->at(3).c_str());
-            printf("pkey (in hal2009-server, 1): %s\n", r.pkey);
-            sql_begin("");
-            char* source = sql_del_record(&r);
-            if (source) {
-                fact_delete_from_source(source);
-                free(source);
-            }
-            sql_end();
-            (*stream) << "DELETED:SUCCESS" << endl;
-        }
-
-        if ( result->at(0) == string("REINDEX") ) {
-            printf("Running re-index function.\n");
-            printf("Start.\n");
-            sql_begin("");
-            sql_re_index();
-            sql_end();
-            printf("Stop.\nNew Index.\n");
-            (*stream) << "REINDEX:SUCCESS" << endl << "REINDEX:SUCCESS" << endl;
-        }
-
-        if ( result->at(0) == string("READ") && result->at(1) == string("XML") ) {
-            hal2009_add_xml_file(result->at(2));
-        }
-        
-        if ( result->at(0) == string("LIST") && result->at(1) == string("XML") ) {
-            hal2009_add_xml_file(result->at(2));
-        }
-
-        if ( result->at(0) == string("GET") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
-            struct RECORD r;
-            strcpy(r.pkey, result->at(3).c_str());
-            while (r.pkey[0] && (r.pkey[strlen(r.pkey)-1] == '\r' || r.pkey[strlen(r.pkey)-1] == '\n')) {
-                r.pkey[strlen(r.pkey)-1] = '\0';
-            }
-            printf("get .pro entry (in hal2009-server, 1): %s\n", r.pkey);
-            sql_begin("");
-            char* source = sql_get_source(&r);
-            printf("source: '%s'\n", source ? source : "(null)");
-            if (source) {
-                char* editable_fact_data = fact_read_from_source(source);
-                if (editable_fact_data) {
-                    (*stream) << "PROFACT:" << editable_fact_data << endl;
-                    free(editable_fact_data);
-                }
-                free(source);
+    {
+        vector<tcp::iostream*>::iterator iter = hal2009_server_clients.begin();
+        for(; iter != hal2009_server_clients.end();) {
+            if (*iter == stream) {
+                delete(*iter);
+                iter = hal2009_server_clients.erase(iter);
             }
             else {
-                (*stream) << "PROFACT:" << "Datei nicht gefunden..." << endl;
+                ++iter;
             }
-            sql_end();
         }
+    }
 
-        if ( result->at(0) == string("REPLACE") && result->at(1) == string("PROFACT") && result->at(2) == string("PK") ) {
-            struct RECORD r;
-            strcpy(r.pkey, result->at(3).c_str());
-            char replacement[2001];
-            strncpy(replacement, result->at(5).c_str(), 2000);
-            while (replacement[0] && (replacement[strlen(replacement)-1] == '\r' || replacement[strlen(replacement)-1] == '\n')) {
-                replacement[strlen(replacement)-1] = '\0';
-            }
-            printf("replace .pro entry (in hal2009-server, 1): %s by '%s'\n", r.pkey, replacement);
-            sql_begin("");
-            char* source = sql_get_source(&r);
-            if (source) {
-                fact_replace_in_source(source, replacement);
-                char* editable_fact_data = fact_read_from_source(source);
-                if (editable_fact_data) {
-                    (*stream) << "PROFACT:" << editable_fact_data << endl;
-                    free(editable_fact_data);
-                }
-                char* filename = strdup(source);
-                if (strstr(filename, ":")) {
-                    strstr(filename, ":")[0] = '\0';
-                    sql_end();
-                    hal2009_add_xml_file(filename);
-                    // hal2009_add_pro_file() free's filename
-                    sql_begin("");
-                }
-                free(source);
+    {
+        vector<boost::thread*>::iterator iter = hal2009_server_clients_threads.begin();
+        for(; iter != hal2009_server_clients_threads.end();) {
+            if ((*iter)->get_id() == this_id) {
+                delete(*iter);
+                iter = hal2009_server_clients_threads.erase(iter);
             }
             else {
-                (*stream) << "PROFACT:" << "Datei nicht gefunden..." << endl;
-            }
-            sql_end();
-        }
-
-        if ( init_thread_ended > 0 && result->at(0) == string("QUESTION") && result->at(1) != string("QUESTION") && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
-            string input;
-            for (int i = 1; i < result->size(); ++i) {
-                if (i != 1) {
-                    input += ":";
-                }
-                input += result->at(i);
-            }
-            replace_all(input, "::", ":");
-            hal2009_server_statement(stream, input, username, true, true);
-        }
-
-        if ( init_thread_ended > 0 && result->size() >= 2 && result->at(1).size() > 0 && !(result->at(1).size() < 3 && ' ' == result->at(1)[0]) ) {
-            string input;
-            for (int i = 1; i < result->size(); ++i) {
-                if (i != 1) {
-                    input += ":";
-                }
-                input += result->at(i);
-            }
-            replace_all(input, "::", ":");
-
-            if (result->at(0) == string("LEARN") && result->at(1) != string("LEARN")) {
-                hal2009_server_statement(stream, input, username, true, false);
-            }
-            else if (result->at(0) == string("TALK") && result->at(1) != string("TALK")) {
-                hal2009_server_statement(stream, input, username, false, true);
-            }
-            else if (result->at(0) == string("TALK_LEARN") && result->at(1) != string("TALK_LEARN")) {
-                hal2009_server_statement(stream, input, username, true, true);
+                ++iter;
             }
         }
-
-        delete result;
-        delete result_underscore;
     }
 }
 
 void hal2009_server_run() {
-    vector<boost::thread*>* threads = new vector<boost::thread*>();
     ofstream booted_file("booted");
     booted_file.close();
-
-    boost::thread* log_streamer = 0;
 
     for (;;) {
         tcp::iostream* stream;
@@ -873,18 +360,11 @@ void hal2009_server_run() {
             hal2009_server_clients.push_back(stream);
 
 
-            if (init_thread_ended == 0) {
-                init_thread_ended = -1;
+            static int num = 0;
+            ++num;
 
-                pthread_t thread_init;
-                pthread_create (&thread_init, NULL, hal2009_init_thread, (void*)NULL);
-
-            }
-
-            if (log_streamer)
-                delete log_streamer;
-            log_streamer = new boost::thread(boost::bind(&hal2009_log_streamer, stream));
-            hal2009_server_client_connection(stream);
+            hal2009_server_clients_threads.push_back(new boost::thread(boost::bind(&hal2009_server_client_connection, stream, num)));
+            halusleep(2000);
         }
         catch (std::exception& e)
         {
@@ -898,10 +378,14 @@ void hal2009_server_stop() {
     for (vector<tcp::iostream*>::iterator iter = hal2009_server_clients.begin(); iter != hal2009_server_clients.end(); iter++) {
         delete(*iter);
     }
+    for (vector<boost::thread*>::iterator iter = hal2009_server_clients_threads.begin(); iter != hal2009_server_clients_threads.end(); iter++) {
+        delete(*iter);
+    }
     hal2009_server_clients = vector<tcp::iostream*>();
+    hal2009_server_clients_threads = vector<boost::thread*>();
 }
 
-char* hal2009_server_get_value_from_socket(char* s1, const char* s2) {
+char* hal2009_server_get_value_from_socket(const char* s1, const char* s2) {
     cout << "Get stream." << endl;
     while (0 == hal2009_server_clients.size()) {
         halusleep(1000);
@@ -956,123 +440,62 @@ int set_nonblocking(int fd)
 #endif
 }
 
-void* hal2009_init_thread (void*) {
-    time_t start = 0;
-    time(&start);
-
-    hal2009_init(planguage, tlanguage, base_dir);
-    init_thread_ended = 1;
-
-    time_t end = 0;
-    time(&end);
-
-    int sec = end - start;
-    struct tm* ts_start = localtime(&start);
-    struct tm* ts_end   = localtime(&end);
-    char*      ch_start = strdup(asctime(ts_start));
-    char*      ch_end   = strdup(asctime(ts_end));
-    if (strstr(ch_start, "\n")) {
-        strstr(ch_start, "\n")[0] = '\0';
-    }
-    if (strstr(ch_end, "\n")) {
-        strstr(ch_end, "\n")[0] = '\0';
-    }
-
-    ofstream protocol("database.log", ios::out | ios::app);
-    protocol << "Rev. " << FULL_VERSION << ", " << ch_start << ":\t" << sec << " s \t= " << (sec/60) << " min" << endl;
-    protocol.close();
-
-    free(ch_start);
-    free(ch_end);
-
-}
-
 int main(int argc, char** argv) {
-    sql_engine = (char*)calloc(64, 1);
-    strcpy(sql_engine, "disk");
-    if (argc >= 3 && argv[2]) {
-        strcpy(sql_engine, argv[2]);
-    }
-    hal2009_clean();
-    extract();
+    current_instance = new instance();
+    current_instance->sql_engine = "disk";
+    current_instance->tlanguage = "de";
+    current_instance->planguage = "perl5";
+    current_debugging_options = new debugging_options();
 
-    planguage = "perl5";
-    tlanguage = "de";
-    for (int g = 0; g < argc; ++g) {
-        if (argv[g] && strlen(argv[g]) == 2) {
-            tlanguage = argv[g];
+    vector<string>* params = params_argv(argc, argv);
+
+    for (int i = 0; i < params->size(); i += 2) {
+        if (i+1 == params->size()) {
+            fprintf(output(), "No value: %s.\n", params->at(i).c_str());
+        }
+        const string key = params->at(i);
+        const string value = params->at(i+1);
+
+        if (key == "--language") {
+            current_instance->tlanguage = value;
+        }
+        if (key == "--sql") {
+            current_instance->sql_engine = value;
+        }
+        if (key == "--interpreter") {
+            current_instance->planguage = value;
+        }
+        if (key == "--valgrind") {
+            if (value == "false" || value == "off" || value == "0") {
+                current_debugging_options->g_valgrind = 0;
+            }
+            if (value != "true" && value != "on" && value.size() > 1) {
+                current_debugging_options->g_valgrind = 1;
+                current_debugging_options->g_valgrind_tool = value;
+            }
+            else {
+                current_debugging_options->g_valgrind = 1;
+                current_debugging_options->g_valgrind_tool = string("");
+            }
+        }
+        if (key == "--gdb") {
+            if (value == "false" || value == "off" || value == "0") {
+                current_debugging_options->g_gdb = 0;
+            }
+            else {
+                current_debugging_options->g_gdb = 1;
+            }
         }
     }
-    fprintf(output(), "Language is %s.\n", tlanguage.c_str());
-    fprintf(output(), "Database Engine is %s.\n", sql_engine);
-    base_dir = ".";
 
-    {
-        string sqlite_filename = base_dir + "/lang_" + tlanguage + "/database.db";
-        sql_sqlite_set_filename(strdup(sqlite_filename.c_str()));
-    }
-
-    /*pthread_t signal_thread = hal2009_start_signal_handler(strdup(planguage), strdup(tlanguage), MULTI);
-    copy_for_init_planguage = strdup(planguage);
-    copy_for_init_base_dir = strdup(base_dir);
-    copy_for_init_tlanguage = strdup(tlanguage);*/
-    pthread_t thread_netcom;
+    fprintf(output(), "Language is %s.\n", current_instance->tlanguage.c_str());
+    fprintf(output(), "Interpreter is %s.\n", current_instance->planguage.c_str());
+    fprintf(output(), "Database Tool is %s.\n", current_instance->sql_engine.c_str());
+    current_instance->base_dir = ".";
 
     hal2009_server_start();
-    hal2009_netcom_start();
 
-    pthread_create (&thread_netcom, NULL, hal2009_netcom_run, (void*)NULL);
     hal2009_server_run();
 
     hal2009_server_stop();
 }
-
-void* hal2009_handle_signal(void* arg) {
-    char* type = (char*)((void**)arg)[0];
-    char* text = (char*)((void**)arg)[1];
-
-    if (0 == strcmp(type, "output_pos")) {
-        FILE* _doing = fopen("_doing__pos", "w+b");
-        halclose(_doing);
-        fprintf(output(), "\nUnknown part of speech:\n\n%s\n", text);
-        text = hal2009_server_get_value_from_socket("WORD_TYPE", text);
-        hal2009_send_signal("input_pos", text);
-        unlink("_doing__pos");
-    }
-    else if (0 == strcmp(type, "output_link")) {
-        if (strlen(text) < 99) {
-            char link[99] = {0};
-            int f1 = 0;
-            int f2 = 0;
-            sscanf(text, "%98[a-zA-Z]%d\n%d", &link, &f1, &f2);
-            fprintf(output(), "--%s--\n%s\n%i\n%i", text, link, f1, f2);
-            hal2009_add_link(link, f1, f2);
-        }
-    }
-    else if (0 == strcmp(type, "add_pro_file")) {
-        hal2009_add_pro_file(text);
-        hal2009_send_signal("add_pro_file", "");
-    }
-    else if (0 == strcmp(type, "add_xml_file")) {
-        hal2009_add_xml_file(text);
-        hal2009_send_signal("add_xml_file", "");
-    }
-    else if (0 == strcmp(type, "database_request")) {
-        struct DATASET set = hal2009_get_csv(text);
-        char* csv_data = hal2009_make_csv(&set);
-        hal2009_send_signal("database_request", csv_data);
-        fprintf(output(), "Release memory now.\n");
-        free(csv_data);
-        fprintf(output(), "Memory is released.\n");
-    }
-    else if (0 == strcmp(type, "output")) {
-        output_by_signal = text;
-    }
-    else if (0 == strcmp(type, "_exit_by_user")) {
-        exit(0);
-    }
-
-    free(type);
-    free(text);
-}
-

@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -20,6 +20,10 @@
 */
 
 #include "hal2009.h"
+#include "hal2009-wiki.h"
+#include "hal2009-util.h"
+#include "hal2009-talk.h"
+#include "hal2009-universal-cxx.h"
 #include "hal2009-ipc.h"
 BEGIN_EXTERN_C
 #include "hal2009-universal.h"
@@ -27,7 +31,7 @@ END_EXTERN_C
 
 string download_from_url(const string& url);
 
-int wiki_begin() {
+EXTERN_C int wiki_begin() {
     return 1;
 }
 
@@ -218,15 +222,15 @@ string transform_sentence(const string& _sentence, const string& entity) {
         verbs.push_back("means");
         verbs.push_back("describes");
     }
-    
+
     string verb_str;
 
     int i;
     for (i = 0; i < verbs.size(); ++i) {
         if (verb_str.size() > 0) break;
-        
+
         string verb = " " + verbs[i] + " ";
-        
+
         int verb_pos = sentence.find(verb);
         if (verb_pos != string::npos && verb_pos < sentence.find(".")) {
             verb_str = sentence.substr(verb_pos + verb.size());
@@ -234,9 +238,9 @@ string transform_sentence(const string& _sentence, const string& entity) {
     }
     for (i = 0; i < verbs.size(); ++i) {
         if (verb_str.size() > 0) break;
-        
+
         string verb = " " + verbs[i] + " ";
-        
+
         int verb_pos = sentence.find(verb);
         if (verb_pos != string::npos) {
             verb_str = sentence.substr(verb_pos + verb.size());
@@ -245,7 +249,7 @@ string transform_sentence(const string& _sentence, const string& entity) {
     if (verb_str.size() == 0) {
         verb_str = sentence;
     }
-    
+
     vector<string> dot_allowed;
     dot_allowed.push_back("bspw");
     dot_allowed.push_back("mio");
@@ -278,7 +282,7 @@ string transform_sentence(const string& _sentence, const string& entity) {
         }
     }
     // verb_str.substr(0, end)
-    
+
     string object = verb_str;
     int dot_pos = verb_str.find_first_of(".!?", object_end);
     if (dot_pos != string::npos) {
@@ -305,7 +309,7 @@ string upper (const string& _s) {
 
 string delete_articles(const string& _s) {
     string s(_s);
-    
+
     vector<string> articles;
     articles.push_back("der");
     articles.push_back("die");
@@ -317,7 +321,7 @@ string delete_articles(const string& _s) {
     articles.push_back("einem");
     articles.push_back("eine");
     articles.push_back("ein");
-    
+
     int i;
     for (i = 0; i < articles.size(); ++i) {
         if (s.find(articles[i] + " ") < 5) {
@@ -409,15 +413,15 @@ EXTERN_C struct fact** search_facts_wiki(const char* _entity, short todo) {
         cout << "return 0;" << endl;
         return 0;
     }
-    
+
     struct fact** facts = 0;
 
     int i = (todo == NEW) ? 0 : search_results_line;
-    
+
     cout << "(" << lines.size() << " lines / search_results_line = " << search_results_line << " / current_line = " << i << endl;
     for (++i; i < lines.size(); ++i) {
         string line(lines[i]);
-    
+
         cout << "- " << line << endl;
         if (line.size() <= 1) {
             continue;
@@ -461,7 +465,7 @@ EXTERN_C struct fact** search_facts_wiki(const char* _entity, short todo) {
             }
         }
     }
-    
+
     return facts;
 }
 
@@ -473,7 +477,7 @@ struct fact** search_facts_wiki_page(const string& __url, const string& entity_u
     string url = replace_spaces(hal2009_get_text_language() + string(".wikipedia.org") + __url);
     cout << "page: url: " << url << endl;
     string file = download_from_url(url);
-    
+
     if (file.size() == 0) {
         printf("page: Was not successful: download_from_url\n");
         return 0;
@@ -493,7 +497,7 @@ struct fact** search_facts_wiki_page(const string& __url, const string& entity_u
     int i = 0;
     for (i = 0; i < lines.size(); ++i) {
         string line = lines[i];
-        
+
         if (line.size() <= 1) {
             continue;
         }
@@ -600,7 +604,7 @@ struct fact** search_facts_wiki_page(const string& __url, const string& entity_u
             /// write to prot file
             {
                 string file = "lang_" + string(hal2009_get_text_language()) + "/wiki/" + entity_upper[0] + "-wiki.prot";
-                
+
                 string line;
                 string object_working = object;
                 int end;
@@ -645,7 +649,7 @@ struct fact** search_facts_wiki_page(const string& __url, const string& entity_u
             }
         }
     }
-    
+
     return facts;
 }
 

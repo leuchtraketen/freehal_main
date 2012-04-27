@@ -1,0 +1,1810 @@
+<fact>
+  <subject>abfangen</subject>
+  <object>von daten</object>
+  <verb>=</verb>
+  <adverbs>_(bad)_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abgeordnetenbestechung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abstossend</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aerger</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aggressiv</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>amtsanmassung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>armut</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aussageerpressung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aussetzung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ausspaehen</subject>
+  <object>von daten</object>
+  <verb>=</verb>
+  <adverbs>_(bad)_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ausuebung</subject>
+  <object>der verbotenen prostitution (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baugefaehrdung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bedrohung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beguenstigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beleidigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>besoffen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bestechlichkeit</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bestechung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betrug</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betrunken</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bewaffneter raubueberfall</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bildung</subject>
+  <object>bewaffneter gruppen (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bildung</subject>
+  <object>terroristischer vereinigungen (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bildung krimineller vereinigungen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bodenverunreinigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>boesartig</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bombe</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bombenanschlag</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brandstiftung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>computerbetrug</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>computersabotage</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>datenveraenderung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>diebstahl</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>doppelehe</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drogenhandel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drogensucht</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>einbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>entfuehrung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erpressung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erregung</subject>
+  <object>oeffentlichen aergernisses (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>exhibitionistische handlungen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fahrlaessige toetung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falschaussage</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falsche verdaechtigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fischwilderei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>folterung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freiheitsberaubung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freudlos</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedensverrat</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gefangen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gefangenenbefreiung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gefangenenmeuterei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gefangenschaft</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geiselnahme</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geldfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geldwaesche</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gewaesserverunreinigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gewaltdarstellung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>glaeubigerbeguenstigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hausfriedensbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hehlerei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heiratsschwindel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hochstapelei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hochverrat</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hungrig</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>inverkehrbringen</subject>
+  <object></object>
+  <verb>=</verb>
+  <adverbs>von falschgeld</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>_(bad)_</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>jagdwilderei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kanibalismus</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kapitalanlagebetrug</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kinderhandel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>koerperverletzung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kreditbetrug</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>landesverrat</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>landfriedensbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luftverunreinigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meineid</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menschenhandel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menschenraub</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mord</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nachstellen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>noetigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>parteiverrat</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>personenstandsfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pfandkehr</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pirat</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>piraterie</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raubmord</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raubueberfall</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rauchen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rechtsbeugung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rufmord</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sachbeschaedigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlechtwetter</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schuldnerbeguenstigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schwaeche</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sexuelle noetigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sexueller missbrauch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sexueller missbrauch</subject>
+  <object>von kindern</object>
+  <verb>=</verb>
+  <adverbs>_(bad)_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siegelbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stalking</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stoerung</subject>
+  <object>der religionsausuebung (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stoerung</subject>
+  <object>der totenruhe (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>strafvereitelung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>subventionsbetrug</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>terroranschlag</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>traurigkeit</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>trunkenheit</subject>
+  <object>in dem verkehr</object>
+  <verb>=</verb>
+  <adverbs>_(bad)_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ueberfall</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ueble nachrede</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>unangenehm</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>unehrlich</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>unterlassene hilfeleistung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>unterschlagung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>untreue</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>urkundenfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vandalismus</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vergewaltigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verleitung zur falschaussage</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verletzung</subject>
+  <object>der unterhaltspflicht (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verletzung</subject>
+  <object>des wahlgeheimnisses (bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verleumdung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verschleppung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>versicherungsmissbrauch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verstrickungsbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verwahrungsbruch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>voelkermord</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>volksverhetzung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vollrausch</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vortaeuschen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vorteilsannahme</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vorteilsgewaehrung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waehlerbestechung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waehlernoetigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waehlertaeuschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wahlbehinderung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wahlfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wertzeichenfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wirbelsturm</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wucher</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zuhaelterei</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>antichrist</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>atombombe</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bankraeuber</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bestechung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bestehlen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betruegen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betrueger</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dieb</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>entfuehrer</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>folterung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geiselnahme</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geiselnehmer</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geldfaelscher</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>koerperverletzung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>krieg</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luegen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menschenhaendler</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menschenhandel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>moerder</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>noetigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>piraterie</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raeuber</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sachbeschaedigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>satan</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stehlen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>terror</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>terrorist</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>teufel</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>todschlag</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>urkundenfaelscher</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>urkundenfaelschung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vandale</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vandalismus</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verbrechen</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verbrecher</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vergewaltiger</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vergewaltigung</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wasserstoffbombe</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weltuntergang</subject>
+  <object>(bad)</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

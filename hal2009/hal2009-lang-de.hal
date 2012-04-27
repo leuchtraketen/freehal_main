@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -117,6 +117,8 @@ set multi-line new global array builtin_male_names to [
           "baldur",
           "balthasar",
           "baptist",
+          "barack",
+          "barrack",
           "bardo",
           "barnabas",
           "bartho",
@@ -4093,9 +4095,7 @@ define action stem_nouns with array phrases do
         print new line
         set new array words to split using /\s/, var phrase
         for each new var noun in array words is rw do
-            # TEXT
             # Delete articles...
-            # CODE
 
             if var noun matches /^\(a\)$/ do
                 do regex with var noun: /^\(a\)$/ -> "*" :global:i
@@ -4129,9 +4129,7 @@ define action stem_nouns with array phrases do
                 go to next
             done
 
-            # TEXT
             # That's the stemming algorithm
-            # CODE
             if var noun matches /((ein)|(ie.)|(tes)|(be)|([mnpl][ksl]er))$/ do
                 go to next
             done
@@ -4836,12 +4834,16 @@ done
 define action check_for_weather with var place, var lang, var path do
     do chdir with var path
     do regex with var place: /\s+/ -> "\\s" :global
-    do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather.txt http://www.wetter.com/suche/?search=" concat var place concat "&search_type_weather=1&search_type_site=1"
+    do unlink with "weather.txt"
+    do system with "curl -A \"Mozilla/5.0 (X11; U; Linux x86_64; de; rv:1.9.0.13) Gecko/2009080315 Ubuntu/9.04 (jaunty) IE/4.0\" -s -o weather.txt \"http://www.wetter.com/suche/?search=" concat var place concat "&search_type_weather=1&search_type_site=1\""
 
+    set new var xml_file_name to "./lang_" concat var lang concat "/weather.xml"
     set new var pro_file_name to "./lang_" concat var lang concat "/weather.pro"
     set new var weather_pro_file to handle for file name var pro_file_name, write
     do close with var weather_pro_file
     do trigger_check_files without arguments
+
+    set new array urls to an empty array
 
     set new var search_results to handle for file name "weather.txt", read
     for each new var line from var search_results do
@@ -4849,9 +4851,22 @@ define action check_for_weather with var place, var lang, var path do
             set new var url to var line
             do regex with var url: /^.*?http/ -> "http" :global
             do regex with var url: /html.*?$/ -> "html" :global
-            print var url
-            print new line
+            print "- url: " concat var url concat new line
+#            print new line
 
+            push into array urls, var url
+        done
+    done
+    do close with var search_results
+
+    set new hash success_urls to an empty hash
+
+    for each new var url in array urls do
+        set new var suburl to var url
+        do regex with var suburl: /\/<[^\/]>*?$/ -> "" :global
+        print "- sub url: " concat var suburl concat new line
+
+        if from hash success_urls item { var suburl } <= 0 and from hash success_urls item { var suburl } >= -2 do
             set new var name to ''
             set new var temperature to ''
             set new var weather to ''
@@ -4865,7 +4880,7 @@ define action check_for_weather with var place, var lang, var path do
                     do regex with var line: /google_kw/ -> "" :global
                     do regex with var line: /[<][^>]*?[>]/ -> "" :global
                     do regex with var line: /[&].*/ -> "" :global
-                    do regex with var line: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+                    do regex with var line: /<[^a-zA-Z0-9,\s-]>/ -> "" :global:i
                     do regex with var line: /^\s+/ -> "" :global:i
                     do regex with var line: /\s+$/ -> "" :global:i
                     do regex with var line: /,/ -> " in " :global
@@ -4877,28 +4892,38 @@ define action check_for_weather with var place, var lang, var path do
                     done
                 done
                 if var line matches /deg text_l temp_w/ do
-                    set new array parts to split with /<.div>/, var line
-                    set var line to from array parts 1st element
-                    do regex with var line: /[<][^>]*?[>]/ -> "" :global
-                    do regex with var line: /[&].*/ -> "" :global
-                    do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
-                    do regex with var line: /,/ -> " in " :global
-                    if var line do
-                        set var temperature to var line
+                    if var line matches /[>]([^>]*?)[&]deg.C......(.*)[<]/ do
+                        set var temperature to $0
+                        set var weather to $1
+
+                        do regex with var temperature: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+                        do regex with var weather: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+
+                        do regex with var weather: /m.*?iger/ -> "maessiger" :global
+                        do regex with var weather: /bew.*?lkt/ -> "bewoelkt" :global
 
                         print var line
                         print new line
                     done
                 done
-                if var line matches /deg text_l temp_w/ do
-                    set new array parts to split with /<.div>/, var line
-                    set var line to from array parts 2nd element
-                    do regex with var line: /[<][^>]*?[>]/ -> "" :global
-                    do regex with var line: /[&].*/ -> "" :global
-                    do regex with var line: /[^a-zA-Z0-9,. ]/ -> "" :global:i
-                    do regex with var line: /,/ -> " in " :global
-                    if var line do
-                        set var weather to var line
+                if var line matches /deg text_l mgb/ do
+                    if var line matches /[>]([^>]*?)[&]deg.C/ do
+                        set var temperature to $0
+
+                        do regex with var temperature: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+
+                        print var line
+                        print new line
+                    done
+                done
+                if var line matches /<p style="width:189px;/ do
+                    if var line matches /><b>([^<>]*?)<.b></ do
+                        set var weather to $0
+
+                        do regex with var weather: /<[^a-zA-Z0-9,\s]>/ -> "" :global:i
+
+                        do regex with var weather: /m.*?iger/ -> "maessiger" :global
+                        do regex with var weather: /bew.*?lkt/ -> "bewoelkt" :global
 
                         print var line
                         print new line
@@ -4907,25 +4932,32 @@ define action check_for_weather with var place, var lang, var path do
             done
             do close with var city
 
-            set new var weather_pro_file to handle for file name var pro_file_name, append
-            print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> (true)"
-            print into var weather_pro_file data new line
-            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad celsius <> in " concat var name concat " <> (true)"
-            print into var weather_pro_file data new line
-            print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
-            print into var weather_pro_file data new line
-            print into var weather_pro_file data "ist <> die temperatur <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
-            print into var weather_pro_file data new line
-            print into var weather_pro_file data "ist <> das wetter <> " concat var weather concat " bei " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
-            print into var weather_pro_file data new line
-            print into var weather_pro_file data new line
-            do close with var weather_pro_file
+            if var temperature do
+                set new var weather_pro_file to handle for file name var pro_file_name, append
+                print into var weather_pro_file data "ist <> es <>  <> " concat var weather concat " in " concat var name concat " <> (true)"
+                print into var weather_pro_file data new line
+                print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad celsius <> in " concat var name concat " <> (true)"
+                print into var weather_pro_file data new line
+                print into var weather_pro_file data "sind <> es <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
+                print into var weather_pro_file data new line
+                print into var weather_pro_file data "ist <> die temperatur <> " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
+                print into var weather_pro_file data new line
+                print into var weather_pro_file data "ist <> das wetter <> " concat var weather concat " bei " concat var temperature concat " grad <> in " concat var name concat " <> (true)"
+                print into var weather_pro_file data new line
+                print into var weather_pro_file data new line
+                do close with var weather_pro_file
+
+                set from hash success_urls item { var suburl } to 1
+            done
+            else do
+                set from hash success_urls item { var suburl } to from hash success_urls item { var suburl } - 1
+            done
 
         done
     done
-    do close with var search_results
 
     do reread_pro_file with var pro_file_name
+    do reread_xml_file with var xml_file_name
 
     do return without arguments
 done

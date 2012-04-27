@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,14 +19,21 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include "hal2009.h"
+
 #ifndef HAL2009_PRO
 #define HAL2009_PRO 1
 
-#include "hal2009.h"
+#if defined(__cplusplus) /* GENERATED */
 
+#endif /* GENERATED */
+
+// functions begin
+#if defined(__cplusplus) /* GENERATED */
 int hal2009_add_pro_file (const string& filename);
 int remove_negation (char* _line, double* truth_ref, int* only_logic);
 string delete_underscores(const string& _text);
-
-#endif
+#endif /* GENERATED */
+// functions end
+#endif /* HAL2009_PRO */
 

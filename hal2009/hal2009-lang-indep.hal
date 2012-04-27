@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -143,7 +143,7 @@ define action compute_input with var input is rw, var lang, var path do
     print new line
 
     set var input to make_ascii with var input
-    
+
     set new flag is_question to 0
     if lc(var input) matches /(global var questionwords_reg_ex|<[?]>)/ do
         set flag is_question to 1
@@ -452,32 +452,32 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /befindet sich/ -> "liegt" :global
     do regex with var input: /sich (.*?)befindet/ -> "$0liegt" :global
     do regex with var input: /teil von ein.?.?\s/ -> "teil von " :global:i
-    
+
     # statements
-    
+
     if flag is_question is false do
         if var input matches /^(.*?) hat (?:der|die|das)\s(<[^A-Z]>*?<[A-Z]><[^\s]>+?)\s(.*?)$/ do
             set new var subject to $0
             set new var prop to $1
             set new var value to $2
-            
+
             set var prop to transform_to_name with var prop
             set var value to transform_to_name with var value
-            
+
             set new var expr to var prop concat " _:_ " concat var value
             set var input to "var subject is-property var expr"
         done
-        
+
         if var input matches /^(.*?) ist (<[a-z]>+?)\s*?$/ do
             set new var subject to $0
             set new var prop to ""
             set new var value to $1
-            
+
             set new flag contains_verb to contains_part_of_speech with var value, var lang, var path
             if flag contains_verb do
                 set var value to ""
             done
-            
+
             if var value is true do
                 do regex with var value: /^\s+/ -> "" :global:i
                 do regex with var value: /\s+$/ -> "" :global:i
@@ -488,25 +488,25 @@ define action compute_input with var input is rw, var lang, var path do
                     print "prossible property for value: " concat var _prop concat " = " concat var value concat new line
                     set var prop to var _prop
                 done
-                
+
                 if var prop do
                     set var prop to transform_to_name with var prop
                     set var value to transform_to_name with var value
-                
+
                     set new var expr to var prop concat " _:_ " concat var value
                     set var input to "var subject is-property var expr"
                 done
             done
         done
     done
-    
+
     # questions
-    
+
     else do
         if var input matches /^(.*?) hat (.*?)((?:<[?]>.*?)?)$/ do
             set new var subject to $1
             set new var prop to $0
-            
+
             set var input to "var subject is-property var prop ?"
         done
     done
@@ -571,7 +571,7 @@ define action compute_input with var input is rw, var lang, var path do
             set new var adverbs to ''
             set ( var a, var adverbs ) to array-returning remove_adverbs with var a, var adverbs
             set ( var b, var adverbs ) to array-returning remove_adverbs with var b, var adverbs
-            
+
             set new flag contains_verb to contains_part_of_speech with var b, var lang, var path
             if flag contains_verb is false do
                 set var a to transform_to_name with var a
@@ -887,7 +887,7 @@ define action compute_input with var input is rw, var lang, var path do
 
     do regex with var input: /nenne mir (.*)/ -> "zaehle $0 auf" :global:i
     do regex with var input: /nenne (.*)/ -> "zaehle $0 auf" :global:i
-    
+
     do regex with var input: /Zaehle mir alle (.*)en auf.*/ -> "ENUMALL ein $0e" :global:i
     do regex with var input: /Zaehle mir die (.*)en auf.*/ -> "ENUMALL eine $0e" :global:i
     do regex with var input: /Zaehle mir den (.*)en auf.*/ -> "ENUMALL ein $0e" :global:i
@@ -970,7 +970,7 @@ define action compute_input with var input is rw, var lang, var path do
     do regex with var input: /hast du was mal von (.*?) gehoert/ -> "was ist $0" :global:i
     do regex with var input: /^(...*?) hast du / -> "du hast $0 " :global:i
     do regex with var input: /^(...*?) habe ich / -> "ich habe $0 " :global:i
-    
+
     print "Computed input (no. 4.2) ... ", var input
     print new line
 
@@ -1091,9 +1091,7 @@ define action compute_input with var input is rw, var lang, var path do
     print "Computed input (no. 4.4) ... ", var input
     print new line
 
-    # TEXT
     # Here was the chapter about replacing user defined strings
-    # CODE
 
     if is an empty global array replace_array do
         set new var cache_file_name to '_cache_replace'

@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -21,9 +21,7 @@
 
 set new global hash content_of_memory_file to an empty hash
 
-# TEXT
 # ~~~~~ TAGGER CODE ~~~~~
-# CODE
 
 define action get_tag_part_of_speech with var word, var lang do
     if (not var word) or (var word matches /^\s*?$/) or exists: "_no_user_ask", end test do
@@ -50,10 +48,8 @@ define action get_tag_part_of_speech with var word, var lang do
     do return with array return_array
 done
 
-# TEXT
 # Save the word "name_of_entry" in the memory file.
 # The memory file contains the parts of speech.
-# CODE
 define action memory_set_by_name with var file_name, var name_of_entry, array tags, var lang, var path do
     set new var write_protocol to 1
     if var file_name matches /NO PROTOCOL / do
@@ -193,9 +189,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     do close with var output_handle
 
     if var write_protocol do
-        # TEXT
         # Protocol file:
-        # CODE
         set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/protocol.memory", append
         print into var output_handle data var name_of_entry concat ":"
         print into var output_handle data new line
@@ -221,26 +215,33 @@ define action memory_build_cache with var file_name, var lang, var path do
         print new line
 
         set new var entry to ""
+        set new hash entries_added to an empty hash
         set new array lines to an empty array
-        set elements of array lines to all lines from var input_handle
-        for each new var line in array lines is rw do
+        #set elements of array lines to all lines from var input_handle
+        #for each new var line in array lines is rw do
+        for each new var line from var input_handle do
             # no line ending
             do regex with var line: /<[\r\n]>/ -> "" :global
 
             if var line matches /^ / do
-                push into that array: from global hash content_of_memory_file element { var file_name } element { var entry }, var line
+                if from hash entries_added item { var line } is false do
+#print var line
+                    push into that array: from global hash content_of_memory_file element { var file_name } element { var entry }, var line
+                    set from hash entries_added item { var line } to 1
+                done
             done
             else do
+#print var line
                 set var entry to var line
+                set hash entries_added to an empty hash
             done
         done
+        do close with var input_handle
     done
 done
 
-# TEXT
 # Search in the memory file for the word "name_of_entry".
 # The memory file contains the parts of speech.
-# CODE
 define action memory_get_by_name with var file_name, var name_of_entry, var lang, var path do
     if exists: "SLOW", end test do
         print "Running in SLOW mode... "
@@ -345,9 +346,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     do return using an empty array
 done
 
-# TEXT
 # Ensure the memory limit
-# CODE
 define action memory_limit with var file_name, var lang, var path do
     if var file_name matches /brain/ do
         do return without arguments
@@ -358,9 +357,7 @@ define action memory_limit with var file_name, var lang, var path do
     print "There is a memory limit of " concat var limit concat ", file " concat var file_name
     print new line
 
-    # TEXT
     # read file
-    # CODE
     set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
     set new var average_count to 0
     set new var count_elements to 1
@@ -369,9 +366,11 @@ define action memory_limit with var file_name, var lang, var path do
     set new array names to an empty array
     set new hash file_to_limit to an empty hash
     set new hash count_values to an empty hash
-    set elements of array lines to all lines from var input_handle
-    do close with var input_handle
-    for each new var line in array lines is rw do
+    set new hash entries_added to an empty hash
+    #set elements of array lines to all lines from var input_handle
+    #do close with var input_handle
+    #for each new var line in array lines is rw do
+    for each new var line from var input_handle do
         # no line ending
         do regex with var line: /<[\r\n]>/ -> "" :global
 
@@ -379,7 +378,10 @@ define action memory_limit with var file_name, var lang, var path do
             go to next
         done
         else if var line matches /^ / do
-            push into that array: from hash file_to_limit element { var entry }, var line
+            if from hash entries_added item { var line } is false do
+                push into that array: from hash file_to_limit element { var entry }, var line
+                set from hash entries_added item { var line } to 1
+            done
 
             if var line matches /count..(.*)/ do
                 set new var cnt to $0
@@ -392,8 +394,10 @@ define action memory_limit with var file_name, var lang, var path do
         else do
             set var entry to var line
             push into array names, var entry
+            set hash entries_added to an empty hash
         done
     done
+    do close with var input_handle
 
     set var average_count to var average_count / var count_elements
     if var average_count < 1 do
@@ -403,9 +407,7 @@ define action memory_limit with var file_name, var lang, var path do
     print "Average is " concat var average_count
     print new line
 
-    # TEXT
     # ensure that the limit is not exceeded
-    # CODE
 
     set new var count_over_avg to 0
     set new var count_under_avg to 0
@@ -453,9 +455,7 @@ define action memory_limit with var file_name, var lang, var path do
     set elements of array entries_over_avg to reverse with elements of array entries_over_avg
     #set elements of array entries_under_avg to reverse with elements of array entries_under_avg
 
-    # TEXT
     # save everything
-    # CODE
     set new var output_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, write
     for each new var entry in array entries_over_avg is rw do
         print into var output_handle data var entry
@@ -486,9 +486,7 @@ define action memory_limit with var file_name, var lang, var path do
     do close with var output_handle
 done
 
-# TEXT
 # Update the "count" value
-# CODE
 define action memory_plus with var file_name, var matched_id, var count, var lang, var path do
     if var file_name matches /brain/ do
         do return without arguments
@@ -543,9 +541,7 @@ define action memory_plus with var file_name, var matched_id, var count, var lan
     do close with var output_handle
 done
 
-# TEXT
 # For BOINC
-# CODE
 define action boinc_guess_part_of_speech with var word, var lang, var path do
     if var word matches /[A-Z]/ do
         do return with "n"
@@ -555,9 +551,7 @@ define action boinc_guess_part_of_speech with var word, var lang, var path do
     done
 done
 
-# TEXT
 # Find out the part of speech
-# CODE
 define action compute_tags with var word, var lang, var path do
     do regex with var word: /<[\x80-\xFF]>/ -> "" :global
     if ( var word matches /<[(]>/ and var word not matches /<[)]>/ ) or ( var word matches /<[)]>/ and var word not matches /<[(]>/ ) do
@@ -589,9 +583,7 @@ define action compute_tags with var word, var lang, var path do
             done
         done
 
-        # TEXT
         # Is it built in into FreeHAL?
-        # CODE
         if is an empty array tags do
             set array tags to memory_get_by_name using var main_file, var word, var lang, var path
             set from array tags 1st element to from global hash builtin_part_of_speech element { var word }
@@ -605,9 +597,7 @@ define action compute_tags with var word, var lang, var path do
                 print "built in: " concat from array tags 1st element
                 print new line
 
-                # TEXT
                 # If no noun, we need no genus, so skip the rest
-                # CODE
                 if not from array tags 1st element matches /n/ do
                     go to last
                 done
@@ -626,9 +616,7 @@ define action compute_tags with var word, var lang, var path do
                 print "built in: " concat from array tags 1st element
                 print new line
 
-                # TEXT
                 # If no noun, we need no genus, so skip the rest
-                # CODE
                 if not from array tags 1st element matches /n/ do
                     go to last
                 done
@@ -647,9 +635,7 @@ define action compute_tags with var word, var lang, var path do
                 print "built in: " concat from array tags 1st element
                 print new line
 
-                # TEXT
                 # If no noun, we need no genus, so skip the rest
-                # CODE
                 if not from array tags 1st element matches /n/ do
                     go to last
                 done
@@ -744,9 +730,7 @@ define action compute_tags with var word, var lang, var path do
             done
         done
 
-        # TEXT
         # Look if the lower case variant of the word is a verb in the memory file.
-        # CODE
         if is an empty array tags and lc(var word) matches var word do
             set array tags to memory_get_by_name using var main_file, ucfirst(var word), var lang, var path
 
@@ -755,9 +739,7 @@ define action compute_tags with var word, var lang, var path do
             done
         done
 
-        # TEXT
         # Look if the lower case variant of the word is a verb in the memory file.
-        # CODE
         if is an empty array tags do
             set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
 
@@ -766,9 +748,7 @@ define action compute_tags with var word, var lang, var path do
             done
         done
 
-        # TEXT
         # Look if the lower case variant of the word is a preposition in the memory file.
-        # CODE
         if is an empty array tags do
             set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
 
@@ -777,9 +757,7 @@ define action compute_tags with var word, var lang, var path do
             done
         done
 
-        # TEXT
         # Look in the memory file.
-        # CODE
         if is an empty array tags do
             set array tags to memory_get_by_name using var main_file, var word, var lang, var path
         done
@@ -789,9 +767,7 @@ define action compute_tags with var word, var lang, var path do
             go to last
         done
 
-        # TEXT
         # Look for similar words.
-        # CODE
         #if is an empty array tags do
         #    set new var modified_word to var word
         #    for each new var suffix in array standard_suffixes do
@@ -812,9 +788,7 @@ define action compute_tags with var word, var lang, var path do
         go to last
     done
 
-    # TEXT
     # Ask the user.
-    # CODE
     if is an empty array tags do
         print "Ask the user: "
         print ( exists: var path concat "/no-tagger.txt", end test )
@@ -830,9 +804,7 @@ define action compute_tags with var word, var lang, var path do
         done
     done
 
-    # TEXT
     # Guess.
-    # CODE
     if is an empty array tags do
         print "Guess: "
         print ( not exists: var path concat "/no-tagger.txt", end test )
@@ -854,9 +826,7 @@ define action compute_tags with var word, var lang, var path do
         done
     done
 
-    # TEXT
     # Ask the user.
-    # CODE
     if is an empty array tags do
         set array tags to an empty array
         set from array tags to get_tag_part_of_speech using var word, var lang
@@ -869,9 +839,7 @@ define action compute_tags with var word, var lang, var path do
         do compute_tags with $0, var lang, var path
     done
 
-    # TEXT
     # Return the result.
-    # CODE
     do return using array tags
 done
 

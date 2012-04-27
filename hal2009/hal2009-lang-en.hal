@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -3253,9 +3253,7 @@ define action stem_nouns with array phrases do
     for each new var phrase in array phrases is rw do
         set new array words to split using /\s/, var phrase
         for each new var noun in array words is rw do
-            # TEXT
             # Delete articles...
-            # CODE
             if var noun matches /^\(a\)$/ do
                 do regex with var noun: /^\(a\)$/ -> "*" :global:i
             done
@@ -3270,9 +3268,7 @@ define action stem_nouns with array phrases do
                 go to next
             done
 
-            # TEXT
             # That's the stemming algorithm
-            # CODE
             if var noun matches /ers$/ do
                 do regex with var noun: /ers$/ -> "*" :global:i
             done
@@ -3803,5 +3799,5 @@ define action find_logical_operator with var word, var lang, var path do
     if var word matches /^(oder|or)$/ do
         do return with "|"
     done
-    do return with var word 
+    do return with var word
 done

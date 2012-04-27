@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,11 +19,9 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-# TEXT
 # ~~~~~ MONOLITHIC PARSER CODE ~~~~~
 #
 # This function returns the next few words from "array words" which are either nouns, acticles, or adjectives.
-# CODE
 
 define action entity_chose_end_of_entity with var lang, array words, hash tags, var current_tag, var next_tag, var current_word, var next_word, flag found_subject, var count_of_words_through_looop do
     if flag found_subject do
@@ -122,26 +120,20 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
     print "Begin do parse_using_entity."
     print new line
 
-    # TEXT
     # This will be returned.
-    # CODE
     set new hash full_entity to an empty hash
     set from hash full_entity element { "subjects" } to an empty array
     set from hash full_entity element { "objects" } to an empty array
     set from hash full_entity element { "verbs" } to an empty array
     set from hash full_entity element { "adverbs" } to an empty array
 
-    # TEXT
     # Decide whether this entity is a subject or an object
-    # CODE
     set new var entity_key_name to "subjects"
     if flag found_subject do
         set var entity_key_name to "objects"
     done
 
-    # TEXT
     # Here the current word and the following word are assigned to variables.
-    # CODE
     set new var current_word to from array words 1st element
     set new array current_tag to from hash tags element { var current_word }
     set new var next_word to from array words 2nd element
@@ -247,9 +239,7 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
     done
 
-    # TEXT
     # The subject ends when there is a noun which is followed by an adjective or an adverb or a verb or nothing.
-    # CODE
     if from hash sym_noun element { from array current_tag element [ const TYPE ] } do
     #    if from hash sym_verb element { from array next_tag element [ const TYPE ] } do
     #        if (not elements of that array: from hash full_entity element { var entity_key_name } end of elements) or (not from hash full_entity element { var entity_key_name } element [ elements of that array: from hash full_entity element { var entity_key_name } end of elements - 1 ] 1st element matches var current_word) do
@@ -264,18 +254,14 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
         done
     done
 
-    # TEXT
     # The subject ends when the current word is an article and the next one is a verb
-    # CODE
     if from hash sym_art element { from array current_tag element [ const TYPE ] } do
         if from hash sym_verb element { from array next_tag element [ const TYPE ] } do
             set flag found_subject to 1
         done
     done
 
-    # TEXT
     # The subject ends when the current word is an adjective/adverb and the next one is a verb
-    # CODE
     if from hash sym_adj element { from array current_tag element [ const TYPE ] } do
         if from hash sym_verb element { from array next_tag element [ const TYPE ] } do
             set flag found_subject to 1
@@ -284,16 +270,12 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
 
     if not var what matches "nothing" do
 
-        # TEXT
         # In "hash parsed" there will be the next word, if it's also either a noun, an adjective or an article.
         # Otherwise it will be empty
-        # CODE
         set new hash parsed to parse_what with var lang, array words, hash tags, var what, flag found_subject
         if hash parsed is false or is an empty hash parsed do
-            # TEXT
             # It's empty. The "1", which is returned as the second array element,
             # means that there's another following part of speech, probably a verb
-            # CODE
 
             print var ident
             print "#    "
@@ -303,10 +285,8 @@ define action parse_using_entity with var lang, array words, hash tags, flag fou
             do return using [ hash full_entity, 1 ]
         done
         else if hash parsed do
-            # TEXT
             # It's not empty. The "0" means that we are at the end of the sentence.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
-            # CODE
 
             set new array keys to [ keys of hash parsed ]
             for each new var key in array keys do
@@ -353,24 +333,18 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
     print "Begin do parse_using_preposition."
     print new line
 
-    # TEXT
     # This will be returned.
-    # CODE
     set new hash full_entity to an empty hash
     set from hash full_entity element { "subjects" } to an empty array
     set from hash full_entity element { "objects" } to an empty array
     set from hash full_entity element { "verbs" } to an empty array
     set from hash full_entity element { "adverbs" } to an empty array
 
-    # TEXT
     # Participle constructions, prepositions and adverbs are the same in FreeHAL english and FreeHAL german.
-    # CODE
     set new var entity_key_name to "adverbs"
 
-    # TEXT
     # It is known that the next word WILL be either a noun, an adjective or an article.
     # So push it into "hash full_entity"
-    # CODE
     set new var current_word to from array words 1st element
     set new array current_tag to from hash tags element { var current_word }
     set new var next_word to from array words 2nd element
@@ -388,19 +362,15 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
         set new hash parsed to parse_what with var lang, array words, hash tags, "entity", flag found_subject
 
         if hash parsed and that hash is not empty: hash parsed end check do
-            # TEXT
             # It's not empty.
             # In "hash parsed", there is the last word, either a noun, an adjective or an article.
-            # CODE
 
             if not from hash parsed element { "questionword" } do
                 set from hash parsed element { "questionword" } to an empty array
             done
             if not that array is empty: from hash parsed element { "questionword" } end check do
-                # TEXT
                 # A question word was found! DO NOT add everything to the "adverbs" column.
                 # Instead, add everything where it fits best.
-                # CODE
                 print "A question word was found! DO NOT add everything to the \"adverbs\" column."
                 print new line
                 print "Instead, add everything where it fits best."
@@ -414,10 +384,8 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                 done
             done
             else do
-                # TEXT
                 # No question word found...
                 # Add everything to the \"adverbs\" column.
-                # CODE
                 print "No question word found..."
                 print new line
                 print "Add everything to the \"adverbs\" column."
@@ -445,9 +413,7 @@ define action parse_using_preposition with var lang, array words, hash tags, fla
                     done
                 done
 
-                # TEXT
                 # Example for this feature: durch die 1905 _entwickelte_ Relativitaetstheorie
-                # CODE
                 if flag found_an_article is true and from hash sym_verb element { from hash tags element { from array words 1st element } 1st element } and from array words 1st element not matches "=" and not from hash sym_art element { from hash tags element { from array words 2nd element } 1st element } do
                     print "Verb-inside feature activated."
                     print new line
@@ -486,19 +452,15 @@ define action parse_using_questionword with var lang, array words, hash tags, fl
     print "Begin do parse_using_questionword."
     print new line
 
-    # TEXT
     # This will be returned.
-    # CODE
     set new hash full_entity to an empty hash
     set from hash full_entity element { "subjects" } to an empty array
     set from hash full_entity element { "objects" } to an empty array
     set from hash full_entity element { "verbs" } to an empty array
     set from hash full_entity element { "adverbs" } to an empty array
 
-    # TEXT
     # It is known that the next word WILL be either a noun, an adjective or an article.
     # So push it into "hash full_entity"
-    # CODE
     set new var current_word to from array words 1st element
     set new array current_tag to from hash tags element { var current_word }
     set new var next_word to from array words 2nd element
@@ -537,9 +499,7 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
     print "Begin do parse_using_keyword."
     print new line
 
-    # TEXT
     # This will be returned.
-    # CODE
     set new hash full_entity to an empty hash
     set from hash full_entity element { "subjects" } to an empty array
     set from hash full_entity element { "objects" } to an empty array
@@ -547,10 +507,8 @@ define action parse_using_keyword with var lang, array words, hash tags, flag fo
     set from hash full_entity element { "adverbs" } to an empty array
     set from hash full_entity element { "extra" } to an empty array
 
-    # TEXT
     # It is known that the next word WILL be either a noun, an adjective or an article.
     # So push it into "hash full_entity"
-    # CODE
     shift from array words
     set new var current_word to from array words 1st element
     set new array current_tag to from hash tags element { var current_word }
@@ -1051,14 +1009,12 @@ define action parse with var lang, array words, hash tags do
     set var ident to ""
 
 
-    # TEXT
     # In German, there are many verbs which are sometimes written as
     # "$prefix$verb", but also as "$verb $prefix" (as two words).
     # Changing the second form into the first one is done by
     # first searching the prefixes and then prepending them to the verb.
     # <br /><br />
     # Search prefixes:
-    # CODE
 
     set new var prefix to ''
 
@@ -1066,18 +1022,14 @@ define action parse with var lang, array words, hash tags do
     set new var i to 0
     for each new var word in array words is copy do
         if from global hash builtin_verb_prefixes element { lc(var word) } and from array words element [ var i + 1 ] matches "" do
-            # TEXT
             # It is a prefix.
-            # CODE
 
             if var word do
                 set var prefix to var word
             done
         done
         else do
-            # TEXT
             # It's another word. Add it to the new words array.
-            # CODE
 
             push into array words_correct, var word
         done
@@ -1086,17 +1038,13 @@ define action parse with var lang, array words, hash tags do
 
 
 
-    # TEXT
     # Add prefixes to the verb(s):
-    # CODE
     if var prefix do
         set array words to [ elements of array words_correct ]
         set array words_correct to an empty array
         for each new var word in array words is copy do
             if from hash sym_verb element { from hash tags element { var word } 1st element } do
-                # TEXT
                 # It is a verb.
-                # CODE
 
                 set from hash tags element { var prefix concat var word } to from hash tags element { var word }
 

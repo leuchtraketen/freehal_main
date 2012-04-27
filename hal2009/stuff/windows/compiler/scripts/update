@@ -21,12 +21,12 @@ cd /compiler/hal2009
 svn cleanup ; svn cleanup
 svn revert hal2009-version.h
 svn up --non-interactive ; svn up --non-interactive
-export R=svn$(svn up --non-interactive | sed 's@[^0-9]@@igm')
+export R=svn$(svn up --non-interactive | grep -i rev | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
 if [ "x$1" != "x" ]
 then
         export R="$1"
 fi
-export RR=$(echo $R | sed 's@[^0-9]@@igm')
+export RR=$(echo $R | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
 sed -i "s@00000@$RR@igm" hal2009-version.h
 
 echo $R | grep step && (
@@ -38,14 +38,32 @@ echo $R | grep step || (
 	ssh root@freehal.org 'echo -n svn'$RR' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_TEXT'
 )
 
-make clean
-rm -rf CMakeCache.txt CMakeFiles
-cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
-ln -sf /compiler/local/lib/* /opt/mingw32/i686-w64-mingw32/lib/
-make clean
-rm -f runner.exe
-make runner
-/opt/mingw32/bin/i686-w64-mingw32-strip runner.exe
+(
+	make clean
+	rm -rf CMakeCache.txt CMakeFiles
+	cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
+	ln -sf /compiler/local/lib/* /opt/mingw32/i686-w64-mingw32/lib/
+	make clean
+	rm -f runner.exe runner-thread.exe
+	make runner runner-thread
+	/opt/mingw32/bin/i686-w64-mingw32-strip runner.exe
+	/opt/mingw32/bin/i686-w64-mingw32-strip runner-thread.exe
+	mkdir bin
+	cp runner.exe runner-thread.exe bin/
+)
+
+(
+	make hal2009-boinc
+	cp -f hal2009-boinc.exe /disk/web1/var/www/projects/freehal_at_home/new/apps/windows/hal2009-boinc.exe
+)
+
+(
+	make clean
+	rm -rf CMakeCache.txt CMakeFiles
+	cmake .
+	make hal2009-boinc
+	cp -f hal2009-boinc /disk/web1/var/www/projects/freehal_at_home/new/apps/linux/hal2009-boinc.32
+)
 
 export DLL=$(echo \
 		/opt/mingw32/bin/zlib1.dll \
@@ -78,9 +96,10 @@ export DLL=$(echo \
 )
 
 (
+	cp bin/runner.exe bin/runner-thread.exe .
 	rm -rf Freehal/
 	mkdir Freehal/
-	cp runner.exe gui-qt/FreeHAL-QT.exe $DLL Freehal/
+	cp runner.exe runner-thread.exe gui-qt/FreeHAL-QT.exe $DLL Freehal/
 	./scripts/update_zips
 	cd Freehal && unzip ../fh-1*.zip && echo A | unzip ../fh-2*.zip && cd ..
 	mkdir Freehal/temp
@@ -95,10 +114,10 @@ export DLL=$(echo \
 	find Freehal -name ".svn" -exec rm -rf '{}' \;
 
 # no database
-	rm -rf /tmp/freehal-${R}-no-database-windows.zip
-	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-no-database-windows.zip Freehal-${R} && mv Freehal-${R} Freehal
-	scp -C /tmp/freehal-${R}-no-database-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
-	rm /tmp/freehal-${R}-no-database-windows.zip
+	rm -rf "/tmp/freehal-${R}-no-database-windows.zip"
+	mv Freehal "Freehal-${R}" && zip -r "/tmp/freehal-${R}-no-database-windows.zip" "Freehal-${R}" && mv "Freehal-${R}" Freehal
+	scp -C "/tmp/freehal-${R}-no-database-windows.zip" root@freehal.org:/var/www/vhosts/default/htdocs/download
+	rm "/tmp/freehal-${R}-no-database-windows.zip"
 
 # with database
 	for x in lang_de/database*

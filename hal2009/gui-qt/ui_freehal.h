@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freehal.ui'
 **
-** Created: Sun Mar 20 00:23:28 2011
-**      by: Qt User Interface Compiler version 4.7.0
+** Created: Sat Dec 24 15:18:06 2011
+**      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -105,13 +105,13 @@ public:
     QLabel *label_3;
     QLabel *flowchart_view;
     QLabel *label_4;
-    QLineEdit *flowchart_edit;
     QLabel *label;
     QSpinBox *flowchart_fact_pk;
     QPushButton *plus;
     QPushButton *minus;
     QPushButton *flowchart_fact_edit;
     QPushButton *flowchart_fact_delete;
+    QTextEdit *flowchart_edit;
     QWidget *Database;
     QGridLayout *gridLayout_7;
     QLabel *label_14;
@@ -407,7 +407,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 461, 399));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 493, 393));
         QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
@@ -479,13 +479,9 @@ public:
 
         label_4 = new QLabel(scrollAreaWidgetContents);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         gridLayout_3->addWidget(label_4, 5, 0, 1, 2);
-
-        flowchart_edit = new QLineEdit(scrollAreaWidgetContents);
-        flowchart_edit->setObjectName(QString::fromUtf8("flowchart_edit"));
-
-        gridLayout_3->addWidget(flowchart_edit, 5, 2, 1, 5);
 
         label = new QLabel(scrollAreaWidgetContents);
         label->setObjectName(QString::fromUtf8("label"));
@@ -527,6 +523,17 @@ public:
         flowchart_fact_delete->setSizePolicy(sizePolicy3);
 
         gridLayout_3->addWidget(flowchart_fact_delete, 7, 4, 1, 2);
+
+        flowchart_edit = new QTextEdit(scrollAreaWidgetContents);
+        flowchart_edit->setObjectName(QString::fromUtf8("flowchart_edit"));
+        QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Maximum);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(flowchart_edit->sizePolicy().hasHeightForWidth());
+        flowchart_edit->setSizePolicy(sizePolicy6);
+        flowchart_edit->setMaximumSize(QSize(16777215, 100));
+
+        gridLayout_3->addWidget(flowchart_edit, 5, 2, 1, 4);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
@@ -689,7 +696,7 @@ public:
         freehalWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(freehalWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 986, 21));
+        menubar->setGeometry(QRect(0, 0, 986, 24));
         menuDatei = new QMenu(menubar);
         menuDatei->setObjectName(QString::fromUtf8("menuDatei"));
         menuExtras = new QMenu(menubar);
@@ -781,8 +788,8 @@ public:
         textedit_talk->setHtml(QApplication::translate("freehalWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans'; font-size:10pt;\"></p></body></html>", 0, QApplication::UnicodeUTF8));
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans';\"></p></body></html>", 0, QApplication::UnicodeUTF8));
         lineedit_talk->clear();
         lineedit_talk->insertItems(0, QStringList()
          << QString()

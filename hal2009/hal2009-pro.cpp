@@ -1,9 +1,9 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
- * 
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -22,6 +22,7 @@
 #include "hal2009.h"
 #include "hal2009-pro.h"
 #include "hal2009-xml.h"
+#include "hal2009-util.h"
 
 int hal2009_add_pro_file (const string& filename) {
     string filename_xml = filename;
@@ -54,7 +55,7 @@ int hal2009_add_pro_file (const string& filename) {
             /// Add the fact
             struct RECORD r;
             r.truth = 0.5;
-            
+
             line = replace(line, "nothing", " ");
             line = replace(line, "nichts", "nothing");
             line = replace(line, "\"", "'");
@@ -353,7 +354,7 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic) {
         line = replace(line, "(logic)", "");
         (*only_logic) = 1;
     }
-    
+
     strcpy(_line, line.c_str());
 }
 

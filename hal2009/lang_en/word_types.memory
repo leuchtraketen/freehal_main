@@ -80,9 +80,11 @@ use:
   count: 12
   type: v
 you:
-  count: 38
+  count: 39
   type: n
 .
+English:
+  type: n
 Freehal:
   type: n
 Nam:
@@ -103,3 +105,5 @@ project:
   type: n
 science:
   type: n
+speak:
+  type: v

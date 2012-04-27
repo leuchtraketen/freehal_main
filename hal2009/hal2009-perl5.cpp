@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,7 +19,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include "hal2009.h"
 #include "hal2009-perl5.h"
+#include "hal2009-util.h"
 
 bp::postream* child_stdin = 0;
 bp::pistream* child_stdout = 0;
@@ -467,10 +469,40 @@ string perl5_convert_code(string halcode, int just_compile) {
 
         newcode += lines[i] + "\n";
     }
-    
+
     newcode += "\n1\n";
 
     return newcode;
+}
+
+int file_size(const string& c) {
+    FILE* _tmp = fopen(c.c_str(), "r");
+    int file_size = 0;
+    if (_tmp) {
+        fseek (_tmp , 0 , SEEK_END);
+        file_size = ftell (_tmp);
+        rewind (_tmp);
+        fclose(_tmp);
+    }
+    return file_size;
+}
+
+int file_read(const string& c, string& code) {
+    std::ifstream code_i(c.c_str());
+    if (!code_i.is_open()) {
+        return 1;
+    }
+    std::stringstream ss;
+    ss << code_i.rdbuf();
+    code = ss.str();
+    return 0;
+}
+
+int file_write(const string& c, const string code) {
+    std::ofstream code_tmp_o(c.c_str());
+    code_tmp_o << code;
+    code_tmp_o.close();
+    return 0;
 }
 
 int perl5_convert_file(string filename) {
@@ -479,48 +511,24 @@ int perl5_convert_file(string filename) {
         fprintf(output(), "compiler: abort, unnecessary!\n");
         return 0;
     }
-    
+
+    int file_size_1 = file_size(filename);
+    int file_size_2 = file_size(filename + ".tmp");
+
+    int just_compile = (file_size_1 == file_size_2 && filename.find("temp") == -1);
+
     string code;
-    std::ifstream code_i(filename.c_str());
-    if (!code_i.is_open()) {
+    if (file_read(filename, code)) {
         fprintf(output(), "compiler: file not found: %s (at: P1, lang: perl5)\n", filename.c_str());
         return 1;
     }
-    else {
-        std::stringstream ss;
-        ss << code_i.rdbuf();
-        code = ss.str();
-    }
-    
-    int just_compile = 0;
-    /// Look whether nothing has changed
-    {
-        std::ifstream code_tmp_i((filename + ".tmp").c_str());
-        if (!code_tmp_i.is_open()) {
-//            fprintf(output(), "\ncompiler: file not found: %s (at: P1, lang: perl5)\n", (filename + ".tmp").c_str());
-        }
-        else {
-            std::stringstream ss;
-            ss << code_tmp_i.rdbuf();
-            string code_tmp = ss.str();
-            
-            if (code == code_tmp && -1 == filename.find("temp")) {
-                just_compile = 1;
-            }
-        }
-    }
-    {
-        std::ofstream code_tmp_o((filename + ".tmp").c_str());
-        code_tmp_o << code;
-        code_tmp_o.close();
-    }
+
+    file_write(filename + ".tmp", code);
 
     fprintf(output(), "compiler: compile %s (size: %i bytes, lang: perl5)\n", filename.c_str(), code.size());
     string targetcode = perl5_convert_code(code, just_compile);
     if (!just_compile) {
-        std::ofstream code_target_o((filename + ".pl").c_str());
-        code_target_o << targetcode;
-        code_target_o.close();
+        file_write(filename + ".pl", targetcode);
     }
 
     last_filename = filename;
@@ -569,7 +577,7 @@ void perl5_execute(string filename) {
     child_stdin = &c.get_stdin();
     hal2009_send_signals();
     std::string line;
-    
+
     ofstream log("log.txt");
 
     vector<pthread_t> threads;
@@ -580,7 +588,7 @@ void perl5_execute(string filename) {
             std::getline(*child_stdout, vfile);
             trim(vfile);
             cout << vfile << endl;
-            
+
             std::string data;
             std::string data_line;
             while (data_line != ".") {
@@ -590,12 +598,13 @@ void perl5_execute(string filename) {
                 trim(data_line);
                 cout << data_line << endl;
             }
-            
-            char* parameters[3] = {strdup(vfile.c_str()), strdup(data.c_str()), (char*)MULTI};
+
+            pair<const string, const string>* parameters = new pair<const string, const string>(vfile, data);
+//            char* parameters[3] = {strdup(vfile.c_str()), strdup(data.c_str()), (char*)MULTI};
             pthread_t thread_no_1;
             pthread_create (&thread_no_1, NULL, hal2009_handle_signal, (void*)parameters);
             threads.push_back(thread_no_1);
-            
+
             if (threads.size() > 20) {
                 int k;
                 for (k = 0; k < threads.size(); ++k) {

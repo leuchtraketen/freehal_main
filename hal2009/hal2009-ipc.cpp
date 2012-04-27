@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -24,13 +24,13 @@
 void (*hal2009_send_signal_func)(string vfile, string data) = 0;
 std::vector<std::pair<string, string> > signals_to_child;
 
-extern "C" void hal2009_send_signal(const char* vfile, const char* data) {
+void hal2009_send_signal(const string& vfile, const string& data) {
     cout << "signals_to_child.push_back(make_pair<string, string>(\"" << vfile << "\", \"" << data << "\"));\"" << endl;
     signals_to_child.push_back(make_pair<string, string>(vfile, data));
 
     hal2009_send_signals();
 }
-extern "C" void hal2009_send_signals() {
+void hal2009_send_signals() {
     if (hal2009_send_signal_func) {
         for (int i = 0; i < signals_to_child.size(); ++i) {
             cout << "hal2009_send_signal_func(\"" << signals_to_child[i].first << "\", \"" << signals_to_child[i].second << "\");" << endl;

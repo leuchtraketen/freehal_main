@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -207,7 +207,7 @@ define action match_in_replaced_history with array replaced_history, array data_
 
         if var symbol matches /var prefix/ do
             set var count to var count + 1
-        
+
             if var symbol matches /v-subject/ do
                 push into array subjects, elements of array words
             done
@@ -269,7 +269,7 @@ define action match_in_replaced_history with array replaced_history, array data_
     do print_array with array extra
     print new line
     print "marker: end new parser result" concat new line
-    
+
     if var count is 0 do
         do return with false
     done
@@ -388,7 +388,7 @@ define action list_grammar with array grammar do
                 done
                 # set var premise_str to var premise_str concat var part_of_replacement concat " <([^~]*?)>"
                 set var premise_str to var premise_str concat var part_of_replacement concat " WILDCARD"
-                if var i <= 9 do
+                if var i <= 19 do
                     if var virtual_replacement do
                         set var conclusion to var conclusion concat "var virtual_replacement < \\" concat var i concat " > "
                     done
@@ -404,7 +404,7 @@ define action list_grammar with array grammar do
             if var conclusion matches /^s-all/ do
                 set var premise_str to "^\\s*?" concat var premise_str concat "\\s*?\$"
             done
-            
+
             # print var premise_str concat new line
 
             if var premise_str and var symbol not matches /r-/ do
@@ -487,11 +487,11 @@ define action match_in_grammar with hash rules, array data_pos, array data_words
         set new var i to 2
         while var i < 10 do
             set new hash parsed_clause to match_in_replaced_history with array replaced_history, array data_pos, array data_words, "v-clause-" concat var i concat "_"
-            
+
             if hash parsed_clause is false do
                 go to last
             done
-            
+
             push into array clauses, hash parsed_clause
             set var i to var i + 1
         done
@@ -524,6 +524,8 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
         if not var premise do
             go to next
         done
+
+#        print var premise concat new line
 
         set new var premise_regular_exp to var premise
         do regex with var premise_regular_exp: /WILDCARD/ -> "var match_correct_open_end_tags" :global
@@ -588,7 +590,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                             set new array replaced_history to an empty array
                             set elements of array replaced_history to elements of that array: from array data_pos_element 2nd element end of elements
                             print "conclusion: " concat var conclusion concat new line
-                            
+
                             #set new var history_premise to "var _0 var _1 var _2 var _3 var _4 var _5 var _6 var _7 var _8 var _9"
                             #do regex with var history_premise: /^\s+/ -> ""
                             #do regex with var history_premise: /\s+$/ -> ""
@@ -602,7 +604,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                             #print "history_premise: " concat var history_premise concat new line
                             #push into array replaced_history, [ var history_conclusion, var history_premise ]
 
-                            
+
                             if var _data_pos_str matches /[(]/ do
                                 set new array conclusion_words to split with /\s+/, var _data_pos_str
                                 set new var j to 0
@@ -613,7 +615,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                                         if from array conclusion_words element [ var j - 1 ] matches /v-clause-/ do
                                             set var clause_name to from array conclusion_words element [ var j - 1 ]
                                         done
-                                    
+
                                         set new var k to var j
                                         set new var level to 0
                                         set new array innerwords to an empty array
@@ -627,7 +629,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                                                 if var level is 0 do
                                                     set new var innerpremise to from array conclusion_words element [ var j - 1 ]
                                                     set new var innertext to join with " ", elements of array innerwords
-                                                    
+
                                                     set new flag do_add to true
                                                     for each new array replaced_history_entry in array replaced_history do
                                                         if var innerpremise matches from array replaced_history_entry 1st item and var innertext matches from array replaced_history_entry 2nd item do
@@ -635,7 +637,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                                                             go to last
                                                         done
                                                     done
-                                                    
+
                                                     if flag do_add is true and var clause_name matches /./ do
                                                         push into array replaced_history, [ var clause_name concat "_" concat var innerpremise, var innertext ]
                                                     done
@@ -682,7 +684,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
 
     if flag final do
         set new array replaced_histories to an empty array
-        
+
         for each new array data_pos_element in array data_pos_list do
             set new var data_pos_str to from array data_pos_element 1st element
 
@@ -699,7 +701,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
                 push into array replaced_histories, array replaced_history
             done
         done
-        
+
         # prefer results which have an "extra" entry!
         if size of array replaced_histories do
             for each new array replaced_history in array replaced_histories do
@@ -756,6 +758,12 @@ set multi-line new global array grammar to [
         [ "r-adverbs", "r-questionword-part", "s-sentence-ps", ],
         [ "r-adverbs", "r-questionword-part", "s-sentence-sp", ],
         [ "r-adverbs", "r-questionword-part", "s-sentence-p", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-spo", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-pso", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-sop", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-ps", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-sp", ],
+        [ "r-adverbs", "s-questionword-part", "s-sentence-p", ],
     ],
 
     [ "r-clauselinking",
@@ -778,6 +786,11 @@ set multi-line new global array grammar to [
         [ "r-questionword", "r-extra-after" ],
         [ "r-questionword", ],
         [ "d-linking/v-questionword", ],
+        [ "d-questionword/v-questionword", "d-adjective/v-extra-after", ],
+    ],
+
+    [ "s-questionword-part",
+        [ "r-questionword-part" ],
     ],
 
     [ "r-questionword",

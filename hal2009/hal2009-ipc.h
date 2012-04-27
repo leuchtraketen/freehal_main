@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,18 +19,22 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include "hal2009.h"
+
 #ifndef HAL2009_IPC
 #define HAL2009_IPC 1
 
-#include "hal2009.h"
+#if defined(__cplusplus) /* GENERATED */
 
-
-extern "C" {
-	extern std::vector<std::pair<string, string> > signals_to_child;
-	void hal2009_send_signal(const char* vfile, const char* data);
-	void hal2009_send_signals();
-}
+extern std::vector<std::pair<string, string> > signals_to_child;
 extern void (*hal2009_send_signal_func)(string vfile, string data);
+#endif /* GENERATED */
 
-#endif
+// functions begin
+#if defined(__cplusplus) /* GENERATED */
+void hal2009_send_signal(const string& vfile, const string& data);
+void hal2009_send_signals();
+#endif /* GENERATED */
+// functions end
+#endif /* HAL2009_IPC */
 

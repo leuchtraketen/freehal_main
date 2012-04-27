@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -47,9 +47,7 @@ define action be_slow without arguments do
     done
 done
 
-# TEXT
 # ~~~~~ CONFIG CODE ~~~~~
-# CODE
 
 define action check_config with var name, var default, var lang, var path do
     set new var file_name to "config.txt"
@@ -159,7 +157,7 @@ set new array stdin_responses to an empty array
 
 define action hal2009_fetch_signal with var _vfile do
     print "hal2009_fetch_signal:" concat var _vfile concat new line
-    
+
     for each new array _response in array stdin_responses do
         if from array _response 1st item matches var _vfile do
             set new array new_stdin_responses to an empty array
@@ -172,14 +170,14 @@ define action hal2009_fetch_signal with var _vfile do
             do return with from array _response 2nd item
         done
     done
-    
+
     set new var check_tell to 10000
     while 1 do
         set var check_tell to var check_tell - 1
         if var check_tell is 0 do
             do exit with 0
         done
-        
+
         set new var response to the next line from STDIN
         do chomp with var response
         if var response matches "IPC:" do
@@ -199,7 +197,7 @@ define action hal2009_fetch_signal with var _vfile do
                 print var data_line concat new line
             done
             do regex with var data: /\s*?\.$/, ""
-            
+
             if var vfile matches var _vfile do
                 do return with var data
             done
@@ -213,4 +211,21 @@ define action hal2009_fetch_signal with var _vfile do
     done
 done
 
+define action part_of_array with array list, var i, var j do
+    set new array _list to an empty array
+    while var i <= var j do
+        push into array _list, from array list element [ var i ]
+        set var i to var i + 1
+    done
+    do return with array _list
+done
 
+define action all_empty_in_array with array list, var i, var j do
+    while var i <= var j do
+        if from array list element [ var i ] not is empty string do
+             do return with 0
+        done
+        set var i to var i + 1
+    done
+    do return with 1
+done

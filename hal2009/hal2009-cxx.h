@@ -1,9 +1,9 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
- * 
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -65,16 +65,4 @@ using boost::asio::ip::tcp;
 #define cxxzero_p( p, s )          { long i; for (i = 0; i < ( s ) - 1 ; ++i) { ( p ) [i] = 0; } }
 #define line_size 4096
 
-
-string ascii(const string& not_ascii);
-string& replace (string& in, const string& rep, const string& wit);
-const string& hal2009_get_text_language();
-int hal2009_set_text_language(const string&);
-
-int hal2009_compile(const string& file, const string& planguage);
-int hal2009_execute_code(const string& code, const string& planguage);
-int hal2009_execute_file(const string& file, const string& planguage);
-pthread_t hal2009_answer(const string&, const string&, const string&, const string&, int, short);
-void hal2009_init(const string& planguage, const string& tlanguage, const string& base_dir);
-int hal2009_add_xml_file (const string& filename);
 

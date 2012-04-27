@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -126,18 +126,14 @@ define action save_facts with array facts_parsed, hash tags, var xml_file_name, 
             set var adverb to from array adverb 1st element
         done
 
-        # TEXT
         # Replace ~~~ with =
-        # CODE
         if from array verbs 1st element matches "~~~" do
             set from array verbs to an empty array
             set from array verbs 1st element to "="
             set from hash parsed element { 'verbs' } to array verbs
         done
 
-        # TEXT
         # Delete all other verbs if there is a "="
-        # CODE
         if from array verbs 1st element matches "=" do
             set from array verbs to an empty array
             set from array verbs 1st element to "="
@@ -328,9 +324,7 @@ define action reread_pro_file with var file, var lang do
         do return with 1
     done
     do wait 1 seconds
-    # TEXT
     # Write the signal file for re-reading
-    # CODE
     do hal2009_send_signal with "add_pro_file", var file
     do trigger_check_files without arguments
 done
@@ -342,11 +336,10 @@ define action reread_xml_file with var file, var lang do
         do return with 1
     done
     do wait 1 seconds
-    # TEXT
     # Write the signal file for re-reading
-    # CODE
     do hal2009_send_signal with "add_xml_file", var file
     do trigger_check_files without arguments
+    do hal2009_fetch_signal with "add_xml_file"
 done
 
 define action work_prot_line with var input, var file_name, var lang, var path do
@@ -359,9 +352,7 @@ define action work_prot_line with var input, var file_name, var lang, var path d
 
     do be_slow without arguments
     do regex with var input: /(<[.!?]>)/ -> "" :global
-    # TEXT
     # Make the komma's readable.
-    # CODE
     set (var input, new var no_change_pronouns) to compute_input with var input, var lang, var path
     set var input to make_parsable with var input
 
@@ -376,23 +367,17 @@ define action work_prot_line with var input, var file_name, var lang, var path d
     for each new var clause in array clauses_input do
         do be_slow without arguments
 
-        # TEXT
         # Split the sentence.
-        # CODE
 
         set new array words to split with " ", var clause
 
-        # TEXT
         # Then compute the parts of speech etc.
-        # CODE
         for each new var word in array words is rw do
             do be_slow without arguments
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
         done
 
-        # TEXT
         # Then toggle the identities (user <-> machine).
-        # CODE
         if flag number_of_clause is 0 do
             set new array data to input_data_for_bottom_up_parser with array words, hash tags, var lang, var path
             set hash parsed to new_parser_start with global array grammar, array data, var lang, var path
@@ -539,9 +524,7 @@ define action init_prot_files with var current_language, var path do
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
-        # TEXT
         # Read all .prot files by parsing them
-        # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
             set new var save_file to var saved_directory concat '/' concat var file_name
@@ -561,16 +544,8 @@ define action init_prot_files with var current_language, var path do
             #    go to next
             #done
 
-            set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_file, read
-            set new var i to 1
-            for each new var line from var check_input_handle_one is rw do
-                set var i to var i + 1 + length(var line)
-            done
-            set new var j to 1
-            for each new var line from var check_input_handle_two is rw do
-                set var j to var j + 1 + length(var line)
-            done
+            set new var i to -s var file
+            set new var j to -s var save_file
 
             if not var i is var j do
 
@@ -691,9 +666,7 @@ define action init_csv_files with var current_language, var path do
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
-        # TEXT
         # Read all .prot files by parsing them
-        # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
             set new var save_file to var saved_directory concat '/' concat var file_name
@@ -709,16 +682,8 @@ define action init_csv_files with var current_language, var path do
             set new var xml_file to var file
             do regex with var xml_file: /csv$/ -> "xml" :i
 
-            set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_file, read
-            set new var i to 1
-            for each new var line from var check_input_handle_one is rw do
-                set var i to var i + 1 + length(var line)
-            done
-            set new var j to 1
-            for each new var line from var check_input_handle_two is rw do
-                set var j to var j + 1 + length(var line)
-            done
+            set new var i to -s var file
+            set new var j to -s var save_file
 
             if not var i is var j do
 
@@ -799,9 +764,7 @@ define action update_list_of_pro_files with var pattern, var current_language, v
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
-        # TEXT
         # Read all .pro files by sending a signal to the C thread
-        # CODE
         for each new var file_name in array files is rw do
             set new var file to var language_directory concat '/' concat var file_name
             set new var save_file to var saved_directory concat '/' concat var file_name
@@ -823,7 +786,7 @@ define action correct_human_edit_typos with var file, var current_language, var 
     set new var output_1 to handle for file name var file concat ".tmp", write
     for each new var line from var input_1 is rw do
         set new var _copy to var line
-        
+
         do regex with var line: /^(ist|is-a) <> (<[^<]>*?) <> (eine|ein) (.*?)$/ -> "is-a <> $1 <> (a) $3"
         do regex with var line: /^(ist|is-a) <> (eine|ein) (.*?)$/ -> "is-a <> (a) $2"
         do regex with var line: /^(ist|is-a) <> (<[^<]>*?) <> (der|die|das) (.*?)$/ -> "is-a <> $1 <> (the) $3"
@@ -869,10 +832,10 @@ define action correct_human_edit_typos with var file, var current_language, var 
 
         do regex with var line: /_<[&]>_/ -> "_ & _" :global
         do regex with var line: /_<[|]>_/ -> "_ | _" :global
-        
+
         set new var _tmp to ":"
         do regex with var line: /_<[:]>_/ -> "_ var _tmp _" :global
-        
+
         do regex with var line: /<[;]>{2}/ -> "<>"
         do regex with var line: /^((?:.*?<[<]><[>]>\s+?){6,})\(((?:true)|(?:maybe)|(?:false)|(?:logic))\)/ -> "$0($1)"
 #print var line concat new line
@@ -980,9 +943,7 @@ define action init_pro_files with var current_language, var path do
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
-        # TEXT
         # Read all .pro files by sending a signal to the C thread
-        # CODE
         for each new var file_name in array files is rw do
             #print var file_name concat "..."
             #print new line
@@ -995,18 +956,14 @@ define action init_pro_files with var current_language, var path do
                 go to next
             done
 
-            set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_file, read
-            set new var i to 1
-            for each new var line from var check_input_handle_one is rw do
-                set var i to var i + 1 + length(var line)
+            set new var xml_file to var file
+            do regex with var xml_file: /\.pro$/ -> ".xml" :i
+            if exists: var xml_file, end test do
+                go to next
             done
-            set new var j to 1
-            for each new var line from var check_input_handle_two is rw do
-                set var j to var j + 1 + length(var line)
-            done
-            do close with var check_input_handle_one
-            do close with var check_input_handle_two
+
+            set new var i to -s var file
+            set new var j to -s var save_file
 
             if not var i is var j do
 
@@ -1018,17 +975,13 @@ define action init_pro_files with var current_language, var path do
                 print var file
                 print new line
 
-                # TEXT
                 # Write the signal file
-                # CODE
                 do hal2009_send_signal with "add_pro_file", var file
                 do trigger_check_files without arguments
 
                 #do wait 1 seconds
 
-                # TEXT
                 # Wait...
-                # CODE
                 do hal2009_fetch_signal with "add_pro_file"
 
                 set new var copy_input_handle to handle for file name var file, read
@@ -1049,7 +1002,7 @@ define action init_pro_files with var current_language, var path do
             done
         done
     done
-    print "Done..."
+    print "Done... (init_pro_files)"
     print new line
 done
 
@@ -1078,9 +1031,7 @@ define action init_xml_files with var current_language, var path do
 
         do opendir with new var dir_handle, var language_directory
         set new array files to [ sort(readdir(var dir_handle)) ]
-        # TEXT
         # Read all .xml files by sending a signal to the C thread
-        # CODE
         for each new var file_name in array files is rw do
             #print var file_name concat "..."
             #print new line
@@ -1093,18 +1044,8 @@ define action init_xml_files with var current_language, var path do
                 go to next
             done
 
-            set new var check_input_handle_one to handle for file name var file, read
-            set new var check_input_handle_two to handle for file name var save_file, read
-            set new var i to 1
-            for each new var line from var check_input_handle_one is rw do
-                set var i to var i + 1 + length(var line)
-            done
-            set new var j to 1
-            for each new var line from var check_input_handle_two is rw do
-                set var j to var j + 1 + length(var line)
-            done
-            do close with var check_input_handle_one
-            do close with var check_input_handle_two
+            set new var i to -s var file
+            set new var j to -s var save_file
 
             if not var i is var j do
 
@@ -1112,17 +1053,13 @@ define action init_xml_files with var current_language, var path do
                 print var file
                 print new line
 
-                # TEXT
                 # Write the signal file
-                # CODE
                 do hal2009_send_signal with "add_xml_file", var file
                 do trigger_check_files without arguments
 
                 #do wait 1 seconds
 
-                # TEXT
                 # Wait...
-                # CODE
                 do hal2009_fetch_signal with "add_xml_file"
 
                 set new var copy_input_handle to handle for file name var file, read
@@ -1143,7 +1080,7 @@ define action init_xml_files with var current_language, var path do
             done
         done
     done
-    print "Done..."
+    print "Done... (init_xml_files)"
     print new line
 done
 

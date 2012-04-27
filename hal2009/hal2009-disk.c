@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,10 +19,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include "hal2009-universal.h"
 #include "hal2009-disk.h"
+#include "hal2009-util.h"
 
 int disk_cache_clauses = -1;
 int disk_cache_facts = -1;
+int disk_cache_wordid = -1;
 
 int disk_begin(const char* modes) {
     // initialize semantic ram_net
@@ -67,13 +70,25 @@ int disk_begin(const char* modes) {
 
         short create_tables = 0;
         {
-            struct stat stbuf;
-            stat(db_main, &stbuf);
-            int file_size = &stbuf ? stbuf.st_size : 0;
-      //      printf("file_size %i\n", file_size);
+            FILE* _tmp = fopen(db_main, "r");
+            int file_size = 0;
+            if (_tmp) {
+                fseek (_tmp , 0 , SEEK_END);
+                file_size = ftell (_tmp);
+                rewind (_tmp);
+                fclose(_tmp);
+            }
+            printf("file_size %i\n", file_size);
             if (file_size < 1000) {
                 create_tables = 1;
             }
+            /*
+            struct stat stbuf;
+            stat(db_main, &stbuf);
+            int file_size = &stbuf ? stbuf.st_size : 0;
+            if (file_size < 1000) {
+                create_tables = 1;
+            }*/
         }
     //    printf("create tables? %i (1)\n", create_tables);
 
@@ -212,7 +227,7 @@ int disk_end() {
 
 int sql_sqlite_set_filename(const char* filename) {
     if (sqlite_filename)
-        free(sqlite_filename);
+        free((char*)sqlite_filename);
     sqlite_filename = 0;
     sqlite_filename = filename;
 }
@@ -273,7 +288,7 @@ int get_last_pk(int rel) {
     // no cache
     char sql[5120];
     *sql = 0;
-    strcat(sql, "SELECT pk from ");
+    strcat(sql, "SELECT id from ");
     strcat(sql, rel ? "clauses" : "facts");
     strcat(sql, " order by 1 desc limit 1;");
 
@@ -288,6 +303,26 @@ int get_last_pk(int rel) {
     }
 
     return (rel ? disk_cache_clauses : disk_cache_facts);
+}
+
+int get_last_wordid() {
+    // cache
+    if (disk_cache_wordid > -1) {
+        ++disk_cache_wordid;
+        return disk_cache_wordid;
+    }
+
+    // no cache
+    char sql[5120];
+    *sql = 0;
+    strcat(sql, "SELECT id FROM word ORDER BY 1 DESC LIMIT 1;");
+
+    char key[99];
+    int error = sql_execute(sql, select_primary_key, key);
+
+    disk_cache_wordid = to_number(key);
+
+    return disk_cache_wordid;
 }
 
 int detect_words(int* num_of_words, char** words, const char* r_verbs, const char* r_subjects, const char* r_objects, const char* r_adverbs, const char* r_extra) {
@@ -393,6 +428,98 @@ int detect_words(int* num_of_words, char** words, const char* r_verbs, const cha
     free(extra);
 }
 
+char* no_underscore(const char* word) {
+    if (word[0] == '_' && strlen(word) > 1) {
+        char* _word = strdup(word+1);
+        if (_word[strlen(_word)-1] == '_') {
+            _word[strlen(_word)-1] = 0;
+        }
+        int l;
+        for (l = 0; _word[l]; ++l) {
+            if (_word[l] == '_') _word[l] = ' ';
+        }
+        for (l = 0; _word[l] && _word[l+1]; ++l) {
+            if (_word[l] == ' ' && _word[l+1] == ' ') strcpy(_word+l, _word+l+1);
+        }
+        return _word;
+    }
+    return 0;
+}
+
+int sql_get_word(char* sql, const char* word) {
+    if (word && word[0] != ' ') {
+        strcat(sql, "(SELECT `word`.`id` FROM `word` where `word`.`word` = \"");
+        char* _word = no_underscore(word);
+        if (_word) { strcat(sql, _word); free(_word); }
+        else { strcat(sql, word); }
+        strcat(sql, "\")");
+    }
+    else {
+        strcat(sql, "-1");
+    }
+    return 0;
+}
+
+int sql_get_words(char* sql, const char** words) {
+    if (words && words[0] && words[0][0] != ' ') {
+        strcat(sql, "(SELECT `word`.`id` FROM `word` where `word`.`word` IN (");
+        int i;
+        for (i = 0; words[i]; ++i) {
+            if (words[i][0] != ' ') {
+                if (i) strcat(sql, ", ");
+                strcat(sql, "\"");
+                char* _word = no_underscore(words[i]);
+                if (_word) { strcat(sql, _word); free(_word); }
+                else { strcat(sql, words[i]); }
+                strcat(sql, "\"");
+            }
+        }
+        strcat(sql, "))");
+    }
+    else {
+        strcat(sql, "(-1)");
+    }
+    return 0;
+}
+
+int sql_select_word(char* sql, const char* word) {
+    if (word && word[0] != ' ') {
+        strcat(sql, "(SELECT `word`.`word` FROM `word` where `word`.`id` = ");
+        char* _word = no_underscore(word);
+        if (_word) { strcat(sql, _word); free(_word); }
+        else { strcat(sql, word); }
+        strcat(sql, ")");
+    }
+    return 0;
+}
+
+int sql_get_word_glob(char* sql, const char* word) {
+    if (word && word[0] != ' ') {
+        strcat(sql, "(SELECT `word`.`id` FROM `word` where `word`.`word` GLOB \"");
+        char* _word = no_underscore(word);
+        if (_word) { strcat(sql, _word); free(_word); }
+        else { strcat(sql, word); }
+        strcat(sql, "\")");
+    }
+    return 0;
+}
+
+int sql_set_word(char* sql, const char* word) {
+    if (word[0] != ' ') {
+//      strcat(sql, "INSERT OR IGNORE INTO `word` (`id`, `word`) VALUES ( (SELECT count(`b`.`id`)+1 FROM `word` AS `b`), \"");
+        strcat(sql, "INSERT OR IGNORE INTO `word` (`id`, `word`) VALUES ( ");
+        char _id[10];
+        snprintf(_id, 9, "%d", get_last_wordid());
+        strcat(sql, _id);
+        strcat(sql, ", \"");
+        char* _word = no_underscore(word);
+        if (_word) { strcat(sql, _word); free(_word); }
+        else { strcat(sql, word); }
+        strcat(sql, "\");");
+    }
+    return 0;
+}
+
 char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic) {
 
     const char* last_subject_word = subjects;
@@ -424,51 +551,63 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
         sql = malloc(102400);
         *sql = 0;
     }
+
+    sql_set_word(sql, subjects);
+    sql_set_word(sql, objects);
+    sql_set_word(sql, adverbs);
+    sql_set_word(sql, last_subject_word);
+    sql_set_word(sql, last_object_word);
+    sql_set_word(sql, questionword);
+    sql_set_word(sql, verbs);
+
+    if (!rel && (0==strcmp(verbs, "=")||0==strcmp(verbs, "is-a")) && !strstr(filename, "fa-") && strlen(adverbs) < 3) {
+        strcat(sql, "INSERT OR IGNORE INTO synonym (`a`, `a_last`, `b`, `b_last`, `fileid`, `line`) VALUES (");
+        sql_get_word(sql, subjects);
+        strcat(sql, ", ");
+        sql_get_word(sql, last_subject_word);
+        strcat(sql, ", ");
+        sql_get_word(sql, objects);
+        strcat(sql, ", ");
+        sql_get_word(sql, last_object_word);
+        strcat(sql, ", ");
+        char* _n = from_number(fileid(filename));
+        strcat(sql, _n);
+        free(_n);
+        strcat(sql, ", ");
+        strcat(sql, line);
+        strcat(sql, ");");
+    }
+
     strcat(sql, "INSERT INTO ");
     strcat(sql, rel ? "clauses" : "facts");
-    strcat(sql, " (`pk`, `mix_1`, `verb`, `verbgroup`, `subjects`, `objects`, "
-    "`last_subject_word`, `last_object_word`, `adverbs`, `questionword`, `prio`, "
-    "`fileid`, `line`, `rel`, `truth`, `only_logic`, `can_be_synonym`) VALUES (");
+    strcat(sql, " (`id`, `verb`, `subjects`, `objects`, "
+    "`adverbs`, `questionword`, `prio`, "
+    "`fileid`, `line`, `rel`, `truth`, `only_logic`) VALUES (");
     char num_of_records_str[10];
     snprintf(num_of_records_str, 9, "%d", pk);
     strcat(sql, num_of_records_str);
+    strcat(sql, ", ");
+    sql_get_word(sql, verbs);
+    strcat(sql, ", ");
+/*
     strcat(sql, ", \"");
-    strcat(sql, " ");
-    strcat(sql, subjects);
-    strcat(sql, " ");
-    strcat(sql, objects);
-    strcat(sql, " ");
-    strcat(sql, adverbs);
-    strcat(sql, " ");
-    strcat(sql, "\", \"");
-    strcat(sql, verbs);
-    strcat(sql, "\", \"");
-//printf("%s\n", sql);
     if (0==strcmp(verbs, "=") || 0==strcmp(verbs, "ist") || 0==strcmp(verbs, "bist") || 0==strcmp(verbs, "bin") || 0==strcmp(verbs, "sind") || 0==strcmp(verbs, "sein") || 0==strcmp(verbs, "heisst") || 0==strcmp(verbs, "heisse") || 0==strcmp(verbs, "heissen") || 0==strcmp(verbs, "war") || 0==strcmp(verbs, "is") || 0==strcmp(verbs, "are") || 0==strcmp(verbs, "am") || 0==strcmp(verbs, "was")) {
         strcat(sql, "be");
     }
     if (0==strcmp(verbs, "haben") || 0==strcmp(verbs, "habe") || 0==strcmp(verbs, "hat") || 0==strcmp(verbs, "hast") || 0==strcmp(verbs, "hab") || 0==strcmp(verbs, "have") || 0==strcmp(verbs, "has")) {
         strcat(sql, "have");
     }
-    strcat(sql, "\", \"");
-    if (subjects[0] != ' ')
-        strcat(sql, subjects);
-    strcat(sql, "\", \"");
-    if (objects[0] != ' ')
-        strcat(sql, objects);
-    strcat(sql, "\", \"");
-    if (last_subject_word[0] != ' ')
-        strcat(sql, last_subject_word);
-    strcat(sql, "\", \"");
-    if (last_object_word[0] != ' ')
-        strcat(sql, last_object_word);
-    strcat(sql, "\", \"");
-    if (adverbs[0] != ' ')
-        strcat(sql, adverbs);
-    strcat(sql, "\", \"");
-    if (questionword)    strcat(sql, questionword);
-    else                 strcat(sql, "NULL");
-    strcat(sql, "\", 50, ");
+    strcat(sql, "\", ");
+*/
+    sql_get_word(sql, subjects);
+    strcat(sql, ", ");
+    sql_get_word(sql, objects);
+    strcat(sql, ", ");
+    sql_get_word(sql, adverbs);
+    strcat(sql, ", ");
+    if (questionword)    sql_get_word(sql, questionword);
+    else                 strcat(sql, "\"NULL\"");
+    strcat(sql, ", 50, ");
     char* _n = from_number(fileid(filename));
     strcat(sql, _n);
     free(_n);
@@ -485,12 +624,13 @@ char* gen_sql_add_entry(char* sql, int pk, int rel, const char* subjects, const 
     }
     strcat(sql, ", ");
     char truth_str[10];
-    snprintf(truth_str, 9, "%f", truth);
+    snprintf(truth_str, 9, "%fl", truth);
+    if (strlen(truth_str) > 3) {
+        truth_str[4] = 0;
+    }
     strcat(sql, truth_str);
     strcat(sql, ", ");
     strcat(sql, only_logic?"1":"0");
-    strcat(sql, ", ");
-    strcat(sql, strstr(filename, "fa-")?"0":"1");
     strcat(sql, ");\n");
 
     return sql;
@@ -524,6 +664,7 @@ char* gen_sql_add_verb_flags(char* sql, int pk, int rel, const char* subjects, c
     return sql;
 }
 
+
 char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword) {
 
     char key[101];
@@ -545,35 +686,17 @@ char* gen_sql_add_word_fact_relations(char* sql, int pk, int rel, const char* su
 
     while (num_of_words >= 0) {
         if (words[num_of_words]) {
-            if (words[num_of_words][0] != '0') {
-                /*{
-                    strcat(sql, "INSERT OR IGNORE INTO db_index`.`rel_word_fact__general (`word`, `fact`, `table`) VALUES (");
-                    strcat(sql, "\n\"");
-                    strcat(sql, words[num_of_words]);
-                    strcat(sql, "\", \n");
-                    strcat(sql, key);
-                    strcat(sql, ", \n\"");
-                    strcat(sql, rel ? "clauses" : "facts");
-                    strcat(sql, "\"");
-                    strcat(sql, ");");
-                }*/
-
-                char* smid = small_identifier(words[num_of_words]);
-                {
-                    strcat(sql, "INSERT OR IGNORE INTO `db_index`.`rel_word_fact__");
-                    strcat(sql, smid);
-                    strcat(sql, "` (`word`, `fact`, `table`) VALUES (");
-                    strcat(sql, "\n\"");
-                    strcat(sql, words[num_of_words]);
-                    strcat(sql, "\", \n");
-                    strcat(sql, key);
-                    strcat(sql, ", \n\"");
-                    strcat(sql, rel ? "c" : "f");
-                    strcat(sql, "\"");
-                    strcat(sql, ");");
-                }
-                free(smid);
+            if (!(words[num_of_words][0] == '0' && strlen(words[num_of_words]) < 3) && strlen(words[num_of_words]) > 0) {
+                sql_set_word(sql, words[num_of_words]);
+                strcat(sql, "INSERT OR IGNORE INTO `db_index`.`rel_word_fact` (`word`, `fact`, `table`) VALUES (");
+                sql_get_word(sql, words[num_of_words]);
+                strcat(sql, ", ");
+                strcat(sql, key);
+                strcat(sql, ", ");
+                strcat(sql, rel ? "2" : "1");
+                strcat(sql, ");");
             }
+
             free(words[num_of_words]);
             words[num_of_words] = 0;
         }
@@ -590,18 +713,34 @@ char* gen_sql_get_clauses_for_rel(int rel, struct fact** facts, int limit, int* 
     char* sql = malloc(102400);
     *sql = 0;
 
-    strcat(sql, "SELECT DISTINCT -1, "
-    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
-    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
-    strcat(sql, " FROM clauses AS nmain JOIN rel_clause_flag AS rff ON nmain.pk = rff.fact WHERE nmain.rel = ");
+    strcat(sql, "SELECT DISTINCT -1, ");
+    sql_select_word(sql, "`nmain`.`verb`");
+    strcat(sql, " || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, ");
+    sql_select_word(sql, "`nmain`.`subjects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`objects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`adverbs`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`questionword`");
+    strcat(sql, ", `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
+    strcat(sql, " FROM clauses AS nmain JOIN rel_clause_flag AS rff ON nmain.id = rff.fact WHERE nmain.rel = ");
     char rel_str[10];
     snprintf(rel_str, 9, "%d", rel);
     strcat(sql, rel_str);
     strcat(sql, " UNION ALL ");
-    strcat(sql, "SELECT DISTINCT -1, "
-    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
-    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
-    strcat(sql, " FROM facts AS nmain JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact WHERE nmain.pk IN ");
+    strcat(sql, "SELECT DISTINCT -1, ");
+    sql_select_word(sql, "`nmain`.`verb`");
+    strcat(sql, " || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, ");
+    sql_select_word(sql, "`nmain`.`subjects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`objects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`adverbs`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`questionword`");
+    strcat(sql, ", `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, 0 ");
+    strcat(sql, " FROM facts AS nmain JOIN rel_fact_flag AS rff ON nmain.id = rff.fact WHERE nmain.id IN ");
     strcat(sql, " (SELECT f2 FROM `linking` WHERE f1 = ");
     strcat(sql, rel_str);
     strcat(sql, " );");
@@ -614,10 +753,10 @@ char* gen_sql_get_double_facts() {
     char* sql = malloc(102400);
     *sql = 0;
 
-    strcat(sql, "SELECT `nmain`.`pk`, "
+    strcat(sql, "SELECT `nmain`.`id`, "
     "`nmain`.`verb` || \"00000\", "
     "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
-    strcat(sql, " FROM facts WHERE mix_1||verb IN ( SELECT mix_1||verb AS a FROM facts GROUP BY a HAVING count(pk) >= 2) order by mix_1, verb;");
+    strcat(sql, " FROM facts WHERE subjects||objects||adverbs||verb IN ( SELECT subjects||objects||adverbs||verb AS a FROM facts GROUP BY a HAVING count(id) >= 2) order by subjects, objects, adverbs, verb;");
 
     return sql;
 }
@@ -643,9 +782,10 @@ char* gen_sql_delete_everything_from(const char* filename) {
     char* sql = malloc(1024*30);
     *sql = 0;
 
+    /*
     printf("Clean index...\n");
 
-    strcat(sql, "delete from cache_ids ; INSERT OR IGNORE INTO cache_ids SELECT `pk` FROM facts WHERE `fileid` = ");
+    strcat(sql, "delete from cache_ids ; INSERT OR IGNORE INTO cache_ids SELECT `id` FROM facts WHERE `fileid` = ");
     char* _n = from_number(fileid(filename));
     strcat(sql, _n);
     free(_n);
@@ -675,7 +815,9 @@ char* gen_sql_delete_everything_from(const char* filename) {
 
         int error = sql_execute(sql, NULL, NULL);
     }
+    */
 
+    char* _n;
     *sql = 0;
     strcat(sql, "DELETE FROM clauses WHERE `fileid` = ");
     _n = from_number(fileid(filename));
@@ -683,6 +825,11 @@ char* gen_sql_delete_everything_from(const char* filename) {
     free(_n);
     strcat(sql, ";");
     strcat(sql, "DELETE FROM facts WHERE `fileid` = ");
+    _n = from_number(fileid(filename));
+    strcat(sql, _n);
+    free(_n);
+    strcat(sql, ";");
+    strcat(sql, "DELETE FROM synonym WHERE `fileid` = ");
     _n = from_number(fileid(filename));
     strcat(sql, _n);
     free(_n);
@@ -702,10 +849,10 @@ char* disk_get_source(const char* key) {
         char* _where = malloc(1024);
         *_where = 0;
         if (0 == strcmp(key, "a")) {
-            strcat(_where, " WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1) ");
+            strcat(_where, " WHERE id = (SELECT id FROM facts ORDER BY id DESC LIMIT 1) ");
         }
         else {
-            strcat(_where, " WHERE pk = ");
+            strcat(_where, " WHERE id = ");
             strcat(_where, key);
             strcat(_where, " ");
         }
@@ -728,10 +875,18 @@ char* disk_get_source(const char* key) {
     return source;
 }
 
-char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse) {
-    printf("disk_get_thesaurus_synonyms: %s\n", key);
-    if (!key || !key[0])
+const char* disk_get_thesaurus_synonyms(const char* key, const char** keys, struct string_pair** facts, int limit, int* position, int level, short reverse) {
+    printf("disk_get_thesaurus_synonyms: key=%s keys=%li\n", key, (long int)keys);
+    if (!keys && (!key || !key[0]))
         return (char*)1;
+
+    int free_keys = 0;
+    if (key && !keys) {
+        keys = calloc(sizeof(char*), 2);
+        keys[0] = strdup(key);
+        key = 0;
+        free_keys = 1;
+    }
 
     struct request_string_pair req;
     req.facts    = facts;
@@ -744,97 +899,60 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
         *sql = 0;
         if (reverse) {
             if (level == 1) {
-                strcat(sql, "select e.last_subject_word, e.objects from facts as e where e.verb = \"=\" and e.objects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and `can_be_synonym` = 1;");
+                strcat(sql, "select ");
+                sql_select_word(sql, "`a_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `b` IN ");
+                sql_get_words(sql, keys);
+                strcat(sql, ";");
             }
             else if (level == 2) {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250));"
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
-                strcat(sql, key);
-                strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
-                "select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and u.`can_be_synonym` = 1;");
-
-                strcat(sql, "select e.last_subject_word, e.objects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
+                strcat(sql, "select ");
+                sql_select_word(sql, "e.`a_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `b_last` IN (select u.`a_last` from synonym as u where u.`b` IN ");
+                sql_get_words(sql, keys);
+                strcat(sql, ");");
             }
             else {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms_2`;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
-                strcat(sql, key);
-                strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
-                "select distinct u.subjects from facts as u where u.verb = \"=\" and u.objects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and u.`can_be_synonym` = 1;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) "
-                "select distinct e.subjects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_object_word = `word`);");
-                strcat(sql, "select e.last_subject_word, e.objects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_object_word = `word`);");
+                strcat(sql, "select ");
+                sql_select_word(sql, "e.`a_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `b_last` IN (select u.`a_last` from synonym as u where u.`b_last` IN (select uu.`a_last` from synonym as uu where uu.`b` = ");
+                sql_get_words(sql, keys);
+                strcat(sql, ");)");
             }
         }
         else {
             if (level == 1) {
-                strcat(sql, "select e.last_object_word, e.subjects from facts as e where e.verb = \"=\" and e.subjects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and `can_be_synonym` = 1;");
+                strcat(sql, "select ");
+                sql_select_word(sql, "`b_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `a` = ");
+                sql_get_words(sql, keys);
+                strcat(sql, ";");
             }
             else if (level == 2) {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
-                strcat(sql, key);
-                strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
-                "select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and u.`can_be_synonym` = 1;");
-                strcat(sql, "select e.last_object_word, e.subjects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.last_subject_word = `word`);");
+                strcat(sql, "select ");
+                sql_select_word(sql, "e.`b_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `a_last` IN (select u.`b_last` from synonym as u where u.`a` = ");
+                sql_get_words(sql, keys);
+                strcat(sql, ");");
             }
             else {
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_word` ON `_tmp_thesaurus_synonyms` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms`;");
-                strcat(sql, "CREATE TABLE IF NOT EXISTS `_tmp_thesaurus_synonyms_2` "
-                "(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `word` varchar(250)); "
-                "CREATE INDEX IF NOT EXISTS `idx__tmp_thesaurus_synonyms_2_word` ON `_tmp_thesaurus_synonyms_2` (`word`); "
-                "delete from `_tmp_thesaurus_synonyms_2`;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) values (\"");
-                strcat(sql, key);
-                strcat(sql, "\");");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms` (`word`) "
-                "select distinct u.objects from facts as u where u.verb = \"=\" and u.subjects = \"");
-                strcat(sql, key);
-                strcat(sql, "\" and u.`can_be_synonym` = 1;");
-                strcat(sql, "insert into `_tmp_thesaurus_synonyms_2` (`word`) "
-                "select distinct e.objects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms` where e.object_word = `word`);");
-                strcat(sql, "select e.last_object_word, e.subjects from facts as e "
-                "where e.verb IN (\"=\", \"is-a\", \"ist\") and e.`can_be_synonym` = 1 "
-                "and exists (select 1 from `_tmp_thesaurus_synonyms_2` where e.last_subject_word = `word`);");
+                strcat(sql, "select ");
+                sql_select_word(sql, "e.`b_last`");
+                strcat(sql, ", \"");
+                strcat(sql, keys[0]);
+                strcat(sql, "\" from synonym as e where `a_last` IN (select u.`b_last` from synonym as u where u.`a_last` IN (select uu.`b_last` from synonym as uu where uu.`a` = ");
+                sql_get_words(sql, keys);
+                strcat(sql, ");)");
             }
         }
         printf("%s\n", sql);
@@ -842,6 +960,8 @@ char* disk_get_thesaurus_synonyms(const char* key, struct string_pair** facts, i
         int error = sql_execute(sql, callback_string_pair, &req);
         free(sql);
     }
+
+    if (free_keys) free(keys);
 }
 
 char* disk_del_record(const char* key) {
@@ -853,10 +973,10 @@ char* disk_del_record(const char* key) {
     char* sql = malloc(1024);
     *sql = 0;
     if (0 == strcmp(key, "a")) {
-        strcat(sql, "DELETE FROM facts WHERE pk = (SELECT pk FROM facts ORDER BY pk DESC LIMIT 1);");
+        strcat(sql, "DELETE FROM facts WHERE id = (SELECT id FROM facts ORDER BY id DESC LIMIT 1);");
     }
     else {
-        strcat(sql, "DELETE FROM facts WHERE pk = ");
+        strcat(sql, "DELETE FROM facts WHERE id = ");
         strcat(sql, key);
         strcat(sql, ";");
     }
@@ -864,6 +984,7 @@ char* disk_del_record(const char* key) {
 
     int error = sql_execute(sql, NULL, NULL);
 
+    /*
     int i;
     for (i = 'a'; i <= 'z'; ++i) {
         int k;
@@ -881,143 +1002,137 @@ char* disk_del_record(const char* key) {
             int error = sql_execute(sql, NULL, NULL);
         }
     }
+    */
 
     free(sql);
 
     return source;
 }
 
+int is_in(void** unique, int first, int last, void* o) {
+    if (!can_be_a_pointer(o)) return 0;
+
+    int q;
+    for (q = first; unique[q] && q < last; ++q) {
+        if (unique[q] == o) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+void hashes(struct word** unique_words, int* hash_n_1, int* hash_n_2, int* hash_n_3) {
+    int n;
+    for (n = 0; unique_words[n]; ++n) {
+        if (!unique_words[n]) continue;
+
+        *hash_n_1 += unique_words[n]->name[0];
+        *hash_n_2 += strlen(unique_words[n]->name);
+        char* x = unique_words[n]->name;
+        int k;
+        for (k = 0; k < strlen(x) > 0; ++k) {
+            *hash_n_3 += unique_words[n]->name[k] * ( (k%3==0) ? 3 : (k%3==1) ? 7 : 11 );
+        }
+    }
+}
+
+void** unique(void*** words) {
+    int max = 1024;
+    void** unique = (void**)calloc(sizeof(void*), max);
+    int u = 0;
+
+    int n;
+    for (n = 0; words[n]; ++n) {
+        if (u+1>=max || !can_be_a_pointer(words[n])) continue;
+        int m;
+        for (m = 0; words[n][m]; ++m) {
+            if (u+1>=max || !can_be_a_pointer(words[n][m]) || is_in(unique, 0, n, words[n][m])) continue;
+
+            unique[u++] = words[n][m];
+        }
+    }
+
+    return unique;
+}
+
 char* gen_sql_get_facts_for_words(struct word*** words, struct fact** facts, int limit, int* position, int* hash_n_1, int* hash_n_2, int* hash_n_3) {
 
     char* sql = malloc(512000);
     *sql = 0;
-    int n, m, q;
 
     if (0 == can_be_a_pointer(words[0])) {
         return sql;
     }
 
-    strcat(sql, "delete from cache_facts ; delete from cache_indices ");
-
-    int in_bracket = 0;
     debugf("Generating SQL for searching facts for words (at %p).\n", words);
-    char* last_smid = 0;
-    for (n = 0; words[n]; ++n) {
-        if (!can_be_a_pointer(words[n])) {
-            continue;
-        }
+    strcat(sql, "DELETE FROM cache_facts; DELETE FROM cache_indices;\n");
 
-        int is_new = 1;
-        if (can_be_a_pointer(words[n][0])) {
-            for (q = 0; words[q] && q+1 < n; ++q) {
-                if (can_be_a_pointer(words[q][0]) && words[n][0] == words[q][0]) {
-                    is_new = 0;
-                    break;
-                }
-            }
-        }
-        if (can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0])) {
-            debugf("synonym no %d: %d, %p, %s\n",
-                n,
-                can_be_a_pointer(words[n]),
-                can_be_a_pointer(words[n]) ? words[n][0] : 0,
-                can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0]) ? words[n][0]->name : "(null)"
-            );
-        }
-        if (!is_new) {
-            debugf("not new.\n");
-            continue;
-        }
+    struct word** unique_words = (struct word**)unique((void***)words);
 
-        for (m = 0; words[n][m]; ++m) {
-            if (!(can_be_a_pointer(words[n][m]) && words[n][m]->name && words[n][m]->name[0])) {
-                continue;
-            }
-            if (!is_important_word(words[n][m]->name) && is_a_trivial_word(words[n][m]->name)) {
-                continue;
-            }
-            if (!can_be_a_synonym(words[n][m]->name)) {
-                continue;
-            }
-            if (is_bad(words[n][m]->name)) {
-                continue;
-            }
+    hashes(unique_words, hash_n_1, hash_n_2, hash_n_3);
 
-            {
-                *hash_n_1 += words[n][m]->name[0];
-                *hash_n_2 += strlen(words[n][m]->name);
-                if (strlen(words[n][m]->name) >= 3) {
-                    *hash_n_3 += words[n][m]->name[2]*3 + words[n][m]->name[2]*2 - words[n][m]->name[0];
-                }
-            }
+    int n;
+    for (n = 0; unique_words[n]; ++n) {
 
-            char* smid = small_identifier(words[n][m]->name);
-            if ((!last_smid || strcmp(last_smid, smid)) && smid) {
-                if (in_bracket) {
-                    strcat(sql, ")");
-                    in_bracket = 0;
-                }
-                strcat(sql, " ; \nINSERT OR IGNORE INTO cache_indices SELECT fact FROM ");
+        debugf("synonym no %d: %li, %p, %s\n",
+            n,
+            can_be_a_pointer(words[n]),
+            can_be_a_pointer(words[n]) ? words[n][0] : 0,
+            can_be_a_pointer(words[n]) && can_be_a_pointer(words[n][0]) ? words[n][0]->name : "(null)"
+        );
 
-                strcat(sql, " `db_index`.`rel_word_fact__");
-                strcat(sql, smid);
-                strcat(sql, "` AS rel_word_fact ");
+        const char* word = unique_words[n]->name;
 
-                strcat(sql, " WHERE 0 ");
-            }
-            if (last_smid) {
-                free(last_smid);
-            }
-            last_smid = strdup(smid);
-            free(smid);
+        if (!is_important_word(word) && is_a_trivial_word(word)) continue;
+        if (!can_be_a_synonym(word)) continue;
+        if (is_bad(word)) continue;
 
-
-            if (words[n][m]->name[0] && words[n][m]->name[0] == '*') {
-                if (strstr(words[n][m]->name+1, "*")) {
-                    strcat(sql, "OR rel_word_fact.word GLOB \"");
-                    strcat(sql, words[n][m]->name+1);
-                    strcat(sql, "\" ");
-                }
-                else {
-                    strcat(sql, "OR rel_word_fact.word = \"");
-                    strcat(sql, words[n][m]->name+1);
-                    strcat(sql, "\" ");
-                }
-            }
-            else if (strstr(words[n][m]->name, "*")) {
-                strcat(sql, "OR rel_word_fact.word GLOB \"");
-                strcat(sql, words[n][m]->name);
-                strcat(sql, "\" ");
+        strcat(sql, "INSERT OR IGNORE INTO `cache_indices` SELECT `fact` FROM `db_index`.`rel_word_fact` AS rwf WHERE ");
+        if (word[0] && word[0] == '*') {
+            if (strstr(word+1, "*")) {
+                strcat(sql, "rwf.`word` IN ");
+                sql_get_word_glob(sql, word+1);
             }
             else {
-                strcat(sql, "OR rel_word_fact.word = \"");
-                strcat(sql, words[n][m]->name);
-                strcat(sql, "\" ");
+                strcat(sql, "rwf.`word` = ");
+                sql_get_word(sql, word+1);
             }
         }
+        else if (strstr(word, "*")) {
+            strcat(sql, "rwf.`word` IN ");
+            sql_get_word_glob(sql, word);
+        }
+        else {
+            strcat(sql, "rwf.`word` = ");
+            sql_get_word(sql, word);
+        }
+        strcat(sql, ";\n");
     }
-    if (last_smid)
-        free(last_smid);
-    if (in_bracket) {
-        strcat(sql, ")");
-    }
-    strcat(sql, ";");
-    strcat(sql, " ; INSERT OR IGNORE INTO cache_facts "
-    "(pk, fileid, line, verb, verbgroup, subjects, objects, adverbs, "
-    "mix_1, questionword, prio, rel, type, truth, hash_clauses, only_logic, can_be_synonym) "
+
+    strcat(sql, "INSERT OR IGNORE INTO cache_facts "
+    "(id, fileid, line, verb, subjects, objects, adverbs, "
+    "questionword, prio, rel, type, truth, only_logic) "
     "SELECT "
-    "pk, fileid, line, verb, verbgroup, subjects, objects, adverbs, "
-    "mix_1, questionword, prio, rel, type, truth, hash_clauses, only_logic, can_be_synonym "
-    "FROM facts WHERE pk in (SELECT i FROM cache_indices);");
+    "id, fileid, line, verb, subjects, objects, adverbs, "
+    "questionword, prio, rel, type, truth, only_logic "
+    "FROM facts WHERE id IN (SELECT i FROM cache_indices);");
 
     strcat(sql, "SELECT DISTINCT "
-    "`nmain`.`pk`, "
-    "`nmain`.`verb` || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, "
-    "`nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, "
-    "`nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
-    strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.pk = rff.fact");
+    "`nmain`.`id`, ");
+    sql_select_word(sql, "`nmain`.`verb`");
+    strcat(sql, " || rff.verb_flag_want || rff.verb_flag_must || rff.verb_flag_can || rff.verb_flag_may || rff.verb_flag_should, ");
+    sql_select_word(sql, "`nmain`.`subjects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`objects`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`adverbs`");
+    strcat(sql, ", ");
+    sql_select_word(sql, "`nmain`.`questionword`");
+    strcat(sql, ", `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`, `nmain`.`only_logic` ");
+//    strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.id = rff.fact");
+    strcat(sql, " FROM cache_facts AS nmain LEFT JOIN rel_fact_flag AS rff ON nmain.id = rff.fact");
     strcat(sql, ";\n");
-    printf(sql);
+    printf("%s", sql);
     return sql;
 }
 
@@ -1156,7 +1271,7 @@ struct word* disk_set_word(const char* name) {
         // debugf("empty list wile inserting %s.\n", name);
     }
     else {
-        0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, disk_net[i][k]->list, disk_net[i][k]->size, ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size-1]->name);
+//        0 && debugf("not empty list wile inserting %s: %p, %p entries, last entry = %s\n", name, disk_net[i][k]->list, disk_net[i][k]->size, ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size-1]->name);
     }
 
     if (disk_net[i][k]->size == 0) {
@@ -1171,10 +1286,10 @@ struct word* disk_set_word(const char* name) {
     disk_net[i][k]->list[disk_net[i][k]->size] = calloc(1, sizeof(struct word));
     ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name   = strdup(name);
     ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->length = strlen(name);
-    0 && debugf("inserted: %s = %p, %p.\n",
-            ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name,
-            disk_net[i][k]->list[disk_net[i][k]->size],
-            disk_net[i][k]->size);
+//    0 && debugf("inserted: %s = %p, %p.\n",
+//            ((struct word**)(disk_net[i][k]->list))[disk_net[i][k]->size]->name,
+//            disk_net[i][k]->list[disk_net[i][k]->size],
+//            disk_net[i][k]->size);
     ++(disk_net[i][k]->size);
     return disk_net[i][k]->list[disk_net[i][k]->size - 1];
 }
@@ -1228,7 +1343,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
         query_cache_list = calloc(sizeof(struct query_cache_entry*), QUERY_CACHE_SIZE+1);
     }
     short need_to_create = 1;
-    int i_right = INVALID_POINTER;
+    int i_right = -1;
     int i = 0;
     // check whether there is a matching entry
     while (query_cache_list[i] && i < QUERY_CACHE_SIZE) {
@@ -1245,7 +1360,7 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
 
         need_to_create = 1;
         i = 0;
-        i_right = INVALID_POINTER;
+        i_right = -1;
     }
 
     if (if_needed_create_entry) {
@@ -1268,6 +1383,8 @@ int find_query_cache_entry (struct request_get_facts_for_words* req, short if_ne
 
 static int callback_get_facts(void* arg, int argc, char **argv, char **azColName) {
     struct request_get_facts_for_words* req = arg;
+
+//    printf("callback_get_facts(arg=%li, argc=%li, argv=%li, azColName=%li);", (long)&arg, (long)argc, (long)argv, (long)azColName);
 
     if (*req->position >= req->limit) {
         return 1;
@@ -1363,7 +1480,6 @@ int disk_search_facts_for_words_in_net(struct word*** words, struct fact** facts
         printf("i_right:  %d\n", i_right);
         printf("%s\n", "\n");
         */
-
         if (i_right >= 0 && query_cache_list && query_cache_list[i_right] && query_cache_list[i_right]->rawfacts) {
             req.make_rawfacts = 0;
             req.debug_facts = 0;
@@ -1424,6 +1540,7 @@ int disk_search_double_facts(struct word*** words, struct fact** facts, int limi
     return 0;
 }
 
+/*
 int re_index_size_sql = 0;
 int re_index_pos_sql = 0;
 int re_index_in_facts = 1;
@@ -1450,16 +1567,15 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
             char* smid = small_identifier(words[i]);
             {
                 char sql[1000];
+                sql_set_word(sql, words[i]);
                 strcat(sql, "INSERT OR IGNORE INTO `db_index`.`rel_word_fact__");
                 strcat(sql, smid);
                 strcat(sql, "` (`word`, `fact`, `table`) VALUES (");
-                strcat(sql, "\n\"");
-                strcat(sql, words[i]);
-                strcat(sql, "\", \n");
+                sql_get_word(sql, words[i]);
+                strcat(sql, ", ");
                 strcat(sql, argv[0]);
-                strcat(sql, ", \n\"");
-                strcat(sql, re_index_in_facts ? "f" : "c");
-                strcat(sql, "\"");
+                strcat(sql, ", ");
+                strcat(sql, re_index_in_facts ? "1" : "2");
                 strcat(sql, ");");
 
                 int size_sql = strlen(sql);
@@ -1480,7 +1596,9 @@ static int callback_re_index(void* arg, int argc, char **argv, char **azColName)
 
     return 0;
 }
+*/
 
+/*
 int disk_re_index() {
     {
         int error1 = sql_execute("COMMIT;", NULL, NULL);
@@ -1502,7 +1620,7 @@ int disk_re_index() {
         {
             char sql[5120];
             *sql = 0;
-            strcat(sql, "SELECT count(pk) from facts;");
+            strcat(sql, "SELECT count(id) from facts;");
             printf("%s\n", sql);
             char key[99];
             int error = sql_execute(sql, select_primary_key, key);
@@ -1511,7 +1629,7 @@ int disk_re_index() {
             int k = 0;
             while (k < count) {
                 *sql = 0;
-                strcat(sql, "SELECT `nmain`.`pk`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`");
+                strcat(sql, "SELECT `nmain`.`id`, `nmain`.`verb` || \"00000\", `nmain`.`subjects`, `nmain`.`objects`, `nmain`.`adverbs`, `nmain`.`questionword`, `nmain`.`fileid`, `nmain`.`line`, `nmain`.`truth`");
                 strcat(sql, " FROM facts AS nmain LIMIT ");
                 char _k_1[40];
                 snprintf(_k_1, 39, "%d", k);
@@ -1530,6 +1648,11 @@ int disk_re_index() {
         printf("Done.\n");
         int error6 = sql_execute("BEGIN;", NULL, NULL);
     }
+    return 0;
+}
+*/
+
+int disk_re_index() {
     return 0;
 }
 
@@ -1573,7 +1696,7 @@ int disk_delete_everything_from(const char* filename) {
         free(sql);
         return error;
     }
-    return INVALID_POINTER;
+    return -1;
 }
 
 int disk_add_filename(const char* filename) {
@@ -1583,7 +1706,7 @@ int disk_add_filename(const char* filename) {
         free(sql);
         return error;
     }
-    return INVALID_POINTER;
+    return -1;
 }
 
 int disk_set_to_invalid_value(void** p) {

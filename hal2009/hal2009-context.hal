@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,9 +20,7 @@
 #
 
 define action run_parser with var input, hash tags, var mode, var lang, var path do
-    # TEXT
     # Make input parsable
-    # CODE
     set var input to make_parsable with var input
     do regex with var input: /<[,]>\s/ -> " KOMMA " :global:i
     do regex with var input: /(\D)<[.]>/ -> "${1} DOT " :global:i
@@ -36,14 +34,10 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
     set new array clauses_input to split with " KOMMA ", var input
     set new hash parsed to an empty hash
     for each new var clause in array clauses_input do
-        # TEXT
         # Split the sentence.
-        # CODE
         set new array list_of_words to split with " ", var clause
 
-        # TEXT
         # Then compute the parts of speech etc.
-        # CODE
         for each new var word in array list_of_words is rw do
             set from hash tags element { var word } to compute_tags with var word, var lang, var path
             set from hash genus_of element { lc(var word) } to from hash tags element { var word } 1st element
@@ -52,9 +46,7 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
         set new array list_of_list_of_words to pre_parse with array list_of_words, hash tags, var mode, var lang, var path
 
         for each new array words in array list_of_list_of_words is rw do
-            # TEXT
             # Then toggle the identities (user <-> machine).
-            # CODE
             if is an empty hash parsed do
 
                 do be_slow without arguments
@@ -104,9 +96,7 @@ define action run_parser with var input, hash tags, var mode, var lang, var path
         done
     done
 
-    # TEXT
     # Save male and female substantives
-    # CODE
 
     set new array copy_subjects to from hash parsed element { 'subjects' }
     set new var genus_subject to 'q'
@@ -199,9 +189,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
     set new flag save_input to decide_save_input with var input, var mode, var lang, var path
     do regex with var input: /^\/save / -> "" :global:i
 
-    # TEXT
     # --- WITHOUT LOGIC
-    # CODE
 
     # greeting
     set new flag is_a_greeting to check_for_greeting using var input
@@ -229,9 +217,7 @@ define action use_mode with var input is copy, array facts_to_save, hash tags, v
         do check_for_weather with var place, var lang, var path
     done
 
-    # TEXT
     # --- LOGIC
-    # CODE
 
     set new hash parsed to run_parser with var input, hash tags, var mode, var lang, var path
 
@@ -323,9 +309,7 @@ define action sort_out_best with array results, var mode, hash parsed do
         for each new array clause in array result do
             set new array sentence to an empty array
 
-            # TEXT
             # Look at the verbs. Do they contain "=>"? Verbs with "=>" would only be used if no other verbs are there.
-            # CODE
             set new array raw_verbs to [ split ' ', from array clause 1st element ]
             set new var symbol to "=>"
             for each new var verb in array raw_verbs do
@@ -343,30 +327,23 @@ define action sort_out_best with array results, var mode, hash parsed do
 
         do unshift with elements of array result, var primary_key
 
-        # TEXT
         # It is an important fact, for example "I am FreeHAL", because it contains "freehal"
         if flag is_important do
             push into array results_important, array result
         done
 
-        # TEXT
         # Result is a proper result.
-        # CODE
         if flag is_proper do
             push into array results_proper, array result
         done
-        # TEXT
         # Result is no proper result.
-        # CODE
         else do
             push into array results_variable_answer, array result
         done
     done
 
     set new array questionword_array to from hash parsed element { 'questionword' } 1st element
-    # TEXT
     # First, prefer important answers
-    # CODE
     if is not an empty array results_important do
         print "There are important sentences."
         print new line
@@ -376,9 +353,7 @@ define action sort_out_best with array results, var mode, hash parsed do
         print "There are not any important sentences."
         print new line
     done
-    # TEXT
     # If there is no questionword, prefer proper answers
-    # CODE
     if not from array questionword_array 1st element do
         if is an empty array results_variable_answer or (elements of array results_variable_answer)+50 < (elements of array results_proper) do
             print "-> results_proper (1): " concat elements of array results_proper concat " <-> " concat elements of array results_variable_answer concat " = " concat elements of array results

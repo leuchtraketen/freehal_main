@@ -1,10 +1,10 @@
 use Socket;
 
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -21,9 +21,7 @@ use Socket;
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-# TEXT
-# This is the main FreeHAL 2010 source file.
-# CODE
+# This is the main FreeHAL 2012 source file.
 
 set global hash sym_noun
 set global hash sym_prep
@@ -176,9 +174,7 @@ define action compute_context with hash parsed do
         done
     done
 
-    # TEXT
     # Look for something like "Das habe ich nicht gemeint"
-    # CODE
     for each new var verb in array verb_array do
         if var verb 1st element matches /mein<[et]>/ do
             do return with "not_meant"
@@ -213,17 +209,13 @@ define action logic with var input, var lang, var path, hash parsed do
             for each new array verb_array in array request_verb_array is rw do
                 set new var verb to from array verb_array 1st element
                 if not flag do_removed do
-                    # TEXT
                     # Remove "do" and "does" in englishs entences
-                    # CODE
                     if var verb matches /^(does|do)$/ do
                         set flag do_removed to 1
                         go to next
                     done
 
-                    # TEXT
                     # Turn verbs like "must" or "want" into flags
-                    # CODE
                     set new var verb_category to verb_category with var verb
 
                     if var verb_category and var verb not matches /\// do
@@ -372,37 +364,28 @@ define action logic with var input, var lang, var path, hash parsed do
         set var request_primary_key to "0"
     done
 
-    set new var output to ''
-    set var output to var output concat ( lc(var request_verb_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_subjects_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_objects_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_adverbs_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_extra_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_context_string) || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( lc(var request_primary_key) || '0' )
+    set multi-line new array output to [
+        lc(var request_verb_string) || '0',
+        lc(var request_subjects_string) || '0',
+        lc(var request_objects_string) || '0',
+        lc(var request_adverbs_string) || '0',
+        lc(var request_extra_string) || '0',
+        lc(var request_context_string) || '0',
+        lc(var request_primary_key) || '0',
 
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( flag verb_flag_want   || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( flag verb_flag_must   || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( flag verb_flag_can    || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( flag verb_flag_may    || '0' )
-    set var output to var output concat ( '^' )
-    set var output to var output concat ( flag verb_flag_should || '0' )
+        flag verb_flag_want   || '0',
+        flag verb_flag_must   || '0',
+        flag verb_flag_can    || '0',
+        flag verb_flag_may    || '0',
+        flag verb_flag_should || '0',
+    ];
+    set new var output to join using '^', elements of array output
 
 
     do hal2009_send_signal with "database_request", var output
     set new var input to hal2009_fetch_signal with "database_request"
     set new array input_lines to split with /\r?\n/, var input
-    
+
     print "got: input (database request)"
     print new line
 
@@ -430,15 +413,10 @@ define action logic with var input, var lang, var path, hash parsed do
         set new array result to an empty array
         set new array rawresult to split using /\^/, var line
 
-        # TEXT
         # Shift Primary key
-        # CODE
         set new var primary_key to shift with elements of array rawresult
 
-
-        # TEXT
         # Divide main clause and sub clauses
-        # CODE
         push into array result, an empty array
         set new var number_of_clause to 0
         set new var i to 0
@@ -447,46 +425,41 @@ define action logic with var input, var lang, var path, hash parsed do
             set var i to var i + 1
         done
 
-        # TEXT
         # Truth goes from 1.0 to 0.0.
-        # CODE
 
         set new var truth to from array rawresult element [ var i ]
         do adjust_truth with array result, from array rawresult element [ var i ], var number_of_clause, 0
         set var i to var i + 1
 
-        # TEXT
         # Now add the subclauses to the array.
-        # CODE
 
         set new var offs to var i
         push into array result, an empty array
         set var number_of_clause to var number_of_clause + 1
         set var i to 0
         while var i < 10 do
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 0 ]
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 1 ]
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 2 ]
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 3 ]
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 4 ]
-            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 5 ]
-#            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 6 ]
+            set new var _empty to all_empty_in_array with array rawresult, (var i * 6) + var offs + 0, (var i * 6) + var offs + 5
+            if var _empty do
+                go to last
+            done
+
+            set new array _part to part_of_array with array rawresult, (var i * 6) + var offs + 0, (var i * 6) + var offs + 5
+            push into that array: from array result element [ var number_of_clause ], elements of array _part
+
+#            push into that array: from array result element [ var number_of_clause ], from array rawresult element [ (var i * 6) + var offs + 0 ]
+
             do adjust_truth with array result, from array rawresult element [ var offs - 1 + 6 ], var number_of_clause, var i
             set var i to var i + 1
             push into array result, an empty array
             set var number_of_clause to var number_of_clause + 1
         done
 
-        # TEXT
         # Unshift Primary key
-        # CODE
         do unshift with elements of array result, var primary_key
 
 
 
-        # TEXT
         # Be sure that the modal verbs are matched
-        # CODE
         set new var modal_verb_template to var verb_flag_want concat var verb_flag_must concat var verb_flag_can concat var verb_flag_may concat var verb_flag_should
         if (not from array rawresult element [ 0 ] matches /var modal_verb_template/) and from array rawresult element [ 0 ] matches /([01])([01])([01])([01])([01])/ do
             print "Not matching to: " concat var modal_verb_template
@@ -589,9 +562,7 @@ define action logic with var input, var lang, var path, hash parsed do
     print "After t/m/f correction: found " concat elements of array results concat " sentences"
     print new line
 
-    # TEXT
     # Exception: If we are in the "enum_all" context, all subjects together are the object
-    # CODE
     if var request_context_string matches "enum_all" and elements of array results do
         set new hash subjects to an empty hash
 
@@ -753,10 +724,8 @@ define action save_output with var input, var current_language, var path do
 done
 
 define action give_output with var input is rw, var only_learn, array facts_to_save, hash tags, var current_language, var path do
-    # TEXT
     # --- SCORE
     # We try to use the answer as a judgement
-    # CODE
     set new array score to check_score using var input
     if from array score 2nd element do
         if from array score 1st element do
@@ -778,9 +747,7 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
         do return with [ var answer ]
     done
 
-    # TEXT
     # --- COMPUTE INPUT
-    # CODE
     set (var input, new var no_change_pronouns) to compute_input with var input, var current_language, var path
     if not var input do
         do return with an empty array
@@ -795,9 +762,7 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
     print var input
     print new line
 
-    # TEXT
     # --- GET OUTPUT
-    # CODE
     print "Input is computed... Going on."
     print new line
     set new var mode to find_mode_of_input using var input, var only_learn, var current_language, var path
@@ -812,15 +777,11 @@ define action give_output with var input is rw, var only_learn, array facts_to_s
         done
     done
 
-    # TEXT
     # --- Flow chart
-    # CODE
     do flowchart_out_answers with array sentences, var current_language, var path
 
 
-    # TEXT
     # --- NO SUCCESS
-    # CODE
     if is an empty array sentences do
         print "Well, no logic answer available."
         print new line
@@ -940,16 +901,12 @@ define action decide with array output, var input, flag all_output_phrases, var 
             done
         done
 
-        # TEXT
         # If all scores are negative...
-        # CODE
         if is an empty array rel_output do
             set array rel_output to array output
         done
 
-        # TEXT
         # Choose an answer
-        # CODE
         set new var random_number to rand using elements of array rel_output
         set new array final_output to from array rel_output element [ var random_number ]
         set new var final_output_str to post_phrase with var lang, var path, var mode, hash parsed, array final_output
@@ -1085,7 +1042,7 @@ define action shell with var current_language, var path do
     do memory_limit with "word_types.self-taggered", var current_language, var path
 
 #    do wait 3 seconds
-    
-    do hal2009_send_signal with "exit", ""
+
+#    do hal2009_send_signal with "exit", ""
     do exit with 0
 done

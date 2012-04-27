@@ -321,7 +321,9 @@ void FreeHALWindow::on_flowchart_fact_delete_clicked() {
 void FreeHALWindow::on_flowchart_fact_edit_clicked() {
     QString qs;
     qs.setNum(user_interface_main_window->flowchart_fact_pk->value());
-    QString replacement = main_window->user_interface_main_window->flowchart_edit->text();
+    QString replacement = main_window->user_interface_main_window->flowchart_edit->toPlainText();
+    replacement.replace("\r", "");
+    replacement.replace("\n", "\\n");
     main_window->user_interface_main_window->flowchart_edit->setText("Please wait...");
 
     freehal::comm_send("REPLACE:PROFACT:PK:" + qs.toStdString() + ":BY:" + replacement.toStdString());
@@ -1534,7 +1536,11 @@ void freehal::comm_new(freehal::string s) {
         }
         if (s.contains("PROFACT")) {
             if (place_edit_profact == FLOWCHART) {
-                emit fc->setFactText_Chart(QString::fromStdString(parts[1].ref()));
+                QString txt = QString::fromStdString(parts[1].ref());
+                txt.replace("\r", "");
+                txt.replace("\n", "");
+                txt.replace("\\n", "\r\n");
+                emit fc->setFactText_Chart(txt);
             }
             else {
                 emit fc->setFactText_DB(QString::fromStdString(parts[1].ref()));

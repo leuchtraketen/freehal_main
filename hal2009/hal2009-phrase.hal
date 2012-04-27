@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -27,11 +27,9 @@ define action sort_verbs with array clause, var final_sentence, hash parsed do
 
     for each new var verb in array raw_verbs do
         if var verb matches /=>/ do
-            # TEXT
             # We have such a sentence:
             # "Clause to match , => Clause to print"
             # SO we have to remove the first one
-            # CODE
             set var final_sentence to ""
         done
 
@@ -108,7 +106,7 @@ define action sort_verbs with array clause, var final_sentence, hash parsed do
         do unshift with elements of array proper_verbs, "zu"
         do regex with from array clause 5th element: /(^|\s)_to_(\s|$)/ -> "$0" :global
     done
-    
+
     print "auxiliary verbs: "
     do print_array with array auxiliary_verbs
     print new line
@@ -159,7 +157,7 @@ define action phrase_fact with array sentence, array clause, var final_sentence,
         set var object_article to get_article with var object_genus, "subject", "definite"
         do regex with from array clause 3rd element: /\(the\)\s+?/ -> "" :global
     done
-    
+
     set new array adverbs_parts to split with ";", from array clause 4th element
     for each new var adverb_part in array adverbs_parts do
         set new array adverb_part_words to split with " ", var adverb_part
@@ -178,7 +176,7 @@ define action phrase_fact with array sentence, array clause, var final_sentence,
     done
     set new var _tmp to join with ";", elements of array adverbs_parts
     set from array clause 4th element to var _tmp
-    
+
     if from array proper_verbs 1st element matches /^(equal)/ do
 
         # subject article
@@ -328,9 +326,7 @@ define action phrase_sentence with array sentence, array clause, var final_sente
         set array proper_verbs to an empty array
     done
 
-    # TEXT
     # When there is a time period mentioned in the question, but not in the answer
-    # CODE
     if from array clause 4th element not matches /time.(from|to)/ and from array clause 3rd element not matches /time.(from|to)/ do
         set new array input_adverbs to from hash parsed element { 'adverbs' }
         for each new var _adverb in array input_adverbs do
@@ -347,9 +343,7 @@ define action phrase_sentence with array sentence, array clause, var final_sente
         done
     done
 
-    # TEXT
     # Replace *s
-    # CODE
     if from array clause 2nd element matches "*" do
         if from array clause 3rd element matches "*" do
             if lc( hash parsed element { 'subjects' } 1st element ) matches /array/ do
@@ -639,9 +633,7 @@ define action phrase with var lang, var path, var mode, array results, hash pars
 
     push into array results, elements of array additional_results
 
-    # TEXT
     # Iterate through all results.
-    # CODE
     for each new array result in array results do
         set new var primary_key to shift with elements of array result
 
@@ -649,19 +641,15 @@ define action phrase with var lang, var path, var mode, array results, hash pars
         for each new array clause in array result do
             set new array sentence to an empty array
 
-            # TEXT
             # Tag and sort all verbs.
-            # CODE
-            
+
             set ( new array auxiliary_verbs, new array proper_verbs, var final_sentence, hash parsed ) to array-returning sort_verbs with array clause, var final_sentence, hash parsed
 
             set from array clause 2nd element to check_for_as_well_as with from array clause 2nd element, from array clause 4th element, var lang, var path
             set from array clause 3rd element to check_for_as_well_as with from array clause 3rd element, from array clause 4th element, var lang, var path
             set from array clause 4th element to check_for_as_well_as with from array clause 4th element, from array clause 4th element, var lang, var path
 
-            # TEXT
             # Build the final sentence.
-            # CODE
             if from array proper_verbs 1st element and from array proper_verbs 1st element matches /^(equal|is<[-]>)/ do
 
                 set ( var final_sentence, array sentence, hash parsed ) to array-returning phrase_fact with array sentence, array clause, var final_sentence, hash parsed, array auxiliary_verbs, array proper_verbs, var lang, var path
@@ -728,13 +716,9 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
 
     set new var final_sentence to from array output 1st element
 
-    # TEXT
     # Add linked sentences...
-    # CODE
     if var primary_key do
-        # TEXT
         # After the sentence.
-        # CODE
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order element { 'primary_key' } to var primary_key
         set new array results_link_order to logic with '', var lang, var path, hash hash_link_order
@@ -751,9 +735,7 @@ define action post_phrase with var lang, var path, var mode, hash parsed, array 
             set var final_sentence to var final_sentence concat ". " concat var result_link_order
         done
 
-        # TEXT
         # Before the sentence.
-        # CODE
         set new hash hash_link_order to an empty hash
         set from hash hash_link_order element { 'primary_key' } to 0 - var primary_key
         set new array results_link_order to logic with '', var lang, var path, hash hash_link_order

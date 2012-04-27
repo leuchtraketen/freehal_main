@@ -1,9 +1,9 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
- * 
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -52,6 +52,7 @@ void *realloc (void*, size_t);
     #include <sys/types.h>
     #include <sys/stat.h>
     #include <unistd.h>
+    #include <math.h>
     #define MODUS ,0711)
 #elif __WIN32__ || _MS_DOS_
     #include <sys/stat.h>
@@ -95,7 +96,6 @@ void *realloc (void*, size_t);
 */
 
 extern FILE* output_handle_pipe;
-extern char* sql_engine;
 static int num_facts_added_during_this_run = 0;
 static int num_facts_not_added_during_this_run_because_exist = 0;
 static int num_facts_not_added_during_this_run_because_other_error = 0;
@@ -120,13 +120,13 @@ struct RECORD {
     int hash_clauses;
     int only_logic;
     double truth;
-    
+
     short verb_flag_want;
     short verb_flag_must;
     short verb_flag_can;
     short verb_flag_may;
     short verb_flag_should;
-    
+
     short everything_q;
 };
 struct RECORD_short {
@@ -146,7 +146,7 @@ struct RECORD_short {
     int hash_clauses;
     int only_logic;
     double truth;
-    
+
     short verb_flag_want;
     short verb_flag_must;
     short verb_flag_can;
@@ -160,51 +160,5 @@ struct DATASET {
     long int timeout;
     int err;
 };
-
-char* fact_read_from_source (const char* source);
-char* fact_read_from_source(const char* source);
-char* hal2009_make_csv(struct DATASET* set);
-char* sql_del_record(struct RECORD* r);
-char* sql_get_source(struct RECORD* r);
-char* check_config (const char* name, const char* _default);
-const char* engine();
-const char* is_engine(const char*);
-/* execute functions */
-int _debugf(const char* c, ...);
-int fact_delete_from_source(const char* source);
-int fact_replace_in_source(const char* source, const char* replacement);
-int hal2009_add_filename(const char* filename);
-int hal2009_add_link (char* link, int key_1, int key_2);
-int hal2009_delete_everything_from(const char* filename);
-int halsleep(double);
-int halusleep(double);
-int remove_negation (char* _line, double* truth_ref, int* only_logic);
-int sql_begin(const char* begin);
-int sql_end();
-int sql_re_index();
-int sql_set_quiet(int);
-int sql_sqlite_set_filename(const char* filename);
-struct DATASET hal2009_get_csv(char* csv_request);
-void* hal2009_answer_thread(void*);
-void* hal2009_answer_thread(void* parameters);
-void hal2009_clean();
-void* hal2009_handle_signal(void*);
-void* hal2009_signal_handler(void* parameters);
-void* halfilecalloc( long s, long si, char* f );
-void* halfilecalloc( long s, long si, char* str );
-void* halfilefree( void* s );
-
-char* sql_del_record(struct RECORD* r);
-char* sql_get_source(struct RECORD* r);
-const char* engine();
-const char* is_engine(const char* m);
-int sql_add_filename(const char* filename);
-int sql_add_link (char* link, int key_1, int key_2);
-int sql_add_record(struct RECORD* r);
-int sql_begin(const char* modes);
-int sql_delete_everything_from(const char* filename);
-int sql_end();
-int sql_re_index();
-int sql_set_quiet(int i);
 
 

@@ -1,8 +1,8 @@
 #
-# This file is part of FreeHAL 2010.
+# This file is part of FreeHAL 2012.
 #
-# Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
-# http://freehal.org
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,15 +19,13 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-# TEXT
 # ~~~~~~ INTRODUCTION ~~~~~~
-# This is the FreeHAL 2010 source file for general definitions.
+# This is the FreeHAL 2012 source file for general definitions.
 # ~~~~~~ IMPLEMENTATION ~~~~~~
 # ~~~~~ HEADER ~~~~~
 #
 # A part of speech is represented as a string.
 # sym_* is always a hash containing these representations as keys.
-# CODE
 set hash sym_noun to { "2" => 1, "n" => 1, "n," => 1, "f,m" => 1, "f,n" => 1, "f,n,m" => 1, "f,m,n" => 1, "m,f" => 1, "m,n" => 1, "m,f,n" => 1, "m,n,f" => 1, "m" => 1, "f" => 1, "n,pl" => 1, "ppron" => 1, }
 set hash sym_prep to { "6" => 1, "prep" => 1, }
 set hash sym_questionword to { "5" => 1, "fw" => 1, "questionword" => 1, }
@@ -43,25 +41,17 @@ set hash sym_keyword to { "ISUNKNOWN" => 1, "ENUMALL" => 1, }
 
 set hash val_omit to { "a" => 1, "b" => 1, "c" => 1, "d" => 1, "e" => 1, "f" => 1, "g" => 1, "h" => 1, }
 
-# TEXT
 # The constant variables TYPE and GENUS are defined as 0 and 1. They are used as array indices.
-# CODE
 set const TYPE to 0
 set const GENUS to 1
 
-# TEXT
 # If a message is printed, "ident" contains the amount of spaces at the left
-# CODE
 set var ident to ""
 
-# TEXT
 # Cache, only used when high memory support used
-# CODE
 set array cache_memory to [ ]
 
-# TEXT
 # An example: If the german word Baecker is not found, maybe Baeckerin is there
-# CODE
  #, "es", "er", "en", "em"
 set array standard_suffixes to [ "", "in", "e", "s" ]
 set var be_slow__last_time to time without arguments

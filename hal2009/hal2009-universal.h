@@ -1,9 +1,9 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
- * 
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3
@@ -19,9 +19,11 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_UNIVERSAL_H
-#define HAL2009_UNIVERSAL_H 1
+#include "hal2009.h"
 
+BEGIN_EXTERN_C /* GENERATED */
+#ifndef HAL2009_UNIVERSAL
+#define HAL2009_UNIVERSAL 1
 
 #define n(ch)       ((1-'a'+ch)<=  0 ? WRONG : ((1-'a'+ch) > 27  ? WRONG : (1-'a'+ch)))
 #define c(nm)       ((nm-1+'a')< 'a' ? WRONG : ((nm-1+'a') > 'z' ? WRONG : (nm-1+'a')))
@@ -127,19 +129,14 @@ struct string_pair {
     char*  objects;
 };
 
-
 extern struct word** variable_replacements;
 extern int variable_replacements_c;
 
-
-int wiki_begin();
-struct fact** search_facts_wiki(const char*, short);
-
+// functions begin
 char** divide_by(const char by, const char* str);
+char** divide_by_logical_operators(const char* exp);
 char** divide_string(const char* str);
-struct word*** filter_synonyms(struct synonym** synonyms, int level, short direction);
-char* generalize_verb(char* verb);
-char* get_thesaurus_synonyms(const char* key, struct string_pair** facts, int limit, int* position, int level, short reverse);
+char* from_number(int i);
 char* join_words_by(const char* by, struct word** words);
 char* join_words(struct word** words);
 char* small_identifier(const char* word);
@@ -148,16 +145,14 @@ char* universal_del_record(char* key);
 char* universal_get_source(char* key);
 char* use_thesaurus_synonyms(const char* key);
 const char* clean_str (const char* str);
-char* from_number(int i);
 const char* get_catchf();
+const char* get_thesaurus_synonyms(const char* key, const char** keys, struct string_pair** facts, int limit, int* position, int level, short reverse);
 int append_on_dataset_record(int offset, int limit, char** record, struct fact** list);
 int begin_catchf();
-int can_be_a_main_synonym(const char* word);
-int can_be_a_synonym(const char* word);
 int catchf(const char* fmt, void* arg1);
 int check_synonym(struct synonym* syn_a, struct synonym** synonyms, int a, int b);
 int clear_catchf();
-int next_in_list(void** list);
+int copy_list(int a_1, int a_2, int b_1, int b_2, void** a, void** b, int(*except)(const void*));
 int count_list(void** list);
 int count_of_synonym(struct word*** words);
 int delete_in_first_if_in_second(struct word*** delete_in, struct word*** find_in);
@@ -165,6 +160,7 @@ int delete_in_first_if_second(struct word*** list, const char* exp);
 int _diff(int a, int b);
 int divide_and_round_up(int a, int b);
 int end_catchf();
+int except_article(const void* _a);
 int fact_matches_adverb_by_adverb(struct fact* fact, struct request* request, int weak);
 int fact_matches_adverb_by_object(struct fact* fact, struct request* request, int weak);
 int fact_matches_anything_by_extra(struct fact* fact, struct request* request);
@@ -185,30 +181,35 @@ int fact_matches_subject_by_object(struct fact* fact, struct request* request, i
 int fact_matches_subject_by_subject(struct fact* fact, struct request* request, int weak);
 int fact_matches_truth(struct fact* fact, struct request* request);
 int fact_matches_verb(struct fact* fact, struct request* request);
+int fileid(const char* filename);
+int free_expressions(char** exps);
 int free_facts_deep(struct fact** facts);
 int free_facts_synonyms(struct fact** facts_synonyms);
+int free_request(struct request* fact);
+int free_string_pair(struct string_pair** sp);
+int free_synonym_set(struct synonym_set* synonym_set);
 int free_synonym(struct synonym* syn);
 int free_words_deep(struct word** words);
 int free_words_weak(struct word** words);
 int higher(int a, int b);
-int is_a_trivial_word(const char* word);
-int is_a_variable(const char* word);
 int is_bad(const char* s);
-int is_conditional_questionword(const char* word);
 int is_good(const char* s);
-int is_important_word(const char* word);
 int matches(const char* a, const char* b);
+int matches_with_pipe(const char* a, const char* b);
+int net_go_way(const char* way, int value, struct request* fact, struct fact** facts, int limit, int* position);
+int net_supports_way(const char* way, int value);
+int next_in_list(void** list);
 int search_facts_for_words_in_net(struct word*** words, struct fact** facts, int limit, int* position);
 int set_to_invalid_fact(struct fact** p);
 int set_to_invalid_value(void** p);
 int sql_universal_add_link (const char* link, int key_1, int key_2);
-int store_synonyms(const char* exp, struct word*** synonyms, int level);
 int to_number(const char* str);
-int universal_begin(const char* begin);
+int universal_add_filename(const char* filename);
+int universal_begin(const char* modes);
+int universal_clear_cache();
 int universal_delete_everything_from(const char* filename);
 int universal_end();
 int universal_re_index();
-int universal_clear_cache();
 int word_matches_word_array(struct word* word, struct word** words, int words_begin, int words_end, int flags);
 long can_be_a_pointer(void* _p);
 struct DATASET as_dataset(struct fact** list);
@@ -218,6 +219,8 @@ struct fact* add_clause(int rel, const char* subjects, const char* objects, cons
 struct fact* add_fact(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* filename, const char* line, float truth, short verb_flag_want, short verb_flag_must, short verb_flag_can, short verb_flag_may, short verb_flag_should, short only_logic, short has_conditional_questionword);
 struct fact* filter_fact_by_rules(struct fact* fact, struct request* request, int weak);
 struct fact** filter_list_by_rules(struct fact** list, struct request* request, int weak);
+struct fact* replace_variables_in_fact(struct fact* fact);
+struct fact** replace_variables_in_list(struct fact** list);
 struct fact** search_clauses(int rel);
 struct fact** search_facts_by_weakness(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, int weak);
 struct fact** search_facts(const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context);
@@ -231,27 +234,21 @@ struct flist* look_at_list(struct flist* l);
 struct request* negotiate_deep_search(struct synonym_set* synonym_set, const char* subjects, const char* objects, const char* verbs, const char* adverbs, const char* extra, const char* questionword, const char* context, const struct fact* if_clause, const struct fact* then_clause, int level, int direction);
 struct synonym** add_synonyms_by_search(const char** exps, struct synonym** synonyms, int* position, const char* category);
 struct synonym** add_synonyms_by_string(const char** exps, struct synonym** synonyms, int* position, const char* category);
-struct synonym** add_synonyms(const char* exp, const char** exps, struct synonym** synonyms, int* position, const char* category);
+struct synonym** add_synonyms(const char* exp, const char** _exps, struct synonym** synonyms, int* position, const char* category);
 struct synonym* construct_synonym(const char* _exp, const char** _exps, struct word* word, struct word** words, int level, int direction);
 struct synonym** prepare_synonyms();
 struct synonym** put_search_synonyms(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct fact** facts, struct synonym** synonyms, int* position, int level, short direction);
 struct synonym** put_synonym_raw(struct synonym* syn, struct synonym** synonyms, int* position);
 struct synonym** put_synonym(struct synonym* syn, struct synonym** synonyms, int* position);
-struct word*** __add_synonyms_by_search(const char* subj, const char* obj, const char* verb, const char* adverbs, int use_what, struct word*** synonyms, struct fact** facts, int* position, int* allocated_until);
-struct word*** __add_synonyms_by_string(const char* exp, struct word*** synonyms, int* position, int* allocated_until);
 struct word** divide_words(const char* str);
 struct word*** fake_synonyms(const char* exp, const char** exp_array);
-struct word*** get_stored_synonyms(const char* exp, int level);
+struct word*** filter_synonyms(struct synonym** synonyms, int level, short direction);
 struct word* get_word(const char* name);
-struct word*** search_synonyms_add(const char* exp, int level, int reverse_search, struct word*** synonyms, int* position, int* allocated_until);
-struct word*** search_synonyms(const char* exp, int level, int reverse_search);
+struct word** replace_variables_in_words(struct word** list);
+struct word* replace_variables_in_word(struct word* word);
 struct word* set_word(const char* name);
 void flowchart_write_list_of_synonym(struct word*** words);
 void print_word_list_3rd_order(struct word*** list);
-
-
-
-
-#endif
-
-
+// functions end
+#endif /* HAL2009_UNIVERSAL */
+END_EXTERN_C /* GENERATED */
