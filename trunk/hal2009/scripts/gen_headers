@@ -1,0 +1,66 @@
+#!/bin/bash
+
+export HEAD=$(cat hal2009.h | perl -e 'while (<STDIN>) { print; if (/[*]\//) { last; } }');
+
+rm -rf backup
+mkdir backup
+
+for x in hal*.c hal*.cpp
+do
+	export y="$x"
+
+	export x=$(echo "$x" | sed 's@[.]cpp@@igm')
+	export x=$(echo "$x" | sed 's@[.]c@@igm')
+
+	export def=$(echo "$x" | perl -n -e '$_ = uc $_; s/[._-]/_/igm; print')
+	echo $def, $y, $x.h
+
+	export BODY=$(cat $x.h 2>/dev/null | perl -e 'while (<STDIN>) { if (/[*]\//) { last; } } my $last = ""; while (<STDIN>) { if (/\/\/ functions begin/) { last; } print if $_ ne $last; $last = $_; } while (<STDIN>) { if (/\/\/ functions end/) { last; } } while (<STDIN>) { print; }' | grep -v GENERATED | grep -v $def | grep -v '#include "hal2009.h"');
+
+	export FUNC=$(grep " {" $y | grep -v '}' | grep -v while | grep -v namespace | grep -v extern | \
+			grep -v '\/\/' | grep -v '\/\*' | egrep -v '^([^ ]+)[ ].*::' | \
+			egrep -v "^\\s" | sed 's@ {@;@igm' | grep " " | grep -v ' : ' | \
+			perl -n -e 's/ = [^),]*?([),])/$1/igm; print' | \
+			sort | uniq)
+
+	export BEGIN_EXTERN_C="" ; export END_EXTERN_C=""
+	echo $y | egrep "\\.c$" > /dev/null 2>&1 && export BEGIN_EXTERN_C=$(echo; echo "BEGIN_EXTERN_C /* GENERATED */") && export END_EXTERN_C=$(echo "END_EXTERN_C /* GENERATED */"; echo)
+	export BEGIN_CXX="" ; export END_CXX=""
+	echo $y | egrep "\\.cpp$" > /dev/null 2>&1 && export BEGIN_CXX=$(echo; echo "#if defined(__cplusplus) /* GENERATED */") && export END_CXX=$(echo "#endif /* GENERATED */"; echo) && \
+	export FUNC=$(
+		echo "$FUNC" | perl -n -e 'print if /EXTERN_C/;'
+		echo "#if defined(__cplusplus) /* GENERATED */"
+		echo "$FUNC" | perl -n -e 'print if !/EXTERN_C/;'
+		echo "#endif /* GENERATED */"
+	)
+
+	cp $x.h backup/$x.h
+	cat > $x.h__ << EOF
+$HEAD
+
+#include "hal2009.h"
+$BEGIN_EXTERN_C
+#ifndef $def
+#define $def 1
+$BEGIN_CXX
+$BODY
+$END_CXX
+
+// functions begin
+$FUNC
+// functions end
+#endif /* $def */
+$END_EXTERN_C
+EOF
+	cat $x.h__ | perl -e 'my $l = ""; while (<STDIN>) { next if $_ eq $l; print; $l = $_; }' > $x.h_ && rm -f $x.h__
+
+	(diff $x.h_ $x.h || mv -f $x.h_ $x.h) >/dev/null 2>&1
+	rm -f $x.h_
+
+	(echo $y | egrep -v "(boinc)|(as)|(test)|(main)|(server)|(cgi)|(wiki)" && (
+		echo $y | egrep "\\.cpp$" && (echo '#include "'$x'.h"' >> backup/headers-cpp)
+		echo $y | egrep "\\.c$" && (echo '#include "'$x'.h"' >> backup/headers-c)
+	)) > /dev/null 2>&1
+done
+
+scripts/create_manifest

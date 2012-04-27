@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo
+echo 'ATTACH DATABASE "lang_de/database.db.index" AS db_index;'
+echo
+sqlite3 lang_de/database.db.main
+

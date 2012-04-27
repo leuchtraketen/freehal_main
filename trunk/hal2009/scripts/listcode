@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+my $f = $ARGV[0];
+$f =~ s/^(.*?):$/$1/igm;
+if ($f =~ /^(.*?):(.*?)$/) {
+	my $file = $1;
+	my $line = $2-1;
+	open my $handle, "<", $file;
+	my @lines = <$handle>;
+	for my $l ($line-5..$line+5) {
+		print (($l < $line)?"  ":(($l > $line)?"  ":"->"));
+		if (length($l) == length($line+5)-1) { print " "; }
+		print " " . ($l+1) . " ";
+		print $lines[$l];
+	}
+}

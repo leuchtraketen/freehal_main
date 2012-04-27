@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,69 +19,33 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#include "hal2009.h"
-
-#include "hal2009-sql-universal.c"
+#include "hal2009-sql.h"
+#include "hal2009-sql-universal.h"
+#include "hal2009-universal.h"
+#include "hal2009-util.h"
+#include "hal2009-startup.h"
 
 static int sql_begin_end_quiet = 0;
 static int database_used = 0;
 
 struct DATASET sql_get_records(struct RECORD* r) {
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        return sql_sqlite_get_records(r);
-    }
-    else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        return sql_semtree_get_records(r);
-    }
-    else {
-    */
     return sql_universal_get_records(r);
-    //}
 }
 
 int sql_add_record(struct RECORD* r) {
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        return sql_sqlite_add_record(r, NULL);
-    }
-    else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        return sql_semtree_add_record(r, NULL);
-    }
-    else {
-    */
     return sql_universal_add_record(r, NULL);
-    //}
 }
 
 char* sql_del_record(struct RECORD* r) {
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        return sql_sqlite_del_record(r);
-    }
-    else {
-    */
     return sql_universal_del_record(r);
-    //}
 }
 
 char* sql_get_source(struct RECORD* r) {
-    /*printf("sql_get_source: %d\n", r);
-    if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        // does not exist
-    }
-    else {*/
     return sql_universal_get_source(r);
-    //}
 }
 
 int sql_add_link (char* link, int key_1, int key_2) {
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        return sql_sqlite_add_link(link, key_1, key_2);
-    }
-    else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        return sql_semtree_add_link(link, key_1, key_2);
-    }
-    else {*/
     return sql_universal_add_link(link, key_1, key_2);
-    //}
 }
 
 int sql_delete_everything_from(const char* filename) {
@@ -100,48 +64,35 @@ int sql_set_quiet(int i) {
     sql_begin_end_quiet = i?1:0;
 }
 
-int sql_begin(const char* modes) {
-    while (database_used) {
+EXTERN_C int sql_begin(const char* modes) {
+    network_lock("DB");
+    int timeout = 5;
+    while (database_used && timeout > 0) {
         fprintf(output(), "Wait while database is used.\n");
-        halsleep(1);
+        halsleep(500);
+	--timeout;
     }
     if (!sql_begin_end_quiet)
         fprintf(output(), "%s\n", "Start database access.");
     database_used = 1;
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        return sql_sqlite_begin();
-    }
-    else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        return sql_semtree_begin();
-    }
-    else {
-    */
     return sql_universal_begin(modes);
-    //}
 }
 
-int sql_end() {
+EXTERN_C int sql_end() {
     int ret;
-    /*if (sql_engine && matchstr(sql_engine, "sqlite")) {
-        ret = sql_sqlite_end();
-    }
-    else if (sql_engine && matchstr(sql_engine, "semtree")) {
-        ret = sql_semtree_end();
-    }
-    else {
-    */
     ret = sql_universal_end();
-    //}
     if (!sql_begin_end_quiet)
         fprintf(output(), "%s\n", "Stop database access.");
     database_used = 0;
 
+    network_unlock("DB");
+
     return ret;
 }
 
-const char* engine() {
-    return sql_engine;
+EXTERN_C const char* engine() {
+    return current_instance->sql_engine.c_str();
 }
-const char* is_engine(const char* m) {
-    return (0 == strcmp(sql_engine, m));
+EXTERN_C const char* is_engine(const char* m) {
+    return (current_instance->sql_engine == m ?m:0);
 }

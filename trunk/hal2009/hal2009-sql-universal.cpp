@@ -1,8 +1,8 @@
 /*
- * This file is part of FreeHAL 2010.
+ * This file is part of FreeHAL 2012.
  *
- * Copyright(c) 2006, 2007, 2008, 2009, 2010 Tobias Schulz and contributors.
- * http://freehal.org
+ * Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+ * http://www.freehal.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -20,12 +20,11 @@
 */
 
 #include "hal2009-universal.h"
+#include "hal2009-sql-universal.h"
 #include "hal2009-ram.h"
 #include "hal2009-disk.h"
-
-#include "hal2009-universal.c"
-#include "hal2009-ram.c"
-#include "hal2009-disk.c"
+#include "hal2009-sql.h"
+#include "hal2009-universal-cxx.h"
 
 int sql_universal_set_filename(const char* filename) {
 }
@@ -46,7 +45,7 @@ char* sql_universal_del_record(struct RECORD* r) {
 }
 
 char* sql_universal_get_source(struct RECORD* r) {
-    printf("sql_universal_get_source: %d, to_number(r->pkey) = %d, r->pkey = %s\n", r, to_number(r->pkey), r->pkey ? r->pkey : "(null)");
+    printf("sql_universal_get_source: %li, to_number(r->pkey) = %d, r->pkey = %s\n", (long int)r, to_number(r->pkey), r->pkey ? r->pkey : "(null)");
     if (r->pkey && r->pkey[0]) {
         return universal_get_source(r->pkey);
     }
