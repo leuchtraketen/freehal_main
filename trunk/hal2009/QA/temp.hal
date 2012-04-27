@@ -1,8 +1,0 @@
-compile source hal2009-lang-hi.hal
-require source hal2009-lang-hi.hal
-compile source hal2009.hal
-require source hal2009.hal
-set new var current_language to 'hi'
-set new var path to "."
-do shell with var current_language, var path
-do exit with 0
