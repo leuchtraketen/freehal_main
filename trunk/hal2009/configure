@@ -7,4 +7,3 @@ grep -- "-boinc" CMakeLists.txt  && (
 
 cmake . >/dev/null 2>&1
 cmake .
-
