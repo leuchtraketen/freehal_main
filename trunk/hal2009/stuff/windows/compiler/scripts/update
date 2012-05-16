@@ -11,16 +11,28 @@ exec 5>&1
 exec >&4
 
 
+if test ! -d /compiler/status/
+then
+	mkdir /compiler/status/
+fi
+if test ! -d /compiler/download/
+then
+	mkdir /compiler/download/
+fi
+
 if test ! -d /compiler/hal2009/
 then
 	cd /compiler
-	svn co http://www.freehal.org/code/hal2009
+#	svn co http://www.freehal.org/code/hal2009
+	svn checkout http://freehal.googlecode.com/svn/trunk/hal2009/ hal2009
 fi
 
 cd /compiler/hal2009
+sleep 2
 svn cleanup ; svn cleanup
 svn revert hal2009-version.h
 svn up --non-interactive ; svn up --non-interactive
+sleep 2
 export R=svn$(svn up --non-interactive | grep -i rev | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
 if [ "x$1" != "x" ]
 then
@@ -29,13 +41,18 @@ fi
 export RR=$(echo $R | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
 sed -i "s@00000@$RR@igm" hal2009-version.h
 
+#/system/disk/compiler-win32/compiler/
 echo $R | grep step && (
-	ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_CODE'
-	ssh root@freehal.org 'echo -n Step '$RR' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_TEXT'
+	#ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_CODE'
+	#ssh root@freehal.org 'echo -n Step '$RR' > /var/www/vhosts/default/htdocs/download/LATEST_STABLE_TEXT'
+	echo -n $R > /compiler/status/LATEST_STABLE_CODE
+	echo -n Step $RR > /compiler/status/LATEST_STABLE_TEXT
 )
 echo $R | grep step || (
-	ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_CODE'
-	ssh root@freehal.org 'echo -n svn'$RR' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_TEXT'
+	#ssh root@freehal.org 'echo -n '$R' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_CODE'
+	#ssh root@freehal.org 'echo -n svn'$RR' > /var/www/vhosts/default/htdocs/download/LATEST_DEVELOPMENT_TEXT'
+	echo -n $R > /compiler/status/LATEST_DEVELOPMENT_CODE
+	echo -n svn$RR > /compiler/status/LATEST_DEVELOPMENT_TEXT
 )
 
 (
@@ -91,8 +108,10 @@ export DLL=$(echo \
 	cp gui-qt/FreeHAL-Online-Demo.exe $DLL Freehal-Online-Demo/
 	upx Freehal-Online-Demo/*
 	zip -r /tmp/freehal-${R}-online-demo-windows.zip Freehal-Online-Demo/
-	scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-${R}-online-demo-windows.zip
-	scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-latest-online-demo-windows.zip
+	#scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-${R}-online-demo-windows.zip
+	#scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-latest-online-demo-windows.zip
+	cp /tmp/freehal-${R}-online-demo-windows.zip /compiler/download/freehal-${R}-online-demo-windows.zip
+	cp /tmp/freehal-${R}-online-demo-windows.zip /compiler/download/freehal-latest-online-demo-windows.zip
 )
 
 (
@@ -116,7 +135,8 @@ export DLL=$(echo \
 # no database
 	rm -rf "/tmp/freehal-${R}-no-database-windows.zip"
 	mv Freehal "Freehal-${R}" && zip -r "/tmp/freehal-${R}-no-database-windows.zip" "Freehal-${R}" && mv "Freehal-${R}" Freehal
-	scp -C "/tmp/freehal-${R}-no-database-windows.zip" root@freehal.org:/var/www/vhosts/default/htdocs/download
+	#scp -C "/tmp/freehal-${R}-no-database-windows.zip" root@freehal.org:/var/www/vhosts/default/htdocs/download
+	cp "/tmp/freehal-${R}-no-database-windows.zip" /compiler/download/
 	rm "/tmp/freehal-${R}-no-database-windows.zip"
 
 # with database
@@ -130,16 +150,18 @@ export DLL=$(echo \
 	done
 	rm -rf /tmp/freehal-${R}-windows.zip
 	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-windows.zip Freehal-${R} && mv Freehal-${R} Freehal
-	scp -C /tmp/freehal-${R}-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
+	#scp -C /tmp/freehal-${R}-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
+	cp /tmp/freehal-${R}-windows.zip /compiler/download
 	rm /tmp/freehal-${R}-windows.zip
 
 # source code
 	rm -rf Freehal/*.{exe,dll} Freehal/runtime-perl5-win32/
 	mv Freehal Freehal-${R} && tar cplSzf /tmp/freehal-${R}.tar.gz Freehal-${R} && mv Freehal-${R} Freehal
-	scp -C /tmp/freehal-${R}.tar.gz root@freehal.org:/var/www/vhosts/default/htdocs/download
+	#scp -C /tmp/freehal-${R}.tar.gz root@freehal.org:/var/www/vhosts/default/htdocs/download
+	cp /tmp/freehal-${R}.tar.gz /compiler/download
 	rm /tmp/freehal-${R}.tar.gz
 
-	ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
+	#ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
 )
 
 (
