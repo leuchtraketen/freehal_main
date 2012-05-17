@@ -1,4 +1,3 @@
-
 Adam Alexander
 Alain Constant
 Alan Hutchings
@@ -37,10 +36,10 @@ David Lawson
 David Tomecko
 David Zastrau
 Denis Jacquet
-Dirk Gudensch ­ Wager
+Dirk Gudensch Wager
 Dm Passchier
 Donald Gray
-Dr . Joerg Kulaczew ­ Ski
+Dr. Joerg Kulaczew Ski
 Erich Weber
 Erik Tol
 Ernest Moran
@@ -52,7 +51,7 @@ Glenn Goninan
 Greg Goodsir
 Guido Zimmermann
 Handel & Dienstleistungen Arne Birkl
-Hans Toffelei ­T
+Hans Toffelei­T
 Hans Zoons
 Heike Wirtz
 Hiroki Kobayashi
@@ -116,7 +115,7 @@ Paul Drane
 Paul Haneline
 Paul Williams
 Pavel Sidelev
-Peter -­ Christia ­N Artzen
+Peter Christia N Artzen
 Peter F Schilder
 Peter Hollenbeck
 Philipp Brand
@@ -130,10 +129,10 @@ Roland Bender
 Roland Haeder
 Ronald Burk
 Ryuichi Hirano
-Sebastia ­N Alfred De Cillia
+Sebastia­N Alfred De Cillia
 Sebastian Bauer
 Shin Sik
-Sieleman ­N, Arne
+Sieleman­N, Arne
 Simon Baute
 Simon Convey
 Simon Mertens
@@ -147,7 +146,7 @@ Teemu Mannermaa
 Tetsuya Watanabe
 Thierry Drumel
 Thomas Dahl
-Thomas Kleinhen ­N
+Thomas Kleinhen­N
 Thomas Lott
 Thomas Pest
 Timo Zenker
@@ -165,7 +164,6 @@ Walter Hammerschmid
 William Brandt
 Yvan Stauffer
 christopher watts
-fb
 gilles etienne
 http://ungoogle.org
 kevin Given
@@ -176,4 +174,3 @@ r vd veen
 theage
 twistingart
 zach underwood
-Павел Кнышов
