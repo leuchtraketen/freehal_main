@@ -5,5 +5,15 @@ grep -- "-boinc" CMakeLists.txt  && (
 	grep -v -- '-boinc' CMakeLists.txt.tmp > CMakeLists.txt
 )
 
+test -d /var/lib/apt && (
+	echo Install dependencies...
+	export PKG="build-essential subversion cmake libperl-dev boinc-dev libboost-system-dev libboost-thread-dev libboost-iostreams-dev libasio-dev qt4-dev-tools wget"
+
+	test -f /usr/bin/sudo && \
+		sudo apt-get install $PKG
+	test -f /usr/bin/sudo || \
+		su -c "apt-get install $PKG"
+)
+
 cmake . >/dev/null 2>&1
 cmake .
