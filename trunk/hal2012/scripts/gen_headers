@@ -18,7 +18,7 @@ do
 	export BODY=$(cat $x.h 2>/dev/null | perl -e 'while (<STDIN>) { if (/[*]\//) { last; } } my $last = ""; while (<STDIN>) { if (/\/\/ functions begin/) { last; } print if $_ ne $last; $last = $_; } while (<STDIN>) { if (/\/\/ functions end/) { last; } } while (<STDIN>) { print; }' | grep -v GENERATED | grep -v $def | grep -v '#include "hal2012.h"');
 
 	export FUNC=$(grep " {" $y | grep -v '}' | grep -v while | grep -v namespace | grep -v extern | \
-			grep -v '\/\/' | grep -v '\/\*' | egrep -v '^([^ ]+)[ ].*::' | \
+			grep -v '\/\/' | grep -v '\/\*' | egrep -v '^([^ ]+)[ ].*::' | grep -v "<T>" | \
 			egrep -v "^\\s" | sed 's@ {@;@igm' | grep " " | grep -v ' : ' | \
 			perl -n -e 's/ = [^),]*?([),])/$1/igm; print' | \
 			sort | uniq)

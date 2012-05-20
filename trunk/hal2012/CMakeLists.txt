@@ -45,7 +45,7 @@ target_link_libraries (hal2012 m pthread z)
 
 add_executable (runner hal2012-startup.cpp hal2012-server.cpp extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-ipc.cpp hal2012-util.cpp  iowin32.c ioapi.c)
 target_link_libraries (runner m pthread pthread z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 boost_iostreams-mt boost_system-mt boost_thread_win32-mt)
-add_executable (runner-thread hal2012-startup.cpp hal2012-server-thread.cpp hal2012-download.cpp hal2012-wiki.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp  hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp  iowin32.c ioapi.c parser2012.cpp)
+add_executable (runner-thread hal2012-startup.cpp hal2012-server-thread.cpp hal2012-download.cpp hal2012-wiki.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp  hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp  iowin32.c ioapi.c hal2012-grammar2012.cpp)
 target_link_libraries (runner-thread m pthread pthread z msvcrt crypt32 ws2_32 mswsock wsock32 ole32 oleaut32 winmm uuid gdi32 boost_iostreams-mt boost_system-mt boost_thread_win32-mt)
 
 
@@ -67,7 +67,7 @@ include_directories (/add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_co
 add_executable (hal2012-server hal2012-startup.cpp hal2012-server.cpp extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-ipc.cpp hal2012-util.cpp)
 target_link_libraries (hal2012-server m crypt pthread dl z boost_thread-mt boost_system-mt)
 
-add_executable (hal2012-server-thread hal2012-startup.cpp hal2012-server-thread.cpp hal2012-download.cpp hal2012-wiki.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp  hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp parser2012.cpp)
+add_executable (hal2012-server-thread hal2012-startup.cpp hal2012-server-thread.cpp hal2012-download.cpp hal2012-wiki.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp  hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp hal2012-grammar2012.cpp)
 target_link_libraries (hal2012-server-thread m crypt pthread dl z boost_thread-mt boost_system-mt)
 
 #add_executable (hal2012 hal2012-main.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp hal2012-wiki.cpp hal2012-download.cpp)

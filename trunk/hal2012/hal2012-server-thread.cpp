@@ -28,7 +28,7 @@
 #include "hal2012-pro.h"
 #include "hal2012-sql.h"
 #include "hal2012-disk.h"
-#include "parser2012.h"
+#include "hal2012-grammar2012.h"
 
 #include <pthread.h>
 

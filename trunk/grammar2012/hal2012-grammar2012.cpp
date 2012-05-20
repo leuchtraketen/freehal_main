@@ -278,7 +278,7 @@ const char entity::type() const {
 					's') :
 			'd';
 }
-std::size_t hash_value(entity const& o) {
+std::size_t hash_value(grammar2012::entity const& o) {
 	std::size_t seed = 0;
 	boost::hash_combine(seed, o.get_data());
 	boost::hash_combine(seed, o.get_repl());
