@@ -40,13 +40,13 @@ const string grammar::print_vector(const entities& v) {
 	for (entities::const_iterator i = v.begin(); i != v.end(); ++i) {
 		if (i != v.begin())
 			ss << ", ";
-		ss << (*i)->to_str();
+		ss << (*i)->print();
 	}
 	ss << "]";
 	return ss.str();
 }
 const string grammar::print_entity(entity* i) {
-	return "{" + i->to_str() + "}";
+	return "{" + i->print() + "}";
 }
 
 entity::entity() :
@@ -90,12 +90,113 @@ void entity::init(const string text) {
 		}
 	}
 }
+entity::perlmap* entity::to_groups(perlmap* pm = 0, vector<string> v_keys =
+		vector<string>(), string keyprefix = "v-clause-1") const {
+
+	for (vector<string>::const_iterator it = virt.begin(); it != virt.end();
+			++it) {
+		if (algo::starts_with(*it, "v-clause")) {
+			keyprefix = *it;
+		} else if (algo::starts_with(*it, "v-subject")) {
+			v_keys.push_back("subjects");
+		} else if (algo::starts_with(*it, "v-object")) {
+			v_keys.push_back("objects");
+		} else if (algo::starts_with(*it, "v-verb")
+				&& !algo::starts_with(*it, "v-verbprefix")) {
+			v_keys.push_back("verbs");
+		} else if (algo::starts_with(*it, "v-verbprefix")) {
+			v_keys.push_back("verbprefixes");
+		} else if (algo::starts_with(*it, "v-adverb")
+				|| algo::starts_with(*it, "v-longadverb")) {
+			v_keys.push_back("adverbs");
+		} else if (algo::starts_with(*it, "v-questionword")) {
+			v_keys.push_back("questionwords");
+		} else if (algo::starts_with(*it, "v-extra-after")) {
+			v_keys.push_back("extra");
+		} else if (algo::starts_with(*it, "v-extra-before")) {
+			v_keys.push_back("before-adverbs");
+		}
+	}
+
+	if (pm == 0) {
+		pm = new perlmap();
+	}
+	if (text.size() > 0) {
+		for (vector<string>::const_iterator v_key_it = v_keys.begin();
+				v_key_it != v_keys.end(); ++v_key_it) {
+			pm->insert(perlmap::value_type(keyprefix + "/" + *v_key_it, text));
+		}
+
+	} else {
+		if (embed.size() > 0) {
+			for (entities::const_iterator it = embed.begin(); it != embed.end();
+					++it) {
+				(*it)->to_groups(pm, v_keys);
+			}
+		}
+	}
+
+	return pm;
+}
+const string entity::print_perl(entity::perlmap* pm, string v_key = "",
+		string keyprefix = "v-clause-1") {
+	stringstream ss;
+	if (v_key.size() == 0) {
+		if (keyprefix == "v-clause-1") {
+			ss << "$parsed = ";
+		}
+
+		ss << "{" << endl;
+		ss << "'subjects' => [ " << print_perl(pm, "subjects", keyprefix)
+				<< " ],";
+		ss << "'objects' => [ " << print_perl(pm, "objects", keyprefix)
+				<< " ],";
+		ss << "'verbs' => [ " << print_perl(pm, "verbs", keyprefix) << " ],";
+		ss << "'adverbs' => [ " << print_perl(pm, "before-adverbs", keyprefix)
+				<< print_perl(pm, "adverbs", keyprefix) << " ],";
+		ss << "'extra' => [ " << print_perl(pm, "extra", keyprefix) << " ],";
+		ss << "'questionword' => [ "
+				<< print_perl(pm, "questionwords", keyprefix) << " ],";
+		if (keyprefix == "v-clause-1") {
+			ss << endl;
+			ss << "'clauses' => [";
+			ss << print_perl(pm, "", "v-clause-2");
+			ss << "],";
+		}
+		ss << "}";
+
+		if (keyprefix == "v-clause-1") {
+			ss << ";";
+		} else {
+			ss << "," << endl;
+		}
+	} else {
+		if (v_key == "verbs" && pm->count(keyprefix + "/verbs") == 1
+				&& pm->count(keyprefix + "/verbprefixes") > 0) {
+			// fix verbprefixes
+			ss << "[ '" << pm->find(keyprefix + "/verbprefixes")->second
+					<< pm->find(keyprefix + "/verbs")->second << "', 0 ], ";
+		} else {
+			// normal
+			pair<perlmap::iterator, perlmap::iterator> iters = pm->equal_range(
+					keyprefix + "/" + v_key);
+			for (perlmap::iterator iter = iters.first; iter != iters.second;
+					++iter) {
+				ss << "[ '" << iter->second << "', 0 ], ";
+			}
+		}
+		if (v_key == "adverbs" && pm->count(keyprefix + "/verbs") != 1
+				&& pm->count(keyprefix + "/verbprefixes") > 0) {
+			// fix verbprefixes
+			ss << "[ '" << pm->find(keyprefix + "/verbprefixes")->second
+					<< "', 0 ], ";
+		}
+	}
+
+	return ss.str();
+}
 const string entity::print_long(string left = "") const {
-	string str =
-			(data.size() == 0) ?
-					(symbol.size() == 0 ?
-							(repl.size() == 0 ? "null" : repl) : symbol) :
-					data;
+	string str = to_key();
 	if (virt.size()) {
 		vector<string>::const_iterator it;
 		for (it = virt.begin(); it != virt.end(); ++it) {
@@ -118,11 +219,7 @@ const string entity::print_long(string left = "") const {
 	return ss.str();
 }
 const string entity::print() const {
-	string str =
-			(data.size() == 0) ?
-					(symbol.size() == 0 ?
-							(repl.size() == 0 ? "null" : repl) : symbol) :
-					data;
+	string str = to_key();
 	if (virt.size()) {
 		vector<string>::const_iterator it;
 		for (it = virt.begin(); it != virt.end(); ++it) {
@@ -130,7 +227,9 @@ const string entity::print() const {
 			str += *it;
 		}
 	}
-	str = "{" + str + "}";
+	if (text.size() > 0) {
+		str += ": '" + text + "'";
+	}
 	if (embed.size()) {
 		str += " < ";
 		entities::const_iterator it;
@@ -144,11 +243,7 @@ const string entity::print() const {
 	return str;
 }
 const string entity::to_str() const {
-	string str =
-			(data.size() == 0) ?
-					(symbol.size() == 0 ?
-							(repl.size() == 0 ? "null" : repl) : symbol) :
-					data;
+	string str = to_key();
 	if (virt.size()) {
 		vector<string>::const_iterator it;
 		for (it = virt.begin(); it != virt.end(); ++it) {
@@ -523,7 +618,7 @@ entities* grammar::parse_input(const string words_str) {
 
 	// split by #
 	vector<string> words;
-	algo::split(words, words_str, algo::is_any_of("#"));
+	algo::split(words, words_str, algo::is_any_of("#>"));
 	vector<string>::iterator word;
 	for (word = words.begin(); word != words.end(); ++word) {
 		// ignore invalid words
@@ -533,7 +628,7 @@ entities* grammar::parse_input(const string words_str) {
 
 		// split by |
 		vector<string> parts;
-		algo::split(parts, *word, algo::is_any_of("|"));
+		algo::split(parts, *word, algo::is_any_of("|<"));
 		if (parts.size() != 2) {
 			cout << "Error! no or too many pipe characters in: \"" << *word
 					<< "\" from: \"" << words_str << "\"" << endl;
@@ -541,8 +636,12 @@ entities* grammar::parse_input(const string words_str) {
 		}
 
 		// construct objects
-		entity* obj = add_symbol(parts.at(0));
-		obj->set_text(parts.at(1));
+		string part_of_speech = parts.at(0);
+		string text = parts.at(1);
+		boost::trim(part_of_speech);
+		boost::trim(text);
+		entity* obj = add_entity(new entity(this, part_of_speech));
+		obj->set_text(text);
 		words_i->push_back(obj);
 	}
 
@@ -636,14 +735,17 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 }
 
 vector<entities*>* grammar::reduce(entities* old_words_i) {
+	if (is_verbose())
+		cout << "reduce: " << print_vector(*old_words_i) << endl << endl;
+
 	vector<entities*>* final = new vector<entities*>();
 	reducelist* words_list = new reducelist();
 	words_list->insert(
 			reducelist::value_type(all_to_str(*old_words_i), old_words_i));
-	int step = 1;
+	int step = 0;
 	while (step++ <= 50) {
 		if (is_verbose())
-			cout << "reduce step " << step << "..." << endl;
+			cout << "reduce step " << step << "..." << endl << endl;
 		if (words_list->size() == 0)
 			break;
 
@@ -659,6 +761,8 @@ vector<entities*>* grammar::reduce(entities* old_words_i) {
 
 				new_words_list->insert(*temp_iter);
 			}
+			if (is_verbose())
+				cout << endl;
 		}
 		delete words_list;
 		words_list = new_words_list;
@@ -683,7 +787,7 @@ const string grammar::print_input(const string words_str) {
 
 	// split by #
 	vector<string> words;
-	algo::split(words, words_str, algo::is_any_of("#"));
+	algo::split(words, words_str, algo::is_any_of("#>"));
 	vector<string>::iterator word;
 	for (word = words.begin(); word != words.end(); ++word) {
 		// ignore invalid words
@@ -693,14 +797,18 @@ const string grammar::print_input(const string words_str) {
 
 		// split by |
 		vector<string> parts;
-		algo::split(parts, *word, algo::is_any_of("|"));
+		algo::split(parts, *word, algo::is_any_of("|<"));
 		if (parts.size() != 2) {
 			cout << "  - Error! no or too many pipe characters in:" << endl
 					<< "    " << *word << endl;
 			continue;
 		}
 
-		ss << "  - " << parts.at(0) << " (" << parts.at(1) << ")" << endl;
+		string part_of_speech = parts.at(0);
+		string text = parts.at(1);
+		boost::trim(part_of_speech);
+		boost::trim(text);
+		ss << "  - " << part_of_speech << ": '" << text << "'" << endl;
 	}
 
 	return ss.str();
@@ -715,22 +823,51 @@ const string grammar::print_output(vector<entities*>* output_list) {
 		for (entities::iterator iter = output->begin(); iter != output->end();
 				++iter) {
 			ss << (*iter)->print_long();
+
+			/*entity::perlmap* pm = (*iter)->to_groups();
+			 for (entity::perlmap::iterator it = pm->begin(); it != pm->end();
+			 ++it) {
+			 ss << it->first << " => " << it->second << endl;
+			 }*/
+
+			ss << endl << endl;
+			entity::perlmap* pm = (*iter)->to_groups();
+			ss << entity::print_perl(pm);
+			ss << endl << endl;
 		}
 	}
 
 	return ss.str();
 }
-void grammar::parse(const string words_str) {
+const string grammar::print_perl(vector<entities*>* output_list) {
+	stringstream ss;
+
+	for (vector<entities*>::iterator iter_list = output_list->begin();
+			iter_list != output_list->end(); ++iter_list) {
+		entities* output = *iter_list;
+		for (entities::iterator iter = output->begin(); iter != output->end();
+				++iter) {
+			entity::perlmap* pm = (*iter)->to_groups();
+			ss << entity::print_perl(pm);
+		}
+	}
+
+	return ss.str();
+}
+const string grammar::parse(const string words_str) {
 	cout << "========================================" << endl
 			<< "============  Grammar 2012  ============" << endl
 			<< "========================================" << endl << endl
-			<< "input: " << endl << endl << print_input(words_str) << endl;
+			<< "input: " << endl << endl << grammar::print_input(words_str)
+			<< endl;
 
 	entities* words_i = parse_input(words_str);
 	vector<entities*>* reduced = reduce(words_i);
 	reduced->empty();
 
-	cout << "output:" << endl << endl << print_output(reduced) << endl;
+	cout << "output:" << endl << endl << grammar::print_output(reduced) << endl;
+
+	return grammar::print_perl(reduced);
 }
 
 void grammar::set_verbose(bool v) {
