@@ -51,6 +51,8 @@ require source hal2009-lang-indep.hal
 
 compile source hal2009-parser-common.hal
 require source hal2009-parser-common.hal
+compile source hal2009-grammar2012.hal
+require source hal2009-grammar2012.hal
 compile source hal2009-parser-bottomup.hal
 require source hal2009-parser-bottomup.hal
 compile source hal2009-parser-monolithic.hal

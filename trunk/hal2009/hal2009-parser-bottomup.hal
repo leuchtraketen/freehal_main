@@ -721,7 +721,7 @@ define action reduce_with_rules with array premises, hash rules, array data_pos_
     do return with 0
 done
 
-define action new_parser_start with array grammar, array data, var lang, var path do
+define action _new_parser_start with array grammar, array data, var lang, var path do
 
     set new array data_words to elements_of_array with array data, 0
     set new array data_pos to elements_of_array with array data, 1

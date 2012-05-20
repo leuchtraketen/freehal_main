@@ -28,6 +28,7 @@
 #include "hal2009-pro.h"
 #include "hal2009-sql.h"
 #include "hal2009-disk.h"
+#include "parser2012.h"
 
 #include <pthread.h>
 
@@ -652,6 +653,16 @@ void* hal2009_handle_signal(void* _p) {
         fprintf(output(), "Release memory now.\n");
         free(csv_data);
         fprintf(output(), "Memory is released.\n");
+    }
+    else if (type == "grammar2012") {
+
+	grammar2012::grammar* g = new grammar2012::grammar();
+	g->read_grammar("grammar.txt");
+	g->set_verbose(false);
+	g->expand();
+	const string perl_eval = g->parse(text);
+        hal2009_send_signal("grammar2012", perl_eval);
+
     }
     else if (type == "output") {
         output_by_signal = text;

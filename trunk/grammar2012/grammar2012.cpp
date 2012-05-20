@@ -1,5 +1,5 @@
 /*
- * parser2012.cpp
+ * grammar2012.cpp
  *
  *  Created on: 18.05.2012
  *      Author: tobias

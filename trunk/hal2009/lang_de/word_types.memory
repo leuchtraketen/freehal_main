@@ -3,7 +3,7 @@ Abend:
   genus: m
   type: n
 Ahnung:
-  count: 14
+  count: 19
   genus: f
   type: n
 Alkohol:
@@ -16,8 +16,14 @@ Apple:
 Barack:
   count: 1
   type: n
+Das:
+  count: 1
+  type: art
 Es:
   count: 20
+  type: n
+Felix:
+  count: 10
   type: n
 Hallo:
   count: 4
@@ -42,6 +48,9 @@ Obstbrand:
 Tag:
   count: 3
   type: n
+Tobias:
+  count: 10
+  type: n
 alkohol:
   count: 13
   genus: m
@@ -62,13 +71,13 @@ barack:
   count: 1
   type: n
 dir:
-  count: 39
+  count: 42
   type: n
 du:
-  count: 37
+  count: 39
   type: n
 es:
-  count: 40
+  count: 55
   type: n
 gar:
   count: 9
@@ -78,10 +87,10 @@ hallo:
   genus: s
   type: n
 hi:
-  count: 2
+  count: 3
   type: inter
 ich:
-  count: 25
+  count: 33
   type: n
 jahre:
   count: 7
@@ -96,7 +105,7 @@ trinkst:
   count: 14
   type: vi
 und:
-  count: 9
+  count: 20
   type: linking
 Antwort:
   genus: f
@@ -107,6 +116,10 @@ Daten:
 Eingabe:
   genus: f
   type: n
+Hm:
+  type: inter
+Keine:
+  type: pron
 Ungarn:
   type: n
 beantworten:

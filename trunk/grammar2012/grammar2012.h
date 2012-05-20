@@ -1,5 +1,5 @@
 /*
- * parser2012.h
+ * grammar2012.h
  *
  *  Created on: 18.05.2012
  *      Author: tobias

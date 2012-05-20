@@ -3040,12 +3040,9 @@ define action is_job with var lang, var _word do
     set new flag is_a_job to 0
 
     if flag is_a_job is false do
-    print var word concat new line
         if var word matches /(gebrueder)|(^bundes)|(minister)|(meister$)|(ger$)/ do
-    print "is a job" concat new line
             set flag is_a_job to 1
         done
-    print "is no job" concat new line
     done
 
     if flag is_a_job is false do

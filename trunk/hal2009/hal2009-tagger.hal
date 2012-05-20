@@ -59,19 +59,19 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
 
     set new array check_tags to memory_get_by_name using var file_name, var name_of_entry, var lang, var path
     if not is an empty array check_tags do
-        print "Already in ?-file: " concat var name_of_entry concat " (" concat var file_name concat ")"
+        print "already found '" concat var name_of_entry concat "' in: '" concat var file_name concat "'"
         print new line
         do return without arguments
     done
     set new array check_tags to memory_get_by_name using "word_types.memory", var name_of_entry, var lang, var path
     if not is an empty array check_tags do
-        print "Already in memory file: " concat var name_of_entry
+        print "already found '" concat var name_of_entry concat "' in: '" concat var file_name concat "'"
         print new line
         do return without arguments
     done
     set new array check_tags to memory_get_by_name using "word_types.self-taggered", var name_of_entry, var lang, var path
     if not is an empty array check_tags do
-        print "Already in self-taggered file: " concat var name_of_entry
+        print "already found '" concat var name_of_entry concat "' in: '" concat var file_name concat "'"
         print new line
         do return without arguments
     done
@@ -80,6 +80,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     #    print "Already in protocol file: " concat var name_of_entry
     #    print new line
     #    do return without arguments
+
     #done
     #set new array check_tags to memory_get_by_name using "word_types.brain", var name_of_entry, var lang, var path
     #if not is an empty array check_tags do
@@ -135,7 +136,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
     done
 
     do be_slow without arguments
-    print "Setting   " concat var name_of_entry concat "    \tin file " concat var file_name concat "\t to " concat from array tags 1st element
+    print "setting: '" concat var name_of_entry concat "' to '" concat from array tags 1st element concat "' in '" concat var file_name concat "'"
     print new line
 
     if not from array tags 1st element do
@@ -164,7 +165,7 @@ define action memory_set_by_name with var file_name, var name_of_entry, array ta
         set from array tags 1st element to 'inter'
     done
 
-    if from array tags 1st element matches /q/ do
+    if from array tags 1st element matches /^q$/ do
         print "POS matches 'q', exiting memory_set_by_name..."
         print new line
         do return without arguments
@@ -211,7 +212,7 @@ define action memory_build_cache with var file_name, var lang, var path do
         set new var input_handle to handle for file name var path concat "/lang_" concat var lang concat "/" concat var file_name, read
 
         do be_slow without arguments
-        print "Caching file " concat var file_name concat "..."
+        print "caching file " concat var file_name concat "..."
         print new line
 
         set new var entry to ""
@@ -255,7 +256,7 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
     do memory_build_cache with var file_name, var lang, var path
 
     do be_slow without arguments
-    print "search    in " concat var file_name concat ": " concat var name_of_entry
+    print "  " concat var file_name concat ": search: '" concat var name_of_entry concat "'"
     print new line
 
     set new array contents to an empty array
@@ -326,14 +327,11 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         set var i to var i + 1
     done
     if (not var type matches "q") or (not var genus matches "q") do
-        print "found     in " concat var file_name concat ": " concat var name_of_entry
-        print new line
+        print "  " concat var file_name concat ": found:  '" concat var name_of_entry concat "'"
 
-        print "    type:  " concat var type
-        print new line
-        print "    genus: " concat var genus
-        print new line
-        print "    count: " concat var count
+        print " (type: " concat var type concat ", "
+        print "genus: " concat var genus concat ", "
+        print "count: " concat var count concat ")"
         print new line
 
         do memory_plus with var file_name, var matched_id, var count + 1, var lang, var path
@@ -341,8 +339,9 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         do return with [ var type, var genus ]
     done
 
-    print "not found in " concat var file_name concat ": " concat var name_of_entry
-    print new line
+    #print "  " concat var file_name concat ": not found."
+    #print "not found in " concat var file_name concat ": " concat var name_of_entry
+    #print new line
     do return using an empty array
 done
 
@@ -566,6 +565,9 @@ define action compute_tags with var word, var lang, var path do
         do return with array tags
     done
 
+    print new line
+    print "find out tags: '" concat var word concat "'" concat new line
+
     set new array main_files to an empty array
     push into array main_files, "word_types.memory"
     push into array main_files, "word_types.self-taggered"
@@ -584,67 +586,28 @@ define action compute_tags with var word, var lang, var path do
         done
 
         # Is it built in into FreeHAL?
-        if is an empty array tags do
-            set array tags to memory_get_by_name using var main_file, var word, var lang, var path
-            set from array tags 1st element to from global hash builtin_part_of_speech element { var word }
+        set new array variants to an empty array
+        push into array variants, var word
+        push into array variants, ucfirst(var word)
+        push into array variants, lc(var word)
 
-            if not from array tags 1st element do
-                set array tags to an empty array
-                print "NOT built in: " concat var word
+        for each new var variant in array variants do
+            if from global hash builtin_part_of_speech element { var word } not is empty string do
+                set array tags to memory_get_by_name using var main_file, var variant, var lang, var path
+                set from array tags 1st element to from global hash builtin_part_of_speech element { var variant }
+                print "  built in: '" concat var variant concat "' - " concat from array tags 1st element
                 print new line
-            done
-            else do
-                print "built in: " concat from array tags 1st element
-                print new line
-
-                # If no noun, we need no genus, so skip the rest
-                if not from array tags 1st element matches /n/ do
-                    go to last
-                done
+                go to last
             done
         done
-        if is an empty array tags do
-            set array tags to memory_get_by_name using var main_file, ucfirst(var word), var lang, var path
-            set from array tags 1st element to from global hash builtin_part_of_speech element { ucfirst(var word) }
-
-            if not from array tags 1st element do
-                set array tags to an empty array
-                print "NOT built in: " concat var word
-                print new line
-            done
-            else do
-                print "built in: " concat from array tags 1st element
-                print new line
-
-                # If no noun, we need no genus, so skip the rest
-                if not from array tags 1st element matches /n/ do
-                    go to last
-                done
-            done
-        done
-        if is an empty array tags do
-            set array tags to memory_get_by_name using var main_file, lc(var word), var lang, var path
-            set from array tags 1st element to from global hash builtin_part_of_speech element { lc(var word) }
-
-            if not from array tags 1st element do
-                set array tags to an empty array
-                print "NOT built in: " concat var word
-                print new line
-            done
-            else do
-                print "built in: " concat from array tags 1st element
-                print new line
-
-                # If no noun, we need no genus, so skip the rest
-                if not from array tags 1st element matches /n/ do
-                    go to last
-                done
-            done
+        # If no noun, we need no genus, so skip the rest
+        if from array tags 1st element not is empty string and from array tags 1st element not matches /^n$/ do
+            go to last
         done
 
         if is an empty array tags do
             if lc(var word) matches /<[{]><[{]><[{]>(.*?)<[}]><[}]><[}]>/ do
-                print "predefined: " concat $0
+                print "  predefined: " concat $0
                 print new line
                 set from array tags 1st element to $0
                 go to last
@@ -838,6 +801,8 @@ define action compute_tags with var word, var lang, var path do
     if var word matches /^_(.*?)_$/ do
         do compute_tags with $0, var lang, var path
     done
+
+    print new line
 
     # Return the result.
     do return using array tags
