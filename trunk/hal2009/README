@@ -27,15 +27,15 @@ To compile and install FreeHAL, you need:
 To compile the command line version of FreeHAL, invoke:
 
     $ cmake .
-    $ make hal2009
+    $ make hal2012
 
 Then, execute FreeHAL 2009 by running:
 
-    $ ./hal2009 -i "A german sentence you want to say to FreeHAL"
+    $ ./hal2012 -i "A german sentence you want to say to FreeHAL"
 
 or:
 
-    $ ./hal2009 -s # This starts a shell where you can type in sentences
+    $ ./hal2012 -s # This starts a shell where you can type in sentences
 
 English will be the next language which is going to be ported from the old
 FreeHAL to FreeHAL 2009.

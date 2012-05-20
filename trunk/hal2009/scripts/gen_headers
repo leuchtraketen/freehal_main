@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export HEAD=$(cat hal2009.h | perl -e 'while (<STDIN>) { print; if (/[*]\//) { last; } }');
+export HEAD=$(cat hal2012.h | perl -e 'while (<STDIN>) { print; if (/[*]\//) { last; } }');
 
 rm -rf backup
 mkdir backup
@@ -15,7 +15,7 @@ do
 	export def=$(echo "$x" | perl -n -e '$_ = uc $_; s/[._-]/_/igm; print')
 	echo $def, $y, $x.h
 
-	export BODY=$(cat $x.h 2>/dev/null | perl -e 'while (<STDIN>) { if (/[*]\//) { last; } } my $last = ""; while (<STDIN>) { if (/\/\/ functions begin/) { last; } print if $_ ne $last; $last = $_; } while (<STDIN>) { if (/\/\/ functions end/) { last; } } while (<STDIN>) { print; }' | grep -v GENERATED | grep -v $def | grep -v '#include "hal2009.h"');
+	export BODY=$(cat $x.h 2>/dev/null | perl -e 'while (<STDIN>) { if (/[*]\//) { last; } } my $last = ""; while (<STDIN>) { if (/\/\/ functions begin/) { last; } print if $_ ne $last; $last = $_; } while (<STDIN>) { if (/\/\/ functions end/) { last; } } while (<STDIN>) { print; }' | grep -v GENERATED | grep -v $def | grep -v '#include "hal2012.h"');
 
 	export FUNC=$(grep " {" $y | grep -v '}' | grep -v while | grep -v namespace | grep -v extern | \
 			grep -v '\/\/' | grep -v '\/\*' | egrep -v '^([^ ]+)[ ].*::' | \
@@ -38,7 +38,7 @@ do
 	cat > $x.h__ << EOF
 $HEAD
 
-#include "hal2009.h"
+#include "hal2012.h"
 $BEGIN_EXTERN_C
 #ifndef $def
 #define $def 1

@@ -22,7 +22,7 @@
 #define USE_CXX 1
 #define NOT_HEADER_ONLY 1
 #define DONT_DECLARE_STD 1
-#include "hal2009.h"
+#include "hal2012.h"
 
 #include <unistd.h>
 
@@ -34,7 +34,7 @@ char* global_distrib__programming_language            = "perl5";
 char* global_distrib__output                          = (char*)calloc(5001, 1);
 short global_distrib__initialized_signal_handler      = 0;
 
-void* hal2009_answer__1(void* x) {
+void* hal2012_answer__1(void* x) {
     char* input;
     char* language;
     input = (char*)calloc(strlen((const char*)x), 1);
@@ -43,13 +43,13 @@ void* hal2009_answer__1(void* x) {
     ((char*)x)[2] = '\0';
     strcpy(language, (const char*)x);
     
-    char* copy_of_programming_language = (char*)cxxhalmalloc(16, "hal2009_server_statement");
+    char* copy_of_programming_language = (char*)cxxhalmalloc(16, "hal2012_server_statement");
     strcpy(copy_of_programming_language, global_distrib__programming_language);
-    char* copy_of_language             = (char*)cxxhalmalloc(16, "hal2009_server_statement");
+    char* copy_of_language             = (char*)cxxhalmalloc(16, "hal2012_server_statement");
     strcpy(copy_of_language,             language);
-    char* copy_of_base_dir             = (char*)cxxhalmalloc(16, "hal2009_server_statement");
+    char* copy_of_base_dir             = (char*)cxxhalmalloc(16, "hal2012_server_statement");
     strcpy(copy_of_base_dir,             global_distrib__base_dir);
-    char* copy_of_input                = (char*)cxxhalmalloc(1025, "hal2009_server_statement");
+    char* copy_of_input                = (char*)cxxhalmalloc(1025, "hal2012_server_statement");
     strncpy(copy_of_input,               input, 1024);
     
     
@@ -63,18 +63,18 @@ void* hal2009_answer__1(void* x) {
     }
 
     if (!global_distrib__initialized_signal_handler) {
-        hal2009_clean();
+        hal2012_clean();
 
         fprintf(stdout, "Programming language is %s\n", copy_of_programming_language);
         fprintf(stdout, "Text language is %s\n", copy_of_language);
-        pthread_t signal_thread = hal2009_start_signal_handler(strdup(copy_of_programming_language), strdup(copy_of_language), MULTI);
+        pthread_t signal_thread = hal2012_start_signal_handler(strdup(copy_of_programming_language), strdup(copy_of_language), MULTI);
         fprintf(stdout, "Shell started...\nThis is %s.\n\n", FULL_NAME);
         sleep(2);
         
         global_distrib__initialized_signal_handler = 1;
     }
     
-    pthread_t answer_thread = hal2009_answer(copy_of_input, copy_of_programming_language, copy_of_language, copy_of_base_dir, NOT_JOIN, MULTI);
+    pthread_t answer_thread = hal2012_answer(copy_of_input, copy_of_programming_language, copy_of_language, copy_of_base_dir, NOT_JOIN, MULTI);
     //pthread_join(answer_thread, NULL);
 
     while (global_distrib__output == 0 || global_distrib__output[0] == 0) {
@@ -87,7 +87,7 @@ void* hal2009_answer__1(void* x) {
     return (void*)result;
 }
 
-void hal2009_handle_signal(void* arg) {
+void hal2012_handle_signal(void* arg) {
     char* type       = (char*)((void**)arg)[0];
     char* text       = (char*)((void**)arg)[1];
     void* start_type = (void*)((void**)arg)[2];
@@ -106,17 +106,17 @@ void hal2009_handle_signal(void* arg) {
             int f2 = 0;
             sscanf(text, "%98[a-zA-Z]%d\n%d", &link, &f1, &f2);
             fprintf(output(), "--%s--\n%s\n%i\n%i", text, link, f1, f2);
-            hal2009_add_link(link, f1, f2);
+            hal2012_add_link(link, f1, f2);
         }
     }
     else if (0 == strcmp(type, "_output__add_pro_file")) {
-        hal2009_add_pro_file(text);
+        hal2012_add_pro_file(text);
         FILE* target = fopen("_input__add_pro_file", "w+b");
         halclose(target);
     }
     else if (0 == strcmp(type, "_output__get_csv")) {
-        struct DATASET set = hal2009_get_csv(text);
-        const char* csv_data = hal2009_make_csv(&set);
+        struct DATASET set = hal2012_get_csv(text);
+        const char* csv_data = hal2012_make_csv(&set);
         FILE* target = fopen("_input__get_csv", "w+b");
         halwrite(csv_data, 1, strlen(csv_data), target);
         halclose(target);
@@ -141,10 +141,10 @@ void hal2009_handle_signal(void* arg) {
 #define N_FUNC		1
 
 #define PTR_TO_STR 	{ \
-				(fp)hal2009_answer__1, \
+				(fp)hal2012_answer__1, \
 			}
 
 #define STR_TO_PTR 	{ \
-				"hal2009_answer__1", \
+				"hal2012_answer__1", \
 			}
 

@@ -1,7 +1,7 @@
-compile source hal2009-lang-de.hal
-require source hal2009-lang-de.hal
-compile source hal2009.hal
-require source hal2009.hal
+compile source hal2012-lang-de.hal
+require source hal2012-lang-de.hal
+compile source hal2012.hal
+require source hal2012.hal
 set new var current_language to 'de'
 set new var path to "."
 

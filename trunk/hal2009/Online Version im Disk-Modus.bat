@@ -1,5 +1,5 @@
 @echo off
 :start
-hal2009-online-demo.exe disk
+hal2012-online-demo.exe disk
 goto :start
 

@@ -1,0 +1,231 @@
+#
+# This file is part of FreeHAL 2012.
+#
+# Copyright(c) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Tobias Schulz and contributors.
+# http://www.freehal.org
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 3
+# of the License, or any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+
+define action be_slow without arguments do
+    if exists: "SLOW", end test do
+        set new var be_slow__new_time to time without arguments
+        set new var diff to var be_slow__new_time - var be_slow__last_time
+        if var diff > 3 do
+            set var diff to 3
+        done
+        if var diff >= 0.5 do
+            print STDERR "Micro-managing freehal process: "
+            print STDERR var diff
+            print STDERR " cpu seconds were used."
+            print STDERR new line
+
+            set new var timeout to 25 * var diff
+            set new var last_time to time without arguments
+            while var timeout > 0 do
+                do wait var timeout seconds
+
+                set new var new_time to time without arguments
+                set var timeout to var timeout - var new_time + var last_time
+                set var last_time to var new_time
+            done
+
+            set var be_slow__last_time to time without arguments
+        done
+    done
+done
+
+# ~~~~~ CONFIG CODE ~~~~~
+
+define action check_config with var name, var default, var lang, var path do
+    set new var file_name to "config.txt"
+
+    set new var config_path to var path concat "/" concat var file_name
+    set new var input_handle to handle for file name var config_path, read
+    if not var input_handle do
+        set var config_path to var path concat "/../" concat var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+    if not var input_handle do
+        set var config_path to var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+    if not var input_handle do
+        set var config_path to "../" concat var file_name
+        set var input_handle to handle for file name var config_path, read
+    done
+
+    if var input_handle do
+        for each new var line from var input_handle do
+            if var line matches /var name\s*?<[=]>\s*?(.*?)\s*?$/ do
+                set new var value to $0
+                do regex with var value: /^\s+?/ -> "" :global
+                do regex with var value: /\s+?$/ -> "" :global
+                print var config_path concat ": " concat var name concat " = " concat var value
+                print new line
+                do return with var value
+            done
+        done
+    done
+
+    set new var output_handle to handle for file name var config_path, append
+    if not var output_handle do
+        set var config_path to var path concat "/" concat var file_name
+        set var output_handle to handle for file name var config_path, append
+    done
+    if var output_handle do
+        print into var output_handle data var name concat " = " concat var default concat new line
+        do close with var output_handle
+    done
+
+    print var config_path concat ": " concat var name concat " = ???, default = " concat var default
+    print new line
+    do return with var default
+done
+
+define action make_ascii with var text is rw do
+    do return with var text
+done
+
+define action print_array with array data do
+    set new flag i to 0
+
+    print "[ "
+    for each new var __data in array data do
+        if flag i is true do
+            print ", "
+        done
+
+        set flag i to 1
+        print "'" concat var __data concat "'"
+    done
+    print " ]"
+done
+
+define action join_elements with array list do
+    set new var txt to ''
+    for each new var listelement in array list do
+        set var txt to var txt concat " ("
+        set var txt to var txt concat var listelement
+        set var txt to var txt concat "), "
+    done
+    do return with var txt
+done
+
+define action last_element with array list do
+    do return with from array list element [ size of array list - 1 ]
+done
+
+define action escape_html with var text do
+    do regex with var text: /<[<]>/ -> "&lt;" :global
+    do regex with var text: /<[>]>/ -> "&gt;" :global
+
+    do return with var text
+done
+
+define action trigger_check_files without arguments do
+    set new var output_handle to handle for file name "_check_files", write
+    do close with var output_handle
+done
+
+#    do hal2012_send_signal with "add_pro_file", var file
+
+define action hal2012_send_signal with var vfile, var data do
+    print "send (hal->c): IPC:" concat new line
+    print var vfile concat new line
+    print var data concat new line
+    print "." concat new line
+    print "IPC:" concat new line
+    print var vfile concat new line
+    print var data concat new line
+    print "." concat new line
+done
+
+set new array stdin_responses to an empty array
+
+define action hal2012_fetch_signal with var _vfile do
+    print "hal2012_fetch_signal:" concat var _vfile concat new line
+
+    for each new array _response in array stdin_responses do
+        if from array _response 1st item matches var _vfile do
+            set new array new_stdin_responses to an empty array
+            for each new array new_response in array stdin_responses do
+                if array new_response not matches array _response do
+                    push into array new_stdin_responses, array new_response
+                done
+            done
+            set array stdin_responses to array new_stdin_responses
+            do return with from array _response 2nd item
+        done
+    done
+
+    set new var check_tell to 10000
+    while 1 do
+        set var check_tell to var check_tell - 1
+        if var check_tell is 0 do
+            do exit with 0
+        done
+
+        set new var response to the next line from STDIN
+        do chomp with var response
+        if var response matches "IPC:" do
+            print "get (c->hal): IPC:" concat new line
+            set new var vfile to the next line from STDIN
+            do chomp with var vfile
+            print var vfile concat new line
+            set new var data to ""
+            set new var data_line to ""
+            while var data_line not matches "." do
+                set var data_line to the next line from STDIN
+                do chomp with var data_line
+                if var data do
+                    set var data to var data concat new line
+                done
+                set var data to var data concat var data_line
+                print var data_line concat new line
+            done
+            do regex with var data: /\s*?\.$/, ""
+
+            if var vfile matches var _vfile do
+                do return with var data
+            done
+            else do
+                set new array _response to an empty array
+                push into array _response, var vfile
+                push into array _response, var data
+                push into array stdin_responses, array _response
+            done
+        done
+    done
+done
+
+define action part_of_array with array list, var i, var j do
+    set new array _list to an empty array
+    while var i <= var j do
+        push into array _list, from array list element [ var i ]
+        set var i to var i + 1
+    done
+    do return with array _list
+done
+
+define action all_empty_in_array with array list, var i, var j do
+    while var i <= var j do
+        if from array list element [ var i ] not is empty string do
+             do return with 0
+        done
+        set var i to var i + 1
+    done
+    do return with 1
+done

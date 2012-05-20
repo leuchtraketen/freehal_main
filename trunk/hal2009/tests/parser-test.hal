@@ -19,8 +19,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-compile source hal2009-parser.hal
-require source hal2009-parser.hal
+compile source hal2012-parser.hal
+require source hal2012-parser.hal
 
 
 # set new array data to [ ["der", "d-article"], ["test", "d-noun"], ["ist", "d-verb"], ["ein", "d-article"], ["mensch", "d-noun"] ];

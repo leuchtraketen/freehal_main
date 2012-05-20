@@ -19,8 +19,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 
-compile source hal2009-summarize.hal
-require source hal2009-summarize.hal
+compile source hal2012-summarize.hal
+require source hal2012-summarize.hal
 
 
 set new var current_language to 'de'

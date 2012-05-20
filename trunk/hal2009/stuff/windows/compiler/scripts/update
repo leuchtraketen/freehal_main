@@ -20,17 +20,17 @@ then
 	mkdir /compiler/download/
 fi
 
-if test ! -d /compiler/hal2009/
+if test ! -d /compiler/hal2012/
 then
 	cd /compiler
-#	svn co http://www.freehal.org/code/hal2009
-	svn checkout http://freehal.googlecode.com/svn/trunk/hal2009/ hal2009
+#	svn co http://www.freehal.org/code/hal2012
+	svn checkout http://freehal.googlecode.com/svn/trunk/hal2012/ hal2012
 fi
 
-cd /compiler/hal2009
+cd /compiler/hal2012
 sleep 2
 svn cleanup ; svn cleanup
-svn revert hal2009-version.h
+svn revert hal2012-version.h
 svn up --non-interactive ; svn up --non-interactive
 sleep 2
 export R=svn$(svn up --non-interactive | grep -i rev | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
@@ -39,7 +39,7 @@ then
         export R="$1"
 fi
 export RR=$(echo $R | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
-sed -i "s@00000@$RR@igm" hal2009-version.h
+sed -i "s@00000@$RR@igm" hal2012-version.h
 
 #/system/disk/compiler-win32/compiler/
 echo $R | grep step && (
@@ -70,16 +70,16 @@ echo $R | grep step || (
 )
 
 (
-	make hal2009-boinc
-	cp -f hal2009-boinc.exe /disk/web1/var/www/projects/freehal_at_home/new/apps/windows/hal2009-boinc.exe
+	make hal2012-boinc
+	cp -f hal2012-boinc.exe /disk/web1/var/www/projects/freehal_at_home/new/apps/windows/hal2012-boinc.exe
 )
 
 (
 	make clean
 	rm -rf CMakeCache.txt CMakeFiles
 	cmake .
-	make hal2009-boinc
-	cp -f hal2009-boinc /disk/web1/var/www/projects/freehal_at_home/new/apps/linux/hal2009-boinc.32
+	make hal2012-boinc
+	cp -f hal2012-boinc /disk/web1/var/www/projects/freehal_at_home/new/apps/linux/hal2012-boinc.32
 )
 
 export DLL=$(echo \

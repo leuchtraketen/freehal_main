@@ -421,7 +421,7 @@ int windows_stop_runner() {
     ofstream _exit_by_user("_exit_by_user");
     _exit_by_user.close();
 
-    std::system("killall hal2009-server");
+    std::system("killall hal2012-server");
 }
 
 
@@ -434,7 +434,7 @@ int linux_update_svn() {
 
 int linux_compile_runner() {
     linux_update_svn();
-    std::system("make hal2009-server");
+    std::system("make hal2012-server");
     cout << "done: compile server." << endl;
     return 0;
 }
@@ -443,7 +443,7 @@ int linux_stop_runner() {
     ofstream _exit_by_user("_exit_by_user");
     _exit_by_user.close();
 
-    std::system("killall hal2009-server");
+    std::system("killall hal2012-server");
 }
 
 int linux_invoke_runner_thread(int current_working_directory) {
@@ -451,7 +451,7 @@ int linux_invoke_runner_thread(int current_working_directory) {
     if (current_working_directory) {
         cmd += "./";
     }
-    cmd += "hal2009-server ";
+    cmd += "hal2012-server ";
     cmd += freehal::get_lang_str().ref();
     cmd += " ";
     cmd += database_engine;
@@ -463,7 +463,7 @@ int linux_invoke_runner_thread(int current_working_directory) {
 int linux_invoke_runner() {
     cout << "start server..." << endl;
 
-    ifstream i_1("hal2009-server");
+    ifstream i_1("hal2012-server");
     if (i_1) {
         boost::thread t_v(boost::bind(linux_invoke_runner_thread, 1));
     }
@@ -540,7 +540,7 @@ void set_start_kernel(bool do_it) {
 void make_connection(int show_connection_window) {
     cout << (show_connection_window ? "connect" : "reconnect") << "..." << endl;
 
-    chdir("hal2009");
+    chdir("hal2012");
     if (!chdir("gui-qt")) {
         chdir("..");
     }
