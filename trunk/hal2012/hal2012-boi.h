@@ -19,12 +19,12 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_BOI
-#define HAL2009_BOI 1
+#ifndef HAL2012_BOI
+#define HAL2012_BOI 1
 
 
 // functions begin
 
 // functions end
 
-#endif /* HAL2009_BOI */
+#endif /* HAL2012_BOI */

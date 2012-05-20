@@ -22,8 +22,8 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_RAM
-#define HAL2009_RAM 1
+#ifndef HAL2012_RAM
+#define HAL2012_RAM 1
 
 static struct flist*** ram_net = 0;
 static struct flist*   ram_fact_by_key = 0;
@@ -53,5 +53,5 @@ struct fact** related_facts_of_word(struct word* key, struct fact** facts, int l
 struct word* ram_get_word(const char* name);
 struct word* ram_set_word(const char* name);
 // functions end
-#endif /* HAL2009_RAM */
+#endif /* HAL2012_RAM */
 END_EXTERN_C /* GENERATED */

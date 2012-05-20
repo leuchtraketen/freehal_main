@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_DOWNLOAD
-#define HAL2009_DOWNLOAD 1
+#ifndef HAL2012_DOWNLOAD
+#define HAL2012_DOWNLOAD 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -33,5 +33,5 @@
 string download_from_url(const string& url);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_DOWNLOAD */
+#endif /* HAL2012_DOWNLOAD */
 

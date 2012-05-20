@@ -19,8 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_PERL6
-#define HAL2009_PERL6 1
+#ifndef HAL2012_PERL6
+#define HAL2012_PERL6 1
 
 #include "hal2012.h"
 

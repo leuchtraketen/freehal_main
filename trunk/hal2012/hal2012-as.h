@@ -19,8 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009_AS_H
-#define HAL2009_AS_H 1
+#ifndef HAL2012_AS_H
+#define HAL2012_AS_H 1
 
 extern short DEBUG__LONG_LISTINGS;
 

@@ -22,8 +22,8 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_CGI
-#define HAL2009_CGI 1
+#ifndef HAL2012_CGI
+#define HAL2012_CGI 1
 
 // functions begin
 int main (int argc, char** argv);
@@ -32,5 +32,5 @@ void for__input__get_csv(void* text);
 void hal2012_handle_signal(void* arg);
 void set_user();
 // functions end
-#endif /* HAL2009_CGI */
+#endif /* HAL2012_CGI */
 END_EXTERN_C /* GENERATED */

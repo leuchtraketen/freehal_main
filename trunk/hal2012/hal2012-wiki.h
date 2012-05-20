@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_WIKI
-#define HAL2009_WIKI 1
+#ifndef HAL2012_WIKI
+#define HAL2012_WIKI 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -44,5 +44,5 @@ string upper (const string& _s);
 struct fact** search_facts_wiki_page(const string& __url, const string& entity_upper);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_WIKI */
+#endif /* HAL2012_WIKI */
 

@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_UTIL
-#define HAL2009_UTIL 1
+#ifndef HAL2012_UTIL
+#define HAL2012_UTIL 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -54,5 +54,5 @@ string ascii(const string& not_ascii);
 string& replace (string& in, const string& rep, const string& wit);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_UTIL */
+#endif /* HAL2012_UTIL */
 

@@ -22,11 +22,11 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_AS_DEBUG
-#define HAL2009_AS_DEBUG 1
+#ifndef HAL2012_AS_DEBUG
+#define HAL2012_AS_DEBUG 1
 
 // functions begin
 
 // functions end
-#endif /* HAL2009_AS_DEBUG */
+#endif /* HAL2012_AS_DEBUG */
 END_EXTERN_C /* GENERATED */

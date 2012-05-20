@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_SERVER
-#define HAL2009_SERVER 1
+#ifndef HAL2012_SERVER
+#define HAL2012_SERVER 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -39,5 +39,5 @@ void hal2012_server_start();
 void hal2012_server_stop();
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_SERVER */
+#endif /* HAL2012_SERVER */
 

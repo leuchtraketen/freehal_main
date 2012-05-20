@@ -22,8 +22,8 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_DISK
-#define HAL2009_DISK 1
+#ifndef HAL2012_DISK
+#define HAL2012_DISK 1
 
 #include "sqlite3.h"
 
@@ -207,5 +207,5 @@ struct word* disk_set_word(const char* name);
 void hashes(struct word** unique_words, int* hash_n_1, int* hash_n_2, int* hash_n_3);
 void** unique(void*** words);
 // functions end
-#endif /* HAL2009_DISK */
+#endif /* HAL2012_DISK */
 END_EXTERN_C /* GENERATED */

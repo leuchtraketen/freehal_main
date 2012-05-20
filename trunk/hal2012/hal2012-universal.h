@@ -22,8 +22,8 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_UNIVERSAL
-#define HAL2009_UNIVERSAL 1
+#ifndef HAL2012_UNIVERSAL
+#define HAL2012_UNIVERSAL 1
 
 #define n(ch)       ((1-'a'+ch)<=  0 ? WRONG : ((1-'a'+ch) > 27  ? WRONG : (1-'a'+ch)))
 #define c(nm)       ((nm-1+'a')< 'a' ? WRONG : ((nm-1+'a') > 'z' ? WRONG : (nm-1+'a')))
@@ -250,5 +250,5 @@ struct word* set_word(const char* name);
 void flowchart_write_list_of_synonym(struct word*** words);
 void print_word_list_3rd_order(struct word*** list);
 // functions end
-#endif /* HAL2009_UNIVERSAL */
+#endif /* HAL2012_UNIVERSAL */
 END_EXTERN_C /* GENERATED */

@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#define HAL2009_CGI_MODE 1
+#define HAL2012_CGI_MODE 1
 
 #include "hal2012.h"
 #include "hal2012-wiki.c"

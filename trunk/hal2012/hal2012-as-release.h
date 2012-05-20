@@ -22,11 +22,11 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_AS_RELEASE
-#define HAL2009_AS_RELEASE 1
+#ifndef HAL2012_AS_RELEASE
+#define HAL2012_AS_RELEASE 1
 
 // functions begin
 
 // functions end
-#endif /* HAL2009_AS_RELEASE */
+#endif /* HAL2012_AS_RELEASE */
 END_EXTERN_C /* GENERATED */

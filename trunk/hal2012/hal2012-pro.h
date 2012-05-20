@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_PRO
-#define HAL2009_PRO 1
+#ifndef HAL2012_PRO
+#define HAL2012_PRO 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -35,5 +35,5 @@ int remove_negation (char* _line, double* truth_ref, int* only_logic);
 string delete_underscores(const string& _text);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_PRO */
+#endif /* HAL2012_PRO */
 

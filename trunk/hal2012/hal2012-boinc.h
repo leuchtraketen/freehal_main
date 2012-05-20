@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_BOINC
-#define HAL2009_BOINC 1
+#ifndef HAL2012_BOINC
+#define HAL2012_BOINC 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -43,5 +43,5 @@ void* cpu_thread (void* p);
 void* hal2012_handle_signal(void* arg);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_BOINC */
+#endif /* HAL2012_BOINC */
 

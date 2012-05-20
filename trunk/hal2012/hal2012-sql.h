@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_SQL
-#define HAL2009_SQL 1
+#ifndef HAL2012_SQL
+#define HAL2012_SQL 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -45,5 +45,5 @@ int sql_set_quiet(int i);
 struct DATASET sql_get_records(struct RECORD* r);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_SQL */
+#endif /* HAL2012_SQL */
 

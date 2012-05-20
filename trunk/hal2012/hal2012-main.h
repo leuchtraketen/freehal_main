@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_MAIN
-#define HAL2009_MAIN 1
+#ifndef HAL2012_MAIN
+#define HAL2012_MAIN 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -36,5 +36,5 @@ void* hal2012_handle_signal(void* arg);
 void shell(string programming_language, string language, string base_dir);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_MAIN */
+#endif /* HAL2012_MAIN */
 

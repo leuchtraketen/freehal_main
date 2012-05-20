@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_IPC
-#define HAL2009_IPC 1
+#ifndef HAL2012_IPC
+#define HAL2012_IPC 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -36,5 +36,5 @@ void hal2012_send_signal(const string& vfile, const string& data);
 void hal2012_send_signals();
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_IPC */
+#endif /* HAL2012_IPC */
 

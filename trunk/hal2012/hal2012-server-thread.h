@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_SERVER_THREAD
-#define HAL2009_SERVER_THREAD 1
+#ifndef HAL2012_SERVER_THREAD
+#define HAL2012_SERVER_THREAD 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -42,5 +42,5 @@ void hal2012_server_statement(const string& s, const string& username, bool do_l
 void hal2012_server_stop();
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_SERVER_THREAD */
+#endif /* HAL2012_SERVER_THREAD */
 

@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_XML
-#define HAL2009_XML 1
+#ifndef HAL2012_XML
+#define HAL2012_XML 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -131,5 +131,5 @@ XML_Object* operator <<(XML_Object* o, vector<XML_Object*> i);
 XML_Object* operator <<(XML_Object* o, XML_Object& i);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_XML */
+#endif /* HAL2012_XML */
 

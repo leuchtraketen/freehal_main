@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_PERL6_DUMMY
-#define HAL2009_PERL6_DUMMY 1
+#ifndef HAL2012_PERL6_DUMMY
+#define HAL2012_PERL6_DUMMY 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -34,5 +34,5 @@ int perl6_convert_file(string filename);
 void perl6_execute(string filename);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_PERL6_DUMMY */
+#endif /* HAL2012_PERL6_DUMMY */
 

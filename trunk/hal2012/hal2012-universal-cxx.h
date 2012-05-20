@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_UNIVERSAL_CXX
-#define HAL2009_UNIVERSAL_CXX 1
+#ifndef HAL2012_UNIVERSAL_CXX
+#define HAL2012_UNIVERSAL_CXX 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -40,5 +40,5 @@ EXTERN_C int is_important_word(const char* _word);
 #if defined(__cplusplus) /* GENERATED */
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_UNIVERSAL_CXX */
+#endif /* HAL2012_UNIVERSAL_CXX */
 

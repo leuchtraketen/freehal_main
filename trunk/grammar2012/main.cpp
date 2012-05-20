@@ -5,7 +5,7 @@
  *      Author: tobias
  */
 
-#include "grammar2012.h"
+#include "hal2012-grammar2012.h"
 
 int main() {
 

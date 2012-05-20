@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_STARTUP
-#define HAL2009_STARTUP 1
+#ifndef HAL2012_STARTUP
+#define HAL2012_STARTUP 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -62,5 +62,5 @@ vector<string>* params_argv(int argc, char** argv);
 vector<string>* params_cin();
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_STARTUP */
+#endif /* HAL2012_STARTUP */
 

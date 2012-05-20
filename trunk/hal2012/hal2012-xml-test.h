@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_XML_TEST
-#define HAL2009_XML_TEST 1
+#ifndef HAL2012_XML_TEST
+#define HAL2012_XML_TEST 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -33,5 +33,5 @@
 int main();
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_XML_TEST */
+#endif /* HAL2012_XML_TEST */
 

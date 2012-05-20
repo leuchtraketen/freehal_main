@@ -22,8 +22,8 @@
 #include "hal2012.h"
 
 BEGIN_EXTERN_C /* GENERATED */
-#ifndef HAL2009_WIKI_DUMMY
-#define HAL2009_WIKI_DUMMY 1
+#ifndef HAL2012_WIKI_DUMMY
+#define HAL2012_WIKI_DUMMY 1
 
 // functions begin
 int wiki_begin();
@@ -31,5 +31,5 @@ int _wiki_begin();
 struct fact** search_facts_wiki(const char* entity, short dummy);
 struct fact** _search_facts_wiki(const char* entity, short dummy);
 // functions end
-#endif /* HAL2009_WIKI_DUMMY */
+#endif /* HAL2012_WIKI_DUMMY */
 END_EXTERN_C /* GENERATED */

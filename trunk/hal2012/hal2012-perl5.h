@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_PERL5
-#define HAL2009_PERL5 1
+#ifndef HAL2012_PERL5
+#define HAL2012_PERL5 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -62,5 +62,5 @@ void perl5_execute(string filename);
 void perl5_hal2012_send_signal(string vfile, string data);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_PERL5 */
+#endif /* HAL2012_PERL5 */
 

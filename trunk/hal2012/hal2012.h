@@ -19,8 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
-#ifndef HAL2009
-#define HAL2009 1
+#ifndef HAL2012
+#define HAL2012 1
 
 #include "hal2012-version.h"
 
@@ -63,4 +63,4 @@
 #   define usleep(x) Sleep(x)
 #endif
 
-#endif /* HAL2009 */
+#endif /* HAL2012 */

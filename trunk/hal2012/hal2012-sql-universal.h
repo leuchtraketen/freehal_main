@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_SQL_UNIVERSAL
-#define HAL2009_SQL_UNIVERSAL 1
+#ifndef HAL2012_SQL_UNIVERSAL
+#define HAL2012_SQL_UNIVERSAL 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -42,5 +42,5 @@ int sql_universal_set_filename(const char* filename);
 struct DATASET sql_universal_get_records(struct RECORD* r);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_SQL_UNIVERSAL */
+#endif /* HAL2012_SQL_UNIVERSAL */
 

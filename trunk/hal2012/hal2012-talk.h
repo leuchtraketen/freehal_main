@@ -21,8 +21,8 @@
 
 #include "hal2012.h"
 
-#ifndef HAL2009_TALK
-#define HAL2009_TALK 1
+#ifndef HAL2012_TALK
+#define HAL2012_TALK 1
 
 #if defined(__cplusplus) /* GENERATED */
 
@@ -53,5 +53,5 @@ void hal2012_clean();
 void hal2012_init(const string& planguage, const string& tlanguage, const string& base_dir);
 #endif /* GENERATED */
 // functions end
-#endif /* HAL2009_TALK */
+#endif /* HAL2012_TALK */
 
