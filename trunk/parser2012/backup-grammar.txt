@@ -1,0 +1,162 @@
+s-all:
+    s-sentence/v-clause-1
+    s-sentence/v-clause-1 s-followingsentence/v-clause-2
+
+
+s-sentence:
+    r-adverbs s-sentence-spo
+    r-adverbs s-sentence-pso
+    r-adverbs s-sentence-sop
+    r-adverbs s-sentence-ps
+    r-adverbs s-sentence-sp
+    r-adverbs s-sentence-p
+    r-adverbs r-questionword-part s-sentence-spo
+    r-adverbs r-questionword-part s-sentence-pso
+    r-adverbs r-questionword-part s-sentence-sop
+    r-adverbs r-questionword-part s-sentence-ps
+    r-adverbs r-questionword-part s-sentence-sp
+    r-adverbs r-questionword-part s-sentence-p
+    r-adverbs s-questionword-part s-sentence-spo
+    r-adverbs s-questionword-part s-sentence-pso
+    r-adverbs s-questionword-part s-sentence-sop
+    r-adverbs s-questionword-part s-sentence-ps
+    r-adverbs s-questionword-part s-sentence-sp
+    r-adverbs s-questionword-part s-sentence-p
+
+
+r-clauselinking:
+    d-linking/v-clauselinking
+
+s-followingsentence:
+    r-clauselinking r-adverbs s-sentence-po
+    r-clauselinking r-adverbs s-sentence-p
+
+s-sentence-po:
+    s-verb/v-verb r-adverbs r-objects r-longadverbs
+    s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
+
+s-sentence-p:
+    s-verb/v-verb r-longadverbs
+
+
+r-questionword-part:
+    r-extra-before r-questionword r-extra-after
+    r-questionword r-extra-after
+    r-questionword
+    d-linking/v-questionword
+    d-questionword/v-questionword d-adjective/v-extra-after
+
+
+s-questionword-part:
+    r-questionword-part
+
+
+r-questionword:
+    d-questionword/v-questionword
+
+r-extra-after:
+    d-adjective/v-extra-after
+    d-noun/v-extra-after
+
+r-extra-before:
+    d-preposition/v-extra-before
+
+
+s-sentence-spo:
+    s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs r-verbprefix
+    s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
+
+s-sentence-ps:
+    s-verb/v-verb r-adverbs s-nounphrases/v-subject r-longadverbs
+    s-verb/v-verb r-adverbs s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-longadverbs
+
+s-sentence-sp:
+    s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
+
+s-sentence-pso:
+    s-verb/v-verb r-adverbs s-nounphrases/v-subject r-adverbs r-objects r-longadverbs
+    s-verb/v-verb r-adverbs s-nounphrases/v-subject r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
+
+s-sentence-sop:
+    s-nounphrases/v-subject r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
+
+s-sentence-p:
+    s-verb/v-verb r-longadverbs
+
+
+r-objects:
+    s-nounphrases/v-object
+    s-nounphrases/v-object s-nounphrases/v-object
+    s-nounphrases/v-object s-nounphrases/v-object s-nounphrases/v-object
+
+
+s-nounphrases:
+    r-nounphrase
+    s-nounphrases d-linking s-nounphrases
+
+
+r-nounphrase:
+    r-nounphrase-nouns
+    d-adjective r-nounphrase-nouns
+    d-article r-nounphrase-nouns
+    d-article d-adjective r-nounphrase-nouns
+
+
+r-nounphrase-nouns:
+    d-title
+    d-noun
+    d-title d-noun
+    d-title d-title d-noun
+    d-title d-noun d-noun
+
+
+r-verbprefix:
+    s-verbprefix/v-verbprefix
+    null
+
+
+s-verbprefix:
+    d-preposition
+
+
+r-longadverbs:
+    s-longadverbs/v-longadverbs
+    s-adverbs/v-adverbs
+    null
+
+
+s-longadverbs:
+    s-longadverb/v-longadverb
+    s-longadverb/v-longadverb s-longadverb/v-longadverb
+    s-longadverb/v-longadverb s-longadverb/v-longadverb s-longadverb/v-longadverb
+    s-longadverb/v-longadverb s-longadverb/v-longadverb s-longadverb/v-longadverb s-longadverb/v-longadverb
+
+
+s-longadverb:
+    d-preposition s-nounphrases s-nounphrases
+
+
+r-adverbs:
+    s-adverbs
+    null
+
+
+s-adverbs:
+    s-adverb/v-adverb
+    s-adverb/v-adverb s-adverb/v-adverb
+    s-adverb/v-adverb s-adverb/v-adverb s-adverb/v-adverb
+    s-adverb/v-adverb s-adverb/v-adverb s-adverb/v-adverb s-adverb/v-adverb
+
+
+s-adverb:
+    d-preposition s-nounphrases
+    s-verbprefix s-nounphrases
+    d-adjective
+    d-adjective d-adjective
+
+
+s-verb:
+    d-verb
+    d-verb d-verb
+    d-verb d-verb d-verb
+
