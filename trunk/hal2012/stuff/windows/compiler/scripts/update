@@ -128,7 +128,7 @@ export DLL=$(echo \
 	cp img/* Freehal/img/
 	cp doc/* Freehal/doc/
 	cp -rf runtime-perl5-win32/ Freehal/
-	../scripts/fill-saved
+	./scripts/fill-saved
 	cp -rf saved/* Freehal/saved/
 	find Freehal -name ".svn" -exec rm -rf '{}' \;
 
