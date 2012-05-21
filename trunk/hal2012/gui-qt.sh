@@ -3,4 +3,4 @@
 cd gui-qt
 qmake
 make
-bin/freehal
+bin/freehal >/dev/null 2>&1

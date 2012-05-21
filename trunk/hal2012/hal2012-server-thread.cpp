@@ -658,7 +658,8 @@ void* hal2012_handle_signal(void* _p) {
     }
     else if (type == "grammar2012") {
         grammar2012::grammar* g = new grammar2012::grammar();
-        g->read_grammar("grammar.txt");
+        string grammar_file = current_instance->base_dir + "/lang_" + current_instance->tlanguage + "/grammar.txt";
+        g->read_grammar(grammar_file);
         g->set_verbose(false);
         g->expand();
         grammar2012::parsed_type* parsed = g->parse(text);

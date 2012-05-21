@@ -27,7 +27,7 @@ Familienname:
   genus: m
   type: n
 Felix:
-  count: 16
+  count: 17
   type: n
 Hallo:
   count: 4
@@ -82,7 +82,7 @@ barack:
   count: 1
   type: n
 bruder:
-  count: 4
+  count: 5
   type: n
 dir:
   count: 43
@@ -94,7 +94,7 @@ es:
   count: 56
   type: n
 felix:
-  count: 5
+  count: 6
   type: n
 freehal:
   count: 2
