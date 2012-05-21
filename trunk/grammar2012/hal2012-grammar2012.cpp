@@ -138,6 +138,40 @@ entity::perlmap* entity::to_groups(perlmap* pm = 0, vector<string> v_keys =
 
 	return pm;
 }
+const string entity::print_graph(string* _key = 0) const {
+	static int u = 1;
+	stringstream sskey;
+	if (virt.size() > 0)
+		sskey << virt.at(0);
+	else
+		sskey << to_key();
+	sskey << " (" << u++ << ")";
+	string key = sskey.str();
+	if (_key != 0)
+		*_key = key;
+
+	stringstream ss;
+	ss << "\"" << key << "\" [shape=record,regular=1];" << endl;
+
+	if (text.size() > 0) {
+		ss << "\"" << text << "\" [shape=record,style=filled,fillcolor=yellow,regular=1];" << endl;
+		ss << "\"" << key << "\" -> \"" << text << "\" [dir=none,weight=10];"
+				<< endl;
+	} else {
+		if (embed.size() > 0) {
+			for (entities::const_iterator it = embed.begin(); it != embed.end();
+					++it) {
+				string key_it;
+				ss << (*it)->print_graph(&key_it);
+
+				ss << "\"" << key << "\" -> \"" << key_it
+						<< "\" [dir=none,weight=10];" << endl;
+			}
+		}
+	}
+
+	return ss.str();
+}
 const string entity::print_perl(entity::perlmap* pm, string v_key = "",
 		string keyprefix = "v-clause-1") {
 	stringstream ss;
@@ -283,6 +317,8 @@ std::size_t hash_value(grammar2012::entity const& o) {
 	boost::hash_combine(seed, o.get_data());
 	boost::hash_combine(seed, o.get_repl());
 	boost::hash_combine(seed, o.get_symbol());
+	boost::hash_combine(seed, o.get_virt());
+	boost::hash_combine(seed, o.get_embed());
 	return seed;
 }
 void entity::set_text(const string text) {
@@ -299,6 +335,9 @@ const string entity::get_repl() const {
 }
 const vector<string> entity::get_virt() const {
 	return virt;
+}
+const vector<entity*> entity::get_embed() const {
+	return embed;
 }
 const vector<string> entity::get_marker() const {
 	if (virt.size() > 0) {
@@ -854,7 +893,24 @@ const string grammar::print_perl(vector<entities*>* output_list) {
 
 	return ss.str();
 }
-const string grammar::parse(const string words_str) {
+const string grammar::print_graph(vector<entities*>* output_list) {
+	stringstream ss;
+	ss << "digraph parsed {" << endl;
+
+	for (vector<entities*>::iterator iter_list = output_list->begin();
+			iter_list != output_list->end(); ++iter_list) {
+		entities* output = *iter_list;
+		for (entities::iterator iter = output->begin(); iter != output->end();
+				++iter) {
+			ss << (*iter)->print_graph();
+		}
+		break;
+	}
+
+	ss << "}" << endl;
+	return ss.str();
+}
+vector<entities*>* grammar::parse(const string words_str) {
 	cout << "========================================" << endl
 			<< "============  Grammar 2012  ============" << endl
 			<< "========================================" << endl << endl
@@ -867,7 +923,7 @@ const string grammar::parse(const string words_str) {
 
 	cout << "output:" << endl << endl << grammar::print_output(reduced) << endl;
 
-	return grammar::print_perl(reduced);
+	return reduced;
 }
 
 void grammar::set_verbose(bool v) {

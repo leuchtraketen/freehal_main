@@ -58,6 +58,7 @@ public:
 	void add(const string);
 
 	perlmap* to_groups(perlmap*, vector<string>, string) const;
+	const string print_graph(string*) const;
 	const string print() const;
 	const string print_long(string) const;
 	const string to_str() const;
@@ -71,11 +72,13 @@ public:
 	const string get_repl() const;
 	const vector<string> get_virt() const;
 	const vector<string> get_marker() const;
+	const vector<entity*> get_embed() const;
 
 	static const string print_perl(entity::perlmap*, string, string);
 };
 std::size_t hash_value(entity const&);
 typedef vector<entity*> entities;
+typedef vector<entities*> parsed_type;
 
 class grammar {
 private:
@@ -103,9 +106,6 @@ private:
 	bool expand_step(int*);
 	vector<entities*>* expand_entry(entities*, int*, bool*);
 	entities* parse_input(const string);
-	static const string print_input(const string);
-	static const string print_output(vector<entities*>*);
-	static const string print_perl(vector<entities*>*);
 	vector<entities*>* reduce(entities*i);
 	reducelist* reduce_step(entities*i);
 	entities* replace_in_vector(const entities&, const entities&, entity*);
@@ -115,7 +115,7 @@ public:
 	int read_grammar(const string);
 	const string to_str() const;
 	void expand();
-	const string parse(const string);
+	vector<entities*>* parse(const string);
 	void set_verbose(bool);
 	bool is_verbose();
 
@@ -126,6 +126,11 @@ public:
 
 	const string print_vector(const entities&);
 	const string print_entity(entity*);
+
+	static const string print_input(const string);
+	static const string print_output(vector<entities*>*);
+	static const string print_perl(vector<entities*>*);
+	static const string print_graph(vector<entities*>*);
 };
 
 }

@@ -18,6 +18,14 @@ int main() {
 
 	//g->parse("d-article|der#d-noun|Hund#d-verb|ist#d-adjective|da");
 	//g->parse("d-questionword|wie#d-adjective|alt#d-verb|bist#d-noun|du");
-	g->parse("d-questionword < wie > d-verb < geht > d-noun < es > d-title < Felix > d-linking < & > d-title < Tobias >");
+	grammar2012::parsed_type* parsed = g->parse(
+			"d-questionword < wie > d-verb < geht > d-noun < es > "
+					"d-title < Felix > d-linking < & > d-title < Tobias >");
+	grammar2012::grammar::print_perl(parsed);
+
+	ofstream o("y.dot");
+	o << grammar2012::grammar::print_graph(parsed);
+	o.close();
+	system("dot -Tpng y.dot > y.png");
 }
 

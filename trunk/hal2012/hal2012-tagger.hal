@@ -249,6 +249,8 @@ define action memory_get_by_name with var file_name, var name_of_entry, var lang
         print new line
     done
 
+    do regex with var name_of_entry: /[?]/ -> "" :global:i
+
     if not var name_of_entry or var name_of_entry matches /^\s*?$/ do
         do return using an empty array
     done

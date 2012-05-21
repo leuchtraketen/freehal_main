@@ -52,25 +52,27 @@ int init_thread_ended = 0;
 void hal2012_server_start() {
 }
 
+const string time_str() {
+    time_t rawtime;
+    struct tm* timeinfo;
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+    char output[30];
+    strftime(output, 30, "%d.%m.%Y %T", timeinfo);
+    return string(output);
+}
+
 void hal2012_server_statement(const string& s, const string& username, bool do_learn, bool do_talk) {
     cout << "Begin of statement process." << endl;
     static string* to_display_talk = 0;
     static string* to_display_learn = 0;
     if (!to_display_talk) {
         to_display_talk = new string;
-        time_t t;
-        time(&t);
-        char* time = ctime(&t);
-        time[strlen(time)-1] = 0;
-        (*to_display_talk) += "<i>" + string(time) + "</i><br /><br/>";
+        (*to_display_talk) += "<i>" + time_str() + "</i><br /><br/>";
     }
     if (!to_display_learn) {
         to_display_learn = new string;
-        time_t t;
-        time(&t);
-        char* time = ctime(&t);
-        time[strlen(time)-1] = 0;
-        (*to_display_learn) += "<i>" + string(time) + "</i><br /><br/>";
+        (*to_display_learn) += "<i>" + time_str() + "</i><br /><br/>";
     }
     string* to_display = (do_learn) ? to_display_learn : to_display_talk;
     cout << "Initialize variables." << endl;
@@ -655,14 +657,21 @@ void* hal2012_handle_signal(void* _p) {
         fprintf(output(), "Memory is released.\n");
     }
     else if (type == "grammar2012") {
-
-	grammar2012::grammar* g = new grammar2012::grammar();
-	g->read_grammar("grammar.txt");
-	g->set_verbose(false);
-	g->expand();
-	const string perl_eval = g->parse(text);
+        grammar2012::grammar* g = new grammar2012::grammar();
+        g->read_grammar("grammar.txt");
+        g->set_verbose(false);
+        g->expand();
+        grammar2012::parsed_type* parsed = g->parse(text);
+        const string perl_eval = grammar2012::grammar::print_perl(parsed);
         hal2012_send_signal("grammar2012", perl_eval);
-
+        ofstream o("current.dot");
+        o << grammar2012::grammar::print_graph(parsed);
+        o.close();
+#if defined(MINGW) || defined(WIN32)
+        ::system("dot.exe -Tpng current.dot > current.png");
+#else
+        ::system("dot -Tpng current.dot > current.png");
+#endif
     }
     else if (type == "output") {
         output_by_signal = text;

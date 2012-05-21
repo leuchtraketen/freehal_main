@@ -1,9 +1,9 @@
 Abend:
-  count: 3
+  count: 4
   genus: m
   type: n
 Ahnung:
-  count: 19
+  count: 20
   genus: f
   type: n
 Alkohol:
@@ -17,13 +17,17 @@ Barack:
   count: 1
   type: n
 Das:
-  count: 1
+  count: 3
   type: art
 Es:
   count: 20
   type: n
+Familienname:
+  count: 1
+  genus: m
+  type: n
 Felix:
-  count: 10
+  count: 16
   type: n
 Hallo:
   count: 4
@@ -35,11 +39,18 @@ Ich:
 Ja:
   count: 1
   type: adv
+Keine:
+  count: 1
+  type: pron
+Lust:
+  count: 3
+  genus: f
+  type: n
 Mir:
   count: 1
   type: n
 Nein:
-  count: 17
+  count: 25
   type: n
 Obstbrand:
   count: 1
@@ -70,33 +81,45 @@ ausgesprochen:
 barack:
   count: 1
   type: n
+bruder:
+  count: 4
+  type: n
 dir:
-  count: 42
+  count: 43
   type: n
 du:
-  count: 39
+  count: 48
   type: n
 es:
-  count: 55
+  count: 56
+  type: n
+felix:
+  count: 5
+  type: n
+freehal:
+  count: 2
   type: n
 gar:
-  count: 9
+  count: 12
   type: adj
 hallo:
   count: 3
   genus: s
   type: n
 hi:
-  count: 3
+  count: 4
   type: inter
 ich:
-  count: 33
+  count: 34
   type: n
 jahre:
   count: 7
   type: n
+kuenstliche:
+  count: 4
+  type: adv
 mir:
-  count: 22
+  count: 27
   type: n
 trinke:
   count: 2
@@ -105,8 +128,28 @@ trinkst:
   count: 14
   type: vi
 und:
-  count: 20
+  count: 23
   type: linking
+?:
+  type: n
+  type: n
+  type: n
+  type: n
+?:
+  type: n
+  type: n
+  type: n
+  type: n
+?:
+  type: n
+  type: n
+  type: n
+  type: n
+?:
+  type: n
+  type: n
+  type: n
+  type: n
 Antwort:
   genus: f
   type: n
@@ -116,11 +159,18 @@ Daten:
 Eingabe:
   genus: f
   type: n
+Guten:
+  type: adv
 Hm:
   type: inter
-Keine:
-  type: pron
+Klar:
+  type: adj
+Sorry:
+  type: inter
 Ungarn:
+  type: n
+Vorname:
+  genus: m
   type: n
 beantworten:
   genus: s
@@ -132,8 +182,8 @@ englische:
 firma:
   genus: f
   type: n
-freehal:
-  type: n
+hufiger:
+  type: adj
 internet:
   type: n
 komme:

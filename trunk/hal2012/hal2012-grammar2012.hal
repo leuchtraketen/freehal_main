@@ -42,7 +42,7 @@ define action new_parser_start with array grammar, array data, var lang, var pat
     do hal2012_send_signal with "grammar2012", var input
     set new var to_eval to hal2012_fetch_signal with "grammar2012"
 
-    set new hash parsed to an empty hash
+    set new hash parsed to fake_hash_parsed without arguments
     do eval with var to_eval
     if hash parsed is false do
         print "Error! hash parsed is false!"
