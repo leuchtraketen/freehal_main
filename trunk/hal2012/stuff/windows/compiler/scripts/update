@@ -85,6 +85,7 @@ echo $R | grep step || (
 export DLL=$(echo \
 		/opt/mingw32/bin/zlib1.dll \
 		/compiler/local/lib/libboost_system-mt.dll \
+		/compiler/local/lib/libboost_regex-mt.dll \
 		/compiler/local/lib/libboost_thread_win32-mt.dll \
 		/compiler/local/bin/pthreadGC2.dll \
 		/opt/mingw32/bin/QtCore4.dll \
