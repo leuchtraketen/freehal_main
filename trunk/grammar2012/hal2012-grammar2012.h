@@ -1,12 +1,12 @@
 /*
- * grammar2012.h
+ * hal2012-grammar2012.h
  *
  *  Created on: 18.05.2012
  *      Author: tobias
  */
 
-#ifndef PARSER2012_H_
-#define PARSER2012_H_
+#ifndef HAL2012_GRAMMAR2012_H_
+#define HAL2012_GRAMMAR2012_H_
 
 #include <boost/unordered_map.hpp>
 #include <boost/unordered_set.hpp>

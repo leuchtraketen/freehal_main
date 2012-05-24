@@ -554,6 +554,20 @@ done
 
 # Find out the part of speech
 define action compute_tags with var word, var lang, var path do
+    do hal2012_send_signal with "tagger2012", var word
+    set new var response to hal2012_fetch_signal with "tagger2012"
+    if var response do
+        print "got tags: '" concat var response concat "'"
+        print new line
+
+        set new array return_array to split with /<[,:]>/, var response
+        do return with array return_array
+    done
+    do return with an empty array
+done
+
+# Find out the part of speech
+define action _compute_tags with var word, var lang, var path do
     do regex with var word: /<[\x80-\xFF]>/ -> "" :global
     if ( var word matches /<[(]>/ and var word not matches /<[)]>/ ) or ( var word matches /<[)]>/ and var word not matches /<[(]>/ ) do
         do regex with var word: /<[)(]>/ -> "" :global

@@ -29,6 +29,7 @@
 #include "hal2012-sql.h"
 #include "hal2012-disk.h"
 #include "hal2012-grammar2012.h"
+#include "hal2012-tagger2012.h"
 
 #include <pthread.h>
 
@@ -656,15 +657,32 @@ void* hal2012_handle_signal(void* _p) {
         free(csv_data);
         fprintf(output(), "Memory is released.\n");
     }
+    else if (type == "tagger2012") {
+
+        static grammar2012::tagger* t = 0;
+        if (t == 0) {
+            t = new grammar2012::tagger();
+            t->set_verbose(true);
+            string grammar_dir = current_instance->base_dir + "/lang_" + current_instance->tlanguage + "/";
+            t->read_pos_file(grammar_dir + "brain.pos");
+            t->read_pos_file(grammar_dir + "memory.pos");
+            t->read_regex_pos_file(grammar_dir + "regex.pos");
+        }
+        grammar2012::tags tags = t->get_pos(text);
+        hal2012_send_signal("tagger2012", tags.first + ":" + tags.second);
+
+    }
     else if (type == "grammar2012") {
+
         grammar2012::grammar* g = new grammar2012::grammar();
         string grammar_file = current_instance->base_dir + "/lang_" + current_instance->tlanguage + "/grammar.txt";
         g->read_grammar(grammar_file);
-        g->set_verbose(false);
+        g->set_verbose(true);
         g->expand();
         grammar2012::parsed_type* parsed = g->parse(text);
         const string perl_eval = grammar2012::grammar::print_perl(parsed);
         hal2012_send_signal("grammar2012", perl_eval);
+
         ofstream o("current.dot");
         o << grammar2012::grammar::print_graph(parsed);
         o.close();
@@ -673,6 +691,7 @@ void* hal2012_handle_signal(void* _p) {
 #else
         ::system("dot -Tpng current.dot > current.png");
 #endif
+
     }
     else if (type == "output") {
         output_by_signal = text;
@@ -685,3 +704,8 @@ void* hal2012_handle_signal(void* _p) {
     delete parameters;
 }
 
+void grammar2012::tagger::ask_user(const string word, grammar2012::tags& tags) {
+    fprintf(output(), "\nUnknown part of speech:\n\n%s\n", word.c_str());
+    const string& pos = hal2012_server_get_value_from_socket("WORD_TYPE", word);
+    tags.first = pos;
+}

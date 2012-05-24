@@ -1,5 +1,5 @@
 /*
- * grammar2012.cpp
+ * hal2012-grammar2012.cpp
  *
  *  Created on: 18.05.2012
  *      Author: tobias
