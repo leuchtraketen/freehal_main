@@ -93,6 +93,7 @@ private:
 	symbolmap_so* sym_so;
 	symbolmap_os* sym_os;
 	bool verbose;
+	bool buffered;
 
 	typedef boost::unordered_map<string, entities*> reducelist;
 
@@ -118,6 +119,8 @@ public:
 	vector<entities*>* parse(const string);
 	void set_verbose(bool);
 	bool is_verbose();
+	void set_buffered(bool);
+	bool is_buffered();
 
 	string o2s(entity*) const;
 	entity* s2o(string) const;

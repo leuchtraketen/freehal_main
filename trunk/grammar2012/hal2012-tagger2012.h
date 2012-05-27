@@ -40,10 +40,10 @@ typedef pair<string, string> tags;
 
 bool is_invalid_char(char);
 void to_ascii(string&);
-bool is_empty(const tags&);
+bool is_empty(const tags*);
 bool regex(boost::smatch&, const string&, const string&);
 bool regex_case(boost::smatch&, const string&, const string&);
-const string print_tags(const tags&);
+const string print_tags(const tags*);
 
 class tagger;
 
@@ -51,25 +51,29 @@ class tagger {
 private:
 	typedef boost::unordered_map<string, string> tagmap;
 	typedef vector<pair<string, string> > taglist;
-	tagmap type;
-	tagmap genus;
-	taglist regex_type;
-	tagmap regex_genus;
+	tagmap* type;
+	tagmap* genus;
+	taglist* regex_type;
+	tagmap* regex_genus;
 	bool verbose;
+	bool buffered;
 
-	void impl_get_pos(const string, tags&);
-	void impl_regex_get_pos(const string, tags&);
-	void impl_guess(const string, tags&);
-	void guess(const string, tags&);
-	void ask_user(const string, tags&);
+	void impl_get_pos(const string, tags*);
+	void impl_regex_get_pos(const string, tags*);
+	void impl_guess(const string, tags*);
+	void guess(const string, tags*);
+	void ask_user(const string, tags*);
 
 public:
 	tagger();
+	~tagger();
 	int read_pos_file(const string);
 	int read_regex_pos_file(const string);
-	pair<string, string> get_pos(const string);
+	tags* get_pos(const string);
 	void set_verbose(bool);
 	bool is_verbose();
+	void set_buffered(bool);
+	bool is_buffered();
 };
 
 }

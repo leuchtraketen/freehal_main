@@ -8,7 +8,7 @@
 #include "hal2012-grammar2012.h"
 #include "hal2012-tagger2012.h"
 
-void grammar2012::tagger::ask_user(const string word, grammar2012::tags& tags) {
+void grammar2012::tagger::ask_user(const string word, grammar2012::tags* tags) {
 }
 EXTERN_C char* check_config(const char* name, const char* _default) {
 	return strdup("1");

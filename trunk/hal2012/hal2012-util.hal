@@ -180,10 +180,14 @@ define action hal2012_fetch_signal with var _vfile do
 
         set new var response to the next line from STDIN
         do chomp with var response
-        if var response matches "IPC:" do
+        if var response matches /IPC:/ do
             print "get (c->hal): IPC:" concat new line
             set new var vfile to the next line from STDIN
             do chomp with var vfile
+            if var vfile matches /IPC:/ do
+                set var vfile to the next line from STDIN
+                do chomp with var vfile
+            done
             print var vfile concat new line
             set new var data to ""
             set new var data_line to ""

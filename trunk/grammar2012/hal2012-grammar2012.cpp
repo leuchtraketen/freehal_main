@@ -154,7 +154,9 @@ const string entity::print_graph(string* _key = 0) const {
 	ss << "\"" << key << "\" [shape=record,regular=1];" << endl;
 
 	if (text.size() > 0) {
-		ss << "\"" << text << "\" [shape=record,style=filled,fillcolor=yellow,regular=1];" << endl;
+		ss << "\"" << text
+				<< "\" [shape=record,style=filled,fillcolor=yellow,regular=1];"
+				<< endl;
 		ss << "\"" << key << "\" -> \"" << text << "\" [dir=none,weight=10];"
 				<< endl;
 	} else {
@@ -350,8 +352,9 @@ const vector<string> entity::get_marker() const {
 }
 
 grammar::grammar() :
-		gra(new grammarmap()), red(new reducemap()), sym_so(new symbolmap_so()), sym_os(
-				new symbolmap_os()) {
+		gra(new grammarmap()), red(new reducemap()), red_keys_sorted(
+				new reducekeys()), sym_so(new symbolmap_so()), sym_os(
+				new symbolmap_os()), verbose(true), buffered(false) {
 }
 
 int grammar::read_grammar(const string filename) {
@@ -931,6 +934,13 @@ void grammar::set_verbose(bool v) {
 }
 bool grammar::is_verbose() {
 	return verbose;
+}
+
+void grammar::set_buffered(bool v) {
+	buffered = v;
+}
+bool grammar::is_buffered() {
+	return buffered;
 }
 
 }

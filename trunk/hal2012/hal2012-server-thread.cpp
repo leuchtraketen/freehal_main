@@ -663,14 +663,21 @@ void* hal2012_handle_signal(void* _p) {
         if (t == 0) {
             t = new grammar2012::tagger();
             t->set_verbose(true);
+            t->set_buffered(true);
             string grammar_dir = current_instance->base_dir + "/lang_" + current_instance->tlanguage + "/";
             t->read_pos_file(grammar_dir + "brain.pos");
             t->read_pos_file(grammar_dir + "memory.pos");
             t->read_regex_pos_file(grammar_dir + "regex.pos");
         }
-        grammar2012::tags tags = t->get_pos(text);
-        hal2012_send_signal("tagger2012", tags.first + ":" + tags.second);
+        grammar2012::tags* tags = t->get_pos(text);
+        string* tags_str = new string(tags->first + ":" + tags->second);
+        hal2012_send_signal("tagger2012", *tags_str);
 
+//        hal2012_send_signal("tagger2012", "n:");
+//        delete(t); t = 0;
+
+        delete(tags);
+        delete(tags_str);
     }
     else if (type == "grammar2012") {
 
@@ -678,6 +685,7 @@ void* hal2012_handle_signal(void* _p) {
         string grammar_file = current_instance->base_dir + "/lang_" + current_instance->tlanguage + "/grammar.txt";
         g->read_grammar(grammar_file);
         g->set_verbose(true);
+        g->set_buffered(true);
         g->expand();
         grammar2012::parsed_type* parsed = g->parse(text);
         const string perl_eval = grammar2012::grammar::print_perl(parsed);
@@ -704,8 +712,8 @@ void* hal2012_handle_signal(void* _p) {
     delete parameters;
 }
 
-void grammar2012::tagger::ask_user(const string word, grammar2012::tags& tags) {
+void grammar2012::tagger::ask_user(const string word, grammar2012::tags* tags) {
     fprintf(output(), "\nUnknown part of speech:\n\n%s\n", word.c_str());
     const string& pos = hal2012_server_get_value_from_socket("WORD_TYPE", word);
-    tags.first = pos;
+    tags->first = pos;
 }

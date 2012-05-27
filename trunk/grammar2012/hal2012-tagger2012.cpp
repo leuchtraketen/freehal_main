@@ -39,8 +39,8 @@ const string ucfirst(const string& _data) {
 bool is_lower(const string& _data) {
 	return lc(_data) == _data;
 }
-bool is_empty(const tags& tags) {
-	return tags.first.size() == 0 && tags.second.size() == 0;
+bool is_empty(const tags* tags) {
+	return tags->first.size() == 0 && tags->second.size() == 0;
 }
 bool regex(boost::smatch& what, const string& str, const string& exp) {
 	boost::regex regex(exp, boost::regex::perl | boost::regex::icase);
@@ -50,9 +50,9 @@ bool regex_case(boost::smatch& what, const string& str, const string& exp) {
 	boost::regex regex(exp, boost::regex::perl);
 	return boost::regex_search(str.begin(), str.end(), what, regex);
 }
-const string print_tags(const tags& tags) {
-	return "type=" + tags.first
-			+ (tags.second.size() == 0 ? "" : ",genus=" + tags.second);
+const string print_tags(const tags* tags) {
+	return "type=" + tags->first
+			+ (tags->second.size() == 0 ? "" : ",genus=" + tags->second);
 }
 const string unique_pos_type(const string& type) {
 	if (type == "vi" || type == "vt" || type == "ci")
@@ -66,7 +66,14 @@ const string unique_pos_type(const string& type) {
 }
 
 tagger::tagger() :
-		type(), genus(), regex_type(), regex_genus(), verbose(true) {
+		type(new tagmap()), genus(new tagmap()), regex_type(new taglist()), regex_genus(
+				new tagmap()), verbose(true), buffered(false) {
+}
+tagger::~tagger() {
+	delete type;
+	delete genus;
+	delete regex_type;
+	delete regex_genus;
 }
 
 void tagger::set_verbose(bool v) {
@@ -74,6 +81,13 @@ void tagger::set_verbose(bool v) {
 }
 bool tagger::is_verbose() {
 	return verbose;
+}
+
+void tagger::set_buffered(bool v) {
+	buffered = v;
+}
+bool tagger::is_buffered() {
+	return buffered;
 }
 
 int tagger::read_pos_file(const string filename) {
@@ -90,9 +104,19 @@ int tagger::read_pos_file(const string filename) {
 		cout << "read part of speech file: " << filename << endl;
 
 	string line;
+	vector<string> lines;
+	while (std::getline(i, line)) {
+		lines.push_back(line);
+	}
+
+	//string line;
 	string word;
 	int n = 0;
-	while (std::getline(i, line)) {
+	//while (std::getline(i, line)) {
+	for (vector<string>::iterator iter = lines.begin(); iter != lines.end();
+			++iter) {
+		line = *iter;
+
 		algo::trim_right_if(line, boost::is_space());
 		if (algo::ends_with(line, ":")) {
 			algo::trim_if(line, boost::is_any_of(":") || boost::is_space());
@@ -105,21 +129,23 @@ int tagger::read_pos_file(const string filename) {
 				algo::trim_left_if(line,
 						boost::is_any_of(":") || boost::is_space());
 				line = unique_pos_type(line);
-				type.insert(tagmap::value_type(word, line));
+				type->insert(tagmap::value_type(word, line));
 			} else if (algo::starts_with(line, "genus")) {
 				line = line.substr(5);
 				algo::trim_left_if(line,
 						boost::is_any_of(":") || boost::is_space());
-				genus.insert(tagmap::value_type(word, line));
+				genus->insert(tagmap::value_type(word, line));
 			}
 		}
 
 		if (is_verbose() && ++n % 10000 == 0) {
 			cout << "\r  " << n << " lines...          " << flush;
+			if (is_buffered())
+				cout << endl;
 		}
 	}
 	if (is_verbose()) {
-		cout << "\r  " << n << " lines.          \n" << flush;
+		cout << "\r  " << n << " lines.          " << endl << flush;
 	}
 
 	return 0;
@@ -154,47 +180,49 @@ int tagger::read_regex_pos_file(const string filename) {
 				algo::trim_left_if(line,
 						boost::is_any_of(":") || boost::is_space());
 				line = unique_pos_type(line);
-				regex_type.push_back(pair<string, string>(word, line));
+				regex_type->push_back(pair<string, string>(word, line));
 			} else if (algo::starts_with(line, "genus")) {
 				line = line.substr(5);
 				algo::trim_left_if(line,
 						boost::is_any_of(":") || boost::is_space());
-				regex_genus.insert(tagmap::value_type(word, line));
+				regex_genus->insert(tagmap::value_type(word, line));
 			}
 		}
 
 		if (is_verbose() && ++n % 10000 == 0) {
 			cout << "\r  " << n << " lines...          " << flush;
+			if (is_buffered())
+				cout << endl;
 		}
 	}
 	if (is_verbose()) {
-		cout << "\r  " << n << " lines.          \n" << flush;
+		cout << "\r  " << n << " lines.          " << endl << flush;
 	}
 
 	return 0;
 }
 
-void tagger::impl_get_pos(const string word, tags& tags) {
-	if (type.count(word)) {
-		tags.first = type.find(word)->second;
-		if (tags.first == "n" && genus.count(word)) {
-			tags.second = genus.find(word)->second;
+void tagger::impl_get_pos(const string word, tags* tags) {
+	if (type->count(word)) {
+		tags->first = type->find(word)->second;
+		if (tags->first == "n" && genus->count(word)) {
+			tags->second = genus->find(word)->second;
 		}
 		if (is_verbose())
 			cout << "  found: " << print_tags(tags) << endl;
 	}
 }
-void tagger::impl_regex_get_pos(const string word, tags& tags) {
-	for (taglist::iterator iter = regex_type.begin(); iter != regex_type.end();
-			++iter) {
+void tagger::impl_regex_get_pos(const string word, tags* tags) {
+	for (taglist::iterator iter = regex_type->begin();
+			iter != regex_type->end(); ++iter) {
 		const string& exp = iter->first;
 		const string& value = iter->second;
 
 		boost::smatch result;
 		if (regex(result, word, exp)) {
-			tags.first = value;
-			if (tags.first == "n" && regex_genus.count(exp)) {
-				tags.second = regex_genus.find(exp)->second;
+			tags->first = value;
+			if (tags->first == "n" && regex_genus->count(exp)) {
+				tags->second = regex_genus->find(exp)->second;
 			}
 			if (is_verbose())
 				cout << "  found: " << print_tags(tags) << endl
@@ -205,10 +233,10 @@ void tagger::impl_regex_get_pos(const string word, tags& tags) {
 	}
 }
 
-tags tagger::get_pos(const string _word) {
+tags* tagger::get_pos(const string _word) {
 	string word = _word;
 	to_ascii(word);
-	tags tags;
+	tags* tags = new grammar2012::tags("", "");
 	if (word.size() == 0) {
 		return tags;
 	}
@@ -225,7 +253,7 @@ tags tagger::get_pos(const string _word) {
 	if (is_empty(tags)) {
 		boost::smatch result;
 		if (regex(result, word, "[{]{3}(.*?)[}]{3}")) {
-			tags.first = result[1];
+			tags->first = result[1];
 			if (is_verbose())
 				cout << "  predefined: " << print_tags(tags) << endl;
 		}
@@ -235,7 +263,7 @@ tags tagger::get_pos(const string _word) {
 	if (is_empty(tags)) {
 		boost::smatch result;
 		if (regex_case(result, word, "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]")) {
-			tags.first = "n";
+			tags->first = "n";
 			if (is_verbose())
 				cout << "  found: " << print_tags(tags) << endl
 						<< "  (upper case)" << endl;
@@ -254,28 +282,40 @@ tags tagger::get_pos(const string _word) {
 	return tags;
 }
 
-void tagger::impl_guess(const string word, tags& tags) {
+void tagger::impl_guess(const string word, tags* tags) {
+
+	return; /////////////////////////////////
+
 	int word_size = word.size();
 	bool word_is_lower = is_lower(word);
 	if (is_verbose())
 		cout << "  guess: " << word << endl;
 
 	boost::unordered_map<string, int> ends;
-	if (word_size > 1) ends.insert(pair<string, int>(word.substr(word_size - 1), 2));
-	if (word_size > 2) ends.insert(pair<string, int>(word.substr(word_size - 2), 6));
-	if (word_size > 3) ends.insert(pair<string, int>(word.substr(word_size - 3), 12));
-	if (word_size > 4) ends.insert(pair<string, int>(word.substr(word_size - 4), 8));
-	if (word_size > 5) ends.insert(pair<string, int>(word.substr(word_size - 5), 10));
-	if (word_size > 6) ends.insert(pair<string, int>(word.substr(word_size - 6), 12));
+	if (word_size > 1)
+		ends.insert(pair<string, int>(word.substr(word_size - 1), 2));
+	if (word_size > 2)
+		ends.insert(pair<string, int>(word.substr(word_size - 2), 6));
+	if (word_size > 3)
+		ends.insert(pair<string, int>(word.substr(word_size - 3), 12));
+	if (word_size > 4)
+		ends.insert(pair<string, int>(word.substr(word_size - 4), 8));
+	if (word_size > 5)
+		ends.insert(pair<string, int>(word.substr(word_size - 5), 10));
+	if (word_size > 6)
+		ends.insert(pair<string, int>(word.substr(word_size - 6), 12));
 	boost::unordered_map<string, int> begins;
-	if (word_size > 1) begins.insert(pair<string, int>(word.substr(0, 1), 1));
-	if (word_size > 2) begins.insert(pair<string, int>(word.substr(0, 2), 2));
-	if (word_size > 3) begins.insert(pair<string, int>(word.substr(0, 3), 3));
+	if (word_size > 1)
+		begins.insert(pair<string, int>(word.substr(0, 1), 1));
+	if (word_size > 2)
+		begins.insert(pair<string, int>(word.substr(0, 2), 2));
+	if (word_size > 3)
+		begins.insert(pair<string, int>(word.substr(0, 3), 3));
 
 	boost::unordered_map<string, int> pos_to_rating;
 	boost::unordered_map<string, int> pos_to_count;
 
-	for (tagmap::iterator iter = type.begin(); iter != type.end(); ++iter) {
+	for (tagmap::iterator iter = type->begin(); iter != type->end(); ++iter) {
 		const string& val_word = iter->first;
 		const string& val_type = iter->second;
 		if (val_type != "n" && val_type != "adj" && val_type != "v")
@@ -328,12 +368,12 @@ void tagger::impl_guess(const string word, tags& tags) {
 					<< score << endl;
 	}
 
-	tags.first = best_pos_type;
+	tags->first = best_pos_type;
 	if (is_verbose())
 		cout << "  guessed: " << print_tags(tags) << endl;
 }
 
-void tagger::guess(const string word, tags& tags) {
+void tagger::guess(const string word, tags* tags) {
 	const string _config_value = check_config("tagger", "1");
 	if (boost::contains(_config_value, "1")) {
 		impl_guess(word, tags);

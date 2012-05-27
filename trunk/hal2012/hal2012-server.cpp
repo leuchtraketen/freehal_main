@@ -85,6 +85,9 @@ void stream_process_to_std(int num, bool& do_exit, bp::pistream* i, std::ostream
                 if (strstr(line.c_str(), "Program received signal")) {
                     (*o_stdin) << "bt" << endl;
                 }
+                if (strstr(line.c_str(), "Backtrace:")) {
+                    (*o_stdin) << "bt" << endl;
+                }
             }
             if (line == oldline) {
                 ++times_oldline;

@@ -19,6 +19,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include "hal2012.h"
+#include "hal2012-util.h"
 #include "hal2012-ipc.h"
 
 void (*hal2012_send_signal_func)(string vfile, string data) = 0;
@@ -31,6 +33,9 @@ void hal2012_send_signal(const string& vfile, const string& data) {
     hal2012_send_signals();
 }
 void hal2012_send_signals() {
+    static bool running = false;
+    if (running) return;
+    running = true;
     if (hal2012_send_signal_func) {
         for (int i = 0; i < signals_to_child.size(); ++i) {
             cout << "hal2012_send_signal_func(\"" << signals_to_child[i].first << "\", \"" << signals_to_child[i].second << "\");" << endl;
@@ -38,6 +43,7 @@ void hal2012_send_signals() {
         }
         signals_to_child.clear();
     }
+    running = false;
 }
 
 

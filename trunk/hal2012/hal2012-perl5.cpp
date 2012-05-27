@@ -580,7 +580,8 @@ void perl5_execute(string filename) {
 
     ofstream log("log.txt");
 
-    vector<pthread_t> threads;
+    vector<boost::thread*> threads;
+    //vector<pthread_t> threads;
     while (std::getline(*child_stdout, line)) {
         if (line.find("IPC:") == 0) {
             cout << "get (hal->c): IPC:" << endl;
@@ -600,15 +601,16 @@ void perl5_execute(string filename) {
             }
 
             pair<const string, const string>* parameters = new pair<const string, const string>(vfile, data);
-//            char* parameters[3] = {strdup(vfile.c_str()), strdup(data.c_str()), (char*)MULTI};
-            pthread_t thread_no_1;
-            pthread_create (&thread_no_1, NULL, hal2012_handle_signal, (void*)parameters);
-            threads.push_back(thread_no_1);
+            //pthread_t thread_no_1;
+            //pthread_create (&thread_no_1, NULL, hal2012_handle_signal, (void*)parameters);
+            //threads.push_back(thread_no_1);
+            threads.push_back(new boost::thread(boost::bind(&hal2012_handle_signal, (void*)parameters)));
 
-            if (threads.size() > 20) {
+            if (threads.size() > 5) {
                 int k;
                 for (k = 0; k < threads.size(); ++k) {
-                    pthread_join(threads[k], NULL);
+                    threads[k]->join();
+                    //pthread_join(threads[k], NULL);
                 }
                 threads.clear();
             }
@@ -623,7 +625,8 @@ void perl5_execute(string filename) {
     }
     int k;
     for (k = 0; k < threads.size(); ++k) {
-        pthread_join(threads[k], NULL);
+        threads[k]->join();
+        //pthread_join(threads[k], NULL);
     }
     threads.clear();
 

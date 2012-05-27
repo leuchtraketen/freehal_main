@@ -209,3 +209,10 @@ vorhanden:
   type: adj
 wort:
   type: n
+gut:
+  type: adj
+geht:
+  type: v
+es:
+  type: n
+
