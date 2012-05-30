@@ -1,12 +1,12 @@
 /*
- * hal2012-tagger2012.h
+ * hal2012-parser2012.h
  *
  *  Created on: 23.05.2012
  *      Author: tobias
  */
 
-#ifndef HAL2012_TAGGER2012_H_
-#define HAL2012_TAGGER2012_H_
+#ifndef HAL2012_PARSER2012_H_
+#define HAL2012_PARSER2012_H_
 
 #include <boost/unordered_map.hpp>
 #include <boost/unordered_set.hpp>
@@ -35,36 +35,25 @@ namespace algo = boost::algorithm;
 EXTERN_C char* check_config(const char* name, const char* _default);
 
 namespace grammar2012 {
-typedef pair<string, string> tags;
+typedef unsigned int size_t;
 
-bool is_empty(const tags*);
-const string print_tags(const tags*);
 
-class tagger;
-
-class tagger {
+class parser {
 private:
-	typedef boost::unordered_map<string, string> tagmap;
-	typedef vector<pair<string, string> > taglist;
-	tagmap* type;
-	tagmap* genus;
-	taglist* regex_type;
-	tagmap* regex_genus;
+	string input_raw;
+	string input_clean;
+
 	bool verbose;
 	bool buffered;
 
-	void impl_get_pos(const string, tags*);
-	void impl_regex_get_pos(const string, tags*);
-	void impl_guess(const string, tags*);
-	void guess(const string, tags*);
-	void ask_user(const string, tags*);
+	void clean_input(string&);
+	void build_pair_sentences(string&, const string&, const string&);
+	void build_pair_sentences(string&, const string&, const string&, const string&);
 
 public:
-	tagger();
-	~tagger();
-	int read_pos_file(const string);
-	int read_regex_pos_file(const string);
-	tags* get_pos(const string);
+	parser(const string&);
+	~parser();
+
 	void set_verbose(bool);
 	bool is_verbose();
 	void set_buffered(bool);

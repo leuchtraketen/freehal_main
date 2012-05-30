@@ -5,64 +5,17 @@
  *      Author: tobias
  */
 
+#include "hal2012-util2012.h"
 #include "hal2012-tagger2012.h"
 
 namespace grammar2012 {
 
-bool is_invalid_char(char c) {
-	return !(c >= 0 && c < 128);
-}
-void to_ascii(string& str) {
-	str.erase(remove_if(str.begin(), str.end(), is_invalid_char), str.end());
-}
-const string lc(const string& _data) {
-	string data(_data);
-	std::transform(data.begin(), data.end(), data.begin(), ::tolower);
-	return data;
-}
-const string uc(const string& _data) {
-	string data(_data);
-	std::transform(data.begin(), data.end(), data.begin(), ::toupper);
-	return data;
-}
-const string lcfirst(const string& _data) {
-	string data(_data);
-	data[0] = ::tolower(data[0]);
-	return data;
-}
-const string ucfirst(const string& _data) {
-	string data(_data);
-	std::transform(data.begin(), data.end(), data.begin(), ::tolower);
-	data[0] = ::toupper(data[0]);
-	return data;
-}
-bool is_lower(const string& _data) {
-	return lc(_data) == _data;
-}
 bool is_empty(const tags* tags) {
 	return tags->first.size() == 0 && tags->second.size() == 0;
-}
-bool regex(boost::smatch& what, const string& str, const string& exp) {
-	boost::regex regex(exp, boost::regex::perl | boost::regex::icase);
-	return boost::regex_search(str.begin(), str.end(), what, regex);
-}
-bool regex_case(boost::smatch& what, const string& str, const string& exp) {
-	boost::regex regex(exp, boost::regex::perl);
-	return boost::regex_search(str.begin(), str.end(), what, regex);
 }
 const string print_tags(const tags* tags) {
 	return "type=" + tags->first
 			+ (tags->second.size() == 0 ? "" : ",genus=" + tags->second);
-}
-const string unique_pos_type(const string& type) {
-	if (type == "vi" || type == "vt" || type == "ci")
-		return "v";
-	else if (algo::starts_with(type, "a") && type != "art")
-		return "adj";
-	else if (type == "n" || type == "f" || type == "m"
-			|| algo::starts_with(type, "n,") || type == "pron" || type == "b")
-		return "n";
-	return type;
 }
 
 tagger::tagger() :
@@ -219,7 +172,7 @@ void tagger::impl_regex_get_pos(const string word, tags* tags) {
 		const string& value = iter->second;
 
 		boost::smatch result;
-		if (regex(result, word, exp)) {
+		if (regex_ifind(result, word, exp)) {
 			tags->first = value;
 			if (tags->first == "n" && regex_genus->count(exp)) {
 				tags->second = regex_genus->find(exp)->second;
@@ -252,7 +205,7 @@ tags* tagger::get_pos(const string _word) {
 
 	if (is_empty(tags)) {
 		boost::smatch result;
-		if (regex(result, word, "[{]{3}(.*?)[}]{3}")) {
+		if (regex_ifind(result, word, "[{]{3}(.*?)[}]{3}")) {
 			tags->first = result[1];
 			if (is_verbose())
 				cout << "  predefined: " << print_tags(tags) << endl;
@@ -262,7 +215,7 @@ tags* tagger::get_pos(const string _word) {
 		impl_regex_get_pos(word, tags);
 	if (is_empty(tags)) {
 		boost::smatch result;
-		if (regex_case(result, word, "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]")) {
+		if (regex_find(result, word, "[ABCDEFGHIJKLMNOPQRSTUVWXYZ]")) {
 			tags->first = "n";
 			if (is_verbose())
 				cout << "  found: " << print_tags(tags) << endl

@@ -5,6 +5,7 @@
  *      Author: tobias
  */
 
+#include "hal2012-util2012.h"
 #include "hal2012-grammar2012.h"
 
 namespace grammar2012 {
