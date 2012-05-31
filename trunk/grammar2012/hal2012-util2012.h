@@ -39,6 +39,8 @@ namespace grammar2012 {
 
 typedef unsigned int size_t;
 
+extern const char quote;
+
 bool is_invalid_char(char c);
 void to_ascii(string& str);
 const string lc(const string& _data);

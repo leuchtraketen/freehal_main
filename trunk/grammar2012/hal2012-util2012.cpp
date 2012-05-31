@@ -9,6 +9,8 @@
 
 namespace grammar2012 {
 
+const char quote = '"';
+
 bool is_invalid_char(char c) {
 	return !(c >= 0 && c < 128);
 }
@@ -51,6 +53,7 @@ const string unique_pos_type(const string& type) {
 }
 
 bool regex_ifind(boost::smatch& what, const string& str, const string& exp) {
+	what = boost::smatch();
 	boost::regex regex(exp, boost::regex::perl | boost::regex::icase);
 	if (safe_iregex(regex, exp))
 		return boost::regex_search(str.begin(), str.end(), what, regex);
@@ -58,6 +61,7 @@ bool regex_ifind(boost::smatch& what, const string& str, const string& exp) {
 		return false;
 }
 bool regex_find(boost::smatch& what, const string& str, const string& exp) {
+	what = boost::smatch();
 	boost::regex regex(exp, boost::regex::perl);
 	if (safe_regex(regex, exp))
 		return boost::regex_search(str.begin(), str.end(), what, regex);

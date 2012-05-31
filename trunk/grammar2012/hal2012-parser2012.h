@@ -42,16 +42,19 @@ class parser {
 private:
 	string input_raw;
 	string input_clean;
+	string input_simplified;
 
 	bool verbose;
 	bool buffered;
+	string lang;
 
 	void clean_input(string&);
+	void simplify_input(string&);
 	void build_pair_sentences(string&, const string&, const string&);
 	void build_pair_sentences(string&, const string&, const string&, const string&);
 
 public:
-	parser(const string&);
+	parser(const string&, const string&);
 	~parser();
 
 	void set_verbose(bool);
