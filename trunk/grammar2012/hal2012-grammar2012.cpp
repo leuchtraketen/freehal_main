@@ -750,7 +750,8 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 							<< print_entity(rule_iter->second.first) << " ; "
 							<< print_vector(*rule_iter->second.second) << endl;
 
-				const string& complexity_key = print_entity(rule_iter->second.first);
+				const string& complexity_key = print_entity(
+						rule_iter->second.first);
 				int complexity = rule_iter->second.second->size();
 				int best_complexity = 0;
 				if (new_words_complexity_map->find(complexity_key)
@@ -766,6 +767,16 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 										complexity_key,
 										pair<int, reducelist>(complexity,
 												reducelist())));
+						if (is_verbose())
+							cout << "      best complexity. deleting worse data. ("
+									<< complexity << " > " << best_complexity << ")"
+									<< endl;
+					}else {
+						if (is_verbose())
+							cout << "      equal complexity. ("
+									<< complexity << " = " << best_complexity << ")"
+									<< endl;
+
 					}
 
 					entities* new_words_i = replace_in_vector(*old_words_i,
@@ -774,6 +785,12 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 					new_words_complexity_map->find(complexity_key)->second.second.insert(
 							reducelist::value_type(all_to_str(*new_words_i),
 									new_words_i));
+
+				} else {
+					if (is_verbose())
+						cout << "      too low complexity. ("
+								<< complexity << " < " << best_complexity << ")"
+								<< endl;
 
 				}
 				//new_words_list->insert(
@@ -824,6 +841,8 @@ vector<entities*>* grammar::reduce(entities* old_words_i) {
 
 				new_words_list->insert(*temp_iter);
 			}
+			delete temp;
+			temp = 0;
 			if (is_verbose())
 				cout << endl;
 		}
