@@ -133,7 +133,7 @@ const string entity::print_graph(string* _key = 0) const {
 		stringstream sstext;
 		sstext << text << " (" << u++ << ")";
 		ss << "\"" << sstext.str()
-				<< "\" [shape=record,style=filled,fillcolor=yellow,regular=1];"
+				<< "\" [shape=record,fontsize=14,style=filled,fillcolor=yellow,regular=1];"
 				<< endl;
 		ss << "\"" << key << "\" -> \"" << sstext.str()
 				<< "\" [dir=none,weight=10];" << endl;
