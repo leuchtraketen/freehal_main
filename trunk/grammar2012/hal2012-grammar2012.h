@@ -96,6 +96,7 @@ private:
 	bool buffered;
 
 	typedef boost::unordered_map<string, entities*> reducelist;
+	typedef boost::unordered_map<string, pair<int, reducelist> > reducelist_by_complexity;
 
 	entity* add_entity(entity*);
 	entity* add_symbol(const string);

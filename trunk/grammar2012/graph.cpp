@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
 	grammar2012::grammar* _g = new grammar2012::grammar();
 	_g->read_grammar("grammar.txt");
-	_g->set_verbose(false);
+	_g->set_verbose(true);
 	_g->set_buffered(true);
 	_g->expand();
 

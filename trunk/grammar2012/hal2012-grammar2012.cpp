@@ -724,7 +724,8 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 }
 grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 	const string old_impression = all_get_key(*old_words_i);
-	reducelist* new_words_list = new reducelist();
+	reducelist_by_complexity*new_words_complexity_map =
+			new reducelist_by_complexity();
 
 	// for each key
 	reducekeys::iterator iter;
@@ -749,22 +750,55 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 							<< print_entity(rule_iter->second.first) << " ; "
 							<< print_vector(*rule_iter->second.second) << endl;
 
-				entities* new_words_i = replace_in_vector(*old_words_i,
-						*rule_iter->second.second, rule_iter->second.first);
+				const string& complexity_key = print_entity(rule_iter->second.first);
+				int complexity = rule_iter->second.second->size();
+				int best_complexity = 0;
+				if (new_words_complexity_map->find(complexity_key)
+						!= new_words_complexity_map->end()) {
+					best_complexity = new_words_complexity_map->find(
+							complexity_key)->second.first;
+				}
+				if (complexity >= best_complexity) {
+					if (complexity > best_complexity) {
+						new_words_complexity_map->erase(complexity_key);
+						new_words_complexity_map->insert(
+								reducelist_by_complexity::value_type(
+										complexity_key,
+										pair<int, reducelist>(complexity,
+												reducelist())));
+					}
 
-				new_words_list->insert(
-						reducelist::value_type(all_to_str(*new_words_i),
-								new_words_i));
+					entities* new_words_i = replace_in_vector(*old_words_i,
+							*rule_iter->second.second, rule_iter->second.first);
+
+					new_words_complexity_map->find(complexity_key)->second.second.insert(
+							reducelist::value_type(all_to_str(*new_words_i),
+									new_words_i));
+
+				}
+				//new_words_list->insert(
+				//		reducelist::value_type(all_to_str(*new_words_i),
+				//			new_words_i));
 			}
 		}
 	}
 
+	reducelist* new_words_list = new reducelist();
+	for (reducelist_by_complexity::iterator iter =
+			new_words_complexity_map->begin();
+			iter != new_words_complexity_map->end(); ++iter) {
+		for (reducelist::iterator i = iter->second.second.begin();
+				i != iter->second.second.end(); ++i) {
+			new_words_list->insert(*i);
+		}
+	}
+	delete new_words_complexity_map;
 	return new_words_list;
 }
 
 vector<entities*>* grammar::reduce(entities* old_words_i) {
-	if (is_verbose())
-		cout << "reduce: " << print_vector(*old_words_i) << endl << endl;
+	//if (is_verbose())
+	cout << "reduce: " << print_vector(*old_words_i) << endl << endl;
 
 	vector<entities*>* final = new vector<entities*>();
 	reducelist* words_list = new reducelist();
@@ -772,8 +806,9 @@ vector<entities*>* grammar::reduce(entities* old_words_i) {
 			reducelist::value_type(all_to_str(*old_words_i), old_words_i));
 	int step = 0;
 	while (step++ <= 50) {
-		if (is_verbose())
-			cout << "reduce step " << step << "..." << endl << endl;
+		//	if (is_verbose())
+		cout << "reduce step " << step << "... " << words_list->size()
+				<< " possibilities..." << endl << endl;
 		if (words_list->size() == 0)
 			break;
 
