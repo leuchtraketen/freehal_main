@@ -1216,8 +1216,8 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "hast du schon was von (.*?) gehoert", "was ist \\1");
 	regex_ireplace(str, "hast du was von (.*?) gehoert", "was ist \\1");
 	regex_ireplace(str, "hast du was mal von (.*?) gehoert", "was ist \\1");
-	regex_ireplace(str, "^(...*?) hast du ", "du hast \\1 ");
-	regex_ireplace(str, "^(...*?) habe ich ", "ich habe \\1 ");
+	regex_ireplace(str, "^(...*?) hast du ", "\\1 du hast ");
+	regex_ireplace(str, "^(...*?) habe ich ", "\\1 ich habe ");
 
 	// cout << "parser2012: step 4.2: " << str << endl;
 
