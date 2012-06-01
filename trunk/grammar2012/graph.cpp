@@ -20,13 +20,15 @@ int main(int argc, char** argv) {
 
 	grammar2012::tagger* _t = new grammar2012::tagger();
 	_t->set_verbose(true);
+	_t->set_buffered(true);
 	_t->read_pos_file("brain.pos");
 	_t->read_pos_file("memory.pos");
 	_t->read_regex_pos_file("regex.pos");
 
 	grammar2012::grammar* _g = new grammar2012::grammar();
 	_g->read_grammar("grammar.txt");
-	_g->set_verbose(true);
+	_g->set_verbose(false);
+	_g->set_buffered(true);
 	_g->expand();
 
 	grammar2012::parser* p = new grammar2012::parser();
