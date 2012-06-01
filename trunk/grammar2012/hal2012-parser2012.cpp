@@ -15,8 +15,8 @@ sentence::sentence(parser* _p, const string& _input) :
 
 	{
 		string tmp(input);
-		regex_replace(tmp, "[.!?]", "");
-		algo::trim(tmp);
+		regex_replace(tmp, "[.!?\"']", "");
+		algo::trim_if(tmp, algo::is_space() || algo::is_any_of("[-;,#+]"));
 		algo::split(words_list, tmp, algo::is_space());
 	}
 	{
