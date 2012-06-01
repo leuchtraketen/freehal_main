@@ -223,6 +223,8 @@ tags* tagger::get_pos(const string _word) {
 		boost::smatch result;
 		if (word == "," || word == ";") {
 			tags->first = "komma";
+			if (is_verbose())
+				cout << "  builtin: " << print_tags(tags) << endl;
 		}
 		if (regex_ifind(result, word, "[{]{3}(.*?)[}]{3}")) {
 			tags->first = result[1];
