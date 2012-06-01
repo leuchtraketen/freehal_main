@@ -13,8 +13,8 @@ target_link_libraries (graph m dl boost_regex-mt)
 set_target_properties("main" PROPERTIES COMPILE_FLAGS "-pg -g")
 set_target_properties("main" PROPERTIES LINK_FLAGS "-pg -g")
 
-set_target_properties("graph" PROPERTIES COMPILE_FLAGS "-pg -g")
-set_target_properties("graph" PROPERTIES LINK_FLAGS "-pg -g")
+set_target_properties("graph" PROPERTIES COMPILE_FLAGS " -g")
+set_target_properties("graph" PROPERTIES LINK_FLAGS " -g")
 
 
 install(PROGRAMS graph DESTINATION bin)
