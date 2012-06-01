@@ -1,7 +1,9 @@
 s-all:
     s-sentence/v-clause-1
     s-sentence/v-clause-1 s-followingsentence/v-clause-2
-
+    s-sentence/v-clause-1 d-komma s-sentence/v-clause-2
+    s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3
+    s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-komma s-sentence/v-clause-4
 
 s-sentence:
     r-adverbs s-sentence-spo

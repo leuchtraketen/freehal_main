@@ -8,6 +8,7 @@
 #include "hal2012-grammar2012.h"
 #include "hal2012-tagger2012.h"
 #include "hal2012-parser2012.h"
+#include "hal2012-util2012.h"
 
 void grammar2012::tagger::ask_user(const string word, grammar2012::tags* tags) {
 }
@@ -17,9 +18,36 @@ EXTERN_C char* check_config(const char* name, const char* _default) {
 
 int main() {
 
-	grammar2012::parser* p = new grammar2012::parser(
-			"Wie alt bist du? wie gehts?");
+	grammar2012::tagger* _t = new grammar2012::tagger();
+	_t->set_verbose(true);
+	_t->read_pos_file("brain.pos");
+	_t->read_pos_file("memory.pos");
+	_t->read_regex_pos_file("regex.pos");
+
+	grammar2012::grammar* _g = new grammar2012::grammar();
+	_g->read_grammar("grammar.txt");
+	_g->set_verbose(true);
+	_g->expand();
+
+	grammar2012::parser* p = new grammar2012::parser();
+	p->set_lang("de");
+	p->set_path(".");
+	p->set_tagger(_t);
+	p->set_grammar(_g);
 	p->set_verbose(true);
+	p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
+	const vector<grammar2012::sentence*>& vs = p->get_sentences();
+	foreach (grammar2012::sentence* s, vs) {
+		ofstream o("current.dot");
+		o << grammar2012::grammar::print_graph(s->get_parsed());
+		o.close();
+	}
+
+#if defined(MINGW) || defined(WIN32)
+	::system("dot.exe -Tpng current.dot > current.png");
+#else
+	::system("dot -Tpng current.dot > current.png");
+#endif
 
 	return 0;
 

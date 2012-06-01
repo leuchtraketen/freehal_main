@@ -10,6 +10,45 @@
 namespace grammar2012 {
 
 const char quote = '"';
+bool REGEX_DEBUG = false;
+
+template<typename T>
+const string print_vector(const vector<T>& v) {
+	stringstream ss;
+	ss << "[";
+	for (typename vector<T>::const_iterator i = v.begin(); i != v.end(); ++i) {
+		if (i != v.begin())
+			ss << ", ";
+		ss << *i;
+	}
+	ss << "]";
+	return ss.str();
+}
+template<typename T>
+const string print_doublevector(const vector<vector<T> >& v) {
+	stringstream ss;
+	ss << "[";
+	for (typename vector<vector<T> >::const_iterator i = v.begin();
+			i != v.end(); ++i) {
+		if (i != v.begin())
+			ss << ", ";
+		ss << print_vector(*i);
+	}
+	ss << "]";
+	return ss.str();
+}
+const string print_vector(const vector<string>& v) {
+	stringstream ss;
+	ss << "[";
+	for (typename vector<string>::const_iterator i = v.begin(); i != v.end();
+			++i) {
+		if (i != v.begin())
+			ss << ", ";
+		ss << '"' << *i << '"';
+	}
+	ss << "]";
+	return ss.str();
+}
 
 bool is_invalid_char(char c) {
 	return !(c >= 0 && c < 128);
@@ -40,16 +79,6 @@ const string ucfirst(const string& _data) {
 }
 bool is_lower(const string& _data) {
 	return lc(_data) == _data;
-}
-const string unique_pos_type(const string& type) {
-	if (type == "vi" || type == "vt" || type == "ci")
-		return "v";
-	else if (algo::starts_with(type, "a") && type != "art")
-		return "adj";
-	else if (type == "n" || type == "f" || type == "m"
-			|| algo::starts_with(type, "n,") || type == "pron" || type == "b")
-		return "n";
-	return type;
 }
 
 bool regex_ifind(boost::smatch& what, const string& str, const string& exp) {
@@ -84,19 +113,28 @@ bool regex_find(const string& str, const string& exp) {
 }
 void regex_ireplace(string& str, const string& exp, const string& repl) {
 	boost::regex regex;
-	if (safe_iregex(regex, exp))
+	if (safe_iregex(regex, exp)) {
+		const string copy = str;
 		str = boost::regex_replace(str, regex, repl,
 				boost::match_default | boost::format_perl);
-	else
-		return;
+		if (REGEX_DEBUG && copy != str)
+			cout << "  regex replace: " << quote << copy << quote << " -> "
+					<< quote << str << quote << " (" << quote << exp << quote
+					<< " -> " << quote << repl << quote << ")"
+					<< " [ignore case]" << endl;
+	}
 }
 void regex_replace(string& str, const string& exp, const string& repl) {
 	boost::regex regex;
-	if (safe_regex(regex, exp))
+	if (safe_regex(regex, exp)) {
+		const string copy = str;
 		str = boost::regex_replace(str, regex, repl,
 				boost::match_default | boost::format_perl);
-	else
-		return;
+		if (REGEX_DEBUG && copy != str)
+			cout << "  regex replace: " << quote << copy << quote << " -> "
+					<< quote << str << quote << " (" << quote << exp << quote
+					<< " -> " << quote << repl << quote << ")" << endl;
+	}
 }
 void str_replace(string& str, const string& tofind, const string& repl) {
 	boost::replace_all(str, tofind, repl);
@@ -107,7 +145,8 @@ bool safe_regex(boost::regex& regex, const string& exp) {
 		regex.assign(exp, boost::regex::perl);
 		return true;
 	} catch (boost::regex_error& e) {
-		cout << "regex error! \"" << e.what() << "\" (exp: \"" << exp << "\")" << endl;
+		cout << "regex error! \"" << e.what() << "\" (exp: \"" << exp << "\")"
+				<< endl;
 	}
 	return false;
 }
@@ -116,7 +155,8 @@ bool safe_iregex(boost::regex& regex, const string& exp) {
 		regex.assign(exp, boost::regex::perl | boost::regex::icase);
 		return true;
 	} catch (boost::regex_error& e) {
-		cout << "regex error! \"" << e.what() << "\" (exp: \"" << exp << "\")" << endl;
+		cout << "regex error! \"" << e.what() << "\" (exp: \"" << exp << "\")"
+				<< endl;
 	}
 	return false;
 }

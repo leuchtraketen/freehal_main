@@ -40,6 +40,13 @@ namespace grammar2012 {
 typedef unsigned int size_t;
 
 extern const char quote;
+extern bool REGEX_DEBUG;
+
+template<typename T>
+const string print_vector(const vector<T>& v);
+template<typename T>
+const string print_doublevector(const vector<vector<T> >& v);
+const string print_vector(const vector<string>& v);
 
 bool is_invalid_char(char c);
 void to_ascii(string& str);
@@ -52,7 +59,6 @@ bool regex_find(boost::smatch& what, const string& str, const string& exp);
 bool regex_ifind(boost::smatch& what, const string& str, const string& exp);
 bool regex_find(const string& str, const string& exp);
 bool regex_ifind(const string& str, const string& exp);
-const string unique_pos_type(const string& type);
 void regex_replace(string& str, const string& exp, const string& repl);
 void regex_ireplace(string& str, const string& exp, const string& repl);
 void str_replace(string& str, const string& exp, const string& repl);
@@ -60,6 +66,5 @@ bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
 
 }
-
 
 #endif /* HAL2012_UTIL2012_H_ */

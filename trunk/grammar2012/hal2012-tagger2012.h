@@ -39,6 +39,7 @@ typedef pair<string, string> tags;
 
 bool is_empty(const tags*);
 const string print_tags(const tags*);
+const string print_vector(const vector<tags*>&);
 
 class tagger;
 
@@ -65,10 +66,24 @@ public:
 	int read_pos_file(const string);
 	int read_regex_pos_file(const string);
 	tags* get_pos(const string);
+
 	void set_verbose(bool);
 	bool is_verbose();
 	void set_buffered(bool);
 	bool is_buffered();
+
+	static bool is_name(const string&);
+	static bool is_job(const string&);
+	static const string unique_pos_type(const string&);
+	static const string to_grammar_pos(tags*, const string&);
+
+	static string __builtin_entity_ends;
+	static string __builtin_male_names;
+	static string __builtin_female_names;
+	static vector<string> builtin_entity_ends;
+	static vector<string> builtin_male_names;
+	static vector<string> builtin_female_names;
+	static vector<string> custom_names;
 };
 
 }

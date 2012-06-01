@@ -10,31 +10,6 @@
 
 namespace grammar2012 {
 
-template<typename T>
-const string print_vector(const vector<T>& v) {
-	stringstream ss;
-	ss << "[";
-	for (typename vector<T>::const_iterator i = v.begin(); i != v.end(); ++i) {
-		if (i != v.begin())
-			ss << ", ";
-		ss << *i;
-	}
-	ss << "]";
-	return ss.str();
-}
-template<typename T>
-const string print_doublevector(const vector<vector<T> >& v) {
-	stringstream ss;
-	ss << "[";
-	for (typename vector<vector<T> >::const_iterator i = v.begin();
-			i != v.end(); ++i) {
-		if (i != v.begin())
-			ss << ", ";
-		ss << print_vector(*i);
-	}
-	ss << "]";
-	return ss.str();
-}
 const string grammar::print_vector(const entities& v) {
 	stringstream ss;
 	ss << "[";
@@ -155,11 +130,13 @@ const string entity::print_graph(string* _key = 0) const {
 	ss << "\"" << key << "\" [shape=record,regular=1];" << endl;
 
 	if (text.size() > 0) {
-		ss << "\"" << text
+		stringstream sstext;
+		sstext << text << " (" << u++ << ")";
+		ss << "\"" << sstext.str()
 				<< "\" [shape=record,style=filled,fillcolor=yellow,regular=1];"
 				<< endl;
-		ss << "\"" << key << "\" -> \"" << text << "\" [dir=none,weight=10];"
-				<< endl;
+		ss << "\"" << key << "\" -> \"" << sstext.str()
+				<< "\" [dir=none,weight=10];" << endl;
 	} else {
 		if (embed.size() > 0) {
 			for (entities::const_iterator it = embed.begin(); it != embed.end();
@@ -183,29 +160,37 @@ const string entity::print_perl(entity::perlmap* pm, string v_key = "",
 			ss << "$parsed = ";
 		}
 
-		ss << "{" << endl;
-		ss << "'subjects' => [ " << print_perl(pm, "subjects", keyprefix)
-				<< " ],";
-		ss << "'objects' => [ " << print_perl(pm, "objects", keyprefix)
-				<< " ],";
-		ss << "'verbs' => [ " << print_perl(pm, "verbs", keyprefix) << " ],";
-		ss << "'adverbs' => [ " << print_perl(pm, "before-adverbs", keyprefix)
-				<< print_perl(pm, "adverbs", keyprefix) << " ],";
-		ss << "'extra' => [ " << print_perl(pm, "extra", keyprefix) << " ],";
-		ss << "'questionword' => [ "
-				<< print_perl(pm, "questionwords", keyprefix) << " ],";
-		if (keyprefix == "v-clause-1") {
-			ss << endl;
-			ss << "'clauses' => [";
-			ss << print_perl(pm, "", "v-clause-2");
-			ss << "],";
-		}
-		ss << "}";
+		const string subjects = print_perl(pm, "subjects", keyprefix);
+		const string objects = print_perl(pm, "objects", keyprefix);
+		const string verbs = print_perl(pm, "verbs", keyprefix);
+		const string adverbs = print_perl(pm, "before-adverbs", keyprefix)
+				+ print_perl(pm, "adverbs", keyprefix);
+		const string extra = print_perl(pm, "extra", keyprefix);
+		const string questionword = print_perl(pm, "questionwords", keyprefix);
 
-		if (keyprefix == "v-clause-1") {
-			ss << ";";
-		} else {
-			ss << "," << endl;
+		if (keyprefix == "v-clause-1" || subjects.size() || objects.size()
+				|| verbs.size() || adverbs.size() || extra.size()
+				|| questionword.size()) {
+			ss << "{" << endl;
+			ss << "'subjects' => [ " << subjects << " ],";
+			ss << "'objects' => [ " << objects << " ],";
+			ss << "'verbs' => [ " << verbs << " ],";
+			ss << "'adverbs' => [ " << adverbs << " ],";
+			ss << "'extra' => [ " << extra << " ],";
+			ss << "'questionword' => [ " << questionword << " ],";
+			if (keyprefix == "v-clause-1") {
+				ss << endl;
+				ss << "'clauses' => [";
+				ss << print_perl(pm, "", "v-clause-2");
+				ss << "],";
+			}
+			ss << "}";
+
+			if (keyprefix == "v-clause-1") {
+				ss << ";";
+			} else {
+				ss << "," << endl;
+			}
 		}
 	} else {
 		if (v_key == "verbs" && pm->count(keyprefix + "/verbs") == 1

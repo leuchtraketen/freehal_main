@@ -10,28 +10,231 @@
 
 namespace grammar2012 {
 
-parser::parser(const string& _lang, const string& txt) :
-		input_raw(txt), input_clean(txt), input_simplified(), verbose(true), buffered(
-				false), lang(_lang) {
-	if (is_verbose())
-		cout << "parser2012: raw input: " << quote << input_raw << quote
-				<< endl;
+sentence::sentence(parser* _p, const string& _input) :
+		input(_input), mode(UNKNOWN), words_list(), tags_list(), p(_p) {
 
-	clean_input(input_clean);
-	if (is_verbose())
-		cout << "parser2012: clean input: " << quote << input_clean << quote
-				<< endl;
+	{
+		string tmp(input);
+		regex_replace(tmp, "[.!?]", "");
+		algo::trim(tmp);
+		algo::split(words_list, tmp, algo::is_space());
+	}
+	{
+		foreach (string word, words_list) {
+			tags_list.push_back(p->get_tagger()->get_pos(word));
+		}
+	}
 
-	input_simplified = input_clean;
-	simplify_input(input_simplified);
-	if (is_verbose())
-		cout << "parser2012: simplified input: " << quote << input_simplified
-				<< quote << endl;
+	find_mode();
+}
+void sentence::find_mode() {
+	string message;
+	if (words_list.size() == 0) {
+		mode = UNKNOWN;
+	} else if (algo::contains(input, "?")) {
+		message = "sentence contains a question mark";
+		mode = QUESTION;
+		return;
+	} else if (!algo::contains(input, "_no-question_")) {
+		if (tags_list.size() >= 1) {
+			if (tags_list[0]->first == "v") {
+				message = "the first word is a verb";
+				mode = QUESTION;
+				return;
+			}
+		}
+		foreach (tags* tags, tags_list) {
+			if (tags->first == "questionword") {
+				message = "sentence contains a questionword";
+				mode = QUESTION;
+				return;
+			}
+		}
+	}
+	mode = STATEMENT;
+}
+
+const string sentence::to_grammar_input() const {
+	if (words_list.size() != tags_list.size()) {
+		cout << "Error! words_list (" << words_list.size()
+				<< ") and tags_list (" << tags_list.size()
+				<< ") must have the same size.";
+		return "";
+	}
+
+	stringstream ss;
+	int i = 0;
+	foreach (string word, words_list) {
+		tags* tag = tags_list[i];
+
+		ss << tagger::to_grammar_pos(tag, word) << "<" << word << ">";
+
+		++i;
+	}
+	return ss.str();
+}
+const string sentence::to_str() const {
+	stringstream ss;
+	ss << "{";
+	bool need_komma = false;
+	if (words_list.size() > 0) {
+		if (need_komma)
+			ss << ",";
+		ss << " words=" << print_vector(words_list);
+		need_komma = true;
+	}
+	if (tags_list.size() > 0) {
+		if (need_komma)
+			ss << ",";
+		ss << " tags=" << print_vector(tags_list);
+		need_komma = true;
+	}
+	if (input.size() > 0) {
+		if (need_komma)
+			ss << ",";
+		ss << " input=" << quote << input << quote;
+		need_komma = true;
+	}
+	if (mode != UNKNOWN) {
+		if (need_komma)
+			ss << ",";
+		ss << " mode="
+				<< (mode == ONLY_LEARN ? "ONLY_LEARN" :
+					mode == STATEMENT ? "STATEMENT" :
+					mode == QUESTION ? "QUESTION" : "UNKNOWN");
+		need_komma = true;
+	}
+	ss << " }";
+	return ss.str();
+}
+
+void sentence::parse() {
+	parsed = p->get_grammar()->parse(this->to_grammar_input());
+}
+
+const string sentence::get_input() const {
+	return input;
+}
+Mode sentence::get_mode() const {
+	return mode;
+}
+vector<string> sentence::get_words_list() const {
+	return words_list;
+}
+vector<tags*> sentence::get_tags_list() const {
+	return tags_list;
+}
+parsed_type* sentence::get_parsed() const {
+	return parsed;
+}
+
+parser::parser() :
+		input_raw(), input_clean(), input_simplified(), input_extended(), sentences(), verbose(
+				true), buffered(false), lang(), path() {
 }
 parser::~parser() {
-
+	for (size_t i = 0; i < sentences.size(); ++i) {
+		if (sentences[i]) {
+			delete (sentences[i]);
+			sentences[i] = 0;
+		}
+	}
 }
 
+void parser::parse(const string& txt) {
+	if (lang.size() == 0) {
+		cout << "Error! parser2012: language is undefined." << endl;
+		return;
+	} else if (path.size() == 0) {
+		cout << "Error! parser2012: path is undefined." << endl;
+		return;
+	} else if (t == 0) {
+		cout << "Error! parser2012: tagger is undefined." << endl;
+		return;
+	}
+
+	{
+		input_raw.assign(txt);
+		if (is_verbose())
+			cout << "parser2012: raw input: " << quote << input_raw << quote
+					<< endl;
+	}
+
+	{
+		input_clean.assign(input_raw);
+		clean_input(input_clean);
+		if (is_verbose())
+			cout << "parser2012: clean input: " << quote << input_clean << quote
+					<< endl;
+	}
+
+	{
+		algo::split(input_simplified, input_clean, algo::is_any_of("@"));
+		for (size_t i = 0; i < input_simplified.size(); ++i) {
+			simplify_input(input_simplified[i]);
+		}
+		if (is_verbose())
+			cout << "parser2012: simplified input: "
+					<< print_vector(input_simplified) << endl;
+	}
+
+	{
+		std::copy(input_simplified.begin(), input_simplified.end(),
+				back_inserter(input_extended));
+		for (size_t i = 0; i < input_extended.size(); ++i) {
+			extend_input(input_extended[i]);
+		}
+		if (is_verbose())
+			cout << "parser2012: extended input: "
+					<< print_vector(input_extended) << endl;
+	}
+
+	{
+		for (size_t i = 0; i < input_extended.size(); ++i) {
+			sentences.push_back(new sentence(this, input_extended[i]));
+		}
+		if (is_verbose())
+			cout << "parser2012: ready to parse: " << print_vector(sentences)
+					<< endl;
+	}
+
+	{
+		foreach (sentence* s, sentences) {
+			if (is_verbose())
+				cout << "parser2012: parse: " << s->to_str() << endl;
+			s->parse();
+		}
+	}
+
+}
+vector<sentence*> parser::get_sentences() const {
+	return sentences;
+}
+
+void parser::set_lang(const string& _lang) {
+	lang = _lang;
+}
+void parser::set_path(const string& _path) {
+	path = _path;
+}
+void parser::set_tagger(tagger* _t) {
+	t = _t;
+}
+void parser::set_grammar(grammar* _g) {
+	g = _g;
+}
+const string parser::get_lang() const {
+	return lang;
+}
+const string parser::get_path() const {
+	return path;
+}
+tagger* parser::get_tagger() const {
+	return t;
+}
+grammar* parser::get_grammar() const {
+	return g;
+}
 void parser::clean_input(string& str) {
 	regex_replace(str, "[?]+", "?");
 	regex_replace(str, "([?])", "\\1.");
@@ -48,9 +251,6 @@ void parser::clean_input(string& str) {
 	regex_replace(str, "\\(reason\\)", " reasonof ");
 	regex_replace(str, "\\(r\\)", " reasonof ");
 
-	regex_replace(str, "\\s+", " ");
-	algo::trim(str);
-
 	boost::smatch m;
 	if (algo::contains(str, " reasonof ")) {
 		build_pair_sentences(str, " reasonof ", "reasonof");
@@ -63,6 +263,13 @@ void parser::clean_input(string& str) {
 	} else if (regex_find(str, "[=].*?[=]")) {
 		build_pair_sentences(str, "=", "=");
 	}
+
+	regex_replace(str, "\\s+", " ");
+	algo::trim(str);
+
+	regex_replace(str, "@", "AT");
+	regex_replace(str, "\\s*STOP\\s*", "@");
+	algo::trim_if(str, algo::is_any_of("@"));
 }
 
 void parser::build_pair_sentences(string& str, const string& divideby,
@@ -110,18 +317,18 @@ void parser::build_pair_sentences(string& str, const string& divideby,
 }
 
 void parser::simplify_input(string& str) {
+
+	REGEX_DEBUG = true;
 	boost::smatch m;
 
 	bool is_question = regex_find(str, "[?]");
-
-	cout << "computed input (no. 2) ... " << str << endl;
 
 	regex_ireplace(str, "9637", "\\$\\$");
 	regex_ireplace(str, "9489", "\\$\\$");
 	regex_ireplace(str, "[?][=][>]", " questionnext ");
 	regex_ireplace(str, "[!][=][>]", " factnext ");
 	regex_ireplace(str, "[=][>]", " questionnext ");
-	regex_ireplace(str, "[?]", " ?");
+	regex_ireplace(str, "\\s*[?]", " ?");
 	regex_ireplace(str, "^[und]<ws>[,]<ws>", "");
 
 	if (lang == "en") {
@@ -195,7 +402,7 @@ void parser::simplify_input(string& str) {
 	regex_replace(str, "(\\d)\\.(\\d)", "\\1\\2");
 
 	if (regex_find(m, str, "^(ist|war|sind|waren)\\s")) {
-		string& verb = m[1];
+		string verb = m[1];
 		regex_ireplace(str, "^(ist|war|sind|waren)\\s", verb + " ");
 	}
 	regex_replace(str,
@@ -208,15 +415,13 @@ void parser::simplify_input(string& str) {
 
 	if (regex_find(str, "\\(bad\\)")) {
 		regex_ireplace(str, "\\s*?\\(bad\\)", "");
-		regex_ireplace(str, "^\\s+", "");
-		regex_ireplace(str, "\\s+$", "");
+		algo::trim(str);
 		regex_ireplace(str, "\\s+ ", "_");
 		str = "_" + str + "_ = _(bad)_";
 	}
 	if (regex_find(str, "\\(good\\)")) {
 		regex_ireplace(str, "\\s*?\\(good\\)", "");
-		regex_ireplace(str, "^\\s+", "");
-		regex_ireplace(str, "\\s+$", "");
+		algo::trim(str);
 		regex_ireplace(str, "\\s+ ", "_");
 		str = "_" + str + "_ = _(good)_";
 	}
@@ -240,12 +445,15 @@ void parser::simplify_input(string& str) {
 			"juni", "juli", "august", "september", "oktober", "november",
 			"dezember" };
 	int month_num = 1;
-	int year = 2012;
+	const string& year = "2012";
 	foreach (string month, months) {
+		stringstream ss;
+		ss << month_num;
+		const string& _month_num = ss.str();
 		regex_ireplace(str, "(seit|bis) " + month + " ([0-9]+)",
-				"\\1 01." + month_num + ".\\2s");
+				"\\1 01." + _month_num + ".\\2s");
 		regex_ireplace(str, "(seit|bis) " + month,
-				"\\1 01." + month_num + "." + year);
+				"\\1 01." + _month_num + "." + year);
 		++month_num;
 	}
 
@@ -297,12 +505,16 @@ void parser::simplify_input(string& str) {
 
 	int i = 0;
 	foreach (string number, numbers) {
+		stringstream ss;
+		ss << i;
+		const string& _i = ss.str();
 
-		regex_ireplace(str, "(^|\\s)" + number + "(\\s|$)", "\\1 " + i + "\\3");
+		regex_ireplace(str, "(^|\\s)" + number + "(\\s|$)",
+				"\\1 " + _i + "\\3");
 		regex_ireplace(str, "(^|\\s)[+]" + number + "(\\s|$)",
-				"\\1+" + i + "\\3");
+				"\\1+" + _i + "\\3");
 		regex_ireplace(str, "(^|\\s)[-]" + number + "(\\s|$)",
-				"\\1-" + i + "\\3");
+				"\\1-" + _i + "\\3");
 		++i;
 	}
 
@@ -334,7 +546,8 @@ void parser::simplify_input(string& str) {
 			"\\1_\\2_etwas_\\3");
 
 	ifstream remove_words_file;
-	remove_words_file.open(path + "/lang_" + lang + "/remove-words.csv");
+	remove_words_file.open(
+			(path + "/lang_" + lang + "/remove-words.csv").c_str());
 	if (i) {
 		string line;
 		vector<string> remove_words_file_lines;
@@ -345,11 +558,11 @@ void parser::simplify_input(string& str) {
 			algo::trim(remove_word);
 			bool at_beginning = algo::starts_with(remove_word, "^");
 			bool at_end = algo::ends_with(remove_word, "$");
-			if (flag at_beginning) {
+			if (at_beginning) {
 				regex_ireplace(str,
 						"^([\\s!.,?]+)" + remove_word + "([\\s!.,?]+)",
 						"\\1\\2");
-			} else if (flag at_end) {
+			} else if (at_end) {
 				regex_ireplace(str,
 						"([\\s!.,?]+)" + remove_word + "([\\s!.,?]+)$",
 						"\\1\\2");
@@ -362,7 +575,7 @@ void parser::simplify_input(string& str) {
 		}
 	}
 	regex_ireplace(str, "do you know ", "");
-	regex_replace(str, "^\\s+", "");
+	algo::trim(str);
 	regex_ireplace(str, "^you know (wh)", "\\1");
 
 	regex_ireplace(str, "\\sreally", "");
@@ -404,7 +617,7 @@ void parser::simplify_input(string& str) {
 	regex_replace(str, "(^|\\s)(\\d+?)\\.(\\d+?)\\.?(\\s|$)",
 			"\\2.\\3.0000\\5");
 
-	regex_replace(str, "^\\s+", "");
+	algo::trim(str);
 
 	regex_ireplace(str, "(^|\\s)sein\\s([A-Z])", "\\1sein{{{art}}} \\2");
 
@@ -464,10 +677,10 @@ void parser::simplify_input(string& str) {
 			string prop = m[2];
 			string value = m[3];
 
-			prop = transform_to_name(prop);
-			value = transform_to_name(value);
+			to_name(prop);
+			to_name(value);
 
-			input = subject + " is-property " + prop + " _:_ " + value;
+			str = subject + " is-property " + prop + " _:_ " + value;
 		}
 
 		/*if (regex_find(m, str, "^(.*?) ist ([a-z]+?)\\s*?$")) {
@@ -493,11 +706,11 @@ void parser::simplify_input(string& str) {
 		 }
 
 		 if (var prop) {
-		 prop = transform_to_name with var prop
-		 value = transform_to_name with var value
+		 prop = to_name with var prop
+		 value = to_name with var value
 
 		 string expr = var prop concat " _:_ " concat var value
-		 input = "var subject is-property var expr"
+		 str = "var subject is-property var expr"
 		 }
 		 }
 		 }*/
@@ -522,8 +735,8 @@ void parser::simplify_input(string& str) {
 			remove_adverbs(a, adverbs);
 			remove_adverbs(b, adverbs);
 
-			a = transform_to_name(a);
-			b = transform_to_name(b);
+			to_name(a);
+			to_name(b);
 
 			str = a + " is-part " + b + " " + adverbs;
 		}
@@ -535,8 +748,8 @@ void parser::simplify_input(string& str) {
 			remove_adverbs(a, adverbs);
 			remove_adverbs(b, adverbs);
 
-			a = transform_to_name(a);
-			b = transform_to_name(b);
+			to_name(a);
+			to_name(b);
 
 			str = a + " is-own " + b + " " + adverbs;
 		}
@@ -548,12 +761,12 @@ void parser::simplify_input(string& str) {
 			remove_adverbs(a, adverbs);
 			remove_adverbs(b, adverbs);
 
-			a = transform_to_name(a);
-			b = transform_to_name(b);
+			to_name(a);
+			to_name(b);
 
 			str = a + " is-part " + b + " " + adverbs;
 		}
-		if (lc(regex_find(input), "^(.+?)\\s+?(besitzt)\\s+?(.+?)$")) {
+		if (regex_ifind(str, "^(.+?)\\s+?(besitzt)\\s+?(.+?)$")) {
 			string a = m[3];
 			string b = m[1];
 			string adverbs = "";
@@ -561,8 +774,8 @@ void parser::simplify_input(string& str) {
 			remove_adverbs(a, adverbs);
 			remove_adverbs(b, adverbs);
 
-			a = transform_to_name(a);
-			b = transform_to_name(b);
+			to_name(a);
+			to_name(b);
 
 			str = a + " is-own " + b + " " + adverbs;
 		}
@@ -577,14 +790,14 @@ void parser::simplify_input(string& str) {
 		 // TODO
 		 set new flag contains_verb to contains_part_of_speech with var b, var lang, var path
 		 if (flag contains_verb is false) {
-		 a = transform_to_name with var a
-		 b = transform_to_name with var b
+		 a = to_name with var a
+		 b = to_name with var b
 
 		 if (regex_find(a not, "\\(a\\)") and regex_find(b, "\\(a\\)") and regex_find(input not, "[=]")) {
-		 input = var a concat " is-a " concat var b concat " " concat var adverbs
+		 str = var a concat " is-a " concat var b concat " " concat var adverbs
 		 }
-		 else) {
-		 input = var a concat " = " concat var b concat " " concat var adverbs
+		 else {
+		 str = var a concat " = " concat var b concat " " concat var adverbs
 		 }
 		 }}*/
 
@@ -785,8 +998,10 @@ void parser::simplify_input(string& str) {
 
 	if (!algo::contains(str, "_no-question_")
 			&& regex_ifind(str,
-					"^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {
-		regex_replace(str, "[?]", "");
+					"^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")
+			&& (!algo::ends_with(str, "?") || regex_find(str, "[?].*?[?]"))) {
+		regex_replace(str, "\\s*[?]", "");
+		algo::trim(str);
 		str += " ?";
 	}
 
@@ -844,7 +1059,7 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "es ist<ws>?$", "ist es ");
 	regex_ireplace(str, "es ist<ws>?[?]<ws>?$", "ist es ?");
 
-	cout << "Computed input (no. 3) ... " << str << endl;
+	// cout << "parser2012: step 3: " << str << endl;
 
 	if (regex_find(m, str, "\\s(|d|m|k)ein\\s([a-z]+?en)(\\s|$)")) {
 		const string& noun = ucfirst(m[2]);
@@ -881,19 +1096,19 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "didn['`']t", "did not");
 	regex_ireplace(str, "mustn['`']t", "must not");
 	regex_ireplace(str, "n['`']t", " not");
-	regex_ireplace(str, "gehts(.?.?.?.?)$", "geht es dir?");
+	regex_ireplace(str, "gehts(.?.?.?.?)$", "geht es dir ?");
 	regex_ireplace(str, "gehts", "geht es");
 	regex_ireplace(str, "geht['`']s", "geht es");
 	regex_ireplace(str, "^(.?.?)gibt es ", "\\1was ist ");
 	regex_ireplace(str, "^(.?.?)gibt es", "\\1was ist");
 	regex_ireplace(str, "was ist neues", "was gibt es neues");
-	str += " ";
+
 	regex_ireplace(str, "geht es so[?\\s]", "geht es\\1");
 	regex_ireplace(str, "wie geht es [?]", "wie geht es dir ?");
 	regex_ireplace(str, "wie geht es\\s*?$", "wie geht es dir ?");
 	regex_ireplace(str, "wie geht es<ws>?$", "wie geht es dir ?");
 
-	cout << "Computed input (no. 4) ... " << str << endl;
+	// cout << "parser2012: step 4: " << str << endl;
 
 	for (int i = 1; i < 20; ++i) {
 		regex_ireplace(str,
@@ -971,429 +1186,513 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "ENUMALL mir (.*?) auf.*", "ENUMALL \\1");
 	regex_ireplace(str, "ENUMALL mir (.*)", "ENUMALL \\1");
 
-	cout << "Computed input (no. 4.1) ... " << str << endl;
+	// cout << "parser2012: step 4.1: " << str << endl;
 
 	regex_ireplace(str, "http[:/]+", "http_");
 
-regex_ireplace(str, "(^|\\s)(eigentlich|wirklich|doch|nun|wenigstens|schliesslich|denn)(\\s|$)", "\\1\\3");
+	regex_ireplace(str,
+			"(^|\\s)(eigentlich|wirklich|doch|nun|wenigstens|schliesslich|denn)(\\s|$)",
+			"\\1\\3");
 
-regex_ireplace(str, " das verlangen ", " das _verlangen_ ");
+	regex_ireplace(str, " das verlangen ", " das _verlangen_ ");
 
-regex_ireplace(str, "wie viel uhr", "wie uhr");
-regex_ireplace(str, "wie viel[a-zA-Z]*\\s", "wie ");
-regex_ireplace(str, "wieviel[a-zA-Z]*\\s", "wie ");
-regex_ireplace(str, "wie spaet", "wie uhr");
-regex_ireplace(str, "wie frueh", "wie uhr");
- regex_ireplace(str, "wie uhr ", "wie _$$time$$_ ");
+	regex_ireplace(str, "wie viel uhr", "wie uhr");
+	regex_ireplace(str, "wie viel[a-zA-Z]*\\s", "wie ");
+	regex_ireplace(str, "wieviel[a-zA-Z]*\\s", "wie ");
+	regex_ireplace(str, "wie spaet", "wie uhr");
+	regex_ireplace(str, "wie frueh", "wie uhr");
+	regex_ireplace(str, "wie uhr ", "wie _$$time$$_ ");
 
-regex_ireplace(str, "[=]", " = ");
-regex_replace(str, "opposite", " opposite ");
-regex_ireplace(str, "wofuer steht ", "was ist ");
-regex_ireplace(str, " schon mal ", " ");
-regex_ireplace(str, "hast du schon mal von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du schon von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du mal von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du schon mal was von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du schon was von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du was von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "hast du was mal von (.*?) gehoert", "was ist \\1");
-regex_ireplace(str, "^(...*?) hast du ", "du hast \\1 ");
-regex_ireplace(str, "^(...*?) habe ich ", "ich habe \\1 ");
+	regex_ireplace(str, "[=]", " = ");
+	regex_replace(str, "opposite", " opposite ");
+	regex_ireplace(str, "wofuer steht ", "was ist ");
+	regex_ireplace(str, " schon mal ", " ");
+	regex_ireplace(str, "hast du schon mal von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du schon von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du mal von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du schon mal was von (.*?) gehoert",
+			"was ist \\1");
+	regex_ireplace(str, "hast du schon was von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du was von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "hast du was mal von (.*?) gehoert", "was ist \\1");
+	regex_ireplace(str, "^(...*?) hast du ", "du hast \\1 ");
+	regex_ireplace(str, "^(...*?) habe ich ", "ich habe \\1 ");
 
-cout << "Computed input (no. 4.2) ... "<<str<<endl;
+	// cout << "parser2012: step 4.2: " << str << endl;
 
-if (str.size() > 24 && regex_find(var input, "(question|fact)next")) {
+	if (str.size() > 24 && regex_find(str, "(question|fact)next")) {
+		regex_ireplace(str, "^weisst du<ws>[,]*<ws>", "");
+		regex_ireplace(str, "^weisst du", "");
+	}
 	regex_ireplace(str, "^weisst du<ws>[,]*<ws>", "");
 	regex_ireplace(str, "^weisst du", "");
-}
-regex_ireplace(str, "^weisst du<ws>[,]*<ws>", "");
-regex_ireplace(str, "^weisst du", "");
 
-str = " " + str + " ";
-regex_ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)", " noch-\\1\\2");
-regex_ireplace(str, "\\snoch([\\s!.,?]+)", "\\1");
-regex_ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)", " noch \\1\\2");
-regex_ireplace(str, "(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)", "\\1_\\2_etwas_\\3");
-regex_ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)", "\\1_\\2_etwas_\\3");
+	str = " " + str + " ";
+	regex_ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)", " noch-\\1\\2");
+	regex_ireplace(str, "\\snoch([\\s!.,?]+)", "\\1");
+	regex_ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)", " noch \\1\\2");
+	regex_ireplace(str, "(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)",
+			"\\1_\\2_etwas_\\3");
+	regex_ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)",
+			"\\1_\\2_etwas_\\3");
 
-if (length(regex_find(input) > 24 and var input, "[?]")) {
-	regex_ireplace(str, "\\sgerne([\\s!.,?]+)", "\\1");
-}
-
-regex_ireplace(str, "\\s(kein|keine|keinen|keiner|keinem|nicht)\\skein(|e|en|er|em)\\s", " kein\\2 ");
-regex_ireplace(str, "\\s(kein|keine|keinen|keiner|keinem|nicht)\\snicht\\s", " \\1 ");
-regex_ireplace(str, "(^|\\s)?k(ein|eine|einen|einer|einem)\\s", "\\1nicht \\2 ");
-regex_ireplace(str, "\\sim\\s", " in dem ");
-regex_ireplace(str, "\\sbeim\\s", " bei dem ");
-if (algo::contains(lang, "de")) {
-	regex_ireplace(str, "\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])", " am_\\1ten{{{adj}}} \\2 ");
-	regex_ireplace(str, "\\sam\\s", " an dem ");
-	regex_ireplace(str, "\\sins\\s", " in das ");
-	regex_ireplace(str, "^im\\s", " in dem ");
-	regex_ireplace(str, "^am\\s", " an dem ");
-	regex_ireplace(str, "^ins\\s", " in das ");
-}
-
-if (regex_find(m, str, "\\szu[mr]\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$")) {
-	if (algo::ends_with(m[2], "t")) {
-
-		regex_ireplace(str, "\\szu([mt])\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$", " zu\\1_\\l\\2_\\l\\3 \\4");
+	if (str.size() > 24 && algo::contains(str, "?")) {
+		regex_ireplace(str, "\\sgerne([\\s!.,?]+)", "\\1");
 	}
-}
 
-regex_ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)\\s+([A-Z_][a-zA-Z_]+)", " zu\\1_\\l\\2_\\l\\3 ");
-regex_ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)", " zu\\1_\\l\\2 ");
-regex_ireplace(str, "^zu([mr])\\s+([a-zA-Z_]+)", " zu\\1_\\l\\2 ");
-regex_ireplace(str, "[,]\\s+[,]", ",");
-regex_ireplace(str, "^wozu\\s", "wie ");
-regex_ireplace(str, "\\swozu\\s", " wie ");
-regex_ireplace(str, "\\soppo\\s", " opposite ");
-regex_ireplace(str, "\\s.?.?opposite.?.?\\s", " opposite ");
+	regex_ireplace(str,
+			"\\s(kein|keine|keinen|keiner|keinem|nicht)\\skein(|e|en|er|em)\\s",
+			" kein\\2 ");
+	regex_ireplace(str, "\\s(kein|keine|keinen|keiner|keinem|nicht)\\snicht\\s",
+			" \\1 ");
+	regex_ireplace(str, "(^|\\s)?k(ein|eine|einen|einer|einem)\\s",
+			"\\1nicht \\2 ");
+	regex_ireplace(str, "\\sim\\s", " in dem ");
+	regex_ireplace(str, "\\sbeim\\s", " bei dem ");
+	if (algo::contains(lang, "de")) {
+		regex_ireplace(str, "\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])",
+				" am_\\1ten{{{adj}}} \\2 ");
+		regex_ireplace(str, "\\sam\\s", " an dem ");
+		regex_ireplace(str, "\\sins\\s", " in das ");
+		regex_ireplace(str, "^im\\s", " in dem ");
+		regex_ireplace(str, "^am\\s", " an dem ");
+		regex_ireplace(str, "^ins\\s", " in das ");
+	}
 
-cout << "Computed input (no. 4.3) ... "<<str<<endl;
+	if (regex_find(m, str,
+			"\\szu[mr]\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$")) {
+		const string& _match = m[2];
+		if (algo::ends_with(_match, "t")) {
 
-regex_ireplace(str, "(^|\\s)(ich|du|das) (weiss) ", "\\1\\2 \\3\\{\\{\\{v\\}\\}\\} ");
-regex_ireplace(str, " (weiss) (ich|du|das) ", " \\1\\{\\{\\{v\\}\\}\\} \\2 ");
+			regex_ireplace(str,
+					"\\szu([mt])\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$",
+					" zu\\1_\\l\\2_\\l\\3 \\4");
+		}
+	}
 
-if (regex_find(str, " opposite ")) {
-	regex_replace(str, "^\\s+", "");
-	regex_replace(str, "\\s+$", "");
-	regex_replace(str, "\\s+", "_");
+	regex_ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)\\s+([A-Z_][a-zA-Z_]+)",
+			" zu\\1_\\l\\2_\\l\\3 ");
+	regex_ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)", " zu\\1_\\l\\2 ");
+	regex_ireplace(str, "^zu([mr])\\s+([a-zA-Z_]+)", " zu\\1_\\l\\2 ");
+	regex_ireplace(str, "[,]\\s+[,]", ",");
+	regex_ireplace(str, "^wozu\\s", "wie ");
+	regex_ireplace(str, "\\swozu\\s", " wie ");
+	regex_ireplace(str, "\\soppo\\s", " opposite ");
+	regex_ireplace(str, "\\s.?.?opposite.?.?\\s", " opposite ");
 
-	str_replace(str, "_opposite_", "@");
-	vector<string> opposites;
-	algo::split(opposites, str, algo::is_any_of("@"));
-str = "_" +opposites[0] +"_ opposite _"+opposites[1]+"_";
-}
+	// cout << "parser2012: step 4.3: " << str << endl;
 
-regex_replace(str, "\\szu\\s([a-z]+?)\\s([a-z]+?)(.?.?.?)$", " \\2 , _to_ \\1 \\3");
+	regex_ireplace(str, "(^|\\s)(ich|du|das) (weiss) ",
+			"\\1\\2 \\3\\{\\{\\{v\\}\\}\\} ");
+	regex_ireplace(str, " (weiss) (ich|du|das) ",
+			" \\1\\{\\{\\{v\\}\\}\\} \\2 ");
 
-str_replace(str, "KOMMA", ",");
-vector<string> clauses;
-algo::split(clauses, str, algo::is_any_of(","));
-foreach (string clause, clauses) {
-	if (regex_find(m, clause, "\\szu\\s([a-z]+?en)\\s")) {
-		cout << "found 'zu'." << endl;
-		string zu_verb = m[1];
+	if (regex_find(str, " opposite ")) {
+		algo::trim(str);
+		regex_replace(str, "\\s+", "_");
 
-		vector<string> words;
-		algo::split(words, clause, algo::is_space());
+		str_replace(str, "_opposite_", "@");
+		vector<string> opposites;
+		algo::split(opposites, str, algo::is_any_of("@"));
+		str = "_" + opposites[0] + "_ opposite _" + opposites[1] + "_";
+	}
 
-		bool found_other_verb = 0;
-		bool found_zu_verb = 0;
-		foreach (string word, words) {
-			if (word.size() > 0) {
-				if (word != zu_verb) {
-					tags* tags = t->get_pos(word);
-					if (tags->first == "linking" && found_zu_verb) {
-						break;
-					}
-					if (tags->first == "v") {
-						found_other_verb = true;
-						cout << "other verb: "<<word << endl;
+	regex_replace(str, "\\szu\\s([a-z]+?)\\s([a-z]+?)(.?.?.?)$",
+			" \\2 , _to_ \\1 \\3");
+
+	{
+		str_replace(str, "KOMMA", ",");
+		vector<string> clauses;
+		algo::split(clauses, str, algo::is_any_of(","));
+		foreach (string clause, clauses) {
+			if (regex_find(m, clause, "\\szu\\s([a-z]+?en)\\s")) {
+				cout << "found 'zu'." << endl;
+				string zu_verb = m[1];
+
+				vector<string> words;
+				algo::split(words, clause, algo::is_space());
+
+				bool found_other_verb = 0;
+				bool found_zu_verb = 0;
+				foreach (string word, words) {
+					if (word.size() > 0) {
+						if (word != zu_verb) {
+							tags* tags = t->get_pos(word);
+							if (tags->first == "linking" && found_zu_verb) {
+								break;
+							}
+							if (tags->first == "v") {
+								found_other_verb = true;
+								cout << "other verb: " << word << endl;
+							}
+						} else {
+							found_zu_verb = true;
+						}
 					}
 				}
-				else {
-					found_zu_verb = true;
+				cout << "found an other verb: "
+						<< (found_other_verb ? "true" : "false") << endl;
+
+				if (found_other_verb) {
+					regex_replace(str, "\\szu\\s([a-z]+?en)\\s",
+							" , _to_ \\1 ");
+				} else {
+					regex_replace(str, "\\szu\\s([a-z]+?en)\\s", " _to_ \\1 ");
 				}
 			}
 		}
-		cout << "found an other verb: " << (found_other_verb ? "true":"false") << endl;
-
-		if (found_other_verb) {
-			regex_replace(str, "\\szu\\s([a-z]+?en)\\s", " , _to_ \\1 ");
-		}
-		else {
-			regex_replace(str, "\\szu\\s([a-z]+?en)\\s", " _to_ \\1 ");
-		}
 	}
-}
 
-if (regex_find(str, "ist es.*?\\szu\\s")) {
-	regex_ireplace(str, " ist es ", " ist ");
-}
-if (regex_find(str, "ist\\ses(\\s[A-Za-z]+?)?(\\s[A-Za-z]+?)?\\s(das|der|die)\\s")) {
-	regex_ireplace(str, " ist es ", " ist ");
-}
+	if (regex_find(str, "ist es.*?\\szu\\s")) {
+		regex_ireplace(str, " ist es ", " ist ");
+	}
+	if (regex_find(str,
+			"ist\\ses(\\s[A-Za-z]+?)?(\\s[A-Za-z]+?)?\\s(das|der|die)\\s")) {
+		regex_ireplace(str, " ist es ", " ist ");
+	}
 
-regex_ireplace(str, "^\\s+", "");
-regex_ireplace(str, "^[,]", "");
-regex_ireplace(str, "^\\s+", "");
+	algo::trim_left_if(str, algo::is_space() || algo::is_any_of(","));
 
-cout << "Computed input (no. 4.4) ... "<<str<<endl;
+	// cout << "parser2012: step 4.4: " << str << endl;
 
+/////////////////////////////////////////////////////
 // Here was the chapter about replacing user defined strings
 
-if (is an empty global array replace_array) {
-	string cache_file_name = '_cache_replace'
+	/*
+	 static
+	 if (is an empty global array replace_array) {
+	 string cache_file_name = '_cache_replace'
 
-	if (exists: var cache_file_name, end test) {
-		string cache_input = handle foreach (file name var cache_file_name, read
-		foreach (new var line from var cache_input is rw) {
-			push into global array replace_array, var line
+	 if (exists: var cache_file_name, end test) {
+	 string cache_str = handle foreach (file name var cache_file_name, read
+	 foreach (new var line from var cache_input is rw) {
+	 push into global array replace_array, var line
+	 }
+	 }
+	 else {
+
+	 string csv_output = '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
+	 do hal2012_send_signal with "database_request", var csv_output
+	 string csv_str = hal2012_fetch_signal with "database_request"
+	 set new array csv_input_lines to split with /\\r?\\n/, var csv_input
+
+	 string cache_output = handle foreach (file name var cache_file_name, write
+	 foreach (new var line in array csv_input_lines) {
+	 do regex with var a: /[+]/ -> "\\\\+" :global:i
+	 push into global array replace_array, var line
+	 print into var cache_output data var line concat new line
+	 }
+	 do close with var cache_output
+	 do trigger_check_files without arguments
+	 }
+
+	 push into global array replace_array, ""
+	 }
+	 set new array _replace_array to global array replace_array
+	 foreach (new var line in array _replace_array) {
+	 set new array result to an empty array
+	 set new array rawresult to split using /\\^/, var line
+	 if (var line) {
+	 string a = from array rawresult element [ 2 ]
+	 string b = from array rawresult element [ 3 ]
+	 if (var a and var b and var a not matches var b) {
+	 regex_ireplace(str, "(^|\\s)var a(\\s|$)", "\\1var b\\2");
+
+	 #print "#var a# --> #var b#"
+	 #print new line
+	 #print var input
+	 #print new line
+	 }
+	 }
+	 }*/
+
+// cout << "parser2012: step 4.5: " << str << endl;
+	regex_ireplace(str, "kind of ", "kind_of_");
+	regex_ireplace(str, " mal n ", " einen ");
+	regex_ireplace(str, " mal nen ", " einen ");
+	regex_ireplace(str, " n ", " einen ");
+	regex_ireplace(str, " nen ", " einen ");
+	regex_ireplace(str, " mal [']n ", " einen ");
+	regex_ireplace(str, " mal [']nen ", " einen ");
+	regex_ireplace(str, " [']n ", " einen ");
+	regex_ireplace(str, " [']nen ", " einen ");
+	regex_ireplace(str, " mal [`]n ", " einen ");
+	regex_ireplace(str, " mal [`]nen ", " einen ");
+	regex_ireplace(str, " [`]n ", " einen ");
+	regex_ireplace(str, " [`]nen ", " einen ");
+
+	regex_ireplace(str, " .... username .... ", " \\$\\$username\\$\\$ ");
+	regex_ireplace(str, " ..... username ..... ", " \\$\\$username\\$\\$ ");
+	regex_ireplace(str, " .... unknownproperty .... ",
+			" \\$\\$unknownproperty\\$\\$ ");
+	regex_ireplace(str, " ..... unknownproperty ..... ",
+			" \\$\\$unknownproperty\\$\\$ ");
+
+	if (regex_ifind(str, "ist\\s(\\d+?)")) {
+		regex_ireplace(str, "(^|\\s)(\\d+?) ", "\\1_\\2_ ");
+	}
+
+	regex_ireplace(str, "(^|\\s)tobias schulz", "\\1_tobias_schulz_");
+
+	if (algo::contains(lang, "de")) {
+		regex_ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ", "\\1\\2 ");
+		regex_ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ", "\\1\\2 ");
+		if (regex_find(str, "\\d\\d\\d\\d")) {
+			if (!regex_find(str, "\\svon\\s(\\d\\d\\d\\d)\\s")
+					and !regex_ifind(str, "ist\\s(\\d\\d\\d\\d)")) {
+				regex_ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ",
+						"\\1in_jahre_\\2 ");
+			}
+			if (!regex_find(str, "(\\d\\d\\d\\d)......")) {
+				regex_ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ", "\\1_\\2_ ");
+			}
 		}
 	}
-	else) {
 
-		string csv_output = '>>>^0^0^0^0^just_verb^0^0^0^0^0^0'
- do hal2012_send_signal with "database_request", var csv_output
-		string csv_input = hal2012_fetch_signal with "database_request"
-		set new array csv_input_lines to split with /\\r?\\n/, var csv_input
+	// cout << "parser2012: step 5: " << str << endl;
 
-		string cache_output = handle foreach (file name var cache_file_name, write
-		foreach (new var line in array csv_input_lines) {
-			do regex with var a: /[+]/ -> "\\\\+" :global:i
-			push into global array replace_array, var line
-			print into var cache_output data var line concat new line
-		}
-		do close with var cache_output
-		do trigger_check_files without arguments
+	if (regex_find(str, "[?]")) {
+		regex_ireplace(str, "(^|\\s)?(nicht|not)(\\s)", "\\1");
 	}
 
-	push into global array replace_array, ""
-}
-set new array _replace_array to global array replace_array
-foreach (new var line in array _replace_array) {
-	set new array result to an empty array
-	set new array rawresult to split using /\\^/, var line
-	if (var line) {
-		string a = from array rawresult element [ 2 ]
-		string b = from array rawresult element [ 3 ]
-		if (var a and var b and var a not matches var b) {
-			regex_ireplace(str, "(^|\\s)var a(\\s|$)", "\\1var b\\2");
+	regex_ireplace(str,
+			"(herr|frau|mr|mrs|miss|doktor|dr|firma)\\.? (\\S\\S\\S+?)($|\\s)",
+			"_\\1_\\2_ \\3");
 
-#print "#var a# --> #var b#"
-#print new line
-#print var input
-#print new line
-		}
-	}
-}
+	regex_ireplace(str, "sth\\.", "something");
+	regex_ireplace(str, "sth\\s", "something ");
+	regex_ireplace(str, "do you know (what|who|where|how|when|which|whose)",
+			"\\1");
+	regex_ireplace(str, "do you know something about ", "what is ");
+	regex_ireplace(str, " do you do", " are you");
+	algo::trim(str);
+	regex_ireplace(str, "what<ws>up\\s($|[?])", "how are you?");
+	regex_ireplace(str, "what[']s<ws>up\\s($|[?])", "how are you?");
+	regex_ireplace(str, "whats<ws>up\\s($|[?])", "how are you?");
+	regex_ireplace(str, "how are you doing", "how are you");
 
-print "Computed input (no. 4.5) ... ", var input
-print new line
+	regex_ireplace(str, "what\\'s ", "what is ");
+	regex_ireplace(str, "whats ", "what is ");
+	regex_ireplace(str, "whos ", "what is ");
+	regex_ireplace(str, "who\\'s ", "what is ");
+	regex_ireplace(str, "whore ", "what is ");
+	regex_ireplace(str, "who\\'re ", "what is ");
+	regex_ireplace(str, "who are you.*", "what is your name?");
 
-regex_ireplace(str, "kind of ", "kind_of_");
-regex_ireplace(str, " mal n ", " einen ");
-regex_ireplace(str, " mal nen ", " einen ");
-regex_ireplace(str, " n ", " einen ");
-regex_ireplace(str, " nen ", " einen ");
-regex_ireplace(str, " mal [']n ", " einen ");
-regex_ireplace(str, " mal [']nen ", " einen ");
-regex_ireplace(str, " [']n ", " einen ");
-regex_ireplace(str, " [']nen ", " einen ");
-regex_ireplace(str, " mal [`]n ", " einen ");
-regex_ireplace(str, " mal [`]nen ", " einen ");
-regex_ireplace(str, " [`]n ", " einen ");
-regex_ireplace(str, " [`]nen ", " einen ");
+	regex_ireplace(str, "was ist mit (.*?) los", "was ist \\1");
+	regex_ireplace(str, "was ist ueber (.*?)", "was ist \\1");
+	regex_ireplace(str, "was ist los mit (.*?)", "was ist \\1");
 
-regex_ireplace(str, " .... username .... ", " \\$\\$username\\$\\$ ");
-regex_ireplace(str, " ..... username ..... ", " \\$\\$username\\$\\$ ");
-regex_ireplace(str, " .... unknownproperty .... ", " \\$\\$unknownproperty\\$\\$ ");
-regex_ireplace(str, " ..... unknownproperty ..... ", " \\$\\$unknownproperty\\$\\$ ");
+	regex_ireplace(str, "^(.*?) muss man ", "Man muss \\1 ");
 
-if (lc(regex_find(input), "ist\\s(\\d+?)")) {
-	regex_ireplace(str, "(^|\\s)(\\d+?) ", "\\1_\\2_ ");
-}
+	// cout << "parser2012: step 6: " << str << endl;
 
-regex_ireplace(str, "(^|\\s)tobias schulz", "\\1_tobias_schulz_");
+	regex_ireplace(str, "^weisst du denn noch ", "weisst du ");
+	regex_ireplace(str, "^weisst du denn ", "weisst du ");
+	regex_ireplace(str, "^weisst du noch ", "weisst du ");
+	regex_ireplace(str, "^weisst du (w[^\\s]*?)\\s([^?!.,]*)", "\\2 \\1");
+	regex_ireplace(str, "^weisst du ", "");
 
-if (algo::contains(lang, "de")) {
-	regex_ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ", "\\1\\2 ");
-	regex_ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ", "\\1\\2 ");
-	if (regex_find(str, "\\d\\d\\d\\d")) {
-		if (regex_find(input not, "\\svon\\s(\\d\\d\\d\\d)\\s") and lc(regex_find(input) not, "ist\\s(\\d\\d\\d\\d)")) {
-			regex_ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ", "\\1in_jahre_\\2 ");
-		}
-		if (regex_find(input not, "(\\d\\d\\d\\d)......")) {
-			regex_ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ", "\\1_\\2_ ");
-		}
-	}
-}
+	regex_ireplace(str, "wie vie[a-zA-Z]+\\s", "wie ");
+	regex_ireplace(str, "^hm\\, ", " ");
+	regex_ireplace(str, "^hm \\, ", " ");
+	regex_ireplace(str, "\\shm\\, ", " ");
+	regex_ireplace(str, "\\shm \\, ", " ");
 
-print "Computed input (no. 5) ... ", var input
-print new line
+	{
+		str_replace(str, "KOMMA", ",");
+		vector<string> clauses;
+		algo::split(clauses, str, algo::is_any_of(","));
+		int clause_no = 0;
+		foreach (string clause, clauses) {
+			++clause_no;
 
-if (regex_find(str, "[?]")) {
-	regex_ireplace(str, "(^|\\s)?(nicht|not)(\\s)", "\\1");
-}
+			if (clause_no > 1
+					&& regex_find(m, clause,
+							"^\\s*?(der|die|das|den|dem|dessen)\\s([a-z]+?)\\s")) {
+				cout << "maybe found a relative clause." << endl;
+				const string& rel_verb = m[2];
+				vector<string> words;
+				algo::split(words, clause, algo::is_space());
 
-regex_ireplace(str, "(herr|frau|mr|mrs|miss|doktor|dr|firma)\\.? (\\S\\S\\S+?)($|\\s)", "_\\1_\\2_ \\3");
-
-regex_ireplace(str, "sth\\.", "something");
-regex_ireplace(str, "sth\\s", "something ");
-regex_ireplace(str, "do you know (what|who|where|how|when|which|whose)", "\\1");
-regex_ireplace(str, "do you know something about ", "what is ");
-regex_ireplace(str, " do you do", " are you");
-regex_ireplace(str, "^\\s+", "");
-regex_ireplace(str, "\\s+$", "");
-regex_ireplace(str, "what<ws>up\\s($|[?])", "how are you?");
-regex_ireplace(str, "what[']s<ws>up\\s($|[?])", "how are you?");
-regex_ireplace(str, "whats<ws>up\\s($|[?])", "how are you?");
-regex_ireplace(str, "how are you doing", "how are you");
-
-string i_s = "i" concat "s"
-
-regex_ireplace(str, "what\\'s ", "what var i_s ");
-regex_ireplace(str, "whats ", "what var i_s ");
-regex_ireplace(str, "whos ", "what var i_s ");
-regex_ireplace(str, "who\\'s ", "what var i_s ");
-regex_ireplace(str, "whore ", "what var i_s ");
-regex_ireplace(str, "who\\'re ", "what var i_s ");
-#    regex_ireplace(str, "what is your name", "who are you");
-regex_ireplace(str, "who are you.*", "what var i_s your name?");
-
-regex_ireplace(str, "was ist mit (.*?) los", "was ist \\1");
-regex_ireplace(str, "was ist ueber (.*?)", "was ist \\1");
-regex_ireplace(str, "was ist los mit (.*?)", "was ist \\1");
-
-regex_ireplace(str, "^(.*?) muss man ", "Man muss \\1 ");
-
-print "Computed input (no. 6) ... ", var input
-print new line
-
-regex_ireplace(str, "^weisst du denn noch ", "weisst du ");
-regex_ireplace(str, "^weisst du denn ", "weisst du ");
-regex_ireplace(str, "^weisst du noch ", "weisst du ");
-regex_ireplace(str, "^weisst du (w[^\\s]*?)\\s([^?!.,]*)", "\\2 \\1");
-regex_ireplace(str, "^weisst du ", "");
-
-regex_ireplace(str, "wie vie[a-zA-Z]+\\s", "wie ");
-regex_ireplace(str, "^hm\\, ", " ");
-regex_ireplace(str, "^hm \\, ", " ");
-regex_ireplace(str, "\\shm\\, ", " ");
-regex_ireplace(str, "\\shm \\, ", " ");
-
-#regex_ireplace(str, "was ist ", "ISUNKNOWN ");
-#regex_ireplace(str, "wer ist ", "ISUNKNOWN ");
-#regex_ireplace(str, "what is ", "ISUNKNOWN ");
-
-set new array clauses to split using /([,]|KOMMA)/, var input
-string clause_no = 0
-foreach (new var clause in array clauses) {
-	clause_no = var clause_no + 1
-
-	if (regex_find(clause_no is not 1 and var clause, "^\\s*?(der|die|das|den|dem|dessen)\\s([a-z]+?)\\s")) {
-		print "maybe found a relative clause."
-		string rel_verb = \\2
-		set new array words to split using /\\s+/, var clause
-
-		set new flag next_is_a_verb to 0
-		set new array tag to compute_tags with var rel_verb, var lang, var path
-		if (from hash sym_verb element {from array tag 1st element}or size of array words < 3 or ( size of array words < 4 and from hash sym_verb element {from array tag 1st element})) {
-			set flag next_is_a_verb to 1
-			print "not found an relative clause verb: " concat var rel_verb concat new line
-		}
-		else) {
-			print "found an relative clause verb: " concat var rel_verb concat new line
-		}
-
-		if (not flag next_is_a_verb) {
-			regex_replace(str, "\\s*?(der|die|das|den|dem|dessen)\\s(var rel_verb)\\s", " \\1\\{\\{\\{questionword\\}\\}\\} \\2 ");
-		}
-		else) {
-			regex_replace(str, "\\s*?(der|die|das|den|dem|dessen)\\s(var rel_verb)\\s", " _\\1_ \\2 ");
-		}
-	}
-}
-
-do put_underscore_names_into_builtin_names with var input, var lang, var path
-
-print "Computed input (no. 7) ... ", var input
-print new line
-
-input = to_unixtime with var input, var lang, var path
-
-string mark = "\\""
-
-regex_ireplace(str, "\\svar {mark}\\s?([A-Za-z0-9_var {mark}]+?)\\s?var {mark}", " var {mark}\\1var {mark}");
-
-regex_ireplace(str, "in dem jahr ([\\d]+)", "in dem var {mark}jahre \\1var {mark}");
-regex_ireplace(str, "in dem jahre ([\\d]+)", "in dem var {mark}jahre \\1var {mark}");
-
-string e = 50
-while var e >= 0) {
-	regex_ireplace(str, "var {mark}([^\\svar mark]+?)\\s([^var mark]*?)var {mark}", "var {mark}\\1_\\2var {mark}");
-	e = var e - 1
-}
-regex_ireplace(str, "var {mark}", "_");
-
-print "Computed input (no. 8) ... ", var input
-print new line
-
-regex_ireplace(str, "^\\s+", "");
-regex_ireplace(str, "\\s+$", "");
-regex_ireplace(str, "questionnext", "q=>");
-regex_ireplace(str, "factnext", "f=>");
-regex_ireplace(str, "[?]<ws>[=]<ws>[>]", "?=>");
-regex_ireplace(str, "\\s+[?][=][>]", ", ?=>");
-regex_ireplace(str, "[!]<ws>[=]<ws>[>]", "!=>");
-regex_ireplace(str, "\\s+[!][=][>]", ", !=>");
-regex_ireplace(str, "[f]<ws>[=]<ws>[>]", "f=>");
-regex_ireplace(str, "\\s+[f][=][>]", ", f=>");
-regex_ireplace(str, "[q]<ws>[=]<ws>[>]", "q=>");
-regex_ireplace(str, "\\s+[q][=][>]", ", q=>");
-regex_ireplace(str, "[=]\\s+[>]", "=>");
-regex_ireplace(str, "\\s+[=][>]", ", =>");
-regex_ireplace(str, "[,]+", " , ");
-regex_ireplace(str, "\\s+", " ");
-regex_ireplace(str, "[_]+", "_");
-
-if (regex_find(str, "[?]")) {
-	input = lcfirst with var input
-}
-
-print "Computed input (no. 9) ... ", var input
-print new line
-
-string male_file = handle
-foreach(file name var path concat '/lang_' concat var lang concat '/male.history', read
-		string last_male_substantive = ''
-		foreach (new var line from var male_file) {
-			last_male_substantive = var line
-		}
-		do close with var male_file
-
-		string female_file = handle foreach (file name var path concat '/lang_' concat var lang concat '/female.history', read
-				string last_female_substantive = ''
-				foreach (new var line from var female_file) {
-					last_female_substantive = var line
+				tags* tags = t->get_pos(rel_verb);
+				if (tags->first == "v" || words.size() < 3) {
+					cout << "not found an relative clause verb: " << rel_verb
+							<< endl;
+					regex_replace(str,
+							"\\s*?(der|die|das|den|dem|dessen)\\s(" + rel_verb
+									+ ")\\s", " _\\1_ \\2 ");
+				} else {
+					cout << "found an relative clause verb: " << rel_verb
+							<< endl;
+					regex_replace(str,
+							"\\s*?(der|die|das|den|dem|dessen)\\s(" + rel_verb
+									+ ")\\s",
+							" \\1\\{\\{\\{questionword\\}\\}\\} \\2 ");
 				}
-				do close with var male_file
+			}
+		}
+	}
 
-				if (var last_male_substantive) {
-					input = replace_he with var input, var last_male_substantive
-				}
-				if (var last_female_substantive) {
-					input = replace_she with var input, var last_female_substantive
-				}
+	put_underscore_names_into_builtin_name(str);
 
-				print "Computed input ... ... ", var input
-				print new line
+	// cout << "parser2012: step 7: " << str << endl;
 
-				string flowchart_log = handle foreach (file name var path concat '/flowchart.log', append
-						print into var flowchart_log data "textcontent 000000 => \\t" concat var input
-						print into var flowchart_log data new line
-						print into var flowchart_log data "end box"
-						print into var flowchart_log data new line
-						do close with var flowchart_log
+	to_unixtime(str);
 
-					}
+	const string& mark = "\"";
 
-					void parser::set_verbose(bool v) {
-						verbose = v;
-					}
-					bool parser::is_verbose() {
-						return verbose;
-					}
+	regex_ireplace(str,
+			"\\s" + mark + "\\s?([A-Za-z0-9_" + mark + "]+?)\\s?" + mark + "",
+			" " + mark + "\\1" + mark + "");
 
-					void parser::set_buffered(bool v) {
-						buffered = v;
-					}
-					bool parser::is_buffered() {
-						return buffered;
-					}
+	regex_ireplace(str, "in dem jahr ([\\d]+)",
+			"in dem " + mark + "jahre \\1" + mark + "");
+	regex_ireplace(str, "in dem jahre ([\\d]+)",
+			"in dem " + mark + "jahre \\1" + mark + "");
 
-				}
+	int e = 50;
+	while (e >= 0) {
+		regex_ireplace(str,
+				"" + mark + "([^\\s" + mark + "]+?)\\s([^" + mark + "]*?)"
+						+ mark + "", "" + mark + "\\1_\\2" + mark + "");
+		--e;
+	}
+	regex_ireplace(str, "" + mark + "", "_");
+
+	// cout << "parser2012: step 8: " << str << endl;
+
+	algo::trim(str);
+	regex_ireplace(str, "questionnext", "q=>");
+	regex_ireplace(str, "factnext", "f=>");
+	regex_ireplace(str, "[?]<ws>[=]<ws>[>]", "?=>");
+	regex_ireplace(str, "\\s+[?][=][>]", ", ?=>");
+	regex_ireplace(str, "[!]<ws>[=]<ws>[>]", "!=>");
+	regex_ireplace(str, "\\s+[!][=][>]", ", !=>");
+	regex_ireplace(str, "[f]<ws>[=]<ws>[>]", "f=>");
+	regex_ireplace(str, "\\s+[f][=][>]", ", f=>");
+	regex_ireplace(str, "[q]<ws>[=]<ws>[>]", "q=>");
+	regex_ireplace(str, "\\s+[q][=][>]", ", q=>");
+	regex_ireplace(str, "[=]\\s+[>]", "=>");
+	regex_ireplace(str, "\\s+[=][>]", ", =>");
+	regex_ireplace(str, "[,]+", " , ");
+	regex_ireplace(str, "\\s+", " ");
+	regex_ireplace(str, "[_]+", "_");
+
+	if (regex_find(str, "[?]")) {
+		str = lcfirst(str);
+	}
+
+	// cout << "parser2012: step 9: " << str << endl;
+
+	{
+		ifstream male_hist_file;
+		male_hist_file.open((path + "/lang_" + lang + "/male.history").c_str());
+		if (i) {
+			string line;
+			string last_male_substantive;
+			while (std::getline(male_hist_file, line)) {
+				if (line.size() > 1)
+					last_male_substantive = line;
+			}
+			if (last_male_substantive.size() > 0) {
+				replace_he(str, last_male_substantive);
+			}
+		}
+	}
+	{
+		ifstream female_hist_file;
+		female_hist_file.open(
+				(path + "/lang_" + lang + "/male.history").c_str());
+		if (i) {
+			string line;
+			string last_female_substantive;
+			while (std::getline(female_hist_file, line)) {
+				if (line.size() > 1)
+					last_female_substantive = line;
+			}
+			if (last_female_substantive.size() > 0) {
+				replace_she(str, last_female_substantive);
+			}
+		}
+	}
+
+	REGEX_DEBUG = false;
+}
+
+void parser::extend_input(string& str) {
+	// TODO!!!
+}
+
+void parser::to_name(string& text) {
+	bool article_undef = regex_ifind(text, "(^|\\s)(ein|eine)\\s");
+	regex_ireplace(text, "(^|\\s)(ein|eine)\\s", "");
+	bool article_def = regex_ifind(text, "(^|\\s)(der|die|das)\\s");
+	regex_ireplace(text, "(^|\\s)(der|die|das)\\s", "");
+
+	algo::trim_if(text, algo::is_space() || algo::is_any_of("_"));
+	regex_replace(text, "\\s+", "_");
+
+	if (article_undef) {
+		text = "(a) " + text;
+	} else if (article_def) {
+		text = "(the) " + text;
+	}
+
+	regex_replace(text, "_(und|and)_", "_ & _");
+	regex_replace(text, "_(oder|or)_", "_ | _");
+}
+void parser::remove_adverbs(string& text, string& adverbs) {
+	boost::smatch m;
+	if (regex_find(m, text, "^(.*?)\\s(von.*?)$")) {
+		text = m[1];
+		if (adverbs.size() > 0)
+			adverbs += " ";
+		adverbs += m[2];
+	}
+}
+void parser::put_underscore_names_into_builtin_name(string&) {
+	// TODO
+	// learn names
+}
+void parser::to_unixtime(string&) {
+	// TODO
+}
+void parser::replace_he(string& text, const string& replacement) {
+	regex_ireplace(text, "(^|\\s)(er|ihn)(\\s|$)", "\\1" + replacement + "\\3");
+	regex_ireplace(text, "(^|\\s)(he|him)(\\s|$)", "\\1" + replacement + "\\3");
+}
+void parser::replace_she(string& text, const string& replacement) {
+	regex_ireplace(text, "(^|\\s)(sie)(\\s|$)", "\\1" + replacement + "\\3");
+	regex_ireplace(text, "(^|\\s)(she)(\\s|$)", "\\1" + replacement + "\\3");
+}
+
+void parser::set_verbose(bool v) {
+	verbose = v;
+}
+bool parser::is_verbose() const {
+	return verbose;
+}
+
+void parser::set_buffered(bool v) {
+	buffered = v;
+}
+bool parser::is_buffered() const {
+	return buffered;
+}
+
+const string print_vector(const vector<sentence*>& v) {
+	stringstream ss;
+	ss << "[";
+	for (vector<sentence*>::const_iterator i = v.begin(); i != v.end(); ++i) {
+		if (i != v.begin())
+			ss << ", ";
+		ss << (*i)->to_str();
+	}
+	ss << "]";
+	return ss.str();
+}
+
+}
 

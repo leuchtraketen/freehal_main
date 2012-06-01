@@ -17,10 +17,26 @@ const string print_tags(const tags* tags) {
 	return "type=" + tags->first
 			+ (tags->second.size() == 0 ? "" : ",genus=" + tags->second);
 }
+const string print_vector(const vector<tags*>& v) {
+	stringstream ss;
+	ss << "[";
+	for (vector<tags*>::const_iterator i = v.begin(); i != v.end(); ++i) {
+		if (i != v.begin())
+			ss << ", ";
+		ss << "(" << print_tags(*i) << ")";
+	}
+	ss << "]";
+	return ss.str();
+}
 
 tagger::tagger() :
 		type(new tagmap()), genus(new tagmap()), regex_type(new taglist()), regex_genus(
 				new tagmap()), verbose(true), buffered(false) {
+	algo::split(builtin_entity_ends, __builtin_entity_ends,
+			algo::is_any_of(";"));
+	algo::split(builtin_male_names, __builtin_male_names, algo::is_any_of(";"));
+	algo::split(builtin_female_names, __builtin_female_names,
+			algo::is_any_of(";"));
 }
 tagger::~tagger() {
 	delete type;
@@ -205,6 +221,9 @@ tags* tagger::get_pos(const string _word) {
 
 	if (is_empty(tags)) {
 		boost::smatch result;
+		if (word == "," || word == ";") {
+			tags->first = "komma";
+		}
 		if (regex_ifind(result, word, "[{]{3}(.*?)[}]{3}")) {
 			tags->first = result[1];
 			if (is_verbose())
@@ -334,6 +353,80 @@ void tagger::guess(const string word, tags* tags) {
 		if (is_verbose())
 			cout << "  (can't guess, deactivated in config)" << endl;
 	}
+}
+
+bool tagger::is_name(const string& _name) {
+	const string name = lc(_name);
+
+	foreach (string& s, tagger::builtin_entity_ends) {
+		if (s == name)
+			return false;
+	}
+
+	foreach (string& s, tagger::builtin_male_names) {
+		if (s == name)
+			return true;
+	}
+
+	foreach (string& s, tagger::builtin_female_names) {
+		if (s == name)
+			return true;
+	}
+
+	foreach (string& s, tagger::custom_names) {
+		if (s == name)
+			return true;
+	}
+
+	if (is_job(name))
+		return true;
+
+	return false;
+}
+
+bool tagger::is_job(const string& _name) {
+	return regex_find(_name,
+			"(gebrueder)|(^bundes)|(minister)|(meister$)|(ger$)");
+}
+
+const string tagger::unique_pos_type(const string& type) {
+	if (type == "komma")
+		return "komma";
+	else if (type == "vi" || type == "vt" || type == "ci")
+		return "v";
+	else if (algo::starts_with(type, "a") && type != "art")
+		return "adj";
+	else if (type == "n" || type == "f" || type == "m"
+			|| algo::starts_with(type, "n,") || type == "pron" || type == "b")
+		return "n";
+	else if (type == "fw" || algo::starts_with(type, "ques"))
+		return "questionword";
+	return type;
+}
+const string tagger::to_grammar_pos(tags* tags, const string& word) {
+	const string& type = tags->first;
+
+	if (type == "komma")
+		return "d-komma";
+	else if (type == "v")
+		return "d-verb";
+	else if (type == "art")
+		return "d-article";
+	else if (type == "adj")
+		return "d-adjective";
+	else if (type == "prep")
+		return "d-preposition";
+	else if (type == "questionword")
+		return "d-questionword";
+	else if (type == "linking")
+		return "d-linking";
+	else if (type == "n") {
+		if (tagger::is_name(word))
+			return "d-title";
+		else
+			return "d-noun";
+	}
+	return "q";
 }
 
 }
