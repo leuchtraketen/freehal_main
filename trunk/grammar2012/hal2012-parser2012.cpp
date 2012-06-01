@@ -676,7 +676,7 @@ void parser::simplify_input(string& str) {
 			const string& subject = m[2];
 			const string& prop = m[1];
 
-			str = subject + " is-property " + prop + " " + m[3];
+			str = subject + " is-property " + prop + " ?";
 		}
 	} else {
 		if (regex_find(m, str,

@@ -45,7 +45,8 @@ tagger::tagger() :
 			const string& builtin_pos = __builtin_pos_types[i];
 
 			algo::split(splitted, builtin_pos,
-					algo::is_any_of(":") || algo::is_space(), algo::token_compress_on);
+					algo::is_any_of(":") || algo::is_space(),
+					algo::token_compress_on);
 			if (splitted.size() == 2) {
 				const string& word = splitted[0];
 				const string& pos = unique_pos_type(splitted[1]);
@@ -251,6 +252,12 @@ tags* tagger::get_pos(const string _word) {
 				cout << "  predefined: " << print_tags(tags) << endl;
 		}
 	}
+	if (is_empty(tags))
+		if (is_name(word)) {
+			tags->first = "n";
+			if (is_verbose())
+				cout << "  is name: " << print_tags(tags) << endl;
+		}
 	if (is_empty(tags))
 		impl_regex_get_pos(word, tags);
 	if (is_empty(tags)) {
