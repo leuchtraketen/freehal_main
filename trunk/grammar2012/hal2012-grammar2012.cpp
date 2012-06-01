@@ -740,6 +740,7 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 	const string old_impression = all_get_key(*old_words_i);
 	reducelist_by_complexity*new_words_complexity_map =
 			new reducelist_by_complexity();
+	string in_this_step_reduce_to = "";
 
 	// for each key
 	reducekeys::iterator iter;
@@ -759,13 +760,21 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 			for (reducemap::iterator rule_iter = it_pair.first;
 					rule_iter != it_pair.second; ++rule_iter) {
 
+				const string& complexity_key = print_entity(
+						rule_iter->second.first);
+				if (in_this_step_reduce_to.size() > 0
+						&& complexity_key != in_this_step_reduce_to) {
+					cout
+							<< "    wrong target entity, in this step we'll reduce to "
+							<< in_this_step_reduce_to << endl;
+					continue;
+				}
+
 				if (is_verbose())
 					cout << "    rule: " << *iter << " --> "
 							<< print_entity(rule_iter->second.first) << " ; "
 							<< print_vector(*rule_iter->second.second) << endl;
 
-				const string& complexity_key = print_entity(
-						rule_iter->second.first);
 				int complexity = rule_iter->second.second->size();
 				int best_complexity = 0;
 				if (new_words_complexity_map->find(complexity_key)
@@ -781,15 +790,17 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 										complexity_key,
 										pair<int, reducelist>(complexity,
 												reducelist())));
+						in_this_step_reduce_to = complexity_key;
+
 						if (is_verbose())
-							cout << "      best complexity. deleting worse data. ("
-									<< complexity << " > " << best_complexity << ")"
-									<< endl;
-					}else {
+							cout
+									<< "      best complexity. deleting worse data. ("
+									<< complexity << " > " << best_complexity
+									<< ")" << endl;
+					} else {
 						if (is_verbose())
-							cout << "      equal complexity. ("
-									<< complexity << " = " << best_complexity << ")"
-									<< endl;
+							cout << "      equal complexity. (" << complexity
+									<< " = " << best_complexity << ")" << endl;
 
 					}
 
@@ -802,9 +813,8 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 
 				} else {
 					if (is_verbose())
-						cout << "      too low complexity. ("
-								<< complexity << " < " << best_complexity << ")"
-								<< endl;
+						cout << "      too low complexity. (" << complexity
+								<< " < " << best_complexity << ")" << endl;
 
 				}
 				//new_words_list->insert(

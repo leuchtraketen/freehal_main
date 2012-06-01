@@ -284,7 +284,7 @@ tags* tagger::get_pos(const string _word) {
 
 void tagger::impl_guess(const string word, tags* tags) {
 
-	return; /////////////////////////////////
+	//return; /////////////////////////////////
 
 	int word_size = word.size();
 	bool word_is_lower = is_lower(word);
@@ -358,7 +358,7 @@ void tagger::impl_guess(const string word, tags* tags) {
 		score *= score;
 		score = 100 * score / count;
 
-		if (score > best_score) {
+		if (score > best_score || best_score == 0) {
 			best_score = score;
 			best_pos_type = pos_type;
 		}

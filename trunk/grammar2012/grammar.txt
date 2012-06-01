@@ -6,40 +6,32 @@ s-all:
     d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-komma s-sentence/v-clause-4 d-$
 
 s-sentence:
-    r-adverbs s-sentence-spo
-    r-adverbs s-sentence-pso
-    r-adverbs s-sentence-sop
-    r-adverbs s-sentence-ps
-    r-adverbs s-sentence-sp
-    r-adverbs s-sentence-p
-    r-adverbs r-questionword-part s-sentence-spo
-    r-adverbs r-questionword-part s-sentence-pso
-    r-adverbs r-questionword-part s-sentence-sop
-    r-adverbs r-questionword-part s-sentence-ps
-    r-adverbs r-questionword-part s-sentence-sp
-    r-adverbs r-questionword-part s-sentence-p
-    r-adverbs s-questionword-part s-sentence-spo
-    r-adverbs s-questionword-part s-sentence-pso
-    r-adverbs s-questionword-part s-sentence-sop
-    r-adverbs s-questionword-part s-sentence-ps
-    r-adverbs s-questionword-part s-sentence-sp
-    r-adverbs s-questionword-part s-sentence-p
+    r-adverbs r-sentence-spo
+    r-adverbs r-sentence-pso
+    r-adverbs r-sentence-sop
+    r-adverbs r-sentence-ps
+    r-adverbs r-sentence-sp
+    r-adverbs r-sentence-p
+    r-adverbs r-questionword-part r-sentence-spo
+    r-adverbs r-questionword-part r-sentence-pso
+    r-adverbs r-questionword-part r-sentence-sop
+    r-adverbs r-questionword-part r-sentence-ps
+    r-adverbs r-questionword-part r-sentence-sp
+    r-adverbs r-questionword-part r-sentence-p
+    r-adverbs s-questionword-part r-sentence-spo
+    r-adverbs s-questionword-part r-sentence-pso
+    r-adverbs s-questionword-part r-sentence-sop
+    r-adverbs s-questionword-part r-sentence-ps
+    r-adverbs s-questionword-part r-sentence-sp
+    r-adverbs s-questionword-part r-sentence-p
 
 
 r-clauselinking:
     d-linking/v-clauselinking
 
 s-followingsentence:
-    r-clauselinking r-adverbs s-sentence-po
-    r-clauselinking r-adverbs s-sentence-p
-
-s-sentence-po:
-    s-verb/v-verb r-adverbs r-objects r-longadverbs/v-test
-    s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
-
-s-sentence-p:
-    s-verb/v-verb r-longadverbs
-
+    r-clauselinking r-adverbs r-sentence-po
+    r-clauselinking r-adverbs r-sentence-p
 
 r-questionword-part:
     r-extra-before r-questionword r-extra-after
@@ -64,27 +56,30 @@ r-extra-before:
     d-preposition/v-extra-before
 
 
-s-sentence-spo:
+r-sentence-spo:
     s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs r-verbprefix
     s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
 
-s-sentence-ps:
+r-sentence-ps:
     s-verb/v-verb r-adverbs s-nounphrases/v-subject r-longadverbs
     s-verb/v-verb r-adverbs s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-longadverbs
 
-s-sentence-sp:
+r-sentence-sp:
     s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
 
-s-sentence-pso:
+r-sentence-pso:
     s-verb/v-verb r-adverbs s-nounphrases/v-subject r-adverbs r-objects r-longadverbs
     s-verb/v-verb r-adverbs s-nounphrases/v-subject r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
 
-s-sentence-sop:
+r-sentence-sop:
     s-nounphrases/v-subject r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
 
-s-sentence-p:
-    s-verb/v-verb r-longadverbs
+r-sentence-po:
+    s-verb/v-verb r-adverbs r-objects r-longadverbs/v-test
+    s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs
 
+r-sentence-p:
+    s-verb/v-verb r-longadverbs
 
 r-objects:
     s-nounphrases/v-object

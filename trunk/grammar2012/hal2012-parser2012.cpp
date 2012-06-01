@@ -241,7 +241,7 @@ void parser::clean_input(string& str) {
 	regex_replace(str, "([?])", "\\1.");
 	regex_replace(str, "[.!~]\\s*?[.!~]", "~");
 	regex_replace(str, "[.!~]\\s*?[.!~]", "~");
-	regex_replace(str, "[.](\\s|$)", " STOP ");
+	regex_replace(str, "[.!](\\s|$)", " STOP ");
 	regex_replace(str, "([0-9]) STOP ", "\\1.");
 	regex_replace(str, " STOP \\((.*)\\)", " ($0) STOP . ");
 
