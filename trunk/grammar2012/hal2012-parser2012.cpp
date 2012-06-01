@@ -17,7 +17,7 @@ sentence::sentence(parser* _p, const string& _input) :
 		string tmp(input);
 		regex_replace(tmp, "[.!?\"']", "");
 		algo::trim_if(tmp, algo::is_space() || algo::is_any_of("[-;,#+]"));
-		algo::split(words_list, tmp, algo::is_space());
+		algo::split(words_list, tmp, algo::is_space(), algo::token_compress_on);
 	}
 	{
 		foreach (string word, words_list) {
@@ -169,7 +169,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
-		algo::split(input_simplified, input_clean, algo::is_any_of("@"));
+		algo::split(input_simplified, input_clean, algo::is_any_of("@"), algo::token_compress_on);
 		for (size_t i = 0; i < input_simplified.size(); ++i) {
 			simplify_input(input_simplified[i]);
 		}
@@ -277,7 +277,7 @@ void parser::build_pair_sentences(string& str, const string& divideby,
 	algo::trim(str);
 	str_replace(str, divideby, "@");
 	vector<string> parts;
-	algo::split(parts, str, algo::is_any_of("@"));
+	algo::split(parts, str, algo::is_any_of("@"), algo::token_compress_on);
 	stringstream ss;
 	foreach (string i, parts) {
 		foreach (string j, parts) {
@@ -302,7 +302,7 @@ void parser::build_pair_sentences(string& str, const string& divideby,
 	algo::trim(str);
 	str_replace(str, divideby, "@");
 	vector<string> parts;
-	algo::split(parts, str, algo::is_any_of("@"));
+	algo::split(parts, str, algo::is_any_of("@"), algo::token_compress_on);
 	stringstream ss;
 	foreach (string j, parts) {
 		if (word_1 != j) {
@@ -1294,7 +1294,7 @@ void parser::simplify_input(string& str) {
 
 		str_replace(str, "_opposite_", "@");
 		vector<string> opposites;
-		algo::split(opposites, str, algo::is_any_of("@"));
+		algo::split(opposites, str, algo::is_any_of("@"), algo::token_compress_on);
 		str = "_" + opposites[0] + "_ opposite _" + opposites[1] + "_";
 	}
 
@@ -1304,14 +1304,15 @@ void parser::simplify_input(string& str) {
 	{
 		str_replace(str, "KOMMA", ",");
 		vector<string> clauses;
-		algo::split(clauses, str, algo::is_any_of(","));
+		algo::split(clauses, str, algo::is_any_of(","), algo::token_compress_on);
 		foreach (string clause, clauses) {
 			if (regex_find(m, clause, "\\szu\\s([a-z]+?en)\\s")) {
 				cout << "found 'zu'." << endl;
 				string zu_verb = m[1];
 
 				vector<string> words;
-				algo::split(words, clause, algo::is_space());
+				algo::trim(clause);
+				algo::split(words, clause, algo::is_space(), algo::token_compress_on);
 
 				bool found_other_verb = 0;
 				bool found_zu_verb = 0;
@@ -1503,7 +1504,7 @@ void parser::simplify_input(string& str) {
 	{
 		str_replace(str, "KOMMA", ",");
 		vector<string> clauses;
-		algo::split(clauses, str, algo::is_any_of(","));
+		algo::split(clauses, str, algo::is_any_of(","), algo::token_compress_on);
 		int clause_no = 0;
 		foreach (string clause, clauses) {
 			++clause_no;
@@ -1514,7 +1515,7 @@ void parser::simplify_input(string& str) {
 				cout << "maybe found a relative clause." << endl;
 				const string& rel_verb = m[2];
 				vector<string> words;
-				algo::split(words, clause, algo::is_space());
+				algo::split(words, clause, algo::is_space(), algo::token_compress_on);
 
 				tags* tags = t->get_pos(rel_verb);
 				if (tags->first == "v" || words.size() < 3) {

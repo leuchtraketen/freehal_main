@@ -32,11 +32,30 @@ const string print_vector(const vector<tags*>& v) {
 tagger::tagger() :
 		type(new tagmap()), genus(new tagmap()), regex_type(new taglist()), regex_genus(
 				new tagmap()), verbose(true), buffered(false) {
+
 	algo::split(builtin_entity_ends, __builtin_entity_ends,
 			algo::is_any_of(";"));
 	algo::split(builtin_male_names, __builtin_male_names, algo::is_any_of(";"));
 	algo::split(builtin_female_names, __builtin_female_names,
 			algo::is_any_of(";"));
+
+	{
+		vector<string> splitted;
+		for (int i = 0; __builtin_pos_types[i].size() > 0; ++i) {
+			const string& builtin_pos = __builtin_pos_types[i];
+
+			algo::split(splitted, builtin_pos,
+					algo::is_any_of(":") || algo::is_space(), algo::token_compress_on);
+			if (splitted.size() == 2) {
+				const string& word = splitted[0];
+				const string& pos = unique_pos_type(splitted[1]);
+				type->insert(tagmap::value_type(word, pos));
+			} else {
+				cout << "Error! invalid builtin part of speech: " << quote
+						<< builtin_pos << quote << endl;
+			}
+		}
+	}
 }
 tagger::~tagger() {
 	delete type;

@@ -80,6 +80,7 @@ public:
 	static string __builtin_entity_ends;
 	static string __builtin_male_names;
 	static string __builtin_female_names;
+	static string __builtin_pos_types[];
 	static vector<string> builtin_entity_ends;
 	static vector<string> builtin_male_names;
 	static vector<string> builtin_female_names;
