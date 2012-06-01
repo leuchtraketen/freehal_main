@@ -644,7 +644,14 @@ void grammar::expand() {
 entities* grammar::parse_input(const string words_str) {
 	entities* words_i = new entities();
 
-	// split by #
+	// marker
+	{
+		entity* obj = add_entity(new entity(this, "d-^"));
+		obj->set_text("");
+		words_i->push_back(obj);
+	}
+
+	// split by # or >
 	vector<string> words;
 	algo::split(words, words_str, algo::is_any_of("#>"));
 	vector<string>::iterator word;
@@ -654,7 +661,7 @@ entities* grammar::parse_input(const string words_str) {
 			continue;
 		}
 
-		// split by |
+		// split by | or <
 		vector<string> parts;
 		algo::split(parts, *word, algo::is_any_of("|<"));
 		if (parts.size() != 2) {
@@ -670,6 +677,13 @@ entities* grammar::parse_input(const string words_str) {
 		boost::trim(text);
 		entity* obj = add_entity(new entity(this, part_of_speech));
 		obj->set_text(text);
+		words_i->push_back(obj);
+	}
+
+	// marker
+	{
+		entity* obj = add_entity(new entity(this, "d-$"));
+		obj->set_text("");
 		words_i->push_back(obj);
 	}
 
