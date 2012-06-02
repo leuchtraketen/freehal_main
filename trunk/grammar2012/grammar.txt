@@ -77,6 +77,7 @@ s-subjectphrase$s-o-phrase:
 s-objectphrase$s-o-phrase:
     r-object
     s-objectphrase$s-o-phrase s-objectphrase$s-o-phrase
+    s-objectphrase$s-o-phrase s-objectphrase$s-o-phrase s-objectphrase$s-o-phrase
 
 r-object:
     s-nounphrases/v-object r-adverbs
