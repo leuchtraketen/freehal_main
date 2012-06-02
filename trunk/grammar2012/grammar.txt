@@ -1,11 +1,11 @@
 s-all:
-    d-^ s-sentence/v-clause-1 d-$
-    d-^ s-sentence/v-clause-1 s-followingsentence/v-clause-2 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-komma s-sentence/v-clause-4 d-$
+    d-^ s-sentence*/v-clause-1 d-$
+    d-^ s-sentence*/v-clause-1 s-followingsentence*/v-clause-2 d-$
+    d-^ s-sentence*/v-clause-1 d-komma s-sentence*/v-clause-2 d-$
+    d-^ s-sentence*/v-clause-1 d-komma s-sentence*/v-clause-2 d-komma s-sentence*/v-clause-3 d-$
+    d-^ s-sentence*/v-clause-1 d-komma s-sentence*/v-clause-2 d-komma s-sentence*/v-clause-3 d-komma s-sentence*/v-clause-4 d-$
 
-s-sentence:
+s-sentence*:
     r-adverbs r-sentence-spo
     r-adverbs r-sentence-pso
     r-adverbs r-sentence-sop
@@ -23,7 +23,7 @@ s-sentence:
 r-clauselinking:
     d-linking/v-clauselinking
 
-s-followingsentence:
+s-followingsentence*:
     r-clauselinking r-adverbs r-sentence-po
     r-clauselinking r-adverbs r-sentence-p
 
