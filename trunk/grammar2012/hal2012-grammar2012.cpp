@@ -26,15 +26,16 @@ const string grammar::print_entity(entity* i) {
 }
 
 entity::entity() :
-		data(), symbol(), repl(), virt(), text(), embed() {
+		data(), symbol(), repl(), virt(), text(), embed(), order(-1) {
 }
 entity::entity(grammar* _grammar, const string text) :
-		grammar_p(_grammar), data(), symbol(), repl(), virt(), text(), embed() {
+		grammar_p(_grammar), data(), symbol(), repl(), virt(), text(), embed(), order(
+				-1) {
 	init(text);
 }
 entity::entity(grammar* _grammar, const string text, entities _embed) :
 		grammar_p(_grammar), data(), symbol(), repl(), virt(), text(), embed(
-				_embed.begin(), _embed.end()) {
+				_embed.begin(), _embed.end()), order(-1) {
 	init(text);
 }
 void entity::add(const string text) {
@@ -47,6 +48,10 @@ void entity::init(const string text) {
 	for (it = parts.begin(); it != parts.end(); it++) {
 		if (*it == "" || *it == "null") {
 			// ignore
+		} else if (regex_find(*it, "^([0-9]+)$")) {
+			stringstream ss;
+			ss << *it;
+			ss >> order;
 		} else if (symbol.size() == 0 && repl.size() == 0 && data.size() == 0) {
 			if (algo::starts_with(*it, "s-")) {
 				symbol = *it;
@@ -290,12 +295,19 @@ const string entity::to_str() const {
 	return str;
 }
 const string entity::to_key() const {
-	string str =
-			(data.size() == 0) ?
-					(symbol.size() == 0 ?
-							(repl.size() == 0 ? "null" : repl) : symbol) :
-					data;
-	return str;
+	stringstream ss;
+	if (data.size() > 0) {
+		ss << data;
+	} else if (symbol.size() > 0) {
+		ss << symbol;
+	} else if (repl.size() > 0) {
+		ss << repl;
+	} else {
+		ss << "null";
+	}
+	if (order >= 0)
+		ss << "/" << order;
+	return ss.str();
 }
 const char entity::type() const {
 	return (data.size() == 0) ?
@@ -340,11 +352,14 @@ const vector<string> entity::get_marker() const {
 		return v;
 	}
 }
+int entity::get_order() const {
+	return order >= 0 ? order : 1;
+}
 
 grammar::grammar() :
-		gra(new grammarmap()), red(new reducemap()), red_keys_sorted(
-				new reducekeys()), sym_so(new symbolmap_so()), sym_os(
-				new symbolmap_os()), verbose(true), buffered(false) {
+		gra(new grammarmap()), red(), red_keys_sorted(), sym_so(
+				new symbolmap_so()), sym_os(new symbolmap_os()), verbose(true), buffered(
+				false) {
 }
 
 int grammar::read_grammar(const string filename) {
@@ -512,31 +527,38 @@ bool string_compare_by_length(const string &left, const string &right) {
 		return false;
 }
 void grammar::build_reducemap() {
-	if (red != 0) {
-		delete red;
-		red = 0;
-	}
+	red.clear();
+	red_keys_sorted.clear();
 
-	red = new reducemap();
-	boost::unordered_set<string> red_keys;
+	vector<boost::unordered_set<string> > red_keys;
 
 	grammarmap::iterator it;
 	for (it = gra->begin(); it != gra->end(); ++it) {
 		if (s2o(it->first)->get_repl().size() == 0) {
 			const string keys = all_get_key(*it->second);
 			if (keys.size() > 0) {
-				red->insert(
+				entity* target = s2o(it->first);
+				int order = target->get_order();
+				if (order >= red.size()) {
+					for (int i = red.size(); i <= order; ++i) {
+						red.push_back(reducemap());
+						red_keys.push_back(boost::unordered_set<string>());
+					}
+				}
+				red[order].insert(
 						reducemap::value_type(keys,
-								pair<entity*, entities*>(s2o(it->first),
-										it->second)));
-				red_keys.insert(keys);
+								pair<entity*, entities*>(target, it->second)));
+				red_keys[order].insert(keys);
 			}
 		}
 	}
 
-	red_keys_sorted = new reducekeys(red_keys.begin(), red_keys.end());
-	std::sort(red_keys_sorted->begin(), red_keys_sorted->end(),
-			string_compare_by_length);
+	for (int i = 0; i < red.size(); ++i) {
+		red_keys_sorted.push_back(
+				reducekeys(red_keys[i].begin(), red_keys[i].end()));
+		std::sort(red_keys_sorted[i].begin(), red_keys_sorted[i].end(),
+				string_compare_by_length);
+	}
 }
 
 vector<entities*>* grammar::expand_entry(entities* oldvalue, int* expanded,
@@ -746,91 +768,104 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 			new reducelist_by_complexity();
 	string in_this_step_reduce_to = "";
 
-	// for each key
-	reducekeys::iterator iter;
-	for (iter = red_keys_sorted->begin(); iter != red_keys_sorted->end();
-			++iter) {
-		///cout << *iter << endl;
+	bool found = false;
+	int order = -1;
+	// while we haven't found anything, and in the right order
+	while (!found && ++order < red.size()) {
+		// for each key
+		reducekeys::iterator iter;
+		for (iter = red_keys_sorted[order].begin();
+				iter != red_keys_sorted[order].end(); ++iter) {
+			///cout << *iter << endl;
 
-		// does it match?
-		if (old_impression.find(*iter) != string::npos) {
-			if (is_verbose())
-				cout << "    found: '" << *iter << "' in '" << old_impression
-						<< "'" << endl;
-			pair<reducemap::iterator, reducemap::iterator> it_pair =
-					red->equal_range(*iter);
-
-			// for each rule we found
-			for (reducemap::iterator rule_iter = it_pair.first;
-					rule_iter != it_pair.second; ++rule_iter) {
-
+			// does it match?
+			if (old_impression.find(*iter) != string::npos) {
 				if (is_verbose())
-					cout << "    rule: " << *iter << " --> "
-							<< print_entity(rule_iter->second.first) << " ; "
-							<< print_vector(*rule_iter->second.second) << endl;
+					cout << "    found: '" << *iter << "' in '"
+							<< old_impression << "'" << endl;
+				pair<reducemap::iterator, reducemap::iterator> it_pair =
+						red[order].equal_range(*iter);
 
-				string complexity_key = print_entity(rule_iter->second.first);
-				if (algo::contains(complexity_key, "$")) {
-					complexity_key = "{"
-							+ complexity_key.substr(complexity_key.find("$"));
-				}
-				if (in_this_step_reduce_to.size() > 0
-						&& complexity_key != in_this_step_reduce_to) {
-					cout
-							<< "      wrong target entity, in this step we'll reduce to "
-							<< in_this_step_reduce_to << endl;
-					continue;
-				}
+				// for each rule we found
+				for (reducemap::iterator rule_iter = it_pair.first;
+						rule_iter != it_pair.second; ++rule_iter) {
 
-				int complexity = rule_iter->second.second->size();
-				int best_complexity = 0;
-				if (new_words_complexity_map->find(complexity_key)
-						!= new_words_complexity_map->end()) {
-					best_complexity = new_words_complexity_map->find(
-							complexity_key)->second.first;
-				}
-				if (complexity >= best_complexity) {
-					if (complexity > best_complexity) {
-						new_words_complexity_map->erase(complexity_key);
-						new_words_complexity_map->insert(
-								reducelist_by_complexity::value_type(
-										complexity_key,
-										pair<int, reducelist>(complexity,
-												reducelist())));
-						in_this_step_reduce_to = complexity_key;
+					if (is_verbose())
+						cout << "    rule: " << *iter << " --> "
+								<< print_entity(rule_iter->second.first)
+								<< " ; "
+								<< print_vector(*rule_iter->second.second)
+								<< endl;
 
-						if (is_verbose())
-							cout
-									<< "      best complexity. deleting worse data. ("
-									<< complexity << " > " << best_complexity
-									<< ")" << endl;
-					} else {
-						if (is_verbose())
-							cout << "      equal complexity. (" << complexity
-									<< " = " << best_complexity << ")" << endl;
-
+					string complexity_key = print_entity(
+							rule_iter->second.first);
+					if (algo::contains(complexity_key, "$")) {
+						complexity_key = "{"
+								+ complexity_key.substr(
+										complexity_key.find("$"));
+					}
+					if (in_this_step_reduce_to.size() > 0
+							&& complexity_key != in_this_step_reduce_to) {
+						cout
+								<< "      wrong target entity, in this step we'll reduce to "
+								<< in_this_step_reduce_to << endl;
+						continue;
 					}
 
-					entities* new_words_i = replace_in_vector(*old_words_i,
-							*rule_iter->second.second, rule_iter->second.first);
+					int complexity = rule_iter->second.second->size();
+					int best_complexity = 0;
+					if (new_words_complexity_map->find(complexity_key)
+							!= new_words_complexity_map->end()) {
+						best_complexity = new_words_complexity_map->find(
+								complexity_key)->second.first;
+					}
+					if (complexity >= best_complexity) {
+						if (complexity > best_complexity) {
+							new_words_complexity_map->erase(complexity_key);
+							new_words_complexity_map->insert(
+									reducelist_by_complexity::value_type(
+											complexity_key,
+											pair<int, reducelist>(complexity,
+													reducelist())));
+							in_this_step_reduce_to = complexity_key;
+							found = true;
 
-					new_words_complexity_map->find(complexity_key)->second.second.insert(
-							reducelist::value_type(all_to_str(*new_words_i),
-									new_words_i));
-					if (algo::contains(complexity_key, "*"))
+							if (is_verbose())
+								cout
+										<< "      best complexity. deleting worse data. ("
+										<< complexity << " > "
+										<< best_complexity << ")" << endl;
+						} else {
+							if (is_verbose())
+								cout << "      equal complexity. ("
+										<< complexity << " = "
+										<< best_complexity << ")" << endl;
+
+						}
+
+						entities* new_words_i = replace_in_vector(*old_words_i,
+								*rule_iter->second.second,
+								rule_iter->second.first);
+
 						new_words_complexity_map->find(complexity_key)->second.second.insert(
-								reducelist::value_type(all_to_str(*old_words_i),
-										old_words_i));
+								reducelist::value_type(all_to_str(*new_words_i),
+										new_words_i));
+						if (algo::contains(complexity_key, "*"))
+							new_words_complexity_map->find(complexity_key)->second.second.insert(
+									reducelist::value_type(
+											all_to_str(*old_words_i),
+											old_words_i));
 
-				} else {
-					if (is_verbose())
-						cout << "      too low complexity. (" << complexity
-								<< " < " << best_complexity << ")" << endl;
+					} else {
+						if (is_verbose())
+							cout << "      too low complexity. (" << complexity
+									<< " < " << best_complexity << ")" << endl;
 
+					}
+					//new_words_list->insert(
+					//		reducelist::value_type(all_to_str(*new_words_i),
+					//			new_words_i));
 				}
-				//new_words_list->insert(
-				//		reducelist::value_type(all_to_str(*new_words_i),
-				//			new_words_i));
 			}
 		}
 	}

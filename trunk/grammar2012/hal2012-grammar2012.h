@@ -38,7 +38,6 @@ class grammar;
 
 class entity {
 private:
-
 	grammar* grammar_p;
 	string data;
 	string symbol;
@@ -46,6 +45,7 @@ private:
 	vector<string> virt;
 	string text;
 	vector<entity*> embed;
+	int order;
 
 	entity();
 	void init(const string);
@@ -73,6 +73,7 @@ public:
 	const vector<string> get_virt() const;
 	const vector<string> get_marker() const;
 	const vector<entity*> get_embed() const;
+	int get_order() const;
 
 	static const string print_perl(entity::perlmap*, string, string);
 };
@@ -88,8 +89,8 @@ private:
 	typedef boost::unordered_multimap<string, pair<entity*, entities*> > reducemap;
 	typedef vector<string> reducekeys;
 	grammarmap* gra;
-	reducemap* red;
-	reducekeys* red_keys_sorted;
+	vector<reducemap> red;
+	vector<reducekeys> red_keys_sorted;
 	symbolmap_so* sym_so;
 	symbolmap_os* sym_os;
 	bool verbose;
