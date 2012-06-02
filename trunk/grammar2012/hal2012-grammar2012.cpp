@@ -720,9 +720,10 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 	if (find.size() == 0)
 		return new entities(vec.begin(), vec.end());
 
+	bool replace_done = false;
 	entities* new_vector = new entities();
 	for (size_t i = 0; i < vec.size(); ++i) {
-		if (vec.at(i)->to_key() == find.at(0)->to_key()) {
+		if (!replace_done && vec.at(i)->to_key() == find.at(0)->to_key()) {
 			bool found = true;
 			size_t f, j;
 			for (f = 1, j = i + 1; j < vec.size() && f < find.size();
@@ -746,6 +747,8 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 				add_entity(e);
 				new_vector->push_back(e);
 				i = j - 1;
+
+				replace_done = true;
 			} else {
 				new_vector->push_back(vec.at(i));
 			}
