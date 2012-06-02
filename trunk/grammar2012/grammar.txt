@@ -1,11 +1,11 @@
 s-all:
-    d-^ s-sentence/v-clause-1 d-$
-    d-^ s-sentence/v-clause-1 s-followingsentence*/v-clause-2 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-$
-    d-^ s-sentence/v-clause-1 d-komma s-sentence/v-clause-2 d-komma s-sentence/v-clause-3 d-komma s-sentence/v-clause-4 d-$
+    d-^ s-sentence/99/v-clause-1 d-$
+    d-^ s-sentence/99/v-clause-1 s-followingsentence*/v-clause-2 d-$
+    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-$
+    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-komma s-sentence/99/v-clause-3 d-$
+    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-komma s-sentence/99/v-clause-3 d-komma s-sentence/99/v-clause-4 d-$
 
-s-sentence:
+s-sentence/99:
     r-adverbs r-sentence-spo
     r-adverbs r-sentence-pso
     r-adverbs r-sentence-sop
