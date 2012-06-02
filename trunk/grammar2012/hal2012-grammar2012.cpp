@@ -98,9 +98,13 @@ entity::perlmap* entity::to_groups(perlmap* pm = 0, vector<string> v_keys =
 		pm = new perlmap();
 	}
 	if (text.size() > 0) {
+		string last = "";
 		for (vector<string>::const_iterator v_key_it = v_keys.begin();
 				v_key_it != v_keys.end(); ++v_key_it) {
-			pm->insert(perlmap::value_type(keyprefix + "/" + *v_key_it, text));
+			if (*v_key_it != last)
+				pm->insert(
+						perlmap::value_type(keyprefix + "/" + *v_key_it, text));
+			last = *v_key_it;
 		}
 
 	} else {

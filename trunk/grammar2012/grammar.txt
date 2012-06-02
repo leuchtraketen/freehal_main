@@ -49,6 +49,8 @@ r-extra-before:
 r-sentence-spo:
     s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs r-verbprefix
     s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
+    s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-adverbs r-objects r-longadverbs r-verbprefix
+    s-nounphrases/v-subject r-longadverbs s-verb/v-verb r-adverbs r-objects r-adverbs r-objects r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
 
 r-sentence-ps:
     s-verb/v-verb r-adverbs s-nounphrases/v-subject r-longadverbs
@@ -79,7 +81,9 @@ r-objects:
 
 s-nounphrases:
     r-nounphrase
-    s-nounphrases d-linking s-nounphrases
+    s-nounphrases/v-linked d-linking s-nounphrases/v-linked
+    s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-linking s-nounphrases/v-linked
+    s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-linking s-nounphrases/v-linked
 
 
 r-nounphrase:
@@ -88,8 +92,12 @@ r-nounphrase:
     d-article r-nounphrase-nouns
     d-article d-adjective r-nounphrase-nouns
 
-
 r-nounphrase-nouns:
+    r-nounphrase-noun
+    r-nounphrase-noun/v-linked d-linking r-nounphrase-noun/v-linked
+    r-nounphrase-noun/v-linked d-komma r-nounphrase-noun/v-linked d-linking r-nounphrase-noun/v-linked
+
+r-nounphrase-noun:
     d-title
     d-noun
     d-title d-noun

@@ -414,7 +414,7 @@ bool tagger::is_name(const string& _name) {
 
 bool tagger::is_job(const string& _name) {
 	return regex_find(_name,
-			"(gebrueder)|(^bundes)|(minister)|(meister$)|(ger$)");
+			"(soehne|shne|toechter|tchter|gebrueder|brueder)|(^bundes)|(minister)|(meister$)|(ger$)");
 }
 
 const string tagger::unique_pos_type(const string& type) {
