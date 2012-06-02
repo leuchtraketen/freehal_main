@@ -47,37 +47,37 @@ r-extra-before:
 
 
 r-sentence-spo:
-    s-subjectphrase r-longadverbs s-verb/v-verb s-objectphrase r-longadverbs r-verbprefix
-    s-subjectphrase r-longadverbs s-verb/v-verb s-objectphrase r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
+    s-subjectphrase$s-o-phrase r-longadverbs s-verb/v-verb s-objectphrase$s-o-phrase r-longadverbs r-verbprefix
+    s-subjectphrase$s-o-phrase r-longadverbs s-verb/v-verb s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
 
 r-sentence-ps:
-    s-verb/v-verb r-adverbs s-subjectphrase r-longadverbs
-    s-verb/v-verb r-adverbs s-subjectphrase r-longadverbs s-verb/v-verb r-longadverbs
+    s-verb/v-verb r-adverbs s-subjectphrase$s-o-phrase r-longadverbs
+    s-verb/v-verb r-adverbs s-subjectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-sp:
-    s-subjectphrase r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
+    s-subjectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs r-verbprefix
 
 r-sentence-pso:
-    s-verb/v-verb r-adverbs s-subjectphrase s-objectphrase r-longadverbs
-    s-verb/v-verb r-adverbs s-subjectphrase s-objectphrase r-longadverbs s-verb/v-verb r-longadverbs
+    s-verb/v-verb r-adverbs s-subjectphrase$s-o-phrase s-objectphrase$s-o-phrase r-longadverbs
+    s-verb/v-verb r-adverbs s-subjectphrase$s-o-phrase s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-sop:
-    s-subjectphrase r-adverbs s-objectphrase r-longadverbs s-verb/v-verb r-longadverbs
+    s-subjectphrase$s-o-phrase r-adverbs s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-po:
-    s-verb/v-verb s-objectphrase r-longadverbs
-    s-verb/v-verb s-objectphrase r-longadverbs s-verb/v-verb r-longadverbs
+    s-verb/v-verb s-objectphrase$s-o-phrase r-longadverbs
+    s-verb/v-verb s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-p:
     s-verb/v-verb r-longadverbs
 
-s-subjectphrase:
+s-subjectphrase$s-o-phrase:
     s-nounphrases/v-subject
 
-s-objectphrase:
+s-objectphrase$s-o-phrase:
     r-object
-    s-objectphrase s-objectphrase
-    
+    s-objectphrase$s-o-phrase s-objectphrase$s-o-phrase
+
 r-object:
     s-nounphrases/v-object r-adverbs
     r-adverbs s-nounphrases/v-object

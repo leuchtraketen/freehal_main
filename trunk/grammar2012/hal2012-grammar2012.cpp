@@ -764,20 +764,23 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 			for (reducemap::iterator rule_iter = it_pair.first;
 					rule_iter != it_pair.second; ++rule_iter) {
 
-				const string& complexity_key = print_entity(
-						rule_iter->second.first);
-				if (in_this_step_reduce_to.size() > 0
-						&& complexity_key != in_this_step_reduce_to) {
-					cout
-							<< "    wrong target entity, in this step we'll reduce to "
-							<< in_this_step_reduce_to << endl;
-					continue;
-				}
-
 				if (is_verbose())
 					cout << "    rule: " << *iter << " --> "
 							<< print_entity(rule_iter->second.first) << " ; "
 							<< print_vector(*rule_iter->second.second) << endl;
+
+				string complexity_key = print_entity(rule_iter->second.first);
+				if (algo::contains(complexity_key, "$")) {
+					complexity_key = "{"
+							+ complexity_key.substr(complexity_key.find("$"));
+				}
+				if (in_this_step_reduce_to.size() > 0
+						&& complexity_key != in_this_step_reduce_to) {
+					cout
+							<< "      wrong target entity, in this step we'll reduce to "
+							<< in_this_step_reduce_to << endl;
+					continue;
+				}
 
 				int complexity = rule_iter->second.second->size();
 				int best_complexity = 0;
