@@ -62,7 +62,7 @@ r-sentence-pso:
     s-verb/v-verb r-adverbs s-subjectphrase$s-o-phrase s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-sop:
-    s-subjectphrase$s-o-phrase r-adverbs s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
+    s-subjectphrase$s-o-phrase s-objectphrase$s-o-phrase r-longadverbs s-verb/v-verb r-longadverbs
 
 r-sentence-po:
     s-verb/v-verb s-objectphrase$s-o-phrase r-longadverbs
@@ -72,7 +72,7 @@ r-sentence-p:
     s-verb/v-verb r-longadverbs
 
 s-subjectphrase$s-o-phrase:
-    s-nounphrases/v-subject
+    s-nounphrases/v-subject r-adverbs
 
 s-objectphrase$s-o-phrase:
     r-object
