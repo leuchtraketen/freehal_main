@@ -1,11 +1,11 @@
 s-all:
-    d-^ s-sentence/99/v-clause-1 d-$
-    d-^ s-sentence/99/v-clause-1 s-followingsentence*/v-clause-2 d-$
-    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-$
-    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-komma s-sentence/99/v-clause-3 d-$
-    d-^ s-sentence/99/v-clause-1 d-komma s-sentence/99/v-clause-2 d-komma s-sentence/99/v-clause-3 d-komma s-sentence/99/v-clause-4 d-$
+    d-^ s-sentence/9/v-clause-1 d-$
+    d-^ s-sentence/9/v-clause-1 s-followingsentence*/v-clause-2 d-$
+    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-$
+    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-komma s-sentence/9/v-clause-3 d-$
+    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-komma s-sentence/9/v-clause-3 d-komma s-sentence/9/v-clause-4 d-$
 
-s-sentence/99:
+s-sentence/9:
     r-adverbs r-sentence-spo
     r-adverbs r-sentence-pso
     r-adverbs r-sentence-sop
@@ -97,11 +97,11 @@ r-nounphrase:
     d-article d-adjective r-nounphrase-nouns
 
 r-nounphrase-nouns:
-    r-nounphrase-noun
-    r-nounphrase-noun/v-linked d-linking r-nounphrase-noun/v-linked
-    r-nounphrase-noun/v-linked d-komma r-nounphrase-noun/v-linked d-linking r-nounphrase-noun/v-linked
+    s-noun/0
+    s-noun/0/v-linked d-linking s-noun/0/v-linked
+    s-noun/0/v-linked d-komma s-noun/0/v-linked d-linking s-noun/0/v-linked
 
-r-nounphrase-noun:
+s-noun/0:
     d-title
     d-noun
     d-title d-noun
