@@ -817,6 +817,10 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 					new_words_complexity_map->find(complexity_key)->second.second.insert(
 							reducelist::value_type(all_to_str(*new_words_i),
 									new_words_i));
+					if (algo::ends_with(complexity_key, "*"))
+						new_words_complexity_map->find(complexity_key)->second.second.insert(
+								reducelist::value_type(all_to_str(*old_words_i),
+										old_words_i));
 
 				} else {
 					if (is_verbose())
