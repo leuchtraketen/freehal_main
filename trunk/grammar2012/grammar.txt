@@ -1,9 +1,13 @@
 s-all:
     d-^ s-sentence/9/v-clause-1 d-$
     d-^ s-sentence/9/v-clause-1 s-followingsentence*/v-clause-2 d-$
-    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-$
-    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-komma s-sentence/9/v-clause-3 d-$
-    d-^ s-sentence/9/v-clause-1 d-komma s-sentence/9/v-clause-2 d-komma s-sentence/9/v-clause-3 d-komma s-sentence/9/v-clause-4 d-$
+    d-^ s-sentence/9/v-clause-1 r-komma s-sentence/9/v-clause-2 d-$
+    d-^ s-sentence/9/v-clause-1 r-komma s-sentence/9/v-clause-2 r-komma s-sentence/9/v-clause-3 d-$
+    d-^ s-sentence/9/v-clause-1 r-komma s-sentence/9/v-clause-2 r-komma s-sentence/9/v-clause-3 r-komma s-sentence/9/v-clause-4 d-$
+
+r-komma:
+    d-komma
+    d-komma d-linking
 
 s-sentence/9:
     r-adverbs r-sentence-spo
@@ -31,7 +35,6 @@ r-questionword-part:
     r-extra-before r-questionword r-extra-after
     r-questionword r-extra-after
     r-questionword
-    d-linking/v-questionword
     d-questionword/v-questionword d-adjective/v-extra-after
 
 
@@ -96,6 +99,7 @@ r-nounphrase:
     d-adjective r-nounphrase-nouns
     d-article r-nounphrase-nouns
     d-article d-adjective r-nounphrase-nouns
+    d-article
 
 r-nounphrase-nouns:
     s-noun/0
