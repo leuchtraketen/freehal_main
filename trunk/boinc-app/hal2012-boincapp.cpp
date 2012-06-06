@@ -145,6 +145,11 @@ int main(int argc, char **argv) {
         boinc_parse(line, &n_sentence, out);
     }
 
+    for (int h = 0; h < 60; ++h) {
+        out << "second " << h << endl;
+        boinc_sleep(1);
+    }
+
     out.close();
 
     // See if there's a valid checkpoint file.
