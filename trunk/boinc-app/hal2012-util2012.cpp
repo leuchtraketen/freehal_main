@@ -40,7 +40,7 @@ const string print_doublevector(const vector<vector<T> >& v) {
 const string print_vector(const vector<string>& v) {
 	stringstream ss;
 	ss << "[";
-	for (typename vector<string>::const_iterator i = v.begin(); i != v.end();
+	for (vector<string>::const_iterator i = v.begin(); i != v.end();
 			++i) {
 		if (i != v.begin())
 			ss << ", ";
