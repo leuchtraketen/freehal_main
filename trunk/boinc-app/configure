@@ -1,0 +1,2 @@
+ln -s `g++ -print-file-name=libstdc++.a`
+make
