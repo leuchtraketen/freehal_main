@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd /compiler/boinc_trunk/lib/
+cd /compiler/boinc_trunk-win32/lib/
 export CC=/opt/mingw32/bin/i686-w64-mingw32-gcc
 export CXX=/opt/mingw32/bin/i686-w64-mingw32-g++
 export AR=/opt/mingw32/bin/i686-w64-mingw32-ar
 export RANLIB=/opt/mingw32/bin/i686-w64-mingw32-ranlib
-export BOINC_PREFIX=/compiler/local/boinc
+export BOINC_PREFIX=/compiler/local/boinc-win32
 
 sed -i 's@march=i386@march=i486@gm' Makefile.mingw
 
