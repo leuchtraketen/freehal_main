@@ -19,6 +19,8 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/regex.hpp>
 
+#include "hal2012-serialization.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -59,6 +61,17 @@ private:
 	void impl_guess(const string, tags*);
 	void guess(const string, tags*);
 	void ask_user(const string, tags*);
+
+	friend class boost::serialization::access;
+	template<class Archive>
+	void serialize(Archive & ar, const unsigned int version) {
+		ar & boost::serialization::make_nvp("type_map", type);
+		ar & boost::serialization::make_nvp("genus_map", genus);
+		ar & boost::serialization::make_nvp("regex_type_map", regex_type);
+		ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);;
+		ar & BOOST_SERIALIZATION_NVP(verbose);
+		ar & BOOST_SERIALIZATION_NVP(buffered);
+	}
 
 public:
 	tagger();

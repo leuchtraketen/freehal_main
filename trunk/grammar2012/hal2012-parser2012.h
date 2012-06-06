@@ -19,6 +19,8 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/regex.hpp>
 
+#include "hal2012-serialization.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -45,7 +47,9 @@ class parser;
 
 const string print_vector(const vector<sentence*>&);
 
-enum Mode { ONLY_LEARN, QUESTION, STATEMENT, UNKNOWN };
+enum Mode {
+	ONLY_LEARN, QUESTION, STATEMENT, UNKNOWN
+};
 class sentence {
 private:
 	string input;
@@ -54,6 +58,19 @@ private:
 	vector<tags*> tags_list;
 	grammar2012::parsed_type* parsed;
 	parser* p;
+
+	sentence();
+
+	friend class boost::serialization::access;
+	template<class Archive>
+	void serialize(Archive & ar, const unsigned int version) {
+		ar & BOOST_SERIALIZATION_NVP(input);
+		ar & BOOST_SERIALIZATION_NVP(mode);
+		ar & BOOST_SERIALIZATION_NVP(words_list);
+		ar & BOOST_SERIALIZATION_NVP(tags_list);
+		ar & BOOST_SERIALIZATION_NVP(parsed);
+		ar & boost::serialization::make_nvp("parser_ref", p);
+	}
 
 public:
 	sentence(parser*, const string&);
@@ -99,6 +116,23 @@ private:
 	void to_unixtime(string&);
 	void replace_he(string&, const string&);
 	void replace_she(string&, const string&);
+
+	friend class boost::serialization::access;
+	template<class Archive>
+	void serialize(Archive & ar, const unsigned int version) {
+		ar & BOOST_SERIALIZATION_NVP(input_raw);
+		ar & BOOST_SERIALIZATION_NVP(input_clean);
+		ar & BOOST_SERIALIZATION_NVP(input_simplified);
+		ar & BOOST_SERIALIZATION_NVP(input_extended);
+		ar & BOOST_SERIALIZATION_NVP(sentences);
+
+		ar & BOOST_SERIALIZATION_NVP(verbose);
+		ar & BOOST_SERIALIZATION_NVP(buffered);
+		ar & BOOST_SERIALIZATION_NVP(lang);
+		ar & BOOST_SERIALIZATION_NVP(path);
+		ar & boost::serialization::make_nvp("tagger_ref", t);
+		ar & boost::serialization::make_nvp("grammar_ref", g);
+	}
 
 public:
 	parser();

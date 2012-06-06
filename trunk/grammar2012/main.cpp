@@ -35,6 +35,24 @@ int main() {
 	p->set_tagger(_t);
 	p->set_grammar(_g);
 	p->set_verbose(true);
+
+	{
+		std::ofstream ofs("filename.dat", ios::binary);
+		boost::archive::xml_oarchive oa(ofs);
+		oa << BOOST_SERIALIZATION_NVP(p);
+	}
+	delete p;
+	p = new grammar2012::parser();
+	{
+		std::ifstream ifs("filename.dat");
+		boost::archive::xml_iarchive ia(ifs);
+		ia >> BOOST_SERIALIZATION_NVP(p);
+	}
+
+	p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
+
+	return(0);
+
 	p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
 	const vector<grammar2012::sentence*>& vs = p->get_sentences();
 	foreach (grammar2012::sentence* s, vs) {

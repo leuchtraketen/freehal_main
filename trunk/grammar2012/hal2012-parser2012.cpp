@@ -10,6 +10,9 @@
 
 namespace grammar2012 {
 
+sentence::sentence() :
+		input(), mode(UNKNOWN), words_list(), tags_list(), p(0) {
+}
 sentence::sentence(parser* _p, const string& _input) :
 		input(_input), mode(UNKNOWN), words_list(), tags_list(), p(_p) {
 

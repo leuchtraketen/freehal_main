@@ -18,6 +18,8 @@
 #include <boost/algorithm/string/find_format.hpp>
 #include <boost/algorithm/string/split.hpp>
 
+#include "hal2012-serialization.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -49,6 +51,19 @@ private:
 
 	entity();
 	void init(const string);
+
+	friend class boost::serialization::access;
+	template<class Archive>
+	void serialize(Archive & ar, const unsigned int version) {
+		ar & boost::serialization::make_nvp("grammar_ref", grammar_p);
+		ar & BOOST_SERIALIZATION_NVP(data);
+		ar & BOOST_SERIALIZATION_NVP(symbol);
+		ar & boost::serialization::make_nvp("replacesymbol", repl);
+		ar & boost::serialization::make_nvp("virtual", virt);
+		ar & BOOST_SERIALIZATION_NVP(text);
+		ar & boost::serialization::make_nvp("embedded", embed);
+		ar & BOOST_SERIALIZATION_NVP(order);
+	}
 
 public:
 	typedef boost::unordered_multimap<string, string> perlmap;
@@ -112,6 +127,27 @@ private:
 	vector<entities*>* reduce(entities*i);
 	reducelist* reduce_step(entities*i);
 	entities* replace_in_vector(const entities&, const entities&, entity*);
+
+	friend class boost::serialization::access;
+	template<class Archive>
+	void save(Archive & ar, const unsigned int version) const {
+		ar & boost::serialization::make_nvp("grammar_map", gra);
+		ar & boost::serialization::make_nvp("symbol_to_object", sym_so);
+		ar & boost::serialization::make_nvp("object_to_symbol", sym_os);
+		ar & BOOST_SERIALIZATION_NVP(verbose);
+		ar & BOOST_SERIALIZATION_NVP(buffered);
+	}
+	template<class Archive>
+	void load(Archive & ar, const unsigned int version) {
+		ar & boost::serialization::make_nvp("grammar_map", gra);
+		ar & boost::serialization::make_nvp("symbol_to_object", sym_so);
+		ar & boost::serialization::make_nvp("object_to_symbol", sym_os);
+		ar & BOOST_SERIALIZATION_NVP(verbose);
+		ar & BOOST_SERIALIZATION_NVP(buffered);
+		build_reducemap();
+	}
+
+    BOOST_SERIALIZATION_SPLIT_MEMBER()
 
 public:
 	grammar();
