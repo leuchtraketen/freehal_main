@@ -20,6 +20,8 @@
 #include "boinc/util.h"
 #include "boinc/filesys.h"
 
+#include "hal2012-revision.h"
+
 using std::string;
 
 #define CHECKPOINT_FILE "state"
@@ -85,7 +87,7 @@ int boinc_parse(string line, int* n_sentence, ofstream& out) {
     const vector<grammar2012::sentence*>& vs = p->get_sentences();
     int n_clause = 0;
     foreach (grammar2012::sentence* s, vs) {
-        out << "---- " << ++(*n_sentence) << " " << ++n_clause << endl;
+        out << "---- " << REVISION_T << ";" << ++(*n_sentence) << ";" << ++n_clause << endl;
         out << grammar2012::grammar::print_graph(s->get_parsed()) << endl;
         out << "---- " << endl;
     }
