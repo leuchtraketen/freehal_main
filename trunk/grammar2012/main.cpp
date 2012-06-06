@@ -18,41 +18,49 @@ EXTERN_C char* check_config(const char* name, const char* _default) {
 
 int main() {
 
-	grammar2012::tagger* _t = new grammar2012::tagger();
-	_t->set_verbose(true);
-	_t->read_pos_file("brain.pos");
-	_t->read_pos_file("memory.pos");
-	_t->read_regex_pos_file("regex.pos");
+	if (0) {
+		grammar2012::tagger* _t = new grammar2012::tagger();
+		_t->set_verbose(true);
+		_t->read_pos_file("brain.pos");
+		_t->read_pos_file("memory.pos");
+		_t->read_regex_pos_file("regex.pos");
 
-	grammar2012::grammar* _g = new grammar2012::grammar();
-	_g->read_grammar("grammar.txt");
-	_g->set_verbose(true);
-	_g->expand();
+		grammar2012::grammar* _g = new grammar2012::grammar();
+		_g->read_grammar("grammar.txt");
+		_g->set_verbose(true);
+		_g->expand();
+
+		grammar2012::parser* p = new grammar2012::parser();
+		p->set_lang("de");
+		p->set_path(".");
+		p->set_tagger(_t);
+		p->set_grammar(_g);
+		p->set_verbose(true);
+
+		{
+			std::ofstream ofs("filename.dat", ios::binary);
+			boost::archive::xml_oarchive oa(ofs);
+			oa << BOOST_SERIALIZATION_NVP(p);
+		}
+		delete p;
+	}
+
+	{
+		grammar2012::parser* p = new grammar2012::parser();
+		{
+			std::ifstream ifs("filename.dat");
+			boost::archive::xml_iarchive ia(ifs);
+			ia >> BOOST_SERIALIZATION_NVP(p);
+		}
+
+		p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
+
+		system("ps aux | grep main");
+	}
+
+	return (0);
 
 	grammar2012::parser* p = new grammar2012::parser();
-	p->set_lang("de");
-	p->set_path(".");
-	p->set_tagger(_t);
-	p->set_grammar(_g);
-	p->set_verbose(true);
-
-	{
-		std::ofstream ofs("filename.dat", ios::binary);
-		boost::archive::xml_oarchive oa(ofs);
-		oa << BOOST_SERIALIZATION_NVP(p);
-	}
-	delete p;
-	p = new grammar2012::parser();
-	{
-		std::ifstream ifs("filename.dat");
-		boost::archive::xml_iarchive ia(ifs);
-		ia >> BOOST_SERIALIZATION_NVP(p);
-	}
-
-	p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
-
-	return(0);
-
 	p->parse("Wie alt bist du? wie gehts? ich heisse Winfried!");
 	const vector<grammar2012::sentence*>& vs = p->get_sentences();
 	foreach (grammar2012::sentence* s, vs) {
