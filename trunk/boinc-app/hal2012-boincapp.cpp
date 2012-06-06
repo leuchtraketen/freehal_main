@@ -1,5 +1,7 @@
 #ifdef _WIN32
-#include "boinc_win.h"
+#include "boinc/boinc_win.h"
+#else
+#include "boinc/str_util.h"
 #endif
 #include <cstdio>
 #include <cctype>
@@ -15,7 +17,6 @@
 #include "hal2012-util2012.h"
 
 #include "boinc/boinc_api.h"
-#include "boinc/str_util.h"
 #include "boinc/util.h"
 #include "boinc/filesys.h"
 
@@ -245,8 +246,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR Args, int WinMode
     char* argv[100];
     int argc;
 
-    command_line = GetCommandLine();
-    argc = parse_command_line( command_line, argv );
+    argc = 0;
     return main(argc, argv);
 }
 #endif
