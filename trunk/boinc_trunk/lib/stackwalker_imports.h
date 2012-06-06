@@ -68,6 +68,7 @@
 #define CBA_DEFERRED_SYMBOL_LOAD_PARTIAL        0x00000020
 #define CBA_DEBUG_INFO                          0x10000000
 
+/*
 enum {
     sevInfo = 0,
     sevProblem,
@@ -75,15 +76,18 @@ enum {
     sevFatal,
     sevMax
 };
+*/
 
-typedef enum {
+/*typedef enum {
     SymDia = 7,
     SymVirtual,
     NumSymTypes
 } SYM_TYPE_EX;
+*/
 
 typedef PCSTR PCTSTR;
 
+/*
 typedef struct _IMAGEHLP_CBA_EVENT {
     DWORD severity;                                     
     DWORD code;                                         
@@ -161,6 +165,7 @@ typedef struct _STACKFRAME64 {
     DWORD64     Reserved[3];
     KDHELP64    KdHelp;
 } STACKFRAME64, *LPSTACKFRAME64;
+*/
 
 typedef BOOL
 (CALLBACK *PSYM_ENUMMODULES_CALLBACK64)(
