@@ -30,6 +30,8 @@ using std::string;
 
 bool run_slow = false;
 
+grammar2012::parser* p = 0;
+
 // do a billion floating-point ops
 // (note: I needed to add an arg to this;
 // otherwise the MS C++ compiler optimizes away
@@ -65,8 +67,7 @@ int do_checkpoint(MFILE& mf, int nchars) {
 
 grammar2012::parser* setup_parser() {
 
-    static grammar2012::parser* p = 0;
-    if (!p) {
+    if (p == 0) {
         string path = "../../projects/www.freehal.net_freehal_at_home/";
 
         grammar2012::tagger* _t = new grammar2012::tagger();
