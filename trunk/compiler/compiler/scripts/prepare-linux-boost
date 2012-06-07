@@ -1,0 +1,9 @@
+#!/bin/bash
+
+./bootstrap.sh --without-icu
+
+./bjam --with-filesystem --with-regex --with-serialization --with-system --with-thread --with-iostreams -d+2 variant=debug link=static runtime-link=static threading=multi
+
+mkdir -p /compiler/local-linux/include /compiler/local-linux/lib
+cp -rf boost /compiler/local-linux/include/
+cp stage/lib/* /compiler/local-linux/lib/

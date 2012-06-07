@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /tmp
+svn co https://freehal.googlecode.com/svn/trunk/boinc_trunk boinc_trunk-linux
+cd boinc_trunk-linux
+
+./_autosetup
+./configure --prefix=/compiler/local-linux --exec-prefix=/compiler/local-linux --disable-client --disable-manager --disable-server

@@ -54,8 +54,11 @@ cat user-config.jam
 cd ..
 cd boost_1_46_1-linux
 ./bootstrap.sh --without-icu
-./bjam --prefix=/usr --with-filesystem --with-regex --with-serialization --with-system --with-thread --with-iostreams
-./bjam --prefix=/usr --with-filesystem --with-regex --with-serialization --with-system --with-thread --with-iostreams install
+./bjam --with-filesystem --with-regex --with-serialization --with-system --with-thread --with-iostreams -d+2 variant=debug link=static runtime-link=static threading=multi
+rm -f /usr/lib/libboost*
+cp stage/lib/* /usr/lib/ -rf
+rm -rf /usr/include/boost
+cp -rf boost /usr/include/
 
 
 ######################

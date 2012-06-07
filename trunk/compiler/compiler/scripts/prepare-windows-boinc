@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cd /tmp
+svn co https://freehal.googlecode.com/svn/trunk/boinc_trunk boinc_trunk-win32
+cd boinc_trunk-win32
+
+cd /compiler/boinc_trunk-win32/lib/
+export CC=/opt/mingw32/bin/i686-w64-mingw32-gcc
+export CXX=/opt/mingw32/bin/i686-w64-mingw32-g++
+export AR=/opt/mingw32/bin/i686-w64-mingw32-ar
+export RANLIB=/opt/mingw32/bin/i686-w64-mingw32-ranlib
+export BOINC_PREFIX=/compiler/local-windows
+
+sed -i 's@march=i386@march=i486@gm' Makefile.mingw
+
+#make -f Makefile.mingw clean
+make -f Makefile.mingw
+make -f Makefile.mingw install
+
+sed -i 's@typedef size_t socklen_t;@//typedef size_t socklen_t;@gm' /compiler/local-windows/include/*/boinc_win.h
+

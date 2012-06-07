@@ -40,7 +40,7 @@ ADD_DEFINITIONS(-static-libgcc)
 SET(CMAKE_CXX_LINK_EXECUTABLE" ${CMAKE_CXX_LINK_EXECUTABLE} -static-libgcc")
 SET(CMAKE_FIND_LIBRARY_SUFFIXES .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 
-include_directories (. ~/boinc/include/ /compiler/local/boinc-linux/include/)
+include_directories (. /compiler/local/boost-linux/include/ ~/boinc/include/ /compiler/local/boinc-linux/include/)
 link_directories (stuff/linux/boinc-distrib/ ~/boinc/lib/ /compiler/local/boinc-linux/lib/)
 
 #set(Boost_USE_STATIC_LIBS   ON)
