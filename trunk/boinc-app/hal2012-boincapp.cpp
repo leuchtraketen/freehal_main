@@ -172,7 +172,7 @@ int main(int argc, char **argv) {
         boinc_parse(line, &n_sentence, out);
 
         boinc_fraction_done((double)l/(double)lines);
-        boinc_sleep(5);
+        boinc_sleep(3);
     }
 
     for (int h = 0; h < 60; ++h) {
