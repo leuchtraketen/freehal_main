@@ -74,14 +74,6 @@ echo $R | grep step || (
 	cp -f hal2012-boinc.exe /disk/web1/var/www/projects/freehal_at_home/new/apps/windows/hal2012-boinc.exe
 )
 
-(
-	make clean
-	rm -rf CMakeCache.txt CMakeFiles
-	cmake .
-	make hal2012-boinc
-	cp -f hal2012-boinc /disk/web1/var/www/projects/freehal_at_home/new/apps/linux/hal2012-boinc.32
-)
-
 export DLL=$(echo \
 		/opt/mingw32/bin/zlib1.dll \
 		/compiler/local/lib/libboost_system-mt.dll \

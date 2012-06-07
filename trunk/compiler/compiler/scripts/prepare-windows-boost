@@ -1,5 +1,11 @@
 #!/bin/bash
 
+cd /tmp
+rm -rf boost_1_49_0 boost_1_49_0-windows
+tar xjf /compiler/boost/boost_1_49_0.tar.bz2
+mv boost_1_49_0 boost_1_49_0-windows
+cd boost_1_49_0-windows
+
 ./bootstrap.sh --without-icu
 
 echo "using gcc : 4.4 : /opt/mingw32/bin/i686-w64-mingw32-g++
@@ -10,6 +16,6 @@ echo "using gcc : 4.4 : /opt/mingw32/bin/i686-w64-mingw32-g++
 cat user-config.jam
 
 ./bjam toolset=gcc target-os=windows variant=release threading=multi threadapi=win32\
-    link=shared runtime-link=shared --prefix=/compiler/local-windows --user-config=user-config.jam -j 2\
+    link=shared runtime-link=shared --prefix=/compiler/local/windows --user-config=user-config.jam -j 2\
     --without-mpi --without-python -sNO_BZIP2=1 -sNO_ZLIB=1 --layout=tagged install
 

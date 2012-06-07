@@ -1,9 +1,15 @@
 #!/bin/bash
 
+cd /tmp
+rm -rf boost_1_49_0 boost_1_49_0-linux
+tar xjf /compiler/boost/boost_1_49_0.tar.bz2
+mv boost_1_49_0 boost_1_49_0-linux
+cd boost_1_49_0-linux
+
 ./bootstrap.sh --without-icu
 
 ./bjam --with-filesystem --with-regex --with-serialization --with-system --with-thread --with-iostreams -d+2 variant=debug link=static runtime-link=static threading=multi
 
-mkdir -p /compiler/local-linux/include /compiler/local-linux/lib
-cp -rf boost /compiler/local-linux/include/
-cp stage/lib/* /compiler/local-linux/lib/
+mkdir -p /compiler/local/linux/include /compiler/local/linux/lib
+cp -rf boost /compiler/local/linux/include/
+cp stage/lib/* /compiler/local/linux/lib/

@@ -32,8 +32,8 @@ project (FreeHAL)
 if(MINGW)
 
 include_directories (.) 
-include_directories (/compiler/local/boinc/include/) 
-link_directories (/compiler/local/boinc/lib/) 
+include_directories (/compiler/local/windows/include)
+link_directories (/compiler/local/windows/lib)
 
 add_executable (hal2012 hal2012-main.cpp hal2012-perl6-dummy.cpp hal2012-perl5.cpp sqlite3.c iowin32.c ioapi.c extract_with_unzipper.c unzipper.c unzip.c hal2012-as-release.c hal2012-xml.cpp hal2012-ipc.cpp  hal2012-util.cpp hal2012-talk.cpp hal2012-sql.cpp hal2012-sql-universal.cpp hal2012-universal.c hal2012-disk.c hal2012-ram.c hal2012-pro.cpp hal2012-universal-cxx.cpp hal2012-wiki.cpp hal2012-download.cpp)
 target_link_libraries (hal2012 m pthread z)
@@ -60,9 +60,9 @@ target_link_libraries (runner-thread m pthread pthread z msvcrt crypt32 ws2_32 m
 
 else(MINGW)
 
-include_directories (.) 
-include_directories (${FreeHAL_SOURCE_DIR}/perl5 ${FreeHAL_SOURCE_DIR}/parrot/include) 
-include_directories (/add1/root/boinc_core_release_5_10/lib/ /add1/root/boinc_core_release_5_10/api/ /add1/root/boinc_core_release_5_10/)
+include_directories (.)
+include_directories (/compiler/local/linux/include)
+link_directories (/compiler/local/linux/lib)
 
 add_executable (hal2012-server hal2012-startup.cpp hal2012-server.cpp extract_with_unzipper.c unzip.c unzipper.c ioapi.c hal2012-as-release.c hal2012-ipc.cpp hal2012-util.cpp)
 target_link_libraries (hal2012-server m crypt pthread dl z boost_regex-mt boost_thread-mt boost_system-mt)

@@ -11,8 +11,9 @@ if(MINGW)
 
 SET(CMAKE_FIND_LIBRARY_SUFFIXES .lib .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 
-include_directories (. /compiler/local/boinc-win32/include)
-link_directories (. /compiler/local/boinc-win32/lib ../local/lib/)
+include_directories (.)
+include_directories (/compiler/local/windows/include)
+link_directories (/compiler/local/windows/lib)
 
 add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp)
 target_link_libraries (freehalapp m boost_regex-mt boost_serialization-mt boinc_api boinc)
@@ -40,8 +41,9 @@ ADD_DEFINITIONS(-static-libgcc)
 SET(CMAKE_CXX_LINK_EXECUTABLE" ${CMAKE_CXX_LINK_EXECUTABLE} -static-libgcc")
 SET(CMAKE_FIND_LIBRARY_SUFFIXES .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 
-include_directories (. /compiler/local/boost-linux/include/ ~/boinc/include/ /compiler/local/boinc-linux/include/)
-link_directories (stuff/linux/boinc-distrib/ ~/boinc/lib/ /compiler/local/boinc-linux/lib/)
+include_directories (.)
+include_directories (/compiler/local/linux/include)
+link_directories (/compiler/local/linux/lib)
 
 #set(Boost_USE_STATIC_LIBS   ON)
 #set(Boost_USE_MULTITHREADED ON)
