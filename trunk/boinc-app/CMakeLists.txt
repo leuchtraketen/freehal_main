@@ -43,16 +43,17 @@ SET(CMAKE_FIND_LIBRARY_SUFFIXES .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 include_directories (. ~/boinc/include/ /compiler/local/boinc-linux/include/)
 link_directories (stuff/linux/boinc-distrib/ ~/boinc/lib/ /compiler/local/boinc-linux/lib/)
 
-set(Boost_USE_STATIC_LIBS   ON)
-set(Boost_USE_MULTITHREADED ON)
-find_package( Boost 1.36.0 COMPONENTS regex serialization system REQUIRED )
-find_package( Threads )
+#set(Boost_USE_STATIC_LIBS   ON)
+#set(Boost_USE_MULTITHREADED ON)
+#find_package( Boost 1.36.0 COMPONENTS regex serialization system REQUIRED )
+#find_package( Threads )
 
-add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp stuff/linux/boinc-distrib/libboost_regex-mt.a)
-target_link_libraries( freehalapp m dl boinc_api boinc ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} )
+add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp)
+target_link_libraries( freehalapp m dl boinc_api boinc ${CMAKE_THREAD_LIBS_INIT} boost_regex-mt )
 
 set_target_properties("freehalapp" PROPERTIES COMPILE_FLAGS "-g")
 set_target_properties("freehalapp" PROPERTIES LINK_FLAGS "-g -static-libgcc -static -pthread")
+
 
 endif(MINGW)
 
