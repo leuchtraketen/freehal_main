@@ -135,6 +135,14 @@ int main(int argc, char **argv) {
         );
         exit(-1);
     }
+    int lines = 0;
+    {
+        ifstream _infile(input_path);
+        string line;
+        while (std::getline(infile, line)) {
+            ++lines;
+        }
+    }
 
     // get size of input file (used to compute fraction done)
     //
@@ -156,8 +164,12 @@ int main(int argc, char **argv) {
     }
 
     string line;
+    int l = 0;
     while (std::getline(infile, line)) {
+        ++l;
         boinc_parse(line, &n_sentence, out);
+
+        boinc_fraction_done((double)l/(double)lines);
         boinc_sleep(5);
     }
 
