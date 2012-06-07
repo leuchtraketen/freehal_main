@@ -96,6 +96,9 @@ int boinc_parse(string line, int* n_sentence, ofstream& out) {
 }
 
 int main(int argc, char **argv) {
+
+    std::cout.rdbuf(std::cerr.rdbuf());
+
     int i;
     int c, retval, n;
     double fsize, fd;
