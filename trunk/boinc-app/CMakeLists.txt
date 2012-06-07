@@ -48,7 +48,7 @@ set(Boost_USE_MULTITHREADED ON)
 find_package( Boost 1.36.0 COMPONENTS regex serialization system REQUIRED )
 find_package( Threads )
 
-add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp /usr/lib/libboost_regex-mt.a)
+add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp stuff/linux/boinc-distrib/libboost_regex-mt.a)
 target_link_libraries( freehalapp m dl boinc_api boinc ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} )
 
 set_target_properties("freehalapp" PROPERTIES COMPILE_FLAGS "-g")
