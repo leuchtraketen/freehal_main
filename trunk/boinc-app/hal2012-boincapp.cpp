@@ -129,20 +129,21 @@ int main(int argc, char **argv) {
     boinc_resolve_filename(INPUT_FILENAME, input_path, sizeof(input_path));
     ifstream infile(input_path);
     if (!infile.is_open()) {
-        fprintf(stderr,
-            "%s Couldn't find input file, resolved name %s.\n",
-            boinc_msg_prefix(), input_path
-        );
+        cout <<
+            "%s Couldn't find input file, resolved name %s.\n"
+            << boinc_msg_prefix() << input_path << endl;
         exit(-1);
     }
     int lines = 0;
     {
-        ifstream _infile(input_path);
         string line;
         while (std::getline(infile, line)) {
             ++lines;
         }
     }
+    infile.close();
+    infile.open(input_path);
+    cout << "lines: " << lines << endl;
 
     // get size of input file (used to compute fraction done)
     //
