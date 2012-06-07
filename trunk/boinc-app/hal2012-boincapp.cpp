@@ -100,6 +100,7 @@ int boinc_parse(string line, int* n_sentence, ofstream& out) {
     int n_clause = 0;
     foreach (grammar2012::sentence* s, vs) {
         out << "---- " << REVISION_T << ";" << ++(*n_sentence) << ";" << ++n_clause << endl;
+        out << "::input= " << line << endl;
         out << grammar2012::grammar::print_graph(s->get_parsed()) << endl;
         out << "---- " << endl;
     }
