@@ -77,7 +77,7 @@ grammar2012::parser* setup_parser() {
 
         grammar2012::grammar* _g = new grammar2012::grammar();
         _g->read_grammar((path+"grammar.txt").c_str());
-        _g->set_verbose(true);
+        _g->set_verbose(false);
         _g->expand();
 
         p = new grammar2012::parser();
@@ -85,7 +85,7 @@ grammar2012::parser* setup_parser() {
         p->set_path(".");
         p->set_tagger(_t);
         p->set_grammar(_g);
-        p->set_verbose(true);
+        p->set_verbose(false);
     }
 
     return p;
