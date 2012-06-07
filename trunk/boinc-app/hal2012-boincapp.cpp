@@ -64,14 +64,16 @@ int do_checkpoint(MFILE& mf, int nchars) {
 }
 
 int boinc_parse(string line, int* n_sentence, ofstream& out) {
+    string path = "../../projects/www.freehal.net_freehal_at_home/";
+
     grammar2012::tagger* _t = new grammar2012::tagger();
     _t->set_verbose(true);
-    _t->read_pos_file("brain.pos");
-    _t->read_pos_file("memory.pos");
-    _t->read_regex_pos_file("regex.pos");
+    _t->read_pos_file((path+"brain.pos").c_str());
+    _t->read_pos_file((path+"memory.pos").c_str());
+    _t->read_regex_pos_file((path+"regex.pos").c_str());
 
     grammar2012::grammar* _g = new grammar2012::grammar();
-    _g->read_grammar("grammar.txt");
+    _g->read_grammar((path+"grammar.txt").c_str());
     _g->set_verbose(true);
     _g->expand();
 
