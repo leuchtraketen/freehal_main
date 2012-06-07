@@ -1,0 +1,117 @@
+#!/bin/bash
+export LC_ALL=C
+
+export TARGET="/var/log/compiler-update-boinc.log"
+rm -f $TARGET
+# file descriptor 4 prints to STDOUT and to TARGET
+exec 4> >(while read a; do echo $a; echo $a >>$TARGET; done)
+# file descriptor 5 remembers STDOUT
+exec 5>&1
+# now STDOUT is redirected
+exec >&4
+
+
+if test ! -d /compiler/status/
+then
+	mkdir /compiler/status/
+fi
+if test ! -d /compiler/download/
+then
+	mkdir /compiler/download/
+fi
+
+if test ! -d /compiler/boinc-app/
+then
+	cd /compiler
+#	svn co http://www.freehal.org/code/hal2012
+	svn checkout http://freehal.googlecode.com/svn/trunk/boinc-app/ boinc-app
+fi
+
+cd /compiler/boinc-app
+svn cleanup ; svn cleanup
+rm -f hal2012-revision.h
+svn up --non-interactive ; svn up --non-interactive
+export R=svn$(svn up --non-interactive | grep -i rev | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
+if [ "x$1" != "x" ]
+then
+        export R="$1"
+fi
+export RR=$(echo $R | sed 's@[^0-9]@@igm' | perl -n -e 's/[^0-9]//igm; print')
+echo '#define REVISION_I '$RR > hal2012-revision.h
+echo '#define REVISION_T "'$RR'"' >> hal2012-revision.h
+
+
+# clean distrib directory
+rm -rf /compiler/download/boinc-apps/
+
+# for windows
+(
+	# clean
+	(
+		make clean
+		rm -rf CMakeCache.txt CMakeFiles
+		cmake -DCMAKE_TOOLCHAIN_FILE=/compiler/cmake/mingw.cmake -DMINGW=1 -DBOOST_PROCESS_WINDOWS_USE_NAMED_PIPE=1 .
+		make clean
+		rm -f freehalapp.exe freehalapp
+	)
+
+	# compile
+	(
+		make freehalapp
+		/opt/mingw32/bin/i686-w64-mingw32-strip freehalapp.exe
+	)
+
+	# distrib
+
+	(
+		export DIR=freehalapp_1.${RR}_windows_intelx86.exe
+		mkdir -p /compiler/download/boinc-apps/$DIR
+		cp freehalapp.exe \
+			/compiler/download/boinc-apps/$DIR/$DIR
+		cp stuff/windows/boinc-distrib/* \
+			grammar.txt *.pos \
+			/compiler/download/boinc-apps/$DIR/
+	)
+)
+
+# for linux 32 bit
+(
+	# clean
+	(
+		make clean
+		rm -rf CMakeCache.txt CMakeFiles
+		cmake .
+		make clean
+		rm -f freehalapp.exe freehalapp
+	)
+
+	# compile
+	(
+		make freehalapp
+#		strip freehalapp
+	)
+
+	# distrib
+
+	(
+		export DIR=freehalapp_1.${RR}_i686-pc-linux-gnu
+		mkdir -p /compiler/download/boinc-apps/$DIR
+		cp freehalapp \
+			/compiler/download/boinc-apps/$DIR/$DIR
+
+		#cp freehalapp \
+		#	/compiler/download/boinc-apps/$DIR/_$DIR
+		#echo '#!/bin/bash' > /compiler/download/boinc-apps/$DIR/$DIR
+		#echo 'export LD_LIBRARY_PATH=../../projects/www.freehal.net_freehal_at_home/' >> /compiler/download/boinc-apps/$DIR/$DIR
+		#echo '../../projects/www.freehal.net_freehal_at_home/_'$DIR' $*' >> /compiler/download/boinc-apps/$DIR/$DIR
+		#cp stuff/linux/boinc-distrib/* \
+		#	grammar.txt *.pos \
+		#	/compiler/download/boinc-apps/$DIR/
+
+		cp grammar.txt *.pos \
+			/compiler/download/boinc-apps/$DIR/
+	)
+)
+
+rm -f hal2012-revision.h
+svn up hal2012-revision.h

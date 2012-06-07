@@ -1,0 +1,7 @@
+QMAKE_PRL_BUILD_DIR = /build/buildd/mingw-x-qt-4.7.2/BUILD/32/./src/winmain
+QMAKE_PRO_INPUT = winmain.pro
+QMAKE_PRL_TARGET = libqtmain
+QMAKE_PRL_DEFINES = QT_THREAD_SUPPORT
+QMAKE_PRL_CONFIG = lex yacc warn_on uic resources exceptions_off incremental_off windows release ReleaseBuild Release build_pass warn_on release link_prl copy_dir_files debug_and_release debug_and_release_target precompile_header def_files_disabled rtti no_mocdepend release stl qt_no_framework cross_compile release stl mmx 3dnow sse sse2 sse3 ssse3 sse4_1 sse4_2 avx exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build release ReleaseBuild Release build_pass staticlib warn_on png qt_install_headers qt warn_on depend_includepath qmake_cache target_qt debug_and_release hide_symbols static release ReleaseBuild Release build_pass no_autoqmake staticlib static moc thread
+QMAKE_PRL_VERSION = 4
+QMAKE_PRL_LIBS =   
