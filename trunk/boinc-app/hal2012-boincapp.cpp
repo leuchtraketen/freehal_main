@@ -63,27 +63,37 @@ int do_checkpoint(MFILE& mf, int nchars) {
     return 0;
 }
 
+grammar2012::parser* setup_parser() {
+
+    static grammar2012::parser* p = 0;
+    if (!p) {
+        string path = "../../projects/www.freehal.net_freehal_at_home/";
+
+        grammar2012::tagger* _t = new grammar2012::tagger();
+        _t->set_verbose(true);
+        _t->read_pos_file((path+"brain.pos").c_str());
+        _t->read_pos_file((path+"memory.pos").c_str());
+        _t->read_regex_pos_file((path+"regex.pos").c_str());
+
+        grammar2012::grammar* _g = new grammar2012::grammar();
+        _g->read_grammar((path+"grammar.txt").c_str());
+        _g->set_verbose(true);
+        _g->expand();
+
+        p = new grammar2012::parser();
+        p->set_lang("de");
+        p->set_path(".");
+        p->set_tagger(_t);
+        p->set_grammar(_g);
+        p->set_verbose(true);
+    }
+
+    return p;
+}
+
 int boinc_parse(string line, int* n_sentence, ofstream& out) {
-    string path = "../../projects/www.freehal.net_freehal_at_home/";
 
-    grammar2012::tagger* _t = new grammar2012::tagger();
-    _t->set_verbose(true);
-    _t->read_pos_file((path+"brain.pos").c_str());
-    _t->read_pos_file((path+"memory.pos").c_str());
-    _t->read_regex_pos_file((path+"regex.pos").c_str());
-
-    grammar2012::grammar* _g = new grammar2012::grammar();
-    _g->read_grammar((path+"grammar.txt").c_str());
-    _g->set_verbose(true);
-    _g->expand();
-
-    grammar2012::parser* p = new grammar2012::parser();
-    p->set_lang("de");
-    p->set_path(".");
-    p->set_tagger(_t);
-    p->set_grammar(_g);
-    p->set_verbose(true);
-
+    grammar2012::parser* p = setup_parser();
     p->parse(line);
 
     const vector<grammar2012::sentence*>& vs = p->get_sentences();
@@ -148,6 +158,7 @@ int main(int argc, char **argv) {
     string line;
     while (std::getline(infile, line)) {
         boinc_parse(line, &n_sentence, out);
+        boinc_sleep(5);
     }
 
     for (int h = 0; h < 60; ++h) {
