@@ -459,7 +459,8 @@ const string grammar::to_str() const {
 	for (it = gra->begin(); it != gra->end(); ++it) {
 		stringstream ss;
 
-		ss << s2o(it->first)->to_str();
+		entity* it_first = s2o(it->first);
+		ss << it_first?it_first->to_str():"#null";
 		ss << " = ";
 
 		entities* value = it->second;
@@ -534,10 +535,10 @@ void grammar::build_reducemap() {
 
 	grammarmap::iterator it;
 	for (it = gra->begin(); it != gra->end(); ++it) {
-		if (s2o(it->first)->get_repl().size() == 0) {
+		entity* target = s2o(it->first);
+		if (target && target->get_repl().size() == 0) {
 			const string keys = all_get_key(*it->second);
 			if (keys.size() > 0) {
-				entity* target = s2o(it->first);
 				int order = target->get_order();
 				if (order >= red.size()) {
 					for (int i = red.size(); i <= order; ++i) {
