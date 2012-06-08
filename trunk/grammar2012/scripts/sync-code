@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for x in hal2012*.{cpp,h}
+do
+	rsync -auv $x ../boinc-app/$x
+	rsync -auv ../boinc-app/$x $x
+	cp $x ../hal2012/$x
+	svn add ../hal2012/$x 2>&1 | grep -vi warn
+done
+
+for x in grammar.txt *.pos
+do
+	rsync -auv $x ../boinc-app/$x
+	rsync -auv ../boinc-app/$x $x
+	cp $x ../hal2012/lang_de/
+done
