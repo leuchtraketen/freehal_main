@@ -154,6 +154,9 @@ void parser::parse(const string& txt) {
 	} else if (t == 0) {
 		cout << "Error! parser2012: tagger is undefined." << endl;
 		return;
+	} else if (g == 0) {
+		cout << "Error! parser2012: grammar is undefined." << endl;
+		return;
 	}
 
 	{

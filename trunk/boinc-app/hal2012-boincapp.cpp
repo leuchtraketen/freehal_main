@@ -30,21 +30,13 @@ using std::string;
 
 bool run_slow = false;
 
-grammar2012::parser* p = 0;
+grammar2012::tagger* t = 0;
+grammar2012::grammar* g = 0;
 
-// do a billion floating-point ops
-// (note: I needed to add an arg to this;
-// otherwise the MS C++ compiler optimizes away
-// all but the first call to it!)
-//
-static double do_a_giga_flop(int foo) {
-    double x = 3.14159*foo;
-    int i;
-    for (i=0; i<500000000; i++) {
-        x += 5.12313123;
-        x *= 0.5398394834;
-    }
-    return x;
+bool fexists(const char *filename)
+{
+  ifstream ifile(filename);
+  return ifile;
 }
 
 int do_checkpoint(MFILE& mf, int nchars) {
@@ -67,25 +59,30 @@ int do_checkpoint(MFILE& mf, int nchars) {
 
 grammar2012::parser* setup_parser() {
 
+    string path = "../../projects/www.freehal.net_freehal_at_home/";
+
+    if (t == 0) {
+        t = new grammar2012::tagger();
+        t->set_verbose(true);
+        t->read_pos_file((path+"brain.pos").c_str());
+        t->read_pos_file((path+"memory.pos").c_str());
+        t->read_regex_pos_file((path+"regex.pos").c_str());
+    }
+
+    if (g == 0) {
+        g = new grammar2012::grammar();
+        g->read_grammar((path+"grammar.txt").c_str());
+        g->set_verbose(false);
+        g->expand();
+    }
+
+    grammar2012::parser* p = 0;
     if (p == 0) {
-        string path = "../../projects/www.freehal.net_freehal_at_home/";
-
-        grammar2012::tagger* _t = new grammar2012::tagger();
-        _t->set_verbose(true);
-        _t->read_pos_file((path+"brain.pos").c_str());
-        _t->read_pos_file((path+"memory.pos").c_str());
-        _t->read_regex_pos_file((path+"regex.pos").c_str());
-
-        grammar2012::grammar* _g = new grammar2012::grammar();
-        _g->read_grammar((path+"grammar.txt").c_str());
-        _g->set_verbose(false);
-        _g->expand();
-
         p = new grammar2012::parser();
         p->set_lang("de");
         p->set_path(".");
-        p->set_tagger(_t);
-        p->set_grammar(_g);
+        p->set_tagger(t);
+        p->set_grammar(g);
         p->set_verbose(false);
     }
 
@@ -97,14 +94,17 @@ int boinc_parse(string line, int* n_sentence, ofstream& out) {
     grammar2012::parser* p = setup_parser();
     p->parse(line);
 
+    ++(*n_sentence);
     const vector<grammar2012::sentence*>& vs = p->get_sentences();
     int n_clause = 0;
     foreach (grammar2012::sentence* s, vs) {
-        out << "---- " << REVISION_T << ";" << ++(*n_sentence) << ";" << ++n_clause << endl;
+        out << "---- " << REVISION_T << ";" << (*n_sentence) << ";" << ++n_clause << endl;
         out << "::input= " << line << endl;
         out << grammar2012::grammar::print_graph(s->get_parsed()) << endl;
         out << "---- " << endl;
     }
+
+    delete p;
 }
 
 int main(int argc, char **argv) {
@@ -120,8 +120,7 @@ int main(int argc, char **argv) {
 
     retval = boinc_init();
     if (retval) {
-        fprintf(stderr, "%s boinc_init returned %d\n",
-            boinc_msg_prefix(), retval
+        fprintf(stderr, "freehalapp: boinc_init returned %d\n", retval
         );
         exit(retval);
     }
@@ -132,8 +131,8 @@ int main(int argc, char **argv) {
     ifstream infile(input_path);
     if (!infile.is_open()) {
         cout <<
-            "%s Couldn't find input file, resolved name %s.\n"
-            << boinc_msg_prefix() << input_path << endl;
+            "freehalapp: Couldn't find input file, resolved name "
+            << input_path << "." << endl;
         exit(-1);
     }
     int lines = 0;
@@ -146,6 +145,9 @@ int main(int argc, char **argv) {
     infile.close();
     infile.open(input_path);
     cout << "lines: " << lines << endl;
+
+    run_slow = fexists("SLOW");
+    cout << "run slow? " << (run_slow?"yes":"no") << endl;
 
     // get size of input file (used to compute fraction done)
     //
@@ -173,7 +175,7 @@ int main(int argc, char **argv) {
         boinc_parse(line, &n_sentence, out);
 
         boinc_fraction_done((double)l/(double)lines);
-        boinc_sleep(3);
+        boinc_sleep(run_slow?90:5);
     }
 
     for (int h = 0; h < 60; ++h) {
