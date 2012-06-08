@@ -74,14 +74,18 @@ echo $R | grep step || (
 	cp -f hal2012-boinc.exe /disk/web1/var/www/projects/freehal_at_home/new/apps/windows/hal2012-boinc.exe
 )
 
+#		/compiler/local/lib/libboost_system-mt.dll \
+#		/compiler/local/lib/libboost_regex-mt.dll \
+#		/compiler/local/lib/libboost_thread_win32-mt.dll \
+#		/compiler/local/bin/pthreadGC2.dll \
 export DLL=$(echo \
 		/opt/mingw32/bin/zlib1.dll \
-		/compiler/local/lib/libboost_system-mt.dll \
-		/compiler/local/lib/libboost_regex-mt.dll \
-		/compiler/local/lib/libboost_thread_win32-mt.dll \
-		/compiler/local/bin/pthreadGC2.dll \
 		/opt/mingw32/bin/QtCore4.dll \
 		/opt/mingw32/bin/QtGui4.dll \
+		/compiler/local/windows/lib/libboost_regex-mt.dll \
+		/compiler/local/windows/lib/libboost_system-mt.dll \
+		/compiler/local/windows/lib/libboost_thread_win32-mt.dll \
+		/compiler/local/windows/lib/pthreadGC2.dll \
 )
 
 (
@@ -100,7 +104,7 @@ export DLL=$(echo \
 	mkdir Freehal-Online-Demo
 	cp gui-qt/FreeHAL-Online-Demo.exe $DLL Freehal-Online-Demo/
 	upx Freehal-Online-Demo/*
-	zip -r /tmp/freehal-${R}-online-demo-windows.zip Freehal-Online-Demo/
+	zip -r /tmp/freehal-${R}-online-demo-windows.zip Freehal-Online-Demo/ 2>&1 | grep -v adding
 	#scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-${R}-online-demo-windows.zip
 	#scp -C /tmp/freehal-${R}-online-demo-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download/freehal-latest-online-demo-windows.zip
 	cp /tmp/freehal-${R}-online-demo-windows.zip /compiler/download/freehal-${R}-online-demo-windows.zip
@@ -112,7 +116,7 @@ export DLL=$(echo \
 	rm -rf Freehal/
 	mkdir Freehal/
 	cp runner.exe runner-thread.exe gui-qt/FreeHAL-QT.exe $DLL Freehal/
-	./scripts/update_zips
+	./scripts/update_zips 2>&1 | grep -v adding
 	cd Freehal && unzip ../fh-1*.zip && echo A | unzip ../fh-2*.zip && cd ..
 	mkdir Freehal/temp
 	mkdir -p Freehal/{lang_en,temp,ui,img,saved/de,saved/en,doc}
@@ -120,7 +124,6 @@ export DLL=$(echo \
 	cp gui-qt/*.{png,gif} Freehal/
 	cp img/* Freehal/img/
 	cp doc/* Freehal/doc/
-	cp -rf runtime-perl5-win32/ Freehal/
 	./scripts/fill-saved
 	cp -rf saved/* Freehal/saved/
 	find Freehal -name ".svn" -exec rm -rf '{}' \;
@@ -164,4 +167,4 @@ export DLL=$(echo \
 #	svn add stuff/windows/*
 #	svn commit stuff -m "update compiler backup"
 #)
-svn commit /svn/compiler -m "update compiler code"
+svn commit /svn -m "updated compiler code"
