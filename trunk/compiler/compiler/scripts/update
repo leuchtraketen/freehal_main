@@ -117,7 +117,7 @@ export DLL=$(echo \
 	mkdir Freehal/
 	cp runner.exe runner-thread.exe gui-qt/FreeHAL-QT.exe $DLL Freehal/
 	./scripts/update_zips 2>&1 | grep -v adding
-	cd Freehal && unzip ../fh-1*.zip && echo A | unzip ../fh-2*.zip && cd ..
+	(cd Freehal && unzip ../fh-1*.zip && echo A | unzip ../fh-2*.zip && cd ..) 2>&1 | grep -v inflating
 	mkdir Freehal/temp
 	mkdir -p Freehal/{lang_en,temp,ui,img,saved/de,saved/en,doc}
 	cp gui-qt/ui/*.{svg,png} Freehal/ui/
@@ -130,8 +130,7 @@ export DLL=$(echo \
 
 # no database
 	rm -rf "/tmp/freehal-${R}-no-database-windows.zip"
-	mv Freehal "Freehal-${R}" && zip -r "/tmp/freehal-${R}-no-database-windows.zip" "Freehal-${R}" && mv "Freehal-${R}" Freehal
-	#scp -C "/tmp/freehal-${R}-no-database-windows.zip" root@freehal.org:/var/www/vhosts/default/htdocs/download
+	mv Freehal "Freehal-${R}" && zip -r "/tmp/freehal-${R}-no-database-windows.zip" "Freehal-${R}"  2>&1 | grep -v adding && mv "Freehal-${R}" Freehal
 	cp "/tmp/freehal-${R}-no-database-windows.zip" /compiler/download/
 	rm "/tmp/freehal-${R}-no-database-windows.zip"
 
@@ -145,7 +144,7 @@ export DLL=$(echo \
 		ln -f $x Freehal/lang_de/
 	done
 	rm -rf /tmp/freehal-${R}-windows.zip
-	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-windows.zip Freehal-${R} && mv Freehal-${R} Freehal
+	mv Freehal Freehal-${R} && zip -r /tmp/freehal-${R}-windows.zip Freehal-${R}  2>&1 | grep -v adding && mv Freehal-${R} Freehal
 	#scp -C /tmp/freehal-${R}-windows.zip root@freehal.org:/var/www/vhosts/default/htdocs/download
 	cp /tmp/freehal-${R}-windows.zip /compiler/download
 	rm /tmp/freehal-${R}-windows.zip
