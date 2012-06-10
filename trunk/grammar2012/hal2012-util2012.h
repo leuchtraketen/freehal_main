@@ -19,6 +19,7 @@
 #include <boost/algorithm/string/split.hpp>
 #include <boost/regex.hpp>
 #include <boost/foreach.hpp>
+#include <boost/shared_ptr.hpp>
 
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
@@ -40,9 +41,12 @@ namespace algo = boost::algorithm;
 #define foreach         BOOST_FOREACH
 #define reverse_foreach BOOST_REVERSE_FOREACH
 
-namespace grammar2012 {
+#define BOOST_FILESYSTEM_VERSION 3
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
+namespace fs = boost::filesystem;
 
-typedef unsigned int size_t;
+namespace grammar2012 {
 
 extern const char quote;
 extern bool REGEX_DEBUG;

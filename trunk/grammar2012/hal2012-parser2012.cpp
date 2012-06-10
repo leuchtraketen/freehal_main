@@ -118,7 +118,7 @@ void sentence::parse() {
 const string sentence::get_input() const {
 	return input;
 }
-Mode sentence::get_mode() const {
+sentence_mode sentence::get_mode() const {
 	return mode;
 }
 vector<string> sentence::get_words_list() const {
