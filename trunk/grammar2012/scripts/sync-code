@@ -6,6 +6,7 @@ do
 	rsync -auv ../boinc-app/$x $x
 	cp $x ../hal2012/$x
 	svn add ../hal2012/$x 2>&1 | grep -vi warn
+	svn add ../boinc-app/$x 2>&1 | grep -vi warn
 done
 
 for x in grammar.txt *.pos

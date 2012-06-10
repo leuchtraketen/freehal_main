@@ -33,7 +33,6 @@ using namespace std;
 namespace algo = boost::algorithm;
 
 namespace grammar2012 {
-typedef unsigned int size_t;
 
 class entity;
 class grammar;

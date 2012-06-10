@@ -40,20 +40,19 @@ EXTERN_C char* check_config(const char* name, const char* _default);
 #include "hal2012-grammar2012.h"
 
 namespace grammar2012 {
-typedef unsigned int size_t;
 
 class sentence;
 class parser;
 
 const string print_vector(const vector<sentence*>&);
 
-enum Mode {
+enum sentence_mode {
 	ONLY_LEARN, QUESTION, STATEMENT, UNKNOWN
 };
 class sentence {
 private:
 	string input;
-	Mode mode;
+	sentence_mode mode;
 	vector<string> words_list;
 	vector<tags*> tags_list;
 	grammar2012::parsed_type* parsed;
@@ -79,10 +78,11 @@ public:
 	void parse();
 
 	const string get_input() const;
-	Mode get_mode() const;
+	sentence_mode get_mode() const;
 	vector<string> get_words_list() const;
 	vector<tags*> get_tags_list() const;
 	parsed_type* get_parsed() const;
+
 
 private:
 	void find_mode();
