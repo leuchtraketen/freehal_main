@@ -38,6 +38,7 @@ int diskdb::insert(xml_fact* xfact) {
 	foreach (string word, words) {
 		if (word.size() == 0)
 			continue;
+		word = lc(word);
 
 		index_word.insert(indexmap_str::value_type(word, xfact_p));
 
@@ -60,14 +61,13 @@ int diskdb::copy_to(vector<boost::shared_ptr<xml_fact> >& list) {
 }
 
 int diskdb::find_by_word(const string& word) {
-
 	string key;
 	{
 		stringstream ss_key;
-		ss_key << word.substr(0, 3);
+		ss_key << lc(word.substr(0, 3));
 		key = ss_key.str();
 		while (key.size() < 3)
-			key = "_" + key;
+			key += "_";
 		if (d->is_verbose())
 			cout << "find facts by key: " << key << endl << flush;
 	}

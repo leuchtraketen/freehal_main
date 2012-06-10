@@ -56,14 +56,19 @@ protected:
 
 // list
 public:
-	std::vector<xml_obj*> part(string) const;
+	std::vector<boost::shared_ptr<xml_obj> > part(string) const;
 	void trim();
 	size_t size();
-	friend xml_obj* operator >>(xml_obj*, vector<xml_obj*>);
-	friend xml_obj* operator <<(xml_obj*, vector<xml_obj*>);
-	friend xml_obj* operator <<(xml_obj*, xml_obj&);
+
+	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
+			boost::shared_ptr<xml_obj>);
+	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
+			vector<boost::shared_ptr<xml_obj> >);
+	friend xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+	friend xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
+	friend xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
 protected:
-	std::vector<xml_obj*> content;
+	std::vector<boost::shared_ptr<xml_obj> > content;
 
 // text
 public:
@@ -116,14 +121,19 @@ vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
 xml_fact* halxml_readxml_fact(vector<string>& lines, int& i);
 xml_fact* record_to_xml_fact(struct RECORD* r, int level);
 xml_obj* halxml_readtree(const string& tag_name, vector<string>& lines, int& i);
-xml_obj* operator >>(xml_obj* i, vector<xml_obj*> o);
-xml_obj* operator <<(xml_obj* o, vector<xml_obj*> i);
-xml_obj* operator <<(xml_obj* o, xml_obj& i);
-std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
-std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
 int use_xml_fact(void* _d, xml_fact* xfact, int xml_facts_size,
 		time_t* start_ref, const fs::path& filename_ref, int k);
 std::size_t hash_value(const xml_obj& o);
+
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
+		boost::shared_ptr<xml_obj>);
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
+		vector<boost::shared_ptr<xml_obj> >);
+xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
+xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
+std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
 
 }
 

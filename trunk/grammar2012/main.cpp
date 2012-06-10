@@ -34,7 +34,7 @@ int main() {
 
 		g::grammar* _g = new g::grammar();
 		_g->read_grammar("grammar.txt");
-		_g->set_verbose(true);
+		_g->set_verbose(false);
 		_g->expand();
 
 		g::parser* p = new g::parser();
@@ -42,7 +42,7 @@ int main() {
 		p->set_path(".");
 		p->set_tagger(_t);
 		p->set_grammar(_g);
-		p->set_verbose(true);
+		p->set_verbose(false);
 
 		p->parse("In der Zeitung steht, dass es nur fuer die "
 				"Schlecker-Toechter IhrPlatz und "
@@ -52,9 +52,24 @@ int main() {
 			//cout << g::grammar::print_xml(s->get_parsed());
 			cout << *s->get_fact() << endl;
 		}
+
+		g::database<g::diskdb>* d = new g::database<g::diskdb>();
+		d->set_verbose(true);
+		d->set_lang("de");
+		d->set_path(".");
+		print_memory();
+		d->prepare("../hal2012/lang_de");
+
+		print_memory();
+		vector<boost::shared_ptr<g::xml_fact> > facts;
+		d->find_by_word(facts, "FreeHAL");
+		foreach (boost::shared_ptr<g::xml_fact> fact, facts) {
+			cout << fact->print_str() << endl;
+		}
+		print_memory();
 	}
 
-	if (1) {
+	if (0) {
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
 		d->set_lang("de");
@@ -69,7 +84,7 @@ int main() {
 		print_memory();
 	}
 
-	if (1) {
+	if (0) {
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
 		d->set_lang("de");

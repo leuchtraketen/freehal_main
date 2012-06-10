@@ -209,6 +209,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		input_simplified.clear();
 		algo::split(input_simplified, input_clean, algo::is_any_of("@"),
 				algo::token_compress_on);
 		for (size_t i = 0; i < input_simplified.size(); ++i) {
@@ -220,6 +221,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		input_extended.clear();
 		std::copy(input_simplified.begin(), input_simplified.end(),
 				back_inserter(input_extended));
 		for (size_t i = 0; i < input_extended.size(); ++i) {
@@ -231,6 +233,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		sentences.clear();
 		for (size_t i = 0; i < input_extended.size(); ++i) {
 			sentences.push_back(new sentence(this, input_extended[i]));
 		}

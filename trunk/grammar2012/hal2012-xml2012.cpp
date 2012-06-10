@@ -26,19 +26,12 @@ namespace grammar2012 {
 
 xml_obj::xml_obj(xml_obj_mode _mode) :
 		mode(_mode), content(), text(""), name("") {
-	//cout << "construct: " << "xml_obj" << endl;
 }
 xml_obj::xml_obj() :
 		mode(LIST), content(), text(""), name("") {
-	//cout << "construct: " << "xml_obj" << endl;
 }
 xml_obj::~xml_obj() {
-	//cout << "destruct:  " << "xml_obj" << endl;
 	if (mode == LIST) {
-		int k;
-		for (k = 0; k < content.size(); ++k) {
-			delete (content[k]);
-		}
 		content.clear();
 	}
 }
@@ -47,18 +40,29 @@ xml_obj_mode xml_obj::get_mode() {
 	return mode;
 }
 
-xml_obj* operator <<(xml_obj* o, xml_obj& i) {
-	o->content.push_back(&i);
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
+		boost::shared_ptr<xml_obj> i) {
+	o->content.push_back(i);
 	return o;
 }
-xml_obj* operator <<(xml_obj* o, vector<xml_obj*> i) {
-	int k;
-	for (k = 0; k < i.size(); ++k) {
-		o->content.push_back(i[k]);
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
+		vector<boost::shared_ptr<xml_obj> > i) {
+	foreach (boost::shared_ptr<xml_obj> elem, i) {
+		o->content.push_back(elem);
 	}
 	return o;
 }
-xml_obj* operator >>(xml_obj* i, vector<xml_obj*> o) {
+xml_obj* operator <<(xml_obj* o, boost::shared_ptr<xml_obj> i) {
+	o->content.push_back(i);
+	return o;
+}
+xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> > i) {
+	foreach (boost::shared_ptr<xml_obj> elem, i) {
+		o->content.push_back(elem);
+	}
+	return o;
+}
+xml_obj* operator >>(xml_obj* i, vector<boost::shared_ptr<xml_obj> > o) {
 	int k;
 	for (k = 0; k < i->content.size(); ++k) {
 		o.push_back(i->content[k]);
@@ -117,7 +121,7 @@ string xml_obj::print_xml(int level, int secondlevel) const {
 	return (string());
 }
 string xml_obj::print_str(string tag_name) const {
-	std::vector<xml_obj*> _content = part(tag_name);
+	std::vector<boost::shared_ptr<xml_obj> > _content = part(tag_name);
 
 	string str;
 	int k;
@@ -170,13 +174,15 @@ int xml_obj::get_words(vector<string>& words) const {
 	if (mode == TEXT) {
 		vector<string> _words;
 		// !(algo::is_digit() || algo::is_alpha())
-		algo::split(_words, text, !algo::is_alpha(), algo::token_compress_on);
+		algo::split(_words, text,
+				!(algo::is_alpha() || algo::is_any_of(")(}{][=")),
+				algo::token_compress_on);
 		if (_words.size() > 0)
 			copy(_words.begin(), _words.end(), back_inserter(words));
 		return 0;
 	}
 	if (mode == LIST) {
-		foreach (xml_obj* embedded, content) {
+		foreach (boost::shared_ptr<xml_obj> embedded, content) {
 			embedded->get_words(words);
 		}
 	}
@@ -187,25 +193,27 @@ size_t xml_obj::size() {
 }
 void xml_obj::trim() {
 	if (mode == LIST) {
-		xml_obj* subject = new xml_obj(LIST);
-		xml_obj* object = new xml_obj(LIST);
-		xml_obj* adverbs = new xml_obj(LIST);
-		xml_obj* verb = new xml_obj(LIST);
-		vector<xml_obj*> other;
+		boost::shared_ptr<xml_obj> subject(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> object(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> adverbs(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> verb(new xml_obj(LIST));
+		vector<boost::shared_ptr<xml_obj> > other;
 
-		foreach (xml_obj* embedded, content) {
-			xml_obj * unique = (embedded->name == "subject" ? subject :
-								embedded->name == "object" ? object :
-								embedded->name == "adverbs" ? adverbs :
-								embedded->name == "verb" ? verb : 0);
+		foreach (boost::shared_ptr<xml_obj> embedded, content) {
+			boost::shared_ptr<xml_obj> unique;
+			if (embedded->name == "subject")
+				unique = subject;
+			else if (embedded->name == "object")
+				unique = object;
+			else if (embedded->name == "adverbs")
+				unique = adverbs;
+			else if (embedded->name == "verb")
+				unique = verb;
 			embedded->trim();
 
-			if (unique != 0) {
+			if (unique) {
 				unique->set_name(embedded->name);
 				unique << embedded->content;
-				embedded->content.clear();
-				delete embedded;
-				embedded = 0;
 			} else {
 				other.push_back(embedded);
 			}
@@ -213,21 +221,13 @@ void xml_obj::trim() {
 
 		content.clear();
 		if (subject->size() > 0)
-			this << *subject;
-		else
-			delete subject;
+			this << subject;
 		if (object->size() > 0)
-			this << *object;
-		else
-			delete object;
+			this << object;
 		if (adverbs->size() > 0)
-			this << *adverbs;
-		else
-			delete adverbs;
+			this << adverbs;
 		if (verb->size() > 0)
-			this << *verb;
-		else
-			delete verb;
+			this << verb;
 		this << other;
 	}
 }
@@ -254,28 +254,15 @@ bool operator==(const xml_fact& o1, const xml_fact& o2) {
 xml_fact::xml_fact() :
 		xml_obj(LIST), line(), filename() {
 	name = "fact";
-	//cout << "construct: " << "fact" << endl;
 }
 xml_fact::~xml_fact() {
 	if (content.size() > 0) {
-		int k;
-		for (k = 0; k < content.size(); ++k) {
-			delete (content[k]);
-		}
 		content.clear();
 	}
-	//cout << "destruct:  " << "fact" << endl;
-	/*int k;
-	 if (content) {
-	 for (k = 0; k < content.size(); ++k) {
-	 delete (content[k]);
-	 }
-	 delete (content);
-	 }*/
 }
 
-std::vector<xml_obj*> xml_obj::part(string tag_name) const {
-	std::vector<xml_obj*> _content;
+std::vector<boost::shared_ptr<xml_obj> > xml_obj::part(string tag_name) const {
+	std::vector<boost::shared_ptr<xml_obj> > _content;
 	int k;
 	for (k = 0; k < content.size(); ++k) {
 		if (content[k]->get_name() == tag_name) {
@@ -355,27 +342,25 @@ Tree* halxml_readtree(Tree* tree, const string& tag_name, vector<string>& lines,
 			string _tag_name = lines[i];
 			++i;
 			{
-				xml_obj* subtree = new xml_obj(LIST);
-				halxml_readtree(subtree, _tag_name, lines, i);
+				boost::shared_ptr<xml_obj> subtree(new xml_obj(LIST));
+				halxml_readtree(subtree.get(), _tag_name, lines, i);
 				if (subtree->content.size() > 0) {
-					tree << *subtree;
-				} else {
-					delete subtree;
+					tree << subtree;
 				}
 			}
 		} else if (string(lines[i]).size() > 0) {
 			const string& text = lines[i];
 			// check for default values
 			if (text != "00000" && !algo::starts_with(text, "0.50")) {
-				xml_obj* t = new xml_obj(TEXT);
+				boost::shared_ptr<xml_obj> t(new xml_obj(TEXT));
 				t->set_text(text);
 				if (tag_name == "text") {
-					tree << *t;
+					tree << t;
 				} else {
-					xml_obj* text_obj = new xml_obj(LIST);
+					boost::shared_ptr<xml_obj> text_obj(new xml_obj(LIST));
 					text_obj->set_name("text");
-					text_obj << *t;
-					tree << *text_obj;
+					text_obj << t;
+					tree << text_obj;
 				}
 			}
 		}
@@ -389,185 +374,5 @@ xml_fact* halxml_readxml_fact(vector<string>& lines, int& i) {
 	halxml_readtree(fact, "fact", lines, i);
 	return (fact);
 }
-
-xml_fact* record_to_xml_fact(void* r, int level = 0) {
-	xml_fact* fact = new xml_fact();
-
-	xml_obj* tree = 0;
-	xml_obj* t = 0;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("subject");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->subjects);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("object");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->objects);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("verb");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->verb);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("adverbs");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->adverbs);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("extra");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->extra);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("questionword");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->questionword);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("truth");
-	t = new xml_obj(TEXT);
-	//char truth_str[10];
-	//snprintf(truth_str, 9, "%f", r->truth);
-	//t->set_text(truth_str);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("flags");
-	t = new xml_obj(TEXT);
-	//char flags_str[10];
-	//snprintf(flags_str, 9, "%d%d%d%d%d", r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should);
-	//t->set_text(flags_str);
-	tree << *t;
-	fact << *tree;
-
-	/*
-	 if (level == 0) {
-	 int n;
-	 int broken = 0;
-	 for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
-	 struct RECORD* clause = (struct RECORD*)(r->clauses[n]);
-
-	 if (( (!clause->subjects||0==strcmp(clause->subjects, "")) && (!clause->objects||0==strcmp(clause->objects, "")) && (!clause->verb||0==strcmp(clause->verb, "")) && !(clause->verb_flag_want || clause->verb_flag_must || clause->verb_flag_can || clause->verb_flag_may || clause->verb_flag_should)) || (clause->questionword && clause->questionword[0] == ')')) {
-	 break;
-	 }
-
-	 xml_fact* clause_xml_fact = record_to_xml_fact(clause, level+1);
-	 clause_xml_fact->set_name("clause");
-	 xml_fact << *clause_xml_fact;
-	 }
-	 }
-	 */
-
-	//xml_fact->filename = r->filename;
-	//xml_fact->line = r->line;
-	return fact;
-}
-
-/*
- int add_xml_fact(xml_fact* xfact) {
- int only_logic = 0;
- int has_conditional_questionword = 0;
-
- string subject = xfact->print_str("subject");
- string object = xfact->print_str("object");
- string verb = xfact->print_str("verb");
- string adverbs = xfact->print_str("adverbs");
- string extra = xfact->print_str("extra");
- string questionword = xfact->print_str("questionword");
- string filename = xfact->filename;
- string line = xfact->line;
- string truth_str = xfact->print_str("truth");
-
- float truth;
- sscanf(truth_str.c_str(), "%fl", &truth);
- stringstream sst;
- sst << truth_str;
- sst >> truth;
-
- string verb_flags = xfact->print_str("flags");
- int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0,
- verb_flag_may = 0, verb_flag_should = 0;
- if (verb_flags.size() == 5)
- sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want,
- &verb_flag_must, &verb_flag_can, &verb_flag_may,
- &verb_flag_should);
-
- struct xml_fact* xml_fact = add_xml_fact(subject.c_str(), object.c_str(), verb.c_str(),
- adverbs.c_str(), extra.c_str(), questionword.c_str(),
- filename.c_str(), line.c_str(), truth, verb_flag_want,
- verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should,
- only_logic, has_conditional_questionword);
-
- if (xml_fact && xml_fact->pk) {
- FILE* input_key = fopen("_input_key", "w+b");
- if (input_key) {
- fprintf(input_key, "%d", xml_fact->pk);
- fclose(input_key);
- }
- }
-
- if (xml_fact && xml_fact != INVALID_POINTER && xml_fact->pk) {
- std::vector<xml_obj*> _content = xfact->part("clause");
- string str;
- int k;
- for (k = 0; k < _content.size(); ++k) {
- xml_fact* xclause = (xml_fact*) _content[k];
-
- string clause_subject = xclause->print_str("subject");
- string clause_object = xclause->print_str("object");
- string clause_verb = xclause->print_str("verb");
- string clause_adverbs = xclause->print_str("adverbs");
- string clause_extra = xclause->print_str("extra");
- string clause_questionword = xclause->print_str("questionword");
- string clause_truth_str = xclause->print_str("truth");
- float clause_truth;
- sscanf(clause_truth_str.c_str(), "%fl", &clause_truth);
- string clause_verb_flags = xclause->print_str("flags");
- int clause_verb_flag_want = 0, clause_verb_flag_must = 0,
- clause_verb_flag_can = 0, clause_verb_flag_may = 0,
- clause_verb_flag_should = 0;
- if (clause_verb_flags.size() == 5)
- sscanf(clause_verb_flags.c_str(), "%d%d%d%d%d",
- &clause_verb_flag_want, &clause_verb_flag_must,
- &clause_verb_flag_can, &clause_verb_flag_may,
- &clause_verb_flag_should);
-
- struct xml_fact* clause = add_clause(xml_fact->pk, clause_subject.c_str(),
- clause_object.c_str(), clause_verb.c_str(),
- clause_adverbs.c_str(), clause_extra.c_str(),
- clause_questionword.c_str(), filename.c_str(), line.c_str(),
- clause_truth, clause_verb_flag_want, clause_verb_flag_must,
- clause_verb_flag_can, clause_verb_flag_may,
- clause_verb_flag_should);
-
- if (clause && clause != INVALID_POINTER) {
- free(clause);
- }
- }
-
- if (is_engine("disk")) {
- free(xml_fact);
- }
- }
-
- return 0;
- }
- */
 
 }
