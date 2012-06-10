@@ -43,7 +43,7 @@ public:
 
 // universal
 public:
-	void set_name(string);
+	void set_name(const string&);
 	string get_name();
 	string print_xml() const;
 	string print_xml(int, int) const;
@@ -57,6 +57,8 @@ protected:
 // list
 public:
 	std::vector<xml_obj*> part(string) const;
+	void trim();
+	size_t size();
 	friend xml_obj* operator >>(xml_obj*, vector<xml_obj*>);
 	friend xml_obj* operator <<(xml_obj*, vector<xml_obj*>);
 	friend xml_obj* operator <<(xml_obj*, xml_obj&);
@@ -65,7 +67,7 @@ protected:
 
 // text
 public:
-	void set_text(string);
+	void set_text(const string&);
 private:
 	string text;
 
@@ -95,19 +97,6 @@ public:
 	string line;
 	fs::path filename;
 
-private:
-	string context;
-	string pkey;
-
-	int prio;
-	int num_clauses;
-	short type;
-	int hash_clauses;
-	int only_logic;
-	double truth;
-
-	short everything_q;
-
 	//serialization
 public:
 	friend class boost::serialization::access;
@@ -130,10 +119,11 @@ xml_obj* halxml_readtree(const string& tag_name, vector<string>& lines, int& i);
 xml_obj* operator >>(xml_obj* i, vector<xml_obj*> o);
 xml_obj* operator <<(xml_obj* o, vector<xml_obj*> i);
 xml_obj* operator <<(xml_obj* o, xml_obj& i);
+std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
+std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
 int use_xml_fact(void* _d, xml_fact* xfact, int xml_facts_size,
 		time_t* start_ref, const fs::path& filename_ref, int k);
 std::size_t hash_value(const xml_obj& o);
-
 
 }
 

@@ -16,12 +16,12 @@ s-sentence/9:
     r-adverbs r-sentence-ps
     r-adverbs r-sentence-sp
     r-adverbs r-sentence-p
-    r-adverbs r-questionword-part r-sentence-spo
-    r-adverbs r-questionword-part r-sentence-pso
-    r-adverbs r-questionword-part r-sentence-sop
-    r-adverbs r-questionword-part r-sentence-ps
-    r-adverbs r-questionword-part r-sentence-sp
-    r-adverbs r-questionword-part r-sentence-p
+    r-adverbs s-questionword-part r-sentence-spo
+    r-adverbs s-questionword-part r-sentence-pso
+    r-adverbs s-questionword-part r-sentence-sop
+    r-adverbs s-questionword-part r-sentence-ps
+    r-adverbs s-questionword-part r-sentence-sp
+    r-adverbs s-questionword-part r-sentence-p
 
 
 r-clauselinking:
@@ -31,11 +31,11 @@ s-followingsentence*:
     r-clauselinking r-adverbs r-sentence-po
     r-clauselinking r-adverbs r-sentence-p
 
-r-questionword-part:
+s-questionword-part:
     r-extra-before r-questionword r-extra-after
     r-questionword r-extra-after
     r-questionword
-    d-questionword/v-questionword d-adjective/v-extra-after
+    r-questionword d-adjective/v-extra-after
 
 
 r-questionword:
@@ -89,6 +89,8 @@ r-object:
 
 s-nounphrases:
     r-nounphrase
+    r-nounphrases-link/v-link
+r-nounphrases-link:
     s-nounphrases/v-linked d-linking s-nounphrases/v-linked
     s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-linking s-nounphrases/v-linked
     s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-komma s-nounphrases/v-linked d-linking s-nounphrases/v-linked
@@ -103,6 +105,8 @@ r-nounphrase:
 
 r-nounphrase-nouns:
     s-noun/0
+    r-nounphrase-nouns-link/v-link
+r-nounphrase-nouns-link:
     s-noun/0/v-linked d-linking s-noun/0/v-linked
     s-noun/0/v-linked d-komma s-noun/0/v-linked d-linking s-noun/0/v-linked
 

@@ -8,14 +8,7 @@ vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
 	time(&start);
 
 	vector<string> lines;
-	{
-		string _str;
-		stringstream predata;
-		predata << prestr;
-		while (getline(predata, _str)) {
-			lines.push_back(_str);
-		}
-	}
+	split_lines(lines, prestr);
 
 	vector<xml_fact*> xml_facts;
 	int i;
@@ -73,7 +66,7 @@ int use_xml_fact(DB* d, xml_fact* xfact, int xml_facts_size, time_t* start_ref,
 					+ 0.5 * (xml_facts_size - k) / (xml_facts_per_second + 1);
 
 			cout << (k + 1) << " of " << xml_facts_size << " added ("
-					<< xml_facts_per_second << " xml_facts / sec, "
+					<< xml_facts_per_second << " facts / sec, "
 					<< now - *start_ref << " sec, " << time_needed
 					<< " sec needed, " << (100.0 / xml_facts_size * (k + 1))
 					<< "% done)          " << (d->is_buffered() ? "\n" : "\r")

@@ -65,20 +65,24 @@ xml_obj* operator >>(xml_obj* i, vector<xml_obj*> o) {
 	}
 	return i;
 }
-void xml_obj::set_name(string name) {
+std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact) {
+	stream << xfact.print_xml();
+	return stream;
+}
+std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj) {
+	stream << xobj.print_xml();
+	return stream;
+}
+void xml_obj::set_name(const string& name) {
 	this->name = name;
 }
 string xml_obj::get_name() {
 	return (name);
 }
 
-void trim(std::string& s, const char* t = " \t\n\r\f\v") {
-	s.erase(0, s.find_first_not_of(t));
-	s.erase(s.find_last_not_of(t) + 1);
-}
-void xml_obj::set_text(string str) {
+void xml_obj::set_text(const string& str) {
 	text = str;
-	trim(text);
+	algo::trim_if(text, algo::is_any_of(" \t\n\r\f\v"));
 }
 string xml_obj::print_xml() const {
 	return print_xml(0, 0) + "\n";
@@ -172,12 +176,60 @@ int xml_obj::get_words(vector<string>& words) const {
 		return 0;
 	}
 	if (mode == LIST) {
-		int k;
 		foreach (xml_obj* embedded, content) {
 			embedded->get_words(words);
 		}
 	}
 	return 0;
+}
+size_t xml_obj::size() {
+	return content.size();
+}
+void xml_obj::trim() {
+	if (mode == LIST) {
+		xml_obj* subject = new xml_obj(LIST);
+		xml_obj* object = new xml_obj(LIST);
+		xml_obj* adverbs = new xml_obj(LIST);
+		xml_obj* verb = new xml_obj(LIST);
+		vector<xml_obj*> other;
+
+		foreach (xml_obj* embedded, content) {
+			xml_obj * unique = (embedded->name == "subject" ? subject :
+								embedded->name == "object" ? object :
+								embedded->name == "adverbs" ? adverbs :
+								embedded->name == "verb" ? verb : 0);
+			embedded->trim();
+
+			if (unique != 0) {
+				unique->set_name(embedded->name);
+				unique << embedded->content;
+				embedded->content.clear();
+				delete embedded;
+				embedded = 0;
+			} else {
+				other.push_back(embedded);
+			}
+		}
+
+		content.clear();
+		if (subject->size() > 0)
+			this << *subject;
+		else
+			delete subject;
+		if (object->size() > 0)
+			this << *object;
+		else
+			delete object;
+		if (adverbs->size() > 0)
+			this << *adverbs;
+		else
+			delete adverbs;
+		if (verb->size() > 0)
+			this << *verb;
+		else
+			delete verb;
+		this << other;
+	}
 }
 
 std::size_t hash_value(const xml_obj& o) {
@@ -200,7 +252,7 @@ bool operator==(const xml_fact& o1, const xml_fact& o2) {
 }
 
 xml_fact::xml_fact() :
-		xml_obj(), line(), filename() {
+		xml_obj(LIST), line(), filename() {
 	name = "fact";
 	//cout << "construct: " << "fact" << endl;
 }
@@ -426,7 +478,6 @@ xml_fact* record_to_xml_fact(void* r, int level = 0) {
 	//xml_fact->line = r->line;
 	return fact;
 }
-
 
 /*
  int add_xml_fact(xml_fact* xfact) {

@@ -161,4 +161,16 @@ bool safe_iregex(boost::regex& regex, const string& exp) {
 	return false;
 }
 
+int split_lines(vector<string>& lines, const string& prestr) {
+	string _str;
+	stringstream predata;
+	predata << prestr;
+	int i = 0;
+	while (getline(predata, _str)) {
+		lines.push_back(_str);
+		++i;
+	}
+	return i;
+}
+
 }

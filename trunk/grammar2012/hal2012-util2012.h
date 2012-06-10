@@ -73,6 +73,7 @@ void regex_ireplace(string& str, const string& exp, const string& repl);
 void str_replace(string& str, const string& exp, const string& repl);
 bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
+int split_lines(vector<string>&, const string&);
 
 }
 

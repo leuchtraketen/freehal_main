@@ -26,6 +26,35 @@ void print_memory() {
 
 int main() {
 	if (1) {
+		g::tagger* _t = new g::tagger();
+		_t->set_verbose(true);
+		_t->read_pos_file("brain.pos");
+		_t->read_pos_file("memory.pos");
+		_t->read_regex_pos_file("regex.pos");
+
+		g::grammar* _g = new g::grammar();
+		_g->read_grammar("grammar.txt");
+		_g->set_verbose(true);
+		_g->expand();
+
+		g::parser* p = new g::parser();
+		p->set_lang("de");
+		p->set_path(".");
+		p->set_tagger(_t);
+		p->set_grammar(_g);
+		p->set_verbose(true);
+
+		p->parse("In der Zeitung steht, dass es nur fuer die "
+				"Schlecker-Toechter IhrPlatz und "
+				"SchleckerXL eine Zukunft geben soll.");
+		const vector<g::sentence*>& vs = p->get_sentences();
+		foreach (g::sentence* s, vs) {
+			//cout << g::grammar::print_xml(s->get_parsed());
+			cout << *s->get_fact() << endl;
+		}
+	}
+
+	if (1) {
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
 		d->set_lang("de");
@@ -167,7 +196,7 @@ int main() {
 
 	//g->parse("d-article|der#d-noun|Hund#d-verb|ist#d-adjective|da");
 	//g->parse("d-questionword|wie#d-adjective|alt#d-verb|bist#d-noun|du");
-	g::parsed_type* parsed = g->parse(
+	g::parsed_t* parsed = g->parse(
 			"d-questionword < wie > d-verb < geht > d-noun < es > "
 					"d-title < Felix > d-linking < & > d-title < Tobias >");
 	g::grammar::print_perl(parsed);

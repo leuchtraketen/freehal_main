@@ -73,6 +73,7 @@ public:
 
 	perlmap* to_groups(perlmap*, vector<string>, string) const;
 	const string print_graph(string*) const;
+	const string to_xml(string*, string*, int) const;
 	const string print() const;
 	const string print_long(string) const;
 	const string to_str() const;
@@ -93,7 +94,7 @@ public:
 };
 std::size_t hash_value(entity const&);
 typedef vector<entity*> entities;
-typedef vector<entities*> parsed_type;
+typedef vector<entities*> parsed_t;
 
 class grammar {
 private:
@@ -171,6 +172,7 @@ public:
 	static const string print_output(vector<entities*>*);
 	static const string print_perl(vector<entities*>*);
 	static const string print_graph(vector<entities*>*);
+	static const string print_xml(vector<entities*>*);
 };
 
 }

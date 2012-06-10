@@ -8,36 +8,14 @@
 #ifndef HAL2012_PARSER2012_H_
 #define HAL2012_PARSER2012_H_
 
-#include <boost/unordered_map.hpp>
-#include <boost/unordered_set.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/algorithm/string/trim.hpp>
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/find.hpp>
-#include <boost/algorithm/string/erase.hpp>
-#include <boost/algorithm/string/find_format.hpp>
-#include <boost/algorithm/string/split.hpp>
-#include <boost/regex.hpp>
-
+#include "hal2012-util2012.h"
+#include "hal2012-grammar2012.h"
+#include "hal2012-tagger2012.h"
+#include "hal2012-database2012.h"
 #include "hal2012-serialization.h"
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-#include <string>
-#include <map>
-
-using namespace std;
-
-namespace algo = boost::algorithm;
 
 #define EXTERN_C extern "C"
 EXTERN_C char* check_config(const char* name, const char* _default);
-
-#include "hal2012-tagger2012.h"
-#include "hal2012-grammar2012.h"
 
 namespace grammar2012 {
 
@@ -55,7 +33,8 @@ private:
 	sentence_mode mode;
 	vector<string> words_list;
 	vector<tags*> tags_list;
-	grammar2012::parsed_type* parsed;
+	parsed_t* parsed;
+	boost::shared_ptr<xml_fact> xfact;
 	parser* p;
 
 	sentence();
@@ -73,6 +52,7 @@ private:
 
 public:
 	sentence(parser*, const string&);
+	~sentence();
 	const string to_str() const;
 	const string to_grammar_input() const;
 	void parse();
@@ -81,8 +61,8 @@ public:
 	sentence_mode get_mode() const;
 	vector<string> get_words_list() const;
 	vector<tags*> get_tags_list() const;
-	parsed_type* get_parsed() const;
-
+	parsed_t* get_parsed() const;
+	boost::shared_ptr<xml_fact> get_fact() const;
 
 private:
 	void find_mode();

@@ -7,14 +7,18 @@
 
 #include "hal2012-util2012.h"
 #include "hal2012-parser2012.h"
+#include "hal2012-xml2012.h"
 
 namespace grammar2012 {
 
 sentence::sentence() :
-		input(), mode(UNKNOWN), words_list(), tags_list(), p(0) {
+		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+				0) {
 }
+
 sentence::sentence(parser* _p, const string& _input) :
-		input(_input), mode(UNKNOWN), words_list(), tags_list(), p(_p) {
+		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+				_p) {
 
 	{
 		string tmp(input);
@@ -30,6 +34,10 @@ sentence::sentence(parser* _p, const string& _input) :
 
 	find_mode();
 }
+
+sentence::~sentence() {
+}
+
 void sentence::find_mode() {
 	string message;
 	if (words_list.size() == 0) {
@@ -113,6 +121,29 @@ const string sentence::to_str() const {
 
 void sentence::parse() {
 	parsed = p->get_grammar()->parse(this->to_grammar_input());
+
+	string xml_in = grammar::print_xml(parsed);
+	string xml_pre;
+	halxml_ordertags(xml_in, xml_pre);
+	vector<string> lines;
+	split_lines(lines, xml_pre);
+	for (int i = 0; i < lines.size(); ++i) {
+		if (lines[i] == "<") {
+			++i;
+			if (lines[i] == "fact") {
+				++i;
+				xfact.reset(halxml_readxml_fact(lines, i));
+				xfact->trim();
+				break;
+			}
+		}
+	}
+	if (xfact.get() == 0) {
+		cout << "Error! did'nt recognize XML format "
+				"in sentence::parse()!" << endl;
+		cout << "lines:" << endl;
+		copy(lines.begin(), lines.end(), ostream_iterator<string>(cout, "\n"));
+	}
 }
 
 const string sentence::get_input() const {
@@ -127,8 +158,11 @@ vector<string> sentence::get_words_list() const {
 vector<tags*> sentence::get_tags_list() const {
 	return tags_list;
 }
-parsed_type* sentence::get_parsed() const {
+parsed_t* sentence::get_parsed() const {
 	return parsed;
+}
+boost::shared_ptr<xml_fact> sentence::get_fact() const {
+	return xfact;
 }
 
 parser::parser() :

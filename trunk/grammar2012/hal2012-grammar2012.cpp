@@ -161,6 +161,98 @@ const string entity::print_graph(string* _key = 0) const {
 
 	return ss.str();
 }
+const string entity::to_xml(string* _key = 0, string* _text = 0,
+		int level = 0) const {
+
+	string grammar_key = (virt.size() > 0) ? virt.at(0) : to_key();
+	string key =
+			grammar_key == "s-all" ? "fact" :
+			grammar_key == "v-subject" ? "subject" :
+			grammar_key == "v-object" ? "object" :
+			grammar_key == "v-questionword" ? "questionword" :
+			algo::starts_with(grammar_key, "v-extra-") ? "extra" :
+			grammar_key == "v-verb" ? "verb" :
+			(algo::starts_with(grammar_key, "v-clause-")
+					&& grammar_key != "v-clause-1") ? "clause" :
+			grammar_key == "v-adverb" ? "adverbs" :
+			grammar_key == "v-linked" ? "linked" :
+			grammar_key == "d-linking" ? "linking" :
+			grammar_key == "" ? "" : ""; // "--" + key;
+
+	if (_key != 0)
+		*_key = grammar_key;
+	if (_text != 0)
+		*_text = text;
+
+	if (key == "clause")
+		level = 0;
+	if (grammar_key == "d-linking" || grammar_key == "d-komma")
+		return "";
+
+	stringstream ss_embed;
+	if (text.size() > 0) {
+		ss_embed << "<text>" << text << "</text>";
+	} else if (embed.size() > 0 && grammar_key != "d-komma") {
+		for (entities::const_iterator it = embed.begin(); it != embed.end();
+				++it) {
+			string embedded_grammar_key;
+			string embedded_text;
+			const string embedded = (*it)->to_xml(&embedded_grammar_key,
+					&embedded_text, (key.size() > 0 ? level + 1 : level));
+			if (algo::starts_with(embedded_grammar_key, "v-link")) {
+				// found some linked objects -> inner loop
+				string link_key = "link_?";
+				stringstream ss_link;
+				entities::const_iterator it2(it);
+				for (; it2 != embed.end(); ++it2) {
+					const string embedded = (*it2)->to_xml(
+							&embedded_grammar_key, &embedded_text,
+							(key.size() > 0 ? level + 1 : level));
+					if (!algo::starts_with(embedded_grammar_key, "v-link")) {
+						// no linked objects from now on
+						break;
+					}
+
+					if (algo::contains(embedded_text, "&")
+							|| embedded_text == "und" || embedded_text == "and")
+						link_key = "link_&";
+					else if (algo::contains(embedded_text, "|")
+							|| embedded_text == "oder" || embedded_text == "or")
+						link_key = "link_|";
+					else
+						ss_link << embedded;
+				}
+				// go on with the normal (outer) loop
+				it = --it2;
+				ss_embed << "<" << link_key << ">";
+				ss_embed << ss_link.str();
+				ss_embed << "</" << link_key << ">";
+			} else {
+				ss_embed << embedded;
+			}
+		}
+	}
+	stringstream ss;
+	if (key.size() > 0) {
+		if (level == 0) {
+			ss << "<" << key << ">" << endl;
+			ss << ss_embed.str();
+			ss << "</" << key << ">" << endl;
+		} else if (level == 1) {
+			ss << "<" << key << ">";
+			ss << ss_embed.str();
+			ss << "</" << key << ">" << endl;
+		} else {
+			ss << "<" << key << ">";
+			ss << ss_embed.str();
+			ss << "</" << key << ">";
+		}
+	} else {
+		ss << ss_embed.str();
+	}
+
+	return ss.str();
+}
 const string entity::print_perl(entity::perlmap* pm, string v_key = "",
 		string keyprefix = "v-clause-1") {
 	stringstream ss;
@@ -460,7 +552,7 @@ const string grammar::to_str() const {
 		stringstream ss;
 
 		entity* it_first = s2o(it->first);
-		ss << it_first?it_first->to_str():"#null";
+		ss << it_first ? it_first->to_str() : "#null";
 		ss << " = ";
 
 		entities* value = it->second;
@@ -1025,6 +1117,21 @@ const string grammar::print_graph(vector<entities*>* output_list) {
 	}
 
 	ss << "}" << endl;
+	return ss.str();
+}
+const string grammar::print_xml(vector<entities*>* output_list) {
+	stringstream ss;
+
+	for (vector<entities*>::iterator iter_list = output_list->begin();
+			iter_list != output_list->end(); ++iter_list) {
+		entities* output = *iter_list;
+		for (entities::iterator iter = output->begin(); iter != output->end();
+				++iter) {
+			ss << (*iter)->to_xml();
+		}
+		break;
+	}
+
 	return ss.str();
 }
 vector<entities*>* grammar::parse(const string words_str) {
