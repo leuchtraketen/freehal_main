@@ -16,7 +16,7 @@ include_directories (/compiler/local/windows/include /compiler/local/all/include
 link_directories (/compiler/local/windows/lib)
 
 add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp)
-target_link_libraries (freehalapp m boost_regex-mt boost_serialization-mt boinc_api boinc)
+target_link_libraries (freehalapp m boost_regex-mt boost_serialization-mt boost_filesystem-mt boost_system-mt boinc_api boinc)
 
 set_target_properties("freehalapp" PROPERTIES COMPILE_FLAGS "-g")
 set_target_properties("freehalapp" PROPERTIES LINK_FLAGS "-g -static-libgcc")
@@ -51,7 +51,7 @@ link_directories (/compiler/local/linux/lib)
 #find_package( Threads )
 
 add_executable (freehalapp hal2012-boincapp.cpp hal2012-grammar2012.cpp hal2012-parser2012.cpp hal2012-tagger2012-builtin.cpp hal2012-tagger2012.cpp hal2012-util2012.cpp)
-target_link_libraries( freehalapp m dl boinc_api boinc ${CMAKE_THREAD_LIBS_INIT} boost_regex )
+target_link_libraries( freehalapp m dl boinc_api boinc ${CMAKE_THREAD_LIBS_INIT} boost_regex boost_filesystem boost_system )
 
 set_target_properties("freehalapp" PROPERTIES COMPILE_FLAGS "-g")
 set_target_properties("freehalapp" PROPERTIES LINK_FLAGS "-g -static-libgcc -static -pthread")
