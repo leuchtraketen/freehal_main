@@ -49,24 +49,27 @@ public:
 	string print_xml(int, int) const;
 	string print_str() const;
 	string print_str(string) const;
-	int get_words(vector<string>&) const;
 	void free();
+
+	int get_words(vector<string>&) const;
 protected:
 	string name;
 
 // list
 public:
-	std::vector<boost::shared_ptr<xml_obj> > part(string) const;
+	int part(std::vector<boost::shared_ptr<xml_obj> >&, string) const;
 	void trim();
 	size_t size();
 
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 			boost::shared_ptr<xml_obj>);
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
-			vector<boost::shared_ptr<xml_obj> >);
-	friend xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+			vector<boost::shared_ptr<xml_obj> >&);
+	friend boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>&,
+			vector<boost::shared_ptr<xml_obj> >&);
+	friend xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 	friend xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
-	friend xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+	friend xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 protected:
 	std::vector<boost::shared_ptr<xml_obj> > content;
 
@@ -128,10 +131,12 @@ std::size_t hash_value(const xml_obj& o);
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 		boost::shared_ptr<xml_obj>);
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
-		vector<boost::shared_ptr<xml_obj> >);
-xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+		vector<boost::shared_ptr<xml_obj> >&);
+boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>&,
+		vector<boost::shared_ptr<xml_obj> >&);
+xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
-xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >);
+xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
 std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
 

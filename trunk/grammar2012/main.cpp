@@ -10,6 +10,7 @@
 #include "hal2012-parser2012.h"
 #include "hal2012-xml2012.h"
 #include "hal2012-diskdb2012.h"
+#include "hal2012-filterfacts2012.h"
 #include "hal2012-util2012.h"
 
 namespace g = grammar2012;
@@ -44,13 +45,15 @@ int main() {
 		p->set_grammar(_g);
 		p->set_verbose(false);
 
-		p->parse("In der Zeitung steht, dass es nur fuer die "
-				"Schlecker-Toechter IhrPlatz und "
-				"SchleckerXL eine Zukunft geben soll.");
-		const vector<g::sentence*>& vs = p->get_sentences();
-		foreach (g::sentence* s, vs) {
-			//cout << g::grammar::print_xml(s->get_parsed());
-			cout << *s->get_fact() << endl;
+		{
+			p->parse("In der Zeitung steht, dass es nur fuer die "
+					"Schlecker-Toechter IhrPlatz und "
+					"SchleckerXL eine Zukunft geben soll.");
+			const vector<g::sentence*>& vs = p->get_sentences();
+			foreach (g::sentence* s, vs) {
+				//cout << g::grammar::print_xml(s->get_parsed());
+				cout << *s->get_fact() << endl;
+			}
 		}
 
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
@@ -61,10 +64,22 @@ int main() {
 		d->prepare("../hal2012/lang_de");
 
 		print_memory();
-		vector<boost::shared_ptr<g::xml_fact> > facts;
-		d->find_by_word(facts, "FreeHAL");
-		foreach (boost::shared_ptr<g::xml_fact> fact, facts) {
-			cout << fact->print_str() << endl;
+		p->parse("was is-a Katar");
+		const vector<g::sentence*>& vs = p->get_sentences();
+		foreach (g::sentence* s, vs) {
+			boost::shared_ptr<g::xml_fact> infact = s->get_fact();
+			cout << *infact << endl;
+
+			vector<boost::shared_ptr<g::xml_fact> > facts;
+			d->find_by_word(facts, "Katar");
+			foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
+				double matches = infact / fact2;
+				if (matches > 0)
+
+					cout << "% " << infact->print_str() << endl << "  "
+							<< fact2->print_str() << endl << "= " << matches
+							<< endl;
+			}
 		}
 		print_memory();
 	}

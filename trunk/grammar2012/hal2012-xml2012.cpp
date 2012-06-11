@@ -46,23 +46,30 @@ boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 	return o;
 }
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
-		vector<boost::shared_ptr<xml_obj> > i) {
+		vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
 	}
 	return o;
+}
+boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>& i,
+		vector<boost::shared_ptr<xml_obj> >& o) {
+	foreach (boost::shared_ptr<xml_obj> elem, i->content) {
+		o.push_back(elem);
+	}
+	return i;
 }
 xml_obj* operator <<(xml_obj* o, boost::shared_ptr<xml_obj> i) {
 	o->content.push_back(i);
 	return o;
 }
-xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> > i) {
+xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
 	}
 	return o;
 }
-xml_obj* operator >>(xml_obj* i, vector<boost::shared_ptr<xml_obj> > o) {
+xml_obj* operator >>(xml_obj* i, vector<boost::shared_ptr<xml_obj> >& o) {
 	int k;
 	for (k = 0; k < i->content.size(); ++k) {
 		o.push_back(i->content[k]);
@@ -121,7 +128,8 @@ string xml_obj::print_xml(int level, int secondlevel) const {
 	return (string());
 }
 string xml_obj::print_str(string tag_name) const {
-	std::vector<boost::shared_ptr<xml_obj> > _content = part(tag_name);
+	std::vector<boost::shared_ptr<xml_obj> > _content;
+	part(_content, tag_name);
 
 	string str;
 	int k;
@@ -175,7 +183,7 @@ int xml_obj::get_words(vector<string>& words) const {
 		vector<string> _words;
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
-				!(algo::is_alpha() || algo::is_any_of(")(}{][=")),
+				!(algo::is_alpha() || algo::is_any_of(")(}{][=-")),
 				algo::token_compress_on);
 		if (_words.size() > 0)
 			copy(_words.begin(), _words.end(), back_inserter(words));
@@ -261,15 +269,15 @@ xml_fact::~xml_fact() {
 	}
 }
 
-std::vector<boost::shared_ptr<xml_obj> > xml_obj::part(string tag_name) const {
-	std::vector<boost::shared_ptr<xml_obj> > _content;
-	int k;
-	for (k = 0; k < content.size(); ++k) {
-		if (content[k]->get_name() == tag_name) {
-			_content.push_back(content[k]);
+int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content, string tag_name) const {
+	int j;
+	foreach (boost::shared_ptr<xml_obj> o, content) {
+		if (o->get_name() == tag_name) {
+			_content.push_back(o);
+			++j;
 		}
 	}
-	return _content;
+	return j;
 }
 
 string halxml_readfile(const fs::path& infile) {
