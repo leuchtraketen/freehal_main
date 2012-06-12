@@ -29,7 +29,7 @@ public:
 	int to_disk(const string& = "");
 	int from_disk(const string&);
 	int from_file(const fs::path&);
-	int find_by_word(const string&);
+	int find_by_word(const word&);
 	int copy_to(vector<boost::shared_ptr<xml_fact> >&);
 
 	bool is_verbose();

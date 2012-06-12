@@ -369,6 +369,7 @@ void tagger::impl_guess(const string word, tags* tags) {
 	}
 
 	tags->first = best_pos_type;
+	type->insert(tagmap::value_type(word, tags->first));
 	if (is_verbose())
 		cout << "  guessed: " << print_tags(tags) << endl;
 }

@@ -33,9 +33,10 @@ int diskdb::insert(xml_fact* xfact) {
 	boost::shared_ptr<xml_fact> xfact_p(xfact);
 	uniquefacts.insert(indexmap_int::value_type(hash, xfact_p));
 
-	vector<string> words;
-	xfact->get_words(words);
-	foreach (string word, words) {
+	vector<word> words;
+	((const xml_fact*) xfact)->get_words(words);
+	foreach (word& _word, words) {
+		string word = _word.get_word();
 		if (word.size() == 0)
 			continue;
 		word = lc(word);
@@ -60,11 +61,11 @@ int diskdb::copy_to(vector<boost::shared_ptr<xml_fact> >& list) {
 	return 0;
 }
 
-int diskdb::find_by_word(const string& word) {
+int diskdb::find_by_word(const word& word) {
 	string key;
 	{
 		stringstream ss_key;
-		ss_key << lc(word.substr(0, 3));
+		ss_key << lc(word.get_word().substr(0, 3));
 		key = ss_key.str();
 		while (key.size() < 3)
 			key += "_";
@@ -99,7 +100,8 @@ int diskdb::from_file(const fs::path& path) {
 				this->from_file(p);
 			}
 			if (is_verbose() && !is_buffered())
-				cout << "index scan done. " << uniquefacts.size() << " facts found." << endl;
+				cout << "index scan done. " << uniquefacts.size()
+						<< " facts found." << endl;
 			return 0;
 
 		} else if (fs::is_regular_file(path)) {

@@ -19,6 +19,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
+#include "hal2012-tagger2012.h"
 #include "hal2012-util2012.h"
 
 #ifndef HAL2012_XML
@@ -28,6 +29,7 @@ namespace grammar2012 {
 
 class xml_obj;
 class xml_fact;
+class word;
 
 enum xml_obj_mode {
 	LIST, TEXT, ANY
@@ -51,9 +53,16 @@ public:
 	string print_str(string) const;
 	void free();
 
-	int get_words(vector<string>&) const;
+	int prepare_words(tagger* t);
+	int get_words(vector<word>&) const;
+	int get_words(vector<word>&);
+
 protected:
 	string name;
+private:
+	bool is_cached_words;
+	bool is_cached_tags;
+	vector<word> cache_words;
 
 // list
 public:
@@ -115,6 +124,23 @@ public:
 		ar & boost::serialization::make_nvp("content", content);
 	}
 };
+
+class word {
+private:
+	string w;
+	tags* tag;
+
+public:
+	word();
+	word(const string);
+	word(const string, tags*);
+
+	void set_word(const string&);
+	void set_tags(tags*);
+	const string& get_word() const;
+	tags* get_tags() const;
+};
+
 
 int halxml_ordertags(string& indata, string& predata);
 string halxml_readfile(const fs::path& infile);

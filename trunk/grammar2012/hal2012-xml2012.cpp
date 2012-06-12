@@ -25,10 +25,12 @@
 namespace grammar2012 {
 
 xml_obj::xml_obj(xml_obj_mode _mode) :
-		mode(_mode), content(), text(""), name("") {
+		mode(_mode), content(), text(""), name(""), is_cached_words(false), is_cached_tags(
+				false) {
 }
 xml_obj::xml_obj() :
-		mode(LIST), content(), text(""), name("") {
+		mode(LIST), content(), text(""), name(""), is_cached_words(false), is_cached_tags(
+				false) {
 }
 xml_obj::~xml_obj() {
 	if (mode == LIST) {
@@ -178,24 +180,61 @@ string xml_obj::print_str() const {
 	return "";
 }
 
-int xml_obj::get_words(vector<string>& words) const {
+int xml_obj::prepare_words(tagger* _t = 0) {
+	if (is_cached_tags && _t == 0)
+		return 1;
+
+	cout << "prepare_words: " << this->print_str() << endl;
+
 	if (mode == TEXT) {
 		vector<string> _words;
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
-				!(algo::is_alpha() || algo::is_any_of(")(}{][=-")),
+				!(algo::is_alpha() || algo::is_any_of("}{][=-")),
 				algo::token_compress_on);
-		if (_words.size() > 0)
-			copy(_words.begin(), _words.end(), back_inserter(words));
-		return 0;
+		foreach (string& text, _words) {
+			if (text.size() > 0)
+				cache_words.push_back(word(text));
+		}
 	}
 	if (mode == LIST) {
 		foreach (boost::shared_ptr<xml_obj> embedded, content) {
-			embedded->get_words(words);
+			embedded->prepare_words(_t);
+			embedded->get_words(cache_words);
 		}
 	}
+	is_cached_words = true;
+
+	tagger* t = _t;
+	if (_t == 0) {
+		cout << "Error! prepare_words: no tagger given..." << endl;
+		t = new tagger();
+	}
+	foreach (word& w, cache_words) {
+		if (w.get_tags() == 0)
+			w.set_tags(t->get_pos(w.get_word()));
+	}
+	if (_t == 0) {
+		delete t;
+	} else {
+		is_cached_tags = true;
+	}
+
 	return 0;
 }
+
+int xml_obj::get_words(vector<word>& words) const {
+	words.insert(words.end(), cache_words.begin(), cache_words.end());
+	return 0;
+}
+
+int xml_obj::get_words(vector<word>& words) {
+	if (!is_cached_words)
+		this->prepare_words();
+	words.insert(words.end(), cache_words.begin(), cache_words.end());
+	return 0;
+}
+
 size_t xml_obj::size() {
 	return content.size();
 }
@@ -269,7 +308,8 @@ xml_fact::~xml_fact() {
 	}
 }
 
-int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content, string tag_name) const {
+int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
+		string tag_name) const {
 	int j;
 	foreach (boost::shared_ptr<xml_obj> o, content) {
 		if (o->get_name() == tag_name) {
@@ -381,6 +421,28 @@ xml_fact* halxml_readxml_fact(vector<string>& lines, int& i) {
 	xml_fact* fact = new xml_fact();
 	halxml_readtree(fact, "fact", lines, i);
 	return (fact);
+}
+
+word::word() :
+		tag(0) {
+}
+word::word(const string _w) :
+		w(_w), tag(0) {
+}
+word::word(const string _w, tags* _tags) :
+		w(_w), tag(_tags) {
+}
+void word::set_word(const string& _w) {
+	w = _w;
+}
+void word::set_tags(tags* _tag) {
+	tag = _tag;
+}
+const string& word::get_word() const {
+	return w;
+}
+tags* word::get_tags() const {
+	return tag;
 }
 
 }

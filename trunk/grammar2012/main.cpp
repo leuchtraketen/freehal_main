@@ -60,26 +60,36 @@ int main() {
 		d->set_verbose(true);
 		d->set_lang("de");
 		d->set_path(".");
+		d->set_tagger(_t);
 		print_memory();
 		d->prepare("../hal2012/lang_de");
 
 		print_memory();
-		p->parse("was is-a Katar");
-		const vector<g::sentence*>& vs = p->get_sentences();
-		foreach (g::sentence* s, vs) {
-			boost::shared_ptr<g::xml_fact> infact = s->get_fact();
-			cout << *infact << endl;
+		string input;
+		static string prompt = "Eingabe: ";
+		cout << endl << prompt;
+		while (getline(cin, input)) {
+			p->parse(input);
+			const vector<g::sentence*>& vs = p->get_sentences();
+			foreach (g::sentence* s, vs) {
+				boost::shared_ptr<g::xml_fact> infact = s->get_fact();
+				cout << *infact << endl;
 
-			vector<boost::shared_ptr<g::xml_fact> > facts;
-			d->find_by_word(facts, "Katar");
-			foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
-				double matches = infact / fact2;
-				if (matches > 0)
-
+				vector<boost::shared_ptr<g::xml_fact> > facts;
+				d->find_by_fact(facts, infact);
+				g::ranking<boost::shared_ptr<g::xml_fact>, double> rank;
+				foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
+					fact2->prepare_words(_t);
+					double match = infact / fact2;
+					rank.insert(fact2, match);
+				}
+				for (int i = 0; i < rank.size(); ++i) {
 					cout << "% " << infact->print_str() << endl << "  "
-							<< fact2->print_str() << endl << "= " << matches
-							<< endl;
+							<< rank[i]->print_str() << endl << "= "
+							<< rank.rank(i) << endl;
+				}
 			}
+			cout << endl << prompt;
 		}
 		print_memory();
 	}
@@ -92,7 +102,7 @@ int main() {
 
 		print_memory();
 		vector<boost::shared_ptr<g::xml_fact> > facts;
-		d->find_by_word(facts, "katze");
+		d->find_by_word(facts, g::word("katze"));
 		foreach (boost::shared_ptr<g::xml_fact> fact, facts) {
 			cout << fact->print_str() << endl;
 		}
@@ -112,7 +122,7 @@ int main() {
 		d->prepare("test.xml");
 		print_memory();
 		vector<boost::shared_ptr<g::xml_fact> > facts;
-		d->find_by_word(facts, "katze");
+		d->find_by_word(facts, g::word("katze"));
 		print_memory();
 
 		{

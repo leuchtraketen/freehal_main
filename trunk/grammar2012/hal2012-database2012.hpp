@@ -36,6 +36,13 @@ template<typename DB> const string database<DB>::get_path() const {
 	return path;
 }
 
+template<typename DB> void database<DB>::set_tagger(tagger* _t) {
+	t = _t;
+}
+template<typename DB> tagger* database<DB>::get_tagger() const {
+	return t;
+}
+
 template<typename DB>
 int database<DB>::resume() {
 	if (!lang.empty() && !path.empty()) {
@@ -181,7 +188,7 @@ int database<DB>::disk_write_file(const fs::path& p, const M& list) {
 
 template<typename DB>
 int database<DB>::find_by_word(vector<boost::shared_ptr<xml_fact> >& list,
-		const string& word) {
+		const word& word) {
 
 	DB* idb = new DB(this);
 	idb->find_by_word(word);
@@ -189,6 +196,32 @@ int database<DB>::find_by_word(vector<boost::shared_ptr<xml_fact> >& list,
 	delete idb;
 
 	return 0;
+}
+
+template<typename DB>
+int database<DB>::find_by_words(vector<boost::shared_ptr<xml_fact> >& list,
+		const vector<word>& words) {
+
+	DB* idb = new DB(this);
+	foreach (const word& word, words) {
+		idb->find_by_word(word);
+	}
+	idb->copy_to(list);
+	delete idb;
+
+	return 0;
+}
+
+template<typename DB>
+int database<DB>::find_by_fact(vector<boost::shared_ptr<xml_fact> >& list,
+		boost::shared_ptr<xml_fact> fact) {
+
+	vector<word> words;
+	fact->get_words(words);
+	vector<word> usefulwords;
+	filter(words, usefulwords, is_index_word());
+
+	return find_by_words(list, usefulwords);
 }
 
 template<typename DB>

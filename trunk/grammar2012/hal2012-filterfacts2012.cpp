@@ -28,29 +28,45 @@ any_in::any_in(vector<boost::shared_ptr<xml_obj> >& _content) :
 		content(_content) {
 }
 
-bool operator &(string& word1, string& word2) {
+double operator &(word& _word1, word& _word2) {
+	const string& word1 = _word1.get_word();
+	const string& word2 = _word2.get_word();
+	tags* tag1 = _word1.get_tags();
+	tags* tag2 = _word2.get_tags();
+
+	double weight = tag1->first == "n" ? 1 : tag1->first == "adj" ? 0.5 :
+					tag1->first == "v" ? 0.75 :
+					tag1->first == "art" ? 0.1 : 0.4;
+
 	cout << "---- compare: " << word1 << " & " << word2 << " = "
-			<< (word1 == word2 ? 1 : 0) << endl;
-	return word1 == word2 || lc(word1) == lc(word2);
-}
-bool operator &(string& word1, boost::shared_ptr<xml_obj>& o2) {
-	vector<string> words;
-	o2->get_words(words);
-	foreach (string& word2, words) {
-		if (word1 & word2)
-			return true;
+			<< (word1 == word2 || lc(word1) == lc(word2) ? weight : 0) << endl;
+
+	if (word1 == word2 || lc(word1) == lc(word2)) {
+		return weight;
+	} else {
+		return 0;
 	}
-	return false;
 }
-size_t operator &(boost::shared_ptr<xml_obj>& o1,
+double operator &(word& word1, boost::shared_ptr<xml_obj>& o2) {
+	vector<word> words;
+	o2->get_words(words);
+
+	foreach (word& word2, words) {
+		double matches = word1 & word2;
+		if (matches > 0)
+			return matches * (3.0 * words.size() + 1) / 4.0 / words.size();
+	}
+	return 0;
+}
+double operator &(boost::shared_ptr<xml_obj>& o1,
 		boost::shared_ptr<xml_obj>& o2) {
 	cout << "---- compare: " << o1->print_str() << " & " << o2->print_str()
 			<< endl;
-	size_t matches = 0;
+	double matches = 0;
 	if (o1->get_mode() == TEXT && o2->get_mode() == TEXT) {
-		vector<string> words;
+		vector<word> words;
 		o1->get_words(words);
-		foreach (string& word, words) {
+		foreach (word& word, words) {
 			matches += word & o2;
 		}
 	} else if (o1->get_mode() == LIST) {
@@ -58,7 +74,7 @@ size_t operator &(boost::shared_ptr<xml_obj>& o1,
 		o1 >> content;
 		int count = 0;
 		foreach (boost::shared_ptr<xml_obj> subobj, content) {
-			size_t m = subobj & o2;
+			double m = subobj & o2;
 			if (m > 0) {
 				matches += m;
 				++count;
@@ -72,7 +88,7 @@ size_t operator &(boost::shared_ptr<xml_obj>& o1,
 		o2 >> content;
 		int count = 0;
 		foreach (boost::shared_ptr<xml_obj> subobj, content) {
-			size_t m = o1 & subobj;
+			double m = o1 & subobj;
 			if (m > 0) {
 				matches += m;
 				++count;
@@ -86,9 +102,9 @@ size_t operator &(boost::shared_ptr<xml_obj>& o1,
 			<< " = " << matches << endl;
 	return matches;
 }
-size_t operator &(boost::shared_ptr<xml_obj>& o1,
+double operator &(boost::shared_ptr<xml_obj>& o1,
 		vector<boost::shared_ptr<xml_obj> >& v2) {
-	size_t matches = 0;
+	double matches = 0;
 	foreach (boost::shared_ptr<xml_obj> o2, v2) {
 		matches += o1 & o2;
 	}
@@ -96,9 +112,9 @@ size_t operator &(boost::shared_ptr<xml_obj>& o1,
 			<< matches << endl;
 	return matches;
 }
-size_t operator &(vector<boost::shared_ptr<xml_obj> >& v1,
+double operator &(vector<boost::shared_ptr<xml_obj> >& v1,
 		vector<boost::shared_ptr<xml_obj> >& v2) {
-	size_t matches = 0;
+	double matches = 0;
 	foreach (boost::shared_ptr<xml_obj> o1, v1) {
 		matches += o1 & v2;
 	}
@@ -108,12 +124,13 @@ size_t operator &(vector<boost::shared_ptr<xml_obj> >& v1,
 }
 double count(boost::shared_ptr<xml_obj> o) {
 	if (o->get_mode() == TEXT) {
-		vector<string> words;
+		vector<word> words;
 		o->get_words(words);
 		return (double) words.size();
 
 	} else if (o->get_name() == "questionword" || o->get_name() == "adverbs"
-			|| o->get_name() == "extra"|| o->get_name() == "truth") {
+			|| o->get_name() == "extra" || o->get_name() == "truth"
+			|| o->get_name() == "clause") {
 		return 0;
 
 	} else {
@@ -129,16 +146,16 @@ double count(boost::shared_ptr<xml_obj> o) {
 	}
 }
 
-size_t operator %(boost::shared_ptr<xml_obj> o1,
+double operator %(boost::shared_ptr<xml_obj> o1,
 		boost::shared_ptr<xml_obj> o2) {
-	size_t matches = 0;
+	double matches = 0;
 
 	vector<boost::shared_ptr<xml_obj> > verbs1;
 	o1->part(verbs1, "verb");
 	vector<boost::shared_ptr<xml_obj> > verbs2;
 	o2->part(verbs2, "verb");
 
-	size_t verbs_match = verbs1 & verbs2;
+	double verbs_match = verbs1 & verbs2;
 	if (verbs_match == 0)
 		return matches;
 
@@ -155,21 +172,21 @@ size_t operator %(boost::shared_ptr<xml_obj> o1,
 	vector<boost::shared_ptr<xml_obj> > adverbs2;
 	o2->part(adverbs2, "adverbs");
 
-	size_t subject_match = (subject1 & subject2) + (subject1 & object2)
+	double subject_match = (subject1 & subject2) + (subject1 & object2)
 			+ (subject1 & adverbs2);
 	matches += subject_match;
 
-	size_t object_match = (object1 & subject2) + (object1 & object2)
+	double object_match = (object1 & subject2) + (object1 & object2)
 			+ (object1 & adverbs2);
 	matches += object_match;
 
-	size_t adverbs_match = (adverbs1 & subject2) + (adverbs1 & object2)
+	double adverbs_match = (adverbs1 & subject2) + (adverbs1 & object2)
 			+ (adverbs1 & adverbs2);
 	matches += adverbs_match;
 
 	return matches;
 }
-size_t operator %(boost::shared_ptr<xml_fact> o1,
+double operator %(boost::shared_ptr<xml_fact> o1,
 		boost::shared_ptr<xml_fact> o2) {
 	return boost::dynamic_pointer_cast<xml_obj>(o1)
 			% boost::dynamic_pointer_cast<xml_obj>(o2);
@@ -177,7 +194,7 @@ size_t operator %(boost::shared_ptr<xml_fact> o1,
 double operator /(boost::shared_ptr<xml_obj> o1,
 		boost::shared_ptr<xml_obj> o2) {
 	double matches = o1 % o2;
-	double avgcount = (3 * count(o1) + count(o2)) / 4.0;
+	double avgcount = (9 * count(o1) + count(o2)) / 10.0;
 	if (avgcount > 0)
 		matches /= avgcount;
 	return matches;

@@ -10,6 +10,8 @@
 
 #include "hal2012-util2012.h"
 #include "hal2012-xml2012.h"
+#include "hal2012-tagger2012.h"
+#include "hal2012-filterfacts2012.h"
 #include "hal2012-serialization.h"
 
 namespace grammar2012 {
@@ -25,6 +27,7 @@ private:
 	bool buffered;
 	string lang;
 	fs::path path;
+	tagger* t;
 
 	// IO variables
 	typedef boost::unordered_map<string, uintmax_t> filesmap;
@@ -42,7 +45,9 @@ public:
 
 	// I/O
 	int prepare(const fs::path&);
-	int find_by_word(vector<boost::shared_ptr<xml_fact> >&, const string&);
+	int find_by_word(vector<boost::shared_ptr<xml_fact> >&, const word&);
+	int find_by_words(vector<boost::shared_ptr<xml_fact> >&, const vector<word>&);
+	int find_by_fact(vector<boost::shared_ptr<xml_fact> >&, boost::shared_ptr<xml_fact>);
 
 	// I/O flags
 	void set_verbose(bool);
@@ -55,6 +60,8 @@ public:
 	void set_path(const string&);
 	const string get_lang() const;
 	const string get_path() const;
+	void set_tagger(tagger*);
+	tagger* get_tagger() const;
 
 	// cache algorithm
 	template<typename T1, typename T2>
