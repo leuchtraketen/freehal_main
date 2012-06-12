@@ -58,6 +58,7 @@ int main() {
 
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
+		d->set_buffered(true);
 		d->set_lang("de");
 		d->set_path(".");
 		d->set_tagger(_t);
@@ -79,7 +80,7 @@ int main() {
 				d->find_by_fact(facts, infact);
 				g::ranking<boost::shared_ptr<g::xml_fact>, double> rank;
 				foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
-					fact2->prepare_words(_t);
+					fact2->prepare_tags(_t);
 					double match = infact / fact2;
 					rank.insert(fact2, match);
 				}

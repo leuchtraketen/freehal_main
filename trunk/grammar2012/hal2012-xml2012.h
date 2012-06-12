@@ -53,7 +53,8 @@ public:
 	string print_str(string) const;
 	void free();
 
-	int prepare_words(tagger* t);
+	int prepare_words();
+	int prepare_tags(tagger* t);
 	int get_words(vector<word>&) const;
 	int get_words(vector<word>&);
 

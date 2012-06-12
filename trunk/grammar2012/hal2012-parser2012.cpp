@@ -134,7 +134,7 @@ void sentence::parse() {
 				++i;
 				xfact.reset(halxml_readxml_fact(lines, i));
 				xfact->trim();
-				xfact->prepare_words(p->get_tagger());
+				xfact->prepare_tags(p->get_tagger());
 				break;
 			}
 		}

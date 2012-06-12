@@ -180,8 +180,8 @@ string xml_obj::print_str() const {
 	return "";
 }
 
-int xml_obj::prepare_words(tagger* _t = 0) {
-	if (is_cached_tags && _t == 0)
+int xml_obj::prepare_words() {
+	if (is_cached_words)
 		return 1;
 
 	cout << "prepare_words: " << this->print_str() << endl;
@@ -199,11 +199,20 @@ int xml_obj::prepare_words(tagger* _t = 0) {
 	}
 	if (mode == LIST) {
 		foreach (boost::shared_ptr<xml_obj> embedded, content) {
-			embedded->prepare_words(_t);
+			embedded->prepare_words();
 			embedded->get_words(cache_words);
 		}
 	}
 	is_cached_words = true;
+
+	return 0;
+}
+
+int xml_obj::prepare_tags(tagger* _t = 0) {
+	if (is_cached_tags && _t == 0)
+		return 1;
+
+	cout << "prepare_tags: " << this->print_str() << endl;
 
 	tagger* t = _t;
 	if (_t == 0) {

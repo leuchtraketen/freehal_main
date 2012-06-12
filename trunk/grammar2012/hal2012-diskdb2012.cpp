@@ -34,7 +34,7 @@ int diskdb::insert(xml_fact* xfact) {
 	uniquefacts.insert(indexmap_int::value_type(hash, xfact_p));
 
 	vector<word> words;
-	((const xml_fact*) xfact)->get_words(words);
+	xfact->get_words(words);
 	foreach (word& _word, words) {
 		string word = _word.get_word();
 		if (word.size() == 0)
@@ -164,7 +164,6 @@ int diskdb::to_disk(const string& key) {
 		if (hashes.first != hashes.second) {
 			const fs::path path = d->disk_find_file("index", key[0], key[1],
 					key[2], filename.filename().generic_string());
-
 			if (is_complete()) {
 				boost::unordered_set<string> set;
 				for (indexmap_3chars::iterator hash_iter = hashes.first;
