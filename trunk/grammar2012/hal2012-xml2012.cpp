@@ -38,6 +38,13 @@ xml_obj::~xml_obj() {
 	}
 }
 
+boost::shared_ptr<xml_obj> xml_obj::from_text(const string& _text) {
+	boost::shared_ptr<xml_obj> obj(new xml_obj(TEXT));
+	obj->set_name("");
+	obj->set_text(_text);
+	return obj;
+}
+
 xml_obj_mode xml_obj::get_mode() {
 	return mode;
 }
@@ -54,8 +61,10 @@ boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 	}
 	return o;
 }
-boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>& i,
+const boost::shared_ptr<xml_obj>& operator >>(
+		const boost::shared_ptr<xml_obj>& i,
 		vector<boost::shared_ptr<xml_obj> >& o) {
+
 	foreach (boost::shared_ptr<xml_obj> elem, i->content) {
 		o.push_back(elem);
 	}
@@ -71,7 +80,8 @@ xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> >& i) {
 	}
 	return o;
 }
-xml_obj* operator >>(xml_obj* i, vector<boost::shared_ptr<xml_obj> >& o) {
+const xml_obj* operator >>(const xml_obj* i,
+		vector<boost::shared_ptr<xml_obj> >& o) {
 	int k;
 	for (k = 0; k < i->content.size(); ++k) {
 		o.push_back(i->content[k]);
@@ -220,7 +230,7 @@ int xml_obj::prepare_tags(tagger* _t = 0) {
 		t = new tagger();
 	}
 	foreach (word& w, cache_words) {
-		if (w.get_tags() == 0)
+		if (!w.has_tags())
 			w.set_tags(t->get_pos(w.get_word()));
 	}
 	if (_t == 0) {
@@ -318,7 +328,7 @@ xml_fact::~xml_fact() {
 }
 
 int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
-		string tag_name) const {
+		const string& tag_name) const {
 	int j;
 	foreach (boost::shared_ptr<xml_obj> o, content) {
 		if (o->get_name() == tag_name) {
@@ -327,6 +337,18 @@ int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
 		}
 	}
 	return j;
+}
+
+boost::shared_ptr<xml_obj> xml_obj::part(const string& tag_name) const {
+
+	boost::shared_ptr<xml_obj> subtree(new xml_obj(LIST));
+	subtree->set_name(tag_name);
+	foreach (boost::shared_ptr<xml_obj> o, content) {
+		if (o->get_name() == tag_name) {
+			subtree << o->content;
+		}
+	}
+	return subtree;
 }
 
 string halxml_readfile(const fs::path& infile) {
@@ -438,6 +460,9 @@ word::word() :
 word::word(const string _w) :
 		w(_w), tag(0) {
 }
+word::word(const word& _w) :
+		w(_w.w), tag(_w.tag) {
+}
 word::word(const string _w, tags* _tags) :
 		w(_w), tag(_tags) {
 }
@@ -452,6 +477,9 @@ const string& word::get_word() const {
 }
 tags* word::get_tags() const {
 	return tag;
+}
+bool word::has_tags() const {
+	return tag != 0 ? true : false;
 }
 
 }

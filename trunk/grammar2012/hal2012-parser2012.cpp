@@ -168,7 +168,7 @@ boost::shared_ptr<xml_fact> sentence::get_fact() const {
 
 parser::parser() :
 		input_raw(), input_clean(), input_simplified(), input_extended(), sentences(), verbose(
-				true), buffered(false), lang(), path() {
+				true), buffered(false), lang(), path(".") {
 }
 parser::~parser() {
 	for (size_t i = 0; i < sentences.size(); ++i) {
@@ -590,10 +590,11 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)",
 			"\\1_\\2_etwas_\\3");
 
-	ifstream remove_words_file;
+	fs::ifstream remove_words_file;
 	remove_words_file.open(
-			(path + "/lang_" + lang + "/remove-words.csv").c_str());
-	if (i) {
+			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+					+ "remove-words.csv");
+	if (remove_words_file.is_open()) {
 		string line;
 		vector<string> remove_words_file_lines;
 		while (std::getline(remove_words_file, line)) {
@@ -1636,9 +1637,11 @@ void parser::simplify_input(string& str) {
 	// cout << "parser2012: step 9: " << str << endl;
 
 	{
-		ifstream male_hist_file;
-		male_hist_file.open((path + "/lang_" + lang + "/male.history").c_str());
-		if (i) {
+		fs::ifstream male_hist_file;
+		male_hist_file.open(
+				(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+						+ "male.history");
+		if (male_hist_file.is_open()) {
 			string line;
 			string last_male_substantive;
 			while (std::getline(male_hist_file, line)) {
@@ -1651,10 +1654,11 @@ void parser::simplify_input(string& str) {
 		}
 	}
 	{
-		ifstream female_hist_file;
+		fs::ifstream female_hist_file;
 		female_hist_file.open(
-				(path + "/lang_" + lang + "/male.history").c_str());
-		if (i) {
+				(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+						+ "male.history");
+		if (female_hist_file.is_open()) {
 			string line;
 			string last_female_substantive;
 			while (std::getline(female_hist_file, line)) {

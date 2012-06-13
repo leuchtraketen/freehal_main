@@ -8,30 +8,8 @@
 #ifndef HAL2012_TAGGER2012_H_
 #define HAL2012_TAGGER2012_H_
 
-#include <boost/unordered_map.hpp>
-#include <boost/unordered_set.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/algorithm/string/trim.hpp>
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/find.hpp>
-#include <boost/algorithm/string/erase.hpp>
-#include <boost/algorithm/string/find_format.hpp>
-#include <boost/algorithm/string/split.hpp>
-#include <boost/regex.hpp>
-
 #include "hal2012-serialization.h"
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-#include <string>
-#include <map>
-
-using namespace std;
-
-namespace algo = boost::algorithm;
+#include "hal2012-util2012.h"
 
 #define EXTERN_C extern "C"
 EXTERN_C char* check_config(const char* name, const char* _default);
@@ -53,8 +31,11 @@ private:
 	tagmap* genus;
 	taglist* regex_type;
 	tagmap* regex_genus;
+
 	bool verbose;
 	bool buffered;
+	string lang;
+	string path;
 
 	void impl_get_pos(const string, tags*);
 	void impl_regex_get_pos(const string, tags*);
@@ -76,14 +57,19 @@ private:
 public:
 	tagger();
 	~tagger();
-	int read_pos_file(const string);
-	int read_regex_pos_file(const string);
+	int read_pos_file(const fs::path&);
+	int read_regex_pos_file(const fs::path&);
+	int write_to_file(const fs::path&, const string&, tags*);
 	tags* get_pos(const string);
 
 	void set_verbose(bool);
 	bool is_verbose();
 	void set_buffered(bool);
 	bool is_buffered();
+	void set_lang(const string&);
+	void set_path(const string&);
+	const string get_lang() const;
+	const string get_path() const;
 
 	static bool is_name(const string&);
 	static bool is_job(const string&);

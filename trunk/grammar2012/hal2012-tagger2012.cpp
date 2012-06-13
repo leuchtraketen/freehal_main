@@ -31,7 +31,8 @@ const string print_vector(const vector<tags*>& v) {
 
 tagger::tagger() :
 		type(new tagmap()), genus(new tagmap()), regex_type(new taglist()), regex_genus(
-				new tagmap()), verbose(true), buffered(false) {
+				new tagmap()), verbose(true), buffered(false), lang(""), path(
+				".") {
 
 	algo::split(builtin_entity_ends, __builtin_entity_ends,
 			algo::is_any_of(";"));
@@ -79,11 +80,51 @@ bool tagger::is_buffered() {
 	return buffered;
 }
 
-int tagger::read_pos_file(const string filename) {
-	ifstream i;
-	i.open(filename.c_str());
+void tagger::set_lang(const string& _lang) {
+	lang = _lang;
+}
+const string tagger::get_lang() const {
+	return lang;
+}
 
-	if (!i) {
+void tagger::set_path(const string& _path) {
+	path = _path;
+}
+const string tagger::get_path() const {
+	return path;
+}
+
+int tagger::write_to_file(const fs::path& filename, const string& word,
+		tags* t) {
+	fs::ofstream o;
+	o.open(
+			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+					+ filename.generic_string(), ios::app);
+
+	if (!o.is_open()) {
+		cout << "Error! Could not open part of speech file: " << filename
+				<< endl;
+		return 1;
+	}
+	if (is_verbose())
+		cout << "write part of speech file: " << filename << endl;
+
+	o << word << ":" << endl;
+	if (t->first.size() > 0)
+		o << "  type: " << t->first << endl;
+	if (t->second.size() > 0)
+		o << "  genus: " << t->second << endl;
+
+	return 0;
+}
+
+int tagger::read_pos_file(const fs::path& filename) {
+	fs::ifstream i;
+	i.open(
+			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+					+ filename.generic_string());
+
+	if (!i.is_open()) {
 		cout << "Error! Could not open part of speech file: " << filename
 				<< endl;
 		return 1;
@@ -140,11 +181,13 @@ int tagger::read_pos_file(const string filename) {
 	return 0;
 }
 
-int tagger::read_regex_pos_file(const string filename) {
-	ifstream i;
-	i.open(filename.c_str());
+int tagger::read_regex_pos_file(const fs::path& filename) {
+	fs::ifstream i;
+	i.open(
+			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
+					+ filename.generic_string());
 
-	if (!i) {
+	if (!i.is_open()) {
 		cout << "Error! Could not open regex part of speech file: " << filename
 				<< endl;
 		return 1;
@@ -369,7 +412,10 @@ void tagger::impl_guess(const string word, tags* tags) {
 	}
 
 	tags->first = best_pos_type;
+
 	type->insert(tagmap::value_type(word, tags->first));
+	this->write_to_file("guessed.pos", word, tags);
+
 	if (is_verbose())
 		cout << "  guessed: " << print_tags(tags) << endl;
 }

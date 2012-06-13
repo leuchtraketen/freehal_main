@@ -88,9 +88,57 @@ public:
 	}
 	bool operator()(const word& word) const {
 		tags* tags = word.get_tags();
-		cout << tags->first << endl;
-		return tags->first == "n" || tags->first == "adj";
+		if (tags == 0) {
+			return true;
+		} else {
+			cout << tags->first << endl;
+			return tags->first == "n" || tags->first == "adj";
+		}
 	}
+};
+
+class filterrule: public binary_function<
+		pair<boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj> >, double,
+		double> {
+protected:
+	boost::shared_ptr<xml_obj> a;
+	boost::shared_ptr<xml_obj> b;
+	double m;
+
+public:
+	virtual double operator()(
+			pair<boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj> >,
+			double);
+	virtual void rule() = 0;
+	virtual ~filterrule();
+};
+
+class filterlist: public filterrule {
+private:
+	vector<boost::shared_ptr<filterrule> > rules;
+	static boost::shared_ptr<filterlist> instance;
+
+	bool verbose;
+	bool buffered;
+
+	filterlist();
+
+public:
+	void rule();
+	static boost::shared_ptr<filterlist> get();
+
+	void add(boost::shared_ptr<filterrule>);
+	void add(filterrule*);
+
+	static void set_verbose(bool);
+	static bool is_verbose();
+	static void set_buffered(bool);
+	static bool is_buffered();
+};
+
+class filter_no_names: public filterrule {
+public:
+	void rule();
 };
 
 }

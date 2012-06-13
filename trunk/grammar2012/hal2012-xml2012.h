@@ -67,7 +67,8 @@ private:
 
 // list
 public:
-	int part(std::vector<boost::shared_ptr<xml_obj> >&, string) const;
+	int part(std::vector<boost::shared_ptr<xml_obj> >&, const string&) const;
+	boost::shared_ptr<xml_obj> part(const string&) const;
 	void trim();
 	size_t size();
 
@@ -75,17 +76,20 @@ public:
 			boost::shared_ptr<xml_obj>);
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 			vector<boost::shared_ptr<xml_obj> >&);
-	friend boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>&,
+	friend const boost::shared_ptr<xml_obj>& operator >>(
+			const boost::shared_ptr<xml_obj>&,
 			vector<boost::shared_ptr<xml_obj> >&);
 	friend xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 	friend xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
-	friend xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
+	friend const xml_obj* operator >>(const xml_obj*,
+			vector<boost::shared_ptr<xml_obj> >&);
 protected:
 	std::vector<boost::shared_ptr<xml_obj> > content;
 
 // text
 public:
 	void set_text(const string&);
+	static boost::shared_ptr<xml_obj> from_text(const string& _text);
 private:
 	string text;
 
@@ -134,14 +138,15 @@ private:
 public:
 	word();
 	word(const string);
+	word(const word&);
 	word(const string, tags*);
 
 	void set_word(const string&);
 	void set_tags(tags*);
 	const string& get_word() const;
 	tags* get_tags() const;
+	bool has_tags() const;
 };
-
 
 int halxml_ordertags(string& indata, string& predata);
 string halxml_readfile(const fs::path& infile);
@@ -159,11 +164,12 @@ boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 		boost::shared_ptr<xml_obj>);
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 		vector<boost::shared_ptr<xml_obj> >&);
-boost::shared_ptr<xml_obj>& operator >>(boost::shared_ptr<xml_obj>&,
+const boost::shared_ptr<xml_obj>& operator >>(const boost::shared_ptr<xml_obj>&,
 		vector<boost::shared_ptr<xml_obj> >&);
 xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
-xml_obj* operator >>(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
+const xml_obj* operator >>(const xml_obj*,
+		vector<boost::shared_ptr<xml_obj> >&);
 std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
 std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
 

@@ -29,6 +29,9 @@ int main() {
 	if (1) {
 		g::tagger* _t = new g::tagger();
 		_t->set_verbose(true);
+		_t->set_lang("de");
+		_t->set_path(".");
+		_t->read_pos_file("guessed.pos");
 		_t->read_pos_file("brain.pos");
 		_t->read_pos_file("memory.pos");
 		_t->read_regex_pos_file("regex.pos");
@@ -70,6 +73,9 @@ int main() {
 		static string prompt = "Eingabe: ";
 		cout << endl << prompt;
 		while (getline(cin, input)) {
+			if (input.size() == 0)
+				break;
+
 			p->parse(input);
 			const vector<g::sentence*>& vs = p->get_sentences();
 			foreach (g::sentence* s, vs) {
