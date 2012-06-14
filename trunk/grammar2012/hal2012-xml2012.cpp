@@ -384,15 +384,16 @@ void xml_obj::trim() {
 
 std::size_t hash_value(const xml_obj& o) {
 	std::size_t seed = 0;
-	if (o.get_mode() == TEXT) {
+	boost::hash_combine(seed, o.print_text());
+	/*if (o.get_mode() == TEXT) {
 		boost::hash_combine(seed, o.print_text());
 	} else {
 		const vector<boost::shared_ptr<xml_obj> >& vec = o.get_embedded();
 		foreach(const boost::shared_ptr<xml_obj>& sub, vec) {
 			hash_value(*sub);
 		}
-	}
-	boost::hash_combine(seed, o.print_xml());
+	}*/
+	//boost::hash_combine(seed, o.print_xml());
 	return seed;
 }
 std::size_t hash_value(const xml_fact& o) {
