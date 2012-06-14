@@ -1620,9 +1620,9 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>deiner meinung</object>
+  <object></object>
   <verb>bin</verb>
-  <adverbs></adverbs>
+  <adverbs>deiner meinung</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>

@@ -204,15 +204,8 @@ programmierer:
 programmiert:
   type: vi
 so:
-  type: prep
+  type: adj
 vorhanden:
   type: adj
 wort:
   type: n
-gut:
-  type: adj
-geht:
-  type: v
-es:
-  type: n
-
