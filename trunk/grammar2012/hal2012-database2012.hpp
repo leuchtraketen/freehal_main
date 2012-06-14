@@ -11,7 +11,7 @@ template<typename DB> void database<DB>::set_lang(const string& _lang) {
 	resume();
 }
 template<typename DB> void database<DB>::set_path(const fs::path& _path) {
-	freehal_base::set_path (_path);
+	freehal_base::set_path(_path);
 	resume();
 }
 
@@ -118,8 +118,8 @@ int database<DB>::prepare(const fs::path& p) {
 }
 
 template<typename DB> template<typename T1, typename T2>
-const fs::path database<DB>::disk_find_file(const string type, T1 a, T1 b, T1 c, T1 d,
-		T2 filename) {
+const fs::path database<DB>::disk_find_file(const string type, T1 a, T1 b, T1 c,
+		T1 d, T2 filename) {
 
 	stringstream ss;
 	ss << a << "/" << b << "/" << c << "/" << d;
@@ -127,8 +127,10 @@ const fs::path database<DB>::disk_find_file(const string type, T1 a, T1 b, T1 c,
 	fs::path dir(get_cache_directory() / "database" / type / ss.str());
 	create_directories(dir);
 
-	fs::path file(dir / filename);
-	return file;
+	if (filename.empty())
+		return dir;
+	else
+		return dir / filename;
 }
 
 template<typename DB> template<typename M>
@@ -242,13 +244,16 @@ int database<DB>::find_by_fact(vector<boost::shared_ptr<xml_fact> >& list,
 
 	this->insert_synonyms(boost::dynamic_pointer_cast<xml_obj>(fact));
 
-	cout << "tagger: " << t << endl;
 	if (t != 0) {
+		fact->toggle(t);
+
 		bool verbose_copy = t->is_verbose();
 		t->set_verbose(false);
 		fact->prepare_tags(t);
 		t->set_verbose(verbose_copy);
 	}
+
+	cout << "find_by_fact: " << fact << " (tagger=" << t << ")" << endl;
 
 	vector<word> words;
 	fact->get_words(words);
@@ -333,14 +338,13 @@ boost::shared_ptr<xml_obj> database<DB>::insert_synonyms(
 			&& xobj->get_name() != "flags") {
 		std::vector<boost::shared_ptr<xml_obj> >& embedded =
 				xobj->get_embedded();
-		foreach(boost::shared_ptr < xml_obj > &o, embedded)
+		foreach(boost::shared_ptr < xml_obj > &obj, embedded)
 		{
-			if (o->get_mode() == LIST && o->get_name() == "text") {
-				vector<word> words;
-				o->get_words(words);
-				o.reset(new xml_obj(LIST));
-				o->set_name("list");
-				foreach(word & w, words)
+			if (obj->get_mode() == LIST && obj->get_name() == "text") {
+				const vector<word>& words = obj->get_words();
+				boost::shared_ptr<xml_obj> newobj(new xml_obj(LIST));
+				newobj->set_name("list");
+				foreach(const word& w, words)
 				{
 					vector<word> syns;
 					this->get_synonyms(syns, w);
@@ -355,14 +359,16 @@ boost::shared_ptr<xml_obj> database<DB>::insert_synonyms(
 						text_obj << t;
 						subtree << text_obj;
 					}
-					o << subtree;
+					newobj << subtree;
 				}
+				obj = newobj;
+
 			} else {
-				insert_synonyms (o);
+				insert_synonyms (obj);
 			}
 		}
 	}
-	//cout << "after: " << xobj->print_str() << endl;
+//cout << "after: " << xobj->print_str() << endl;
 	return xobj;
 }
 

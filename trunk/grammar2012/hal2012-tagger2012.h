@@ -5,11 +5,11 @@
  *      Author: tobias
  */
 
-#ifndef HAL2012_TAGGER2012_H_
-#define HAL2012_TAGGER2012_H_
-
 #include "hal2012-serialization.h"
 #include "hal2012-util2012.h"
+
+#ifndef HAL2012_TAGGER2012_H_
+#define HAL2012_TAGGER2012_H_
 
 #define EXTERN_C extern "C"
 EXTERN_C char* check_config(const char* name, const char* _default);
@@ -27,10 +27,11 @@ class tagger: public freehal_base {
 private:
 	typedef boost::unordered_map<string, string> tagmap;
 	typedef vector<pair<string, string> > taglist;
-	tagmap* type;
-	tagmap* genus;
-	taglist* regex_type;
-	tagmap* regex_genus;
+	boost::shared_ptr<tagmap> type;
+	boost::shared_ptr<tagmap> genus;
+	boost::shared_ptr<taglist> regex_type;
+	boost::shared_ptr<tagmap> regex_genus;
+	boost::shared_ptr<tagmap> togglemap;
 
 	void impl_get_pos(const string, tags*);
 	void impl_regex_get_pos(const string, tags*);
@@ -41,13 +42,10 @@ private:
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version) {
-		ar & boost::serialization::make_nvp("type_map", type);
-		ar & boost::serialization::make_nvp("genus_map", genus);
-		ar & boost::serialization::make_nvp("regex_type_map", regex_type);
-		ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);
-		;
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
+		/*ar & boost::serialization::make_nvp("type_map", type);
+		 ar & boost::serialization::make_nvp("genus_map", genus);
+		 ar & boost::serialization::make_nvp("regex_type_map", regex_type);
+		 ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);*/
 	}
 
 public:
@@ -62,6 +60,9 @@ public:
 	static bool is_job(const string&);
 	static const string unique_pos_type(const string&);
 	static const string to_grammar_pos(tags*, const string&);
+
+	int read_verbs_file(const fs::path&);
+	int toggle(string&);
 
 	static string __builtin_entity_ends;
 	static string __builtin_male_names;

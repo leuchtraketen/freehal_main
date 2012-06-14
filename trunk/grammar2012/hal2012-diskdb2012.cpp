@@ -19,10 +19,6 @@ diskdb::diskdb(database<diskdb>* _db) :
 	db = _db;
 }
 diskdb::~diskdb() {
-	foreach (indexmap_int::value_type i, uniquefacts) {
-//		if (i.second)
-//			delete i.second;
-	}
 }
 
 void diskdb::set_add_synonyms(bool b) {
@@ -41,9 +37,10 @@ int diskdb::insert_fact(boost::shared_ptr<xml_fact> xfact_p) {
 		return 0;
 	}
 
-	size_t hash = hash_value(*xfact_p);
-	uniquefacts.insert(indexmap_int::value_type(hash, xfact_p));
+	// add to global set
+	uniquefacts.insert(xfact_p);
 
+	// for each word
 	vector<word> words;
 	xfact_p->get_words(words);
 	foreach (word& _word, words) {
@@ -52,8 +49,10 @@ int diskdb::insert_fact(boost::shared_ptr<xml_fact> xfact_p) {
 			continue;
 		word = lc(word);
 
+		// add to a per-word index
 		index_word.insert(indexmap_str::value_type(word, xfact_p));
 
+		// and the same with the first 4 chars of the word
 		if (is_index_word()(word)) {
 			diskdb_key key(word);
 			indexmap_3chars::iterator iter(index_3chars.find(key.get_key()));
@@ -143,11 +142,7 @@ int diskdb::insert_synonym(boost::shared_ptr<xml_fact> xfact_p) {
 }
 
 int diskdb::copy_facts_to(vector<boost::shared_ptr<xml_fact> >& list) {
-
-	foreach (indexmap_int::value_type v, uniquefacts) {
-		list.push_back(v.second);
-	}
-
+	std::copy(uniquefacts.begin(), uniquefacts.end(), back_inserter(list));
 	return 0;
 }
 
@@ -198,7 +193,7 @@ int diskdb::get_facts(const word& word) {
 
 int diskdb::from_disk(const diskdb_key& key) {
 	const fs::path path = db->disk_find_file("index", key[0], key[1], key[2],
-			key[3], "");
+			key[3], fs::path());
 	this->from_disk(path);
 	return 0;
 }
@@ -368,14 +363,14 @@ diskdb_key::diskdb_key(const diskdb_key& copy) :
 diskdb_key::diskdb_key(const string& w) :
 		_key(), _word(w) {
 
-	_key = lc(_word.substr(0, 4));
+	_key = lc(_word.substr(0, _word.size() < 4 ? _word.size() : 4));
 	while (_key.size() < 4)
 		_key += "_";
 }
 diskdb_key::diskdb_key(const word& w) :
 		_key(), _word(w.get_word()) {
 
-	_key = lc(_word.substr(0, 4));
+	_key = lc(_word.substr(0, _word.size() < 4 ? _word.size() : 4));
 	while (_key.size() < 4)
 		_key += "_";
 }

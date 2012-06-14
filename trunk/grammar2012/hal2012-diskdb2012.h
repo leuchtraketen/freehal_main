@@ -55,14 +55,13 @@ public:
 	static diskdb_key ALL_KEYS;
 
 	// data
-	typedef boost::unordered_map<std::size_t, boost::shared_ptr<xml_fact> > indexmap_int;
-	typedef boost::unordered_multimap<string, boost::shared_ptr<xml_fact> > indexmap_str;
 	typedef boost::unordered_set<boost::shared_ptr<xml_fact> > xml_facts_set;
+	typedef boost::unordered_multimap<string, boost::shared_ptr<xml_fact> > indexmap_str;
 	typedef boost::unordered_map<string, boost::shared_ptr<xml_facts_set> > indexmap_3chars;
 	typedef boost::unordered_map<string,
 			boost::shared_ptr<boost::unordered_set<string> > > synonymsmap;
 
-	indexmap_int uniquefacts;
+	xml_facts_set uniquefacts;
 	indexmap_str index_word;
 	indexmap_3chars index_3chars;
 	synonymsmap synonyms;

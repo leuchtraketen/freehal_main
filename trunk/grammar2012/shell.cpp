@@ -32,8 +32,8 @@ EXTERN_C char* check_config(const char* name, const char* _default) {
 	return strdup("1");
 }
 
-void print_memory() {
-	system("ps aux | grep main | grep -v grep");
+int print_memory() {
+	return system("ps aux | grep main | grep -v grep");
 }
 
 int new_sentence(g::sentence* s, g::database<g::diskdb>* d) {

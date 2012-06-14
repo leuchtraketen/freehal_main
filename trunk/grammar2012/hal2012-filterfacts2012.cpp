@@ -70,10 +70,9 @@ double operator &(const word& _word1, const word& _word2) {
 }
 
 double operator &&(const word& word1, const boost::shared_ptr<xml_obj>& o2) {
-	vector<word> words;
-	o2->get_words(words);
+	const vector<word>& words = o2->get_words();
 
-	foreach (word& word2, words) {
+	foreach (const word& word2, words) {
 		double matches = word1 && word2;
 		if (matches > 0)
 			return matches;
@@ -82,10 +81,9 @@ double operator &&(const word& word1, const boost::shared_ptr<xml_obj>& o2) {
 }
 
 double operator &(const word& word1, const boost::shared_ptr<xml_obj>& o2) {
-	vector<word> words;
-	o2->get_words(words);
+	const vector<word>& words = o2->get_words();
 
-	foreach (word& word2, words) {
+	foreach (const word& word2, words) {
 		double matches = word1 & word2;
 		if (matches > 0)
 			return matches * (3.0 * words.size() + 1) / 4.0 / words.size();
@@ -100,9 +98,8 @@ double operator &&(const boost::shared_ptr<xml_obj>& o1,
 				<< endl;
 	double matches = 0;
 	if (o1->get_mode() == TEXT && o2->get_mode() == TEXT) {
-		vector<word> words;
-		o1->get_words(words);
-		foreach (word& word, words) {
+		const vector<word>& words = o1->get_words();
+		foreach (const word& word, words) {
 			matches += word && o2;
 		}
 	} else if (o1->get_mode() == LIST) {
@@ -151,9 +148,8 @@ double operator &(const boost::shared_ptr<xml_obj>& o1,
 				<< endl;
 	double matches = 0;
 	if (o1->get_mode() == TEXT && o2->get_mode() == TEXT) {
-		vector<word> words;
-		o1->get_words(words);
-		foreach (word& word, words) {
+		const vector<word>& words = o1->get_words();
+		foreach (const word& word, words) {
 			matches += word & o2;
 		}
 	} else if (o1->get_mode() == LIST) {
@@ -218,8 +214,7 @@ double operator &(const vector<boost::shared_ptr<xml_obj> >& v1,
 }
 double count_words(boost::shared_ptr<xml_obj> o) {
 	if (o->get_mode() == TEXT) {
-		vector<word> words;
-		o->get_words(words);
+		const vector<word>& words = o->get_words();
 		return (double) words.size();
 
 	} else {
@@ -243,10 +238,9 @@ double count_words(boost::shared_ptr<xml_obj> o) {
 
 double count_tags(boost::shared_ptr<xml_obj> o, const tags tag) {
 	//if (o->get_mode() == TEXT) {
-	vector<word> words;
-	o->get_words(words);
+	const vector<word>& words = o->get_words();
 	int amount = 0;
-	foreach (word& w, words) {
+	foreach (const word& w, words) {
 		cout << "freehal|| w.has_tags() = " << w.has_tags() << endl;
 		if (w.has_tags()) {
 			cout << "freehal|| tag.first.size() > 0 = "

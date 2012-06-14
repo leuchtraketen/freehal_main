@@ -31,7 +31,8 @@ const string print_vector(const vector<tags*>& v) {
 
 tagger::tagger() :
 		freehal_base(), type(new tagmap()), genus(new tagmap()), regex_type(
-				new taglist()), regex_genus(new tagmap()) {
+				new taglist()), regex_genus(new tagmap()), togglemap(
+				new tagmap()) {
 
 	algo::split(builtin_entity_ends, __builtin_entity_ends,
 			algo::is_any_of(";"));
@@ -59,10 +60,6 @@ tagger::tagger() :
 	}
 }
 tagger::~tagger() {
-	delete type;
-	delete genus;
-	delete regex_type;
-	delete regex_genus;
 }
 
 int tagger::write_to_file(const fs::path& filename, const string& word,
@@ -106,8 +103,8 @@ int tagger::read_pos_file(const fs::path& filename) {
 		lines.push_back(line);
 	}
 
-	type->rehash(type->size()+lines.size()/2);
-	genus->rehash(type->size()+lines.size()/20);
+	type->rehash(type->size() + lines.size() / 2);
+	genus->rehash(type->size() + lines.size() / 20);
 
 	//string line;
 	string word;
@@ -121,8 +118,7 @@ int tagger::read_pos_file(const fs::path& filename) {
 		if (algo::ends_with(line, ":")) {
 			algo::trim_if(line, boost::is_any_of(":") || boost::is_space());
 			word = line;
-		}
-		else if (algo::starts_with(line, " ")) {
+		} else if (algo::starts_with(line, " ")) {
 			algo::trim_if(line, boost::is_any_of(":,;") || boost::is_space());
 			if (algo::starts_with(line, "type")) {
 				line = line.substr(4);
@@ -172,8 +168,7 @@ int tagger::read_regex_pos_file(const fs::path& filename) {
 		if (algo::ends_with(line, ":")) {
 			algo::trim_if(line, boost::is_any_of(":") || boost::is_space());
 			word = line;
-		}
-		else if (algo::starts_with(line, " ")) {
+		} else if (algo::starts_with(line, " ")) {
 			algo::trim_if(line, boost::is_any_of(":,;") || boost::is_space());
 			if (algo::starts_with(line, "type")) {
 				line = line.substr(4);
@@ -470,6 +465,75 @@ const string tagger::to_grammar_pos(tags* tags, const string& word) {
 			return "d-noun";
 	}
 	return "q";
+}
+
+int tagger::read_verbs_file(const fs::path& filename) {
+	if (togglemap->size() > 0)
+		return 1;
+
+	fs::ifstream i;
+	i.open(get_language_directory() / filename);
+
+	if (!i.is_open()) {
+		cout << "Error! Could not open verbs file: " << filename << endl;
+		return 1;
+	}
+
+	if (is_verbose())
+		cout << "read verbs file: " << filename << endl;
+
+	string line;
+	vector<string> lines;
+	while (std::getline(i, line)) {
+		lines.push_back(line);
+	}
+
+	for (vector<string>::iterator iter = lines.begin(); iter != lines.end();
+			++iter) {
+		line = *iter;
+
+		algo::trim(line);
+		vector<string> verbs;
+		algo::split(verbs, line, algo::is_any_of(","), algo::token_compress_on);
+		if (verbs.size() >= 2) {
+			togglemap->insert(tagmap::value_type(verbs[0], verbs[1]));
+			togglemap->insert(tagmap::value_type(verbs[1], verbs[0]));
+		}
+	}
+
+	return togglemap->size() > 0 ? 0 : 1;
+}
+
+int tagger::toggle(string& word) {
+	tagmap::iterator iter(togglemap->find(word));
+	if (iter != togglemap->end()) {
+		word = iter->second;
+		return 0;
+	}
+
+	const string _word = word;
+	if (word == _word)
+		regex_replace(word, "([gdm])elst$", "\\1le");
+	if (word == _word)
+		regex_replace(word, "([gdm])le$", "\\1elst");
+	if (word == _word)
+		regex_replace(word, "te$", "test");
+	if (word == _word)
+		regex_replace(word, "test$", "te");
+	if (word == _word)
+		regex_replace(word, "sst$", "sse");
+	if (word == _word)
+		regex_replace(word, "est$", "e");
+	if (word == _word)
+		regex_replace(word, "st$", "e");
+	if (word == _word)
+		regex_replace(word, "[td]e$", "\\1est");
+	if (word == _word)
+		regex_replace(word, "e$", "st");
+	if (word == _word)
+		regex_replace(word, "sss", "ss");
+
+	return word != _word ? 0 : 1;
 }
 
 }

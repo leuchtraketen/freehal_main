@@ -60,7 +60,9 @@ protected:
 // cache
 public:
 	int prepare_words();
-	int prepare_tags(tagger* t);
+	int prepare_tags(tagger*);
+	const vector<word>& get_words() const;
+	const vector<word>& get_words();
 	int get_words(vector<word>&) const;
 	int get_words(vector<word>&);
 	int reset_cache();
@@ -78,6 +80,7 @@ public:
 	size_t size() const;
 	const std::vector<boost::shared_ptr<xml_obj> >& get_embedded() const;
 	std::vector<boost::shared_ptr<xml_obj> >& get_embedded();
+	int toggle(tagger*);
 
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 			boost::shared_ptr<xml_obj>);

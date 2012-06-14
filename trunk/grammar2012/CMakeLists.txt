@@ -16,8 +16,8 @@ target_link_libraries (graph m dl boost_regex-mt boost_serialization-mt boost_fi
 set_target_properties("test" PROPERTIES COMPILE_FLAGS "-pg -g")
 set_target_properties("test" PROPERTIES LINK_FLAGS "-pg -g")
 
-set_target_properties("shell" PROPERTIES COMPILE_FLAGS "-g -DREADLINE")
-set_target_properties("shell" PROPERTIES LINK_FLAGS "-g")
+set_target_properties("shell" PROPERTIES COMPILE_FLAGS "-g -DREADLINE -O2 -O3")
+set_target_properties("shell" PROPERTIES LINK_FLAGS "-g -O2 -O3")
 
 set_target_properties("graph" PROPERTIES COMPILE_FLAGS " -g")
 set_target_properties("graph" PROPERTIES LINK_FLAGS " -g")

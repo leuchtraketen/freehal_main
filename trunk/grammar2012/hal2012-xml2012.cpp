@@ -326,6 +326,16 @@ int xml_obj::reset_cache() {
 	return 0;
 }
 
+const vector<word>& xml_obj::get_words() const {
+	return cache_words;
+}
+
+const vector<word>& xml_obj::get_words() {
+	if (!is_cached_words)
+		this->prepare_words();
+	return cache_words;
+}
+
 int xml_obj::get_words(vector<word>& words) const {
 	words.insert(words.end(), cache_words.begin(), cache_words.end());
 	return 0;
@@ -341,6 +351,7 @@ int xml_obj::get_words(vector<word>& words) {
 size_t xml_obj::size() const {
 	return content.size();
 }
+
 void xml_obj::trim() {
 	if (mode == LIST) {
 		boost::shared_ptr<xml_obj> subject(new xml_obj(LIST));
@@ -382,17 +393,55 @@ void xml_obj::trim() {
 	}
 }
 
+int xml_obj::toggle(tagger* t) {
+	if (t == 0)
+		return 1;
+	bool delete_cache = false;
+
+	t->read_verbs_file("toggle.csv");
+
+	if (mode == LIST && content.size() > 0) {
+		if (name == "synonyms") {
+			// foreach (boost::shared_ptr < xml_obj > &subobj, content) {
+			string word = content[0]->print_text();
+			if (!t->toggle(word)) {
+				boost::shared_ptr<xml_obj> text_obj(new xml_obj(LIST));
+				text_obj->set_name("text");
+				boost::shared_ptr<xml_obj> t(new xml_obj(TEXT));
+				t->set_text(word);
+				text_obj << t;
+				content[0] = text_obj;
+				delete_cache = true;
+				// content.insert(content.begin(), text_obj); break;
+			}
+		} else {
+			foreach (boost::shared_ptr < xml_obj > &subobj, content) {
+				if (subobj->toggle(t) == 0) {
+					delete_cache = true;
+				}
+			}
+		}
+	}
+
+	if (delete_cache) {
+		reset_cache();
+		prepare_tags(t);
+	}
+
+	return delete_cache ? 0 : 1;
+}
+
 std::size_t hash_value(const xml_obj& o) {
 	std::size_t seed = 0;
 	boost::hash_combine(seed, o.print_text());
 	/*if (o.get_mode() == TEXT) {
-		boost::hash_combine(seed, o.print_text());
-	} else {
-		const vector<boost::shared_ptr<xml_obj> >& vec = o.get_embedded();
-		foreach(const boost::shared_ptr<xml_obj>& sub, vec) {
-			hash_value(*sub);
-		}
-	}*/
+	 boost::hash_combine(seed, o.print_text());
+	 } else {
+	 const vector<boost::shared_ptr<xml_obj> >& vec = o.get_embedded();
+	 foreach(const boost::shared_ptr<xml_obj>& sub, vec) {
+	 hash_value(*sub);
+	 }
+	 }*/
 	//boost::hash_combine(seed, o.print_xml());
 	return seed;
 }
