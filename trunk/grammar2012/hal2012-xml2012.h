@@ -46,7 +46,7 @@ public:
 // universal
 public:
 	void set_name(const string&);
-	string get_name();
+	string get_name() const;
 	string print_xml() const;
 	string print_xml(int, int) const;
 	string print_str() const;
@@ -76,6 +76,7 @@ public:
 	boost::shared_ptr<xml_obj> part(const string&) const;
 	void trim();
 	size_t size() const;
+	const std::vector<boost::shared_ptr<xml_obj> >& get_embedded() const;
 	std::vector<boost::shared_ptr<xml_obj> >& get_embedded();
 
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
@@ -102,7 +103,7 @@ private:
 
 // mode
 public:
-	xml_obj_mode get_mode();
+	xml_obj_mode get_mode() const;
 private:
 	xml_obj_mode mode;
 
@@ -163,13 +164,13 @@ public:
 int halxml_ordertags(string& indata, string& predata);
 string halxml_readfile(const fs::path& infile);
 template<typename DB>
-int halxml_readfacts(DB* d, const string& prestr,
-		const fs::path& filename_ref);
+int halxml_readfacts(DB* d, const string& prestr, const fs::path& filename_ref);
 xml_fact* halxml_readxml_fact(vector<string>& lines, int& i);
 xml_fact* record_to_xml_fact(struct RECORD* r, int level);
 xml_obj* halxml_readtree(const string& tag_name, vector<string>& lines, int& i);
-int use_xml_fact(void* _d, boost::shared_ptr<xml_fact> xfact, int xml_facts_size,
-		time_t* start_ref, const fs::path& filename_ref, int k);
+int use_xml_fact(void* _d, boost::shared_ptr<xml_fact> xfact,
+		int xml_facts_size, time_t* start_ref, const fs::path& filename_ref,
+		int k);
 std::size_t hash_value(const xml_obj& o);
 
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,

@@ -302,38 +302,66 @@
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[exe] main" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-<buildCommand>/usr/bin/make</buildCommand>
-<buildArguments>-j2</buildArguments>
-<buildTarget>main</buildTarget>
-<stopOnError>true</stopOnError>
-<useDefaultCommand>false</useDefaultCommand>
-</target>
-<target name="[exe] main/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-<buildCommand>/usr/bin/make</buildCommand>
-<buildArguments>-j2</buildArguments>
-<buildTarget>main/fast</buildTarget>
-<stopOnError>true</stopOnError>
-<useDefaultCommand>false</useDefaultCommand>
-</target>
-<target name="Build" path="[Targets]/[exe] main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-<buildCommand>/usr/bin/make</buildCommand>
-<buildArguments>-C "/home/tobias/freehal/grammar2012" -j2</buildArguments>
-<buildTarget>main</buildTarget>
-<stopOnError>true</stopOnError>
-<useDefaultCommand>false</useDefaultCommand>
-</target>
-<target name="Clean" path="[Targets]/[exe] main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-<buildCommand>/usr/bin/cmake</buildCommand>
-<buildArguments>-E chdir "/home/tobias/freehal/grammar2012" "/usr/bin/cmake" -P "CMakeFiles/main.dir/cmake_clean.cmake"</buildArguments>
-<buildTarget></buildTarget>
-<stopOnError>true</stopOnError>
-<useDefaultCommand>false</useDefaultCommand>
-</target>
 <target name=": rebuild_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j2</buildArguments>
 <buildTarget>rebuild_cache</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] shell" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>shell</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] shell/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>shell/fast</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Build" path="[Targets]/[exe] shell" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-C "/home/tobias/freehal/grammar2012" -j2</buildArguments>
+<buildTarget>shell</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Clean" path="[Targets]/[exe] shell" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/cmake</buildCommand>
+<buildArguments>-E chdir "/home/tobias/freehal/grammar2012" "/usr/bin/cmake" -P "CMakeFiles/shell.dir/cmake_clean.cmake"</buildArguments>
+<buildTarget></buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] test" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>test</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[exe] test/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>test/fast</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Build" path="[Targets]/[exe] test" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-C "/home/tobias/freehal/grammar2012" -j2</buildArguments>
+<buildTarget>test</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="Clean" path="[Targets]/[exe] test" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/cmake</buildCommand>
+<buildArguments>-E chdir "/home/tobias/freehal/grammar2012" "/usr/bin/cmake" -P "CMakeFiles/test.dir/cmake_clean.cmake"</buildArguments>
+<buildTarget></buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
@@ -540,24 +568,45 @@
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[obj] main.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[obj] shell.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j2</buildArguments>
-<buildTarget>main.cpp.o</buildTarget>
+<buildTarget>shell.cpp.o</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[pre] main.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[pre] shell.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j2</buildArguments>
-<buildTarget>main.cpp.i</buildTarget>
+<buildTarget>shell.cpp.i</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>
-<target name="[to asm] main.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<target name="[to asm] shell.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 <buildCommand>/usr/bin/make</buildCommand>
 <buildArguments>-j2</buildArguments>
-<buildTarget>main.cpp.s</buildTarget>
+<buildTarget>shell.cpp.s</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[obj] test.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>test.cpp.o</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[pre] test.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>test.cpp.i</buildTarget>
+<stopOnError>true</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+</target>
+<target name="[to asm] test.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>/usr/bin/make</buildCommand>
+<buildArguments>-j2</buildArguments>
+<buildTarget>test.cpp.s</buildTarget>
 <stopOnError>true</stopOnError>
 <useDefaultCommand>false</useDefaultCommand>
 </target>

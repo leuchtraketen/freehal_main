@@ -45,7 +45,7 @@ boost::shared_ptr<xml_obj> xml_obj::from_text(const string& _text) {
 	return obj;
 }
 
-xml_obj_mode xml_obj::get_mode() {
+xml_obj_mode xml_obj::get_mode() const {
 	return mode;
 }
 
@@ -107,6 +107,9 @@ std::ostream& operator<<(std::ostream& stream,
 	return stream;
 }
 
+const std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() const {
+	return content;
+}
 std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() {
 	return content;
 }
@@ -114,7 +117,7 @@ std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() {
 void xml_obj::set_name(const string& name) {
 	this->name = name;
 }
-string xml_obj::get_name() {
+string xml_obj::get_name() const {
 	return (name);
 }
 
@@ -381,13 +384,19 @@ void xml_obj::trim() {
 
 std::size_t hash_value(const xml_obj& o) {
 	std::size_t seed = 0;
+	if (o.get_mode() == TEXT) {
+		boost::hash_combine(seed, o.print_text());
+	} else {
+		const vector<boost::shared_ptr<xml_obj> >& vec = o.get_embedded();
+		foreach(const boost::shared_ptr<xml_obj>& sub, vec) {
+			hash_value(*sub);
+		}
+	}
 	boost::hash_combine(seed, o.print_xml());
 	return seed;
 }
 std::size_t hash_value(const xml_fact& o) {
-	std::size_t seed = 0;
-	boost::hash_combine(seed, o.print_xml());
-	return seed;
+	return hash_value((const xml_obj&) o);
 }
 bool operator==(const xml_obj& o1, const xml_obj& o2) {
 	return o1.print_xml() == o2.print_xml();

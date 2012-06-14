@@ -194,77 +194,152 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main</name>
+			<name>[Targets]/[exe] shell</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/</name>
+			<name>[Targets]/[exe] shell/</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files</name>
+			<name>[Targets]/[exe] shell/Source Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/main.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/shell.cpp</name>
 			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/main.cpp</location>
+			<location>/home/tobias/freehal/grammar2012/shell.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-grammar2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-grammar2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-grammar2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-parser2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-parser2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-parser2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-tagger2012-builtin.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-tagger2012-builtin.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012-builtin.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-tagger2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-tagger2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-util2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-util2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-util2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-xml2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-xml2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-xml2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-diskdb2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-diskdb2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Source Files/hal2012-filterfacts2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-filterfacts2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Header Files</name>
+			<name>[Targets]/[exe] shell/Header Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/CMake Rules</name>
+			<name>[Targets]/[exe] shell/CMake Rules</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] main/Resources</name>
+			<name>[Targets]/[exe] shell/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/test.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-grammar2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-grammar2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-parser2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-parser2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-tagger2012-builtin.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012-builtin.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-tagger2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-util2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-util2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-xml2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-xml2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-diskdb2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-filterfacts2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Resources</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>

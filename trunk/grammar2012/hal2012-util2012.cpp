@@ -208,6 +208,12 @@ const fs::path freehal_base::get_language_directory() const {
 	else
 		return path / ("lang_" + lang);
 }
+const fs::path freehal_base::get_cache_directory() const {
+	if (path.empty())
+			return "";
+		else
+			return path / ("cache_" + lang);
+}
 bool freehal_base::is_configured() const {
 	if (lang.empty()) {
 		cout << "Error! parser2012: language is undefined." << endl;

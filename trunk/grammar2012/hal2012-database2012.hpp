@@ -36,7 +36,7 @@ template<typename DB> bool database<DB>::is_configured() const {
 template<typename DB>
 int database<DB>::resume() {
 	if (!lang.empty() && !path.empty()) {
-		fs::path resumefile = get_language_directory() / "db/files.dat";
+		fs::path resumefile = get_cache_directory() / "files.cache";
 		try {
 			fs::ifstream ifs(resumefile);
 			if (ifs.is_open()) {
@@ -53,7 +53,7 @@ int database<DB>::resume() {
 template<typename DB>
 int database<DB>::suspend() {
 	if (!lang.empty() && !path.empty()) {
-		fs::path resumefile = get_language_directory() / "db/files.dat";
+		fs::path resumefile = get_cache_directory() / "files.cache";
 		try {
 
 			fs::ofstream ofs(resumefile, ios::binary);
@@ -124,7 +124,7 @@ const fs::path database<DB>::disk_find_file(const string type, T1 a, T1 b, T1 c,
 	stringstream ss;
 	ss << a << "/" << b << "/" << c << "/" << d;
 
-	fs::path dir(get_language_directory() / "db" / type / ss.str());
+	fs::path dir(get_cache_directory() / "database" / type / ss.str());
 	create_directories(dir);
 
 	fs::path file(dir / filename);

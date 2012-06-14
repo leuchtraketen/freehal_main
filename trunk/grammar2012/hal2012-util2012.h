@@ -102,6 +102,7 @@ public:
 	virtual const string get_lang() const;
 	virtual const fs::path get_path() const;
 	virtual const fs::path get_language_directory() const;
+	virtual const fs::path get_cache_directory() const;
 };
 
 }
