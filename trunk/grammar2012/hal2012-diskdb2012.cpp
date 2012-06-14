@@ -56,7 +56,15 @@ int diskdb::insert_fact(boost::shared_ptr<xml_fact> xfact_p) {
 
 		if (is_index_word()(word)) {
 			diskdb_key key(word);
-			index_3chars.insert(indexmap_3chars::value_type(key.get_key(), xfact_p));
+			indexmap_3chars::iterator iter(index_3chars.find(key.get_key()));
+			if (iter == index_3chars.end()) {
+				boost::shared_ptr<xml_facts_set> set(new xml_facts_set());
+				set->insert(xfact_p);
+				index_3chars.insert(
+						indexmap_3chars::value_type(key.get_key(), set));
+			} else {
+				iter->second->insert(xfact_p);
+			}
 		}
 	}
 
@@ -245,7 +253,38 @@ int diskdb::from_disk(const fs::path& path) {
 int diskdb::to_disk(const diskdb_key& key) {
 	if (key.is_empty()) {
 		// store facts
-		{
+		for (indexmap_3chars::iterator found(index_3chars.begin());
+				found != index_3chars.end(); ++found) {
+
+			diskdb_key key(found->first);
+			if (db->is_buffered())
+				cout << "store index: " << key.get_key() << endl;
+			else
+				cout << "store index: " << key.get_key() << "\r" << flush;
+
+			const fs::path path = db->disk_find_file("index", key[0], key[1],
+					key[2], key[3], filename.filename().generic_string());
+			// cout << path << endl;
+			if (is_complete()) {
+				boost::unordered_set<string> set;
+				foreach (boost::shared_ptr<xml_fact> xfact_p, *(found->second)) {
+					set.insert(xfact_p->print_xml());
+				}
+				vector<string> list(set.begin(), set.end());
+				db->disk_write_file(path, list);
+			} else {
+				vector<string> list;
+				db->disk_read_file(path, list);
+				boost::unordered_set<string> set(list.begin(), list.end());
+				foreach (boost::shared_ptr<xml_fact> xfact_p, *(found->second)) {
+					set.insert(xfact_p->print_xml());
+				}
+				list.assign(set.begin(), set.end());
+				db->disk_write_file(path, list);
+			}
+
+		}
+		if (0) {
 			vector<char> chars;
 			for (char a = 'a'; a <= 'z'; ++a) {
 				chars.push_back(a);
@@ -260,11 +299,10 @@ int diskdb::to_disk(const diskdb_key& key) {
 
 							if (db->is_verbose() && c == '_' && d == '_') {
 								if (db->is_buffered() && b == '_')
-									cout << "store index: " << a
-											<< endl;
+									cout << "store index: " << a << endl;
 								else
-									cout << "store index: " << a << b
-											<< "\r" << flush;
+									cout << "store index: " << a << b << "\r"
+											<< flush;
 							}
 
 							this->to_disk(key);
@@ -303,33 +341,6 @@ int diskdb::to_disk(const diskdb_key& key) {
 				cout << "store synonym: done " << endl << flush;
 		}
 
-	} else {
-		pair<indexmap_3chars::iterator, indexmap_3chars::iterator> hashes =
-				index_3chars.equal_range(key.get_key());
-		if (hashes.first != hashes.second) {
-			const fs::path path = db->disk_find_file("index", key[0], key[1],
-					key[2], key[3], filename.filename().generic_string());
-			// cout << path << endl;
-			if (is_complete()) {
-				boost::unordered_set<string> set;
-				for (indexmap_3chars::iterator hash_iter = hashes.first;
-						hash_iter != hashes.second; ++hash_iter) {
-					set.insert(hash_iter->second->print_xml());
-				}
-				vector<string> list(set.begin(), set.end());
-				db->disk_write_file(path, list);
-			} else {
-				vector<string> list;
-				db->disk_read_file(path, list);
-				boost::unordered_set<string> set(list.begin(), list.end());
-				for (indexmap_3chars::iterator hash_iter = hashes.first;
-						hash_iter != hashes.second; ++hash_iter) {
-					set.insert(hash_iter->second->print_xml());
-				}
-				list.assign(set.begin(), set.end());
-				db->disk_write_file(path, list);
-			}
-		}
 	}
 	return 0;
 }

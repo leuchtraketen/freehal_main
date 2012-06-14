@@ -455,7 +455,7 @@ void filter_question_who::rule() {
 
 	if ((a->part("questionword") && xml_obj::from_text("who")) == 1) {
 		if (count_words(b->part("clause")) > 0) {
-			m *= 0.9;
+			m *= 0.75;
 		}
 		if (count_words(b->part("adverbs")) > 0) {
 			m *= 0.3;
