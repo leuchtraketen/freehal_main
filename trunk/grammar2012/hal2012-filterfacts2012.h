@@ -14,20 +14,9 @@
 namespace grammar2012 {
 
 template<class Element>
-int push(vector<Element>& target, Element& e) {
-	target.push_back(e);
-}
+int push(vector<Element>& target, Element& e);
 template<class Container, class Predicate>
-int filter(Container& source, Container& target, Predicate pred) {
-	int filtered = 0;
-	for (int i = 0; i < source.size(); ++i) {
-		if (pred(source[i])) {
-			push(target, source[i]);
-			++filtered;
-		}
-	}
-	return filtered;
-}
+int filter(Container& source, Container& target, Predicate pred);
 
 class all_in {
 public:
@@ -40,61 +29,50 @@ public:
 	any_in(vector<boost::shared_ptr<xml_obj> >&);
 };
 
-double operator %(boost::shared_ptr<xml_obj> o1, boost::shared_ptr<xml_obj> o2);
-double operator %(boost::shared_ptr<xml_fact> o1,
-		boost::shared_ptr<xml_fact> o2);
-double operator /(boost::shared_ptr<xml_obj> o1, boost::shared_ptr<xml_obj> o2);
-double operator /(boost::shared_ptr<xml_fact> o1,
-		boost::shared_ptr<xml_fact> o2);
+double operator &&(const word& _word1, const word& _word2);
+double operator &(const word& _word1, const word& _word2);
+double operator &&(const word& word1, const boost::shared_ptr<xml_obj>& o2);
+double operator &(const word& word1, boost::shared_ptr<xml_obj>& o2);
+double operator &&(const boost::shared_ptr<xml_obj>& o1,
+		const boost::shared_ptr<xml_obj>& o2);
+double operator &(const boost::shared_ptr<xml_obj>& o1,
+		const boost::shared_ptr<xml_obj>& o2);
+double operator &(const boost::shared_ptr<xml_obj>& o1,
+		const vector<boost::shared_ptr<xml_obj> >& v2);
+double operator &(const vector<boost::shared_ptr<xml_obj> >& v1,
+		const vector<boost::shared_ptr<xml_obj> >& v2);
+
+double operator %(boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj>);
+double operator %(boost::shared_ptr<xml_fact>, boost::shared_ptr<xml_fact>);
+double operator /(boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj>);
+double operator /(boost::shared_ptr<xml_fact>, boost::shared_ptr<xml_fact>);
+double count_words(boost::shared_ptr<xml_obj>);
+double count_tags(boost::shared_ptr<xml_obj>);
 
 template<typename O, typename R>
 class ranking {
 private:
-	std::map<R, O> map;
+	std::multimap<R, O> map;
 	vector<R> keys;
 	vector<O> values;
 
 public:
-	ranking() :
-			map() {
-	}
-	void insert(O o, R r) {
-		map.insert(make_pair(r, o));
-	}
-	O get(int i) {
-		if (values.size() == 0)
-			std::transform(map.begin(), map.end(), std::back_inserter(values),
-					boost::bind(&std::map<R, O>::value_type::second, _1));
-		return (i < values.size() ? values[i] : O());
-	}
-	R rank(int i) {
-		if (keys.size() == 0)
-			std::transform(map.begin(), map.end(), std::back_inserter(keys),
-					boost::bind(&std::map<R, O>::value_type::first, _1));
-		return (i < keys.size() ? keys[i] : R());
-	}
-	O operator[](int i) {
-		return get(i);
-	}
-	size_t size() {
-		return map.size();
-	}
+	ranking();
+	void insert(O, R);
+	O get(int);
+	R rank(int);
+	O operator[](int);
+	size_t size();
 };
 
 class is_index_word: std::unary_function<word, bool> {
 public:
-	is_index_word() :
-			std::unary_function<word, bool>() {
-	}
-	bool operator()(const word& word) const {
-		tags* tags = word.get_tags();
-		if (tags == 0) {
-			return true;
-		} else {
-			cout << tags->first << endl;
-			return tags->first == "n" || tags->first == "adj";
-		}
-	}
+	bool operator()(const word&) const;
+};
+
+class is_synonym: std::unary_function<boost::shared_ptr<xml_obj>, bool> {
+public:
+	bool operator()(const boost::shared_ptr<xml_obj>&) const;
 };
 
 class filterrule: public binary_function<
@@ -141,6 +119,28 @@ public:
 	void rule();
 };
 
+class filter_not: public filterrule {
+public:
+	void rule();
+};
+
+class filter_question_who: public filterrule {
+public:
+	void rule();
+};
+
+class filter_question_what: public filterrule {
+public:
+	void rule();
+};
+
+class filter_question_extra: public filterrule {
+public:
+	void rule();
+};
+
 }
+
+#include "hal2012-filterfacts2012.hpp"
 
 #endif /* HAL2012_FILTERFACTS_H_ */

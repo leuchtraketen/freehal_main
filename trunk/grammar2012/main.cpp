@@ -15,7 +15,11 @@
 
 namespace g = grammar2012;
 
+const string language("de");
+const fs::path path(".");
+
 void g::tagger::ask_user(const string word, g::tags* tags) {
+	// TODO
 }
 EXTERN_C char* check_config(const char* name, const char* _default) {
 	return strdup("1");
@@ -25,87 +29,104 @@ void print_memory() {
 	system("ps aux | grep main | grep -v grep");
 }
 
+int new_sentence(g::sentence* s, g::database<g::diskdb>* d) {
+	boost::shared_ptr<g::xml_fact> infact = s->get_fact();
+	if (!infact)
+		return 1;
+	cout << *infact << endl;
+
+	vector<boost::shared_ptr<g::xml_fact> > facts;
+	d->find_by_fact(facts, infact);
+
+	g::ranking<boost::shared_ptr<g::xml_fact>, double> rank;
+	int i = 0;
+	foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
+		cout << "match fact " << ++i << "\r" << flush;
+		double match = infact / fact2;
+		rank.insert(fact2, match);
+
+		/*if (algo::contains(fact2->print_str(), "kuenstliche")
+		 && algo::contains(fact2->print_str(), "intelligenz")
+		 && algo::contains(fact2->print_str(),
+		 "lernfaehige")) {
+		 cout << fact2->print_str() << endl;
+		 exit(0);
+		 }*/
+	}
+	cout << endl;
+	for (int i = 0; i < rank.size(); ++i) {
+		cout << rank.rank(i) << ": " << rank[i]->print_str() << endl;
+	}
+
+	return 0;
+}
+
+int shell() {
+	g::tagger* _t = new g::tagger();
+	_t->set_verbose(true);
+	_t->set_lang(language);
+	_t->set_path(path);
+	_t->read_pos_file("guessed.pos");
+	_t->read_pos_file("brain.pos");
+	_t->read_pos_file("memory.pos");
+	_t->read_regex_pos_file("regex.pos");
+
+	g::grammar* _g = new g::grammar();
+	_g->set_lang(language);
+	_g->set_path(path);
+	_g->read_grammar("grammar.txt");
+	_g->set_verbose(false);
+	_g->expand();
+
+	g::parser* p = new g::parser();
+	p->set_lang(language);
+	p->set_path(path);
+	p->set_tagger(_t);
+	p->set_grammar(_g);
+	p->set_verbose(false);
+
+	g::filterlist::set_verbose(false);
+
+	g::database<g::diskdb>* d = new g::database<g::diskdb>();
+	d->set_verbose(true);
+	d->set_buffered(false);
+	d->set_lang(language);
+	d->set_path(path);
+	d->set_tagger(_t);
+	print_memory();
+	d->prepare("../hal2012/lang_de");
+
+	print_memory();
+	string input;
+	static string prompt = "Eingabe: ";
+	cout << endl << prompt;
+	while (getline(cin, input)) {
+		if (input.size() == 0)
+			break;
+
+		p->parse(input);
+		const vector<g::sentence*>& vs = p->get_sentences();
+		foreach (g::sentence* s, vs) {
+			new_sentence(s, d);
+		}
+
+		cout << endl << prompt;
+	}
+	print_memory();
+
+	return 0;
+}
+
 int main() {
 	if (1) {
-		g::tagger* _t = new g::tagger();
-		_t->set_verbose(true);
-		_t->set_lang("de");
-		_t->set_path(".");
-		_t->read_pos_file("guessed.pos");
-		_t->read_pos_file("brain.pos");
-		_t->read_pos_file("memory.pos");
-		_t->read_regex_pos_file("regex.pos");
-
-		g::grammar* _g = new g::grammar();
-		_g->read_grammar("grammar.txt");
-		_g->set_verbose(false);
-		_g->expand();
-
-		g::parser* p = new g::parser();
-		p->set_lang("de");
-		p->set_path(".");
-		p->set_tagger(_t);
-		p->set_grammar(_g);
-		p->set_verbose(false);
-
-		{
-			p->parse("In der Zeitung steht, dass es nur fuer die "
-					"Schlecker-Toechter IhrPlatz und "
-					"SchleckerXL eine Zukunft geben soll.");
-			const vector<g::sentence*>& vs = p->get_sentences();
-			foreach (g::sentence* s, vs) {
-				//cout << g::grammar::print_xml(s->get_parsed());
-				cout << *s->get_fact() << endl;
-			}
-		}
-
-		g::database<g::diskdb>* d = new g::database<g::diskdb>();
-		d->set_verbose(true);
-		d->set_buffered(true);
-		d->set_lang("de");
-		d->set_path(".");
-		d->set_tagger(_t);
-		print_memory();
-		d->prepare("../hal2012/lang_de");
-
-		print_memory();
-		string input;
-		static string prompt = "Eingabe: ";
-		cout << endl << prompt;
-		while (getline(cin, input)) {
-			if (input.size() == 0)
-				break;
-
-			p->parse(input);
-			const vector<g::sentence*>& vs = p->get_sentences();
-			foreach (g::sentence* s, vs) {
-				boost::shared_ptr<g::xml_fact> infact = s->get_fact();
-				cout << *infact << endl;
-
-				vector<boost::shared_ptr<g::xml_fact> > facts;
-				d->find_by_fact(facts, infact);
-				g::ranking<boost::shared_ptr<g::xml_fact>, double> rank;
-				foreach (boost::shared_ptr<g::xml_fact> fact2, facts) {
-					fact2->prepare_tags(_t);
-					double match = infact / fact2;
-					rank.insert(fact2, match);
-				}
-				for (int i = 0; i < rank.size(); ++i) {
-					cout << "% " << infact->print_str() << endl << "  "
-							<< rank[i]->print_str() << endl << "= "
-							<< rank.rank(i) << endl;
-				}
-			}
-			cout << endl << prompt;
-		}
-		print_memory();
+		shell();
 	}
 
 	if (0) {
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
-		d->set_lang("de");
-		d->set_path(".");
+		d->set_lang(language);
+		d->set_path(path);
 
 		print_memory();
 		vector<boost::shared_ptr<g::xml_fact> > facts;
@@ -119,8 +140,8 @@ int main() {
 	if (0) {
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 		d->set_verbose(true);
-		d->set_lang("de");
-		d->set_path(".");
+		d->set_lang(language);
+		d->set_path(path);
 
 		print_memory();
 		d->prepare("freehal.xml");
@@ -158,8 +179,8 @@ int main() {
 		_g->expand();
 
 		g::parser* p = new g::parser();
-		p->set_lang("de");
-		p->set_path(".");
+		p->set_lang(language);
+		p->set_path(path);
 		p->set_tagger(_t);
 		p->set_grammar(_g);
 		p->set_verbose(true);
@@ -178,7 +199,7 @@ int main() {
 		delete p;
 	}
 
-	if (1) {
+	if (0) {
 		g::parser* p = new g::parser();
 		{
 			try {

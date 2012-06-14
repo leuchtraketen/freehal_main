@@ -21558,7 +21558,7 @@ Fuzzy-logik:
 booleschen:
   type: adj
 Panierter:
-  type: asj
+  type: adj
 leberkaese:
   genus  : m
   type: n
@@ -75627,7 +75627,7 @@ Mannschaftssport:
   genus: m
   type: n
 Jedoch:
-  type: fw
+  type: adj
 funkgeregelt:
   type: adj
 wiedereinfuehrung:
@@ -78387,7 +78387,7 @@ Piksen:
   genus: s
   type: n
 Nichtsdestoweniger:
-  type: fw
+  type: adj
 Friedlich:
   type: adv
 abwechselnd:
@@ -81865,7 +81865,7 @@ Konstatieren:
   genus: s
   type: n
 Wenngleich:
-  type: fw
+  type: asj
 Fehlerlosigkeit:
   genus: f
   type: n
@@ -84330,7 +84330,7 @@ Einteilungen:
   genus: f
   type: n
 Eingestellt:
-  type: asj
+  type: adj
 Basisspitzenstrom:
   genus: m
   type: n
@@ -122358,7 +122358,7 @@ Sport:
 kruemelig:
   type: adv
 so:
-  type: adj
+  type: prep
 drehbuchschreiber:
   genus  : m
   type: n
@@ -156318,7 +156318,7 @@ Moeglichkeitsform:
   genus  : f
   type: n
 dummerweisen:
-  type: asj
+  type: adj
 Lesbierin:
   genus  : f
   type: n

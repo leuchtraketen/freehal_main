@@ -78,6 +78,32 @@ bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
 int split_lines(vector<string>&, const string&);
 
+class freehal_base {
+protected:
+	bool verbose;
+	bool buffered;
+	string lang;
+	fs::path path;
+
+public:
+	freehal_base();
+	virtual ~freehal_base();
+
+	// I/O flags
+	virtual void set_verbose(bool);
+	virtual bool is_verbose() const;
+	virtual void set_buffered(bool);
+	virtual bool is_buffered() const;
+
+	// environment
+	virtual bool is_configured() const;
+	virtual void set_lang(const string&);
+	virtual void set_path(const fs::path&);
+	virtual const string get_lang() const;
+	virtual const fs::path get_path() const;
+	virtual const fs::path get_language_directory() const;
+};
+
 }
 
 #endif /* HAL2012_UTIL2012_H_ */

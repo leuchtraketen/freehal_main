@@ -51,15 +51,20 @@ public:
 	string print_xml(int, int) const;
 	string print_str() const;
 	string print_str(string) const;
+	string print_text() const;
 	void free();
 
+protected:
+	string name;
+
+// cache
+public:
 	int prepare_words();
 	int prepare_tags(tagger* t);
 	int get_words(vector<word>&) const;
 	int get_words(vector<word>&);
+	int reset_cache();
 
-protected:
-	string name;
 private:
 	bool is_cached_words;
 	bool is_cached_tags;
@@ -70,7 +75,8 @@ public:
 	int part(std::vector<boost::shared_ptr<xml_obj> >&, const string&) const;
 	boost::shared_ptr<xml_obj> part(const string&) const;
 	void trim();
-	size_t size();
+	size_t size() const;
+	std::vector<boost::shared_ptr<xml_obj> >& get_embedded();
 
 	friend boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>&,
 			boost::shared_ptr<xml_obj>);
@@ -89,6 +95,7 @@ protected:
 // text
 public:
 	void set_text(const string&);
+	void set_text(const word&);
 	static boost::shared_ptr<xml_obj> from_text(const string& _text);
 private:
 	string text;
@@ -141,6 +148,11 @@ public:
 	word(const word&);
 	word(const string, tags*);
 
+	bool operator ==(const string&) const;
+	bool operator !=(const string&) const;
+	bool operator ==(const word&) const;
+	bool operator !=(const word&) const;
+
 	void set_word(const string&);
 	void set_tags(tags*);
 	const string& get_word() const;
@@ -151,12 +163,12 @@ public:
 int halxml_ordertags(string& indata, string& predata);
 string halxml_readfile(const fs::path& infile);
 template<typename DB>
-vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
+int halxml_readfacts(DB* d, const string& prestr,
 		const fs::path& filename_ref);
 xml_fact* halxml_readxml_fact(vector<string>& lines, int& i);
 xml_fact* record_to_xml_fact(struct RECORD* r, int level);
 xml_obj* halxml_readtree(const string& tag_name, vector<string>& lines, int& i);
-int use_xml_fact(void* _d, xml_fact* xfact, int xml_facts_size,
+int use_xml_fact(void* _d, boost::shared_ptr<xml_fact> xfact, int xml_facts_size,
 		time_t* start_ref, const fs::path& filename_ref, int k);
 std::size_t hash_value(const xml_obj& o);
 
@@ -170,8 +182,11 @@ xml_obj* operator <<(xml_obj*, vector<boost::shared_ptr<xml_obj> >&);
 xml_obj* operator <<(xml_obj*, boost::shared_ptr<xml_obj>);
 const xml_obj* operator >>(const xml_obj*,
 		vector<boost::shared_ptr<xml_obj> >&);
-std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact);
-std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj);
+std::ostream& operator<<(std::ostream&, const xml_fact&);
+std::ostream& operator<<(std::ostream&, const xml_obj&);
+std::ostream& operator<<(std::ostream&, const boost::shared_ptr<xml_fact>&);
+std::ostream& operator<<(std::ostream&, const boost::shared_ptr<xml_obj>&);
+std::ostream& operator<<(std::ostream&, const word&);
 
 }
 

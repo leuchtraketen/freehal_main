@@ -33,6 +33,7 @@ s-followingsentence*:
 
 s-questionword-part:
     r-extra-before r-questionword r-extra-after
+    r-extra-before r-questionword
     r-questionword r-extra-after
     r-questionword
     r-questionword d-adjective/v-extra-after

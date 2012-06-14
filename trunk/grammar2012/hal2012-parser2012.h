@@ -68,7 +68,7 @@ private:
 	void find_mode();
 };
 
-class parser {
+class parser: public freehal_base {
 private:
 	string input_raw;
 	string input_clean;
@@ -76,10 +76,6 @@ private:
 	vector<string> input_extended;
 	vector<sentence*> sentences;
 
-	bool verbose;
-	bool buffered;
-	string lang;
-	string path;
 	tagger* t;
 	grammar* g;
 
@@ -106,10 +102,6 @@ private:
 		ar & BOOST_SERIALIZATION_NVP(input_extended);
 		ar & BOOST_SERIALIZATION_NVP(sentences);
 
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
-		ar & BOOST_SERIALIZATION_NVP(lang);
-		ar & BOOST_SERIALIZATION_NVP(path);
 		ar & boost::serialization::make_nvp("tagger_ref", t);
 		ar & boost::serialization::make_nvp("grammar_ref", g);
 	}
@@ -120,19 +112,10 @@ public:
 	void parse(const string&);
 	vector<sentence*> get_sentences() const;
 
-	void set_lang(const string&);
-	void set_path(const string&);
 	void set_tagger(tagger*);
 	void set_grammar(grammar*);
-	const string get_lang() const;
-	const string get_path() const;
 	tagger* get_tagger() const;
 	grammar* get_grammar() const;
-
-	void set_verbose(bool);
-	bool is_verbose() const;
-	void set_buffered(bool);
-	bool is_buffered() const;
 };
 
 }

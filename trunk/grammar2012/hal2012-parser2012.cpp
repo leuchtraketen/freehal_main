@@ -167,8 +167,7 @@ boost::shared_ptr<xml_fact> sentence::get_fact() const {
 }
 
 parser::parser() :
-		input_raw(), input_clean(), input_simplified(), input_extended(), sentences(), verbose(
-				true), buffered(false), lang(), path(".") {
+		freehal_base(), input_raw(), input_clean(), input_simplified(), input_extended(), sentences() {
 }
 parser::~parser() {
 	for (size_t i = 0; i < sentences.size(); ++i) {
@@ -180,11 +179,7 @@ parser::~parser() {
 }
 
 void parser::parse(const string& txt) {
-	if (lang.size() == 0) {
-		cout << "Error! parser2012: language is undefined." << endl;
-		return;
-	} else if (path.size() == 0) {
-		cout << "Error! parser2012: path is undefined." << endl;
+	if (!freehal_base::is_configured()) {
 		return;
 	} else if (t == 0) {
 		cout << "Error! parser2012: tagger is undefined." << endl;
@@ -256,23 +251,11 @@ vector<sentence*> parser::get_sentences() const {
 	return sentences;
 }
 
-void parser::set_lang(const string& _lang) {
-	lang = _lang;
-}
-void parser::set_path(const string& _path) {
-	path = _path;
-}
 void parser::set_tagger(tagger* _t) {
 	t = _t;
 }
 void parser::set_grammar(grammar* _g) {
 	g = _g;
-}
-const string parser::get_lang() const {
-	return lang;
-}
-const string parser::get_path() const {
-	return path;
 }
 tagger* parser::get_tagger() const {
 	return t;
@@ -577,7 +560,7 @@ void parser::simplify_input(string& str) {
 
 	regex_ireplace(str, " hab ", " habe ");
 
-	if (!regex_find(str, "(heiss|name)") && lang == "de") {
+	if (!regex_find(str, "(heiss|name)") && lang == "de" && str.size() > 20) {
 		regex_ireplace(str, " FreeHAL(.?.?.?.?)$", " \\1");
 	}
 
@@ -591,9 +574,7 @@ void parser::simplify_input(string& str) {
 			"\\1_\\2_etwas_\\3");
 
 	fs::ifstream remove_words_file;
-	remove_words_file.open(
-			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-					+ "remove-words.csv");
+	remove_words_file.open(get_language_directory() / "remove-words.csv");
 	if (remove_words_file.is_open()) {
 		string line;
 		vector<string> remove_words_file_lines;
@@ -1638,9 +1619,7 @@ void parser::simplify_input(string& str) {
 
 	{
 		fs::ifstream male_hist_file;
-		male_hist_file.open(
-				(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-						+ "male.history");
+		male_hist_file.open(get_language_directory() / "male.history");
 		if (male_hist_file.is_open()) {
 			string line;
 			string last_male_substantive;
@@ -1655,9 +1634,7 @@ void parser::simplify_input(string& str) {
 	}
 	{
 		fs::ifstream female_hist_file;
-		female_hist_file.open(
-				(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-						+ "male.history");
+		female_hist_file.open(get_language_directory() / "female.history");
 		if (female_hist_file.is_open()) {
 			string line;
 			string last_female_substantive;
@@ -1719,20 +1696,6 @@ void parser::replace_he(string& text, const string& replacement) {
 void parser::replace_she(string& text, const string& replacement) {
 	regex_ireplace(text, "(^|\\s)(sie)(\\s|$)", "\\1" + replacement + "\\3");
 	regex_ireplace(text, "(^|\\s)(she)(\\s|$)", "\\1" + replacement + "\\3");
-}
-
-void parser::set_verbose(bool v) {
-	verbose = v;
-}
-bool parser::is_verbose() const {
-	return verbose;
-}
-
-void parser::set_buffered(bool v) {
-	buffered = v;
-}
-bool parser::is_buffered() const {
-	return buffered;
 }
 
 const string print_vector(const vector<sentence*>& v) {

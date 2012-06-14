@@ -23,7 +23,7 @@ const string print_vector(const vector<tags*>&);
 
 class tagger;
 
-class tagger {
+class tagger: public freehal_base {
 private:
 	typedef boost::unordered_map<string, string> tagmap;
 	typedef vector<pair<string, string> > taglist;
@@ -31,11 +31,6 @@ private:
 	tagmap* genus;
 	taglist* regex_type;
 	tagmap* regex_genus;
-
-	bool verbose;
-	bool buffered;
-	string lang;
-	string path;
 
 	void impl_get_pos(const string, tags*);
 	void impl_regex_get_pos(const string, tags*);
@@ -49,7 +44,8 @@ private:
 		ar & boost::serialization::make_nvp("type_map", type);
 		ar & boost::serialization::make_nvp("genus_map", genus);
 		ar & boost::serialization::make_nvp("regex_type_map", regex_type);
-		ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);;
+		ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);
+		;
 		ar & BOOST_SERIALIZATION_NVP(verbose);
 		ar & BOOST_SERIALIZATION_NVP(buffered);
 	}
@@ -61,15 +57,6 @@ public:
 	int read_regex_pos_file(const fs::path&);
 	int write_to_file(const fs::path&, const string&, tags*);
 	tags* get_pos(const string);
-
-	void set_verbose(bool);
-	bool is_verbose();
-	void set_buffered(bool);
-	bool is_buffered();
-	void set_lang(const string&);
-	void set_path(const string&);
-	const string get_lang() const;
-	const string get_path() const;
 
 	static bool is_name(const string&);
 	static bool is_job(const string&);

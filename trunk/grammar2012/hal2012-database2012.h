@@ -21,12 +21,8 @@ namespace grammar2012 {
 class xml_fact;
 
 template<typename DB>
-class database {
+class database : public freehal_base {
 private:
-	bool verbose;
-	bool buffered;
-	string lang;
-	fs::path path;
 	tagger* t;
 
 	// IO variables
@@ -46,26 +42,25 @@ public:
 	// I/O
 	int prepare(const fs::path&);
 	int find_by_word(vector<boost::shared_ptr<xml_fact> >&, const word&);
-	int find_by_words(vector<boost::shared_ptr<xml_fact> >&, const vector<word>&);
-	int find_by_fact(vector<boost::shared_ptr<xml_fact> >&, boost::shared_ptr<xml_fact>);
+	int find_by_words(vector<boost::shared_ptr<xml_fact> >&,
+			const vector<word>&);
+	int find_by_fact(vector<boost::shared_ptr<xml_fact> >&,
+			boost::shared_ptr<xml_fact>);
+	int get_synonyms(vector<word>&, const word& w);
 
-	// I/O flags
-	void set_verbose(bool);
-	bool is_verbose();
-	void set_buffered(bool);
-	bool is_buffered();
+	// XML
+	boost::shared_ptr<xml_obj> insert_synonyms(boost::shared_ptr<xml_obj>);
 
 	// environment variables
 	void set_lang(const string&);
-	void set_path(const string&);
-	const string get_lang() const;
-	const string get_path() const;
+	void set_path(const fs::path& _path);
+	bool is_configured() const;
 	void set_tagger(tagger*);
 	tagger* get_tagger() const;
 
 	// cache algorithm
 	template<typename T1, typename T2>
-	const fs::path disk_find_file(const string, T1, T1, T1, T2);
+	const fs::path disk_find_file(const string, T1, T1, T1, T1, T2);
 	template<typename M>
 	int disk_read_file(const fs::path&, M&);
 	template<typename M>
@@ -76,10 +71,6 @@ private:
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version) {
-		ar & BOOST_SERIALIZATION_NVP(lang);
-		//ar & BOOST_SERIALIZATION_NVP(path);
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
 	}
 };
 

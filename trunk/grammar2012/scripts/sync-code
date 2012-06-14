@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for x in hal2012*.{cpp,h}
+for x in hal2012*.{cpp,h,hpp}
 do
 	rsync -auv $x ../boinc-app/$x
 	rsync -auv ../boinc-app/$x $x

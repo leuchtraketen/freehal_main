@@ -21,6 +21,7 @@ const string grammar::print_vector(const entities& v) {
 	ss << "]";
 	return ss.str();
 }
+
 const string grammar::print_entity(entity* i) {
 	return "{" + i->print() + "}";
 }
@@ -28,19 +29,23 @@ const string grammar::print_entity(entity* i) {
 entity::entity() :
 		data(), symbol(), repl(), virt(), text(), embed(), order(-1) {
 }
+
 entity::entity(grammar* _grammar, const string text) :
 		grammar_p(_grammar), data(), symbol(), repl(), virt(), text(), embed(), order(
 				-1) {
 	init(text);
 }
+
 entity::entity(grammar* _grammar, const string text, entities _embed) :
 		grammar_p(_grammar), data(), symbol(), repl(), virt(), text(), embed(
 				_embed.begin(), _embed.end()), order(-1) {
 	init(text);
 }
+
 void entity::add(const string text) {
 	init(text);
 }
+
 void entity::init(const string text) {
 	vector<string> parts;
 	algo::split(parts, text, algo::is_any_of("/"));
@@ -71,6 +76,7 @@ void entity::init(const string text) {
 		}
 	}
 }
+
 entity::perlmap* entity::to_groups(perlmap* pm = 0, vector<string> v_keys =
 		vector<string>(), string keyprefix = "v-clause-1") const {
 
@@ -123,6 +129,7 @@ entity::perlmap* entity::to_groups(perlmap* pm = 0, vector<string> v_keys =
 
 	return pm;
 }
+
 const string entity::print_graph(string* _key = 0) const {
 	static int u = 1;
 	stringstream sskey;
@@ -161,6 +168,7 @@ const string entity::print_graph(string* _key = 0) const {
 
 	return ss.str();
 }
+
 const string entity::to_xml(string* _key = 0, string* _text = 0,
 		int level = 0) const {
 
@@ -253,6 +261,7 @@ const string entity::to_xml(string* _key = 0, string* _text = 0,
 
 	return ss.str();
 }
+
 const string entity::print_perl(entity::perlmap* pm, string v_key = "",
 		string keyprefix = "v-clause-1") {
 	stringstream ss;
@@ -318,6 +327,7 @@ const string entity::print_perl(entity::perlmap* pm, string v_key = "",
 
 	return ss.str();
 }
+
 const string entity::print_long(string left = "") const {
 	string str = to_key();
 	if (virt.size()) {
@@ -341,6 +351,7 @@ const string entity::print_long(string left = "") const {
 	}
 	return ss.str();
 }
+
 const string entity::print() const {
 	string str = to_key();
 	if (virt.size()) {
@@ -365,6 +376,7 @@ const string entity::print() const {
 	}
 	return str;
 }
+
 const string entity::to_str() const {
 	string str = to_key();
 	if (virt.size()) {
@@ -386,6 +398,7 @@ const string entity::to_str() const {
 	}
 	return str;
 }
+
 const string entity::to_key() const {
 	stringstream ss;
 	if (data.size() > 0) {
@@ -401,6 +414,7 @@ const string entity::to_key() const {
 		ss << "/" << order;
 	return ss.str();
 }
+
 const char entity::type() const {
 	return (data.size() == 0) ?
 			(symbol.size() == 0 ?
@@ -408,6 +422,7 @@ const char entity::type() const {
 					's') :
 			'd';
 }
+
 std::size_t hash_value(grammar2012::entity const& o) {
 	std::size_t seed = 0;
 	boost::hash_combine(seed, o.get_data());
@@ -417,24 +432,31 @@ std::size_t hash_value(grammar2012::entity const& o) {
 	boost::hash_combine(seed, o.get_embed());
 	return seed;
 }
+
 void entity::set_text(const string text) {
 	this->text = text;
 }
+
 const string entity::get_data() const {
 	return data;
 }
+
 const string entity::get_symbol() const {
 	return symbol;
 }
+
 const string entity::get_repl() const {
 	return repl;
 }
+
 const vector<string> entity::get_virt() const {
 	return virt;
 }
+
 const vector<entity*> entity::get_embed() const {
 	return embed;
 }
+
 const vector<string> entity::get_marker() const {
 	if (virt.size() > 0) {
 		return virt;
@@ -444,19 +466,19 @@ const vector<string> entity::get_marker() const {
 		return v;
 	}
 }
+
 int entity::get_order() const {
 	return order >= 0 ? order : 1;
 }
 
 grammar::grammar() :
-		gra(new grammarmap()), red(), red_keys_sorted(), sym_so(
-				new symbolmap_so()), sym_os(new symbolmap_os()), verbose(true), buffered(
-				false) {
+		freehal_base(), gra(new grammarmap()), red(), red_keys_sorted(), sym_so(
+				new symbolmap_so()), sym_os(new symbolmap_os()) {
 }
 
-int grammar::read_grammar(const string filename) {
-	ifstream i;
-	i.open(filename.c_str());
+int grammar::read_grammar(const fs::path filename) {
+	fs::ifstream i;
+	i.open(get_language_directory() / filename);
 
 	if (!i) {
 		cout << "Error! Could not open grammar file: " << filename << endl;
@@ -503,6 +525,7 @@ string grammar::o2s(entity* o) const {
 	}
 	return 0;
 }
+
 entity* grammar::s2o(string s) const {
 	symbolmap_so::iterator found = sym_so->find(s);
 	if (found != sym_so->end()) {
@@ -619,6 +642,7 @@ bool string_compare_by_length(const string &left, const string &right) {
 	else
 		return false;
 }
+
 void grammar::build_reducemap() {
 	red.clear();
 	red_keys_sorted.clear();
@@ -808,6 +832,7 @@ entities* grammar::parse_input(const string words_str) {
 
 	return words_i;
 }
+
 entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 		entity* replacement) {
 	if (find.size() == 0)
@@ -858,6 +883,7 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 
 	return new_vector;
 }
+
 grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 	const string old_impression = all_get_key(*old_words_i);
 	reducelist_by_complexity*new_words_complexity_map =
@@ -1030,6 +1056,7 @@ vector<entities*>* grammar::reduce(entities* old_words_i) {
 
 	return final;
 }
+
 const string grammar::print_input(const string words_str) {
 	stringstream ss;
 
@@ -1087,6 +1114,7 @@ const string grammar::print_output(vector<entities*>* output_list) {
 
 	return ss.str();
 }
+
 const string grammar::print_perl(vector<entities*>* output_list) {
 	stringstream ss;
 
@@ -1102,6 +1130,7 @@ const string grammar::print_perl(vector<entities*>* output_list) {
 
 	return ss.str();
 }
+
 const string grammar::print_graph(vector<entities*>* output_list) {
 	stringstream ss;
 	ss << "digraph parsed {" << endl;
@@ -1119,6 +1148,7 @@ const string grammar::print_graph(vector<entities*>* output_list) {
 	ss << "}" << endl;
 	return ss.str();
 }
+
 const string grammar::print_xml(vector<entities*>* output_list) {
 	stringstream ss;
 
@@ -1134,6 +1164,7 @@ const string grammar::print_xml(vector<entities*>* output_list) {
 
 	return ss.str();
 }
+
 vector<entities*>* grammar::parse(const string words_str) {
 	cout << "========================================" << endl
 			<< "============  Grammar 2012  ============" << endl
@@ -1150,18 +1181,5 @@ vector<entities*>* grammar::parse(const string words_str) {
 	return reduced;
 }
 
-void grammar::set_verbose(bool v) {
-	verbose = v;
-}
-bool grammar::is_verbose() {
-	return verbose;
 }
 
-void grammar::set_buffered(bool v) {
-	buffered = v;
-}
-bool grammar::is_buffered() {
-	return buffered;
-}
-
-}

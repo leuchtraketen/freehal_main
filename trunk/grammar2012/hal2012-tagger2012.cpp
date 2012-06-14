@@ -30,9 +30,8 @@ const string print_vector(const vector<tags*>& v) {
 }
 
 tagger::tagger() :
-		type(new tagmap()), genus(new tagmap()), regex_type(new taglist()), regex_genus(
-				new tagmap()), verbose(true), buffered(false), lang(""), path(
-				".") {
+		freehal_base(), type(new tagmap()), genus(new tagmap()), regex_type(
+				new taglist()), regex_genus(new tagmap()) {
 
 	algo::split(builtin_entity_ends, __builtin_entity_ends,
 			algo::is_any_of(";"));
@@ -66,40 +65,10 @@ tagger::~tagger() {
 	delete regex_genus;
 }
 
-void tagger::set_verbose(bool v) {
-	verbose = v;
-}
-bool tagger::is_verbose() {
-	return verbose;
-}
-
-void tagger::set_buffered(bool v) {
-	buffered = v;
-}
-bool tagger::is_buffered() {
-	return buffered;
-}
-
-void tagger::set_lang(const string& _lang) {
-	lang = _lang;
-}
-const string tagger::get_lang() const {
-	return lang;
-}
-
-void tagger::set_path(const string& _path) {
-	path = _path;
-}
-const string tagger::get_path() const {
-	return path;
-}
-
 int tagger::write_to_file(const fs::path& filename, const string& word,
 		tags* t) {
 	fs::ofstream o;
-	o.open(
-			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-					+ filename.generic_string(), ios::app);
+	o.open(get_language_directory() / filename, ios::app);
 
 	if (!o.is_open()) {
 		cout << "Error! Could not open part of speech file: " << filename
@@ -120,9 +89,7 @@ int tagger::write_to_file(const fs::path& filename, const string& word,
 
 int tagger::read_pos_file(const fs::path& filename) {
 	fs::ifstream i;
-	i.open(
-			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-					+ filename.generic_string());
+	i.open(get_language_directory() / filename);
 
 	if (!i.is_open()) {
 		cout << "Error! Could not open part of speech file: " << filename
@@ -139,6 +106,9 @@ int tagger::read_pos_file(const fs::path& filename) {
 		lines.push_back(line);
 	}
 
+	type->rehash(type->size()+lines.size()/2);
+	genus->rehash(type->size()+lines.size()/20);
+
 	//string line;
 	string word;
 	int n = 0;
@@ -152,7 +122,7 @@ int tagger::read_pos_file(const fs::path& filename) {
 			algo::trim_if(line, boost::is_any_of(":") || boost::is_space());
 			word = line;
 		}
-		if (algo::starts_with(line, " ")) {
+		else if (algo::starts_with(line, " ")) {
 			algo::trim_if(line, boost::is_any_of(":,;") || boost::is_space());
 			if (algo::starts_with(line, "type")) {
 				line = line.substr(4);
@@ -183,9 +153,7 @@ int tagger::read_pos_file(const fs::path& filename) {
 
 int tagger::read_regex_pos_file(const fs::path& filename) {
 	fs::ifstream i;
-	i.open(
-			(path.size() > 1 ? path + "/lang_" + lang + "/" : "")
-					+ filename.generic_string());
+	i.open(get_language_directory() / filename);
 
 	if (!i.is_open()) {
 		cout << "Error! Could not open regex part of speech file: " << filename
@@ -205,7 +173,7 @@ int tagger::read_regex_pos_file(const fs::path& filename) {
 			algo::trim_if(line, boost::is_any_of(":") || boost::is_space());
 			word = line;
 		}
-		if (algo::starts_with(line, " ")) {
+		else if (algo::starts_with(line, " ")) {
 			algo::trim_if(line, boost::is_any_of(":,;") || boost::is_space());
 			if (algo::starts_with(line, "type")) {
 				line = line.substr(4);

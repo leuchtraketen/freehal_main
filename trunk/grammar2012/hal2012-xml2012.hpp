@@ -1,7 +1,7 @@
 namespace grammar2012 {
 
 template<typename DB>
-vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
+int halxml_readfacts(DB* d, const string& prestr,
 		const fs::path& filename_ref) {
 
 	time_t start = 0;
@@ -10,7 +10,6 @@ vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
 	vector<string> lines;
 	split_lines(lines, prestr);
 
-	vector<xml_fact*> xml_facts;
 	int i;
 	int xml_facts_size = 0;
 	for (i = 0; i < lines.size(); ++i) {
@@ -28,25 +27,21 @@ vector<xml_fact*> halxml_readfacts(DB* d, const string& prestr,
 			++i;
 			if (lines[i] == "fact") {
 				++i;
-				xml_fact* xml_fact = halxml_readxml_fact(lines, i);
+				boost::shared_ptr<xml_fact> xml_fact(halxml_readxml_fact(lines, i));
 
-				//if (use) {
 				use_xml_fact(d, xml_fact, xml_facts_size, &start,
 						filename_ref, xml_facts_so_far);
 				++xml_facts_so_far;
-				//} else {
-				//	xml_facts.push_back(xml_fact);
-				//}
 			}
 		}
 		++i;
 	}
 
-	return xml_facts;
+	return xml_facts_so_far;
 }
 
 template<typename DB>
-int use_xml_fact(DB* d, xml_fact* xfact, int xml_facts_size, time_t* start_ref,
+int use_xml_fact(DB* d, boost::shared_ptr<xml_fact> xfact, int xml_facts_size, time_t* start_ref,
 		const fs::path& filename_ref, int k) {
 	xfact->filename = filename_ref;
 	stringstream sst;
@@ -77,7 +72,7 @@ int use_xml_fact(DB* d, xml_fact* xfact, int xml_facts_size, time_t* start_ref,
 		cout << endl;
 	}
 
-	d->insert(xfact);
+	d->insert_fact(xfact);
 
 	return 0;
 }

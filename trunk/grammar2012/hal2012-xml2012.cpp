@@ -96,6 +96,21 @@ std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj) {
 	stream << xobj.print_xml();
 	return stream;
 }
+std::ostream& operator<<(std::ostream& stream,
+		const boost::shared_ptr<xml_fact>& xfact) {
+	stream << xfact->print_str();
+	return stream;
+}
+std::ostream& operator<<(std::ostream& stream,
+		const boost::shared_ptr<xml_obj>& xobj) {
+	stream << xobj->print_str();
+	return stream;
+}
+
+std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() {
+	return content;
+}
+
 void xml_obj::set_name(const string& name) {
 	this->name = name;
 }
@@ -107,6 +122,15 @@ void xml_obj::set_text(const string& str) {
 	text = str;
 	algo::trim_if(text, algo::is_any_of(" \t\n\r\f\v"));
 }
+void xml_obj::set_text(const word& w) {
+	text = w.get_word();
+	cache_words.clear();
+	cache_words.push_back(w);
+	is_cached_words = true;
+	if (w.has_tags())
+		is_cached_tags = true;
+}
+
 string xml_obj::print_xml() const {
 	return print_xml(0, 0) + "\n";
 }
@@ -139,6 +163,7 @@ string xml_obj::print_xml(int level, int secondlevel) const {
 	}
 	return (string());
 }
+
 string xml_obj::print_str(string tag_name) const {
 	std::vector<boost::shared_ptr<xml_obj> > _content;
 	part(_content, tag_name);
@@ -152,6 +177,7 @@ string xml_obj::print_str(string tag_name) const {
 	}
 	return (str);
 }
+
 string xml_obj::print_str() const {
 	if (mode == TEXT) {
 		return "\"" + text + "\"";
@@ -168,6 +194,15 @@ string xml_obj::print_str() const {
 		if (name == "text" && content.size() == 1) {
 			ss << name << ":";
 			ss << content[0]->print_str();
+		} else if (name == "synonyms") {
+			ss << name << ": \"";
+			int k;
+			for (k = 0; k < content.size(); ++k) {
+				if (k > 0)
+					ss << "|";
+				ss << content[k]->print_text();
+			}
+			ss << "\"";
 		} else {
 			ss << "'" << name << "':{";
 
@@ -190,18 +225,52 @@ string xml_obj::print_str() const {
 	return "";
 }
 
+string xml_obj::print_text() const {
+	if (mode == TEXT) {
+		return text;
+	}
+	if (mode == LIST) {
+		string delem;
+		if (name == "and" || name == "or") {
+			delem = " " + name + " ";
+		} else {
+			delem = " ";
+		}
+
+		stringstream ss;
+		if (name == "text" && content.size() == 1) {
+			ss << content[0]->print_text();
+		} else {
+
+			if (content.size() == 1) {
+				ss << content[0]->print_text();
+			} else if (content.size() > 1) {
+				int k;
+				for (k = 0; k < content.size(); ++k) {
+					if (k > 0)
+						ss << delem;
+					ss << content[k]->print_text();
+				}
+			}
+		}
+		return ss.str();
+	}
+	return "";
+}
+
 int xml_obj::prepare_words() {
 	if (is_cached_words)
 		return 1;
+	cache_words.clear();
 
-	cout << "prepare_words: " << this->print_str() << endl;
+	//cout << "prepare_words: " << this->print_str() << endl;
 
 	if (mode == TEXT) {
 		vector<string> _words;
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
-				!(algo::is_alpha() || algo::is_any_of("}{][=-")),
-				algo::token_compress_on);
+				!(algo::is_alpha() || algo::is_digit()
+						|| algo::is_any_of("}{][=-")), algo::token_compress_on);
 		foreach (string& text, _words) {
 			if (text.size() > 0)
 				cache_words.push_back(word(text));
@@ -219,10 +288,11 @@ int xml_obj::prepare_words() {
 }
 
 int xml_obj::prepare_tags(tagger* _t = 0) {
-	if (is_cached_tags && _t == 0)
+	if (is_cached_tags)
 		return 1;
+	prepare_words();
 
-	cout << "prepare_tags: " << this->print_str() << endl;
+	//cout << "prepare_tags: " << this->print_str() << endl;
 
 	tagger* t = _t;
 	if (_t == 0) {
@@ -233,12 +303,23 @@ int xml_obj::prepare_tags(tagger* _t = 0) {
 		if (!w.has_tags())
 			w.set_tags(t->get_pos(w.get_word()));
 	}
+	if (mode == LIST) {
+		foreach (boost::shared_ptr<xml_obj> embedded, content) {
+			embedded->prepare_tags(_t);
+		}
+	}
 	if (_t == 0) {
 		delete t;
 	} else {
 		is_cached_tags = true;
 	}
 
+	return 0;
+}
+
+int xml_obj::reset_cache() {
+	is_cached_words = false;
+	is_cached_tags = false;
 	return 0;
 }
 
@@ -254,7 +335,7 @@ int xml_obj::get_words(vector<word>& words) {
 	return 0;
 }
 
-size_t xml_obj::size() {
+size_t xml_obj::size() const {
 	return content.size();
 }
 void xml_obj::trim() {
@@ -341,14 +422,26 @@ int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
 
 boost::shared_ptr<xml_obj> xml_obj::part(const string& tag_name) const {
 
-	boost::shared_ptr<xml_obj> subtree(new xml_obj(LIST));
-	subtree->set_name(tag_name);
+	boost::shared_ptr<xml_obj> subtree;
+	int count = 0;
 	foreach (boost::shared_ptr<xml_obj> o, content) {
 		if (o->get_name() == tag_name) {
-			subtree << o->content;
+			++count;
+			subtree = o;
 		}
 	}
-	return subtree;
+	if (count == 1) {
+		return subtree;
+	} else {
+		subtree.reset(new xml_obj(LIST));
+		subtree->set_name(tag_name);
+		foreach (boost::shared_ptr<xml_obj> o, content) {
+			if (o->get_name() == tag_name) {
+				subtree << o->content;
+			}
+		}
+		return subtree;
+	}
 }
 
 string halxml_readfile(const fs::path& infile) {
@@ -432,7 +525,9 @@ Tree* halxml_readtree(Tree* tree, const string& tag_name, vector<string>& lines,
 			// check for default values
 			if (text != "00000" && !algo::starts_with(text, "0.50")) {
 				boost::shared_ptr<xml_obj> t(new xml_obj(TEXT));
-				t->set_text(text);
+				t->set_text(
+						algo::starts_with(text, "0.0") ? "0" :
+						algo::starts_with(text, "1.0") ? "1" : text);
 				if (tag_name == "text") {
 					tree << t;
 				} else {
@@ -480,6 +575,22 @@ tags* word::get_tags() const {
 }
 bool word::has_tags() const {
 	return tag != 0 ? true : false;
+}
+bool word::operator ==(const string& _w) const {
+	return w == _w;
+}
+bool word::operator !=(const string& _w) const {
+	return w != _w;
+}
+bool word::operator ==(const word& _w) const {
+	return w == _w.w;
+}
+bool word::operator !=(const word& _w) const {
+	return w != _w.w;
+}
+std::ostream& operator<<(std::ostream& stream, const word& w) {
+	stream << w.get_word();
+	return stream;
 }
 
 }

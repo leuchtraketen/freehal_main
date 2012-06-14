@@ -8,25 +8,8 @@
 #ifndef HAL2012_GRAMMAR2012_H_
 #define HAL2012_GRAMMAR2012_H_
 
-#include <boost/unordered_map.hpp>
-#include <boost/unordered_set.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/algorithm/string/trim.hpp>
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/find.hpp>
-#include <boost/algorithm/string/erase.hpp>
-#include <boost/algorithm/string/find_format.hpp>
-#include <boost/algorithm/string/split.hpp>
-
 #include "hal2012-serialization.h"
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-#include <string>
-#include <map>
+#include "hal2012-util2012.h"
 
 using namespace std;
 
@@ -96,7 +79,7 @@ std::size_t hash_value(entity const&);
 typedef vector<entity*> entities;
 typedef vector<entities*> parsed_t;
 
-class grammar {
+class grammar: public freehal_base {
 private:
 	typedef boost::unordered_map<string, entity*> symbolmap_so;
 	typedef boost::unordered_map<entity*, string> symbolmap_os;
@@ -108,8 +91,6 @@ private:
 	vector<reducekeys> red_keys_sorted;
 	symbolmap_so* sym_so;
 	symbolmap_os* sym_os;
-	bool verbose;
-	bool buffered;
 
 	typedef boost::unordered_map<string, entities*> reducelist;
 	typedef boost::unordered_map<string, pair<int, reducelist> > reducelist_by_complexity;
@@ -134,16 +115,12 @@ private:
 		ar & boost::serialization::make_nvp("grammar_map", gra);
 		ar & boost::serialization::make_nvp("symbol_to_object", sym_so);
 		ar & boost::serialization::make_nvp("object_to_symbol", sym_os);
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
 	}
 	template<class Archive>
 	void load(Archive & ar, const unsigned int version) {
 		ar & boost::serialization::make_nvp("grammar_map", gra);
 		ar & boost::serialization::make_nvp("symbol_to_object", sym_so);
 		ar & boost::serialization::make_nvp("object_to_symbol", sym_os);
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
 		build_reducemap();
 	}
 
@@ -151,14 +128,10 @@ private:
 
 public:
 	grammar();
-	int read_grammar(const string);
+	int read_grammar(const fs::path);
 	const string to_str() const;
 	void expand();
 	vector<entities*>* parse(const string);
-	void set_verbose(bool);
-	bool is_verbose();
-	void set_buffered(bool);
-	bool is_buffered();
 
 	string o2s(entity*) const;
 	entity* s2o(string) const;

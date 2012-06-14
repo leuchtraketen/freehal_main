@@ -13,21 +13,30 @@ namespace grammar2012 {
 
 boost::shared_ptr<filterlist> filterlist::instance;
 
-struct my_is_digit: std::unary_function<char, bool> {
-	bool operator()(char c) const {
-		return c >= '0' && c <= '9';
+bool is_index_word::operator()(const word& word) const {
+	tags* tags = word.get_tags();
+	if (tags == 0) {
+		// cout << "tags == 0" << endl;
+		return word != "a" && word != "the" && word != "in" && word != "verb"
+				&& word != "name" && word != "von" && word != "der"
+				&& word != "die" && word != "das" && word != "ein"
+				&& word != "eine";
+	} else {
+		cout << "tags != 0 => " << word.get_word() << ": " << tags->first
+				<< endl;
+		return tags->first == "n" || tags->first == "adj";
 	}
-};
-
-std::unary_negate<my_is_digit> operator!(const my_is_digit& x) {
-	return std::not1(x);
 }
 
-all_in::all_in(vector<boost::shared_ptr<xml_obj> >& _content) :
-		content(_content) {
-}
-any_in::any_in(vector<boost::shared_ptr<xml_obj> >& _content) :
-		content(_content) {
+bool is_synonym::operator()(const boost::shared_ptr<xml_obj>& xfact_p) const {
+	double count_subject = count_words(xfact_p->part("subject"));
+	double count_object = count_words(xfact_p->part("object"));
+	return ((xfact_p->part("verb") && xml_obj::from_text("=")) == 1
+			&& count_subject > 0 && count_object > 0
+			&& ((xfact_p->part("subject") && xml_obj::from_text("(a)")) == 0
+					|| count_subject == 1)
+			&& ((xfact_p->part("object") && xml_obj::from_text("(a)")) == 0
+					|| count_object == 1));
 }
 
 double operator &&(const word& _word1, const word& _word2) {
@@ -41,7 +50,7 @@ double operator &&(const word& _word1, const word& _word2) {
 	}
 }
 
-double operator &(word& _word1, word& _word2) {
+double operator &(const word& _word1, const word& _word2) {
 	if (_word1 && _word2) {
 		bool equal = _word1 && _word2;
 		tags* tags = 0;
@@ -72,7 +81,7 @@ double operator &&(const word& word1, const boost::shared_ptr<xml_obj>& o2) {
 	return 0;
 }
 
-double operator &(word& word1, boost::shared_ptr<xml_obj>& o2) {
+double operator &(const word& word1, const boost::shared_ptr<xml_obj>& o2) {
 	vector<word> words;
 	o2->get_words(words);
 
@@ -110,6 +119,8 @@ double operator &&(const boost::shared_ptr<xml_obj>& o1,
 
 		if (o1->get_name() == "link_&")
 			matches = (count == content.size() ? matches : 0);
+		if (o1->get_name() == "synonyms")
+			matches /= count;
 	} else if (o2->get_mode() == LIST) {
 		std::vector<boost::shared_ptr<xml_obj> > content;
 		o2 >> content;
@@ -124,6 +135,8 @@ double operator &&(const boost::shared_ptr<xml_obj>& o1,
 
 		if (o2->get_name() == "link_&")
 			matches = (count == content.size() ? matches : 0);
+		if (o1->get_name() == "synonyms")
+			matches /= count;
 	}
 	if (filterlist::is_verbose())
 		cout << "---- compare: " << o1->print_str() << " && " << o2->print_str()
@@ -131,8 +144,8 @@ double operator &&(const boost::shared_ptr<xml_obj>& o1,
 	return matches;
 }
 
-double operator &(boost::shared_ptr<xml_obj>& o1,
-		boost::shared_ptr<xml_obj>& o2) {
+double operator &(const boost::shared_ptr<xml_obj>& o1,
+		const boost::shared_ptr<xml_obj>& o2) {
 	if (filterlist::is_verbose())
 		cout << "---- compare: " << o1->print_str() << " & " << o2->print_str()
 				<< endl;
@@ -157,6 +170,8 @@ double operator &(boost::shared_ptr<xml_obj>& o1,
 
 		if (o1->get_name() == "link_&")
 			matches = (count == content.size() ? matches : 0);
+		if (o1->get_name() == "synonyms")
+			matches /= count;
 	} else if (o2->get_mode() == LIST) {
 		std::vector<boost::shared_ptr<xml_obj> > content;
 		o2 >> content;
@@ -171,14 +186,16 @@ double operator &(boost::shared_ptr<xml_obj>& o1,
 
 		if (o2->get_name() == "link_&")
 			matches = (count == content.size() ? matches : 0);
+		if (o1->get_name() == "synonyms")
+			matches /= count;
 	}
 	if (filterlist::is_verbose())
 		cout << "---- compare: " << o1->print_str() << " & " << o2->print_str()
 				<< " = " << matches << endl;
 	return matches;
 }
-double operator &(boost::shared_ptr<xml_obj>& o1,
-		vector<boost::shared_ptr<xml_obj> >& v2) {
+double operator &(const boost::shared_ptr<xml_obj>& o1,
+		const vector<boost::shared_ptr<xml_obj> >& v2) {
 	double matches = 0;
 	foreach (boost::shared_ptr<xml_obj> o2, v2) {
 		matches += o1 & o2;
@@ -188,8 +205,8 @@ double operator &(boost::shared_ptr<xml_obj>& o1,
 				<< " = " << matches << endl;
 	return matches;
 }
-double operator &(vector<boost::shared_ptr<xml_obj> >& v1,
-		vector<boost::shared_ptr<xml_obj> >& v2) {
+double operator &(const vector<boost::shared_ptr<xml_obj> >& v1,
+		const vector<boost::shared_ptr<xml_obj> >& v2) {
 	double matches = 0;
 	foreach (boost::shared_ptr<xml_obj> o1, v1) {
 		matches += o1 & v2;
@@ -199,28 +216,74 @@ double operator &(vector<boost::shared_ptr<xml_obj> >& v1,
 				<< matches << endl;
 	return matches;
 }
-double count(boost::shared_ptr<xml_obj> o) {
+double count_words(boost::shared_ptr<xml_obj> o) {
 	if (o->get_mode() == TEXT) {
 		vector<word> words;
 		o->get_words(words);
 		return (double) words.size();
-
-	} else if (o->get_name() == "questionword" || o->get_name() == "adverbs"
-			|| o->get_name() == "extra" || o->get_name() == "truth"
-			|| o->get_name() == "clause") {
-		return 0;
 
 	} else {
 		std::vector<boost::shared_ptr<xml_obj> > content;
 		o >> content;
 		double c = 0;
 		foreach (boost::shared_ptr<xml_obj> subobj, content) {
-			c += count(subobj);
+			if (subobj->get_name() != "questionword"
+					//	&& subobj->get_name() != "adverbs"
+					&& subobj->get_name() != "extra"
+					&& subobj->get_name() != "truth"
+					&& subobj->get_name() != "clause") {
+				c += count_words(subobj);
+			}
 		}
-		if (o->get_name() == "link_|")
+		if (o->get_name() == "link_|" || o->get_name() == "synonyms")
 			c /= content.size();
 		return c;
 	}
+}
+
+double count_tags(boost::shared_ptr<xml_obj> o, const tags tag) {
+	//if (o->get_mode() == TEXT) {
+	vector<word> words;
+	o->get_words(words);
+	int amount = 0;
+	foreach (word& w, words) {
+		cout << "freehal|| w.has_tags() = " << w.has_tags() << endl;
+		if (w.has_tags()) {
+			cout << "freehal|| tag.first.size() > 0 = "
+					<< (tag.first.size() > 0) << endl;
+			cout << "freehal|| tag.first == w.get_tags()->first = "
+					<< (tag.first == w.get_tags()->first) << endl;
+			if (tag.first.size() > 0 && tag.first == w.get_tags()->first) {
+				if (tag.second.size() == 0)
+					++amount;
+				else if (tag.first == w.get_tags()->first)
+					++amount;
+			}
+		}
+	}
+	if (algo::contains(o->print_xml(), "freehal"))
+		cout << "count_tags(): o->get_name() = " << o->get_name()
+				<< ", o->print_str() = " << o->print_str() << " amount = "
+				<< amount << endl;
+	return (double) amount;
+	/*
+	 } else {
+	 std::vector<boost::shared_ptr<xml_obj> > content;
+	 o >> content;
+	 double c = 0;
+	 foreach (boost::shared_ptr<xml_obj> subobj, content) {
+	 if (subobj->get_name() != "questionword"
+	 //	&& subobj->get_name() != "adverbs"
+	 && subobj->get_name() != "extra"
+	 && subobj->get_name() != "truth"
+	 && subobj->get_name() != "clause") {
+	 c += count_tags(subobj, tag);
+	 }
+	 }
+	 if (o->get_name() == "link_|" || o->get_name() == "synonyms")
+	 c /= content.size();
+	 return c;
+	 }*/
 }
 
 double operator %(boost::shared_ptr<xml_obj> o1,
@@ -261,8 +324,14 @@ double operator %(boost::shared_ptr<xml_obj> o1,
 			+ (adverbs1 & adverbs2);
 	matches += adverbs_match;
 
+	if (filterlist::is_verbose())
+		cout << "matches (before filterlist): " << matches << endl;
+
 	boost::shared_ptr<filterlist> filters = filterlist::get();
 	matches = (*filters)(make_pair(o1, o2), matches);
+
+	if (filterlist::is_verbose())
+		cout << "matches (after filterlist): " << matches << endl;
 
 	return matches;
 }
@@ -274,9 +343,12 @@ double operator %(boost::shared_ptr<xml_fact> o1,
 double operator /(boost::shared_ptr<xml_obj> o1,
 		boost::shared_ptr<xml_obj> o2) {
 	double matches = o1 % o2;
-	double avgcount = (9 * count(o1) + count(o2)) / 10.0;
-	if (avgcount > 0)
-		matches /= avgcount;
+	//double avgcount = 0; // sqrt((9 * count(o1) + count(o2)) / 10.0);
+	// cout << "count(o1): " << count(o1) << endl;
+	// cout << "count(o2): " << count(o2) << endl;
+	//if (avgcount > 0)
+	//	matches /= avgcount;
+	// cout << "matches: " << matches << endl;
 	return matches;
 }
 double operator /(boost::shared_ptr<xml_fact> o1,
@@ -319,11 +391,6 @@ boost::shared_ptr<filterlist> filterlist::get() {
 	return instance;
 }
 
-filterlist::filterlist() :
-		verbose(true), buffered(false) {
-	add(new filter_no_names());
-}
-
 void filterlist::set_verbose(bool v) {
 	get()->verbose = v;
 }
@@ -338,7 +405,18 @@ bool filterlist::is_buffered() {
 	return get()->buffered;
 }
 
+filterlist::filterlist() :
+		verbose(true), buffered(false) {
+	add(new filter_no_names());
+	add(new filter_not());
+	add(new filter_question_who());
+	add(new filter_question_what());
+	add(new filter_question_extra());
+}
+
 void filter_no_names::rule() {
+	if (filterlist::is_verbose())
+		cout << "matches (filter: no_names): " << m << endl;
 
 	if (filterlist::is_verbose()) {
 		cout << "filter_no_names: (verb && is-a) == 1, ="
@@ -352,6 +430,94 @@ void filter_no_names::rule() {
 		if ((b->part("object") && xml_obj::from_text("(a) name")) == 2) {
 			m *= 0.1;
 		}
+	}
+}
+
+void filter_not::rule() {
+	if (filterlist::is_verbose())
+		cout << "matches (filter: not): " << m << endl;
+
+	//if ((a->part("questionword") && xml_obj::from_text("who")) == 1) {
+	if ((b->part("adverbs") && xml_obj::from_text("nicht")) >= 1) {
+		m *= 0.25;
+	}
+	if ((b->part("truth") && xml_obj::from_text("0")) >= 1) {
+		m *= 0.1;
+	}
+	//}
+}
+
+void filter_question_who::rule() {
+	if (filterlist::is_verbose())
+		cout << "matches (filter: question_who): " << m << endl;
+	//cout << "  (a->part(questionword) && xml_obj::from_text(who)) == 1, = "
+	//		<< (a->part("questionword") && xml_obj::from_text("who")) << endl;
+
+	if ((a->part("questionword") && xml_obj::from_text("who")) == 1) {
+		if (count_words(b->part("clause")) > 0) {
+			m *= 0.9;
+		}
+		if (count_words(b->part("adverbs")) > 0) {
+			m *= 0.3;
+		}
+		if (count_words(b->part("object")) > 0) {
+			if ((b->part("object") && xml_obj::from_text("(a)")) > 0) {
+				m *= 0.5;
+			} else if (count_tags(b->part("object"), tags("n", "")) == 0) {
+				m *= 0.3;
+			}
+		} else {
+			m *= 0.3;
+		}
+	}
+}
+
+void filter_question_what::rule() {
+	if (filterlist::is_verbose())
+		cout << "matches (filter: question_what): " << m << endl;
+	if ((a->part("questionword") && xml_obj::from_text("what")) == 1) {
+		if (count_words(b->part("clause")) > 0) {
+			m *= 0.9;
+		}
+		if (count_words(b->part("object")) > 0) {
+			if ((b->part("object") && xml_obj::from_text("(a)")) > 0) {
+				m *= 2;
+			} else {
+				m *= 0.7;
+			}
+		} else {
+			m *= 0.3;
+		}
+	}
+}
+
+void filter_question_extra::rule() {
+	if (filterlist::is_verbose())
+		cout << "matches (filter: question_extra): " << m << endl;
+
+	if (count_words(a->part("extra")) > 0) {
+		vector<boost::shared_ptr<xml_obj> > extra1;
+		a->part(extra1, "extra");
+		vector<boost::shared_ptr<xml_obj> > subject2;
+		b->part(subject2, "subject");
+		vector<boost::shared_ptr<xml_obj> > object2;
+		b->part(object2, "object");
+		vector<boost::shared_ptr<xml_obj> > adverbs2;
+		b->part(adverbs2, "adverbs");
+
+		if (filterlist::is_verbose())
+			cout << "question_extra: (extra1 & subject2) = "
+					<< (extra1 & subject2) << ", (extra1 & object2) = "
+					<< (extra1 & object2) << ", (extra1 & adverbs2) = "
+					<< (extra1 & adverbs2) << ", fact = " << b << endl;
+
+		double _m = (extra1 & subject2) + (extra1 & object2)
+				+ (extra1 & adverbs2);
+		if (_m > 0)
+			m += _m;
+		else
+			m *= 0.75;
+		cout << "m = " << m << ", _m = " << _m << endl;
 	}
 }
 
