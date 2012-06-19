@@ -173,6 +173,9 @@ int wu_delete_files(WORKUNIT& wu) {
             else if (strstr(filename, ".pm")) {
                 count_deleted++;
             }
+            else if (strstr(filename, "input-")) {
+                count_deleted++;
+            }
             else {
                 if (retval == ERR_OPENDIR) {
                     log_messages.printf(MSG_CRITICAL,
@@ -187,7 +190,7 @@ int wu_delete_files(WORKUNIT& wu) {
                     );
                 } else {
                     log_messages.printf(MSG_NORMAL,
-                        "[WU#%d] deleting %s\n", wu.id, filename
+                        "[WU#%d] delete: %s\n", wu.id, filename
                     );
                     retval = unlink(pathname);
                     if (retval) {

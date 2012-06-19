@@ -157,7 +157,7 @@ if (seqno % 500 == 0)
         return 0;
     }
 
-    if (seqno == 99) system("touch /var/www/projects/freehal_at_home/download/312/report.txt");
+    if (seqno == 99) system("touch /home/boincadm/www/projects/freehal_at_home/download/312/report.txt");
 
     create_work(
             wu,

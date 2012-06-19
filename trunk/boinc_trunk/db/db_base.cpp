@@ -197,6 +197,10 @@ int DB_BASE::insert_batch(std::string& values) {
     return db->do_query(query.c_str());
 }
 
+int DB_BASE::do_query(const std::string& q) {
+    return db->do_query(q.c_str());
+}
+
 int DB_BASE::affected_rows() {
     return db->affected_rows();
 }
@@ -344,6 +348,8 @@ int DB_BASE::enumerate(const char* clause, bool use_use_result) {
         cursor.active = true;
 
         sprintf(query, "select * from %s %s", table_name, clause);
+
+        fprintf(stderr, "query: %s\n", query);
 
         x = db->do_query(query);
         if (x) return mysql_errno(db->mysql);

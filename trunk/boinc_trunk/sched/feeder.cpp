@@ -122,7 +122,7 @@ using std::vector;
 #include "gcl_simulator.h"
 #endif
 
-#define DEFAULT_SLEEP_INTERVAL  0.5
+#define DEFAULT_SLEEP_INTERVAL  2
 #define AV_UPDATE_PERIOD      600
 
 #define REREAD_DB_FILENAME      "reread_db"
@@ -439,9 +439,14 @@ static bool scan_work_array(vector<DB_WORK_ITEM> &work_items) {
 
     for (i=0; i<ssp->max_wu_results; i++) {
         app_index = app_indices[i];
-
         DB_WORK_ITEM& wi = work_items[app_index];
         WU_RESULT& wu_result = ssp->wu_results[i];
+
+                if(0) log_messages.printf(MSG_NORMAL,
+                    "wu_result.resultid=%d, i=%d\n",
+                    wu_result.resultid, i
+                );
+
         switch (wu_result.state) {
         case WR_STATE_PRESENT:
             if (purge_stale_time && wu_result.time_added_to_shared_memory < (time(0) - purge_stale_time)) {
@@ -689,6 +694,8 @@ int main(int argc, char** argv) {
     char path[256];
     char* appids=NULL;
 
+    order_clause = "ORDER BY RAND() ";
+
     for (i=1; i<argc; i++) {
         if (is_arg(argv[i], "d") || is_arg(argv[i], "debug_level")) {
             if (!argv[++i]) {
@@ -700,7 +707,7 @@ int main(int argc, char** argv) {
             log_messages.set_debug_level(dl);
             if (dl == 4) g_print_queries = true;
         } else if (is_arg(argv[i], "random_order")) {
-            order_clause = "order by r1.random ";
+            order_clause = "ORDER BY RAND() ";
         } else if (is_arg(argv[i], "allapps")) {
             all_apps = true;
         } else if (is_arg(argv[i], "priority_order")) {

@@ -25,12 +25,12 @@ int got_enough_host(int hostid) {
 
 
   char path[499];
-  sprintf(path, "/var/www/projects/freehal_at_home/date-limits/%d/%d/%d/h-%d.limit", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday, hostid);
+  sprintf(path, "/home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d/h-%d.limit", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday, hostid);
   {
     ifstream i(path);
     if (!i) {
       char _cmd[499];
-      sprintf(_cmd, "mkdir -p /var/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
+      sprintf(_cmd, "mkdir -p /home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
     system(_cmd);
       ofstream o(path);
           o << 0;
@@ -41,7 +41,7 @@ int got_enough_host(int hostid) {
         i >> size;
     if (size == 0) {
       char _cmd[499];
-      sprintf(_cmd, "mkdir -p /var/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
+      sprintf(_cmd, "mkdir -p /home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
     system(_cmd);
       ofstream o(path);
           o << 0;
@@ -85,12 +85,12 @@ int got_enough_user(int userid) {
   
 
   char path[499];
-  sprintf(path, "/var/www/projects/freehal_at_home/date-limits/%d/%d/%d/u-%d.limit", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday, userid);
+  sprintf(path, "/home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d/u-%d.limit", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday, userid);
   {
     ifstream i(path);
     if (!i) {
       char _cmd[499];
-      sprintf(_cmd, "mkdir -p /var/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
+      sprintf(_cmd, "mkdir -p /home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
     system(_cmd);
       ofstream o(path);
           o << 0;
@@ -101,7 +101,7 @@ int got_enough_user(int userid) {
         i >> size;
     if (size == 0) {
       char _cmd[499];
-      sprintf(_cmd, "mkdir -p /var/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
+      sprintf(_cmd, "mkdir -p /home/boincadm/www/projects/freehal_at_home/date-limits/%d/%d/%d", time_val->tm_year + 1900, time_val->tm_mon + 1, time_val->tm_mday);
     system(_cmd);
       ofstream o(path);
           o << 0;
@@ -272,8 +272,8 @@ n_workunits = 0;
     char _buf[2560];
     sprintf(_buf,
 //      "where client_state = 5 and server_state = 5 and validate_state IN (0, 1) limit %s",
-        "where server_state = 5 and validate_state IN (0, 1) limit %s",
-        LIMIT ? LIMIT : "50"
+        "where server_state = 5 and validate_state IN (0, 1, 2) limit %s",
+        LIMIT ? LIMIT : "200"
     );
     log_messages.printf(MSG_NORMAL,
         "VALIDATE_FAST: SQL (1): %s\n", _buf
@@ -281,28 +281,33 @@ n_workunits = 0;
     int i = 0;
     while (1) {
         retval = res.enumerate(_buf);
-        if (retval)
+        if (retval) {
+            log_messages.printf(MSG_NORMAL, "retval != 0 -> break;\n");
             break;
+        }
 
         if ( mod_n && (res.id % mod_n) != mod_i ) {
-//log_messages.printf(MSG_NORMAL, "modulus: %d mod %d = %d != %d\n", res.id, mod_n, (res.id % mod_n), mod_i);
+            log_messages.printf(MSG_NORMAL, "modulus: %d mod %d = %d != %d\n", res.id, mod_n, (res.id % mod_n), mod_i);
 
-        wus.push_back(res.workunitid);
-        ress.push_back(res.id);
+            wus.push_back(res.workunitid);
+            ress.push_back(res.id);
 
             continue;
-    }
-//log_messages.printf(MSG_NORMAL, "modulus: %d mod %d = %d == %d\n", res.id, mod_n, (res.id % mod_n), mod_i);
+        }
 
-    if (res.id == 0)
-        continue;
+        log_messages.printf(MSG_NORMAL, "modulus: %d mod %d = %d == %d\n", res.id, mod_n, (res.id % mod_n), mod_i);
 
-    if (std::find(ress.begin(), ress.end(), res.id) != ress.end()) {
+        if (res.id == 0)
+            continue;
+
+        if (std::find(ress.begin(), ress.end(), res.id) != ress.end()) {
             if(0) log_messages.printf(MSG_NORMAL,
                 "[RES#%d] BUG: result %d already processed and deleted!\n", res.id, res.id
             );
             continue;
-    }
+        }
+
+        log_messages.printf(MSG_NORMAL, "res.id = %d\n", res.id);
 
         wus.push_back(res.workunitid);
         ress.push_back(res.id);
@@ -320,12 +325,12 @@ update_credit_amount(res);
   time_t unix_time;
   unix_time = time(NULL);
     if (!is_ok(res) || host_got_enough || user_got_enough || res.outcome != 1) {
-        ofstream log("/var/www/projects/freehal_at_home/wu-logs/deleted.log", ios::app);
+        ofstream log("/home/boincadm/www/projects/freehal_at_home/wu-logs/deleted.log", ios::app);
         log << res.userid << "_" << res.hostid << "," << res.id << "," << res.name << (host_got_enough?"GEH":"") << (user_got_enough?"GEU":"") << "," << res.outcome << "," << 0 << ","
             << res.received_time << "," << res.sent_time << "," << unix_time << endl;
         log.close();
         char errfile[1000];
-        snprintf(errfile, 999, "/var/www/projects/freehal_at_home/wu-logs/err/%d-%d-%d", res.userid, res.hostid, res.id);
+        snprintf(errfile, 999, "/home/boincadm/www/projects/freehal_at_home/wu-logs/err/%d-%d-%d", res.userid, res.hostid, res.id);
         ofstream errlog(errfile, ios::app);
         errlog << res.userid << "_" << res.hostid << "," << res.id << "," << res.name << "," << res.outcome << "," << 0 << ","
             << res.received_time << "," << res.sent_time << "," << unix_time << endl;
@@ -334,14 +339,14 @@ update_credit_amount(res);
 //        continue;
     }
     else {
-        ofstream log("/var/www/projects/freehal_at_home/wu-logs/deleted.log", ios::app);
+        ofstream log("/home/boincadm/www/projects/freehal_at_home/wu-logs/deleted.log", ios::app);
         log << res.userid << "_" << res.hostid << "," << res.id << "," << res.name << "," << res.outcome << "," << granted_credit << ","
             << res.received_time << "," << res.sent_time << "," << unix_time << endl;
         log.close();
 
         if (res.received_time-res.sent_time > 60*90) {
         char errfile[1000];
-        snprintf(errfile, 999, "/var/www/projects/freehal_at_home/wu-logs/out/%d-%d-%d", res.userid, res.hostid, res.id);
+        snprintf(errfile, 999, "/home/boincadm/www/projects/freehal_at_home/wu-logs/out/%d-%d-%d", res.userid, res.hostid, res.id);
         ofstream errlog(errfile, ios::app);
         errlog << res.userid << "_" << res.hostid << "," << res.id << "," << res.name << "," << res.outcome << "," << 0 << ","
             << res.received_time << "," << res.sent_time << "," << unix_time << endl;

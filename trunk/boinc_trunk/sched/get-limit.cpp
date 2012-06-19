@@ -8,7 +8,7 @@
 
 int main(int argc, char** argv) {
     char filename[300];
-    sprintf(filename, "/srv/www/vhosts/boinc.freehal.org/httpdocs/projects/freehal_at_home/limits/%s", argv[1]);
+    sprintf(filename, "/home/boincadm/www/projects/freehal_at_home/limits/%s", argv[1]);
     
     FILE* f = fopen(filename, "r");
     int i;

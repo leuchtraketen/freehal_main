@@ -55,6 +55,8 @@
 
 int nwus = 0;
 
+bool accept_any_cpu_intensity = false;
+
 const char* r_mode_str = 0;
 const char* r_behave_str = 0;
 
@@ -66,7 +68,7 @@ const char* mode_str() {
     int i;
     {
         char filename[300];
-        sprintf(filename, "/srv/www/vhosts/boinc.freehal.org/httpdocs/projects/freehal_at_home/limits/%d-%s", g_reply->user.id,    strlen(g_reply->host.venue) ?
+        sprintf(filename, "/home/boincadm/www/projects/freehal_at_home/limits/%d-%s", g_reply->user.id,    strlen(g_reply->host.venue) ?
         (
             (
                     0 == strcmp(g_reply->host.venue,    "home")
@@ -96,7 +98,7 @@ const char* mode_str() {
             f = FCGI_fopen(filename, "r");
             if (f) FCGI_fread(&i, sizeof(int), 1, f);
         }
-        FCGI_fclose(f);
+        if (f) FCGI_fclose(f);
         log_messages.printf(MSG_NORMAL, "User selected mode %d\n", i);
 
         mode = i;
@@ -146,7 +148,7 @@ const char* behave_str() {
     int i;
     {
         char filename[300];
-        sprintf(filename, "/srv/www/vhosts/boinc.freehal.org/httpdocs/projects/freehal_at_home/limits/behave-%d-%s", g_reply->user.id,    strlen(g_reply->host.venue) ?
+        sprintf(filename, "/home/boincadm/www/projects/freehal_at_home/limits/behave-%d-%s", g_reply->user.id,    strlen(g_reply->host.venue) ?
         (
             (
                     0 == strcmp(g_reply->host.venue,    "home")
@@ -255,7 +257,7 @@ static bool quick_check(
     // need a reliable host, then continue if the result is a normal result
     // skip if the app is beta (beta apps don't use the reliable mechanism)
     //
-    if (!app->beta) {
+    if (0 && !app->beta) {
         if (g_wreq->reliable_only && (!wu_result.need_reliable)) {
             return false;
         } else if (!g_wreq->reliable_only && wu_result.need_reliable) {
@@ -266,13 +268,13 @@ static bool quick_check(
     // don't send if we are looking for infeasible results
     // and the result is not infeasible
     //
-    if (g_wreq->infeasible_only && (wu_result.infeasible_count==0)) {
+    if (0 && g_wreq->infeasible_only && (wu_result.infeasible_count==0)) {
         return false;
     }
     
     // check app filter if needed
     //
-    if (g_wreq->user_apps_only &&
+    if (0 && g_wreq->user_apps_only &&
         (!g_wreq->beta_only || config.distinct_beta_apps)
     ) {
         if (app_not_selected(wu)) {
@@ -303,6 +305,7 @@ static bool quick_check(
 
     // don't send job if host can't handle it
     //
+/*
     retval = wu_is_infeasible_fast(
         wu,
         wu_result.res_server_state, wu_result.res_priority,
@@ -322,6 +325,7 @@ static bool quick_check(
         }
         return false;
     }
+*/
 
     if (!(
        (strstr(mode_str(), "_ci_") && strstr(wu.name, "_ci_"))
@@ -352,20 +356,10 @@ static bool quick_check(
                        "high"
                     );
         }
-/*        if (strstr(wu.name, "_ci_")) { */
             times = 9999999;
-/*        }
-        else {
-                    g_reply->insert_message(
-                       "You will get a 'non cpu intensive' workunit.",
-                       "high"
-                    );
-message_for_users();
-            return true;
-        }*/
     }
 
-    return false;
+///    return false;
     }
 
 
@@ -519,12 +513,21 @@ static bool scan_work_array() {
         WU_RESULT& wu_result = ssp->wu_results[i];
         WORKUNIT wu = wu_result.workunit;
 
-    if (!(
-           (strstr(mode_str(), "_ci_") && strstr(wu.name, "_ci_"))
-        || (strstr(mode_str(), "_nci_") && strstr(wu.name, "_nci_"))
-        )) {
-
-        continue;
+    if (strstr(mode_str(), "_ci_") && !strstr(wu.name, "_ci_")) {
+        if (accept_any_cpu_intensity) {
+            log_messages.printf(MSG_NORMAL, "user requested ci, workunit %s is nci\n", wu.name);
+        }
+        else {
+            continue;
+        }
+    }
+    if (strstr(mode_str(), "_nci_") && !strstr(wu.name, "_nci_")) {
+        if (accept_any_cpu_intensity) {
+            log_messages.printf(MSG_NORMAL, "user requested nci, workunit %s is ci\n", wu.name);
+        }
+        else {
+            continue;
+        }
     }
 
         // do fast (non-DB) checks
@@ -532,6 +535,7 @@ static bool scan_work_array() {
 //        app = ssp->lookup_app(wu_result.workunit.appid);
 //        if (app == NULL) continue; // this should never happen
         if (!quick_check(wu_result, wu, bavp, app, last_retval)) {
+log_messages.printf(MSG_NORMAL, "quick_check failed\n");
             continue;
         }
 
@@ -551,6 +555,8 @@ static bool scan_work_array() {
             // set its state back to PRESENT
             //
             wu_result.state = WR_STATE_PRESENT;
+
+log_messages.printf(MSG_NORMAL, "slow_check failed\n");
         } else {
             result.id = wu_result.resultid;
 
@@ -595,9 +601,14 @@ log_messages.printf(MSG_NORMAL,
 // This has been superceded by send_work_matchmaker()
 //
 void send_work_old() {
-int i = 0;
-    while (i < 2 && work_needed(false)) {
-++i;
+    int i = 5;
+    while (i >= 0 && work_needed(false)) {
+    --i;
+
+    // activate this to send the other one if the selected one is not available!!!
+    //
+    // accept_any_cpu_intensity = (i == 0);
+
     g_wreq->beta_only = false;
     g_wreq->user_apps_only = true;
     g_wreq->infeasible_only = false;

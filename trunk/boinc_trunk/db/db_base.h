@@ -94,6 +94,7 @@ public:
     virtual ~DB_BASE(){}
     int insert();
     int insert_batch(std::string&);
+    int do_query(const std::string& q);
     int update();
     int update_field(const char*, const char* where_clause=NULL);
     int update_fields_noid(char* set_clause, char* where_clause);

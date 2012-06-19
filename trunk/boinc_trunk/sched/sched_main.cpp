@@ -410,7 +410,7 @@ int main(int argc, char** argv) {
     } else {
         char *stderr_buffer, buf[256];
         get_log_path(path, "scheduler.log");
-        sprintf(path, "%s/scheduler.log-%d", config.project_path(REQ_FILE_PREFIX), getpid());
+//        sprintf(path, "%s/scheduler.log-%d", config.project_path(REQ_FILE_PREFIX), getpid());
 #ifndef _USING_FCGI_
         if (!freopen(path, "a", stderr)) {
             fprintf(stderr, "Can't redirect stderr\n");

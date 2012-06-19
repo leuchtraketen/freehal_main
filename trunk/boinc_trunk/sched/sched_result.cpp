@@ -453,7 +453,7 @@ char path[256];
 get_log_path(path, "scheduler-forked.log");
 FILE* out = 0;
 if (!out) {
-    strcpy(path, "/var/www/projects/freehal_at_home/log_freehal/scheduler-forked.log");
+    strcpy(path, "/home/boincadm/www/projects/freehal_at_home/log_freehal/scheduler-forked.log");
     if (out = fopen(path, "a")) {
         log_messages.redirect(out);
     }

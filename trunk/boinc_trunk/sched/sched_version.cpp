@@ -127,10 +127,12 @@ CLIENT_APP_VERSION* get_app_version_anonymous(APP& app, bool reliable_only) {
             continue;
         }
         int gavid = host_usage_to_gavid(cav.host_usage, app);
+/*
         if (reliable_only && !app_version_is_reliable(gavid)) {
             log_messages.printf(MSG_NORMAL, "[version] not reliable\n");
             continue;
         }
+*/
         if (daily_quota_exceeded(gavid)) {
             log_messages.printf(MSG_NORMAL, "[version] daily quota exceeded\n");
             continue;
@@ -145,9 +147,9 @@ CLIENT_APP_VERSION* get_app_version_anonymous(APP& app, bool reliable_only) {
             continue;
         }
         if (best) {
-            if (cav.host_usage.projected_flops > best->host_usage.projected_flops) {
+//            if (cav.host_usage.projected_flops > best->host_usage.projected_flops) {
                 best = &cav;
-            }
+//            }
         } else {
             best = &cav;
         }

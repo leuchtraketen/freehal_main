@@ -1877,17 +1877,17 @@ int DB_WORK_ITEM::enumerate(
         // (historical reasons)
         //
         sprintf(query,
-            "select r1.id, r1.priority, r1.server_state, r1.report_deadline, workunit.* from result r1 force index(ind_res_st), workunit "
+            "(select r1.id, r1.priority, r1.server_state, r1.report_deadline, workunit.* from result r1 force index(ind_res_st), workunit "
             " where r1.server_state=%d and r1.workunitid=workunit.id and ci = 1 "
             " %s "
             " %s "
-            "limit 400"
-            " union all "
+            "limit 40"
+            ") union all ("
             "select r1.id, r1.priority, r1.server_state, r1.report_deadline, workunit.* from result r1 force index(ind_res_st), workunit "
             " where r1.server_state=%d and r1.workunitid=workunit.id and ci = 0 "
             " %s "
             " %s "
-            "limit 400",
+            "limit 40)",
             RESULT_SERVER_STATE_UNSENT,
             select_clause,
             order_clause,
