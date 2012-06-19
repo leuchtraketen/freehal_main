@@ -260,14 +260,10 @@ static bool get_job_from_db(
         strcpy(select_clause, mod_select_clause);
         enum_size = enum_limit;
     }
-    int hrt = ssp->apps[app_index].homogeneous_redundancy;
 
     while (1) {
-        if (hrt) {
-            retval = wi.enumerate_all(enum_size, select_clause);
-        } else {
-            retval = wi.enumerate(enum_size, select_clause, order_clause, ___i);
-        }
+        retval = wi.enumerate(enum_size, select_clause, order_clause, ___i);
+
         if (retval) {
             if (retval != ERR_DB_NOT_FOUND) {
                 // If DB server dies, exit;
@@ -331,18 +327,6 @@ static bool get_job_from_db(
             }
             if (collision) {
                 continue;
-            }
-
-            // if using HR, check whether we've exceeded quota for this class
-            //
-            if (hrt) {
-                if (!hr_info.accept(hrt, wi.wu.hr_class)) {
-                    log_messages.printf(MSG_DEBUG,
-                        "rejecting [RESULT#%d] because HR class %d/%d over quota\n",
-                        wi.res_id, hrt, wi.wu.hr_class
-                    );
-                    continue;
-                }
             }
 
 //printf("wi.wu.name: %s\n", wi.wu.name);
@@ -466,8 +450,8 @@ static bool scan_work_array(vector<DB_WORK_ITEM> &work_items) {
             );
             if (found) {
                 log_messages.printf(MSG_NORMAL,
-                    "adding result [RESULT#%d] in slot %d\n",
-                    wi.res_id, i
+                    "adding result [RESULT#%d], wu %s in slot %d\n",
+                    wi.res_id, wi.wu.name, i
                 );
                 wu_result.resultid = wi.res_id;
                 wu_result.res_priority = wi.res_priority;

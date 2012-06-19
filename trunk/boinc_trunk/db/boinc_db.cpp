@@ -1876,32 +1876,21 @@ int DB_WORK_ITEM::enumerate(
         // use "r1" to refer to the result, since the feeder assumes that
         // (historical reasons)
         //
+
         sprintf(query,
-            "(select r1.id, r1.priority, r1.server_state, r1.report_deadline, workunit.* from result r1 force index(ind_res_st), workunit "
-            " where r1.server_state=%d and r1.workunitid=workunit.id and ci = 1 "
-            " %s "
-            " %s "
-            "limit 40"
-            ") union all ("
             "select r1.id, r1.priority, r1.server_state, r1.report_deadline, workunit.* from result r1 force index(ind_res_st), workunit "
-            " where r1.server_state=%d and r1.workunitid=workunit.id and ci = 0 "
-            " %s "
-            " %s "
-            "limit 40)",
+            " where r1.server_state=%d and r1.workunitid=workunit.id and ci = %d "
+            " %s %s limit 100",
             RESULT_SERVER_STATE_UNSENT,
-            select_clause,
-            order_clause,
-//            ___i > 1 ? limit/2 : (___i ? 100 :  0),
-            RESULT_SERVER_STATE_UNSENT,
+            ___i%2, // cpu intensity
             select_clause,
             order_clause
-//            ___i > 1 ? limit/2 : (___i ?  0 : 100)
         );
         retval = db->do_query(query);
         if (retval) return mysql_errno(db->mysql);
         cursor.rp = mysql_store_result(db->mysql);
         if (!cursor.rp) return mysql_errno(db->mysql);
-        cursor.active = true;
+        // cursor.active = true;
     }
     row = mysql_fetch_row(cursor.rp);
     if (!row) {
