@@ -63,6 +63,9 @@ public:
 	R rank(int);
 	O operator[](int);
 	size_t size();
+
+	vector<O> best();
+	O best_one();
 };
 
 class is_index_word: std::unary_function<word, bool> {

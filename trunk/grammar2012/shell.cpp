@@ -65,6 +65,8 @@ int new_sentence(g::sentence* s, g::database<g::diskdb>* d) {
 		cout << rank.rank(i) << ": " << rank[i]->print_str() << endl;
 	}
 
+        boost::shared_ptr<g::xml_fact> best = rank.best_one();
+
 	return 0;
 }
 
