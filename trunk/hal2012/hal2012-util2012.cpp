@@ -40,8 +40,7 @@ const string print_doublevector(const vector<vector<T> >& v) {
 const string print_vector(const vector<string>& v) {
 	stringstream ss;
 	ss << "[";
-	for (vector<string>::const_iterator i = v.begin(); i != v.end();
-			++i) {
+	for (vector<string>::const_iterator i = v.begin(); i != v.end(); ++i) {
 		if (i != v.begin())
 			ss << ", ";
 		ss << '"' << *i << '"';
@@ -159,6 +158,72 @@ bool safe_iregex(boost::regex& regex, const string& exp) {
 				<< endl;
 	}
 	return false;
+}
+
+int split_lines(vector<string>& lines, const string& prestr) {
+	string _str;
+	stringstream predata;
+	predata << prestr;
+	int i = 0;
+	while (getline(predata, _str)) {
+		lines.push_back(_str);
+		++i;
+	}
+	return i;
+}
+
+freehal_base::freehal_base() :
+		verbose(true), buffered(false), lang(), path() {
+}
+freehal_base::~freehal_base() {
+}
+
+void freehal_base::set_verbose(bool v) {
+	verbose = v;
+}
+bool freehal_base::is_verbose() const {
+	return verbose;
+}
+void freehal_base::set_buffered(bool v) {
+	buffered = v;
+}
+bool freehal_base::is_buffered() const {
+	return buffered;
+}
+void freehal_base::set_lang(const string& _lang) {
+	lang = _lang;
+}
+void freehal_base::set_path(const fs::path& _path) {
+	path = _path;
+}
+const string freehal_base::get_lang() const {
+	return lang;
+}
+const fs::path freehal_base::get_path() const {
+	return path;
+}
+const fs::path freehal_base::get_language_directory() const {
+	if (path.empty())
+		return "";
+	else
+		return path / ("lang_" + lang);
+}
+const fs::path freehal_base::get_cache_directory() const {
+	if (path.empty())
+			return "";
+		else
+			return path / ("cache_" + lang);
+}
+bool freehal_base::is_configured() const {
+	if (lang.empty()) {
+		cout << "Error! parser2012: language is undefined." << endl;
+		return false;
+	} else if (path.empty()) {
+		cout << "Error! parser2012: path is undefined." << endl;
+		return false;
+	} else {
+		return true;
+	}
 }
 
 }

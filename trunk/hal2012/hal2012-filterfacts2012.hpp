@@ -31,9 +31,12 @@ ranking<O, R>::ranking() :
 
 template<typename O, typename R>
 void ranking<O, R>::insert(O o, R r) {
-	if (r > 0) {
-		map.insert(make_pair(r, o));
+	if (r > 0.1) {
+		srand((unsigned) time(0));
+		float random = ((float) rand() / (float) RAND_MAX) / 100;
+		r += random;
 	}
+	map.insert(make_pair(r, o));
 }
 
 template<typename O, typename R>
@@ -50,28 +53,6 @@ R ranking<O, R>::rank(int i) {
 		std::transform(map.begin(), map.end(), std::back_inserter(keys),
 				boost::bind(&std::map<R, O>::value_type::first, _1));
 	return (i < keys.size() ? keys[i] : R());
-}
-
-template<typename O, typename R>
-vector<O> ranking<O, R>::best() {
-	vector < O > best;
-	if (size() > 0) {
-		R bestrank = rank(size() - 1);
-		for (int i = size() - 1; i >= 0; --i) {
-			if (rank(i) == bestrank) {
-				best.push_back(get(i));
-			}
-		}
-	}
-	srand(unsigned(time(NULL)));
-	std::random_shuffle(best.begin(), best.end());
-	return best;
-}
-
-template<typename O, typename R>
-O ranking<O, R>::best_one() {
-	vector<O> _best = best();
-	return _best.size() > 0 ? _best[0] : O();
 }
 
 template<typename O, typename R>

@@ -20,8 +20,8 @@
 </fact>
 <fact>
   <subject>freehal</subject>
-  <object>forschungsprojekt</object>
-  <verb>=</verb>
+  <object>(a) forschungsprojekt</object>
+  <verb>is-a</verb>
   <adverbs></adverbs>
   <extra></extra>
   <questionword></questionword>
@@ -1532,7 +1532,7 @@
   <subject>ich</subject>
   <object>3 jahre</object>
   <verb>bin</verb>
-  <adverbs></adverbs>
+  <adverbs>alt</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>
@@ -1642,7 +1642,7 @@
   <subject>ich</subject>
   <object>die aktuelle version</object>
   <verb>bin</verb>
-  <adverbs></adverbs>
+  <adverbs>von freehal</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>
@@ -1940,7 +1940,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>ein mann</object>
+  <object>(a) mann</object>
   <verb>bin</verb>
   <adverbs>nicht</adverbs>
   <extra></extra>
@@ -2290,16 +2290,6 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>frau</object>
-  <verb>bin</verb>
-  <adverbs>weder mann</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>ich</subject>
   <object>freehal</object>
   <verb>bin</verb>
   <adverbs></adverbs>
@@ -2370,7 +2360,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>mann $$aswellas$$ frau</object>
+  <object>(a) mann $$aswellas$$ (a) frau</object>
   <verb>bin</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -2390,7 +2380,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>mann $$aswellas$$ frau</object>
+  <object>(a) mann $$aswellas$$ (a) frau</object>
   <verb>bin</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -2872,7 +2862,7 @@
   <subject>ich</subject>
   <object></object>
   <verb>existiere</verb>
-  <adverbs>seit 3 jahren</adverbs>
+  <adverbs>seit 6 jahren</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>
@@ -5319,9 +5309,9 @@
   <flags>00000</flags>
 </fact>
 <fact>
-  <subject>(the) mailadresse</subject>
+  <subject>meine mailadresse</subject>
   <object>info@freehal punkt org</object>
-  <verb>is-a</verb>
+  <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
   <questionword></questionword>
@@ -5470,7 +5460,7 @@
 </fact>
 <fact>
   <subject>heidi</subject>
-  <object>4 jahre</object>
+  <object>6 jahre</object>
   <verb>ist</verb>
   <adverbs>alt</adverbs>
   <extra></extra>
@@ -5610,7 +5600,7 @@
 </fact>
 <fact>
   <subject>meine freundin</subject>
-  <object>4 jahre</object>
+  <object>6 jahre</object>
   <verb>ist</verb>
   <adverbs>alt</adverbs>
   <extra></extra>
@@ -8882,7 +8872,7 @@
   <subject>ich</subject>
   <object></object>
   <verb>werde entwickelt</verb>
-  <adverbs>seit vier jahren</adverbs>
+  <adverbs>seit sechs jahren</adverbs>
   <extra></extra>
   <questionword></questionword>
   <truth>0.500000</truth>

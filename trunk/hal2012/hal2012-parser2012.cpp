@@ -7,14 +7,18 @@
 
 #include "hal2012-util2012.h"
 #include "hal2012-parser2012.h"
+#include "hal2012-xml2012.h"
 
 namespace grammar2012 {
 
 sentence::sentence() :
-		input(), mode(UNKNOWN), words_list(), tags_list(), p(0) {
+		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+				0) {
 }
+
 sentence::sentence(parser* _p, const string& _input) :
-		input(_input), mode(UNKNOWN), words_list(), tags_list(), p(_p) {
+		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+				_p) {
 
 	{
 		string tmp(input);
@@ -30,6 +34,10 @@ sentence::sentence(parser* _p, const string& _input) :
 
 	find_mode();
 }
+
+sentence::~sentence() {
+}
+
 void sentence::find_mode() {
 	string message;
 	if (words_list.size() == 0) {
@@ -113,12 +121,36 @@ const string sentence::to_str() const {
 
 void sentence::parse() {
 	parsed = p->get_grammar()->parse(this->to_grammar_input());
+
+	string xml_in = grammar::print_xml(parsed);
+	string xml_pre;
+	halxml_ordertags(xml_in, xml_pre);
+	vector<string> lines;
+	split_lines(lines, xml_pre);
+	for (int i = 0; i < lines.size(); ++i) {
+		if (lines[i] == "<") {
+			++i;
+			if (lines[i] == "fact") {
+				++i;
+				xfact.reset(halxml_readxml_fact(lines, i));
+				xfact->trim();
+				xfact->prepare_tags(p->get_tagger());
+				break;
+			}
+		}
+	}
+	if (xfact.get() == 0) {
+		cout << "Error! did'nt recognize XML format "
+				"in sentence::parse()!" << endl;
+		cout << "lines:" << endl;
+		copy(lines.begin(), lines.end(), ostream_iterator<string>(cout, "\n"));
+	}
 }
 
 const string sentence::get_input() const {
 	return input;
 }
-Mode sentence::get_mode() const {
+sentence_mode sentence::get_mode() const {
 	return mode;
 }
 vector<string> sentence::get_words_list() const {
@@ -127,13 +159,15 @@ vector<string> sentence::get_words_list() const {
 vector<tags*> sentence::get_tags_list() const {
 	return tags_list;
 }
-parsed_type* sentence::get_parsed() const {
+parsed_t* sentence::get_parsed() const {
 	return parsed;
+}
+boost::shared_ptr<xml_fact> sentence::get_fact() const {
+	return xfact;
 }
 
 parser::parser() :
-		input_raw(), input_clean(), input_simplified(), input_extended(), sentences(), verbose(
-				true), buffered(false), lang(), path() {
+		freehal_base(), input_raw(), input_clean(), input_simplified(), input_extended(), sentences() {
 }
 parser::~parser() {
 	for (size_t i = 0; i < sentences.size(); ++i) {
@@ -145,11 +179,7 @@ parser::~parser() {
 }
 
 void parser::parse(const string& txt) {
-	if (lang.size() == 0) {
-		cout << "Error! parser2012: language is undefined." << endl;
-		return;
-	} else if (path.size() == 0) {
-		cout << "Error! parser2012: path is undefined." << endl;
+	if (!freehal_base::is_configured()) {
 		return;
 	} else if (t == 0) {
 		cout << "Error! parser2012: tagger is undefined." << endl;
@@ -175,6 +205,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		input_simplified.clear();
 		algo::split(input_simplified, input_clean, algo::is_any_of("@"),
 				algo::token_compress_on);
 		for (size_t i = 0; i < input_simplified.size(); ++i) {
@@ -186,6 +217,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		input_extended.clear();
 		std::copy(input_simplified.begin(), input_simplified.end(),
 				back_inserter(input_extended));
 		for (size_t i = 0; i < input_extended.size(); ++i) {
@@ -197,6 +229,7 @@ void parser::parse(const string& txt) {
 	}
 
 	{
+		sentences.clear();
 		for (size_t i = 0; i < input_extended.size(); ++i) {
 			sentences.push_back(new sentence(this, input_extended[i]));
 		}
@@ -218,23 +251,11 @@ vector<sentence*> parser::get_sentences() const {
 	return sentences;
 }
 
-void parser::set_lang(const string& _lang) {
-	lang = _lang;
-}
-void parser::set_path(const string& _path) {
-	path = _path;
-}
 void parser::set_tagger(tagger* _t) {
 	t = _t;
 }
 void parser::set_grammar(grammar* _g) {
 	g = _g;
-}
-const string parser::get_lang() const {
-	return lang;
-}
-const string parser::get_path() const {
-	return path;
 }
 tagger* parser::get_tagger() const {
 	return t;
@@ -539,7 +560,7 @@ void parser::simplify_input(string& str) {
 
 	regex_ireplace(str, " hab ", " habe ");
 
-	if (!regex_find(str, "(heiss|name)") && lang == "de") {
+	if (!regex_find(str, "(heiss|name)") && lang == "de" && str.size() > 20) {
 		regex_ireplace(str, " FreeHAL(.?.?.?.?)$", " \\1");
 	}
 
@@ -552,10 +573,9 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)",
 			"\\1_\\2_etwas_\\3");
 
-	ifstream remove_words_file;
-	remove_words_file.open(
-			(path + "/lang_" + lang + "/remove-words.csv").c_str());
-	if (i) {
+	fs::ifstream remove_words_file;
+	remove_words_file.open(get_language_directory() / "remove-words.csv");
+	if (remove_words_file.is_open()) {
 		string line;
 		vector<string> remove_words_file_lines;
 		while (std::getline(remove_words_file, line)) {
@@ -1598,9 +1618,9 @@ void parser::simplify_input(string& str) {
 	// cout << "parser2012: step 9: " << str << endl;
 
 	{
-		ifstream male_hist_file;
-		male_hist_file.open((path + "/lang_" + lang + "/male.history").c_str());
-		if (i) {
+		fs::ifstream male_hist_file;
+		male_hist_file.open(get_language_directory() / "male.history");
+		if (male_hist_file.is_open()) {
 			string line;
 			string last_male_substantive;
 			while (std::getline(male_hist_file, line)) {
@@ -1613,10 +1633,9 @@ void parser::simplify_input(string& str) {
 		}
 	}
 	{
-		ifstream female_hist_file;
-		female_hist_file.open(
-				(path + "/lang_" + lang + "/male.history").c_str());
-		if (i) {
+		fs::ifstream female_hist_file;
+		female_hist_file.open(get_language_directory() / "female.history");
+		if (female_hist_file.is_open()) {
 			string line;
 			string last_female_substantive;
 			while (std::getline(female_hist_file, line)) {
@@ -1677,20 +1696,6 @@ void parser::replace_he(string& text, const string& replacement) {
 void parser::replace_she(string& text, const string& replacement) {
 	regex_ireplace(text, "(^|\\s)(sie)(\\s|$)", "\\1" + replacement + "\\3");
 	regex_ireplace(text, "(^|\\s)(she)(\\s|$)", "\\1" + replacement + "\\3");
-}
-
-void parser::set_verbose(bool v) {
-	verbose = v;
-}
-bool parser::is_verbose() const {
-	return verbose;
-}
-
-void parser::set_buffered(bool v) {
-	buffered = v;
-}
-bool parser::is_buffered() const {
-	return buffered;
 }
 
 const string print_vector(const vector<sentence*>& v) {

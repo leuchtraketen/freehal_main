@@ -179,36 +179,6 @@
   </clause>
 </fact>
 <fact>
-  <subject>es</subject>
-  <object>mir so</object>
-  <verb>geht</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-  <clause>
-    <subject>es</subject>
-    <object>mir</object>
-    <verb>f=> geht</verb>
-    <adverbs>sehr gut</adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.500000</truth>
-    <flags>00000</flags>
-  </clause>
-  <clause>
-    <subject>100</subject>
-    <object></object>
-    <verb></verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.500000</truth>
-    <flags>00000</flags>
-  </clause>
-</fact>
-<fact>
   <subject>$a$</subject>
   <object>durst</object>
   <verb>hat</verb>
