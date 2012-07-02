@@ -8,6 +8,7 @@
 #include "hal2012-grammar2012.h"
 #include "hal2012-tagger2012.h"
 #include "hal2012-parser2012.h"
+#include "hal2012-phrase2012.h"
 #include "hal2012-xml2012.h"
 #include "hal2012-diskdb2012.h"
 #include "hal2012-filterfacts2012.h"
@@ -36,7 +37,7 @@ int print_memory() {
 	return system("ps aux | grep main | grep -v grep");
 }
 
-int new_sentence(g::sentence* s, g::database<g::diskdb>* d) {
+int new_sentence(g::sentence* s, g::database<g::diskdb>* d, g::phraser* h) {
 	boost::shared_ptr<g::xml_fact> infact = s->get_fact();
 	if (!infact)
 		return 1;
@@ -69,6 +70,9 @@ int new_sentence(g::sentence* s, g::database<g::diskdb>* d) {
 	cout << endl;
 	cout << best->print_str() << endl;
 
+	string phrased = h->phrase(best);
+	cout << phrased << endl;
+
 	return 0;
 }
 
@@ -95,6 +99,13 @@ int shell() {
 	p->set_tagger(_t);
 	p->set_grammar(_g);
 	p->set_verbose(false);
+
+	g::phraser* h = new g::phraser();
+	h->set_lang(language);
+	h->set_path(path);
+	h->set_tagger(_t);
+	h->set_grammar(_g);
+	h->set_verbose(true);
 
 	g::filterlist::set_verbose(false);
 
@@ -127,7 +138,7 @@ int shell() {
 		p->parse(input);
 		const vector<g::sentence*>& vs = p->get_sentences();
 		foreach (g::sentence* s, vs) {
-			new_sentence(s, d);
+			new_sentence(s, d, h);
 		}
 
 #ifdef READLINE

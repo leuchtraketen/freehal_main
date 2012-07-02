@@ -10,6 +10,9 @@
 #include "hal2012-parser2012.h"
 #include "hal2012-util2012.h"
 
+const string language(language);
+const fs::path path(path);
+
 void grammar2012::tagger::ask_user(const string word, grammar2012::tags* tags) {
 }
 EXTERN_C char* check_config(const char* name, const char* _default) {
@@ -19,8 +22,8 @@ EXTERN_C char* check_config(const char* name, const char* _default) {
 int main(int argc, char** argv) {
 
 	grammar2012::tagger* _t = new grammar2012::tagger();
-	_t->set_lang("de");
-	_t->set_path(".");
+	_t->set_lang(language);
+	_t->set_path(path);
 	_t->set_verbose(true);
 	_t->set_buffered(true);
 	_t->read_pos_file("brain.pos");
@@ -28,16 +31,16 @@ int main(int argc, char** argv) {
 	_t->read_regex_pos_file("regex.pos");
 
 	grammar2012::grammar* _g = new grammar2012::grammar();
-	_g->set_lang("de");
-	_g->set_path(".");
+	_g->set_lang(language);
+	_g->set_path(path);
 	_g->read_grammar("grammar.txt");
 	_g->set_verbose(true);
 	_g->set_buffered(true);
 	_g->expand();
 
 	grammar2012::parser* p = new grammar2012::parser();
-	p->set_lang("de");
-	p->set_path(".");
+	p->set_lang(language);
+	p->set_path(path);
 	p->set_tagger(_t);
 	p->set_grammar(_g);
 	p->set_verbose(true);
