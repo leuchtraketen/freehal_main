@@ -254,6 +254,11 @@
 			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
 		</link>
 		<link>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-phrase2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-phrase2012.cpp</location>
+		</link>
+		<link>
 			<name>[Targets]/[exe] shell/Header Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>

@@ -70,6 +70,7 @@ int new_sentence(g::sentence* s, g::database<g::diskdb>* d, g::phraser* h) {
 	cout << endl;
 	cout << best->print_str() << endl;
 
+	best->prepare_tags(h->get_tagger());
 	string phrased = h->phrase(best);
 	cout << phrased << endl;
 
@@ -90,7 +91,7 @@ int shell() {
 	_g->set_lang(language);
 	_g->set_path(path);
 	_g->read_grammar("grammar.txt");
-	_g->set_verbose(false);
+	_g->set_verbose(true);
 	_g->expand();
 
 	g::parser* p = new g::parser();

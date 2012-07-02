@@ -50,12 +50,29 @@ const string phraser::phrase(boost::shared_ptr<xml_fact> xfact) {
 	return joined;
 }
 
-const string phraser::join(const vector<word>& words) {
+const string phraser::join(vector<word>& words) {
+	// upper case nouns
+	foreach (word& w, words) {
+		if (w.has_tags() && w.get_tags()->first == "n")
+			w.set_word(ucfirst(w.get_word()));
+		else if (w.has_tags())
+			cout << w << ", tags=" << w.get_tags()->first << endl;
+	}
+
+	// words to strings
 	vector<string> strings;
 	std::transform(words.begin(), words.end(), std::back_inserter(strings),
 			boost::bind(&word::get_word, _1));
+	// join them with spaces as seperators
+	string joined = boost::algorithm::join(strings, " ");
 
-	string joined = boost::algorithm::join(list, " ");
+	// syntax
+	regex_replace(joined, "[ ]+([.?!;,])", "\\1");
+	if (!regex_find(joined, "[?!]")) {
+		joined += ".";
+	}
+	joined = ucfirst(joined);
+
 	return joined;
 }
 

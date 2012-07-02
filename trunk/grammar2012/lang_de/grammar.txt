@@ -101,7 +101,8 @@ r-nounphrase:
     r-nounphrase-nouns
     d-adjective r-nounphrase-nouns
     d-article r-nounphrase-nouns
-    d-article d-adjective r-nounphrase-nouns
+    d-adjective s-nounphrases
+    d-article s-nounphrases
     d-article
 
 r-nounphrase-nouns:

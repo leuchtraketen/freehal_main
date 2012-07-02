@@ -27,7 +27,7 @@ private:
 	tagger* t;
 	grammar* g;
 
-	const string join(const vector<word>&);
+	const string join(vector<word>&);
 	void arrange(vector<word>&, boost::shared_ptr<xml_fact>);
 
 	friend class boost::serialization::access;
