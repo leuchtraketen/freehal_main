@@ -63,7 +63,11 @@ vector<O> ranking<O, R>::best() {
 			}
 		}
 	}
-	srand(unsigned(time(NULL)));
+	bool initialized = false;
+	if (!initialized) {
+		srand(unsigned(time(NULL)));
+		initialized = true;
+	}
 	std::random_shuffle(best.begin(), best.end());
 	return best;
 }

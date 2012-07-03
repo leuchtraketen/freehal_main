@@ -365,7 +365,6 @@ filterrule::~filterrule() {
 }
 
 void filterlist::rule() {
-
 	for (int i = 0; i < rules.size(); ++i) {
 		filterrule* func = rules[i].get();
 		m = (*func)(make_pair(a, b), m);
