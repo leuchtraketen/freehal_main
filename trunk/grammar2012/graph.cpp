@@ -10,8 +10,8 @@
 #include "hal2012-parser2012.h"
 #include "hal2012-util2012.h"
 
-const string language(language);
-const fs::path path(path);
+const string language("de");
+const fs::path path(".");
 
 void grammar2012::tagger::ask_user(const string word, grammar2012::tags* tags) {
 }
