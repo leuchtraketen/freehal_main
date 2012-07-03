@@ -52,12 +52,14 @@ xml_obj_mode xml_obj::get_mode() const {
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 		boost::shared_ptr<xml_obj> i) {
 	o->content.push_back(i);
+	o->reset_cache();
 	return o;
 }
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 		vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
+		o->reset_cache();
 	}
 	return o;
 }
@@ -72,11 +74,13 @@ const boost::shared_ptr<xml_obj>& operator >>(
 }
 xml_obj* operator <<(xml_obj* o, boost::shared_ptr<xml_obj> i) {
 	o->content.push_back(i);
+	o->reset_cache();
 	return o;
 }
 xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
+		o->reset_cache();
 	}
 	return o;
 }

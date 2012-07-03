@@ -53,11 +53,16 @@ const string phraser::phrase(boost::shared_ptr<xml_fact> xfact) {
 const string phraser::join(vector<word>& words) {
 	// upper case nouns
 	foreach (word& w, words) {
+		if (is_verbose() && w.has_tags())
+			cout << "phrase: word: " << w << ", tags: "
+					<< print_tags(w.get_tags()) << endl;
+
 		if (w.has_tags() && w.get_tags()->first == "n")
 			w.set_word(ucfirst(w.get_word()));
-		else if (w.has_tags())
-			cout << w << ", tags=" << w.get_tags()->first << endl;
 	}
+
+	if (words.size() >= 1)
+		words[0].set_word(ucfirst(words[0].get_word()));
 
 	// words to strings
 	vector<string> strings;
@@ -71,7 +76,6 @@ const string phraser::join(vector<word>& words) {
 	if (!regex_find(joined, "[?!]")) {
 		joined += ".";
 	}
-	joined = ucfirst(joined);
 
 	return joined;
 }
