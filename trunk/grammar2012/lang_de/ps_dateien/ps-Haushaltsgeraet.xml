@@ -1,0 +1,790 @@
+<fact>
+  <subject>besen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>buegeleisen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dampfbuegeleisen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dampfreiniger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dampfstrahlreiniger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faltbrett</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fensterleder</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>feudel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>foen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>giesskanne</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haartrockner</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haekelnadel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hammer</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>handstaubsauger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haushaltsschere</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heimtrainer</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heissmangel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heizkissen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heizluefter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hochdruckreiniger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kehrblech</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerzen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kerzenhalter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kleiderbuegel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>klobuerste</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lochzange</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luftbefeuchter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luftbefeuchter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>massagegeraet</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>massband</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mehrfachsteckdose</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mopp</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nadelkissen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>naehmaschine</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>naehnadeln</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>personenwaage</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>putzeimer</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rasiersoiegel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>saugglocke oder poempel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schminkspiegel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schreibtischleuchte</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schrubber</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schuhpoliermaschine</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sonnenbank</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spindel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spinnrad</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>staubsauger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>staubwedel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stehleuchte</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stickrahmen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stoffschere</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stopfei</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>strahlungsheizung</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>strickmaschine</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stricknadeln</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tablett</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>taschenlampe</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>teppichreiniger</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tischleuchte</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>toilettenrollenhalter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>trittleiter</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ventilator</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verlaengerungskabel</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vorhaengeschloss</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waermedecke</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waescheklammer</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waeschekorb</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waescheleine</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waeschestaender</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waeschetrockner</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waschmaschine</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waschtrockner</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>webrahmen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>webschiffchen</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wecker</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wischmopp</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wurzelbuerste</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zahnputzbecher</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zerstaeuberflasche</subject>
+  <object>haushaltsgeraet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

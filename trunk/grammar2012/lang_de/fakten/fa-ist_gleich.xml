@@ -1,0 +1,1780 @@
+<fact>
+  <subject>stinkt</subject>
+  <object>riecht unangenehm</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hauptstadt</subject>
+  <object>stadt</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angst haben</subject>
+  <object>sich fuerchten</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>antialkoholisch</subject>
+  <object>alkoholfrei</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beibringen</subject>
+  <object>lernen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>durstig sein</subject>
+  <object>durst haben</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gerne wissen</subject>
+  <object>wissen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geschaffen</subject>
+  <object>entwickelt</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine arbeit</subject>
+  <object>arbeitslos</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sich fuerchten</subject>
+  <object>angst haben</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tut</subject>
+  <object>macht</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wissen</subject>
+  <object>gerne wissen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wochentag</subject>
+  <object>tag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wuetend sein</subject>
+  <object>wut haben</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wuetend sein</subject>
+  <object>zornig sein</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wut haben</subject>
+  <object>wuetend sein</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zornig sein</subject>
+  <object>wuetend sein</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yangtse</subject>
+  <object>chang jiang</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chang jiang</subject>
+  <object>yangtse</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jenisei</subject>
+  <object>angara</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angara</subject>
+  <object>jenisei</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shatt el arab</subject>
+  <object>euphrat</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>euphrat</subject>
+  <object>shatt el arab</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shatt el arab</subject>
+  <object>tigris</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tigris</subject>
+  <object>shatt el arab</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tigris</subject>
+  <object>euphrat</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>euphrat</subject>
+  <object>tigris</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brahmaputra</subject>
+  <object>tsangpo</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tsangpo</subject>
+  <object>brahmaputra</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>murray</subject>
+  <object>darling</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>darling</subject>
+  <object>murray</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tarim</subject>
+  <object>khotan</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>khotan</subject>
+  <object>tarim</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gemacht</subject>
+  <object>getan</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weisst du was</subject>
+  <object>was ist</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beruflich</subject>
+  <object>beruf</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beruf</subject>
+  <object>beruflich</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ewig leben</subject>
+  <object>unsterblich sein</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>unsterblich sein</subject>
+  <object>ewig leben</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>film</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>agentenfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anti kriegsfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filmparodie</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heimatfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>historienfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kriminalfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liebesfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martial arts film</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>musikfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bibelfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erotikfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fantasyfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filmdrama</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filmbiografie</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>actionfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abenteuerfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>science fiction film</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>western</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>musicalfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>horrorfilm</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>filmkomoedie</subject>
+  <object>ein eigenname</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gehe</subject>
+  <object>gehen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alkoholisches getraenk</subject>
+  <object>alkohol</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alkohol</subject>
+  <object>alkoholisches getraenk</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schimpfwoerter</subject>
+  <object>schimpfwort</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sonnig</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>regnerisch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>bewoelkt</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>windig</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sonnenschein</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>regen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schneefall</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>hagel</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sturm</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>stuermisch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wolkenbruch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>gewitter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>gewittrig</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>abendrot</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>abkuehlung</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>agrarmeteorologie</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>alpengluehen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>altweibersommer</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>azorenhoch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>barometer</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>bedeckungsgrad</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>blitz</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>boe</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>cirrocumulus</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>cirrostratus</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>cirrus</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>dauerfrost</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>dauerniederschlag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>dauerregen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>diesig</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>donner</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>duerre</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>temperatur</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>eisbruch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>eisglaette</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>eiskoerner</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>eistage</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>foehn</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>frost</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>frostgraupel</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>gefrierender regen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>genuatief</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>gewitter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>glatteis</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>grosswetterlage</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>hagel</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>heisser tag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>heiter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>hochdruckgebiet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>hundstage</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>inversionswolken</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>islandtief</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>jahrhundertsommer</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>kaltfront</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>kaltluftstau</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>klima</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>klimafaktoren</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>klimascheide</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>kondensstreifen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>landregen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>lokalklima</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>luftdruck</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>lufttemperatur</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>meteorologie</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>meteosat</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>monsunregen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>morgenrot</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nachtfrost</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nebel</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nebeltag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nebeltreiben</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>niederschlag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>niederschlagshoehe</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>niederschlagstag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nieselregen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>nordfoehn</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>orkan</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>packeis</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>pappschnee</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>polarlichter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>polarluft</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>pulverschnee</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>regen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>regenbogen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>regentag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>reif</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sandsturm</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schafskaelte</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schauer</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schnee</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schneesturm</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>schneetag</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>starkregen</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sturm</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>sturmtief</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>taifun</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>tauwetter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>meteorologie</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>tiefdruckgebiet</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>tornado</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>unwetter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>waermegewitter</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>warmfront</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wetterlage</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wetterradar</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wetterstation</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wetterwarnung</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>windstaerke</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>windstille</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wolke</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>wolkenbruch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wetter</subject>
+  <object>zwischenhoch</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

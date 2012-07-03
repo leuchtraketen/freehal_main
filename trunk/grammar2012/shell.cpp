@@ -123,7 +123,8 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	d->set_path(path);
 	d->set_tagger(_t);
 	print_memory();
-	d->prepare("../hal2012/lang_de");
+	// d->prepare("../hal2012/lang_de");
+	d->prepare(d->get_language_directory());
 
 	return 0;
 }

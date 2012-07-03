@@ -1,0 +1,770 @@
+<fact>
+  <subject>palmatius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pam</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pamela</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pamina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pandora</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pankraz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>parsifal</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>parzival</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paschalis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patrick</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patrik</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patrizia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patrizius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patroklus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paula</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paulina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pauline</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paulinus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pebbles</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>peer</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelagia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelagius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>penelope</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) name</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>per</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>perdita</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>perpetua</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>perpetuus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>persephone</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>peter</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petronella</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petronia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petronilla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petunia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phaedra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phibie</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philemon</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philibert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philipp</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philippa</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philippine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philomena</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philomene</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phoebe</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phyllis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phöbe</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>phöbus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>piet</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pippin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pirmin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>piroschka</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pitt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>placidus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>plektrudis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pluto</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>poldi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pollux</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>polykarp</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pontian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pontianus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>potifar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>potiphar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>praxedis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>primus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>prisca</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priscilla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priska</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priszilla</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pyrrhus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>quintin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>quirin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

@@ -1,0 +1,132 @@
+seid:
+  type: n
+waers:
+  type: n
+month:
+  type: adj
+f=:
+  type: n
+q=:
+  type: n
+dus:
+  type: adj
+nimms:
+  type: n
+edlen:
+  type: v
+ueberlegs:
+  type: n
+ueberlege:
+  type: adj
+erklaers:
+  type: n
+habs:
+  type: n
+probiers:
+  type: n
+mirs:
+  type: n
+isses:
+  type: adj
+nehms:
+  type: n
+glaubs:
+  type: n
+stimmts:
+  type: adj
+isset:
+  type: adj
+dirs:
+  type: n
+hl:
+  type: n
+ists:
+  type: n
+werdet:
+  type: adj
+wuerdet:
+  type: adj
+werds:
+  type: n
+year:
+  type: adj
+herkommt:
+  type: adj
+kitt:
+  type: adj
+aswellas:
+  type: n
+gets:
+  type: n
+finds:
+  type: n
+energiewesen:
+  type: adj
+gings:
+  type: n
+wers:
+  type: n
+mans:
+  type: n
+ghts:
+  type: n
+machet:
+  type: adj
+geds:
+  type: n
+ihc:
+  type: n
+hoffe:
+  type: n
+geographie:
+  type: adj
+nochmal:
+  type: adj
+aussiehe:
+  type: v
+musse:
+  type: adj
+gibe:
+  type: adj
+herkomme:
+  type: adj
+aussenseiter:
+  type: v
+randomname:
+  type: adj
+erstaunt:
+  type: adj
+entwickele:
+  type: adj
+erinnere:
+  type: adj
+laeufe:
+  type: adj
+raucht:
+  type: v
+schaetzt:
+  type: v
+auswaehle:
+  type: adj
+ausantworten:
+  type: adj
+ins:
+  type: n
+dazulerne:
+  type: adj
+mage:
+  type: adj
+insolventen:
+  type: adj
+abgibt:
+  type: adj
+anschuetz:
+  type: n
+schleiden:
+  type: n
+foehr:
+  type: adj
+sol:
+  type: n
+insolventen:
+  type: adj

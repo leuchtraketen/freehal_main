@@ -1,0 +1,520 @@
+<fact>
+  <subject>octavia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>octavian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>octavius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odila</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odilia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odilie</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odoaker</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odovacar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odowakar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>odowaker</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oktavia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oktavian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oktavus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>olaf</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ole</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oliver</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>olivera</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>olivia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>olympia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ommo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ophelia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oranna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orell</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orion</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ornella</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>orsina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ortraud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ortrud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ortrun</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ortwin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>osbert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oskar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oswald</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oswin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otfried</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otger</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otgunde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>othmar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otila</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otmar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottfried</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottilia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottilie</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottmar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottokar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

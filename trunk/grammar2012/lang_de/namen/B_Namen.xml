@@ -1,0 +1,1530 @@
+<fact>
+  <subject>babette</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>babsi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bailey</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balbina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balder</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balduin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baldur</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baldwin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balthasar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balthild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balthilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balu</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baptist</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>barbara</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>barbra</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>barnabas</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bartel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>barthold</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bartholomaeus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>basil</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>basileo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bassel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>basti</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bastian</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bastienne</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bathilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bathseba</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>batseba</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bea</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beat</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beata</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beate</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beath</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beatrix</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belana</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belanna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belinda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belinde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belisar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bella</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bendix</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benedicta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benedikt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benedikta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benen</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beniese</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benigna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjy</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benno</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berahthraban</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berengar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berenice</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berenike</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernd</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berndt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernfried</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berngar</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernger</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernhard</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernharda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernharde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernhardin</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernhardina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernhardine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bernward</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berte</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berthild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berthilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berthold</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berti</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertold</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertolt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertrad</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertrada</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertrade</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertradis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertram</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bertrand</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beryl</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beryll</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bethli</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betlindis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bettina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beverley</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beverly</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bianca</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bianka</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bibi</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bibiana</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bibiane</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>binia</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birger</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birgid</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birgit</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birgitt</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birk</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birte</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birthe</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bithja</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bitja</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blanda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blandina</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blandine</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blanka</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blictrudis</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bliktrud</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blonda</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bodo</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bodobert</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bonaventura</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bonifatius</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bonifaz</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>borchard</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>borghild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bosse</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>botho</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>braida</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brigitta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brigitte</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bringfried</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bringfriede</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>briska</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brita</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>britta</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein name</subject>
+  <object></object>
+  <verb>brun ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruna</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brunhild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brunhilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruno</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brutus</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bryan</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruenhild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruenhilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burghard</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burghild</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burghilde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burglinde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burgunde</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burkard</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burkart</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burkhard</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burkhart</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>baerbel</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
