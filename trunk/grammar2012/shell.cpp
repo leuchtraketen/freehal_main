@@ -128,7 +128,7 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	return 0;
 }
 
-string new_input(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
+string get_answer(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		g::database<g::diskdb>* d, string input) {
 
 	p->parse(input);
@@ -138,6 +138,35 @@ string new_input(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		output.push_back(new_sentence(_t, _g, p, h, d, s));
 	}
 	return algo::join(output, " ");
+}
+
+void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
+		g::database<g::diskdb>* d, const string& input,
+		const string& output_prefix) {
+
+	p->parse(input);
+	const vector<g::sentence*>& vs = p->get_sentences();
+	int k = 0;
+	foreach (g::sentence* s, vs) {
+		stringstream ss;
+		ss << ++k;
+		const string file_prefix = output_prefix + ss.str();
+
+		ofstream o((file_prefix + ".dot").c_str());
+		o << grammar2012::grammar::print_graph(s->get_parsed());
+		o.close();
+
+		const string dot_args = " -Tpng " + file_prefix + ".dot > "
+				+ file_prefix + ".png";
+#if defined(MINGW) || defined(WIN32)
+		const string cmdline = "dot.exe " + dot_args;
+#else
+		const string cmdline = "dot " + dot_args;
+#endif
+		if (::system(cmdline.c_str())) {
+			cout << "Error! cannot execute: " << cmdline << endl;
+		}
+	}
 }
 
 int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
@@ -162,7 +191,7 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 				|| input == "exit")
 			break;
 
-		const string output = new_input(_t, _g, p, h, d, input);
+		const string output = get_answer(_t, _g, p, h, d, input);
 
 		history << "You:     " << input << endl;
 		history << "Freehal: " << output << endl;
@@ -185,7 +214,7 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	return 0;
 }
 
-int write_output(string input, string outputfile) {
+int write_output(const string& input, const string& outputfile) {
 	fs::ofstream o(outputfile);
 	if (o.is_open()) {
 		o << input;
@@ -201,19 +230,30 @@ int main(int ac, char* av[]) {
 	try {
 		int verbose = 0;
 
-		po::options_description desc("Allowed options");
-		desc.add_options()("help,h", "help")("verbose,v",
+		po::options_description generic("Generic options");
+		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
-				"enable verbosity (optionally specify level)")("input,i",
-				po::value<string>(), "question to ask")("output-file,o",
-				po::value<string>(), "write output to this file");
+				"enable verbosity (optionally specify level)");
+
+		po::options_description io("I/O options");
+		io.add_options()("input,i", po::value<string>(), "question to ask")(
+				"output-file,o", po::value<string>(),
+				"write the answer to this file")("graph-file,g",
+				po::value<string>(),
+				"write the syntax graph to files with this prefix, "
+						"followed by an index (first is 1), "
+						"with the file extension .dot, and use "
+						"graphviz to convert it to a PNG file");
+
+		po::options_description cmdline_options;
+		cmdline_options.add(generic).add(io);
 
 		po::variables_map vm;
-		po::store(po::parse_command_line(ac, av, desc), vm);
+		po::store(po::parse_command_line(ac, av, cmdline_options), vm);
 		po::notify(vm);
 
 		if (vm.count("help")) {
-			cout << desc << "\n";
+			cout << cmdline_options << "\n";
 			return 1;
 		}
 
@@ -228,20 +268,32 @@ int main(int ac, char* av[]) {
 		g::phraser* h = new g::phraser();
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 
-		if (vm.count("input") > 0 && vm.count("output-file") > 0) {
+		if (vm.count("input") > 0) {
 			string input = vm["input"].as<string>();
-			string outputfile = vm["output-file"].as<string>();
 			cout << "Input: " << input << ".\n";
-
 			init(_t, _g, p, h, d, verbose);
-			const string output = new_input(_t, _g, p, h, d, input);
-			write_output(input, outputfile);
 
-		} else if (vm.count("input") > 0 && vm.count("output-file") == 0) {
-			cerr << "Error! input string but no output file given." << endl;
+			if (vm.count("output-file") > 0) {
+				string outputfile = vm["output-file"].as<string>();
+				const string output = get_answer(_t, _g, p, h, d, input);
+				write_output(input, outputfile);
+			}
+			if (vm.count("graph-file") > 0) {
+				string graphfile = vm["graph-file"].as<string>();
+				get_graph(_t, _g, p, h, d, input, graphfile);
+			}
+
+			if (vm.count("output-file") == 0 && vm.count("graph-file") == 0) {
+				cerr << "Error! input string "
+						<< "but no answer or graph output file given." << endl;
+			}
 
 		} else if (vm.count("input") == 0 && vm.count("output-file") > 0) {
-			cerr << "Error! output file but no input string given." << endl;
+			cerr << "Error! answer output file but no input string given."
+					<< endl;
+		} else if (vm.count("input") == 0 && vm.count("graph-file") > 0) {
+			cerr << "Error! graph output file but no input string given."
+					<< endl;
 
 		} else {
 			init(_t, _g, p, h, d, verbose);
