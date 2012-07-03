@@ -28,8 +28,8 @@ namespace g = grammar2012;
 #include <boost/program_options.hpp>
 namespace po = boost::program_options;
 
-const string language("de");
-const fs::path path(".");
+string language("de");
+fs::path path(".");
 
 void g::tagger::ask_user(const string word, g::tags* tags) {
 	// TODO
@@ -220,7 +220,10 @@ int main(int ac, char* av[]) {
 		po::options_description generic("Generic options");
 		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
-				"enable verbosity (optionally specify level)");
+				"enable verbosity (optionally specify level)")("language,l",
+				po::value<string>(), "the language")("path,p",
+				po::value<string>(), "the path containing the lang_XY "
+						"and cache_XY directories");
 
 		po::options_description io("I/O options");
 		io.add_options()("input,i", po::value<string>(), "the input sentences")(
@@ -243,6 +246,13 @@ int main(int ac, char* av[]) {
 		if (vm.count("help")) {
 			cout << cmdline_options << "\n";
 			return 1;
+		}
+
+		if (vm.count("path")) {
+			path = vm["path"].as<string>();
+		}
+		if (vm.count("language")) {
+			language = vm["language"].as<string>();
 		}
 
 		int verbose = 0;
