@@ -220,16 +220,19 @@ int main(int ac, char* av[]) {
 		po::options_description generic("Generic options");
 		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
-				"enable verbosity (optionally specify level)")("language,l",
-				po::value<string>(), "the language")("path,p",
-				po::value<string>(), "the path containing the lang_XY "
+				"enable verbosity (optionally specify level)");
+
+		po::options_description lang("Language options");
+		lang.add_options()("language,l",
+				po::value<string>()->implicit_value("de"), "the language")("path,p",
+				po::value<string>()->implicit_value("path"), "the path containing the lang_XY "
 						"and cache_XY directories");
 
 		po::options_description io("I/O options");
 		io.add_options()("input,i", po::value<string>(), "the input sentences")(
-				"input-file,r", po::value<string>(),
+				"input-file,j", po::value<string>(),
 				"the file to read the input sentences from")("output-file,o",
-				po::value<string>(), "write the answer to this file")(
+				po::value<string>(), "the file to write the answer to")(
 				"graph-file,g", po::value<string>(),
 				"write the syntax graph to files with this prefix, "
 						"followed by an index (first is 1), "
@@ -237,7 +240,7 @@ int main(int ac, char* av[]) {
 						"graphviz to convert it to a PNG file");
 
 		po::options_description cmdline_options;
-		cmdline_options.add(generic).add(io);
+		cmdline_options.add(generic).add(lang).add(io);
 
 		po::variables_map vm;
 		po::store(po::parse_command_line(ac, av, cmdline_options), vm);
