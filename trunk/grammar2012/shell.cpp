@@ -214,32 +214,19 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	return 0;
 }
 
-int write_output(const string& input, const string& outputfile) {
-	fs::ofstream o(outputfile);
-	if (o.is_open()) {
-		o << input;
-		o.close();
-	} else {
-		cout << "Error! cannot write to output file: " << outputfile << endl;
-	}
-
-	return 0;
-}
-
 int main(int ac, char* av[]) {
 	try {
-		int verbose = 0;
-
 		po::options_description generic("Generic options");
 		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
 				"enable verbosity (optionally specify level)");
 
 		po::options_description io("I/O options");
-		io.add_options()("input,i", po::value<string>(), "question to ask")(
-				"output-file,o", po::value<string>(),
-				"write the answer to this file")("graph-file,g",
-				po::value<string>(),
+		io.add_options()("input,i", po::value<string>(), "the input sentences")(
+				"input-file,r", po::value<string>(),
+				"the file to read the input sentences from")("output-file,o",
+				po::value<string>(), "write the answer to this file")(
+				"graph-file,g", po::value<string>(),
 				"write the syntax graph to files with this prefix, "
 						"followed by an index (first is 1), "
 						"with the file extension .dot, and use "
@@ -257,6 +244,7 @@ int main(int ac, char* av[]) {
 			return 1;
 		}
 
+		int verbose = 0;
 		if (vm.count("verbose")) {
 			verbose = vm["verbose"].as<int>();
 			cout << "Verbosity level was set to " << verbose << ".\n";
@@ -268,15 +256,21 @@ int main(int ac, char* av[]) {
 		g::phraser* h = new g::phraser();
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
 
+		string input;
 		if (vm.count("input") > 0) {
-			string input = vm["input"].as<string>();
+			input = vm["input"].as<string>();
+		} else if (vm.count("input-file") > 0) {
+			input = g::read_file(vm["input-file"].as<string>());
+		}
+
+		if (input.size() > 0) {
 			cout << "Input: " << input << ".\n";
 			init(_t, _g, p, h, d, verbose);
 
 			if (vm.count("output-file") > 0) {
-				string outputfile = vm["output-file"].as<string>();
+				fs::path outputfile = vm["output-file"].as<string>();
 				const string output = get_answer(_t, _g, p, h, d, input);
-				write_output(input, outputfile);
+				g::write_file(outputfile, output);
 			}
 			if (vm.count("graph-file") > 0) {
 				string graphfile = vm["graph-file"].as<string>();
@@ -288,10 +282,10 @@ int main(int ac, char* av[]) {
 						<< "but no answer or graph output file given." << endl;
 			}
 
-		} else if (vm.count("input") == 0 && vm.count("output-file") > 0) {
+		} else if (input.size() == 0 && vm.count("output-file") > 0) {
 			cerr << "Error! answer output file but no input string given."
 					<< endl;
-		} else if (vm.count("input") == 0 && vm.count("graph-file") > 0) {
+		} else if (input.size() == 0 && vm.count("graph-file") > 0) {
 			cerr << "Error! graph output file but no input string given."
 					<< endl;
 
@@ -300,11 +294,13 @@ int main(int ac, char* av[]) {
 			shell(_t, _g, p, h, d);
 		}
 
+		return 0;
 	} catch (exception& e) {
 		cerr << "Error: " << e.what() << "\n";
 		return 1;
 	} catch (...) {
 		cerr << "Error: exception of unknown type!\n";
+		return 1;
 	}
 }
 

@@ -78,6 +78,8 @@ void str_replace(string& str, const string& exp, const string& repl);
 bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
 int split_lines(vector<string>&, const string&);
+const string read_file(const fs::path&);
+bool write_file(const fs::path&, const string&);
 
 class freehal_base {
 protected:
