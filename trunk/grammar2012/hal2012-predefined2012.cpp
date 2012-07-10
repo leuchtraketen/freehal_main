@@ -116,7 +116,7 @@ void predefined::try_thanks(const string& input, string& output) {
 		outputs.push_back("Gern geschehen...");
 		outputs.push_back("Nichts zu danken!");
 		outputs.push_back("Gern geschehen!");
-		srand(unsigned(time(NULL)) + unsigned(&outputs));
+		srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
 		std::random_shuffle(outputs.begin(), outputs.end());
 		output = outputs[0];
 	}
@@ -126,7 +126,7 @@ void predefined::try_thanks(const string& input, string& output) {
 		outputs.push_back("Danke!");
 		outputs.push_back("Danke.");
 		outputs.push_back("Danke...");
-		srand(unsigned(time(NULL)) + unsigned(&outputs));
+		srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
 		std::random_shuffle(outputs.begin(), outputs.end());
 		output = outputs[0];
 	}
@@ -235,7 +235,7 @@ void predefined::try_random_question(const string& input, string& output) {
 		}
 	}
 
-	srand(unsigned(time(NULL)) + unsigned(&outputs));
+	srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
 	std::random_shuffle(outputs.begin(), outputs.end());
 	output = outputs[0];
 }
@@ -256,7 +256,7 @@ void predefined::try_random_statement(const string& input, string& output) {
 	outputs.push_back("Oh.");
 	outputs.push_back("Klar.");
 
-	srand(unsigned(time(NULL)) + unsigned(&outputs));
+	srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
 	std::random_shuffle(outputs.begin(), outputs.end());
 	output = outputs[0];
 }
