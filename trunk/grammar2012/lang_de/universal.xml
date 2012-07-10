@@ -2729,16 +2729,6 @@
   <flags>00000</flags>
 </fact>
 <fact>
-  <subject>es</subject>
-  <object>mir manchmal</object>
-  <verb>geht</verb>
-  <adverbs>auch so</adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
   <subject>immer</subject>
   <object></object>
   <verb>geht</verb>

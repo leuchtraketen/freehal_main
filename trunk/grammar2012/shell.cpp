@@ -94,8 +94,10 @@ string new_sentence(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 }
 
 int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, g::predefined* r, int verbose) {
+		g::database<g::diskdb>* d, g::predefined* r, int verbose,
+		bool buffered) {
 	_t->set_verbose(true);
+	_t->set_buffered(buffered);
 	_t->set_lang(language);
 	_t->set_path(path);
 	_t->read_pos_file("guessed.pos");
@@ -107,6 +109,7 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	_g->set_path(path);
 	_g->read_grammar("grammar.txt");
 	_g->set_verbose(true);
+	_g->set_buffered(buffered);
 	_g->expand();
 
 	p->set_lang(language);
@@ -114,17 +117,19 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	p->set_tagger(_t);
 	p->set_grammar(_g);
 	p->set_verbose(false);
+	p->set_buffered(buffered);
 
 	h->set_lang(language);
 	h->set_path(path);
 	h->set_tagger(_t);
 	h->set_grammar(_g);
 	h->set_verbose(true);
+	h->set_buffered(buffered);
 
 	g::filterlist::set_verbose(false);
 
 	d->set_verbose(true);
-	d->set_buffered(false);
+	d->set_buffered(buffered);
 	d->set_lang(language);
 	d->set_path(path);
 	d->set_tagger(_t);
@@ -136,6 +141,7 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	r->set_tagger(_t);
 	r->set_grammar(_g);
 	r->set_verbose(true);
+	r->set_buffered(buffered);
 
 	return 0;
 }
@@ -242,7 +248,8 @@ int main(int ac, char* av[]) {
 		po::options_description generic("Generic options");
 		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
-				"enable verbosity (optionally specify level)");
+				"enable verbosity (optionally specify level)")("buffered,b",
+				po::value<bool>()->implicit_value(false));
 
 		po::options_description lang("Language options");
 		lang.add_options()("language,l",
@@ -284,7 +291,13 @@ int main(int ac, char* av[]) {
 		int verbose = 0;
 		if (vm.count("verbose")) {
 			verbose = vm["verbose"].as<int>();
-			cout << "Verbosity level was set to " << verbose << ".\n";
+			cout << "Verbosity level is set to " << verbose << ".\n";
+		}
+
+		bool buffered = false;
+		if (vm.count("buffered")) {
+			buffered = vm["buffered"].as<bool>();
+			cout << "Buffering is set to " << buffered << ".\n";
 		}
 
 		g::tagger* _t = new g::tagger();
@@ -303,7 +316,7 @@ int main(int ac, char* av[]) {
 
 		if (input.size() > 0) {
 			cout << "Input: " << input << ".\n";
-			init(_t, _g, p, h, d, r, verbose);
+			init(_t, _g, p, h, d, r, verbose, buffered);
 
 			if (vm.count("output-file") > 0) {
 				fs::path outputfile = vm["output-file"].as<string>();
@@ -328,7 +341,7 @@ int main(int ac, char* av[]) {
 					<< endl;
 
 		} else {
-			init(_t, _g, p, h, d, r, verbose);
+			init(_t, _g, p, h, d, r, verbose, buffered);
 			d->prepare(d->get_language_directory());
 			shell(_t, _g, p, h, d, r);
 		}
