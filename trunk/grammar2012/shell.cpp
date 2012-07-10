@@ -48,7 +48,8 @@ string new_sentence(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 
 	boost::shared_ptr<g::xml_fact> infact = s->get_fact();
 	if (!infact)
-		return "";
+		return r->get_random_output(s);
+
 	cout << *infact << endl;
 
 	vector<boost::shared_ptr<g::xml_fact> > facts;
@@ -83,7 +84,8 @@ string new_sentence(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		best->prepare_tags(h->get_tagger());
 		phrased = h->phrase(best);
 		cout << phrased << endl;
-	} else {
+	}
+	if (!best || phrased.size() == 0) {
 		// predefined random answers
 		phrased = r->get_random_output(s);
 	}
