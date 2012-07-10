@@ -128,7 +128,6 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	d->set_tagger(_t);
 	print_memory();
 	// d->prepare("../hal2012/lang_de");
-	d->prepare(d->get_language_directory());
 
 	r->set_lang(language);
 	r->set_path(path);
@@ -328,6 +327,7 @@ int main(int ac, char* av[]) {
 
 		} else {
 			init(_t, _g, p, h, d, r, verbose);
+			d->prepare(d->get_language_directory());
 			shell(_t, _g, p, h, d, r);
 		}
 
