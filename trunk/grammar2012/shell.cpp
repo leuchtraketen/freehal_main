@@ -13,6 +13,7 @@
 #include "hal2012-xml2012.h"
 #include "hal2012-diskdb2012.h"
 #include "hal2012-filterfacts2012.h"
+#include "hal2012-predefined2012.h"
 #include "hal2012-util2012.h"
 namespace g = grammar2012;
 
@@ -43,7 +44,7 @@ int print_memory() {
 }
 
 string new_sentence(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, g::sentence* s) {
+		g::database<g::diskdb>* d, g::predefined* r, g::sentence* s) {
 
 	boost::shared_ptr<g::xml_fact> infact = s->get_fact();
 	if (!infact)
@@ -82,13 +83,16 @@ string new_sentence(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		best->prepare_tags(h->get_tagger());
 		phrased = h->phrase(best);
 		cout << phrased << endl;
+	} else {
+		// predefined random answers
+		phrased = r->get_random_output(s);
 	}
 
 	return phrased;
 }
 
 int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, int verbose) {
+		g::database<g::diskdb>* d, g::predefined* r, int verbose) {
 	_t->set_verbose(true);
 	_t->set_lang(language);
 	_t->set_path(path);
@@ -126,23 +130,40 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	// d->prepare("../hal2012/lang_de");
 	d->prepare(d->get_language_directory());
 
+	r->set_lang(language);
+	r->set_path(path);
+	r->set_tagger(_t);
+	r->set_grammar(_g);
+	r->set_verbose(true);
+
 	return 0;
 }
 
 string get_answer(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, string input) {
+		g::database<g::diskdb>* d, g::predefined* r, string input) {
 
-	p->parse(input);
-	const vector<g::sentence*>& vs = p->get_sentences();
-	vector<string> output;
-	foreach (g::sentence* s, vs) {
-		output.push_back(new_sentence(_t, _g, p, h, d, s));
+	// predefined answers
+	{
+		string output = r->get_predefined_output(input);
+		if (output.size() > 0) {
+			return output;
+		}
 	}
-	return algo::join(output, " ");
+
+	// grammar answers
+	{
+		p->parse(input);
+		const vector<g::sentence*>& vs = p->get_sentences();
+		vector<string> output;
+		foreach (g::sentence* s, vs) {
+			output.push_back(new_sentence(_t, _g, p, h, d, r, s));
+		}
+		return algo::join(output, " ");
+	}
 }
 
 void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, const string& input,
+		g::database<g::diskdb>* d, g::predefined* r, const string& input,
 		const string& output_prefix) {
 
 	p->parse(input);
@@ -171,7 +192,7 @@ void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 }
 
 int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d) {
+		g::database<g::diskdb>* d, g::predefined* r) {
 
 	print_memory();
 
@@ -192,7 +213,7 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 				|| input == "exit")
 			break;
 
-		const string output = get_answer(_t, _g, p, h, d, input);
+		const string output = get_answer(_t, _g, p, h, d, r, input);
 
 		history << "You:     " << input << endl;
 		history << "Freehal: " << output << endl;
@@ -224,8 +245,9 @@ int main(int ac, char* av[]) {
 
 		po::options_description lang("Language options");
 		lang.add_options()("language,l",
-				po::value<string>()->implicit_value("de"), "the language")("path,p",
-				po::value<string>()->implicit_value("path"), "the path containing the lang_XY "
+				po::value<string>()->implicit_value("de"), "the language")(
+				"path,p", po::value<string>()->implicit_value("path"),
+				"the path containing the lang_XY "
 						"and cache_XY directories");
 
 		po::options_description io("I/O options");
@@ -269,6 +291,7 @@ int main(int ac, char* av[]) {
 		g::parser* p = new g::parser();
 		g::phraser* h = new g::phraser();
 		g::database<g::diskdb>* d = new g::database<g::diskdb>();
+		g::predefined* r = new g::predefined();
 
 		string input;
 		if (vm.count("input") > 0) {
@@ -279,16 +302,16 @@ int main(int ac, char* av[]) {
 
 		if (input.size() > 0) {
 			cout << "Input: " << input << ".\n";
-			init(_t, _g, p, h, d, verbose);
+			init(_t, _g, p, h, d, r, verbose);
 
 			if (vm.count("output-file") > 0) {
 				fs::path outputfile = vm["output-file"].as<string>();
-				const string output = get_answer(_t, _g, p, h, d, input);
+				const string output = get_answer(_t, _g, p, h, d, r, input);
 				g::write_file(outputfile, output);
 			}
 			if (vm.count("graph-file") > 0) {
 				string graphfile = vm["graph-file"].as<string>();
-				get_graph(_t, _g, p, h, d, input, graphfile);
+				get_graph(_t, _g, p, h, d, r, input, graphfile);
 			}
 
 			if (vm.count("output-file") == 0 && vm.count("graph-file") == 0) {
@@ -304,8 +327,8 @@ int main(int ac, char* av[]) {
 					<< endl;
 
 		} else {
-			init(_t, _g, p, h, d, verbose);
-			shell(_t, _g, p, h, d);
+			init(_t, _g, p, h, d, r, verbose);
+			shell(_t, _g, p, h, d, r);
 		}
 
 		return 0;
