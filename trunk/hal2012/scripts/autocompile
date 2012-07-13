@@ -29,7 +29,7 @@ cd bin
 rm -rf freehal-svn-old 2>/dev/null
 mv -f freehal-svn freehal-svn-old 2>/dev/null
 echo Download source code...
-svn co http://freehal.org/code/hal2012 freehal-svn > /dev/null || (echo Error: Download source code ; exit 0)
+svn co https://freehal.googlecode.com/svn/trunk/hal2012 freehal-svn > /dev/null || (echo Error: Download source code ; exit 0)
 cd freehal-svn
 echo Compile server
 (./configure && make hal2012-server hal2012-server-thread) > compile-server.log 2>&1 || (echo Error: Compile server ; exit 0)
