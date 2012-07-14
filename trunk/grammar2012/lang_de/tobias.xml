@@ -300,23 +300,10 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>3 jahre</object>
+  <object>fast 6 jahre</object>
   <verb>bin</verb>
-  <adverbs>fast alt</adverbs>
+  <adverbs>alt</adverbs>
   <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
-  <flags>00000</flags>
-  <clause>
-    <subject></subject>
-    <object></object>
-    <verb>50</verb>
-    <adverbs></adverbs>
-    <extra></extra>
-    <questionword></questionword>
-    <truth>0.500000</truth>
-    <flags>00000</flags>
-  </clause>
 </fact>
 <fact>
   <subject>$$date$$</subject>
