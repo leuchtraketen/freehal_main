@@ -697,7 +697,8 @@ void parser::simplify_input(string& str) {
 	regex_replace(str, "sich (.*?)befindet", "\\1liegt");
 	regex_ireplace(str, "teil von ein.?.?\\s", "teil von ");
 
-	if (is_question) {
+	if (is_question && !regex_ifind(str,
+                        "^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {
 		if (regex_find(m, str, "^(.*?) hat (.*?)((?:[?].*?)?)$")) {
 			const string& subject = m[2];
 			const string& prop = m[1];

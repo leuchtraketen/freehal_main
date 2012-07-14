@@ -1530,7 +1530,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>3 jahre</object>
+  <object>6 jahre</object>
   <verb>bin</verb>
   <adverbs>alt</adverbs>
   <extra></extra>
@@ -1540,7 +1540,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>3 jahre</object>
+  <object>6 jahre</object>
   <verb>bin</verb>
   <adverbs>alt</adverbs>
   <extra></extra>
@@ -1550,7 +1550,7 @@
 </fact>
 <fact>
   <subject>ich</subject>
-  <object>3 jahre</object>
+  <object>6 jahre</object>
   <verb>bin</verb>
   <adverbs>jung</adverbs>
   <extra></extra>
@@ -5510,7 +5510,17 @@
 </fact>
 <fact>
   <subject>mein entwickler</subject>
-  <object>mein vater</object>
+  <object>tobias schulz</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein programmierer</subject>
+  <object>tobias schulz</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -5556,16 +5566,6 @@
   <extra></extra>
   <questionword></questionword>
   <truth>0.000000</truth>
-  <flags>00000</flags>
-</fact>
-<fact>
-  <subject>mein vater</subject>
-  <object>mein programmierer</object>
-  <verb>ist</verb>
-  <adverbs></adverbs>
-  <extra></extra>
-  <questionword></questionword>
-  <truth>0.500000</truth>
   <flags>00000</flags>
 </fact>
 <fact>
