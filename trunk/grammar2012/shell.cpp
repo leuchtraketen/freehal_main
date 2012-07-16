@@ -169,8 +169,13 @@ string get_answer(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 
 	fs::ofstream history_steam(history_file, ios::app);
 	if (history_steam.is_open()) {
-		history_steam << username << "#" << input << "#" << output << endl;
+		stringstream ss;
+		ss << username << "#" << input << "#" << output << endl;
+		string entry(ss.str());
+		g::regex_replace(entry, "[\\r\\n\\s]+", " ");
+		history_steam << entry;
 	}
+	history_steam.close();
 
 	return output;
 }
