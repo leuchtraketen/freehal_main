@@ -513,7 +513,7 @@ int tagger::toggle(string& word) {
 
 	tags* tagged = get_pos(word);
 	if (tagged != 0) {
-		if (tagged->type != "v") {
+		if (tagged->first != "v") {
 			delete tagged;
 			return 1;
 		}
