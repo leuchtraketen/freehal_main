@@ -63,6 +63,8 @@ public:
 
 	int read_verbs_file(const fs::path&);
 	int toggle(string&);
+	const string get_verb(const string&, const string&);
+	const string get_article(const string&, const string&, const string&);
 
 	static string __builtin_entity_ends;
 	static string __builtin_male_names;

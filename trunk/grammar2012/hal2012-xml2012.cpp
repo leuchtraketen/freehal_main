@@ -277,16 +277,19 @@ int xml_obj::prepare_words() {
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
 				!(algo::is_alpha() || algo::is_digit()
-						|| algo::is_any_of("}{][=-")), algo::token_compress_on);
+						|| algo::is_any_of("}{][=-)(")),
+				algo::token_compress_on);
 		foreach (string& text, _words) {
 			if (text.size() > 0 && text != "1")
 				cache_words.push_back(word(text));
 		}
 	}
 	if (mode == LIST) {
-		foreach (boost::shared_ptr<xml_obj> embedded, content) {
-			embedded->prepare_words();
-			embedded->get_words(cache_words);
+		if (name != "truth") {
+			foreach (boost::shared_ptr<xml_obj> embedded, content) {
+				embedded->prepare_words();
+				embedded->get_words(cache_words);
+			}
 		}
 	}
 	is_cached_words = true;

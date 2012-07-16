@@ -525,4 +525,302 @@ vector<string> tagger::builtin_male_names;
 vector<string> tagger::builtin_female_names;
 vector<string> tagger::custom_names;
 
+const string tagger::get_article(const string& article, const string& genus,
+		const string& part_of_sentence) {
+	if (article == "(the)") {
+		if (part_of_sentence == "object") {
+			if (genus == "m")
+				return "den";
+			else if (genus == "f")
+				return "die";
+			else
+				return "das";
+		}
+		else if (part_of_sentence == "subject") {
+			if (genus == "m")
+				return "der";
+			else if (genus == "f")
+				return "die";
+			else
+				return "das";
+		}
+	}
+	if (article == "(a)") {
+		if (part_of_sentence == "object") {
+			if (genus == "m")
+				return "einen";
+			else if (genus == "f")
+				return "eine";
+			else
+				return "ein";
+		}
+		else if (part_of_sentence == "subject") {
+			if (genus == "m")
+				return "ein";
+			else if (genus == "f")
+				return "eine";
+			else
+				return "ein";
+		}
+	}
+	return article;
+}
+
+const string tagger::get_verb(const string& verb, const string& person) {
+
+	if (verb == "be") {
+		if (person == "1s") {
+			return "bin";
+		}
+		if (person == "2s") {
+			return "bist";
+		}
+		if (person == "3s") {
+			return "ist";
+		}
+		if (person == "1p") {
+			return "sind";
+		}
+		if (person == "2p") {
+			return "seid";
+		}
+		if (person == "3p") {
+			return "sind";
+		}
+	}
+
+	if (verb == "have") {
+		if (person == "1s") {
+			return "habe";
+		}
+		if (person == "2s") {
+			return "hast";
+		}
+		if (person == "3s") {
+			return "hat";
+		}
+		if (person == "1p") {
+			return "haben";
+		}
+		if (person == "2p") {
+			return "habt";
+		}
+		if (person == "3p") {
+			return "haben";
+		}
+	}
+
+	if (verb == "want") {
+		if (person == "1s") {
+			return "will";
+		}
+		if (person == "2s") {
+			return "willst";
+		}
+		if (person == "3s") {
+			return "will";
+		}
+		if (person == "1p") {
+			return "wollen";
+		}
+		if (person == "2p") {
+			return "wollt";
+		}
+		if (person == "3p") {
+			return "wollen";
+		}
+	}
+
+	if (verb == "must") {
+		if (person == "1s") {
+			return "muss";
+		}
+		if (person == "2s") {
+			return "musst";
+		}
+		if (person == "3s") {
+			return "muss";
+		}
+		if (person == "1p") {
+			return "muessen";
+		}
+		if (person == "2p") {
+			return "muesst";
+		}
+		if (person == "3p") {
+			return "muessen";
+		}
+	}
+
+	if (verb == "can") {
+		if (person == "1s") {
+			return "kann";
+		}
+		if (person == "2s") {
+			return "kannst";
+		}
+		if (person == "3s") {
+			return "kann";
+		}
+		if (person == "1p") {
+			return "koennen";
+		}
+		if (person == "2p") {
+			return "koennt";
+		}
+		if (person == "3p") {
+			return "koennen";
+		}
+	}
+
+	if (verb == "may") {
+		if (person == "1s") {
+			return "darf";
+		}
+		if (person == "2s") {
+			return "darfst";
+		}
+		if (person == "3s") {
+			return "darf";
+		}
+		if (person == "1p") {
+			return "duerfen";
+		}
+		if (person == "2p") {
+			return "duerft";
+		}
+		if (person == "3p") {
+			return "duerfen";
+		}
+	}
+
+	if (verb == "should") {
+		if (person == "1s") {
+			return "sollte";
+		}
+		if (person == "2s") {
+			return "solltest";
+		}
+		if (person == "3s") {
+			return "sollte";
+		}
+		if (person == "1p") {
+			return "sollten";
+		}
+		if (person == "2p") {
+			return "solltet";
+		}
+		if (person == "3p") {
+			return "sollten";
+		}
+	}
+
+	if (verb == "is-a") {
+		if (person == "1s") {
+			return "bin";
+		}
+		if (person == "2s") {
+			return "bist";
+		}
+		if (person == "3s") {
+			return "ist";
+		}
+		if (person == "1p") {
+			return "sind";
+		}
+		if (person == "2p") {
+			return "seid";
+		}
+		if (person == "3p") {
+			return "sind";
+		}
+	}
+
+	if (verb == "is-same-as") {
+		if (person == "1s") {
+			return "entspricht";
+		}
+		if (person == "2s") {
+			return "entsprichst";
+		}
+		if (person == "3s") {
+			return "entspricht";
+		}
+		if (person == "1p") {
+			return "entsprechen";
+		}
+		if (person == "2p") {
+			return "entsprecht";
+		}
+		if (person == "3p") {
+			return "entsprechen";
+		}
+	}
+
+	if (verb == "is-part-0") {
+		if (person == "1s") {
+			return "gehoere zu";
+		}
+		if (person == "2s") {
+			return "gehoerst zu";
+		}
+		if (person == "3s") {
+			return "gehoert zu";
+		}
+		if (person == "1p") {
+			return "gehoeren zu";
+		}
+		if (person == "2p") {
+			return "gehoert zu";
+		}
+		if (person == "3p") {
+			return "gehoeren zu";
+		}
+	}
+
+	if (verb == "is-part-1") {
+		if (person == "1s") {
+			return "bin ein Teil von";
+		}
+		if (person == "2s") {
+			return "bist ein Teil von";
+		}
+		if (person == "3s") {
+			return "ist ein Teil von";
+		}
+		if (person == "1p") {
+			return "sind ein Teil von";
+		}
+		if (person == "2p") {
+			return "seid ein Teil von";
+		}
+		if (person == "3p") {
+			return "sind ein Teil von";
+		}
+	}
+
+	if (verb == "is-own-") {
+		if (person == "1s") {
+			return "gehoere";
+		}
+		if (person == "2s") {
+			return "gehoerst";
+		}
+		if (person == "3s") {
+			return "gehoert";
+		}
+		if (person == "1p") {
+			return "gehoeren";
+		}
+		if (person == "2p") {
+			return "gehoert";
+		}
+		if (person == "3p") {
+			return "gehoeren";
+		}
+	}
+
+	return verb;
+}
+
 }

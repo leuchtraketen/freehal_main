@@ -537,4 +537,3 @@ int tagger::toggle(string& word) {
 }
 
 }
-

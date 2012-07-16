@@ -10,6 +10,10 @@
 
 namespace grammar2012 {
 
+tagger* phrase_tagger_local = 0;
+
+vector<word>& operator <<(vector<word>& words, tagger* t);
+
 phraser::phraser() :
 		freehal_base() {
 }
@@ -91,20 +95,53 @@ void phraser::arrange(vector<word>& words, boost::shared_ptr<xml_fact> xf) {
 	xf->part(adverbs, "adverbs");
 
 	{
-		words << subject << verbs << object << adverbs;
+		words << t << subject << verbs << object << adverbs;
 	}
+}
+
+vector<word>& operator <<(vector<word>& words, tagger* t) {
+	if (t != 0)
+		phrase_tagger_local = t;
+	return words;
+}
+
+void replace_virtual_words(vector<word>& final_words,
+		const vector<word>& raw_words, const string& obj_name) {
+	foreach (word w, raw_words) {
+		if (phrase_tagger_local != 0) {
+			if (w == "is-a") {
+				w = phrase_tagger_local->get_verb("be", "3s");
+			}
+			if (w == "(a)") {
+				string genus;
+				foreach (const word& inner_w, raw_words) {
+					if (inner_w.has_tags()
+							&& inner_w.get_tags()->second.size() > 0)
+						genus = inner_w.get_tags()->second;
+				}
+				if (!genus.empty())
+					w = phrase_tagger_local->get_article(w.get_word(), genus,
+							obj_name);
+			}
+		}
+		final_words.push_back(w);
+	}
+}
+
+vector<word>& operator <<(vector<word>& words, boost::shared_ptr<xml_obj> obj) {
+	vector<word> final_words;
+	vector<word> raw_words;
+	obj->get_words(raw_words);
+	replace_virtual_words(final_words, raw_words, obj->get_name());
+	words.insert(words.end(), final_words.begin(), final_words.end());
+	return words;
 }
 
 vector<word>& operator <<(vector<word>& words,
 		const vector<boost::shared_ptr<xml_obj> >& objs) {
 	foreach (boost::shared_ptr<xml_obj> obj, objs) {
-		obj->get_words(words);
+		words << obj;
 	}
-	return words;
-}
-
-vector<word>& operator <<(vector<word>& words, boost::shared_ptr<xml_obj> obj) {
-	obj->get_words(words);
 	return words;
 }
 
