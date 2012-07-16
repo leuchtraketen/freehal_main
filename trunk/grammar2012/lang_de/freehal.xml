@@ -1649,7 +1649,7 @@
   <flags>00000</flags>
 </fact>
 <fact>
-  <subject>mein name</subject>
+  <subject>mein_name</subject>
   <object>freehal</object>
   <verb>ist</verb>
 </fact>
@@ -5359,7 +5359,7 @@
   <flags>00000</flags>
 </fact>
 <fact>
-  <subject>mein name</subject>
+  <subject>mein_name</subject>
   <object>freehal</object>
   <verb>ist</verb>
   <adverbs></adverbs>
@@ -7249,7 +7249,7 @@
   <flags>00000</flags>
 </fact>
 <fact>
-  <subject>mein name</subject>
+  <subject>mein_name</subject>
   <object>freehal</object>
   <verb>lautet</verb>
   <adverbs></adverbs>
