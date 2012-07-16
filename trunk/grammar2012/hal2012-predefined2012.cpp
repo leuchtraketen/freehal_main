@@ -81,9 +81,9 @@ void predefined::try_greeting(const string& input, string& output) {
 	if (output.size() > 0)
 		return;
 
-	if (regex_ifind(input, "(hallo|hi|hey|mahlzeit|"
-			"(gute|guten|schoene|schoenen "
-			"tag|morgen|abend|nachmittag|vormittag|nacht))")) {
+	if (regex_ifind(input, "(^|\\s)(hallo|hi|hey|mahlzeit|"
+			"((gute|guten|schoene|schoenen)(.+)"
+			"(tag|morgen|abend|nachmittag|vormittag|nacht)))(\\s|$)")) {
 
 		boost::posix_time::ptime pt =
 				boost::posix_time::second_clock::local_time();
