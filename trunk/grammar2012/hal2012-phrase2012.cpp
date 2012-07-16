@@ -80,6 +80,7 @@ const string phraser::join(vector<word>& words) {
 	if (!regex_find(joined, "[?!]")) {
 		joined += ".";
 	}
+	regex_replace(joined, "[ _]+", " ");
 
 	return joined;
 }
