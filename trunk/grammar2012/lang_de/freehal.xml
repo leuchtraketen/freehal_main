@@ -1649,6 +1649,16 @@
   <flags>00000</flags>
 </fact>
 <fact>
+  <subject>mein name</subject>
+  <object>freehal</object>
+  <verb>ist</verb>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>freehal</object>
+  <verb>heisse</verb>
+</fact>
+<fact>
   <subject>ich</subject>
   <object>ein arschloch</object>
   <verb>bin</verb>
