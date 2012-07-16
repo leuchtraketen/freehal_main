@@ -511,6 +511,15 @@ int tagger::toggle(string& word) {
 		return 0;
 	}
 
+	tags* tagged = get_pos(word);
+	if (tagged != 0) {
+		if (tagged->type != "v") {
+			delete tagged;
+			return 1;
+		}
+		delete tagged;
+	}
+
 	const string _word = word;
 	if (word == _word)
 		regex_replace(word, "([gdm])elst$", "\\1le");
