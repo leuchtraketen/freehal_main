@@ -88,7 +88,7 @@ void predefined::try_greeting(const string& input, string& output) {
 		boost::posix_time::ptime pt =
 				boost::posix_time::second_clock::local_time();
 		int hour = pt.time_of_day().hours();
-		std::cout << "predefined2012: hour = " << hour;
+		std::cout << "predefined2012: hour = " << hour << endl;
 
 		if (hour < 5) {
 			stringstream ss;
