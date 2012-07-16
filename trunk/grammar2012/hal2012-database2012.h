@@ -41,6 +41,7 @@ public:
 
 	// I/O
 	int prepare(const fs::path&);
+	int prepare(const fs::path&, const fs::path&);
 	int find_by_word(vector<boost::shared_ptr<xml_fact> >&, const word&);
 	int find_by_words(vector<boost::shared_ptr<xml_fact> >&,
 			const vector<word>&);

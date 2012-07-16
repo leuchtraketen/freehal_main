@@ -147,26 +147,32 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 }
 
 string get_answer(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, g::predefined* r, string input) {
+		g::database<g::diskdb>* d, g::predefined* r, string input,
+		const string& username, const fs::path& history_file) {
+	string output;
 
 	// predefined answers
-	{
-		string output = r->get_predefined_output(input);
-		if (output.size() > 0) {
-			return output;
-		}
+	if (output.empty()) {
+		output = r->get_predefined_output(input);
 	}
 
 	// grammar answers
-	{
+	if (output.empty()) {
 		p->parse(input);
 		const vector<g::sentence*>& vs = p->get_sentences();
-		vector<string> output;
+		vector<string> output_parts;
 		foreach (g::sentence* s, vs) {
-			output.push_back(new_sentence(_t, _g, p, h, d, r, s));
+			output_parts.push_back(new_sentence(_t, _g, p, h, d, r, s));
 		}
-		return algo::join(output, " ");
+		output = algo::join(output_parts, " ");
 	}
+
+	fs::ofstream history_steam(history_file, ios::app);
+	if (history_steam.is_open()) {
+		history_steam << username << "#" << input << "#" << output << endl;
+	}
+
+	return output;
 }
 
 void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
@@ -199,7 +205,8 @@ void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 }
 
 int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
-		g::database<g::diskdb>* d, g::predefined* r) {
+		g::database<g::diskdb>* d, g::predefined* r, const string& username,
+		const fs::path& history_file) {
 
 	print_memory();
 
@@ -220,7 +227,8 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 				|| input == "exit")
 			break;
 
-		const string output = get_answer(_t, _g, p, h, d, r, input);
+		const string output = get_answer(_t, _g, p, h, d, r, input, username,
+				history_file);
 
 		history << "You:     " << input << endl;
 		history << "Freehal: " << output << endl;
@@ -249,13 +257,15 @@ int main(int ac, char* av[]) {
 		generic.add_options()("help,h", "help")("verbose,v",
 				po::value<int>()->implicit_value(1),
 				"enable verbosity (optionally specify level)")("buffered,b",
-				po::value<bool>()->implicit_value(false));
+				po::value<bool>()->implicit_value(false),
+				"if standard output is written to a log file "
+						"instead of being displayed in a console");
 
 		po::options_description lang("Language options");
 		lang.add_options()("language,l",
 				po::value<string>()->implicit_value("de"), "the language")(
 				"path,p", po::value<string>()->implicit_value("path"),
-				"the path containing the lang_XY "
+				"the directory containing the lang_XY "
 						"and cache_XY directories");
 
 		po::options_description io("I/O options");
@@ -267,7 +277,9 @@ int main(int ac, char* av[]) {
 				"write the syntax graph to files with this prefix, "
 						"followed by an index (first is 1), "
 						"with the file extension .dot, and use "
-						"graphviz to convert it to a PNG file");
+						"graphviz to convert it to a PNG file")("history,H",
+				po::value<string>(), "history file")("user,u",
+				po::value<string>(), "the name of the current user");
 
 		po::options_description cmdline_options;
 		cmdline_options.add(generic).add(lang).add(io);
@@ -300,6 +312,18 @@ int main(int ac, char* av[]) {
 			cout << "Buffering is set to " << buffered << ".\n";
 		}
 
+		fs::path history_file;
+		if (vm.count("history")) {
+			history_file = vm["history"].as<string>();
+			cout << "History file is set to " << history_file << ".\n";
+		}
+
+		string username;
+		if (vm.count("user")) {
+			username = vm["user"].as<string>();
+			cout << "User is set to \"" << username << "\".\n";
+		}
+
 		g::tagger* _t = new g::tagger();
 		g::grammar* _g = new g::grammar();
 		g::parser* p = new g::parser();
@@ -320,7 +344,8 @@ int main(int ac, char* av[]) {
 
 			if (vm.count("output-file") > 0) {
 				fs::path outputfile = vm["output-file"].as<string>();
-				const string output = get_answer(_t, _g, p, h, d, r, input);
+				const string output = get_answer(_t, _g, p, h, d, r, input,
+						username, history_file);
 				g::write_file(outputfile, output);
 			}
 			if (vm.count("graph-file") > 0) {
@@ -343,7 +368,7 @@ int main(int ac, char* av[]) {
 		} else {
 			init(_t, _g, p, h, d, r, verbose, buffered);
 			d->prepare(d->get_language_directory());
-			shell(_t, _g, p, h, d, r);
+			shell(_t, _g, p, h, d, r, username, history_file);
 		}
 
 		return 0;

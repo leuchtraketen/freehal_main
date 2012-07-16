@@ -279,36 +279,6 @@ int diskdb::to_disk(const diskdb_key& key) {
 			}
 
 		}
-		if (0) {
-			vector<char> chars;
-			for (char a = 'a'; a <= 'z'; ++a) {
-				chars.push_back(a);
-			}
-			chars.push_back('_');
-
-			foreach (char a, chars) {
-				foreach (char b, chars) {
-					foreach (char c, chars) {
-						foreach (char d, chars) {
-							diskdb_key key(a, b, c, d);
-
-							if (db->is_verbose() && c == '_' && d == '_') {
-								if (db->is_buffered() && b == '_')
-									cout << "store index: " << a << endl;
-								else
-									cout << "store index: " << a << b << "\r"
-											<< flush;
-							}
-
-							this->to_disk(key);
-						}
-					}
-				}
-			}
-			if (db->is_verbose())
-				cout << "store index: done" << endl << flush;
-		}
-
 		// store synonyms
 		{
 			foreach (synonymsmap::value_type v, synonyms) {

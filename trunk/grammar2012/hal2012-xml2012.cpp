@@ -279,7 +279,7 @@ int xml_obj::prepare_words() {
 				!(algo::is_alpha() || algo::is_digit()
 						|| algo::is_any_of("}{][=-")), algo::token_compress_on);
 		foreach (string& text, _words) {
-			if (text.size() > 0)
+			if (text.size() > 0 && text != "1")
 				cache_words.push_back(word(text));
 		}
 	}

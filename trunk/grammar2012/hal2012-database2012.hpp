@@ -68,6 +68,11 @@ int database<DB>::suspend() {
 
 template<typename DB>
 int database<DB>::prepare(const fs::path& p) {
+	return prepare(p, p);
+}
+
+template<typename DB>
+int database<DB>::prepare(const fs::path& p, const fs::path& as) {
 	if (!is_configured())
 		return 1;
 
@@ -76,8 +81,8 @@ int database<DB>::prepare(const fs::path& p) {
 			// is p a regular file?
 			if (fs::is_regular_file(p)) {
 				uintmax_t size = fs::file_size(p);
-				if (files.find(p.generic_string()) == files.end()
-						|| files.at(p.generic_string()) != size) {
+				if (files.find(as.generic_string()) == files.end()
+						|| files.at(as.generic_string()) != size) {
 
 					DB* idb = new DB(this);
 					read_xml_fact_file(p, idb);
@@ -85,7 +90,7 @@ int database<DB>::prepare(const fs::path& p) {
 					delete idb;
 
 					files.insert(
-							filesmap::value_type(p.generic_string(), size));
+							filesmap::value_type(as.generic_string(), size));
 				}
 			}
 			// is p a directory?
