@@ -277,7 +277,7 @@ int xml_obj::prepare_words() {
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
 				!(algo::is_alpha() || algo::is_digit()
-						|| algo::is_any_of("}{][=-)(")),
+						|| algo::is_any_of("}{][=-)(_")),
 				algo::token_compress_on);
 		foreach (string& text, _words) {
 			if (text.size() > 0 && text != "1")

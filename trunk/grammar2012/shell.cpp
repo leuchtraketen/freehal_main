@@ -126,7 +126,7 @@ int init(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	h->set_verbose(true);
 	h->set_buffered(buffered);
 
-	g::filterlist::set_verbose(true);
+	g::filterlist::set_verbose(false);
 
 	d->set_verbose(true);
 	d->set_buffered(buffered);
