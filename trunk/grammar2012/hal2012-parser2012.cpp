@@ -610,8 +610,8 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "world wide web", "_world_wide_web_");
 	regex_ireplace(str, "Hersteller von", "Hersteller fuer");
 
-	regex_ireplace(str, "mein name", "_mein_name_");
-	regex_ireplace(str, "dein name", "_dein_name_");
+//	regex_ireplace(str, "mein name", "_mein_name_");
+//	regex_ireplace(str, "dein name", "_dein_name_");
 
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?januar(\\s|$)", "\\1\\2.01.\\4");
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?jaenner(\\s|$)",
@@ -1144,12 +1144,12 @@ void parser::simplify_input(string& str) {
 				"<ws>[,]<ws>([a-zA-Z0-9_]+\\s+[a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>",
 				" \\2 \\1 \\2 ");
 	}
-	regex_ireplace(str, "heisse\\sich", "ist _mein_name_");
-	regex_ireplace(str, "ich\\sheisse", "_mein_name_ ist");
+//	regex_ireplace(str, "heisse\\sich", "ist _mein_name_");
+//	regex_ireplace(str, "ich\\sheisse", "_mein_name_ ist");
 	regex_ireplace(str, "wie heisst\\sdu", "wer bist du");
 	regex_ireplace(str, "wie heisse\\s", "wer bin ");
-	regex_ireplace(str, "heisst\\sdu", "ist _dein_name_");
-	regex_ireplace(str, "du\\sheisst", "_dein_name_ ist");
+//	regex_ireplace(str, "heisst\\sdu", "ist _dein_name_");
+//	regex_ireplace(str, "du\\sheisst", "_dein_name_ ist");
 
 	regex_replace(str, "(ist) ([A-Z][a-z]+?) (ein)", "\\1 _\\2_ \\3");
 
