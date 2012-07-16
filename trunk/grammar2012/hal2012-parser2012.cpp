@@ -1144,12 +1144,15 @@ void parser::simplify_input(string& str) {
 				"<ws>[,]<ws>([a-zA-Z0-9_]+\\s+[a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>",
 				" \\2 \\1 \\2 ");
 	}
+
+//	regex_ireplace(str, "wie heisst\\sdu", "wer bin ich");
+//	regex_ireplace(str, "wie heisse\\s", "wer bist ");
 	regex_ireplace(str, "heisst\\sdu", "ist dein_name");
 	regex_ireplace(str, "du\\sheisst", "dein_name ist");
-	regex_ireplace(str, "wie heisst\\sdu", "wer bin ich");
-	regex_ireplace(str, "wie heisse\\s", "wer bist ");
 	regex_ireplace(str, "heisse\\sich", "ist mein_name");
 	regex_ireplace(str, "ich\\sheisse", "mein_name ist");
+	regex_ireplace(str, "wer\\sbist\\sdu", "was ist dein_name");
+	regex_ireplace(str, "wer\\sdu\\sbist", "wer ist dein_name");
 
 	regex_replace(str, "(ist) ([A-Z][a-z]+?) (ein)", "\\1 _\\2_ \\3");
 
