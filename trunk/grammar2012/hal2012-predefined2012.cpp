@@ -81,9 +81,11 @@ void predefined::try_greeting(const string& input, string& output) {
 	if (output.size() > 0)
 		return;
 
-	if (regex_ifind(input, "(^|\\s)(hallo|hi|hey|mahlzeit|"
+	if (regex_ifind(input, "(^|[,;.?!-]|\\s)"
+			"(hallo|hi|hey|mahlzeit|"
 			"((gute|guten|schoene|schoenen)(.+)"
-			"(tag|morgen|abend|nachmittag|vormittag|nacht)))(\\s|$)")) {
+			"(tag|morgen|abend|nachmittag|vormittag|nacht)))"
+			"(\\s|[,;.?!-]|$)")) {
 
 		boost::posix_time::ptime pt =
 				boost::posix_time::second_clock::local_time();
@@ -92,8 +94,7 @@ void predefined::try_greeting(const string& input, string& output) {
 
 		if (hour < 5) {
 			stringstream ss;
-			ss << "Immer noch wach...? Es ist " << hour
-					<< " Uhr nachts!";
+			ss << "Immer noch wach...? Es ist " << hour << " Uhr nachts!";
 			output = ss.str();
 		} else if (hour < 12)
 			output = "Guten Morgen!";
@@ -116,7 +117,7 @@ void predefined::try_thanks(const string& input, string& output) {
 		outputs.push_back("Gern geschehen...");
 		outputs.push_back("Nichts zu danken!");
 		outputs.push_back("Gern geschehen!");
-		srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
+		srand(unsigned(time(NULL)) + (unsigned long) (&outputs));
 		std::random_shuffle(outputs.begin(), outputs.end());
 		output = outputs[0];
 	}
@@ -126,7 +127,7 @@ void predefined::try_thanks(const string& input, string& output) {
 		outputs.push_back("Danke!");
 		outputs.push_back("Danke.");
 		outputs.push_back("Danke...");
-		srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
+		srand(unsigned(time(NULL)) + (unsigned long) (&outputs));
 		std::random_shuffle(outputs.begin(), outputs.end());
 		output = outputs[0];
 	}
@@ -235,7 +236,7 @@ void predefined::try_random_question(const string& input, string& output) {
 		}
 	}
 
-	srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
+	srand(unsigned(time(NULL)) + (unsigned long) (&outputs));
 	std::random_shuffle(outputs.begin(), outputs.end());
 	output = outputs[0];
 }
@@ -256,7 +257,7 @@ void predefined::try_random_statement(const string& input, string& output) {
 	outputs.push_back("Oh.");
 	outputs.push_back("Klar.");
 
-	srand(unsigned(time(NULL)) + (unsigned long)(&outputs));
+	srand(unsigned(time(NULL)) + (unsigned long) (&outputs));
 	std::random_shuffle(outputs.begin(), outputs.end());
 	output = outputs[0];
 }
