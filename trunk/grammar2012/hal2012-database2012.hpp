@@ -89,8 +89,7 @@ int database<DB>::prepare(const fs::path& p, const fs::path& as) {
 					idb->to_disk(DB::ALL_KEYS);
 					delete idb;
 
-					files.insert(
-							filesmap::value_type(as.generic_string(), size));
+					files[as.generic_string()] = size;
 				}
 			}
 			// is p a directory?

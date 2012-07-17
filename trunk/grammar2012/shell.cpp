@@ -209,6 +209,15 @@ void get_graph(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 	}
 }
 
+const string add_spaces(const string& _name, const string& _or,
+		int min_length) {
+	string prompt = _name.size() > 0 ? _name : _or;
+	prompt += ": ";
+	while (prompt.size() < min_length)
+		prompt += " ";
+	return prompt;
+}
+
 int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		g::database<g::diskdb>* d, g::predefined* r, const string& username,
 		const fs::path& history_file) {
@@ -235,8 +244,9 @@ int shell(g::tagger* _t, g::grammar* _g, g::parser* p, g::phraser* h,
 		const string output = get_answer(_t, _g, p, h, d, r, input, username,
 				history_file);
 
-		history << "You:     " << input << endl;
-		history << "Freehal: " << output << endl;
+		int min_length = 2 + max(username.size(), string("Freehal").size());
+		history << add_spaces(username, "You", min_length) << input << endl;
+		history << add_spaces("Freehal", "", min_length) << output << endl;
 
 		cout << endl << history.str();
 
