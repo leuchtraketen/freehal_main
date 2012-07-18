@@ -294,7 +294,12 @@ int main(int ac, char* av[]) {
 						"with the file extension .dot, and use "
 						"graphviz to convert it to a PNG file")("history,H",
 				po::value<string>(), "history file")("user,u",
-				po::value<string>(), "the name of the current user");
+				po::value<string>(), "the name of the current user")("mode,m",
+				po::value<string>()->implicit_value("shell"),
+				"'shell': start a command line "
+						"if neither -i nor -j is given; \n"
+						"'server': start a freehal protocol server "
+						"(not implemented yet)");
 
 		po::options_description cmdline_options;
 		cmdline_options.add(generic).add(lang).add(io);
