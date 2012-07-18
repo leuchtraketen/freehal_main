@@ -71,6 +71,7 @@ public:
 class is_index_word: std::unary_function<word, bool> {
 public:
 	bool operator()(const word&) const;
+	bool operator()(const word&, const word&) const;
 };
 
 class is_synonym: std::unary_function<boost::shared_ptr<xml_obj>, bool> {

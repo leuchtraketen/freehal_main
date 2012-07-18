@@ -610,8 +610,8 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "world wide web", "_world_wide_web_");
 	regex_ireplace(str, "Hersteller von", "Hersteller fuer");
 
-	regex_ireplace(str, "mein name", "mein_name");
-	regex_ireplace(str, "dein name", "dein_name");
+	//regex_ireplace(str, "mein name", "mein_name");
+	//regex_ireplace(str, "dein name", "dein_name");
 
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?januar(\\s|$)", "\\1\\2.01.\\4");
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?jaenner(\\s|$)",
@@ -697,8 +697,9 @@ void parser::simplify_input(string& str) {
 	regex_replace(str, "sich (.*?)befindet", "\\1liegt");
 	regex_ireplace(str, "teil von ein.?.?\\s", "teil von ");
 
-	if (is_question && !regex_ifind(str,
-                        "^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {
+	if (is_question
+			&& !regex_ifind(str,
+					"^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {
 		if (regex_find(m, str, "^(.*?) hat (.*?)((?:[?].*?)?)$")) {
 			const string& subject = m[2];
 			const string& prop = m[1];
@@ -1147,12 +1148,12 @@ void parser::simplify_input(string& str) {
 
 //	regex_ireplace(str, "wie heisst\\sdu", "wer bin ich");
 //	regex_ireplace(str, "wie heisse\\s", "wer bist ");
-	regex_ireplace(str, "heisst\\sdu", "ist dein_name");
-	regex_ireplace(str, "du\\sheisst", "dein_name ist");
-	regex_ireplace(str, "heisse\\sich", "ist mein_name");
-	regex_ireplace(str, "ich\\sheisse", "mein_name ist");
-	regex_ireplace(str, "wer\\sbist\\sdu", "was ist dein_name");
-	regex_ireplace(str, "wer\\sdu\\sbist", "wer ist dein_name");
+	regex_ireplace(str, "heisst\\sdu", "ist dein name");
+	regex_ireplace(str, "du\\sheisst", "dein name ist");
+	regex_ireplace(str, "heisse\\sich", "ist mein name");
+	regex_ireplace(str, "ich\\sheisse", "mein name ist");
+	regex_ireplace(str, "wer\\sbist\\sdu", "was ist dein name");
+	regex_ireplace(str, "wer\\sdu\\sbist", "wer ist dein name");
 
 	regex_replace(str, "(ist) ([A-Z][a-z]+?) (ein)", "\\1 _\\2_ \\3");
 

@@ -10,35 +10,15 @@
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
-					<value>clean</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
-					<value>true</value>
+					<key>org.eclipse.cdt.core.errorOutputParser</key>
+					<value>org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.append_environment</key>
 					<value>true</value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.stopOnError</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.command</key>
-					<value>/usr/bin/make</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.contents</key>
-					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.target.inc</key>
+					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
 					<value>all</value>
 				</dictionary>
 				<dictionary>
@@ -46,35 +26,23 @@
 					<value></value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<key>org.eclipse.cdt.make.core.build.command</key>
+					<value>/usr/bin/make</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.location</key>
 					<value>/home/tobias/freehal/grammar2012</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
-					<value>false</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.environment</key>
-					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
-					<value>true</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.target.auto</key>
 					<value>all</value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
-					<value>false</value>
-				</dictionary>
-				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.target.clean</key>
 					<value>clean</value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
+					<key>org.eclipse.cdt.make.core.build.target.inc</key>
 					<value>all</value>
 				</dictionary>
 				<dictionary>
@@ -82,16 +50,48 @@
 					<value></value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.location</key>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
 					<value>/home/tobias/freehal/grammar2012</value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
+					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.environment</key>
+					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
 					<value>all</value>
 				</dictionary>
 				<dictionary>
-					<key>org.eclipse.cdt.core.errorOutputParser</key>
-					<value>org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>false</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>
@@ -119,87 +119,27 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] graph</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/graph.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/graph.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-grammar2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-grammar2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-parser2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-parser2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-tagger2012-builtin.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012-builtin.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-tagger2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-tagger2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-util2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-util2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-xml2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-xml2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-diskdb2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Source Files/hal2012-filterfacts2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] graph/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
 			<name>[Targets]/[exe] shell/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Resources</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -209,9 +149,34 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] shell/Source Files/shell.cpp</name>
+			<name>[Targets]/[exe] test/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-diskdb2012.cpp</name>
 			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/shell.cpp</location>
+			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-filterfacts2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] shell/Source Files/hal2012-grammar2012.cpp</name>
@@ -222,6 +187,16 @@
 			<name>[Targets]/[exe] shell/Source Files/hal2012-parser2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-parser2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-phrase2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-phrase2012.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] shell/Source Files/hal2012-predefined2012.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/hal2012-predefined2012.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] shell/Source Files/hal2012-tagger2012-builtin.cpp</name>
@@ -244,59 +219,19 @@
 			<location>/home/tobias/freehal/grammar2012/hal2012-xml2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] shell/Source Files/hal2012-diskdb2012.cpp</name>
+			<name>[Targets]/[exe] shell/Source Files/shell.cpp</name>
+			<type>1</type>
+			<location>/home/tobias/freehal/grammar2012/shell.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] test/Source Files/hal2012-diskdb2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] shell/Source Files/hal2012-filterfacts2012.cpp</name>
+			<name>[Targets]/[exe] test/Source Files/hal2012-filterfacts2012.cpp</name>
 			<type>1</type>
 			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell/Source Files/hal2012-phrase2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-phrase2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell/Source Files/hal2012-predefined2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-predefined2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] shell/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/Source Files/test.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] test/Source Files/hal2012-grammar2012.cpp</name>
@@ -329,29 +264,20 @@
 			<location>/home/tobias/freehal/grammar2012/hal2012-xml2012.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] test/Source Files/hal2012-diskdb2012.cpp</name>
+			<name>[Targets]/[exe] test/Source Files/test.cpp</name>
 			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-diskdb2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/Source Files/hal2012-filterfacts2012.cpp</name>
-			<type>1</type>
-			<location>/home/tobias/freehal/grammar2012/hal2012-filterfacts2012.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] test/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
+			<location>/home/tobias/freehal/grammar2012/test.cpp</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1342631163907</id>
+			<name>cache_de</name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-projectRelativePath-matches-false-false-cache_de</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

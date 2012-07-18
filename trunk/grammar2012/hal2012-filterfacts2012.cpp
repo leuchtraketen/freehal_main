@@ -13,17 +13,30 @@ namespace grammar2012 {
 
 boost::shared_ptr<filterlist> filterlist::instance;
 
+bool is_index_word::operator()(const word& word_1, const word& word_2) const {
+	if (word_1 == "(a)" && word_2 == "name")
+		return false;
+
+	return true;
+}
+
 bool is_index_word::operator()(const word& word) const {
 	tags* tags = word.get_tags();
+
+	if (word == "a" || word == "the" || word == "in" || word == "verb"
+			|| word == "von" || word == "der" || word == "die" || word == "das"
+			|| word == "ein" || word == "eine")
+		return false;
+
 	if (tags == 0) {
-		// cout << "tags == 0" << endl;
-		return word != "a" && word != "the" && word != "in" && word != "verb"
-				&& word != "name" && word != "von" && word != "der"
-				&& word != "die" && word != "das" && word != "ein"
-				&& word != "eine";
-	} else {
-		cout << "tags != 0 => " << word.get_word() << ": " << tags->first
+		//if (filterlist::is_verbose())
+		cout << "tags == 0 => " << word.get_word() << ": is_index_word=" << true
 				<< endl;
+		return true;
+	} else {
+		//if (filterlist::is_verbose())
+		cout << "tags != 0 => " << word.get_word() << ": tags->first="
+				<< tags->first << endl;
 		return tags->first == "n" || tags->first == "adj";
 	}
 }

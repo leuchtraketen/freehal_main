@@ -616,7 +616,7 @@ xml_fact* halxml_readxml_fact(vector<string>& lines, int& i) {
 }
 
 word::word() :
-		tag(0) {
+		w(""), tag(0) {
 }
 word::word(const string _w) :
 		w(_w), tag(0) {
@@ -642,6 +642,9 @@ tags* word::get_tags() const {
 bool word::has_tags() const {
 	return tag != 0 ? true : false;
 }
+size_t word::size() const {
+	return w.size();
+}
 bool word::operator ==(const string& _w) const {
 	return w == _w;
 }
@@ -657,6 +660,27 @@ bool word::operator !=(const word& _w) const {
 std::ostream& operator<<(std::ostream& stream, const word& w) {
 	stream << w.get_word();
 	return stream;
+}
+
+const word lc(const word& _data) {
+	word data(_data);
+	data.set_word(lc(data.get_word()));
+	return data;
+}
+const word uc(const word& _data) {
+	word data(_data);
+	data.set_word(uc(data.get_word()));
+	return data;
+}
+const word lcfirst(const word& _data) {
+	word data(_data);
+	data.set_word(lcfirst(data.get_word()));
+	return data;
+}
+const word ucfirst(const word& _data) {
+	word data(_data);
+	data.set_word(ucfirst(data.get_word()));
+	return data;
 }
 
 }

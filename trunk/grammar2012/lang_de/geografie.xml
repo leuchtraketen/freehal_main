@@ -8,7 +8,6 @@
   <truth>0.500000</truth>
   <flags>00000</flags>
 </fact>
-
 <fact>
   <subject>eine bergspitze</subject>
   <object>der hoechste punkt</object>
@@ -50251,7 +50250,7 @@
 </fact>
 <fact>
   <subject>big apple</subject>
-  <object>ein name fuer new york</object>
+  <object>(a) name fuer new york</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50261,7 +50260,7 @@
 </fact>
 <fact>
   <subject>birma</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50271,7 +50270,7 @@
 </fact>
 <fact>
   <subject>bolivien</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50291,7 +50290,7 @@
 </fact>
 <fact>
   <subject>bosnien</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50301,7 +50300,7 @@
 </fact>
 <fact>
   <subject>botsuana</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50321,7 +50320,7 @@
 </fact>
 <fact>
   <subject>brasilien</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50341,7 +50340,7 @@
 </fact>
 <fact>
   <subject>brunei</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50351,7 +50350,7 @@
 </fact>
 <fact>
   <subject>bulgarien</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50371,7 +50370,7 @@
 </fact>
 <fact>
   <subject>burkina faso</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50381,7 +50380,7 @@
 </fact>
 <fact>
   <subject>burundi</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50431,7 +50430,7 @@
 </fact>
 <fact>
   <subject>daenemark</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50481,7 +50480,7 @@
 </fact>
 <fact>
   <subject>deutschland</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50501,7 +50500,7 @@
 </fact>
 <fact>
   <subject>dominica</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50511,7 +50510,7 @@
 </fact>
 <fact>
   <subject>dschibuti</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50521,7 +50520,7 @@
 </fact>
 <fact>
   <subject>ecuador</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50531,7 +50530,7 @@
 </fact>
 <fact>
   <subject>el salvador</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50541,7 +50540,7 @@
 </fact>
 <fact>
   <subject>elfenbeinkueste</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50551,7 +50550,7 @@
 </fact>
 <fact>
   <subject>eritrea</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50571,7 +50570,7 @@
 </fact>
 <fact>
   <subject>estland</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50611,7 +50610,7 @@
 </fact>
 <fact>
   <subject>foederierte staaten von mikronesien</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -50711,7 +50710,7 @@
 </fact>
 <fact>
   <subject>herzegowina</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
@@ -51281,7 +51280,7 @@
 </fact>
 <fact>
   <subject>vereinigte arabische emirate</subject>
-  <object>ein name</object>
+  <object>(a) name</object>
   <verb>ist</verb>
   <adverbs></adverbs>
   <extra></extra>
