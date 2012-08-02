@@ -440,36 +440,37 @@ string tagger::__builtin_pos_types[] = { "&: linking", "|: linking", "?: n",
 		"sollten: v", "sollte: v", "sollt: v", "soll: v", "sometimes: adj",
 		"sondern: prep", "soon: adj", "soviel: adj", "soweit: questionword",
 		"sowie: prep", "sowohl: prep", "spaet: adj", "spaeter: adj", "spd: n",
-		"Speisen: n", "speisen: v", "spielen: v", "spielst: v", "spielt: v",
-		"spitz: adj", "sprechen: v", "spreche: v", "spricht: v", "sproede: adj",
-		"stand: v", "stark: adj", "starr: adj", "statt: prep", "ste: adj",
-		"stehen: v", "stehst: v", "steht: v", "steif: adj", "steil: adj",
-		"stem: adj", "sten: adj", "ster: adj", "sterben: v", "sterbe: v",
-		"stes: adj", "stet: adj", "stets: adj", "stifte: n", "stiften: n",
-		"stiftet: v", "stift: n", "still: adj", "stirbt: v", "stmals: adj",
-		"stolz: adj", "streng: adj", "studiert: v", "stumm: adj", "stumpf: adj",
-		"stur: adj", "suche: v", "suchst: v", "sue?: adj", "tag: n",
-		"takt: adj", "tal: n", "tapfer: adj", "taub: adj", "tauchen: v",
-		"tauche: v", "tauchst: v", "taucht: v", "tausend: adj", "tausende: adj",
-		"teils: prep", "telligent: adj", "ten: prep", "teressieren: v",
-		"teressiere: v", "teressierst: v", "testen: v", "test: n", "teuer: adj",
-		"that: art", "the: art", "their: art", "this: art", "tief: adj",
-		"time: n", "$$time$$: n", "tiere: n", "tlerweile: adj", "today: adj",
-		"tod: n", "toll: adj", "tomorrow: adj", "to: prep",
-		"_to_: questionword", "tot: adj", "traege: adj", "trage: v", "tree: n",
-		"trees: n", "treu: adj", "trinken: v", "trocken: adj", "tuckernde: adj",
-		"_true_: adj", "_(true)_: adj", "trueb: adj", "ts: adj", "tumb: adj",
-		"tun: v", "uebermorgen: adj", "uebel: adj", "ueben: v",
-		"ueberhaupt: adj", "uebernahm: v", "ueber: prep", "ueber: prep",
-		"uebe: v", "uebst: v", "uebt: v", "uhr: n", "um: prep", "um: prep",
-		"und: linking", "unerlaubt: adj", "unerlaubte: adj", "unerlaubtem: adj",
-		"unerlaubten: adj", "unerlaubter: adj", "unerlaubtes: adj",
-		"ungefaehr: adj", "universitaet: n", "unreif: adj", "unreife: adj",
-		"unreifem: adj", "unreifen: adj", "unreifer: adj", "unreifes: adj",
-		"unsere: art", "unserem: art", "unseren: art", "unseres: art", "uns: n",
-		"unterhalten: v", "unter: prep", "unter: prep", "untertauchen: v",
-		"untertauche: v", "untertauchst: v", "untertaucht: v", "unterwegs: adj",
-		"unterwelt: n", "us-amerikanisch: adj", "us-amerikanische: adj",
+		"Speisen: n", "spiele: v", "speisen: v", "spielen: v", "spielst: v",
+		"spielt: v", "spitz: adj", "sprechen: v", "spreche: v", "spricht: v",
+		"sproede: adj", "stand: v", "stark: adj", "starr: adj", "statt: prep",
+		"ste: adj", "stehen: v", "stehst: v", "steht: v", "steif: adj",
+		"steil: adj", "stem: adj", "sten: adj", "ster: adj", "sterben: v",
+		"sterbe: v", "stes: adj", "stet: adj", "stets: adj", "stifte: n",
+		"stiften: n", "stiftet: v", "stift: n", "still: adj", "stirbt: v",
+		"stmals: adj", "stolz: adj", "streng: adj", "studiert: v", "stumm: adj",
+		"stumpf: adj", "stur: adj", "suche: v", "suchst: v", "sue?: adj",
+		"tag: n", "takt: adj", "tal: n", "tapfer: adj", "taub: adj",
+		"tauchen: v", "tauche: v", "tauchst: v", "taucht: v", "tausend: adj",
+		"tausende: adj", "teils: prep", "telligent: adj", "ten: prep",
+		"teressieren: v", "teressiere: v", "teressierst: v", "testen: v",
+		"test: n", "teuer: adj", "that: art", "the: art", "their: art",
+		"this: art", "tief: adj", "time: n", "$$time$$: n", "tiere: n",
+		"tlerweile: adj", "today: adj", "tod: n", "toll: adj", "tomorrow: adj",
+		"to: prep", "_to_: questionword", "tot: adj", "traege: adj", "trage: v",
+		"tree: n", "trees: n", "treu: adj", "trinken: v", "trocken: adj",
+		"tuckernde: adj", "_true_: adj", "_(true)_: adj", "trueb: adj",
+		"ts: adj", "tumb: adj", "tun: v", "uebermorgen: adj", "uebel: adj",
+		"ueben: v", "ueberhaupt: adj", "uebernahm: v", "ueber: prep",
+		"ueber: prep", "uebe: v", "uebst: v", "uebt: v", "uhr: n", "um: prep",
+		"um: prep", "und: linking", "unerlaubt: adj", "unerlaubte: adj",
+		"unerlaubtem: adj", "unerlaubten: adj", "unerlaubter: adj",
+		"unerlaubtes: adj", "ungefaehr: adj", "universitaet: n", "unreif: adj",
+		"unreife: adj", "unreifem: adj", "unreifen: adj", "unreifer: adj",
+		"unreifes: adj", "unsere: art", "unserem: art", "unseren: art",
+		"unseres: art", "uns: n", "unterhalten: v", "unter: prep",
+		"unter: prep", "untertauchen: v", "untertauche: v", "untertauchst: v",
+		"untertaucht: v", "unterwegs: adj", "unterwelt: n",
+		"us-amerikanisch: adj", "us-amerikanische: adj",
 		"us-amerikanischem: adj", "us-amerikanischen: adj",
 		"us-amerikanischer: adj", "us-amerikanisches: adj", "usually: adj",
 		"~~~: v", "~: v", "==: v", "=>: v", "=: v", "is-a: v", "is-part: v",
@@ -523,5 +524,303 @@ vector<string> tagger::builtin_entity_ends;
 vector<string> tagger::builtin_male_names;
 vector<string> tagger::builtin_female_names;
 vector<string> tagger::custom_names;
+
+const string tagger::get_article(const string& article, const string& genus,
+		const string& part_of_sentence) {
+	if (article == "(the)") {
+		if (part_of_sentence == "object") {
+			if (genus == "m")
+				return "den";
+			else if (genus == "f")
+				return "die";
+			else
+				return "das";
+		}
+		else if (part_of_sentence == "subject") {
+			if (genus == "m")
+				return "der";
+			else if (genus == "f")
+				return "die";
+			else
+				return "das";
+		}
+	}
+	if (article == "(a)") {
+		if (part_of_sentence == "object") {
+			if (genus == "m")
+				return "einen";
+			else if (genus == "f")
+				return "eine";
+			else
+				return "ein";
+		}
+		else if (part_of_sentence == "subject") {
+			if (genus == "m")
+				return "ein";
+			else if (genus == "f")
+				return "eine";
+			else
+				return "ein";
+		}
+	}
+	return article;
+}
+
+const string tagger::get_verb(const string& verb, const string& person) {
+
+	if (verb == "be") {
+		if (person == "1s") {
+			return "bin";
+		}
+		if (person == "2s") {
+			return "bist";
+		}
+		if (person == "3s") {
+			return "ist";
+		}
+		if (person == "1p") {
+			return "sind";
+		}
+		if (person == "2p") {
+			return "seid";
+		}
+		if (person == "3p") {
+			return "sind";
+		}
+	}
+
+	if (verb == "have") {
+		if (person == "1s") {
+			return "habe";
+		}
+		if (person == "2s") {
+			return "hast";
+		}
+		if (person == "3s") {
+			return "hat";
+		}
+		if (person == "1p") {
+			return "haben";
+		}
+		if (person == "2p") {
+			return "habt";
+		}
+		if (person == "3p") {
+			return "haben";
+		}
+	}
+
+	if (verb == "want") {
+		if (person == "1s") {
+			return "will";
+		}
+		if (person == "2s") {
+			return "willst";
+		}
+		if (person == "3s") {
+			return "will";
+		}
+		if (person == "1p") {
+			return "wollen";
+		}
+		if (person == "2p") {
+			return "wollt";
+		}
+		if (person == "3p") {
+			return "wollen";
+		}
+	}
+
+	if (verb == "must") {
+		if (person == "1s") {
+			return "muss";
+		}
+		if (person == "2s") {
+			return "musst";
+		}
+		if (person == "3s") {
+			return "muss";
+		}
+		if (person == "1p") {
+			return "muessen";
+		}
+		if (person == "2p") {
+			return "muesst";
+		}
+		if (person == "3p") {
+			return "muessen";
+		}
+	}
+
+	if (verb == "can") {
+		if (person == "1s") {
+			return "kann";
+		}
+		if (person == "2s") {
+			return "kannst";
+		}
+		if (person == "3s") {
+			return "kann";
+		}
+		if (person == "1p") {
+			return "koennen";
+		}
+		if (person == "2p") {
+			return "koennt";
+		}
+		if (person == "3p") {
+			return "koennen";
+		}
+	}
+
+	if (verb == "may") {
+		if (person == "1s") {
+			return "darf";
+		}
+		if (person == "2s") {
+			return "darfst";
+		}
+		if (person == "3s") {
+			return "darf";
+		}
+		if (person == "1p") {
+			return "duerfen";
+		}
+		if (person == "2p") {
+			return "duerft";
+		}
+		if (person == "3p") {
+			return "duerfen";
+		}
+	}
+
+	if (verb == "should") {
+		if (person == "1s") {
+			return "sollte";
+		}
+		if (person == "2s") {
+			return "solltest";
+		}
+		if (person == "3s") {
+			return "sollte";
+		}
+		if (person == "1p") {
+			return "sollten";
+		}
+		if (person == "2p") {
+			return "solltet";
+		}
+		if (person == "3p") {
+			return "sollten";
+		}
+	}
+
+	if (verb == "is-a") {
+		if (person == "1s") {
+			return "bin";
+		}
+		if (person == "2s") {
+			return "bist";
+		}
+		if (person == "3s") {
+			return "ist";
+		}
+		if (person == "1p") {
+			return "sind";
+		}
+		if (person == "2p") {
+			return "seid";
+		}
+		if (person == "3p") {
+			return "sind";
+		}
+	}
+
+	if (verb == "is-same-as") {
+		if (person == "1s") {
+			return "entspricht";
+		}
+		if (person == "2s") {
+			return "entsprichst";
+		}
+		if (person == "3s") {
+			return "entspricht";
+		}
+		if (person == "1p") {
+			return "entsprechen";
+		}
+		if (person == "2p") {
+			return "entsprecht";
+		}
+		if (person == "3p") {
+			return "entsprechen";
+		}
+	}
+
+	if (verb == "is-part-0") {
+		if (person == "1s") {
+			return "gehoere zu";
+		}
+		if (person == "2s") {
+			return "gehoerst zu";
+		}
+		if (person == "3s") {
+			return "gehoert zu";
+		}
+		if (person == "1p") {
+			return "gehoeren zu";
+		}
+		if (person == "2p") {
+			return "gehoert zu";
+		}
+		if (person == "3p") {
+			return "gehoeren zu";
+		}
+	}
+
+	if (verb == "is-part-1") {
+		if (person == "1s") {
+			return "bin ein Teil von";
+		}
+		if (person == "2s") {
+			return "bist ein Teil von";
+		}
+		if (person == "3s") {
+			return "ist ein Teil von";
+		}
+		if (person == "1p") {
+			return "sind ein Teil von";
+		}
+		if (person == "2p") {
+			return "seid ein Teil von";
+		}
+		if (person == "3p") {
+			return "sind ein Teil von";
+		}
+	}
+
+	if (verb == "is-own-") {
+		if (person == "1s") {
+			return "gehoere";
+		}
+		if (person == "2s") {
+			return "gehoerst";
+		}
+		if (person == "3s") {
+			return "gehoert";
+		}
+		if (person == "1p") {
+			return "gehoeren";
+		}
+		if (person == "2p") {
+			return "gehoert";
+		}
+		if (person == "3p") {
+			return "gehoeren";
+		}
+	}
+
+	return verb;
+}
 
 }

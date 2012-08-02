@@ -5,33 +5,11 @@
  *      Author: tobias
  */
 
+#include "hal2012-serialization.h"
+#include "hal2012-util2012.h"
+
 #ifndef HAL2012_TAGGER2012_H_
 #define HAL2012_TAGGER2012_H_
-
-#include <boost/unordered_map.hpp>
-#include <boost/unordered_set.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/algorithm/string/trim.hpp>
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/algorithm/string/find.hpp>
-#include <boost/algorithm/string/erase.hpp>
-#include <boost/algorithm/string/find_format.hpp>
-#include <boost/algorithm/string/split.hpp>
-#include <boost/regex.hpp>
-
-#include "hal2012-serialization.h"
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <vector>
-#include <string>
-#include <map>
-
-using namespace std;
-
-namespace algo = boost::algorithm;
 
 #define EXTERN_C extern "C"
 EXTERN_C char* check_config(const char* name, const char* _default);
@@ -45,16 +23,15 @@ const string print_vector(const vector<tags*>&);
 
 class tagger;
 
-class tagger {
+class tagger: public freehal_base {
 private:
 	typedef boost::unordered_map<string, string> tagmap;
 	typedef vector<pair<string, string> > taglist;
-	tagmap* type;
-	tagmap* genus;
-	taglist* regex_type;
-	tagmap* regex_genus;
-	bool verbose;
-	bool buffered;
+	boost::shared_ptr<tagmap> type;
+	boost::shared_ptr<tagmap> genus;
+	boost::shared_ptr<taglist> regex_type;
+	boost::shared_ptr<tagmap> regex_genus;
+	boost::shared_ptr<tagmap> togglemap;
 
 	void impl_get_pos(const string, tags*);
 	void impl_regex_get_pos(const string, tags*);
@@ -65,30 +42,29 @@ private:
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version) {
-		ar & boost::serialization::make_nvp("type_map", type);
-		ar & boost::serialization::make_nvp("genus_map", genus);
-		ar & boost::serialization::make_nvp("regex_type_map", regex_type);
-		ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);;
-		ar & BOOST_SERIALIZATION_NVP(verbose);
-		ar & BOOST_SERIALIZATION_NVP(buffered);
+		/*ar & boost::serialization::make_nvp("type_map", type);
+		 ar & boost::serialization::make_nvp("genus_map", genus);
+		 ar & boost::serialization::make_nvp("regex_type_map", regex_type);
+		 ar & boost::serialization::make_nvp("regex_genus_map", regex_genus);*/
 	}
 
 public:
 	tagger();
 	~tagger();
-	int read_pos_file(const string);
-	int read_regex_pos_file(const string);
+	int read_pos_file(const fs::path&);
+	int read_regex_pos_file(const fs::path&);
+	int write_to_file(const fs::path&, const string&, tags*);
 	tags* get_pos(const string);
-
-	void set_verbose(bool);
-	bool is_verbose();
-	void set_buffered(bool);
-	bool is_buffered();
 
 	static bool is_name(const string&);
 	static bool is_job(const string&);
 	static const string unique_pos_type(const string&);
 	static const string to_grammar_pos(tags*, const string&);
+
+	int read_verbs_file(const fs::path&);
+	int toggle(string&);
+	const string get_verb(const string&, const string&);
+	const string get_article(const string&, const string&, const string&);
 
 	static string __builtin_entity_ends;
 	static string __builtin_male_names;

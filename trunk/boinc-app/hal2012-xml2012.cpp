@@ -25,61 +25,119 @@
 namespace grammar2012 {
 
 xml_obj::xml_obj(xml_obj_mode _mode) :
-		mode(_mode), content(), text(""), name("") {
-	//cout << "construct: " << "xml_obj" << endl;
+		mode(_mode), content(), text(""), name(""), is_cached_words(false), is_cached_tags(
+				false) {
 }
 xml_obj::xml_obj() :
-		mode(LIST), content(), text(""), name("") {
-	//cout << "construct: " << "xml_obj" << endl;
+		mode(LIST), content(), text(""), name(""), is_cached_words(false), is_cached_tags(
+				false) {
 }
 xml_obj::~xml_obj() {
-	//cout << "destruct:  " << "xml_obj" << endl;
 	if (mode == LIST) {
-		int k;
-		for (k = 0; k < content.size(); ++k) {
-			delete (content[k]);
-		}
 		content.clear();
 	}
 }
 
-xml_obj_mode xml_obj::get_mode() {
+boost::shared_ptr<xml_obj> xml_obj::from_text(const string& _text) {
+	boost::shared_ptr<xml_obj> obj(new xml_obj(TEXT));
+	obj->set_name("");
+	obj->set_text(_text);
+	return obj;
+}
+
+xml_obj_mode xml_obj::get_mode() const {
 	return mode;
 }
 
-xml_obj* operator <<(xml_obj* o, xml_obj& i) {
-	o->content.push_back(&i);
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
+		boost::shared_ptr<xml_obj> i) {
+	o->content.push_back(i);
+	o->reset_cache();
 	return o;
 }
-xml_obj* operator <<(xml_obj* o, vector<xml_obj*> i) {
-	int k;
-	for (k = 0; k < i.size(); ++k) {
-		o->content.push_back(i[k]);
+boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
+		vector<boost::shared_ptr<xml_obj> >& i) {
+	foreach (boost::shared_ptr<xml_obj> elem, i) {
+		o->content.push_back(elem);
+		o->reset_cache();
 	}
 	return o;
 }
-xml_obj* operator >>(xml_obj* i, vector<xml_obj*> o) {
+const boost::shared_ptr<xml_obj>& operator >>(
+		const boost::shared_ptr<xml_obj>& i,
+		vector<boost::shared_ptr<xml_obj> >& o) {
+
+	foreach (boost::shared_ptr<xml_obj> elem, i->content) {
+		o.push_back(elem);
+	}
+	return i;
+}
+xml_obj* operator <<(xml_obj* o, boost::shared_ptr<xml_obj> i) {
+	o->content.push_back(i);
+	o->reset_cache();
+	return o;
+}
+xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> >& i) {
+	foreach (boost::shared_ptr<xml_obj> elem, i) {
+		o->content.push_back(elem);
+		o->reset_cache();
+	}
+	return o;
+}
+const xml_obj* operator >>(const xml_obj* i,
+		vector<boost::shared_ptr<xml_obj> >& o) {
 	int k;
 	for (k = 0; k < i->content.size(); ++k) {
 		o.push_back(i->content[k]);
 	}
 	return i;
 }
-void xml_obj::set_name(string name) {
+std::ostream& operator<<(std::ostream& stream, const xml_fact& xfact) {
+	stream << xfact.print_xml();
+	return stream;
+}
+std::ostream& operator<<(std::ostream& stream, const xml_obj& xobj) {
+	stream << xobj.print_xml();
+	return stream;
+}
+std::ostream& operator<<(std::ostream& stream,
+		const boost::shared_ptr<xml_fact>& xfact) {
+	stream << xfact->print_str();
+	return stream;
+}
+std::ostream& operator<<(std::ostream& stream,
+		const boost::shared_ptr<xml_obj>& xobj) {
+	stream << xobj->print_str();
+	return stream;
+}
+
+const std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() const {
+	return content;
+}
+std::vector<boost::shared_ptr<xml_obj> >& xml_obj::get_embedded() {
+	return content;
+}
+
+void xml_obj::set_name(const string& name) {
 	this->name = name;
 }
-string xml_obj::get_name() {
+string xml_obj::get_name() const {
 	return (name);
 }
 
-void trim(std::string& s, const char* t = " \t\n\r\f\v") {
-	s.erase(0, s.find_first_not_of(t));
-	s.erase(s.find_last_not_of(t) + 1);
-}
-void xml_obj::set_text(string str) {
+void xml_obj::set_text(const string& str) {
 	text = str;
-	trim(text);
+	algo::trim_if(text, algo::is_any_of(" \t\n\r\f\v"));
 }
+void xml_obj::set_text(const word& w) {
+	text = w.get_word();
+	cache_words.clear();
+	cache_words.push_back(w);
+	is_cached_words = true;
+	if (w.has_tags())
+		is_cached_tags = true;
+}
+
 string xml_obj::print_xml() const {
 	return print_xml(0, 0) + "\n";
 }
@@ -112,8 +170,10 @@ string xml_obj::print_xml(int level, int secondlevel) const {
 	}
 	return (string());
 }
+
 string xml_obj::print_str(string tag_name) const {
-	std::vector<xml_obj*> _content = part(tag_name);
+	std::vector<boost::shared_ptr<xml_obj> > _content;
+	part(_content, tag_name);
 
 	string str;
 	int k;
@@ -124,6 +184,7 @@ string xml_obj::print_str(string tag_name) const {
 	}
 	return (str);
 }
+
 string xml_obj::print_str() const {
 	if (mode == TEXT) {
 		return "\"" + text + "\"";
@@ -140,6 +201,15 @@ string xml_obj::print_str() const {
 		if (name == "text" && content.size() == 1) {
 			ss << name << ":";
 			ss << content[0]->print_str();
+		} else if (name == "synonyms") {
+			ss << name << ": \"";
+			int k;
+			for (k = 0; k < content.size(); ++k) {
+				if (k > 0)
+					ss << "|";
+				ss << content[k]->print_text();
+			}
+			ss << "\"";
 		} else {
 			ss << "'" << name << "':{";
 
@@ -162,33 +232,228 @@ string xml_obj::print_str() const {
 	return "";
 }
 
-int xml_obj::get_words(vector<string>& words) const {
+string xml_obj::print_text() const {
+	if (mode == TEXT) {
+		return text;
+	}
+	if (mode == LIST) {
+		string delem;
+		if (name == "and" || name == "or") {
+			delem = " " + name + " ";
+		} else {
+			delem = " ";
+		}
+
+		stringstream ss;
+		if (name == "text" && content.size() == 1) {
+			ss << content[0]->print_text();
+		} else {
+
+			if (content.size() == 1) {
+				ss << content[0]->print_text();
+			} else if (content.size() > 1) {
+				int k;
+				for (k = 0; k < content.size(); ++k) {
+					if (k > 0)
+						ss << delem;
+					ss << content[k]->print_text();
+				}
+			}
+		}
+		return ss.str();
+	}
+	return "";
+}
+
+int xml_obj::prepare_words() {
+	if (is_cached_words)
+		return 1;
+	cache_words.clear();
+
+	//cout << "prepare_words: " << this->print_str() << endl;
+
 	if (mode == TEXT) {
 		vector<string> _words;
 		// !(algo::is_digit() || algo::is_alpha())
-		algo::split(_words, text, !algo::is_alpha(), algo::token_compress_on);
-		if (_words.size() > 0)
-			copy(_words.begin(), _words.end(), back_inserter(words));
-		return 0;
-	}
-	if (mode == LIST) {
-		int k;
-		foreach (xml_obj* embedded, content) {
-			embedded->get_words(words);
+		algo::split(_words, text,
+				!(algo::is_alpha() || algo::is_digit()
+						|| algo::is_any_of("}{][=-)(_")),
+				algo::token_compress_on);
+		foreach (string& text, _words) {
+			if (text.size() > 0 && text != "1")
+				cache_words.push_back(word(text));
 		}
 	}
+	if (mode == LIST) {
+		if (name != "truth") {
+			foreach (boost::shared_ptr<xml_obj> embedded, content) {
+				embedded->prepare_words();
+				embedded->get_words(cache_words);
+			}
+		}
+	}
+	is_cached_words = true;
+
 	return 0;
+}
+
+int xml_obj::prepare_tags(tagger* _t = 0) {
+	if (is_cached_tags)
+		return 1;
+	prepare_words();
+
+	//cout << "prepare_tags: " << this->print_str() << endl;
+
+	tagger* t = _t;
+	if (_t == 0) {
+		cout << "Error! prepare_words: no tagger given..." << endl;
+		t = new tagger();
+	}
+	foreach (word& w, cache_words) {
+		if (!w.has_tags())
+			w.set_tags(t->get_pos(w.get_word()));
+	}
+	if (mode == LIST) {
+		foreach (boost::shared_ptr<xml_obj> embedded, content) {
+			embedded->prepare_tags(_t);
+		}
+	}
+	if (_t == 0) {
+		delete t;
+	} else {
+		is_cached_tags = true;
+	}
+
+	return 0;
+}
+
+int xml_obj::reset_cache() {
+	is_cached_words = false;
+	is_cached_tags = false;
+	return 0;
+}
+
+const vector<word>& xml_obj::get_words() const {
+	return cache_words;
+}
+
+const vector<word>& xml_obj::get_words() {
+	if (!is_cached_words)
+		this->prepare_words();
+	return cache_words;
+}
+
+int xml_obj::get_words(vector<word>& words) const {
+	words.insert(words.end(), cache_words.begin(), cache_words.end());
+	return 0;
+}
+
+int xml_obj::get_words(vector<word>& words) {
+	if (!is_cached_words)
+		this->prepare_words();
+	words.insert(words.end(), cache_words.begin(), cache_words.end());
+	return 0;
+}
+
+size_t xml_obj::size() const {
+	return content.size();
+}
+
+void xml_obj::trim() {
+	if (mode == LIST) {
+		boost::shared_ptr<xml_obj> subject(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> object(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> adverbs(new xml_obj(LIST));
+		boost::shared_ptr<xml_obj> verb(new xml_obj(LIST));
+		vector<boost::shared_ptr<xml_obj> > other;
+
+		foreach (boost::shared_ptr<xml_obj> embedded, content) {
+			boost::shared_ptr<xml_obj> unique;
+			if (embedded->name == "subject")
+				unique = subject;
+			else if (embedded->name == "object")
+				unique = object;
+			else if (embedded->name == "adverbs")
+				unique = adverbs;
+			else if (embedded->name == "verb")
+				unique = verb;
+			embedded->trim();
+
+			if (unique) {
+				unique->set_name(embedded->name);
+				unique << embedded->content;
+			} else {
+				other.push_back(embedded);
+			}
+		}
+
+		content.clear();
+		if (subject->size() > 0)
+			this << subject;
+		if (object->size() > 0)
+			this << object;
+		if (adverbs->size() > 0)
+			this << adverbs;
+		if (verb->size() > 0)
+			this << verb;
+		this << other;
+	}
+}
+
+int xml_obj::toggle(tagger* t) {
+	if (t == 0)
+		return 1;
+	bool delete_cache = false;
+
+	t->read_verbs_file("toggle.csv");
+
+	if (mode == LIST && content.size() > 0) {
+		if (name == "synonyms") {
+			// foreach (boost::shared_ptr < xml_obj > &subobj, content) {
+			string word = content[0]->print_text();
+			if (!t->toggle(word)) {
+				boost::shared_ptr<xml_obj> text_obj(new xml_obj(LIST));
+				text_obj->set_name("text");
+				boost::shared_ptr<xml_obj> t(new xml_obj(TEXT));
+				t->set_text(word);
+				text_obj << t;
+				content[0] = text_obj;
+				delete_cache = true;
+				// content.insert(content.begin(), text_obj); break;
+			}
+		} else {
+			foreach (boost::shared_ptr < xml_obj > &subobj, content) {
+				if (subobj->toggle(t) == 0) {
+					delete_cache = true;
+				}
+			}
+		}
+	}
+
+	if (delete_cache) {
+		reset_cache();
+		prepare_tags(t);
+	}
+
+	return delete_cache ? 0 : 1;
 }
 
 std::size_t hash_value(const xml_obj& o) {
 	std::size_t seed = 0;
-	boost::hash_combine(seed, o.print_xml());
+	boost::hash_combine(seed, o.print_text());
+	/*if (o.get_mode() == TEXT) {
+	 boost::hash_combine(seed, o.print_text());
+	 } else {
+	 const vector<boost::shared_ptr<xml_obj> >& vec = o.get_embedded();
+	 foreach(const boost::shared_ptr<xml_obj>& sub, vec) {
+	 hash_value(*sub);
+	 }
+	 }*/
+	//boost::hash_combine(seed, o.print_xml());
 	return seed;
 }
 std::size_t hash_value(const xml_fact& o) {
-	std::size_t seed = 0;
-	boost::hash_combine(seed, o.print_xml());
-	return seed;
+	return hash_value((const xml_obj&) o);
 }
 bool operator==(const xml_obj& o1, const xml_obj& o2) {
 	return o1.print_xml() == o2.print_xml();
@@ -200,37 +465,49 @@ bool operator==(const xml_fact& o1, const xml_fact& o2) {
 }
 
 xml_fact::xml_fact() :
-		xml_obj(), line(), filename() {
+		xml_obj(LIST), line(), filename() {
 	name = "fact";
-	//cout << "construct: " << "fact" << endl;
 }
 xml_fact::~xml_fact() {
 	if (content.size() > 0) {
-		int k;
-		for (k = 0; k < content.size(); ++k) {
-			delete (content[k]);
-		}
 		content.clear();
 	}
-	//cout << "destruct:  " << "fact" << endl;
-	/*int k;
-	 if (content) {
-	 for (k = 0; k < content.size(); ++k) {
-	 delete (content[k]);
-	 }
-	 delete (content);
-	 }*/
 }
 
-std::vector<xml_obj*> xml_obj::part(string tag_name) const {
-	std::vector<xml_obj*> _content;
-	int k;
-	for (k = 0; k < content.size(); ++k) {
-		if (content[k]->get_name() == tag_name) {
-			_content.push_back(content[k]);
+int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
+		const string& tag_name) const {
+	int j;
+	foreach (boost::shared_ptr<xml_obj> o, content) {
+		if (o->get_name() == tag_name) {
+			_content.push_back(o);
+			++j;
 		}
 	}
-	return _content;
+	return j;
+}
+
+boost::shared_ptr<xml_obj> xml_obj::part(const string& tag_name) const {
+
+	boost::shared_ptr<xml_obj> subtree;
+	int count = 0;
+	foreach (boost::shared_ptr<xml_obj> o, content) {
+		if (o->get_name() == tag_name) {
+			++count;
+			subtree = o;
+		}
+	}
+	if (count == 1) {
+		return subtree;
+	} else {
+		subtree.reset(new xml_obj(LIST));
+		subtree->set_name(tag_name);
+		foreach (boost::shared_ptr<xml_obj> o, content) {
+			if (o->get_name() == tag_name) {
+				subtree << o->content;
+			}
+		}
+		return subtree;
+	}
 }
 
 string halxml_readfile(const fs::path& infile) {
@@ -303,27 +580,27 @@ Tree* halxml_readtree(Tree* tree, const string& tag_name, vector<string>& lines,
 			string _tag_name = lines[i];
 			++i;
 			{
-				xml_obj* subtree = new xml_obj(LIST);
-				halxml_readtree(subtree, _tag_name, lines, i);
+				boost::shared_ptr<xml_obj> subtree(new xml_obj(LIST));
+				halxml_readtree(subtree.get(), _tag_name, lines, i);
 				if (subtree->content.size() > 0) {
-					tree << *subtree;
-				} else {
-					delete subtree;
+					tree << subtree;
 				}
 			}
 		} else if (string(lines[i]).size() > 0) {
 			const string& text = lines[i];
 			// check for default values
 			if (text != "00000" && !algo::starts_with(text, "0.50")) {
-				xml_obj* t = new xml_obj(TEXT);
-				t->set_text(text);
+				boost::shared_ptr<xml_obj> t(new xml_obj(TEXT));
+				t->set_text(
+						algo::starts_with(text, "0.0") ? "0" :
+						algo::starts_with(text, "1.0") ? "1" : text);
 				if (tag_name == "text") {
-					tree << *t;
+					tree << t;
 				} else {
-					xml_obj* text_obj = new xml_obj(LIST);
+					boost::shared_ptr<xml_obj> text_obj(new xml_obj(LIST));
 					text_obj->set_name("text");
-					text_obj << *t;
-					tree << *text_obj;
+					text_obj << t;
+					tree << text_obj;
 				}
 			}
 		}
@@ -338,185 +615,72 @@ xml_fact* halxml_readxml_fact(vector<string>& lines, int& i) {
 	return (fact);
 }
 
-xml_fact* record_to_xml_fact(void* r, int level = 0) {
-	xml_fact* fact = new xml_fact();
-
-	xml_obj* tree = 0;
-	xml_obj* t = 0;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("subject");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->subjects);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("object");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->objects);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("verb");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->verb);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("adverbs");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->adverbs);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("extra");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->extra);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("questionword");
-	t = new xml_obj(TEXT);
-	//t->set_text(r->questionword);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("truth");
-	t = new xml_obj(TEXT);
-	//char truth_str[10];
-	//snprintf(truth_str, 9, "%f", r->truth);
-	//t->set_text(truth_str);
-	tree << *t;
-	fact << *tree;
-
-	tree = new xml_obj(LIST);
-	tree->set_name("flags");
-	t = new xml_obj(TEXT);
-	//char flags_str[10];
-	//snprintf(flags_str, 9, "%d%d%d%d%d", r->verb_flag_want, r->verb_flag_must, r->verb_flag_can, r->verb_flag_may, r->verb_flag_should);
-	//t->set_text(flags_str);
-	tree << *t;
-	fact << *tree;
-
-	/*
-	 if (level == 0) {
-	 int n;
-	 int broken = 0;
-	 for (n = 0; n < r->num_clauses && n+1 < MAX_CLAUSES && r->clauses && r->clauses[n]; ++n) {
-	 struct RECORD* clause = (struct RECORD*)(r->clauses[n]);
-
-	 if (( (!clause->subjects||0==strcmp(clause->subjects, "")) && (!clause->objects||0==strcmp(clause->objects, "")) && (!clause->verb||0==strcmp(clause->verb, "")) && !(clause->verb_flag_want || clause->verb_flag_must || clause->verb_flag_can || clause->verb_flag_may || clause->verb_flag_should)) || (clause->questionword && clause->questionword[0] == ')')) {
-	 break;
-	 }
-
-	 xml_fact* clause_xml_fact = record_to_xml_fact(clause, level+1);
-	 clause_xml_fact->set_name("clause");
-	 xml_fact << *clause_xml_fact;
-	 }
-	 }
-	 */
-
-	//xml_fact->filename = r->filename;
-	//xml_fact->line = r->line;
-	return fact;
+word::word() :
+		w(""), tag(0) {
+}
+word::word(const string _w) :
+		w(_w), tag(0) {
+}
+word::word(const word& _w) :
+		w(_w.w), tag(_w.tag) {
+}
+word::word(const string _w, tags* _tags) :
+		w(_w), tag(_tags) {
+}
+void word::set_word(const string& _w) {
+	w = _w;
+}
+void word::set_tags(tags* _tag) {
+	tag = _tag;
+}
+const string& word::get_word() const {
+	return w;
+}
+tags* word::get_tags() const {
+	return tag;
+}
+bool word::has_tags() const {
+	return tag != 0 ? true : false;
+}
+size_t word::size() const {
+	return w.size();
+}
+bool word::operator ==(const string& _w) const {
+	return w == _w;
+}
+bool word::operator !=(const string& _w) const {
+	return w != _w;
+}
+bool word::operator ==(const word& _w) const {
+	return w == _w.w;
+}
+bool word::operator !=(const word& _w) const {
+	return w != _w.w;
+}
+std::ostream& operator<<(std::ostream& stream, const word& w) {
+	stream << w.get_word();
+	return stream;
 }
 
-
-/*
- int add_xml_fact(xml_fact* xfact) {
- int only_logic = 0;
- int has_conditional_questionword = 0;
-
- string subject = xfact->print_str("subject");
- string object = xfact->print_str("object");
- string verb = xfact->print_str("verb");
- string adverbs = xfact->print_str("adverbs");
- string extra = xfact->print_str("extra");
- string questionword = xfact->print_str("questionword");
- string filename = xfact->filename;
- string line = xfact->line;
- string truth_str = xfact->print_str("truth");
-
- float truth;
- sscanf(truth_str.c_str(), "%fl", &truth);
- stringstream sst;
- sst << truth_str;
- sst >> truth;
-
- string verb_flags = xfact->print_str("flags");
- int verb_flag_want = 0, verb_flag_must = 0, verb_flag_can = 0,
- verb_flag_may = 0, verb_flag_should = 0;
- if (verb_flags.size() == 5)
- sscanf(verb_flags.c_str(), "%d%d%d%d%d", &verb_flag_want,
- &verb_flag_must, &verb_flag_can, &verb_flag_may,
- &verb_flag_should);
-
- struct xml_fact* xml_fact = add_xml_fact(subject.c_str(), object.c_str(), verb.c_str(),
- adverbs.c_str(), extra.c_str(), questionword.c_str(),
- filename.c_str(), line.c_str(), truth, verb_flag_want,
- verb_flag_must, verb_flag_can, verb_flag_may, verb_flag_should,
- only_logic, has_conditional_questionword);
-
- if (xml_fact && xml_fact->pk) {
- FILE* input_key = fopen("_input_key", "w+b");
- if (input_key) {
- fprintf(input_key, "%d", xml_fact->pk);
- fclose(input_key);
- }
- }
-
- if (xml_fact && xml_fact != INVALID_POINTER && xml_fact->pk) {
- std::vector<xml_obj*> _content = xfact->part("clause");
- string str;
- int k;
- for (k = 0; k < _content.size(); ++k) {
- xml_fact* xclause = (xml_fact*) _content[k];
-
- string clause_subject = xclause->print_str("subject");
- string clause_object = xclause->print_str("object");
- string clause_verb = xclause->print_str("verb");
- string clause_adverbs = xclause->print_str("adverbs");
- string clause_extra = xclause->print_str("extra");
- string clause_questionword = xclause->print_str("questionword");
- string clause_truth_str = xclause->print_str("truth");
- float clause_truth;
- sscanf(clause_truth_str.c_str(), "%fl", &clause_truth);
- string clause_verb_flags = xclause->print_str("flags");
- int clause_verb_flag_want = 0, clause_verb_flag_must = 0,
- clause_verb_flag_can = 0, clause_verb_flag_may = 0,
- clause_verb_flag_should = 0;
- if (clause_verb_flags.size() == 5)
- sscanf(clause_verb_flags.c_str(), "%d%d%d%d%d",
- &clause_verb_flag_want, &clause_verb_flag_must,
- &clause_verb_flag_can, &clause_verb_flag_may,
- &clause_verb_flag_should);
-
- struct xml_fact* clause = add_clause(xml_fact->pk, clause_subject.c_str(),
- clause_object.c_str(), clause_verb.c_str(),
- clause_adverbs.c_str(), clause_extra.c_str(),
- clause_questionword.c_str(), filename.c_str(), line.c_str(),
- clause_truth, clause_verb_flag_want, clause_verb_flag_must,
- clause_verb_flag_can, clause_verb_flag_may,
- clause_verb_flag_should);
-
- if (clause && clause != INVALID_POINTER) {
- free(clause);
- }
- }
-
- if (is_engine("disk")) {
- free(xml_fact);
- }
- }
-
- return 0;
- }
- */
+const word lc(const word& _data) {
+	word data(_data);
+	data.set_word(lc(data.get_word()));
+	return data;
+}
+const word uc(const word& _data) {
+	word data(_data);
+	data.set_word(uc(data.get_word()));
+	return data;
+}
+const word lcfirst(const word& _data) {
+	word data(_data);
+	data.set_word(lcfirst(data.get_word()));
+	return data;
+}
+const word ucfirst(const word& _data) {
+	word data(_data);
+	data.set_word(ucfirst(data.get_word()));
+	return data;
+}
 
 }

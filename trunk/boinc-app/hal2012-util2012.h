@@ -17,9 +17,11 @@
 #include <boost/algorithm/string/erase.hpp>
 #include <boost/algorithm/string/find_format.hpp>
 #include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/join.hpp>
 #include <boost/regex.hpp>
 #include <boost/foreach.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/bind.hpp>
 
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
@@ -33,6 +35,8 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <algorithm>
+#include <functional>
 
 using namespace std;
 
@@ -73,6 +77,36 @@ void regex_ireplace(string& str, const string& exp, const string& repl);
 void str_replace(string& str, const string& exp, const string& repl);
 bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
+int split_lines(vector<string>&, const string&);
+const string read_file(const fs::path&);
+bool write_file(const fs::path&, const string&);
+
+class freehal_base {
+protected:
+	bool verbose;
+	bool buffered;
+	string lang;
+	fs::path path;
+
+public:
+	freehal_base();
+	virtual ~freehal_base();
+
+	// I/O flags
+	virtual void set_verbose(bool);
+	virtual bool is_verbose() const;
+	virtual void set_buffered(bool);
+	virtual bool is_buffered() const;
+
+	// environment
+	virtual bool is_configured() const;
+	virtual void set_lang(const string&);
+	virtual void set_path(const fs::path&);
+	virtual const string get_lang() const;
+	virtual const fs::path get_path() const;
+	virtual const fs::path get_language_directory() const;
+	virtual const fs::path get_cache_directory() const;
+};
 
 }
 
