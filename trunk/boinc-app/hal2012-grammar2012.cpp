@@ -476,6 +476,14 @@ grammar::grammar() :
 				new symbolmap_so()), sym_os(new symbolmap_os()) {
 }
 
+grammar::~grammar() {
+	for (symbolmap_os::iterator iter = sym_os->begin(); iter != sym_os->end(); ++iter) {
+		if (iter->first) {
+			delete(iter->first);
+		}
+	}
+}
+
 int grammar::read_grammar(const fs::path filename) {
 	fs::ifstream i;
 	i.open(get_language_directory() / filename);

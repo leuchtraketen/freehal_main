@@ -128,6 +128,7 @@ private:
 
 public:
 	grammar();
+	~grammar();
 	int read_grammar(const fs::path);
 	const string to_str() const;
 	void expand();
