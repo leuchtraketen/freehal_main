@@ -33,7 +33,7 @@ private:
 	sentence_mode mode;
 	vector<string> words_list;
 	vector<tags*> tags_list;
-	parsed_t* parsed;
+	boost::shared_ptr<parsed_t> parsed;
 	boost::shared_ptr<xml_fact> xfact;
 	parser* p;
 
@@ -61,7 +61,7 @@ public:
 	sentence_mode get_mode() const;
 	vector<string> get_words_list() const;
 	vector<tags*> get_tags_list() const;
-	parsed_t* get_parsed() const;
+	boost::shared_ptr<parsed_t> get_parsed() const;
 	boost::shared_ptr<xml_fact> get_fact() const;
 
 private:

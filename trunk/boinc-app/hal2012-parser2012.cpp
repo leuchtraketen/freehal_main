@@ -12,12 +12,12 @@
 namespace grammar2012 {
 
 sentence::sentence() :
-		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(), xfact(), p(
 				0) {
 }
 
 sentence::sentence(parser* _p, const string& _input) :
-		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(), xfact(), p(
 				_p) {
 
 	{
@@ -159,7 +159,7 @@ vector<string> sentence::get_words_list() const {
 vector<tags*> sentence::get_tags_list() const {
 	return tags_list;
 }
-parsed_t* sentence::get_parsed() const {
+boost::shared_ptr<parsed_t> sentence::get_parsed() const {
 	return parsed;
 }
 boost::shared_ptr<xml_fact> sentence::get_fact() const {
