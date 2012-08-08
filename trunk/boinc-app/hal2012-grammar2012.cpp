@@ -482,6 +482,9 @@ grammar::~grammar() {
 			delete(iter->first);
 		}
 	}
+	delete gra;
+	delete sym_os;
+	delete sym_so;
 }
 
 int grammar::read_grammar(const fs::path filename) {
@@ -767,6 +770,8 @@ bool grammar::expand_step(int* expanded) {
 			newgrammar->insert(
 					grammarmap::value_type(it->first, newvalues->at(j)));
 		}
+
+		delete newvalues;
 	}
 
 	delete gra;
