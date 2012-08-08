@@ -769,7 +769,6 @@ bool grammar::expand_step(int* expanded) {
 		for (size_t j = 0; j < newvalues->size(); ++j) {
 			newgrammar->insert(
 					grammarmap::value_type(it->first, newvalues->at(j)));
-			delete newvalues->at(j);
 		}
 
 		delete newvalues;
