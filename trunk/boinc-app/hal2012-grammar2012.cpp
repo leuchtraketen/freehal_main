@@ -769,6 +769,7 @@ bool grammar::expand_step(int* expanded) {
 		for (size_t j = 0; j < newvalues->size(); ++j) {
 			newgrammar->insert(
 					grammarmap::value_type(it->first, newvalues->at(j)));
+			delete newvalues->at(j);
 		}
 
 		delete newvalues;
@@ -990,6 +991,7 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 									reducelist::value_type(
 											all_to_str(*old_words_i),
 											old_words_i));
+						delete new_words_i;
 
 					} else {
 						if (is_verbose())
