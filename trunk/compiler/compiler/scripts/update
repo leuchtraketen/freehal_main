@@ -156,6 +156,8 @@ export DLL=$(echo \
 	cp /tmp/freehal-${R}.tar.gz /compiler/download
 	rm /tmp/freehal-${R}.tar.gz
 
+	rm -rf Freehal-${R} Freehal
+
 	#ssh -C root@freehal.org "/usr/local/bin/new-revision ${R} freehal-${R}-windows.zip"
 )
 
