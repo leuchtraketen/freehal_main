@@ -105,6 +105,34 @@ int boinc_parse(string line, int* n_sentence, ofstream& out) {
     }
 
     delete p;
+    delete t;
+    t = 0;
+    delete g;
+    g = 0;
+}
+
+bool find_file( const fs::path & dir_path,         // in this directory,
+                const std::string & file_name, // search for this name,
+                fs::path & path_found,            // placing path here if found
+                const std::string & only_if_dir_contains) // only if the filename contains
+{
+  if ( !exists( dir_path ) ) return false;
+  fs::directory_iterator end_itr; // default construction yields past-the-end
+  for ( fs::directory_iterator itr( dir_path );
+        itr != end_itr;
+        ++itr )
+  {
+    if ( fs::is_directory(itr->status()) && (only_if_dir_contains.empty() || algo::contains(grammar2012::lc(itr->path().leaf().string()), only_if_dir_contains)) )
+    {
+      if ( find_file( itr->path(), file_name, path_found, "" ) ) return true;
+    }
+    else if ( itr->path().leaf() == file_name ) // see below
+    {
+      path_found = itr->path();
+      return true;
+    }
+  }
+  return false;
 }
 
 int main(int argc, char **argv) {
@@ -146,6 +174,17 @@ int main(int argc, char **argv) {
     infile.open(input_path);
     cout << "lines: " << lines << endl;
 
+    fs::path java_exe;
+    fs::path dir;
+    string only_if_dir_contains;
+    bool found;
+
+    dir = "/";
+    only_if_dir_contains = "prog";
+    found = find_file(fs::path(dir), "java.exe", java_exe, only_if_dir_contains);
+    cout << "java found in "<<dir<<"? " << (found?"yes, here: " + java_exe.string() : "no") << endl;
+
+
     run_slow = fexists("SLOW");
     cout << "run slow? " << (run_slow?"yes":"no") << endl;
 
@@ -160,12 +199,26 @@ int main(int argc, char **argv) {
     if (state) {
         n = fscanf(state, "%d", &n_sentence);
         fclose(state);
+	stringstream ss;
+	ss << n_sentence << "/" << lines;
+	cout << "checkpoint state? yes, progress=" << ss.str() << endl;
     }
+    else {
+        cout << "checkpoint state? none" << endl;
+    }
+
     ofstream out;
     if (state && n==1) {
         out.open(output_path, std::ios::app);
     } else {
         out.open(output_path);
+    }
+
+    int checkpoint_skip = n_sentence;
+    while (checkpoint_skip > 0) {
+        string line;
+        std::getline(infile, line);
+        --checkpoint_skip;
     }
 
     string line;
@@ -175,7 +228,14 @@ int main(int argc, char **argv) {
         boinc_parse(line, &n_sentence, out);
 
         boinc_fraction_done((double)l/(double)lines);
-        boinc_sleep(run_slow?90:5);
+        if (run_slow) boinc_sleep(run_slow?90:1);
+
+        ofstream chk;
+        chk.open(chkpt_path);
+        if (chk.is_open()) {
+            chk << n_sentence;
+            chk.close();
+        }
     }
 
     for (int h = 0; h < 60; ++h) {
@@ -184,6 +244,9 @@ int main(int argc, char **argv) {
     }
 
     out.close();
+
+    delete t;
+    delete g;
 
     // See if there's a valid checkpoint file.
     // If so seek input file and truncate output file
