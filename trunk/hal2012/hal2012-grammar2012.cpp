@@ -22,7 +22,7 @@ const string grammar::print_vector(const entities& v) {
 	return ss.str();
 }
 
-const string grammar::print_entity(entity* i) {
+const string grammar::print_entity(boost::shared_ptr<entity> i) {
 	return "{" + i->print() + "}";
 }
 
@@ -453,7 +453,7 @@ const vector<string> entity::get_virt() const {
 	return virt;
 }
 
-const vector<entity*> entity::get_embed() const {
+const vector<boost::shared_ptr<entity> > entity::get_embed() const {
 	return embed;
 }
 
@@ -476,6 +476,12 @@ grammar::grammar() :
 				new symbolmap_so()), sym_os(new symbolmap_os()) {
 }
 
+grammar::~grammar() {
+	delete gra;
+	delete sym_os;
+	delete sym_so;
+}
+
 int grammar::read_grammar(const fs::path filename) {
 	fs::ifstream i;
 	i.open(get_language_directory() / filename);
@@ -486,7 +492,7 @@ int grammar::read_grammar(const fs::path filename) {
 	}
 
 	string line;
-	entity* key_obj;
+	boost::shared_ptr<entity> key_obj;
 	while (std::getline(i, line)) {
 		if (algo::ends_with(line, ":")) {
 			algo::trim_right_if(line, boost::is_any_of(":"));
@@ -495,12 +501,12 @@ int grammar::read_grammar(const fs::path filename) {
 		if (algo::starts_with(line, "  ")) {
 			algo::trim_left_if(line, boost::is_any_of(" "));
 
-			entities* value_i = new entities();
+			boost::shared_ptr<entities> value_i(new entities());
 			vector<string> parts;
 			algo::split(parts, line, algo::is_any_of(" "));
 			vector<string>::iterator it;
 			for (it = parts.begin(); it != parts.end(); it++) {
-				entity* val_obj = add_symbol(*it);
+				boost::shared_ptr<entity> val_obj = add_symbol(*it);
 				if (val_obj->type() != 0) {
 					value_i->push_back(val_obj);
 				}
@@ -515,7 +521,7 @@ int grammar::read_grammar(const fs::path filename) {
 	return 0;
 }
 
-string grammar::o2s(entity* o) const {
+string grammar::o2s(boost::shared_ptr<entity> o) const {
 	if (o == NULL) {
 		return "null";
 	}
@@ -526,21 +532,21 @@ string grammar::o2s(entity* o) const {
 	return 0;
 }
 
-entity* grammar::s2o(string s) const {
+boost::shared_ptr<entity> grammar::s2o(string s) const {
 	symbolmap_so::iterator found = sym_so->find(s);
 	if (found != sym_so->end()) {
 		return found->second;
 	}
-	return 0;
+	return boost::shared_ptr<entity>();
 }
 
-entity* grammar::add_symbol(const string str) {
-	entity* key = s2o(str);
-	if (key != NULL) {
+boost::shared_ptr<entity> grammar::add_symbol(const string str) {
+	boost::shared_ptr<entity> key = s2o(str);
+	if (key) {
 		return key;
 	}
 
-	key = new entity(this, str);
+	key.reset(new entity(this, str));
 	if (key->to_str() != str) {
 		cout << "Error! key->to_str() != line: " << key->to_str() << " != "
 				<< str << endl;
@@ -549,20 +555,20 @@ entity* grammar::add_symbol(const string str) {
 	return key;
 }
 
-entity* grammar::add_entity(entity* key) {
+boost::shared_ptr<entity> grammar::add_entity(boost::shared_ptr<entity> key) {
 	sym_os->insert(symbolmap_os::value_type(key, key->to_str()));
 	sym_so->insert(symbolmap_so::value_type(key->to_str(), key));
 	return key;
 }
 
-entity* grammar::modify_symbol(entity* obj, const vector<string>& _str) {
+boost::shared_ptr<entity> grammar::modify_symbol(boost::shared_ptr<entity> obj, const vector<string>& _str) {
 	string str;
 	vector<string>::const_iterator it;
 	for (it = _str.begin(); it != _str.end(); ++it) {
 		str += "/" + *it;
 	}
 
-	entity* modified = new entity(*obj);
+	boost::shared_ptr<entity> modified(new entity(*obj));
 	modified->add(str);
 
 	return add_entity(modified);
@@ -574,11 +580,11 @@ const string grammar::to_str() const {
 	for (it = gra->begin(); it != gra->end(); ++it) {
 		stringstream ss;
 
-		entity* it_first = s2o(it->first);
+		boost::shared_ptr<entity> it_first = s2o(it->first);
 		ss << it_first ? it_first->to_str() : "#null";
 		ss << " = ";
 
-		entities* value = it->second;
+		boost::shared_ptr<entities> value = it->second;
 		entities::iterator val;
 		for (val = value->begin(); val != value->end(); ++val) {
 			if (val != value->begin()) {
@@ -597,13 +603,13 @@ const string grammar::to_str() const {
 }
 
 int insert_back(entities::iterator begin, entities::iterator end,
-		entities* into, entity* previous, grammar* grammar) {
+		boost::shared_ptr<entities> into, boost::shared_ptr<entity> previous, grammar* grammar) {
 
 	/// cout << "get_virt: size=" << previous->get_virt().size() << endl;
 	if (previous->get_marker().size() > 0) {
 		entities::iterator it;
 		for (it = begin; it != end; ++it) {
-			entity* e = grammar->modify_symbol(*it, previous->get_marker());
+			boost::shared_ptr<entity> e = grammar->modify_symbol(*it, previous->get_marker());
 			into->push_back(e);
 		}
 	} else {
@@ -651,7 +657,7 @@ void grammar::build_reducemap() {
 
 	grammarmap::iterator it;
 	for (it = gra->begin(); it != gra->end(); ++it) {
-		entity* target = s2o(it->first);
+		boost::shared_ptr<entity> target = s2o(it->first);
 		if (target && target->get_repl().size() == 0) {
 			const string keys = all_get_key(*it->second);
 			if (keys.size() > 0) {
@@ -664,7 +670,7 @@ void grammar::build_reducemap() {
 				}
 				red[order].insert(
 						reducemap::value_type(keys,
-								pair<entity*, entities*>(target, it->second)));
+								pair<boost::shared_ptr<entity>, boost::shared_ptr<entities> >(target, it->second)));
 				red_keys[order].insert(keys);
 			}
 		}
@@ -678,17 +684,17 @@ void grammar::build_reducemap() {
 	}
 }
 
-vector<entities*>* grammar::expand_entry(entities* oldvalue, int* expanded,
+boost::shared_ptr<vector<boost::shared_ptr<entities> > > grammar::expand_entry(boost::shared_ptr<entities> oldvalue, int* expanded,
 		bool* complete) {
 
-	vector<entities*>* newvalues = new vector<entities*>();
-	newvalues->push_back(new entities());
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > newvalues(new vector<boost::shared_ptr<entities> >());
+	newvalues->push_back(boost::shared_ptr<entities>(new entities()));
 
 	entities::iterator oldvalue_iter;
 	for (oldvalue_iter = oldvalue->begin(); oldvalue_iter != oldvalue->end();
 			++oldvalue_iter) {
 
-		entity* to_be_replaced_obj = *oldvalue_iter;
+		boost::shared_ptr<entity> to_be_replaced_obj = *oldvalue_iter;
 
 		string key_of_to_be_replaced = to_be_replaced_obj->to_key();
 		int count = gra->count(key_of_to_be_replaced);
@@ -699,7 +705,7 @@ vector<entities*>* grammar::expand_entry(entities* oldvalue, int* expanded,
 				cout << "Error! Count of symbol is 0: "
 						<< to_be_replaced_obj->to_str() << endl;
 			} else if (count == 1) {
-				entities* replacement = gra->find(key_of_to_be_replaced)->second;
+				boost::shared_ptr<entities> replacement = gra->find(key_of_to_be_replaced)->second;
 				for (size_t j = 0; j < newvalues->size(); ++j) {
 					insert_back(replacement->begin(), replacement->end(),
 							newvalues->at(j), to_be_replaced_obj, this);
@@ -711,7 +717,7 @@ vector<entities*>* grammar::expand_entry(entities* oldvalue, int* expanded,
 					// make count minus 1 copies
 					int g;
 					for (g = 1; g < count; ++g) {
-						newvalues->push_back(new entities(*newvalues->at(0)));
+						newvalues->push_back(boost::shared_ptr<entities>(new entities(*newvalues->at(0))));
 					}
 
 					// for each copy, add the replacement at the end
@@ -751,14 +757,17 @@ bool grammar::expand_step(int* expanded) {
 	grammarmap::iterator it;
 	for (it = gra->begin(); it != gra->end(); ++it) {
 
-		entities* oldvalue = it->second;
-		vector<entities*>* newvalues = expand_entry(oldvalue, expanded,
+		boost::shared_ptr<entities> oldvalue = it->second;
+		boost::shared_ptr<vector<boost::shared_ptr<entities> > > newvalues = expand_entry(oldvalue, expanded,
 				&complete);
 
 		for (size_t j = 0; j < newvalues->size(); ++j) {
 			newgrammar->insert(
 					grammarmap::value_type(it->first, newvalues->at(j)));
+			//delete newvalues->at(j);
 		}
+
+		//delete newvalues;
 	}
 
 	delete gra;
@@ -784,12 +793,12 @@ void grammar::expand() {
 	build_reducemap();
 }
 
-entities* grammar::parse_input(const string words_str) {
-	entities* words_i = new entities();
+boost::shared_ptr<entities> grammar::parse_input(const string words_str) {
+	boost::shared_ptr<entities> words_i(new entities());
 
 	// marker
 	{
-		entity* obj = add_entity(new entity(this, "d-^"));
+		boost::shared_ptr<entity> obj = add_entity(boost::shared_ptr<entity>(new entity(this, "d-^")));
 		obj->set_text("");
 		words_i->push_back(obj);
 	}
@@ -818,14 +827,14 @@ entities* grammar::parse_input(const string words_str) {
 		string text = parts.at(1);
 		boost::trim(part_of_speech);
 		boost::trim(text);
-		entity* obj = add_entity(new entity(this, part_of_speech));
+		boost::shared_ptr<entity> obj = add_entity(boost::shared_ptr<entity>(new entity(this, part_of_speech)));
 		obj->set_text(text);
 		words_i->push_back(obj);
 	}
 
 	// marker
 	{
-		entity* obj = add_entity(new entity(this, "d-$"));
+		boost::shared_ptr<entity> obj = add_entity(boost::shared_ptr<entity>(new entity(this, "d-$")));
 		obj->set_text("");
 		words_i->push_back(obj);
 	}
@@ -833,13 +842,13 @@ entities* grammar::parse_input(const string words_str) {
 	return words_i;
 }
 
-entities* grammar::replace_in_vector(const entities& vec, const entities& find,
-		entity* replacement) {
+boost::shared_ptr<entities> grammar::replace_in_vector(const entities& vec, const entities& find,
+		boost::shared_ptr<entity> replacement) {
 	if (find.size() == 0)
-		return new entities(vec.begin(), vec.end());
+		return boost::shared_ptr<entities>(new entities(vec.begin(), vec.end()));
 
 	bool replace_done = false;
-	entities* new_vector = new entities();
+	boost::shared_ptr<entities> new_vector(new entities());
 	for (size_t i = 0; i < vec.size(); ++i) {
 		if (!replace_done && vec.at(i)->to_key() == find.at(0)->to_key()) {
 			bool found = true;
@@ -855,13 +864,13 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 				entities found_vec;
 				for (f = 0, j = i; j < vec.size() && f < find.size();
 						++f, ++j) {
-					entity* e = modify_symbol(vec.at(j),
+					boost::shared_ptr<entity> e = modify_symbol(vec.at(j),
 							find.at(f)->get_marker());
 
 					found_vec.push_back(e); ///////////////////////////
 				}
 
-				entity* e = new entity(this, replacement->to_str(), found_vec);
+				boost::shared_ptr<entity> e(new entity(this, replacement->to_str(), found_vec));
 				add_entity(e);
 				new_vector->push_back(e);
 				i = j - 1;
@@ -884,7 +893,7 @@ entities* grammar::replace_in_vector(const entities& vec, const entities& find,
 	return new_vector;
 }
 
-grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
+grammar::reducelist* grammar::reduce_step(boost::shared_ptr<entities> old_words_i) {
 	const string old_impression = all_get_key(*old_words_i);
 	reducelist_by_complexity*new_words_complexity_map =
 			new reducelist_by_complexity();
@@ -965,7 +974,7 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 
 						}
 
-						entities* new_words_i = replace_in_vector(*old_words_i,
+						boost::shared_ptr<entities> new_words_i = replace_in_vector(*old_words_i,
 								*rule_iter->second.second,
 								rule_iter->second.first);
 
@@ -977,6 +986,7 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 									reducelist::value_type(
 											all_to_str(*old_words_i),
 											old_words_i));
+						//delete new_words_i;
 
 					} else {
 						if (is_verbose())
@@ -1005,11 +1015,11 @@ grammar::reducelist* grammar::reduce_step(entities* old_words_i) {
 	return new_words_list;
 }
 
-vector<entities*>* grammar::reduce(entities* old_words_i) {
+boost::shared_ptr<vector<boost::shared_ptr<entities> > > grammar::reduce(boost::shared_ptr<entities> old_words_i) {
 	//if (is_verbose())
 	cout << "reduce: " << print_vector(*old_words_i) << endl << endl;
 
-	vector<entities*>* final = new vector<entities*>();
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > final(new vector<boost::shared_ptr<entities> >());
 	reducelist* words_list = new reducelist();
 	words_list->insert(
 			reducelist::value_type(all_to_str(*old_words_i), old_words_i));
@@ -1089,12 +1099,12 @@ const string grammar::print_input(const string words_str) {
 	return ss.str();
 }
 
-const string grammar::print_output(vector<entities*>* output_list) {
+const string grammar::print_output(boost::shared_ptr<vector<boost::shared_ptr<entities> > > output_list) {
 	stringstream ss;
 
-	for (vector<entities*>::iterator iter_list = output_list->begin();
+	for (vector<boost::shared_ptr<entities> >::iterator iter_list = output_list->begin();
 			iter_list != output_list->end(); ++iter_list) {
-		entities* output = *iter_list;
+		boost::shared_ptr<entities> output = *iter_list;
 		for (entities::iterator iter = output->begin(); iter != output->end();
 				++iter) {
 			ss << (*iter)->print_long();
@@ -1115,12 +1125,12 @@ const string grammar::print_output(vector<entities*>* output_list) {
 	return ss.str();
 }
 
-const string grammar::print_perl(vector<entities*>* output_list) {
+const string grammar::print_perl(boost::shared_ptr<vector<boost::shared_ptr<entities> > > output_list) {
 	stringstream ss;
 
-	for (vector<entities*>::iterator iter_list = output_list->begin();
+	for (vector<boost::shared_ptr<entities> >::iterator iter_list = output_list->begin();
 			iter_list != output_list->end(); ++iter_list) {
-		entities* output = *iter_list;
+		boost::shared_ptr<entities> output = *iter_list;
 		for (entities::iterator iter = output->begin(); iter != output->end();
 				++iter) {
 			entity::perlmap* pm = (*iter)->to_groups();
@@ -1131,13 +1141,13 @@ const string grammar::print_perl(vector<entities*>* output_list) {
 	return ss.str();
 }
 
-const string grammar::print_graph(vector<entities*>* output_list) {
+const string grammar::print_graph(boost::shared_ptr<vector<boost::shared_ptr<entities> > > output_list) {
 	stringstream ss;
 	ss << "digraph parsed {" << endl;
 
-	for (vector<entities*>::iterator iter_list = output_list->begin();
+	for (vector<boost::shared_ptr<entities> >::iterator iter_list = output_list->begin();
 			iter_list != output_list->end(); ++iter_list) {
-		entities* output = *iter_list;
+		boost::shared_ptr<entities> output = *iter_list;
 		for (entities::iterator iter = output->begin(); iter != output->end();
 				++iter) {
 			ss << (*iter)->print_graph();
@@ -1149,12 +1159,12 @@ const string grammar::print_graph(vector<entities*>* output_list) {
 	return ss.str();
 }
 
-const string grammar::print_xml(vector<entities*>* output_list) {
+const string grammar::print_xml(boost::shared_ptr<vector<boost::shared_ptr<entities> > > output_list) {
 	stringstream ss;
 
-	for (vector<entities*>::iterator iter_list = output_list->begin();
+	for (vector<boost::shared_ptr<entities> >::iterator iter_list = output_list->begin();
 			iter_list != output_list->end(); ++iter_list) {
-		entities* output = *iter_list;
+		boost::shared_ptr<entities> output = *iter_list;
 		for (entities::iterator iter = output->begin(); iter != output->end();
 				++iter) {
 			ss << (*iter)->to_xml();
@@ -1165,15 +1175,15 @@ const string grammar::print_xml(vector<entities*>* output_list) {
 	return ss.str();
 }
 
-vector<entities*>* grammar::parse(const string words_str) {
+boost::shared_ptr<vector<boost::shared_ptr<entities> > > grammar::parse(const string words_str) {
 	cout << "========================================" << endl
 			<< "============  Grammar 2012  ============" << endl
 			<< "========================================" << endl << endl
 			<< "input: " << endl << endl << grammar::print_input(words_str)
 			<< endl;
 
-	entities* words_i = parse_input(words_str);
-	vector<entities*>* reduced = reduce(words_i);
+	boost::shared_ptr<entities> words_i = parse_input(words_str);
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > reduced = reduce(words_i);
 	reduced->empty();
 
 	cout << "output:" << endl << endl << grammar::print_output(reduced) << endl;

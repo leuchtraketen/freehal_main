@@ -160,6 +160,7 @@ public:
 	void set_word(const string&);
 	void set_tags(tags*);
 	const string& get_word() const;
+	size_t size() const;
 	tags* get_tags() const;
 	bool has_tags() const;
 };
@@ -191,6 +192,11 @@ std::ostream& operator<<(std::ostream&, const xml_obj&);
 std::ostream& operator<<(std::ostream&, const boost::shared_ptr<xml_fact>&);
 std::ostream& operator<<(std::ostream&, const boost::shared_ptr<xml_obj>&);
 std::ostream& operator<<(std::ostream&, const word&);
+
+const word lc(const word& _data);
+const word uc(const word& _data);
+const word lcfirst(const word& _data);
+const word ucfirst(const word& _data);
 
 }
 

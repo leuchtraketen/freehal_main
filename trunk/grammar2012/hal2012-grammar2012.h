@@ -97,7 +97,6 @@ private:
 
 	boost::shared_ptr<entity> add_entity(boost::shared_ptr<entity>);
 	boost::shared_ptr<entity> add_symbol(const string);
-	boost::shared_ptr<entity> get_symbol(const string) const;
 	const string all_get_key(const entities&);
 	const string all_to_str(const entities&) const;
 

@@ -52,12 +52,14 @@ xml_obj_mode xml_obj::get_mode() const {
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 		boost::shared_ptr<xml_obj> i) {
 	o->content.push_back(i);
+	o->reset_cache();
 	return o;
 }
 boost::shared_ptr<xml_obj>& operator <<(boost::shared_ptr<xml_obj>& o,
 		vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
+		o->reset_cache();
 	}
 	return o;
 }
@@ -72,11 +74,13 @@ const boost::shared_ptr<xml_obj>& operator >>(
 }
 xml_obj* operator <<(xml_obj* o, boost::shared_ptr<xml_obj> i) {
 	o->content.push_back(i);
+	o->reset_cache();
 	return o;
 }
 xml_obj* operator <<(xml_obj* o, vector<boost::shared_ptr<xml_obj> >& i) {
 	foreach (boost::shared_ptr<xml_obj> elem, i) {
 		o->content.push_back(elem);
+		o->reset_cache();
 	}
 	return o;
 }
@@ -273,16 +277,19 @@ int xml_obj::prepare_words() {
 		// !(algo::is_digit() || algo::is_alpha())
 		algo::split(_words, text,
 				!(algo::is_alpha() || algo::is_digit()
-						|| algo::is_any_of("}{][=-")), algo::token_compress_on);
+						|| algo::is_any_of("}{][=-)(_")),
+				algo::token_compress_on);
 		foreach (string& text, _words) {
-			if (text.size() > 0)
+			if (text.size() > 0 && text != "1")
 				cache_words.push_back(word(text));
 		}
 	}
 	if (mode == LIST) {
-		foreach (boost::shared_ptr<xml_obj> embedded, content) {
-			embedded->prepare_words();
-			embedded->get_words(cache_words);
+		if (name != "truth") {
+			foreach (boost::shared_ptr<xml_obj> embedded, content) {
+				embedded->prepare_words();
+				embedded->get_words(cache_words);
+			}
 		}
 	}
 	is_cached_words = true;
@@ -609,7 +616,7 @@ xml_fact* halxml_readxml_fact(vector<string>& lines, int& i) {
 }
 
 word::word() :
-		tag(0) {
+		w(""), tag(0) {
 }
 word::word(const string _w) :
 		w(_w), tag(0) {
@@ -635,6 +642,9 @@ tags* word::get_tags() const {
 bool word::has_tags() const {
 	return tag != 0 ? true : false;
 }
+size_t word::size() const {
+	return w.size();
+}
 bool word::operator ==(const string& _w) const {
 	return w == _w;
 }
@@ -650,6 +660,27 @@ bool word::operator !=(const word& _w) const {
 std::ostream& operator<<(std::ostream& stream, const word& w) {
 	stream << w.get_word();
 	return stream;
+}
+
+const word lc(const word& _data) {
+	word data(_data);
+	data.set_word(lc(data.get_word()));
+	return data;
+}
+const word uc(const word& _data) {
+	word data(_data);
+	data.set_word(uc(data.get_word()));
+	return data;
+}
+const word lcfirst(const word& _data) {
+	word data(_data);
+	data.set_word(lcfirst(data.get_word()));
+	return data;
+}
+const word ucfirst(const word& _data) {
+	word data(_data);
+	data.set_word(ucfirst(data.get_word()));
+	return data;
 }
 
 }

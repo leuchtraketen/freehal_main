@@ -172,6 +172,29 @@ int split_lines(vector<string>& lines, const string& prestr) {
 	return i;
 }
 
+const string read_file(const fs::path& p) {
+	fs::ifstream i(p);
+	if (i.is_open()) {
+		stringstream ss;
+		ss << i.rdbuf();
+		i.close();
+		return ss.str();
+	}
+	return "";
+}
+
+bool write_file(const fs::path& p, const string& data) {
+	fs::ofstream o(p);
+	if (o.is_open()) {
+		o << data;
+		o.close();
+		return true;
+	} else {
+		cout << "Error! cannot write to file: " << p << endl;
+		return false;
+	}
+}
+
 freehal_base::freehal_base() :
 		verbose(true), buffered(false), lang(), path() {
 }
@@ -210,9 +233,9 @@ const fs::path freehal_base::get_language_directory() const {
 }
 const fs::path freehal_base::get_cache_directory() const {
 	if (path.empty())
-			return "";
-		else
-			return path / ("cache_" + lang);
+		return "";
+	else
+		return path / ("cache_" + lang);
 }
 bool freehal_base::is_configured() const {
 	if (lang.empty()) {

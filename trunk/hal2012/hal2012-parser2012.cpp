@@ -12,12 +12,12 @@
 namespace grammar2012 {
 
 sentence::sentence() :
-		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+		input(), mode(UNKNOWN), words_list(), tags_list(), parsed(), xfact(), p(
 				0) {
 }
 
 sentence::sentence(parser* _p, const string& _input) :
-		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(0), xfact(), p(
+		input(_input), mode(UNKNOWN), words_list(), tags_list(), parsed(), xfact(), p(
 				_p) {
 
 	{
@@ -159,7 +159,7 @@ vector<string> sentence::get_words_list() const {
 vector<tags*> sentence::get_tags_list() const {
 	return tags_list;
 }
-parsed_t* sentence::get_parsed() const {
+boost::shared_ptr<parsed_t> sentence::get_parsed() const {
 	return parsed;
 }
 boost::shared_ptr<xml_fact> sentence::get_fact() const {
@@ -610,8 +610,8 @@ void parser::simplify_input(string& str) {
 	regex_ireplace(str, "world wide web", "_world_wide_web_");
 	regex_ireplace(str, "Hersteller von", "Hersteller fuer");
 
-	regex_ireplace(str, "mein name", "_mein_name_");
-	regex_ireplace(str, "dein name", "_dein_name_");
+	//regex_ireplace(str, "mein name", "mein_name");
+	//regex_ireplace(str, "dein name", "dein_name");
 
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?januar(\\s|$)", "\\1\\2.01.\\4");
 	regex_ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?jaenner(\\s|$)",
@@ -697,7 +697,9 @@ void parser::simplify_input(string& str) {
 	regex_replace(str, "sich (.*?)befindet", "\\1liegt");
 	regex_ireplace(str, "teil von ein.?.?\\s", "teil von ");
 
-	if (is_question) {
+	if (is_question
+			&& !regex_ifind(str,
+					"^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {
 		if (regex_find(m, str, "^(.*?) hat (.*?)((?:[?].*?)?)$")) {
 			const string& subject = m[2];
 			const string& prop = m[1];
@@ -1143,12 +1145,15 @@ void parser::simplify_input(string& str) {
 				"<ws>[,]<ws>([a-zA-Z0-9_]+\\s+[a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>",
 				" \\2 \\1 \\2 ");
 	}
-	regex_ireplace(str, "heisse\\sich", "ist _mein_name_");
-	regex_ireplace(str, "ich\\sheisse", "_mein_name_ ist");
-	regex_ireplace(str, "wie heisst\\sdu", "wer bist du");
-	regex_ireplace(str, "wie heisse\\s", "wer bin ");
-	regex_ireplace(str, "heisst\\sdu", "ist _dein_name_");
-	regex_ireplace(str, "du\\sheisst", "_dein_name_ ist");
+
+//	regex_ireplace(str, "wie heisst\\sdu", "wer bin ich");
+//	regex_ireplace(str, "wie heisse\\s", "wer bist ");
+	regex_ireplace(str, "heisst\\sdu", "ist dein name");
+	regex_ireplace(str, "du\\sheisst", "dein name ist");
+	regex_ireplace(str, "heisse\\sich", "ist mein name");
+	regex_ireplace(str, "ich\\sheisse", "mein name ist");
+	regex_ireplace(str, "wer\\sbist\\sdu", "was ist dein name");
+	regex_ireplace(str, "wer\\sdu\\sbist", "wer ist dein name");
 
 	regex_replace(str, "(ist) ([A-Z][a-z]+?) (ein)", "\\1 _\\2_ \\3");
 

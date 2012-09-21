@@ -195,7 +195,7 @@ double operator &(const boost::shared_ptr<xml_obj>& o1,
 
 		if (o2->get_name() == "link_&")
 			matches = (count == content.size() ? matches : 0);
-		if (o1->get_name() == "synonyms")
+		if (o2->get_name() == "synonyms")
 			matches /= count;
 	}
 	if (filterlist::is_verbose())

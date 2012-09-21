@@ -476,7 +476,7 @@ xml_fact::~xml_fact() {
 
 int xml_obj::part(std::vector<boost::shared_ptr<xml_obj> >& _content,
 		const string& tag_name) const {
-	int j;
+	int j = 0;
 	foreach (boost::shared_ptr<xml_obj> o, content) {
 		if (o->get_name() == tag_name) {
 			_content.push_back(o);

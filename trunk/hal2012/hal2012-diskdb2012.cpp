@@ -43,17 +43,17 @@ int diskdb::insert_fact(boost::shared_ptr<xml_fact> xfact_p) {
 	// for each word
 	vector<word> words;
 	xfact_p->get_words(words);
-	foreach (word& _word, words) {
-		string word = _word.get_word();
+	word word_before;
+	foreach (word& word, words) {
 		if (word.size() == 0)
 			continue;
 		word = lc(word);
 
 		// add to a per-word index
-		index_word.insert(indexmap_str::value_type(word, xfact_p));
+		index_word.insert(indexmap_str::value_type(word.get_word(), xfact_p));
 
 		// and the same with the first 4 chars of the word
-		if (is_index_word()(word)) {
+		if (is_index_word()(word) && is_index_word()(word_before, word)) {
 			diskdb_key key(word);
 			indexmap_3chars::iterator iter(index_3chars.find(key.get_key()));
 			if (iter == index_3chars.end()) {
@@ -65,6 +65,8 @@ int diskdb::insert_fact(boost::shared_ptr<xml_fact> xfact_p) {
 				iter->second->insert(xfact_p);
 			}
 		}
+
+		word_before = word;
 	}
 
 	return 0;
@@ -279,36 +281,6 @@ int diskdb::to_disk(const diskdb_key& key) {
 			}
 
 		}
-		if (0) {
-			vector<char> chars;
-			for (char a = 'a'; a <= 'z'; ++a) {
-				chars.push_back(a);
-			}
-			chars.push_back('_');
-
-			foreach (char a, chars) {
-				foreach (char b, chars) {
-					foreach (char c, chars) {
-						foreach (char d, chars) {
-							diskdb_key key(a, b, c, d);
-
-							if (db->is_verbose() && c == '_' && d == '_') {
-								if (db->is_buffered() && b == '_')
-									cout << "store index: " << a << endl;
-								else
-									cout << "store index: " << a << b << "\r"
-											<< flush;
-							}
-
-							this->to_disk(key);
-						}
-					}
-				}
-			}
-			if (db->is_verbose())
-				cout << "store index: done" << endl << flush;
-		}
-
 		// store synonyms
 		{
 			foreach (synonymsmap::value_type v, synonyms) {

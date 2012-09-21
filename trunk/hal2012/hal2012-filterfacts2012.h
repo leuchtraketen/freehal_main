@@ -46,12 +46,13 @@ double operator %(boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj>);
 double operator %(boost::shared_ptr<xml_fact>, boost::shared_ptr<xml_fact>);
 double operator /(boost::shared_ptr<xml_obj>, boost::shared_ptr<xml_obj>);
 double operator /(boost::shared_ptr<xml_fact>, boost::shared_ptr<xml_fact>);
-double count(boost::shared_ptr<xml_obj>);
+double count_words(boost::shared_ptr<xml_obj>);
+double count_tags(boost::shared_ptr<xml_obj>);
 
 template<typename O, typename R>
 class ranking {
 private:
-	std::map<R, O> map;
+	std::multimap<R, O> map;
 	vector<R> keys;
 	vector<O> values;
 
@@ -62,12 +63,20 @@ public:
 	R rank(int);
 	O operator[](int);
 	size_t size();
+
+	vector<O> best();
+	O best_one();
 };
 
 class is_index_word: std::unary_function<word, bool> {
 public:
-	is_index_word();
 	bool operator()(const word&) const;
+	bool operator()(const word&, const word&) const;
+};
+
+class is_synonym: std::unary_function<boost::shared_ptr<xml_obj>, bool> {
+public:
+	bool operator()(const boost::shared_ptr<xml_obj>&) const;
 };
 
 class filterrule: public binary_function<
@@ -125,6 +134,11 @@ public:
 };
 
 class filter_question_what: public filterrule {
+public:
+	void rule();
+};
+
+class filter_question_extra: public filterrule {
 public:
 	void rule();
 };

@@ -17,6 +17,7 @@
 #include <boost/algorithm/string/erase.hpp>
 #include <boost/algorithm/string/find_format.hpp>
 #include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/join.hpp>
 #include <boost/regex.hpp>
 #include <boost/foreach.hpp>
 #include <boost/shared_ptr.hpp>
@@ -77,6 +78,8 @@ void str_replace(string& str, const string& exp, const string& repl);
 bool safe_regex(boost::regex&, const string&);
 bool safe_iregex(boost::regex&, const string&);
 int split_lines(vector<string>&, const string&);
+const string read_file(const fs::path&);
+bool write_file(const fs::path&, const string&);
 
 class freehal_base {
 protected:

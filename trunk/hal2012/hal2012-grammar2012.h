@@ -28,7 +28,7 @@ private:
 	string repl;
 	vector<string> virt;
 	string text;
-	vector<entity*> embed;
+	vector<boost::shared_ptr<entity> > embed;
 	int order;
 
 	entity();
@@ -51,7 +51,7 @@ public:
 	typedef boost::unordered_multimap<string, string> perlmap;
 
 	entity(grammar*, const string);
-	entity(grammar*, const string, vector<entity*>);
+	entity(grammar*, const string, vector<boost::shared_ptr<entity> >);
 	void add(const string);
 
 	perlmap* to_groups(perlmap*, vector<string>, string) const;
@@ -70,21 +70,21 @@ public:
 	const string get_repl() const;
 	const vector<string> get_virt() const;
 	const vector<string> get_marker() const;
-	const vector<entity*> get_embed() const;
+	const vector<boost::shared_ptr<entity> > get_embed() const;
 	int get_order() const;
 
 	static const string print_perl(entity::perlmap*, string, string);
 };
 std::size_t hash_value(entity const&);
-typedef vector<entity*> entities;
-typedef vector<entities*> parsed_t;
+typedef vector<boost::shared_ptr<entity> > entities;
+typedef vector<boost::shared_ptr<entities> > parsed_t;
 
 class grammar: public freehal_base {
 private:
-	typedef boost::unordered_map<string, entity*> symbolmap_so;
-	typedef boost::unordered_map<entity*, string> symbolmap_os;
-	typedef boost::unordered_multimap<string, entities*> grammarmap;
-	typedef boost::unordered_multimap<string, pair<entity*, entities*> > reducemap;
+	typedef boost::unordered_map<string, boost::shared_ptr<entity> > symbolmap_so;
+	typedef boost::unordered_map<boost::shared_ptr<entity>, string> symbolmap_os;
+	typedef boost::unordered_multimap<string, boost::shared_ptr<entities> > grammarmap;
+	typedef boost::unordered_multimap<string, pair<boost::shared_ptr<entity>, boost::shared_ptr<entities> > > reducemap;
 	typedef vector<string> reducekeys;
 	grammarmap* gra;
 	vector<reducemap> red;
@@ -92,22 +92,22 @@ private:
 	symbolmap_so* sym_so;
 	symbolmap_os* sym_os;
 
-	typedef boost::unordered_map<string, entities*> reducelist;
+	typedef boost::unordered_map<string, boost::shared_ptr<entities> > reducelist;
 	typedef boost::unordered_map<string, pair<int, reducelist> > reducelist_by_complexity;
 
-	entity* add_entity(entity*);
-	entity* add_symbol(const string);
-	entity* get_symbol(const string) const;
+	boost::shared_ptr<entity> add_entity(boost::shared_ptr<entity>);
+	boost::shared_ptr<entity> add_symbol(const string);
+	boost::shared_ptr<entity> get_symbol(const string) const;
 	const string all_get_key(const entities&);
 	const string all_to_str(const entities&) const;
 
 	void build_reducemap();
 	bool expand_step(int*);
-	vector<entities*>* expand_entry(entities*, int*, bool*);
-	entities* parse_input(const string);
-	vector<entities*>* reduce(entities*i);
-	reducelist* reduce_step(entities*i);
-	entities* replace_in_vector(const entities&, const entities&, entity*);
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > expand_entry(boost::shared_ptr<entities>, int*, bool*);
+	boost::shared_ptr<entities> parse_input(const string);
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > reduce(boost::shared_ptr<entities>i);
+	reducelist* reduce_step(boost::shared_ptr<entities>i);
+	boost::shared_ptr<entities> replace_in_vector(const entities&, const entities&, boost::shared_ptr<entity>);
 
 	friend class boost::serialization::access;
 	template<class Archive>
@@ -128,24 +128,25 @@ private:
 
 public:
 	grammar();
+	~grammar();
 	int read_grammar(const fs::path);
 	const string to_str() const;
 	void expand();
-	vector<entities*>* parse(const string);
+	boost::shared_ptr<vector<boost::shared_ptr<entities> > > parse(const string);
 
-	string o2s(entity*) const;
-	entity* s2o(string) const;
+	string o2s(boost::shared_ptr<entity>) const;
+	boost::shared_ptr<entity> s2o(string) const;
 
-	entity* modify_symbol(entity*, const vector<string>&);
+	boost::shared_ptr<entity> modify_symbol(boost::shared_ptr<entity>, const vector<string>&);
 
 	const string print_vector(const entities&);
-	const string print_entity(entity*);
+	const string print_entity(boost::shared_ptr<entity>);
 
 	static const string print_input(const string);
-	static const string print_output(vector<entities*>*);
-	static const string print_perl(vector<entities*>*);
-	static const string print_graph(vector<entities*>*);
-	static const string print_xml(vector<entities*>*);
+	static const string print_output(boost::shared_ptr<vector<boost::shared_ptr<entities> > >);
+	static const string print_perl(boost::shared_ptr<vector<boost::shared_ptr<entities> > >);
+	static const string print_graph(boost::shared_ptr<vector<boost::shared_ptr<entities> > >);
+	static const string print_xml(boost::shared_ptr<vector<boost::shared_ptr<entities> > >);
 };
 
 }
