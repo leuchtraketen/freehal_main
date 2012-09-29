@@ -14,33 +14,44 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.app;
+package net.freehal.core.pos;
 
-import net.freehal.app.R;
-import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.ListView;
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
-public class AutoScrollListView extends ListView {
+public class TagListMemory extends TagContainerMemory {
 
-	public AutoScrollListView(Context context) {
-		super(context);
-	}
+	private List<Map.Entry<String, Tags>> list = new ArrayList<Map.Entry<String, Tags>>();
 
-	public AutoScrollListView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
-
-	public AutoScrollListView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
+	@Override
+	public void add(String word, Tags tags) {
+		list.add(new AbstractMap.SimpleEntry<String, Tags>(word, tags));
 	}
 
 	@Override
-	public void onSizeChanged(int w, int h, int oldw, int oldh) {
-		super.onSizeChanged(w, h, oldw, oldh);
-		ListView list = (ListView) this.findViewById(R.id.listView);
-		if (list != null)
-			list.setSelection(list.getAdapter().getCount() - 1);
+	public boolean containsKey(String word) {
+		for (Map.Entry<String, Tags> entry : list) {
+			if (entry.getKey().equals(word))
+				return true;
+		}
+		return false;
 	}
 
+	@Override
+	public Tags get(String word) {
+		for (Map.Entry<String, Tags> entry : list) {
+			if (entry.getKey().equals(word))
+				return entry.getValue();
+		}
+		return null;
+	}
+
+	@Override
+	public Iterator<Entry<String, Tags>> iterator() {
+		return list.iterator();
+	}
 }

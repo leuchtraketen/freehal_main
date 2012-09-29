@@ -14,33 +14,33 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.app;
+package net.freehal.core.pos;
 
-import net.freehal.app.R;
-import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.ListView;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
-public class AutoScrollListView extends ListView {
+public class TagMapMemory extends TagContainerMemory {
 
-	public AutoScrollListView(Context context) {
-		super(context);
-	}
+	Map<String, Tags> map = new HashMap<String, Tags>();
 
-	public AutoScrollListView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
-
-	public AutoScrollListView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
+	@Override
+	public void add(String word, Tags tags) {
+		map.put(word, tags);
 	}
 
 	@Override
-	public void onSizeChanged(int w, int h, int oldw, int oldh) {
-		super.onSizeChanged(w, h, oldw, oldh);
-		ListView list = (ListView) this.findViewById(R.id.listView);
-		if (list != null)
-			list.setSelection(list.getAdapter().getCount() - 1);
+	public boolean containsKey(String word) {
+		return map.containsKey(word);
 	}
 
+	@Override
+	public Iterator<java.util.Map.Entry<String, Tags>> iterator() {
+		return map.entrySet().iterator();
+	}
+
+	@Override
+	public Tags get(String word) {
+		return map.get(word);
+	}
 }
